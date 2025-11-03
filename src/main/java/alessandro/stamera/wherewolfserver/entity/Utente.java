@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity public final class Utente
+@Entity public class Utente
 {
 
     @Id private String username;
