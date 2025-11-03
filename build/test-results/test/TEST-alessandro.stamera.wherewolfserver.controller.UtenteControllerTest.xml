@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alessandro.stamera.wherewolfserver.controller.UtenteControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-03T22:45:15" hostname="ALESSANDRO" time="1.009">
+  <properties/>
+  <testcase name="testAllUtenti()" classname="alessandro.stamera.wherewolfserver.controller.UtenteControllerTest" time="1.009"/>
+  <system-out><![CDATA[23:45:04.879 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.UtenteControllerTest]: UtenteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:45:05.498 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.UtenteControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2025-11-03T23:45:07.046+01:00  INFO 19800 --- [    Test worker] a.s.w.controller.UtenteControllerTest    : Starting UtenteControllerTest using Java 21.0.3 with PID 19800 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
+2025-11-03T23:45:07.057+01:00  INFO 19800 --- [    Test worker] a.s.w.controller.UtenteControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2025-11-03T23:45:15.363+01:00  INFO 19800 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-11-03T23:45:15.364+01:00  INFO 19800 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-11-03T23:45:15.380+01:00  INFO 19800 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2025-11-03T23:45:15.531+01:00  INFO 19800 --- [    Test worker] a.s.w.controller.UtenteControllerTest    : Started UtenteControllerTest in 9.701 seconds (process running for 15.585)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
