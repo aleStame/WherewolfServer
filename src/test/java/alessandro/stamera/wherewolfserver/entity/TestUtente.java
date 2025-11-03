@@ -13,9 +13,11 @@ public final class TestUtente
 
     @BeforeEach public void setUp() { esempio = new Utente("alessandro", "passwordsupersegreta"); }
 
-    @Test public void loginRiuscito() { assertThat(esempio.login("alessandro", "passwordsupersegreta")).isTrue(); }
+    @Test public void loginRiuscito() { assertThat(login("alessandro", "passwordsupersegreta")).isTrue(); }
 
     @ParameterizedTest @CsvSource( { "alessandro, passworderrata", "marco, passwordsupersegreta", "pino, passwordsbagliata" })
-    public void loginNonRiuscito(String username, String password) { assertThat(esempio.login(username, password)).isFalse(); }
+    public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
+
+    private boolean login(String username, String password) { return esempio.login(username, password); }
 
 }
