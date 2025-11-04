@@ -4,7 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 public final class TestUtente
 {
@@ -21,14 +23,16 @@ public final class TestUtente
 
     @Test public void username() { assertThat(esempio.getUsername()).isEqualTo(ESEMPIO_USERNAME); }
 
-    @Test public void cambioPasswordRiuscito() { assertThatNoException().isThrownBy(() -> esempio.cambiaPassword("nuovapassword")); }
+    @Test public void cambioPasswordRiuscito() { assertThatNoException().isThrownBy(() -> cambiaPassword("nuovapassword")); }
 
     @Test public void cambioPasswordNonRiuscito()
     {
-        assertThatIllegalArgumentException().isThrownBy(() -> esempio.cambiaPassword(ESEMPIO_PASSWORD))
+        assertThatIllegalArgumentException().isThrownBy(() -> cambiaPassword(ESEMPIO_PASSWORD))
             .withMessage("ERRORE!!! Password uguale alla precedente");
     }
 
     private boolean login(String username, String password) { return esempio.login(username, password); }
+
+    private void cambiaPassword(String password) { esempio.cambiaPassword(password); }
 
 }
