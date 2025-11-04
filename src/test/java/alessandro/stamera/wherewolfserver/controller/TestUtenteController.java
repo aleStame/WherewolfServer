@@ -34,8 +34,7 @@ import static org.mockito.BDDMockito.given;
         esempio[0] = new Utente("andrea", "andrea1998");
         esempio[1] = new Utente("marco", "passwordsecret");
         esempio[2] = new Utente("bruce", "batmanbeyond");
-        given(repo.findAll()).willReturn(of(esempio));
-        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
+        mocking();
     }
 
     @ParameterizedTest @CsvSource
@@ -58,6 +57,12 @@ import static org.mockito.BDDMockito.given;
     public void registrazione(String username, String password, String risultato) throws Exception
     {
         controllaRisultato(post("/utenti/registrazione?username=" + username + "&password=" + password), risultato);
+    }
+
+    private void mocking()
+    {
+        given(repo.findAll()).willReturn(of(esempio));
+        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
     }
 
     private void controllaRisultato(RequestBuilder richiesta, String risultato) throws Exception

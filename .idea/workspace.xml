@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo inserisciUtente">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eseguiRichiesta">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/controller/TestUtenteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/controller/TestUtenteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestUtenteController.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestUtenteController.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -370,7 +388,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762264420877</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="REFACTORING: definizione del metodo controllaRisultato">
+      <option name="closed" value="true" />
+      <created>1762264685510</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264685510</updated>
+    </task>
+    <task id="LOCAL-00026" summary="REFACTORING: definizione del metodo eseguiRichiesta">
+      <option name="closed" value="true" />
+      <created>1762265244942</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1762265244942</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -401,6 +435,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo eseguiLogin" />
     <MESSAGE value="REFACTORING: definizione del metodo isUtentePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo inserisciUtente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo inserisciUtente" />
+    <MESSAGE value="REFACTORING: definizione del metodo controllaRisultato" />
+    <MESSAGE value="REFACTORING: definizione del metodo eseguiRichiesta" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eseguiRichiesta" />
   </component>
 </project>
