@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Merge remote-tracking branch 'origin/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo mocking">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,19 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/wherewolf.server&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.TestUtente.executor": "Run",
+    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
+    "Gradle.wherewolf.server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/registrazione",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/wherewolf.server"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.TestUtente">
+}]]></component>
+  <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -161,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestUtente" />
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
+        <item itemvalue="Gradle.TestUtente" />
         <item itemvalue="Gradle.wherewolf.server" />
       </list>
     </recent_temporary>
@@ -296,7 +298,103 @@
       <option name="project" value="LOCAL" />
       <updated>1762254255615</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Merge tag 'correzione' into develop&#10;&#10;Sistemazione metodo login">
+      <option name="closed" value="true" />
+      <created>1762254546882</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762254546882</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ROSSO: username non riuscito">
+      <option name="closed" value="true" />
+      <created>1762255178104</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762255178104</updated>
+    </task>
+    <task id="LOCAL-00018" summary="VERDE: username riuscito">
+      <option name="closed" value="true" />
+      <created>1762255545751</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762255545751</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ROSSO: registrazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1762256320978</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762256320978</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ROSSO: registrazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1762263977925</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1762263977925</updated>
+    </task>
+    <task id="LOCAL-00021" summary="VERDE: registrazione riuscito">
+      <option name="closed" value="true" />
+      <created>1762263993175</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1762263993175</updated>
+    </task>
+    <task id="LOCAL-00022" summary="REFACTORING: definizione del metodo eseguiLogin">
+      <option name="closed" value="true" />
+      <created>1762264157964</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264157964</updated>
+    </task>
+    <task id="LOCAL-00023" summary="REFACTORING: definizione del metodo isUtentePresente">
+      <option name="closed" value="true" />
+      <created>1762264294654</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264294654</updated>
+    </task>
+    <task id="LOCAL-00024" summary="REFACTORING: definizione del metodo inserisciUtente">
+      <option name="closed" value="true" />
+      <created>1762264420877</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264420877</updated>
+    </task>
+    <task id="LOCAL-00025" summary="REFACTORING: definizione del metodo controllaRisultato">
+      <option name="closed" value="true" />
+      <created>1762264685510</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264685510</updated>
+    </task>
+    <task id="LOCAL-00026" summary="REFACTORING: definizione del metodo eseguiRichiesta">
+      <option name="closed" value="true" />
+      <created>1762265244942</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1762265244942</updated>
+    </task>
+    <task id="LOCAL-00027" summary="REFACTORING: definizione del metodo mocking">
+      <option name="closed" value="true" />
+      <created>1762265365218</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1762265365218</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,6 +417,17 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Risoluzione conflitti" />
     <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Merge tag 'correzione' into develop&#10;&#10;Sistemazione metodo login" />
+    <MESSAGE value="ROSSO: username non riuscito" />
+    <MESSAGE value="VERDE: username riuscito" />
+    <MESSAGE value="ROSSO: registrazione non riuscito" />
+    <MESSAGE value="VERDE: registrazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo eseguiLogin" />
+    <MESSAGE value="REFACTORING: definizione del metodo isUtentePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo inserisciUtente" />
+    <MESSAGE value="REFACTORING: definizione del metodo controllaRisultato" />
+    <MESSAGE value="REFACTORING: definizione del metodo eseguiRichiesta" />
+    <MESSAGE value="REFACTORING: definizione del metodo mocking" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo mocking" />
   </component>
 </project>

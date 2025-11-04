@@ -9,8 +9,12 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.RequestBuilder;
+import java.util.Optional;
 import static java.util.List.of;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -26,11 +30,8 @@ import static org.mockito.BDDMockito.given;
 
     @BeforeEach public void setUp()
     {
-        esempio = new Utente[3];
-        esempio[0] = new Utente("andrea", "andrea1998");
-        esempio[1] = new Utente("marco", "passwordsecret");
-        esempio[2] = new Utente("bruce", "batmanbeyond");
-        given(repo.findAll()).willReturn(of(esempio));
+        esempio = getUtentiEsempio();
+        mocking();
     }
 
     @ParameterizedTest @CsvSource
@@ -43,9 +44,40 @@ import static org.mockito.BDDMockito.given;
     )
     public void login(String username, String password, String risultato) throws Exception
     {
-        var mvcResult = mockMvc.perform(get("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
-            .andReturn();
-        assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
+        controllaRisultato(get("/utenti/login?username=" + username + "&password=" + password), risultato);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        { "marco, passworddimarco, ERRORE!!! Nome utente già inserito", "pinuccio, pwdpinuccio, Registrazione avvenuta correttamente" }
+    )
+    public void registrazione(String username, String password, String risultato) throws Exception
+    {
+        controllaRisultato(post("/utenti/registrazione?username=" + username + "&password=" + password), risultato);
+    }
+
+    private Utente[] getUtentiEsempio()
+    {
+        String[][] credenziali = { { "andrea", "andrea1998" }, { "marco", "passwordsecret" }, { "bruce", "batmanbeyond" } };
+        Utente[] utenti = new Utente[credenziali.length];
+        for(int i = 0; i < utenti.length; i++) utenti[i] = new Utente(credenziali[i][0], credenziali[i][1]);
+        return utenti;
+    }
+
+    private void mocking()
+    {
+        given(repo.findAll()).willReturn(of(esempio));
+        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
+    }
+
+    private void controllaRisultato(RequestBuilder richiesta, String risultato) throws Exception
+    {
+        assertThat(eseguiRichiesta(richiesta).getResponse().getContentAsString()).isEqualTo(risultato);
+    }
+
+    private MvcResult eseguiRichiesta(RequestBuilder richiesta) throws Exception
+    {
+        return mockMvc.perform(richiesta).andExpect(status().isOk()).andReturn();
     }
 
 }
