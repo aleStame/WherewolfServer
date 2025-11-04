@@ -31,6 +31,8 @@ public final class TestUtente
             .withMessage("ERRORE!!! Password uguale alla precedente");
     }
 
+    @Test public void controlloPasswordGiusta() { assertThat(esempio.controlloPassword("passwordsupersegreta")).isTrue(); }
+
     private boolean login(String username, String password) { return esempio.login(username, password); }
 
     private void cambiaPassword(String password) { esempio.cambiaPassword(password); }
