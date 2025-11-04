@@ -21,4 +21,6 @@ import jakarta.persistence.Id;
 
     public String getUsername() { return username; }
 
+    public void cambiaPassword(String password) { throw new IllegalArgumentException(); }
+
 }

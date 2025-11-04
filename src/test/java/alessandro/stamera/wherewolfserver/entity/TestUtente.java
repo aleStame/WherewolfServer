@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
 
 public final class TestUtente
 {
@@ -20,6 +21,8 @@ public final class TestUtente
     public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
 
     @Test public void username() { assertThat(esempio.getUsername()).isEqualTo(ESEMPIO_USERNAME); }
+
+    @Test public void cambioPasswordRiuscito() { assertThatNoException().isThrownBy(() -> esempio.cambiaPassword("nuovapassword")); }
 
     private boolean login(String username, String password) { return esempio.login(username, password); }
 
