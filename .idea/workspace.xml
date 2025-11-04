@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Merge remote-tracking branch 'origin/develop' into develop" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: commit file non versionati" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +26,11 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -57,7 +62,7 @@
     "Gradle.wherewolf.server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "release/registrazione",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/wherewolf.server"
   }
@@ -161,9 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
-        <item itemvalue="Gradle.TestUtente" />
         <item itemvalue="Gradle.wherewolf.server" />
+        <item itemvalue="Gradle.TestUtente" />
+        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
+        <item itemvalue="Gradle.wherewolf.server" />
+        <item itemvalue="Gradle.TestUtente" />
       </list>
     </recent_temporary>
   </component>
@@ -416,7 +423,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762267187912</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="REFACTORING: adattamento della classe Utente al sistema Hibernate">
+      <option name="closed" value="true" />
+      <created>1762271435338</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1762271435338</updated>
+    </task>
+    <task id="LOCAL-00032" summary="REFACTORING: commit file non versionati">
+      <option name="closed" value="true" />
+      <created>1762271511016</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1762271511016</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -453,6 +476,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getUtentiEsempio" />
     <MESSAGE value="Implementazione registrazione degli utenti" />
     <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/develop' into develop" />
+    <MESSAGE value="REFACTORING: adattamento della classe Utente al sistema Hibernate" />
+    <MESSAGE value="REFACTORING: commit file non versionati" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: commit file non versionati" />
   </component>
 </project>
