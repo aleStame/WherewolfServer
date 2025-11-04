@@ -19,7 +19,7 @@ public final class TestUtente
     @Test public void loginRiuscito() { controllaCondizioneVera(login(ESEMPIO_USERNAME, ESEMPIO_PASSWORD)); }
 
     @ParameterizedTest @CsvSource( { "alessandro, passworderrata", "marco, passwordsupersegreta", "pino, passwordsbagliata" })
-    public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
+    public void loginNonRiuscito(String username, String password) { controllaCondizioneFalsa(login(username, password)); }
 
     @Test public void username() { assertThat(esempio.getUsername()).isEqualTo(ESEMPIO_USERNAME); }
 
@@ -33,9 +33,11 @@ public final class TestUtente
 
     @Test public void controlloPasswordGiusta() { controllaCondizioneVera(esempio.controlloPassword("passwordsupersegreta")); }
 
-    @Test public void controlloPasswordErrata() { assertThat(esempio.controlloPassword("passwordcasuale")).isFalse(); }
+    @Test public void controlloPasswordErrata() { controllaCondizioneFalsa(esempio.controlloPassword("passwordcasuale")); }
 
     private void controllaCondizioneVera(boolean condizione) { assertThat(condizione).isTrue(); }
+
+    private void controllaCondizioneFalsa(boolean condizione) { assertThat(condizione).isFalse(); }
 
     private boolean login(String username, String password) { return esempio.login(username, password); }
 
