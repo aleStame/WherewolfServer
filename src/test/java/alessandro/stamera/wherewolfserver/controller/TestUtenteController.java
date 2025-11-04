@@ -3,16 +3,14 @@ package alessandro.stamera.wherewolfserver.controller;
 import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
-
 import static java.util.List.of;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -45,7 +43,7 @@ import static org.mockito.BDDMockito.given;
     )
     public void login(String username, String password, String risultato) throws Exception
     {
-        var mvcResult = mockMvc.perform(post("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
+        var mvcResult = mockMvc.perform(get("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
             .andReturn();
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
     }
