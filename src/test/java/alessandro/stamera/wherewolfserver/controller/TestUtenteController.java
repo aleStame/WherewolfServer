@@ -56,6 +56,19 @@ import static org.mockito.BDDMockito.given;
         controllaRisultato(post("/utenti/registrazione?username=" + username + "&password=" + password), risultato);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "marco, passwordsecret, newpwd, Password cambiata correttamente",
+            "bruce, batmanbeyond, batmanbeyond, ERRORE!!! Password uguale alla precedente",
+        }
+    )
+    public void cambioPassword(String username, String vecchiaPassword, String nuovaPassword, String risultato) throws Exception
+    {
+        String URL = "/utenti/cambioPassword?username=" + username + "&vecchiaPassword=" + vecchiaPassword + "&nuovaPassword=" + nuovaPassword;
+        controllaRisultato(post(URL), risultato);
+    }
+
     private Utente[] getUtentiEsempio()
     {
         String[][] credenziali = { { "andrea", "andrea1998" }, { "marco", "passwordsecret" }, { "bruce", "batmanbeyond" } };
