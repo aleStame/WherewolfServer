@@ -10,9 +10,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-
+import org.springframework.test.web.servlet.RequestBuilder;
 import java.util.Optional;
-
 import static java.util.List.of;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -49,9 +48,7 @@ import static org.mockito.BDDMockito.given;
     )
     public void login(String username, String password, String risultato) throws Exception
     {
-        var mvcResult = mockMvc.perform(get("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
-            .andReturn();
-        controllaRisultato(mvcResult, risultato);
+        controllaRisultato(get("/utenti/login?username=" + username + "&password=" + password), risultato);
     }
 
     @ParameterizedTest @CsvSource
@@ -60,14 +57,17 @@ import static org.mockito.BDDMockito.given;
     )
     public void registrazione(String username, String password, String risultato) throws Exception
     {
-        var mvcResult = mockMvc.perform(post("/utenti/registrazione?username=" + username + "&password=" + password))
-            .andExpect(status().isOk()).andReturn();
-        controllaRisultato(mvcResult, risultato);
+        controllaRisultato(post("/utenti/registrazione?username=" + username + "&password=" + password), risultato);
     }
 
-    private void controllaRisultato(MvcResult mvcResult, String risultato) throws Exception
+    private void controllaRisultato(RequestBuilder richiesta, String risultato) throws Exception
     {
-        assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
+        assertThat(eseguiRichiesta(richiesta).getResponse().getContentAsString()).isEqualTo(risultato);
+    }
+
+    private MvcResult eseguiRichiesta(RequestBuilder richiesta) throws Exception
+    {
+        return mockMvc.perform(richiesta).andExpect(status().isOk()).andReturn();
     }
 
 }
