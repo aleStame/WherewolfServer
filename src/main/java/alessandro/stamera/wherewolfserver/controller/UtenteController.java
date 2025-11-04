@@ -14,8 +14,9 @@ import org.springframework.web.bind.annotation.*;
 
     @PostMapping("/login") public String login(@RequestParam String username, @RequestParam String password)
     {
-        String risultato = "";
+        String risultato;
         if(repo.findAll().stream().anyMatch(utente -> utente.login(username, password))) risultato = "Login eseguito correttamente";
+        else risultato = "ERRORE!!! Username o password errate";
         return risultato;
     }
 
