@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: cambioPasswordRiuscito riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/entity/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/entity/Utente.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo setPassword">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/entity/TestUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/entity/TestUtente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +473,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762275381190</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="REFACTORING: definizione del metodo cambiaPassword">
+      <option name="closed" value="true" />
+      <created>1762275580933</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762275580933</updated>
+    </task>
+    <task id="LOCAL-00038" summary="REFACTORING: definizione del metodo setPassword">
+      <option name="closed" value="true" />
+      <created>1762275689118</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1762275689118</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -488,8 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: divisione del test login in loginRiuscito e loginNonRiuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo login" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Risoluzione conflitti" />
     <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
@@ -513,6 +527,8 @@
     <MESSAGE value="REFACTORING: workspace" />
     <MESSAGE value="ROSSO: cambioPasswordRiuscito non riuscito" />
     <MESSAGE value="VERDE: cambioPasswordRiuscito riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: cambioPasswordRiuscito riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo cambiaPassword" />
+    <MESSAGE value="REFACTORING: definizione del metodo setPassword" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo setPassword" />
   </component>
 </project>
