@@ -6,14 +6,16 @@ import jakarta.persistence.Id;
 @Entity public class Utente
 {
 
-    @Id private final String username;
-    private final String password;
+    @Id private String username;
+    private String password;
 
     public Utente(String username, String password)
     {
         this.username = username;
         this.password = password;
     }
+
+    public Utente() { }
 
     public boolean login(String username, String password) { return username.equals(getUsername()) && this.password.equals(password); }
 
