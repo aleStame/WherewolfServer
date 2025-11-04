@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.*;
         if(isUtentePresente(username)) risultato = "ERRORE!!! Nome utente già inserito";
         else
         {
-            repo.save(new Utente(username, password));
+            inserisciUtente(username, password);
             risultato = "Registrazione avvenuta correttamente";
         }
         return risultato;
@@ -37,5 +37,7 @@ import org.springframework.web.bind.annotation.*;
     }
 
     private boolean isUtentePresente(String username) { return repo.findById(username).isPresent(); }
+
+    private void inserisciUtente(String username, String password) { repo.save(new Utente(username, password)); }
 
 }
