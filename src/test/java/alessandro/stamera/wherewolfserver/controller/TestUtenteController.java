@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 
 import java.util.Optional;
 
@@ -50,7 +51,7 @@ import static org.mockito.BDDMockito.given;
     {
         var mvcResult = mockMvc.perform(get("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
             .andReturn();
-        assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
+        controllaRisultato(mvcResult, risultato);
     }
 
     @ParameterizedTest @CsvSource
@@ -61,6 +62,11 @@ import static org.mockito.BDDMockito.given;
     {
         var mvcResult = mockMvc.perform(post("/utenti/registrazione?username=" + username + "&password=" + password))
             .andExpect(status().isOk()).andReturn();
+        controllaRisultato(mvcResult, risultato);
+    }
+
+    private void controllaRisultato(MvcResult mvcResult, String risultato) throws Exception
+    {
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
     }
 

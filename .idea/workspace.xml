@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eseguiLogin" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo inserisciUtente">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -352,7 +354,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762264157964</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="REFACTORING: definizione del metodo isUtentePresente">
+      <option name="closed" value="true" />
+      <created>1762264294654</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264294654</updated>
+    </task>
+    <task id="LOCAL-00024" summary="REFACTORING: definizione del metodo inserisciUtente">
+      <option name="closed" value="true" />
+      <created>1762264420877</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264420877</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -381,6 +399,8 @@
     <MESSAGE value="ROSSO: registrazione non riuscito" />
     <MESSAGE value="VERDE: registrazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eseguiLogin" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eseguiLogin" />
+    <MESSAGE value="REFACTORING: definizione del metodo isUtentePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo inserisciUtente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo inserisciUtente" />
   </component>
 </project>
