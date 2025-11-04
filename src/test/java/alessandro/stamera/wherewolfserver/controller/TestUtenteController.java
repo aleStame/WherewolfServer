@@ -61,6 +61,7 @@ import static org.mockito.BDDMockito.given;
         {
             "marco, passwordsecret, newpwd, Password cambiata correttamente",
             "bruce, batmanbeyond, batmanbeyond, ERRORE!!! Password uguale alla precedente",
+            "andrea, skibidiboppi, ped32312231, ERRORE!!! Inserire la password attuale corretta"
         }
     )
     public void cambioPassword(String username, String vecchiaPassword, String nuovaPassword, String risultato) throws Exception
