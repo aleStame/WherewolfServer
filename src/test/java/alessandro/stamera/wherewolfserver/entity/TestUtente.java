@@ -31,9 +31,9 @@ public final class TestUtente
             .withMessage("ERRORE!!! Password uguale alla precedente");
     }
 
-    @Test public void controlloPasswordGiusta() { controllaCondizioneVera(esempio.controlloPassword("passwordsupersegreta")); }
+    @Test public void controlloPasswordGiusta() { controllaCondizioneVera(controlloPassword("passwordsupersegreta")); }
 
-    @Test public void controlloPasswordErrata() { controllaCondizioneFalsa(esempio.controlloPassword("passwordcasuale")); }
+    @Test public void controlloPasswordErrata() { controllaCondizioneFalsa(controlloPassword("passwordcasuale")); }
 
     private void controllaCondizioneVera(boolean condizione) { assertThat(condizione).isTrue(); }
 
@@ -42,5 +42,7 @@ public final class TestUtente
     private boolean login(String username, String password) { return esempio.login(username, password); }
 
     private void cambiaPassword(String password) { esempio.cambiaPassword(password); }
+
+    private boolean controlloPassword(String password) { return esempio.controlloPassword(password); }
 
 }
