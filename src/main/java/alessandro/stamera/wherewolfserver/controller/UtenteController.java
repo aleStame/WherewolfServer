@@ -4,8 +4,6 @@ import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-
 @RestController @RequestMapping("/utenti")  public final class UtenteController
 {
 
