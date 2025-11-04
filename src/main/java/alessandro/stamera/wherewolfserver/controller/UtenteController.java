@@ -4,6 +4,8 @@ import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @RestController @RequestMapping("/utenti")  public final class UtenteController
 {
 
@@ -28,6 +30,19 @@ import org.springframework.web.bind.annotation.*;
             inserisciUtente(username, password);
             risultato = "Registrazione avvenuta correttamente";
         }
+        return risultato;
+    }
+
+    @PostMapping("/cambioPassword")
+    public String cambioPassword(@RequestParam String username, @RequestParam String vecchiaPassword, @RequestParam String nuovaPassword)
+    {
+        String risultato;
+        try
+        {
+            repo.findById(username).get().cambiaPassword(nuovaPassword);
+            risultato = "Password cambiata correttamente";
+        }
+        catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
         return risultato;
     }
 
