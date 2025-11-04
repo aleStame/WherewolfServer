@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.entity.TestUtente" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-11-04T08:02:35" hostname="ALESSANDRO" time="0.598">
+<testsuite name="alessandro.stamera.wherewolfserver.entity.TestUtente" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-11-04T10:07:46" hostname="ALESSANDRO" time="0.144">
   <properties/>
-  <testcase name="loginRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.308"/>
-  <testcase name="[1] username=alessandro, password=passworderrata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.069"/>
-  <testcase name="[2] username=marco, password=passwordsupersegreta" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.003"/>
-  <testcase name="[3] username=pino, password=passwordsbagliata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.003"/>
+  <testcase name="loginRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.018"/>
+  <testcase name="[1] username=alessandro, password=passworderrata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.013"/>
+  <testcase name="[2] username=marco, password=passwordsupersegreta" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.012"/>
+  <testcase name="[3] username=pino, password=passwordsbagliata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
