@@ -42,4 +42,13 @@ import static org.mockito.BDDMockito.given;
             .andReturn();
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("Login eseguito correttamente");
     }
+
+    @ParameterizedTest @CsvSource({ "andrea, pwdsbagliata", "gino, batmanbeyond", "utentefinto, pwdfinta" })
+    public void loginNonRiuscito(String username, String password) throws Exception
+    {
+        var mvcResult = mockMvc.perform(post("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
+                .andReturn();
+        assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("ERRORE!!! Username o password errate");
+    }
+
 }
