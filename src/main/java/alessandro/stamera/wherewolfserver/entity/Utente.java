@@ -17,14 +17,16 @@ import jakarta.persistence.Id;
 
     public Utente() { }
 
-    public boolean login(String username, String password) { return username.equals(getUsername()) && this.password.equals(password); }
+    public boolean login(String username, String password) { return username.equals(getUsername()) && controllaPassword(password); }
 
     public String getUsername() { return username; }
 
     public void cambiaPassword(String password)
     {
-        if(this.password.equals(password)) throw new IllegalArgumentException();
+        if(controllaPassword(password)) throw new IllegalArgumentException();
         else this.password = password;
     }
+
+    private boolean controllaPassword(String password) { return this.password.equals(password); }
 
 }
