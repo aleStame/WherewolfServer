@@ -33,6 +33,8 @@ public final class TestUtente
 
     @Test public void controlloPasswordGiusta() { assertThat(esempio.controlloPassword("passwordsupersegreta")).isTrue(); }
 
+    @Test public void controlloPasswordErrata() { assertThat(esempio.controlloPassword("passwordcasuale")).isFalse(); }
+
     private boolean login(String username, String password) { return esempio.login(username, password); }
 
     private void cambiaPassword(String password) { esempio.cambiaPassword(password); }
