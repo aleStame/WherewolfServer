@@ -30,10 +30,7 @@ import static org.mockito.BDDMockito.given;
 
     @BeforeEach public void setUp()
     {
-        esempio = new Utente[3];
-        esempio[0] = new Utente("andrea", "andrea1998");
-        esempio[1] = new Utente("marco", "passwordsecret");
-        esempio[2] = new Utente("bruce", "batmanbeyond");
+        esempio = getUtentiEsempio();
         mocking();
     }
 
@@ -57,6 +54,14 @@ import static org.mockito.BDDMockito.given;
     public void registrazione(String username, String password, String risultato) throws Exception
     {
         controllaRisultato(post("/utenti/registrazione?username=" + username + "&password=" + password), risultato);
+    }
+
+    private Utente[] getUtentiEsempio()
+    {
+        String[][] credenziali = { { "andrea", "andrea1998" }, { "marco", "passwordsecret" }, { "bruce", "batmanbeyond" } };
+        Utente[] utenti = new Utente[credenziali.length];
+        for(int i = 0; i < utenti.length; i++) utenti[i] = new Utente(credenziali[i][0], credenziali[i][1]);
+        return utenti;
     }
 
     private void mocking()
