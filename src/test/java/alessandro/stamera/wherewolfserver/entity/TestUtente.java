@@ -8,12 +8,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestUtente
 {
+    private static final String ESEMPIO_USERNAME = "alessandro", ESEMPIO_PASSWORD = "passwordsupersegreta";
 
     private Utente esempio;
 
-    @BeforeEach public void setUp() { esempio = new Utente("alessandro", "passwordsupersegreta"); }
+    @BeforeEach public void setUp() { esempio = new Utente(ESEMPIO_USERNAME, ESEMPIO_PASSWORD); }
 
-    @Test public void loginRiuscito() { assertThat(login("alessandro", "passwordsupersegreta")).isTrue(); }
+    @Test public void loginRiuscito() { assertThat(login(ESEMPIO_USERNAME, ESEMPIO_PASSWORD)).isTrue(); }
 
     @ParameterizedTest @CsvSource( { "alessandro, passworderrata", "marco, passwordsupersegreta", "pino, passwordsbagliata" })
     public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
