@@ -23,7 +23,7 @@ import jakarta.persistence.Id;
 
     public void cambiaPassword(String password)
     {
-        if(controllaPassword(password)) throw new IllegalArgumentException();
+        if(controllaPassword(password)) throw new IllegalArgumentException("ERRORE!!! Password uguale alla precedente");
         else setPassword(password);
     }
 
