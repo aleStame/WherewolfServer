@@ -41,8 +41,13 @@ import org.springframework.web.bind.annotation.PostMapping;
         String risultato;
         try
         {
-            repo.findById(username).get().cambiaPassword(nuovaPassword);
-            risultato = "Password cambiata correttamente";
+            Utente utente = repo.findById(username).get();
+            if(utente.controlloPassword(vecchiaPassword))
+            {
+                utente.cambiaPassword(nuovaPassword);
+                risultato = "Password cambiata correttamente";
+            }
+            else risultato = "ERRORE!!! Inserire la password attuale corretta";
         }
         catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
         return risultato;
