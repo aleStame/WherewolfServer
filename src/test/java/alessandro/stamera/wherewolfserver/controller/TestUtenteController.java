@@ -9,8 +9,12 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
+
+import java.util.Optional;
+
 import static java.util.List.of;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -31,6 +35,7 @@ import static org.mockito.BDDMockito.given;
         esempio[1] = new Utente("marco", "passwordsecret");
         esempio[2] = new Utente("bruce", "batmanbeyond");
         given(repo.findAll()).willReturn(of(esempio));
+        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
     }
 
     @ParameterizedTest @CsvSource
@@ -45,6 +50,17 @@ import static org.mockito.BDDMockito.given;
     {
         var mvcResult = mockMvc.perform(get("/utenti/login?username=" + username + "&password=" + password)).andExpect(status().isOk())
             .andReturn();
+        assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        { "marco, passworddimarco, ERRORE!!! Nome utente già inserito", "pinuccio, pwdpinuccio, Registrazione avvenuta correttamente" }
+    )
+    public void registrazione(String username, String password, String risultato) throws Exception
+    {
+        var mvcResult = mockMvc.perform(post("/utenti/registrazione?username=" + username + "&password=" + password))
+            .andExpect(status().isOk()).andReturn();
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo(risultato);
     }
 
