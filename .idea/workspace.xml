@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: username riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: registrazione non riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762255545751</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ROSSO: registrazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1762256320978</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762256320978</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +357,7 @@
     <MESSAGE value="Merge tag 'correzione' into develop&#10;&#10;Sistemazione metodo login" />
     <MESSAGE value="ROSSO: username non riuscito" />
     <MESSAGE value="VERDE: username riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: username riuscito" />
+    <MESSAGE value="ROSSO: registrazione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: registrazione non riuscito" />
   </component>
 </project>
