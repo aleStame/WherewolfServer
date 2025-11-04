@@ -19,6 +19,8 @@ public final class TestUtente
     @ParameterizedTest @CsvSource( { "alessandro, passworderrata", "marco, passwordsupersegreta", "pino, passwordsbagliata" })
     public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
 
+    @Test public void username() { assertThat(esempio.getUsername()).isEqualTo(ESEMPIO_USERNAME); }
+
     private boolean login(String username, String password) { return esempio.login(username, password); }
 
 }
