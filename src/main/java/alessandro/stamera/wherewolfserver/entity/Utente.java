@@ -21,6 +21,10 @@ import jakarta.persistence.Id;
 
     public String getUsername() { return username; }
 
-    public void cambiaPassword(String password) { throw new IllegalArgumentException(); }
+    public void cambiaPassword(String password)
+    {
+        if(this.password.equals(password)) throw new IllegalArgumentException();
+        else this.password = password;
+    }
 
 }
