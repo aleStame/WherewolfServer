@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
     @PostMapping("/registrazione") public String registrazione(@RequestParam String username, @RequestParam String password)
     {
         String risultato;
-        if(repo.findById(username).isPresent())risultato = "ERRORE!!! Nome utente già inserito";
+        if(isUtentePresente(username)) risultato = "ERRORE!!! Nome utente già inserito";
         else
         {
             repo.save(new Utente(username, password));
@@ -35,5 +35,7 @@ import org.springframework.web.bind.annotation.*;
     {
         return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
     }
+
+    private boolean isUtentePresente(String username) { return repo.findById(username).isPresent(); }
 
 }
