@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
     public Utente(String username, String password)
     {
         this.username = username;
-        this.password = password;
+        setPassword(password);
     }
 
     public Utente() { }
@@ -24,8 +24,10 @@ import jakarta.persistence.Id;
     public void cambiaPassword(String password)
     {
         if(controllaPassword(password)) throw new IllegalArgumentException();
-        else this.password = password;
+        else setPassword(password);
     }
+
+    private void setPassword(String password) { this.password = password; }
 
     private boolean controllaPassword(String password) { return this.password.equals(password); }
 
