@@ -15,8 +15,8 @@ import jakarta.persistence.Id;
         this.password = password;
     }
 
-    public boolean login(String username, String password) { return this.username.equals(username) && this.password.equals(password); }
+    public boolean login(String username, String password) { return username.equals(getUsername()) && this.password.equals(password); }
 
-    public String getUsername() { return ""; }
+    public String getUsername() { return username; }
 
 }
