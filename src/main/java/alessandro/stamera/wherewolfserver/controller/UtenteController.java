@@ -68,33 +68,36 @@ import java.util.Optional;
 
     private void inserisciUtente(String username, String password)
     {
-        if(getUtente(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
+        if(isUtentePresente(username)) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
         salvaDatiUtente(username, password);
     }
 
     private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
     {
-        if(controlloPasswordAssente(username, vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
+        if(controlloPasswordErrata(username, vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
         eseguiCambioPassword(username, nuovaPassword);
         salvaDatiUtente(username, nuovaPassword);
     }
 
     private void eseguiDisiscrizione(String username, String password)
     {
-        if(controlloPasswordAssente(username, password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
+        if(controlloPasswordErrata(username, password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
         repo.delete(cercaUtente(username));
     }
 
-    private boolean controlloPasswordAssente(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
+    private boolean controlloPasswordErrata(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
 
     private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
 
     private Utente cercaUtente(String username)
     {
-        Optional<Utente> risultato = getUtente(username);
-        if(risultato.isEmpty()) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
-        return risultato.get();
+        if(isUtenteAssente(username)) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
+        return getUtente(username).get();
     }
+
+    private boolean isUtentePresente(String username) { return getUtente(username).isPresent(); }
+
+    private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
 
     private Optional<Utente> getUtente(String username) { return repo.findById(username); }
 
