@@ -70,6 +70,18 @@ import static org.mockito.BDDMockito.given;
         controllaRisultato(post(URL), risultato);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "andrea, andrea1998, Disiscrizione avvenuta correttamente", "marco, passwordcasual, ERRORE!!! Inserire la password corretta",
+            "sulpicio, batmanbeyond, ERRORE!!! Utente non esistente", "sigismondo, pwdfantasiosa, ERRORE!!! Utente non esistente"
+        }
+    )
+    public void disiscrizione(String username, String password, String risultato) throws Exception
+    {
+        controllaRisultato(post("/utenti/disiscrizione?username=" + username + "&password=" + password), risultato);
+    }
+
     private Utente[] getUtentiEsempio()
     {
         String[][] credenziali = { { "andrea", "andrea1998" }, { "marco", "passwordsecret" }, { "bruce", "batmanbeyond" } };

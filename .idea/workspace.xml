@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: sistemazione degli aggiornamenti al database">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Merge tag 'aggiornamentoDatabase' into develop&#10;&#10;Correzione del salvataggio delle modifiche al db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/entity/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/entity/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/controller/TestUtenteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +58,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/wherewolf.server&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.TestUtente.executor": "Run",
+    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
+    "Gradle.wherewolf.server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/disiscriviUtente",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/wherewolf.server"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
@@ -170,9 +169,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.wherewolf.server" />
         <item itemvalue="Gradle.TestUtente" />
-        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.wherewolf.server" />
       </list>
@@ -186,14 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Commit iniziale">
-      <option name="closed" value="true" />
-      <created>1762207857425</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1762207857425</updated>
     </task>
     <task id="LOCAL-00007" summary="Commit iniziale">
       <option name="closed" value="true" />
@@ -579,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762336489555</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Merge tag 'aggiornamentoDatabase' into develop&#10;&#10;Correzione del salvataggio delle modifiche al db">
+      <option name="closed" value="true" />
+      <created>1762337618622</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1762337618622</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -594,7 +593,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementazione registrazione degli utenti" />
     <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop" />
     <MESSAGE value="REFACTORING: adattamento della classe Utente al sistema Hibernate" />
     <MESSAGE value="REFACTORING: commit file non versionati" />
@@ -619,6 +617,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo eseguiCambioPassword" />
     <MESSAGE value="REFACTORING: consegna workspace cambiato" />
     <MESSAGE value="REFACTORING: sistemazione degli aggiornamenti al database" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: sistemazione degli aggiornamenti al database" />
+    <MESSAGE value="Merge tag 'aggiornamentoDatabase' into develop&#10;&#10;Correzione del salvataggio delle modifiche al db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge tag 'aggiornamentoDatabase' into develop&#10;&#10;Correzione del salvataggio delle modifiche al db" />
   </component>
 </project>
