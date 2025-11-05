@@ -55,9 +55,7 @@ import java.util.Optional;
         String risultato;
         try
         {
-            Utente utente = getUtente(username);
-            if(!utente.controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
-            repo.delete(getUtente(username));
+            eseguiDisiscrizione(username, password);
             risultato = "Disiscrizione avvenuta correttamente";
         }
         catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
@@ -81,6 +79,13 @@ import java.util.Optional;
         if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
         utente.cambiaPassword(nuovaPassword);
         repo.save(utente);
+    }
+
+    private void eseguiDisiscrizione(String username, String password)
+    {
+        Utente utente = getUtente(username);
+        if(!utente.controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
+        repo.delete(getUtente(username));
     }
 
     private Utente getUtente(String username)
