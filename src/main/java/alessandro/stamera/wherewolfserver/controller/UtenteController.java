@@ -27,7 +27,7 @@ import java.util.Optional;
 
     @PostMapping("/registrazione") public String registrazione(@RequestParam String username, @RequestParam String password)
     {
-        String risultato = "";
+        String risultato;
         try
         {
             inserisciUtente(username, password);
@@ -43,13 +43,8 @@ import java.util.Optional;
         String risultato;
         try
         {
-            Utente utente = getUtente(username).get();
-            if(utente.controlloPassword(vecchiaPassword))
-            {
-                utente.cambiaPassword(nuovaPassword);
-                risultato = "Password cambiata correttamente";
-            }
-            else risultato = "ERRORE!!! Inserire la password attuale corretta";
+            eseguiCambioPassword(username, vecchiaPassword, nuovaPassword);
+            risultato = "Password cambiata correttamente";
         }
         catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
         return risultato;
@@ -67,5 +62,12 @@ import java.util.Optional;
     }
 
     private Optional<Utente> getUtente(String username) { return repo.findById(username); }
+
+    private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
+    {
+        Utente utente = getUtente(username).get();
+        if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
+        utente.cambiaPassword(nuovaPassword);
+    }
 
 }
