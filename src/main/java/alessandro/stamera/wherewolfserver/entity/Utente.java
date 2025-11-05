@@ -12,13 +12,23 @@ import jakarta.persistence.Id;
     public Utente(String username, String password)
     {
         this.username = username;
-        this.password = password;
+        setPassword(password);
     }
 
     public Utente() { }
 
-    public boolean login(String username, String password) { return username.equals(getUsername()) && this.password.equals(password); }
+    public boolean login(String username, String password) { return username.equals(getUsername()) && controlloPassword(password); }
 
     public String getUsername() { return username; }
+
+    public void cambiaPassword(String password)
+    {
+        if(controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Password uguale alla precedente");
+        else setPassword(password);
+    }
+
+    public boolean controlloPassword(String password) { return this.password.equals(password); }
+
+    private void setPassword(String password) { this.password = password; }
 
 }
