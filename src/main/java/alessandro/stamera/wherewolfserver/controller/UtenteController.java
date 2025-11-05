@@ -74,9 +74,8 @@ import java.util.Optional;
 
     private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
     {
-        Utente utente = cercaUtente(username);
-        if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
-        utente.cambiaPassword(nuovaPassword);
+        if(!controlloPassword(username, vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
+        eseguiCambioPassword(username, nuovaPassword);
         salvaDatiUtente(username, nuovaPassword);
     }
 
@@ -86,6 +85,10 @@ import java.util.Optional;
         if(!utente.controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
         repo.delete(utente);
     }
+
+    private boolean controlloPassword(String username, String password) { return cercaUtente(username).controlloPassword(password); }
+
+    private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
 
     private Utente cercaUtente(String username)
     {
