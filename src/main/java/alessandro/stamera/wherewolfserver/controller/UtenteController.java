@@ -69,13 +69,13 @@ import java.util.Optional;
 
     private void inserisciUtente(String username, String password)
     {
-        if(repo.findById(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
+        if(getUtente(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
         repo.save(new Utente(username, password));
     }
 
     private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
     {
-        Utente utente = getUtente(username);
+        Utente utente = cercaUtente(username);
         if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
         utente.cambiaPassword(nuovaPassword);
         repo.save(utente);
@@ -83,16 +83,18 @@ import java.util.Optional;
 
     private void eseguiDisiscrizione(String username, String password)
     {
-        Utente utente = getUtente(username);
+        Utente utente = cercaUtente(username);
         if(!utente.controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
-        repo.delete(getUtente(username));
+        repo.delete(utente);
     }
 
-    private Utente getUtente(String username)
+    private Utente cercaUtente(String username)
     {
-        Optional<Utente> risultato = repo.findById(username);
+        Optional<Utente> risultato = getUtente(username);
         if(risultato.isEmpty()) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
         return risultato.get();
     }
+
+    private Optional<Utente> getUtente(String username) { return repo.findById(username); }
 
 }
