@@ -50,6 +50,20 @@ import java.util.Optional;
         return risultato;
     }
 
+    @PostMapping("/disiscrizione") public String disiscrizione(@RequestParam String username, @RequestParam String password)
+    {
+        String risultato;
+        try
+        {
+            Utente utente = getUtente(username);
+            if(!utente.controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
+            repo.delete(getUtente(username));
+            risultato = "Disiscrizione avvenuta correttamente";
+        }
+        catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
+        return risultato;
+    }
+
     private boolean eseguiLogin(String username, String password)
     {
         return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
@@ -57,18 +71,23 @@ import java.util.Optional;
 
     private void inserisciUtente(String username, String password)
     {
-        if(getUtente(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
+        if(repo.findById(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
         repo.save(new Utente(username, password));
     }
 
-    private Optional<Utente> getUtente(String username) { return repo.findById(username); }
-
     private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
     {
-        Utente utente = getUtente(username).get();
+        Utente utente = getUtente(username);
         if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
         utente.cambiaPassword(nuovaPassword);
         repo.save(utente);
+    }
+
+    private Utente getUtente(String username)
+    {
+        Optional<Utente> risultato = repo.findById(username);
+        if(risultato.isEmpty()) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
+        return risultato.get();
     }
 
 }
