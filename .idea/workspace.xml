@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: ridefinizione del metodo inserisciUtente">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: consegna workspace cambiato">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
     &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/cambioPassword&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/wherewolf.server&quot;
   }
@@ -168,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.wherewolf.server" />
+        <item itemvalue="Gradle.TestUtente" />
+        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.wherewolf.server" />
-        <item itemvalue="Gradle.TestUtente" />
-        <item itemvalue="Gradle.wherewolf.server" />
-        <item itemvalue="Gradle.TestUtente" />
       </list>
     </recent_temporary>
   </component>
@@ -184,14 +184,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Commit iniziale">
-      <option name="closed" value="true" />
-      <created>1762205721484</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1762205721484</updated>
     </task>
     <task id="LOCAL-00005" summary="Commit iniziale">
       <option name="closed" value="true" />
@@ -577,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762335160555</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="REFACTORING: definizione del metodo eseguiCambioPassword">
+      <option name="closed" value="true" />
+      <created>1762335484770</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1762335484770</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -592,8 +592,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo eseguiRichiesta" />
-    <MESSAGE value="REFACTORING: definizione del metodo mocking" />
     <MESSAGE value="REFACTORING: definizione del metodo getUtentiEsempio" />
     <MESSAGE value="Implementazione registrazione degli utenti" />
     <MESSAGE value="Merge remote-tracking branch 'origin/develop' into develop" />
@@ -617,6 +615,8 @@
     <MESSAGE value="ROSSO: cambioPassword (caso 3) non riuscito" />
     <MESSAGE value="VERDE: cambioPassword (caso 3) riuscito" />
     <MESSAGE value="REFACTORING: ridefinizione del metodo inserisciUtente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: ridefinizione del metodo inserisciUtente" />
+    <MESSAGE value="REFACTORING: definizione del metodo eseguiCambioPassword" />
+    <MESSAGE value="REFACTORING: consegna workspace cambiato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: consegna workspace cambiato" />
   </component>
 </project>

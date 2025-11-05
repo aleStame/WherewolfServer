@@ -68,6 +68,7 @@ import java.util.Optional;
         Utente utente = getUtente(username).get();
         if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
         utente.cambiaPassword(nuovaPassword);
+        repo.save(utente);
     }
 
 }
