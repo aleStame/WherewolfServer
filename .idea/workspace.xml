@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eseguiDisiscrizione" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo cercaUtente">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,14 +184,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/master'">
-      <option name="closed" value="true" />
-      <created>1762210006488</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1762210006489</updated>
     </task>
     <task id="LOCAL-00011" summary="ROSSO: testLogin non riuscito">
       <option name="closed" value="true" />
@@ -575,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762363136674</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="REFACTORING: definizione del metodo cercaUtente">
+      <option name="closed" value="true" />
+      <created>1762363421168</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1762363421168</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -590,7 +592,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: commit finale" />
     <MESSAGE value="REFACTORING: workspace" />
     <MESSAGE value="ROSSO: cambioPasswordRiuscito non riuscito" />
     <MESSAGE value="VERDE: cambioPasswordRiuscito riuscito" />
@@ -615,6 +616,7 @@
     <MESSAGE value="ROSSO: disiscrizione non riuscito" />
     <MESSAGE value="VERDE: disiscrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eseguiDisiscrizione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eseguiDisiscrizione" />
+    <MESSAGE value="REFACTORING: definizione del metodo cercaUtente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo cercaUtente" />
   </component>
 </project>

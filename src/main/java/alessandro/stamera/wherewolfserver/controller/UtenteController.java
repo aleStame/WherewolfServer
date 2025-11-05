@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import java.util.Optional;
 
 @RestController @RequestMapping("/utenti")  public final class UtenteController
@@ -70,7 +69,7 @@ import java.util.Optional;
     private void inserisciUtente(String username, String password)
     {
         if(getUtente(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
-        repo.save(new Utente(username, password));
+        salvaDatiUtente(username, password);
     }
 
     private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
@@ -78,7 +77,7 @@ import java.util.Optional;
         Utente utente = cercaUtente(username);
         if(!utente.controlloPassword(vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
         utente.cambiaPassword(nuovaPassword);
-        repo.save(utente);
+        salvaDatiUtente(username, nuovaPassword);
     }
 
     private void eseguiDisiscrizione(String username, String password)
@@ -96,5 +95,7 @@ import java.util.Optional;
     }
 
     private Optional<Utente> getUtente(String username) { return repo.findById(username); }
+
+    private void salvaDatiUtente(String username, String password) { repo.save(new Utente(username, password)); }
 
 }
