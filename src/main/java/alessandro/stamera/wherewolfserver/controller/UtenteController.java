@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Optional;
+
 @RestController @RequestMapping("/utenti")  public final class UtenteController
 {
 
@@ -25,13 +27,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 
     @PostMapping("/registrazione") public String registrazione(@RequestParam String username, @RequestParam String password)
     {
-        String risultato;
-        if(isUtentePresente(username)) risultato = "ERRORE!!! Nome utente già inserito";
-        else
+        String risultato = "";
+        try
         {
             inserisciUtente(username, password);
             risultato = "Registrazione avvenuta correttamente";
         }
+        catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
         return risultato;
     }
 
@@ -41,7 +43,7 @@ import org.springframework.web.bind.annotation.PostMapping;
         String risultato;
         try
         {
-            Utente utente = repo.findById(username).get();
+            Utente utente = getUtente(username).get();
             if(utente.controlloPassword(vecchiaPassword))
             {
                 utente.cambiaPassword(nuovaPassword);
@@ -58,8 +60,12 @@ import org.springframework.web.bind.annotation.PostMapping;
         return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
     }
 
-    private boolean isUtentePresente(String username) { return repo.findById(username).isPresent(); }
+    private void inserisciUtente(String username, String password)
+    {
+        if(getUtente(username).isPresent()) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
+        repo.save(new Utente(username, password));
+    }
 
-    private void inserisciUtente(String username, String password) { repo.save(new Utente(username, password)); }
+    private Optional<Utente> getUtente(String username) { return repo.findById(username); }
 
 }
