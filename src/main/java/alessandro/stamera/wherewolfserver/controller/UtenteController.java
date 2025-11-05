@@ -82,12 +82,14 @@ import java.util.Optional;
     private void eseguiDisiscrizione(String username, String password)
     {
         if(controlloPasswordErrata(username, password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
-        repo.delete(cercaUtente(username));
+        eliminaUtente(username);
     }
 
     private boolean controlloPasswordErrata(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
 
     private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
+
+    private void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
     private Utente cercaUtente(String username)
     {

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo controlloPasswordAssente">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,14 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00014" summary="REFACTORING: definizione del metodo login">
-      <option name="closed" value="true" />
-      <created>1762211507195</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1762211507195</updated>
     </task>
     <task id="LOCAL-00015" summary="Risoluzione conflitti">
       <option name="closed" value="true" />
@@ -577,7 +567,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762364243803</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente">
+      <option name="closed" value="true" />
+      <created>1762364574490</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1762364574490</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -592,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo setPassword" />
     <MESSAGE value="ROSSO: cambioPasswordNonRiuscito non riuscito" />
     <MESSAGE value="VERDE: cambioPasswordNonRiuscito riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo cambiaPassword" />
@@ -617,6 +614,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo salvaDatiUtente" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloPassword e di una variante del metodo eseguiCambioPassword" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloPasswordAssente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo controlloPasswordAssente" />
+    <MESSAGE value="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
   </component>
 </project>
