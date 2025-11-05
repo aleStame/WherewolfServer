@@ -24,7 +24,7 @@ import jakarta.persistence.Id;
     public void cambiaPassword(String password)
     {
         if(controlloPassword(password)) throw new IllegalArgumentException("ERRORE!!! Password uguale alla precedente");
-        else setPassword(password);
+        setPassword(password);
     }
 
     public boolean controlloPassword(String password) { return this.password.equals(password); }
