@@ -29,7 +29,7 @@ public final class Utenti
         salvaDatiUtente(username, nuovaPassword);
     }
 
-    public void disiscrizione(String username, String password) { throw new IllegalArgumentException(); }
+    public void disiscrizione(String username, String password) { eliminaUtente(username); }
 
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
