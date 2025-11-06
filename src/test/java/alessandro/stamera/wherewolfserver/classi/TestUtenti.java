@@ -33,8 +33,7 @@ public final class TestUtenti
 
     @Test public void registrazioneNonRiuscita()
     {
-        assertThatIllegalArgumentException().isThrownBy(() -> registrazione("marco", "passworddimarco"))
-            .withMessage("ERRORE!!! Nome utente già inserito");
+        verificaEccezione(() -> registrazione("marco", "passworddimarco"), "ERRORE!!! Nome utente già inserito");
     }
 
     @Test public void cambioPasswordRiuscito()
@@ -51,7 +50,7 @@ public final class TestUtenti
     )
     public void cambioPasswordNonRiuscito(String username, String vecchiaPassword, String nuovaPassword, String risultato)
     {
-        assertThatIllegalArgumentException().isThrownBy(() -> cambioPassword(username, vecchiaPassword, nuovaPassword)).withMessage(risultato);
+        verificaEccezione(() -> cambioPassword(username, vecchiaPassword, nuovaPassword), risultato);
     }
 
     private UtenteRepository getRepositoryEsempio()
@@ -66,6 +65,11 @@ public final class TestUtenti
     private boolean login(String username, String password) { return utenti.login(username, password); }
 
     public void verificaNoEccezione(ThrowingCallable operazione) { assertThatNoException().isThrownBy(operazione); }
+
+    public void verificaEccezione(ThrowingCallable operazione, String risultato)
+    {
+        assertThatIllegalArgumentException().isThrownBy(operazione).withMessage(risultato);
+    }
 
     private void registrazione(String username, String password) { utenti.registrazione(username, password); }
 
