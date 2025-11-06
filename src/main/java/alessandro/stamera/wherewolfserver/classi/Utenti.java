@@ -9,6 +9,9 @@ public final class Utenti
 
     public Utenti(UtenteRepository repo) { this.repo = repo; }
 
-    public boolean login(String username, String password) { return false; }
+    public boolean login(String username, String password)
+    {
+        return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
+    }
 
 }

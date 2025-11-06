@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestUtenti" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-11-06T10:07:15" hostname="ALESSANDRO" time="3.784">
+  <properties/>
+  <testcase name="[1] username=andrea, password=andrea1998, risultato=true" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="3.654"/>
+  <testcase name="[2] username=marco, password=passwordsecret, risultato=true" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.016"/>
+  <testcase name="[3] username=bruce, password=batmanbeyond, risultato=true" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.015"/>
+  <testcase name="[4] username=andrea, password=pwdsbagliata, risultato=false" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.014"/>
+  <testcase name="[5] username=gino, password=batmanbeyond, risultato=false" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.02"/>
+  <testcase name="[6] username=utentefinto, password=pwdfinta, risultato=false" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

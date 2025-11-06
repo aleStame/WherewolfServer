@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mock;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Optional;
@@ -13,21 +14,21 @@ import static java.util.List.of;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 public final class TestUtenti
 {
 
-    @MockBean private UtenteRepository repo;
-
-    private Utente[] esempio;
+    private UtenteRepository repo;
 
     private Utenti utenti;
 
     @BeforeEach public void setUp()
     {
-        esempio = getUtentiEsempio();
-        mocking();
+        repo = mock(UtenteRepository.class);
+        when(repo.findAll()).thenReturn(of(getUtentiEsempio()));
         utenti = new Utenti(repo);
     }
 
@@ -38,7 +39,7 @@ public final class TestUtenti
             "gino, batmanbeyond, false", "utentefinto, pwdfinta, false"
         }
     )
-    public void login(String username, String password, boolean risultato) { assertThat(utenti.login(username, password)); }
+    public void login(String username, String password, boolean risultato) { assertThat(utenti.login(username, password)).isEqualTo(risultato); }
 
     private Utente[] getUtentiEsempio()
     {
@@ -46,12 +47,6 @@ public final class TestUtenti
         Utente[] utenti = new Utente[credenziali.length];
         for(int i = 0; i < utenti.length; i++) utenti[i] = new Utente(credenziali[i][0], credenziali[i][1]);
         return utenti;
-    }
-
-    private void mocking()
-    {
-        given(repo.findAll()).willReturn(of(esempio));
-        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
     }
 
 }
