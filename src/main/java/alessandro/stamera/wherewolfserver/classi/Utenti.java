@@ -17,7 +17,7 @@ public final class Utenti
         return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
     }
 
-    public void registrazione(String username, String password) { throw new IllegalArgumentException(); }
+    public void registrazione(String username, String password) { salvaDatiUtente(username, password); }
 
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
