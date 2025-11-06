@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaEccezione">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Utenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Utenti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestUtenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestUtenti.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo disiscrizione" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,70 +200,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00036" summary="VERDE: cambioPasswordRiuscito riuscito">
-      <option name="closed" value="true" />
-      <created>1762275381190</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1762275381190</updated>
-    </task>
-    <task id="LOCAL-00037" summary="REFACTORING: definizione del metodo cambiaPassword">
-      <option name="closed" value="true" />
-      <created>1762275580933</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1762275580933</updated>
-    </task>
-    <task id="LOCAL-00038" summary="REFACTORING: definizione del metodo setPassword">
-      <option name="closed" value="true" />
-      <created>1762275689118</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1762275689118</updated>
-    </task>
-    <task id="LOCAL-00039" summary="ROSSO: cambioPasswordNonRiuscito non riuscito">
-      <option name="closed" value="true" />
-      <created>1762275934154</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1762275934154</updated>
-    </task>
-    <task id="LOCAL-00040" summary="VERDE: cambioPasswordNonRiuscito riuscito">
-      <option name="closed" value="true" />
-      <created>1762275993548</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1762275993548</updated>
-    </task>
-    <task id="LOCAL-00041" summary="REFACTORING: definizione del metodo cambiaPassword">
-      <option name="closed" value="true" />
-      <created>1762276125549</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1762276125549</updated>
-    </task>
-    <task id="LOCAL-00042" summary="ROSSO: cambioPassword non riuscito">
-      <option name="closed" value="true" />
-      <created>1762285942868</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1762285942869</updated>
-    </task>
-    <task id="LOCAL-00043" summary="ROSSO: cambioPassword non riuscito">
-      <option name="closed" value="true" />
-      <created>1762286536054</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1762286536054</updated>
     </task>
     <task id="LOCAL-00044" summary="VERDE: cambioPassword riuscito">
       <option name="closed" value="true" />
@@ -596,7 +529,71 @@
       <option name="project" value="LOCAL" />
       <updated>1762427433873</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="ROSSO: disiscrizioneRiuscita non riuscito">
+      <option name="closed" value="true" />
+      <created>1762427625931</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1762427625931</updated>
+    </task>
+    <task id="LOCAL-00086" summary="VERDE: disiscrizioneRiuscita riuscito">
+      <option name="closed" value="true" />
+      <created>1762427678522</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1762427678522</updated>
+    </task>
+    <task id="LOCAL-00087" summary="ROSSO: disiscrizioneNonRiuscita non riuscito">
+      <option name="closed" value="true" />
+      <created>1762427941759</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1762427941759</updated>
+    </task>
+    <task id="LOCAL-00088" summary="VERDE: disiscrizioneNonRiuscita riuscito">
+      <option name="closed" value="true" />
+      <created>1762428042273</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1762428042273</updated>
+    </task>
+    <task id="LOCAL-00089" summary="REFACTORING: utilizzo di Utenti.disiscrizine in UtenteController">
+      <option name="closed" value="true" />
+      <created>1762428294623</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1762428294623</updated>
+    </task>
+    <task id="LOCAL-00090" summary="REFACTORING: definizione del metodo disiscrizione">
+      <option name="closed" value="true" />
+      <created>1762428454303</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1762428454303</updated>
+    </task>
+    <task id="LOCAL-00091" summary="REFACTORING: definizione del metodo disiscrizione">
+      <option name="closed" value="true" />
+      <created>1762428544683</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1762428544683</updated>
+    </task>
+    <task id="LOCAL-00092" summary="REFACTORING: definizione del metodo disiscrizione">
+      <option name="closed" value="true" />
+      <created>1762437256376</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1762437256376</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,12 +608,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo salvaDatiUtente" />
-    <MESSAGE value="REFACTORING: definizione del metodo controlloPassword e di una variante del metodo eseguiCambioPassword" />
-    <MESSAGE value="REFACTORING: definizione del metodo controlloPasswordAssente" />
-    <MESSAGE value="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
-    <MESSAGE value="REFACTORING: definizione del metodo eliminaUtente" />
-    <MESSAGE value="ROSSO: login non riuscito" />
     <MESSAGE value="VERDE: login riuscito" />
     <MESSAGE value="REFACTORING: utilizzo di Utenti.login dentro UtenteController" />
     <MESSAGE value="REFACTORING: separazione del metodo di test login in loginRiuscito e loginNonRiuscito" />
@@ -636,6 +627,12 @@
     <MESSAGE value="REFACTORING: definizione del metodo cambioPassword" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNoEccezione" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEccezione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEccezione" />
+    <MESSAGE value="ROSSO: disiscrizioneRiuscita non riuscito" />
+    <MESSAGE value="VERDE: disiscrizioneRiuscita riuscito" />
+    <MESSAGE value="ROSSO: disiscrizioneNonRiuscita non riuscito" />
+    <MESSAGE value="VERDE: disiscrizioneNonRiuscita riuscito" />
+    <MESSAGE value="REFACTORING: utilizzo di Utenti.disiscrizine in UtenteController" />
+    <MESSAGE value="REFACTORING: definizione del metodo disiscrizione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo disiscrizione" />
   </component>
 </project>

@@ -15,7 +15,6 @@ import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 public final class TestUtenti
 {
@@ -30,7 +29,10 @@ public final class TestUtenti
     @ParameterizedTest @CsvSource({ "andrea, andrea1998", "marco, passwordsecret", "bruce, batmanbeyond" })
     public void loginRiuscito(String username, String password) { assertThat(login(username, password)).isTrue(); }
 
-    @Test public void registrazioneRiuscita() { verificaNoEccezione(() -> registrazione("pinuccio", "pwdpinuccio")); }
+    @Test public void registrazioneRiuscita()
+    {
+        verificaNoEccezione(() -> registrazione("pinuccio", "pwdpinuccio"));
+    }
 
     @Test public void registrazioneNonRiuscita()
     {
@@ -54,7 +56,7 @@ public final class TestUtenti
         verificaEccezione(() -> cambioPassword(username, vecchiaPassword, nuovaPassword), risultato);
     }
 
-    @Test public void disiscrizioneRiuscita() { verificaNoEccezione(() -> utenti.disiscrizione("andrea", "andrea1998")); }
+    @Test public void disiscrizioneRiuscita() { verificaNoEccezione(() -> disiscrizione("andrea", "andrea1998")); }
 
     @ParameterizedTest @CsvSource
     (
@@ -65,7 +67,7 @@ public final class TestUtenti
     )
     public void disiscrizioneNonRiuscita(String username, String password, String risultato)
     {
-        verificaEccezione(() -> utenti.disiscrizione(username, password), risultato);
+        verificaEccezione(() -> disiscrizione(username, password), risultato);
     }
 
     private UtenteRepository getRepositoryEsempio()
@@ -92,6 +94,8 @@ public final class TestUtenti
     {
         utenti.cambioPassword(username, vecchiaPassword, nuovaPassword);
     }
+
+    private void disiscrizione(String username, String password) { utenti.disiscrizione(username, password); }
 
     private Utente[] getUtentiEsempio()
     {
