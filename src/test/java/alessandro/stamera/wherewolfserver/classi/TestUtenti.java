@@ -41,7 +41,7 @@ public final class TestUtenti
 
     @Test public void cambioPasswordRiuscito()
     {
-        assertThatNoException().isThrownBy(() -> utenti.cambioPassword("marco", "passwordsecret", "newpwd"));
+        assertThatNoException().isThrownBy(() -> cambioPassword("marco", "passwordsecret", "newpwd"));
     }
 
     @ParameterizedTest @CsvSource
@@ -53,8 +53,7 @@ public final class TestUtenti
     )
     public void cambioPasswordNonRiuscito(String username, String vecchiaPassword, String nuovaPassword, String risultato)
     {
-        assertThatIllegalArgumentException().isThrownBy(() -> utenti.cambioPassword(username, vecchiaPassword, nuovaPassword))
-            .withMessage(risultato);
+        assertThatIllegalArgumentException().isThrownBy(() -> cambioPassword(username, vecchiaPassword, nuovaPassword)).withMessage(risultato);
     }
 
     private UtenteRepository getRepositoryEsempio()
@@ -69,6 +68,11 @@ public final class TestUtenti
     private boolean login(String username, String password) { return utenti.login(username, password); }
 
     private void registrazione(String username, String password) { utenti.registrazione(username, password); }
+
+    private void cambioPassword(String username, String vecchiaPassword, String nuovaPassword)
+    {
+        utenti.cambioPassword(username, vecchiaPassword, nuovaPassword);
+    }
 
     private Utente[] getUtentiEsempio()
     {
