@@ -39,6 +39,11 @@ public final class TestUtenti
             .withMessage("ERRORE!!! Nome utente già inserito");
     }
 
+    @Test public void cambioPasswordRiuscito()
+    {
+        assertThatNoException().isThrownBy(() -> utenti.cambioPassword("marco", "passwordsecret", "newpwd"));
+    }
+
     private UtenteRepository getRepositoryEsempio()
     {
         UtenteRepository repo = mock(UtenteRepository.class);
