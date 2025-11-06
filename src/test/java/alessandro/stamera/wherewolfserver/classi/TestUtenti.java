@@ -8,11 +8,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import java.util.Optional;
 import java.util.List;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatNoException;
+
+import static org.assertj.core.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 public final class TestUtenti
 {
@@ -35,6 +36,12 @@ public final class TestUtenti
     public void loginRiuscito(String username, String password) { assertThat(utenti.login(username, password)).isTrue(); }
 
     @Test public void registrazioneRiuscita() { assertThatNoException().isThrownBy(() -> utenti.registrazione("pinuccio", "pwdpinuccio")); }
+
+    @Test public void registrazioneNonRiuscita()
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> utenti.registrazione("marco", "passworddimarco"))
+                .withMessage("ERRORE!!! Nome utente già inserito");
+    }
 
     private Utente[] getUtentiEsempio()
     {
