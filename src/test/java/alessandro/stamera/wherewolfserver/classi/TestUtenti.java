@@ -3,10 +3,14 @@ package alessandro.stamera.wherewolfserver.classi;
 import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static java.util.List.of;
+import java.util.Optional;
+import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -18,7 +22,9 @@ public final class TestUtenti
     @BeforeEach public void setUp()
     {
         UtenteRepository repo = mock(UtenteRepository.class);
-        when(repo.findAll()).thenReturn(of(getUtentiEsempio()));
+        Utente[] esempio = getUtentiEsempio();
+        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
+        when(repo.findAll()).thenReturn(List.of(esempio));
         utenti = new Utenti(repo);
     }
 
@@ -27,6 +33,8 @@ public final class TestUtenti
 
     @ParameterizedTest @CsvSource({ "andrea, andrea1998", "marco, passwordsecret", "bruce, batmanbeyond" })
     public void loginRiuscito(String username, String password) { assertThat(utenti.login(username, password)).isTrue(); }
+
+    @Test public void registrazioneRiuscita() { assertThatNoException().isThrownBy(() -> utenti.registrazione("pinuccio", "pwdpinuccio")); }
 
     private Utente[] getUtentiEsempio()
     {
