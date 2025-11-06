@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: cambioPasswordNonRiuscito riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaEccezione">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Utenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Utenti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/controller/UtenteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestUtenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestUtenti.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,38 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00032" summary="REFACTORING: commit file non versionati">
-      <option name="closed" value="true" />
-      <created>1762271511016</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1762271511016</updated>
-    </task>
-    <task id="LOCAL-00033" summary="REFACTORING: commit finale">
-      <option name="closed" value="true" />
-      <created>1762271743307</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1762271743307</updated>
-    </task>
-    <task id="LOCAL-00034" summary="REFACTORING: workspace">
-      <option name="closed" value="true" />
-      <created>1762273889217</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1762273889217</updated>
-    </task>
-    <task id="LOCAL-00035" summary="ROSSO: cambioPasswordRiuscito non riuscito">
-      <option name="closed" value="true" />
-      <created>1762274949749</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1762274949749</updated>
     </task>
     <task id="LOCAL-00036" summary="VERDE: cambioPasswordRiuscito riuscito">
       <option name="closed" value="true" />
@@ -596,7 +564,39 @@
       <option name="project" value="LOCAL" />
       <updated>1762426724888</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="REFACTORING: utilizzo di utenti.cambioPassword in UtenteController">
+      <option name="closed" value="true" />
+      <created>1762426857643</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1762426857643</updated>
+    </task>
+    <task id="LOCAL-00082" summary="REFACTORING: definizione del metodo cambioPassword">
+      <option name="closed" value="true" />
+      <created>1762426995558</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1762426995558</updated>
+    </task>
+    <task id="LOCAL-00083" summary="REFACTORING: definizione del metodo verificaNoEccezione">
+      <option name="closed" value="true" />
+      <created>1762427294179</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1762427294179</updated>
+    </task>
+    <task id="LOCAL-00084" summary="REFACTORING: definizione del metodo verificaEccezione">
+      <option name="closed" value="true" />
+      <created>1762427433873</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1762427433873</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,10 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: disiscrizione non riuscito" />
-    <MESSAGE value="VERDE: disiscrizione riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo eseguiDisiscrizione" />
-    <MESSAGE value="REFACTORING: definizione del metodo cercaUtente" />
     <MESSAGE value="REFACTORING: definizione del metodo salvaDatiUtente" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloPassword e di una variante del metodo eseguiCambioPassword" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloPasswordAssente" />
@@ -636,6 +632,10 @@
     <MESSAGE value="VERDE: cambioPasswordRiuscito riuscito" />
     <MESSAGE value="ROSSO: cambioPasswordNonRiuscito non riuscito" />
     <MESSAGE value="VERDE: cambioPasswordNonRiuscito riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: cambioPasswordNonRiuscito riuscito" />
+    <MESSAGE value="REFACTORING: utilizzo di utenti.cambioPassword in UtenteController" />
+    <MESSAGE value="REFACTORING: definizione del metodo cambioPassword" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNoEccezione" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEccezione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEccezione" />
   </component>
 </project>

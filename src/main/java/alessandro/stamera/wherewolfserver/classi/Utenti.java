@@ -29,6 +29,8 @@ public final class Utenti
         salvaDatiUtente(username, nuovaPassword);
     }
 
+    public void disiscrizione(String username, String password) { throw new IllegalArgumentException(); }
+
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
     public Optional<Utente> getUtente(String username) { return repo.findById(username); }

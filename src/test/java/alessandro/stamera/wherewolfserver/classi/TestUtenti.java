@@ -53,6 +53,8 @@ public final class TestUtenti
         verificaEccezione(() -> cambioPassword(username, vecchiaPassword, nuovaPassword), risultato);
     }
 
+    @Test public void disiscrizioneRiuscita() { verificaNoEccezione(() -> utenti.disiscrizione("andrea", "andrea1998")); }
+
     private UtenteRepository getRepositoryEsempio()
     {
         UtenteRepository repo = mock(UtenteRepository.class);
