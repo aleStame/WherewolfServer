@@ -44,6 +44,19 @@ public final class TestUtenti
         assertThatNoException().isThrownBy(() -> utenti.cambioPassword("marco", "passwordsecret", "newpwd"));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "bruce, batmanbeyond, batmanbeyond, ERRORE!!! Password uguale alla precedente",
+            "andrea, skibidiboppi, ped32312231, ERRORE!!! Inserire la password attuale corretta"
+        }
+    )
+    public void cambioPasswordNonRiuscito(String username, String vecchiaPassword, String nuovaPassword, String risultato)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> utenti.cambioPassword(username, vecchiaPassword, nuovaPassword))
+            .withMessage(risultato);
+    }
+
     private UtenteRepository getRepositoryEsempio()
     {
         UtenteRepository repo = mock(UtenteRepository.class);
