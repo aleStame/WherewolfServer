@@ -17,7 +17,11 @@ public final class Utenti
         return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
     }
 
-    public void registrazione(String username, String password) { salvaDatiUtente(username, password); }
+    public void registrazione(String username, String password)
+    {
+        if(isUtentePresente(username)) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
+        salvaDatiUtente(username, password);
+    }
 
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
@@ -30,6 +34,8 @@ public final class Utenti
         if(isUtenteAssente(username)) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
         return getUtente(username).get();
     }
+
+    private boolean isUtentePresente(String username) { return getUtente(username).isPresent(); }
 
     private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
 

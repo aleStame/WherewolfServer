@@ -40,7 +40,7 @@ public final class TestUtenti
     @Test public void registrazioneNonRiuscita()
     {
         assertThatIllegalArgumentException().isThrownBy(() -> utenti.registrazione("marco", "passworddimarco"))
-                .withMessage("ERRORE!!! Nome utente già inserito");
+            .withMessage("ERRORE!!! Nome utente già inserito");
     }
 
     private Utente[] getUtentiEsempio()
