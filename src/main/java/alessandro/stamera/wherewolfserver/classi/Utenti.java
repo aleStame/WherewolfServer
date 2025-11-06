@@ -29,7 +29,11 @@ public final class Utenti
         salvaDatiUtente(username, nuovaPassword);
     }
 
-    public void disiscrizione(String username, String password) { eliminaUtente(username); }
+    public void disiscrizione(String username, String password)
+    {
+        if(controlloPasswordErrata(username, password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
+        eliminaUtente(username);
+    }
 
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
