@@ -5,41 +5,28 @@ import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.mockito.Mock;
-import org.springframework.boot.test.mock.mockito.MockBean;
-
-import java.util.Optional;
-
 import static java.util.List.of;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 public final class TestUtenti
 {
-
-    private UtenteRepository repo;
 
     private Utenti utenti;
 
     @BeforeEach public void setUp()
     {
-        repo = mock(UtenteRepository.class);
+        UtenteRepository repo = mock(UtenteRepository.class);
         when(repo.findAll()).thenReturn(of(getUtentiEsempio()));
         utenti = new Utenti(repo);
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "andrea, andrea1998, true", "marco, passwordsecret, true", "bruce, batmanbeyond, true", "andrea, pwdsbagliata, false",
-            "gino, batmanbeyond, false", "utentefinto, pwdfinta, false"
-        }
-    )
-    public void login(String username, String password, boolean risultato) { assertThat(utenti.login(username, password)).isEqualTo(risultato); }
+    @ParameterizedTest @CsvSource({ "andrea, pwdsbagliata", "gino, batmanbeyond", "utentefinto, pwdfinta" })
+    public void loginNonRiuscito(String username, String password) { assertThat(utenti.login(username, password)).isFalse(); }
+
+    @ParameterizedTest @CsvSource({ "andrea, andrea1998", "marco, passwordsecret", "bruce, batmanbeyond" })
+    public void loginRiuscito(String username, String password) { assertThat(utenti.login(username, password)).isTrue(); }
 
     private Utente[] getUtentiEsempio()
     {

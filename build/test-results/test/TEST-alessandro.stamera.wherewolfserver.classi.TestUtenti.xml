@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestUtenti" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-11-06T10:14:04" hostname="ALESSANDRO" time="3.095">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestUtenti" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-11-06T10:20:10" hostname="ALESSANDRO" time="3.149">
   <properties/>
-  <testcase name="[1] username=andrea, password=andrea1998, risultato=true" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="2.991"/>
-  <testcase name="[2] username=marco, password=passwordsecret, risultato=true" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.019"/>
-  <testcase name="[3] username=bruce, password=batmanbeyond, risultato=true" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.009"/>
-  <testcase name="[4] username=andrea, password=pwdsbagliata, risultato=false" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.007"/>
-  <testcase name="[5] username=gino, password=batmanbeyond, risultato=false" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.009"/>
-  <testcase name="[6] username=utentefinto, password=pwdfinta, risultato=false" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.01"/>
+  <testcase name="[1] username=andrea, password=andrea1998" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="3.015"/>
+  <testcase name="[2] username=marco, password=passwordsecret" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.014"/>
+  <testcase name="[3] username=bruce, password=batmanbeyond" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.015"/>
+  <testcase name="[1] username=andrea, password=pwdsbagliata" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.014"/>
+  <testcase name="[2] username=gino, password=batmanbeyond" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.017"/>
+  <testcase name="[3] username=utentefinto, password=pwdfinta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
