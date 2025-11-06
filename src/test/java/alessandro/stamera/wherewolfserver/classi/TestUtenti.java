@@ -30,10 +30,10 @@ public final class TestUtenti
     }
 
     @ParameterizedTest @CsvSource({ "andrea, pwdsbagliata", "gino, batmanbeyond", "utentefinto, pwdfinta" })
-    public void loginNonRiuscito(String username, String password) { assertThat(utenti.login(username, password)).isFalse(); }
+    public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
 
     @ParameterizedTest @CsvSource({ "andrea, andrea1998", "marco, passwordsecret", "bruce, batmanbeyond" })
-    public void loginRiuscito(String username, String password) { assertThat(utenti.login(username, password)).isTrue(); }
+    public void loginRiuscito(String username, String password) { assertThat(login(username, password)).isTrue(); }
 
     @Test public void registrazioneRiuscita() { assertThatNoException().isThrownBy(() -> utenti.registrazione("pinuccio", "pwdpinuccio")); }
 
@@ -50,5 +50,7 @@ public final class TestUtenti
         for(int i = 0; i < utenti.length; i++) utenti[i] = new Utente(credenziali[i][0], credenziali[i][1]);
         return utenti;
     }
+
+    private boolean login(String username, String password) { return utenti.login(username, password); }
 
 }
