@@ -35,12 +35,6 @@ public final class Utenti
         eliminaUtente(username);
     }
 
-    public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
-
-    public Optional<Utente> getUtente(String username) { return repo.findById(username); }
-
-    public void salvaDatiUtente(String username, String password) { repo.save(new Utente(username, password)); }
-
     private boolean controlloPasswordErrata(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
 
     private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
@@ -54,5 +48,11 @@ public final class Utenti
     private boolean isUtentePresente(String username) { return getUtente(username).isPresent(); }
 
     private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
+
+    private void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
+
+    private Optional<Utente> getUtente(String username) { return repo.findById(username); }
+
+    private void salvaDatiUtente(String username, String password) { repo.save(new Utente(username, password)); }
 
 }

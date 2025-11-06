@@ -55,31 +55,11 @@ import java.util.Optional;
         String risultato;
         try
         {
-            eseguiDisiscrizione(username, password);
+            utenti.disiscrizione(username, password);
             risultato = "Disiscrizione avvenuta correttamente";
         }
         catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
         return risultato;
     }
-
-    private void eseguiDisiscrizione(String username, String password)
-    {
-        if(controlloPasswordErrata(username, password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
-        eliminaUtente(username);
-    }
-
-    private boolean controlloPasswordErrata(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
-
-    private void eliminaUtente(String username) { utenti.eliminaUtente(username); }
-
-    private Utente cercaUtente(String username)
-    {
-        if(isUtenteAssente(username)) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
-        return getUtente(username).get();
-    }
-
-    private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
-
-    private Optional<Utente> getUtente(String username) { return utenti.getUtente(username); }
 
 }
