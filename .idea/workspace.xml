@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eliminaUtente">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Utenti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestUtenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +28,14 @@
         <projects_view />
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -62,11 +74,21 @@
     "Gradle.wherewolf.server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "feature/disiscriviUtente",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/wherewolf.server"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="alessandro.stamera.wherewolfserver.classi" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
@@ -182,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Risoluzione conflitti">
-      <option name="closed" value="true" />
-      <created>1762254255615</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1762254255615</updated>
     </task>
     <task id="LOCAL-00016" summary="Merge tag 'correzione' into develop&#10;&#10;Sistemazione metodo login">
       <option name="closed" value="true" />
@@ -575,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762364574490</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="REFACTORING: definizione del metodo eliminaUtente">
+      <option name="closed" value="true" />
+      <created>1762364786959</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1762364786959</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -590,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: cambioPasswordNonRiuscito non riuscito" />
     <MESSAGE value="VERDE: cambioPasswordNonRiuscito riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo cambiaPassword" />
     <MESSAGE value="ROSSO: cambioPassword non riuscito" />
@@ -615,6 +636,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo controlloPassword e di una variante del metodo eseguiCambioPassword" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloPasswordAssente" />
     <MESSAGE value="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaUtente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaUtente" />
   </component>
 </project>
