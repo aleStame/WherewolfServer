@@ -43,7 +43,7 @@ import java.util.Optional;
         String risultato;
         try
         {
-            eseguiCambioPassword(username, vecchiaPassword, nuovaPassword);
+            utenti.cambioPassword(username, vecchiaPassword, nuovaPassword);
             risultato = "Password cambiata correttamente";
         }
         catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
@@ -62,13 +62,6 @@ import java.util.Optional;
         return risultato;
     }
 
-    private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
-    {
-        if(controlloPasswordErrata(username, vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
-        eseguiCambioPassword(username, nuovaPassword);
-        salvaDatiUtente(username, nuovaPassword);
-    }
-
     private void eseguiDisiscrizione(String username, String password)
     {
         if(controlloPasswordErrata(username, password)) throw new IllegalArgumentException("ERRORE!!! Inserire la password corretta");
@@ -76,8 +69,6 @@ import java.util.Optional;
     }
 
     private boolean controlloPasswordErrata(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
-
-    private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
 
     private void eliminaUtente(String username) { utenti.eliminaUtente(username); }
 
@@ -90,7 +81,5 @@ import java.util.Optional;
     private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
 
     private Optional<Utente> getUtente(String username) { return utenti.getUtente(username); }
-
-    private void salvaDatiUtente(String username, String password) { utenti.salvaDatiUtente(username, password); }
 
 }

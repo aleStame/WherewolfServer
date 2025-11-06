@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
-
 import java.util.Optional;
 
 public final class Utenti
