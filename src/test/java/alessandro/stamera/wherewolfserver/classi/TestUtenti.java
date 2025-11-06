@@ -8,7 +8,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import java.util.Optional;
 import java.util.List;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -18,14 +20,7 @@ public final class TestUtenti
 
     private Utenti utenti;
 
-    @BeforeEach public void setUp()
-    {
-        UtenteRepository repo = mock(UtenteRepository.class);
-        Utente[] esempio = getUtentiEsempio();
-        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
-        when(repo.findAll()).thenReturn(List.of(esempio));
-        utenti = new Utenti(repo);
-    }
+    @BeforeEach public void setUp() { utenti = new Utenti(getRepositoryEsempio()); }
 
     @ParameterizedTest @CsvSource({ "andrea, pwdsbagliata", "gino, batmanbeyond", "utentefinto, pwdfinta" })
     public void loginNonRiuscito(String username, String password) { assertThat(login(username, password)).isFalse(); }
@@ -44,6 +39,19 @@ public final class TestUtenti
             .withMessage("ERRORE!!! Nome utente già inserito");
     }
 
+    private UtenteRepository getRepositoryEsempio()
+    {
+        UtenteRepository repo = mock(UtenteRepository.class);
+        Utente[] esempio = getUtentiEsempio();
+        for(Utente utente : esempio) given(repo.findById(utente.getUsername())).willReturn(Optional.of(utente));
+        when(repo.findAll()).thenReturn(List.of(esempio));
+        return repo;
+    }
+
+    private boolean login(String username, String password) { return utenti.login(username, password); }
+
+    private void registrazione(String username, String password) { utenti.registrazione(username, password); }
+
     private Utente[] getUtentiEsempio()
     {
         String[][] credenziali = { { "andrea", "andrea1998" }, { "marco", "passwordsecret" }, { "bruce", "batmanbeyond" } };
@@ -51,9 +59,5 @@ public final class TestUtenti
         for(int i = 0; i < utenti.length; i++) utenti[i] = new Utente(credenziali[i][0], credenziali[i][1]);
         return utenti;
     }
-
-    private boolean login(String username, String password) { return utenti.login(username, password); }
-
-    private void registrazione(String username, String password) { utenti.registrazione(username, password); }
 
 }
