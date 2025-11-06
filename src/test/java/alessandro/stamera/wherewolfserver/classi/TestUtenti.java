@@ -15,6 +15,7 @@ import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 public final class TestUtenti
 {
@@ -54,6 +55,18 @@ public final class TestUtenti
     }
 
     @Test public void disiscrizioneRiuscita() { verificaNoEccezione(() -> utenti.disiscrizione("andrea", "andrea1998")); }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "marco, passwordcasual, ERRORE!!! Inserire la password corretta", "sulpicio, batmanbeyond, ERRORE!!! Utente non esistente",
+            "sigismondo, pwdfantasiosa, ERRORE!!! Utente non esistente"
+        }
+    )
+    public void disiscrizioneNonRiuscita(String username, String password, String risultato)
+    {
+        verificaEccezione(() -> utenti.disiscrizione(username, password), risultato);
+    }
 
     private UtenteRepository getRepositoryEsempio()
     {
