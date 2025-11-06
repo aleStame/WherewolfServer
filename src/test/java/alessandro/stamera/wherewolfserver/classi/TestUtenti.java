@@ -8,12 +8,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import java.util.Optional;
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 public final class TestUtenti
 {
@@ -35,11 +33,14 @@ public final class TestUtenti
     @ParameterizedTest @CsvSource({ "andrea, andrea1998", "marco, passwordsecret", "bruce, batmanbeyond" })
     public void loginRiuscito(String username, String password) { assertThat(login(username, password)).isTrue(); }
 
-    @Test public void registrazioneRiuscita() { assertThatNoException().isThrownBy(() -> utenti.registrazione("pinuccio", "pwdpinuccio")); }
+    @Test public void registrazioneRiuscita()
+    {
+        assertThatNoException().isThrownBy(() -> registrazione("pinuccio", "pwdpinuccio"));
+    }
 
     @Test public void registrazioneNonRiuscita()
     {
-        assertThatIllegalArgumentException().isThrownBy(() -> utenti.registrazione("marco", "passworddimarco"))
+        assertThatIllegalArgumentException().isThrownBy(() -> registrazione("marco", "passworddimarco"))
             .withMessage("ERRORE!!! Nome utente già inserito");
     }
 
@@ -52,5 +53,7 @@ public final class TestUtenti
     }
 
     private boolean login(String username, String password) { return utenti.login(username, password); }
+
+    private void registrazione(String username, String password) { utenti.registrazione(username, password); }
 
 }
