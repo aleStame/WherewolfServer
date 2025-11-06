@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
+import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -28,10 +29,7 @@ public final class TestUtenti
     @ParameterizedTest @CsvSource({ "andrea, andrea1998", "marco, passwordsecret", "bruce, batmanbeyond" })
     public void loginRiuscito(String username, String password) { assertThat(login(username, password)).isTrue(); }
 
-    @Test public void registrazioneRiuscita()
-    {
-        assertThatNoException().isThrownBy(() -> registrazione("pinuccio", "pwdpinuccio"));
-    }
+    @Test public void registrazioneRiuscita() { verificaNoEccezione(() -> registrazione("pinuccio", "pwdpinuccio")); }
 
     @Test public void registrazioneNonRiuscita()
     {
@@ -41,7 +39,7 @@ public final class TestUtenti
 
     @Test public void cambioPasswordRiuscito()
     {
-        assertThatNoException().isThrownBy(() -> cambioPassword("marco", "passwordsecret", "newpwd"));
+        verificaNoEccezione(() -> cambioPassword("marco", "passwordsecret", "newpwd"));
     }
 
     @ParameterizedTest @CsvSource
@@ -66,6 +64,8 @@ public final class TestUtenti
     }
 
     private boolean login(String username, String password) { return utenti.login(username, password); }
+
+    public void verificaNoEccezione(ThrowingCallable operazione) { assertThatNoException().isThrownBy(operazione); }
 
     private void registrazione(String username, String password) { utenti.registrazione(username, password); }
 
