@@ -30,7 +30,7 @@ import java.util.Optional;
         String risultato;
         try
         {
-            inserisciUtente(username, password);
+            utenti.registrazione(username, password);
             risultato = "Registrazione avvenuta correttamente";
         }
         catch(IllegalArgumentException ex) { risultato = ex.getMessage(); }
@@ -62,12 +62,6 @@ import java.util.Optional;
         return risultato;
     }
 
-    private void inserisciUtente(String username, String password)
-    {
-        if(isUtentePresente(username)) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
-        salvaDatiUtente(username, password);
-    }
-
     private void eseguiCambioPassword(String username, String vecchiaPassword, String nuovaPassword)
     {
         if(controlloPasswordErrata(username, vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
@@ -92,8 +86,6 @@ import java.util.Optional;
         if(isUtenteAssente(username)) throw new IllegalArgumentException("ERRORE!!! Utente non esistente");
         return getUtente(username).get();
     }
-
-    private boolean isUtentePresente(String username) { return getUtente(username).isPresent(); }
 
     private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
 
