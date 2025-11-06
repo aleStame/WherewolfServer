@@ -25,7 +25,9 @@ public final class Utenti
 
     public void cambioPassword(String username, String vecchiaPassword, String nuovaPassword)
     {
-        cercaUtente(username).cambiaPassword(nuovaPassword);
+        if(controlloPasswordErrata(username, vecchiaPassword)) throw new IllegalArgumentException("ERRORE!!! Inserire la password attuale corretta");
+        eseguiCambioPassword(username, nuovaPassword);
+        salvaDatiUtente(username, nuovaPassword);
     }
 
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
@@ -33,6 +35,10 @@ public final class Utenti
     public Optional<Utente> getUtente(String username) { return repo.findById(username); }
 
     public void salvaDatiUtente(String username, String password) { repo.save(new Utente(username, password)); }
+
+    private boolean controlloPasswordErrata(String username, String password) { return !cercaUtente(username).controlloPassword(password); }
+
+    private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
 
     private Utente cercaUtente(String username)
     {
