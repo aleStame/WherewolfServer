@@ -23,7 +23,10 @@ public final class Utenti
         salvaDatiUtente(username, password);
     }
 
-    public void cambioPassword(String username, String vecchiaPassword, String nuovaPassword) { throw new IllegalArgumentException(); }
+    public void cambioPassword(String username, String vecchiaPassword, String nuovaPassword)
+    {
+        cercaUtente(username).cambiaPassword(nuovaPassword);
+    }
 
     public void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
 
