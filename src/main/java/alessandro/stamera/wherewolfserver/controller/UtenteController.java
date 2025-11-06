@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.controller;
 
+import alessandro.stamera.wherewolfserver.classi.Utenti;
 import alessandro.stamera.wherewolfserver.entity.Utente;
 import alessandro.stamera.wherewolfserver.repository.UtenteRepository;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,14 +13,14 @@ import java.util.Optional;
 @RestController @RequestMapping("/utenti")  public final class UtenteController
 {
 
-    private final UtenteRepository repo;
+    private final Utenti utenti;
 
-    public UtenteController(UtenteRepository repo) {  this.repo = repo; }
+    public UtenteController(UtenteRepository repo) {  utenti = new Utenti(repo); }
 
     @GetMapping("/login") public String login(@RequestParam String username, @RequestParam String password)
     {
         String risultato;
-        if(eseguiLogin(username, password)) risultato = "Login eseguito correttamente";
+        if(utenti.login(username, password)) risultato = "Login eseguito correttamente";
         else risultato = "ERRORE!!! Username o password errate";
         return risultato;
     }
@@ -61,11 +62,6 @@ import java.util.Optional;
         return risultato;
     }
 
-    private boolean eseguiLogin(String username, String password)
-    {
-        return repo.findAll().stream().anyMatch(utente -> utente.login(username, password));
-    }
-
     private void inserisciUtente(String username, String password)
     {
         if(isUtentePresente(username)) throw new IllegalArgumentException("ERRORE!!! Nome utente già inserito");
@@ -89,7 +85,7 @@ import java.util.Optional;
 
     private void eseguiCambioPassword(String username, String password) { cercaUtente(username).cambiaPassword(password); }
 
-    private void eliminaUtente(String username) { repo.delete(cercaUtente(username)); }
+    private void eliminaUtente(String username) { utenti.eliminaUtente(username); }
 
     private Utente cercaUtente(String username)
     {
@@ -101,8 +97,8 @@ import java.util.Optional;
 
     private boolean isUtenteAssente(String username) { return getUtente(username).isEmpty(); }
 
-    private Optional<Utente> getUtente(String username) { return repo.findById(username); }
+    private Optional<Utente> getUtente(String username) { return utenti.getUtente(username); }
 
-    private void salvaDatiUtente(String username, String password) { repo.save(new Utente(username, password)); }
+    private void salvaDatiUtente(String username, String password) { utenti.salvaDatiUtente(username, password); }
 
 }
