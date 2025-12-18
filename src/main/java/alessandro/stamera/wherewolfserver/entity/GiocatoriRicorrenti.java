@@ -16,7 +16,7 @@ import static java.util.Locale.ITALY;
     public void aggiungi(String nomeGiocatore)
     {
         if(cercaGiocatore(nomeGiocatore)) throw new IllegalArgumentException("ERRORE!!! Utente già inserito");
-        giocatori.add(nomeGiocatore);
+        inserisciGiocatore(nomeGiocatore);
         giocatori.sort(getInstance(ITALY));
     }
 
@@ -27,5 +27,7 @@ import static java.util.Locale.ITALY;
     public String getNomeGiocatore(int posizione) { return giocatori.get(posizione); }
 
     private boolean cercaGiocatore(String nomeGiocatore) { return giocatori.contains(nomeGiocatore); }
+
+    private void inserisciGiocatore(String nomeGiocatore) { giocatori.add(nomeGiocatore); }
 
 }
