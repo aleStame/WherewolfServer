@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Commit workspace" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Merge branch 'release/origins'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +74,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "release/origins",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/wherewolf.server"
   }
@@ -187,8 +189,8 @@
         <item itemvalue="Gradle.wherewolf.server" />
         <item itemvalue="Gradle.TestUtente" />
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
-        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.wherewolf.server" />
+        <item itemvalue="Gradle.TestUtente" />
       </list>
     </recent_temporary>
   </component>
@@ -200,14 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00047" summary="REFACTORING: definizione del metodo controllaCondizioneVera">
-      <option name="closed" value="true" />
-      <created>1762287398369</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1762287398369</updated>
     </task>
     <task id="LOCAL-00048" summary="REFACTORING: definizione del metodo controllaCondizioneFalsa">
       <option name="closed" value="true" />
@@ -593,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762437957762</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Merge branch 'release/origins'">
+      <option name="closed" value="true" />
+      <created>1762448910694</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1762448910694</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -608,8 +610,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: registrazioneRiuscita non riuscito" />
-    <MESSAGE value="VERDE: registrazioneRiuscita riuscito" />
     <MESSAGE value="ROSSO: registrazioneNonRiuscita non riuscito" />
     <MESSAGE value="VERDE: registrazioneNonRiuscita riuscito" />
     <MESSAGE value="REFACTORING: utilizzo di Utenti.registrazione dentro UtenteController" />
@@ -633,6 +633,8 @@
     <MESSAGE value="Merge branch 'feature/disiscriviUtente' into develop" />
     <MESSAGE value="Merge branch 'release/disiscrizione'" />
     <MESSAGE value="Commit workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit workspace" />
+    <MESSAGE value="Gestione cross origins" />
+    <MESSAGE value="Merge branch 'release/origins'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'release/origins'" />
   </component>
 </project>
