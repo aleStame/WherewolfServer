@@ -29,6 +29,12 @@ public final class TestGiocatoriRicorrenti
         assertThatIllegalArgumentException().isThrownBy(() -> aggiungiGiocatore(ESEMPIO_GIOCATORE)).withMessage("ERRORE!!! Utente già inserito");
     }
 
+    @Test public void eliminazioneGiocatore()
+    {
+        giocatori.elimina(ESEMPIO_GIOCATORE);
+        assertThat(giocatori.getNumeroGiocatori()).isZero();
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore) { giocatori.aggiungi(nomeGiocatore); }
 
 }

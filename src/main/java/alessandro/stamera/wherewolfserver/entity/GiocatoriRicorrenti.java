@@ -19,6 +19,8 @@ import java.util.List;
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
+    public void elimina(String nomeGiocatore) { }
+
     private boolean cercaGiocatore(String nomeGiocatore) { return giocatori.contains(nomeGiocatore); }
 
 }
