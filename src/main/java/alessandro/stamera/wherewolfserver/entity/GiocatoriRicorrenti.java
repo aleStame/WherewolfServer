@@ -17,7 +17,7 @@ import static java.util.Locale.ITALY;
     {
         if(cercaGiocatore(nomeGiocatore)) throw new IllegalArgumentException("ERRORE!!! Utente già inserito");
         inserisciGiocatore(nomeGiocatore);
-        giocatori.sort(getInstance(ITALY));
+        riordinaLista();
     }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
@@ -29,5 +29,7 @@ import static java.util.Locale.ITALY;
     private boolean cercaGiocatore(String nomeGiocatore) { return giocatori.contains(nomeGiocatore); }
 
     private void inserisciGiocatore(String nomeGiocatore) { giocatori.add(nomeGiocatore); }
+
+    private void riordinaLista() { giocatori.sort(getInstance(ITALY)); }
 
 }
