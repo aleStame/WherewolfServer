@@ -21,7 +21,7 @@ public final class TestGiocatoriRicorrenti
     @Test public void inserimentoGiocatoreRiuscito()
     {
         aggiungiGiocatore("Giovanni");
-        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(2);
+        assertThat(getNumeroGiocatori()).isEqualTo(2);
     }
 
     @Test public void inserimentoGiocatoreNonRiuscito()
@@ -32,9 +32,20 @@ public final class TestGiocatoriRicorrenti
     @Test public void eliminazioneGiocatore()
     {
         giocatori.elimina(ESEMPIO_GIOCATORE);
-        assertThat(giocatori.getNumeroGiocatori()).isZero();
+        assertThat(getNumeroGiocatori()).isZero();
+    }
+
+    @Test public void ordineAlfabetico()
+    {
+        aggiungiGiocatore("Adriano");
+        aggiungiGiocatore("Davide");
+        String[] soluzioni = new String[getNumeroGiocatori()];
+        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = giocatori.getNomeGiocatore(i);
+        assertThat(soluzioni).isEqualTo(new String[]{ "Adriano", ESEMPIO_GIOCATORE, "Davide" });
     }
 
     private void aggiungiGiocatore(String nomeGiocatore) { giocatori.aggiungi(nomeGiocatore); }
+
+    private int getNumeroGiocatori() { return giocatori.getNumeroGiocatori(); }
 
 }

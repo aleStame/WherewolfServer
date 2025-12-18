@@ -21,6 +21,8 @@ import java.util.List;
 
     public void elimina(String nomeGiocatore) { giocatori.remove(nomeGiocatore); }
 
+    public String getNomeGiocatore(int posizione) { return null; }
+
     private boolean cercaGiocatore(String nomeGiocatore) { return giocatori.contains(nomeGiocatore); }
 
 }
