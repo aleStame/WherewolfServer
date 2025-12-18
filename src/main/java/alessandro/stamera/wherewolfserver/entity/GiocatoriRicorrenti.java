@@ -13,10 +13,12 @@ import java.util.List;
 
     public void aggiungi(String nomeGiocatore)
     {
-        if(giocatori.contains(nomeGiocatore)) throw new IllegalArgumentException("ERRORE!!! Utente già inserito");
+        if(cercaGiocatore(nomeGiocatore)) throw new IllegalArgumentException("ERRORE!!! Utente già inserito");
         giocatori.add(nomeGiocatore);
     }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
+
+    private boolean cercaGiocatore(String nomeGiocatore) { return giocatori.contains(nomeGiocatore); }
 
 }
