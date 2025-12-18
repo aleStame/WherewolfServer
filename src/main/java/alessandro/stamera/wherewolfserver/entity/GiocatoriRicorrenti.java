@@ -1,12 +1,18 @@
 package alessandro.stamera.wherewolfserver.entity;
 
 import jakarta.persistence.Embeddable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Embeddable public class GiocatoriRicorrenti
 {
 
-    public void aggiungi(String nomeGiocatore) { }
+    private final List<String> giocatori;
 
-    public int getNumeroGiocatori() { return -1; }
+    public GiocatoriRicorrenti() { giocatori = new ArrayList<>(); }
+
+    public void aggiungi(String nomeGiocatore) { giocatori.add(nomeGiocatore); }
+
+    public int getNumeroGiocatori() { return giocatori.size(); }
 
 }
