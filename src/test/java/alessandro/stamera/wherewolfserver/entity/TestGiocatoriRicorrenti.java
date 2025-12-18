@@ -19,7 +19,7 @@ public final class TestGiocatoriRicorrenti
     {
         GiocatoriRicorrenti giocatori = new GiocatoriRicorrenti();
         giocatori.aggiungi("Aldo");
-        assertThatIllegalArgumentException().isThrownBy(() -> giocatori.aggiungi("Aldo")).withMessage("ERRORE!!! Utente già inserito.");
+        assertThatIllegalArgumentException().isThrownBy(() -> giocatori.aggiungi("Aldo")).withMessage("ERRORE!!! Utente già inserito");
     }
 
 }
