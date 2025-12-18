@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.entity;
 import jakarta.persistence.Embeddable;
 import java.util.ArrayList;
 import java.util.List;
+import static java.text.Collator.getInstance;
+import static java.util.Locale.ITALY;
 
 @Embeddable public class GiocatoriRicorrenti
 {
@@ -15,13 +17,14 @@ import java.util.List;
     {
         if(cercaGiocatore(nomeGiocatore)) throw new IllegalArgumentException("ERRORE!!! Utente già inserito");
         giocatori.add(nomeGiocatore);
+        giocatori.sort(getInstance(ITALY));
     }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
     public void elimina(String nomeGiocatore) { giocatori.remove(nomeGiocatore); }
 
-    public String getNomeGiocatore(int posizione) { return null; }
+    public String getNomeGiocatore(int posizione) { return giocatori.get(posizione); }
 
     private boolean cercaGiocatore(String nomeGiocatore) { return giocatori.contains(nomeGiocatore); }
 

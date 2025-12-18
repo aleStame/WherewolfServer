@@ -37,11 +37,12 @@ public final class TestGiocatoriRicorrenti
 
     @Test public void ordineAlfabetico()
     {
-        aggiungiGiocatore("Adriano");
-        aggiungiGiocatore("Davide");
+        String[] esempi = { "Adriano", "Davide" };
+        aggiungiGiocatore(esempi[0]);
+        aggiungiGiocatore(esempi[1]);
         String[] soluzioni = new String[getNumeroGiocatori()];
         for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = giocatori.getNomeGiocatore(i);
-        assertThat(soluzioni).isEqualTo(new String[]{ "Adriano", ESEMPIO_GIOCATORE, "Davide" });
+        assertThat(soluzioni).isEqualTo(new String[]{ esempi[0], ESEMPIO_GIOCATORE, esempi[1] });
     }
 
     private void aggiungiGiocatore(String nomeGiocatore) { giocatori.aggiungi(nomeGiocatore); }
