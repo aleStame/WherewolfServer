@@ -14,15 +14,17 @@ public final class TestGiocatoriRicorrenti
 
     @Test public void inserimentoGiocatoreRiuscito()
     {
-        giocatori.aggiungi("Aldo");
-        giocatori.aggiungi("Giovanni");
+        aggiungiGiocatore("Aldo");
+        aggiungiGiocatore("Giovanni");
         assertThat(giocatori.getNumeroGiocatori()).isEqualTo(2);
     }
 
     @Test public void inserimentoGiocatoreNonRiuscito()
     {
-        giocatori.aggiungi("Aldo");
-        assertThatIllegalArgumentException().isThrownBy(() -> giocatori.aggiungi("Aldo")).withMessage("ERRORE!!! Utente già inserito");
+        aggiungiGiocatore("Aldo");
+        assertThatIllegalArgumentException().isThrownBy(() -> aggiungiGiocatore("Aldo")).withMessage("ERRORE!!! Utente già inserito");
     }
+
+    private void aggiungiGiocatore(String nomeGiocatore) { giocatori.aggiungi(nomeGiocatore); }
 
 }
