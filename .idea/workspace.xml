@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo riordinaLista">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Merge tag 'correzioneURL' into develop&#10;&#10;Correzione dell'URL del database" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,22 +201,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00068" summary="REFACTORING: separazione del metodo di test login in loginRiuscito e loginNonRiuscito">
-      <option name="closed" value="true" />
-      <created>1762424451159</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1762424451159</updated>
-    </task>
-    <task id="LOCAL-00069" summary="ROSSO: registrazioneRiuscita non riuscito">
-      <option name="closed" value="true" />
-      <created>1762424857406</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1762424857406</updated>
     </task>
     <task id="LOCAL-00070" summary="VERDE: registrazioneRiuscita riuscito">
       <option name="closed" value="true" />
@@ -596,7 +578,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766148027141</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Correzione del file application.properties">
+      <option name="closed" value="true" />
+      <created>1766148991085</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1766148991086</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Merge tag 'correzioneURL' into develop&#10;&#10;Correzione dell'URL del database">
+      <option name="closed" value="true" />
+      <created>1766149249267</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1766149249268</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,8 +609,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: disiscrizioneRiuscita riuscito" />
-    <MESSAGE value="ROSSO: disiscrizioneNonRiuscita non riuscito" />
     <MESSAGE value="VERDE: disiscrizioneNonRiuscita riuscito" />
     <MESSAGE value="REFACTORING: utilizzo di Utenti.disiscrizine in UtenteController" />
     <MESSAGE value="REFACTORING: definizione del metodo disiscrizione" />
@@ -636,6 +632,8 @@
     <MESSAGE value="VERDE: ordineAlfabetico riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo inserisciGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo riordinaLista" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo riordinaLista" />
+    <MESSAGE value="Correzione del file application.properties" />
+    <MESSAGE value="Merge tag 'correzioneURL' into develop&#10;&#10;Correzione dell'URL del database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge tag 'correzioneURL' into develop&#10;&#10;Correzione dell'URL del database" />
   </component>
 </project>
