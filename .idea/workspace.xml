@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Commit workspace" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo riordinaLista">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +74,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "release/origins",
+    "git-widget-placeholder": "feature/listaGiocatoriRicorrenti",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/wherewolf.server"
   }
@@ -82,6 +84,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="alessandro.stamera.wherewolfserver.entity" />
       <recent name="alessandro.stamera.wherewolfserver.classi" />
     </key>
   </component>
@@ -184,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.wherewolf.server" />
         <item itemvalue="Gradle.TestUtente" />
-        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
-        <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
         <item itemvalue="Gradle.wherewolf.server" />
+        <item itemvalue="Gradle.TestUtente" />
       </list>
     </recent_temporary>
   </component>
@@ -200,166 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00047" summary="REFACTORING: definizione del metodo controllaCondizioneVera">
-      <option name="closed" value="true" />
-      <created>1762287398369</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1762287398369</updated>
-    </task>
-    <task id="LOCAL-00048" summary="REFACTORING: definizione del metodo controllaCondizioneFalsa">
-      <option name="closed" value="true" />
-      <created>1762287534805</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1762287534805</updated>
-    </task>
-    <task id="LOCAL-00049" summary="REFACTORING: definizione del metodo controlloPassword">
-      <option name="closed" value="true" />
-      <created>1762287716053</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1762287716053</updated>
-    </task>
-    <task id="LOCAL-00050" summary="ROSSO: cambioPassword (caso 3) non riuscito">
-      <option name="closed" value="true" />
-      <created>1762288080643</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1762288080644</updated>
-    </task>
-    <task id="LOCAL-00051" summary="VERDE: cambioPassword (caso 3) riuscito">
-      <option name="closed" value="true" />
-      <created>1762289725468</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1762289725468</updated>
-    </task>
-    <task id="LOCAL-00052" summary="REFACTORING: ridefinizione del metodo inserisciUtente">
-      <option name="closed" value="true" />
-      <created>1762335160554</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1762335160555</updated>
-    </task>
-    <task id="LOCAL-00053" summary="REFACTORING: definizione del metodo eseguiCambioPassword">
-      <option name="closed" value="true" />
-      <created>1762335484770</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1762335484770</updated>
-    </task>
-    <task id="LOCAL-00054" summary="REFACTORING: sistemazione degli aggiornamenti al database">
-      <option name="closed" value="true" />
-      <created>1762336489555</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1762336489555</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Merge tag 'aggiornamentoDatabase' into develop&#10;&#10;Correzione del salvataggio delle modifiche al db">
-      <option name="closed" value="true" />
-      <created>1762337618622</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1762337618622</updated>
-    </task>
-    <task id="LOCAL-00056" summary="ROSSO: disiscrizione non riuscito">
-      <option name="closed" value="true" />
-      <created>1762338339563</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1762338339563</updated>
-    </task>
-    <task id="LOCAL-00057" summary="VERDE: disiscrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1762363008130</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1762363008130</updated>
-    </task>
-    <task id="LOCAL-00058" summary="REFACTORING: definizione del metodo eseguiDisiscrizione">
-      <option name="closed" value="true" />
-      <created>1762363136674</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1762363136674</updated>
-    </task>
-    <task id="LOCAL-00059" summary="REFACTORING: definizione del metodo cercaUtente">
-      <option name="closed" value="true" />
-      <created>1762363421168</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1762363421168</updated>
-    </task>
-    <task id="LOCAL-00060" summary="REFACTORING: definizione del metodo salvaDatiUtente">
-      <option name="closed" value="true" />
-      <created>1762363667746</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1762363667747</updated>
-    </task>
-    <task id="LOCAL-00061" summary="REFACTORING: definizione del metodo controlloPassword e di una variante del metodo eseguiCambioPassword">
-      <option name="closed" value="true" />
-      <created>1762364091251</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1762364091251</updated>
-    </task>
-    <task id="LOCAL-00062" summary="REFACTORING: definizione del metodo controlloPasswordAssente">
-      <option name="closed" value="true" />
-      <created>1762364243803</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1762364243803</updated>
-    </task>
-    <task id="LOCAL-00063" summary="REFACTORING: definizione dei metodi isUtentePresente e isUtenteAssente">
-      <option name="closed" value="true" />
-      <created>1762364574490</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1762364574490</updated>
-    </task>
-    <task id="LOCAL-00064" summary="REFACTORING: definizione del metodo eliminaUtente">
-      <option name="closed" value="true" />
-      <created>1762364786959</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1762364786959</updated>
-    </task>
-    <task id="LOCAL-00065" summary="ROSSO: login non riuscito">
-      <option name="closed" value="true" />
-      <created>1762422954801</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1762422954802</updated>
-    </task>
-    <task id="LOCAL-00066" summary="VERDE: login riuscito">
-      <option name="closed" value="true" />
-      <created>1762423678174</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1762423678174</updated>
     </task>
     <task id="LOCAL-00067" summary="REFACTORING: utilizzo di Utenti.login dentro UtenteController">
       <option name="closed" value="true" />
@@ -593,7 +436,167 @@
       <option name="project" value="LOCAL" />
       <updated>1762437957762</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Merge branch 'release/origins'">
+      <option name="closed" value="true" />
+      <created>1762448910694</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1762448910694</updated>
+    </task>
+    <task id="LOCAL-00097" summary="ROSSO: inserimentoGiocatoreRiuscito non riuscito">
+      <option name="closed" value="true" />
+      <created>1766068238037</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1766068238037</updated>
+    </task>
+    <task id="LOCAL-00098" summary="VERDE: inserimentoGiocatoreRiuscito riuscito">
+      <option name="closed" value="true" />
+      <created>1766068382482</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1766068382482</updated>
+    </task>
+    <task id="LOCAL-00099" summary="ROSSO: inserimentoGiocatoreNonRiuscito non riuscito">
+      <option name="closed" value="true" />
+      <created>1766068699610</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1766068699610</updated>
+    </task>
+    <task id="LOCAL-00100" summary="VERDE: inserimentoGiocatoreNonRiuscito riuscito">
+      <option name="closed" value="true" />
+      <created>1766068797670</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1766068797670</updated>
+    </task>
+    <task id="LOCAL-00101" summary="REFACTORING: definizione del metodo cercaGiocatore">
+      <option name="closed" value="true" />
+      <created>1766068943637</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1766068943637</updated>
+    </task>
+    <task id="LOCAL-00102" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1766069146538</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1766069146538</updated>
+    </task>
+    <task id="LOCAL-00103" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1766069310323</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1766069310323</updated>
+    </task>
+    <task id="LOCAL-00104" summary="REFACTORING: definizione e utilizzo della costante ESEMPIO_GIOCATORE">
+      <option name="closed" value="true" />
+      <created>1766069517247</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1766069517247</updated>
+    </task>
+    <task id="LOCAL-00105" summary="ROSSO: eliminazioneGiocatore non riuscito">
+      <option name="closed" value="true" />
+      <created>1766069866258</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1766069866258</updated>
+    </task>
+    <task id="LOCAL-00106" summary="VERDE: eliminazioneGiocatore non riuscito">
+      <option name="closed" value="true" />
+      <created>1766069943241</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1766069943241</updated>
+    </task>
+    <task id="LOCAL-00107" summary="REFACTORING: definizione del metodo getNumeroGiocatori">
+      <option name="closed" value="true" />
+      <created>1766070076926</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1766070076926</updated>
+    </task>
+    <task id="LOCAL-00108" summary="ROSSO: ordineAlfabetico non riuscito">
+      <option name="closed" value="true" />
+      <created>1766070704162</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1766070704162</updated>
+    </task>
+    <task id="LOCAL-00109" summary="ROSSO: ordineAlfabetico non riuscito">
+      <option name="closed" value="true" />
+      <created>1766071917197</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1766071917197</updated>
+    </task>
+    <task id="LOCAL-00110" summary="VERDE: ordineAlfabetico riuscito">
+      <option name="closed" value="true" />
+      <created>1766071932944</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1766071932944</updated>
+    </task>
+    <task id="LOCAL-00111" summary="REFACTORING: definizione del metodo inserisciGiocatore">
+      <option name="closed" value="true" />
+      <created>1766072098556</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1766072098556</updated>
+    </task>
+    <task id="LOCAL-00112" summary="REFACTORING: definizione del metodo riordinaLista">
+      <option name="closed" value="true" />
+      <created>1766072167118</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1766072167118</updated>
+    </task>
+    <task id="LOCAL-00113" summary="REFACTORING: definizione del metodo riordinaLista">
+      <option name="closed" value="true" />
+      <created>1766087049290</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1766087049290</updated>
+    </task>
+    <task id="LOCAL-00114" summary="REFACTORING: definizione del metodo riordinaLista">
+      <option name="closed" value="true" />
+      <created>1766088018070</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1766088018070</updated>
+    </task>
+    <task id="LOCAL-00115" summary="REFACTORING: definizione del metodo riordinaLista">
+      <option name="closed" value="true" />
+      <created>1766088256871</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1766088256871</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -608,23 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: registrazioneRiuscita non riuscito" />
-    <MESSAGE value="VERDE: registrazioneRiuscita riuscito" />
-    <MESSAGE value="ROSSO: registrazioneNonRiuscita non riuscito" />
-    <MESSAGE value="VERDE: registrazioneNonRiuscita riuscito" />
-    <MESSAGE value="REFACTORING: utilizzo di Utenti.registrazione dentro UtenteController" />
-    <MESSAGE value="REFACTORING: definizione del metodo login" />
-    <MESSAGE value="REFACTORING: definizione del metodo registrazione" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRepositoryEsempio" />
-    <MESSAGE value="ROSSO: cambioPasswordRiuscito non riuscito" />
-    <MESSAGE value="VERDE: cambioPasswordRiuscito riuscito" />
-    <MESSAGE value="ROSSO: cambioPasswordNonRiuscito non riuscito" />
-    <MESSAGE value="VERDE: cambioPasswordNonRiuscito riuscito" />
-    <MESSAGE value="REFACTORING: utilizzo di utenti.cambioPassword in UtenteController" />
-    <MESSAGE value="REFACTORING: definizione del metodo cambioPassword" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNoEccezione" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEccezione" />
-    <MESSAGE value="ROSSO: disiscrizioneRiuscita non riuscito" />
     <MESSAGE value="VERDE: disiscrizioneRiuscita riuscito" />
     <MESSAGE value="ROSSO: disiscrizioneNonRiuscita non riuscito" />
     <MESSAGE value="VERDE: disiscrizioneNonRiuscita riuscito" />
@@ -633,6 +619,23 @@
     <MESSAGE value="Merge branch 'feature/disiscriviUtente' into develop" />
     <MESSAGE value="Merge branch 'release/disiscrizione'" />
     <MESSAGE value="Commit workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit workspace" />
+    <MESSAGE value="Gestione cross origins" />
+    <MESSAGE value="Merge branch 'release/origins'" />
+    <MESSAGE value="ROSSO: inserimentoGiocatoreRiuscito non riuscito" />
+    <MESSAGE value="VERDE: inserimentoGiocatoreRiuscito riuscito" />
+    <MESSAGE value="ROSSO: inserimentoGiocatoreNonRiuscito non riuscito" />
+    <MESSAGE value="VERDE: inserimentoGiocatoreNonRiuscito riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo cercaGiocatore" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <MESSAGE value="REFACTORING: definizione e utilizzo della costante ESEMPIO_GIOCATORE" />
+    <MESSAGE value="ROSSO: eliminazioneGiocatore non riuscito" />
+    <MESSAGE value="VERDE: eliminazioneGiocatore non riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNumeroGiocatori" />
+    <MESSAGE value="ROSSO: ordineAlfabetico non riuscito" />
+    <MESSAGE value="VERDE: ordineAlfabetico riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo inserisciGiocatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo riordinaLista" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo riordinaLista" />
   </component>
 </project>
