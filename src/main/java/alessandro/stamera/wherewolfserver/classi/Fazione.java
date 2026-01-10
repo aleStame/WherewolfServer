@@ -16,4 +16,6 @@ public enum Fazione
 
     @Override public String toString() { return "Fazione: " + descrizione; }
 
+    public Categoria getCategoria() { return null; }
+
 }
