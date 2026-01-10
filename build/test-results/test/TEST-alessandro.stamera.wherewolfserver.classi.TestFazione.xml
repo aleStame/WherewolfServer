@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestFazione" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-01-10T15:12:37" hostname="ALESSANDRO" time="0.849">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestFazione" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-01-10T15:37:08" hostname="ALESSANDRO" time="0.434">
   <properties/>
-  <testcase name="[1] fazione=NESSUNA, messaggio=Fazione: -" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.289"/>
-  <testcase name="[2] fazione=LUPO_BRANCO, messaggio=Fazione: Lupi del branco" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
-  <testcase name="[3] fazione=LUPO_SOLITARIO, messaggio=Fazione: Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
-  <testcase name="[4] fazione=VAMPIRO, messaggio=Fazione: Vampiro" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
-  <testcase name="[5] fazione=NOSFERATU, messaggio=Fazione: Nosferatu" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.007"/>
-  <testcase name="[6] fazione=NEGROMANTE, messaggio=Fazione: Negromante" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.029"/>
+  <testcase name="[1] fazione=NESSUNA, messaggio=Fazione: -" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
+  <testcase name="[2] fazione=LUPO_BRANCO, messaggio=Fazione: Lupi del branco" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
+  <testcase name="[3] fazione=LUPO_SOLITARIO, messaggio=Fazione: Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.007"/>
+  <testcase name="[4] fazione=VAMPIRO, messaggio=Fazione: Vampiro" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
+  <testcase name="[5] fazione=NOSFERATU, messaggio=Fazione: Nosferatu" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
+  <testcase name="[6] fazione=NEGROMANTE, messaggio=Fazione: Negromante" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.006"/>
   <testcase name="[7] fazione=POSSEDUTO, messaggio=Fazione: Posseduto" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
   <testcase name="[8] fazione=VILLAGGIO, messaggio=Fazione: Villaggio" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
-  <testcase name="[9] fazione=CITTA, messaggio=Fazione: Città" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.014"/>
-  <testcase name="[10] fazione=CRIMINALI, messaggio=Fazione: Criminali" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.01"/>
-  <testcase name="[11] fazione=AMANTI, messaggio=Fazione: Amanti" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.01"/>
-  <testcase name="[12] fazione=INQUISIZIONE, messaggio=Fazione: Inquisizione" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.01"/>
-  <testcase name="[1] fazione=NESSUNA, categoria=NESSUNA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.029"/>
-  <testcase name="[2] fazione=LUPO_BRANCO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.011"/>
-  <testcase name="[3] fazione=LUPO_SOLITARIO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
-  <testcase name="[4] fazione=VAMPIRO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.01"/>
-  <testcase name="[5] fazione=NOSFERATU, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
-  <testcase name="[6] fazione=NEGROMANTE, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
-  <testcase name="[7] fazione=POSSEDUTO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.011"/>
-  <testcase name="[8] fazione=VILLAGGIO, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.009"/>
-  <testcase name="[9] fazione=CITTA, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.007"/>
-  <testcase name="[10] fazione=CRIMINALI, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.01"/>
-  <testcase name="[11] fazione=AMANTI, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.015"/>
-  <testcase name="[12] fazione=INQUISIZIONE, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.004"/>
+  <testcase name="[9] fazione=CITTA, messaggio=Fazione: Città" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.006"/>
+  <testcase name="[10] fazione=CRIMINALI, messaggio=Fazione: Criminali" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.014"/>
+  <testcase name="[11] fazione=AMANTI, messaggio=Fazione: Amanti" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.006"/>
+  <testcase name="[12] fazione=INQUISIZIONE, messaggio=Fazione: Inquisizione" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.007"/>
+  <testcase name="[1] fazione=NESSUNA, categoria=NESSUNA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.013"/>
+  <testcase name="[2] fazione=LUPO_BRANCO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.009"/>
+  <testcase name="[3] fazione=LUPO_SOLITARIO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.011"/>
+  <testcase name="[4] fazione=VAMPIRO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.019"/>
+  <testcase name="[5] fazione=NOSFERATU, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.013"/>
+  <testcase name="[6] fazione=NEGROMANTE, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
+  <testcase name="[7] fazione=POSSEDUTO, categoria=CREATURE_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
+  <testcase name="[8] fazione=VILLAGGIO, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.013"/>
+  <testcase name="[9] fazione=CITTA, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.011"/>
+  <testcase name="[10] fazione=CRIMINALI, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.012"/>
+  <testcase name="[11] fazione=AMANTI, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.008"/>
+  <testcase name="[12] fazione=INQUISIZIONE, categoria=UOMINI" classname="alessandro.stamera.wherewolfserver.classi.TestFazione" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
