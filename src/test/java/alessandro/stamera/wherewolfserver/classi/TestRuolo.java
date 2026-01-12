@@ -19,6 +19,15 @@ public final class TestRuolo
     @ParameterizedTest @CsvSource
     (
         {
+            "NESSUNA", "LUPO_BRANCO", "LUPO_SOLITARIO", "VAMPIRO", "NOSFERATU", "NEGROMANTE", "POSSEDUTO", "VILLAGGIO", "CITTA", "CRIMINALI",
+            "AMANTI", "INQUISIZIONE"
+        }
+    )
+    public void testFazione(Fazione fazione) { assertThat(getRuolo("Personaggio", fazione, BIANCA, 3).fazione()).isEqualTo(fazione); }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
             "NESSUNA, NESSUNA", "LUPO_BRANCO, CREATURE_OMBRA", "LUPO_SOLITARIO, CREATURE_OMBRA", "VAMPIRO, CREATURE_OMBRA",
             "NOSFERATU, CREATURE_OMBRA", "NEGROMANTE, CREATURE_OMBRA", "POSSEDUTO, CREATURE_OMBRA", "VILLAGGIO, UOMINI", "CITTA, UOMINI",
             "CRIMINALI, UOMINI", "AMANTI, UOMINI", "INQUISIZIONE, UOMINI"
