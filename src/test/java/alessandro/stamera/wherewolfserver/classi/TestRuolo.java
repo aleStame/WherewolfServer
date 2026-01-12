@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.*;
@@ -36,6 +37,12 @@ public final class TestRuolo
     public void testCategoria(Fazione fazione, Categoria categoria)
     {
         assertThat(getRuolo("Alessandro", fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
+    }
+
+    @Test public void testNome()
+    {
+        String nome = "Nome";
+        assertThat(getRuolo(nome, NESSUNA, BIANCA, 1).nome()).isEqualTo(nome);
     }
 
     private Ruolo getRuolo(String nome, Fazione fazione, Aura aura, int lune) { return new Ruolo(nome, fazione, aura, lune); }
