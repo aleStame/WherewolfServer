@@ -7,7 +7,7 @@ public class Contadino extends Ruolo
 
     public Contadino(Aura aura)
     {
-        super("Contadino", VILLAGGIO, aura, "", 0);
+        super("Contadino", VILLAGGIO, aura, "", 1);
     }
 
 }
