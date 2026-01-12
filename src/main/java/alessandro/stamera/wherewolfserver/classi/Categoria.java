@@ -11,6 +11,11 @@ public enum Categoria
 
     @Override public String toString() { return descrizione; }
 
-    public static Categoria getCategoria(String descrizione) { return null; }
+    public static Categoria getCategoria(String descrizione)
+    {
+        int posizione = -1;
+        for(int i = 0; i < values().length && posizione == -1; i++) if(descrizione.equals(values()[i].toString())) posizione = i;
+        return values()[posizione];
+    }
 
 }
