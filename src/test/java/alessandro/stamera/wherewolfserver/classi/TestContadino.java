@@ -8,9 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestContadino
 {
 
-    @Test public void testNome() { assertThat(new Contadino(BIANCA).getNome()).isEqualTo("Contadino"); }
+    @Test public void testNome() { assertThat(getContadinoBianco().getNome()).isEqualTo("Contadino"); }
 
-    @Test public void testFazione() { assertThat(new Contadino(BIANCA).getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testFazione() { assertThat(getContadinoBianco().getFazione()).isEqualTo(VILLAGGIO); }
 
     @Test public void testDescrizione()
     {
@@ -20,5 +20,7 @@ public final class TestContadino
     }
 
     @Test public void testLune() { assertThat(new Contadino(NERA).getLune()).isEqualTo(1); }
+
+    private Contadino getContadinoBianco() { return new Contadino(BIANCA); }
 
 }
