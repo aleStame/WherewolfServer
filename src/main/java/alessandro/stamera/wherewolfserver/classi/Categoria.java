@@ -16,9 +16,11 @@ public enum Categoria
     private static int getPosizioneCategoria(String descrizione)
     {
         int posizione = -1;
-        for(int i = 0; i < getNumeroCategorie() && posizione == -1; i++) if(descrizione.equals(getCategoria(i).toString())) posizione = i;
+        for(int i = 0; i < getNumeroCategorie() && posizione == -1; i++) if(descrizione.equals(getDescrizione(i))) posizione = i;
         return posizione;
     }
+
+    private static String getDescrizione(int posizione) { return getCategoria(posizione).toString(); }
 
     private static Categoria getCategoria(int posizione) { return values()[posizione]; }
 
