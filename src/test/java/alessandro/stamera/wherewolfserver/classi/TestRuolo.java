@@ -16,10 +16,10 @@ public final class TestRuolo
     private static final String ESEMPIO_NOME = "Ruolo", ESEMPIO_DESCRIZIONE = "Descrizione generica";
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
-    public void testLune(int lune) { assertThat(getRuolo(VILLAGGIO, BIANCA, lune).lune()).isEqualTo(lune); }
+    public void testLune(int lune) { assertThat(getRuolo(VILLAGGIO, BIANCA, lune).getLune()).isEqualTo(lune); }
 
     @ParameterizedTest @CsvSource({ "BIANCA, NERA" })
-    public void testAura(Aura aura) { assertThat(getRuolo(VAMPIRO, aura, 1).aura()).isEqualTo(aura); }
+    public void testAura(Aura aura) { assertThat(getRuolo(VAMPIRO, aura, 1).getAura()).isEqualTo(aura); }
 
     @ParameterizedTest @CsvSource
     (
@@ -28,7 +28,7 @@ public final class TestRuolo
             "AMANTI", "INQUISIZIONE"
         }
     )
-    public void testFazione(Fazione fazione) { assertThat(getRuolo(fazione, BIANCA, 3).fazione()).isEqualTo(fazione); }
+    public void testFazione(Fazione fazione) { assertThat(getRuolo(fazione, BIANCA, 3).getFazione()).isEqualTo(fazione); }
 
     @ParameterizedTest @CsvSource
     (
@@ -43,9 +43,9 @@ public final class TestRuolo
         assertThat(getRuolo(fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
     }
 
-    @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).nome()).isEqualTo(ESEMPIO_NOME); }
+    @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).getNome()).isEqualTo(ESEMPIO_NOME); }
 
-    @Test public void testDescrizione() { assertThat(getRuolo(CITTA, NERA, 3).descrizione()).isEqualTo(ESEMPIO_DESCRIZIONE); }
+    @Test public void testDescrizione() { assertThat(getRuolo(CITTA, NERA, 3).getDescrizione()).isEqualTo(ESEMPIO_DESCRIZIONE); }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {
