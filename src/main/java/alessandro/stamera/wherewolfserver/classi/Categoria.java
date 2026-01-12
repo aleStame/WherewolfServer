@@ -11,4 +11,6 @@ public enum Categoria
 
     @Override public String toString() { return descrizione; }
 
+    public static Categoria getCategoria(String descrizione) { return null; }
+
 }
