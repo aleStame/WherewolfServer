@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestRuolo
 {
 
-    private static final String ESEMPIO_NOME = "Ruolo";
+    private static final String ESEMPIO_NOME = "Ruolo", ESEMPIO_DESCRIZIONE = "Descrizione generica";
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
     public void testLune(int lune) { assertThat(getRuolo(VILLAGGIO, BIANCA, lune).lune()).isEqualTo(lune); }
@@ -45,11 +45,11 @@ public final class TestRuolo
 
     @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).nome()).isEqualTo(ESEMPIO_NOME); }
 
-    @Test public void testDescrizione() { assertThat(getRuolo(CITTA, NERA, 3).descrizione()).isEqualTo("Descrizione generica"); }
+    @Test public void testDescrizione() { assertThat(getRuolo(CITTA, NERA, 3).descrizione()).isEqualTo(ESEMPIO_DESCRIZIONE); }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {
-        return new Ruolo(ESEMPIO_NOME, fazione, aura, "Descrizione generica", lune);
+        return new Ruolo(ESEMPIO_NOME, fazione, aura, ESEMPIO_DESCRIZIONE, lune);
     }
 
 }
