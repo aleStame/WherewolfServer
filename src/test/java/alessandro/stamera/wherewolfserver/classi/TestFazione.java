@@ -10,10 +10,9 @@ public final class TestFazione
     @ParameterizedTest @CsvSource
     (
         {
-            "NESSUNA, Fazione: -", "LUPO_BRANCO, Fazione: Lupi del branco", "LUPO_SOLITARIO, Fazione: Lupo solitario",
-            "VAMPIRO, Fazione: Vampiro", "NOSFERATU, Fazione: Nosferatu", "NEGROMANTE, Fazione: Negromante", "POSSEDUTO, Fazione: Posseduto",
-            "VILLAGGIO, Fazione: Villaggio", "CITTA, Fazione: Città", "CRIMINALI, Fazione: Criminali", "AMANTI, Fazione: Amanti",
-            "INQUISIZIONE, Fazione: Inquisizione"
+            "NESSUNA, -", "LUPO_BRANCO, Lupi del branco", "LUPO_SOLITARIO, Lupo solitario", "VAMPIRO, Vampiro", "NOSFERATU, Nosferatu",
+            "NEGROMANTE, Negromante", "POSSEDUTO, Posseduto", "VILLAGGIO, Villaggio", "CITTA, Città", "CRIMINALI, Criminali", "AMANTI, Amanti",
+            "INQUISIZIONE, Inquisizione"
         }
     )
     public void testStringaFazione(Fazione fazione, String messaggio) { assertThat(fazione.toString()).isEqualTo(messaggio); }

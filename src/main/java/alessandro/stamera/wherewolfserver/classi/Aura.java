@@ -9,6 +9,6 @@ public enum Aura
 
     Aura(String descrizione){ this.descrizione = descrizione; }
 
-    @Override public String toString() { return "Aura: " + descrizione; }
+    @Override public String toString() { return descrizione; }
 
 }

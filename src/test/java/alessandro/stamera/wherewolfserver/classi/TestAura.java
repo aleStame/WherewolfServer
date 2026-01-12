@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestAura
 {
 
-    @ParameterizedTest @CsvSource({ "BIANCA, Aura: Bianca", "NERA, Aura: Nera" })
+    @ParameterizedTest @CsvSource({ "BIANCA, Bianca", "NERA, Nera" })
     public void testStringaAura(Aura aura, String messaggio) { assertThat(aura.toString()).isEqualTo(messaggio); }
 
 }

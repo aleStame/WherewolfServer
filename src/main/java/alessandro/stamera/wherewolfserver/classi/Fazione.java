@@ -24,7 +24,7 @@ public enum Fazione
         this.categoria = categoria;
     }
 
-    @Override public String toString() { return "Fazione: " + descrizione; }
+    @Override public String toString() { return descrizione; }
 
     public Categoria getCategoria() { return categoria; }
 
