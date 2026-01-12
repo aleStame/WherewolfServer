@@ -12,6 +12,13 @@ public final class TestContadino
 
     @Test public void testFazione() { assertThat(new Contadino(BIANCA).getFazione()).isEqualTo(VILLAGGIO); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
+        assertThat(new Contadino(NERA).getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(new Contadino(NERA).getLune()).isEqualTo(1); }
 
 }
