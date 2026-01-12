@@ -11,11 +11,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestRuolo
 {
 
+    private static final String ESEMPIO_NOME = "Ruolo";
+
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
-    public void testLune(int lune) { assertThat(getRuolo("Contadino", VILLAGGIO, BIANCA, lune).lune()).isEqualTo(lune); }
+    public void testLune(int lune) { assertThat(getRuolo(VILLAGGIO, BIANCA, lune).lune()).isEqualTo(lune); }
 
     @ParameterizedTest @CsvSource({ "BIANCA, NERA" })
-    public void testAura(Aura aura) { assertThat(getRuolo("Ruolo", NESSUNA, aura, 1).aura()).isEqualTo(aura); }
+    public void testAura(Aura aura) { assertThat(getRuolo(NESSUNA, aura, 1).aura()).isEqualTo(aura); }
 
     @ParameterizedTest @CsvSource
     (
@@ -24,7 +26,7 @@ public final class TestRuolo
             "AMANTI", "INQUISIZIONE"
         }
     )
-    public void testFazione(Fazione fazione) { assertThat(getRuolo("Personaggio", fazione, BIANCA, 3).fazione()).isEqualTo(fazione); }
+    public void testFazione(Fazione fazione) { assertThat(getRuolo(fazione, BIANCA, 3).fazione()).isEqualTo(fazione); }
 
     @ParameterizedTest @CsvSource
     (
@@ -36,15 +38,11 @@ public final class TestRuolo
     )
     public void testCategoria(Fazione fazione, Categoria categoria)
     {
-        assertThat(getRuolo("Alessandro", fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
+        assertThat(getRuolo(fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
     }
 
-    @Test public void testNome()
-    {
-        String nome = "Nome";
-        assertThat(getRuolo(nome, NESSUNA, BIANCA, 1).nome()).isEqualTo(nome);
-    }
+    @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).nome()).isEqualTo(ESEMPIO_NOME); }
 
-    private Ruolo getRuolo(String nome, Fazione fazione, Aura aura, int lune) { return new Ruolo(nome, fazione, aura, lune); }
+    private Ruolo getRuolo(Fazione fazione, Aura aura, int lune) { return new Ruolo(ESEMPIO_NOME, fazione, aura, lune); }
 
 }
