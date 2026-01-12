@@ -5,6 +5,8 @@ public enum Categoria
 
     NESSUNA("-"), CREATURE_OMBRA("Creature dell'ombra"), UOMINI("Uomini");
 
+    private static final int NON_TROVATO = -1;
+
     private final String descrizione;
 
     Categoria(String descrizione) { this.descrizione = descrizione; }
@@ -15,8 +17,8 @@ public enum Categoria
 
     private static int getPosizioneCategoria(String descrizione)
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroCategorie() && posizione == -1; i++) if(descrizione.equals(getDescrizione(i))) posizione = i;
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroCategorie() && posizione == NON_TROVATO; i++) if(descrizione.equals(getDescrizione(i))) posizione = i;
         return posizione;
     }
 
