@@ -11,4 +11,6 @@ public enum Aura
 
     @Override public String toString() { return descrizione; }
 
+    public static Aura getAura(String descrizione) { return null; }
+
 }
