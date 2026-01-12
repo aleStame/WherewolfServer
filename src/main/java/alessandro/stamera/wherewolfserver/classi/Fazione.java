@@ -30,7 +30,9 @@ public enum Fazione
 
     public static Fazione getFazione(String descrizione)
     {
-        return null;
+        int posizione = -1;
+        for(int i = 0; i < values().length && posizione == -1; i++) if(descrizione.equals(values()[i].toString())) posizione = i;
+        return values()[posizione];
     }
 
 }
