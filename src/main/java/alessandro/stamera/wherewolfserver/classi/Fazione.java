@@ -28,4 +28,9 @@ public enum Fazione
 
     public Categoria getCategoria() { return categoria; }
 
+    public static Fazione getFazione(String descrizione)
+    {
+        return null;
+    }
+
 }

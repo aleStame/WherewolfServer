@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.getFazione;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestFazione
@@ -15,7 +16,17 @@ public final class TestFazione
             "INQUISIZIONE, Inquisizione"
         }
     )
-    public void testStringaFazione(Fazione fazione, String messaggio) { assertThat(fazione.toString()).isEqualTo(messaggio); }
+    public void testStringaFazione(Fazione fazione, String descrizione) { assertThat(fazione.toString()).isEqualTo(descrizione); }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "-, NESSUNA", "Lupi del branco, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO", "Vampiro, VAMPIRO", "Nosferatu, NOSFERATU",
+            "Negromante, NEGROMANTE", "Posseduto, POSSEDUTO", "Villaggio, VILLAGGIO", "Città, CITTA", "Criminali, CRIMINALI", "Amanti, AMANTI",
+            "Inquisizione, INQUISIZIONE"
+        }
+    )
+    public void testRicerca(String descrizione, Fazione fazione) { assertThat(getFazione(descrizione)).isEqualTo(fazione); }
 
     @ParameterizedTest @CsvSource
     (
