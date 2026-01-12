@@ -6,6 +6,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.*;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestRuolo
@@ -17,7 +19,7 @@ public final class TestRuolo
     public void testLune(int lune) { assertThat(getRuolo(VILLAGGIO, BIANCA, lune).lune()).isEqualTo(lune); }
 
     @ParameterizedTest @CsvSource({ "BIANCA, NERA" })
-    public void testAura(Aura aura) { assertThat(getRuolo(NESSUNA, aura, 1).aura()).isEqualTo(aura); }
+    public void testAura(Aura aura) { assertThat(getRuolo(VAMPIRO, aura, 1).aura()).isEqualTo(aura); }
 
     @ParameterizedTest @CsvSource
     (
@@ -43,6 +45,11 @@ public final class TestRuolo
 
     @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).nome()).isEqualTo(ESEMPIO_NOME); }
 
-    private Ruolo getRuolo(Fazione fazione, Aura aura, int lune) { return new Ruolo(ESEMPIO_NOME, fazione, aura, lune); }
+    @Test public void testDescrizione() { assertThat(getRuolo(CITTA, NERA, 3).descrizione()).isEqualTo("Descrizione generica"); }
+
+    private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
+    {
+        return new Ruolo(ESEMPIO_NOME, fazione, aura, "Descrizione generica", lune);
+    }
 
 }
