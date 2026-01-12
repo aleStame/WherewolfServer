@@ -12,14 +12,16 @@ public final class TestRuolo
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testLune(int lune)
     {
-        Ruolo ruolo = new Ruolo("Contadino", VILLAGGIO, BIANCA, lune);
+        Ruolo ruolo = getRuolo("Contadino", VILLAGGIO, BIANCA, lune);
         assertThat(ruolo.lune()).isEqualTo(lune);
     }
 
     @ParameterizedTest @CsvSource({ "BIANCA, NERA" }) public void testAura(Aura aura)
     {
-        Ruolo ruolo = new Ruolo("Ruolo", NESSUNA, aura, 1);
+        Ruolo ruolo = getRuolo("Ruolo", NESSUNA, aura, 1);
         assertThat(ruolo.aura()).isEqualTo(aura);
     }
+
+    private Ruolo getRuolo(String nome, Fazione fazione, Aura aura, int lune) { return new Ruolo(nome, fazione, aura, lune); }
 
 }
