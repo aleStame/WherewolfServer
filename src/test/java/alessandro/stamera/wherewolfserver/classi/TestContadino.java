@@ -21,8 +21,10 @@ public final class TestContadino
 
     @Test public void testLune() { assertThat(getContadinoNero().getLune()).isEqualTo(1); }
 
-    private Contadino getContadinoBianco() { return new Contadino(BIANCA); }
+    private Contadino getContadinoBianco() { return getContadino(BIANCA); }
 
-    private Contadino getContadinoNero() { return new Contadino(NERA); }
+    private Contadino getContadinoNero() { return getContadino(NERA); }
+
+    private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
 }
