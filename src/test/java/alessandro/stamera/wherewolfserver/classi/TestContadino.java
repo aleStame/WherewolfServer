@@ -16,11 +16,13 @@ public final class TestContadino
     {
         String descrizione =
             "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
-        assertThat(new Contadino(NERA).getDescrizione()).isEqualTo(descrizione);
+        assertThat(getContadinoNero().getDescrizione()).isEqualTo(descrizione);
     }
 
-    @Test public void testLune() { assertThat(new Contadino(NERA).getLune()).isEqualTo(1); }
+    @Test public void testLune() { assertThat(getContadinoNero().getLune()).isEqualTo(1); }
 
     private Contadino getContadinoBianco() { return new Contadino(BIANCA); }
+
+    private Contadino getContadinoNero() { return new Contadino(NERA); }
 
 }
