@@ -11,7 +11,7 @@ public final class TestAura
     @ParameterizedTest @CsvSource({ "BIANCA, Bianca", "NERA, Nera" })
     public void testStringaAura(Aura aura, String messaggio) { assertThat(aura.toString()).isEqualTo(messaggio); }
     
-    @ParameterizedTest @CsvSource({ "Bianca, BIANCA", "NERA, Nera" })
+    @ParameterizedTest @CsvSource({ "Bianca, BIANCA", "Nera, NERA" })
     public void testRicerca(String descrizione, Aura aura) { assertThat(getAura(descrizione)).isEqualTo(aura); }
 
 }
