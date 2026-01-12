@@ -12,6 +12,8 @@ public enum Fazione
     VILLAGGIO("Villaggio", UOMINI), CITTA("Città", UOMINI), CRIMINALI("Criminali", UOMINI),
     AMANTI("Amanti", UOMINI), INQUISIZIONE("Inquisizione", UOMINI);
 
+    private static final int NON_TROVATO = -1;
+
     private final String descrizione;
 
     private final Categoria categoria;
@@ -24,8 +26,23 @@ public enum Fazione
         this.categoria = categoria;
     }
 
-    @Override public String toString() { return "Fazione: " + descrizione; }
+    @Override public String toString() { return descrizione; }
 
     public Categoria getCategoria() { return categoria; }
+
+    public static Fazione getFazione(String descrizione) { return getFazione(getPosizione(descrizione)); }
+
+    private static int getPosizione(String descrizione)
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroFazioni() && posizione == NON_TROVATO; i++) if(descrizione.equals(getDescrizione(i))) posizione = i;
+        return posizione;
+    }
+
+    private static int getNumeroFazioni() { return values().length; }
+
+    private static String getDescrizione(int posizione) { return getFazione(posizione).toString(); }
+
+    private static Fazione getFazione(int posizione) { return values()[posizione]; }
 
 }

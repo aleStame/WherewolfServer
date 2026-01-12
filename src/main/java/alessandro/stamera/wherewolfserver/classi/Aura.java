@@ -9,6 +9,13 @@ public enum Aura
 
     Aura(String descrizione){ this.descrizione = descrizione; }
 
-    @Override public String toString() { return "Aura: " + descrizione; }
+    @Override public String toString() { return descrizione; }
+
+    public static Aura getAura(String descrizione)
+    {
+        Aura risultato = BIANCA;
+        if(descrizione.equals(NERA.toString())) risultato = NERA;
+        return risultato;
+    }
 
 }
