@@ -9,4 +9,6 @@ public final class TestContadinoNormale
 
     @Test public void testAura() { assertThat(new ContadinoNormale().getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testContadinoNormale() { assertThat(new ContadinoNormale().isContadinoNormale()).isTrue(); }
+
 }
