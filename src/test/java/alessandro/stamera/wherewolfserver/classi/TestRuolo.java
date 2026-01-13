@@ -6,6 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.*;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -45,7 +46,12 @@ public final class TestRuolo
 
     @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).getNome()).isEqualTo(ESEMPIO_NOME); }
 
-    @Test public void testDescrizione() { assertThat(getRuolo(CITTA, NERA, 3).getDescrizione()).isEqualTo(ESEMPIO_DESCRIZIONE); }
+    @Test public void testDescrizione()
+    {
+        assertThat(getRuolo(CITTA, NERA, 3).getDescrizione()).isEqualTo(ESEMPIO_DESCRIZIONE);
+    }
+
+    @Test public void testContadino() { assertThat(getRuolo(NEGROMANTE, NERA, 1).isContadino()).isFalse(); }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {

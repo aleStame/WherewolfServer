@@ -32,4 +32,6 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
+    public boolean isContadino() { return true; }
+
 }
