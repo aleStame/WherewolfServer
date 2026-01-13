@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getContadino">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: isContadino non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Contadino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Contadino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,30 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00124" summary="ROSSO: testStringaAura non riuscito">
-      <option name="closed" value="true" />
-      <created>1768059220870</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1768059220870</updated>
-    </task>
-    <task id="LOCAL-00125" summary="VERDE: testStringaAura riuscito">
-      <option name="closed" value="true" />
-      <created>1768059457627</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1768059457627</updated>
-    </task>
-    <task id="LOCAL-00126" summary="VERDE DIRETTO: testLune riuscito">
-      <option name="closed" value="true" />
-      <created>1768214748410</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1768214748411</updated>
     </task>
     <task id="LOCAL-00127" summary="VERDE DIRETTO: testAura riuscito">
       <option name="closed" value="true" />
@@ -599,7 +573,31 @@
       <option name="project" value="LOCAL" />
       <updated>1768255320103</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="ROSSO: testRuolo non riuscito">
+      <option name="closed" value="true" />
+      <created>1768310587196</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1768310587196</updated>
+    </task>
+    <task id="LOCAL-00174" summary="VERDE: testRuolo riuscito">
+      <option name="closed" value="true" />
+      <created>1768310662455</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1768310662455</updated>
+    </task>
+    <task id="LOCAL-00175" summary="ROSSO: isContadino non riuscito">
+      <option name="closed" value="true" />
+      <created>1768310766868</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1768310766868</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -614,9 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_DESCRIZIONE" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCategoria" />
-    <MESSAGE value="REFACTORING: definizione di una variante del metodo getCategoria che accetta come parametro la posizione della categoria richiesta" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroCategorie" />
     <MESSAGE value="VERDE: testRicerca riuscito" />
     <MESSAGE value="REFACTORING: definizione di una variante del metodo getFazione che accetta come parametro l'indice della fazione richiesta" />
@@ -639,6 +634,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo getContadinoBianco" />
     <MESSAGE value="REFACTORING: definizione del metodo getContadinoNero" />
     <MESSAGE value="REFACTORING: definizione del metodo getContadino" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getContadino" />
+    <MESSAGE value="ROSSO: testRuolo non riuscito" />
+    <MESSAGE value="VERDE: testRuolo riuscito" />
+    <MESSAGE value="ROSSO: isContadino non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: isContadino non riuscito" />
   </component>
 </project>
