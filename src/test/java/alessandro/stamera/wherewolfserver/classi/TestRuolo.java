@@ -9,6 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.INQUISIZIONE;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestRuolo
@@ -52,6 +53,8 @@ public final class TestRuolo
     }
 
     @Test public void testContadino() { assertThat(getRuolo(NEGROMANTE, NERA, 1).isContadino()).isFalse(); }
+
+    @Test public void testContadinoNormale() { assertThat(getRuolo(INQUISIZIONE, BIANCA, 2).isContadinoNormale()).isFalse(); }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {
