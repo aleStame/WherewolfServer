@@ -34,6 +34,6 @@ public class Ruolo
 
     public boolean isContadino() { return false; }
 
-    public boolean isContadinoNormale() { return true; }
+    public boolean isContadinoNormale() { return false; }
 
 }
