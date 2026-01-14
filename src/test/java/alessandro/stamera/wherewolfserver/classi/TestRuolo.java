@@ -40,22 +40,23 @@ public final class TestRuolo
         assertThat(getRuolo(fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
     }
 
-    @Test public void testNome() { assertThat(getRuolo(NESSUNA, BIANCA, 1).getNome()).isEqualTo(ESEMPIO_NOME); }
+    @Test public void testNome() { verificaStringa(getRuolo(NESSUNA, BIANCA, 1).getNome(), ESEMPIO_NOME); }
 
-    @Test public void testDescrizione()
-    {
-        assertThat(getRuolo(CITTA, NERA, 3).getDescrizione()).isEqualTo(ESEMPIO_DESCRIZIONE);
-    }
+    @Test public void testDescrizione() { verificaStringa(getRuolo(CITTA, NERA, 3).getDescrizione(), ESEMPIO_DESCRIZIONE); }
 
-    @Test public void testContadino() { assertThat(getRuolo(NEGROMANTE, NERA, 1).isContadino()).isFalse(); }
+    @Test public void testContadino() { verificaFalso(getRuolo(NEGROMANTE, NERA, 1).isContadino()); }
 
-    @Test public void testContadinoNormale() { assertThat(getRuolo(INQUISIZIONE, BIANCA, 2).isContadinoNormale()).isFalse(); }
+    @Test public void testContadinoNormale() { verificaFalso(getRuolo(INQUISIZIONE, BIANCA, 2).isContadinoNormale()); }
 
-    @Test public void testContadinoMostro() { assertThat(getRuolo(LUPO_BRANCO, NERA, 3).isContadinoMostro()).isFalse(); }
+    @Test public void testContadinoMostro() { verificaFalso(getRuolo(LUPO_BRANCO, NERA, 3).isContadinoMostro()); }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {
         return new Ruolo(ESEMPIO_NOME, fazione, aura, ESEMPIO_DESCRIZIONE, lune);
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
