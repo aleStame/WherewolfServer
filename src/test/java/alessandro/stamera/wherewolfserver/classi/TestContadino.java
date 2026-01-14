@@ -28,13 +28,15 @@ public final class TestContadino
     public void testContadino(Aura aura) { assertThat(getContadino(aura).isContadino()).isTrue(); }
 
     @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
-    public void testContadinoNormale(Aura aura) { assertThat(getContadino(aura).isContadinoNormale()).isFalse(); }
+    public void testContadinoNormale(Aura aura) { verificaFalso(getContadino(aura).isContadinoNormale()); }
 
     @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
-    public void testContadinoMostro(Aura aura) { assertThat(getContadino(aura).isContadinoMostro()).isFalse(); }
+    public void testContadinoMostro(Aura aura) { verificaFalso(getContadino(aura).isContadinoMostro()); }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
