@@ -1,35 +1,37 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Aura.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadino
 {
 
-    @Test public void testNome() { assertThat(getContadinoBianco().getNome()).isEqualTo("Contadino"); }
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testNome(Aura aura) { assertThat(getContadino(aura).getNome()).isEqualTo("Contadino"); }
 
-    @Test public void testFazione() { assertThat(getContadinoBianco().getFazione()).isEqualTo(VILLAGGIO); }
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testFazione(Aura aura) { assertThat(getContadino(aura).getFazione()).isEqualTo(VILLAGGIO); }
 
-    @Test public void testDescrizione()
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" }) public void testDescrizione(Aura aura)
     {
         String descrizione =
             "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
-        assertThat(getContadinoNero().getDescrizione()).isEqualTo(descrizione);
+        assertThat(getContadino(aura).getDescrizione()).isEqualTo(descrizione);
     }
 
-    @Test public void testLune() { assertThat(getContadinoNero().getLune()).isEqualTo(1); }
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testLune(Aura aura) { assertThat(getContadino(aura).getLune()).isEqualTo(1); }
 
-    @Test public void testContadino() { assertThat(getContadinoBianco().isContadino()).isTrue(); }
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testContadino(Aura aura) { assertThat(getContadino(aura).isContadino()).isTrue(); }
 
-    @Test public void testContadinoNormale() { assertThat(getContadinoNero().isContadinoNormale()).isFalse(); }
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testContadinoNormale(Aura aura) { assertThat(getContadino(aura).isContadinoNormale()).isFalse(); }
 
-    @Test public void testContadinoMostro() { assertThat(getContadinoBianco().isContadinoMostro()).isFalse(); }
-
-    private Contadino getContadinoBianco() { return getContadino(BIANCA); }
-
-    private Contadino getContadinoNero() { return getContadino(NERA); }
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testContadinoMostro(Aura aura) { assertThat(getContadino(aura).isContadinoMostro()).isFalse(); }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
