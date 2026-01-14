@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadinoNormale riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testContadinoNormale riuscito">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ContadinoMostro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoNormale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoNormale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,22 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00133" summary="VERDE DIRETTO: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1768230316013</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1768230316013</updated>
-    </task>
-    <task id="LOCAL-00134" summary="REFACTORING: definizione della costante ESEMPIO_NOME">
-      <option name="closed" value="true" />
-      <created>1768230498245</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1768230498245</updated>
     </task>
     <task id="LOCAL-00135" summary="VERDE DIRETTO: testDescrizione riuscito">
       <option name="closed" value="true" />
@@ -601,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768322231491</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="ROSSO: testContadinoNormale non riuscito">
+      <option name="closed" value="true" />
+      <created>1768324320822</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1768324320822</updated>
+    </task>
+    <task id="LOCAL-00183" summary="VERDE: testContadinoNormale riuscito">
+      <option name="closed" value="true" />
+      <created>1768324427666</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1768324427666</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -638,9 +639,9 @@
     <MESSAGE value="VERDE: isContadino riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testContadinoNormale riuscito" />
     <MESSAGE value="ROSSO: testContadinoNormale non riuscito" />
     <MESSAGE value="VERDE: testContadinoNormale riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testContadinoNormale riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadinoNormale riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testContadinoNormale riuscito" />
   </component>
 </project>
