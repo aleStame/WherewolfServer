@@ -9,7 +9,7 @@ public final class TestContadino
 {
 
     @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
-    public void testNome(Aura aura) { assertThat(getContadino(aura).getNome()).isEqualTo("Contadino"); }
+    public void testNome(Aura aura) { verificaStringa(getContadino(aura).getNome(), "Contadino"); }
 
     @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
     public void testFazione(Aura aura) { assertThat(getContadino(aura).getFazione()).isEqualTo(VILLAGGIO); }
@@ -18,7 +18,7 @@ public final class TestContadino
     {
         String descrizione =
             "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
-        assertThat(getContadino(aura).getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(getContadino(aura).getDescrizione(), descrizione);
     }
 
     @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
@@ -34,5 +34,7 @@ public final class TestContadino
     public void testContadinoMostro(Aura aura) { assertThat(getContadino(aura).isContadinoMostro()).isFalse(); }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
