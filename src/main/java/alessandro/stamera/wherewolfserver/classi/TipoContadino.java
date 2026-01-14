@@ -15,8 +15,10 @@ public enum TipoContadino
     public static TipoContadino getTipoContadino(String descrizione)
     {
         int posizione = -1;
-        for(int i = 0; i < values().length && posizione == -1; i++) if(descrizione.equals(values()[i].toString())) posizione = i;
-        return values()[posizione];
+        for(int i = 0; i < values().length && posizione == -1; i++) if(descrizione.equals(getTipoContadino(i).toString())) posizione = i;
+        return getTipoContadino(posizione);
     }
+
+    private static TipoContadino getTipoContadino(int posizione) { return values()[posizione]; }
 
 }
