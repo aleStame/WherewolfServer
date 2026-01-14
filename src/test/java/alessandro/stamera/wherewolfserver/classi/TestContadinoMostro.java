@@ -8,12 +8,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestContadinoMostro
 {
 
-    private Contadino contadino;
+    private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { contadino = new ContadinoMostro(); }
+    @BeforeEach public void setUp() { ruolo = new ContadinoMostro(); }
 
-    @Test public void testAura() { assertThat(contadino.getAura()).isEqualTo(NERA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
-    @Test public void testContadinoNormale() { assertThat(contadino.isContadinoNormale()).isFalse(); }
+    @Test public void testContadinoNormale() { assertThat(ruolo.isContadinoNormale()).isFalse(); }
 
 }
