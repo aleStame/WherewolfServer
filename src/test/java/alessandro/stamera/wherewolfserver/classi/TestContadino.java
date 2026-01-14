@@ -25,6 +25,8 @@ public final class TestContadino
 
     @Test public void testContadinoNormale() { assertThat(getContadinoNero().isContadinoNormale()).isFalse(); }
 
+    @Test public void testContadinoMostro() { assertThat(getContadinoBianco().isContadinoMostro()).isFalse(); }
+
     private Contadino getContadinoBianco() { return getContadino(BIANCA); }
 
     private Contadino getContadinoNero() { return getContadino(NERA); }
