@@ -38,6 +38,6 @@ public class Ruolo
 
     public boolean isContadinoMostro() { return false; }
 
-    public boolean isContadinoEroe() { return true; }
+    public boolean isContadinoEroe() { return false; }
 
 }

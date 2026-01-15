@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testContadinoEroe non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,14 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00159" summary="VERDE: testStringa riuscito">
-      <option name="closed" value="true" />
-      <created>1768251752434</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1768251752434</updated>
     </task>
     <task id="LOCAL-00160" summary="ROSSO: testRicerca non riuscito">
       <option name="closed" value="true" />
@@ -601,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768414235440</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="ROSSO: testContadinoEroe non riuscito">
+      <option name="closed" value="true" />
+      <created>1768473078112</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1768473078113</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getContadinoBianco" />
     <MESSAGE value="REFACTORING: definizione del metodo getContadinoNero" />
     <MESSAGE value="REFACTORING: definizione del metodo getContadino" />
     <MESSAGE value="ROSSO: testRuolo non riuscito" />
@@ -641,6 +639,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getDescrizioneContadino" />
     <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
+    <MESSAGE value="ROSSO: testContadinoEroe non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testContadinoEroe non riuscito" />
   </component>
 </project>
