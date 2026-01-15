@@ -20,13 +20,15 @@ public final class TestContadinoEroe
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
+    @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
     @Test public void testContadinoNormale() { verificaFalso(ruolo.isContadinoNormale()); }
 
     @Test public void testContadinoMostro() { verificaFalso(ruolo.isContadinoMostro()); }
 
-    @Test public void testContadinoEroe() { assertThat(ruolo.isContadinoEroe()).isTrue(); }
+    @Test public void testContadinoEroe() { verificaVero(ruolo.isContadinoEroe()); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
