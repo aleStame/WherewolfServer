@@ -22,4 +22,6 @@ public final class TestContadinoEroe
 
     @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
 
+    @Test public void testContadinoNormale() { assertThat(ruolo.isContadinoNormale()).isFalse(); }
+
 }
