@@ -18,10 +18,12 @@ public final class TestContadinoNormale
 
     @Test public void testContadinoNormale() { verificaVero(ruolo.isContadinoNormale()); }
 
-    @Test public void testContadinoMostro() { assertThat(ruolo.isContadinoMostro()).isFalse(); }
+    @Test public void testContadinoMostro() { verificaFalso(ruolo.isContadinoMostro()); }
 
-    @Test public void testContadinoEroe() { assertThat(ruolo.isContadinoMostro()).isFalse(); }
+    @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoMostro()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNome riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadinoEroe riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,22 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00168" summary="ROSSO: testDescrizione non riuscito">
-      <option name="closed" value="true" />
-      <created>1768254731269</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1768254731269</updated>
-    </task>
-    <task id="LOCAL-00169" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1768254905324</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1768254905324</updated>
     </task>
     <task id="LOCAL-00170" summary="REFACTORING: definizione del metodo getContadinoBianco">
       <option name="closed" value="true" />
@@ -601,7 +582,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768490335131</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="VERDE DIRETTO: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1768491817597</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1768491817598</updated>
+    </task>
+    <task id="LOCAL-00218" summary="VERDE DIRETTO: testContadinoEroe riuscito">
+      <option name="closed" value="true" />
+      <created>1768491948091</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1768491948092</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: isContadino riuscito" />
     <MESSAGE value="VERDE: testContadinoNormale riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
@@ -638,9 +634,10 @@
     <MESSAGE value="REFACTORING: parametrizzazione dei test" />
     <MESSAGE value="REFACTORING: definizione del metodo getComboEnum" />
     <MESSAGE value="REFACTORING: ottimizzazione dei parametri" />
-    <MESSAGE value="VERDE DIRETTO: testContadinoEroe riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testNome riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNome riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testContadinoEroe riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadinoEroe riuscito" />
   </component>
 </project>
