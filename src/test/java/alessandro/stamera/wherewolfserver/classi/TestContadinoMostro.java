@@ -12,6 +12,8 @@ public final class TestContadinoMostro
 
     @BeforeEach public void setUp() { ruolo = new ContadinoMostro(); }
 
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
+
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
