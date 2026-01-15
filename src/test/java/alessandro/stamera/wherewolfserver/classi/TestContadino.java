@@ -33,6 +33,9 @@ public final class TestContadino
     @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
     public void testContadinoMostro(Aura aura) { verificaFalso(getContadino(aura).isContadinoMostro()); }
 
+    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    public void testContadinoEroe(Aura aura) { verificaFalso(getContadino(aura).isContadinoEroe()); }
+
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
