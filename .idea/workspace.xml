@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: parametrizzazione dei test">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadinoEroe riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,22 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00162" summary="ROSSO: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1768254007714</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1768254007714</updated>
-    </task>
-    <task id="LOCAL-00163" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1768254059141</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1768254059141</updated>
     </task>
     <task id="LOCAL-00164" summary="ROSSO: testFazione non riuscito">
       <option name="closed" value="true" />
@@ -601,7 +585,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768487419212</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="REFACTORING: definizione del metodo getComboEnum">
+      <option name="closed" value="true" />
+      <created>1768489114382</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1768489114382</updated>
+    </task>
+    <task id="LOCAL-00212" summary="VERDE DIRETTO: testContadinoEroe riuscito">
+      <option name="closed" value="true" />
+      <created>1768489292524</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1768489292524</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,8 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getContadino" />
-    <MESSAGE value="ROSSO: testRuolo non riuscito" />
     <MESSAGE value="VERDE: testRuolo riuscito" />
     <MESSAGE value="ROSSO: isContadino non riuscito" />
     <MESSAGE value="VERDE: isContadino riuscito" />
@@ -641,6 +639,8 @@
     <MESSAGE value="ROSSO: testContadinoEroe non riuscito" />
     <MESSAGE value="VERDE: testContadinoEroe riuscito" />
     <MESSAGE value="REFACTORING: parametrizzazione dei test" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: parametrizzazione dei test" />
+    <MESSAGE value="REFACTORING: definizione del metodo getComboEnum" />
+    <MESSAGE value="VERDE DIRETTO: testContadinoEroe riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadinoEroe riuscito" />
   </component>
 </project>

@@ -1,39 +1,39 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadino
 {
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testNome(Aura aura) { verificaStringa(getContadino(aura).getNome(), "Contadino"); }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testFazione(Aura aura) { assertThat(getContadino(aura).getFazione()).isEqualTo(VILLAGGIO); }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" }) public void testDescrizione(Aura aura)
+    @ParameterizedTest @EnumSource(Aura.class) public void testDescrizione(Aura aura)
     {
         String descrizione =
             "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
         verificaStringa(getContadino(aura).getDescrizione(), descrizione);
     }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testLune(Aura aura) { assertThat(getContadino(aura).getLune()).isEqualTo(1); }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testContadino(Aura aura) { assertThat(getContadino(aura).isContadino()).isTrue(); }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testContadinoNormale(Aura aura) { verificaFalso(getContadino(aura).isContadinoNormale()); }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testContadinoMostro(Aura aura) { verificaFalso(getContadino(aura).isContadinoMostro()); }
 
-    @ParameterizedTest @CsvSource({ "BIANCA", "NERA" })
+    @ParameterizedTest @EnumSource(Aura.class)
     public void testContadinoEroe(Aura aura) { verificaFalso(getContadino(aura).isContadinoEroe()); }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
