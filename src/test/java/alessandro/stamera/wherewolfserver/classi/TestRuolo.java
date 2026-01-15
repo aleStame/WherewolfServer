@@ -1,6 +1,5 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.*;
@@ -40,17 +39,134 @@ public final class TestRuolo
         assertThat(getRuolo(fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
     }
 
-    @Test public void testNome() { verificaStringa(getRuolo(NESSUNA, BIANCA, 1).getNome(), ESEMPIO_NOME); }
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "NESSUNA, BIANCA, 1", "NESSUNA, BIANCA, 2", "NESSUNA, BIANCA, 3", "NESSUNA, NERA, 1", "NESSUNA, NERA, 2", "NESSUNA, NERA, 3",
+            "LUPO_BRANCO, BIANCA, 1", "LUPO_BRANCO, BIANCA, 2", "LUPO_BRANCO, BIANCA, 3", "LUPO_BRANCO, NERA, 1", "LUPO_BRANCO, NERA, 2",
+            "LUPO_BRANCO, NERA, 3", "LUPO_SOLITARIO, BIANCA, 1", "LUPO_SOLITARIO, BIANCA, 2", "LUPO_SOLITARIO, BIANCA, 3",
+            "LUPO_SOLITARIO, NERA, 1", "LUPO_SOLITARIO, NERA, 2", "LUPO_SOLITARIO, NERA, 3", "VAMPIRO, BIANCA, 1", "VAMPIRO, BIANCA, 2",
+            "VAMPIRO, BIANCA, 3", "VAMPIRO, NERA, 1", "VAMPIRO, NERA, 2", "VAMPIRO, NERA, 3", "NOSFERATU, BIANCA, 1", "NOSFERATU, BIANCA, 2",
+            "NOSFERATU, BIANCA, 3", "NOSFERATU, NERA, 1", "NOSFERATU, NERA, 2", "NOSFERATU, NERA, 3", "NEGROMANTE, BIANCA, 1",
+            "NEGROMANTE, BIANCA, 1", "NEGROMANTE, BIANCA, 2", "NEGROMANTE, BIANCA, 3", "NEGROMANTE, NERA, 1", "NEGROMANTE, NERA, 2",
+            "NEGROMANTE, NERA, 3", "POSSEDUTO, BIANCA, 1", "POSSEDUTO, BIANCA, 2", "POSSEDUTO, BIANCA, 3", "POSSEDUTO, NERA, 1",
+            "POSSEDUTO, NERA, 2", "POSSEDUTO, NERA, 3", "VILLAGGIO, BIANCA, 1", "VILLAGGIO, BIANCA, 2", "VILLAGGIO, BIANCA, 3",
+            "VILLAGGIO, NERA, 1", "VILLAGGIO, NERA, 2", "VILLAGGIO, NERA, 3", "CITTA, BIANCA, 1", "CITTA, BIANCA, 2", "CITTA, BIANCA, 3",
+            "CITTA, NERA, 1", "CITTA, NERA, 2", "CITTA, NERA, 3", "CRIMINALI, BIANCA, 1", "CRIMINALI, BIANCA, 2", "CRIMINALI, BIANCA, 3",
+            "CRIMINALI, NERA, 1", "CRIMINALI, NERA, 2", "CRIMINALI, NERA, 3", "AMANTI, BIANCA, 1", "AMANTI, BIANCA, 2", "AMANTI, BIANCA, 3",
+            "AMANTI, NERA, 1", "AMANTI, NERA, 2", "AMANTI, NERA, 3", "INQUISIZIONE, BIANCA, 1", "INQUISIZIONE, BIANCA, 2",
+            "INQUISIZIONE, BIANCA, 3", "INQUISIZIONE, NERA, 1", "INQUISIZIONE, NERA, 2", "INQUISIZIONE, NERA, 3"
+        }
+    )
+    public void testNome(Fazione fazione, Aura aura, int lune) { verificaStringa(getRuolo(fazione, aura, lune).getNome(), ESEMPIO_NOME); }
 
-    @Test public void testDescrizione() { verificaStringa(getRuolo(CITTA, NERA, 3).getDescrizione(), ESEMPIO_DESCRIZIONE); }
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "NESSUNA, BIANCA, 1", "NESSUNA, BIANCA, 2", "NESSUNA, BIANCA, 3", "NESSUNA, NERA, 1", "NESSUNA, NERA, 2", "NESSUNA, NERA, 3",
+            "LUPO_BRANCO, BIANCA, 1", "LUPO_BRANCO, BIANCA, 2", "LUPO_BRANCO, BIANCA, 3", "LUPO_BRANCO, NERA, 1", "LUPO_BRANCO, NERA, 2",
+            "LUPO_BRANCO, NERA, 3", "LUPO_SOLITARIO, BIANCA, 1", "LUPO_SOLITARIO, BIANCA, 2", "LUPO_SOLITARIO, BIANCA, 3",
+            "LUPO_SOLITARIO, NERA, 1", "LUPO_SOLITARIO, NERA, 2", "LUPO_SOLITARIO, NERA, 3", "VAMPIRO, BIANCA, 1", "VAMPIRO, BIANCA, 2",
+            "VAMPIRO, BIANCA, 3", "VAMPIRO, NERA, 1", "VAMPIRO, NERA, 2", "VAMPIRO, NERA, 3", "NOSFERATU, BIANCA, 1", "NOSFERATU, BIANCA, 2",
+            "NOSFERATU, BIANCA, 3", "NOSFERATU, NERA, 1", "NOSFERATU, NERA, 2", "NOSFERATU, NERA, 3", "NEGROMANTE, BIANCA, 1",
+            "NEGROMANTE, BIANCA, 1", "NEGROMANTE, BIANCA, 2", "NEGROMANTE, BIANCA, 3", "NEGROMANTE, NERA, 1", "NEGROMANTE, NERA, 2",
+            "NEGROMANTE, NERA, 3", "POSSEDUTO, BIANCA, 1", "POSSEDUTO, BIANCA, 2", "POSSEDUTO, BIANCA, 3", "POSSEDUTO, NERA, 1",
+            "POSSEDUTO, NERA, 2", "POSSEDUTO, NERA, 3", "VILLAGGIO, BIANCA, 1", "VILLAGGIO, BIANCA, 2", "VILLAGGIO, BIANCA, 3",
+            "VILLAGGIO, NERA, 1", "VILLAGGIO, NERA, 2", "VILLAGGIO, NERA, 3", "CITTA, BIANCA, 1", "CITTA, BIANCA, 2", "CITTA, BIANCA, 3",
+            "CITTA, NERA, 1", "CITTA, NERA, 2", "CITTA, NERA, 3", "CRIMINALI, BIANCA, 1", "CRIMINALI, BIANCA, 2", "CRIMINALI, BIANCA, 3",
+            "CRIMINALI, NERA, 1", "CRIMINALI, NERA, 2", "CRIMINALI, NERA, 3", "AMANTI, BIANCA, 1", "AMANTI, BIANCA, 2", "AMANTI, BIANCA, 3",
+            "AMANTI, NERA, 1", "AMANTI, NERA, 2", "AMANTI, NERA, 3", "INQUISIZIONE, BIANCA, 1", "INQUISIZIONE, BIANCA, 2",
+            "INQUISIZIONE, BIANCA, 3", "INQUISIZIONE, NERA, 1", "INQUISIZIONE, NERA, 2", "INQUISIZIONE, NERA, 3"
+        }
+    )
+    public void testDescrizione(Fazione fazione, Aura aura, int lune)
+    {
+        verificaStringa(getRuolo(fazione, aura, lune).getDescrizione(), ESEMPIO_DESCRIZIONE);
+    }
 
-    @Test public void testContadino() { verificaFalso(getRuolo(NEGROMANTE, NERA, 1).isContadino()); }
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "NESSUNA, BIANCA, 1", "NESSUNA, BIANCA, 2", "NESSUNA, BIANCA, 3", "NESSUNA, NERA, 1", "NESSUNA, NERA, 2", "NESSUNA, NERA, 3",
+            "LUPO_BRANCO, BIANCA, 1", "LUPO_BRANCO, BIANCA, 2", "LUPO_BRANCO, BIANCA, 3", "LUPO_BRANCO, NERA, 1", "LUPO_BRANCO, NERA, 2",
+            "LUPO_BRANCO, NERA, 3", "LUPO_SOLITARIO, BIANCA, 1", "LUPO_SOLITARIO, BIANCA, 2", "LUPO_SOLITARIO, BIANCA, 3",
+            "LUPO_SOLITARIO, NERA, 1", "LUPO_SOLITARIO, NERA, 2", "LUPO_SOLITARIO, NERA, 3", "VAMPIRO, BIANCA, 1", "VAMPIRO, BIANCA, 2",
+            "VAMPIRO, BIANCA, 3", "VAMPIRO, NERA, 1", "VAMPIRO, NERA, 2", "VAMPIRO, NERA, 3", "NOSFERATU, BIANCA, 1", "NOSFERATU, BIANCA, 2",
+            "NOSFERATU, BIANCA, 3", "NOSFERATU, NERA, 1", "NOSFERATU, NERA, 2", "NOSFERATU, NERA, 3", "NEGROMANTE, BIANCA, 1",
+            "NEGROMANTE, BIANCA, 1", "NEGROMANTE, BIANCA, 2", "NEGROMANTE, BIANCA, 3", "NEGROMANTE, NERA, 1", "NEGROMANTE, NERA, 2",
+            "NEGROMANTE, NERA, 3", "POSSEDUTO, BIANCA, 1", "POSSEDUTO, BIANCA, 2", "POSSEDUTO, BIANCA, 3", "POSSEDUTO, NERA, 1",
+            "POSSEDUTO, NERA, 2", "POSSEDUTO, NERA, 3", "VILLAGGIO, BIANCA, 1", "VILLAGGIO, BIANCA, 2", "VILLAGGIO, BIANCA, 3",
+            "VILLAGGIO, NERA, 1", "VILLAGGIO, NERA, 2", "VILLAGGIO, NERA, 3", "CITTA, BIANCA, 1", "CITTA, BIANCA, 2", "CITTA, BIANCA, 3",
+            "CITTA, NERA, 1", "CITTA, NERA, 2", "CITTA, NERA, 3", "CRIMINALI, BIANCA, 1", "CRIMINALI, BIANCA, 2", "CRIMINALI, BIANCA, 3",
+            "CRIMINALI, NERA, 1", "CRIMINALI, NERA, 2", "CRIMINALI, NERA, 3", "AMANTI, BIANCA, 1", "AMANTI, BIANCA, 2", "AMANTI, BIANCA, 3",
+            "AMANTI, NERA, 1", "AMANTI, NERA, 2", "AMANTI, NERA, 3", "INQUISIZIONE, BIANCA, 1", "INQUISIZIONE, BIANCA, 2",
+            "INQUISIZIONE, BIANCA, 3", "INQUISIZIONE, NERA, 1", "INQUISIZIONE, NERA, 2", "INQUISIZIONE, NERA, 3"
+        }
+    )
+    public void testContadino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadino()); }
 
-    @Test public void testContadinoNormale() { verificaFalso(getRuolo(INQUISIZIONE, BIANCA, 2).isContadinoNormale()); }
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "NESSUNA, BIANCA, 1", "NESSUNA, BIANCA, 2", "NESSUNA, BIANCA, 3", "NESSUNA, NERA, 1", "NESSUNA, NERA, 2", "NESSUNA, NERA, 3",
+            "LUPO_BRANCO, BIANCA, 1", "LUPO_BRANCO, BIANCA, 2", "LUPO_BRANCO, BIANCA, 3", "LUPO_BRANCO, NERA, 1", "LUPO_BRANCO, NERA, 2",
+            "LUPO_BRANCO, NERA, 3", "LUPO_SOLITARIO, BIANCA, 1", "LUPO_SOLITARIO, BIANCA, 2", "LUPO_SOLITARIO, BIANCA, 3",
+            "LUPO_SOLITARIO, NERA, 1", "LUPO_SOLITARIO, NERA, 2", "LUPO_SOLITARIO, NERA, 3", "VAMPIRO, BIANCA, 1", "VAMPIRO, BIANCA, 2",
+            "VAMPIRO, BIANCA, 3", "VAMPIRO, NERA, 1", "VAMPIRO, NERA, 2", "VAMPIRO, NERA, 3", "NOSFERATU, BIANCA, 1", "NOSFERATU, BIANCA, 2",
+            "NOSFERATU, BIANCA, 3", "NOSFERATU, NERA, 1", "NOSFERATU, NERA, 2", "NOSFERATU, NERA, 3", "NEGROMANTE, BIANCA, 1",
+            "NEGROMANTE, BIANCA, 1", "NEGROMANTE, BIANCA, 2", "NEGROMANTE, BIANCA, 3", "NEGROMANTE, NERA, 1", "NEGROMANTE, NERA, 2",
+            "NEGROMANTE, NERA, 3", "POSSEDUTO, BIANCA, 1", "POSSEDUTO, BIANCA, 2", "POSSEDUTO, BIANCA, 3", "POSSEDUTO, NERA, 1",
+            "POSSEDUTO, NERA, 2", "POSSEDUTO, NERA, 3", "VILLAGGIO, BIANCA, 1", "VILLAGGIO, BIANCA, 2", "VILLAGGIO, BIANCA, 3",
+            "VILLAGGIO, NERA, 1", "VILLAGGIO, NERA, 2", "VILLAGGIO, NERA, 3", "CITTA, BIANCA, 1", "CITTA, BIANCA, 2", "CITTA, BIANCA, 3",
+            "CITTA, NERA, 1", "CITTA, NERA, 2", "CITTA, NERA, 3", "CRIMINALI, BIANCA, 1", "CRIMINALI, BIANCA, 2", "CRIMINALI, BIANCA, 3",
+            "CRIMINALI, NERA, 1", "CRIMINALI, NERA, 2", "CRIMINALI, NERA, 3", "AMANTI, BIANCA, 1", "AMANTI, BIANCA, 2", "AMANTI, BIANCA, 3",
+            "AMANTI, NERA, 1", "AMANTI, NERA, 2", "AMANTI, NERA, 3", "INQUISIZIONE, BIANCA, 1", "INQUISIZIONE, BIANCA, 2",
+            "INQUISIZIONE, BIANCA, 3", "INQUISIZIONE, NERA, 1", "INQUISIZIONE, NERA, 2", "INQUISIZIONE, NERA, 3"
+        }
+    )
+    public void testContadinoNormale(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoNormale()); }
 
-    @Test public void testContadinoMostro() { verificaFalso(getRuolo(LUPO_BRANCO, NERA, 3).isContadinoMostro()); }
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "NESSUNA, BIANCA, 1", "NESSUNA, BIANCA, 2", "NESSUNA, BIANCA, 3", "NESSUNA, NERA, 1", "NESSUNA, NERA, 2", "NESSUNA, NERA, 3",
+            "LUPO_BRANCO, BIANCA, 1", "LUPO_BRANCO, BIANCA, 2", "LUPO_BRANCO, BIANCA, 3", "LUPO_BRANCO, NERA, 1", "LUPO_BRANCO, NERA, 2",
+            "LUPO_BRANCO, NERA, 3", "LUPO_SOLITARIO, BIANCA, 1", "LUPO_SOLITARIO, BIANCA, 2", "LUPO_SOLITARIO, BIANCA, 3",
+            "LUPO_SOLITARIO, NERA, 1", "LUPO_SOLITARIO, NERA, 2", "LUPO_SOLITARIO, NERA, 3", "VAMPIRO, BIANCA, 1", "VAMPIRO, BIANCA, 2",
+            "VAMPIRO, BIANCA, 3", "VAMPIRO, NERA, 1", "VAMPIRO, NERA, 2", "VAMPIRO, NERA, 3", "NOSFERATU, BIANCA, 1", "NOSFERATU, BIANCA, 2",
+            "NOSFERATU, BIANCA, 3", "NOSFERATU, NERA, 1", "NOSFERATU, NERA, 2", "NOSFERATU, NERA, 3", "NEGROMANTE, BIANCA, 1",
+            "NEGROMANTE, BIANCA, 1", "NEGROMANTE, BIANCA, 2", "NEGROMANTE, BIANCA, 3", "NEGROMANTE, NERA, 1", "NEGROMANTE, NERA, 2",
+            "NEGROMANTE, NERA, 3", "POSSEDUTO, BIANCA, 1", "POSSEDUTO, BIANCA, 2", "POSSEDUTO, BIANCA, 3", "POSSEDUTO, NERA, 1",
+            "POSSEDUTO, NERA, 2", "POSSEDUTO, NERA, 3", "VILLAGGIO, BIANCA, 1", "VILLAGGIO, BIANCA, 2", "VILLAGGIO, BIANCA, 3",
+            "VILLAGGIO, NERA, 1", "VILLAGGIO, NERA, 2", "VILLAGGIO, NERA, 3", "CITTA, BIANCA, 1", "CITTA, BIANCA, 2", "CITTA, BIANCA, 3",
+            "CITTA, NERA, 1", "CITTA, NERA, 2", "CITTA, NERA, 3", "CRIMINALI, BIANCA, 1", "CRIMINALI, BIANCA, 2", "CRIMINALI, BIANCA, 3",
+            "CRIMINALI, NERA, 1", "CRIMINALI, NERA, 2", "CRIMINALI, NERA, 3", "AMANTI, BIANCA, 1", "AMANTI, BIANCA, 2", "AMANTI, BIANCA, 3",
+            "AMANTI, NERA, 1", "AMANTI, NERA, 2", "AMANTI, NERA, 3", "INQUISIZIONE, BIANCA, 1", "INQUISIZIONE, BIANCA, 2",
+            "INQUISIZIONE, BIANCA, 3", "INQUISIZIONE, NERA, 1", "INQUISIZIONE, NERA, 2", "INQUISIZIONE, NERA, 3"
+        }
+    )
+    public void testContadinoMostro(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoMostro()); }
 
-    @Test public void testContadinoEroe() { verificaFalso(getRuolo(LUPO_BRANCO, NERA, 3).isContadinoEroe()); }
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "NESSUNA, BIANCA, 1", "NESSUNA, BIANCA, 2", "NESSUNA, BIANCA, 3", "NESSUNA, NERA, 1", "NESSUNA, NERA, 2", "NESSUNA, NERA, 3",
+            "LUPO_BRANCO, BIANCA, 1", "LUPO_BRANCO, BIANCA, 2", "LUPO_BRANCO, BIANCA, 3", "LUPO_BRANCO, NERA, 1", "LUPO_BRANCO, NERA, 2",
+            "LUPO_BRANCO, NERA, 3", "LUPO_SOLITARIO, BIANCA, 1", "LUPO_SOLITARIO, BIANCA, 2", "LUPO_SOLITARIO, BIANCA, 3",
+            "LUPO_SOLITARIO, NERA, 1", "LUPO_SOLITARIO, NERA, 2", "LUPO_SOLITARIO, NERA, 3", "VAMPIRO, BIANCA, 1", "VAMPIRO, BIANCA, 2",
+            "VAMPIRO, BIANCA, 3", "VAMPIRO, NERA, 1", "VAMPIRO, NERA, 2", "VAMPIRO, NERA, 3", "NOSFERATU, BIANCA, 1", "NOSFERATU, BIANCA, 2",
+            "NOSFERATU, BIANCA, 3", "NOSFERATU, NERA, 1", "NOSFERATU, NERA, 2", "NOSFERATU, NERA, 3", "NEGROMANTE, BIANCA, 1",
+            "NEGROMANTE, BIANCA, 1", "NEGROMANTE, BIANCA, 2", "NEGROMANTE, BIANCA, 3", "NEGROMANTE, NERA, 1", "NEGROMANTE, NERA, 2",
+            "NEGROMANTE, NERA, 3", "POSSEDUTO, BIANCA, 1", "POSSEDUTO, BIANCA, 2", "POSSEDUTO, BIANCA, 3", "POSSEDUTO, NERA, 1",
+            "POSSEDUTO, NERA, 2", "POSSEDUTO, NERA, 3", "VILLAGGIO, BIANCA, 1", "VILLAGGIO, BIANCA, 2", "VILLAGGIO, BIANCA, 3",
+            "VILLAGGIO, NERA, 1", "VILLAGGIO, NERA, 2", "VILLAGGIO, NERA, 3", "CITTA, BIANCA, 1", "CITTA, BIANCA, 2", "CITTA, BIANCA, 3",
+            "CITTA, NERA, 1", "CITTA, NERA, 2", "CITTA, NERA, 3", "CRIMINALI, BIANCA, 1", "CRIMINALI, BIANCA, 2", "CRIMINALI, BIANCA, 3",
+            "CRIMINALI, NERA, 1", "CRIMINALI, NERA, 2", "CRIMINALI, NERA, 3", "AMANTI, BIANCA, 1", "AMANTI, BIANCA, 2", "AMANTI, BIANCA, 3",
+            "AMANTI, NERA, 1", "AMANTI, NERA, 2", "AMANTI, NERA, 3", "INQUISIZIONE, BIANCA, 1", "INQUISIZIONE, BIANCA, 2",
+            "INQUISIZIONE, BIANCA, 3", "INQUISIZIONE, NERA, 1", "INQUISIZIONE, NERA, 2", "INQUISIZIONE, NERA, 3"
+        }
+    )
+    public void testContadinoEroe(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoEroe()); }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {
