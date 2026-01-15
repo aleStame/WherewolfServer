@@ -50,6 +50,8 @@ public final class TestRuolo
 
     @Test public void testContadinoMostro() { verificaFalso(getRuolo(LUPO_BRANCO, NERA, 3).isContadinoMostro()); }
 
+    @Test public void testContadinoEroe() { verificaFalso(getRuolo(LUPO_BRANCO, NERA, 3).isContadinoEroe()); }
+
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
     {
         return new Ruolo(ESEMPIO_NOME, fazione, aura, ESEMPIO_DESCRIZIONE, lune);
