@@ -20,4 +20,6 @@ public final class TestContadinoEroe
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
+
 }
