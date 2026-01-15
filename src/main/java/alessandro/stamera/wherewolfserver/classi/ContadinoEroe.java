@@ -7,4 +7,6 @@ public final class ContadinoEroe extends Contadino
 
     public ContadinoEroe() { super(BIANCA); }
 
+    @Override public boolean isContadinoEroe() { return !super.isContadinoEroe(); }
+
 }
