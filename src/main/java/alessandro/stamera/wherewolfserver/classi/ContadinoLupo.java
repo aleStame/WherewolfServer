@@ -1,8 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-public class ContadinoLupo
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+
+public final class ContadinoLupo extends Contadino
 {
 
-    public String getNome() { return null; }
+    public ContadinoLupo() { super(NERA); }
 
 }
