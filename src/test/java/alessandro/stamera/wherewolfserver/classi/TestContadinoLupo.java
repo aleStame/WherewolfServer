@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -7,8 +8,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestContadinoLupo
 {
 
-    @Test public void testNome() { assertThat(new ContadinoLupo().getNome()).isEqualTo("Contadino"); }
+    private Ruolo ruolo;
 
-    @Test public void testFazione() { assertThat(new ContadinoLupo().getFazione()).isEqualTo(VILLAGGIO); }
+    @BeforeEach public void setUp() { ruolo = new ContadinoLupo(); }
+
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
+
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
 }
