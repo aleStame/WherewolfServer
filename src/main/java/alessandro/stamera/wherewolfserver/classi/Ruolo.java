@@ -49,4 +49,6 @@ public class Ruolo
 
     public int getNumeroVoti() { return voti; }
 
+    public void annullaVoti() { }
+
 }
