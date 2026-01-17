@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadinoNormale riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -251,22 +251,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00192" summary="VERDE DIRETTO: testContadino riuscito">
-      <option name="closed" value="true" />
-      <created>1768410863150</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1768410863150</updated>
-    </task>
-    <task id="LOCAL-00193" summary="VERDE DIRETTO: testContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1768411005018</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1768411005018</updated>
     </task>
     <task id="LOCAL-00194" summary="REFACTORING: parametrizzazione dei test">
       <option name="closed" value="true" />
@@ -644,7 +628,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768642507321</updated>
     </task>
-    <option name="localTasksCounter" value="241" />
+    <task id="LOCAL-00241" summary="VERDE DIRETTO: testContadinoNormale riuscito">
+      <option name="closed" value="true" />
+      <created>1768642618002</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1768642618002</updated>
+    </task>
+    <task id="LOCAL-00242" summary="VERDE DIRETTO: testContadinoMostro riuscito">
+      <option name="closed" value="true" />
+      <created>1768642762210</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1768642762210</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -671,8 +671,6 @@
     <MESSAGE value="VERDE DIRETTO: testNome riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di setUp" />
     <MESSAGE value="VERDE DIRETTO: testAura riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testContadinoMostro riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="ROSSO: testContadinoEroe non riuscito" />
     <MESSAGE value="VERDE: testContadinoEroe riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
@@ -684,6 +682,8 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadinoNormale riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadinoNormale riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testContadinoMostro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
