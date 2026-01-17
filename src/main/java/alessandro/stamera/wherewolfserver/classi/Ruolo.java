@@ -20,7 +20,7 @@ public class Ruolo
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
-        voti = 0;
+        annullaVoti();
     }
 
     public String getNome() { return nome; }
@@ -49,6 +49,6 @@ public class Ruolo
 
     public int getNumeroVoti() { return voti; }
 
-    public void annullaVoti() { }
+    public void annullaVoti() { voti = 0; }
 
 }
