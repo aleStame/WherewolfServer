@@ -58,7 +58,7 @@ public class Ruolo
 
     public void sceltaAngeloCustode() { setAmato(true); }
 
-    public boolean isAngeloCustode() { return true; }
+    public boolean isAngeloCustode() { return false; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 
