@@ -63,15 +63,12 @@ public final class TestRuolo
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testVoti(Fazione fazione, Aura aura, int lune)
     {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
-        for(int i = 0; i < 3; i++) ruolo.incrementaVoti();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(3);
+        assertThat(getEsempioVoti(fazione, aura, lune).getNumeroVoti()).isEqualTo(3);
     }
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testAnnullamentoVoti(Fazione fazione, Aura aura, int lune)
     {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
-        for(int i = 0; i < 3; i++) ruolo.incrementaVoti();
+        Ruolo ruolo = getEsempioVoti(fazione, aura, lune);
         ruolo.annullaVoti();
         assertThat(ruolo.getNumeroVoti()).isZero();
     }
@@ -82,6 +79,13 @@ public final class TestRuolo
         for(Fazione fazione : Fazione.values()) for(Aura aura : Aura.values()) for(int lune = 1; lune <= 3; lune++)
             argomenti.add(Arguments.of(fazione, aura, lune));
         return argomenti.stream();
+    }
+
+    private Ruolo getEsempioVoti(Fazione fazione, Aura aura, int lune)
+    {
+        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        for(int i = 0; i < 3; i++) ruolo.incrementaVoti();
+        return ruolo;
     }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
