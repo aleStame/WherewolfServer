@@ -5,6 +5,6 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 public final class ContadinoLupo extends Contadino
 {
 
-    public ContadinoLupo() { super(null); }
+    public ContadinoLupo() { super(NERA); }
 
 }
