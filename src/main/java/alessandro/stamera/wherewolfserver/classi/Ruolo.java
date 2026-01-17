@@ -42,4 +42,8 @@ public class Ruolo
 
     public boolean isContadinoLupo() { return false; }
 
+    public void incrementaVoti() { }
+
+    public int getNumeroVoti() { return -1; }
+
 }
