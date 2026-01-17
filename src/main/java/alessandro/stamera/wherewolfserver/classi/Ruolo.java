@@ -56,4 +56,6 @@ public class Ruolo
 
     public boolean isAmato() { return amato; }
 
+    public void sceltaAngeloCustode() { }
+
 }
