@@ -51,4 +51,6 @@ public class Ruolo
 
     public void annullaVoti() { voti = 0; }
 
+    public boolean isAmato() { return true; }
+
 }
