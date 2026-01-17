@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAmato riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo setAmato" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,30 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00213" summary="REFACTORING: ottimizzazione dei parametri">
-      <option name="closed" value="true" />
-      <created>1768489686458</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1768489686458</updated>
-    </task>
-    <task id="LOCAL-00214" summary="VERDE DIRETTO: testContadinoEroe riuscito">
-      <option name="closed" value="true" />
-      <created>1768489901866</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1768489901866</updated>
-    </task>
-    <task id="LOCAL-00215" summary="REFACTORING: definizione del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1768490068079</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1768490068079</updated>
     </task>
     <task id="LOCAL-00216" summary="VERDE DIRETTO: testNome riuscito">
       <option name="closed" value="true" />
@@ -601,7 +574,31 @@
       <option name="project" value="LOCAL" />
       <updated>1768660529912</updated>
     </task>
-    <option name="localTasksCounter" value="262" />
+    <task id="LOCAL-00262" summary="ROSSO: testScelta non riuscito">
+      <option name="closed" value="true" />
+      <created>1768660755368</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1768660755368</updated>
+    </task>
+    <task id="LOCAL-00263" summary="VERDE: testScelta riuscito">
+      <option name="closed" value="true" />
+      <created>1768660835504</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1768660835504</updated>
+    </task>
+    <task id="LOCAL-00264" summary="REFACTORING: definizione del metodo setAmato">
+      <option name="closed" value="true" />
+      <created>1768660978992</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1768660978992</updated>
+    </task>
+    <option name="localTasksCounter" value="265" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,9 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testContadinoEroe non riuscito" />
-    <MESSAGE value="VERDE: testContadinoEroe riuscito" />
-    <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
@@ -641,6 +635,9 @@
     <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_VOTI" />
     <MESSAGE value="ROSSO: testAmato non riuscito" />
     <MESSAGE value="VERDE: testAmato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAmato riuscito" />
+    <MESSAGE value="ROSSO: testScelta non riuscito" />
+    <MESSAGE value="VERDE: testScelta riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo setAmato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo setAmato" />
   </component>
 </project>

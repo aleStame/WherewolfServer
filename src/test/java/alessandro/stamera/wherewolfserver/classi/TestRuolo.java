@@ -85,6 +85,9 @@ public final class TestRuolo
         assertThat(ruolo.isAmato()).isTrue();
     }
 
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testAngeloCustode(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAngeloCustode()); }
+
     private static Stream<Arguments> getComboEnum()
     {
         List<Arguments> argomenti = new ArrayList<>();
