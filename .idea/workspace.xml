@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadinoLupo riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testContadinoLupo non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ContadinoLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ContadinoLupo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,22 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00200" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1768412308171</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1768412308171</updated>
-    </task>
-    <task id="LOCAL-00201" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1768412511678</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1768412511678</updated>
     </task>
     <task id="LOCAL-00202" summary="REFACTORING: definizione del metodo verificaFalso">
       <option name="closed" value="true" />
@@ -600,7 +584,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768643515459</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="VERDE DIRETTO: testContadinoLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1768643757999</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1768643757999</updated>
+    </task>
+    <task id="LOCAL-00250" summary="ROSSO: testContadinoLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1768643981562</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1768643981563</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getTipoContadino" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneContadino" />
     <MESSAGE value="REFACTORING: definizione del metodo getDescrizioneContadino" />
     <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
@@ -640,6 +639,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testContadinoEroe riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadinoLupo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadinoLupo riuscito" />
+    <MESSAGE value="ROSSO: testContadinoLupo non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testContadinoLupo non riuscito" />
   </component>
 </project>
