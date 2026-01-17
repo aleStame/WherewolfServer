@@ -29,4 +29,6 @@ public final class TestContadinoLupo
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
+    @Test public void testContadinoLupo() { assertThat(ruolo.isContadinoLupo()).isTrue(); }
+
 }
