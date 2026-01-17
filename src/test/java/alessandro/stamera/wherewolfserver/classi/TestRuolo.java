@@ -58,6 +58,9 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testContadinoEroe(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoEroe()); }
 
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testContadinoLupo(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoLupo()); }
+
     private static Stream<Arguments> getComboEnum()
     {
         List<Arguments> argomenti = new ArrayList<>();

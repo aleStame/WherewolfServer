@@ -40,4 +40,6 @@ public class Ruolo
 
     public boolean isContadinoEroe() { return false; }
 
+    public boolean isContadinoLupo() { return false; }
+
 }
