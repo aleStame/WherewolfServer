@@ -19,4 +19,6 @@ public final class TestContadinoLupo
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
+    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
+
 }
