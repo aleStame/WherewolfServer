@@ -19,4 +19,13 @@ public final class TestAngeloCustode
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String soluzione =
+            "La prima notte indica un giocatore, l'Amato, che viene avvisato. Se quel giocatore dovesse essere accusato, l'Angelo custode sarà " +
+            "accusato al suo posto. Se dovesse essere attaccato e ucciso durante la notte, sarà invece attaccato, avvisato e ucciso l'Angelo " +
+            "custode.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(soluzione);
+    }
+
 }
