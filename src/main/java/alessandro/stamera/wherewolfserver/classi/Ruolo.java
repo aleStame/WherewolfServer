@@ -23,7 +23,7 @@ public class Ruolo
         this.descrizione = descrizione;
         this.lune = lune;
         annullaVoti();
-        amato = false;
+        setAmato(false);
     }
 
     public String getNome() { return nome; }
@@ -56,6 +56,8 @@ public class Ruolo
 
     public boolean isAmato() { return amato; }
 
-    public void sceltaAngeloCustode() { amato = true; }
+    public void sceltaAngeloCustode() { setAmato(true); }
+
+    private void setAmato(boolean amato) { this.amato = amato; }
 
 }
