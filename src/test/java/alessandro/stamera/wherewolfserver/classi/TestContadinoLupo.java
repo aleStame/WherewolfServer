@@ -23,4 +23,6 @@ public final class TestContadinoLupo
 
     @Test public void testContadinoNormale() { assertThat(ruolo.isContadinoNormale()).isFalse(); }
 
+    @Test public void testContadinoMostro() { assertThat(ruolo.isContadinoMostro()).isFalse(); }
+
 }
