@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVoti non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,14 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00205" summary="REFACTORING: definizione del metodo getDescrizioneContadino">
-      <option name="closed" value="true" />
-      <created>1768413238774</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1768413238774</updated>
     </task>
     <task id="LOCAL-00206" summary="REFACTORING: definizione della costante NON_TROVATO">
       <option name="closed" value="true" />
@@ -601,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768644564543</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="ROSSO: testVoti non riuscito">
+      <option name="closed" value="true" />
+      <created>1768658459083</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1768658459084</updated>
+    </task>
+    <option name="localTasksCounter" value="255" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getDescrizioneContadino" />
     <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
     <MESSAGE value="REFACTORING: parametrizzazione dei test" />
     <MESSAGE value="REFACTORING: definizione del metodo getComboEnum" />
@@ -641,6 +639,7 @@
     <MESSAGE value="ROSSO: testContadinoLupo non riuscito" />
     <MESSAGE value="VERDE: testContadinoLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="ROSSO: testVoti non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVoti non riuscito" />
   </component>
 </project>
