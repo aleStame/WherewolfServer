@@ -11,6 +11,8 @@ public class Ruolo
 
     private final int lune;
 
+    private int voti;
+
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune)
     {
         this.nome = nome;
@@ -18,6 +20,7 @@ public class Ruolo
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
+        annullaVoti();
     }
 
     public String getNome() { return nome; }
@@ -41,5 +44,11 @@ public class Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
+
+    public void incrementaVoti() { voti++; }
+
+    public int getNumeroVoti() { return voti; }
+
+    public void annullaVoti() { voti = 0; }
 
 }

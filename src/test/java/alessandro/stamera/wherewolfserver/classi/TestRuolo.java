@@ -15,6 +15,8 @@ public final class TestRuolo
 
     private static final String ESEMPIO_NOME = "Ruolo", ESEMPIO_DESCRIZIONE = "Descrizione generica";
 
+    private static final int ESEMPIO_VOTI = 2;
+
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testLune(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getLune()).isEqualTo(lune); }
 
@@ -61,12 +63,31 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testContadinoLupo(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoLupo()); }
 
+    @ParameterizedTest @MethodSource("getComboEnum") public void testVoti(Fazione fazione, Aura aura, int lune)
+    {
+        assertThat(getEsempioVoti(fazione, aura, lune).getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
+    }
+
+    @ParameterizedTest @MethodSource("getComboEnum") public void testAnnullamentoVoti(Fazione fazione, Aura aura, int lune)
+    {
+        Ruolo ruolo = getEsempioVoti(fazione, aura, lune);
+        ruolo.annullaVoti();
+        assertThat(ruolo.getNumeroVoti()).isZero();
+    }
+
     private static Stream<Arguments> getComboEnum()
     {
         List<Arguments> argomenti = new ArrayList<>();
         for(Fazione fazione : Fazione.values()) for(Aura aura : Aura.values()) for(int lune = 1; lune <= 3; lune++)
             argomenti.add(Arguments.of(fazione, aura, lune));
         return argomenti.stream();
+    }
+
+    private Ruolo getEsempioVoti(Fazione fazione, Aura aura, int lune)
+    {
+        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        for(int i = 0; i < ESEMPIO_VOTI; i++) ruolo.incrementaVoti();
+        return ruolo;
     }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
