@@ -19,7 +19,7 @@ public final class TestContadinoLupo
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
+    @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
     @Test public void testContadinoNormale() { verificaFalso(ruolo.isContadinoNormale()); }
 
@@ -27,8 +27,10 @@ public final class TestContadinoLupo
 
     @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoEroe()); }
 
+    @Test public void testContadinoLupo() { verificaVero(ruolo.isContadinoLupo()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
-    @Test public void testContadinoLupo() { assertThat(ruolo.isContadinoLupo()).isTrue(); }
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
