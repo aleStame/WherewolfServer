@@ -36,6 +36,9 @@ public final class TestContadino
     @ParameterizedTest @EnumSource(Aura.class)
     public void testContadinoEroe(Aura aura) { verificaFalso(getContadino(aura).isContadinoEroe()); }
 
+    @ParameterizedTest @EnumSource(Aura.class)
+    public void testContadinoLupo(Aura aura) { verificaFalso(getContadino(aura).isContadinoLupo()); }
+
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
