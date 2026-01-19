@@ -13,7 +13,7 @@ public final class TestAssassino
 
     @BeforeEach public void setUp() { ruolo = new Assassino(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Assassino"); }
+    @Test public void testNome() { testStringa(ruolo.getNome(), "Assassino"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 
@@ -24,7 +24,9 @@ public final class TestAssassino
         String soluzione =
             "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte, può aprire gli occhi nel turno di un " +
             "mistico. Se quel mistico in gioco, viene ucciso. Altrimenti, l'Assassino indica un giocatore che viene avvisato ed ucciso.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(soluzione);
+        testStringa(ruolo.getDescrizione(), soluzione);
     }
+
+    private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
