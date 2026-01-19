@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAura riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testLune non riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAssassino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAssassino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,38 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00239" summary="VERDE: testAura riuscito">
-      <option name="closed" value="true" />
-      <created>1768642384392</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1768642384392</updated>
-    </task>
-    <task id="LOCAL-00240" summary="VERDE DIRETTO: testContadino riuscito">
-      <option name="closed" value="true" />
-      <created>1768642507321</created>
-      <option name="number" value="00240" />
-      <option name="presentableId" value="LOCAL-00240" />
-      <option name="project" value="LOCAL" />
-      <updated>1768642507321</updated>
-    </task>
-    <task id="LOCAL-00241" summary="VERDE DIRETTO: testContadinoNormale riuscito">
-      <option name="closed" value="true" />
-      <created>1768642618002</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1768642618002</updated>
-    </task>
-    <task id="LOCAL-00242" summary="VERDE DIRETTO: testContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1768642762210</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1768642762210</updated>
     </task>
     <task id="LOCAL-00243" summary="REFACTORING: definizione del metodo verificaFalso">
       <option name="closed" value="true" />
@@ -601,7 +569,39 @@
       <option name="project" value="LOCAL" />
       <updated>1768835999753</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="ROSSO: testFazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1768843732807</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1768843732807</updated>
+    </task>
+    <task id="LOCAL-00289" summary="VERDE: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1768843830286</created>
+      <option name="number" value="00289" />
+      <option name="presentableId" value="LOCAL-00289" />
+      <option name="project" value="LOCAL" />
+      <updated>1768843830286</updated>
+    </task>
+    <task id="LOCAL-00290" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1768843988321</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1768843988321</updated>
+    </task>
+    <task id="LOCAL-00291" summary="ROSSO: testLune non riuscito">
+      <option name="closed" value="true" />
+      <created>1768844463365</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1768844463366</updated>
+    </task>
+    <option name="localTasksCounter" value="292" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -625,13 +625,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo setAmato" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
-    <MESSAGE value="ROSSO: testFazione non riuscito" />
-    <MESSAGE value="VERDE: testFazione riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo testStringa" />
-    <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAngeloCustode riuscito" />
@@ -641,6 +637,10 @@
     <MESSAGE value="VERDE: assassino riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAura riuscito" />
+    <MESSAGE value="ROSSO: testFazione non riuscito" />
+    <MESSAGE value="VERDE: testFazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="ROSSO: testLune non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testLune non riuscito" />
   </component>
 </project>
