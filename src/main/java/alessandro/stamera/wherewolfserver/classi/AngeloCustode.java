@@ -18,4 +18,6 @@ public final class AngeloCustode extends Ruolo
         );
     }
 
+    @Override public boolean isAngeloCustode() { return !super.isAngeloCustode(); }
+
 }

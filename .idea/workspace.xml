@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo testStringa">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAngeloCustode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAngeloCustode.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAngeloCustode riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,22 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00230" summary="REFACTORING: definizione del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1768497367783</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1768497367783</updated>
-    </task>
-    <task id="LOCAL-00231" summary="ROSSO: testContadinoEroe non riuscito">
-      <option name="closed" value="true" />
-      <created>1768497435599</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1768497435599</updated>
     </task>
     <task id="LOCAL-00232" summary="VERDE: testContadinoEroe riuscito">
       <option name="closed" value="true" />
@@ -600,7 +582,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768832949845</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="ROSSO: testAngeloCustode non riuscito">
+      <option name="closed" value="true" />
+      <created>1768833084272</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1768833084273</updated>
+    </task>
+    <task id="LOCAL-00280" summary="VERDE: testAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1768833179258</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1768833179258</updated>
+    </task>
+    <option name="localTasksCounter" value="281" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,8 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testContadinoLupo riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="ROSSO: testVoti non riuscito" />
     <MESSAGE value="VERDE: testVoti riuscito" />
     <MESSAGE value="ROSSO: testAnnullamentoVoti non riuscito" />
@@ -628,8 +624,6 @@
     <MESSAGE value="ROSSO: testScelta non riuscito" />
     <MESSAGE value="VERDE: testScelta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo setAmato" />
-    <MESSAGE value="ROSSO: testAngeloCustode non riuscito" />
-    <MESSAGE value="VERDE: testAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
@@ -640,6 +634,10 @@
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo testStringa" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo testStringa" />
+    <MESSAGE value="ROSSO: testLune non riuscito" />
+    <MESSAGE value="VERDE: testLune riuscito" />
+    <MESSAGE value="ROSSO: testAngeloCustode non riuscito" />
+    <MESSAGE value="VERDE: testAngeloCustode riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAngeloCustode riuscito" />
   </component>
 </project>
