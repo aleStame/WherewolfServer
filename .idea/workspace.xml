@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAssassino riuscito">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAssassino.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: assassino riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,22 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00235" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1768559042529</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1768559042529</updated>
-    </task>
-    <task id="LOCAL-00236" summary="VERDE DIRETTO: testFazione riuscito">
-      <option name="closed" value="true" />
-      <created>1768559241060</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1768559241060</updated>
     </task>
     <task id="LOCAL-00237" summary="REFACTORING: definizione di un metodo di set up">
       <option name="closed" value="true" />
@@ -601,7 +582,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768834560588</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="ROSSO: assassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1768834871579</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1768834871579</updated>
+    </task>
+    <task id="LOCAL-00285" summary="VERDE: assassino riuscito">
+      <option name="closed" value="true" />
+      <created>1768834994873</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1768834994873</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,8 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAnnullamentoVoti non riuscito" />
-    <MESSAGE value="VERDE: testAnnullamentoVoti riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroVoti" />
     <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_VOTI" />
     <MESSAGE value="ROSSO: testAmato non riuscito" />
@@ -641,6 +636,8 @@
     <MESSAGE value="VERDE: testAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: testAssassino non riuscito" />
     <MESSAGE value="VERDE: testAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAssassino riuscito" />
+    <MESSAGE value="ROSSO: assassino non riuscito" />
+    <MESSAGE value="VERDE: assassino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: assassino riuscito" />
   </component>
 </project>
