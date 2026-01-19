@@ -30,6 +30,8 @@ public final class TestAngeloCustode
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
+    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
