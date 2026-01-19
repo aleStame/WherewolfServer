@@ -13,7 +13,7 @@ public final class TestAngeloCustode
 
     @BeforeEach public void setUp() { ruolo = new AngeloCustode(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Angelo custode"); }
+    @Test public void testNome() { testStringa(ruolo.getNome(), "Angelo custode"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(AMANTI); }
 
@@ -25,7 +25,9 @@ public final class TestAngeloCustode
             "La prima notte indica un giocatore, l'Amato, che viene avvisato. Se quel giocatore dovesse essere accusato, l'Angelo custode sarà " +
             "accusato al suo posto. Se dovesse essere attaccato e ucciso durante la notte, sarà invece attaccato, avvisato e ucciso l'Angelo " +
             "custode.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(soluzione);
+        testStringa(ruolo.getDescrizione(), soluzione);
     }
+
+    private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
