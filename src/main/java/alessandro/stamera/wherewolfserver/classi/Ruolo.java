@@ -60,7 +60,7 @@ public class Ruolo
 
     public boolean isAngeloCustode() { return false; }
 
-    public boolean isAssassino() { return true; }
+    public boolean isAssassino() { return false; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 
