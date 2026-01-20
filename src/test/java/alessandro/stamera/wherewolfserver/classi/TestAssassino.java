@@ -31,6 +31,8 @@ public final class TestAssassino
 
     @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isTrue(); }
 
+    @Test public void testInizializzazione() { assertThat(ruolo.assassinioAvvenuto()).isFalse(); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
