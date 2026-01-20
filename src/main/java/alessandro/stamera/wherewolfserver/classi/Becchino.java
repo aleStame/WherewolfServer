@@ -6,6 +6,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 public class Becchino extends Ruolo
 {
 
-    public Becchino() { super("Becchino", VILLAGGIO, BIANCA, null, -1); }
+    public Becchino() { super("Becchino", VILLAGGIO, BIANCA, null, 3); }
 
 }

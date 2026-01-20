@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestBecchino" tests="4" skipped="0" failures="1" errors="0" timestamp="2026-01-20T15:41:55" hostname="ALESSANDRO" time="0.225">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestBecchino" tests="5" skipped="0" failures="1" errors="0" timestamp="2026-01-20T17:22:34" hostname="ALESSANDRO" time="0.145">
   <properties/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.026"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.022"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.138">
-    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: 3&#13;&#10; but was: -1" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
-expected: 3
- but was: -1
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.006"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.018"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.009"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.009"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.072">
+    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: &quot;La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua fazione diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il Moderatore lo annuncia pubblicamente&quot;&#13;&#10; but was: null" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+expected: &quot;La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua fazione diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il Moderatore lo annuncia pubblicamente&quot;
+ but was: null
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.TestBecchino.testLune(TestBecchino.java:22)
+	at app//alessandro.stamera.wherewolfserver.classi.TestBecchino.testDescrizione(TestBecchino.java:28)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -92,7 +94,6 @@ expected: 3
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestBecchino" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -19,6 +19,15 @@ public final class TestBecchino
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String soluzione =
+            "La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua " +
+            "fazione diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il " +
+            "Moderatore lo annuncia pubblicamente";
+        assertThat(ruolo.getDescrizione()).isEqualTo(soluzione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
 }
