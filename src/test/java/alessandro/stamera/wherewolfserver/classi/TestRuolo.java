@@ -91,6 +91,9 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testAssassino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAssassino()); }
 
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testAssassinio(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).assassinioAvvenuto()); }
+
     private static Stream<Arguments> getComboEnum()
     {
         List<Arguments> argomenti = new ArrayList<>();
