@@ -13,7 +13,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato;
+    private boolean amato, assassinio;
 
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune)
     {
@@ -24,6 +24,7 @@ public class Ruolo
         this.lune = lune;
         annullaVoti();
         setAmato(false);
+        assassinio = false;
     }
 
     public String getNome() { return nome; }
@@ -62,9 +63,12 @@ public class Ruolo
 
     public boolean isAssassino() { return false; }
 
-    public boolean assassinioAvvenuto() { return false; }
+    public boolean assassinioAvvenuto() { return assassinio; }
 
-    public void eseguiAssassinio() { }
+    public void eseguiAssassinio()
+    {
+        if(isAssassino() && !assassinioAvvenuto()) assassinio = true;
+    }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 

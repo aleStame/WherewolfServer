@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testInizializzazione riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAssassinio non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,14 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00259" summary="REFACTORING: definizione della costante ESEMPIO_VOTI">
-      <option name="closed" value="true" />
-      <created>1768659444182</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1768659444182</updated>
     </task>
     <task id="LOCAL-00260" summary="ROSSO: testAmato non riuscito">
       <option name="closed" value="true" />
@@ -598,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768907046017</updated>
     </task>
-    <option name="localTasksCounter" value="308" />
+    <task id="LOCAL-00308" summary="ROSSO: testAssassinio non riuscito">
+      <option name="closed" value="true" />
+      <created>1768907445624</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1768907445625</updated>
+    </task>
+    <option name="localTasksCounter" value="309" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -632,12 +634,12 @@
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testAssassino non riuscito" />
     <MESSAGE value="VERDE: testAssassino riuscito" />
-    <MESSAGE value="ROSSO: testAssassinio non riuscito" />
     <MESSAGE value="VERDE: testAssassinio riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAssassinioAvvenuto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAssassinioNonAvvenuto" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioAssassinio" />
     <MESSAGE value="VERDE DIRETTO: testInizializzazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testInizializzazione riuscito" />
+    <MESSAGE value="ROSSO: testAssassinio non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAssassinio non riuscito" />
   </component>
 </project>
