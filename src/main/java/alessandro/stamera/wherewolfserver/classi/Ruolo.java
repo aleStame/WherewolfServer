@@ -24,7 +24,7 @@ public class Ruolo
         this.lune = lune;
         annullaVoti();
         setAmato(false);
-        assassinio = false;
+        setAssassinio(false);
     }
 
     public String getNome() { return nome; }
@@ -65,11 +65,10 @@ public class Ruolo
 
     public boolean assassinioAvvenuto() { return assassinio; }
 
-    public void eseguiAssassinio()
-    {
-        if(isAssassino() && !assassinioAvvenuto()) assassinio = true;
-    }
+    public void eseguiAssassinio() { if(isAssassino() && !assassinioAvvenuto()) setAssassinio(true); }
 
     private void setAmato(boolean amato) { this.amato = amato; }
+
+    private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
 }
