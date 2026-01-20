@@ -1,0 +1,27 @@
+Index: src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package alessandro.stamera.wherewolfserver.classi;\r\n\r\nimport static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;\r\nimport static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;\r\n\r\npublic final class Assassino extends Ruolo\r\n{\r\n\r\n    public Assassino() { super(\"Assassino\", CRIMINALI, BIANCA, null, -1); }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java b/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java
+--- a/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java	(revision 1d23ea6b23ba5d6fa939c3bc4e274c3d7d0de6a0)
++++ b/src/main/java/alessandro/stamera/wherewolfserver/classi/Assassino.java	(date 1768845041306)
+@@ -6,6 +6,15 @@
+ public final class Assassino extends Ruolo
+ {
+ 
+-    public Assassino() { super("Assassino", CRIMINALI, BIANCA, null, -1); }
++    public Assassino()
++    {
++        super
++        (
++    "Assassino", CRIMINALI, BIANCA,
++"La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte, può aprire gli occhi nel turno di un " +
++          "mistico. Se quel mistico in gioco, viene ucciso. Altrimenti, l'Assassino indica un giocatore che viene avvisato ed ucciso.",
++     -1
++        );
++    }
+ 
+ }
