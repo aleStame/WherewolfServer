@@ -29,6 +29,8 @@ public final class TestAssassino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
+    @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isTrue(); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
