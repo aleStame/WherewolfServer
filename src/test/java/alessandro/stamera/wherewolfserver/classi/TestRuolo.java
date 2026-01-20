@@ -91,15 +91,13 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testAssassino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAssassino()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAssassinio(Fazione fazione, Aura aura, int lune) { verificaAssassinioNonAvvenuto(fazione, aura, lune); }
-
-    @ParameterizedTest @MethodSource("getComboEnum") public void testAssassinioAvvenuto(Fazione fazione, Aura aura, int lune)
+    @ParameterizedTest @MethodSource("getComboEnum") public void testAssassinio(Fazione fazione, Aura aura, int lune)
     {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
-        ruolo.eseguiAssassinio();
-        verificaAssassinioNonAvvenuto(fazione, aura, lune);
+        verificaFalso(getEsempioAssassinio(fazione, aura, lune).assassinioAvvenuto());
     }
+
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testAssassinioAvvenuto(Fazione fazione, Aura aura, int lune) { verificaAssassinioNonAvvenuto(fazione, aura, lune); }
 
     private static Stream<Arguments> getComboEnum()
     {
@@ -118,7 +116,14 @@ public final class TestRuolo
 
     private void verificaAssassinioNonAvvenuto(Fazione fazione, Aura aura, int lune)
     {
-        verificaFalso(getRuolo(fazione, aura, lune).assassinioAvvenuto());
+        verificaFalso(getEsempioAssassinio(fazione, aura, lune).assassinioAvvenuto());
+    }
+
+    private Ruolo getEsempioAssassinio(Fazione fazione, Aura aura, int lune)
+    {
+        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        ruolo.eseguiAssassinio();
+        return ruolo;
     }
 
     private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
