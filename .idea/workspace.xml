@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAssassinio non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAssassinio riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,14 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00254" summary="ROSSO: testVoti non riuscito">
-      <option name="closed" value="true" />
-      <created>1768658459083</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1768658459084</updated>
     </task>
     <task id="LOCAL-00255" summary="VERDE: testVoti riuscito">
       <option name="closed" value="true" />
@@ -600,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768903905304</updated>
     </task>
-    <option name="localTasksCounter" value="303" />
+    <task id="LOCAL-00303" summary="VERDE: testAssassinio riuscito">
+      <option name="closed" value="true" />
+      <created>1768904056980</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1768904056980</updated>
+    </task>
+    <option name="localTasksCounter" value="304" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAmato non riuscito" />
     <MESSAGE value="VERDE: testAmato riuscito" />
     <MESSAGE value="ROSSO: testScelta non riuscito" />
     <MESSAGE value="VERDE: testScelta riuscito" />
@@ -640,6 +639,7 @@
     <MESSAGE value="ROSSO: testAssassino non riuscito" />
     <MESSAGE value="VERDE: testAssassino riuscito" />
     <MESSAGE value="ROSSO: testAssassinio non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAssassinio non riuscito" />
+    <MESSAGE value="VERDE: testAssassinio riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAssassinio riuscito" />
   </component>
 </project>
