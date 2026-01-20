@@ -31,14 +31,16 @@ public final class TestAssassino
 
     @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isTrue(); }
 
-    @Test public void testInizializzazione() { assertThat(ruolo.assassinioAvvenuto()).isFalse(); }
+    @Test public void testInizializzazione() { assertThat(assassinioAvvenuto()).isFalse(); }
 
     @Test public void testAssassinio()
     {
         ruolo.eseguiAssassinio();
-        assertThat(ruolo.assassinioAvvenuto()).isTrue();
+        assertThat(assassinioAvvenuto()).isTrue();
     }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private boolean assassinioAvvenuto() { return ruolo.assassinioAvvenuto(); }
 
 }
