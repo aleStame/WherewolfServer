@@ -65,7 +65,7 @@ public class Ruolo
 
     public boolean assassinioAvvenuto() { return assassinio; }
 
-    public void eseguiAssassinio() { if(isAssassino() && !assassinioAvvenuto()) setAssassinio(true); }
+    public void eseguiAssassinio() { setAssassinio(true); }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 
