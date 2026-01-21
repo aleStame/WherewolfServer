@@ -1,8 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
+
 public final class BoccaDiRosa extends Ruolo
 {
 
-    public BoccaDiRosa() { super("Bocca di rosa", null, null, null, -1); }
+    public BoccaDiRosa() { super("Bocca di rosa", CITTA, null, null, -1); }
 
 }
