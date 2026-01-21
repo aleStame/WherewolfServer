@@ -5,7 +5,7 @@ public class Ruolo
 
     private final String nome, descrizione;
 
-    private final Fazione fazione;
+    private Fazione fazione;
 
     private final Aura aura;
 
@@ -18,7 +18,7 @@ public class Ruolo
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune)
     {
         this.nome = nome;
-        this.fazione = fazione;
+        cambiaFazione(fazione);
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
@@ -71,7 +71,7 @@ public class Ruolo
 
     public boolean isBecchino() { return false; }
 
-    public void cambiaFazione(Fazione fazione) {  }
+    public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
