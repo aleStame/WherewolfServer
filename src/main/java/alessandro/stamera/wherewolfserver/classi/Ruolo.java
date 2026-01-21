@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+
 public class Ruolo
 {
 
@@ -71,7 +73,7 @@ public class Ruolo
 
     public boolean isBecchino() { return false; }
 
-    public void riconosciNegromante() { }
+    public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
