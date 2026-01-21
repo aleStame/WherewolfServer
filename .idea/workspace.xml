@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testBecchino riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCambioFazione riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,22 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00281" summary="VERDE: testAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1768833373609</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1768833373609</updated>
-    </task>
-    <task id="LOCAL-00282" summary="ROSSO: testAssassino non riuscito">
-      <option name="closed" value="true" />
-      <created>1768834479063</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1768834479063</updated>
     </task>
     <task id="LOCAL-00283" summary="VERDE: testAssassino riuscito">
       <option name="closed" value="true" />
@@ -601,7 +584,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768991318461</updated>
     </task>
-    <option name="localTasksCounter" value="330" />
+    <task id="LOCAL-00330" summary="ROSSO: testCambioFazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1768991826733</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1768991826733</updated>
+    </task>
+    <task id="LOCAL-00331" summary="VERDE: testCambioFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1768991920767</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1768991920767</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -616,8 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAssassinioNonAvvenuto" />
-    <MESSAGE value="REFACTORING: definizione del metodo getEsempioAssassinio" />
     <MESSAGE value="VERDE DIRETTO: testInizializzazione riuscito" />
     <MESSAGE value="ROSSO: testAssassinio non riuscito" />
     <MESSAGE value="VERDE: testAssassinio riuscito" />
@@ -641,6 +638,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo testStringa" />
     <MESSAGE value="ROSSO: testBecchino non riuscito" />
     <MESSAGE value="VERDE: testBecchino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBecchino riuscito" />
+    <MESSAGE value="ROSSO: testCambioFazione non riuscito" />
+    <MESSAGE value="VERDE: testCambioFazione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCambioFazione riuscito" />
   </component>
 </project>
