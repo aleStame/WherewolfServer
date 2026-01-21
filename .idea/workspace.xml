@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCambioFazione riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione dle metodo verificaFazione">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBecchino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBecchino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,22 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00283" summary="VERDE: testAssassino riuscito">
-      <option name="closed" value="true" />
-      <created>1768834560588</created>
-      <option name="number" value="00283" />
-      <option name="presentableId" value="LOCAL-00283" />
-      <option name="project" value="LOCAL" />
-      <updated>1768834560588</updated>
-    </task>
-    <task id="LOCAL-00284" summary="ROSSO: assassino non riuscito">
-      <option name="closed" value="true" />
-      <created>1768834871579</created>
-      <option name="number" value="00284" />
-      <option name="presentableId" value="LOCAL-00284" />
-      <option name="project" value="LOCAL" />
-      <updated>1768834871579</updated>
     </task>
     <task id="LOCAL-00285" summary="VERDE: assassino riuscito">
       <option name="closed" value="true" />
@@ -600,7 +585,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768991920767</updated>
     </task>
-    <option name="localTasksCounter" value="332" />
+    <task id="LOCAL-00332" summary="REFACTORING: ottimizzazione della generazione degli argomenti nei test parametrici">
+      <option name="closed" value="true" />
+      <created>1768992410736</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1768992410737</updated>
+    </task>
+    <task id="LOCAL-00333" summary="REFACTORING: definizione dle metodo verificaFazione">
+      <option name="closed" value="true" />
+      <created>1768992650313</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1768992650313</updated>
+    </task>
+    <option name="localTasksCounter" value="334" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,8 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testInizializzazione riuscito" />
-    <MESSAGE value="ROSSO: testAssassinio non riuscito" />
     <MESSAGE value="VERDE: testAssassinio riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo assassinioAvvenuto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
@@ -640,6 +639,8 @@
     <MESSAGE value="VERDE: testBecchino riuscito" />
     <MESSAGE value="ROSSO: testCambioFazione non riuscito" />
     <MESSAGE value="VERDE: testCambioFazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCambioFazione riuscito" />
+    <MESSAGE value="REFACTORING: ottimizzazione della generazione degli argomenti nei test parametrici" />
+    <MESSAGE value="REFACTORING: definizione dle metodo verificaFazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione dle metodo verificaFazione" />
   </component>
 </project>

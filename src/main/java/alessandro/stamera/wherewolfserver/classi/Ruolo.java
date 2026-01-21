@@ -71,6 +71,8 @@ public class Ruolo
 
     public boolean isBecchino() { return false; }
 
+    public void riconosciNegromante() { }
+
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
