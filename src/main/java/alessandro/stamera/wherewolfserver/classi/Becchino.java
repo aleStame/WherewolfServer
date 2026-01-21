@@ -18,4 +18,6 @@ public class Becchino extends Ruolo
         );
     }
 
+    @Override public boolean isBecchino() { return !super.isBecchino(); }
+
 }
