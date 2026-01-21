@@ -13,7 +13,7 @@ public final class TestBecchino
 
     @BeforeEach public void setUp() { ruolo = new Becchino(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Becchino"); }
+    @Test public void testNome() { testStringa(ruolo.getNome(), "Becchino"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
@@ -25,9 +25,11 @@ public final class TestBecchino
             "La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua " +
             "fazione diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il " +
             "Moderatore lo annuncia pubblicamente";
-        assertThat(ruolo.getDescrizione()).isEqualTo(soluzione);
+        testStringa(ruolo.getDescrizione(), soluzione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+
+    private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
