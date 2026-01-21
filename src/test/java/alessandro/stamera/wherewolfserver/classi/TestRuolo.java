@@ -24,7 +24,7 @@ public final class TestRuolo
     public void testAura(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getAura()).isEqualTo(aura); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testFazione(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getFazione()).isEqualTo(fazione); }
+    public void testFazione(Fazione fazione, Aura aura, int lune) { verificaFazione(getRuolo(fazione, aura, lune).getFazione(), fazione); }
 
     @ParameterizedTest @CsvSource
     (
@@ -102,8 +102,10 @@ public final class TestRuolo
     {
         Ruolo ruolo = getRuolo(fazioneVecchia, aura, lune);
         ruolo.cambiaFazione(fazioneNuova);
-        assertThat(ruolo.getFazione()).isEqualTo(fazioneNuova);
+        verificaFazione(ruolo.getFazione(), fazioneNuova);
     }
+
+    private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private static Stream<Arguments> getComboFazioni()
     {
