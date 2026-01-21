@@ -97,11 +97,27 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testBecchino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isBecchino()); }
 
+    @ParameterizedTest @MethodSource("getComboFazioni")
+    public void testCambioFazione(Fazione fazioneVecchia, Aura aura, int lune, Fazione fazioneNuova)
+    {
+        Ruolo ruolo = getRuolo(fazioneVecchia, aura, lune);
+        ruolo.cambiaFazione(fazioneNuova);
+        assertThat(ruolo.getFazione()).isEqualTo(fazioneNuova);
+    }
+
     private static Stream<Arguments> getComboEnum()
     {
         List<Arguments> argomenti = new ArrayList<>();
         for(Fazione fazione : Fazione.values()) for(Aura aura : Aura.values()) for(int lune = 1; lune <= 3; lune++)
             argomenti.add(Arguments.of(fazione, aura, lune));
+        return argomenti.stream();
+    }
+
+    private static Stream<Arguments> getComboFazioni()
+    {
+        List<Arguments> argomenti = new ArrayList<>();
+        for(Fazione fazioneVecchia : Fazione.values()) for(Fazione fazioneNuova : Fazione.values()) for(Aura aura : Aura.values())
+            for(int lune = 1; lune <= 3; lune++) argomenti.add(Arguments.of(fazioneVecchia, aura, lune, fazioneNuova));
         return argomenti.stream();
     }
 
