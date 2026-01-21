@@ -30,6 +30,8 @@ public final class TestBecchino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
+    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
