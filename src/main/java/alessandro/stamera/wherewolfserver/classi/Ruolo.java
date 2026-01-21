@@ -1,11 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+
 public class Ruolo
 {
 
     private final String nome, descrizione;
 
-    private final Fazione fazione;
+    private Fazione fazione;
 
     private final Aura aura;
 
@@ -18,7 +20,7 @@ public class Ruolo
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune)
     {
         this.nome = nome;
-        this.fazione = fazione;
+        cambiaFazione(fazione);
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
@@ -65,9 +67,15 @@ public class Ruolo
 
     public boolean assassinioAvvenuto() { return assassinio; }
 
-    public void eseguiAssassinio() { if(isAssassino() && !assassinioAvvenuto()) setAssassinio(true); }
+    public void eseguiAssassinio() { setAssassinio(true); }
 
     private void setAmato(boolean amato) { this.amato = amato; }
+
+    public boolean isBecchino() { return false; }
+
+    public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
+
+    public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 

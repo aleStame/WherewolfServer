@@ -24,7 +24,7 @@ public final class TestRuolo
     public void testAura(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getAura()).isEqualTo(aura); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testFazione(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getFazione()).isEqualTo(fazione); }
+    public void testFazione(Fazione fazione, Aura aura, int lune) { verificaFazione(getRuolo(fazione, aura, lune).getFazione(), fazione); }
 
     @ParameterizedTest @CsvSource
     (
@@ -91,13 +91,29 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testAssassino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAssassino()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum") public void testAssassinio(Fazione fazione, Aura aura, int lune)
-    {
-        verificaFalso(getEsempioAssassinio(fazione, aura, lune).assassinioAvvenuto());
-    }
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testAssassinio(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).assassinioAvvenuto()); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAssassinioAvvenuto(Fazione fazione, Aura aura, int lune) { verificaAssassinioNonAvvenuto(fazione, aura, lune); }
+    public void testBecchino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isBecchino()); }
+
+    @ParameterizedTest @MethodSource("getComboFazioni")
+    public void testCambioFazione(Fazione fazioneVecchia, Aura aura, int lune, Fazione fazioneNuova)
+    {
+        Ruolo ruolo = getRuolo(fazioneVecchia, aura, lune);
+        ruolo.cambiaFazione(fazioneNuova);
+        verificaFazione(ruolo.getFazione(), fazioneNuova);
+    }
+
+    private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private static Stream<Arguments> getComboFazioni()
+    {
+        List<Arguments> risultato = new ArrayList<>();
+        for(Arguments argomenti : getComboEnum().toList()) for(Fazione fazioneNuova : Fazione.values())
+            risultato.add(Arguments.of(argomenti.get()[0], argomenti.get()[1], argomenti.get()[2], fazioneNuova));
+        return risultato.stream();
+    }
 
     private static Stream<Arguments> getComboEnum()
     {
@@ -111,18 +127,6 @@ public final class TestRuolo
     {
         Ruolo ruolo = getRuolo(fazione, aura, lune);
         for(int i = 0; i < ESEMPIO_VOTI; i++) ruolo.incrementaVoti();
-        return ruolo;
-    }
-
-    private void verificaAssassinioNonAvvenuto(Fazione fazione, Aura aura, int lune)
-    {
-        verificaFalso(getEsempioAssassinio(fazione, aura, lune).assassinioAvvenuto());
-    }
-
-    private Ruolo getEsempioAssassinio(Fazione fazione, Aura aura, int lune)
-    {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
-        ruolo.eseguiAssassinio();
         return ruolo;
     }
 
