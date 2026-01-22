@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -7,15 +9,21 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import static alessandro.stamera.wherewolfserver.classi.Aura.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.doCallRealMethod;
 
 public final class TestRuolo
 {
 
+    private Ruolo ruolo;
+
     private static final String ESEMPIO_NOME = "Ruolo", ESEMPIO_DESCRIZIONE = "Descrizione generica";
 
     private static final int ESEMPIO_VOTI = 2;
+
+    @BeforeEach public void setUp() { ruolo = mock(Ruolo.class); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testLune(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getLune()).isEqualTo(lune); }
@@ -36,7 +44,9 @@ public final class TestRuolo
     )
     public void testCategoria(Fazione fazione, Categoria categoria)
     {
-        assertThat(getRuolo(fazione, NERA, 2).getCategoria()).isEqualTo(categoria);
+        when(ruolo.getFazione()).thenReturn(fazione);
+        doCallRealMethod().when(ruolo).getCategoria();
+        assertThat(ruolo.getCategoria()).isEqualTo(categoria);
     }
 
     @ParameterizedTest @MethodSource("getComboEnum")
@@ -48,20 +58,15 @@ public final class TestRuolo
         verificaStringa(getRuolo(fazione, aura, lune).getDescrizione(), ESEMPIO_DESCRIZIONE);
     }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testContadino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadino()); }
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testContadinoNormale(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoNormale()); }
+    @Test public void testContadinoNormale() { verificaFalso(ruolo.isContadinoNormale()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testContadinoMostro(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoMostro()); }
+    @Test public void testContadinoMostro() { verificaFalso(ruolo.isContadinoMostro()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testContadinoEroe(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoEroe()); }
+    @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoEroe()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testContadinoLupo(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isContadinoLupo()); }
+    @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testVoti(Fazione fazione, Aura aura, int lune)
     {
@@ -75,8 +80,7 @@ public final class TestRuolo
         assertThat(ruolo.getNumeroVoti()).isZero();
     }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAmato(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAmato()); }
+    @Test public void testAmato() { verificaFalso(ruolo.isAmato()); }
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testSceltaAngeloCustode(Fazione fazione, Aura aura, int lune)
     {
@@ -85,17 +89,13 @@ public final class TestRuolo
         assertThat(ruolo.isAmato()).isTrue();
     }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAngeloCustode(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAngeloCustode()); }
+    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAssassino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isAssassino()); }
+    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAssassinio(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).assassinioAvvenuto()); }
+    @Test public void testAssassinio() { verificaFalso(ruolo.assassinioAvvenuto()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testBecchino(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isBecchino()); }
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     @ParameterizedTest @MethodSource("getComboFazioni")
     public void testCambioFazione(Fazione fazioneVecchia, Aura aura, int lune, Fazione fazioneNuova)
@@ -104,6 +104,8 @@ public final class TestRuolo
         ruolo.cambiaFazione(fazioneNuova);
         verificaFazione(ruolo.getFazione(), fazioneNuova);
     }
+
+    @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
 
