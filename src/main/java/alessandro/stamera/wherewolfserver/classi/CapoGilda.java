@@ -6,6 +6,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 public final class CapoGilda extends Ruolo
 {
 
-    public CapoGilda() { super("Capo gilda", CRIMINALI, BIANCA, null, -1); }
+    public CapoGilda() { super("Capo gilda", CRIMINALI, BIANCA, null, 2); }
 
 }
