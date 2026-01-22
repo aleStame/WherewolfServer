@@ -21,6 +21,8 @@ public final class TestBoccaDiRosa
 
     @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
+    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isTrue(); }
+
     @Test public void testVoti()
     {
         for(int i = 0; i < 7; i++) ruolo.incrementaVoti();
