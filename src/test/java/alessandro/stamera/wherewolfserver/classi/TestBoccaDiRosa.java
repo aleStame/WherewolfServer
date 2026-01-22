@@ -21,4 +21,10 @@ public final class TestBoccaDiRosa
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
+    @Test public void testVoti()
+    {
+        for(int i = 0; i < 5; i++) ruolo.incrementaVoti();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(2);
+    }
+
 }
