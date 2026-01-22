@@ -77,7 +77,7 @@ public class Ruolo
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
-    public boolean isBoccaDiRosa() { return true; }
+    public boolean isBoccaDiRosa() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
