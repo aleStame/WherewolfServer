@@ -79,6 +79,8 @@ public class Ruolo
 
     public boolean isBoccaDiRosa() { return false; }
 
+    public boolean gildata() { return false; }
+
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
 }

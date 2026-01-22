@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -106,6 +107,13 @@ public final class TestRuolo
     }
 
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
+
+    @ParameterizedTest @MethodSource("getComboFazioni") public void testGildata(Fazione fazione, Aura aura, int lune)
+    {
+        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        assertThat(ruolo.gildata()).isTrue();
+        verificaFazione(ruolo.getFazione(), CRIMINALI);
+    }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
 
