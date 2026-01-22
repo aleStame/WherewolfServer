@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testGildata riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: ottimizzazione dei test sulle fazioni">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,22 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00326" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1768930104572</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1768930104572</updated>
-    </task>
-    <task id="LOCAL-00327" summary="REFACTORING: definizione del metodo testStringa">
-      <option name="closed" value="true" />
-      <created>1768991055900</created>
-      <option name="number" value="00327" />
-      <option name="presentableId" value="LOCAL-00327" />
-      <option name="project" value="LOCAL" />
-      <updated>1768991055901</updated>
     </task>
     <task id="LOCAL-00328" summary="ROSSO: testBecchino non riuscito">
       <option name="closed" value="true" />
@@ -600,7 +585,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769100077616</updated>
     </task>
-    <option name="localTasksCounter" value="375" />
+    <task id="LOCAL-00375" summary="REFACTORING: definizione del metodo verificaFazione">
+      <option name="closed" value="true" />
+      <created>1769100265475</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1769100265475</updated>
+    </task>
+    <task id="LOCAL-00376" summary="REFACTORING: ottimizzazione dei test sulle fazioni">
+      <option name="closed" value="true" />
+      <created>1769100574423</created>
+      <option name="number" value="00376" />
+      <option name="presentableId" value="LOCAL-00376" />
+      <option name="project" value="LOCAL" />
+      <updated>1769100574423</updated>
+    </task>
+    <option name="localTasksCounter" value="377" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,10 +616,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione dle metodo verificaFazione" />
     <MESSAGE value="ROSSO: testNegromante non riuscito" />
     <MESSAGE value="VERDE: testNegromante riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
     <MESSAGE value="ROSSO: testVoti non riuscito" />
     <MESSAGE value="VERDE: testVoti non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaIntero" />
@@ -640,6 +639,8 @@
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testGildata non riuscito" />
     <MESSAGE value="VERDE: testGildata riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGildata riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
+    <MESSAGE value="REFACTORING: ottimizzazione dei test sulle fazioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: ottimizzazione dei test sulle fazioni" />
   </component>
 </project>
