@@ -6,6 +6,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 public final class BoccaDiRosa extends Ruolo
 {
 
-    public BoccaDiRosa() { super("Bocca di rosa", CITTA, NERA, null, -1); }
+    public BoccaDiRosa() { super("Bocca di rosa", CITTA, NERA, null, 2); }
 
 }
