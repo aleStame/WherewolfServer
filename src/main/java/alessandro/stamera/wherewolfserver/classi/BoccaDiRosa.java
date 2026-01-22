@@ -8,4 +8,6 @@ public final class BoccaDiRosa extends Ruolo
 
     public BoccaDiRosa() { super("Bocca di rosa", CITTA, NERA, null, 2); }
 
+    @Override public int getNumeroVoti() { return super.getNumeroVoti() / 2; }
+
 }
