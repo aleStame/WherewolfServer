@@ -10,4 +10,6 @@ public final class BoccaDiRosa extends Ruolo
 
     @Override public int getNumeroVoti() { return super.getNumeroVoti() / 2; }
 
+    @Override public boolean isBoccaDiRosa() { return !super.isBoccaDiRosa(); }
+
 }
