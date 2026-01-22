@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLune riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaIntero">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,30 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00298" summary="ROSSO: testLune non riuscito">
-      <option name="closed" value="true" />
-      <created>1768902745431</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1768902745432</updated>
-    </task>
-    <task id="LOCAL-00299" summary="VERDE: testLune riuscito">
-      <option name="closed" value="true" />
-      <created>1768902887376</created>
-      <option name="number" value="00299" />
-      <option name="presentableId" value="LOCAL-00299" />
-      <option name="project" value="LOCAL" />
-      <updated>1768902887376</updated>
-    </task>
-    <task id="LOCAL-00300" summary="ROSSO: testAssassino non riuscito">
-      <option name="closed" value="true" />
-      <created>1768903002538</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1768903002538</updated>
     </task>
     <task id="LOCAL-00301" summary="VERDE: testAssassino riuscito">
       <option name="closed" value="true" />
@@ -600,7 +577,31 @@
       <option name="project" value="LOCAL" />
       <updated>1769077960751</updated>
     </task>
-    <option name="localTasksCounter" value="347" />
+    <task id="LOCAL-00347" summary="ROSSO: testVoti non riuscito">
+      <option name="closed" value="true" />
+      <created>1769078107305</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1769078107305</updated>
+    </task>
+    <task id="LOCAL-00348" summary="VERDE: testVoti non riuscito">
+      <option name="closed" value="true" />
+      <created>1769078222745</created>
+      <option name="number" value="00348" />
+      <option name="presentableId" value="LOCAL-00348" />
+      <option name="project" value="LOCAL" />
+      <updated>1769078222745</updated>
+    </task>
+    <task id="LOCAL-00349" summary="REFACTORING: definizione del metodo verificaIntero">
+      <option name="closed" value="true" />
+      <created>1769078385150</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1769078385150</updated>
+    </task>
+    <option name="localTasksCounter" value="350" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,9 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo setAssassinio" />
-    <MESSAGE value="ROSSO: isBecchino non riuscito" />
-    <MESSAGE value="VERDE: isBecchino riuscito" />
     <MESSAGE value="REFACTORING: semplificazione assassinio" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
@@ -640,6 +638,9 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLune riuscito" />
+    <MESSAGE value="ROSSO: testVoti non riuscito" />
+    <MESSAGE value="VERDE: testVoti non riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaIntero" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaIntero" />
   </component>
 </project>

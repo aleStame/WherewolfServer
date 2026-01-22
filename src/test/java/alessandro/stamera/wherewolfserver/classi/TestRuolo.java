@@ -105,6 +105,9 @@ public final class TestRuolo
         verificaFazione(ruolo.getFazione(), fazioneNuova);
     }
 
+    @ParameterizedTest @MethodSource("getComboFazioni")
+    public void testBoccaDiRosa(Fazione fazione, Aura aura, int lune) { verificaFalso(getRuolo(fazione, aura, lune).isBoccaDiRosa()); }
+
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private static Stream<Arguments> getComboFazioni()
