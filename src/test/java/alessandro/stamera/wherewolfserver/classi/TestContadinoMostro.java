@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadinoMostro
@@ -28,6 +29,12 @@ public final class TestContadinoMostro
     @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoEroe()); }
 
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
+
+    @Test public void testGildata()
+    {
+        verificaFalso(ruolo.gildata());
+        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+    }
 
     public void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
