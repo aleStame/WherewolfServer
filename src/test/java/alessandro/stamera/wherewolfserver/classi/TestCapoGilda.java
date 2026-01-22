@@ -14,7 +14,7 @@ public final class TestCapoGilda
 
     @BeforeEach public void setUp() { ruolo = new CapoGilda(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Capo gilda"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Capo gilda"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 
@@ -26,9 +26,11 @@ public final class TestCapoGilda
             "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte, può aprire gli occhi nel turno di un " +
             "mistico. Se quel mistico non è in gioco, indica un giocatore. Se è una Guardia o un lupo mannaro, il Capo gilda viene ucciso. Se " +
             "la sua fazione è Città o Villaggio, riconosce il Capo gilda, altrimenti non accade nulla";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }

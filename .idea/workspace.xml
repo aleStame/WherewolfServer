@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: ottimizzazione dei test sulle fazioni">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testDescrizione riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,22 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00328" summary="ROSSO: testBecchino non riuscito">
-      <option name="closed" value="true" />
-      <created>1768991174381</created>
-      <option name="number" value="00328" />
-      <option name="presentableId" value="LOCAL-00328" />
-      <option name="project" value="LOCAL" />
-      <updated>1768991174381</updated>
-    </task>
-    <task id="LOCAL-00329" summary="VERDE: testBecchino riuscito">
-      <option name="closed" value="true" />
-      <created>1768991318461</created>
-      <option name="number" value="00329" />
-      <option name="presentableId" value="LOCAL-00329" />
-      <option name="project" value="LOCAL" />
-      <updated>1768991318461</updated>
     </task>
     <task id="LOCAL-00330" summary="ROSSO: testCambioFazione non riuscito">
       <option name="closed" value="true" />
@@ -601,7 +584,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769100574423</updated>
     </task>
-    <option name="localTasksCounter" value="377" />
+    <task id="LOCAL-00377" summary="ROSSO: testDescrizione non riuscito">
+      <option name="closed" value="true" />
+      <created>1769100992426</created>
+      <option name="number" value="00377" />
+      <option name="presentableId" value="LOCAL-00377" />
+      <option name="project" value="LOCAL" />
+      <updated>1769100992426</updated>
+    </task>
+    <task id="LOCAL-00378" summary="VERDE: testDescrizione riuscito">
+      <option name="closed" value="true" />
+      <created>1769101176659</created>
+      <option name="number" value="00378" />
+      <option name="presentableId" value="LOCAL-00378" />
+      <option name="project" value="LOCAL" />
+      <updated>1769101176659</updated>
+    </task>
+    <option name="localTasksCounter" value="379" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -623,8 +622,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaIntero" />
     <MESSAGE value="ROSSO: testBoccaDiRosa non riuscito" />
     <MESSAGE value="VERDE: testBoccaDiRosa riuscito" />
-    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
-    <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="ROSSO: testCapoGilda non riuscito" />
     <MESSAGE value="VERDE: testCapoGilda riuscito" />
@@ -641,6 +638,8 @@
     <MESSAGE value="VERDE: testGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
     <MESSAGE value="REFACTORING: ottimizzazione dei test sulle fazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: ottimizzazione dei test sulle fazioni" />
+    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
+    <MESSAGE value="VERDE: testDescrizione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testDescrizione riuscito" />
   </component>
 </project>
