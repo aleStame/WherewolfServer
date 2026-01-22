@@ -108,6 +108,12 @@ public final class TestRuolo
 
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
+    @Test public void testCapoGilda()
+    {
+        doCallRealMethod().when(ruolo).isCapoGilda();
+        verificaFalso(ruolo.isCapoGilda());
+    }
+
     @ParameterizedTest @MethodSource("getComboFazioni") public void testGildata(Fazione fazione, Aura aura, int lune)
     {
         Ruolo ruolo = getRuolo(fazione, aura, lune);
