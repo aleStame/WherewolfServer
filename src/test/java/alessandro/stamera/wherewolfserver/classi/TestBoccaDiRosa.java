@@ -19,12 +19,14 @@ public final class TestBoccaDiRosa
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+    @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
     @Test public void testVoti()
     {
-        for(int i = 0; i < 5; i++) ruolo.incrementaVoti();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(2);
+        for(int i = 0; i < 7; i++) ruolo.incrementaVoti();
+        verificaIntero(ruolo.getNumeroVoti(), 3);
     }
+
+    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
