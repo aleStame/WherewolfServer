@@ -16,7 +16,7 @@ public final class TestContadinoMostro
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
@@ -33,11 +33,13 @@ public final class TestContadinoMostro
     @Test public void testGildata()
     {
         verificaFalso(ruolo.gildata());
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+        verificaFazione(CRIMINALI);
     }
 
-    public void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
-    public void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
 }
