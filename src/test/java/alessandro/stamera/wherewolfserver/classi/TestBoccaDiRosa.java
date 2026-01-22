@@ -23,6 +23,14 @@ public final class TestBoccaDiRosa
 
     @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isTrue(); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Può votare al ballottaggio anche se è accusata. In ogni votazione i voti che Bocca di rosa riceve vengono dimezzati, " +
+            "arrotondando per eccesso.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testVoti()
     {
         for(int i = 0; i < 7; i++) ruolo.incrementaVoti();

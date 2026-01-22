@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di un metodo di set up">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testBoccaDiRosa riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,22 +207,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00305" summary="REFACTORING: definizione del metodo verificaAssassinioNonAvvenuto">
-      <option name="closed" value="true" />
-      <created>1768906308850</created>
-      <option name="number" value="00305" />
-      <option name="presentableId" value="LOCAL-00305" />
-      <option name="project" value="LOCAL" />
-      <updated>1768906308850</updated>
-    </task>
-    <task id="LOCAL-00306" summary="REFACTORING: definizione del metodo getEsempioAssassinio">
-      <option name="closed" value="true" />
-      <created>1768906759470</created>
-      <option name="number" value="00306" />
-      <option name="presentableId" value="LOCAL-00306" />
-      <option name="project" value="LOCAL" />
-      <updated>1768906759470</updated>
     </task>
     <task id="LOCAL-00307" summary="VERDE DIRETTO: testInizializzazione riuscito">
       <option name="closed" value="true" />
@@ -600,7 +584,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769089852107</updated>
     </task>
-    <option name="localTasksCounter" value="354" />
+    <task id="LOCAL-00354" summary="ROSSO: testBoccaDiRosa non riuscito">
+      <option name="closed" value="true" />
+      <created>1769090104917</created>
+      <option name="number" value="00354" />
+      <option name="presentableId" value="LOCAL-00354" />
+      <option name="project" value="LOCAL" />
+      <updated>1769090104917</updated>
+    </task>
+    <task id="LOCAL-00355" summary="VERDE: testBoccaDiRosa riuscito">
+      <option name="closed" value="true" />
+      <created>1769090190028</created>
+      <option name="number" value="00355" />
+      <option name="presentableId" value="LOCAL-00355" />
+      <option name="project" value="LOCAL" />
+      <updated>1769090190028</updated>
+    </task>
+    <option name="localTasksCounter" value="356" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -637,9 +637,9 @@
     <MESSAGE value="ROSSO: testVoti non riuscito" />
     <MESSAGE value="VERDE: testVoti non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaIntero" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testBoccaDiRosa non riuscito" />
     <MESSAGE value="VERDE: testBoccaDiRosa riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di un metodo di set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBoccaDiRosa riuscito" />
   </component>
 </project>
