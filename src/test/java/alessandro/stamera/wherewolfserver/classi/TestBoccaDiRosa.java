@@ -19,4 +19,6 @@ public final class TestBoccaDiRosa
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+
 }
