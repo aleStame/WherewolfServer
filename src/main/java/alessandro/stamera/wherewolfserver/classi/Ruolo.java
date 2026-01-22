@@ -84,7 +84,7 @@ public class Ruolo
         return true;
     }
 
-    public boolean isCapoGilda() { return true; }
+    public boolean isCapoGilda() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
