@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 
 public class Ruolo
 {
@@ -69,8 +70,6 @@ public class Ruolo
 
     public void eseguiAssassinio() { setAssassinio(true); }
 
-    private void setAmato(boolean amato) { this.amato = amato; }
-
     public boolean isBecchino() { return false; }
 
     public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
@@ -79,6 +78,16 @@ public class Ruolo
 
     public boolean isBoccaDiRosa() { return false; }
 
+    public boolean gildata()
+    {
+        cambiaFazione(CRIMINALI);
+        return true;
+    }
+
+    public boolean isCapoGilda() { return false; }
+
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
+
+    private void setAmato(boolean amato) { this.amato = amato; }
 
 }
