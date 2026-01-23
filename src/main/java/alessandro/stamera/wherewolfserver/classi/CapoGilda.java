@@ -18,4 +18,6 @@ public final class CapoGilda extends Ruolo
         );
     }
 
+    @Override public boolean isCapoGilda() { return !super.isCapoGilda(); }
+
 }
