@@ -31,6 +31,8 @@ public final class TestCapoGilda
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
+    @Test public void isCapoGilda() { assertThat(ruolo.isCapoGilda()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
