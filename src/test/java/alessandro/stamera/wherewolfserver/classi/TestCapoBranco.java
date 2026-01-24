@@ -15,4 +15,6 @@ public final class TestCapoBranco
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
+    @Test public void testCapoBranco() { assertThat(ruolo.isCapoBranco()).isTrue(); }
+
 }
