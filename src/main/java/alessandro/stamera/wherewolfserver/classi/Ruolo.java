@@ -84,9 +84,9 @@ public class Ruolo
         return true;
     }
 
-    public boolean isCapoBranco() { return true; }
-
     public boolean isCapoGilda() { return false; }
+
+    public boolean isCapoBranco() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
