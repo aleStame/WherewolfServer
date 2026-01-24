@@ -121,6 +121,12 @@ public final class TestRuolo
         verificaFazione(ruolo.getFazione(), CRIMINALI);
     }
 
+    @Test public void testCapoBranco()
+    {
+        doCallRealMethod().when(ruolo).isCapoBranco();
+        verificaFalso(ruolo.isCapoBranco());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
