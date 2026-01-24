@@ -8,4 +8,6 @@ public final class TestCapoBranco
 
     @Test public void testNome() { assertThat(new CapoBranco().getNome()).isEqualTo("Capo branco"); }
 
+    @Test public void testLune() { assertThat(new CapoBranco().getLune()).isEqualTo(1); }
+
 }
