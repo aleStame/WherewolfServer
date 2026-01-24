@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testFazione riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testGildata non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,22 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00337" summary="ROSSO: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1768993634395</created>
-      <option name="number" value="00337" />
-      <option name="presentableId" value="LOCAL-00337" />
-      <option name="project" value="LOCAL" />
-      <updated>1768993634395</updated>
-    </task>
-    <task id="LOCAL-00338" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1768993831447</created>
-      <option name="number" value="00338" />
-      <option name="presentableId" value="LOCAL-00338" />
-      <option name="project" value="LOCAL" />
-      <updated>1768993831447</updated>
     </task>
     <task id="LOCAL-00339" summary="ROSSO: testFazione non riuscito">
       <option name="closed" value="true" />
@@ -600,7 +582,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769251847990</updated>
     </task>
-    <option name="localTasksCounter" value="386" />
+    <task id="LOCAL-00386" summary="REFACTORING: definizione del metodo getRuoloEsempio">
+      <option name="closed" value="true" />
+      <created>1769252076050</created>
+      <option name="number" value="00386" />
+      <option name="presentableId" value="LOCAL-00386" />
+      <option name="project" value="LOCAL" />
+      <updated>1769252076050</updated>
+    </task>
+    <task id="LOCAL-00387" summary="ROSSO: testGildata non riuscito">
+      <option name="closed" value="true" />
+      <created>1769268643501</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1769268643501</updated>
+    </task>
+    <option name="localTasksCounter" value="388" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVoti non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaIntero" />
     <MESSAGE value="ROSSO: testBoccaDiRosa non riuscito" />
     <MESSAGE value="VERDE: testBoccaDiRosa riuscito" />
@@ -627,7 +624,6 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
-    <MESSAGE value="ROSSO: testGildata non riuscito" />
     <MESSAGE value="VERDE: testGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
     <MESSAGE value="REFACTORING: ottimizzazione dei test sulle fazioni" />
@@ -640,6 +636,8 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testFazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuoloEsempio" />
+    <MESSAGE value="ROSSO: testGildata non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGildata non riuscito" />
   </component>
 </project>
