@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestLupo
 {
 
-    @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testFazione(int lune)
-    {
-        assertThat(new Lupo("Ruolo", "Descrizione generica", lune).getFazione()).isEqualTo(LUPO_BRANCO);
-    }
+    @ParameterizedTest @CsvSource({ "1, 2, 3" })
+    public void testFazione(int lune) { assertThat(getRuoloEsempio(lune).getFazione()).isEqualTo(LUPO_BRANCO); }
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
-    public void testAura(int lune) { assertThat(new Lupo("Ruolo", "Descrizione generica", lune).getAura()).isEqualTo(NERA); }
+    public void testAura(int lune) { assertThat(getRuoloEsempio(lune).getAura()).isEqualTo(NERA); }
+
+    private Ruolo getRuoloEsempio(int lune) { return new Lupo("Ruolo", "Descrizione generica", lune); }
 
 }
