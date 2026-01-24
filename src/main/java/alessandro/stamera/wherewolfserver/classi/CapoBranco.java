@@ -5,4 +5,6 @@ public final class CapoBranco extends Lupo
 
     public CapoBranco() { super("Capo branco", null, 1); }
 
+    @Override public boolean isCapoBranco() { return true; }
+
 }
