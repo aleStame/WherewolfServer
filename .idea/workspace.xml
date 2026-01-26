@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoBranco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoBranco.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLupoBranco riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupoBranco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupoBranco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,30 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00360" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1769092483873</created>
-      <option name="number" value="00360" />
-      <option name="presentableId" value="LOCAL-00360" />
-      <option name="project" value="LOCAL" />
-      <updated>1769092483873</updated>
-    </task>
-    <task id="LOCAL-00361" summary="ROSSO: testCapoGilda non riuscito">
-      <option name="closed" value="true" />
-      <created>1769097098181</created>
-      <option name="number" value="00361" />
-      <option name="presentableId" value="LOCAL-00361" />
-      <option name="project" value="LOCAL" />
-      <updated>1769097098181</updated>
-    </task>
-    <task id="LOCAL-00362" summary="VERDE: testCapoGilda riuscito">
-      <option name="closed" value="true" />
-      <created>1769098013524</created>
-      <option name="number" value="00362" />
-      <option name="presentableId" value="LOCAL-00362" />
-      <option name="project" value="LOCAL" />
-      <updated>1769098013524</updated>
     </task>
     <task id="LOCAL-00363" summary="ROSSO: testNome non riuscito">
       <option name="closed" value="true" />
@@ -600,7 +577,31 @@
       <option name="project" value="LOCAL" />
       <updated>1769425644762</updated>
     </task>
-    <option name="localTasksCounter" value="409" />
+    <task id="LOCAL-00409" summary="VERDE DIRETTO: testLupoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1769425842850</created>
+      <option name="number" value="00409" />
+      <option name="presentableId" value="LOCAL-00409" />
+      <option name="project" value="LOCAL" />
+      <updated>1769425842850</updated>
+    </task>
+    <task id="LOCAL-00410" summary="ROSSO: testLupoBranco non riuscito">
+      <option name="closed" value="true" />
+      <created>1769425965421</created>
+      <option name="number" value="00410" />
+      <option name="presentableId" value="LOCAL-00410" />
+      <option name="project" value="LOCAL" />
+      <updated>1769425965422</updated>
+    </task>
+    <task id="LOCAL-00411" summary="VERDE: testLupoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1769426078489</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1769426078489</updated>
+    </task>
+    <option name="localTasksCounter" value="412" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -636,10 +637,10 @@
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoBranco riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <MESSAGE value="VERDE DIRETTO: testLupoBranco riuscito" />
     <MESSAGE value="ROSSO: testLupoBranco non riuscito" />
     <MESSAGE value="VERDE: testLupoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testLupoBranco riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLupoBranco riuscito" />
   </component>
 </project>
