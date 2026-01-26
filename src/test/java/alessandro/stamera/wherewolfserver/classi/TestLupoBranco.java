@@ -17,4 +17,6 @@ public final class TestLupoBranco
 
     @Test public void testCapoBranco() { assertThat(ruolo.isCapoBranco()).isFalse(); }
 
+    @Test public void testLupoBranco() { assertThat(ruolo.isLupoBranco()).isTrue(); }
+
 }
