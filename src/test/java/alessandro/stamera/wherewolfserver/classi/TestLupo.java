@@ -17,14 +17,16 @@ public final class TestLupo
     @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testGildata(int lune)
     {
         Ruolo ruolo = getRuoloEsempio(lune);
-        assertThat(ruolo.gildata()).isFalse();
+        verificaFalso(ruolo.gildata());
         verificaLupo(ruolo);
     }
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
-    public void testLupoBranco(int lune) { assertThat(getRuoloEsempio(lune).isLupoBranco()).isFalse(); }
+    public void testLupoBranco(int lune) { verificaFalso(getRuoloEsempio(lune).isLupoBranco()); }
 
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private Ruolo getRuoloEsempio(int lune) { return new Lupo("Ruolo", "Descrizione generica", lune); }
 
