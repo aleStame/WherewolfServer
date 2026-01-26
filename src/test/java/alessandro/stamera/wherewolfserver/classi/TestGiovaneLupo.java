@@ -13,6 +13,8 @@ public final class TestGiovaneLupo
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Giovane lupo"); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+
     @Test public void testCapoBranco() { verificaFalso(ruolo.isCapoBranco()); }
 
     @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
