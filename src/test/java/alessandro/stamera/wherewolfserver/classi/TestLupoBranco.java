@@ -11,14 +11,14 @@ public final class TestLupoBranco
 
     @BeforeEach public void setUp() { ruolo = new LupoBranco(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Lupo del branco"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Lupo del branco"); }
 
     @Test public void testDescrizione()
     {
         String soluzione =
             "La prima notte individua il Traditore e riconosce i lupi del branco. Dalla seconda notte può indicare un giocatore che verrà " +
             "ucciso se è il lupo più potente in gioco.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(soluzione);
+        verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
@@ -26,5 +26,7 @@ public final class TestLupoBranco
     @Test public void testCapoBranco() { assertThat(ruolo.isCapoBranco()).isFalse(); }
 
     @Test public void testLupoBranco() { assertThat(ruolo.isLupoBranco()).isTrue(); }
+
+    private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
