@@ -13,8 +13,10 @@ public final class TestGiovaneLupo
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Giovane lupo"); }
 
-    @Test public void testCapoBranco() { assertThat(ruolo.isCapoBranco()).isFalse(); }
+    @Test public void testCapoBranco() { verificaFalso(ruolo.isCapoBranco()); }
 
-    @Test public void testLupoBranco() { assertThat(ruolo.isLupoBranco()).isFalse(); }
+    @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
