@@ -14,13 +14,15 @@ public final class TestLupo
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
     public void testAura(int lune) { assertThat(getRuoloEsempio(lune).getAura()).isEqualTo(NERA); }
 
-    @ParameterizedTest @CsvSource({ "1, 2, 3" })
-    public void testGildata(int lune)
+    @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testGildata(int lune)
     {
         Ruolo ruolo = getRuoloEsempio(lune);
         assertThat(ruolo.gildata()).isFalse();
         verificaLupo(ruolo);
     }
+
+    @ParameterizedTest @CsvSource({ "1, 2, 3" })
+    public void testLupoBranco(int lune) { assertThat(getRuoloEsempio(lune).isLupoBranco()).isFalse(); }
 
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
