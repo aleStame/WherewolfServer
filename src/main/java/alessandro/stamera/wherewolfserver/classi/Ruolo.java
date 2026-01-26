@@ -90,7 +90,7 @@ public class Ruolo
 
     public boolean isLupoBranco() { return false; }
 
-    public boolean isGiovaneLupo() { return true; }
+    public boolean isGiovaneLupo() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
