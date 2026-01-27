@@ -3,6 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class LupoReietto extends Lupo
 {
 
-    public LupoReietto() { super(null, null, 0); }
+    public LupoReietto() { super("Lupo reietto", null, 0); }
 
 }
