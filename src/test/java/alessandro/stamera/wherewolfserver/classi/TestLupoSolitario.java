@@ -9,6 +9,6 @@ public final class TestLupoSolitario
 
     @Test public void testNome() { assertThat(new LupoSolitario().getNome()).isEqualTo("Lupo solitario"); }
 
-    //@Test public void testFazione() { assertThat(new LupoSolitario().getFazione()).isEqualTo(LUPO_SOLITARIO); }
+    @Test public void testFazione() { assertThat(new LupoSolitario().getFazione()).isEqualTo(LUPO_SOLITARIO); }
 
 }
