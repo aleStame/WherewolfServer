@@ -13,6 +13,14 @@ public final class TestGiovaneLupo
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Giovane lupo"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte individua il Traditore e riconosce i lupi del branco e nelle altre apre gli occhi durante il turno dei lupi " +
+            "mannari. Se viene messo al rogo, la notte successiva i lupi del branco attaccheranno due volte";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testCapoBranco() { verificaFalso(ruolo.isCapoBranco()); }
