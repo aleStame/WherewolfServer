@@ -139,6 +139,12 @@ public final class TestRuolo
         verificaFalso(ruolo.isGiovaneLupo());
     }
 
+    @Test public void testLupoReietto()
+    {
+        doCallRealMethod().when(ruolo).isLupoReietto();
+        verificaFalso(ruolo.isLupoReietto());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
