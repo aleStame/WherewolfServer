@@ -29,6 +29,8 @@ public final class TestLupoBranco
 
     @Test public void testGiovaneLupo() { verificaFalso(ruolo.isGiovaneLupo()); }
 
+    @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
+
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
