@@ -11,14 +11,14 @@ public final class TestGiovaneLupo
 
     @BeforeEach public void setUp() { ruolo = new GiovaneLupo(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Giovane lupo"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Giovane lupo"); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
             "La prima notte individua il Traditore e riconosce i lupi del branco e nelle altre apre gli occhi durante il turno dei lupi " +
             "mannari. Se viene messo al rogo, la notte successiva i lupi del branco attaccheranno due volte";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
@@ -28,6 +28,8 @@ public final class TestGiovaneLupo
     @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
 
     @Test public void testGiovaneLupo() { assertThat(ruolo.isGiovaneLupo()).isTrue(); }
+
+    private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
