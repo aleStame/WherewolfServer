@@ -1,10 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.doCallRealMethod;
 
 public final class TestLupo
 {
@@ -19,6 +22,13 @@ public final class TestLupo
         Ruolo ruolo = getRuoloEsempio(lune);
         verificaFalso(ruolo.gildata());
         verificaLupo(ruolo);
+    }
+
+    @Test public void testCapoBranco()
+    {
+        Ruolo ruolo = mock(Ruolo.class);
+        doCallRealMethod().when(ruolo).isCapoBranco();
+        assertThat(ruolo.isCapoBranco()).isFalse();
     }
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
