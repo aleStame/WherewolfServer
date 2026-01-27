@@ -34,6 +34,13 @@ public final class TestLupo
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
     public void testLupoBranco(int lune) { verificaFalso(getRuoloEsempio(lune).isLupoBranco()); }
 
+    @Test public void testLupoReietto()
+    {
+        Ruolo ruolo = mock(Ruolo.class);
+        doCallRealMethod().when(ruolo).isLupoReietto();
+        assertThat(ruolo.isCapoBranco()).isFalse();
+    }
+
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
