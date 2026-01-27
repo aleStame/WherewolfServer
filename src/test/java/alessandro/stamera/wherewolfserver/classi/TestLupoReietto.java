@@ -13,6 +13,15 @@ public final class TestLupoReietto
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Lupo reietto"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte individua il Traditore e la Megera e riconosce i lupi del branco. Dalla prima notte, se è il lupo più potente in " +
+            "gioco, durante il turno dei lupi, può indicare un giocatore che viene ucciso. É protetto dal Capo branco e perde la partita se " +
+            "questi alla fine è ancora in gioco.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
     @Test public void testCapoBranco() { verificaFalso(ruolo.isCapoBranco()); }
