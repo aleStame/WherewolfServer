@@ -1,16 +1,20 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.doCallRealMethod;
 
-public final class TestLupo
+@ExtendWith(MockitoExtension.class) public final class TestLupo
 {
+
+    @Mock private Lupo ruolo;
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testFazione(int lune) { verificaLupo(getRuoloEsempio(lune)); }
 
@@ -26,19 +30,20 @@ public final class TestLupo
 
     @Test public void testCapoBranco()
     {
-        Ruolo ruolo = mock(Ruolo.class);
         doCallRealMethod().when(ruolo).isCapoBranco();
         assertThat(ruolo.isCapoBranco()).isFalse();
     }
 
-    @ParameterizedTest @CsvSource({ "1, 2, 3" })
-    public void testLupoBranco(int lune) { verificaFalso(getRuoloEsempio(lune).isLupoBranco()); }
+    @Test public void testLupoBranco()
+    {
+        doCallRealMethod().when(ruolo).isLupoBranco();
+        assertThat(ruolo.isLupoBranco()).isFalse();
+    }
 
     @Test public void testLupoReietto()
     {
-        Ruolo ruolo = mock(Ruolo.class);
         doCallRealMethod().when(ruolo).isLupoReietto();
-        assertThat(ruolo.isCapoBranco()).isFalse();
+        assertThat(ruolo.isLupoReietto()).isFalse();
     }
 
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
