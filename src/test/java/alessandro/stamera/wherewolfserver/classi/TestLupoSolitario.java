@@ -20,4 +20,6 @@ public final class TestLupoSolitario
 
     @Test public void isCapoBranco() { assertThat(ruolo.isCapoBranco()).isFalse(); }
 
+    @Test public void isLupoBranco() { assertThat(ruolo.isLupoBranco()).isFalse(); }
+
 }
