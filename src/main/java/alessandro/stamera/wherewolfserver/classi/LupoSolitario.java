@@ -7,7 +7,7 @@ public final class LupoSolitario extends Lupo
 
     public LupoSolitario()
     {
-        super("Lupo solitario", null, 0);
+        super("Lupo solitario", null, 3);
         cambiaFazione(LUPO_SOLITARIO);
     }
 
