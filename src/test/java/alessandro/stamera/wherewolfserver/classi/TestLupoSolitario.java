@@ -22,6 +22,8 @@ public final class TestLupoSolitario
 
     @Test public void isLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
 
+    @Test public void isGiovaneLupo() { verificaFalso(ruolo.isGiovaneLupo()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
