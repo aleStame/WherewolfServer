@@ -16,4 +16,6 @@ public final class TestLupoSolitario
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(LUPO_SOLITARIO); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+
 }
