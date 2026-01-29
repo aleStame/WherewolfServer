@@ -31,25 +31,25 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testCapoBranco()
     {
         doCallRealMethod().when(ruolo).isCapoBranco();
-        assertThat(ruolo.isCapoBranco()).isFalse();
+        verificaFalso(ruolo.isCapoBranco());
     }
 
     @Test public void testLupoBranco()
     {
         doCallRealMethod().when(ruolo).isLupoBranco();
-        assertThat(ruolo.isLupoBranco()).isFalse();
+        verificaFalso(ruolo.isLupoBranco());
     }
 
     @Test public void testLupoReietto()
     {
         doCallRealMethod().when(ruolo).isLupoReietto();
-        assertThat(ruolo.isLupoReietto()).isFalse();
+        verificaFalso(ruolo.isLupoReietto());
     }
 
     @Test public void testLupoSolitario()
     {
         doCallRealMethod().when(ruolo).isLupoSolitario();
-        assertThat(ruolo.isLupoSolitario()).isFalse();
+        verificaFalso(ruolo.isLupoSolitario());
     }
 
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
