@@ -1,30 +1,29 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.doCallRealMethod;
 
-public final class TestRuolo
+@ExtendWith(MockitoExtension.class) public final class TestRuolo
 {
 
-    private Ruolo ruolo;
+    @Mock private Ruolo ruolo;
 
     private static final String ESEMPIO_NOME = "Ruolo", ESEMPIO_DESCRIZIONE = "Descrizione generica";
 
     private static final int ESEMPIO_VOTI = 2;
-
-    @BeforeEach public void setUp() { ruolo = mock(Ruolo.class); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testLune(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getLune()).isEqualTo(lune); }
@@ -119,6 +118,36 @@ public final class TestRuolo
         Ruolo ruolo = getRuolo(fazione, aura, lune);
         verificaVero(ruolo.gildata());
         verificaFazione(ruolo.getFazione(), CRIMINALI);
+    }
+
+    @Test public void testCapoBranco()
+    {
+        doCallRealMethod().when(ruolo).isCapoBranco();
+        verificaFalso(ruolo.isCapoBranco());
+    }
+
+    @Test public void testLupoBranco()
+    {
+        doCallRealMethod().when(ruolo).isLupoBranco();
+        verificaFalso(ruolo.isLupoBranco());
+    }
+
+    @Test public void testGiovaneLupo()
+    {
+        doCallRealMethod().when(ruolo).isGiovaneLupo();
+        verificaFalso(ruolo.isGiovaneLupo());
+    }
+
+    @Test public void testLupoReietto()
+    {
+        doCallRealMethod().when(ruolo).isLupoReietto();
+        verificaFalso(ruolo.isLupoReietto());
+    }
+
+    @Test public void testLupoSolitario()
+    {
+        doCallRealMethod().when(ruolo).isLupoSolitario();
+        verificaFalso(ruolo.isLupoSolitario());
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

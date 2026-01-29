@@ -86,6 +86,16 @@ public class Ruolo
 
     public boolean isCapoGilda() { return false; }
 
+    public boolean isCapoBranco() { return false; }
+
+    public boolean isLupoBranco() { return false; }
+
+    public boolean isGiovaneLupo() { return false; }
+
+    public boolean isLupoReietto() { return false; }
+
+    public boolean isLupoSolitario() { return false; }
+
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
