@@ -144,6 +144,12 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isLupoReietto());
     }
 
+    @Test public void testLupoSolitario()
+    {
+        doCallRealMethod().when(ruolo).isLupoSolitario();
+        verificaFalso(ruolo.isLupoSolitario());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
