@@ -25,14 +25,20 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static final int ESEMPIO_VOTI = 2;
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testLune(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getLune()).isEqualTo(lune); }
+    @ParameterizedTest @MethodSource("getComboEnum") public void testLune(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        assertThat(getRuolo(fazione, aura, lune, mistico).getLune()).isEqualTo(lune);
+    }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAura(Fazione fazione, Aura aura, int lune) { assertThat(getRuolo(fazione, aura, lune).getAura()).isEqualTo(aura); }
+    @ParameterizedTest @MethodSource("getComboEnum") public void testAura(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        assertThat(getRuolo(fazione, aura, lune, mistico).getAura()).isEqualTo(aura);
+    }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testFazione(Fazione fazione, Aura aura, int lune) { verificaFazione(getRuolo(fazione, aura, lune).getFazione(), fazione); }
+    @ParameterizedTest @MethodSource("getComboEnum") public void testFazione(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        verificaFazione(getRuolo(fazione, aura, lune, mistico).getFazione(), fazione);
+    }
 
     @ParameterizedTest @CsvSource
     (
@@ -49,13 +55,21 @@ import static org.mockito.Mockito.doCallRealMethod;
         assertThat(ruolo.getCategoria()).isEqualTo(categoria);
     }
 
-    @ParameterizedTest @MethodSource("getComboEnum")
-    public void testNome(Fazione fazione, Aura aura, int lune) { verificaStringa(getRuolo(fazione, aura, lune).getNome(), ESEMPIO_NOME); }
+    @ParameterizedTest @MethodSource("getComboEnum") public void testNome(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        verificaStringa(getRuolo(fazione, aura, lune, mistico).getNome(), ESEMPIO_NOME);
+    }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testDescrizione(Fazione fazione, Aura aura, int lune)
+    public void testDescrizione(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        verificaStringa(getRuolo(fazione, aura, lune).getDescrizione(), ESEMPIO_DESCRIZIONE);
+        verificaStringa(getRuolo(fazione, aura, lune, mistico).getDescrizione(), ESEMPIO_DESCRIZIONE);
+    }
+
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testMistico(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        assertThat(getRuolo(fazione, aura, lune, mistico).isMistico()).isEqualTo(mistico);
     }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
@@ -68,23 +82,26 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum") public void testVoti(Fazione fazione, Aura aura, int lune)
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        assertThat(getEsempioVoti(fazione, aura, lune).getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
+        assertThat(getEsempioVoti(fazione, aura, lune, mistico).getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
     }
 
-    @ParameterizedTest @MethodSource("getComboEnum") public void testAnnullamentoVoti(Fazione fazione, Aura aura, int lune)
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testAnnullamentoVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        Ruolo ruolo = getEsempioVoti(fazione, aura, lune);
+        Ruolo ruolo = getEsempioVoti(fazione, aura, lune, mistico);
         ruolo.annullaVoti();
         assertThat(ruolo.getNumeroVoti()).isZero();
     }
 
     @Test public void testAmato() { verificaFalso(ruolo.isAmato()); }
 
-    @ParameterizedTest @MethodSource("getComboEnum") public void testSceltaAngeloCustode(Fazione fazione, Aura aura, int lune)
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testSceltaAngeloCustode(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        Ruolo ruolo = getRuolo(fazione, aura, lune, mistico);
         ruolo.sceltaAngeloCustode();
         verificaVero(ruolo.isAmato());
     }
@@ -98,9 +115,9 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     @ParameterizedTest @MethodSource("getComboFazioni")
-    public void testCambioFazione(Fazione fazioneVecchia, Aura aura, int lune, Fazione fazioneNuova)
+    public void testCambioFazione(Fazione fazioneVecchia, Aura aura, int lune, boolean mistico, Fazione fazioneNuova)
     {
-        Ruolo ruolo = getRuolo(fazioneVecchia, aura, lune);
+        Ruolo ruolo = getRuolo(fazioneVecchia, aura, lune, mistico);
         ruolo.cambiaFazione(fazioneNuova);
         verificaFazione(ruolo.getFazione(), fazioneNuova);
     }
@@ -113,9 +130,10 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isCapoGilda());
     }
 
-    @ParameterizedTest @MethodSource("getComboFazioni") public void testGildata(Fazione fazione, Aura aura, int lune)
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testGildata(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        Ruolo ruolo = getRuolo(fazione, aura, lune, mistico);
         verificaVero(ruolo.gildata());
         verificaFazione(ruolo.getFazione(), CRIMINALI);
     }
@@ -158,7 +176,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         List<Arguments> risultato = new ArrayList<>();
         for(Arguments argomenti : getComboEnum().toList()) for(Fazione fazioneNuova : Fazione.values())
-            risultato.add(Arguments.of(argomenti.get()[0], argomenti.get()[1], argomenti.get()[2], fazioneNuova));
+            risultato.add(Arguments.of(argomenti.get()[0], argomenti.get()[1], argomenti.get()[2], argomenti.get()[3], fazioneNuova));
         return risultato.stream();
     }
 
@@ -166,20 +184,23 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         List<Arguments> argomenti = new ArrayList<>();
         for(Fazione fazione : Fazione.values()) for(Aura aura : Aura.values()) for(int lune = 1; lune <= 3; lune++)
-            argomenti.add(Arguments.of(fazione, aura, lune));
+        {
+            argomenti.add(Arguments.of(fazione, aura, lune, true));
+            argomenti.add(Arguments.of(fazione, aura, lune, false));
+        }
         return argomenti.stream();
     }
 
-    private Ruolo getEsempioVoti(Fazione fazione, Aura aura, int lune)
+    private Ruolo getEsempioVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        Ruolo ruolo = getRuolo(fazione, aura, lune);
+        Ruolo ruolo = getRuolo(fazione, aura, lune, mistico);
         for(int i = 0; i < ESEMPIO_VOTI; i++) ruolo.incrementaVoti();
         return ruolo;
     }
 
-    private Ruolo getRuolo(Fazione fazione, Aura aura, int lune)
+    private Ruolo getRuolo(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        return new Ruolo(ESEMPIO_NOME, fazione, aura, ESEMPIO_DESCRIZIONE, lune);
+        return new Ruolo(ESEMPIO_NOME, fazione, aura, ESEMPIO_DESCRIZIONE, lune, mistico);
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

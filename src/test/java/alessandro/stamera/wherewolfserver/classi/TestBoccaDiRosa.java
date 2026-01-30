@@ -31,6 +31,8 @@ public final class TestBoccaDiRosa
         assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
     }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
     @Test public void testVoti()
     {
         for(int i = 0; i < 7; i++) ruolo.incrementaVoti();
