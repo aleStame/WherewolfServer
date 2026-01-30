@@ -32,6 +32,8 @@ public final class TestAngeloCustode
 
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
