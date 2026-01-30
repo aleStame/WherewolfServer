@@ -13,7 +13,7 @@ public final class BoccaDiRosa extends Ruolo
     "Bocca di rosa", CITTA, NERA,
 "Può votare al ballottaggio anche se è accusata. In ogni votazione i voti che Bocca di rosa riceve vengono dimezzati, arrotondando " +
           "per eccesso.",
-     2
+     2, false
         );
     }
 

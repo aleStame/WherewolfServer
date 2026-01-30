@@ -18,7 +18,7 @@ public class Ruolo
 
     private boolean amato, assassinio;
 
-    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune)
+    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
     {
         this.nome = nome;
         cambiaFazione(fazione);
@@ -95,6 +95,8 @@ public class Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
+
+    public boolean isMistico() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
