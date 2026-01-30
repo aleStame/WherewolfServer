@@ -39,6 +39,8 @@ public final class TestAssassino
         verificaVero(assassinioAvvenuto());
     }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
