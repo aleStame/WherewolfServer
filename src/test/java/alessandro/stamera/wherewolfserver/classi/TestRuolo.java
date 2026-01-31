@@ -11,6 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
@@ -166,6 +167,16 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         doCallRealMethod().when(ruolo).isLupoSolitario();
         verificaFalso(ruolo.isLupoSolitario());
+    }
+
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testAzzeccagarbugli(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        int soluzione = ESEMPIO_VOTI;
+        if(fazione == CITTA || fazione == CRIMINALI) soluzione = 0;
+        Ruolo ruolo = getEsempioVoti(fazione, aura, lune, mistico);
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(soluzione);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

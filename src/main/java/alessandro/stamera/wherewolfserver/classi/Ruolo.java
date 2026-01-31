@@ -101,6 +101,8 @@ public class Ruolo
 
     public boolean isMistico() { return mistico; }
 
+    public void segnalazioneAzzeccagarbugli() { }
+
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
