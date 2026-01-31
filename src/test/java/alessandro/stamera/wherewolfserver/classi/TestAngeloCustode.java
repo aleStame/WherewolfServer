@@ -28,7 +28,7 @@ public final class TestAngeloCustode
         testStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+    @Test public void testLune() { testNumero(ruolo.getLune(), 2); }
 
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
 
@@ -38,9 +38,11 @@ public final class TestAngeloCustode
     {
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+        testNumero(ruolo.getNumeroVoti(), 1);
     }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }
