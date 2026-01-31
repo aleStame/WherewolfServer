@@ -41,6 +41,13 @@ public final class TestBecchino
         verificaFazione(NEGROMANTE);
     }
 
+    @Test public void testAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+    }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
