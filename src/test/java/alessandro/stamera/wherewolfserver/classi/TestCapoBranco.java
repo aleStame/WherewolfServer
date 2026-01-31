@@ -21,7 +21,7 @@ public final class TestCapoBranco
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { verificaIntero(ruolo.getLune(), 1); }
 
     @Test public void testCapoBranco() { assertThat(ruolo.isCapoBranco()).isTrue(); }
 
@@ -36,8 +36,10 @@ public final class TestCapoBranco
         int voti = 3;
         for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(voti);
+        verificaIntero(ruolo.getNumeroVoti(), voti);
     }
+
+    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
