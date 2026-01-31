@@ -102,10 +102,12 @@ public class Ruolo
 
     public boolean isMistico() { return mistico; }
 
-    public void segnalazioneAzzeccagarbugli() { if(fazione == CITTA || fazione == CRIMINALI) annullaVoti(); }
+    public void segnalazioneAzzeccagarbugli() { if(controlloFazioneAzzeccagarbugli()) annullaVoti(); }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
+
+    private boolean controlloFazioneAzzeccagarbugli() { return fazione == CITTA || fazione == CRIMINALI; }
 
 }
