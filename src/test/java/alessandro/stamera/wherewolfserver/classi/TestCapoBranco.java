@@ -31,6 +31,14 @@ public final class TestCapoBranco
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
+    @Test public void testAzzeccagarbugli()
+    {
+        int voti = 3;
+        for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(voti);
+    }
+
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
