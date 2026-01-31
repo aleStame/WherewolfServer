@@ -108,6 +108,8 @@ public class Ruolo
 
     private void setAmato(boolean amato) { this.amato = amato; }
 
-    private boolean controlloFazioneAzzeccagarbugli() { return fazione == CITTA || fazione == CRIMINALI; }
+    private boolean controlloFazioneAzzeccagarbugli() { return controlloFazione(CITTA) || controlloFazione(CRIMINALI); }
+
+    private boolean controlloFazione(Fazione fazione) { return getFazione() == fazione; }
 
 }
