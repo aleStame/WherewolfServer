@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 
 public class Ruolo
 {
@@ -101,7 +102,7 @@ public class Ruolo
 
     public boolean isMistico() { return mistico; }
 
-    public void segnalazioneAzzeccagarbugli() { }
+    public void segnalazioneAzzeccagarbugli() { if(fazione == CITTA || fazione == CRIMINALI) annullaVoti(); }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
