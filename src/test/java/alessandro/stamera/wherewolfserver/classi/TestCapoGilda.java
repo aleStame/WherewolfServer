@@ -32,7 +32,14 @@ public final class TestCapoGilda
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
-    @Test public void isCapoGilda() { assertThat(ruolo.isCapoGilda()).isTrue(); }
+    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isTrue(); }
+
+    @Test public void testAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isZero();
+    }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
