@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNome riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAzzeccagarbugli.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di un metodo di set up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,30 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00453" summary="ROSSO: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1769532697929</created>
-      <option name="number" value="00453" />
-      <option name="presentableId" value="LOCAL-00453" />
-      <option name="project" value="LOCAL" />
-      <updated>1769532697929</updated>
-    </task>
-    <task id="LOCAL-00454" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1769532839274</created>
-      <option name="number" value="00454" />
-      <option name="presentableId" value="LOCAL-00454" />
-      <option name="project" value="LOCAL" />
-      <updated>1769532839274</updated>
-    </task>
-    <task id="LOCAL-00455" summary="ROSSO: testFazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1769532920772</created>
-      <option name="number" value="00455" />
-      <option name="presentableId" value="LOCAL-00455" />
-      <option name="project" value="LOCAL" />
-      <updated>1769532920772</updated>
     </task>
     <task id="LOCAL-00456" summary="VERDE: testFazione riuscito">
       <option name="closed" value="true" />
@@ -605,7 +579,31 @@
       <option name="project" value="LOCAL" />
       <updated>1770045957397</updated>
     </task>
-    <option name="localTasksCounter" value="502" />
+    <task id="LOCAL-00502" summary="ROSSO: testFazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1770046233802</created>
+      <option name="number" value="00502" />
+      <option name="presentableId" value="LOCAL-00502" />
+      <option name="project" value="LOCAL" />
+      <updated>1770046233802</updated>
+    </task>
+    <task id="LOCAL-00503" summary="VERDE: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1770046369742</created>
+      <option name="number" value="00503" />
+      <option name="presentableId" value="LOCAL-00503" />
+      <option name="project" value="LOCAL" />
+      <updated>1770046369742</updated>
+    </task>
+    <task id="LOCAL-00504" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1770046543110</created>
+      <option name="number" value="00504" />
+      <option name="presentableId" value="LOCAL-00504" />
+      <option name="project" value="LOCAL" />
+      <updated>1770046543110</updated>
+    </task>
+    <option name="localTasksCounter" value="505" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,9 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testLune non riuscito" />
-    <MESSAGE value="VERDE: testLune riuscito" />
-    <MESSAGE value="VERDE DIRETTO: isCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: isLupoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: isGiovaneLupo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiovaneLupo riuscito" />
@@ -645,6 +640,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVoti" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNome riuscito" />
+    <MESSAGE value="ROSSO: testFazione non riuscito" />
+    <MESSAGE value="VERDE: testFazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di un metodo di set up" />
   </component>
 </project>
