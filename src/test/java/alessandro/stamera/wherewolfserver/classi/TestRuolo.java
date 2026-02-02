@@ -179,6 +179,12 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaVoti(ruolo, soluzione);
     }
 
+    @Test public void testAzzeccagarbugli()
+    {
+        doCallRealMethod().when(ruolo).isAzzeccagarbugli();
+        verificaFalso(ruolo.isAzzeccagarbugli());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
