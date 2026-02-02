@@ -8,4 +8,6 @@ public final class Azzeccagarbugli extends Ruolo
 
     public Azzeccagarbugli() { super("Azzeccagarbugli", CITTA, BIANCA, null, 2, false); }
 
+    @Override public boolean isAzzeccagarbugli() { return !super.isAzzeccagarbugli(); }
+
 }
