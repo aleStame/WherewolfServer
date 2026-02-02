@@ -104,7 +104,7 @@ public class Ruolo
 
     public void segnalazioneAzzeccagarbugli() { if(controlloFazioneAzzeccagarbugli()) annullaVoti(); }
 
-    public boolean isAzzeccagarbugli() { return true; }
+    public boolean isAzzeccagarbugli() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
