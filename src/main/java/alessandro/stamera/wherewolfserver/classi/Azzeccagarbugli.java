@@ -6,6 +6,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 public final class Azzeccagarbugli extends Ruolo
 {
 
-    public Azzeccagarbugli() { super("Azzeccagarbugli", CITTA, BIANCA, null, -1, true); }
+    public Azzeccagarbugli() { super("Azzeccagarbugli", CITTA, BIANCA, null, 2, true); }
 
 }
