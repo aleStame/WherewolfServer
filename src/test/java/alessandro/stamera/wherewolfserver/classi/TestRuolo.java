@@ -28,7 +28,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testLune(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        assertThat(getRuolo(fazione, aura, lune, mistico).getLune()).isEqualTo(lune);
+        verificaIntero(getRuolo(fazione, aura, lune, mistico).getLune(), lune);
     }
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testAura(Fazione fazione, Aura aura, int lune, boolean mistico)
@@ -86,7 +86,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        assertThat(getEsempioVoti(fazione, aura, lune, mistico).getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
+        verificaIntero(getEsempioVoti(fazione, aura, lune, mistico).getNumeroVoti(), ESEMPIO_VOTI);
     }
 
     @ParameterizedTest @MethodSource("getComboEnum")
@@ -176,7 +176,7 @@ import static org.mockito.Mockito.doCallRealMethod;
         if(fazione == CITTA || fazione == CRIMINALI) soluzione = 0;
         Ruolo ruolo = getEsempioVoti(fazione, aura, lune, mistico);
         ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(soluzione);
+        verificaIntero(ruolo.getNumeroVoti(), soluzione);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
@@ -217,5 +217,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
