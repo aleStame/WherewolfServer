@@ -34,12 +34,14 @@ public final class TestAngeloCustode
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
-    @Test public void testAzzeccagarbugli()
+    @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         testNumero(ruolo.getNumeroVoti(), 1);
     }
+
+    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
