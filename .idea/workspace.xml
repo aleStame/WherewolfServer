@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di un metodo di set up" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAura riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,22 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00456" summary="VERDE: testFazione riuscito">
-      <option name="closed" value="true" />
-      <created>1769533020463</created>
-      <option name="number" value="00456" />
-      <option name="presentableId" value="LOCAL-00456" />
-      <option name="project" value="LOCAL" />
-      <updated>1769533020463</updated>
-    </task>
-    <task id="LOCAL-00457" summary="REFACTORING: definizione di un metodo di set up">
-      <option name="closed" value="true" />
-      <created>1769533159383</created>
-      <option name="number" value="00457" />
-      <option name="presentableId" value="LOCAL-00457" />
-      <option name="project" value="LOCAL" />
-      <updated>1769533159383</updated>
     </task>
     <task id="LOCAL-00458" summary="ROSSO: testLune non riuscito">
       <option name="closed" value="true" />
@@ -603,7 +587,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770046543110</updated>
     </task>
-    <option name="localTasksCounter" value="505" />
+    <task id="LOCAL-00505" summary="ROSSO: testAura non riuscito">
+      <option name="closed" value="true" />
+      <created>1770046701929</created>
+      <option name="number" value="00505" />
+      <option name="presentableId" value="LOCAL-00505" />
+      <option name="project" value="LOCAL" />
+      <updated>1770046701929</updated>
+    </task>
+    <task id="LOCAL-00506" summary="VERDE: testAura riuscito">
+      <option name="closed" value="true" />
+      <created>1770046853672</created>
+      <option name="number" value="00506" />
+      <option name="presentableId" value="LOCAL-00506" />
+      <option name="project" value="LOCAL" />
+      <updated>1770046853672</updated>
+    </task>
+    <option name="localTasksCounter" value="507" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,8 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: isLupoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: isGiovaneLupo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiovaneLupo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupoSolitario riuscito" />
     <MESSAGE value="REFACTORING: utilizzo del metodo verificaFalso" />
@@ -643,6 +641,8 @@
     <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="ROSSO: testAura non riuscito" />
+    <MESSAGE value="VERDE: testAura riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAura riuscito" />
   </component>
 </project>
