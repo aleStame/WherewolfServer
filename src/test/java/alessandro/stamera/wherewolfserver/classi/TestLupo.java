@@ -58,6 +58,15 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isMistico());
     }
 
+    @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testAzzeccagarbugli(int lune)
+    {
+        Ruolo ruolo = getRuoloEsempio(lune);
+        int voti = 3;
+        for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(voti);
+    }
+
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
