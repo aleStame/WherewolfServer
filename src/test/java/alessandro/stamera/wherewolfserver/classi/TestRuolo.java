@@ -170,7 +170,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testAzzeccagarbugli(Fazione fazione, Aura aura, int lune, boolean mistico)
+    public void testSegnalazioneAzzeccagarbugli(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
         int soluzione = ESEMPIO_VOTI;
         if(fazione == CITTA || fazione == CRIMINALI) soluzione = 0;
@@ -183,6 +183,12 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         doCallRealMethod().when(ruolo).isAzzeccagarbugli();
         verificaFalso(ruolo.isAzzeccagarbugli());
+    }
+
+    @Test public void testAccusa()
+    {
+        doCallRealMethod().when(ruolo).isAccusato();
+        verificaFalso(ruolo.isAccusato());
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

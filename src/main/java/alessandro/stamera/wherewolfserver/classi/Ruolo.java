@@ -106,6 +106,8 @@ public class Ruolo
 
     public boolean isAzzeccagarbugli() { return false; }
 
+    public boolean isAccusato() { return true; }
+
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
