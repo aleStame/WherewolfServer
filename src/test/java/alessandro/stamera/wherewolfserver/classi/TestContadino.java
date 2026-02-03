@@ -34,7 +34,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testContadino()
     {
         doCallRealMethod().when(ruolo).isContadino();
-        assertThat(ruolo.isContadino()).isTrue();
+        verificaVero(ruolo.isContadino());
     }
 
     @Test public void testContadinoNormale() { verificaFalso(ruolo.isContadinoNormale()); }
@@ -54,7 +54,7 @@ import static org.mockito.Mockito.doCallRealMethod;
         for(int i = 0; i < voti; i++) contadino.incrementaVoti();
         contadino.segnalazioneAzzeccagarbugli();
         assertThat(contadino.getNumeroVoti()).isEqualTo(voti);
-        assertThat(contadino.isAccusato()).isTrue();
+        verificaVero(contadino.isAccusato());
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
@@ -62,6 +62,8 @@ import static org.mockito.Mockito.doCallRealMethod;
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
