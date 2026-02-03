@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 
 public class Ruolo
 {
@@ -32,6 +31,7 @@ public class Ruolo
         setAmato(false);
         setAssassinio(false);
         this.mistico = mistico;
+        accusato = false;
     }
 
     public String getNome() { return nome; }
@@ -102,18 +102,14 @@ public class Ruolo
 
     public boolean isMistico() { return mistico; }
 
-    public void segnalazioneAzzeccagarbugli() { if(controlloFazioneAzzeccagarbugli()) annullaVoti(); }
+    public void segnalazioneAzzeccagarbugli() { accusato = true; }
 
     public boolean isAzzeccagarbugli() { return false; }
 
-    public boolean isAccusato() { return false; }
+    public boolean isAccusato() { return accusato; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
-
-    private boolean controlloFazioneAzzeccagarbugli() { return controlloFazione(CITTA) || controlloFazione(CRIMINALI); }
-
-    private boolean controlloFazione(Fazione fazione) { return getFazione() == fazione; }
 
 }
