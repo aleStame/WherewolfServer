@@ -31,7 +31,7 @@ public final class TestBoccaDiRosa
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testVoti()
     {
@@ -46,9 +46,11 @@ public final class TestBoccaDiRosa
         assertThat(getNumeroVoti()).isZero();
     }
 
-    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
