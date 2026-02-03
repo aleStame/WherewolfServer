@@ -46,6 +46,7 @@ public final class TestBecchino
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         testNumero(ruolo.getNumeroVoti(), 1);
+        assertThat(ruolo.isAccusato()).isTrue();
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }

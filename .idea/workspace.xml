@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/CapoGilda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/CapoGilda.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,30 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00495" summary="REFACTORING: definizione del metodo verificaIntero">
-      <option name="closed" value="true" />
-      <created>1769873706222</created>
-      <option name="number" value="00495" />
-      <option name="presentableId" value="LOCAL-00495" />
-      <option name="project" value="LOCAL" />
-      <updated>1769873706222</updated>
-    </task>
-    <task id="LOCAL-00496" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1769873896984</created>
-      <option name="number" value="00496" />
-      <option name="presentableId" value="LOCAL-00496" />
-      <option name="project" value="LOCAL" />
-      <updated>1769873896984</updated>
-    </task>
-    <task id="LOCAL-00497" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1770044476051</created>
-      <option name="number" value="00497" />
-      <option name="presentableId" value="LOCAL-00497" />
-      <option name="project" value="LOCAL" />
-      <updated>1770044476052</updated>
     </task>
     <task id="LOCAL-00498" summary="REFACTORING: definizione del metodo verificaIntero">
       <option name="closed" value="true" />
@@ -605,7 +579,31 @@
       <option name="project" value="LOCAL" />
       <updated>1770128674168</updated>
     </task>
-    <option name="localTasksCounter" value="544" />
+    <task id="LOCAL-00544" summary="VERDE: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770128822841</created>
+      <option name="number" value="00544" />
+      <option name="presentableId" value="LOCAL-00544" />
+      <option name="project" value="LOCAL" />
+      <updated>1770128822841</updated>
+    </task>
+    <task id="LOCAL-00545" summary="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770129049208</created>
+      <option name="number" value="00545" />
+      <option name="presentableId" value="LOCAL-00545" />
+      <option name="project" value="LOCAL" />
+      <updated>1770129049208</updated>
+    </task>
+    <task id="LOCAL-00546" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1770129276812</created>
+      <option name="number" value="00546" />
+      <option name="presentableId" value="LOCAL-00546" />
+      <option name="project" value="LOCAL" />
+      <updated>1770129276812</updated>
+    </task>
+    <option name="localTasksCounter" value="547" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
@@ -630,7 +627,6 @@
     <MESSAGE value="ROSSO: testAzzeccagarbugli (non parametrico) non riuscito" />
     <MESSAGE value="ROSSO: testAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE: testAzzeccagarbugli riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroVoti" />
     <MESSAGE value="REFACTORING: definizione del metodo esempioVoti" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
@@ -643,8 +639,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo getVotiInteri" />
     <MESSAGE value="ROSSO: testAccusa non riuscito" />
     <MESSAGE value="VERDE: testAccusa riuscito" />
-    <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
+    <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
   </component>
 </project>
