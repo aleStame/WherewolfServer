@@ -39,6 +39,7 @@ public final class TestCapoGilda
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(ruolo.getNumeroVoti()).isZero();
+        verificaFalso(ruolo.isAccusato());
     }
 
     @Test public void testSegnalazione() { verificaFalso(ruolo.isAzzeccagarbugli()); }
