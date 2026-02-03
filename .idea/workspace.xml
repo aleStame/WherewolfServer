@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,14 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00471" summary="ROSSO: testMistico non riuscito">
-      <option name="closed" value="true" />
-      <created>1769780573493</created>
-      <option name="number" value="00471" />
-      <option name="presentableId" value="LOCAL-00471" />
-      <option name="project" value="LOCAL" />
-      <updated>1769780573494</updated>
     </task>
     <task id="LOCAL-00472" summary="VERDE: testMistico riuscito">
       <option name="closed" value="true" />
@@ -603,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770053962576</updated>
     </task>
-    <option name="localTasksCounter" value="520" />
+    <task id="LOCAL-00520" summary="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770112407541</created>
+      <option name="number" value="00520" />
+      <option name="presentableId" value="LOCAL-00520" />
+      <option name="project" value="LOCAL" />
+      <updated>1770112407541</updated>
+    </task>
+    <option name="localTasksCounter" value="521" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo controlloFazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloFazione" />
     <MESSAGE value="REFACTORING: definizione del metodo testNumero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
@@ -643,6 +644,7 @@
     <MESSAGE value="VERDE: testAzzeccagarbugli riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
   </component>
 </project>
