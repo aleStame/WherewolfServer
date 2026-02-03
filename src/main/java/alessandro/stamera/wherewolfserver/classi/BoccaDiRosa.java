@@ -17,7 +17,12 @@ public final class BoccaDiRosa extends Ruolo
         );
     }
 
-    @Override public int getNumeroVoti() { return super.getNumeroVoti() / 2; }
+    @Override public int getNumeroVoti()
+    {
+        int numeroVoti = super.getNumeroVoti(), risultato = numeroVoti / 2;
+        if(numeroVoti % 2 == 1) risultato++;
+        return risultato;
+    }
 
     @Override public boolean isBoccaDiRosa() { return !super.isBoccaDiRosa(); }
 
