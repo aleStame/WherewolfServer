@@ -44,6 +44,7 @@ public final class TestBoccaDiRosa
         esempioVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(getNumeroVoti()).isZero();
+        verificaFalso(ruolo.isAccusato());
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
