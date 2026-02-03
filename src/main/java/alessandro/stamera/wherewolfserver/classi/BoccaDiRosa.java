@@ -19,11 +19,13 @@ public final class BoccaDiRosa extends Ruolo
 
     @Override public int getNumeroVoti()
     {
-        int numeroVoti = super.getNumeroVoti(), risultato = numeroVoti / 2;
-        if(numeroVoti % 2 == 1) risultato++;
+        int risultato = super.getNumeroVoti() / 2;
+        if(isVotiDispari()) risultato++;
         return risultato;
     }
 
     @Override public boolean isBoccaDiRosa() { return !super.isBoccaDiRosa(); }
+
+    private boolean isVotiDispari() { return super.getNumeroVoti() % 2 == 1; }
 
 }
