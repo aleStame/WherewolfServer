@@ -106,7 +106,7 @@ public class Ruolo
 
     public boolean isAzzeccagarbugli() { return false; }
 
-    public boolean isAccusato() { return true; }
+    public boolean isAccusato() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
