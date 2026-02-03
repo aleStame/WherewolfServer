@@ -37,6 +37,7 @@ public final class TestCapoBranco
         for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         verificaIntero(ruolo.getNumeroVoti(), voti);
+        assertThat(ruolo.isAccusato()).isTrue();
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
