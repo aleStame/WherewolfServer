@@ -31,13 +31,15 @@ public final class TestCapoBranco
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
-    @Test public void testAzzeccagarbugli()
+    @Test public void testSegnalazioneAzzeccagarbugli()
     {
         int voti = 3;
         for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         verificaIntero(ruolo.getNumeroVoti(), voti);
     }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
