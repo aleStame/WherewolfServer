@@ -39,6 +39,13 @@ public final class TestBoccaDiRosa
         verificaIntero(ruolo.getNumeroVoti(), 3);
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        for(int i = 0; i < 7; i++) ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isZero();
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }

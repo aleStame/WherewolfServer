@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMistico riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,78 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00462" summary="REFACTORING: definizione del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1769593412368</created>
-      <option name="number" value="00462" />
-      <option name="presentableId" value="LOCAL-00462" />
-      <option name="project" value="LOCAL" />
-      <updated>1769593412368</updated>
-    </task>
-    <task id="LOCAL-00463" summary="VERDE DIRETTO: isGiovaneLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1769593524167</created>
-      <option name="number" value="00463" />
-      <option name="presentableId" value="LOCAL-00463" />
-      <option name="project" value="LOCAL" />
-      <updated>1769593524167</updated>
-    </task>
-    <task id="LOCAL-00464" summary="VERDE DIRETTO: testGiovaneLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1769593662884</created>
-      <option name="number" value="00464" />
-      <option name="presentableId" value="LOCAL-00464" />
-      <option name="project" value="LOCAL" />
-      <updated>1769593662884</updated>
-    </task>
-    <task id="LOCAL-00465" summary="ROSSO: testLupoSolitario non riuscito">
-      <option name="closed" value="true" />
-      <created>1769695996118</created>
-      <option name="number" value="00465" />
-      <option name="presentableId" value="LOCAL-00465" />
-      <option name="project" value="LOCAL" />
-      <updated>1769695996119</updated>
-    </task>
-    <task id="LOCAL-00466" summary="VERDE: testLupoSolitario riuscito">
-      <option name="closed" value="true" />
-      <created>1769696382049</created>
-      <option name="number" value="00466" />
-      <option name="presentableId" value="LOCAL-00466" />
-      <option name="project" value="LOCAL" />
-      <updated>1769696382049</updated>
-    </task>
-    <task id="LOCAL-00467" summary="VERDE DIRETTO: testLupoSolitario riuscito">
-      <option name="closed" value="true" />
-      <created>1769696636287</created>
-      <option name="number" value="00467" />
-      <option name="presentableId" value="LOCAL-00467" />
-      <option name="project" value="LOCAL" />
-      <updated>1769696636287</updated>
-    </task>
-    <task id="LOCAL-00468" summary="REFACTORING: utilizzo del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1769696926015</created>
-      <option name="number" value="00468" />
-      <option name="presentableId" value="LOCAL-00468" />
-      <option name="project" value="LOCAL" />
-      <updated>1769696926015</updated>
-    </task>
-    <task id="LOCAL-00469" summary="ROSSO: testLupoSolitario non riuscito">
-      <option name="closed" value="true" />
-      <created>1769697187269</created>
-      <option name="number" value="00469" />
-      <option name="presentableId" value="LOCAL-00469" />
-      <option name="project" value="LOCAL" />
-      <updated>1769697187270</updated>
-    </task>
-    <task id="LOCAL-00470" summary="VERDE: testLupoSolitario riuscito">
-      <option name="closed" value="true" />
-      <created>1769697293466</created>
-      <option name="number" value="00470" />
-      <option name="presentableId" value="LOCAL-00470" />
-      <option name="project" value="LOCAL" />
-      <updated>1769697293466</updated>
     </task>
     <task id="LOCAL-00471" summary="ROSSO: testMistico non riuscito">
       <option name="closed" value="true" />
@@ -606,7 +531,79 @@
       <option name="project" value="LOCAL" />
       <updated>1770047913463</updated>
     </task>
-    <option name="localTasksCounter" value="511" />
+    <task id="LOCAL-00511" summary="ROSSO: testAzzeccagarbugli (non parametrico) riuscito">
+      <option name="closed" value="true" />
+      <created>1770048349808</created>
+      <option name="number" value="00511" />
+      <option name="presentableId" value="LOCAL-00511" />
+      <option name="project" value="LOCAL" />
+      <updated>1770048349808</updated>
+    </task>
+    <task id="LOCAL-00512" summary="VERDE: testAzzeccagarbugli (non parametrico) riuscito">
+      <option name="closed" value="true" />
+      <created>1770048480505</created>
+      <option name="number" value="00512" />
+      <option name="presentableId" value="LOCAL-00512" />
+      <option name="project" value="LOCAL" />
+      <updated>1770048480505</updated>
+    </task>
+    <task id="LOCAL-00513" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770048671773</created>
+      <option name="number" value="00513" />
+      <option name="presentableId" value="LOCAL-00513" />
+      <option name="project" value="LOCAL" />
+      <updated>1770048671773</updated>
+    </task>
+    <task id="LOCAL-00514" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1770048896143</created>
+      <option name="number" value="00514" />
+      <option name="presentableId" value="LOCAL-00514" />
+      <option name="project" value="LOCAL" />
+      <updated>1770048896143</updated>
+    </task>
+    <task id="LOCAL-00515" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770049039008</created>
+      <option name="number" value="00515" />
+      <option name="presentableId" value="LOCAL-00515" />
+      <option name="project" value="LOCAL" />
+      <updated>1770049039008</updated>
+    </task>
+    <task id="LOCAL-00516" summary="ROSSO: testAzzeccagarbugli non riuscito">
+      <option name="closed" value="true" />
+      <created>1770053355932</created>
+      <option name="number" value="00516" />
+      <option name="presentableId" value="LOCAL-00516" />
+      <option name="project" value="LOCAL" />
+      <updated>1770053355932</updated>
+    </task>
+    <task id="LOCAL-00517" summary="VERDE: testAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770053584354</created>
+      <option name="number" value="00517" />
+      <option name="presentableId" value="LOCAL-00517" />
+      <option name="project" value="LOCAL" />
+      <updated>1770053584354</updated>
+    </task>
+    <task id="LOCAL-00518" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770053802610</created>
+      <option name="number" value="00518" />
+      <option name="presentableId" value="LOCAL-00518" />
+      <option name="project" value="LOCAL" />
+      <updated>1770053802610</updated>
+    </task>
+    <task id="LOCAL-00519" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1770053962576</created>
+      <option name="number" value="00519" />
+      <option name="presentableId" value="LOCAL-00519" />
+      <option name="project" value="LOCAL" />
+      <updated>1770053962576</updated>
+    </task>
+    <option name="localTasksCounter" value="520" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -621,18 +618,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: utilizzo del metodo verificaFalso" />
-    <MESSAGE value="ROSSO: testLupoSolitario non riuscito" />
-    <MESSAGE value="VERDE: testLupoSolitario riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
-    <MESSAGE value="VERDE: testAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloFazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloFazione" />
     <MESSAGE value="REFACTORING: definizione del metodo testNumero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaIntero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVoti" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
@@ -646,6 +635,14 @@
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMistico riuscito" />
+    <MESSAGE value="ROSSO: testAzzeccagarbugli (non parametrico) non riuscito" />
+    <MESSAGE value="VERDE: testAzzeccagarbugli (non parametrico) riuscito" />
+    <MESSAGE value="ROSSO: testAzzeccagarbugli (non parametrico) non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
+    <MESSAGE value="ROSSO: testAzzeccagarbugli non riuscito" />
+    <MESSAGE value="VERDE: testAzzeccagarbugli riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
