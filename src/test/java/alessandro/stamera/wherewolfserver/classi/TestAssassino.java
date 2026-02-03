@@ -46,6 +46,7 @@ public final class TestAssassino
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(ruolo.getNumeroVoti()).isZero();
+        verificaFalso(ruolo.isAccusato());
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
