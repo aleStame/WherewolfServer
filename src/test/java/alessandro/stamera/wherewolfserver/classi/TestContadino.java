@@ -54,6 +54,7 @@ import static org.mockito.Mockito.doCallRealMethod;
         for(int i = 0; i < voti; i++) contadino.incrementaVoti();
         contadino.segnalazioneAzzeccagarbugli();
         assertThat(contadino.getNumeroVoti()).isEqualTo(voti);
+        assertThat(contadino.isAccusato()).isTrue();
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
