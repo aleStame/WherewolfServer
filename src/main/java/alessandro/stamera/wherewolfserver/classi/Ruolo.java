@@ -17,7 +17,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, assassinio;
+    private boolean amato, assassinio, accusato;
 
     private final boolean mistico;
 

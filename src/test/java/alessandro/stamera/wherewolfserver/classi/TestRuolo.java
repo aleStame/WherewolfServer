@@ -11,7 +11,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
@@ -84,10 +83,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
-    {
-        verificaVoti(getEsempioVoti(fazione, aura, lune, mistico), ESEMPIO_VOTI);
-    }
+    public void testVoti(Fazione fazione, Aura aura, int lune, boolean mistico) { verificaVoti(getEsempioVoti(fazione, aura, lune, mistico)); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testAnnullamentoVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
@@ -172,11 +168,9 @@ import static org.mockito.Mockito.doCallRealMethod;
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testSegnalazioneAzzeccagarbugli(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        int soluzione = ESEMPIO_VOTI;
-        if(fazione == CITTA || fazione == CRIMINALI) soluzione = 0;
-        Ruolo ruolo = getEsempioVoti(fazione, aura, lune, mistico);
+        Ruolo ruolo = getRuolo(fazione, aura, lune, mistico);
         ruolo.segnalazioneAzzeccagarbugli();
-        verificaVoti(ruolo, soluzione);
+        assertThat(ruolo.isAccusato()).isTrue();
     }
 
     @Test public void testAzzeccagarbugli()
@@ -230,7 +224,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
-    private void verificaVoti(Ruolo ruolo, int risultato) { verificaIntero(ruolo.getNumeroVoti(), risultato); }
+    private void verificaVoti(Ruolo ruolo) { verificaIntero(ruolo.getNumeroVoti(), ESEMPIO_VOTI); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
