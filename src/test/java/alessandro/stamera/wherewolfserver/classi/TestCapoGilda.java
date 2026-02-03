@@ -30,7 +30,7 @@ public final class TestCapoGilda
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isTrue(); }
 
@@ -41,8 +41,10 @@ public final class TestCapoGilda
         assertThat(ruolo.getNumeroVoti()).isZero();
     }
 
-    @Test public void testSegnalazione() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
+    @Test public void testSegnalazione() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
