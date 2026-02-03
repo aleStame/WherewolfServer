@@ -36,7 +36,7 @@ public final class TestBoccaDiRosa
     @Test public void testVoti()
     {
         esempioVoti();
-        verificaIntero(getNumeroVoti(), 3);
+        verificaIntero(getNumeroVoti(), 4);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
