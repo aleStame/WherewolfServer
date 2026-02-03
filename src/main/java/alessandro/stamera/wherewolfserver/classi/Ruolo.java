@@ -16,7 +16,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, assassinio;
+    private boolean amato, assassinio, accusato;
 
     private final boolean mistico;
 
@@ -31,6 +31,7 @@ public class Ruolo
         setAmato(false);
         setAssassinio(false);
         this.mistico = mistico;
+        accusato = false;
     }
 
     public String getNome() { return nome; }
@@ -100,6 +101,12 @@ public class Ruolo
     public boolean isLupoSolitario() { return false; }
 
     public boolean isMistico() { return mistico; }
+
+    public void segnalazioneAzzeccagarbugli() { accusato = true; }
+
+    public boolean isAzzeccagarbugli() { return false; }
+
+    public boolean isAccusato() { return accusato; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 

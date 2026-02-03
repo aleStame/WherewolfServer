@@ -29,11 +29,11 @@ public final class TestBecchino
         testStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+    @Test public void testLune() { testNumero(ruolo.getLune(), 3); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
+    @Test public void testBecchino() { verificaVero(ruolo.isBecchino()); }
 
     @Test public void testNegromante()
     {
@@ -41,8 +41,24 @@ public final class TestBecchino
         verificaFazione(NEGROMANTE);
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        testNumero(ruolo.getNumeroVoti(), 1);
+        verificaVero(ruolo.isAccusato());
+    }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
+    private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

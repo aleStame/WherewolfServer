@@ -17,8 +17,21 @@ public final class BoccaDiRosa extends Ruolo
         );
     }
 
-    @Override public int getNumeroVoti() { return super.getNumeroVoti() / 2; }
+    @Override public int getNumeroVoti()
+    {
+        int risultato = getVotiDimezzati();
+        if(isVotiDispari()) risultato++;
+        return risultato;
+    }
 
     @Override public boolean isBoccaDiRosa() { return !super.isBoccaDiRosa(); }
+
+    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+
+    private int getVotiDimezzati() { return getVotiInteri() / 2; }
+
+    private boolean isVotiDispari() { return getVotiInteri() % 2 == 1; }
+
+    private int getVotiInteri() { return super.getNumeroVoti(); }
 
 }

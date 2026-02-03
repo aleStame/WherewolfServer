@@ -21,9 +21,9 @@ public final class TestCapoBranco
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { verificaIntero(ruolo.getLune(), 1); }
 
-    @Test public void testCapoBranco() { assertThat(ruolo.isCapoBranco()).isTrue(); }
+    @Test public void testCapoBranco() { verificaVero(ruolo.isCapoBranco()); }
 
     @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
 
@@ -31,7 +31,22 @@ public final class TestCapoBranco
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        int voti = 3;
+        for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        verificaIntero(ruolo.getNumeroVoti(), voti);
+        verificaVero(ruolo.isAccusato());
+    }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
+    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
+
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

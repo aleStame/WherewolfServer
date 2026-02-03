@@ -13,7 +13,7 @@ public final class TestAngeloCustode
 
     @BeforeEach public void setUp() { ruolo = new AngeloCustode(); }
 
-    @Test public void testNome() { testStringa(ruolo.getNome(), "Angelo custode"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Angelo custode"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(AMANTI); }
 
@@ -25,15 +25,31 @@ public final class TestAngeloCustode
             "La prima notte indica un giocatore, l'Amato, che viene avvisato. Se quel giocatore dovesse essere accusato, l'Angelo custode sarà " +
             "accusato al suo posto. Se dovesse essere attaccato e ucciso durante la notte, sarà invece attaccato, avvisato e ucciso l'Angelo " +
             "custode.";
-        testStringa(ruolo.getDescrizione(), soluzione);
+        verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+    @Test public void testLune() { verificaNumero(ruolo.getLune(), 2); }
 
-    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
+    @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        verificaNumero(ruolo.getNumeroVoti(), 1);
+        verificaVero(ruolo.isAccusato());
+    }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
+    private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }

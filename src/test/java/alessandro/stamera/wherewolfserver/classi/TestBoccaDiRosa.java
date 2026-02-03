@@ -13,7 +13,7 @@ public final class TestBoccaDiRosa
 
     @BeforeEach public void setUp() { ruolo = new BoccaDiRosa(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Bocca di rosa"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bocca di rosa"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
 
@@ -28,17 +28,35 @@ public final class TestBoccaDiRosa
         String descrizione =
             "Può votare al ballottaggio anche se è accusata. In ogni votazione i voti che Bocca di rosa riceve vengono dimezzati, " +
             "arrotondando per eccesso.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testVoti()
     {
-        for(int i = 0; i < 7; i++) ruolo.incrementaVoti();
-        verificaIntero(ruolo.getNumeroVoti(), 3);
+        esempioVoti();
+        verificaIntero(getNumeroVoti(), 4);
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        esempioVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(getNumeroVoti()).isZero();
+        verificaFalso(ruolo.isAccusato());
+    }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void esempioVoti() { for(int i = 0; i < 7; i++) ruolo.incrementaVoti(); }
+
+    private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
 }

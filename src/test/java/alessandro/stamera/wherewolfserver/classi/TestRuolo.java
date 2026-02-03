@@ -27,7 +27,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testLune(Fazione fazione, Aura aura, int lune, boolean mistico)
     {
-        assertThat(getRuolo(fazione, aura, lune, mistico).getLune()).isEqualTo(lune);
+        verificaIntero(getRuolo(fazione, aura, lune, mistico).getLune(), lune);
     }
 
     @ParameterizedTest @MethodSource("getComboEnum") public void testAura(Fazione fazione, Aura aura, int lune, boolean mistico)
@@ -83,10 +83,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
-    public void testVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
-    {
-        assertThat(getEsempioVoti(fazione, aura, lune, mistico).getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
-    }
+    public void testVoti(Fazione fazione, Aura aura, int lune, boolean mistico) { verificaVoti(getEsempioVoti(fazione, aura, lune, mistico)); }
 
     @ParameterizedTest @MethodSource("getComboEnum")
     public void testAnnullamentoVoti(Fazione fazione, Aura aura, int lune, boolean mistico)
@@ -168,6 +165,26 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isLupoSolitario());
     }
 
+    @ParameterizedTest @MethodSource("getComboEnum")
+    public void testSegnalazioneAzzeccagarbugli(Fazione fazione, Aura aura, int lune, boolean mistico)
+    {
+        Ruolo ruolo = getRuolo(fazione, aura, lune, mistico);
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.isAccusato()).isTrue();
+    }
+
+    @Test public void testAzzeccagarbugli()
+    {
+        doCallRealMethod().when(ruolo).isAzzeccagarbugli();
+        verificaFalso(ruolo.isAzzeccagarbugli());
+    }
+
+    @Test public void testAccusa()
+    {
+        doCallRealMethod().when(ruolo).isAccusato();
+        verificaFalso(ruolo.isAccusato());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFazione(Fazione valore, Fazione risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -206,5 +223,9 @@ import static org.mockito.Mockito.doCallRealMethod;
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaVoti(Ruolo ruolo) { verificaIntero(ruolo.getNumeroVoti(), ESEMPIO_VOTI); }
+
+    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
