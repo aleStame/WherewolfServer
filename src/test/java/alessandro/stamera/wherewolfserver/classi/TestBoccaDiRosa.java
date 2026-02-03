@@ -46,6 +46,8 @@ public final class TestBoccaDiRosa
         assertThat(getNumeroVoti()).isZero();
     }
 
+    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
