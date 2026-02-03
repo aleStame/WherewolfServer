@@ -16,6 +16,14 @@ public final class TestAzzeccagarbugli
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Azzeccagarbugli"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Può votare al ballottaggio anche se è accusato e può segnalare un altro giocatore durante le accuse: se la sua fazione è Città " +
+            "o Criminali, i voti che riceve vengono azzerati, altrimenti sarà accusato a prescindere dai voti ricevuti.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
