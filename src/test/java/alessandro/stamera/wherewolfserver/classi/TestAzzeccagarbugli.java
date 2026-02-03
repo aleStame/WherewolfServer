@@ -14,14 +14,14 @@ public final class TestAzzeccagarbugli
 
     @BeforeEach public void setUp() { ruolo = new Azzeccagarbugli(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Azzeccagarbugli"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Azzeccagarbugli"); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
             "Può votare al ballottaggio anche se è accusato e può segnalare un altro giocatore durante le accuse: se la sua fazione è Città " +
             "o Criminali, i voti che riceve vengono azzerati, altrimenti sarà accusato a prescindere dai voti ricevuti.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
@@ -33,5 +33,7 @@ public final class TestAzzeccagarbugli
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
     @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isTrue(); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
