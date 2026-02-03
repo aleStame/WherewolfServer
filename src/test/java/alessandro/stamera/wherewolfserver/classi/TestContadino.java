@@ -47,7 +47,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @ParameterizedTest @EnumSource(Aura.class) public void testAzzeccagarbugli(Aura aura)
+    @ParameterizedTest @EnumSource(Aura.class) public void testSegnalazioneAzzeccagarbugli(Aura aura)
     {
         Ruolo contadino = getContadino(aura);
         int voti = 3;
@@ -55,6 +55,8 @@ import static org.mockito.Mockito.doCallRealMethod;
         contadino.segnalazioneAzzeccagarbugli();
         assertThat(contadino.getNumeroVoti()).isEqualTo(voti);
     }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
