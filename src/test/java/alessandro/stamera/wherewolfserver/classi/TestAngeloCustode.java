@@ -30,7 +30,7 @@ public final class TestAngeloCustode
 
     @Test public void testLune() { verificaNumero(ruolo.getLune(), 2); }
 
-    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
+    @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -39,12 +39,14 @@ public final class TestAngeloCustode
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         verificaNumero(ruolo.getNumeroVoti(), 1);
-        assertThat(ruolo.isAccusato()).isTrue();
+        verificaVero(ruolo.isAccusato());
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
