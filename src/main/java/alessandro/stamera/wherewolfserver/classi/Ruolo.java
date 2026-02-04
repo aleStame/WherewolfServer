@@ -110,6 +110,8 @@ public class Ruolo
 
     public boolean isBardo() { return false; }
 
+    public boolean isLupo() { return true; }
+
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
