@@ -8,4 +8,6 @@ public final class Bardo extends Ruolo
 
     public Bardo() { super("Bardo", VILLAGGIO, BIANCA, null, 2, false); }
 
+    @Override public boolean isBardo() { return !super.isBardo(); }
+
 }
