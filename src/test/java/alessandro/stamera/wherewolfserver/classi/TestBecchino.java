@@ -51,6 +51,8 @@ public final class TestBecchino
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
