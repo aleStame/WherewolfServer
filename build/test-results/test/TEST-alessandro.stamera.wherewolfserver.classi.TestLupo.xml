@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLupo" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-02-04T12:47:16" hostname="ALESSANDRO" time="0.201">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLupo" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-02-04T12:57:08" hostname="ALESSANDRO" time="5.036">
   <properties/>
-  <testcase name="testLupoBranco()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.081"/>
-  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.007"/>
-  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.015"/>
-  <testcase name="testLupoSolitario()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.007"/>
-  <testcase name="testLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.009"/>
-  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.003"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.004"/>
-  <testcase name="testAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.004"/>
-  <testcase name="testCapoBranco()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.011"/>
-  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.006"/>
+  <testcase name="testLupoBranco()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="3.935"/>
+  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.297"/>
+  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.016"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.023"/>
+  <testcase name="testLupoSolitario()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.01"/>
+  <testcase name="testLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.029"/>
+  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.022"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.012"/>
+  <testcase name="testAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.023"/>
+  <testcase name="testCapoBranco()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.075"/>
+  <testcase name="[1] lune=1" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.024"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
 </testsuite>
