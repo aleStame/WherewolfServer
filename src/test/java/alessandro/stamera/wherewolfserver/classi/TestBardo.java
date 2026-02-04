@@ -52,6 +52,8 @@ public final class TestBardo
         verificaFazione(CRIMINALI);
     }
 
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
