@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: definizione del metodo testContadino">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoBranco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoBranco.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testLupo riuscito">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCapoBranco.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,14 +224,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00552" summary="REFACTORING: definizione del metodo verificaIntero">
-      <option name="closed" value="true" />
-      <created>1770132247443</created>
-      <option name="number" value="00552" />
-      <option name="presentableId" value="LOCAL-00552" />
-      <option name="project" value="LOCAL" />
-      <updated>1770132247443</updated>
     </task>
     <task id="LOCAL-00553" summary="ROSSO: testDescrizione non riuscito">
       <option name="closed" value="true" />
@@ -605,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770211742928</updated>
     </task>
-    <option name="localTasksCounter" value="601" />
+    <task id="LOCAL-00601" summary="VERDE DIRETTO: testLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1770212064842</created>
+      <option name="number" value="00601" />
+      <option name="presentableId" value="LOCAL-00601" />
+      <option name="project" value="LOCAL" />
+      <updated>1770212064842</updated>
+    </task>
+    <option name="localTasksCounter" value="602" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -637,7 +649,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
-    <MESSAGE value="VERDE DIRETTO: testLupo riuscito" />
     <MESSAGE value="ROSSO: testLupo non riuscito" />
     <MESSAGE value="VERDE: testLupo riuscito" />
     <MESSAGE value="REFACTORING: sistemazione del mocking dei metodi" />
@@ -645,6 +656,7 @@
     <MESSAGE value="VERDE DIRETTO: testContadino non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: definizione del metodo testContadino" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: definizione del metodo testContadino" />
+    <MESSAGE value="VERDE DIRETTO: testLupo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupo riuscito" />
   </component>
 </project>
