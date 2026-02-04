@@ -61,6 +61,8 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
