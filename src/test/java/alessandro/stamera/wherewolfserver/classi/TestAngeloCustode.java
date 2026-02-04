@@ -48,6 +48,8 @@ public final class TestAngeloCustode
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
+    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
+
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
