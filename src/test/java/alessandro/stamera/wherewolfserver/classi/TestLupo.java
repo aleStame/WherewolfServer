@@ -77,6 +77,12 @@ import static org.mockito.Mockito.doCallRealMethod;
         assertThat(ruolo.isLupo()).isTrue();
     }
 
+    @Test public void testContadino()
+    {
+        doCallRealMethod().when(ruolo).isContadino();
+        verificaFalso(ruolo.isContadino());
+    }
+
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
