@@ -16,7 +16,7 @@ public final class TestBardo
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Bardo"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
 
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
@@ -49,8 +49,10 @@ public final class TestBardo
     @Test public void testGildata()
     {
         verificaVero(ruolo.gildata());
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+        verificaFazione(CRIMINALI);
     }
+
+    private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
