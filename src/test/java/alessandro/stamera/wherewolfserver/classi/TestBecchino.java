@@ -55,6 +55,8 @@ public final class TestBecchino
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
+    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }

@@ -40,6 +40,8 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
+    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
