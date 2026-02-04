@@ -52,6 +52,8 @@ public final class TestAssassino
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
