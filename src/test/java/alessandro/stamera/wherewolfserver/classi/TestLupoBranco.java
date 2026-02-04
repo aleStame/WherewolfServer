@@ -23,17 +23,19 @@ public final class TestLupoBranco
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testLupo() { assertThat(ruolo.isLupo()).isTrue(); }
+    @Test public void testLupo() { verificaVero(ruolo.isLupo()); }
 
     @Test public void testCapoBranco() { verificaFalso(ruolo.isCapoBranco()); }
 
-    @Test public void testLupoBranco() { assertThat(ruolo.isLupoBranco()).isTrue(); }
+    @Test public void testLupoBranco() { verificaVero(ruolo.isLupoBranco()); }
 
     @Test public void testGiovaneLupo() { verificaFalso(ruolo.isGiovaneLupo()); }
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
