@@ -22,7 +22,7 @@ public final class TestLupoReietto
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testLupo() { assertThat(ruolo.isLupo()).isTrue(); }
+    @Test public void testLupo() { verificaVero(ruolo.isLupo()); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
@@ -32,9 +32,11 @@ public final class TestLupoReietto
 
     @Test public void testGiovaneLupo() { verificaFalso(ruolo.isGiovaneLupo()); }
 
-    @Test public void testLupoReietto() { assertThat(ruolo.isLupoReietto()).isTrue(); }
+    @Test public void testLupoReietto() { verificaVero(ruolo.isLupoReietto()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
