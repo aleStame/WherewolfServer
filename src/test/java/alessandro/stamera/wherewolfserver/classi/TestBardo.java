@@ -19,6 +19,8 @@ public final class TestBardo
 
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
 }
