@@ -22,6 +22,8 @@ public final class TestLupoReietto
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
+    @Test public void testLupo() { assertThat(ruolo.isLupo()).isTrue(); }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
     @Test public void testCapoBranco() { verificaFalso(ruolo.isCapoBranco()); }
