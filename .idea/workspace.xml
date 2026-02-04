@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testLupo non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAzzeccagarbugli.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: definizione del metodo testContadino">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBecchino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBecchino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,30 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00547" summary="VERDE DIRETTO: tesSegnalazioneAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1770129522504</created>
-      <option name="number" value="00547" />
-      <option name="presentableId" value="LOCAL-00547" />
-      <option name="project" value="LOCAL" />
-      <updated>1770129522504</updated>
-    </task>
-    <task id="LOCAL-00548" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1770130032943</created>
-      <option name="number" value="00548" />
-      <option name="presentableId" value="LOCAL-00548" />
-      <option name="project" value="LOCAL" />
-      <updated>1770130032943</updated>
-    </task>
-    <task id="LOCAL-00549" summary="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1770130705865</created>
-      <option name="number" value="00549" />
-      <option name="presentableId" value="LOCAL-00549" />
-      <option name="project" value="LOCAL" />
-      <updated>1770130705865</updated>
     </task>
     <task id="LOCAL-00550" summary="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
       <option name="closed" value="true" />
@@ -605,7 +581,31 @@
       <option name="project" value="LOCAL" />
       <updated>1770211036480</updated>
     </task>
-    <option name="localTasksCounter" value="596" />
+    <task id="LOCAL-00596" summary="VERDE DIRETTO: testContadino non riuscito">
+      <option name="closed" value="true" />
+      <created>1770211175289</created>
+      <option name="number" value="00596" />
+      <option name="presentableId" value="LOCAL-00596" />
+      <option name="project" value="LOCAL" />
+      <updated>1770211175290</updated>
+    </task>
+    <task id="LOCAL-00597" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1770211366225</created>
+      <option name="number" value="00597" />
+      <option name="presentableId" value="LOCAL-00597" />
+      <option name="project" value="LOCAL" />
+      <updated>1770211366225</updated>
+    </task>
+    <task id="LOCAL-00598" summary="VERDE DIRETTO: definizione del metodo testContadino">
+      <option name="closed" value="true" />
+      <created>1770211483794</created>
+      <option name="number" value="00598" />
+      <option name="presentableId" value="LOCAL-00598" />
+      <option name="project" value="LOCAL" />
+      <updated>1770211483794</updated>
+    </task>
+    <option name="localTasksCounter" value="599" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
@@ -628,7 +627,6 @@
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustode riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoGilda riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
@@ -643,8 +641,10 @@
     <MESSAGE value="ROSSO: testLupo non riuscito" />
     <MESSAGE value="VERDE: testLupo riuscito" />
     <MESSAGE value="REFACTORING: sistemazione del mocking dei metodi" />
-    <MESSAGE value="VERDE DIRETTO: testContadino non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupo non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupo non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testContadino non riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <MESSAGE value="VERDE DIRETTO: definizione del metodo testContadino" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: definizione del metodo testContadino" />
   </component>
 </project>
