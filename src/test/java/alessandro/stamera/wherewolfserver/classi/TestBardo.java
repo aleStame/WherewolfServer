@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestBardo
@@ -19,7 +20,7 @@ public final class TestBardo
 
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+    @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -41,9 +42,17 @@ public final class TestBardo
     {
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+        verificaIntero(ruolo.getNumeroVoti(), 1);
         verificaVero(ruolo.isAccusato());
     }
+
+    @Test public void testGildata()
+    {
+        verificaVero(ruolo.gildata());
+        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+    }
+
+    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
