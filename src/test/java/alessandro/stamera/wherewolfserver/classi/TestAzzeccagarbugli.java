@@ -34,6 +34,8 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isTrue(); }
 
+    @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
