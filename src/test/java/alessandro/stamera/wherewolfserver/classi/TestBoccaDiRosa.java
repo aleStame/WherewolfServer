@@ -51,6 +51,8 @@ public final class TestBoccaDiRosa
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
