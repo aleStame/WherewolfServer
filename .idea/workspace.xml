@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testBardo non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Bardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Bardo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testBardo riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAssassino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAssassino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBardo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,14 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00526" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1770113304551</created>
-      <option name="number" value="00526" />
-      <option name="presentableId" value="LOCAL-00526" />
-      <option name="project" value="LOCAL" />
-      <updated>1770113304552</updated>
     </task>
     <task id="LOCAL-00527" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
       <option name="closed" value="true" />
@@ -605,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770200002028</updated>
     </task>
-    <option name="localTasksCounter" value="575" />
+    <task id="LOCAL-00575" summary="VERDE: testBardo riuscito">
+      <option name="closed" value="true" />
+      <created>1770200133354</created>
+      <option name="number" value="00575" />
+      <option name="presentableId" value="LOCAL-00575" />
+      <option name="project" value="LOCAL" />
+      <updated>1770200133354</updated>
+    </task>
+    <option name="localTasksCounter" value="576" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -643,8 +644,8 @@
     <MESSAGE value="VERDE DIRETTO: testBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoGilda riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
-    <MESSAGE value="VERDE: testBardo riuscito" />
     <MESSAGE value="ROSSO: testBardo non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testBardo non riuscito" />
+    <MESSAGE value="VERDE: testBardo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBardo riuscito" />
   </component>
 </project>

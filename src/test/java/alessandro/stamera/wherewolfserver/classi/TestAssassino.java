@@ -29,12 +29,11 @@ public final class TestAssassino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testAssassino() { verificaVero(ruolo.isAssassino()); }
-
     @Test public void testInizializzazione() { verificaFalso(assassinioAvvenuto()); }
 
-    @Test public void testAssassinio()
+    @Test public void testAssassino()
     {
+        verificaVero(ruolo.isAssassino());
         ruolo.eseguiAssassinio();
         verificaVero(assassinioAvvenuto());
     }

@@ -35,6 +35,8 @@ public final class TestBardo
 
     @Test public void testBardo() { assertThat(ruolo.isBardo()).isTrue(); }
 
+    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
