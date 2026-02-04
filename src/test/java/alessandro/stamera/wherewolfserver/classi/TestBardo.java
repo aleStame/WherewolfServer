@@ -33,6 +33,8 @@ public final class TestBardo
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isCapoGilda()); }
 
+    @Test public void testBardo() { assertThat(ruolo.isBardo()).isTrue(); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
