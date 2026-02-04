@@ -10,4 +10,6 @@ public class Lupo extends Ruolo
 
     @Override public boolean gildata() { return false; }
 
+    @Override public boolean isLupo() { return !super.isLupo(); }
+
 }
