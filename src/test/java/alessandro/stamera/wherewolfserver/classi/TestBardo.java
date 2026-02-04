@@ -33,7 +33,7 @@ public final class TestBardo
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isCapoGilda()); }
 
-    @Test public void testBardo() { assertThat(ruolo.isBardo()).isTrue(); }
+    @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
 
     @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
 
@@ -42,9 +42,11 @@ public final class TestBardo
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
-        assertThat(ruolo.isAccusato()).isTrue();
+        verificaVero(ruolo.isAccusato());
     }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
