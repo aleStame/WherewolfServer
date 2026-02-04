@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestContadino" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-02-04T13:05:00" hostname="ALESSANDRO" time="0.343">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestContadino" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-02-04T13:10:31" hostname="ALESSANDRO" time="3.926">
   <properties/>
-  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.074"/>
-  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.006"/>
-  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.005"/>
-  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.014"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.036"/>
-  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.006"/>
-  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.01"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.018"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.004"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.014"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.017"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.007"/>
-  <testcase name="testAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.01"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.01"/>
-  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.009"/>
-  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.009"/>
-  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.005"/>
+  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="3.068"/>
+  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.051"/>
+  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.007"/>
+  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.017"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.236"/>
+  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.007"/>
   <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.007"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.003"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.023"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.076"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.026"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.016"/>
+  <testcase name="testAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.004"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.01"/>
+  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.008"/>
+  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.021"/>
+  <testcase name="[1] aura=Bianca" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.008"/>
+  <testcase name="[2] aura=Nera" classname="alessandro.stamera.wherewolfserver.classi.TestContadino" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
 </testsuite>
