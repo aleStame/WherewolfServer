@@ -30,14 +30,16 @@ public final class TestAzzeccagarbugli
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isTrue(); }
 
-    @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
