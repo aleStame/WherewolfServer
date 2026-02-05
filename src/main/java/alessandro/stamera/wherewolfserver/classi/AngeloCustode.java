@@ -20,9 +20,11 @@ public final class AngeloCustode extends Ruolo
 
     @Override public boolean isAmato() { return false; }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
+    @Override public boolean isAngeloCustode() { return true; }
 
-    public boolean isAzzeccagarbugli() { return false; }
+    @Override public void sceltaAngeloCustode() { }
+
+    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
     public boolean isContadino() { return false; }
 
@@ -33,10 +35,6 @@ public final class AngeloCustode extends Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
-
-    public boolean isAngeloCustode() { return true; }
-
-    public boolean isAssassino() { return false; }
 
     public boolean isBecchino() { return false; }
 

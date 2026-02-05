@@ -17,9 +17,9 @@ public final class Assassino extends Ruolo
         );
     }
 
-    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+    @Override public boolean isAssassino() { return true; }
 
-    public boolean isAzzeccagarbugli() { return false; }
+    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
     public boolean isContadino() { return false; }
 
@@ -30,10 +30,6 @@ public final class Assassino extends Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
-
-    public boolean isAngeloCustode() { return true; }
-
-    public boolean isAssassino() { return true; }
 
     public boolean isBecchino() { return false; }
 

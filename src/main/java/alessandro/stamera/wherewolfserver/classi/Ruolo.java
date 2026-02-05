@@ -74,9 +74,13 @@ public abstract class Ruolo
 
     public boolean isAccusato() { return accusato; }
 
-    void setAccusato(boolean accusato) { this.accusato = accusato; }
+    public boolean isAzzeccagarbugli() { return false; }
 
-    abstract boolean isAzzeccagarbugli();
+    public boolean isAssassino() { return false; }
+
+    public boolean isAngeloCustode() { return false; }
+
+    void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     abstract void segnalazioneAzzeccagarbugli();
 
@@ -89,10 +93,6 @@ public abstract class Ruolo
     abstract boolean isContadinoEroe();
 
     abstract boolean isContadinoLupo();
-
-    abstract boolean isAngeloCustode();
-
-    abstract boolean isAssassino();
 
     abstract boolean isBecchino();
 

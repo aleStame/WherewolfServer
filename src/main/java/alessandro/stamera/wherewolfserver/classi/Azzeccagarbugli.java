@@ -17,9 +17,9 @@ public final class Azzeccagarbugli extends Ruolo
         );
     }
 
-    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+    @Override public boolean isAzzeccagarbugli() { return true; }
 
-    public boolean isAzzeccagarbugli() { return true; }
+    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
     public boolean isContadino() { return false; }
 
@@ -30,10 +30,6 @@ public final class Azzeccagarbugli extends Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
-
-    public boolean isAngeloCustode() { return false; }
-
-    public boolean isAssassino() { return false; }
 
     public boolean isBecchino() { return false; }
 
