@@ -18,6 +18,8 @@ public final class AngeloCustode extends Ruolo
         );
     }
 
+    @Override public boolean isAmato() { return false; }
+
     public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
     public boolean isAzzeccagarbugli() { return false; }
