@@ -17,7 +17,7 @@ public final class BoccaDiRosa extends Ruolo
         );
     }
 
-    public boolean isAzzeccagarbugli() { return false; }
+    @Override public boolean isBoccaDiRosa() { return true; }
 
     public boolean isContadino() { return false; }
 
@@ -28,14 +28,6 @@ public final class BoccaDiRosa extends Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
-
-    public boolean isAngeloCustode() { return false; }
-
-    public boolean isAssassino() { return false; }
-
-    public boolean isBecchino() { return false; }
-
-    public boolean isBoccaDiRosa() { return true; }
 
     public boolean isCapoGilda() { return false; }
 
@@ -48,8 +40,6 @@ public final class BoccaDiRosa extends Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
-
-    public boolean isBardo() { return false; }
 
     public boolean isLupo() { return false; }
 

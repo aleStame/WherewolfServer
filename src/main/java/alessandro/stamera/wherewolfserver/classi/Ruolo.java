@@ -80,6 +80,12 @@ public abstract class Ruolo
 
     public boolean isAngeloCustode() { return false; }
 
+    public boolean isBardo() { return false; }
+
+    public boolean isBecchino() { return false; }
+
+    public boolean isBoccaDiRosa() { return false; }
+
     void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     abstract void segnalazioneAzzeccagarbugli();
@@ -94,10 +100,6 @@ public abstract class Ruolo
 
     abstract boolean isContadinoLupo();
 
-    abstract boolean isBecchino();
-
-    abstract boolean isBoccaDiRosa();
-
     abstract boolean isCapoGilda();
 
     abstract boolean isCapoBranco();
@@ -109,8 +111,6 @@ public abstract class Ruolo
     abstract boolean isLupoReietto();
 
     abstract boolean isLupoSolitario();
-
-    abstract boolean isBardo();
 
     abstract boolean isLupo();
 

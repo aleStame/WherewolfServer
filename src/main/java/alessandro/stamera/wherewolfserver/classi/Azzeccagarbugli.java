@@ -31,10 +31,6 @@ public final class Azzeccagarbugli extends Ruolo
 
     public boolean isContadinoLupo() { return false; }
 
-    public boolean isBecchino() { return false; }
-
-    public boolean isBoccaDiRosa() { return false; }
-
     public boolean isCapoGilda() { return false; }
 
     public boolean isCapoBranco() { return false; }
@@ -46,8 +42,6 @@ public final class Azzeccagarbugli extends Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
-
-    public boolean isBardo() { return false; }
 
     public boolean isLupo() { return false; }
 

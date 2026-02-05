@@ -15,9 +15,9 @@ public final class Bardo extends Ruolo
         );
     }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
+    @Override public boolean isBardo() { return true; }
 
-    public boolean isAzzeccagarbugli() { return false; }
+    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
     public boolean isContadino() { return false; }
 
@@ -28,10 +28,6 @@ public final class Bardo extends Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
-
-    public boolean isAngeloCustode() { return false; }
-
-    public boolean isAssassino() { return false; }
 
     public boolean isBecchino() { return false; }
 
@@ -48,8 +44,6 @@ public final class Bardo extends Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
-
-    public boolean isBardo() { return true; }
 
     public boolean isLupo() { return false; }
 
