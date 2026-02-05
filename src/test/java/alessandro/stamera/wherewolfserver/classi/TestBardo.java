@@ -14,12 +14,15 @@ public final class TestBardo
 
     @BeforeEach public void setUp() { ruolo = new Bardo(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Bardo"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bardo"); }
 
     @Test public void testDescrizione()
     {
-        assertThat(ruolo.getDescrizione())
-            .isEqualTo("Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente.");
+        verificaStringa
+        (
+            ruolo.getDescrizione(),
+    "Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente."
+        );
     }
 
     @Test public void testFazione() { verificaFazione(VILLAGGIO); }
@@ -46,9 +49,10 @@ public final class TestBardo
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        ruolo.incrementaVoti();
+        int voti = 3;
+        for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        verificaIntero(ruolo.getNumeroVoti(), 1);
+        verificaIntero(ruolo.getNumeroVoti(), voti);
         verificaVero(ruolo.isAccusato());
     }
 
@@ -61,6 +65,8 @@ public final class TestBardo
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
