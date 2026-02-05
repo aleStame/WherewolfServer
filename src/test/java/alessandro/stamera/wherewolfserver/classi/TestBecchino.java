@@ -64,6 +64,13 @@ public final class TestBecchino
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
+    @Test public void testSceltaAngeloCustode()
+    {
+        verificaFalso(ruolo.isAmato());
+        ruolo.sceltaAngeloCustode();
+        verificaVero(ruolo.isAmato());
+    }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
