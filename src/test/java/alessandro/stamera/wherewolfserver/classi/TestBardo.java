@@ -16,6 +16,12 @@ public final class TestBardo
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Bardo"); }
 
+    @Test public void testDescrizione()
+    {
+        assertThat(ruolo.getDescrizione())
+            .isEqualTo("Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente.");
+    }
+
     @Test public void testFazione() { verificaFazione(VILLAGGIO); }
 
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
