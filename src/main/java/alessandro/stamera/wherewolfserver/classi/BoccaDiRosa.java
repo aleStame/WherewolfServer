@@ -17,6 +17,42 @@ public final class BoccaDiRosa extends Ruolo
         );
     }
 
+    public boolean isAzzeccagarbugli() { return false; }
+
+    public boolean isContadino() { return false; }
+
+    public boolean isContadinoNormale() { return false; }
+
+    public boolean isContadinoMostro() { return false; }
+
+    public boolean isContadinoEroe() { return false; }
+
+    public boolean isContadinoLupo() { return false; }
+
+    public boolean isAngeloCustode() { return false; }
+
+    public boolean isAssassino() { return false; }
+
+    public boolean isBecchino() { return false; }
+
+    public boolean isBoccaDiRosa() { return true; }
+
+    public boolean isCapoGilda() { return false; }
+
+    public boolean isCapoBranco() { return false; }
+
+    public boolean isLupoBranco() { return false; }
+
+    public boolean isGiovaneLupo() { return false; }
+
+    public boolean isLupoReietto() { return false; }
+
+    public boolean isLupoSolitario() { return false; }
+
+    public boolean isBardo() { return false; }
+
+    public boolean isLupo() { return false; }
+
     @Override public int getNumeroVoti()
     {
         int risultato = getVotiDimezzati();
@@ -24,9 +60,7 @@ public final class BoccaDiRosa extends Ruolo
         return risultato;
     }
 
-    @Override public boolean isBoccaDiRosa() { return !super.isBoccaDiRosa(); }
-
-    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
     private int getVotiDimezzati() { return getVotiInteri() / 2; }
 

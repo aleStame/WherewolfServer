@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 
-public class Ruolo
+public abstract class Ruolo
 {
 
     private final String nome, descrizione;
@@ -31,7 +31,7 @@ public class Ruolo
         setAmato(false);
         setAssassinio(false);
         this.mistico = mistico;
-        accusato = false;
+        setAccusato(false);
     }
 
     public String getNome() { return nome; }
@@ -46,16 +46,6 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public boolean isContadino() { return false; }
-
-    public boolean isContadinoNormale() { return false; }
-
-    public boolean isContadinoMostro() { return false; }
-
-    public boolean isContadinoEroe() { return false; }
-
-    public boolean isContadinoLupo() { return false; }
-
     public void incrementaVoti() { voti++; }
 
     public int getNumeroVoti() { return voti; }
@@ -66,21 +56,13 @@ public class Ruolo
 
     public void sceltaAngeloCustode() { setAmato(true); }
 
-    public boolean isAngeloCustode() { return false; }
-
-    public boolean isAssassino() { return false; }
-
     public boolean assassinioAvvenuto() { return assassinio; }
 
     public void eseguiAssassinio() { setAssassinio(true); }
 
-    public boolean isBecchino() { return false; }
-
     public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
-
-    public boolean isBoccaDiRosa() { return false; }
 
     public boolean gildata()
     {
@@ -88,29 +70,49 @@ public class Ruolo
         return true;
     }
 
-    public boolean isCapoGilda() { return false; }
-
-    public boolean isCapoBranco() { return false; }
-
-    public boolean isLupoBranco() { return false; }
-
-    public boolean isGiovaneLupo() { return false; }
-
-    public boolean isLupoReietto() { return false; }
-
-    public boolean isLupoSolitario() { return false; }
-
     public boolean isMistico() { return mistico; }
-
-    public void segnalazioneAzzeccagarbugli() { accusato = true; }
-
-    public boolean isAzzeccagarbugli() { return false; }
 
     public boolean isAccusato() { return accusato; }
 
-    public boolean isBardo() { return false; }
+    void setAccusato(boolean accusato) { this.accusato = accusato; }
 
-    public boolean isLupo() { return false; }
+    abstract boolean isAzzeccagarbugli();
+
+    abstract void segnalazioneAzzeccagarbugli();
+
+    abstract boolean isContadino();
+
+    abstract boolean isContadinoNormale();
+
+    abstract boolean isContadinoMostro();
+
+    abstract boolean isContadinoEroe();
+
+    abstract boolean isContadinoLupo();
+
+    abstract boolean isAngeloCustode();
+
+    abstract boolean isAssassino();
+
+    abstract boolean isBecchino();
+
+    abstract boolean isBoccaDiRosa();
+
+    abstract boolean isCapoGilda();
+
+    abstract boolean isCapoBranco();
+
+    abstract boolean isLupoBranco();
+
+    abstract boolean isGiovaneLupo();
+
+    abstract boolean isLupoReietto();
+
+    abstract boolean isLupoSolitario();
+
+    abstract boolean isBardo();
+
+    abstract boolean isLupo();
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
