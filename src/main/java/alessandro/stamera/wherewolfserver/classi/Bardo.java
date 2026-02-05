@@ -6,7 +6,14 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 public final class Bardo extends Ruolo
 {
 
-    public Bardo() { super("Bardo", VILLAGGIO, BIANCA, null, 2, false); }
+    public Bardo()
+    {
+        super
+        (
+    "Bardo", VILLAGGIO, BIANCA,
+"Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente.", 1, false
+        );
+    }
 
     @Override public boolean isBardo() { return !super.isBardo(); }
 
