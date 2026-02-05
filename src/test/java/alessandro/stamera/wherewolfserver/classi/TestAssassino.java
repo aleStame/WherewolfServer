@@ -29,12 +29,11 @@ public final class TestAssassino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testAssassino() { verificaVero(ruolo.isAssassino()); }
-
     @Test public void testInizializzazione() { verificaFalso(assassinioAvvenuto()); }
 
-    @Test public void testAssassinio()
+    @Test public void testAssassino()
     {
+        verificaVero(ruolo.isAssassino());
         ruolo.eseguiAssassinio();
         verificaVero(assassinioAvvenuto());
     }
@@ -50,6 +49,12 @@ public final class TestAssassino
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 

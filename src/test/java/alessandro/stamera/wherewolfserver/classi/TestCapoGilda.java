@@ -42,7 +42,13 @@ public final class TestCapoGilda
         verificaFalso(ruolo.isAccusato());
     }
 
-    @Test public void testSegnalazione() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

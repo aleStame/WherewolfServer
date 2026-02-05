@@ -16,8 +16,6 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @Mock private Lupo ruolo;
 
-    @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testFazione(int lune) { verificaLupo(getRuoloEsempio(lune)); }
-
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
     public void testAura(int lune) { assertThat(getRuoloEsempio(lune).getAura()).isEqualTo(NERA); }
 
@@ -67,7 +65,29 @@ import static org.mockito.Mockito.doCallRealMethod;
         assertThat(ruolo.getNumeroVoti()).isEqualTo(voti);
     }
 
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+    @Test public void testAzzeccagarbugli()
+    {
+        doCallRealMethod().when(ruolo).isAzzeccagarbugli();
+        verificaFalso(ruolo.isAzzeccagarbugli());
+    }
+
+    @Test public void testLupo()
+    {
+        doCallRealMethod().when(ruolo).isLupo();
+        assertThat(ruolo.isLupo()).isTrue();
+    }
+
+    @Test public void testContadino()
+    {
+        doCallRealMethod().when(ruolo).isContadino();
+        verificaFalso(ruolo.isContadino());
+    }
+
+    @Test public void testBardo()
+    {
+        doCallRealMethod().when(ruolo).isBardo();
+        verificaFalso(ruolo.isBardo());
+    }
 
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
