@@ -63,9 +63,9 @@ public final class TestAssassino
 
     @Test public void testCustodiaAngelo()
     {
-        verificaFalso(ruolo.isAmato());
+        verificaFalso(isAmato());
         ruolo.sceltaAngeloCustode();
-        verificaVero(ruolo.isAmato());
+        verificaVero(isAmato());
     }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
@@ -75,5 +75,7 @@ public final class TestAssassino
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean assassinioAvvenuto() { return ruolo.assassinioAvvenuto(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }
