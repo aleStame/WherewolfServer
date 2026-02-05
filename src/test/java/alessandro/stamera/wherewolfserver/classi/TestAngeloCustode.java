@@ -57,6 +57,8 @@ public final class TestAngeloCustode
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
+    @Test public void testAmato() { verificaFalso(ruolo.isAmato()); }
+
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
