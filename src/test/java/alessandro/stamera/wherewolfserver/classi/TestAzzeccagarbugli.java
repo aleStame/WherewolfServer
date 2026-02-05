@@ -50,9 +50,9 @@ public final class TestAzzeccagarbugli
 
     @Test public void testCustodiaAngelo()
     {
-        verificaFalso(ruolo.isAmato());
+        verificaFalso(isAmato());
         ruolo.sceltaAngeloCustode();
-        verificaVero(ruolo.isAmato());
+        verificaVero(isAmato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -60,5 +60,7 @@ public final class TestAzzeccagarbugli
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }
