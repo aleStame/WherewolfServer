@@ -13,6 +13,6 @@ public final class LupoBranco extends Lupo
      1);
     }
 
-    @Override public boolean isLupoBranco() { return !super.isLupoBranco(); }
+    @Override public boolean isLupoBranco() { return true; }
 
 }

@@ -86,33 +86,33 @@ public abstract class Ruolo
 
     public boolean isBoccaDiRosa() { return false; }
 
-    void setAccusato(boolean accusato) { this.accusato = accusato; }
+    public boolean isLupo() { return false; }
+
+    public void setAccusato(boolean accusato) { this.accusato = accusato; }
+
+    public boolean isCapoBranco() { return false; }
+
+    public boolean isLupoBranco() { return false; }
+
+    public boolean isGiovaneLupo() { return false; }
+
+    public boolean isLupoReietto() { return false; }
+
+    public boolean isLupoSolitario() { return false; }
 
     abstract void segnalazioneAzzeccagarbugli();
 
-    abstract boolean isContadino();
+    public boolean isContadino() { return false; }
 
-    abstract boolean isContadinoNormale();
+    public boolean isContadinoNormale() { return false; }
 
-    abstract boolean isContadinoMostro();
+    public boolean isContadinoMostro() { return false; }
 
-    abstract boolean isContadinoEroe();
+    public boolean isContadinoEroe() { return false; }
 
-    abstract boolean isContadinoLupo();
+    public boolean isContadinoLupo() { return false; }
 
-    abstract boolean isCapoGilda();
-
-    abstract boolean isCapoBranco();
-
-    abstract boolean isLupoBranco();
-
-    abstract boolean isGiovaneLupo();
-
-    abstract boolean isLupoReietto();
-
-    abstract boolean isLupoSolitario();
-
-    abstract boolean isLupo();
+    public boolean isCapoGilda() { return false; }
 
     private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
 
