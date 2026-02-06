@@ -69,6 +69,14 @@ import static org.mockito.Mockito.doCallRealMethod;
     @ParameterizedTest @EnumSource(Aura.class)
     public void testCategoria(Aura aura) { assertThat(getContadino(aura).getCategoria()).isEqualTo(UOMINI); }
 
+    @ParameterizedTest @EnumSource(Aura.class) public void testSceltaAngeloCustode(Aura aura)
+    {
+        Ruolo ruolo = getContadino(aura);
+        verificaFalso(ruolo.isAmato());
+        ruolo.sceltaAngeloCustode();
+        verificaVero(ruolo.isAmato());
+    }
+
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
