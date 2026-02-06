@@ -22,7 +22,7 @@ public final class TestBoccaDiRosa
 
     @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
-    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isTrue(); }
+    @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
 
     @Test public void testDescrizione()
     {
@@ -64,10 +64,12 @@ public final class TestBoccaDiRosa
     {
         verificaFalso(ruolo.isAmato());
         ruolo.sceltaAngeloCustode();
-        assertThat(ruolo.isAmato()).isTrue();
+        verificaVero(ruolo.isAmato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
