@@ -29,10 +29,6 @@ public final class Bardo extends Ruolo
 
     public boolean isContadinoLupo() { return false; }
 
-    public boolean isBecchino() { return false; }
-
-    public boolean isBoccaDiRosa() { return false; }
-
     public boolean isCapoGilda() { return false; }
 
     public boolean isCapoBranco() { return false; }

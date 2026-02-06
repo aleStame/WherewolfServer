@@ -20,8 +20,6 @@ public final class CapoGilda extends Ruolo
 
     public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
-    public boolean isAzzeccagarbugli() { return false; }
-
     public boolean isContadino() { return false; }
 
     public boolean isContadinoNormale() { return false; }
@@ -31,14 +29,6 @@ public final class CapoGilda extends Ruolo
     public boolean isContadinoEroe() { return false; }
 
     public boolean isContadinoLupo() { return false; }
-
-    public boolean isAngeloCustode() { return false; }
-
-    public boolean isAssassino() { return false; }
-
-    public boolean isBecchino() { return false; }
-
-    public boolean isBoccaDiRosa() { return false; }
 
     public boolean isCapoGilda() { return true; }
 
@@ -51,8 +41,6 @@ public final class CapoGilda extends Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
-
-    public boolean isBardo() { return false; }
 
     public boolean isLupo() { return false; }
 
