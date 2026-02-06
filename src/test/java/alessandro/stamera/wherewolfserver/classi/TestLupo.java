@@ -23,6 +23,14 @@ import static org.mockito.Mockito.doCallRealMethod;
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
     public void testCategoria(int lune) { assertThat(getRuoloEsempio(lune).getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
+    @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testSceltaAngeloCustode(int lune)
+    {
+        Ruolo ruolo = getRuoloEsempio(lune);
+        verificaFalso(ruolo.isAmato());
+        ruolo.sceltaAngeloCustode();
+        assertThat(ruolo.isAmato()).isTrue();
+    }
+
     @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testGildata(int lune)
     {
         Ruolo ruolo = getRuoloEsempio(lune);
