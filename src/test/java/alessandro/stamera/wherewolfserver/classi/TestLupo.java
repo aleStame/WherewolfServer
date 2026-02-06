@@ -28,7 +28,7 @@ import static org.mockito.Mockito.doCallRealMethod;
         Ruolo ruolo = getRuoloEsempio(lune);
         verificaFalso(ruolo.isAmato());
         ruolo.sceltaAngeloCustode();
-        assertThat(ruolo.isAmato()).isTrue();
+        verificaVero(ruolo.isAmato());
     }
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testGildata(int lune)
@@ -86,7 +86,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testLupo()
     {
         doCallRealMethod().when(ruolo).isLupo();
-        assertThat(ruolo.isLupo()).isTrue();
+        verificaVero(ruolo.isLupo());
     }
 
     @Test public void testContadino()
@@ -102,6 +102,8 @@ import static org.mockito.Mockito.doCallRealMethod;
     }
 
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
