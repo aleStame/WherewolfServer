@@ -101,6 +101,12 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isBardo());
     }
 
+    @Test public void testBecchino()
+    {
+        doCallRealMethod().when(ruolo).isBecchino();
+        verificaFalso(ruolo.isBecchino());
+    }
+
     private void verificaLupo(Ruolo ruolo) { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
