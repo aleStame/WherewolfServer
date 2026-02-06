@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
@@ -18,6 +19,9 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" })
     public void testAura(int lune) { assertThat(getRuoloEsempio(lune).getAura()).isEqualTo(NERA); }
+
+    @ParameterizedTest @CsvSource({ "1, 2, 3" })
+    public void testCategoria(int lune) { assertThat(getRuoloEsempio(lune).getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
     @ParameterizedTest @CsvSource({ "1, 2, 3" }) public void testGildata(int lune)
     {
