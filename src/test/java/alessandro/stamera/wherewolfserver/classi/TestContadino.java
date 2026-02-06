@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
@@ -64,6 +65,9 @@ import static org.mockito.Mockito.doCallRealMethod;
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+
+    @ParameterizedTest @EnumSource(Aura.class)
+    public void testCategoria(Aura aura) { assertThat(getContadino(aura).getCategoria()).isEqualTo(UOMINI); }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
