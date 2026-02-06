@@ -66,9 +66,9 @@ public final class TestBecchino
 
     @Test public void testSceltaAngeloCustode()
     {
-        verificaFalso(ruolo.isAmato());
+        verificaFalso(isAmato());
         ruolo.sceltaAngeloCustode();
-        verificaVero(ruolo.isAmato());
+        verificaVero(isAmato());
     }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -80,5 +80,7 @@ public final class TestBecchino
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }
