@@ -62,9 +62,9 @@ public final class TestBoccaDiRosa
 
     @Test public void testSceltaAngeloCustode()
     {
-        verificaFalso(ruolo.isAmato());
+        verificaFalso(isAmato());
         ruolo.sceltaAngeloCustode();
-        verificaVero(ruolo.isAmato());
+        verificaVero(isAmato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -78,5 +78,7 @@ public final class TestBoccaDiRosa
     private void esempioVoti() { for(int i = 0; i < 7; i++) ruolo.incrementaVoti(); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }
