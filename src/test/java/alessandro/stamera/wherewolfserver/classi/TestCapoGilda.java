@@ -33,7 +33,7 @@ public final class TestCapoGilda
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isTrue(); }
+    @Test public void testCapoGilda() { verificaVero(ruolo.isCapoGilda()); }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
@@ -59,10 +59,12 @@ public final class TestCapoGilda
     {
         verificaFalso(ruolo.isAmato());
         ruolo.sceltaAngeloCustode();
-        assertThat(ruolo.isAmato()).isTrue();
+        verificaVero(ruolo.isAmato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
