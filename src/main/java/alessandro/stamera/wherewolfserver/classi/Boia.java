@@ -1,8 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Fazione.INQUISIZIONE;
+
 public final class Boia extends Ruolo
 {
 
-    public Boia() { super("Boia", null, null, null, 0, true); }
+    public Boia() { super("Boia", INQUISIZIONE, null, null, 0, true); }
 
 }
