@@ -17,8 +17,6 @@ public final class TestBecchino
 
     @Test public void testNome() { testStringa(ruolo.getNome(), "Becchino"); }
 
-    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
-
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
@@ -35,12 +33,6 @@ public final class TestBecchino
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testBecchino() { verificaVero(ruolo.isBecchino()); }
-
-    @Test public void testNegromante()
-    {
-        ruolo.riconosciNegromante();
-        verificaFazione(NEGROMANTE);
-    }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
@@ -69,6 +61,13 @@ public final class TestBecchino
         verificaFalso(isAmato());
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
+    }
+
+    @Test public void testRiconoscimentoNegromante()
+    {
+        verificaFazione(VILLAGGIO);
+        ruolo.riconosciNegromante();
+        verificaFazione(NEGROMANTE);
     }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
