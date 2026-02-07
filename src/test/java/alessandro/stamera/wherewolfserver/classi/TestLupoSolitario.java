@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,6 +30,8 @@ public final class TestLupoSolitario
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
     @Test public void testLupoSolitario() { verificaVero(ruolo.isLupoSolitario()); }
+
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
