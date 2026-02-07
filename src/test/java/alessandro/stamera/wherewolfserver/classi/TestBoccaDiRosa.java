@@ -67,6 +67,8 @@ public final class TestBoccaDiRosa
         verificaVero(isAmato());
     }
 
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
