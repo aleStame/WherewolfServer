@@ -19,4 +19,6 @@ public class Criminale extends Ruolo
 
     @Override public void utilizzaPotere() { potereUsato = true; }
 
+    @Override public boolean isCriminale() { return true; }
+
 }
