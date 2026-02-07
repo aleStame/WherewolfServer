@@ -15,6 +15,6 @@ public class Contadino extends Ruolo
         );
     }
 
-    @Override public boolean isContadino() { return !super.isContadino(); }
+    @Override public boolean isContadino() { return true; }
 
 }

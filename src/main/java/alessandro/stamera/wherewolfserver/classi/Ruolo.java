@@ -16,7 +16,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, assassinio, accusato;
+    private boolean amato, accusato;
 
     private final boolean mistico;
 
@@ -29,9 +29,8 @@ public class Ruolo
         this.lune = lune;
         annullaVoti();
         setAmato(false);
-        setAssassinio(false);
         this.mistico = mistico;
-        accusato = false;
+        setAccusato(false);
     }
 
     public String getNome() { return nome; }
@@ -46,16 +45,6 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public boolean isContadino() { return false; }
-
-    public boolean isContadinoNormale() { return false; }
-
-    public boolean isContadinoMostro() { return false; }
-
-    public boolean isContadinoEroe() { return false; }
-
-    public boolean isContadinoLupo() { return false; }
-
     public void incrementaVoti() { voti++; }
 
     public int getNumeroVoti() { return voti; }
@@ -66,21 +55,9 @@ public class Ruolo
 
     public void sceltaAngeloCustode() { setAmato(true); }
 
-    public boolean isAngeloCustode() { return false; }
-
-    public boolean isAssassino() { return false; }
-
-    public boolean assassinioAvvenuto() { return assassinio; }
-
-    public void eseguiAssassinio() { setAssassinio(true); }
-
-    public boolean isBecchino() { return false; }
-
     public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
-
-    public boolean isBoccaDiRosa() { return false; }
 
     public boolean gildata()
     {
@@ -88,7 +65,25 @@ public class Ruolo
         return true;
     }
 
-    public boolean isCapoGilda() { return false; }
+    public boolean isMistico() { return mistico; }
+
+    public boolean isAccusato() { return accusato; }
+
+    public boolean isAzzeccagarbugli() { return false; }
+
+    public boolean isAssassino() { return false; }
+
+    public boolean isAngeloCustode() { return false; }
+
+    public boolean isBardo() { return false; }
+
+    public boolean isBecchino() { return false; }
+
+    public boolean isBoccaDiRosa() { return false; }
+
+    public boolean isLupo() { return false; }
+
+    public void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     public boolean isCapoBranco() { return false; }
 
@@ -100,19 +95,25 @@ public class Ruolo
 
     public boolean isLupoSolitario() { return false; }
 
-    public boolean isMistico() { return mistico; }
+    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
-    public void segnalazioneAzzeccagarbugli() { accusato = true; }
+    public boolean isContadino() { return false; }
 
-    public boolean isAzzeccagarbugli() { return false; }
+    public boolean isContadinoNormale() { return false; }
 
-    public boolean isAccusato() { return accusato; }
+    public boolean isContadinoMostro() { return false; }
 
-    public boolean isBardo() { return false; }
+    public boolean isContadinoEroe() { return false; }
 
-    public boolean isLupo() { return false; }
+    public boolean isContadinoLupo() { return false; }
 
-    private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
+    public boolean isCapoGilda() { return false; }
+
+    public boolean isPotereUtilizzato() { return false; }
+
+    public void utilizzaPotere() { }
+
+    public boolean isCriminale() { return false; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 

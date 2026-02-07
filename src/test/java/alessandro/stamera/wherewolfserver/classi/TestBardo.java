@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -66,6 +67,17 @@ public final class TestBardo
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
+
+    @Test public void testSceltaAngeloCustode()
+    {
+        verificaFalso(isAmato());
+        ruolo.sceltaAngeloCustode();
+        verificaVero(isAmato());
+    }
+
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
@@ -75,5 +87,7 @@ public final class TestBardo
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

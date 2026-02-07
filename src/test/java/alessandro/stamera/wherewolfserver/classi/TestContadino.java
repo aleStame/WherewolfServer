@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
@@ -37,15 +38,35 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaVero(ruolo.isContadino());
     }
 
-    @Test public void testContadinoNormale() { verificaFalso(ruolo.isContadinoNormale()); }
+    @Test public void testContadinoNormale()
+    {
+        doCallRealMethod().when(ruolo).isContadinoNormale();
+        verificaFalso(ruolo.isContadinoNormale());
+    }
 
-    @Test public void testContadinoMostro() { verificaFalso(ruolo.isContadinoMostro()); }
+    @Test public void testContadinoMostro()
+    {
+        doCallRealMethod().when(ruolo).isContadinoMostro();
+        verificaFalso(ruolo.isContadinoMostro());
+    }
 
-    @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoEroe()); }
+    @Test public void testContadinoEroe()
+    {
+        doCallRealMethod().when(ruolo).isContadinoEroe();
+        verificaFalso(ruolo.isContadinoEroe());
+    }
 
-    @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
+    @Test public void testContadinoLupo()
+    {
+        doCallRealMethod().when(ruolo).isContadinoLupo();
+        verificaFalso(ruolo.isContadinoLupo());
+    }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+    @Test public void testMistico()
+    {
+        doCallRealMethod().when(ruolo).isMistico();
+        verificaFalso(ruolo.isMistico());
+    }
 
     @ParameterizedTest @EnumSource(Aura.class) public void testSegnalazioneAzzeccagarbugli(Aura aura)
     {
@@ -57,11 +78,46 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaVero(contadino.isAccusato());
     }
 
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+    @Test public void testAzzeccagarbugli()
+    {
+        doCallRealMethod().when(ruolo).isAzzeccagarbugli();
+        verificaFalso(ruolo.isAzzeccagarbugli());
+    }
 
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+    @Test public void testLupo()
+    {
+        doCallRealMethod().when(ruolo).isLupo();
+        verificaFalso(ruolo.isLupo());
+    }
 
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+    @Test public void testBardo()
+    {
+        doCallRealMethod().when(ruolo).isBardo();
+        verificaFalso(ruolo.isBardo());
+    }
+
+    @Test public void testBecchino()
+    {
+        doCallRealMethod().when(ruolo).isBecchino();
+        verificaFalso(ruolo.isBecchino());
+    }
+
+    @ParameterizedTest @EnumSource(Aura.class)
+    public void testCategoria(Aura aura) { assertThat(getContadino(aura).getCategoria()).isEqualTo(UOMINI); }
+
+    @ParameterizedTest @EnumSource(Aura.class) public void testSceltaAngeloCustode(Aura aura)
+    {
+        Ruolo ruolo = getContadino(aura);
+        verificaFalso(ruolo.isAmato());
+        ruolo.sceltaAngeloCustode();
+        verificaVero(ruolo.isAmato());
+    }
+
+    @Test public void testCriminale()
+    {
+        doCallRealMethod().when(ruolo).isCriminale();
+        verificaFalso(ruolo.isCriminale());
+    }
 
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 

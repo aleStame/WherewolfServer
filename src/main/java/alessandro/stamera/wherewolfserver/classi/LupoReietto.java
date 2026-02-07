@@ -14,6 +14,6 @@ public final class LupoReietto extends Lupo
      3);
     }
 
-    @Override public boolean isLupoReietto() { return !super.isLupoReietto(); }
+    @Override public boolean isLupoReietto() { return true; }
 
 }

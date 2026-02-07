@@ -2,7 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,7 +18,7 @@ public final class TestAssassino
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void tesDescrizione()
     {
@@ -29,13 +30,11 @@ public final class TestAssassino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testInizializzazione() { verificaFalso(assassinioAvvenuto()); }
-
     @Test public void testAssassino()
     {
         verificaVero(ruolo.isAssassino());
-        ruolo.eseguiAssassinio();
-        verificaVero(assassinioAvvenuto());
+        ruolo.utilizzaPotere();
+        verificaVero(ruolo.isPotereUtilizzato());
     }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
@@ -56,12 +55,25 @@ public final class TestAssassino
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
+
+    @Test public void testCustodiaAngelo()
+    {
+        verificaFalso(isAmato());
+        ruolo.sceltaAngeloCustode();
+        verificaVero(isAmato());
+    }
+
+    @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
-    private boolean assassinioAvvenuto() { return ruolo.assassinioAvvenuto(); }
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

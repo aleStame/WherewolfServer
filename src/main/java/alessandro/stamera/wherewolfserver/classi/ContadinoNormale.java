@@ -9,6 +9,6 @@ public final class ContadinoNormale extends Contadino
         super(BIANCA);
     }
 
-    @Override public boolean isContadinoNormale() { return !super.isContadinoNormale(); }
+    @Override public boolean isContadinoNormale() { return true; }
 
 }

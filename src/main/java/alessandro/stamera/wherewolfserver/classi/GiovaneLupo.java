@@ -14,6 +14,6 @@ public class GiovaneLupo extends Lupo
         );
     }
 
-    @Override public boolean isGiovaneLupo() { return !super.isGiovaneLupo(); }
+    @Override public boolean isGiovaneLupo() { return true; }
 
 }

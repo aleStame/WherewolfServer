@@ -15,6 +15,6 @@ public final class Bardo extends Ruolo
         );
     }
 
-    @Override public boolean isBardo() { return !super.isBardo(); }
+    @Override public boolean isBardo() { return true; }
 
 }

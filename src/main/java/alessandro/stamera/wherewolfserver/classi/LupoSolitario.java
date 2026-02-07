@@ -11,6 +11,6 @@ public final class LupoSolitario extends Lupo
         cambiaFazione(LUPO_SOLITARIO);
     }
 
-    @Override public boolean isLupoSolitario() { return !super.isLupoSolitario(); }
+    @Override public boolean isLupoSolitario() { return true; }
 
 }
