@@ -76,6 +76,8 @@ public final class TestBardo
         verificaVero(isAmato());
     }
 
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
