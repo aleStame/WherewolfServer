@@ -20,6 +20,4 @@ public class Becchino extends Ruolo
 
     @Override public boolean isBecchino() { return true; }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
-
 }

@@ -12,6 +12,4 @@ public abstract class Lupo extends Ruolo
 
     @Override public boolean isLupo() { return true; }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
-
 }

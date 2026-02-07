@@ -15,8 +15,6 @@ public class Contadino extends Ruolo
         );
     }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
-
     @Override public boolean isContadino() { return true; }
 
 }

@@ -19,6 +19,6 @@ public final class Assassino extends Ruolo
 
     @Override public boolean isAssassino() { return true; }
 
-    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
 }

@@ -17,6 +17,4 @@ public final class Bardo extends Ruolo
 
     @Override public boolean isBardo() { return true; }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
-
 }

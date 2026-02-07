@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 
-public abstract class Ruolo
+public class Ruolo
 {
 
     private final String nome, descrizione;
@@ -100,7 +100,7 @@ public abstract class Ruolo
 
     public boolean isLupoSolitario() { return false; }
 
-    abstract void segnalazioneAzzeccagarbugli();
+    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
     public boolean isContadino() { return false; }
 

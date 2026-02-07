@@ -24,6 +24,4 @@ public final class AngeloCustode extends Ruolo
 
     @Override public void sceltaAngeloCustode() { }
 
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
-
 }
