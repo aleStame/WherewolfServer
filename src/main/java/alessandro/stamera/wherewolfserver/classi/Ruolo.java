@@ -16,7 +16,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, assassinio, accusato;
+    private boolean amato, accusato;
 
     private final boolean mistico;
 
@@ -29,7 +29,6 @@ public class Ruolo
         this.lune = lune;
         annullaVoti();
         setAmato(false);
-        setAssassinio(false);
         this.mistico = mistico;
         setAccusato(false);
     }
@@ -55,10 +54,6 @@ public class Ruolo
     public boolean isAmato() { return amato; }
 
     public void sceltaAngeloCustode() { setAmato(true); }
-
-    public boolean assassinioAvvenuto() { return assassinio; }
-
-    public void eseguiAssassinio() { setAssassinio(true); }
 
     public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
@@ -114,7 +109,9 @@ public class Ruolo
 
     public boolean isCapoGilda() { return false; }
 
-    private void setAssassinio(boolean assassinio) { this.assassinio = assassinio; }
+    public boolean isPotereUtilizzato() { return false; }
+
+    public void utilizzaPotere() { }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 

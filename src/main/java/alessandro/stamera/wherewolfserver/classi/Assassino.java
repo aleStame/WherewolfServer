@@ -1,24 +1,20 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 
-public final class Assassino extends Ruolo
+public final class Assassino extends Criminale
 {
 
     public Assassino()
     {
         super
         (
-    "Assassino", CRIMINALI, BIANCA,
+    "Assassino", NERA,
 "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte, può aprire gli occhi nel turno di un " +
-          "mistico. Se quel mistico in gioco, viene ucciso. Altrimenti, l'Assassino indica un giocatore che viene avvisato ed ucciso.",
-     2, false
+          "mistico. Se quel mistico in gioco, viene ucciso. Altrimenti, l'Assassino indica un giocatore che viene avvisato ed ucciso."
         );
     }
 
     @Override public boolean isAssassino() { return true; }
-
-    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
 }
