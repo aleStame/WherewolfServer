@@ -113,7 +113,7 @@ public class Ruolo
 
     public void utilizzaPotere() { }
 
-    public boolean isCriminale() { return true; }
+    public boolean isCriminale() { return false; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 
