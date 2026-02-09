@@ -31,7 +31,7 @@ public final class TestBoia
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
-        assertThat(ruolo.isAccusato()).isTrue();
+        verificaVero(ruolo.isAccusato());
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
@@ -50,8 +50,10 @@ public final class TestBoia
     {
         verificaFalso(ruolo.isAmato());
         ruolo.sceltaAngeloCustode();
-        assertThat(ruolo.isAmato()).isTrue();
+        verificaVero(ruolo.isAmato());
     }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
