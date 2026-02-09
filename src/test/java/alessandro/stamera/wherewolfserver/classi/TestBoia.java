@@ -46,6 +46,13 @@ public final class TestBoia
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
+    @Test public void testCustodiaAngelo()
+    {
+        verificaFalso(ruolo.isAmato());
+        ruolo.sceltaAngeloCustode();
+        assertThat(ruolo.isAmato()).isTrue();
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
