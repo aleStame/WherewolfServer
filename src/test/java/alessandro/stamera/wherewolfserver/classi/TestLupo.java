@@ -20,8 +20,10 @@ public final class TestLupo
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
-    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isFalse(); }
+    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
