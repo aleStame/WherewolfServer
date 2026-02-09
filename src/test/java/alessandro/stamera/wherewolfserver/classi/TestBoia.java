@@ -33,6 +33,8 @@ public final class TestBoia
         assertThat(ruolo.isAccusato()).isTrue();
     }
 
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
