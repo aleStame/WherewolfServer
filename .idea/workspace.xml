@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testFazione riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,38 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00633" summary="VERDE DIRETTO: testCategoria riuscito">
-      <option name="closed" value="true" />
-      <created>1770290579424</created>
-      <option name="number" value="00633" />
-      <option name="presentableId" value="LOCAL-00633" />
-      <option name="project" value="LOCAL" />
-      <updated>1770290579424</updated>
-    </task>
-    <task id="LOCAL-00634" summary="VERDE DIRETTO: testAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1770290674168</created>
-      <option name="number" value="00634" />
-      <option name="presentableId" value="LOCAL-00634" />
-      <option name="project" value="LOCAL" />
-      <updated>1770290674168</updated>
-    </task>
-    <task id="LOCAL-00635" summary="VERDE DIRETTO: testCategoria riuscito">
-      <option name="closed" value="true" />
-      <created>1770301810034</created>
-      <option name="number" value="00635" />
-      <option name="presentableId" value="LOCAL-00635" />
-      <option name="project" value="LOCAL" />
-      <updated>1770301810035</updated>
-    </task>
-    <task id="LOCAL-00636" summary="VERDE DIRETTO: custodiaAngelo riuscito">
-      <option name="closed" value="true" />
-      <created>1770302005245</created>
-      <option name="number" value="00636" />
-      <option name="presentableId" value="LOCAL-00636" />
-      <option name="project" value="LOCAL" />
-      <updated>1770302005245</updated>
     </task>
     <task id="LOCAL-00637" summary="REFACTORING: definizione del metodo isAmato">
       <option name="closed" value="true" />
@@ -605,7 +571,39 @@
       <option name="project" value="LOCAL" />
       <updated>1770654338687</updated>
     </task>
-    <option name="localTasksCounter" value="682" />
+    <task id="LOCAL-00682" summary="VERDE DIRETTO: testCategoria riuscito">
+      <option name="closed" value="true" />
+      <created>1770654574925</created>
+      <option name="number" value="00682" />
+      <option name="presentableId" value="LOCAL-00682" />
+      <option name="project" value="LOCAL" />
+      <updated>1770654574925</updated>
+    </task>
+    <task id="LOCAL-00683" summary="VERDE DIRETTO: testAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1770654722108</created>
+      <option name="number" value="00683" />
+      <option name="presentableId" value="LOCAL-00683" />
+      <option name="project" value="LOCAL" />
+      <updated>1770654722108</updated>
+    </task>
+    <task id="LOCAL-00684" summary="VERDE DIRETTO: testMistico riuscito">
+      <option name="closed" value="true" />
+      <created>1770654805298</created>
+      <option name="number" value="00684" />
+      <option name="presentableId" value="LOCAL-00684" />
+      <option name="project" value="LOCAL" />
+      <updated>1770654805298</updated>
+    </task>
+    <task id="LOCAL-00685" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1770654894281</created>
+      <option name="number" value="00685" />
+      <option name="presentableId" value="LOCAL-00685" />
+      <option name="project" value="LOCAL" />
+      <updated>1770654894281</updated>
+    </task>
+    <option name="localTasksCounter" value="686" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,15 +618,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: semplificazione della gerarchia" />
-    <MESSAGE value="VERDE DIRETTO: testAmato riuscito" />
-    <MESSAGE value="REFACTORING: ridefinizione del metodo isAmato" />
     <MESSAGE value="VERDE DIRETTO: custodiaAngelo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCustodiaAngelo riuscito" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia delle classi che iniziano con A" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia delle classi che iniziano con B" />
     <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
-    <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSceltaAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: eliminazione metodi inutili" />
@@ -645,6 +639,10 @@
     <MESSAGE value="VERDE DIRETTO: testBoia non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAura riuscito" />
     <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testFazione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAngeloCustode riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
