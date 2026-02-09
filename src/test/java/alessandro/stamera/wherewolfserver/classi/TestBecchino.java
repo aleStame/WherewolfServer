@@ -70,6 +70,8 @@ public final class TestBecchino
         verificaFazione(NEGROMANTE);
     }
 
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
