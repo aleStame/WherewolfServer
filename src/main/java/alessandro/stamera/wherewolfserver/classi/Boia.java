@@ -8,4 +8,6 @@ public final class Boia extends Ruolo
 
     public Boia() { super("Boia", INQUISIZIONE, BIANCA, null, 3, false); }
 
+    @Override public boolean isBoia() { return true; }
+
 }
