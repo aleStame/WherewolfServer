@@ -22,4 +22,6 @@ public final class TestLupo
 
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isFalse(); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
 }
