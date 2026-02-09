@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAura riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testFazione riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,14 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00632" summary="REFACTORING: semplificazione della gerarchia">
-      <option name="closed" value="true" />
-      <created>1770290067420</created>
-      <option name="number" value="00632" />
-      <option name="presentableId" value="LOCAL-00632" />
-      <option name="project" value="LOCAL" />
-      <updated>1770290067420</updated>
     </task>
     <task id="LOCAL-00633" summary="VERDE DIRETTO: testCategoria riuscito">
       <option name="closed" value="true" />
@@ -605,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770654088105</updated>
     </task>
-    <option name="localTasksCounter" value="681" />
+    <task id="LOCAL-00681" summary="VERDE DIRETTO: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1770654338687</created>
+      <option name="number" value="00681" />
+      <option name="presentableId" value="LOCAL-00681" />
+      <option name="project" value="LOCAL" />
+      <updated>1770654338687</updated>
+    </task>
+    <option name="localTasksCounter" value="682" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="REFACTORING: semplificazione della gerarchia" />
     <MESSAGE value="VERDE DIRETTO: testAmato riuscito" />
     <MESSAGE value="REFACTORING: ridefinizione del metodo isAmato" />
@@ -645,6 +644,7 @@
     <MESSAGE value="VERDE DIRETTO: testBecchino non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBoia non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAura riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAura riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testFazione riuscito" />
   </component>
 </project>
