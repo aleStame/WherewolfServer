@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.INQUISIZIONE;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -42,6 +43,8 @@ public final class TestBoia
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
