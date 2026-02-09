@@ -55,6 +55,8 @@ public final class TestBoia
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testBoia() { verificaVero(ruolo.isBoia()); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
