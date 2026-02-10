@@ -37,6 +37,8 @@ public final class TestCriminale
         assertThat(isPotereUtilizzato()).isTrue();
     }
 
+    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }

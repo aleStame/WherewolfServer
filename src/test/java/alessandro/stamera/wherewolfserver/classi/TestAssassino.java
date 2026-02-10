@@ -15,8 +15,6 @@ public final class TestAssassino
 
     @Test public void testNome() { testStringa(ruolo.getNome(), "Assassino"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
-
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void tesDescrizione()
@@ -35,10 +33,6 @@ public final class TestAssassino
         ruolo.utilizzaPotere();
         verificaVero(ruolo.isPotereUtilizzato());
     }
-
-    @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
-
-    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isFalse(); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
