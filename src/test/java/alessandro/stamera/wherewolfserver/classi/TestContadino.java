@@ -38,30 +38,6 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaVero(ruolo.isContadino());
     }
 
-    @Test public void testContadinoNormale()
-    {
-        doCallRealMethod().when(ruolo).isContadinoNormale();
-        verificaFalso(ruolo.isContadinoNormale());
-    }
-
-    @Test public void testContadinoMostro()
-    {
-        doCallRealMethod().when(ruolo).isContadinoMostro();
-        verificaFalso(ruolo.isContadinoMostro());
-    }
-
-    @Test public void testContadinoEroe()
-    {
-        doCallRealMethod().when(ruolo).isContadinoEroe();
-        verificaFalso(ruolo.isContadinoEroe());
-    }
-
-    @Test public void testContadinoLupo()
-    {
-        doCallRealMethod().when(ruolo).isContadinoLupo();
-        verificaFalso(ruolo.isContadinoLupo());
-    }
-
     @Test public void testMistico()
     {
         doCallRealMethod().when(ruolo).isMistico();

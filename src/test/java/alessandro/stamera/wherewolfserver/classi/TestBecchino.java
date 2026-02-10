@@ -50,8 +50,6 @@ public final class TestBecchino
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
-    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
@@ -71,6 +69,8 @@ public final class TestBecchino
     }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

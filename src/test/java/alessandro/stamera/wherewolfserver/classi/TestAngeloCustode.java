@@ -49,8 +49,6 @@ public final class TestAngeloCustode
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
-    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }

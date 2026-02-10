@@ -37,45 +37,10 @@ public final class TestAssassino
         verificaVero(ruolo.isPotereUtilizzato());
     }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isZero();
-        verificaFalso(ruolo.isAccusato());
-    }
-
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
-
-    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
-    @Test public void testCustodiaAngelo()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

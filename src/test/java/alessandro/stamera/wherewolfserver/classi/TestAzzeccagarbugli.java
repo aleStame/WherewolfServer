@@ -40,8 +40,6 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
-    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }

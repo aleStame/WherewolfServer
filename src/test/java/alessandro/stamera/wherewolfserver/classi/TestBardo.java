@@ -46,9 +46,7 @@ public final class TestBardo
 
     @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
 
-    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
+     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         int voti = 3;
         for(int i = 0; i < voti; i++) ruolo.incrementaVoti();

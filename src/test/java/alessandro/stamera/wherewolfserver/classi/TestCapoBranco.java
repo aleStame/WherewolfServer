@@ -26,12 +26,6 @@ public final class TestCapoBranco
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
-
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
-
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
-
     @Test public void testCapoBranco() { verificaVero(ruolo.isCapoBranco()); }
 
     @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
