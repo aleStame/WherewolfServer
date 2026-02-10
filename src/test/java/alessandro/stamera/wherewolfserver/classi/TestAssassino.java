@@ -3,7 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,6 +37,8 @@ public final class TestAssassino
     }
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
+
+    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isFalse(); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
