@@ -10,4 +10,6 @@ public final class TestCriminale
     @Test
     public void tesFazione() { assertThat(new Criminale(null, null, null).getFazione()).isEqualTo(CRIMINALI); }
 
+    @Test public void tesMistico() { assertThat(new Criminale(null, null, null).isMistico()).isFalse(); }
+
 }
