@@ -30,6 +30,8 @@ public final class TestLupo
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti();
