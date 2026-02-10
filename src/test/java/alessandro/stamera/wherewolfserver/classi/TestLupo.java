@@ -28,6 +28,8 @@ public final class TestLupo
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti();
