@@ -20,14 +20,16 @@ public final class TestCriminale
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(ruolo.getNumeroVoti()).isZero();
-        assertThat(ruolo.isAccusato()).isFalse();
+        verificaFalso(ruolo.isAccusato());
     }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
