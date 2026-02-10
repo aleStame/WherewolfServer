@@ -14,6 +14,8 @@ public final class TestCriminale
 
     @Test public void tesFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
 }
