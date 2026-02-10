@@ -44,13 +44,15 @@ public final class TestLupo
 
     @Test public void testAmato()
     {
-        verificaFalso(ruolo.isAmato());
+        verificaFalso(isAmato());
         ruolo.sceltaAngeloCustode();
-        verificaVero(ruolo.isAmato());
+        verificaVero(isAmato());
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
 }
