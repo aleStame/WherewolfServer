@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLupo" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-02-09T16:36:35" hostname="ALESSANDRO" time="0.011">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLupo" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-02-10T08:39:35" hostname="ALESSANDRO" time="0.322">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.001"/>
-  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.001"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.002"/>
+  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.169"/>
   <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.001"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.001"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.001"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.002"/>
+  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.015"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.009"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.008"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.005"/>
+  <testcase name="testSegnalazioneAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

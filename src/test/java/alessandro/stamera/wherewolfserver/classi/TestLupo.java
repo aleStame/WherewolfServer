@@ -26,6 +26,16 @@ public final class TestLupo
 
     @Test public void testLupo() { assertThat(ruolo.isLupo()).isTrue(); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti();
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+        assertThat(ruolo.isAccusato()).isTrue();
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
