@@ -32,6 +32,8 @@ public final class TestLupo
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti();
@@ -40,7 +42,12 @@ public final class TestLupo
         verificaVero(ruolo.isAccusato());
     }
 
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+    @Test public void testAmato()
+    {
+        verificaFalso(ruolo.isAmato());
+        ruolo.sceltaAngeloCustode();
+        verificaVero(ruolo.isAmato());
+    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
