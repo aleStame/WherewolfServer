@@ -32,11 +32,13 @@ public final class TestCriminale
 
     @Test public void testUtilizzoPotere()
     {
-        verificaFalso(ruolo.isPotereUtilizzato());
+        verificaFalso(isPotereUtilizzato());
         ruolo.utilizzaPotere();
-        assertThat(ruolo.isPotereUtilizzato()).isTrue();
+        assertThat(isPotereUtilizzato()).isTrue();
     }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
 
 }
