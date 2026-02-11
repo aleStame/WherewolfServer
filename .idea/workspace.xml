@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAccusato riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAccusato">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,30 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00648" summary="VERDE DIRETTO: testSceltaAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1770305345345</created>
-      <option name="number" value="00648" />
-      <option name="presentableId" value="LOCAL-00648" />
-      <option name="project" value="LOCAL" />
-      <updated>1770305345345</updated>
-    </task>
-    <task id="LOCAL-00649" summary="VERDE DIRETTO: testSceltaAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1770371336541</created>
-      <option name="number" value="00649" />
-      <option name="presentableId" value="LOCAL-00649" />
-      <option name="project" value="LOCAL" />
-      <updated>1770371336541</updated>
-    </task>
-    <task id="LOCAL-00650" summary="VERDE DIRETTO: testCategoria riuscito">
-      <option name="closed" value="true" />
-      <created>1770371504857</created>
-      <option name="number" value="00650" />
-      <option name="presentableId" value="LOCAL-00650" />
-      <option name="project" value="LOCAL" />
-      <updated>1770371504858</updated>
     </task>
     <task id="LOCAL-00651" summary="VERDE DIRETTO: testSceltaAngeloCustode riuscito">
       <option name="closed" value="true" />
@@ -605,7 +581,31 @@
       <option name="project" value="LOCAL" />
       <updated>1770821960610</updated>
     </task>
-    <option name="localTasksCounter" value="697" />
+    <task id="LOCAL-00697" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1770822141039</created>
+      <option name="number" value="00697" />
+      <option name="presentableId" value="LOCAL-00697" />
+      <option name="project" value="LOCAL" />
+      <updated>1770822141039</updated>
+    </task>
+    <task id="LOCAL-00698" summary="REFACTORING: ridefinizione del metodo segnalazioneAzzeccagarbugli">
+      <option name="closed" value="true" />
+      <created>1770822259278</created>
+      <option name="number" value="00698" />
+      <option name="presentableId" value="LOCAL-00698" />
+      <option name="project" value="LOCAL" />
+      <updated>1770822259278</updated>
+    </task>
+    <task id="LOCAL-00699" summary="REFACTORING: definizione del metodo isAccusato">
+      <option name="closed" value="true" />
+      <created>1770822421019</created>
+      <option name="number" value="00699" />
+      <option name="presentableId" value="LOCAL-00699" />
+      <option name="project" value="LOCAL" />
+      <updated>1770822421019</updated>
+    </task>
+    <option name="localTasksCounter" value="700" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,9 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: semplificazione della gerarchia dei lupi" />
-    <MESSAGE value="VERDE DIRETTO: testAura non riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testFazione non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCategoria non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupo non riuscito" />
@@ -645,6 +642,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="ROSSO: testAccusato non riuscito" />
     <MESSAGE value="VERDE: testAccusato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAccusato riuscito" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: ridefinizione del metodo segnalazioneAzzeccagarbugli" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAccusato" />
   </component>
 </project>

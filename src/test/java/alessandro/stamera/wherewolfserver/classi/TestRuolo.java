@@ -25,6 +25,14 @@ public final class TestRuolo
         assertThat(isAccusato()).isTrue();
     }
 
+    @Test public void testVoti()
+    {
+        ruolo.incrementaVoti();
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+        ruolo.annullaVoti();
+        assertThat(ruolo.getNumeroVoti()).isZero();
+    }
+
     private boolean isAccusato() { return ruolo.isAccusato(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
