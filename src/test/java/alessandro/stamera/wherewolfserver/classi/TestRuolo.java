@@ -23,7 +23,7 @@ public final class TestRuolo
     {
         verificaFalso(isAccusato());
         ruolo.accusa();
-        assertThat(isAccusato()).isTrue();
+        verificaAccusato();
     }
 
     @Test public void testVoti()
@@ -37,8 +37,10 @@ public final class TestRuolo
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(isAccusato()).isTrue();
+        verificaAccusato();
     }
+
+    private void verificaAccusato() { assertThat(isAccusato()).isTrue(); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
 
