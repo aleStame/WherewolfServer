@@ -13,7 +13,7 @@ public final class TestRuolo
 
     @Test public void testInizializzazione()
     {
-        assertThat(getNumeroVoti()).isZero();
+        verificaNessunVoto();
         verificaFalso(ruolo.isAmato());
         verificaFalso(isAccusato());
     }
@@ -30,10 +30,12 @@ public final class TestRuolo
         ruolo.incrementaVoti();
         assertThat(getNumeroVoti()).isEqualTo(1);
         ruolo.annullaVoti();
-        assertThat(getNumeroVoti()).isZero();
+        verificaNessunVoto();
     }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
+
+    private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
