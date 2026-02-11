@@ -83,6 +83,8 @@ public class Ruolo
 
     public boolean isLupo() { return false; }
 
+    public void segnalazioneAzzeccagarbugli() { accusa(); }
+
     public void accusa() { setAccusato(true); }
 
     public boolean isCapoBranco() { return false; }
@@ -94,8 +96,6 @@ public class Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
-
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
     public boolean isContadino() { return false; }
 
