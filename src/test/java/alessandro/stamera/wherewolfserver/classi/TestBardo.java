@@ -58,13 +58,6 @@ public final class TestBardo
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
-    @Test public void testSceltaAngeloCustode()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
@@ -76,7 +69,5 @@ public final class TestBardo
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

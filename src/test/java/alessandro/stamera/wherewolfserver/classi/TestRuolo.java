@@ -42,6 +42,12 @@ public final class TestRuolo
         verificaAccusato();
     }
 
+    @Test public void testSceltaAngeloCustode()
+    {
+        ruolo.sceltaAngeloCustode();
+        assertThat(ruolo.isAmato()).isTrue();
+    }
+
     private void verificaAccusato() { assertThat(isAccusato()).isTrue(); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }

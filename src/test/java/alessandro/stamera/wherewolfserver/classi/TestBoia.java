@@ -38,21 +38,10 @@ public final class TestBoia
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
-    @Test public void testCustodiaAngelo()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
-    @Test public void testBoia() { verificaVero(ruolo.isBoia()); }
-
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+    @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

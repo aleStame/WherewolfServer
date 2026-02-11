@@ -32,7 +32,7 @@ public final class TestBecchino
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBecchino() { verificaVero(ruolo.isBecchino()); }
+    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
@@ -45,13 +45,6 @@ public final class TestBecchino
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
-    @Test public void testSceltaAngeloCustode()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
 
     @Test public void testRiconoscimentoNegromante()
     {
@@ -68,10 +61,6 @@ public final class TestBecchino
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

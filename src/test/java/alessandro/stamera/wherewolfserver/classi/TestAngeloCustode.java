@@ -29,9 +29,14 @@ public final class TestAngeloCustode
         verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { verificaNumero(ruolo.getLune(), 2); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
+    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
+
+    /*@Test public void testSceltaAngeloCustode()
+    {
+
+    }*/
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -57,10 +62,6 @@ public final class TestAngeloCustode
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void verificaNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }

@@ -22,7 +22,7 @@ public final class TestBoccaDiRosa
 
     @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
-    @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
+    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isTrue(); }
 
     @Test public void testDescrizione()
     {
@@ -60,20 +60,11 @@ public final class TestBoccaDiRosa
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
-    @Test public void testSceltaAngeloCustode()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
@@ -82,7 +73,5 @@ public final class TestBoccaDiRosa
     private void esempioVoti() { for(int i = 0; i < 7; i++) ruolo.incrementaVoti(); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }
