@@ -9,7 +9,8 @@ public final class TestRuolo
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, null, -1, false); }
+    @BeforeEach
+    public void setUp() { ruolo = new Ruolo(null, null, null, null, -1, false); }
 
     @Test public void testInizializzazione()
     {
@@ -31,6 +32,12 @@ public final class TestRuolo
         assertThat(getNumeroVoti()).isEqualTo(1);
         ruolo.annullaVoti();
         verificaNessunVoto();
+    }
+
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(isAccusato()).isTrue();
     }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
