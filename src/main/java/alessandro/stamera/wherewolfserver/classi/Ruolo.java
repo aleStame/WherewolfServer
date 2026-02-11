@@ -83,7 +83,7 @@ public class Ruolo
 
     public boolean isLupo() { return false; }
 
-    public void accusa() { }
+    public void accusa() { setAccusato(true); }
 
     public boolean isCapoBranco() { return false; }
 
