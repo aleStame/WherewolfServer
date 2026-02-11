@@ -83,7 +83,7 @@ public class Ruolo
 
     public boolean isLupo() { return false; }
 
-    public void setAccusato(boolean accusato) { this.accusato = accusato; }
+    public void accusa() { }
 
     public boolean isCapoBranco() { return false; }
 
@@ -115,8 +115,10 @@ public class Ruolo
 
     public boolean isCriminale() { return false; }
 
-    private void setAmato(boolean amato) { this.amato = amato; }
-
     public boolean isBoia() { return false; }
+
+    private void setAccusato(boolean accusato) { this.accusato = accusato; }
+
+    private void setAmato(boolean amato) { this.amato = amato; }
 
 }

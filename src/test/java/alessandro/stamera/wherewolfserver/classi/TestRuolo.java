@@ -14,6 +14,14 @@ public final class TestRuolo
         verificaFalso(ruolo.isAccusato());
     }
 
+    @Test public void testAccusato()
+    {
+        Ruolo ruolo = new Ruolo(null, null, null, null, -1, false);
+        verificaFalso(ruolo.isAccusato());
+        ruolo.accusa();
+        assertThat(ruolo.isAccusato()).isTrue();
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
