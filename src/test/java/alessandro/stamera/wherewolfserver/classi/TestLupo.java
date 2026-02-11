@@ -34,14 +34,6 @@ public final class TestLupo
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
-        verificaVero(ruolo.isAccusato());
-    }
-
     @Test public void testAmato()
     {
         verificaFalso(isAmato());

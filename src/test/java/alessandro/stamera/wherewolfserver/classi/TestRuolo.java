@@ -36,7 +36,9 @@ public final class TestRuolo
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
+        ruolo.incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(getNumeroVoti()).isEqualTo(1);
         verificaAccusato();
     }
 

@@ -35,14 +35,6 @@ public final class TestAngeloCustode
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        verificaNumero(ruolo.getNumeroVoti(), 1);
-        verificaVero(ruolo.isAccusato());
-    }
-
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }

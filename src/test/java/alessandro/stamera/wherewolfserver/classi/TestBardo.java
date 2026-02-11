@@ -30,7 +30,7 @@ public final class TestBardo
 
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testLune() { verificaIntero(ruolo.getLune(), 1); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -46,16 +46,7 @@ public final class TestBardo
 
     @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
 
-     @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        int voti = 3;
-        for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        verificaIntero(ruolo.getNumeroVoti(), voti);
-        verificaVero(ruolo.isAccusato());
-    }
-
-    @Test public void testGildata()
+     @Test public void testGildata()
     {
         verificaVero(ruolo.gildata());
         verificaFazione(CRIMINALI);
@@ -81,8 +72,6 @@ public final class TestBardo
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
-
-    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

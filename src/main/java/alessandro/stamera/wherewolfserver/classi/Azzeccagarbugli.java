@@ -19,6 +19,6 @@ public final class Azzeccagarbugli extends Ruolo
 
     @Override public boolean isAzzeccagarbugli() { return true; }
 
-    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+    @Override public void segnalazioneAzzeccagarbugli() { }
 
 }

@@ -28,19 +28,11 @@ public final class TestBecchino
         testStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { testNumero(ruolo.getLune(), 3); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testBecchino() { verificaVero(ruolo.isBecchino()); }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        testNumero(ruolo.getNumeroVoti(), 1);
-        verificaVero(ruolo.isAccusato());
-    }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
@@ -73,8 +65,6 @@ public final class TestBecchino
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void testNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 

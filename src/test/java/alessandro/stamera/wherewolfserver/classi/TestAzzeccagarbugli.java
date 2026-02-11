@@ -32,7 +32,13 @@ public final class TestAzzeccagarbugli
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }
+    @Test public void testAzzeccagarbugli()
+    {
+        verificaVero(ruolo.isAzzeccagarbugli());
+        ruolo.segnalazioneAzzeccagarbugli();
+        verificaFalso(ruolo.isAccusato());
+        assertThat(ruolo.getNumeroVoti()).isZero();
+    }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 

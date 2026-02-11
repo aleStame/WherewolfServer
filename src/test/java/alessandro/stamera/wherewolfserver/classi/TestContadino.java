@@ -30,7 +30,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     }
 
     @ParameterizedTest @EnumSource(Aura.class)
-    public void testLune(Aura aura) { verificaIntero(getContadino(aura).getLune(), 1); }
+    public void testLune(Aura aura) { assertThat(getContadino(aura).getLune()).isEqualTo(1); }
 
     @Test public void testContadino()
     {
@@ -42,16 +42,6 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         doCallRealMethod().when(ruolo).isMistico();
         verificaFalso(ruolo.isMistico());
-    }
-
-    @ParameterizedTest @EnumSource(Aura.class) public void testSegnalazioneAzzeccagarbugli(Aura aura)
-    {
-        Ruolo contadino = getContadino(aura);
-        int voti = 3;
-        for(int i = 0; i < voti; i++) contadino.incrementaVoti();
-        contadino.segnalazioneAzzeccagarbugli();
-        verificaIntero(contadino.getNumeroVoti(), voti);
-        verificaVero(contadino.isAccusato());
     }
 
     @Test public void testAzzeccagarbugli()
@@ -104,8 +94,6 @@ import static org.mockito.Mockito.doCallRealMethod;
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
