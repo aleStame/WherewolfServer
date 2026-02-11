@@ -15,15 +15,17 @@ public final class TestRuolo
     {
         assertThat(ruolo.getNumeroVoti()).isZero();
         verificaFalso(ruolo.isAmato());
-        verificaFalso(ruolo.isAccusato());
+        verificaFalso(isAccusato());
     }
 
     @Test public void testAccusato()
     {
-        verificaFalso(ruolo.isAccusato());
+        verificaFalso(isAccusato());
         ruolo.accusa();
-        assertThat(ruolo.isAccusato()).isTrue();
+        assertThat(isAccusato()).isTrue();
     }
+
+    private boolean isAccusato() { return ruolo.isAccusato(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
