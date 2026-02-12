@@ -14,7 +14,7 @@ public final class TestBoia
 
     @BeforeEach public void setUp() { ruolo = new Boia(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Boia"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Boia"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(INQUISIZIONE); }
 
@@ -25,7 +25,7 @@ public final class TestBoia
         String descrizione =
             "La prima notte viene individuato dall'Inquisitore. Se non è accusato, può segnalare un giocatore durante il ballottaggio: se è un " +
             "mistico o una creatura dell'ombra, i voti di tutti gli altri accusati vengono azzerati alla fine della votazione";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
@@ -49,6 +49,8 @@ public final class TestBoia
     @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
