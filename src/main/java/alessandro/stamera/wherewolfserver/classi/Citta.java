@@ -9,4 +9,6 @@ public class Citta extends Ruolo
 
     @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
+    @Override public boolean isCitta() { return true; }
+
 }

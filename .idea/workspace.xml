@@ -211,22 +211,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-00687" summary="REFACTORING: definizione del metodo isPotereUtilizzato">
-      <option name="closed" value="true" />
-      <created>1770736805926</created>
-      <option name="number" value="00687" />
-      <option name="presentableId" value="LOCAL-00687" />
-      <option name="project" value="LOCAL" />
-      <updated>1770736805926</updated>
-    </task>
-    <task id="LOCAL-00688" summary="VERDE DIRETTO: testCriminale riuscito">
-      <option name="closed" value="true" />
-      <created>1770736994741</created>
-      <option name="number" value="00688" />
-      <option name="presentableId" value="LOCAL-00688" />
-      <option name="project" value="LOCAL" />
-      <updated>1770736994741</updated>
-    </task>
     <task id="LOCAL-00689" summary="REFACTORING: definizione del metodo verificaVero">
       <option name="closed" value="true" />
       <created>1770738877747</created>
@@ -603,7 +587,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770902639277</updated>
     </task>
-    <option name="localTasksCounter" value="736" />
+    <task id="LOCAL-00736" summary="VERDE: testCitta riuscito">
+      <option name="closed" value="true" />
+      <created>1770902722206</created>
+      <option name="number" value="00736" />
+      <option name="presentableId" value="LOCAL-00736" />
+      <option name="project" value="LOCAL" />
+      <updated>1770902722206</updated>
+    </task>
+    <task id="LOCAL-00737" summary="ROSSO: testCitta non riuscito">
+      <option name="closed" value="true" />
+      <created>1770902927594</created>
+      <option name="number" value="00737" />
+      <option name="presentableId" value="LOCAL-00737" />
+      <option name="project" value="LOCAL" />
+      <updated>1770902927595</updated>
+    </task>
+    <option name="localTasksCounter" value="738" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,7 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: definizione del metodo isAmato" />
     <MESSAGE value="REFACTORING: correzione del metodo incrementaVoti" />
     <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVoti" />
@@ -642,6 +641,7 @@
     <MESSAGE value="REFACTORING: sistemazione della gerarchia della città" />
     <MESSAGE value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
+    <MESSAGE value="VERDE: testCitta riuscito" />
     <MESSAGE value="ROSSO: testCitta non riuscito" />
     <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCitta non riuscito" />
   </component>
