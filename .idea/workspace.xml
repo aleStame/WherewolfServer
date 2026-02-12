@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMistico riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: alleggerimento della gerarchia della città" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,14 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00677" summary="VERDE DIRETTO: testBoia non riuscito">
-      <option name="closed" value="true" />
-      <created>1770652775414</created>
-      <option name="number" value="00677" />
-      <option name="presentableId" value="LOCAL-00677" />
-      <option name="project" value="LOCAL" />
-      <updated>1770652775414</updated>
     </task>
     <task id="LOCAL-00678" summary="VERDE DIRETTO: testBoia non riuscito">
       <option name="closed" value="true" />
@@ -603,7 +595,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770891314097</updated>
     </task>
-    <option name="localTasksCounter" value="726" />
+    <task id="LOCAL-00726" summary="REFACTORING: alleggerimento della gerarchia della città">
+      <option name="closed" value="true" />
+      <created>1770891567856</created>
+      <option name="number" value="00726" />
+      <option name="presentableId" value="LOCAL-00726" />
+      <option name="project" value="LOCAL" />
+      <updated>1770891567856</updated>
+    </task>
+    <option name="localTasksCounter" value="727" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,7 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVoti riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroVoti" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNessunVoto" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
@@ -643,6 +642,7 @@
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMistico riuscito" />
+    <MESSAGE value="REFACTORING: alleggerimento della gerarchia della città" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: alleggerimento della gerarchia della città" />
   </component>
 </project>

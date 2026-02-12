@@ -24,14 +24,6 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testAzzeccagarbugli()
-    {
-        assertThat(ruolo.isAzzeccagarbugli()).isTrue();
-        ruolo.segnalazioneAzzeccagarbugli();
-        verificaFalso(ruolo.isAccusato());
-        assertThat(ruolo.getNumeroVoti()).isZero();
-    }
-
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }

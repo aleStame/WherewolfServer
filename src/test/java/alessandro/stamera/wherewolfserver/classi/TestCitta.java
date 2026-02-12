@@ -22,4 +22,12 @@ public final class TestCitta
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti(3);
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isZero();
+        assertThat(ruolo.isAccusato()).isFalse();
+    }
+
 }

@@ -32,14 +32,6 @@ public final class TestBoccaDiRosa
         assertThat(getNumeroVoti()).isEqualTo(4);
     }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        esempioVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(getNumeroVoti()).isZero();
-        verificaFalso(ruolo.isAccusato());
-    }
-
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
