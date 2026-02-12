@@ -7,6 +7,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestRuolo
 {
 
+    private static final int ESEMPIO_VOTI = 3;
+
     private Ruolo ruolo;
 
     @BeforeEach
@@ -27,17 +29,17 @@ public final class TestRuolo
 
     @Test public void testVoti()
     {
-        incrementaVoti(1);
-        verificaVoti(1);
+        incrementaVoti();
+        verificaVoti();
         ruolo.annullaVoti();
         verificaNessunVoto();
     }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        incrementaVoti(1);
+        incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        verificaVoti(1);
+        verificaVoti();
         verificaAccusato();
     }
 
@@ -49,7 +51,7 @@ public final class TestRuolo
 
     private void verificaAccusato() { assertThat(isAccusato()).isTrue(); }
 
-    private void incrementaVoti(int voti) { ruolo.incrementaVoti(voti); }
+    private void incrementaVoti() { ruolo.incrementaVoti(ESEMPIO_VOTI); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
 
@@ -57,7 +59,7 @@ public final class TestRuolo
 
     private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
 
-    private void verificaVoti(int voti) { assertThat(getNumeroVoti()).isEqualTo(voti); }
+    private void verificaVoti() { assertThat(getNumeroVoti()).isEqualTo(ESEMPIO_VOTI); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
