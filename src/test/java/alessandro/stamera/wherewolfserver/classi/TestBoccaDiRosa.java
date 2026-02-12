@@ -46,6 +46,8 @@ public final class TestBoccaDiRosa
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
