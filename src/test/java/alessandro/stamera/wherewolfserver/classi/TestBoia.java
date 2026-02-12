@@ -40,6 +40,8 @@ public final class TestBoia
 
     @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
