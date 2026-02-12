@@ -28,7 +28,7 @@ public final class TestRuolo
     @Test public void testVoti()
     {
         incrementaVoti(1);
-        assertThat(getNumeroVoti()).isEqualTo(1);
+        verificaVoti(1);
         ruolo.annullaVoti();
         verificaNessunVoto();
     }
@@ -37,7 +37,7 @@ public final class TestRuolo
     {
         incrementaVoti(1);
         ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(getNumeroVoti()).isEqualTo(1);
+        verificaVoti(1);
         verificaAccusato();
     }
 
@@ -56,6 +56,8 @@ public final class TestRuolo
     private boolean isAmato() { return ruolo.isAmato(); }
 
     private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
+
+    private void verificaVoti(int voti) { assertThat(getNumeroVoti()).isEqualTo(voti); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
