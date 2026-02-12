@@ -18,7 +18,7 @@ public final class TestRuolo
     {
         verificaNessunVoto();
         verificaFalso(isAmato());
-        verificaFalso(isAccusato());
+        verificaLibero();
     }
 
     @Test public void testAccusato()
@@ -26,7 +26,7 @@ public final class TestRuolo
         ruolo.accusa();
         verificaAccusato();
         ruolo.libera();
-        verificaFalso(isAccusato());
+        verificaLibero();
     }
 
     @Test public void testVoti()
@@ -52,6 +52,8 @@ public final class TestRuolo
     }
 
     private void verificaAccusato() { assertThat(isAccusato()).isTrue(); }
+
+    private void verificaLibero() { verificaFalso(isAccusato()); }
 
     private void incrementaVoti() { ruolo.incrementaVoti(ESEMPIO_VOTI); }
 
