@@ -22,6 +22,8 @@ public final class TestCitta
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti(3);
