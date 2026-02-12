@@ -16,7 +16,7 @@ public final class TestBoccaDiRosa
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
-    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isTrue(); }
+    @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
 
     @Test public void testDescrizione()
     {
@@ -46,9 +46,11 @@ public final class TestBoccaDiRosa
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+    @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
