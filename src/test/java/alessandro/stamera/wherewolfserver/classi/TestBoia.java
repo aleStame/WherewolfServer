@@ -20,6 +20,14 @@ public final class TestBoia
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte viene individuato dall'Inquisitore. Se non è accusato, può segnalare un giocatore durante il ballottaggio: se è un " +
+            "mistico o una creatura dell'ombra, i voti di tutti gli altri accusati vengono azzerati alla fine della votazione";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
