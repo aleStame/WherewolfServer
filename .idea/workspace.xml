@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante ESEMPIO_VOTI" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Citta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCitta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,38 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00665" summary="REFACTORING: semplificazione della gerarchia dei lupi">
-      <option name="closed" value="true" />
-      <created>1770398363142</created>
-      <option name="number" value="00665" />
-      <option name="presentableId" value="LOCAL-00665" />
-      <option name="project" value="LOCAL" />
-      <updated>1770398363142</updated>
-    </task>
-    <task id="LOCAL-00666" summary="VERDE DIRETTO: testAura non riuscito">
-      <option name="closed" value="true" />
-      <created>1770398506606</created>
-      <option name="number" value="00666" />
-      <option name="presentableId" value="LOCAL-00666" />
-      <option name="project" value="LOCAL" />
-      <updated>1770398506606</updated>
-    </task>
-    <task id="LOCAL-00667" summary="VERDE DIRETTO: testFazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1770398607557</created>
-      <option name="number" value="00667" />
-      <option name="presentableId" value="LOCAL-00667" />
-      <option name="project" value="LOCAL" />
-      <updated>1770398607557</updated>
-    </task>
-    <task id="LOCAL-00668" summary="VERDE DIRETTO: testCategoria non riuscito">
-      <option name="closed" value="true" />
-      <created>1770399037644</created>
-      <option name="number" value="00668" />
-      <option name="presentableId" value="LOCAL-00668" />
-      <option name="project" value="LOCAL" />
-      <updated>1770399037644</updated>
     </task>
     <task id="LOCAL-00669" summary="VERDE DIRETTO: testAzzeccagarbugli non riuscito">
       <option name="closed" value="true" />
@@ -603,7 +575,39 @@
       <option name="project" value="LOCAL" />
       <updated>1770889717051</updated>
     </task>
-    <option name="localTasksCounter" value="714" />
+    <task id="LOCAL-00714" summary="ROSSO: testAccusato non riuscito">
+      <option name="closed" value="true" />
+      <created>1770889885496</created>
+      <option name="number" value="00714" />
+      <option name="presentableId" value="LOCAL-00714" />
+      <option name="project" value="LOCAL" />
+      <updated>1770889885496</updated>
+    </task>
+    <task id="LOCAL-00715" summary="VERDE: testAccusato riuscito">
+      <option name="closed" value="true" />
+      <created>1770889967813</created>
+      <option name="number" value="00715" />
+      <option name="presentableId" value="LOCAL-00715" />
+      <option name="project" value="LOCAL" />
+      <updated>1770889967813</updated>
+    </task>
+    <task id="LOCAL-00716" summary="REFACTORING: definizione del metodo verificaLibero">
+      <option name="closed" value="true" />
+      <created>1770890137946</created>
+      <option name="number" value="00716" />
+      <option name="presentableId" value="LOCAL-00716" />
+      <option name="project" value="LOCAL" />
+      <updated>1770890137946</updated>
+    </task>
+    <task id="LOCAL-00717" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1770890255105</created>
+      <option name="number" value="00717" />
+      <option name="presentableId" value="LOCAL-00717" />
+      <option name="project" value="LOCAL" />
+      <updated>1770890255105</updated>
+    </task>
+    <option name="localTasksCounter" value="718" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,15 +622,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isPotereUtilizzato" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoGilda riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testInizializzazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <MESSAGE value="ROSSO: testAccusato non riuscito" />
-    <MESSAGE value="VERDE: testAccusato riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: ridefinizione del metodo segnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
@@ -643,6 +643,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVoti" />
     <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_VOTI" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante ESEMPIO_VOTI" />
+    <MESSAGE value="ROSSO: testAccusato non riuscito" />
+    <MESSAGE value="VERDE: testAccusato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaLibero" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
   </component>
 </project>
