@@ -18,8 +18,12 @@ public final class TestBorgomastro
 
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
 
-    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
-    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isFalse(); }
+    @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
+
+    @Test public void testBorgomastro() { assertThat(ruolo.isBorgomastro()).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

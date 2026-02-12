@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testLupo riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAzzeccagarbugli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBoccaDiRosa.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testBoccaDiRosa riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBorgomastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBorgomastro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,30 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00711" summary="REFACTORING: definizione del metodo incrementaVoti">
-      <option name="closed" value="true" />
-      <created>1770889489916</created>
-      <option name="number" value="00711" />
-      <option name="presentableId" value="LOCAL-00711" />
-      <option name="project" value="LOCAL" />
-      <updated>1770889489916</updated>
-    </task>
-    <task id="LOCAL-00712" summary="REFACTORING: definizione del metodo verificaVoti">
-      <option name="closed" value="true" />
-      <created>1770889606022</created>
-      <option name="number" value="00712" />
-      <option name="presentableId" value="LOCAL-00712" />
-      <option name="project" value="LOCAL" />
-      <updated>1770889606022</updated>
-    </task>
-    <task id="LOCAL-00713" summary="REFACTORING: definizione della costante ESEMPIO_VOTI">
-      <option name="closed" value="true" />
-      <created>1770889717051</created>
-      <option name="number" value="00713" />
-      <option name="presentableId" value="LOCAL-00713" />
-      <option name="project" value="LOCAL" />
-      <updated>1770889717051</updated>
     </task>
     <task id="LOCAL-00714" summary="ROSSO: testAccusato non riuscito">
       <option name="closed" value="true" />
@@ -607,7 +581,31 @@
       <option name="project" value="LOCAL" />
       <updated>1770913749779</updated>
     </task>
-    <option name="localTasksCounter" value="760" />
+    <task id="LOCAL-00760" summary="VERDE DIRETTO: testCitta riuscito">
+      <option name="closed" value="true" />
+      <created>1770914087553</created>
+      <option name="number" value="00760" />
+      <option name="presentableId" value="LOCAL-00760" />
+      <option name="project" value="LOCAL" />
+      <updated>1770914087553</updated>
+    </task>
+    <task id="LOCAL-00761" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1770914229543</created>
+      <option name="number" value="00761" />
+      <option name="presentableId" value="LOCAL-00761" />
+      <option name="project" value="LOCAL" />
+      <updated>1770914229543</updated>
+    </task>
+    <task id="LOCAL-00762" summary="VERDE DIRETTO: testBoccaDiRosa riuscito">
+      <option name="closed" value="true" />
+      <created>1770914317606</created>
+      <option name="number" value="00762" />
+      <option name="presentableId" value="LOCAL-00762" />
+      <option name="project" value="LOCAL" />
+      <updated>1770914317607</updated>
+    </task>
+    <option name="localTasksCounter" value="763" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -631,13 +629,10 @@
     <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia della città" />
-    <MESSAGE value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
     <MESSAGE value="VERDE DIRETTO: isCitta riuscito" />
     <MESSAGE value="ROSSO: testCitta non riuscito" />
     <MESSAGE value="VERDE: testCitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
@@ -647,6 +642,9 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="VERDE DIRETTO: testLupo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
   </component>
 </project>
