@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di un metodo di set up">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Borgomastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNome riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,22 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00705" summary="REFACTORING: definizione del metodo verificaAccusato">
-      <option name="closed" value="true" />
-      <created>1770823866829</created>
-      <option name="number" value="00705" />
-      <option name="presentableId" value="LOCAL-00705" />
-      <option name="project" value="LOCAL" />
-      <updated>1770823866829</updated>
-    </task>
-    <task id="LOCAL-00706" summary="REFACTORING: alleggerimento testAzzeccagarbugli">
-      <option name="closed" value="true" />
-      <created>1770825034911</created>
-      <option name="number" value="00706" />
-      <option name="presentableId" value="LOCAL-00706" />
-      <option name="project" value="LOCAL" />
-      <updated>1770825034911</updated>
     </task>
     <task id="LOCAL-00707" summary="REFACTORING: alleggerimento testSceltaAngeloCustode">
       <option name="closed" value="true" />
@@ -606,7 +587,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770912673443</updated>
     </task>
-    <option name="localTasksCounter" value="754" />
+    <task id="LOCAL-00754" summary="ROSSO: testNome non riuscito">
+      <option name="closed" value="true" />
+      <created>1770913220740</created>
+      <option name="number" value="00754" />
+      <option name="presentableId" value="LOCAL-00754" />
+      <option name="project" value="LOCAL" />
+      <updated>1770913220740</updated>
+    </task>
+    <task id="LOCAL-00755" summary="VERDE: testNome riuscito">
+      <option name="closed" value="true" />
+      <created>1770913273421</created>
+      <option name="number" value="00755" />
+      <option name="presentableId" value="LOCAL-00755" />
+      <option name="project" value="LOCAL" />
+      <updated>1770913273422</updated>
+    </task>
+    <option name="localTasksCounter" value="756" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -621,8 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAccusato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaLibero" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
@@ -646,6 +641,8 @@
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="ROSSO: testNome non riuscito" />
+    <MESSAGE value="VERDE: testNome riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNome riuscito" />
   </component>
 </project>
