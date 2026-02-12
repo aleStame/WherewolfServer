@@ -77,6 +77,12 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isBoia());
     }
 
+    @Test public void testCitta()
+    {
+        doCallRealMethod().when(ruolo).isCitta();
+        verificaFalso(ruolo.isCitta());
+    }
+
     private Contadino getContadino(Aura aura) { return new Contadino(aura); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
