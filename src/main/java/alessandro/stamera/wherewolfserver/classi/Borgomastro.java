@@ -7,4 +7,6 @@ public class Borgomastro extends Citta
 
     public Borgomastro() { super("Borgomastro", BIANCA, null); }
 
+    @Override public boolean isBorgomastro() { return true; }
+
 }
