@@ -16,13 +16,15 @@ public final class TestBorgomastro
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+    @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
-    @Test public void testBorgomastro() { assertThat(ruolo.isBorgomastro()).isTrue(); }
+    @Test public void testBorgomastro() { verificaVero(ruolo.isBorgomastro()); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

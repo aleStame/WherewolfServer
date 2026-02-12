@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testBoccaDiRosa riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testBorgomastro riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBorgomastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBorgomastro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,22 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00714" summary="ROSSO: testAccusato non riuscito">
-      <option name="closed" value="true" />
-      <created>1770889885496</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
-      <option name="project" value="LOCAL" />
-      <updated>1770889885496</updated>
-    </task>
-    <task id="LOCAL-00715" summary="VERDE: testAccusato riuscito">
-      <option name="closed" value="true" />
-      <created>1770889967813</created>
-      <option name="number" value="00715" />
-      <option name="presentableId" value="LOCAL-00715" />
-      <option name="project" value="LOCAL" />
-      <updated>1770889967813</updated>
     </task>
     <task id="LOCAL-00716" summary="REFACTORING: definizione del metodo verificaLibero">
       <option name="closed" value="true" />
@@ -605,7 +589,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770914317607</updated>
     </task>
-    <option name="localTasksCounter" value="763" />
+    <task id="LOCAL-00763" summary="ROSSO: testBorgomastro non riuscito">
+      <option name="closed" value="true" />
+      <created>1770914569149</created>
+      <option name="number" value="00763" />
+      <option name="presentableId" value="LOCAL-00763" />
+      <option name="project" value="LOCAL" />
+      <updated>1770914569149</updated>
+    </task>
+    <task id="LOCAL-00764" summary="VERDE: testBorgomastro riuscito">
+      <option name="closed" value="true" />
+      <created>1770914706981</created>
+      <option name="number" value="00764" />
+      <option name="presentableId" value="LOCAL-00764" />
+      <option name="project" value="LOCAL" />
+      <updated>1770914706981</updated>
+    </task>
+    <option name="localTasksCounter" value="765" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,8 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testLune non riuscito" />
-    <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
     <MESSAGE value="REFACTORING: alleggerimento della gerarchia della città" />
@@ -645,6 +643,8 @@
     <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
+    <MESSAGE value="ROSSO: testBorgomastro non riuscito" />
+    <MESSAGE value="VERDE: testBorgomastro riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBorgomastro riuscito" />
   </component>
 </project>
