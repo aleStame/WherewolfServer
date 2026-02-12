@@ -20,4 +20,6 @@ public final class TestCitta
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
 }
