@@ -20,4 +20,6 @@ public final class TestBorgomastro
 
     @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
 
+    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isFalse(); }
+
 }
