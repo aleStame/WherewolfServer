@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestBoccaDiRosa
@@ -16,11 +14,7 @@ public final class TestBoccaDiRosa
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bocca di rosa"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
-
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
-
-    @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
     @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isTrue(); }
 
@@ -32,12 +26,10 @@ public final class TestBoccaDiRosa
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
     @Test public void testVoti()
     {
         esempioVoti();
-        verificaIntero(getNumeroVoti(), 4);
+        assertThat(getNumeroVoti()).isEqualTo(4);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
@@ -58,8 +50,6 @@ public final class TestBoccaDiRosa
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
@@ -67,8 +57,6 @@ public final class TestBoccaDiRosa
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void esempioVoti() { ruolo.incrementaVoti(7); }
 

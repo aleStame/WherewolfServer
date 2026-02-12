@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestAzzeccagarbugli
@@ -24,13 +22,7 @@ public final class TestAzzeccagarbugli
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
-
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
-
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
-
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testAzzeccagarbugli()
     {
@@ -49,8 +41,6 @@ public final class TestAzzeccagarbugli
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
