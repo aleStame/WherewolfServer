@@ -18,4 +18,6 @@ public final class TestCitta
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+
 }
