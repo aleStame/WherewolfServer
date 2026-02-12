@@ -7,4 +7,6 @@ public class Citta extends Ruolo
 
     public Citta(String nome, Aura aura, String descrizione) { super(nome, CITTA, aura, descrizione, 2, false); }
 
+    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
+
 }

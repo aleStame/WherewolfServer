@@ -26,8 +26,6 @@ public final class BoccaDiRosa extends Ruolo
         return risultato;
     }
 
-    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
-
     private int getVotiDimezzati() { return getVotiInteri() / 2; }
 
     private boolean isVotiDispari() { return getVotiInteri() % 2 == 1; }
