@@ -25,6 +25,8 @@ public final class TestRuolo
     {
         ruolo.accusa();
         verificaAccusato();
+        ruolo.libera();
+        verificaFalso(isAccusato());
     }
 
     @Test public void testVoti()

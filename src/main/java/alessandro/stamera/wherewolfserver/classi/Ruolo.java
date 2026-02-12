@@ -117,6 +117,8 @@ public class Ruolo
 
     public boolean isBoia() { return false; }
 
+    public void libera() { }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
