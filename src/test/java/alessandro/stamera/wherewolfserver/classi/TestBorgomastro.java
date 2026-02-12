@@ -18,4 +18,6 @@ public final class TestBorgomastro
 
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
 
+    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
+
 }
