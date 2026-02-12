@@ -119,7 +119,7 @@ public class Ruolo
 
     public void libera() { setAccusato(false); }
 
-    public boolean isCitta() { return true; }
+    public boolean isCitta() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
