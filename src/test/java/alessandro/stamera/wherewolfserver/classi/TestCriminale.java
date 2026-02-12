@@ -38,6 +38,8 @@ public final class TestCriminale
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
