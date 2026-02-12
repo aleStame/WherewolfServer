@@ -48,10 +48,10 @@ public final class TestRuolo
     @Test public void testSceltaAngeloCustode()
     {
         ruolo.sceltaAngeloCustode();
-        assertThat(isAmato()).isTrue();
+        verificaVero(isAmato());
     }
 
-    private void verificaAccusato() { assertThat(isAccusato()).isTrue(); }
+    private void verificaAccusato() { verificaVero(isAccusato()); }
 
     private void verificaLibero() { verificaFalso(isAccusato()); }
 
@@ -66,6 +66,8 @@ public final class TestRuolo
     private void verificaVoti() { assertThat(getNumeroVoti()).isEqualTo(ESEMPIO_VOTI); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
