@@ -33,10 +33,11 @@ public final class TestAngeloCustode
 
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
 
-    /*@Test public void testSceltaAngeloCustode()
+    @Test public void testSceltaAngeloCustode()
     {
-
-    }*/
+        ruolo.sceltaAngeloCustode();
+        verificaFalso(ruolo.isAmato());
+    }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
