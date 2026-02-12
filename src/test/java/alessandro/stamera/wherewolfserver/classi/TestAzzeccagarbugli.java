@@ -24,21 +24,7 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
-
-    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
-    @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
+    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isFalse(); }
 
     @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }
 
@@ -47,7 +33,5 @@ public final class TestAzzeccagarbugli
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

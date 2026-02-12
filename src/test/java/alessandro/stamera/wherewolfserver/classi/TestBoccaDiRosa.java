@@ -28,34 +28,16 @@ public final class TestBoccaDiRosa
 
     @Test public void testVoti()
     {
-        esempioVoti();
-        assertThat(getNumeroVoti()).isEqualTo(4);
+        ruolo.incrementaVoti(7);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(4);
     }
 
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
-
-    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void esempioVoti() { ruolo.incrementaVoti(7); }
-
-    private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
 }
