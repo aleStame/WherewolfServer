@@ -70,7 +70,7 @@ public final class TestBoccaDiRosa
 
     private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
-    private void esempioVoti() { for(int i = 0; i < 7; i++) ruolo.incrementaVoti(); }
+    private void esempioVoti() { ruolo.incrementaVoti(7); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 

@@ -45,7 +45,7 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public void incrementaVoti() { voti++; }
+    public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
 
     public int getNumeroVoti() { return voti; }
 

@@ -23,7 +23,7 @@ public final class TestCriminale
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        ruolo.incrementaVoti();
+        ruolo.incrementaVoti(2);
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(ruolo.getNumeroVoti()).isZero();
         verificaFalso(ruolo.isAccusato());

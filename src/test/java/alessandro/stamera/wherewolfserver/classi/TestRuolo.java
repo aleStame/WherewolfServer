@@ -27,7 +27,7 @@ public final class TestRuolo
 
     @Test public void testVoti()
     {
-        ruolo.incrementaVoti();
+        ruolo.incrementaVoti(1);
         assertThat(getNumeroVoti()).isEqualTo(1);
         ruolo.annullaVoti();
         verificaNessunVoto();
@@ -35,7 +35,7 @@ public final class TestRuolo
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        ruolo.incrementaVoti();
+        ruolo.incrementaVoti(1);
         ruolo.segnalazioneAzzeccagarbugli();
         assertThat(getNumeroVoti()).isEqualTo(1);
         verificaAccusato();
