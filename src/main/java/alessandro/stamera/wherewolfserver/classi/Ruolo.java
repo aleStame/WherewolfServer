@@ -30,7 +30,7 @@ public class Ruolo
         annullaVoti();
         setAmato(false);
         this.mistico = mistico;
-        setAccusato(false);
+        libera();
     }
 
     public String getNome() { return nome; }
@@ -45,7 +45,7 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public void incrementaVoti() { voti++; }
+    public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
 
     public int getNumeroVoti() { return voti; }
 
@@ -83,7 +83,9 @@ public class Ruolo
 
     public boolean isLupo() { return false; }
 
-    public void setAccusato(boolean accusato) { this.accusato = accusato; }
+    public void segnalazioneAzzeccagarbugli() { accusa(); }
+
+    public void accusa() { setAccusato(true); }
 
     public boolean isCapoBranco() { return false; }
 
@@ -94,8 +96,6 @@ public class Ruolo
     public boolean isLupoReietto() { return false; }
 
     public boolean isLupoSolitario() { return false; }
-
-    public void segnalazioneAzzeccagarbugli() { setAccusato(true); }
 
     public boolean isContadino() { return false; }
 
@@ -114,6 +114,14 @@ public class Ruolo
     public void utilizzaPotere() { }
 
     public boolean isCriminale() { return false; }
+
+    public boolean isBoia() { return false; }
+
+    public void libera() { setAccusato(false); }
+
+    public boolean isCitta() { return false; }
+
+    private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 

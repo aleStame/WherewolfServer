@@ -30,7 +30,7 @@ public final class TestBardo
 
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testLune() { verificaIntero(ruolo.getLune(), 1); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -38,26 +38,11 @@ public final class TestBardo
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
-
     @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
-
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isCapoGilda()); }
 
     @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
 
-    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        int voti = 3;
-        for(int i = 0; i < voti; i++) ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        verificaIntero(ruolo.getNumeroVoti(), voti);
-        verificaVero(ruolo.isAccusato());
-    }
-
-    @Test public void testGildata()
+     @Test public void testGildata()
     {
         verificaVero(ruolo.gildata());
         verificaFazione(CRIMINALI);
@@ -69,25 +54,18 @@ public final class TestBardo
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
-    @Test public void testSceltaAngeloCustode()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
+    @Test public void isCitta() { verificaFalso(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
-    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

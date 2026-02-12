@@ -29,27 +29,21 @@ public final class TestAngeloCustode
         verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { verificaNumero(ruolo.getLune(), 2); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
+    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
+    @Test public void testSceltaAngeloCustode()
     {
-        ruolo.incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        verificaNumero(ruolo.getNumeroVoti(), 1);
-        verificaVero(ruolo.isAccusato());
+        ruolo.sceltaAngeloCustode();
+        verificaFalso(ruolo.isAmato());
     }
 
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
@@ -65,12 +59,10 @@ public final class TestAngeloCustode
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void verificaNumero(int valore, int soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
 }

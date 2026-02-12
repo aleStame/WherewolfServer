@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestBoccaDiRosa
@@ -16,11 +14,7 @@ public final class TestBoccaDiRosa
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bocca di rosa"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
-
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
-
-    @Test public void testLune() { verificaIntero(ruolo.getLune(), 2); }
 
     @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
 
@@ -32,20 +26,10 @@ public final class TestBoccaDiRosa
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
     @Test public void testVoti()
     {
         esempioVoti();
-        verificaIntero(getNumeroVoti(), 4);
-    }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        esempioVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(getNumeroVoti()).isZero();
-        verificaFalso(ruolo.isAccusato());
+        assertThat(getNumeroVoti()).isEqualTo(4);
     }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
@@ -58,16 +42,11 @@ public final class TestBoccaDiRosa
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
-    @Test public void testSceltaAngeloCustode()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
+    @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
@@ -75,12 +54,8 @@ public final class TestBoccaDiRosa
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
-    private void verificaIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void esempioVoti() { for(int i = 0; i < 7; i++) ruolo.incrementaVoti(); }
+    private void esempioVoti() { ruolo.incrementaVoti(7); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

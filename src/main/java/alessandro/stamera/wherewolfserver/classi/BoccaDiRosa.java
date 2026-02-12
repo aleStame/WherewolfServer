@@ -1,19 +1,17 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
 
-public final class BoccaDiRosa extends Ruolo
+public final class BoccaDiRosa extends Citta
 {
 
     public BoccaDiRosa()
     {
         super
         (
-    "Bocca di rosa", CITTA, NERA,
+    "Bocca di rosa", NERA,
 "Può votare al ballottaggio anche se è accusata. In ogni votazione i voti che Bocca di rosa riceve vengono dimezzati, arrotondando " +
-          "per eccesso.",
-     2, false
+          "per eccesso."
         );
     }
 
@@ -25,8 +23,6 @@ public final class BoccaDiRosa extends Ruolo
         if(isVotiDispari()) risultato++;
         return risultato;
     }
-
-    public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
     private int getVotiDimezzati() { return getVotiInteri() / 2; }
 
