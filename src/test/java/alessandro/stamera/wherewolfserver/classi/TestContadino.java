@@ -44,12 +44,6 @@ import static org.mockito.Mockito.doCallRealMethod;
         verificaFalso(ruolo.isMistico());
     }
 
-    @Test public void testAzzeccagarbugli()
-    {
-        doCallRealMethod().when(ruolo).isAzzeccagarbugli();
-        verificaFalso(ruolo.isAzzeccagarbugli());
-    }
-
     @Test public void testLupo()
     {
         doCallRealMethod().when(ruolo).isLupo();

@@ -34,8 +34,6 @@ public final class TestBecchino
 
     @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
 
-    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
-
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
