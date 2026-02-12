@@ -30,7 +30,7 @@ public class Ruolo
         annullaVoti();
         setAmato(false);
         this.mistico = mistico;
-        setAccusato(false);
+        libera();
     }
 
     public String getNome() { return nome; }
@@ -117,7 +117,7 @@ public class Ruolo
 
     public boolean isBoia() { return false; }
 
-    public void libera() { }
+    public void libera() { setAccusato(false); }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
