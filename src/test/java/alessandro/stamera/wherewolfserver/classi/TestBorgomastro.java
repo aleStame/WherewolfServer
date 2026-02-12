@@ -16,4 +16,6 @@ public final class TestBorgomastro
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
+
 }
