@@ -15,13 +15,12 @@ public final class TestRuolo
     @Test public void testInizializzazione()
     {
         verificaNessunVoto();
-        verificaFalso(ruolo.isAmato());
+        verificaFalso(isAmato());
         verificaFalso(isAccusato());
     }
 
     @Test public void testAccusato()
     {
-        verificaFalso(isAccusato());
         ruolo.accusa();
         verificaAccusato();
     }
@@ -45,12 +44,14 @@ public final class TestRuolo
     @Test public void testSceltaAngeloCustode()
     {
         ruolo.sceltaAngeloCustode();
-        assertThat(ruolo.isAmato()).isTrue();
+        assertThat(isAmato()).isTrue();
     }
 
     private void verificaAccusato() { assertThat(isAccusato()).isTrue(); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
+
+    private boolean isAmato() { return ruolo.isAmato(); }
 
     private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
 
