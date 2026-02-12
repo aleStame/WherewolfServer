@@ -1,89 +1,48 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.EnumSource;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.doCallRealMethod;
 
-@ExtendWith(MockitoExtension.class) public final class TestContadino
+public final class TestContadino
 {
 
-    @Mock private Contadino ruolo;
+    private Ruolo ruolo;
 
-    @ParameterizedTest @EnumSource(Aura.class)
-    public void testNome(Aura aura) { verificaStringa(getContadino(aura).getNome(), "Contadino"); }
+    @BeforeEach public void setUp() { ruolo = new Contadino(null); }
 
-    @ParameterizedTest @EnumSource(Aura.class)
-    public void testFazione(Aura aura) { assertThat(getContadino(aura).getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Contadino"); }
 
-    @ParameterizedTest @EnumSource(Aura.class) public void testDescrizione(Aura aura)
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+
+    @Test public void testDescrizione()
     {
         String descrizione =
             "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
-        verificaStringa(getContadino(aura).getDescrizione(), descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @ParameterizedTest @EnumSource(Aura.class)
-    public void testLune(Aura aura) { assertThat(getContadino(aura).getLune()).isEqualTo(1); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testContadino()
-    {
-        doCallRealMethod().when(ruolo).isContadino();
-        assertThat(ruolo.isContadino()).isTrue();
-    }
+    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
 
-    @Test public void testMistico()
-    {
-        doCallRealMethod().when(ruolo).isMistico();
-        verificaFalso(ruolo.isMistico());
-    }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testLupo()
-    {
-        doCallRealMethod().when(ruolo).isLupo();
-        verificaFalso(ruolo.isLupo());
-    }
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testBardo()
-    {
-        doCallRealMethod().when(ruolo).isBardo();
-        verificaFalso(ruolo.isBardo());
-    }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
-    @Test public void testBecchino()
-    {
-        doCallRealMethod().when(ruolo).isBecchino();
-        verificaFalso(ruolo.isBecchino());
-    }
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @ParameterizedTest @EnumSource(Aura.class)
-    public void testCategoria(Aura aura) { assertThat(getContadino(aura).getCategoria()).isEqualTo(UOMINI); }
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
-    @Test public void testCriminale()
-    {
-        doCallRealMethod().when(ruolo).isCriminale();
-        verificaFalso(ruolo.isCriminale());
-    }
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
-    @Test public void testBoia()
-    {
-        doCallRealMethod().when(ruolo).isBoia();
-        verificaFalso(ruolo.isBoia());
-    }
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
-    @Test public void testCitta()
-    {
-        doCallRealMethod().when(ruolo).isCitta();
-        verificaFalso(ruolo.isCitta());
-    }
-
-    private Contadino getContadino(Aura aura) { return new Contadino(aura); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
