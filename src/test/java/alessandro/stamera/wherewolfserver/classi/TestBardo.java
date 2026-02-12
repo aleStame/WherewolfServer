@@ -58,6 +58,8 @@ public final class TestBardo
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
+    @Test public void isCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
