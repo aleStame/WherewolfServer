@@ -28,6 +28,8 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }
 
+    @Test public void testBorgomastro() { assertThat(ruolo.isBorgomastro()).isFalse(); }
+
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
