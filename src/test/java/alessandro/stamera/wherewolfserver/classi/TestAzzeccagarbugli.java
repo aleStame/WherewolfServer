@@ -24,16 +24,18 @@ public final class TestAzzeccagarbugli
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isFalse(); }
+    @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
     @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }
 
-    @Test public void testBorgomastro() { assertThat(ruolo.isBorgomastro()).isFalse(); }
+    @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
