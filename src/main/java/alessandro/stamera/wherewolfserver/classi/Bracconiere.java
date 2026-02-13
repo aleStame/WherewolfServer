@@ -6,6 +6,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 public final class Bracconiere extends Ruolo
 {
 
-    public Bracconiere() { super("Bracconiere", VILLAGGIO, BIANCA, null, 3, true); }
+    public Bracconiere() { super("Bracconiere", VILLAGGIO, BIANCA, null, 3, false); }
 
 }

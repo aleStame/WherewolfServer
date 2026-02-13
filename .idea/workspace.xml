@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAura riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBracconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBracconiere.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMistico non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Bracconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Bracconiere.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,30 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00732" summary="VERDE DIRETTO: testAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1770892890900</created>
-      <option name="number" value="00732" />
-      <option name="presentableId" value="LOCAL-00732" />
-      <option name="project" value="LOCAL" />
-      <updated>1770892890900</updated>
-    </task>
-    <task id="LOCAL-00733" summary="ROSSO: testCitta non riuscito">
-      <option name="closed" value="true" />
-      <created>1770902446130</created>
-      <option name="number" value="00733" />
-      <option name="presentableId" value="LOCAL-00733" />
-      <option name="project" value="LOCAL" />
-      <updated>1770902446130</updated>
-    </task>
-    <task id="LOCAL-00734" summary="ROSSO: testCitta non riuscito">
-      <option name="closed" value="true" />
-      <created>1770902521940</created>
-      <option name="number" value="00734" />
-      <option name="presentableId" value="LOCAL-00734" />
-      <option name="project" value="LOCAL" />
-      <updated>1770902521940</updated>
     </task>
     <task id="LOCAL-00735" summary="ROSSO: testCitta non riuscito">
       <option name="closed" value="true" />
@@ -605,7 +581,31 @@
       <option name="project" value="LOCAL" />
       <updated>1771003165349</updated>
     </task>
-    <option name="localTasksCounter" value="781" />
+    <task id="LOCAL-00781" summary="ROSSO: testLune non riuscito">
+      <option name="closed" value="true" />
+      <created>1771003264014</created>
+      <option name="number" value="00781" />
+      <option name="presentableId" value="LOCAL-00781" />
+      <option name="project" value="LOCAL" />
+      <updated>1771003264014</updated>
+    </task>
+    <task id="LOCAL-00782" summary="VERDE: testLune riuscito">
+      <option name="closed" value="true" />
+      <created>1771003358806</created>
+      <option name="number" value="00782" />
+      <option name="presentableId" value="LOCAL-00782" />
+      <option name="project" value="LOCAL" />
+      <updated>1771003358806</updated>
+    </task>
+    <task id="LOCAL-00783" summary="ROSSO: testMistico non riuscito">
+      <option name="closed" value="true" />
+      <created>1771003461425</created>
+      <option name="number" value="00783" />
+      <option name="presentableId" value="LOCAL-00783" />
+      <option name="project" value="LOCAL" />
+      <updated>1771003461425</updated>
+    </task>
+    <option name="localTasksCounter" value="784" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,9 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
-    <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
-    <MESSAGE value="REFACTORING: sistemazione della gerarchia della città" />
     <MESSAGE value="VERDE DIRETTO: isCitta riuscito" />
     <MESSAGE value="ROSSO: testCitta non riuscito" />
     <MESSAGE value="VERDE: testCitta riuscito" />
@@ -645,6 +642,9 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAura riuscito" />
+    <MESSAGE value="ROSSO: testLune non riuscito" />
+    <MESSAGE value="VERDE: testLune riuscito" />
+    <MESSAGE value="ROSSO: testMistico non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMistico non riuscito" />
   </component>
 </project>
