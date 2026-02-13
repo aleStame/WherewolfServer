@@ -19,4 +19,6 @@ public class TestBracconiere
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+
 }
