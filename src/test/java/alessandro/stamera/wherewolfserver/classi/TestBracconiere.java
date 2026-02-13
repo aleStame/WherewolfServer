@@ -27,6 +27,8 @@ public class TestBracconiere
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
