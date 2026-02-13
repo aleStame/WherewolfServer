@@ -14,6 +14,14 @@ public final class TestBorgomastro
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Borgomastro"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Può votare al ballottaggio anche se è accusato. Può segnalare un giocatore durante il ballottaggio: quel giocatore riceve un " +
+            "minimo di voti pari ai ruoli con fazione Città in gioco più uno.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }

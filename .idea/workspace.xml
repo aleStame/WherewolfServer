@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testBorgomastro riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBorgomastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBorgomastro.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,14 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00719" summary="VERDE: testFazione riuscito">
-      <option name="closed" value="true" />
-      <created>1770890722157</created>
-      <option name="number" value="00719" />
-      <option name="presentableId" value="LOCAL-00719" />
-      <option name="project" value="LOCAL" />
-      <updated>1770890722157</updated>
     </task>
     <task id="LOCAL-00720" summary="VERDE DIRETTO: testCategoria riuscito">
       <option name="closed" value="true" />
@@ -603,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770998233628</updated>
     </task>
-    <option name="localTasksCounter" value="768" />
+    <task id="LOCAL-00768" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1770998631571</created>
+      <option name="number" value="00768" />
+      <option name="presentableId" value="LOCAL-00768" />
+      <option name="project" value="LOCAL" />
+      <updated>1770998631571</updated>
+    </task>
+    <option name="localTasksCounter" value="769" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -641,8 +644,8 @@
     <MESSAGE value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
     <MESSAGE value="ROSSO: testBorgomastro non riuscito" />
     <MESSAGE value="VERDE: testBorgomastro riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testBorgomastro riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBorgomastro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
