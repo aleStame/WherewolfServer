@@ -5,32 +5,32 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class TestAzzeccagarbugli
+public final class TestBorgomastro
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Azzeccagarbugli(); }
+    @BeforeEach public void setUp() { ruolo = new Borgomastro(); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Azzeccagarbugli"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Borgomastro"); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
-            "Può votare al ballottaggio anche se è accusato e può segnalare un altro giocatore durante le accuse: se la sua fazione è Città " +
-            "o Criminali, i voti che riceve vengono azzerati, altrimenti sarà accusato a prescindere dai voti ricevuti.";
+            "Può votare al ballottaggio anche se è accusato. Può segnalare un giocatore durante il ballottaggio: quel giocatore riceve un " +
+            "minimo di voti pari ai ruoli con fazione Città in gioco più uno.";
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
+
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
+
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
-    @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }
-
-    @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
-
-    @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
+    @Test public void testBorgomastro() { verificaVero(ruolo.isBorgomastro()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
