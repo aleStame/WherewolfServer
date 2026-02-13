@@ -12,14 +12,14 @@ public final class TestBorgomastro
 
     @BeforeEach public void setUp() { ruolo = new Borgomastro(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Borgomastro"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Borgomastro"); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
             "Può votare al ballottaggio anche se è accusato. Può segnalare un giocatore durante il ballottaggio: quel giocatore riceve un " +
             "minimo di voti pari ai ruoli con fazione Città in gioco più uno.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
@@ -31,6 +31,8 @@ public final class TestBorgomastro
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
     @Test public void testBorgomastro() { verificaVero(ruolo.isBorgomastro()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
