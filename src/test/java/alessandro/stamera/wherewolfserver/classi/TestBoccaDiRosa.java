@@ -32,14 +32,16 @@ public final class TestBoccaDiRosa
         assertThat(ruolo.getNumeroVoti()).isEqualTo(4);
     }
 
-    @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
+    @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
-    @Test public void testBorgomastro() { assertThat(ruolo.isBorgomastro()).isFalse(); }
+    @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
