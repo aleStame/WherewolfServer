@@ -38,6 +38,8 @@ public class TestBracconiere
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
