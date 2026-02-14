@@ -22,6 +22,14 @@ public class TestBracconiere
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte scopre quanti lupi del branco sono in gioco e se è in gioco il Lupo solitario. Durante il turno dei lupi mannari " +
+            "può segnalare la sua presenza: se in gioco è rimasto soltanto un lupo mannaro, questi non può attaccare";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
