@@ -4,28 +4,30 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.INQUISIZIONE;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class TestBoia
+public class TestBracconiere
 {
 
-    private Boia ruolo;
+    private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Boia(); }
+    @BeforeEach public void setUp() { ruolo = new Bracconiere(); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Boia"); }
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Bracconiere"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(INQUISIZIONE); }
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
-            "La prima notte viene individuato dall'Inquisitore. Se non è accusato, può segnalare un giocatore durante il ballottaggio: se è un " +
-            "mistico o una creatura dell'ombra, i voti di tutti gli altri accusati vengono azzerati alla fine della votazione";
-        verificaStringa(ruolo.getDescrizione(), descrizione);
+            "La prima notte scopre quanti lupi del branco sono in gioco e se è in gioco il Lupo solitario. Durante il turno dei lupi mannari " +
+            "può segnalare la sua presenza: se in gioco è rimasto soltanto un lupo mannaro, questi non può attaccare";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
@@ -42,17 +44,11 @@ public final class TestBoia
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
-
-    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+    @Test public void testBracconiere() { assertThat(ruolo.isBracconiere()).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
