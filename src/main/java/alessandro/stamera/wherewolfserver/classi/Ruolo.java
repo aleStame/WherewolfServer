@@ -123,7 +123,7 @@ public class Ruolo
 
     public boolean isBorgomastro() { return false; }
 
-    public boolean isBracconiere() { return true; }
+    public boolean isBracconiere() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
