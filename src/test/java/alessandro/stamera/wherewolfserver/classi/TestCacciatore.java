@@ -26,4 +26,6 @@ public final class TestCacciatore
 
     @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
 
+    @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
+
 }
