@@ -22,10 +22,12 @@ public final class TestCacciatore
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
