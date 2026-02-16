@@ -20,6 +20,16 @@ public final class TestCacciatore
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Se la Nonna si trasforma in lupo, il Cacciatore è protetto dal lupo ex Nonna. Se in gioco è rimasto l'ultimo lupo del branco " +
+            "(quindi senza contare l'eventuale presenza del Lupo solitario) o solo il LUPO SOLITARIO, il Cacciatore è protetto da questo lupo e " +
+            "se viene da questo attaccato, il lupo muore, anche se uno tra il Lupo ed il Cacciatore fosse Romeo, l'Amato o protetto dalla " +
+            "Strega.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
