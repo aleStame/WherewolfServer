@@ -59,6 +59,8 @@ public final class TestBecchino
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
+    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
