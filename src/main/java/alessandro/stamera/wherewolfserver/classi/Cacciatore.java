@@ -8,4 +8,6 @@ public class Cacciatore extends Ruolo
 
     public Cacciatore() { super("Cacciatore", VILLAGGIO, BIANCA, null, -1, false); }
 
+    @Override public boolean isCacciatore() { return true; }
+
 }
