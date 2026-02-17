@@ -44,6 +44,8 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
+    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
