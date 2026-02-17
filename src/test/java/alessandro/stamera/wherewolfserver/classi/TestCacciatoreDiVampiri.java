@@ -5,52 +5,43 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class TestBardo
+public final class TestCacciatoreDiVampiri
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Bardo(); }
+    @BeforeEach public void setUp() { ruolo = new CacciatoreDiVampiri(); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bardo"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cacciatore di vampiri"); }
+
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testDescrizione()
     {
-        verificaStringa
-        (
-            ruolo.getDescrizione(),
-    "Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente."
-        );
+        String descrizione =
+            "La prima notte scopre il Vampiro è in gioco. È protetto dal Vampiro e, se viene attaccato, viene avvisato e lo elimina";
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
-
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
-    @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
-
-     @Test public void testGildata()
-    {
-        verificaVero(ruolo.gildata());
-        verificaFazione(CRIMINALI);
-    }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
@@ -64,10 +55,6 @@ public final class TestBardo
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
-    private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
