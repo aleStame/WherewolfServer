@@ -14,7 +14,7 @@ public final class TestCacciatore
 
     @BeforeEach public void setUp() { ruolo = new Cacciatore(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Cacciatore"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cacciatore"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
@@ -27,7 +27,7 @@ public final class TestCacciatore
             "(quindi senza contare l'eventuale presenza del Lupo solitario) o solo il LUPO SOLITARIO, il Cacciatore è protetto da questo lupo e " +
             "se viene da questo attaccato, il lupo muore, anche se uno tra il Lupo ed il Cacciatore fosse Romeo, l'Amato o protetto dalla " +
             "Strega.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
@@ -49,6 +49,8 @@ public final class TestCacciatore
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { assertThat(ruolo.isCacciatore()).isTrue(); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
