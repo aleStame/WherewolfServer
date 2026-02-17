@@ -20,6 +20,13 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte scopre il Vampiro è in gioco. È protetto dal Vampiro e, se viene attaccato, viene avvisato e lo elimina";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
