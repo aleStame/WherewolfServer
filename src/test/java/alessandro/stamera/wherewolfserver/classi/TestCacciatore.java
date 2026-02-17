@@ -32,6 +32,8 @@ public final class TestCacciatore
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
