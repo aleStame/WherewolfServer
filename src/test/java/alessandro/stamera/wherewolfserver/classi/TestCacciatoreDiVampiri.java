@@ -14,7 +14,7 @@ public final class TestCacciatoreDiVampiri
 
     @BeforeEach public void setUp() { ruolo = new CacciatoreDiVampiri(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Cacciatore di vampiri"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cacciatore di vampiri"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
@@ -24,7 +24,7 @@ public final class TestCacciatoreDiVampiri
     {
         String descrizione =
             "La prima notte scopre il Vampiro è in gioco. È protetto dal Vampiro e, se viene attaccato, viene avvisato e lo elimina";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
@@ -52,6 +52,8 @@ public final class TestCacciatoreDiVampiri
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
