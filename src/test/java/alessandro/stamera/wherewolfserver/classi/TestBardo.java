@@ -56,7 +56,7 @@ public final class TestBardo
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
-    @Test public void isCitta() { verificaFalso(ruolo.isCitta()); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
