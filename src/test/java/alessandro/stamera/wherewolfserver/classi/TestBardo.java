@@ -38,8 +38,6 @@ public final class TestBardo
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
-
     @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
 
      @Test public void testGildata()
