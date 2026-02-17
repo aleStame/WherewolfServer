@@ -38,6 +38,8 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
