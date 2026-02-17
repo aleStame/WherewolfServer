@@ -25,6 +25,8 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
