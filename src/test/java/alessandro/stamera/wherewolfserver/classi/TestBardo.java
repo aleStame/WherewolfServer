@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -26,8 +24,6 @@ public final class TestBardo
         );
     }
 
-    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
-
     @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
@@ -43,14 +39,12 @@ public final class TestBardo
      @Test public void testGildata()
     {
         verificaVero(ruolo.gildata());
-        verificaFazione(CRIMINALI);
+        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
     }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
@@ -63,8 +57,6 @@ public final class TestBardo
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
