@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 
 public class Citta extends Ruolo
 {
@@ -10,5 +11,7 @@ public class Citta extends Ruolo
     @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
     @Override public boolean isCitta() { return true; }
+
+    @Override public void gildata() { cambiaFazione(CRIMINALI); }
 
 }
