@@ -2,9 +2,9 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CITTA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestCitta
@@ -35,6 +35,12 @@ public final class TestCitta
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
+    @Test public void testGildata()
+    {
+        ruolo.gildata();
+        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+    }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
