@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.369s</div>
+<div class="counter">0.974s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,91 +81,91 @@
 <tr>
 <td class="success">[1] username=marco, vecchiaPassword=passwordsecret, nuovaPassword=newpwd, risultato=Password cambiata correttamente</td>
 <td class="success">cambioPassword(String, String, String, String)[1]</td>
-<td class="success">0.643s</td>
+<td class="success">0.394s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente</td>
 <td class="success">cambioPassword(String, String, String, String)[2]</td>
-<td class="success">0.038s</td>
+<td class="success">0.112s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta</td>
 <td class="success">cambioPassword(String, String, String, String)[3]</td>
-<td class="success">0.029s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=andrea, password=andrea1998, risultato=Disiscrizione avvenuta correttamente</td>
 <td class="success">disiscrizione(String, String, String)[1]</td>
-<td class="success">0.121s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta</td>
 <td class="success">disiscrizione(String, String, String)[2]</td>
-<td class="success">0.039s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente</td>
 <td class="success">disiscrizione(String, String, String)[3]</td>
-<td class="success">0.036s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente</td>
 <td class="success">disiscrizione(String, String, String)[4]</td>
-<td class="success">0.088s</td>
+<td class="success">0.072s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=andrea, password=andrea1998, risultato=Login eseguito correttamente</td>
 <td class="success">login(String, String, String)[1]</td>
-<td class="success">0.035s</td>
+<td class="success">0.054s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=marco, password=passwordsecret, risultato=Login eseguito correttamente</td>
 <td class="success">login(String, String, String)[2]</td>
-<td class="success">0.110s</td>
+<td class="success">0.033s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=bruce, password=batmanbeyond, risultato=Login eseguito correttamente</td>
 <td class="success">login(String, String, String)[3]</td>
-<td class="success">0.027s</td>
+<td class="success">0.032s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] username=andrea, password=pwdsbagliata, risultato=ERRORE!!! Username o password errate</td>
 <td class="success">login(String, String, String)[4]</td>
-<td class="success">0.059s</td>
+<td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] username=gino, password=batmanbeyond, risultato=ERRORE!!! Username o password errate</td>
 <td class="success">login(String, String, String)[5]</td>
-<td class="success">0.032s</td>
+<td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] username=utentefinto, password=pwdfinta, risultato=ERRORE!!! Username o password errate</td>
 <td class="success">login(String, String, String)[6]</td>
-<td class="success">0.051s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=marco, password=passworddimarco, risultato=ERRORE!!! Nome utente già inserito</td>
 <td class="success">registrazione(String, String, String)[1]</td>
-<td class="success">0.034s</td>
+<td class="success">0.093s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=pinuccio, password=pwdpinuccio, risultato=Registrazione avvenuta correttamente</td>
 <td class="success">registrazione(String, String, String)[2]</td>
-<td class="success">0.027s</td>
+<td class="success">0.041s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -173,8 +173,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>17:46:57.266 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:46:58.456 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
+<pre>17:49:49.037 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:49:50.387 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -185,12 +185,12 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2026-02-18T17:47:00.507+01:00  INFO 20316 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 20316 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
-2026-02-18T17:47:00.514+01:00  INFO 20316 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-18T17:47:05.726+01:00  INFO 20316 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-18T17:47:05.727+01:00  INFO 20316 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-18T17:47:05.733+01:00  INFO 20316 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
-2026-02-18T17:47:06.006+01:00  INFO 20316 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 7.128 seconds (process running for 24.677)
+2026-02-18T17:49:51.927+01:00  INFO 21528 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 21528 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
+2026-02-18T17:49:51.931+01:00  INFO 21528 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-18T17:49:55.258+01:00  INFO 21528 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-18T17:49:55.259+01:00  INFO 21528 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-18T17:49:55.267+01:00  INFO 21528 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2026-02-18T17:49:55.394+01:00  INFO 21528 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 4.649 seconds (process running for 18.957)
 </pre>
 </span>
 </div>
@@ -202,7 +202,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 18 feb 2026, 17:47:08</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 18 feb 2026, 17:49:57</p>
 </div>
 </div>
 </body>
