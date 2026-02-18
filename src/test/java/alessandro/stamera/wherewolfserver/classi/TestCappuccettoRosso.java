@@ -31,6 +31,8 @@ public final class TestCappuccettoRosso
 
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
 
+    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
