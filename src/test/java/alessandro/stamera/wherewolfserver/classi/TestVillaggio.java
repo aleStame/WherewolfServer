@@ -14,14 +14,16 @@ public final class TestVillaggio
 
     @BeforeEach public void setUp() { ruolo = new Villaggio(null, null, null, -1, true); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testGildata()
     {
         ruolo.gildata();
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+        verificaFazione(CRIMINALI);
     }
+
+    private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
 
 }
