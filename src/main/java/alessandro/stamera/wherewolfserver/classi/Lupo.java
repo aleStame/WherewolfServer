@@ -8,8 +8,6 @@ public class Lupo extends Ruolo
 
     public Lupo(String nome, String descrizione, int lune) { super(nome, LUPO_BRANCO, NERA, descrizione, lune, false); }
 
-    @Override public boolean gildata() { return false; }
-
     @Override public boolean isLupo() { return true; }
 
 }

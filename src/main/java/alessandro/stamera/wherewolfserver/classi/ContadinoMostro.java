@@ -9,6 +9,4 @@ public final class ContadinoMostro extends Contadino
 
     @Override public boolean isContadinoMostro() { return true; }
 
-    @Override public boolean gildata() { return !super.gildata(); }
-
 }

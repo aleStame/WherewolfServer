@@ -59,11 +59,7 @@ public class Ruolo
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
-    public boolean gildata()
-    {
-        cambiaFazione(CRIMINALI);
-        return true;
-    }
+    public void gildata() { }
 
     public boolean isMistico() { return mistico; }
 

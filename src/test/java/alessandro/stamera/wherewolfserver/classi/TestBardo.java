@@ -34,15 +34,9 @@ public final class TestBardo
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
+    @Test public void testBardo() { assertThat(ruolo.isBardo()).isTrue(); }
 
-     @Test public void testGildata()
-    {
-        verificaVero(ruolo.gildata());
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
-    }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
@@ -59,7 +53,5 @@ public final class TestBardo
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
