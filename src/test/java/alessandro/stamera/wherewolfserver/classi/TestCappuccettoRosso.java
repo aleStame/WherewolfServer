@@ -12,7 +12,7 @@ public final class TestCappuccettoRosso
 
     @BeforeEach public void setUp() { ruolo = new CappuccettoRosso(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Cappuccetto rosso"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
@@ -22,7 +22,9 @@ public final class TestCappuccettoRosso
             "Finché la Nonna è in gioco (anche se essa riceve il tratto Non morto o diventa il Posseduto) e non si è trasformata in Lupo, " +
             "Cappuccetto rosso è protetta dall'attacco dei Lupi. Se l'ultimo Lupo in gioco (sia esso l'ultimo Lupo del Branco o il Lupo " +
             "solitario) attacca Cappuccetto rosso, quest'ultima apre gli occhi e lo riconosce, anche se fosse Romeo o protetta dalla Strega";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
