@@ -14,7 +14,7 @@ public final class TestCitta
 
     @BeforeEach public void setUp() { ruolo = new Citta(null, null, null); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CITTA); }
+    @Test public void testFazione() { verificaFazione(CITTA); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
@@ -39,9 +39,11 @@ public final class TestCitta
     @Test public void testGildata()
     {
         ruolo.gildata();
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+        verificaFazione(CRIMINALI);
     }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
 
 }
