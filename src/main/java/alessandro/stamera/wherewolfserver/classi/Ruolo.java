@@ -122,6 +122,8 @@ public class Ruolo
 
     public boolean isCacciatore() { return false; }
 
+    public boolean isVillaggio() { return false; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
