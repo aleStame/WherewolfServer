@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 
 public class Ruolo
 {
@@ -59,11 +58,7 @@ public class Ruolo
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
-    public boolean gildata()
-    {
-        cambiaFazione(CRIMINALI);
-        return true;
-    }
+    public void gildata() { }
 
     public boolean isMistico() { return mistico; }
 

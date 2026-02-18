@@ -51,6 +51,13 @@ public final class TestRuolo
         verificaVero(isAmato());
     }
 
+    @Test public void testGildata()
+    {
+        Fazione fazione = getFazione();
+        ruolo.gildata();
+        assertThat(getFazione()).isEqualTo(fazione);
+    }
+
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
     private void verificaLibero() { verificaFalso(isAccusato()); }
@@ -70,5 +77,7 @@ public final class TestRuolo
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private Fazione getFazione() { return ruolo.getFazione(); }
 
 }
