@@ -31,8 +31,6 @@ public final class TestCappuccettoRosso
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
