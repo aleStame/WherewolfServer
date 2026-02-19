@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCacciatore riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCacciatoreDiVampiri riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCappuccettoRosso.java" afterDir="false" />
     </list>
@@ -213,22 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00845" summary="ROSSO: testLune non riuscito">
-      <option name="closed" value="true" />
-      <created>1771327392528</created>
-      <option name="number" value="00845" />
-      <option name="presentableId" value="LOCAL-00845" />
-      <option name="project" value="LOCAL" />
-      <updated>1771327392528</updated>
-    </task>
-    <task id="LOCAL-00846" summary="VERDE: testLune riuscito">
-      <option name="closed" value="true" />
-      <created>1771343173738</created>
-      <option name="number" value="00846" />
-      <option name="presentableId" value="LOCAL-00846" />
-      <option name="project" value="LOCAL" />
-      <updated>1771343173738</updated>
     </task>
     <task id="LOCAL-00847" summary="VERDE DIRETTO: testAngeloCustode riuscito">
       <option name="closed" value="true" />
@@ -606,7 +590,23 @@
       <option name="project" value="LOCAL" />
       <updated>1771511622374</updated>
     </task>
-    <option name="localTasksCounter" value="894" />
+    <task id="LOCAL-00894" summary="ROSSO: testCacciatoreDiVampiri non riuscito">
+      <option name="closed" value="true" />
+      <created>1771511862664</created>
+      <option name="number" value="00894" />
+      <option name="presentableId" value="LOCAL-00894" />
+      <option name="project" value="LOCAL" />
+      <updated>1771511862664</updated>
+    </task>
+    <task id="LOCAL-00895" summary="VERDE: testCacciatoreDiVampiri riuscito">
+      <option name="closed" value="true" />
+      <created>1771512041824</created>
+      <option name="number" value="00895" />
+      <option name="presentableId" value="LOCAL-00895" />
+      <option name="project" value="LOCAL" />
+      <updated>1771512041824</updated>
+    </task>
+    <option name="localTasksCounter" value="896" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -621,8 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getFazione" />
     <MESSAGE value="ROSSO: testGildata non riuscito" />
     <MESSAGE value="ROSSO: testGildata non riuscito" />
     <MESSAGE value="VERDE: testGildata riuscito" />
@@ -646,6 +644,8 @@
     <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCacciatore riuscito" />
+    <MESSAGE value="ROSSO: testCacciatoreDiVampiri non riuscito" />
+    <MESSAGE value="VERDE: testCacciatoreDiVampiri riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCacciatoreDiVampiri riuscito" />
   </component>
 </project>
