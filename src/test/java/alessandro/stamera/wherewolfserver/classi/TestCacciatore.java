@@ -40,7 +40,9 @@ public final class TestCacciatore
 
     @Test public void testCacciatore() { assertThat(ruolo.isCacciatore()).isTrue(); }
 
-    @Test public void testCacciatoreDiVampiri() { assertThat(ruolo.isCacciatoreDiVampiri()).isFalse(); }
+    @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
