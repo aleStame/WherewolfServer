@@ -31,11 +31,7 @@ public final class TestBecchino
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
-
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testRiconoscimentoNegromante()
     {
@@ -44,11 +40,17 @@ public final class TestBecchino
         verificaFazione(NEGROMANTE);
     }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
+    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
+
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
     @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
