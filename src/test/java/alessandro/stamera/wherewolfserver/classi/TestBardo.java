@@ -43,6 +43,8 @@ public final class TestBardo
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
+    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
