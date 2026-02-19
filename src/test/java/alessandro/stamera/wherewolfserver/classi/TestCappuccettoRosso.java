@@ -29,7 +29,7 @@ public final class TestCappuccettoRosso
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
@@ -41,9 +41,11 @@ public final class TestCappuccettoRosso
 
     @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
 
-    @Test public void testCappuccettoRosso() { assertThat(ruolo.isCappuccettoRosso()).isTrue(); }
+    @Test public void testCappuccettoRosso() { verificaVero(ruolo.isCappuccettoRosso()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
