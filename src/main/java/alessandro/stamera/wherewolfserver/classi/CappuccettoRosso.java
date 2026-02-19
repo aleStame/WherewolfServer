@@ -17,4 +17,6 @@ public final class CappuccettoRosso extends Villaggio
         );
     }
 
+    @Override public boolean isCappuccettoRosso() { return true; }
+
 }
