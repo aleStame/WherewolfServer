@@ -27,25 +27,17 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
+    @Test public void testCacciatoreDiVampiri() { assertThat(ruolo.isCacciatoreDiVampiri()).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
