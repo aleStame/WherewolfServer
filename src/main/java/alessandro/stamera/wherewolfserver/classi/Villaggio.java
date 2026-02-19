@@ -13,4 +13,6 @@ public class Villaggio extends Ruolo
 
     @Override public void gildata() { cambiaFazione(CRIMINALI); }
 
+    @Override public boolean isVillaggio() { return true; }
+
 }

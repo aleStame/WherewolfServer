@@ -122,9 +122,9 @@ public class Ruolo
 
     public boolean isCacciatore() { return false; }
 
-    public boolean isVillaggio() { return true; }
+    public boolean isVillaggio() { return false; }
 
-    public boolean isCacciatoreDiVampiri() { return true; }
+    public boolean isCacciatoreDiVampiri() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
