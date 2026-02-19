@@ -33,6 +33,8 @@ public final class TestCappuccettoRosso
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
