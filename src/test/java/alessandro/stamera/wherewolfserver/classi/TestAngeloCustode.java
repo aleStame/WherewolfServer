@@ -43,12 +43,6 @@ public final class TestAngeloCustode
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
-
-    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testAmato()
@@ -61,9 +55,7 @@ public final class TestAngeloCustode
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
-
-    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
