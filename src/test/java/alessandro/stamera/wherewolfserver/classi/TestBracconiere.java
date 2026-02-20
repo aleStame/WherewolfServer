@@ -44,6 +44,8 @@ public class TestBracconiere
 
     @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
+    @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
