@@ -10,4 +10,6 @@ public final class Eremita extends Villaggio
         super("Eremita", BIANCA, "È protetto dalle creature dell'ombra", 1, false);
     }
 
+    @Override public boolean isEremita() { return true; }
+
 }
