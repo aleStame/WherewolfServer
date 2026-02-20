@@ -16,4 +16,7 @@ public final class TestEremita
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test
+    public void testDescrizione() { assertThat(ruolo.getDescrizione()).isEqualTo("È protetto dalle creature dell'ombra"); }
+
 }
