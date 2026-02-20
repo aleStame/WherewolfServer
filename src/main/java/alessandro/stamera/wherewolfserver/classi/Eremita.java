@@ -7,7 +7,7 @@ public final class Eremita extends Villaggio
 
     public Eremita()
     {
-        super("Eremita", BIANCA, "È protetto dalle creature dell'ombra", 1, true);
+        super("Eremita", BIANCA, "È protetto dalle creature dell'ombra", 1, false);
     }
 
 }
