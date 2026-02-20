@@ -21,10 +21,12 @@ public final class TestEremita
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
