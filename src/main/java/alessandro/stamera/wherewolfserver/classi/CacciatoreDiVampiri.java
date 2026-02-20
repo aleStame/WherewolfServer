@@ -15,4 +15,6 @@ public final class CacciatoreDiVampiri extends Villaggio
         );
     }
 
+    @Override public boolean isCacciatoreDiVampiri() { return true; }
+
 }

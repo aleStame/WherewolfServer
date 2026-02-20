@@ -22,27 +22,27 @@ public final class TestContadino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
+    @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
-
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
+    @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
+
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

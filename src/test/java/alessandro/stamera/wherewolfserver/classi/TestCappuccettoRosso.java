@@ -5,32 +5,31 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class TestCacciatore
+public final class TestCappuccettoRosso
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Cacciatore(); }
+    @BeforeEach public void setUp() { ruolo = new CappuccettoRosso(); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cacciatore"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
+
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
-            "Se la Nonna si trasforma in lupo, il Cacciatore è protetto dal lupo ex Nonna. Se in gioco è rimasto l'ultimo lupo del branco " +
-            "(quindi senza contare l'eventuale presenza del Lupo solitario) o solo il LUPO SOLITARIO, il Cacciatore è protetto da questo lupo e " +
-            "se viene da questo attaccato, il lupo muore, anche se uno tra il Lupo ed il Cacciatore fosse Romeo, l'Amato o protetto dalla " +
-            "Strega.";
+            "Finché la Nonna è in gioco (anche se essa riceve il tratto Non morto o diventa il Posseduto) e non si è trasformata in Lupo, " +
+            "Cappuccetto rosso è protetta dall'attacco dei Lupi. Se l'ultimo Lupo in gioco (sia esso l'ultimo Lupo del Branco o il Lupo " +
+            "solitario) attacca Cappuccetto rosso, quest'ultima apre gli occhi e lo riconosce, anche se fosse Romeo o protetta dalla Strega";
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
-
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
@@ -38,13 +37,13 @@ public final class TestCacciatore
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
-    @Test public void testCacciatore() { verificaVero(ruolo.isCacciatore()); }
+    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
     @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
 
-    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
+    @Test public void testCappuccettoRosso() { verificaVero(ruolo.isCappuccettoRosso()); }
 
-    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

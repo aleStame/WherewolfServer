@@ -31,15 +31,7 @@ public final class TestBecchino
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isTrue(); }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testRiconoscimentoNegromante()
     {
@@ -48,19 +40,25 @@ public final class TestBecchino
         verificaFazione(NEGROMANTE);
     }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void isCitta() { verificaFalso(ruolo.isCitta()); }
+    @Test public void testBecchino() { verificaVero(ruolo.isBecchino()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
+    @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
+
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
