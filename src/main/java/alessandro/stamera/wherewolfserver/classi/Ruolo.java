@@ -128,6 +128,8 @@ public class Ruolo
 
     public boolean isCappuccettoRosso() { return false; }
 
+    public boolean isEremita() { return false; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }

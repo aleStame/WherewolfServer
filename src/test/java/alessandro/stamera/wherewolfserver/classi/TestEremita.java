@@ -5,33 +5,27 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class TestBardo
+public final class TestEremita
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Bardo(); }
+    @BeforeEach public void setUp() { ruolo = new Eremita(); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bardo"); }
-
-    @Test public void testDescrizione()
-    {
-        verificaStringa
-        (
-            ruolo.getDescrizione(),
-    "Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente."
-        );
-    }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+
+    @Test
+    public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
-    @Test public void testBardo() { verificaVero(ruolo.isBardo()); }
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
@@ -41,15 +35,11 @@ public final class TestBardo
 
     @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+    @Test public void testEremita() { assertThat(ruolo.isEremita()).isTrue(); }
 
-    @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
-
-    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
