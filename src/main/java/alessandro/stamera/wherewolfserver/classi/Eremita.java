@@ -5,6 +5,9 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Eremita extends Villaggio
 {
 
-    public Eremita() { super("Eremita", BIANCA, null, 0, true); }
+    public Eremita()
+    {
+        super("Eremita", BIANCA, "È protetto dalle creature dell'ombra", 0, true);
+    }
 
 }
