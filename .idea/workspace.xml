@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCacciatore riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCacciatoreDiVampiri riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,14 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00897" summary="VERO: testCappuccettoRosso riuscito">
-      <option name="closed" value="true" />
-      <created>1771512507945</created>
-      <option name="number" value="00897" />
-      <option name="presentableId" value="LOCAL-00897" />
-      <option name="project" value="LOCAL" />
-      <updated>1771512507945</updated>
     </task>
     <task id="LOCAL-00898" summary="REFACTORING: definizione del metodo verificaVero">
       <option name="closed" value="true" />
@@ -605,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771584625238</updated>
     </task>
-    <option name="localTasksCounter" value="946" />
+    <task id="LOCAL-00946" summary="VERDE DIRETTO: testCacciatoreDiVampiri riuscito">
+      <option name="closed" value="true" />
+      <created>1771584962550</created>
+      <option name="number" value="00946" />
+      <option name="presentableId" value="LOCAL-00946" />
+      <option name="project" value="LOCAL" />
+      <updated>1771584962550</updated>
+    </task>
+    <option name="localTasksCounter" value="947" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -625,7 +626,6 @@
     <MESSAGE value="VERDE: testCacciatoreVampiri riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
@@ -645,6 +645,7 @@
     <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBracconiere riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
   </component>
 </project>
