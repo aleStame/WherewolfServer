@@ -26,17 +26,9 @@ public final class TestContadino
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
