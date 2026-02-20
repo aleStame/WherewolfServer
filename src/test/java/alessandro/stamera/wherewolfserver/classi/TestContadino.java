@@ -22,7 +22,7 @@ public final class TestContadino
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isTrue(); }
+    @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -34,9 +34,11 @@ public final class TestContadino
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
