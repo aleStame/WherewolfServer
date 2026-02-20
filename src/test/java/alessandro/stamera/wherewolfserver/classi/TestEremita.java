@@ -12,11 +12,12 @@ public final class TestEremita
 
     @BeforeEach public void setUp() { ruolo = new Eremita(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Eremita"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test
-    public void testDescrizione() { assertThat(ruolo.getDescrizione()).isEqualTo("È protetto dalle creature dell'ombra"); }
+    @Test public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
