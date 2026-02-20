@@ -34,6 +34,8 @@ public final class TestContadino
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
+    @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
