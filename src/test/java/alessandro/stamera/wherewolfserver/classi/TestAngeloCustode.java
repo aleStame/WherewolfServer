@@ -57,6 +57,8 @@ public final class TestAngeloCustode
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
