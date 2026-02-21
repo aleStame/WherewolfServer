@@ -32,6 +32,8 @@ public final class TestGhoul
 
     @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
