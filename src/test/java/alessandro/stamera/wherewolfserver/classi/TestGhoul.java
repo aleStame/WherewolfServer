@@ -26,4 +26,6 @@ public final class TestGhoul
 
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isFalse(); }
 
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+
 }
