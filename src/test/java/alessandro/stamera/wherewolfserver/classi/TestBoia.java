@@ -35,9 +35,11 @@ public final class TestBoia
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
+
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
+    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
 
     @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
 
