@@ -8,4 +8,6 @@ public class Ghoul extends Ruolo
 
     public Ghoul() { super("Ghoul", NESSUNA, BIANCA, null, 2, false); }
 
+    @Override public boolean isGhoul() { return true; }
+
 }
