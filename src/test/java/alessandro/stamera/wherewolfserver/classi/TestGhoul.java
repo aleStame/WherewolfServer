@@ -22,10 +22,12 @@ public final class TestGhoul
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isFalse(); }
+    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
