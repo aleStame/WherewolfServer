@@ -134,4 +134,6 @@ public class Ruolo
 
     private void setAmato(boolean amato) { this.amato = amato; }
 
+    public boolean isGhoul() { return true; }
+
 }
