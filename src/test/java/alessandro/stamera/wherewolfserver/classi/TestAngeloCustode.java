@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestAngeloCustode
@@ -15,8 +14,6 @@ public final class TestAngeloCustode
     @BeforeEach public void setUp() { ruolo = new AngeloCustode(); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Angelo custode"); }
-
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(AMANTI); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
