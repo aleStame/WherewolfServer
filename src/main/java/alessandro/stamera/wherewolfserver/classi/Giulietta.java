@@ -5,6 +5,6 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public class Giulietta extends Villaggio
 {
 
-    public Giulietta() { super("Giulietta", BIANCA, null, 0, true); }
+    public Giulietta() { super("Giulietta", BIANCA, null, 0, false); }
 
 }
