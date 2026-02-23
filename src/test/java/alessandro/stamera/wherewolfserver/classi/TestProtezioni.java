@@ -17,8 +17,8 @@ public final class TestProtezioni
     {
         Protezioni protezioni = new Protezioni();
         protezioni.aggiungiProtezione(CREATURE_OMBRA);
-        Fazione[] fazioni = new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO };
-        for(Fazione fazione : fazioni) assertThat(protezioni.isPresente(fazione)).isTrue();
+        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
+            assertThat(protezioni.isPresente(fazione)).isTrue();
     }
 
 }
