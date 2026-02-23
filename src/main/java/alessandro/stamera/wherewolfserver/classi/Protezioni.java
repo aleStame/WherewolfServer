@@ -1,12 +1,21 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import java.util.ArrayList;
+import java.util.List;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.values;
+
 public final class Protezioni
 {
 
-    public Protezioni() {  }
+    private final List<Fazione> fazioni;
 
-    public void aggiungiProtezione(Categoria categoria) { }
+    public Protezioni() { fazioni = new ArrayList<>(); }
 
-    public boolean isPresente(Fazione fazione) { return false; }
+    public void aggiungiProtezione(Categoria categoria)
+    {
+        for(Fazione fazione : values()) if(fazione.getCategoria() == categoria) fazioni.add(fazione);
+    }
+
+    public boolean isPresente(Fazione fazione) { return fazioni.contains(fazione); }
 
 }
