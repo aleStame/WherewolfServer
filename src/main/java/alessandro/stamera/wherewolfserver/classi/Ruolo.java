@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 
 public class Ruolo
@@ -19,6 +20,8 @@ public class Ruolo
 
     private final boolean mistico;
 
+    private final Protezioni protezioni;
+
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
     {
         this.nome = nome;
@@ -30,6 +33,7 @@ public class Ruolo
         setAmato(false);
         this.mistico = mistico;
         libera();
+        protezioni = new Protezioni();
     }
 
     public String getNome() { return nome; }
@@ -131,6 +135,10 @@ public class Ruolo
     public boolean isEremita() { return false; }
 
     public boolean isGhoul() { return false; }
+
+    public void romeizzazione() { protezioni.aggiungiProtezione(CREATURE_OMBRA); }
+
+    public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 

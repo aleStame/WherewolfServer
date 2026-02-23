@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestRuolo
@@ -56,6 +58,13 @@ public final class TestRuolo
         Fazione fazione = getFazione();
         ruolo.gildata();
         assertThat(getFazione()).isEqualTo(fazione);
+    }
+
+    @Test public void testRomeizzazione()
+    {
+        ruolo.romeizzazione();
+        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
+            verificaVero(ruolo.isProtetto(fazione));
     }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
