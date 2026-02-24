@@ -1,11 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
-
-public class Giulietta extends Ruolo
+public final class Giulietta extends Amanti
 {
 
-    public Giulietta() { super("Giulietta", AMANTI, BIANCA, null, 2, false); }
+    public Giulietta() { super("Giulietta", null); }
 
 }

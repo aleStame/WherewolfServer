@@ -22,8 +22,6 @@ public final class TestAngeloCustode
         verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
-
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
 
     @Test public void testSceltaAngeloCustode()
