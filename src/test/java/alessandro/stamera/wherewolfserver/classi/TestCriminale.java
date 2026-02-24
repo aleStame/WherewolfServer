@@ -38,9 +38,11 @@ public final class TestCriminale
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
