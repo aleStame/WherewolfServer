@@ -28,6 +28,8 @@ public final class TestAmanti
 
     @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isTrue(); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
