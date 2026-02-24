@@ -15,4 +15,6 @@ public final class TestGiulietta
 
     @Test public void testGiulietta() { assertThat(ruolo.isGiulietta()).isTrue(); }
 
+    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isFalse(); }
+
 }
