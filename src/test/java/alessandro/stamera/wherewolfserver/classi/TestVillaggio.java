@@ -28,6 +28,8 @@ public final class TestVillaggio
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
