@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" tests="11" skipped="0" failures="1" errors="0" timestamp="2026-02-24T09:58:03" hostname="ALESSANDRO" time="0.454">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" tests="11" skipped="0" failures="1" errors="0" timestamp="2026-02-24T10:00:19" hostname="ALESSANDRO" time="0.533">
   <properties/>
-  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.29"/>
-  <testcase name="testSceltaAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.002"/>
-  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.016"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.012"/>
-  <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.002"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.003"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.025"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.054">
+  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.234"/>
+  <testcase name="testSceltaAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.004"/>
+  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.009"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.009"/>
+  <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.016"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.01"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.06"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.11">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be false but was true" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be false but was true
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -97,9 +97,9 @@ Expecting value to be false but was true
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.001"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.003"/>
   <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.002"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.004"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestAngeloCustode" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
