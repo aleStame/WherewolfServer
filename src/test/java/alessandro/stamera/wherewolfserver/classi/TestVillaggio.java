@@ -24,6 +24,8 @@ public final class TestVillaggio
         verificaFazione(CRIMINALI);
     }
 
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }

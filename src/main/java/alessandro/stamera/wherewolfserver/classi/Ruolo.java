@@ -140,6 +140,8 @@ public class Ruolo
 
     public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
 
+    public boolean isAmanti() { return true; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
