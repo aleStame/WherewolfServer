@@ -22,15 +22,15 @@ public final class TestCitta
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isFalse(); }
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
 
-    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isFalse(); }
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
-    @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isFalse(); }
+    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {

@@ -36,6 +36,8 @@ public final class TestCriminale
         verificaVero(isPotereUtilizzato());
     }
 
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
