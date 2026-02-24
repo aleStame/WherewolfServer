@@ -13,4 +13,6 @@ public final class TestGiulietta
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Giulietta"); }
 
+    @Test public void testGiulietta() { assertThat(ruolo.isGiulietta()).isTrue(); }
+
 }
