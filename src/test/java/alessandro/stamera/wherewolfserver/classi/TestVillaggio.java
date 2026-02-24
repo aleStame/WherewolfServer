@@ -26,6 +26,8 @@ public final class TestVillaggio
 
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
 
+    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isFalse(); }
+
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
 
 }
