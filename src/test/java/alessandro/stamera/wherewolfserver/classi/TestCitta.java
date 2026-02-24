@@ -28,6 +28,8 @@ public final class TestCitta
 
     @Test public void testLupo() { assertThat(ruolo.isLupo()).isFalse(); }
 
+    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isFalse(); }
+
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti(3);
