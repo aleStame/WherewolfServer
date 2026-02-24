@@ -24,4 +24,6 @@ public final class TestAmanti
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
+
 }
