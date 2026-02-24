@@ -142,7 +142,7 @@ public class Ruolo
 
     public boolean isAmanti() { return false; }
 
-    public boolean isGiulietta() { return true; }
+    public boolean isGiulietta() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
