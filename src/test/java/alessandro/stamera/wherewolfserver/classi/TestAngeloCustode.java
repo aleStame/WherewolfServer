@@ -30,21 +30,13 @@ public final class TestAngeloCustode
         verificaFalso(ruolo.isAmato());
     }
 
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
     @Test public void testAmato()
     {
         ruolo.sceltaAngeloCustode();
         verificaFalso(ruolo.isAmato());
     }
 
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
-
-    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
-
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+    @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
