@@ -24,6 +24,8 @@ public final class TestCitta
 
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
 
+    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isFalse(); }
+
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         ruolo.incrementaVoti(3);
