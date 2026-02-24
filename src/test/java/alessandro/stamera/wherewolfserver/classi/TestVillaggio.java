@@ -24,10 +24,12 @@ public final class TestVillaggio
         verificaFazione(CRIMINALI);
     }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isFalse(); }
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
