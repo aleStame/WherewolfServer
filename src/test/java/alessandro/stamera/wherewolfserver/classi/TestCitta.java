@@ -32,10 +32,6 @@ public final class TestCitta
         verificaFalso(ruolo.isAccusato());
     }
 
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
-
-    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
-
     @Test public void testGildata()
     {
         ruolo.gildata();

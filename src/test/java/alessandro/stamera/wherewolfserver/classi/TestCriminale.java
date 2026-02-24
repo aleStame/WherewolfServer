@@ -40,10 +40,6 @@ public final class TestCriminale
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
-
-    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
-
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }

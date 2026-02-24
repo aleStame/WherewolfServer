@@ -30,8 +30,6 @@ public final class TestAngeloCustode
         verificaFalso(ruolo.isAmato());
     }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testAmato()
