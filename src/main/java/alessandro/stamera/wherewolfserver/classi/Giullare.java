@@ -8,4 +8,6 @@ public final class Giullare extends Ruolo
 
     public Giullare() { super("Giullare", NESSUNA, BIANCA, null, 1, false); }
 
+    @Override public boolean isGiullare() { return true; }
+
 }
