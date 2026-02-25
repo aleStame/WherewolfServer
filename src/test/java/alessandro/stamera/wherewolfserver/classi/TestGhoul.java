@@ -36,6 +36,8 @@ public final class TestGhoul
 
     @Test public void testGhoul() { assertThat(ruolo.isGhoul()).isTrue(); }
 
+    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
