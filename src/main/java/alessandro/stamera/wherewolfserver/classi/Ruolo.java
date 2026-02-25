@@ -144,6 +144,8 @@ public class Ruolo
 
     public boolean isGiulietta() { return false; }
 
+    public boolean isGiullare() { return true; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
