@@ -32,6 +32,8 @@ public final class TestCitta
 
     @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
 
+    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
