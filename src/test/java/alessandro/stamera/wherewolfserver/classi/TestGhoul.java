@@ -32,11 +32,11 @@ public final class TestGhoul
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     @Test public void testGhoul() { assertThat(ruolo.isGhoul()).isTrue(); }
+
+    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

@@ -24,9 +24,15 @@ public final class TestCitta
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
+    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
+
+    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
