@@ -36,13 +36,15 @@ public final class TestCriminale
         verificaVero(isPotereUtilizzato());
     }
 
-    @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
+
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
+    @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
-    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

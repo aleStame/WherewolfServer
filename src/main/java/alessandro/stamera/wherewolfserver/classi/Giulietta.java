@@ -1,0 +1,19 @@
+package alessandro.stamera.wherewolfserver.classi;
+
+public final class Giulietta extends Amanti
+{
+
+    public Giulietta()
+    {
+        super
+        (
+    "Giulietta",
+"La prima notte indica un giocatore, Romeo, che la riconosce. Quel giocatore diventa protetto dalle creature dell'ombra finché " +
+          "Giulietta è in gioco, e la sua fazione diventa Amanti. Se uno dei due viene ucciso di notte o messo al rogo, l'altro si uccide " +
+          "durante la notte."
+        );
+    }
+
+    @Override public boolean isGiulietta() { return true; }
+
+}

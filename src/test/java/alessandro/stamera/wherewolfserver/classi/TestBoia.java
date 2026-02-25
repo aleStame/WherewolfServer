@@ -39,8 +39,6 @@ public final class TestBoia
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testAngeloCustode() { verificaFalso(ruolo.isAngeloCustode()); }
-
     @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
 
     @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }

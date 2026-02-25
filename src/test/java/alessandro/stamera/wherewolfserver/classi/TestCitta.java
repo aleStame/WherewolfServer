@@ -22,7 +22,15 @@ public final class TestCitta
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
     @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
+    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
@@ -31,10 +39,6 @@ public final class TestCitta
         assertThat(ruolo.getNumeroVoti()).isZero();
         verificaFalso(ruolo.isAccusato());
     }
-
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
-
-    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
     @Test public void testGildata()
     {
