@@ -8,4 +8,6 @@ public final class TestGoblin
 
     @Test public void testNome() { assertThat(new Goblin().getNome()).isEqualTo("Goblin"); }
 
+    @Test public void testFazione() { assertThat(new Goblin().getFazione()).isEqualTo(Fazione.NESSUNA); }
+
 }
