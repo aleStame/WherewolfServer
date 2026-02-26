@@ -2,7 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGoblin
@@ -18,6 +18,8 @@ public final class TestGoblin
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
 }
