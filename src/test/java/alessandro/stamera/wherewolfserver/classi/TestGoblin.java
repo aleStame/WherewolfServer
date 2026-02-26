@@ -22,8 +22,10 @@ public final class TestGoblin
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
-    @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
