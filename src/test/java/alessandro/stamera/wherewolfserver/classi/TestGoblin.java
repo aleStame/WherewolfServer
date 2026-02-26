@@ -24,4 +24,6 @@ public final class TestGoblin
 
     @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
 
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+
 }
