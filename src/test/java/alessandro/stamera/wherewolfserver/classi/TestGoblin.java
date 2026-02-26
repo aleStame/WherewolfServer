@@ -28,6 +28,8 @@ public final class TestGoblin
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
