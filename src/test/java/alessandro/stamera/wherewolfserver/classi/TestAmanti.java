@@ -36,6 +36,8 @@ public final class TestAmanti
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
+    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
