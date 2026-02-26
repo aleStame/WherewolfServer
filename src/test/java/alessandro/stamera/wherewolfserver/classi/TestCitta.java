@@ -52,6 +52,8 @@ public final class TestCitta
         verificaFazione(CRIMINALI);
     }
 
+    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
