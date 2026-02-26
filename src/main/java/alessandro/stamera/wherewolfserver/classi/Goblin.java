@@ -6,6 +6,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 public class Goblin extends Ruolo
 {
 
-    public Goblin() { super("Goblin", NESSUNA, NERA, null, 0, false); }
+    public Goblin() { super("Goblin", NESSUNA, NERA, null, 0, true); }
 
 }
