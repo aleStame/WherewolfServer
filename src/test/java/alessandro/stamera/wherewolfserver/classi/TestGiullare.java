@@ -17,7 +17,7 @@ public final class TestGiullare
     @Test public void testDescrizione()
     {
         String descrizione =
-            "Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. Vince se" +
+            "Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. Vince se " +
             "viene messo al rogo.";
         assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
     }
