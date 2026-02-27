@@ -32,6 +32,8 @@ public final class TestGoblin
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
+    @Test public void testGoblin() { assertThat(ruolo.isGoblin()).isTrue(); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
