@@ -38,6 +38,8 @@ public final class TestGhoul
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
+    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
