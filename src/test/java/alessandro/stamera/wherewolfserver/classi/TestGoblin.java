@@ -20,7 +20,7 @@ public final class TestGoblin
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
@@ -32,11 +32,13 @@ public final class TestGoblin
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
-    @Test public void testGoblin() { assertThat(ruolo.isGoblin()).isTrue(); }
+    @Test public void testGoblin() { verificaVero(ruolo.isGoblin()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
