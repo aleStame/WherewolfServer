@@ -8,4 +8,6 @@ public class Goblin extends Ruolo
 
     public Goblin() { super("Goblin", NESSUNA, NERA, null, 0, true); }
 
+    @Override public boolean isGoblin() { return true; }
+
 }
