@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testBoia riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,22 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-00958" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1771608083224</created>
-      <option name="number" value="00958" />
-      <option name="presentableId" value="LOCAL-00958" />
-      <option name="project" value="LOCAL" />
-      <updated>1771608083224</updated>
-    </task>
-    <task id="LOCAL-00959" summary="ROSSO: testFazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1771666922729</created>
-      <option name="number" value="00959" />
-      <option name="presentableId" value="LOCAL-00959" />
-      <option name="project" value="LOCAL" />
-      <updated>1771666922729</updated>
     </task>
     <task id="LOCAL-00960" summary="VERDE: testFazione riuscito">
       <option name="closed" value="true" />
@@ -605,7 +590,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772212326499</updated>
     </task>
-    <option name="localTasksCounter" value="1007" />
+    <task id="LOCAL-01007" summary="VERDE DIRETTO: testAmanti riuscito">
+      <option name="closed" value="true" />
+      <created>1772212803795</created>
+      <option name="number" value="01007" />
+      <option name="presentableId" value="LOCAL-01007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772212803795</updated>
+    </task>
+    <task id="LOCAL-01008" summary="VERDE DIRETTO: testBoia riuscito">
+      <option name="closed" value="true" />
+      <created>1772212979816</created>
+      <option name="number" value="01008" />
+      <option name="presentableId" value="LOCAL-01008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772212979816</updated>
+    </task>
+    <option name="localTasksCounter" value="1009" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: testGhoul non riuscito" />
@@ -630,7 +630,6 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testBoia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
@@ -645,6 +644,8 @@
     <MESSAGE value="ROSSO: testGoblin non riuscito" />
     <MESSAGE value="VERDE: testGoblin riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="VERDE DIRETTO: testAmanti riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBoia riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBoia riuscito" />
   </component>
 </project>

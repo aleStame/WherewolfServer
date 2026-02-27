@@ -41,6 +41,8 @@ public final class TestLupo
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
+    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
+
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
