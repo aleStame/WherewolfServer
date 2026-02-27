@@ -12,14 +12,14 @@ public final class TestGiullare
 
     @BeforeEach public void setUp() { ruolo = new Giullare(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Giullare"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Giullare"); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
             "Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. Vince se " +
             "viene messo al rogo.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
@@ -45,6 +45,8 @@ public final class TestGiullare
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
