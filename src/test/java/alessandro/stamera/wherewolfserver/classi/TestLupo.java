@@ -26,12 +26,6 @@ public final class TestLupo
 
     @Test public void testLupo() { verificaVero(ruolo.isLupo()); }
 
-    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
-
-    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
-
-    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
-
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     @Test public void testAmato()
@@ -41,11 +35,9 @@ public final class TestLupo
         verificaVero(isAmato());
     }
 
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
-
-    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
-
-    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
