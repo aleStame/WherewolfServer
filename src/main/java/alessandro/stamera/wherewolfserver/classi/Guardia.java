@@ -5,6 +5,6 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Guardia extends Villaggio
 {
 
-    public Guardia() { super("Guardia", BIANCA, null, 0, false); }
+    public Guardia() { super("Guardia", BIANCA, null, 2, false); }
 
 }
