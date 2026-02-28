@@ -36,6 +36,8 @@ public final class TestGuardia
 
     @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
