@@ -22,4 +22,6 @@ public final class TestGuardia
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
 }
