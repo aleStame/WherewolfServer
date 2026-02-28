@@ -6,7 +6,16 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 public final class Giullare extends Ruolo
 {
 
-    public Giullare() { super("Giullare", NESSUNA, BIANCA, null, 1, false); }
+    public Giullare()
+    {
+        super
+        (
+    "Giullare", NESSUNA, BIANCA,
+"Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. Vince se viene " +
+          "messo al rogo.",
+    1, false
+        );
+    }
 
     @Override public boolean isGiullare() { return true; }
 
