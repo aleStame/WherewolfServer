@@ -38,6 +38,8 @@ public final class TestGuardia
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
+    @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
