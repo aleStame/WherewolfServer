@@ -14,6 +14,12 @@ public final class TestGoblin
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione = "La prima notte riconosce le altre creature del piccolo popolo ed è protetto da tutti i mistici.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
