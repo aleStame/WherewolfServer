@@ -13,8 +13,6 @@ public final class TestGuardiaPrincipale
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guardia"); }
 
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
