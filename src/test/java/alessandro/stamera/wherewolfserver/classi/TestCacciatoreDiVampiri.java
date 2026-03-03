@@ -41,6 +41,8 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
 
+    @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
