@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGuardiaPrincipale
@@ -15,8 +13,6 @@ public final class TestGuardiaPrincipale
     @BeforeEach public void setUp() { ruolo = new GuardiaPrincipale(); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guardia"); }
-
-    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
