@@ -7,4 +7,6 @@ public final class Guardia extends Villaggio
 
     public Guardia() { super("Guardia", BIANCA, null, 2, false); }
 
+    @Override public boolean isGuardia() { return true; }
+
 }
