@@ -37,6 +37,8 @@ public final class TestEremita
 
     @Test public void testEremita() { assertThat(ruolo.isEremita()).isTrue(); }
 
+    @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
+
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
