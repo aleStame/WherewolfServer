@@ -148,6 +148,8 @@ public class Ruolo
 
     public boolean isGoblin() { return false; }
 
+    public boolean isGuardia() { return false; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
