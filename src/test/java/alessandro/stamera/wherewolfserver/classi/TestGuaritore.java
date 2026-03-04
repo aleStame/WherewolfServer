@@ -20,8 +20,10 @@ public final class TestGuaritore
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
-    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
-    @Test public void testBracconiere() { assertThat(ruolo.isBracconiere()).isFalse(); }
+    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
