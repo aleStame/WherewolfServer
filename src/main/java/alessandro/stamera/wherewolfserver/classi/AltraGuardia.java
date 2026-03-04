@@ -1,3 +1,5 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-public class AltraGuardia extends Guardia { public AltraGuardia() { super("Altra guardia", null); } }
+import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+
+public class AltraGuardia extends Guardia { public AltraGuardia() { super("Altra guardia", BIANCA); } }
