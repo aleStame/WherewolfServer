@@ -152,7 +152,7 @@ public class Ruolo
 
     public boolean isGuardiaCorrotta() { return false; }
 
-    public boolean isGuaritore() { return true; }
+    public boolean isGuaritore() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
