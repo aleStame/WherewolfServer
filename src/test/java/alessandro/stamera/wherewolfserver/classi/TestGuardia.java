@@ -34,6 +34,8 @@ public final class TestGuardia
 
     @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
 
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
