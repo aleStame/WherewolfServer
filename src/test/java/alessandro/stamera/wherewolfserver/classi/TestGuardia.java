@@ -24,4 +24,6 @@ public final class TestGuardia
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+
 }
