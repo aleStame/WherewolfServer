@@ -28,6 +28,8 @@ public final class TestGuardia
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
+    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
