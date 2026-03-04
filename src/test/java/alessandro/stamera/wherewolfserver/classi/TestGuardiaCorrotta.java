@@ -13,11 +13,11 @@ public final class TestGuardiaCorrotta
 
     @BeforeEach public void setUp() { ruolo = new GuardiaCorrotta(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guardia corrotta"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Guardia corrotta"); }
 
     @Test public void testDescrizione()
     {
-        assertThat(ruolo.getDescrizione()).isEqualTo("La prima notte riconosce le altre guardie e in seguito gli altri criminali.");
+        verificaStringa(ruolo.getDescrizione(), "La prima notte riconosce le altre guardie e in seguito gli altri criminali.");
     }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
@@ -25,5 +25,7 @@ public final class TestGuardiaCorrotta
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testGuardiaCorrotta() { assertThat(ruolo.isGuardiaCorrotta()).isTrue(); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
