@@ -18,7 +18,7 @@ public final class TestGuaritore
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
@@ -34,7 +34,9 @@ public final class TestGuaritore
 
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
