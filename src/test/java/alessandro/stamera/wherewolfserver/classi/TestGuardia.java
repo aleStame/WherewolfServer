@@ -11,17 +11,11 @@ public final class TestGuardia
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Guardia(null, null); }
+    @BeforeEach public void setUp() { ruolo = new Guardia(null, null, null); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
-    @Test public void testDescrizione()
-    {
-        String descrizione = "La prima notte riconosce le altre guardie, poi scopre dal moderatore il numero di criminali presenti in gioco.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
-    }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 

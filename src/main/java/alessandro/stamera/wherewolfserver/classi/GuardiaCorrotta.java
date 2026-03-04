@@ -8,7 +8,7 @@ public final class GuardiaCorrotta extends Guardia
 
     public GuardiaCorrotta()
     {
-        super("Guardia corrotta", NERA);
+        super("Guardia corrotta", NERA, null);
         cambiaFazione(CRIMINALI);
     }
 
