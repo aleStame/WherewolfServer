@@ -42,6 +42,8 @@ public final class TestGuardia
 
     @Test public void testGuardia() { assertThat(ruolo.isGuardia()).isTrue(); }
 
+    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
