@@ -17,4 +17,6 @@ public final class TestAltraGuardia
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testGuardiaCorrotta() { assertThat(ruolo.isGuardiaCorrotta()).isFalse(); }
+
 }
