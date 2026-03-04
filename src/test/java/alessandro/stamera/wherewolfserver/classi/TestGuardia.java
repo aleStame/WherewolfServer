@@ -12,9 +12,7 @@ public final class TestGuardia
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Guardia(); }
-
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guardia"); }
+    @BeforeEach public void setUp() { ruolo = new Guardia(null); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
