@@ -34,6 +34,8 @@ public final class TestGuaritore
 
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
 
+    @Test public void testGuaritore() { verificaVero(ruolo.isGuaritore()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
