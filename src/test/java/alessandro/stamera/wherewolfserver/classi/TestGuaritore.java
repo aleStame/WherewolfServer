@@ -20,4 +20,6 @@ public final class TestGuaritore
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
+    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
+
 }
