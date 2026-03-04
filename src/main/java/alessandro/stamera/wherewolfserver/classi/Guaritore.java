@@ -7,4 +7,6 @@ public final class Guaritore extends Villaggio
 
     public Guaritore() { super("Guaritore", BIANCA, null, 1, true); }
 
+    @Override public boolean isGuaritore() { return true; }
+
 }
