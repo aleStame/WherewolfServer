@@ -22,4 +22,6 @@ public final class TestGuaritore
 
     @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
 
+    @Test public void testBracconiere() { assertThat(ruolo.isBracconiere()).isFalse(); }
+
 }
