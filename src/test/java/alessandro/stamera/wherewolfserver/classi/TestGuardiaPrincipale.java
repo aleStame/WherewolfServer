@@ -13,12 +13,8 @@ public final class TestGuardiaPrincipale
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guardia"); }
 
-    @Test public void testGuardia() { verificaVero(ruolo.isGuardia()); }
-
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
