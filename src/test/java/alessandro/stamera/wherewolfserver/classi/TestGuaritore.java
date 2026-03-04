@@ -30,6 +30,8 @@ public final class TestGuaritore
 
     @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
+    @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
