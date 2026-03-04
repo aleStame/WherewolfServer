@@ -12,4 +12,6 @@ public final class GuardiaCorrotta extends Guardia
         cambiaFazione(CRIMINALI);
     }
 
+    @Override public boolean isGuardiaCorrotta() { return true; }
+
 }
