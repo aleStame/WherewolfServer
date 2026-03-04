@@ -15,6 +15,11 @@ public final class TestGuardiaCorrotta
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guardia corrotta"); }
 
+    @Test public void testDescrizione()
+    {
+        assertThat(ruolo.getDescrizione()).isEqualTo("La prima notte riconosce le altre guardie e in seguito gli altri criminali.");
+    }
+
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
