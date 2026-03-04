@@ -48,6 +48,8 @@ public class TestBracconiere
 
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
 
+    @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
