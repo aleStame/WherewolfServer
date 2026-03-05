@@ -5,20 +5,20 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
 public class Criminale extends Ruolo
 {
 
-    private boolean potereUsato;
+    private final Potere potere;
 
     public Criminale(String nome, Aura aura, String descrizione)
     {
         super(nome, CRIMINALI, aura, descrizione, 2, false);
-        potereUsato = false;
+        potere = new Potere();
     }
 
     @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
 
-    @Override public boolean isPotereUtilizzato() { return potereUsato; }
-
-    @Override public void utilizzaPotere() { potereUsato = true; }
-
     @Override public boolean isCriminale() { return true; }
+
+    @Override public boolean isPotereUtilizzato() { return potere.isPotereUtilizzato(); }
+
+    @Override public void utilizzaPotere() { potere.utilizzaPotere(); }
 
 }

@@ -8,7 +8,7 @@ public final class TestPotere
 
     @Test public void testUtilizzoPotere()
     {
-        Potere potere = new Potere(null, null, null, null, 0, true);
+        Potere potere = new Potere();
         assertThat(potere.isPotereUtilizzato()).isFalse();
         potere.utilizzaPotere();
         assertThat(potere.isPotereUtilizzato()).isTrue();
