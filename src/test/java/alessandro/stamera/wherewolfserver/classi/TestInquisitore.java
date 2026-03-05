@@ -14,6 +14,14 @@ public final class TestInquisitore
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Inquisitore"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte individua il Boia e il Templare e scopre quanti mistici sono in gioco. Se viene indicato da un mistico, lo " +
+            "riconosce. Può segnalare un giocatore durante le accuse: se è un mistico, sarà accusato a prescindere dai voti ricevuti.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
