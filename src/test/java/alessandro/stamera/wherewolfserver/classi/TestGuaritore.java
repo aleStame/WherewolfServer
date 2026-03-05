@@ -12,14 +12,14 @@ public final class TestGuaritore
 
     @BeforeEach public void setUp() { ruolo = new Guaritore(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Guaritore"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Guaritore"); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
     {
         String descrizione = "Ogni notte individua i giocatori uccisi e una volta per partita può indicarne uno per farlo tornare in vita.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
@@ -50,6 +50,8 @@ public final class TestGuaritore
         ruolo.utilizzaPotere();
         verificaVero(ruolo.isPotereUtilizzato());
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
