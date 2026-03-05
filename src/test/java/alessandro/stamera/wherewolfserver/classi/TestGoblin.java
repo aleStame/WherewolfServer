@@ -28,8 +28,6 @@ public final class TestGoblin
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
@@ -39,6 +37,8 @@ public final class TestGoblin
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
     @Test public void testGoblin() { verificaVero(ruolo.isGoblin()); }
+
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
