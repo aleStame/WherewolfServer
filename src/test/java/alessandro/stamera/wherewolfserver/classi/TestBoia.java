@@ -31,6 +31,8 @@ public final class TestBoia
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
+    @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
