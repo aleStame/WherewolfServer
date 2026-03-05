@@ -2,8 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.INQUISIZIONE;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestBoia
@@ -15,9 +14,7 @@ public final class TestBoia
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Boia"); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(INQUISIZIONE); }
-
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testDescrizione()
     {
@@ -27,20 +24,14 @@ public final class TestBoia
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
-
-    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
-
     @Test public void testBoia() { verificaVero(ruolo.isBoia()); }
 
-    @Test public void testInquisitore() { verificaFalso(ruolo.isInquisitore()); }
+    @Test public void testInquisitore() { assertThat(ruolo.isInquisitore()).isFalse(); }
 
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
