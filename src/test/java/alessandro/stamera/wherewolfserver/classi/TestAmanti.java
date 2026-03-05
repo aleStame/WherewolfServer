@@ -38,6 +38,8 @@ public final class TestAmanti
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
 
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
