@@ -46,9 +46,9 @@ public final class TestGuaritore
 
     @Test public void testUtilizzoPotere()
     {
-        verificaFalso(ruolo.isPotereUtilizzato());
+        verificaFalso(isPotereUtilizzato());
         ruolo.utilizzaPotere();
-        verificaVero(ruolo.isPotereUtilizzato());
+        verificaVero(isPotereUtilizzato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -56,5 +56,7 @@ public final class TestGuaritore
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
 
 }
