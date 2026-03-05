@@ -46,13 +46,15 @@ public final class TestGoblin
 
     @Test public void testSegnalazioneInquisitore()
     {
-        verificaFalso(ruolo.isAccusato());
+        verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
-        verificaVero(ruolo.isAccusato());
+        verificaVero(isAccusato());
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }
