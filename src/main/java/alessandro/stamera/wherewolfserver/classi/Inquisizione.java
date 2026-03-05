@@ -10,4 +10,6 @@ public final class Inquisizione extends Ruolo
         super(nome, INQUISIZIONE, aura, descrizione, 3, false);
     }
 
+    @Override public boolean isInquisizione() { return true; }
+
 }
