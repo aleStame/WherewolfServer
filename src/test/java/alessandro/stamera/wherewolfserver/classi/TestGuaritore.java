@@ -53,9 +53,9 @@ public final class TestGuaritore
 
     @Test public void testSegnalazioneInquisitore()
     {
-        verificaFalso(ruolo.isAccusato());
+        verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
-        verificaVero(ruolo.isAccusato());
+        verificaVero(isAccusato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -65,5 +65,7 @@ public final class TestGuaritore
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
+
+    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }
