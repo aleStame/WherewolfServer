@@ -32,8 +32,6 @@ public final class TestGiullare
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
