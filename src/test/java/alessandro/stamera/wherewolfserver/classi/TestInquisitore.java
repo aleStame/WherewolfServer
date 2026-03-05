@@ -16,10 +16,12 @@ public final class TestInquisitore
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
+    @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
     @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
 
-    @Test public void testInquisitore() { assertThat(ruolo.isInquisitore()).isTrue(); }
+    @Test public void testInquisitore() { verificaVero(ruolo.isInquisitore()); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
