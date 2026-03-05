@@ -2,7 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.INQUISIZIONE;
 
-public final class Inquisizione extends Ruolo
+public class Inquisizione extends Ruolo
 {
 
     public Inquisizione(String nome, Aura aura, String descrizione)

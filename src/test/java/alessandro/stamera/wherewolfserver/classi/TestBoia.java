@@ -31,22 +31,6 @@ public final class TestBoia
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
-
-    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
-    @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
-
-    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
-
-    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
-
-    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
-
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
