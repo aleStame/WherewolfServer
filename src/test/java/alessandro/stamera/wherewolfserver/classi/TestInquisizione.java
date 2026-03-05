@@ -31,6 +31,8 @@ public final class TestInquisizione
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
+    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
     @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
