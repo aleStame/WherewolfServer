@@ -18,4 +18,6 @@ public final class TestInquisitore
 
     @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
 
+    @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
+
 }
