@@ -37,8 +37,6 @@ public final class TestLupo
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
@@ -46,6 +44,8 @@ public final class TestLupo
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 

@@ -28,8 +28,6 @@ public final class TestGoblin
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
@@ -40,12 +38,23 @@ public final class TestGoblin
 
     @Test public void testGoblin() { verificaVero(ruolo.isGoblin()); }
 
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testSegnalazioneInquisitore()
+    {
+        verificaFalso(isAccusato());
+        ruolo.segnalazioneInquisitore();
+        verificaVero(isAccusato());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }

@@ -24,8 +24,6 @@ public final class TestAmanti
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isTrue(); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
@@ -37,6 +35,8 @@ public final class TestAmanti
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 

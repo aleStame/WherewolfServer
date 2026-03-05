@@ -64,6 +64,8 @@ public class Ruolo
 
     public void gildata() { }
 
+    public void segnalazioneInquisitore() { if(isMistico()) accusa(); }
+
     public boolean isMistico() { return mistico; }
 
     public boolean isAccusato() { return accusato; }
@@ -153,6 +155,10 @@ public class Ruolo
     public boolean isGuardiaCorrotta() { return false; }
 
     public boolean isGuaritore() { return false; }
+
+    public boolean isInquisizione() { return false; }
+
+    public boolean isInquisitore() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
