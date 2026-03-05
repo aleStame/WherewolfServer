@@ -16,8 +16,7 @@ public final class TestEremita
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test
-    public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
+    @Test public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
@@ -38,6 +37,8 @@ public final class TestEremita
     @Test public void testEremita() { verificaVero(ruolo.isEremita()); }
 
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
+
+    @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 

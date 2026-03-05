@@ -4,118 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testDescrizione riuscito">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GuardiaCorrotta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuardiaCorrotta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAssassino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAssassino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAura.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAzzeccagarbugli.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAzzeccagarbugli.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBardo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBardo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBecchino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBecchino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBoccaDiRosa.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBoccaDiRosa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBoia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBoia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBorgomastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBorgomastro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBracconiere.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestBracconiere.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCacciatore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCacciatore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCacciatoreDiVampiri.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCacciatoreDiVampiri.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCapoBranco.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCapoBranco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCapoGilda.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCapoGilda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCategoria.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCitta.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCitta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoEroe.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoEroe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoLupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoLupo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoNormale.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestContadinoNormale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCriminale.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestCriminale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestEremita.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestEremita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestFazione.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestFazione.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGhoul.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGhoul.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGiovaneLupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGiovaneLupo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGiulietta.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGiulietta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGiullare.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGiullare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGoblin.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGoblin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGuardia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGuardiaPrincipale.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestGuardiaPrincipale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupoBranco.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupoBranco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupoReietto.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupoReietto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupoSolitario.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestLupoSolitario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestProtezioni.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestProtezioni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestRuolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestRuolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestTipoContadino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestTipoContadino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestVillaggio.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestVillaggio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAmanti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAmanti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAssassino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAssassino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAura.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAura.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAzzeccagarbugli.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestAzzeccagarbugli.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBardo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBardo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBecchino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBecchino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBoccaDiRosa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBoccaDiRosa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBoia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBoia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBorgomastro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBorgomastro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBracconiere.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestBracconiere.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCacciatore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCacciatore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCacciatoreDiVampiri.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCacciatoreDiVampiri.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCapoBranco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCapoBranco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCapoGilda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCapoGilda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCategoria.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCategoria.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCitta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCitta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoEroe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoEroe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoLupo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoLupo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoNormale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestContadinoNormale.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCriminale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestCriminale.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestEremita.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestEremita.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestFazione.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestFazione.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGhoul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGhoul.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGiovaneLupo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGiovaneLupo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGiulietta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGiulietta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGiullare.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGiullare.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGoblin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGoblin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGuardia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGuardia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGuardiaPrincipale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestGuardiaPrincipale.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupoBranco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupoBranco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupoReietto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupoReietto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupoSolitario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestLupoSolitario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestProtezioni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestProtezioni.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestRuolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestRuolo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestTipoContadino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestTipoContadino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestUtenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestUtenti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestVillaggio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestVillaggio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Guardia.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGuardia.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGuardia.class.uniqueId1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: ridefinizione della gerarchia degli ruoli">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Guaritore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Guaritore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCriminale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCriminale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +81,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/guardiacorrotta",
+    "git-widget-placeholder": "feature/guaritore",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient"
   }
@@ -323,399 +214,399 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-01030" summary="VERDE DIRETTO: testBracconiere riuscito">
+    <task id="LOCAL-01083" summary="REFACTORING: definizione del metodo di set up">
       <option name="closed" value="true" />
-      <created>1772291503901</created>
-      <option name="number" value="01030" />
-      <option name="presentableId" value="LOCAL-01030" />
+      <created>1772644390390</created>
+      <option name="number" value="01083" />
+      <option name="presentableId" value="LOCAL-01083" />
       <option name="project" value="LOCAL" />
-      <updated>1772291503901</updated>
+      <updated>1772644390390</updated>
     </task>
-    <task id="LOCAL-01031" summary="VERDE DIRETTO: testCacciatore riuscito">
+    <task id="LOCAL-01084" summary="ROSSO: testAura non riuscito">
       <option name="closed" value="true" />
-      <created>1772291742117</created>
-      <option name="number" value="01031" />
-      <option name="presentableId" value="LOCAL-01031" />
+      <created>1772645148076</created>
+      <option name="number" value="01084" />
+      <option name="presentableId" value="LOCAL-01084" />
       <option name="project" value="LOCAL" />
-      <updated>1772291742117</updated>
+      <updated>1772645148076</updated>
     </task>
-    <task id="LOCAL-01032" summary="VERDE DIRETTO: testCacciatoreDiVampiri riuscito">
+    <task id="LOCAL-01085" summary="VERDE: testAura riuscito">
       <option name="closed" value="true" />
-      <created>1772291889733</created>
-      <option name="number" value="01032" />
-      <option name="presentableId" value="LOCAL-01032" />
+      <created>1772645380936</created>
+      <option name="number" value="01085" />
+      <option name="presentableId" value="LOCAL-01085" />
       <option name="project" value="LOCAL" />
-      <updated>1772291889733</updated>
+      <updated>1772645380936</updated>
     </task>
-    <task id="LOCAL-01033" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
+    <task id="LOCAL-01086" summary="REFACTORING: definizione di un metodo di set up">
       <option name="closed" value="true" />
-      <created>1772292276361</created>
-      <option name="number" value="01033" />
-      <option name="presentableId" value="LOCAL-01033" />
+      <created>1772645512316</created>
+      <option name="number" value="01086" />
+      <option name="presentableId" value="LOCAL-01086" />
       <option name="project" value="LOCAL" />
-      <updated>1772292276361</updated>
+      <updated>1772645512316</updated>
     </task>
-    <task id="LOCAL-01034" summary="VERDE DIRETTO: testContadino riuscito">
+    <task id="LOCAL-01087" summary="ROSSO: testGuardiaCorrotta non riuscito">
       <option name="closed" value="true" />
-      <created>1772292469965</created>
-      <option name="number" value="01034" />
-      <option name="presentableId" value="LOCAL-01034" />
+      <created>1772645794855</created>
+      <option name="number" value="01087" />
+      <option name="presentableId" value="LOCAL-01087" />
       <option name="project" value="LOCAL" />
-      <updated>1772292469965</updated>
+      <updated>1772645794855</updated>
     </task>
-    <task id="LOCAL-01035" summary="VERDE DIRETTO: testEremita riuscito">
+    <task id="LOCAL-01088" summary="VERDE: testGuardiaCorrotta riuscito">
       <option name="closed" value="true" />
-      <created>1772298641354</created>
-      <option name="number" value="01035" />
-      <option name="presentableId" value="LOCAL-01035" />
+      <created>1772646097520</created>
+      <option name="number" value="01088" />
+      <option name="presentableId" value="LOCAL-01088" />
       <option name="project" value="LOCAL" />
-      <updated>1772298641354</updated>
+      <updated>1772646097520</updated>
     </task>
-    <task id="LOCAL-01036" summary="ROSSO: testGuardia non riuscito">
+    <task id="LOCAL-01089" summary="REFACTORING: definizione del metodo di set up">
       <option name="closed" value="true" />
-      <created>1772531622738</created>
-      <option name="number" value="01036" />
-      <option name="presentableId" value="LOCAL-01036" />
+      <created>1772646289706</created>
+      <option name="number" value="01089" />
+      <option name="presentableId" value="LOCAL-01089" />
       <option name="project" value="LOCAL" />
-      <updated>1772531622739</updated>
+      <updated>1772646289706</updated>
     </task>
-    <task id="LOCAL-01037" summary="VERDE: testGuardia riuscito">
+    <task id="LOCAL-01090" summary="VERDE DIRETTO: testGuardiaCorrotta riuscito">
       <option name="closed" value="true" />
-      <created>1772531731524</created>
-      <option name="number" value="01037" />
-      <option name="presentableId" value="LOCAL-01037" />
+      <created>1772646452336</created>
+      <option name="number" value="01090" />
+      <option name="presentableId" value="LOCAL-01090" />
       <option name="project" value="LOCAL" />
-      <updated>1772531731524</updated>
+      <updated>1772646452336</updated>
     </task>
-    <task id="LOCAL-01038" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01091" summary="ROSSO: testGuardiaCorrotta non riuscito">
       <option name="closed" value="true" />
-      <created>1772532125030</created>
-      <option name="number" value="01038" />
-      <option name="presentableId" value="LOCAL-01038" />
+      <created>1772646598824</created>
+      <option name="number" value="01091" />
+      <option name="presentableId" value="LOCAL-01091" />
       <option name="project" value="LOCAL" />
-      <updated>1772532125030</updated>
+      <updated>1772646598824</updated>
     </task>
-    <task id="LOCAL-01039" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01092" summary="VERDE: testGuardiaCorrotta riuscito">
       <option name="closed" value="true" />
-      <created>1772532353516</created>
-      <option name="number" value="01039" />
-      <option name="presentableId" value="LOCAL-01039" />
+      <created>1772646754073</created>
+      <option name="number" value="01092" />
+      <option name="presentableId" value="LOCAL-01092" />
       <option name="project" value="LOCAL" />
-      <updated>1772532353516</updated>
+      <updated>1772646754073</updated>
     </task>
-    <task id="LOCAL-01040" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01093" summary="ROSSO: testDescrizione non riuscito">
       <option name="closed" value="true" />
-      <created>1772532506682</created>
-      <option name="number" value="01040" />
-      <option name="presentableId" value="LOCAL-01040" />
+      <created>1772646955401</created>
+      <option name="number" value="01093" />
+      <option name="presentableId" value="LOCAL-01093" />
       <option name="project" value="LOCAL" />
-      <updated>1772532506683</updated>
+      <updated>1772646955401</updated>
     </task>
-    <task id="LOCAL-01041" summary="VERDE DIRETTO: testBecchino riuscito">
+    <task id="LOCAL-01094" summary="ROSSO: testDescrizione non riuscito">
       <option name="closed" value="true" />
-      <created>1772535371948</created>
-      <option name="number" value="01041" />
-      <option name="presentableId" value="LOCAL-01041" />
+      <created>1772647331721</created>
+      <option name="number" value="01094" />
+      <option name="presentableId" value="LOCAL-01094" />
       <option name="project" value="LOCAL" />
-      <updated>1772535371948</updated>
+      <updated>1772647331721</updated>
     </task>
-    <task id="LOCAL-01042" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01095" summary="VERDE: testDescrizione riuscito">
       <option name="closed" value="true" />
-      <created>1772535513618</created>
-      <option name="number" value="01042" />
-      <option name="presentableId" value="LOCAL-01042" />
+      <created>1772647448372</created>
+      <option name="number" value="01095" />
+      <option name="presentableId" value="LOCAL-01095" />
       <option name="project" value="LOCAL" />
-      <updated>1772535513618</updated>
+      <updated>1772647448372</updated>
     </task>
-    <task id="LOCAL-01043" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01096" summary="REFACTORING: definizione del metodo verificaStringa">
       <option name="closed" value="true" />
-      <created>1772535813307</created>
-      <option name="number" value="01043" />
-      <option name="presentableId" value="LOCAL-01043" />
+      <created>1772647755426</created>
+      <option name="number" value="01096" />
+      <option name="presentableId" value="LOCAL-01096" />
       <option name="project" value="LOCAL" />
-      <updated>1772535813307</updated>
+      <updated>1772647755426</updated>
     </task>
-    <task id="LOCAL-01044" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01097" summary="ROSSO: testNome non riuscito">
       <option name="closed" value="true" />
-      <created>1772536127861</created>
-      <option name="number" value="01044" />
-      <option name="presentableId" value="LOCAL-01044" />
+      <created>1772648134747</created>
+      <option name="number" value="01097" />
+      <option name="presentableId" value="LOCAL-01097" />
       <option name="project" value="LOCAL" />
-      <updated>1772536127861</updated>
+      <updated>1772648134747</updated>
     </task>
-    <task id="LOCAL-01045" summary="VERDE DIRETTO: testGuardia riuscito">
+    <task id="LOCAL-01098" summary="VERDE: testNome riuscito">
       <option name="closed" value="true" />
-      <created>1772536672172</created>
-      <option name="number" value="01045" />
-      <option name="presentableId" value="LOCAL-01045" />
+      <created>1772648248267</created>
+      <option name="number" value="01098" />
+      <option name="presentableId" value="LOCAL-01098" />
       <option name="project" value="LOCAL" />
-      <updated>1772536672172</updated>
+      <updated>1772648248267</updated>
     </task>
-    <task id="LOCAL-01046" summary="REFACTORING: definizione del metodo verificaVero">
+    <task id="LOCAL-01099" summary="ROSSO: testAura non riuscito">
       <option name="closed" value="true" />
-      <created>1772536861462</created>
-      <option name="number" value="01046" />
-      <option name="presentableId" value="LOCAL-01046" />
+      <created>1772648442373</created>
+      <option name="number" value="01099" />
+      <option name="presentableId" value="LOCAL-01099" />
       <option name="project" value="LOCAL" />
-      <updated>1772536861462</updated>
+      <updated>1772648442373</updated>
     </task>
-    <task id="LOCAL-01047" summary="ROSSO: testGuardia non riuscito">
+    <task id="LOCAL-01100" summary="VERDE: testAura riuscito">
       <option name="closed" value="true" />
-      <created>1772536995614</created>
-      <option name="number" value="01047" />
-      <option name="presentableId" value="LOCAL-01047" />
+      <created>1772648523394</created>
+      <option name="number" value="01100" />
+      <option name="presentableId" value="LOCAL-01100" />
       <option name="project" value="LOCAL" />
-      <updated>1772536995614</updated>
+      <updated>1772648523395</updated>
     </task>
-    <task id="LOCAL-01048" summary="VERDE: testGuardia riuscito">
+    <task id="LOCAL-01101" summary="REFACTORING: definizione del metodo di set up">
       <option name="closed" value="true" />
-      <created>1772537332897</created>
-      <option name="number" value="01048" />
-      <option name="presentableId" value="LOCAL-01048" />
+      <created>1772648651165</created>
+      <option name="number" value="01101" />
+      <option name="presentableId" value="LOCAL-01101" />
       <option name="project" value="LOCAL" />
-      <updated>1772537332897</updated>
+      <updated>1772648651165</updated>
     </task>
-    <task id="LOCAL-01049" summary="REFACTORING: definizione del metodo verificaVero">
+    <task id="LOCAL-01102" summary="ROSSO: testLune non riuscito">
       <option name="closed" value="true" />
-      <created>1772552900576</created>
-      <option name="number" value="01049" />
-      <option name="presentableId" value="LOCAL-01049" />
+      <created>1772648775516</created>
+      <option name="number" value="01102" />
+      <option name="presentableId" value="LOCAL-01102" />
       <option name="project" value="LOCAL" />
-      <updated>1772552900577</updated>
+      <updated>1772648775516</updated>
     </task>
-    <task id="LOCAL-01050" summary="REFACTORING: definizione del metodo verificaVero">
+    <task id="LOCAL-01103" summary="VERDE: testLune riuscito">
       <option name="closed" value="true" />
-      <created>1772552957797</created>
-      <option name="number" value="01050" />
-      <option name="presentableId" value="LOCAL-01050" />
+      <created>1772655508669</created>
+      <option name="number" value="01103" />
+      <option name="presentableId" value="LOCAL-01103" />
       <option name="project" value="LOCAL" />
-      <updated>1772552957797</updated>
+      <updated>1772655508669</updated>
     </task>
-    <task id="LOCAL-01051" summary="VERDE DIRETTO: testEremita riuscito">
+    <task id="LOCAL-01104" summary="ROSSO: testMistico non riuscito">
       <option name="closed" value="true" />
-      <created>1772555199852</created>
-      <option name="number" value="01051" />
-      <option name="presentableId" value="LOCAL-01051" />
+      <created>1772655700751</created>
+      <option name="number" value="01104" />
+      <option name="presentableId" value="LOCAL-01104" />
       <option name="project" value="LOCAL" />
-      <updated>1772555199852</updated>
+      <updated>1772655700751</updated>
     </task>
-    <task id="LOCAL-01052" summary="VERDE DIRETTO: testEremita riuscito">
+    <task id="LOCAL-01105" summary="VERDE: testMistico riuscito">
       <option name="closed" value="true" />
-      <created>1772555619811</created>
-      <option name="number" value="01052" />
-      <option name="presentableId" value="LOCAL-01052" />
+      <created>1772655891650</created>
+      <option name="number" value="01105" />
+      <option name="presentableId" value="LOCAL-01105" />
       <option name="project" value="LOCAL" />
-      <updated>1772555619811</updated>
+      <updated>1772655891650</updated>
     </task>
-    <task id="LOCAL-01053" summary="VERDE DIRETTO: testFazione riuscito">
+    <task id="LOCAL-01106" summary="VERDE DIRETTO: testBecchino riuscito">
       <option name="closed" value="true" />
-      <created>1772558170418</created>
-      <option name="number" value="01053" />
-      <option name="presentableId" value="LOCAL-01053" />
+      <created>1772656056557</created>
+      <option name="number" value="01106" />
+      <option name="presentableId" value="LOCAL-01106" />
       <option name="project" value="LOCAL" />
-      <updated>1772558170418</updated>
+      <updated>1772656056557</updated>
     </task>
-    <task id="LOCAL-01054" summary="VERDE DIRETTO: testCategoria riuscito">
+    <task id="LOCAL-01107" summary="VERDE DIRETTO: testBracconiere riuscito">
       <option name="closed" value="true" />
-      <created>1772558308798</created>
-      <option name="number" value="01054" />
-      <option name="presentableId" value="LOCAL-01054" />
+      <created>1772656335870</created>
+      <option name="number" value="01107" />
+      <option name="presentableId" value="LOCAL-01107" />
       <option name="project" value="LOCAL" />
-      <updated>1772558308798</updated>
+      <updated>1772656335870</updated>
     </task>
-    <task id="LOCAL-01055" summary="REFACTORING: definizione del metodo di set up">
+    <task id="LOCAL-01108" summary="REFACTORING: definizione del metodo verificaFalso">
       <option name="closed" value="true" />
-      <created>1772558424567</created>
-      <option name="number" value="01055" />
-      <option name="presentableId" value="LOCAL-01055" />
+      <created>1772656567335</created>
+      <option name="number" value="01108" />
+      <option name="presentableId" value="LOCAL-01108" />
       <option name="project" value="LOCAL" />
-      <updated>1772558424568</updated>
+      <updated>1772656567336</updated>
     </task>
-    <task id="LOCAL-01056" summary="ROSSO: testAura non riuscito">
+    <task id="LOCAL-01109" summary="VERDE DIRETTO: testCacciatore riuscito">
       <option name="closed" value="true" />
-      <created>1772558555669</created>
-      <option name="number" value="01056" />
-      <option name="presentableId" value="LOCAL-01056" />
+      <created>1772656685101</created>
+      <option name="number" value="01109" />
+      <option name="presentableId" value="LOCAL-01109" />
       <option name="project" value="LOCAL" />
-      <updated>1772558555669</updated>
+      <updated>1772656685101</updated>
     </task>
-    <task id="LOCAL-01057" summary="VERDE: testAura riuscito">
+    <task id="LOCAL-01110" summary="VERDE DIRETTO: testCacciatoreDiVampiri riuscito">
       <option name="closed" value="true" />
-      <created>1772558631624</created>
-      <option name="number" value="01057" />
-      <option name="presentableId" value="LOCAL-01057" />
+      <created>1772656816499</created>
+      <option name="number" value="01110" />
+      <option name="presentableId" value="LOCAL-01110" />
       <option name="project" value="LOCAL" />
-      <updated>1772558631624</updated>
+      <updated>1772656816500</updated>
     </task>
-    <task id="LOCAL-01058" summary="ROSSO: testLune non riuscito">
+    <task id="LOCAL-01111" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
       <option name="closed" value="true" />
-      <created>1772558728176</created>
-      <option name="number" value="01058" />
-      <option name="presentableId" value="LOCAL-01058" />
+      <created>1772656941067</created>
+      <option name="number" value="01111" />
+      <option name="presentableId" value="LOCAL-01111" />
       <option name="project" value="LOCAL" />
-      <updated>1772558728176</updated>
+      <updated>1772656941067</updated>
     </task>
-    <task id="LOCAL-01059" summary="VERDE: testLune riuscito">
+    <task id="LOCAL-01112" summary="VERDE DIRETTO: testEremita riuscito">
       <option name="closed" value="true" />
-      <created>1772558886189</created>
-      <option name="number" value="01059" />
-      <option name="presentableId" value="LOCAL-01059" />
+      <created>1772657051670</created>
+      <option name="number" value="01112" />
+      <option name="presentableId" value="LOCAL-01112" />
       <option name="project" value="LOCAL" />
-      <updated>1772558886189</updated>
+      <updated>1772657051671</updated>
     </task>
-    <task id="LOCAL-01060" summary="ROSSO: testMistico non riuscito">
+    <task id="LOCAL-01113" summary="VERDE DIRETTO: testGuardia riuscito">
       <option name="closed" value="true" />
-      <created>1772559002884</created>
-      <option name="number" value="01060" />
-      <option name="presentableId" value="LOCAL-01060" />
+      <created>1772657189217</created>
+      <option name="number" value="01113" />
+      <option name="presentableId" value="LOCAL-01113" />
       <option name="project" value="LOCAL" />
-      <updated>1772559002884</updated>
+      <updated>1772657189217</updated>
     </task>
-    <task id="LOCAL-01061" summary="VERDE: testMistico riuscito">
+    <task id="LOCAL-01114" summary="VERDE DIRETTO: testVillaggio riuscito">
       <option name="closed" value="true" />
-      <created>1772559566684</created>
-      <option name="number" value="01061" />
-      <option name="presentableId" value="LOCAL-01061" />
+      <created>1772657365691</created>
+      <option name="number" value="01114" />
+      <option name="presentableId" value="LOCAL-01114" />
       <option name="project" value="LOCAL" />
-      <updated>1772559566685</updated>
+      <updated>1772657365691</updated>
     </task>
-    <task id="LOCAL-01062" summary="VERDE DIRETTO: testBardo riuscito">
+    <task id="LOCAL-01115" summary="REFACTORING: definizione del metodo verificaVero">
       <option name="closed" value="true" />
-      <created>1772618788645</created>
-      <option name="number" value="01062" />
-      <option name="presentableId" value="LOCAL-01062" />
+      <created>1772657545397</created>
+      <option name="number" value="01115" />
+      <option name="presentableId" value="LOCAL-01115" />
       <option name="project" value="LOCAL" />
-      <updated>1772618788645</updated>
+      <updated>1772657545397</updated>
     </task>
-    <task id="LOCAL-01063" summary="REFACTORING: definizione del metodo verificaFalso">
+    <task id="LOCAL-01116" summary="ROSSO: testGuaritore non riuscito">
       <option name="closed" value="true" />
-      <created>1772618951332</created>
-      <option name="number" value="01063" />
-      <option name="presentableId" value="LOCAL-01063" />
+      <created>1772657824395</created>
+      <option name="number" value="01116" />
+      <option name="presentableId" value="LOCAL-01116" />
       <option name="project" value="LOCAL" />
-      <updated>1772618951332</updated>
+      <updated>1772657824395</updated>
     </task>
-    <task id="LOCAL-01064" summary="VERDE DIRETTO: testBecchino riuscito">
+    <task id="LOCAL-01117" summary="VERDE: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772619070129</created>
-      <option name="number" value="01064" />
-      <option name="presentableId" value="LOCAL-01064" />
+      <created>1772657971778</created>
+      <option name="number" value="01117" />
+      <option name="presentableId" value="LOCAL-01117" />
       <option name="project" value="LOCAL" />
-      <updated>1772619070129</updated>
+      <updated>1772657971778</updated>
     </task>
-    <task id="LOCAL-01065" summary="VERDE DIRETTO: testBracconiere riuscito">
+    <task id="LOCAL-01118" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772619301910</created>
-      <option name="number" value="01065" />
-      <option name="presentableId" value="LOCAL-01065" />
+      <created>1772658160154</created>
+      <option name="number" value="01118" />
+      <option name="presentableId" value="LOCAL-01118" />
       <option name="project" value="LOCAL" />
-      <updated>1772619301910</updated>
+      <updated>1772658160154</updated>
     </task>
-    <task id="LOCAL-01066" summary="VERDE DIRETTO: testCacciatore riuscito">
+    <task id="LOCAL-01119" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772619787227</created>
-      <option name="number" value="01066" />
-      <option name="presentableId" value="LOCAL-01066" />
+      <created>1772658318084</created>
+      <option name="number" value="01119" />
+      <option name="presentableId" value="LOCAL-01119" />
       <option name="project" value="LOCAL" />
-      <updated>1772619787227</updated>
+      <updated>1772658318084</updated>
     </task>
-    <task id="LOCAL-01067" summary="VERDE DIRETTO: testCacciatoreDiVampiri riuscito">
+    <task id="LOCAL-01120" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772619888391</created>
-      <option name="number" value="01067" />
-      <option name="presentableId" value="LOCAL-01067" />
+      <created>1772658526099</created>
+      <option name="number" value="01120" />
+      <option name="presentableId" value="LOCAL-01120" />
       <option name="project" value="LOCAL" />
-      <updated>1772619888391</updated>
+      <updated>1772658526099</updated>
     </task>
-    <task id="LOCAL-01068" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
+    <task id="LOCAL-01121" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772619997372</created>
-      <option name="number" value="01068" />
-      <option name="presentableId" value="LOCAL-01068" />
+      <created>1772658645267</created>
+      <option name="number" value="01121" />
+      <option name="presentableId" value="LOCAL-01121" />
       <option name="project" value="LOCAL" />
-      <updated>1772619997372</updated>
+      <updated>1772658645268</updated>
     </task>
-    <task id="LOCAL-01069" summary="VERDE DIRETTO: testContadino riuscito">
+    <task id="LOCAL-01122" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772620105770</created>
-      <option name="number" value="01069" />
-      <option name="presentableId" value="LOCAL-01069" />
+      <created>1772658813611</created>
+      <option name="number" value="01122" />
+      <option name="presentableId" value="LOCAL-01122" />
       <option name="project" value="LOCAL" />
-      <updated>1772620105770</updated>
+      <updated>1772658813611</updated>
     </task>
-    <task id="LOCAL-01070" summary="VERDE DIRETTO: testEremita riuscito">
+    <task id="LOCAL-01123" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772620262635</created>
-      <option name="number" value="01070" />
-      <option name="presentableId" value="LOCAL-01070" />
+      <created>1772658944114</created>
+      <option name="number" value="01123" />
+      <option name="presentableId" value="LOCAL-01123" />
       <option name="project" value="LOCAL" />
-      <updated>1772620262635</updated>
+      <updated>1772658944114</updated>
     </task>
-    <task id="LOCAL-01071" summary="ROSSO: testGuardia non riuscito">
+    <task id="LOCAL-01124" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772620836106</created>
-      <option name="number" value="01071" />
-      <option name="presentableId" value="LOCAL-01071" />
+      <created>1772659066030</created>
+      <option name="number" value="01124" />
+      <option name="presentableId" value="LOCAL-01124" />
       <option name="project" value="LOCAL" />
-      <updated>1772620836107</updated>
+      <updated>1772659066030</updated>
     </task>
-    <task id="LOCAL-01072" summary="VERDE: testGuardia riuscito">
+    <task id="LOCAL-01125" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
-      <created>1772620916362</created>
-      <option name="number" value="01072" />
-      <option name="presentableId" value="LOCAL-01072" />
+      <created>1772659221371</created>
+      <option name="number" value="01125" />
+      <option name="presentableId" value="LOCAL-01125" />
       <option name="project" value="LOCAL" />
-      <updated>1772620916362</updated>
+      <updated>1772659221371</updated>
     </task>
-    <task id="LOCAL-01073" summary="VERDE DIRETTO: testVillaggio riuscito">
+    <task id="LOCAL-01126" summary="ROSSO: testGuaritore non riuscito">
       <option name="closed" value="true" />
-      <created>1772621078194</created>
-      <option name="number" value="01073" />
-      <option name="presentableId" value="LOCAL-01073" />
+      <created>1772659375849</created>
+      <option name="number" value="01126" />
+      <option name="presentableId" value="LOCAL-01126" />
       <option name="project" value="LOCAL" />
-      <updated>1772621078194</updated>
+      <updated>1772659375849</updated>
     </task>
-    <task id="LOCAL-01074" summary="REFACTORING: definizione del metodo verificaVero">
+    <task id="LOCAL-01127" summary="VERDE: testGuaritore non riuscito">
       <option name="closed" value="true" />
-      <created>1772621248219</created>
-      <option name="number" value="01074" />
-      <option name="presentableId" value="LOCAL-01074" />
+      <created>1772659519335</created>
+      <option name="number" value="01127" />
+      <option name="presentableId" value="LOCAL-01127" />
       <option name="project" value="LOCAL" />
-      <updated>1772621248219</updated>
+      <updated>1772659519335</updated>
     </task>
-    <task id="LOCAL-01075" summary="ROSSO: testNome non riuscito">
+    <task id="LOCAL-01128" summary="ROSSO: testUtilizzoPotere non riuscito">
       <option name="closed" value="true" />
-      <created>1772621517351</created>
-      <option name="number" value="01075" />
-      <option name="presentableId" value="LOCAL-01075" />
+      <created>1772660001404</created>
+      <option name="number" value="01128" />
+      <option name="presentableId" value="LOCAL-01128" />
       <option name="project" value="LOCAL" />
-      <updated>1772621517351</updated>
+      <updated>1772660001404</updated>
     </task>
-    <task id="LOCAL-01076" summary="VERDE: testNome riuscito">
+    <task id="LOCAL-01129" summary="VERDE: testUtilizzoPotere riuscito">
       <option name="closed" value="true" />
-      <created>1772621621022</created>
-      <option name="number" value="01076" />
-      <option name="presentableId" value="LOCAL-01076" />
+      <created>1772660137659</created>
+      <option name="number" value="01129" />
+      <option name="presentableId" value="LOCAL-01129" />
       <option name="project" value="LOCAL" />
-      <updated>1772621621022</updated>
+      <updated>1772660137659</updated>
     </task>
-    <task id="LOCAL-01077" summary="ROSSO: testDescrizione non riuscito">
+    <task id="LOCAL-01130" summary="REFACTORING: definizione del metodo setUtilizzoPotere">
       <option name="closed" value="true" />
-      <created>1772622302867</created>
-      <option name="number" value="01077" />
-      <option name="presentableId" value="LOCAL-01077" />
+      <created>1772660272880</created>
+      <option name="number" value="01130" />
+      <option name="presentableId" value="LOCAL-01130" />
       <option name="project" value="LOCAL" />
-      <updated>1772622302867</updated>
+      <updated>1772660272880</updated>
     </task>
-    <task id="LOCAL-01078" summary="VERDE: testDescrizione riuscito">
+    <task id="LOCAL-01131" summary="REFACTORING: ridefinizione della gerarchia degli ruoli">
       <option name="closed" value="true" />
-      <created>1772622455934</created>
-      <option name="number" value="01078" />
-      <option name="presentableId" value="LOCAL-01078" />
+      <created>1772660430085</created>
+      <option name="number" value="01131" />
+      <option name="presentableId" value="LOCAL-01131" />
       <option name="project" value="LOCAL" />
-      <updated>1772622455934</updated>
+      <updated>1772660430085</updated>
     </task>
-    <option name="localTasksCounter" value="1079" />
+    <option name="localTasksCounter" value="1132" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -730,31 +621,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo di set up" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo di set up" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEremita riuscito" />
-    <MESSAGE value="ROSSO: testGuardia non riuscito" />
-    <MESSAGE value="VERDE: testGuardia riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuardia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="ROSSO: testNome non riuscito" />
-    <MESSAGE value="VERDE: testNome riuscito" />
-    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
-    <MESSAGE value="VERDE: testDescrizione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="VERDE: testGuaritore riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
+    <MESSAGE value="ROSSO: testGuaritore non riuscito" />
+    <MESSAGE value="VERDE: testGuaritore non riuscito" />
+    <MESSAGE value="ROSSO: testUtilizzoPotere non riuscito" />
+    <MESSAGE value="VERDE: testUtilizzoPotere riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo setUtilizzoPotere" />
+    <MESSAGE value="REFACTORING: ridefinizione della gerarchia degli ruoli" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: ridefinizione della gerarchia degli ruoli" />
   </component>
 </project>

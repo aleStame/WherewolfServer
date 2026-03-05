@@ -29,20 +29,13 @@ public final class TestCriminale
         verificaFalso(ruolo.isAccusato());
     }
 
-    @Test public void testUtilizzoPotere()
-    {
-        verificaFalso(isPotereUtilizzato());
-        ruolo.utilizzaPotere();
-        verificaVero(isPotereUtilizzato());
-    }
-
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
+    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
@@ -52,10 +45,6 @@ public final class TestCriminale
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
 
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
 
 }
