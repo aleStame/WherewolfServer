@@ -38,6 +38,13 @@ public final class TestGuaritore
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
+    @Test public void testUtilizzoPotere()
+    {
+        verificaFalso(ruolo.isPotereUtilizzato());
+        ruolo.utilizzaPotere();
+        verificaVero(ruolo.isPotereUtilizzato());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
