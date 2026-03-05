@@ -3,6 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class Inquisitore extends Inquisizione
 {
 
-    public Inquisitore() { super(null, null, null); }
+    public Inquisitore() { super("Inquisitore", null, null); }
 
 }
