@@ -154,6 +154,8 @@ public class Ruolo
 
     public boolean isGuaritore() { return false; }
 
+    public boolean isInquisizione() { return false; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
