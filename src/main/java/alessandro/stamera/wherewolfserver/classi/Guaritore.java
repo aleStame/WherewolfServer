@@ -9,7 +9,11 @@ public final class Guaritore extends Villaggio
 
     public Guaritore()
     {
-        super("Guaritore", BIANCA, null, 1, true);
+        super
+        (
+    "Guaritore", BIANCA,
+"Ogni notte individua i giocatori uccisi e una volta per partita può indicarne uno per farlo tornare in vita.", 1, true
+        );
         potere = new Potere();
     }
 
