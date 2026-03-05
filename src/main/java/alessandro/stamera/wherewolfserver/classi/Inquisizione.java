@@ -7,7 +7,7 @@ public final class Inquisizione extends Ruolo
 
     public Inquisizione(String nome, Aura aura, String descrizione)
     {
-        super(nome, INQUISIZIONE, aura, descrizione, 0, true);
+        super(nome, INQUISIZIONE, aura, descrizione, 3, true);
     }
 
 }
