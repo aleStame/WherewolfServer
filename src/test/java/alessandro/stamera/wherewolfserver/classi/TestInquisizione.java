@@ -19,4 +19,6 @@ public final class TestInquisizione
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
 }
