@@ -21,4 +21,6 @@ public final class TestInquisizione
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isFalse(); }
+
 }

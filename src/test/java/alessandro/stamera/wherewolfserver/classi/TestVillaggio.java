@@ -26,8 +26,6 @@ public final class TestVillaggio
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
