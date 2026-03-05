@@ -42,6 +42,8 @@ public final class TestGiullare
 
     @Test public void testGiullare() { assertThat(ruolo.isGiullare()).isTrue(); }
 
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
