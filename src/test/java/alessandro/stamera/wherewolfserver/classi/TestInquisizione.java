@@ -25,6 +25,8 @@ public final class TestInquisizione
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
