@@ -16,6 +16,12 @@ public final class TestGuaritore
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione = "Ogni notte individua i giocatori uccisi e una volta per partita può indicarne uno per farlo tornare in vita.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
