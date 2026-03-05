@@ -31,13 +31,15 @@ public final class TestBoia
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBoia() { assertThat(ruolo.isBoia()).isTrue(); }
+    @Test public void testBoia() { verificaVero(ruolo.isBoia()); }
 
     @Test public void testInquisitore() { verificaFalso(ruolo.isInquisitore()); }
 
-    @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
+    @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
