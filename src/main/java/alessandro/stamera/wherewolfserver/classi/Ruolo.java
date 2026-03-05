@@ -156,7 +156,7 @@ public class Ruolo
 
     public boolean isInquisizione() { return false; }
 
-    public boolean isInquisitore() { return true; }
+    public boolean isInquisitore() { return false; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
