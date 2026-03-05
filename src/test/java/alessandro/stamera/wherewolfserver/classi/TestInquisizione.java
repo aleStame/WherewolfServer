@@ -23,6 +23,8 @@ public final class TestInquisizione
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
