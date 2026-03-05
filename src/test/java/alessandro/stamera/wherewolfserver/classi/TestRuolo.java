@@ -67,6 +67,13 @@ public final class TestRuolo
             verificaVero(ruolo.isProtetto(fazione));
     }
 
+    @Test public void testSegnalazioneInquisitore()
+    {
+        verificaLibero();
+        ruolo.segnalazioneInquisitore();
+        verificaLibero();
+    }
+
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
     private void verificaLibero() { verificaFalso(isAccusato()); }
