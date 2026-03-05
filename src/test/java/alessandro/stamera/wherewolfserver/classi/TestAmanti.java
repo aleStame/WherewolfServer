@@ -24,8 +24,6 @@ public final class TestAmanti
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isTrue(); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
