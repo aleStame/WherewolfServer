@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAccusato">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLeprecauno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLeprecauno.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testLune non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Goblin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,22 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01193" summary="ROSSO: testAura non riuscito">
-      <option name="closed" value="true" />
-      <created>1772790673198</created>
-      <option name="number" value="01193" />
-      <option name="presentableId" value="LOCAL-01193" />
-      <option name="project" value="LOCAL" />
-      <updated>1772790673198</updated>
-    </task>
-    <task id="LOCAL-01194" summary="VERDE: testAura riuscito">
-      <option name="closed" value="true" />
-      <created>1772790778264</created>
-      <option name="number" value="01194" />
-      <option name="presentableId" value="LOCAL-01194" />
-      <option name="project" value="LOCAL" />
-      <updated>1772790778264</updated>
     </task>
     <task id="LOCAL-01195" summary="REFACTORING: definizione del metodo di set up">
       <option name="closed" value="true" />
@@ -605,7 +589,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772817898349</updated>
     </task>
-    <option name="localTasksCounter" value="1242" />
+    <task id="LOCAL-01242" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1772818119665</created>
+      <option name="number" value="01242" />
+      <option name="presentableId" value="LOCAL-01242" />
+      <option name="project" value="LOCAL" />
+      <updated>1772818119665</updated>
+    </task>
+    <task id="LOCAL-01243" summary="ROSSO: testLune non riuscito">
+      <option name="closed" value="true" />
+      <created>1772818270978</created>
+      <option name="number" value="01243" />
+      <option name="presentableId" value="LOCAL-01243" />
+      <option name="project" value="LOCAL" />
+      <updated>1772818270979</updated>
+    </task>
+    <option name="localTasksCounter" value="1244" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo di set up" />
     <MESSAGE value="VERDE DIRETTO: definizione del metodo testCategoria" />
@@ -629,7 +628,6 @@
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
@@ -645,6 +643,8 @@
     <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAccusato" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="ROSSO: testLune non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testLune non riuscito" />
   </component>
 </project>
