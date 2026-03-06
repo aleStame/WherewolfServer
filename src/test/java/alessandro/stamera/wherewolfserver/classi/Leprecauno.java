@@ -3,6 +3,6 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class Leprecauno extends Ruolo
 {
 
-    public Leprecauno() { super(null, null, null, null, 0, false); }
+    public Leprecauno() { super("Leprecauno", null, null, null, 0, false); }
 
 }
