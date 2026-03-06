@@ -31,6 +31,8 @@ public final class TestLeprecauno
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
