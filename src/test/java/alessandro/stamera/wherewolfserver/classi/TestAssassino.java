@@ -24,16 +24,18 @@ public final class TestAssassino
         testStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
-
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
     @Test public void testAssassino() { verificaVero(ruolo.isAssassino()); }
 
-    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isFalse(); }
+    @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
+
+    @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

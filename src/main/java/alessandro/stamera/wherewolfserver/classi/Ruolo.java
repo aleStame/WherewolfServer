@@ -160,6 +160,10 @@ public class Ruolo
 
     public boolean isInquisitore() { return false; }
 
+    public boolean isLadra() { return false; }
+
+    public boolean isProtezionePresente(Fazione fazione) { return false; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
