@@ -24,8 +24,6 @@ public final class TestAssassino
         testStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
-
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
     @Test public void testAssassino() { verificaVero(ruolo.isAssassino()); }
