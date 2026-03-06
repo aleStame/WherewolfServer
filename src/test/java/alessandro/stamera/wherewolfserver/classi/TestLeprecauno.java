@@ -13,7 +13,7 @@ public final class TestLeprecauno
 
     @BeforeEach public void setUp() { ruolo = new Leprecauno(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Leprecauno"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Leprecauno"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 
@@ -24,7 +24,9 @@ public final class TestLeprecauno
     @Test public void testDescrizione()
     {
         String descrizione = "La prima notte riconosce le altre creature del Piccolo Popolo. Inoltre, è protetto da tutti i mistici";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
