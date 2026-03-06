@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNome non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/Leprecauno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/Leprecauno.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testFazione non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,22 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01168" summary="VERDE: testInquisitore riuscito">
-      <option name="closed" value="true" />
-      <created>1772719194387</created>
-      <option name="number" value="01168" />
-      <option name="presentableId" value="LOCAL-01168" />
-      <option name="project" value="LOCAL" />
-      <updated>1772719194387</updated>
-    </task>
-    <task id="LOCAL-01169" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1772719341103</created>
-      <option name="number" value="01169" />
-      <option name="presentableId" value="LOCAL-01169" />
-      <option name="project" value="LOCAL" />
-      <updated>1772719341103</updated>
     </task>
     <task id="LOCAL-01170" summary="VERDE DIRETTO: testInquisizione riuscito">
       <option name="closed" value="true" />
@@ -605,7 +587,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772811525834</updated>
     </task>
-    <option name="localTasksCounter" value="1217" />
+    <task id="LOCAL-01217" summary="VERDE: testNome riuscito">
+      <option name="closed" value="true" />
+      <created>1772811703150</created>
+      <option name="number" value="01217" />
+      <option name="presentableId" value="LOCAL-01217" />
+      <option name="project" value="LOCAL" />
+      <updated>1772811703150</updated>
+    </task>
+    <task id="LOCAL-01218" summary="ROSSO: testFazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1772811895382</created>
+      <option name="number" value="01218" />
+      <option name="presentableId" value="LOCAL-01218" />
+      <option name="project" value="LOCAL" />
+      <updated>1772811895382</updated>
+    </task>
+    <option name="localTasksCounter" value="1219" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,12 +618,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo di set up" />
@@ -645,6 +641,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getProtezioni" />
     <MESSAGE value="REFACTORING: definizione del metodo isPotereUtilizzato" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNome non riuscito" />
+    <MESSAGE value="VERDE: testNome riuscito" />
+    <MESSAGE value="ROSSO: testFazione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testFazione non riuscito" />
   </component>
 </project>
