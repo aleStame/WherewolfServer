@@ -22,6 +22,8 @@ public final class TestLadra
 
     @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
 
+    @Test public void testLadra() { assertThat(ruolo.isLadra()).isTrue(); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
