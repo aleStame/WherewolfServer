@@ -36,6 +36,8 @@ public final class TestLeprecauno
 
     @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
 
+    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
