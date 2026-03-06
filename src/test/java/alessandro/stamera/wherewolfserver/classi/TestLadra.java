@@ -16,4 +16,6 @@ public final class TestLadra
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
+
 }
