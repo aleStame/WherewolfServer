@@ -28,7 +28,7 @@ public final class TestLeprecauno
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
@@ -50,10 +50,12 @@ public final class TestLeprecauno
     {
         verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
-        assertThat(isAccusato()).isTrue();
+        verificaVero(isAccusato());
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

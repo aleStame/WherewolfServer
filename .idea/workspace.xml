@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testVillaggio riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAccusato">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLeprecauno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLeprecauno.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,22 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01191" summary="ROSSO: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1772790321176</created>
-      <option name="number" value="01191" />
-      <option name="presentableId" value="LOCAL-01191" />
-      <option name="project" value="LOCAL" />
-      <updated>1772790321178</updated>
-    </task>
-    <task id="LOCAL-01192" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1772790483892</created>
-      <option name="number" value="01192" />
-      <option name="presentableId" value="LOCAL-01192" />
-      <option name="project" value="LOCAL" />
-      <updated>1772790483892</updated>
     </task>
     <task id="LOCAL-01193" summary="ROSSO: testAura non riuscito">
       <option name="closed" value="true" />
@@ -603,7 +589,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772817595117</updated>
     </task>
-    <option name="localTasksCounter" value="1240" />
+    <task id="LOCAL-01240" summary="VERDE DIRETTO: testSegnalazioneInquisitore riuscito">
+      <option name="closed" value="true" />
+      <created>1772817756543</created>
+      <option name="number" value="01240" />
+      <option name="presentableId" value="LOCAL-01240" />
+      <option name="project" value="LOCAL" />
+      <updated>1772817756543</updated>
+    </task>
+    <task id="LOCAL-01241" summary="REFACTORING: definizione del metodo isAccusato">
+      <option name="closed" value="true" />
+      <created>1772817898349</created>
+      <option name="number" value="01241" />
+      <option name="presentableId" value="LOCAL-01241" />
+      <option name="project" value="LOCAL" />
+      <updated>1772817898349</updated>
+    </task>
+    <option name="localTasksCounter" value="1242" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,8 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNome non riuscito" />
-    <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo di set up" />
@@ -643,6 +643,8 @@
     <MESSAGE value="VERDE DIRETTO: testInquisizione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVillaggio riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitore riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAccusato" />
   </component>
 </project>
