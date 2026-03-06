@@ -12,7 +12,7 @@ public final class Leprecauno extends Ruolo
         (
     "Leprecauno", NESSUNA, BIANCA,
 "La prima notte riconosce le altre creature del Piccolo Popolo. Inoltre, è protetto da tutti i mistici",
-     1, false
+     1, true
         );
     }
 
