@@ -7,4 +7,6 @@ public final class Ladra extends Criminale
 
     public Ladra() { super("Ladra", BIANCA, null); }
 
+    @Override public boolean isLadra() { return true; }
+
 }
