@@ -13,8 +13,7 @@ public final class Ladra extends Criminale
     public Ladra()
     {
         super("Ladra", BIANCA, null);
-        protezioni = new Protezioni();
-        protezioni.aggiungiProtezione(CREATURE_OMBRA);
+        protezioni = getProtezioni();
         potere = new Potere();
     }
 
@@ -29,5 +28,12 @@ public final class Ladra extends Criminale
     @Override public boolean isPotereUtilizzato() { return potere.isPotereUtilizzato(); }
 
     @Override public boolean isProtezionePresente(Fazione fazione) { return protezioni.isPresente(fazione); }
+
+    private Protezioni getProtezioni()
+    {
+        Protezioni protezioni = new Protezioni();
+        protezioni.aggiungiProtezione(CREATURE_OMBRA);
+        return protezioni;
+    }
 
 }
