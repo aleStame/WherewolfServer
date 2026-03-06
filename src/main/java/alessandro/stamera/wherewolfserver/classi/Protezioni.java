@@ -18,6 +18,6 @@ public final class Protezioni
 
     public boolean isPresente(Fazione fazione) { return fazioni.contains(fazione); }
 
-    public void perdiProtezioni() { }
+    public void perdiProtezioni() { fazioni.clear(); }
 
 }
