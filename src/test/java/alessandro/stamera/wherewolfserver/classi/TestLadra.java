@@ -28,16 +28,18 @@ public final class TestLadra
 
     @Test public void testUtilizzoPotere()
     {
-        verificaFalso(ruolo.isPotereUtilizzato());
+        verificaFalso(isPotereUtilizzato());
         for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
             verificaVero(ruolo.isProtezionePresente(fazione));
         ruolo.utilizzaPotere();
-        verificaVero(ruolo.isPotereUtilizzato());
+        verificaVero(isPotereUtilizzato());
         for(Fazione fazione : values()) verificaFalso(ruolo.isProtezionePresente(fazione));
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
 
 }
