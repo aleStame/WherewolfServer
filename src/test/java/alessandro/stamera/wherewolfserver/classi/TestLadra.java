@@ -20,4 +20,6 @@ public final class TestLadra
 
     @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isFalse(); }
 
+    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isFalse(); }
+
 }
