@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLadra
@@ -23,6 +25,16 @@ public final class TestLadra
     @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
 
     @Test public void testLadra() { verificaVero(ruolo.isLadra()); }
+
+    @Test public void testUtilizzoPotere()
+    {
+        verificaFalso(ruolo.isPotereUtilizzato());
+        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
+            verificaVero(ruolo.isProtezionePresente(fazione));
+        ruolo.utilizzaPotere();
+        verificaVero(ruolo.isPotereUtilizzato());
+        for(Fazione fazione : values()) verificaFalso(ruolo.isProtezionePresente(fazione));
+    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
