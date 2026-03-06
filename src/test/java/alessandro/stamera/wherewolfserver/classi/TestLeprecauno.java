@@ -21,4 +21,10 @@ public final class TestLeprecauno
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione = "La prima notte riconosce le altre creature del Piccolo Popolo. Inoltre, è protetto da tutti i mistici";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
 }
