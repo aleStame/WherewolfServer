@@ -48,13 +48,15 @@ public final class TestLeprecauno
 
     @Test public void testSegnalazioneInquisitore()
     {
-        verificaFalso(ruolo.isAccusato());
+        verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
-        assertThat(ruolo.isAccusato()).isTrue();
+        assertThat(isAccusato()).isTrue();
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }
