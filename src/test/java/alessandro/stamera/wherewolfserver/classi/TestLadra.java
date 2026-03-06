@@ -18,8 +18,10 @@ public final class TestLadra
 
     @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
 
-    @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isFalse(); }
+    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
 
-    @Test public void testCapoGilda() { assertThat(ruolo.isCapoGilda()).isFalse(); }
+    @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
