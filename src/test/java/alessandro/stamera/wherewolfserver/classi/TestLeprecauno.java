@@ -30,10 +30,12 @@ public final class TestLeprecauno
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
-    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isFalse(); }
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
