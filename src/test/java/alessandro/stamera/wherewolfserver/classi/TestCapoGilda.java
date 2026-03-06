@@ -29,12 +29,14 @@ public final class TestCapoGilda
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
-    @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isFalse(); }
+    @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
 
-    @Test public void testLadra() { assertThat(ruolo.isLadra()).isFalse(); }
+    @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
