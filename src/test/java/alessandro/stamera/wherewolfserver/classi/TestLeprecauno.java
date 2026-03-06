@@ -1,14 +1,18 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import alessandro.stamera.wherewolfserver.classi.Fazione;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLeprecauno
 {
 
-    @Test public void testNome() { assertThat(new Leprecauno().getNome()).isEqualTo("Leprecauno"); }
+    private Ruolo ruolo;
 
-    @Test public void testFazione() { assertThat(new Leprecauno().getFazione()).isEqualTo(Fazione.NESSUNA); }
+    @BeforeEach public void setUp() { ruolo = new Leprecauno(); }
+
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Leprecauno"); }
+
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 
 }
