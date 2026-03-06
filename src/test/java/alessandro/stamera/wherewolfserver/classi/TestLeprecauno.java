@@ -46,6 +46,13 @@ public final class TestLeprecauno
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testSegnalazioneInquisitore()
+    {
+        verificaFalso(ruolo.isAccusato());
+        ruolo.segnalazioneInquisitore();
+        assertThat(ruolo.isAccusato()).isTrue();
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
