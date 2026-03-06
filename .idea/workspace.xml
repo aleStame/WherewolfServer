@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCapoGilda.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,22 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01154" summary="REFACTORING: ridefinizione della gerarchia delle classi">
-      <option name="closed" value="true" />
-      <created>1772708041840</created>
-      <option name="number" value="01154" />
-      <option name="presentableId" value="LOCAL-01154" />
-      <option name="project" value="LOCAL" />
-      <updated>1772708041840</updated>
-    </task>
-    <task id="LOCAL-01155" summary="VERDE DIRETTO: testBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1772708169408</created>
-      <option name="number" value="01155" />
-      <option name="presentableId" value="LOCAL-01155" />
-      <option name="project" value="LOCAL" />
-      <updated>1772708169408</updated>
     </task>
     <task id="LOCAL-01156" summary="ROSSO: testInquisitore non riuscito">
       <option name="closed" value="true" />
@@ -603,7 +589,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772796663676</updated>
     </task>
-    <option name="localTasksCounter" value="1203" />
+    <task id="LOCAL-01203" summary="VERDE DIRETTO: definizione del metodo testLadra">
+      <option name="closed" value="true" />
+      <created>1772796813497</created>
+      <option name="number" value="01203" />
+      <option name="presentableId" value="LOCAL-01203" />
+      <option name="project" value="LOCAL" />
+      <updated>1772796813497</updated>
+    </task>
+    <task id="LOCAL-01204" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1772796964732</created>
+      <option name="number" value="01204" />
+      <option name="presentableId" value="LOCAL-01204" />
+      <option name="project" value="LOCAL" />
+      <updated>1772796964732</updated>
+    </task>
+    <option name="localTasksCounter" value="1205" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGhoul riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiullare riuscito" />
     <MESSAGE value="REFACTORING: rimozione test inutili" />
     <MESSAGE value="VERDE DIRETTO: testGiullare riuscito" />
@@ -639,10 +640,11 @@
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoGilda riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="ROSSO: testLadra non riuscito" />
     <MESSAGE value="VERDE: testLadra riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="VERDE DIRETTO: definizione del metodo testLadra" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>

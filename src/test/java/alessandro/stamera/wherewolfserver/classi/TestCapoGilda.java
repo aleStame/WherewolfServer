@@ -31,6 +31,8 @@ public final class TestCapoGilda
 
     @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isFalse(); }
 
+    @Test public void testLadra() { assertThat(ruolo.isLadra()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
