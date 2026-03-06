@@ -26,13 +26,15 @@ public final class TestProtezioni
     @Test public void testGiulietta()
     {
         for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
-            assertThat(protezioni.isPresente(fazione)).isTrue();
+            assertThat(isPresente(fazione)).isTrue();
     }
 
     @Test public void testLadra()
     {
         protezioni.perdiProtezioni();
-        for(Fazione fazione : values()) assertThat(protezioni.isPresente(fazione)).isFalse();
+        for(Fazione fazione : values()) assertThat(isPresente(fazione)).isFalse();
     }
+
+    private boolean isPresente(Fazione fazione) { return protezioni.isPresente(fazione); }
 
 }
