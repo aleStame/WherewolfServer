@@ -22,7 +22,7 @@ public final class TestProtezioni
         protezioni = new Protezioni();
     }
 
-    @Test public void testGiulietta()
+    @Test public void testCreatureOmbra()
     {
         protezioni.aggiungiProtezione(CREATURE_OMBRA);
         verificaProtezioni(new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO });

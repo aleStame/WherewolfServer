@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestEremita
@@ -41,6 +43,12 @@ public final class TestEremita
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    @Test public void testProtezioni()
+    {
+        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
+            verificaVero(ruolo.isProtetto(fazione));
+    }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

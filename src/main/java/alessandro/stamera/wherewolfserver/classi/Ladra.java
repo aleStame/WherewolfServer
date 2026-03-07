@@ -21,13 +21,15 @@ public final class Ladra extends Criminale
 
     @Override public void utilizzaPotere()
     {
-        protezioni.perdiProtezioni();
+        perdiProtezioni();
         potere.utilizzaPotere();
     }
 
     @Override public boolean isPotereUtilizzato() { return potere.isPotereUtilizzato(); }
 
     @Override public boolean isProtezionePresente(Fazione fazione) { return protezioni.isPresente(fazione); }
+
+    @Override public void perdiProtezioni() { protezioni.perdiProtezioni(); }
 
     private Protezioni getProtezioni()
     {

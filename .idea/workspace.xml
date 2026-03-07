@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPerditaProtezioni riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCappuccettoRosso.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtetto">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ladra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ladra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,14 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01211" summary="ROSSO: testUtilizzoPotere non riuscito">
-      <option name="closed" value="true" />
-      <created>1772798258139</created>
-      <option name="number" value="01211" />
-      <option name="presentableId" value="LOCAL-01211" />
-      <option name="project" value="LOCAL" />
-      <updated>1772798258139</updated>
     </task>
     <task id="LOCAL-01212" summary="VERDE: testUtilizzoPotere riuscito">
       <option name="closed" value="true" />
@@ -608,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772881738871</updated>
     </task>
-    <option name="localTasksCounter" value="1260" />
+    <task id="LOCAL-01260" summary="REFACTORING: definizione del metodo isProtetto">
+      <option name="closed" value="true" />
+      <created>1772904249849</created>
+      <option name="number" value="01260" />
+      <option name="presentableId" value="LOCAL-01260" />
+      <option name="project" value="LOCAL" />
+      <updated>1772904249849</updated>
+    </task>
+    <option name="localTasksCounter" value="1261" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -623,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testGhoul riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiullare riuscito" />
@@ -648,6 +646,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getProtezioni" />
     <MESSAGE value="ROSSO: testPerditaProtezioni non riuscito" />
     <MESSAGE value="VERDE: testPerditaProtezioni riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPerditaProtezioni riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtetto" />
   </component>
 </project>
