@@ -42,6 +42,8 @@ public final class TestLeprecauno
 
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
+    @Test public void testLeprecauno() { verificaVero(ruolo.isLeprecauno()); }
+
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
