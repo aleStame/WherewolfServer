@@ -54,13 +54,13 @@ public final class TestCappuccettoRosso
 
     @Test public void testProtezioni()
     {
-        for(Fazione fazione : new Fazione[]{ LUPO_BRANCO, LUPO_SOLITARIO }) verificaVero(ruolo.isProtetto(fazione));
+        for(Fazione fazione : new Fazione[]{ LUPO_BRANCO, LUPO_SOLITARIO }) verificaVero(isProtetto(fazione));
     }
 
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
-        for(Fazione fazione : values()) verificaFalso(ruolo.isProtetto(fazione));
+        for(Fazione fazione : values()) verificaFalso(isProtetto(fazione));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -68,5 +68,7 @@ public final class TestCappuccettoRosso
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isProtetto(Fazione fazione) { return ruolo.isProtetto(fazione); }
 
 }
