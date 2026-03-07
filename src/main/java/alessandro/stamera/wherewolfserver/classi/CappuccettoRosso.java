@@ -19,13 +19,19 @@ public final class CappuccettoRosso extends Villaggio
           "attacca Cappuccetto rosso, quest'ultima apre gli occhi e lo riconosce, anche se fosse Romeo o protetta dalla Strega",
      1, false
         );
-        protezioni = new Protezioni();
-        Fazione[] fazioni = new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO };
-        for(Fazione fazione : fazioni) protezioni.aggiungiProtezione(fazione);
+        this.protezioni = getProtezioni();
     }
 
     @Override public boolean isCappuccettoRosso() { return true; }
 
     @Override public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
+
+    private Protezioni getProtezioni()
+    {
+        Protezioni protezioni = new Protezioni();
+        Fazione[] fazioni = new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO };
+        for(Fazione fazione : fazioni) protezioni.aggiungiProtezione(fazione);
+        return protezioni;
+    }
 
 }

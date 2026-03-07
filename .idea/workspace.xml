@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaProtezioni">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCappuccettoRosso.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testProtezioni riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/CappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/CappuccettoRosso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,22 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01205" summary="VERDE DIRETTO: testLadra riuscito">
-      <option name="closed" value="true" />
-      <created>1772797116354</created>
-      <option name="number" value="01205" />
-      <option name="presentableId" value="LOCAL-01205" />
-      <option name="project" value="LOCAL" />
-      <updated>1772797116354</updated>
-    </task>
-    <task id="LOCAL-01206" summary="REFACTORING: definizione del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1772797261247</created>
-      <option name="number" value="01206" />
-      <option name="presentableId" value="LOCAL-01206" />
-      <option name="project" value="LOCAL" />
-      <updated>1772797261248</updated>
     </task>
     <task id="LOCAL-01207" summary="ROSSO: testLadra non riuscito">
       <option name="closed" value="true" />
@@ -607,7 +591,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772880482877</updated>
     </task>
-    <option name="localTasksCounter" value="1254" />
+    <task id="LOCAL-01254" summary="ROSSO: testProtezioni non riuscito">
+      <option name="closed" value="true" />
+      <created>1772880880458</created>
+      <option name="number" value="01254" />
+      <option name="presentableId" value="LOCAL-01254" />
+      <option name="project" value="LOCAL" />
+      <updated>1772880880458</updated>
+    </task>
+    <task id="LOCAL-01255" summary="VERDE: testProtezioni riuscito">
+      <option name="closed" value="true" />
+      <created>1772881078779</created>
+      <option name="number" value="01255" />
+      <option name="presentableId" value="LOCAL-01255" />
+      <option name="project" value="LOCAL" />
+      <updated>1772881078779</updated>
+    </task>
+    <option name="localTasksCounter" value="1256" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -622,8 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
@@ -647,6 +645,8 @@
     <MESSAGE value="ROSSO: testCappuccettoRosso non riuscito" />
     <MESSAGE value="VERDE: testCappuccettoRosso riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaProtezioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaProtezioni" />
+    <MESSAGE value="ROSSO: testProtezioni non riuscito" />
+    <MESSAGE value="VERDE: testProtezioni riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testProtezioni riuscito" />
   </component>
 </project>
