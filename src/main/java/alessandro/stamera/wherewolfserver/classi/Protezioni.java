@@ -13,10 +13,10 @@ public final class Protezioni
 
     public void aggiungiProtezione(Categoria categoria)
     {
-        for(Fazione fazione : values()) if(fazione.getCategoria() == categoria) fazioni.add(fazione);
+        for(Fazione fazione : values()) if(fazione.getCategoria() == categoria) aggiungiProtezione(fazione);
     }
 
-    public void aggiungiProtezione(Fazione fazione) { }
+    public void aggiungiProtezione(Fazione fazione) { fazioni.add(fazione); }
 
     public boolean isPresente(Fazione fazione) { return fazioni.contains(fazione); }
 
