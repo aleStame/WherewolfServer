@@ -166,6 +166,8 @@ public class Ruolo
 
     public boolean isLeprecauno() { return false; }
 
+    public void perdiProtezioni() { }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
