@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestCappuccettoRosso
@@ -48,6 +50,11 @@ public final class TestCappuccettoRosso
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
+
+    @Test public void testProtezioni()
+    {
+        for(Fazione fazione : new Fazione[]{ LUPO_BRANCO, LUPO_SOLITARIO }) verificaVero(ruolo.isProtetto(fazione));
+    }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
