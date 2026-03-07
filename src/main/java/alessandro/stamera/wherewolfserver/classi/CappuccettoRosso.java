@@ -26,6 +26,8 @@ public final class CappuccettoRosso extends Villaggio
 
     @Override public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
 
+    @Override public void perdiProtezioni() { protezioni.perdiProtezioni(); }
+
     private Protezioni getProtezioni()
     {
         Protezioni protezioni = new Protezioni();
