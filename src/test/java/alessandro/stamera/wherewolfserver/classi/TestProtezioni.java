@@ -20,16 +20,23 @@ public final class TestProtezioni
     @BeforeEach public void setUp()
     {
         protezioni = new Protezioni();
-        protezioni.aggiungiProtezione(CREATURE_OMBRA);
     }
 
     @Test public void testGiulietta()
     {
+        protezioni.aggiungiProtezione(CREATURE_OMBRA);
         for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
             assertThat(isPresente(fazione)).isTrue();
     }
 
-    @Test public void testLadra()
+    @Test public void testCappuccettoRosso()
+    {
+        Fazione[] fazioni = new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO };
+        for(Fazione fazione : fazioni) protezioni.aggiungiProtezione(fazione);
+        for(Fazione fazione : fazioni) assertThat(isPresente(fazione)).isTrue();
+    }
+
+    @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
         for(Fazione fazione : values()) assertThat(isPresente(fazione)).isFalse();

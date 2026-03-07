@@ -16,6 +16,8 @@ public final class Protezioni
         for(Fazione fazione : values()) if(fazione.getCategoria() == categoria) fazioni.add(fazione);
     }
 
+    public void aggiungiProtezione(Fazione fazione) { }
+
     public boolean isPresente(Fazione fazione) { return fazioni.contains(fazione); }
 
     public void perdiProtezioni() { fazioni.clear(); }
