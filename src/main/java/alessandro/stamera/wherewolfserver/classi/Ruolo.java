@@ -164,6 +164,8 @@ public class Ruolo
 
     public boolean isProtezionePresente(Fazione fazione) { return false; }
 
+    public boolean isLeprecauno() { return true; }
+
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
