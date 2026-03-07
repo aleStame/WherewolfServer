@@ -16,4 +16,6 @@ public final class Leprecauno extends Ruolo
         );
     }
 
+    @Override public boolean isLeprecauno() { return true; }
+
 }
