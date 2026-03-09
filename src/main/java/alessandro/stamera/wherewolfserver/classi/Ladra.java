@@ -12,7 +12,12 @@ public final class Ladra extends Criminale
 
     public Ladra()
     {
-        super("Ladra", BIANCA, null);
+        super
+        (
+    "Ladra", BIANCA,
+"La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte può aprire gli occhi nel turno di un " +
+          "mistico. La prima volta che viene attaccata, è protetta dalle creature dell'ombra."
+        );
         protezioni = getProtezioni();
         potere = new Potere();
     }
