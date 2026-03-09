@@ -14,4 +14,10 @@ public final class TestTratti
         assertThat(tratti.isPresente(tratto)).isTrue();
     }
 
+    @ParameterizedTest @EnumSource(Tratto.class) public void testTrattoAssente(Tratto tratto)
+    {
+        Tratti tratti = new Tratti();
+        assertThat(tratti.isPresente(tratto)).isFalse();
+    }
+
 }
