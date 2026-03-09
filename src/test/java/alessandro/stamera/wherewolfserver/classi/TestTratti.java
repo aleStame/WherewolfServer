@@ -15,10 +15,12 @@ public final class TestTratti
     @ParameterizedTest @EnumSource(Tratto.class) public void testTrattoPresente(Tratto tratto)
     {
         tratti.aggiungi(tratto);
-        assertThat(tratti.isPresente(tratto)).isTrue();
+        assertThat(isPresente(tratto)).isTrue();
     }
 
     @ParameterizedTest @EnumSource(Tratto.class)
-    public void testTrattoAssente(Tratto tratto) { assertThat(tratti.isPresente(tratto)).isFalse(); }
+    public void testTrattoAssente(Tratto tratto) { assertThat(isPresente(tratto)).isFalse(); }
+
+    private boolean isPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
 }
