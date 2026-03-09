@@ -9,7 +9,13 @@ public final class Protezioni
 
     private final List<Fazione> fazioni;
 
-    public Protezioni() { fazioni = new ArrayList<>(); }
+    private final List<Ruolo> ruoli;
+
+    public Protezioni()
+    {
+        fazioni = new ArrayList<>();
+        ruoli = new ArrayList<>();
+    }
 
     public void aggiungiProtezione(Categoria categoria)
     {
@@ -20,10 +26,13 @@ public final class Protezioni
 
     public boolean isPresente(Fazione fazione) { return fazioni.contains(fazione); }
 
-    public boolean isPresente(Ruolo ruolo) { return false; }
+    public boolean isPresente(Ruolo ruolo)
+    {
+        return ruoli.stream().anyMatch(elemento -> elemento.getNome().equals(ruolo.getNome()));
+    }
 
     public void perdiProtezioni() { fazioni.clear(); }
 
-    public void aggiungiLupi() { }
+    public void aggiungiLupi() { for(Ruolo ruolo : new Ruoli()) if(ruolo.isLupo()) ruoli.add(ruolo); }
 
 }
