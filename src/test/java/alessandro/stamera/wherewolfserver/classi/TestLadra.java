@@ -14,14 +14,14 @@ public final class TestLadra
 
     @BeforeEach public void setUp() { ruolo = new Ladra(); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Ladra"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Ladra"); }
 
     @Test public void testDescrizione()
     {
         String descrizione =
             "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte può aprire gli occhi nel turno di un " +
             "mistico. La prima volta che viene attaccata, è protetta dalle creature dell'ombra.";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
@@ -43,6 +43,8 @@ public final class TestLadra
         verificaVero(isPotereUtilizzato());
         for(Fazione fazione : values()) verificaFalso(ruolo.isProtezionePresente(fazione));
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
