@@ -1,5 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
+
 public final class CapoBranco extends Lupo
 {
 
@@ -12,6 +15,8 @@ public final class CapoBranco extends Lupo
           "viene ucciso.",
      1
         );
+        Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
+        for(Tratto tratto : tratti) aggiungiTratto(tratto);
     }
 
     @Override public boolean isCapoBranco() { return true; }

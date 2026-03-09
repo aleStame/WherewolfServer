@@ -22,6 +22,8 @@ public class Ruolo
 
     private final Protezioni protezioni;
 
+    private final Tratti tratti;
+
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
     {
         this.nome = nome;
@@ -34,6 +36,7 @@ public class Ruolo
         this.mistico = mistico;
         libera();
         protezioni = new Protezioni();
+        tratti = new Tratti();
     }
 
     public String getNome() { return nome; }
@@ -168,7 +171,9 @@ public class Ruolo
 
     public void perdiProtezioni() { }
 
-    public boolean isTrattoPresente(Tratto tratto) { return false; }
+    public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
+
+    public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
