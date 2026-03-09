@@ -16,7 +16,7 @@ public final class TestRuoli
             new Giulietta(), new Giullare(), new Goblin(), new GuardiaCorrotta(), new GuardiaPrincipale(), new Guaritore(), new Inquisitore(),
             new Ladra(), new LupoBranco(), new LupoReietto(), new LupoSolitario()
         };
-        assertThat(new Ruoli()).containsExactly(soluzione);
+        assertThat(new Ruoli()).usingRecursiveFieldByFieldElementComparator().containsExactly(soluzione);
     }
 
 }
