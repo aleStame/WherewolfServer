@@ -20,6 +20,10 @@ public final class Protezioni
 
     public boolean isPresente(Fazione fazione) { return fazioni.contains(fazione); }
 
+    public boolean isPresente(Ruolo ruolo) { return false; }
+
     public void perdiProtezioni() { fazioni.clear(); }
+
+    public void aggiungiLupi() { }
 
 }

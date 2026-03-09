@@ -30,9 +30,9 @@ public final class TestProtezioni
 
     @Test public void testCappuccettoRosso()
     {
-        Fazione[] fazioni = new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO };
-        for(Fazione fazione : fazioni) protezioni.aggiungiProtezione(fazione);
-        verificaProtezioni(fazioni);
+        protezioni.aggiungiLupi();
+        Ruolo[] ruoli = new Ruolo[] { new CapoBranco(), new LupoBranco(), new GiovaneLupo(), new LupoReietto(), new LupoSolitario() };
+        for(Ruolo ruolo : ruoli) assertThat(protezioni.isPresente(ruolo)).isTrue();
     }
 
     @Test public void testPerdiProtezioni()
