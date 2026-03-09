@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestCapoBranco
@@ -32,6 +34,12 @@ public final class TestCapoBranco
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
     @Test public void testLupo() { verificaVero(ruolo.isLupo()); }
+
+    @Test public void testTratti()
+    {
+        Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
+        for(Tratto tratto : tratti) verificaVero(ruolo.isTrattoPresente(tratto));
+    }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
