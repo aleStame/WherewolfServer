@@ -16,6 +16,14 @@ public final class TestLadra
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Ladra"); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte può aprire gli occhi nel turno di un " +
+            "mistico. La prima volta che viene attaccata, è protetta dalle creature dell'ombra.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
