@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestTratti
@@ -26,6 +27,7 @@ public final class TestTratti
     {
         tratti.aggiungiLupi();
         Ruolo[] ruoli = new Ruolo[] { new CapoBranco(), new LupoBranco(), new GiovaneLupo(), new LupoReietto(), new LupoSolitario() };
+        assertThat(isPresente(PROTETTO)).isTrue();
         for(Ruolo ruolo : ruoli) assertThat(tratti.isProtezionePresente(ruolo)).isTrue();
     }
 
