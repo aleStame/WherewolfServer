@@ -14,4 +14,8 @@ public final class Tratti
 
     public boolean isPresente(Tratto tratto) { return tratti.contains(tratto); }
 
+    public void aggiungiLupi() { }
+
+    public boolean isProtezionePresente(Ruolo ruolo) { return false; }
+
 }
