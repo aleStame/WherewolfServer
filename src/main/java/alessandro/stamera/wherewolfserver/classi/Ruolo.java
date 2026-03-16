@@ -60,7 +60,12 @@ public class Ruolo
 
     public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
 
-    public int getNumeroVoti() { return voti; }
+    public int getNumeroVoti()
+    {
+        int risultato = voti;
+        if(isMaledetto()) risultato++;
+        return risultato;
+    }
 
     public void annullaVoti() { voti = 0; }
 
