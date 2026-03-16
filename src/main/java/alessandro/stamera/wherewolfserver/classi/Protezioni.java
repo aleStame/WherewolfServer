@@ -27,9 +27,7 @@ public final class Protezioni
     {
         List<Ruolo> ruoliAdatti =
             getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
-        Ruolo[] risultato = new Ruolo[ruoliAdatti.size()];
-        ruoliAdatti.toArray(risultato);
-        aggiungiProtezione(risultato);
+        aggiungiProtezione(toArray(ruoliAdatti));
     }
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(getLupi()); }
@@ -43,11 +41,12 @@ public final class Protezioni
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
 
-    private Ruolo[] getLupi()
+    private Ruolo[] getLupi() { return toArray(getRuoli()); }
+
+    private Ruolo[] toArray(List<Ruolo> ruoli)
     {
-        List<Ruolo> lupi = getRuoli();
-        Ruolo[] risultato = new Ruolo[lupi.size()];
-        lupi.toArray(risultato);
+        Ruolo[] risultato = new Ruolo[ruoli.size()];
+        ruoli.toArray(risultato);
         return risultato;
     }
 
