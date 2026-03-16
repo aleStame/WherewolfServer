@@ -2,7 +2,12 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadinoLupo
@@ -25,6 +30,14 @@ public final class TestContadinoLupo
     @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoEroe()); }
 
     @Test public void testContadinoLupo() { verificaVero(ruolo.isContadinoLupo()); }
+
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
+    public void testAttaccoLupi(IstanzaRuolo istanza)
+    {
+        verificaFalso(ruolo.attacco(istanza.getRuolo()));
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
+    }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
