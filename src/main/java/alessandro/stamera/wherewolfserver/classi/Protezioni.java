@@ -32,25 +32,23 @@ public final class Protezioni
         aggiungiProtezione(risultato);
     }
 
-    public void aggiungiProtezioneLupi()
-    {
-        List<Ruolo> lupi = stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList();
-        Ruolo[] risultato = new Ruolo[lupi.size()];
-        lupi.toArray(risultato);
-        aggiungiProtezione(risultato);
-    }
+    public void aggiungiProtezioneLupi() { aggiungiProtezione(getLupi()); }
 
-    public void aggiungiProtezione(Ruolo... ruoli)
+    public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
+
+    public void perdiProtezioni() { ruoli.clear(); }
+
+    private void aggiungiProtezione(Ruolo... ruoli)
     {
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
 
-    public boolean isPresente(Ruolo ruolo)
+    private Ruolo[] getLupi()
     {
-        System.out.println(ruoli);
-        return ruoli.contains(ruolo);
+        List<Ruolo> lupi = stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList();
+        Ruolo[] risultato = new Ruolo[lupi.size()];
+        lupi.toArray(risultato);
+        return risultato;
     }
-
-    public void perdiProtezioni() { ruoli.clear(); }
 
 }
