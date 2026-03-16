@@ -161,6 +161,8 @@ public class Ruolo
 
     public boolean isLadra() { return false; }
 
+    public boolean attacco(Ruolo ruolo) { return !isProtezionePresente(ruolo); }
+
     public boolean isProtezionePresente(Ruolo ruolo) { return tratti.isProtezionePresente(ruolo); }
 
     public boolean isLeprecauno() { return false; }
@@ -176,8 +178,6 @@ public class Ruolo
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
-
-    public boolean attacco(Ruolo ruolo) { return true; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
