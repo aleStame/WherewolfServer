@@ -25,11 +25,13 @@ public final class Tratti
         protezioni.aggiungiProtezione(LUPO_BRANCO, LUPO_SOLITARIO);
     }
 
+    public boolean isMaledetto() { return false; }
+
+    public void maledizione() {  }
+
     public boolean isPresente(Tratto tratto) { return tratti.contains(tratto); }
 
     public boolean isProtezionePresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
-
-    public void aggiungiProtezione(Fazione... fazione) { protezioni.aggiungiProtezione(fazione); }
 
     public void aggiungiProtezione(Categoria categoria) { protezioni.aggiungiProtezione(categoria); }
 

@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -29,6 +30,13 @@ public final class TestTratti
         tratti.aggiungiLupi();
         verificaTrattoPresente(PROTETTO);
         verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
+    }
+
+    @Test public void testMaledizione()
+    {
+        assertThat(tratti.isMaledetto()).isFalse();
+        tratti.maledizione();
+        verificaVero(tratti.isMaledetto());
     }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
