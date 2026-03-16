@@ -167,10 +167,6 @@ public class Ruolo
 
     public void aggiungiProtezioneLupi() { tratti.aggiungiProtezioneLupi(); }
 
-    public void aggiungiProtezione(Fazione... fazione) { tratti.aggiungiProtezione(fazione); }
-
-    public void aggiungiProtezione(Ruolo... ruoli) { for(Ruolo ruolo : ruoli) tratti.aggiungiProtezione(ruolo); }
-
     public void aggiungiProtezione(Categoria categoria) { tratti.aggiungiProtezione(categoria); }
 
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
@@ -178,6 +174,8 @@ public class Ruolo
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
+
+    public boolean attacco(Ruolo ruolo) { return true; }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 

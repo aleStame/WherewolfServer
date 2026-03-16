@@ -2,6 +2,10 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EnumSource;
+
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
@@ -76,6 +80,9 @@ public final class TestRuolo
         ruolo.segnalazioneInquisitore();
         verificaLibero();
     }
+
+    @ParameterizedTest @EnumSource(IstanzaRuolo.class)
+    public void testAttaccoRuoloNonProtetto(IstanzaRuolo istanza) { verificaVero(ruolo.attacco(istanza.getRuolo())); }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
