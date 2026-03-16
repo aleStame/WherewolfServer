@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-03-16T14:13:41" hostname="ALESSANDRO" time="0.17">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-03-16T14:18:02" hostname="ALESSANDRO" time="0.077">
   <properties/>
-  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.007"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.003"/>
-  <testcase name="testPerditaProtezioni()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.017"/>
-  <testcase name="testCacciatore()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
-  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
-  <testcase name="testCacciatoreDiVampiri()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.003"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.003"/>
-  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.003"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.006"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.008"/>
-  <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.004"/>
-  <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.008"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
-  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.026"/>
-  <system-out><![CDATA[Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
+  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.001"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.008"/>
+  <testcase name="testPerditaProtezioni()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.004"/>
+  <testcase name="testCacciatore()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.001"/>
+  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="testCacciatoreDiVampiri()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.001"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.001"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.001"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
+  <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.005"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso" time="0.002"/>
+  <system-out><![CDATA[[]
 []
 []
 []
@@ -56,20 +52,7 @@ Protezioni caricate
 []
 []
 []
-[]
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
-Protezioni caricate
 [alessandro.stamera.wherewolfserver.classi.GiovaneLupo@30990c1b, alessandro.stamera.wherewolfserver.classi.LupoBranco@2453f95d, alessandro.stamera.wherewolfserver.classi.LupoReietto@44828f6b, alessandro.stamera.wherewolfserver.classi.LupoSolitario@2dbe250d, alessandro.stamera.wherewolfserver.classi.CapoBranco@553f1d75]
-Protezioni caricate
-Protezioni caricate
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
