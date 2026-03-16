@@ -39,6 +39,14 @@ public final class TestTratti
         verificaVero(tratti.isMaledetto());
     }
 
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
+    public void testCreatureOmbra(IstanzaRuolo istanza)
+    {
+        tratti.aggiungiProtezioneCreatureOmbra();
+        verificaTrattoPresente(PROTETTO);
+        verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
+    }
+
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
 
     private boolean isPresente(Tratto tratto) { return tratti.isPresente(tratto); }
