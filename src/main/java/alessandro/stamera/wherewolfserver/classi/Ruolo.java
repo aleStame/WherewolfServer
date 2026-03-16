@@ -1,7 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 
 public class Ruolo
 {
@@ -39,7 +42,12 @@ public class Ruolo
 
     public String getNome() { return nome; }
 
-    public Aura getAura() { return aura; }
+    public Aura getAura()
+    {
+        Aura risultato = aura;
+        if(isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO)) risultato = NERA;
+        return risultato;
+    }
 
     public String getDescrizione() { return descrizione; }
 
