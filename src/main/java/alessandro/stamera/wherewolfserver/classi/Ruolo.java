@@ -5,6 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
 
 public class Ruolo
 {
@@ -182,6 +183,8 @@ public class Ruolo
     public void aggiungiProtezione(Ruolo ruolo) { tratti.aggiungiProtezione(ruolo); }
 
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
+
+    public boolean isMaledetto() { return isTrattoPresente(MALEDETTO); }
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
