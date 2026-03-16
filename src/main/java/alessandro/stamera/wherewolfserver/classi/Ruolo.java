@@ -169,6 +169,8 @@ public class Ruolo
 
     public void aggiungiProtezione(Categoria categoria) { tratti.aggiungiProtezione(categoria); }
 
+    public void aggiungiProtezione(Ruolo ruolo) { tratti.aggiungiProtezione(ruolo); }
+
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
