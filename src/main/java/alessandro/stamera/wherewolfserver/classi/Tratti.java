@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 
@@ -25,9 +26,9 @@ public final class Tratti
         protezioni.aggiungiProtezione(LUPO_BRANCO, LUPO_SOLITARIO);
     }
 
-    public boolean isMaledetto() { return false; }
+    public boolean isMaledetto() { return isPresente(MALEDETTO); }
 
-    public void maledizione() {  }
+    public void maledizione() { aggiungi(MALEDETTO); }
 
     public boolean isPresente(Tratto tratto) { return tratti.contains(tratto); }
 
