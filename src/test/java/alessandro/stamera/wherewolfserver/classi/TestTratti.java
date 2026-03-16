@@ -17,7 +17,7 @@ public final class TestTratti
     @ParameterizedTest @EnumSource(Tratto.class) public void testTrattoPresente(Tratto tratto)
     {
         tratti.aggiungi(tratto);
-        verificaVero(isPresente(tratto));
+        verificaTrattoPresente(tratto);
     }
 
     @ParameterizedTest @EnumSource(Tratto.class)
@@ -27,12 +27,14 @@ public final class TestTratti
     public void testCappuccettoRosso(IstanzaRuolo istanza)
     {
         tratti.aggiungiLupi();
-        verificaVero(isPresente(PROTETTO));
+        verificaTrattoPresente(PROTETTO);
         verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
     }
 
-    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+    private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
 
     private boolean isPresente(Tratto tratto) { return tratti.isPresente(tratto); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
