@@ -23,6 +23,12 @@ public final class TestContadinoMostro
         assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
+    /*@Test public void testVoti()
+    {
+        ruolo.incrementaVoti(2);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(3);
+    }*/
+
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
     @Test public void testContadinoNormale() { verificaFalso(ruolo.isContadinoNormale()); }

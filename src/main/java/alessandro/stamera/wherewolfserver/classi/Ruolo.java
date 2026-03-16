@@ -190,7 +190,10 @@ public class Ruolo
 
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
 
-    private boolean controlloTrattiOscuri() { return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO); }
+    private boolean controlloTrattiOscuri()
+    {
+        return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
+    }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 

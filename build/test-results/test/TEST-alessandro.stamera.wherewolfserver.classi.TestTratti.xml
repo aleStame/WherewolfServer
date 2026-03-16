@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestTratti" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-03-16T16:43:30" hostname="ALESSANDRO" time="0.102">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestTratti" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-03-16T16:52:18" hostname="ALESSANDRO" time="0.071">
   <properties/>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
   <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.007"/>
-  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.004"/>
-  <testcase name="[4] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.012"/>
-  <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.008"/>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
-  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.001"/>
-  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.001"/>
+  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
   <testcase name="[4] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
-  <system-out><![CDATA[[alessandro.stamera.wherewolfserver.classi.GiovaneLupo@4f071df8, alessandro.stamera.wherewolfserver.classi.LupoBranco@4de41af9, alessandro.stamera.wherewolfserver.classi.LupoReietto@56ace400, alessandro.stamera.wherewolfserver.classi.LupoSolitario@47404bea, alessandro.stamera.wherewolfserver.classi.CapoBranco@305f7627]
+  <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.006"/>
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
+  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
+  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
+  <testcase name="[4] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.004"/>
+  <system-out><![CDATA[[alessandro.stamera.wherewolfserver.classi.GiovaneLupo@56ace400, alessandro.stamera.wherewolfserver.classi.LupoBranco@47404bea, alessandro.stamera.wherewolfserver.classi.LupoReietto@305f7627, alessandro.stamera.wherewolfserver.classi.LupoSolitario@5d018107, alessandro.stamera.wherewolfserver.classi.CapoBranco@6cbcf243]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

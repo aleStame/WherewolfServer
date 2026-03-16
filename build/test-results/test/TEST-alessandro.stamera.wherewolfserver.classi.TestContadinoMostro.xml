@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" tests="8" skipped="0" failures="1" errors="0" timestamp="2026-03-16T16:43:28" hostname="ALESSANDRO" time="0.051">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" tests="9" skipped="0" failures="1" errors="0" timestamp="2026-03-16T16:52:16" hostname="ALESSANDRO" time="0.102">
   <properties/>
-  <testcase name="testMaledetto()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.035">
-    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
-Expecting value to be true but was false
+  <testcase name="testMaledetto()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.002"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.002"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.006"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.003"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.0"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.006"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.002"/>
+  <testcase name="incrementaVoti()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.051">
+    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: 3&#13;&#10; but was: 2" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+expected: 3
+ but was: 2
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.verificaVero(TestContadinoMostro.java:36)
-	at app//alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.testMaledetto(TestContadinoMostro.java:22)
+	at app//alessandro.stamera.wherewolfserver.classi.TestContadinoMostro.incrementaVoti(TestContadinoMostro.java:29)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -90,13 +98,6 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.002"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoMostro" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
