@@ -16,9 +16,7 @@ public final class RuoliFactory
         for(IstanzaRuolo istanza : values())
         {
             Ruolo ruolo = istanza.getRuolo();
-            String nome = ruolo.getNome();
-            if(nome.equals("Contadino")) nome = getNomeContadino(ruolo);
-            ruoli.put(nome, ruolo);
+            ruoli.put(getNome(ruolo), ruolo);
         }
         getRuolo("Cappuccetto rosso").aggiungiProtezioneLupi();
         getRuolo("Eremita").aggiungiProtezione(CREATURE_OMBRA);
@@ -26,6 +24,14 @@ public final class RuoliFactory
     }
 
     public Ruolo getRuolo(String nome) { return ruoli.get(nome); }
+
+    private String getNome(Ruolo ruolo)
+    {
+        String nome;
+        if(ruolo.isContadino()) nome = getNomeContadino(ruolo);
+        else nome = ruolo.getNome();
+        return nome;
+    }
 
     private String getNomeContadino(Ruolo ruolo)
     {

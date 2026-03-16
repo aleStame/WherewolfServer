@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: sistemazione della gerarchia dei contadini" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomeContadino" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,14 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01234" summary="VERDE DIRETTO: testGhoul riuscito">
-      <option name="closed" value="true" />
-      <created>1772816206367</created>
-      <option name="number" value="01234" />
-      <option name="presentableId" value="LOCAL-01234" />
-      <option name="project" value="LOCAL" />
-      <updated>1772816206367</updated>
     </task>
     <task id="LOCAL-01235" summary="VERDE DIRETTO: testGiullare riuscito">
       <option name="closed" value="true" />
@@ -630,7 +622,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773670459969</updated>
     </task>
-    <option name="localTasksCounter" value="1283" />
+    <task id="LOCAL-01283" summary="REFACTORING: definizione del metodo getNomeContadino">
+      <option name="closed" value="true" />
+      <created>1773670727968</created>
+      <option name="number" value="01283" />
+      <option name="presentableId" value="LOCAL-01283" />
+      <option name="project" value="LOCAL" />
+      <updated>1773670727968</updated>
+    </task>
+    <option name="localTasksCounter" value="1284" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -645,7 +645,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaProtezioni" />
     <MESSAGE value="ROSSO: testProtezioni non riuscito" />
     <MESSAGE value="VERDE: testProtezioni riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getProtezioni" />
@@ -670,7 +669,8 @@
     <MESSAGE value="VERDE: testCappuccettoRosso riuscito" />
     <MESSAGE value="REFACTORING: implementazione del pattern Singleton per i controlli sulle protezioni" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia dei contadini" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: sistemazione della gerarchia dei contadini" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeContadino" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeContadino" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
