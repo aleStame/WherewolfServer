@@ -1,18 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIOVANE_LUPO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
+import org.junit.jupiter.params.provider.EnumSource;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 
 public final class TestProtezioni
 {
@@ -24,26 +16,28 @@ public final class TestProtezioni
         protezioni = new Protezioni();
     }
 
-    @Test public void testCreatureOmbra()
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO" })
+    public void testCreatureOmbra(IstanzaRuolo istanza)
     {
         protezioni.aggiungiProtezioneCreatureOmbra();
-        verificaProtezioni(new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO });
+        verificaPresenza(istanza);
     }
 
-    @Test public void testCappuccettoRosso()
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO" })
+    public void testCappuccettoRosso(IstanzaRuolo istanza)
     {
-        protezioni.aggiungiProtezione(Fazione.LUPO_BRANCO, Fazione.LUPO_SOLITARIO);
-        verificaProtezioni(new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO });
+        protezioni.aggiungiProtezioneLupi();
+        verificaPresenza(istanza);
     }
 
-    @Test public void testPerdiProtezioni()
+    @ParameterizedTest @EnumSource(IstanzaRuolo.class) public void testPerdiProtezioni(IstanzaRuolo istanza)
     {
         protezioni.perdiProtezioni();
-        for(IstanzaRuolo istanza : values()) assertThat(isPresente(istanza.getRuolo())).isFalse();
+        assertThat(isPresente(istanza)).isFalse();
     }
 
-    private void verificaProtezioni(IstanzaRuolo[] istanzaRuolo) { for(IstanzaRuolo x : istanzaRuolo) assertThat(isPresente(x.getRuolo())).isTrue(); }
+    private void verificaPresenza(IstanzaRuolo istanza) { assertThat(isPresente(istanza)).isTrue(); }
 
-    private boolean isPresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
+    private boolean isPresente(IstanzaRuolo istanza) { return protezioni.isPresente(istanza.getRuolo()); }
 
 }
