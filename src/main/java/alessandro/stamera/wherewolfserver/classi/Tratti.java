@@ -34,7 +34,11 @@ public final class Tratti
         protezioni.aggiungiProtezioneLupi();
     }
 
-    public void aggiungiProtezioneCreatureOmbra() { }
+    public void aggiungiProtezioneCreatureOmbra()
+    {
+        if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO);
+        protezioni.aggiungiProtezioneCreatureOmbra();
+    }
 
     public void aggiungi(Tratto tratto) { tratti.add(tratto); }
 
