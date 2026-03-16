@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public class Borgomastro extends Citta
 {
 
-    public Borgomastro()
+    private Borgomastro()
     {
         super
         (
@@ -16,5 +16,7 @@ public class Borgomastro extends Citta
     }
 
     @Override public boolean isBorgomastro() { return true; }
+
+    public static Ruolo getInstance() { return new Borgomastro(); }
 
 }

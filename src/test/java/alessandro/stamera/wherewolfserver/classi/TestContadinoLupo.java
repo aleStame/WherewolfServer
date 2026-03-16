@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CONTADINO_LUPO;
 
 public final class TestContadinoLupo
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new ContadinoLupo(); }
+    @BeforeEach public void setUp() { ruolo = CONTADINO_LUPO.getRuolo(); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 

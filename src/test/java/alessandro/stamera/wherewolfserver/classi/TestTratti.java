@@ -4,6 +4,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIOVANE_LUPO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -26,9 +31,9 @@ public final class TestTratti
     @Test public void testCappuccettoRosso()
     {
         tratti.aggiungiLupi();
-        Ruolo[] ruoli = new Ruolo[] { new CapoBranco(), new LupoBranco(), new GiovaneLupo(), new LupoReietto(), new LupoSolitario() };
+        IstanzaRuolo[] istanzaRuolo = new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO };
         assertThat(isPresente(PROTETTO)).isTrue();
-        for(Ruolo ruolo : ruoli) assertThat(tratti.isProtezionePresente(ruolo)).isTrue();
+        for(IstanzaRuolo ruolo : istanzaRuolo) assertThat(tratti.isProtezionePresente(ruolo.getRuolo())).isTrue();
     }
 
     private boolean isPresente(Tratto tratto) { return tratti.isPresente(tratto); }

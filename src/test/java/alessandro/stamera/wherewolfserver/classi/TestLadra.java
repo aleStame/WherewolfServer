@@ -3,16 +3,21 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIOVANE_LUPO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LADRA;
 
 public final class TestLadra
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Ladra(); }
+    @BeforeEach public void setUp() { ruolo = LADRA.getRuolo(); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Ladra"); }
 
@@ -37,11 +42,11 @@ public final class TestLadra
     @Test public void testUtilizzoPotere()
     {
         verificaFalso(isPotereUtilizzato());
-        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
-            verificaVero(ruolo.isProtezionePresente(fazione));
+        for(IstanzaRuolo x : new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO })
+            verificaVero(ruolo.isProtezionePresente(x.getRuolo()));
         ruolo.utilizzaPotere();
         verificaVero(isPotereUtilizzato());
-        for(Fazione fazione : values()) verificaFalso(ruolo.isProtezionePresente(fazione));
+        for(IstanzaRuolo x : values()) verificaFalso(ruolo.isProtezionePresente(x.getRuolo()));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

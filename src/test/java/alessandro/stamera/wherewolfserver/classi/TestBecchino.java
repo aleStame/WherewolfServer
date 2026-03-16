@@ -12,7 +12,7 @@ public final class TestBecchino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Becchino(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Becchino"); }
 
     @Test public void testNome() { testStringa(ruolo.getNome(), "Becchino"); }
 

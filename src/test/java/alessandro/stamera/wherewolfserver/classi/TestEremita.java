@@ -3,16 +3,18 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.EREMITA;
 
 public final class TestEremita
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Eremita(); }
+    @BeforeEach public void setUp() { ruolo = EREMITA.getRuolo(); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
@@ -46,8 +48,7 @@ public final class TestEremita
 
     @Test public void testProtezioni()
     {
-        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
-            verificaVero(ruolo.isProtetto(fazione));
+        for(IstanzaRuolo istanzaRuolo : new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO }) verificaVero(ruolo.isProtezionePresente(istanzaRuolo.getRuolo()));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

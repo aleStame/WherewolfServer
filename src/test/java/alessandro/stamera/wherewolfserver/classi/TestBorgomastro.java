@@ -10,7 +10,7 @@ public final class TestBorgomastro
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Borgomastro(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Borgomastro"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Borgomastro"); }
 

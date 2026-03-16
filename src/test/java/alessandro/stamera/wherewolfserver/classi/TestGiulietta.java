@@ -3,13 +3,14 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIULIETTA;
 
 public final class TestGiulietta
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Giulietta(); }
+    @BeforeEach public void setUp() { ruolo = GIULIETTA.getRuolo(); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Giulietta"); }
 

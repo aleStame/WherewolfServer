@@ -2,15 +2,17 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIOVANE_LUPO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.values;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 
 public final class TestProtezioni
 {
@@ -25,24 +27,23 @@ public final class TestProtezioni
     @Test public void testCreatureOmbra()
     {
         protezioni.aggiungiProtezione(CREATURE_OMBRA);
-        verificaProtezioni(new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO });
+        verificaProtezioni(new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO });
     }
 
     @Test public void testCappuccettoRosso()
     {
-        protezioni.aggiungiLupi();
-        Ruolo[] ruoli = new Ruolo[] { new CapoBranco(), new LupoBranco(), new GiovaneLupo(), new LupoReietto(), new LupoSolitario() };
-        for(Ruolo ruolo : ruoli) assertThat(protezioni.isPresente(ruolo)).isTrue();
+        protezioni.aggiungiProtezione(Fazione.LUPO_BRANCO, Fazione.LUPO_SOLITARIO);
+        verificaProtezioni(new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO });
     }
 
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(Fazione fazione : values()) assertThat(isPresente(fazione)).isFalse();
+        for(IstanzaRuolo x : values()) assertThat(isPresente(x.getRuolo())).isFalse();
     }
 
-    private void verificaProtezioni(Fazione[] fazioni) { for(Fazione fazione : fazioni) assertThat(isPresente(fazione)).isTrue(); }
+    private void verificaProtezioni(IstanzaRuolo[] istanzaRuolo) { for(IstanzaRuolo x : istanzaRuolo) assertThat(isPresente(x.getRuolo())).isTrue(); }
 
-    private boolean isPresente(Fazione fazione) { return protezioni.isPresente(fazione); }
+    private boolean isPresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
 
 }

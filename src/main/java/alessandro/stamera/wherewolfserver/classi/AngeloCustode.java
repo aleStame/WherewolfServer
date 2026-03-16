@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class AngeloCustode extends Amanti
 {
 
-    public AngeloCustode()
+    private AngeloCustode()
     {
         super
         (
@@ -19,5 +19,7 @@ public final class AngeloCustode extends Amanti
     @Override public boolean isAngeloCustode() { return true; }
 
     @Override public void sceltaAngeloCustode() { }
+
+    public static Ruolo getInstance() { return new AngeloCustode(); }
 
 }

@@ -10,7 +10,7 @@ public final class TestCacciatoreDiVampiri
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new CacciatoreDiVampiri(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Cacciatore di vampiri"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cacciatore di vampiri"); }
 

@@ -9,7 +9,7 @@ public final class TestAngeloCustode
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new AngeloCustode(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Angelo custode"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Angelo custode"); }
 

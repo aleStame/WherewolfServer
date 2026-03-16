@@ -8,9 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestBoia
 {
 
-    private Boia ruolo;
+    private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Boia(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Boia"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Boia"); }
 

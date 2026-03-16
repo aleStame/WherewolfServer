@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 public final class Assassino extends Criminale
 {
 
-    public Assassino()
+    private Assassino()
     {
         super
         (
@@ -16,5 +16,7 @@ public final class Assassino extends Criminale
     }
 
     @Override public boolean isAssassino() { return true; }
+
+    public static Ruolo getInstance() { return new Assassino(); }
 
 }

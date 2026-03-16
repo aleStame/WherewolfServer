@@ -1,15 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 
 public final class CappuccettoRosso extends Villaggio
 {
 
-    private final Protezioni protezioni;
-
-    public CappuccettoRosso()
+    private CappuccettoRosso()
     {
         super
         (
@@ -19,21 +15,10 @@ public final class CappuccettoRosso extends Villaggio
           "attacca Cappuccetto rosso, quest'ultima apre gli occhi e lo riconosce, anche se fosse Romeo o protetta dalla Strega",
      1, false
         );
-        this.protezioni = getProtezioni();
     }
 
     @Override public boolean isCappuccettoRosso() { return true; }
 
-    @Override public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
-
-    @Override public void perdiProtezioni() { protezioni.perdiProtezioni(); }
-
-    private Protezioni getProtezioni()
-    {
-        Protezioni protezioni = new Protezioni();
-        Fazione[] fazioni = new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO };
-        for(Fazione fazione : fazioni) protezioni.aggiungiProtezione(fazione);
-        return protezioni;
-    }
+    public static Ruolo getInstance() { return new CappuccettoRosso(); }
 
 }

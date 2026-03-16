@@ -5,8 +5,10 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class ContadinoEroe extends Contadino
 {
 
-    public ContadinoEroe() { super(BIANCA); }
+    private ContadinoEroe() { super(BIANCA); }
 
     @Override public boolean isContadinoEroe() { return true; }
+
+    public static Ruolo getInstance() { return new ContadinoEroe(); }
 
 }

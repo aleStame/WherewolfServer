@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public class Cacciatore extends Villaggio
 {
 
-    public Cacciatore()
+    private Cacciatore()
     {
         super
         (
@@ -18,5 +18,7 @@ public class Cacciatore extends Villaggio
     }
 
     @Override public boolean isCacciatore() { return true; }
+
+    public static Ruolo getInstance() { return new Cacciatore(); }
 
 }

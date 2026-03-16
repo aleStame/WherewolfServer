@@ -10,7 +10,7 @@ public final class TestBoccaDiRosa
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new BoccaDiRosa(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Bocca di rosa"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Bocca di rosa"); }
 

@@ -10,7 +10,7 @@ public class TestBracconiere
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Bracconiere(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Bracconiere"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Bracconiere"); }
 

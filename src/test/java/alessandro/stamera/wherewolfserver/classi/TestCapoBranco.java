@@ -11,7 +11,7 @@ public final class TestCapoBranco
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new CapoBranco(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Capo branco"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Capo branco"); }
 

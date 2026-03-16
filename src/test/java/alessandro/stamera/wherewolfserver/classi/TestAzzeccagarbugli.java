@@ -10,7 +10,7 @@ public final class TestAzzeccagarbugli
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Azzeccagarbugli(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Azzeccagarbugli"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Azzeccagarbugli"); }
 

@@ -6,13 +6,14 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIOVANE_LUPO;
 
 public final class TestGiovaneLupo
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new GiovaneLupo(); }
+    @BeforeEach public void setUp() { ruolo = GIOVANE_LUPO.getRuolo(); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Giovane lupo"); }
 

@@ -20,12 +20,11 @@ public class Ruolo
 
     private final boolean mistico;
 
-    private final Protezioni protezioni;
-
     private final Tratti tratti;
 
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
     {
+        System.out.println(nome);
         this.nome = nome;
         cambiaFazione(fazione);
         this.aura = aura;
@@ -35,7 +34,6 @@ public class Ruolo
         setAmato(false);
         this.mistico = mistico;
         libera();
-        protezioni = new Protezioni();
         tratti = new Tratti();
     }
 
@@ -141,9 +139,7 @@ public class Ruolo
 
     public boolean isGhoul() { return false; }
 
-    public void romeizzazione() { protezioni.aggiungiProtezione(CREATURE_OMBRA); }
-
-    public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
+    public void romeizzazione() { aggiungiProtezione(CREATURE_OMBRA); }
 
     public boolean isAmanti() { return false; }
 
@@ -165,11 +161,19 @@ public class Ruolo
 
     public boolean isLadra() { return false; }
 
-    public boolean isProtezionePresente(Fazione fazione) { return false; }
+    public boolean isProtezionePresente(Ruolo ruolo) { return tratti.isProtezionePresente(ruolo); }
 
     public boolean isLeprecauno() { return false; }
 
-    public void perdiProtezioni() { }
+    public void aggiungiProtezioneLupi() { tratti.aggiungiProtezioneLupi(); }
+
+    public void aggiungiProtezione(Fazione... fazione) { tratti.aggiungiProtezione(fazione); }
+
+    public void aggiungiProtezione(Ruolo... ruoli) { for(Ruolo ruolo : ruoli) tratti.aggiungiProtezione(ruolo); }
+
+    public void aggiungiProtezione(Categoria categoria) { tratti.aggiungiProtezione(categoria); }
+
+    public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 

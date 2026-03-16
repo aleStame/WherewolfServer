@@ -6,7 +6,7 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 public class Goblin extends Ruolo
 {
 
-    public Goblin()
+    private Goblin()
     {
         super
         (
@@ -16,5 +16,7 @@ public class Goblin extends Ruolo
     }
 
     @Override public boolean isGoblin() { return true; }
+
+    public static Ruolo getInstance() { return new Goblin(); }
 
 }

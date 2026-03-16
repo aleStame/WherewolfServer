@@ -10,7 +10,7 @@ public final class TestCapoGilda
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new CapoGilda(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Capo gilda"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Capo gilda"); }
 

@@ -6,7 +6,7 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 public final class Leprecauno extends Ruolo
 {
 
-    public Leprecauno()
+    private Leprecauno()
     {
         super
         (
@@ -17,5 +17,7 @@ public final class Leprecauno extends Ruolo
     }
 
     @Override public boolean isLeprecauno() { return true; }
+
+    public static Ruolo getInstance() { return new Leprecauno(); }
 
 }

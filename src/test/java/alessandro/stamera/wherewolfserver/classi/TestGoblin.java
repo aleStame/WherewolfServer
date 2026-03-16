@@ -4,13 +4,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GOBLIN;
 
 public final class TestGoblin
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Goblin(); }
+    @BeforeEach public void setUp() { ruolo = GOBLIN.getRuolo(); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
 

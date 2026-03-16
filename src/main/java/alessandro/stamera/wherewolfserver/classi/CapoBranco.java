@@ -6,7 +6,7 @@ import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 public final class CapoBranco extends Lupo
 {
 
-    public CapoBranco()
+    private CapoBranco()
     {
         super
         (
@@ -20,5 +20,7 @@ public final class CapoBranco extends Lupo
     }
 
     @Override public boolean isCapoBranco() { return true; }
+
+    public static Ruolo getInstance() { return new CapoBranco(); }
 
 }

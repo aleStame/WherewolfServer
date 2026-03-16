@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Inquisitore extends Inquisizione
 {
 
-    public Inquisitore()
+    private Inquisitore()
     {
         super
         (
@@ -16,5 +16,7 @@ public final class Inquisitore extends Inquisizione
     }
 
     @Override public boolean isInquisitore() { return true; }
+
+    public static Ruolo getInstance() { return new Inquisitore(); }
 
 }

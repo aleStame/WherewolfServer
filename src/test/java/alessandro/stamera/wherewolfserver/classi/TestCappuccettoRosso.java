@@ -2,18 +2,18 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.values;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 
 public final class TestCappuccettoRosso
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new CappuccettoRosso(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Cappuccetto rosso"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
 
@@ -52,15 +52,16 @@ public final class TestCappuccettoRosso
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @Test public void testProtezioni()
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
+    public void testProtezioni(IstanzaRuolo istanza)
     {
-        for(Fazione fazione : new Fazione[]{ LUPO_BRANCO, LUPO_SOLITARIO }) verificaVero(isProtetto(fazione));
+        verificaVero(isProtezionePresente(istanza.getRuolo()));
     }
 
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
-        for(Fazione fazione : values()) verificaFalso(isProtetto(fazione));
+        for(IstanzaRuolo istanzaRuolo : values()) verificaFalso(isProtezionePresente(istanzaRuolo.getRuolo()));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -69,6 +70,6 @@ public final class TestCappuccettoRosso
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
-    private boolean isProtetto(Fazione fazione) { return ruolo.isProtetto(fazione); }
+    private boolean isProtezionePresente(Ruolo ruolo) { return this.ruolo.isProtezionePresente(ruolo); }
 
 }
