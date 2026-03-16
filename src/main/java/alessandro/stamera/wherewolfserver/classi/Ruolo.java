@@ -45,7 +45,7 @@ public class Ruolo
     public Aura getAura()
     {
         Aura risultato = aura;
-        if(isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO)) risultato = NERA;
+        if(controlloTrattiOscuri()) risultato = NERA;
         return risultato;
     }
 
@@ -186,6 +186,8 @@ public class Ruolo
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
+
+    private boolean controlloTrattiOscuri() { return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO); }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 

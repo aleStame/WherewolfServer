@@ -15,13 +15,17 @@ public final class ContadinoLupo extends Contadino
         boolean esito = super.attacco(ruolo);
         if(esito && ruolo.isLupo())
         {
-            aggiungiTratto(CREATURA_OMBRA);
-            aggiungiTratto(LUPO_MANNARO);
+            aggiungiTrattiOscuri();
             esito = false;
         }
         return esito;
     }
 
     public static Ruolo getInstance() { return new ContadinoLupo(); }
+
+    private void aggiungiTrattiOscuri()
+    {
+        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) aggiungiTratto(tratto);
+    }
 
 }
