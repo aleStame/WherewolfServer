@@ -82,13 +82,6 @@ public final class TestRuolo
     @ParameterizedTest @EnumSource(IstanzaRuolo.class)
     public void testAttaccoRuoloNonProtetto(IstanzaRuolo istanza) { verificaVero(ruolo.attacco(istanza.getRuolo())); }
 
-    @ParameterizedTest @EnumSource(IstanzaRuolo.class) public void testAttaccoRuoloProtetto(IstanzaRuolo istanza)
-    {
-        Ruolo attaccante = istanza.getRuolo();
-        ruolo.aggiungiProtezione(attaccante);
-        verificaFalso(ruolo.attacco(attaccante));
-    }
-
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
     private void verificaLibero() { verificaFalso(isAccusato()); }

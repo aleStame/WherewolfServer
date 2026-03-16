@@ -27,7 +27,7 @@ public final class TestTratti
     @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
     public void testCappuccettoRosso(IstanzaRuolo istanza)
     {
-        tratti.aggiungiLupi();
+        tratti.aggiungiProtezioneLupi();
         verificaTrattoPresente(PROTETTO);
         verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
     }

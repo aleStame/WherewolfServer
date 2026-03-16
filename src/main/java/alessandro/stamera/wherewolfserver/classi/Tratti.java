@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 
 public final class Tratti
 {
@@ -20,12 +18,6 @@ public final class Tratti
         protezioni = new Protezioni();
     }
 
-    public void aggiungiLupi()
-    {
-        aggiungi(PROTETTO);
-        protezioni.aggiungiProtezione(LUPO_BRANCO, LUPO_SOLITARIO);
-    }
-
     public boolean isMaledetto() { return isPresente(MALEDETTO); }
 
     public void maledizione() { aggiungi(MALEDETTO); }
@@ -35,12 +27,6 @@ public final class Tratti
     public boolean isProtezionePresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
 
     public void aggiungiProtezione(Categoria categoria) { protezioni.aggiungiProtezione(categoria); }
-
-    public void aggiungiProtezione(Ruolo... ruoli)
-    {
-        if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO);
-        protezioni.aggiungiProtezione(ruoli);
-    }
 
     public void aggiungiProtezioneLupi()
     {
