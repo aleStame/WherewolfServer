@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static java.util.Arrays.stream;
 
 public final class Protezioni
@@ -11,6 +12,8 @@ public final class Protezioni
     private final List<Ruolo> ruoli;
 
     public Protezioni() { ruoli = new ArrayList<>(); }
+
+    public void aggiungiProtezioneCreatureOmbra() { aggiungiProtezione(CREATURE_OMBRA); }
 
     public void aggiungiProtezione(Categoria categoria)
     {

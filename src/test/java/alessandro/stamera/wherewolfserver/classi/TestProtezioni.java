@@ -26,7 +26,7 @@ public final class TestProtezioni
 
     @Test public void testCreatureOmbra()
     {
-        protezioni.aggiungiProtezione(CREATURE_OMBRA);
+        protezioni.aggiungiProtezioneCreatureOmbra();
         verificaProtezioni(new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO });
     }
 
@@ -39,7 +39,7 @@ public final class TestProtezioni
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(IstanzaRuolo x : values()) assertThat(isPresente(x.getRuolo())).isFalse();
+        for(IstanzaRuolo istanza : values()) assertThat(isPresente(istanza.getRuolo())).isFalse();
     }
 
     private void verificaProtezioni(IstanzaRuolo[] istanzaRuolo) { for(IstanzaRuolo x : istanzaRuolo) assertThat(isPresente(x.getRuolo())).isTrue(); }
