@@ -4,8 +4,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 
 public final class RuoliFactory
 {
@@ -18,7 +16,15 @@ public final class RuoliFactory
         for(IstanzaRuolo istanza : values())
         {
             Ruolo ruolo = istanza.getRuolo();
-            ruoli.put(ruolo.getNome(), ruolo);
+            String nome = ruolo.getNome();
+            if(nome.equals("Contadino"))
+            {
+                if(ruolo.isContadinoNormale()) nome = "Contadino normale";
+                else if(ruolo.isContadinoEroe()) nome = "Contadino eroe";
+                else if(ruolo.isContadinoMostro()) nome = "Contadino mostro";
+                else nome = "Contadino discendente dei lupi";
+            }
+            ruoli.put(nome, ruolo);
         }
         ruoli.get("Cappuccetto rosso").aggiungiProtezioneLupi();
         ruoli.get("Eremita").aggiungiProtezione(CREATURE_OMBRA);

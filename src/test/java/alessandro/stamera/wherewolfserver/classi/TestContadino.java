@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadino
@@ -9,7 +10,7 @@ public final class TestContadino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Contadino(null); }
+    @BeforeEach public void setUp() { ruolo = new Contadino(); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Contadino"); }
 
@@ -19,6 +20,8 @@ public final class TestContadino
             "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.";
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
+
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 

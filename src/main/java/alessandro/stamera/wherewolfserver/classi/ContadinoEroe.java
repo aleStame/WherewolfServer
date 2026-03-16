@@ -1,11 +1,9 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-
 public final class ContadinoEroe extends Contadino
 {
 
-    private ContadinoEroe() { super(BIANCA); }
+    private ContadinoEroe() { super(); }
 
     @Override public boolean isContadinoEroe() { return true; }
 

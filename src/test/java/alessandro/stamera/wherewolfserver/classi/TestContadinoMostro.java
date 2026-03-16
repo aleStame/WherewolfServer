@@ -2,23 +2,19 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CONTADINO_MOSTRO;
 
 public final class TestContadinoMostro
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = CONTADINO_MOSTRO.getRuolo(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Contadino mostro"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
-
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
