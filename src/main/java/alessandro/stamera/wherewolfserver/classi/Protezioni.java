@@ -25,8 +25,8 @@ public final class Protezioni
 
     public void aggiungiProtezione(Fazione... fazioni)
     {
-        List<Ruolo> ruoli = stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).toList();
-        List<Ruolo> ruoliAdatti = ruoli.stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
+        List<Ruolo> ruoliAdatti =
+            getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
         Ruolo[] risultato = new Ruolo[ruoliAdatti.size()];
         ruoliAdatti.toArray(risultato);
         aggiungiProtezione(risultato);
@@ -45,10 +45,12 @@ public final class Protezioni
 
     private Ruolo[] getLupi()
     {
-        List<Ruolo> lupi = stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList();
+        List<Ruolo> lupi = getRuoli();
         Ruolo[] risultato = new Ruolo[lupi.size()];
         lupi.toArray(risultato);
         return risultato;
     }
+
+    private List<Ruolo> getRuoli() { return stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList(); }
 
 }
