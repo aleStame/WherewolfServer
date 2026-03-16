@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadinoMostro
@@ -28,6 +29,8 @@ public final class TestContadinoMostro
         ruolo.incrementaVoti(2);
         assertThat(ruolo.getNumeroVoti()).isEqualTo(3);
     }
+
+    @Test public void testNonMorto() { verificaFalso(ruolo.isTrattoPresente(NON_MORTO)); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
