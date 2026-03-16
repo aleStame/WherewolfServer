@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestRuolo" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-03-16T14:25:13" hostname="ALESSANDRO" time="0.049">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestRuolo" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-03-16T14:29:52" hostname="ALESSANDRO" time="0.071">
   <properties/>
-  <testcase name="testAccusato()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.006"/>
-  <testcase name="testSceltaAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.004"/>
-  <testcase name="testVoti()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.006"/>
-  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.006"/>
-  <testcase name="testRomeizzazione()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.006"/>
+  <testcase name="testAccusato()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.021"/>
+  <testcase name="testSceltaAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.005"/>
+  <testcase name="testVoti()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.008"/>
+  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.009"/>
+  <testcase name="testRomeizzazione()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.004"/>
   <testcase name="testInizializzazione()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.002"/>
-  <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.002"/>
-  <testcase name="testSegnalazioneAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.003"/>
+  <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.003"/>
+  <testcase name="testSegnalazioneAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.TestRuolo" time="0.006"/>
   <system-out><![CDATA[null
 null
 null
 null
 null
-[alessandro.stamera.wherewolfserver.classi.Becchino@6cbcf243, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@30990c1b, alessandro.stamera.wherewolfserver.classi.LupoBranco@2453f95d, alessandro.stamera.wherewolfserver.classi.LupoReietto@44828f6b, alessandro.stamera.wherewolfserver.classi.LupoSolitario@2dbe250d, alessandro.stamera.wherewolfserver.classi.CapoBranco@553f1d75]
-[alessandro.stamera.wherewolfserver.classi.Becchino@6cbcf243, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@30990c1b, alessandro.stamera.wherewolfserver.classi.LupoBranco@2453f95d, alessandro.stamera.wherewolfserver.classi.LupoReietto@44828f6b, alessandro.stamera.wherewolfserver.classi.LupoSolitario@2dbe250d, alessandro.stamera.wherewolfserver.classi.CapoBranco@553f1d75]
-[alessandro.stamera.wherewolfserver.classi.Becchino@6cbcf243, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@30990c1b, alessandro.stamera.wherewolfserver.classi.LupoBranco@2453f95d, alessandro.stamera.wherewolfserver.classi.LupoReietto@44828f6b, alessandro.stamera.wherewolfserver.classi.LupoSolitario@2dbe250d, alessandro.stamera.wherewolfserver.classi.CapoBranco@553f1d75]
-[alessandro.stamera.wherewolfserver.classi.Becchino@6cbcf243, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@30990c1b, alessandro.stamera.wherewolfserver.classi.LupoBranco@2453f95d, alessandro.stamera.wherewolfserver.classi.LupoReietto@44828f6b, alessandro.stamera.wherewolfserver.classi.LupoSolitario@2dbe250d, alessandro.stamera.wherewolfserver.classi.CapoBranco@553f1d75]
-[alessandro.stamera.wherewolfserver.classi.Becchino@6cbcf243, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@30990c1b, alessandro.stamera.wherewolfserver.classi.LupoBranco@2453f95d, alessandro.stamera.wherewolfserver.classi.LupoReietto@44828f6b, alessandro.stamera.wherewolfserver.classi.LupoSolitario@2dbe250d, alessandro.stamera.wherewolfserver.classi.CapoBranco@553f1d75]
+[alessandro.stamera.wherewolfserver.classi.Becchino@5d018107, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@553f1d75, alessandro.stamera.wherewolfserver.classi.LupoBranco@6e1d8f9e, alessandro.stamera.wherewolfserver.classi.LupoReietto@3e34ace1, alessandro.stamera.wherewolfserver.classi.LupoSolitario@62fe6067, alessandro.stamera.wherewolfserver.classi.CapoBranco@4f071df8]
+[alessandro.stamera.wherewolfserver.classi.Becchino@5d018107, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@553f1d75, alessandro.stamera.wherewolfserver.classi.LupoBranco@6e1d8f9e, alessandro.stamera.wherewolfserver.classi.LupoReietto@3e34ace1, alessandro.stamera.wherewolfserver.classi.LupoSolitario@62fe6067, alessandro.stamera.wherewolfserver.classi.CapoBranco@4f071df8]
+[alessandro.stamera.wherewolfserver.classi.Becchino@5d018107, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@553f1d75, alessandro.stamera.wherewolfserver.classi.LupoBranco@6e1d8f9e, alessandro.stamera.wherewolfserver.classi.LupoReietto@3e34ace1, alessandro.stamera.wherewolfserver.classi.LupoSolitario@62fe6067, alessandro.stamera.wherewolfserver.classi.CapoBranco@4f071df8]
+[alessandro.stamera.wherewolfserver.classi.Becchino@5d018107, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@553f1d75, alessandro.stamera.wherewolfserver.classi.LupoBranco@6e1d8f9e, alessandro.stamera.wherewolfserver.classi.LupoReietto@3e34ace1, alessandro.stamera.wherewolfserver.classi.LupoSolitario@62fe6067, alessandro.stamera.wherewolfserver.classi.CapoBranco@4f071df8]
+[alessandro.stamera.wherewolfserver.classi.Becchino@5d018107, alessandro.stamera.wherewolfserver.classi.GiovaneLupo@553f1d75, alessandro.stamera.wherewolfserver.classi.LupoBranco@6e1d8f9e, alessandro.stamera.wherewolfserver.classi.LupoReietto@3e34ace1, alessandro.stamera.wherewolfserver.classi.LupoSolitario@62fe6067, alessandro.stamera.wherewolfserver.classi.CapoBranco@4f071df8]
 null
 null
 null
