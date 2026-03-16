@@ -23,18 +23,18 @@ public final class Protezioni
         aggiungiProtezione(risultato);
     }
 
-    public void aggiungiProtezione(Fazione... fazioni)
-    {
-        List<Ruolo> ruoliAdatti =
-            getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
-        aggiungiProtezione(toArray(ruoliAdatti));
-    }
+    public void aggiungiProtezione(Fazione... fazioni) { aggiungiProtezione(toArray(filtraRuoli(fazioni))); }
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(getLupi()); }
 
     public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
 
     public void perdiProtezioni() { ruoli.clear(); }
+
+    private List<Ruolo> filtraRuoli(Fazione... fazioni)
+    {
+        return getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
+    }
 
     private void aggiungiProtezione(Ruolo... ruoli)
     {
