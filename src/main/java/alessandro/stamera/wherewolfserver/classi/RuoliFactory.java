@@ -13,20 +13,22 @@ public final class RuoliFactory
     public RuoliFactory()
     {
         ruoli = new LinkedHashMap<>();
-        for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza);
+        caricaRuoli();
         getRuolo("Cappuccetto rosso").aggiungiProtezioneLupi();
         aggiungiProtezioneCreatureOmbra("Eremita", "Ladra");
+    }
+
+    private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
+
+    private void aggiungiProtezioneCreatureOmbra(String... nomi)
+    {
+        for(String nome : nomi) getRuolo(nome).aggiungiProtezione(CREATURE_OMBRA);
     }
 
     private void aggiungiRuolo(IstanzaRuolo istanza)
     {
         Ruolo ruolo = istanza.getRuolo();
         ruoli.put(getNome(ruolo), ruolo);
-    }
-
-    private void aggiungiProtezioneCreatureOmbra(String... nomi)
-    {
-        for(String nome : nomi) getRuolo(nome).aggiungiProtezione(CREATURE_OMBRA);
     }
 
     public Ruolo getRuolo(String nome) { return ruoli.get(nome); }

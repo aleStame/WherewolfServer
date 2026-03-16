@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomeContadino" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/RuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/RuoliFactory.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,30 +239,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01235" summary="VERDE DIRETTO: testGiullare riuscito">
-      <option name="closed" value="true" />
-      <created>1772816314624</created>
-      <option name="number" value="01235" />
-      <option name="presentableId" value="LOCAL-01235" />
-      <option name="project" value="LOCAL" />
-      <updated>1772816314624</updated>
-    </task>
-    <task id="LOCAL-01236" summary="VERDE DIRETTO: testGoblin riuscito">
-      <option name="closed" value="true" />
-      <created>1772816438748</created>
-      <option name="number" value="01236" />
-      <option name="presentableId" value="LOCAL-01236" />
-      <option name="project" value="LOCAL" />
-      <updated>1772816438748</updated>
-    </task>
-    <task id="LOCAL-01237" summary="VERDE DIRETTO: testInquisizione riuscito">
-      <option name="closed" value="true" />
-      <created>1772817304254</created>
-      <option name="number" value="01237" />
-      <option name="presentableId" value="LOCAL-01237" />
-      <option name="project" value="LOCAL" />
-      <updated>1772817304254</updated>
     </task>
     <task id="LOCAL-01238" summary="VERDE DIRETTO: testLupo riuscito">
       <option name="closed" value="true" />
@@ -630,7 +608,31 @@
       <option name="project" value="LOCAL" />
       <updated>1773670727968</updated>
     </task>
-    <option name="localTasksCounter" value="1284" />
+    <task id="LOCAL-01284" summary="REFACTORING: definizione del metodo getNome">
+      <option name="closed" value="true" />
+      <created>1773670963356</created>
+      <option name="number" value="01284" />
+      <option name="presentableId" value="LOCAL-01284" />
+      <option name="project" value="LOCAL" />
+      <updated>1773670963356</updated>
+    </task>
+    <task id="LOCAL-01285" summary="REFACTORING: definizione del metodo aggiungiRuolo">
+      <option name="closed" value="true" />
+      <created>1773671145340</created>
+      <option name="number" value="01285" />
+      <option name="presentableId" value="LOCAL-01285" />
+      <option name="project" value="LOCAL" />
+      <updated>1773671145341</updated>
+    </task>
+    <task id="LOCAL-01286" summary="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra">
+      <option name="closed" value="true" />
+      <created>1773671425718</created>
+      <option name="number" value="01286" />
+      <option name="presentableId" value="LOCAL-01286" />
+      <option name="project" value="LOCAL" />
+      <updated>1773671425719</updated>
+    </task>
+    <option name="localTasksCounter" value="1287" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -645,9 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testProtezioni non riuscito" />
-    <MESSAGE value="VERDE: testProtezioni riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getProtezioni" />
     <MESSAGE value="ROSSO: testPerditaProtezioni non riuscito" />
     <MESSAGE value="VERDE: testPerditaProtezioni riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
@@ -670,7 +669,10 @@
     <MESSAGE value="REFACTORING: implementazione del pattern Singleton per i controlli sulle protezioni" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia dei contadini" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeContadino" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeContadino" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNome" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiRuolo" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
