@@ -30,6 +30,11 @@ public final class Protezioni
 
     public void perdiProtezioni() { ruoli.clear(); }
 
+    public void aggiungiProtezioneMistici()
+    {
+        aggiungiProtezione(toArray(getRuoli().stream().filter(Ruolo::isMistico).toList(), Ruolo[]::new));
+    }
+
     private List<Ruolo> filtraRuoli(Fazione... fazioni)
     {
         return getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
@@ -40,12 +45,10 @@ public final class Protezioni
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
 
-    private Ruolo[] getLupi() { return toArray(getRuoli(), Ruolo[]::new); }
+    private Ruolo[] getLupi() { return toArray(getRuoli().stream().filter(Ruolo::isLupo).toList(), Ruolo[]::new); }
 
     private <T> T[] toArray(List<T> lista, IntFunction<T[]> generatore) { return lista.toArray(generatore); }
 
-    private List<Ruolo> getRuoli() { return stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList(); }
-
-    public void aggiungiProtezioneMistici() { }
+    private List<Ruolo> getRuoli() { return stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).toList(); }
 
 }
