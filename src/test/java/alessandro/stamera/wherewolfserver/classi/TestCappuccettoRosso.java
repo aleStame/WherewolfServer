@@ -11,6 +11,8 @@ import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 public final class TestCappuccettoRosso
 {
 
+    private static final String NOME = "Cappuccetto rosso";
+
     private Ruolo ruolo;
 
     private RuoliFactory factory;
@@ -18,9 +20,9 @@ public final class TestCappuccettoRosso
     @BeforeEach public void setUp()
     {
         factory = new RuoliFactory();
-        ruolo = getRuolo("Cappuccetto rosso"); }
+        ruolo = getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
