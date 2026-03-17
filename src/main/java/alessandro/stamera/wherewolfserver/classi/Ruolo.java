@@ -193,6 +193,8 @@ public class Ruolo
 
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
 
+    public void maledizione() { tratti.maledizione(); }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();

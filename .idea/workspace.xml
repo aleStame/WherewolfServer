@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo filtraRuoli">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isMaledetto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,38 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01264" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1773066872845</created>
-      <option name="number" value="01264" />
-      <option name="presentableId" value="LOCAL-01264" />
-      <option name="project" value="LOCAL" />
-      <updated>1773066872845</updated>
-    </task>
-    <task id="LOCAL-01265" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1773067285118</created>
-      <option name="number" value="01265" />
-      <option name="presentableId" value="LOCAL-01265" />
-      <option name="project" value="LOCAL" />
-      <updated>1773067285118</updated>
-    </task>
-    <task id="LOCAL-01266" summary="ROSSO: testRuoli non riuscito">
-      <option name="closed" value="true" />
-      <created>1773069454345</created>
-      <option name="number" value="01266" />
-      <option name="presentableId" value="LOCAL-01266" />
-      <option name="project" value="LOCAL" />
-      <updated>1773069454345</updated>
-    </task>
-    <task id="LOCAL-01267" summary="ROSSO: testRuoli non riuscito">
-      <option name="closed" value="true" />
-      <created>1773070221483</created>
-      <option name="number" value="01267" />
-      <option name="presentableId" value="LOCAL-01267" />
-      <option name="project" value="LOCAL" />
-      <updated>1773070221483</updated>
     </task>
     <task id="LOCAL-01268" summary="VERDE: testRuoli riuscito">
       <option name="closed" value="true" />
@@ -633,7 +598,39 @@
       <option name="project" value="LOCAL" />
       <updated>1773704367019</updated>
     </task>
-    <option name="localTasksCounter" value="1313" />
+    <task id="LOCAL-01313" summary="REFACTORING: generalizzazione del metodo toArray">
+      <option name="closed" value="true" />
+      <created>1773705813637</created>
+      <option name="number" value="01313" />
+      <option name="presentableId" value="LOCAL-01313" />
+      <option name="project" value="LOCAL" />
+      <updated>1773705813637</updated>
+    </task>
+    <task id="LOCAL-01314" summary="REFACTORING: definizione del metodo proteggi">
+      <option name="closed" value="true" />
+      <created>1773706065251</created>
+      <option name="number" value="01314" />
+      <option name="presentableId" value="LOCAL-01314" />
+      <option name="project" value="LOCAL" />
+      <updated>1773706065252</updated>
+    </task>
+    <task id="LOCAL-01315" summary="REFACTORING: definizione del metodo verificaPresenza">
+      <option name="closed" value="true" />
+      <created>1773706216786</created>
+      <option name="number" value="01315" />
+      <option name="presentableId" value="LOCAL-01315" />
+      <option name="project" value="LOCAL" />
+      <updated>1773706216786</updated>
+    </task>
+    <task id="LOCAL-01316" summary="REFACTORING: definizione del metodo isMaledetto">
+      <option name="closed" value="true" />
+      <created>1773706387293</created>
+      <option name="number" value="01316" />
+      <option name="presentableId" value="LOCAL-01316" />
+      <option name="project" value="LOCAL" />
+      <updated>1773706387293</updated>
+    </task>
+    <option name="localTasksCounter" value="1317" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -648,10 +645,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoRuoloProtetto non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoRuoloProtetto riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione dei metodi controlloTrattiOscuri e aggiungiTrattiOscuri" />
     <MESSAGE value="REFACTORING: trasformazione di testCappuccettoRosso in un metodo parametrico" />
@@ -673,7 +666,11 @@
     <MESSAGE value="REFACTORING: definizione del metodo getRuoli" />
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
     <MESSAGE value="REFACTORING: definizione del metodo filtraRuoli" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo filtraRuoli" />
+    <MESSAGE value="REFACTORING: generalizzazione del metodo toArray" />
+    <MESSAGE value="REFACTORING: definizione del metodo proteggi" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaPresenza" />
+    <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isMaledetto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
