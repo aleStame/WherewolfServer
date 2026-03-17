@@ -29,12 +29,7 @@ public final class RuoliFactory
 
     public String getNome(int posizione) { return ruoli.keySet().stream().toList().get(posizione); }
 
-    public Ruolo[] getLupi()
-    {
-        List<Ruolo> lupi = ruoli.values().stream().filter(Ruolo::isLupo).toList();
-        Ruolo[] risultato = new Ruolo[lupi.size()];
-        return lupi.toArray(risultato);
-    }
+    public Ruolo[] getLupi() { return toArray(ruoli.values().stream().filter(Ruolo::isLupo).toList()); }
 
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
@@ -65,6 +60,13 @@ public final class RuoliFactory
         else if(ruolo.isContadinoMostro()) nome = "Contadino mostro";
         else nome = "Contadino discendente dei lupi";
         return nome;
+    }
+
+    private Ruolo[] toArray(List<Ruolo> lista)
+    {
+        Ruolo[] array = new Ruolo[lista.size()];
+        lista.toArray(array);
+        return array;
     }
 
 }

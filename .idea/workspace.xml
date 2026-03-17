@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testProtezioneMistici riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestProtezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestProtezioni.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLupi riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -239,38 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01282" summary="REFACTORING: sistemazione della gerarchia dei contadini">
-      <option name="closed" value="true" />
-      <created>1773670459969</created>
-      <option name="number" value="01282" />
-      <option name="presentableId" value="LOCAL-01282" />
-      <option name="project" value="LOCAL" />
-      <updated>1773670459969</updated>
-    </task>
-    <task id="LOCAL-01283" summary="REFACTORING: definizione del metodo getNomeContadino">
-      <option name="closed" value="true" />
-      <created>1773670727968</created>
-      <option name="number" value="01283" />
-      <option name="presentableId" value="LOCAL-01283" />
-      <option name="project" value="LOCAL" />
-      <updated>1773670727968</updated>
-    </task>
-    <task id="LOCAL-01284" summary="REFACTORING: definizione del metodo getNome">
-      <option name="closed" value="true" />
-      <created>1773670963356</created>
-      <option name="number" value="01284" />
-      <option name="presentableId" value="LOCAL-01284" />
-      <option name="project" value="LOCAL" />
-      <updated>1773670963356</updated>
-    </task>
-    <task id="LOCAL-01285" summary="REFACTORING: definizione del metodo aggiungiRuolo">
-      <option name="closed" value="true" />
-      <created>1773671145340</created>
-      <option name="number" value="01285" />
-      <option name="presentableId" value="LOCAL-01285" />
-      <option name="project" value="LOCAL" />
-      <updated>1773671145341</updated>
     </task>
     <task id="LOCAL-01286" summary="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra">
       <option name="closed" value="true" />
@@ -632,7 +598,39 @@
       <option name="project" value="LOCAL" />
       <updated>1773766669616</updated>
     </task>
-    <option name="localTasksCounter" value="1331" />
+    <task id="LOCAL-01331" summary="REFACTORING: definizione del metodo getRuolo">
+      <option name="closed" value="true" />
+      <created>1773778983079</created>
+      <option name="number" value="01331" />
+      <option name="presentableId" value="LOCAL-01331" />
+      <option name="project" value="LOCAL" />
+      <updated>1773778983080</updated>
+    </task>
+    <task id="LOCAL-01332" summary="REFACTORING: definizione del metodo verificaPresenza">
+      <option name="closed" value="true" />
+      <created>1773779122729</created>
+      <option name="number" value="01332" />
+      <option name="presentableId" value="LOCAL-01332" />
+      <option name="project" value="LOCAL" />
+      <updated>1773779122729</updated>
+    </task>
+    <task id="LOCAL-01333" summary="ROSSO: testLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1773779688403</created>
+      <option name="number" value="01333" />
+      <option name="presentableId" value="LOCAL-01333" />
+      <option name="project" value="LOCAL" />
+      <updated>1773779688403</updated>
+    </task>
+    <task id="LOCAL-01334" summary="VERDE: testLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1773780707896</created>
+      <option name="number" value="01334" />
+      <option name="presentableId" value="LOCAL-01334" />
+      <option name="project" value="LOCAL" />
+      <updated>1773780707896</updated>
+    </task>
+    <option name="localTasksCounter" value="1335" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,9 +645,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testNonMorto riuscito" />
-    <MESSAGE value="ROSSO: testMaledizione non riuscito" />
-    <MESSAGE value="VERDE: testMaledizione riuscito" />
     <MESSAGE value="REFACTORING: eliminazione codice inutile" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra" />
     <MESSAGE value="REFACTORING: parametrizzazione dei test" />
@@ -661,7 +656,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo filtraRuoli" />
     <MESSAGE value="REFACTORING: generalizzazione del metodo toArray" />
     <MESSAGE value="REFACTORING: definizione del metodo proteggi" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaPresenza" />
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
     <MESSAGE value="REFACTORING: ridefinizione del test dei voti" />
@@ -672,7 +666,11 @@
     <MESSAGE value="REFACTORING: definizione del metodo getMistici" />
     <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
     <MESSAGE value="VERDE: testProtezioneMistici riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testProtezioneMistici riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaPresenza" />
+    <MESSAGE value="ROSSO: testLupi non riuscito" />
+    <MESSAGE value="VERDE: testLupi riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLupi riuscito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
