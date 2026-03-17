@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo toArray">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo filtraRuoli">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,14 +240,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01263" summary="ROSSO: testDescrizione non riuscito">
-      <option name="closed" value="true" />
-      <created>1773066658318</created>
-      <option name="number" value="01263" />
-      <option name="presentableId" value="LOCAL-01263" />
-      <option name="project" value="LOCAL" />
-      <updated>1773066658319</updated>
     </task>
     <task id="LOCAL-01264" summary="VERDE: testDescrizione riuscito">
       <option name="closed" value="true" />
@@ -632,7 +625,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773704136068</updated>
     </task>
-    <option name="localTasksCounter" value="1312" />
+    <task id="LOCAL-01312" summary="REFACTORING: definizione del metodo filtraRuoli">
+      <option name="closed" value="true" />
+      <created>1773704367019</created>
+      <option name="number" value="01312" />
+      <option name="presentableId" value="LOCAL-01312" />
+      <option name="project" value="LOCAL" />
+      <updated>1773704367019</updated>
+    </task>
+    <option name="localTasksCounter" value="1313" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,7 +648,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoRuoloNonProtetto riuscito" />
     <MESSAGE value="ROSSO: testAttaccoRuoloProtetto non riuscito" />
     <MESSAGE value="VERDE: testAttaccoRuoloProtetto riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
@@ -672,7 +672,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoli" />
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo toArray" />
+    <MESSAGE value="REFACTORING: definizione del metodo filtraRuoli" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo filtraRuoli" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

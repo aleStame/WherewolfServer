@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.IntFunction;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static java.util.Arrays.stream;
@@ -18,12 +19,10 @@ public final class Protezioni
     public void aggiungiProtezione(Categoria categoria)
     {
         List<Fazione> fazioni = Stream.of(Fazione.values()).filter(fazione -> (fazione).getCategoria() == categoria).toList();
-        Fazione[] risultato = new Fazione[fazioni.size()];
-        for(int i = 0; i < risultato.length; i++) risultato[i] = fazioni.get(i);
-        aggiungiProtezione(risultato);
+        aggiungiProtezione(toArray(fazioni, Fazione[]::new));
     }
 
-    public void aggiungiProtezione(Fazione... fazioni) { aggiungiProtezione(toArray(filtraRuoli(fazioni))); }
+    public void aggiungiProtezione(Fazione... fazioni) { aggiungiProtezione(toArray(filtraRuoli(fazioni), Ruolo[]::new)); }
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(getLupi()); }
 
@@ -41,14 +40,9 @@ public final class Protezioni
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
 
-    private Ruolo[] getLupi() { return toArray(getRuoli()); }
+    private Ruolo[] getLupi() { return toArray(getRuoli(), Ruolo[]::new); }
 
-    private Ruolo[] toArray(List<Ruolo> ruoli)
-    {
-        Ruolo[] risultato = new Ruolo[ruoli.size()];
-        ruoli.toArray(risultato);
-        return risultato;
-    }
+    private <T> T[] toArray(List<T> lista, IntFunction<T[]> generatore) { return lista.toArray(generatore); }
 
     private List<Ruolo> getRuoli() { return stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList(); }
 
