@@ -42,6 +42,8 @@ public final class Tratti
 
     public void aggiungi(Tratto tratto) { tratti.add(tratto); }
 
+    public void aggiungiProtezioneMistici() { }
+
     public void perdiProtezioni()
     {
         protezioni.perdiProtezioni();

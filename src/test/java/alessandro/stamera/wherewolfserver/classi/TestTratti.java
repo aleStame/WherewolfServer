@@ -45,6 +45,12 @@ public final class TestTratti
         verificaProtezione(istanza);
     }
 
+    @ParameterizedTest @CsvSource({ "GOBLIN, GUARITORE, LEPRECAUNO" }) public void testProtezioneMistici(IstanzaRuolo istanza)
+    {
+        tratti.aggiungiProtezioneMistici();
+        verificaProtezione(istanza);
+    }
+
     private boolean isMaledetto() { return tratti.isMaledetto(); }
 
     private void verificaProtezione(IstanzaRuolo istanza)
