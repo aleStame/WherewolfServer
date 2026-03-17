@@ -29,7 +29,12 @@ public final class RuoliFactory
 
     public String getNome(int posizione) { return ruoli.keySet().stream().toList().get(posizione); }
 
-    public Ruolo[] getLupi() { return null; }
+    public Ruolo[] getLupi()
+    {
+        List<Ruolo> lupi = ruoli.values().stream().filter(Ruolo::isLupo).toList();
+        Ruolo[] risultato = new Ruolo[lupi.size()];
+        return lupi.toArray(risultato);
+    }
 
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
