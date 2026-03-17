@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 
 public final class TestCappuccettoRosso
 {
@@ -65,7 +64,7 @@ public final class TestCappuccettoRosso
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
-        for(IstanzaRuolo istanzaRuolo : values()) verificaFalso(isProtezionePresente(istanzaRuolo.getRuolo()));
+        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaFalso(isProtezionePresente(getRuolo(factory.getNome(i))));
     }
 
     private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }

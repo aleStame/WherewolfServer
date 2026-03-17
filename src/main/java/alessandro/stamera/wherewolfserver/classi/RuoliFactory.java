@@ -18,6 +18,12 @@ public final class RuoliFactory
         aggiungiProtezioneCreatureOmbra("Eremita", "Ladra");
     }
 
+    public Ruolo getRuolo(String nome) { return ruoli.get(nome); }
+
+    public int getNumeroRuoli() { return ruoli.size(); }
+
+    public String getNome(int posizione) { return ruoli.keySet().stream().toList().get(posizione); }
+
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
     private void aggiungiProtezioneCreatureOmbra(String... nomi)
@@ -30,8 +36,6 @@ public final class RuoliFactory
         Ruolo ruolo = istanza.getRuolo();
         ruoli.put(getNome(ruolo), ruolo);
     }
-
-    public Ruolo getRuolo(String nome) { return ruoli.get(nome); }
 
     private String getNome(Ruolo ruolo)
     {
