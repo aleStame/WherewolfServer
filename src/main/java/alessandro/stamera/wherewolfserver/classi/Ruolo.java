@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
@@ -153,7 +152,7 @@ public class Ruolo
 
     public boolean isGhoul() { return false; }
 
-    public void romeizzazione() { aggiungiProtezione(CREATURE_OMBRA); }
+    public void romeizzazione() { tratti.aggiungiProtezioneCreatureOmbra(); }
 
     public boolean isAmanti() { return false; }
 

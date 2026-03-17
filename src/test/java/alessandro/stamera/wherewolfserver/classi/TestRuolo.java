@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
@@ -39,16 +40,20 @@ public final class TestRuolo
     @Test public void testVoti()
     {
         incrementaVoti();
-        verificaVoti();
+        verificaVoti(ESEMPIO_VOTI);
         ruolo.annullaVoti();
         verificaNessunVoto();
+        ruolo.maledizione();
+        verificaVoti(1);
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        verificaVoti();
+        verificaVoti(ESEMPIO_VOTI);
         verificaAccusato();
     }
 
@@ -94,7 +99,7 @@ public final class TestRuolo
 
     private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
 
-    private void verificaVoti() { assertThat(getNumeroVoti()).isEqualTo(ESEMPIO_VOTI); }
+    private void verificaVoti(int voti) { assertThat(getNumeroVoti()).isEqualTo(voti); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
