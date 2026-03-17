@@ -18,7 +18,7 @@ public final class TestCappuccettoRosso
     @BeforeEach public void setUp()
     {
         factory = new RuoliFactory();
-        ruolo = factory.getRuolo("Cappuccetto rosso"); }
+        ruolo = getRuolo("Cappuccetto rosso"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
 
@@ -58,13 +58,15 @@ public final class TestCappuccettoRosso
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testProtezioni(String nome) { verificaVero(isProtezionePresente(factory.getRuolo(nome))); }
+    public void testProtezioni(String nome) { verificaVero(isProtezionePresente(getRuolo(nome))); }
 
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
         for(IstanzaRuolo istanzaRuolo : values()) verificaFalso(isProtezionePresente(istanzaRuolo.getRuolo()));
     }
+
+    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
