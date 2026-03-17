@@ -1,5 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
+
 public class GiovaneLupo extends Lupo
 {
 
@@ -12,6 +15,7 @@ public class GiovaneLupo extends Lupo
           "Se viene messo al rogo, la notte successiva i lupi del branco attaccheranno due volte",
      1
         );
+        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) aggiungiTratto(tratto);
     }
 
     @Override public boolean isGiovaneLupo() { return true; }
