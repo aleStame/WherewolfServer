@@ -37,7 +37,7 @@ public class Ruolo
         this.mistico = mistico;
         libera();
         tratti = new Tratti();
-        romeo = false;
+        setRomeo(false);
     }
 
     public String getNome() { return nome; }
@@ -155,7 +155,7 @@ public class Ruolo
     public void romeizzazione()
     {
         tratti.aggiungiProtezioneCreatureOmbra();
-        romeo = true;
+        setRomeo(true);
     }
 
     public boolean isAmanti() { return false; }
@@ -181,9 +181,7 @@ public class Ruolo
     public boolean attacco(Ruolo ruolo)
     {
         boolean esito = !isProtezionePresente(ruolo);
-        System.out.println(esito);
         if(!esito && romeo && ruolo.isLupo()) esito = true;
-        System.out.println(esito);
         return esito;
     }
 
@@ -213,5 +211,7 @@ public class Ruolo
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
+
+    private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
 }
