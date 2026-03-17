@@ -23,9 +23,6 @@ public final class ContadinoLupo extends Contadino
 
     public static Ruolo getInstance() { return new ContadinoLupo(); }
 
-    private void aggiungiTrattiOscuri()
-    {
-        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) aggiungiTratto(tratto);
-    }
+    private void aggiungiTrattiOscuri() { aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO); }
 
 }

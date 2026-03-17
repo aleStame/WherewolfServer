@@ -190,7 +190,7 @@ public class Ruolo
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
-    public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
+    public void aggiungiTratti(Tratto... tratti) { for(Tratto tratto : tratti) this.tratti.aggiungi(tratto); }
 
     public void maledizione() { tratti.maledizione(); }
 

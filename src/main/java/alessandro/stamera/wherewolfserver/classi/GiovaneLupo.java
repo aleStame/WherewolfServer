@@ -15,7 +15,7 @@ public class GiovaneLupo extends Lupo
           "Se viene messo al rogo, la notte successiva i lupi del branco attaccheranno due volte",
      1
         );
-        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) aggiungiTratto(tratto);
+        aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO);
     }
 
     @Override public boolean isGiovaneLupo() { return true; }

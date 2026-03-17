@@ -15,8 +15,7 @@ public final class CapoBranco extends Lupo
           "viene ucciso.",
      1
         );
-        Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
-        for(Tratto tratto : tratti) aggiungiTratto(tratto);
+        aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO);
     }
 
     @Override public boolean isCapoBranco() { return true; }
