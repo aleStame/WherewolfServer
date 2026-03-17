@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo maledizione">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: ridefinizione del test dei voti" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,14 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01269" summary="ROSSO: testTrattoPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1773071353433</created>
-      <option name="number" value="01269" />
-      <option name="presentableId" value="LOCAL-01269" />
-      <option name="project" value="LOCAL" />
-      <updated>1773071353433</updated>
     </task>
     <task id="LOCAL-01270" summary="VERDE: testTrattoPresente riuscito">
       <option name="closed" value="true" />
@@ -632,7 +622,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773706617883</updated>
     </task>
-    <option name="localTasksCounter" value="1318" />
+    <task id="LOCAL-01318" summary="REFACTORING: ridefinizione del test dei voti">
+      <option name="closed" value="true" />
+      <created>1773707414335</created>
+      <option name="number" value="01318" />
+      <option name="presentableId" value="LOCAL-01318" />
+      <option name="project" value="LOCAL" />
+      <updated>1773707414335</updated>
+    </task>
+    <option name="localTasksCounter" value="1319" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,7 +645,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione dei metodi controlloTrattiOscuri e aggiungiTrattiOscuri" />
     <MESSAGE value="REFACTORING: trasformazione di testCappuccettoRosso in un metodo parametrico" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoPresente" />
@@ -672,7 +669,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaPresenza" />
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo maledizione" />
+    <MESSAGE value="REFACTORING: ridefinizione del test dei voti" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: ridefinizione del test dei voti" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,13 +3,9 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GIOVANE_LUPO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestRuolo
@@ -70,11 +66,11 @@ public final class TestRuolo
         assertThat(getFazione()).isEqualTo(fazione);
     }
 
-    @Test public void testRomeizzazione()
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO" })
+    public void testRomeizzazione(IstanzaRuolo istanza)
     {
         ruolo.romeizzazione();
-        for(IstanzaRuolo istanzaRuolo : new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO })
-            verificaVero(ruolo.isProtezionePresente(istanzaRuolo.getRuolo()));
+        verificaVero(ruolo.isProtezionePresente(istanza.getRuolo()));
     }
 
     @Test public void testSegnalazioneInquisitore()
