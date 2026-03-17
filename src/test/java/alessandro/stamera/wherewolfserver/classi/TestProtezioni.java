@@ -23,14 +23,14 @@ public final class TestProtezioni
     public void testCreatureOmbra(String nome)
     {
         protezioni.aggiungiProtezioneCreatureOmbra();
-        verificaPresenza(getRuolo(nome));
+        verificaPresenza(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
     public void testCappuccettoRosso(String nome)
     {
         protezioni.aggiungiProtezioneLupi();
-        verificaPresenza(getRuolo(nome));
+        verificaPresenza(nome);
     }
 
     @Test public void testPerdiProtezioni()
@@ -42,8 +42,10 @@ public final class TestProtezioni
     @ParameterizedTest @CsvSource({ "Guaritore, Goblin, Leprecauno" }) public void testProtezioneMistici(String nome)
     {
         protezioni.aggiungiProtezioneMistici();
-        verificaPresenza(getRuolo(nome));
+        verificaPresenza(nome);
     }
+
+    private void verificaPresenza(String nome) { verificaPresenza(getRuolo(nome)); }
 
     private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
 
