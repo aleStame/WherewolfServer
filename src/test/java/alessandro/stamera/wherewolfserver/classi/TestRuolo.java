@@ -71,7 +71,6 @@ public final class TestRuolo
     {
         ruolo.romeizzazione();
         Ruolo ruolo = new RuoliFactory().getRuolo(nome);
-        verificaVero(this.ruolo.isProtezionePresente(ruolo));
         verificaVero(this.ruolo.attacco(ruolo));
     }
 

@@ -181,6 +181,7 @@ public class Ruolo
     public boolean attacco(Ruolo ruolo)
     {
         boolean esito = !isProtezionePresente(ruolo);
+        System.out.println(esito);
         if(!esito && romeo && ruolo.isLupo()) esito = true;
         System.out.println(esito);
         return esito;
