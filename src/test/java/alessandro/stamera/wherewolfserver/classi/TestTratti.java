@@ -28,8 +28,7 @@ public final class TestTratti
     public void testCappuccettoRosso(IstanzaRuolo istanza)
     {
         tratti.aggiungiProtezioneLupi();
-        verificaTrattoPresente(PROTETTO);
-        verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
+        verificaProtezione(istanza);
     }
 
     @Test public void testMaledizione()
@@ -43,6 +42,11 @@ public final class TestTratti
     public void testCreatureOmbra(IstanzaRuolo istanza)
     {
         tratti.aggiungiProtezioneCreatureOmbra();
+        verificaProtezione(istanza);
+    }
+
+    private void verificaProtezione(IstanzaRuolo istanza)
+    {
         verificaTrattoPresente(PROTETTO);
         verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
     }
