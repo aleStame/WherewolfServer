@@ -34,7 +34,7 @@ public final class TestGiovaneLupo
 
     @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
 
-    @Test public void testGiovaneLupo() { assertThat(ruolo.isGiovaneLupo()).isTrue(); }
+    @Test public void testGiovaneLupo() { verificaVero(ruolo.isGiovaneLupo()); }
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
@@ -45,9 +45,11 @@ public final class TestGiovaneLupo
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
     @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
-    public void testTratti(Tratto tratto) { assertThat(ruolo.isTrattoPresente(tratto)).isTrue(); }
+    public void testTratti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
