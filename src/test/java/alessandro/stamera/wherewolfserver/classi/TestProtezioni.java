@@ -23,27 +23,29 @@ public final class TestProtezioni
     public void testCreatureOmbra(String nome)
     {
         protezioni.aggiungiProtezioneCreatureOmbra();
-        verificaPresenza(factory.getRuolo(nome));
+        verificaPresenza(getRuolo(nome));
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
     public void testCappuccettoRosso(String nome)
     {
         protezioni.aggiungiProtezioneLupi();
-        verificaPresenza(factory.getRuolo(nome));
+        verificaPresenza(getRuolo(nome));
     }
 
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(int i = 0; i < factory.getNumeroRuoli(); i++) assertThat(isPresente(factory.getRuolo(factory.getNome(i)))).isFalse();
+        for(int i = 0; i < factory.getNumeroRuoli(); i++) assertThat(isPresente(getRuolo(factory.getNome(i)))).isFalse();
     }
 
     @ParameterizedTest @CsvSource({ "Guaritore, Goblin, Leprecauno" }) public void testProtezioneMistici(String nome)
     {
         protezioni.aggiungiProtezioneMistici();
-        verificaPresenza(factory.getRuolo(nome));
+        verificaPresenza(getRuolo(nome));
     }
+
+    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
 
     private void verificaPresenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isTrue(); }
 
