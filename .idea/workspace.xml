@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testProtezioneMistici non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testProtezioneMistici riuscito">
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Protezioni.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Tratti.class.uniqueId1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestProtezioni.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -363,14 +366,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01275" summary="VERDE: testTratti riuscito">
-      <option name="closed" value="true" />
-      <created>1773073760393</created>
-      <option name="number" value="01275" />
-      <option name="presentableId" value="LOCAL-01275" />
-      <option name="project" value="LOCAL" />
-      <updated>1773073760393</updated>
     </task>
     <task id="LOCAL-01276" summary="ROSSO: testCappuccettoRosso non riuscito">
       <option name="closed" value="true" />
@@ -756,7 +751,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773759439159</updated>
     </task>
-    <option name="localTasksCounter" value="1324" />
+    <task id="LOCAL-01324" summary="VERDE: testProtezioneMistici riuscito">
+      <option name="closed" value="true" />
+      <created>1773760693296</created>
+      <option name="number" value="01324" />
+      <option name="presentableId" value="LOCAL-01324" />
+      <option name="project" value="LOCAL" />
+      <updated>1773760693296</updated>
+    </task>
+    <option name="localTasksCounter" value="1325" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -771,7 +774,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testVoti non riuscito" />
     <MESSAGE value="VERDE: testVoti riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNonMorto riuscito" />
     <MESSAGE value="ROSSO: testMaledizione non riuscito" />
@@ -796,7 +798,8 @@
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: terstTratti non riuscito" />
     <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testProtezioneMistici non riuscito" />
+    <MESSAGE value="VERDE: testProtezioneMistici riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testProtezioneMistici riuscito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

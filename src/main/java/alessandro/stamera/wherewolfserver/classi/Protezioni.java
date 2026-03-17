@@ -32,7 +32,7 @@ public final class Protezioni
 
     public void aggiungiProtezioneMistici()
     {
-        aggiungiProtezione(toArray(getRuoli().stream().filter(Ruolo::isMistico).toList(), Ruolo[]::new));
+        aggiungiProtezione(getMistici());
     }
 
     private List<Ruolo> filtraRuoli(Fazione... fazioni)
@@ -46,6 +46,8 @@ public final class Protezioni
     }
 
     private Ruolo[] getLupi() { return toArray(getRuoli().stream().filter(Ruolo::isLupo).toList(), Ruolo[]::new); }
+
+    private Ruolo[] getMistici() { return toArray(getRuoli().stream().filter(Ruolo::isMistico).toList(), Ruolo[]::new); }
 
     private <T> T[] toArray(List<T> lista, IntFunction<T[]> generatore) { return lista.toArray(generatore); }
 
