@@ -29,6 +29,8 @@ public final class RuoliFactory
 
     public String getNome(int posizione) { return ruoli.keySet().stream().toList().get(posizione); }
 
+    public Ruolo[] getLupi() { return null; }
+
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
     private void aggiungiProtezioneCreatureOmbra(String... nomi)
