@@ -4,9 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestCapoBranco
