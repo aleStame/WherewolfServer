@@ -2,7 +2,10 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GOBLIN;
 
@@ -54,6 +57,13 @@ public final class TestGoblin
         verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
         verificaVero(isAccusato());
+    }
+
+    @ParameterizedTest @CsvSource({ "GUARITORE, LEPRECAUNO" })
+    public void testProtezioneMistici(IstanzaRuolo istanza)
+    {
+        verificaVero(ruolo.isProtezionePresente(istanza.getRuolo()));
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
