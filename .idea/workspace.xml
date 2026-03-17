@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: ridefinizione del test dei voti" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: parametrizzazione del test della romeizzazione">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,14 +239,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01270" summary="VERDE: testTrattoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1773071611257</created>
-      <option name="number" value="01270" />
-      <option name="presentableId" value="LOCAL-01270" />
-      <option name="project" value="LOCAL" />
-      <updated>1773071611257</updated>
     </task>
     <task id="LOCAL-01271" summary="VERDE DIRETTO: testTrattoAssente riuscito">
       <option name="closed" value="true" />
@@ -630,7 +624,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773707414335</updated>
     </task>
-    <option name="localTasksCounter" value="1319" />
+    <task id="LOCAL-01319" summary="REFACTORING: parametrizzazione del test della romeizzazione">
+      <option name="closed" value="true" />
+      <created>1773707588165</created>
+      <option name="number" value="01319" />
+      <option name="presentableId" value="LOCAL-01319" />
+      <option name="project" value="LOCAL" />
+      <updated>1773707588165</updated>
+    </task>
+    <option name="localTasksCounter" value="1320" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -645,7 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: trasformazione di testCappuccettoRosso in un metodo parametrico" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoPresente" />
     <MESSAGE value="ROSSO: testMaledetto non riuscito" />
@@ -670,7 +671,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
     <MESSAGE value="REFACTORING: ridefinizione del test dei voti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: ridefinizione del test dei voti" />
+    <MESSAGE value="REFACTORING: parametrizzazione del test della romeizzazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: parametrizzazione del test della romeizzazione" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

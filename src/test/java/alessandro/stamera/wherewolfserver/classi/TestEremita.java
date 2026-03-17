@@ -2,19 +2,17 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.CAPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_SOLITARIO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.EREMITA;
 
 public final class TestEremita
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = EREMITA.getRuolo(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Eremita"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
@@ -46,10 +44,8 @@ public final class TestEremita
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @Test public void testProtezioni()
-    {
-        for(IstanzaRuolo istanzaRuolo : new IstanzaRuolo[] { CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO }) verificaVero(ruolo.isProtezionePresente(istanzaRuolo.getRuolo()));
-    }
+    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO" })
+    public void testProtezioni(IstanzaRuolo istanza) { verificaVero(ruolo.isProtezionePresente(istanza.getRuolo())); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
