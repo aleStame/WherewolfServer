@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getMistici" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testProtezioneMistici non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,14 +237,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01277" summary="VERDE: testCappuccettoRosso riuscito">
-      <option name="closed" value="true" />
-      <created>1773076549046</created>
-      <option name="number" value="01277" />
-      <option name="presentableId" value="LOCAL-01277" />
-      <option name="project" value="LOCAL" />
-      <updated>1773076549046</updated>
     </task>
     <task id="LOCAL-01278" summary="ROSSO: testCappuccettoRosso non riuscito">
       <option name="closed" value="true" />
@@ -630,7 +622,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773760896618</updated>
     </task>
-    <option name="localTasksCounter" value="1326" />
+    <task id="LOCAL-01326" summary="ROSSO: testProtezioneMistici non riuscito">
+      <option name="closed" value="true" />
+      <created>1773762676863</created>
+      <option name="number" value="01326" />
+      <option name="presentableId" value="LOCAL-01326" />
+      <option name="project" value="LOCAL" />
+      <updated>1773762676864</updated>
+    </task>
+    <option name="localTasksCounter" value="1327" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -667,10 +667,10 @@
     <MESSAGE value="REFACTORING: parametrizzazione del test delle protezioni" />
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: terstTratti non riuscito" />
-    <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
     <MESSAGE value="VERDE: testProtezioneMistici riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getMistici" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getMistici" />
+    <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testProtezioneMistici non riuscito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
