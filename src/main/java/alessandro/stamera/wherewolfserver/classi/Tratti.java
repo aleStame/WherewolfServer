@@ -30,13 +30,13 @@ public final class Tratti
 
     public void aggiungiProtezioneLupi()
     {
-        if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO);
+        proteggi();
         protezioni.aggiungiProtezioneLupi();
     }
 
     public void aggiungiProtezioneCreatureOmbra()
     {
-        if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO);
+        proteggi();
         protezioni.aggiungiProtezioneCreatureOmbra();
     }
 
@@ -47,5 +47,7 @@ public final class Tratti
         protezioni.perdiProtezioni();
         tratti.remove(PROTETTO);
     }
+
+    private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
 }
