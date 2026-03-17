@@ -13,9 +13,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestContadinoLupo
 {
 
+    private RuoliFactory factory;
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Contadino discendente dei lupi"); }
+    @BeforeEach public void setUp()
+    {
+        factory = new RuoliFactory();
+        ruolo = factory.getRuolo("Contadino discendente dei lupi"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
@@ -31,10 +36,10 @@ public final class TestContadinoLupo
 
     @Test public void testContadinoLupo() { verificaVero(ruolo.isContadinoLupo()); }
 
-    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
-    public void testAttaccoLupi(IstanzaRuolo istanza)
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
+    public void testAttaccoLupi(String nome)
     {
-        verificaFalso(ruolo.attacco(istanza.getRuolo()));
+        verificaFalso(ruolo.attacco(factory.getRuolo(nome)));
         assertThat(ruolo.getAura()).isEqualTo(NERA);
         for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
     }

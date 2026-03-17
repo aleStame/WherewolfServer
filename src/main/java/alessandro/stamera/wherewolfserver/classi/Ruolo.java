@@ -19,7 +19,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, accusato;
+    private boolean amato, accusato, romeo;
 
     private final boolean mistico;
 
@@ -27,7 +27,6 @@ public class Ruolo
 
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
     {
-        System.out.println(nome);
         this.nome = nome;
         cambiaFazione(fazione);
         this.aura = aura;
@@ -38,6 +37,7 @@ public class Ruolo
         this.mistico = mistico;
         libera();
         tratti = new Tratti();
+        romeo = false;
     }
 
     public String getNome() { return nome; }
@@ -152,7 +152,11 @@ public class Ruolo
 
     public boolean isGhoul() { return false; }
 
-    public void romeizzazione() { tratti.aggiungiProtezioneCreatureOmbra(); }
+    public void romeizzazione()
+    {
+        tratti.aggiungiProtezioneCreatureOmbra();
+        romeo = true;
+    }
 
     public boolean isAmanti() { return false; }
 
@@ -174,7 +178,13 @@ public class Ruolo
 
     public boolean isLadra() { return false; }
 
-    public boolean attacco(Ruolo ruolo) { return !isProtezionePresente(ruolo); }
+    public boolean attacco(Ruolo ruolo)
+    {
+        boolean esito = !isProtezionePresente(ruolo);
+        if(!esito && romeo && ruolo.isLupo()) esito = true;
+        System.out.println(esito);
+        return esito;
+    }
 
     public boolean isProtezionePresente(Ruolo ruolo) { return tratti.isProtezionePresente(ruolo); }
 

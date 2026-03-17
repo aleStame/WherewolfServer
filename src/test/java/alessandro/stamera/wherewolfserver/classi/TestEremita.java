@@ -12,9 +12,15 @@ public final class TestEremita
 
     private static final String NOME = "Eremita";
 
+    private RuoliFactory factory;
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
+    @BeforeEach public void setUp()
+    {
+        factory = new RuoliFactory();
+        ruolo = factory.getRuolo(NOME);
+    }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
@@ -46,8 +52,8 @@ public final class TestEremita
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO" })
-    public void testProtezioni(IstanzaRuolo istanza) { verificaVero(ruolo.isProtezionePresente(istanza.getRuolo())); }
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
+    public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(factory.getRuolo(nome))); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

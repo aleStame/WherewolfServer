@@ -66,11 +66,13 @@ public final class TestRuolo
         assertThat(getFazione()).isEqualTo(fazione);
     }
 
-    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, LUPO_SOLITARIO, LUPO_REIETTO, GIOVANE_LUPO" })
-    public void testRomeizzazione(IstanzaRuolo istanza)
+    @ParameterizedTest @CsvSource({ "Assassino, Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
+    public void testRomeizzazioneMorte(String nome)
     {
         ruolo.romeizzazione();
-        verificaVero(ruolo.isProtezionePresente(istanza.getRuolo()));
+        Ruolo ruolo = new RuoliFactory().getRuolo(nome);
+        verificaVero(this.ruolo.isProtezionePresente(ruolo));
+        verificaVero(this.ruolo.attacco(ruolo));
     }
 
     @Test public void testSegnalazioneInquisitore()
