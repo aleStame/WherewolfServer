@@ -203,6 +203,8 @@ public class Ruolo
 
     public void maledizione() { tratti.maledizione(); }
 
+    public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();

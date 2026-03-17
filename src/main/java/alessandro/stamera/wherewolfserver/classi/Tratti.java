@@ -48,6 +48,12 @@ public final class Tratti
         protezioni.aggiungiProtezioneMistici();
     }
 
+    public void aggiungiProtezione(Ruolo[] ruoli)
+    {
+        proteggi();
+        protezioni.aggiungiProtezione(ruoli);
+    }
+
     public void perdiProtezioni()
     {
         protezioni.perdiProtezioni();

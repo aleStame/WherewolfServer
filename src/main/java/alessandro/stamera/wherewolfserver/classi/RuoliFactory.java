@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
@@ -16,6 +17,10 @@ public final class RuoliFactory
         caricaRuoli();
         getRuolo("Cappuccetto rosso").aggiungiProtezioneLupi();
         aggiungiProtezioneCreatureOmbra("Eremita", "Ladra");
+        List<Ruolo> mistici = ruoli.values().stream().filter(ruolo -> ruolo.isMistico() && !ruolo.isGoblin()).toList();
+        Ruolo[] temp = new Ruolo[mistici.size()];
+        mistici.toArray(temp);
+        getRuolo("Goblin").aggiungiProtezione(temp);
     }
 
     public Ruolo getRuolo(String nome) { return ruoli.get(nome); }

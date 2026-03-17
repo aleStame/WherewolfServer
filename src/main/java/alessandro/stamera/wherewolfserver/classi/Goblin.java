@@ -13,7 +13,6 @@ public class Goblin extends Ruolo
     "Goblin", NESSUNA, NERA, "La prima notte riconosce le altre creature del piccolo popolo ed è protetto da tutti i mistici.",
      1, true
         );
-        //aggiungiProtezioneMistici();
     }
 
     @Override public boolean isGoblin() { return true; }

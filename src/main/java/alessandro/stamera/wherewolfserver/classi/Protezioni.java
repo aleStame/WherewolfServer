@@ -40,7 +40,7 @@ public final class Protezioni
         return getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
     }
 
-    private void aggiungiProtezione(Ruolo... ruoli)
+    public void aggiungiProtezione(Ruolo... ruoli)
     {
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }

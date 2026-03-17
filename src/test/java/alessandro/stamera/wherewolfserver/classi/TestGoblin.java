@@ -7,14 +7,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GOBLIN;
 
 public final class TestGoblin
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = GOBLIN.getRuolo(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Goblin"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
 
