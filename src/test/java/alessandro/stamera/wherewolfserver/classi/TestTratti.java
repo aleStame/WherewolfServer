@@ -33,9 +33,9 @@ public final class TestTratti
 
     @Test public void testMaledizione()
     {
-        assertThat(tratti.isMaledetto()).isFalse();
+        assertThat(isMaledetto()).isFalse();
         tratti.maledizione();
-        verificaVero(tratti.isMaledetto());
+        verificaVero(isMaledetto());
     }
 
     @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
@@ -44,6 +44,8 @@ public final class TestTratti
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaProtezione(istanza);
     }
+
+    private boolean isMaledetto() { return tratti.isMaledetto(); }
 
     private void verificaProtezione(IstanzaRuolo istanza)
     {
