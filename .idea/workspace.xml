@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: parametrizzazione del test della romeizzazione">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,22 +239,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01271" summary="VERDE DIRETTO: testTrattoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1773071855862</created>
-      <option name="number" value="01271" />
-      <option name="presentableId" value="LOCAL-01271" />
-      <option name="project" value="LOCAL" />
-      <updated>1773071855862</updated>
-    </task>
-    <task id="LOCAL-01272" summary="REFACTORING: definizione di un metodo di set up">
-      <option name="closed" value="true" />
-      <created>1773072053727</created>
-      <option name="number" value="01272" />
-      <option name="presentableId" value="LOCAL-01272" />
-      <option name="project" value="LOCAL" />
-      <updated>1773072053727</updated>
     </task>
     <task id="LOCAL-01273" summary="REFACTORING: definizione del metodo isPresente">
       <option name="closed" value="true" />
@@ -632,7 +616,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773707588165</updated>
     </task>
-    <option name="localTasksCounter" value="1320" />
+    <task id="LOCAL-01320" summary="REFACTORING: parametrizzazione del test delle protezioni">
+      <option name="closed" value="true" />
+      <created>1773707887995</created>
+      <option name="number" value="01320" />
+      <option name="presentableId" value="LOCAL-01320" />
+      <option name="project" value="LOCAL" />
+      <updated>1773707887995</updated>
+    </task>
+    <task id="LOCAL-01321" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1773708022285</created>
+      <option name="number" value="01321" />
+      <option name="presentableId" value="LOCAL-01321" />
+      <option name="project" value="LOCAL" />
+      <updated>1773708022285</updated>
+    </task>
+    <option name="localTasksCounter" value="1322" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,8 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoPresente" />
     <MESSAGE value="ROSSO: testMaledetto non riuscito" />
     <MESSAGE value="VERDE: testMaledetto riuscito" />
     <MESSAGE value="ROSSO: testVoti non riuscito" />
@@ -672,7 +670,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
     <MESSAGE value="REFACTORING: ridefinizione del test dei voti" />
     <MESSAGE value="REFACTORING: parametrizzazione del test della romeizzazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: parametrizzazione del test della romeizzazione" />
+    <MESSAGE value="REFACTORING: parametrizzazione del test delle protezioni" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
