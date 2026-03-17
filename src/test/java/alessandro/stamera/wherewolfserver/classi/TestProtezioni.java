@@ -36,6 +36,12 @@ public final class TestProtezioni
         assertThat(isPresente(istanza)).isFalse();
     }
 
+    @ParameterizedTest @CsvSource({ "GUARITORE, GOBLIN, LEPRECAUNO" }) public void testProtezioneMistici(IstanzaRuolo istanza)
+    {
+        protezioni.aggiungiProtezioneMistici();
+        verificaPresenza(istanza);
+    }
+
     private void verificaPresenza(IstanzaRuolo istanza) { assertThat(isPresente(istanza)).isTrue(); }
 
     private boolean isPresente(IstanzaRuolo istanza) { return protezioni.isPresente(istanza.getRuolo()); }

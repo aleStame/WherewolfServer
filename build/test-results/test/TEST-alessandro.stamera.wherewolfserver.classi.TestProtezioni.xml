@@ -1,41 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestProtezioni" tests="36" skipped="0" failures="0" errors="0" timestamp="2026-03-17T11:17:49" hostname="ALESSANDRO" time="0.137">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestProtezioni" tests="37" skipped="0" failures="1" errors="0" timestamp="2026-03-17T14:55:02" hostname="ALESSANDRO" time="0.234">
   <properties/>
-  <testcase name="[1] istanza=ALTRA_GUARDIA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
+  <testcase name="[1] istanza=GUARITORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.045">
+    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+Expecting value to be true but was false
+	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at app//alessandro.stamera.wherewolfserver.classi.TestProtezioni.verificaPresenza(TestProtezioni.java:45)
+	at app//alessandro.stamera.wherewolfserver.classi.TestProtezioni.testProtezioneMistici(TestProtezioni.java:42)
+	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:94)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:142)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:110)
+	at java.base@21.0.3/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base@21.0.3/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.3/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@21.0.3/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@21.0.3/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@21.0.3/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@21.0.3/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base@21.0.3/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base@21.0.3/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base@21.0.3/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@21.0.3/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@21.0.3/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@21.0.3/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@21.0.3/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:110)
+	at app//org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:44)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="[1] istanza=ALTRA_GUARDIA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
   <testcase name="[2] istanza=ANGELO_CUSTODE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[3] istanza=ASSASSINO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.003"/>
-  <testcase name="[4] istanza=AZZECCAGARBUGLI" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
-  <testcase name="[5] istanza=BARDO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
-  <testcase name="[6] istanza=BECCHINO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
+  <testcase name="[3] istanza=ASSASSINO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
+  <testcase name="[4] istanza=AZZECCAGARBUGLI" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[5] istanza=BARDO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
+  <testcase name="[6] istanza=BECCHINO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
   <testcase name="[7] istanza=BOCCA_DI_ROSA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[8] istanza=BOIA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[8] istanza=BOIA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
   <testcase name="[9] istanza=BORGOMASTRO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
   <testcase name="[10] istanza=BRACCONIERE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[11] istanza=CACCIATORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
-  <testcase name="[12] istanza=CACCIATORE_DI_VAMPIRI" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.004"/>
+  <testcase name="[11] istanza=CACCIATORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[12] istanza=CACCIATORE_DI_VAMPIRI" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.018"/>
   <testcase name="[13] istanza=CAPO_GILDA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[14] istanza=GIOVANE_LUPO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[14] istanza=GIOVANE_LUPO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
   <testcase name="[15] istanza=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
   <testcase name="[16] istanza=LUPO_REIETTO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[17] istanza=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
+  <testcase name="[17] istanza=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
   <testcase name="[18] istanza=CAPPUCCETTO_ROSSO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[19] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
-  <testcase name="[20] istanza=CONTADINO_EROE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
-  <testcase name="[21] istanza=CONTADINO_LUPO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[22] istanza=CONTADINO_MOSTRO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[19] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[20] istanza=CONTADINO_EROE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[21] istanza=CONTADINO_LUPO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
+  <testcase name="[22] istanza=CONTADINO_MOSTRO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
   <testcase name="[23] istanza=CONTADINO_NORMALE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[24] istanza=EREMITA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
+  <testcase name="[24] istanza=EREMITA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
   <testcase name="[25] istanza=GHOUL" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[26] istanza=GIULIETTA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[26] istanza=GIULIETTA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
   <testcase name="[27] istanza=GIULLARE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[28] istanza=GUARITORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
+  <testcase name="[28] istanza=GUARITORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
   <testcase name="[29] istanza=GOBLIN" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[30] istanza=LEPRECAUNO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
-  <testcase name="[31] istanza=GUARDIA_CORROTTA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
+  <testcase name="[30] istanza=LEPRECAUNO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
+  <testcase name="[31] istanza=GUARDIA_CORROTTA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
   <testcase name="[32] istanza=GUARDIA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
-  <testcase name="[33] istanza=INQUISITORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
+  <testcase name="[33] istanza=INQUISITORE" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.003"/>
   <testcase name="[34] istanza=LADRA" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.0"/>
-  <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.004"/>
+  <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.001"/>
   <testcase name="[1] istanza=CAPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.TestProtezioni" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

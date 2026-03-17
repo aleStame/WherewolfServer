@@ -46,4 +46,6 @@ public final class Protezioni
 
     private List<Ruolo> getRuoli() { return stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).filter(Ruolo::isLupo).toList(); }
 
+    public void aggiungiProtezioneMistici() { }
+
 }
