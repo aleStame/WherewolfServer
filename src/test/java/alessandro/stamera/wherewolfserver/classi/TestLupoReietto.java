@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.LUPO_REIETTO;
 
@@ -34,6 +36,9 @@ public final class TestLupoReietto
     @Test public void testGiovaneLupo() { verificaFalso(ruolo.isGiovaneLupo()); }
 
     @Test public void testLupoReietto() { verificaVero(ruolo.isLupoReietto()); }
+
+    @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
+    public void testTratto(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
