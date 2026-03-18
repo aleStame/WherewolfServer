@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLupoSolitario
@@ -28,6 +30,9 @@ public final class TestLupoSolitario
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
     @Test public void testLupoSolitario() { verificaVero(ruolo.isLupoSolitario()); }
+
+    @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
+    public void testTratto(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

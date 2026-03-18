@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testTratto non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testTratto riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupoSolitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupoSolitario.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -268,22 +270,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01300" summary="VERDE: testVoti riuscito">
-      <option name="closed" value="true" />
-      <created>1773680258490</created>
-      <option name="number" value="01300" />
-      <option name="presentableId" value="LOCAL-01300" />
-      <option name="project" value="LOCAL" />
-      <updated>1773680258490</updated>
-    </task>
-    <task id="LOCAL-01301" summary="VERDE DIRETTO: testNonMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1773680419748</created>
-      <option name="number" value="01301" />
-      <option name="presentableId" value="LOCAL-01301" />
-      <option name="project" value="LOCAL" />
-      <updated>1773680419748</updated>
     </task>
     <task id="LOCAL-01302" summary="ROSSO: testMaledizione non riuscito">
       <option name="closed" value="true" />
@@ -661,7 +647,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773876579303</updated>
     </task>
-    <option name="localTasksCounter" value="1349" />
+    <task id="LOCAL-01349" summary="VERDE: testTratto riuscito">
+      <option name="closed" value="true" />
+      <created>1773876782716</created>
+      <option name="number" value="01349" />
+      <option name="presentableId" value="LOCAL-01349" />
+      <option name="project" value="LOCAL" />
+      <updated>1773876782716</updated>
+    </task>
+    <task id="LOCAL-01350" summary="VERDE DIRETTO: testTratto riuscito">
+      <option name="closed" value="true" />
+      <created>1773876892301</created>
+      <option name="number" value="01350" />
+      <option name="presentableId" value="LOCAL-01350" />
+      <option name="project" value="LOCAL" />
+      <updated>1773876892301</updated>
+    </task>
+    <option name="localTasksCounter" value="1351" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -676,8 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
-    <MESSAGE value="REFACTORING: ridefinizione del test dei voti" />
     <MESSAGE value="REFACTORING: parametrizzazione del test della romeizzazione" />
     <MESSAGE value="REFACTORING: parametrizzazione del test delle protezioni" />
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
@@ -701,6 +701,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="VERDE DIRETTO: testProtezioneMistici riuscito" />
     <MESSAGE value="ROSSO: testTratto non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testTratto non riuscito" />
+    <MESSAGE value="VERDE: testTratto riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testTratto riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testTratto riuscito" />
   </component>
 </project>
