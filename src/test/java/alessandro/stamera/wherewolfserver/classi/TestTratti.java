@@ -24,11 +24,11 @@ public final class TestTratti
     @ParameterizedTest @EnumSource(Tratto.class)
     public void testTrattoAssente(Tratto tratto) { assertThat(isPresente(tratto)).isFalse(); }
 
-    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
-    public void testCappuccettoRosso(IstanzaRuolo istanza)
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
+    public void testCappuccettoRosso(String nome)
     {
         tratti.aggiungiProtezioneLupi();
-        verificaProtezione(istanza);
+        verificaProtezione(nome);
     }
 
     @Test public void testMaledizione()
@@ -38,19 +38,19 @@ public final class TestTratti
         verificaVero(isMaledetto());
     }
 
-    @ParameterizedTest @CsvSource({ "CAPO_BRANCO, LUPO_BRANCO, GIOVANE_LUPO, LUPO_REIETTO, LUPO_SOLITARIO" })
-    public void testCreatureOmbra(IstanzaRuolo istanza)
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
+    public void testCreatureOmbra(String nome)
     {
         tratti.aggiungiProtezioneCreatureOmbra();
-        verificaProtezione(istanza);
+        verificaProtezione(nome);
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
 
-    private void verificaProtezione(IstanzaRuolo istanza)
+    private void verificaProtezione(String nome)
     {
         verificaTrattoPresente(PROTETTO);
-        verificaVero(tratti.isProtezionePresente(istanza.getRuolo()));
+        verificaVero(tratti.isProtezionePresente(new RuoliFactory().getRuolo(nome)));
     }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
