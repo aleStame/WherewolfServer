@@ -26,7 +26,7 @@ public final class Protezioni
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(new RuoliFactory().getLupi()); }
 
-    public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
+    public boolean isPresente(Ruolo ruolo) { System.out.println(ruoli); return ruoli.contains(ruolo); }
 
     public void perdiProtezioni() { ruoli.clear(); }
 

@@ -27,19 +27,9 @@ public final class RuoliFactory
         return ruolo;
     }
 
-    public Ruolo getGoblin()
-    {
-        Ruolo ruolo = getRuolo("Goblin");
-        ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(mistico -> !mistico.isGoblin()).toList()));
-        return ruolo;
-    }
+    public Ruolo getGoblin() { return getPiccoloPopolo("Goblin", (ruolo -> !ruolo.isGoblin())); }
 
-    public Ruolo getLeprecauno()
-    {
-        Ruolo ruolo = getRuolo("Leprecauno");
-        ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(mistico -> !mistico.isLeprecauno()).toList()));
-        return ruolo;
-    }
+    public Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno", (ruolo -> !ruolo.isLeprecauno())); }
 
     public Ruolo getRuolo(String nome) { return ruoli.get(nome); }
 
@@ -52,6 +42,13 @@ public final class RuoliFactory
     public Ruolo[] getMistici() { return filtraRuoli(Ruolo::isMistico); }
 
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
+
+    private Ruolo getPiccoloPopolo(String nome, Predicate<Ruolo> condizione)
+    {
+        Ruolo ruolo = getRuolo(nome);
+        ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(condizione).toList()));
+        return ruolo;
+    }
 
     private Ruolo[] filtraRuoli(Predicate<Ruolo> predicato) { return toArray(ruoli.values().stream().filter(predicato).toList()); }
 
