@@ -14,14 +14,16 @@ public final class TestRuoliFactory
     @BeforeEach public void setUp() { factory = new RuoliFactory(); }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario" })
-    public void testLupi(String nome) { verificaPresenza(factory.getLupi(), factory.getRuolo(nome)); }
+    public void testLupi(String nome) { verificaPresenza(factory.getLupi(), getRuolo(nome)); }
 
     @Test public void testMistici()
     {
-        Ruolo[] mistici = new Ruolo[] { factory.getGoblin(), factory.getRuolo("Guaritore"), factory.getLeprecauno() };
-        for(Ruolo mistico : mistici) verificaPresenza(factory.getMistici(), mistico);
+        for(Ruolo mistico : new Ruolo[] { factory.getGoblin(), getRuolo("Guaritore"), factory.getLeprecauno() })
+            verificaPresenza(factory.getMistici(), mistico);
     }
 
     private void verificaPresenza(Ruolo[] ruoli, Ruolo ruolo) { assertThat(ruoli).contains(ruolo); }
+
+    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
 
 }
