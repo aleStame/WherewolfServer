@@ -13,7 +13,7 @@ public final class TestGoblin
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Goblin"); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getGoblin(); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
 

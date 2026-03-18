@@ -40,12 +40,6 @@ public final class TestProtezioni
         for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaAssenza(getRuolo(factory.getNome(i)));
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Goblin, Leprecauno" }) public void testProtezioneMistici(String nome)
-    {
-        protezioni.aggiungiProtezioneMistici();
-        verificaPresenza(nome);
-    }
-
     private void verificaAssenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isFalse(); }
 
     private void verificaPresenza(String nome) { verificaPresenza(getRuolo(nome)); }
