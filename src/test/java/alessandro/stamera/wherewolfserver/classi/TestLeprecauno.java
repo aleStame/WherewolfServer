@@ -3,14 +3,21 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLeprecauno
 {
 
+    private RuoliFactory factory;
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getLeprecauno(); }
+    @BeforeEach public void setUp()
+    {
+        factory = new RuoliFactory();
+        ruolo = factory.getLeprecauno();
+    }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Leprecauno"); }
 
@@ -53,6 +60,13 @@ public final class TestLeprecauno
         verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
         verificaVero(isAccusato());
+    }
+
+    @Test public void testProtezioneMistici()
+    {
+        for(Ruolo mistico : new Ruolo[] { factory.getGoblin(), factory.getRuolo("Guaritore"), })
+            verificaVero(ruolo.isProtezionePresente(mistico));
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
