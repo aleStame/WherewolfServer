@@ -12,7 +12,10 @@ public final class Protezioni
 
     private final List<Ruolo> ruoli;
 
-    public Protezioni() { ruoli = new ArrayList<>(); }
+    public Protezioni()
+    {
+        ruoli = new ArrayList<>();
+    }
 
     public void aggiungiProtezioneCreatureOmbra() { aggiungiProtezione(CREATURE_OMBRA); }
 
@@ -24,7 +27,7 @@ public final class Protezioni
 
     public void aggiungiProtezione(Fazione... fazioni) { aggiungiProtezione(toArray(filtraRuoli(fazioni), Ruolo[]::new)); }
 
-    public void aggiungiProtezioneLupi() { aggiungiProtezione(getLupi()); }
+    public void aggiungiProtezioneLupi() { aggiungiProtezione(new RuoliFactory().getLupi()); }
 
     public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
 
@@ -44,8 +47,6 @@ public final class Protezioni
     {
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
-
-    private Ruolo[] getLupi() { return toArray(getRuoli().stream().filter(Ruolo::isLupo).toList(), Ruolo[]::new); }
 
     private Ruolo[] getMistici() { return toArray(getRuoli().stream().filter(Ruolo::isMistico).toList(), Ruolo[]::new); }
 

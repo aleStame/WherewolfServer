@@ -10,8 +10,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestCappuccettoRosso
 {
 
-    private static final String NOME = "Cappuccetto rosso";
-
     private Ruolo ruolo;
 
     private RuoliFactory factory;
@@ -19,9 +17,10 @@ public final class TestCappuccettoRosso
     @BeforeEach public void setUp()
     {
         factory = new RuoliFactory();
-        ruolo = getRuolo(NOME); }
+        ruolo = factory.getCappuccettoRosso();
+    }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
@@ -61,10 +60,16 @@ public final class TestCappuccettoRosso
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
     public void testProtezioni(String nome) { verificaVero(isProtezionePresente(getRuolo(nome))); }
 
-    @Test public void testPerditaProtezioni()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco", "Contadino discendente dei lupi", "Giovane lupo", "Lupo branco", "Lupo reietto", "Lupo solitario"
+        }
+    )
+    public void testPerditaProtezioni(String nome)
     {
         ruolo.perdiProtezioni();
-        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaFalso(isProtezionePresente(getRuolo(factory.getNome(i))));
+        verificaFalso(isProtezionePresente(getRuolo(nome)));
     }
 
     private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }

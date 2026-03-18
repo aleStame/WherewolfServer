@@ -15,12 +15,18 @@ public final class RuoliFactory
     {
         ruoli = new LinkedHashMap<>();
         caricaRuoli();
-        getRuolo("Cappuccetto rosso").aggiungiProtezioneLupi();
         aggiungiProtezioneCreatureOmbra("Eremita", "Ladra");
         List<Ruolo> mistici = ruoli.values().stream().filter(ruolo -> ruolo.isMistico() && !ruolo.isGoblin()).toList();
         Ruolo[] temp = new Ruolo[mistici.size()];
         mistici.toArray(temp);
         getRuolo("Goblin").aggiungiProtezione(temp);
+    }
+
+    public Ruolo getCappuccettoRosso()
+    {
+        Ruolo ruolo = getRuolo("Cappuccetto rosso");
+        ruolo.aggiungiProtezioneLupi();
+        return ruolo;
     }
 
     public Ruolo getRuolo(String nome) { return ruoli.get(nome); }
