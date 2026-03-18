@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 
@@ -35,11 +36,13 @@ public final class RuoliFactory
 
     public String getNome(int posizione) { return ruoli.keySet().stream().toList().get(posizione); }
 
-    public Ruolo[] getLupi() { return toArray(ruoli.values().stream().filter(Ruolo::isLupo).toList()); }
+    public Ruolo[] getLupi() { return filtraRuoli(Ruolo::isLupo); }
 
-    public Ruolo[] getMistici() { return toArray(ruoli.values().stream().filter(Ruolo::isMistico).toList()); }
+    public Ruolo[] getMistici() { return filtraRuoli(Ruolo::isMistico); }
 
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
+
+    private Ruolo[] filtraRuoli(Predicate<Ruolo> predicato) { return toArray(ruoli.values().stream().filter(predicato).toList()); }
 
     private void aggiungiProtezioneCreatureOmbra(String... nomi)
     {
