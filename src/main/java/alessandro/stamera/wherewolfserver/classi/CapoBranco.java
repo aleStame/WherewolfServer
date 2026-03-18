@@ -15,7 +15,6 @@ public final class CapoBranco extends Lupo
           "viene ucciso.",
      1
         );
-        aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO);
     }
 
     @Override public boolean isCapoBranco() { return true; }

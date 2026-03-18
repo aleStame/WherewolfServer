@@ -35,7 +35,7 @@ public final class TestLupoBranco
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
-    @ParameterizedTest @CsvSource({ "CREATURE_OMBRA, LUPO_MANNARO" })
+    @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
     public void testTratto(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
