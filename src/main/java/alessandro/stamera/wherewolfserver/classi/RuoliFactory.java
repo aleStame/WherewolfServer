@@ -37,6 +37,8 @@ public final class RuoliFactory
 
     public Ruolo[] getLupi() { return toArray(ruoli.values().stream().filter(Ruolo::isLupo).toList()); }
 
+    public Ruolo[] getMistici() { return null; }
+
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
     private void aggiungiProtezioneCreatureOmbra(String... nomi)
