@@ -9,11 +9,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestLupoSolitario
 {
 
+    private static final String NOME = "Lupo solitario";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = IstanzaRuolo.LUPO_SOLITARIO.getRuolo(); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Lupo solitario"); }
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.LUPO_SOLITARIO); }
 
