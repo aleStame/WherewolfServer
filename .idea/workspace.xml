@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAssenza">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMistici non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/RuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/RuoliFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuoliFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,14 +264,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01289" summary="ROSSO: testAttaccoRuoloProtetto non riuscito">
-      <option name="closed" value="true" />
-      <created>1773673167244</created>
-      <option name="number" value="01289" />
-      <option name="presentableId" value="LOCAL-01289" />
-      <option name="project" value="LOCAL" />
-      <updated>1773673167244</updated>
     </task>
     <task id="LOCAL-01290" summary="VERDE: testAttaccoRuoloProtetto riuscito">
       <option name="closed" value="true" />
@@ -658,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773851813489</updated>
     </task>
-    <option name="localTasksCounter" value="1338" />
+    <task id="LOCAL-01338" summary="ROSSO: testMistici non riuscito">
+      <option name="closed" value="true" />
+      <created>1773852516949</created>
+      <option name="number" value="01338" />
+      <option name="presentableId" value="LOCAL-01338" />
+      <option name="project" value="LOCAL" />
+      <updated>1773852516950</updated>
+    </task>
+    <option name="localTasksCounter" value="1339" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -673,7 +672,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: parametrizzazione dei test" />
     <MESSAGE value="ROSSO: testCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testCreatureOmbra riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getLupi" />
@@ -698,6 +696,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
     <MESSAGE value="REFACTORING: utilizzo del metodo getLupi per semplificare il codice" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAssenza" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAssenza" />
+    <MESSAGE value="ROSSO: testMistici non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMistici non riuscito" />
   </component>
 </project>
