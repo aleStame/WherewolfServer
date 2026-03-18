@@ -36,7 +36,8 @@ public final class TestProtezioni
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(int i = 0; i < factory.getNumeroRuoli(); i++) assertThat(isPresente(getRuolo(factory.getNome(i)))).isFalse();
+        verificaAssenza(factory.getCappuccettoRosso());
+        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaAssenza(getRuolo(factory.getNome(i)));
     }
 
     @ParameterizedTest @CsvSource({ "Guaritore, Goblin, Leprecauno" }) public void testProtezioneMistici(String nome)
@@ -44,6 +45,8 @@ public final class TestProtezioni
         protezioni.aggiungiProtezioneMistici();
         verificaPresenza(nome);
     }
+
+    private void verificaAssenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isFalse(); }
 
     private void verificaPresenza(String nome) { verificaPresenza(getRuolo(nome)); }
 
