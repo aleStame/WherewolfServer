@@ -27,19 +27,9 @@ public final class RuoliFactory
 
     public Ruolo getGoblin() { return getPiccoloPopolo("Goblin", (ruolo -> !ruolo.isGoblin())); }
 
-    public Ruolo getEremita()
-    {
-        Ruolo ruolo = getRuolo("Eremita");
-        ruolo.aggiungiProtezioneCreatureOmbra();
-        return ruolo;
-    }
+    public Ruolo getEremita() { return getPersonaggioProtetto("Eremita"); }
 
-    public Ruolo getLadra()
-    {
-        Ruolo ruolo = getRuolo("Ladra");
-        ruolo.aggiungiProtezioneCreatureOmbra();
-        return ruolo;
-    }
+    public Ruolo getLadra() { return getPersonaggioProtetto("Ladra"); }
 
     public Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno", (ruolo -> !ruolo.isLeprecauno())); }
 
@@ -52,6 +42,13 @@ public final class RuoliFactory
     public Ruolo[] getLupi() { return filtraRuoli(Ruolo::isLupo); }
 
     public Ruolo[] getMistici() { return filtraRuoli(Ruolo::isMistico); }
+
+    private Ruolo getPersonaggioProtetto(String nome)
+    {
+        Ruolo ruolo = getRuolo(nome);
+        ruolo.aggiungiProtezioneCreatureOmbra();
+        return ruolo;
+    }
 
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
