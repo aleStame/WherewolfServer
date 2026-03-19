@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,8 +15,13 @@ public final class TestRuolo
 
     private Ruolo ruolo;
 
-    @BeforeEach
-    public void setUp() { ruolo = new Ruolo(null, null, null, null, -1, false); }
+    private RuoliFactory factory;
+
+    @BeforeEach public void setUp()
+    {
+        ruolo = new Ruolo(null, null, null, null, -1, false);
+        factory = new RuoliFactory();
+    }
 
     @Test public void testInizializzazione()
     {
@@ -63,7 +67,7 @@ public final class TestRuolo
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
-        verificaVero(ruolo.isProtezionePresente(new RuoliFactory().getRuolo(nome)));
+        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
     }
 
     @Test public void testGildata()
@@ -81,7 +85,7 @@ public final class TestRuolo
     {
         ruolo.romeizzazione();
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
-        Ruolo ruolo = new RuoliFactory().getRuolo(nome);
+        Ruolo ruolo = getRuolo(nome);
         verificaVero(this.ruolo.attacco(ruolo));
     }
 
@@ -92,8 +96,10 @@ public final class TestRuolo
         verificaLibero();
     }
 
-    @ParameterizedTest @EnumSource(IstanzaRuolo.class)
-    public void testAttaccoRuoloNonProtetto(IstanzaRuolo istanza) { verificaVero(ruolo.attacco(istanza.getRuolo())); }
+    @Test public void testAttaccoRuoloNonProtetto()
+    {
+        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(factory.getNome(i))));
+    }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
@@ -116,5 +122,7 @@ public final class TestRuolo
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
+
+    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
 
 }
