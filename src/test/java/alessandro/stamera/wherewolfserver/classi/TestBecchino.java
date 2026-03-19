@@ -10,11 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestBecchino
 {
 
+    private static final String NOME = "Becchino";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Becchino"); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
 
-    @Test public void testNome() { testStringa(ruolo.getNome(), "Becchino"); }
+    @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 

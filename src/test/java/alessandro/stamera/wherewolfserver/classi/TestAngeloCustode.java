@@ -7,11 +7,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestAngeloCustode
 {
 
+    private static final String NOME = "Angelo custode";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Angelo custode"); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Angelo custode"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {

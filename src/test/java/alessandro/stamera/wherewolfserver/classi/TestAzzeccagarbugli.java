@@ -8,11 +8,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestAzzeccagarbugli
 {
 
+    private static final String NOME = "Azzeccagarbugli";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo("Azzeccagarbugli"); }
+    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Azzeccagarbugli"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {
