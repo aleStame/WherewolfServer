@@ -66,7 +66,7 @@ public final class TestRuolo
     {
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
-        verificaVero(ruolo.isTrattoPresente(PROTETTO));
+        verificaProtetto();
         verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
     }
 
@@ -84,7 +84,7 @@ public final class TestRuolo
     public void testRomeizzazioneMorte(String nome)
     {
         ruolo.romeizzazione();
-        verificaVero(ruolo.isTrattoPresente(PROTETTO));
+        verificaProtetto();
         Ruolo ruolo = getRuolo(nome);
         verificaVero(this.ruolo.attacco(ruolo));
     }
@@ -100,6 +100,8 @@ public final class TestRuolo
     {
         for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(factory.getNome(i))));
     }
+
+    private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
