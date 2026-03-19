@@ -52,7 +52,7 @@ public final class TestEremita
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
     public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(factory.getRuolo(nome))); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

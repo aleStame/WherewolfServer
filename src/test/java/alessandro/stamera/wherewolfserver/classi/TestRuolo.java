@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestRuolo
@@ -53,10 +54,16 @@ public final class TestRuolo
         verificaAccusato();
     }
 
-    @Test public void testSceltaAngeloCustode()
+    @ParameterizedTest @CsvSource
+    (
+        { "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
+    )
+    public void testSceltaAngeloCustode(String nome)
     {
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
+        verificaVero(ruolo.isProtezionePresente(new RuoliFactory().getRuolo(nome)));
     }
 
     @Test public void testGildata()
@@ -66,10 +73,14 @@ public final class TestRuolo
         assertThat(getFazione()).isEqualTo(fazione);
     }
 
-    @ParameterizedTest @CsvSource({ "Assassino, Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Assassino, Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
+    )
     public void testRomeizzazioneMorte(String nome)
     {
         ruolo.romeizzazione();
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
         Ruolo ruolo = new RuoliFactory().getRuolo(nome);
         verificaVero(this.ruolo.attacco(ruolo));
     }

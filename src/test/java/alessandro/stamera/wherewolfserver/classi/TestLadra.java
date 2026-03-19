@@ -40,7 +40,7 @@ public final class TestLadra
 
     @Test public void testLadra() { verificaVero(ruolo.isLadra()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testUtilizzoPotere(String nome)
     {
         verificaFalso(isPotereUtilizzato());
