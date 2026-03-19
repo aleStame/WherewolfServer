@@ -3,9 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.IntFunction;
-import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
-import static java.util.Arrays.stream;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 
 public final class Protezioni
 {
@@ -14,26 +13,23 @@ public final class Protezioni
 
     public Protezioni() { ruoli = new ArrayList<>(); }
 
-    public void aggiungiProtezioneCreatureOmbra() { aggiungiProtezione(CREATURE_OMBRA); }
-
-    public void aggiungiProtezione(Categoria categoria)
+    public void aggiungiProtezioneCreatureOmbra()
     {
-        List<Fazione> fazioni = Stream.of(Fazione.values()).filter(fazione -> (fazione).getCategoria() == categoria).toList();
-        aggiungiProtezione(toArray(fazioni, Fazione[]::new));
+        List<Ruolo> creatureOmbra = new ArrayList<>();
+        RuoliFactory factory = new RuoliFactory();
+        for(int i = 0; i < factory.getNumeroRuoli(); i++)
+        {
+            Ruolo ruolo = factory.getRuolo(factory.getNome(i));
+            if(ruolo.getCategoria() == CREATURE_OMBRA || ruolo.isTrattoPresente(CREATURA_OMBRA)) creatureOmbra.add(ruolo);
+        }
+        aggiungiProtezione(toArray(creatureOmbra, Ruolo[]::new));
     }
-
-    public void aggiungiProtezione(Fazione... fazioni) { aggiungiProtezione(toArray(filtraRuoli(fazioni), Ruolo[]::new)); }
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(new RuoliFactory().getLupi()); }
 
-    public boolean isPresente(Ruolo ruolo) { System.out.println(ruoli); return ruoli.contains(ruolo); }
+    public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
 
     public void perdiProtezioni() { ruoli.clear(); }
-
-    private List<Ruolo> filtraRuoli(Fazione... fazioni)
-    {
-        return getRuoli().stream().filter(ruolo -> stream(fazioni).anyMatch(fazione -> fazione == ruolo.getFazione())).toList();
-    }
 
     public void aggiungiProtezione(Ruolo... ruoli)
     {
@@ -41,7 +37,5 @@ public final class Protezioni
     }
 
     private <T> T[] toArray(List<T> lista, IntFunction<T[]> generatore) { return lista.toArray(generatore); }
-
-    private List<Ruolo> getRuoli() { return stream(IstanzaRuolo.values()).map(IstanzaRuolo::getRuolo).toList(); }
 
 }

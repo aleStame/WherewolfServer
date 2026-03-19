@@ -4,7 +4,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 import static java.util.Arrays.stream;
 
@@ -17,7 +16,6 @@ public final class RuoliFactory
     {
         ruoli = new LinkedHashMap<>();
         caricaRuoli();
-        aggiungiProtezioneCreatureOmbra("Eremita", "Ladra");
     }
 
     public Ruolo getCappuccettoRosso()
@@ -28,6 +26,20 @@ public final class RuoliFactory
     }
 
     public Ruolo getGoblin() { return getPiccoloPopolo("Goblin", (ruolo -> !ruolo.isGoblin())); }
+
+    public Ruolo getEremita()
+    {
+        Ruolo ruolo = getRuolo("Eremita");
+        ruolo.aggiungiProtezioneCreatureOmbra();
+        return ruolo;
+    }
+
+    public Ruolo getLadra()
+    {
+        Ruolo ruolo = getRuolo("Ladra");
+        ruolo.aggiungiProtezioneCreatureOmbra();
+        return ruolo;
+    }
 
     public Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno", (ruolo -> !ruolo.isLeprecauno())); }
 
@@ -51,11 +63,6 @@ public final class RuoliFactory
     }
 
     private Ruolo[] filtraRuoli(Predicate<Ruolo> predicato) { return toArray(ruoli.values().stream().filter(predicato).toList()); }
-
-    private void aggiungiProtezioneCreatureOmbra(String... nomi)
-    {
-        for(String nome : nomi) getRuolo(nome).aggiungiProtezione(CREATURE_OMBRA);
-    }
 
     private void aggiungiRuolo(IstanzaRuolo istanza)
     {

@@ -26,8 +26,6 @@ public final class Tratti
 
     public boolean isProtezionePresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
 
-    public void aggiungiProtezione(Categoria categoria) { protezioni.aggiungiProtezione(categoria); }
-
     public void aggiungiProtezioneLupi()
     {
         proteggi();

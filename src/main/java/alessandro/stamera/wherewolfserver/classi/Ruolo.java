@@ -70,7 +70,11 @@ public class Ruolo
 
     public boolean isAmato() { return amato; }
 
-    public void sceltaAngeloCustode() { setAmato(true); }
+    public void sceltaAngeloCustode()
+    {
+        setAmato(true);
+        aggiungiProtezioneCreatureOmbra();
+    }
 
     public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
@@ -154,7 +158,7 @@ public class Ruolo
 
     public void romeizzazione()
     {
-        tratti.aggiungiProtezioneCreatureOmbra();
+        aggiungiProtezioneCreatureOmbra();
         setRomeo(true);
     }
 
@@ -191,8 +195,6 @@ public class Ruolo
 
     public void aggiungiProtezioneLupi() { tratti.aggiungiProtezioneLupi(); }
 
-    public void aggiungiProtezione(Categoria categoria) { tratti.aggiungiProtezione(categoria); }
-
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
     public boolean isMaledetto() { return isTrattoPresente(MALEDETTO); }
@@ -204,6 +206,8 @@ public class Ruolo
     public void maledizione() { tratti.maledizione(); }
 
     public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
+
+    public void aggiungiProtezioneCreatureOmbra() { tratti.aggiungiProtezioneCreatureOmbra(); }
 
     private boolean controlloTrattiOscuri()
     {

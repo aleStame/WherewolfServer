@@ -17,7 +17,7 @@ public final class TestLadra
     @BeforeEach public void setUp()
     {
         factory = new RuoliFactory();
-        ruolo = factory.getRuolo("Ladra");
+        ruolo = factory.getLadra();
     }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Ladra"); }
@@ -40,7 +40,8 @@ public final class TestLadra
 
     @Test public void testLadra() { verificaVero(ruolo.isLadra()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testUtilizzoPotere(String nome)
     {
         verificaFalso(isPotereUtilizzato());
