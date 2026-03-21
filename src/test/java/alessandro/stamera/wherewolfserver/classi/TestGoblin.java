@@ -12,11 +12,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestGoblin
 {
 
+    private static final String NOME = "Goblin";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = getRuolo("Goblin"); }
+    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
