@@ -10,11 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestLadra
 {
 
+    private static final String NOME = "Ladra";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Ladra"); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Ladra"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {
@@ -38,11 +40,11 @@ public final class TestLadra
     {
         verificaFalso(isPotereUtilizzato());
         Ruolo[] lupi = FACTORY.getLupi();
-        for(Ruolo lupo : lupi) verificaVero(ruolo.isProtezionePresente(lupo));
+        for(Ruolo lupo : lupi) verificaVero(isProtezionePresente(lupo));
         ruolo.utilizzaPotere();
         verificaVero(isPotereUtilizzato());
         verificaFalso(ruolo.isTrattoPresente(PROTETTO));
-        for(Ruolo lupo : lupi) verificaFalso(ruolo.isProtezionePresente(lupo));
+        for(Ruolo lupo : lupi) verificaFalso(isProtezionePresente(lupo));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -52,5 +54,7 @@ public final class TestLadra
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
+
+    private boolean isProtezionePresente(Ruolo ruolo) { return this.ruolo.isProtezionePresente(ruolo); }
 
 }
