@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
@@ -59,10 +61,9 @@ public final class TestLeprecauno
         verificaVero(isAccusato());
     }
 
-    @Test public void testProtezioneMistici()
+    @ParameterizedTest @CsvSource({ "Goblin, Guaritore" }) public void testProtezioneMistici(String nome)
     {
-        for(Ruolo mistico : new Ruolo[] { FACTORY.getRuolo("Goblin"), FACTORY.getRuolo("Guaritore"), })
-            verificaVero(ruolo.isProtezionePresente(mistico));
+        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
