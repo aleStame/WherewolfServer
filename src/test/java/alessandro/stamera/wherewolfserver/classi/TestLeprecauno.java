@@ -10,11 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestLeprecauno
 {
 
+    private static final String NOME = "Leprecauno";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Leprecauno"); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Leprecauno"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 

@@ -9,11 +9,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestInquisitore
 {
 
+    private static final String NOME = "Inquisitore";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Inquisitore"); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Inquisitore"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {

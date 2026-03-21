@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiovaneLupo
@@ -16,7 +17,7 @@ public final class TestGiovaneLupo
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
