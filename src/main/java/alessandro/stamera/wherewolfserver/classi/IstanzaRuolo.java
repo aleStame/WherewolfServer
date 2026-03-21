@@ -14,7 +14,7 @@ public enum IstanzaRuolo
     GIULLARE(Giullare.getInstance()), GOBLIN(Goblin.getInstance()), GUARDIA(GuardiaPrincipale.getInstance()),
     GUARDIA_CORROTTA(GuardiaCorrotta.getInstance()), GUARITORE(Guaritore.getInstance()), INQUISITORE(Inquisitore.getInstance()),
     LADRA(Ladra.getInstance()), LEPRECAUNO(Leprecauno.getInstance()), LUPO_BRANCO(LupoBranco.getInstance()),
-    LUPO_REIETTO(LupoReietto.getInstance()), LUPO_SOLITARIO(LupoSolitario.getInstance());
+    LUPO_REIETTO(LupoReietto.getInstance()), LUPO_SOLITARIO(LupoSolitario.getInstance()), MAGO(Mago.getInstance());
 
     private final Ruolo ruolo;
 
