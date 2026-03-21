@@ -14,7 +14,7 @@ public final class TestGoblin
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Goblin"); }
+    @BeforeEach public void setUp() { ruolo = getRuolo("Goblin"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
 
@@ -61,7 +61,7 @@ public final class TestGoblin
 
     @ParameterizedTest @CsvSource({ "Guaritore, Leprecauno" }) public void testProtezioneMistici(String nome)
     {
-        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
+        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
@@ -70,5 +70,7 @@ public final class TestGoblin
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }
