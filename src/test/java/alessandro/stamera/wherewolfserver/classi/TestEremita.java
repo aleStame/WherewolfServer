@@ -5,20 +5,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestEremita
 {
 
-    private RuoliFactory factory;
-
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp()
-    {
-        factory = new RuoliFactory();
-        ruolo = factory.getEremita();
-    }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Eremita"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
@@ -53,7 +48,7 @@ public final class TestEremita
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
-    public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(factory.getRuolo(nome))); }
+    public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome))); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

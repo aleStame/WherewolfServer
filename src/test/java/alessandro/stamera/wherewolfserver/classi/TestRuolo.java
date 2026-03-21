@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,13 +16,7 @@ public final class TestRuolo
 
     private Ruolo ruolo;
 
-    private RuoliFactory factory;
-
-    @BeforeEach public void setUp()
-    {
-        ruolo = new Ruolo(null, null, null, null, -1, false);
-        factory = new RuoliFactory();
-    }
+    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, null, -1, false); }
 
     @Test public void testInizializzazione()
     {
@@ -98,7 +93,7 @@ public final class TestRuolo
 
     @Test public void testAttaccoRuoloNonProtetto()
     {
-        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(factory.getNome(i))));
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(FACTORY.getNome(i))));
     }
 
     private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
@@ -125,6 +120,6 @@ public final class TestRuolo
 
     private Fazione getFazione() { return ruolo.getFazione(); }
 
-    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }

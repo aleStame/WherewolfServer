@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestBecchino
@@ -14,7 +15,7 @@ public final class TestBecchino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new RuoliFactory().getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 

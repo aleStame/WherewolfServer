@@ -193,8 +193,6 @@ public class Ruolo
 
     public boolean isLeprecauno() { return false; }
 
-    public void aggiungiProtezioneLupi() { tratti.aggiungiProtezioneLupi(); }
-
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
     public boolean isMaledetto() { return isTrattoPresente(MALEDETTO); }

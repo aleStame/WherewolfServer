@@ -2,23 +2,17 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLadra
 {
 
-    private RuoliFactory factory;
-
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp()
-    {
-        factory = new RuoliFactory();
-        ruolo = factory.getLadra();
-    }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Ladra"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Ladra"); }
 
@@ -40,15 +34,15 @@ public final class TestLadra
 
     @Test public void testLadra() { verificaVero(ruolo.isLadra()); }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
-    public void testUtilizzoPotere(String nome)
+    @Test public void testUtilizzoPotere()
     {
         verificaFalso(isPotereUtilizzato());
-        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
+        Ruolo[] lupi = FACTORY.getLupi();
+        for(Ruolo lupo : lupi) verificaVero(ruolo.isProtezionePresente(lupo));
         ruolo.utilizzaPotere();
         verificaVero(isPotereUtilizzato());
-        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaFalso(ruolo.isProtezionePresente(getRuolo(factory.getNome(i))));
+        verificaFalso(ruolo.isTrattoPresente(PROTETTO));
+        for(Ruolo lupo : lupi) verificaFalso(ruolo.isProtezionePresente(lupo));
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -58,7 +52,5 @@ public final class TestLadra
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
-
-    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
 
 }

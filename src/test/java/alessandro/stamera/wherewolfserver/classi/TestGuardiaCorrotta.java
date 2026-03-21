@@ -4,15 +4,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.GUARDIA_CORROTTA;
 
 public final class TestGuardiaCorrotta
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = GUARDIA_CORROTTA.getRuolo(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Guardia corrotta"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Guardia corrotta"); }
 

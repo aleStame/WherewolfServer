@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,13 +12,7 @@ public final class TestGoblin
 
     private Ruolo ruolo;
 
-    private RuoliFactory factory;
-
-    @BeforeEach public void setUp()
-    {
-        factory = new RuoliFactory();
-        ruolo = factory.getGoblin();
-    }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Goblin"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Goblin"); }
 
@@ -64,7 +59,7 @@ public final class TestGoblin
 
     @Test public void testProtezioneMistici()
     {
-        for(Ruolo mistico : new Ruolo[] { factory.getRuolo("Guaritore"), factory.getLeprecauno() })
+        for(Ruolo mistico : new Ruolo[] { FACTORY.getRuolo("Guaritore"), FACTORY.getRuolo("Leprecauno") })
             verificaVero(ruolo.isProtezionePresente(mistico));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }

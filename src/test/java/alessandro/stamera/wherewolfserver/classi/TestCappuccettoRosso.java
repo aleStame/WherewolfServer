@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestCappuccettoRosso
@@ -12,13 +13,7 @@ public final class TestCappuccettoRosso
 
     private Ruolo ruolo;
 
-    private RuoliFactory factory;
-
-    @BeforeEach public void setUp()
-    {
-        factory = new RuoliFactory();
-        ruolo = factory.getCappuccettoRosso();
-    }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Cappuccetto rosso"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
 
@@ -72,7 +67,7 @@ public final class TestCappuccettoRosso
         verificaFalso(isProtezionePresente(getRuolo(nome)));
     }
 
-    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

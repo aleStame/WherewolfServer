@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestProtezioni
@@ -11,13 +12,7 @@ public final class TestProtezioni
 
     private Protezioni protezioni;
 
-    private RuoliFactory factory;
-
-    @BeforeEach public void setUp()
-    {
-        protezioni = new Protezioni();
-        factory = new RuoliFactory();
-    }
+    @BeforeEach public void setUp() { protezioni = new Protezioni(); }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
     public void testCreatureOmbra(String nome)
@@ -36,15 +31,14 @@ public final class TestProtezioni
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        verificaAssenza(factory.getCappuccettoRosso());
-        for(int i = 0; i < factory.getNumeroRuoli(); i++) verificaAssenza(getRuolo(factory.getNome(i)));
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaAssenza(getRuolo(FACTORY.getNome(i)));
     }
 
     private void verificaAssenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isFalse(); }
 
     private void verificaPresenza(String nome) { verificaPresenza(getRuolo(nome)); }
 
-    private Ruolo getRuolo(String nome) { return factory.getRuolo(nome); }
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaPresenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isTrue(); }
 

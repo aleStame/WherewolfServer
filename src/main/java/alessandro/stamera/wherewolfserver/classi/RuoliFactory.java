@@ -4,7 +4,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static java.util.Arrays.stream;
 
 public final class RuoliFactory
@@ -18,22 +20,20 @@ public final class RuoliFactory
         caricaRuoli();
     }
 
-    public Ruolo getCappuccettoRosso()
+    public Ruolo getRuolo(String nome)
     {
-        Ruolo ruolo = getRuolo("Cappuccetto rosso");
-        ruolo.aggiungiProtezioneLupi();
+        Ruolo ruolo;
+        switch(nome)
+        {
+            case "Cappuccetto rosso" -> ruolo = getCappuccettoRosso();
+            case "Goblin" -> ruolo = getGoblin();
+            case "Eremita" -> ruolo = getEremita();
+            case "Ladra" -> ruolo = getLadra();
+            case "Leprecauno" -> ruolo = getLeprecauno();
+            default -> ruolo = ruoli.get(nome);
+        }
         return ruolo;
     }
-
-    public Ruolo getGoblin() { return getPiccoloPopolo("Goblin", (ruolo -> !ruolo.isGoblin())); }
-
-    public Ruolo getEremita() { return getPersonaggioProtetto("Eremita"); }
-
-    public Ruolo getLadra() { return getPersonaggioProtetto("Ladra"); }
-
-    public Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno", (ruolo -> !ruolo.isLeprecauno())); }
-
-    public Ruolo getRuolo(String nome) { return ruoli.get(nome); }
 
     public int getNumeroRuoli() { return ruoli.size(); }
 
@@ -43,10 +43,30 @@ public final class RuoliFactory
 
     public Ruolo[] getMistici() { return filtraRuoli(Ruolo::isMistico); }
 
+    public Ruolo[] getCreatureOmbra()
+    {
+        return filtraRuoli(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
+    }
+
+    private Ruolo getCappuccettoRosso()
+    {
+        Ruolo ruolo = ruoli.get("Cappuccetto rosso");
+        ruolo.aggiungiProtezione(getLupi());
+        return ruolo;
+    }
+
+    private Ruolo getGoblin() { return getPiccoloPopolo("Goblin", (ruolo -> !ruolo.isGoblin())); }
+
+    private Ruolo getEremita() { return getPersonaggioProtetto("Eremita"); }
+
+    private Ruolo getLadra() { return getPersonaggioProtetto("Ladra"); }
+
+    private Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno", (ruolo -> !ruolo.isLeprecauno())); }
+
     private Ruolo getPersonaggioProtetto(String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
-        ruolo.aggiungiProtezioneCreatureOmbra();
+        Ruolo ruolo = ruoli.get(nome);
+        ruolo.aggiungiProtezione(getCreatureOmbra());
         return ruolo;
     }
 
@@ -54,7 +74,7 @@ public final class RuoliFactory
 
     private Ruolo getPiccoloPopolo(String nome, Predicate<Ruolo> condizione)
     {
-        Ruolo ruolo = getRuolo(nome);
+        Ruolo ruolo = ruoli.get(nome);
         ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(condizione).toList()));
         return ruolo;
     }

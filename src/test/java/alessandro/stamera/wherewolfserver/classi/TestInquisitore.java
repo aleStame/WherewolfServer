@@ -3,15 +3,15 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.INQUISITORE;
 
 public final class TestInquisitore
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = INQUISITORE.getRuolo(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Inquisitore"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Inquisitore"); }
 
