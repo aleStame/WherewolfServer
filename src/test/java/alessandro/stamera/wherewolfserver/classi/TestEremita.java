@@ -2,7 +2,10 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestEremita
@@ -10,13 +13,14 @@ public final class TestEremita
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Eremita(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Eremita"); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
-    @Test public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
+    @Test
+    public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
@@ -41,6 +45,10 @@ public final class TestEremita
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
+    public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome))); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

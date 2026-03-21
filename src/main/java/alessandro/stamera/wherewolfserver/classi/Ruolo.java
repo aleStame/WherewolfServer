@@ -1,7 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
 
 public class Ruolo
 {
@@ -16,11 +19,11 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, accusato;
+    private boolean amato, accusato, romeo;
 
     private final boolean mistico;
 
-    private final Protezioni protezioni;
+    private final Tratti tratti;
 
     public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
     {
@@ -33,12 +36,18 @@ public class Ruolo
         setAmato(false);
         this.mistico = mistico;
         libera();
-        protezioni = new Protezioni();
+        tratti = new Tratti();
+        setRomeo(false);
     }
 
     public String getNome() { return nome; }
 
-    public Aura getAura() { return aura; }
+    public Aura getAura()
+    {
+        Aura risultato = aura;
+        if(controlloTrattiOscuri()) risultato = NERA;
+        return risultato;
+    }
 
     public String getDescrizione() { return descrizione; }
 
@@ -50,13 +59,22 @@ public class Ruolo
 
     public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
 
-    public int getNumeroVoti() { return voti; }
+    public int getNumeroVoti()
+    {
+        int risultato = voti;
+        if(isMaledetto()) risultato++;
+        return risultato;
+    }
 
     public void annullaVoti() { voti = 0; }
 
     public boolean isAmato() { return amato; }
 
-    public void sceltaAngeloCustode() { setAmato(true); }
+    public void sceltaAngeloCustode()
+    {
+        setAmato(true);
+        aggiungiProtezioneCreatureOmbra();
+    }
 
     public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
@@ -138,9 +156,11 @@ public class Ruolo
 
     public boolean isGhoul() { return false; }
 
-    public void romeizzazione() { protezioni.aggiungiProtezione(CREATURE_OMBRA); }
-
-    public boolean isProtetto(Fazione fazione) { return protezioni.isPresente(fazione); }
+    public void romeizzazione()
+    {
+        aggiungiProtezioneCreatureOmbra();
+        setRomeo(true);
+    }
 
     public boolean isAmanti() { return false; }
 
@@ -162,10 +182,40 @@ public class Ruolo
 
     public boolean isLadra() { return false; }
 
-    public boolean isProtezionePresente(Fazione fazione) { return false; }
+    public boolean attacco(Ruolo ruolo)
+    {
+        boolean esito = !isProtezionePresente(ruolo);
+        if(!esito && romeo && ruolo.isLupo()) esito = true;
+        return esito;
+    }
+
+    public boolean isProtezionePresente(Ruolo ruolo) { return tratti.isProtezionePresente(ruolo); }
+
+    public boolean isLeprecauno() { return false; }
+
+    public void perdiProtezioni() { tratti.perdiProtezioni(); }
+
+    public boolean isMaledetto() { return isTrattoPresente(MALEDETTO); }
+
+    public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
+
+    public void aggiungiTratti(Tratto... tratti) { for(Tratto tratto : tratti) this.tratti.aggiungi(tratto); }
+
+    public void maledizione() { tratti.maledizione(); }
+
+    public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
+
+    public void aggiungiProtezioneCreatureOmbra() { tratti.aggiungiProtezioneCreatureOmbra(); }
+
+    private boolean controlloTrattiOscuri()
+    {
+        return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
+    }
 
     private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
+
+    private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
 }

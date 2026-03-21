@@ -2,16 +2,21 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLupoReietto
 {
 
+    private static final String NOME = "Lupo reietto";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new LupoReietto(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Lupo reietto"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {
@@ -33,6 +38,9 @@ public final class TestLupoReietto
     @Test public void testGiovaneLupo() { verificaFalso(ruolo.isGiovaneLupo()); }
 
     @Test public void testLupoReietto() { verificaVero(ruolo.isLupoReietto()); }
+
+    @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
+    public void testTratto(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

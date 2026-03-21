@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class LupoReietto extends Lupo
 {
 
-    public LupoReietto()
+    private LupoReietto()
     {
         super
         (
@@ -15,5 +15,7 @@ public final class LupoReietto extends Lupo
     }
 
     @Override public boolean isLupoReietto() { return true; }
+
+    public static Ruolo getInstance() { return new LupoReietto(); }
 
 }

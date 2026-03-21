@@ -3,16 +3,19 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestBoia
 {
 
-    private Boia ruolo;
+    private static final String NOME = "Boia";
 
-    @BeforeEach public void setUp() { ruolo = new Boia(); }
+    private Ruolo ruolo;
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Boia"); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 

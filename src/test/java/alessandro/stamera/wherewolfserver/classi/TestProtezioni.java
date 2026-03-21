@@ -2,39 +2,46 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.values;
 
 public final class TestProtezioni
 {
 
     private Protezioni protezioni;
 
-    @BeforeEach public void setUp()
+    @BeforeEach public void setUp() { protezioni = new Protezioni(); }
+
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
+    public void testCreatureOmbra(String nome)
     {
-        protezioni = new Protezioni();
-        protezioni.aggiungiProtezione(CREATURE_OMBRA);
+        protezioni.aggiungiProtezioneCreatureOmbra();
+        verificaPresenza(nome);
     }
 
-    @Test public void testGiulietta()
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
+    public void testCappuccettoRosso(String nome)
     {
-        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
-            assertThat(isPresente(fazione)).isTrue();
+        protezioni.aggiungiProtezioneLupi();
+        verificaPresenza(nome);
     }
 
-    @Test public void testLadra()
+    @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(Fazione fazione : values()) assertThat(isPresente(fazione)).isFalse();
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaAssenza(getRuolo(FACTORY.getNome(i)));
     }
 
-    private boolean isPresente(Fazione fazione) { return protezioni.isPresente(fazione); }
+    private void verificaAssenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isFalse(); }
+
+    private void verificaPresenza(String nome) { verificaPresenza(getRuolo(nome)); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaPresenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isTrue(); }
+
+    private boolean isPresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
 
 }

@@ -3,15 +3,18 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 
 public final class TestGiulietta
 {
 
+    private static final String NOME = "Giulietta";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Giulietta(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Giulietta"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {

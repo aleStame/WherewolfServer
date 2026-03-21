@@ -5,12 +5,14 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_SOLITARIO;
 public final class LupoSolitario extends Lupo
 {
 
-    public LupoSolitario()
+    private LupoSolitario()
     {
         super("Lupo solitario", null, 3);
         cambiaFazione(LUPO_SOLITARIO);
     }
 
     @Override public boolean isLupoSolitario() { return true; }
+
+    public static Ruolo getInstance() { return new LupoSolitario(); }
 
 }

@@ -2,19 +2,24 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiovaneLupo
 {
 
+    private static final String NOME = "Giovane lupo";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new GiovaneLupo(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Giovane lupo"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {
@@ -30,7 +35,7 @@ public final class TestGiovaneLupo
 
     @Test public void testLupoBranco() { verificaFalso(ruolo.isLupoBranco()); }
 
-    @Test public void testGiovaneLupo() { assertThat(ruolo.isGiovaneLupo()).isTrue(); }
+    @Test public void testGiovaneLupo() { verificaVero(ruolo.isGiovaneLupo()); }
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
@@ -40,7 +45,12 @@ public final class TestGiovaneLupo
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
+    @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
+    public void testTratti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
+
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

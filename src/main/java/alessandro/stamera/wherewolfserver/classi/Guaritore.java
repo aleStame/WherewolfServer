@@ -7,7 +7,7 @@ public final class Guaritore extends Villaggio
 
     private final Potere potere;
 
-    public Guaritore()
+    private Guaritore()
     {
         super
         (
@@ -22,5 +22,7 @@ public final class Guaritore extends Villaggio
     @Override public boolean isPotereUtilizzato() { return potere.isPotereUtilizzato(); }
 
     @Override public void utilizzaPotere() { potere.utilizzaPotere(); }
+
+    public static Ruolo getInstance() { return new Guaritore(); }
 
 }

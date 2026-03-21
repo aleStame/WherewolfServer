@@ -6,8 +6,10 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 public class Ghoul extends Ruolo
 {
 
-    public Ghoul() { super("Ghoul", NESSUNA, BIANCA, null, 2, false); }
+    private Ghoul() { super("Ghoul", NESSUNA, BIANCA, null, 2, false); }
 
     @Override public boolean isGhoul() { return true; }
+
+    public static Ruolo getInstance() { return new Ghoul(); }
 
 }

@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestContadinoMostro
@@ -11,13 +13,25 @@ public final class TestContadinoMostro
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new ContadinoMostro(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Contadino mostro"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+    @Test public void testMaledetto()
+    {
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+    }
+
+    @Test public void testVoti()
+    {
+        ruolo.incrementaVoti(2);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(3);
+    }
+
+    @Test public void testNonMorto() { verificaFalso(ruolo.isTrattoPresente(NON_MORTO)); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 

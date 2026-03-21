@@ -2,8 +2,11 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestRuolo
@@ -13,8 +16,7 @@ public final class TestRuolo
 
     private Ruolo ruolo;
 
-    @BeforeEach
-    public void setUp() { ruolo = new Ruolo(null, null, null, null, -1, false); }
+    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, null, -1, false); }
 
     @Test public void testInizializzazione()
     {
@@ -34,23 +36,33 @@ public final class TestRuolo
     @Test public void testVoti()
     {
         incrementaVoti();
-        verificaVoti();
+        verificaVoti(ESEMPIO_VOTI);
         ruolo.annullaVoti();
         verificaNessunVoto();
+        ruolo.maledizione();
+        verificaVoti(1);
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         incrementaVoti();
         ruolo.segnalazioneAzzeccagarbugli();
-        verificaVoti();
+        verificaVoti(ESEMPIO_VOTI);
         verificaAccusato();
     }
 
-    @Test public void testSceltaAngeloCustode()
+    @ParameterizedTest @CsvSource
+    (
+        { "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
+    )
+    public void testSceltaAngeloCustode(String nome)
     {
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
+        verificaProtetto();
+        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
     }
 
     @Test public void testGildata()
@@ -60,11 +72,16 @@ public final class TestRuolo
         assertThat(getFazione()).isEqualTo(fazione);
     }
 
-    @Test public void testRomeizzazione()
+    @ParameterizedTest @CsvSource
+    (
+        { "Assassino, Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
+    )
+    public void testRomeizzazioneMorte(String nome)
     {
         ruolo.romeizzazione();
-        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
-            verificaVero(ruolo.isProtetto(fazione));
+        verificaProtetto();
+        Ruolo ruolo = getRuolo(nome);
+        verificaVero(this.ruolo.attacco(ruolo));
     }
 
     @Test public void testSegnalazioneInquisitore()
@@ -73,6 +90,13 @@ public final class TestRuolo
         ruolo.segnalazioneInquisitore();
         verificaLibero();
     }
+
+    @Test public void testAttaccoRuoloNonProtetto()
+    {
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(FACTORY.getNome(i))));
+    }
+
+    private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
@@ -86,7 +110,7 @@ public final class TestRuolo
 
     private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
 
-    private void verificaVoti() { assertThat(getNumeroVoti()).isEqualTo(ESEMPIO_VOTI); }
+    private void verificaVoti(int voti) { assertThat(getNumeroVoti()).isEqualTo(voti); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
@@ -95,5 +119,7 @@ public final class TestRuolo
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }

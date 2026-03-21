@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 public final class BoccaDiRosa extends Citta
 {
 
-    public BoccaDiRosa()
+    private BoccaDiRosa()
     {
         super
         (
@@ -23,6 +23,8 @@ public final class BoccaDiRosa extends Citta
         if(isVotiDispari()) risultato++;
         return risultato;
     }
+
+    public static Ruolo getInstance() { return new BoccaDiRosa(); }
 
     private int getVotiDimezzati() { return getVotiInteri() / 2; }
 

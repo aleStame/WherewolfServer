@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public class Becchino extends Villaggio
 {
 
-    public Becchino()
+    private Becchino()
     {
         super
         (
@@ -18,5 +18,7 @@ public class Becchino extends Villaggio
     }
 
     @Override public boolean isBecchino() { return true; }
+
+    public static Ruolo getInstance() { return new Becchino(); }
 
 }

@@ -6,7 +6,7 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.NESSUNA;
 public final class Giullare extends Ruolo
 {
 
-    public Giullare()
+    private Giullare()
     {
         super
         (
@@ -18,5 +18,7 @@ public final class Giullare extends Ruolo
     }
 
     @Override public boolean isGiullare() { return true; }
+
+    public static Ruolo getInstance() { return new Giullare(); }
 
 }

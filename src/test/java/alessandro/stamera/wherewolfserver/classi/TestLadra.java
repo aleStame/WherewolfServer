@@ -3,18 +3,28 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.*;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLadra
 {
 
+    private static final String NOME = "Ladra";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Ladra(); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Ladra"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
+
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte può aprire gli occhi nel turno di un " +
+            "mistico. La prima volta che viene attaccata, è protetta dalle creature dell'ombra.";
+        verificaStringa(ruolo.getDescrizione(), descrizione);
+    }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
@@ -29,17 +39,22 @@ public final class TestLadra
     @Test public void testUtilizzoPotere()
     {
         verificaFalso(isPotereUtilizzato());
-        for(Fazione fazione : new Fazione[] { LUPO_BRANCO, LUPO_SOLITARIO, VAMPIRO, NOSFERATU, NEGROMANTE, POSSEDUTO })
-            verificaVero(ruolo.isProtezionePresente(fazione));
+        Ruolo[] lupi = FACTORY.getLupi();
+        for(Ruolo lupo : lupi) verificaVero(isProtezionePresente(lupo));
         ruolo.utilizzaPotere();
         verificaVero(isPotereUtilizzato());
-        for(Fazione fazione : values()) verificaFalso(ruolo.isProtezionePresente(fazione));
+        verificaFalso(ruolo.isTrattoPresente(PROTETTO));
+        for(Ruolo lupo : lupi) verificaFalso(isProtezionePresente(lupo));
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
+
+    private boolean isProtezionePresente(Ruolo ruolo) { return this.ruolo.isProtezionePresente(ruolo); }
 
 }
