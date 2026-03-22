@@ -16,15 +16,17 @@ public final class TestMago
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
     {
-        assertThat(ruolo.getDescrizione()).isEqualTo("Ogni notte indica un giocatore e scopre se è mistico.");
+        verificaStringa(ruolo.getDescrizione(), "Ogni notte indica un giocatore e scopre se è mistico.");
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
