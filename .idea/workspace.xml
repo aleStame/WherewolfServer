@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLune riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testDescrizione non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mago.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,14 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01330" summary="VERDE: testProtezioneMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773766669616</created>
-      <option name="number" value="01330" />
-      <option name="presentableId" value="LOCAL-01330" />
-      <option name="project" value="LOCAL" />
-      <updated>1773766669616</updated>
     </task>
     <task id="LOCAL-01331" summary="REFACTORING: definizione del metodo getRuolo">
       <option name="closed" value="true" />
@@ -662,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774139371012</updated>
     </task>
-    <option name="localTasksCounter" value="1379" />
+    <task id="LOCAL-01379" summary="ROSSO: testDescrizione non riuscito">
+      <option name="closed" value="true" />
+      <created>1774139620057</created>
+      <option name="number" value="01379" />
+      <option name="presentableId" value="LOCAL-01379" />
+      <option name="project" value="LOCAL" />
+      <updated>1774139620057</updated>
+    </task>
+    <option name="localTasksCounter" value="1380" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -677,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: ridefinizione gestione mistici" />
     <MESSAGE value="REFACTORING: correzione gestione protezioni Goblin" />
     <MESSAGE value="REFACTORING: utilizzo della classe RuoliFactory" />
     <MESSAGE value="VERDE DIRETTO: testProtezioneMistici riuscito" />
@@ -702,6 +703,7 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLune riuscito" />
+    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testDescrizione non riuscito" />
   </component>
 </project>
