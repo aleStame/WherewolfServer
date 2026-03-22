@@ -20,6 +20,11 @@ public final class TestMago
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        assertThat(ruolo.getDescrizione()).isEqualTo("Ogni notte indica un giocatore e scopre se è mistico.");
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
 }
