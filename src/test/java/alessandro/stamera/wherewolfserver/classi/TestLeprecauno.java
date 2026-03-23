@@ -63,8 +63,8 @@ public final class TestLeprecauno
 
     @ParameterizedTest @CsvSource({ "Goblin, Guaritore, Mago" }) public void testProtezioneMistici(String nome)
     {
-        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
-        verificaFalso(ruolo.isProtezionePresente(FACTORY.getRuolo("Medium")));
+        verificaVero(isProtezionePresente(nome));
+        verificaFalso(isProtezionePresente("Medium"));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
@@ -73,6 +73,8 @@ public final class TestLeprecauno
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isProtezionePresente(String nome) { return ruolo.isProtezionePresente(FACTORY.getRuolo(nome)); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
 
