@@ -96,6 +96,11 @@ public final class TestRuolo
         for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(FACTORY.getNome(i))));
     }
 
+    @Test public void testProtezioni()
+    {
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(ruolo.isProtezionePresente(getRuolo(FACTORY.getNome(i))));
+    }
+
     private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
