@@ -45,6 +45,8 @@ public final class TestGuaritore
 
     @Test public void testGuaritore() { verificaVero(ruolo.isGuaritore()); }
 
+    @Test public void testMago() { verificaFalso(ruolo.isMago()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testUtilizzoPotere()
