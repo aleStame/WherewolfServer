@@ -7,6 +7,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestMedium
 {
 
-    @Test public void testNome() { assertThat(FACTORY.getRuolo("Medium").getNome()).isEqualTo("Medium"); }
+    private static final String NOME = "Medium";
+
+    @Test public void testNome() { assertThat(FACTORY.getRuolo(NOME).getNome()).isEqualTo(NOME); }
 
 }
