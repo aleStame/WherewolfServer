@@ -5,7 +5,13 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Medium extends Villaggio
 {
 
-    public Medium() { super("Medium", BIANCA, null, 0, false); }
+    public Medium()
+    {
+        super
+        (
+    "Medium", BIANCA, "Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.", 0, false
+        );
+    }
 
     public static Ruolo getInstance() { return new Medium(); }
 
