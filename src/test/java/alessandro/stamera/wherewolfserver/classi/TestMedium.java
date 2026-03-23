@@ -19,4 +19,10 @@ public final class TestMedium
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        assertThat(ruolo.getDescrizione())
+            .isEqualTo("Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.");
+    }
+
 }
