@@ -9,7 +9,7 @@ public final class Medium extends Villaggio
     {
         super
         (
-    "Medium", BIANCA, "Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.", 0, false
+    "Medium", BIANCA, "Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.", 0, true
         );
     }
 
