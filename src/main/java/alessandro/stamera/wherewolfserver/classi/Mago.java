@@ -7,7 +7,7 @@ public final class Mago extends Villaggio
 
     public Mago()
     {
-        super("Mago", BIANCA, "Ogni notte indica un giocatore e scopre se è mistico.", 1, false);
+        super("Mago", BIANCA, "Ogni notte indica un giocatore e scopre se è mistico.", 1, true);
     }
 
     public static Ruolo getInstance() { return new Mago(); }
