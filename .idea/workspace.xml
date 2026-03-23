@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testEremita riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testGuaritore riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMago.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -271,22 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01342" summary="REFACTORING: ridefinizione gestione mistici">
-      <option name="closed" value="true" />
-      <created>1773873004371</created>
-      <option name="number" value="01342" />
-      <option name="presentableId" value="LOCAL-01342" />
-      <option name="project" value="LOCAL" />
-      <updated>1773873004372</updated>
-    </task>
-    <task id="LOCAL-01343" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1773873208760</created>
-      <option name="number" value="01343" />
-      <option name="presentableId" value="LOCAL-01343" />
-      <option name="project" value="LOCAL" />
-      <updated>1773873208761</updated>
     </task>
     <task id="LOCAL-01344" summary="REFACTORING: correzione gestione protezioni Goblin">
       <option name="closed" value="true" />
@@ -664,7 +649,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774260807290</updated>
     </task>
-    <option name="localTasksCounter" value="1391" />
+    <task id="LOCAL-01391" summary="VERDE DIRETTO: testEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1774261002130</created>
+      <option name="number" value="01391" />
+      <option name="presentableId" value="LOCAL-01391" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261002130</updated>
+    </task>
+    <task id="LOCAL-01392" summary="VERDE DIRETTO: testGuardia riuscito">
+      <option name="closed" value="true" />
+      <created>1774261174203</created>
+      <option name="number" value="01392" />
+      <option name="presentableId" value="LOCAL-01392" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261174203</updated>
+    </task>
+    <option name="localTasksCounter" value="1393" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,8 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
-    <MESSAGE value="REFACTORING: parametrizzazione del metodo testMistici" />
     <MESSAGE value="REFACTORING: parametrizzazione del metodo testProtezioneMistici" />
     <MESSAGE value="REFACTORING: parametrizzazione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
@@ -704,6 +703,8 @@
     <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEremita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEremita riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuardia riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGuaritore riuscito" />
   </component>
 </project>
