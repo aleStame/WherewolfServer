@@ -54,6 +54,8 @@ public final class TestBardo
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
+    @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

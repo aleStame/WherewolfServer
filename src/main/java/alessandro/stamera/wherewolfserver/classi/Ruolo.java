@@ -209,6 +209,8 @@ public class Ruolo
 
     public boolean isMago() { return false; }
 
+    public boolean isMedium() { return true; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
