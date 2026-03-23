@@ -13,6 +13,8 @@ public final class Medium extends Villaggio
         );
     }
 
+    @Override public boolean isMedium() { return true; }
+
     public static Ruolo getInstance() { return new Medium(); }
 
 }
