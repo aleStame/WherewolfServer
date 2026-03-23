@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadino riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,22 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01380" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1774139885803</created>
-      <option name="number" value="01380" />
-      <option name="presentableId" value="LOCAL-01380" />
-      <option name="project" value="LOCAL" />
-      <updated>1774139885803</updated>
-    </task>
-    <task id="LOCAL-01381" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1774140087611</created>
-      <option name="number" value="01381" />
-      <option name="presentableId" value="LOCAL-01381" />
-      <option name="project" value="LOCAL" />
-      <updated>1774140087611</updated>
     </task>
     <task id="LOCAL-01382" summary="ROSSO: testMistico non riuscito">
       <option name="closed" value="true" />
@@ -662,7 +646,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774279096491</updated>
     </task>
-    <option name="localTasksCounter" value="1429" />
+    <task id="LOCAL-01429" summary="VERDE DIRETTO: testBracconiere riuscito">
+      <option name="closed" value="true" />
+      <created>1774279977968</created>
+      <option name="number" value="01429" />
+      <option name="presentableId" value="LOCAL-01429" />
+      <option name="project" value="LOCAL" />
+      <updated>1774279977968</updated>
+    </task>
+    <task id="LOCAL-01430" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1774280163264</created>
+      <option name="number" value="01430" />
+      <option name="presentableId" value="LOCAL-01430" />
+      <option name="project" value="LOCAL" />
+      <updated>1774280163264</updated>
+    </task>
+    <option name="localTasksCounter" value="1431" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -677,8 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="ROSSO: testMago non riuscito" />
     <MESSAGE value="VERDE: testMago riuscito" />
@@ -702,6 +700,8 @@
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>

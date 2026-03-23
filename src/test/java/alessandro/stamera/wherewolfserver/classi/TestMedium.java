@@ -32,6 +32,8 @@ public final class TestMedium
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
+    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
