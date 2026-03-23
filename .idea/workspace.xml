@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMistico riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testBardo riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,14 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01336" summary="REFACTORING: utilizzo del metodo getLupi per semplificare il codice">
-      <option name="closed" value="true" />
-      <created>1773851114147</created>
-      <option name="number" value="01336" />
-      <option name="presentableId" value="LOCAL-01336" />
-      <option name="project" value="LOCAL" />
-      <updated>1773851114148</updated>
     </task>
     <task id="LOCAL-01337" summary="REFACTORING: definizione del metodo verificaAssenza">
       <option name="closed" value="true" />
@@ -662,7 +654,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774259580380</updated>
     </task>
-    <option name="localTasksCounter" value="1385" />
+    <task id="LOCAL-01385" summary="VERDE DIRETTO: testBardo riuscito">
+      <option name="closed" value="true" />
+      <created>1774259754349</created>
+      <option name="number" value="01385" />
+      <option name="presentableId" value="LOCAL-01385" />
+      <option name="project" value="LOCAL" />
+      <updated>1774259754350</updated>
+    </task>
+    <option name="localTasksCounter" value="1386" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -677,8 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testTratto riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testTratto riuscito" />
     <MESSAGE value="ROSSO: testSceltaAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testSceltaAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
@@ -702,6 +700,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMistico riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBardo riuscito" />
   </component>
 </project>

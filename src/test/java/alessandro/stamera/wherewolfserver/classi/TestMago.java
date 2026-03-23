@@ -29,10 +29,12 @@ public final class TestMago
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
-    @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
+    @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
-    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
