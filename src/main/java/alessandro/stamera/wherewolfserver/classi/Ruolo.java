@@ -209,7 +209,7 @@ public class Ruolo
 
     public boolean isMago() { return false; }
 
-    public boolean isMedium() { return true; }
+    public boolean isMedium() { return false; }
 
     private boolean controlloTrattiOscuri()
     {
