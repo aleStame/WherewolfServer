@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuardiaCorrotta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuardiaCorrotta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuardiaPrincipale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuardiaPrincipale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuaritore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuaritore.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNumeroRuoli" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -88,7 +84,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/leprecauno&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/mago&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
@@ -274,350 +270,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-01320" summary="REFACTORING: parametrizzazione del test delle protezioni">
-      <option name="closed" value="true" />
-      <created>1773707887995</created>
-      <option name="number" value="01320" />
-      <option name="presentableId" value="LOCAL-01320" />
-      <option name="project" value="LOCAL" />
-      <updated>1773707887995</updated>
-    </task>
-    <task id="LOCAL-01321" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1773708022285</created>
-      <option name="number" value="01321" />
-      <option name="presentableId" value="LOCAL-01321" />
-      <option name="project" value="LOCAL" />
-      <updated>1773708022285</updated>
-    </task>
-    <task id="LOCAL-01322" summary="ROSSO: terstTratti non riuscito">
-      <option name="closed" value="true" />
-      <created>1773739010865</created>
-      <option name="number" value="01322" />
-      <option name="presentableId" value="LOCAL-01322" />
-      <option name="project" value="LOCAL" />
-      <updated>1773739010866</updated>
-    </task>
-    <task id="LOCAL-01323" summary="ROSSO: testProtezioneMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1773759439159</created>
-      <option name="number" value="01323" />
-      <option name="presentableId" value="LOCAL-01323" />
-      <option name="project" value="LOCAL" />
-      <updated>1773759439159</updated>
-    </task>
-    <task id="LOCAL-01324" summary="VERDE: testProtezioneMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773760693296</created>
-      <option name="number" value="01324" />
-      <option name="presentableId" value="LOCAL-01324" />
-      <option name="project" value="LOCAL" />
-      <updated>1773760693296</updated>
-    </task>
-    <task id="LOCAL-01325" summary="REFACTORING: definizione del metodo getMistici">
-      <option name="closed" value="true" />
-      <created>1773760896618</created>
-      <option name="number" value="01325" />
-      <option name="presentableId" value="LOCAL-01325" />
-      <option name="project" value="LOCAL" />
-      <updated>1773760896618</updated>
-    </task>
-    <task id="LOCAL-01326" summary="ROSSO: testProtezioneMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1773762676863</created>
-      <option name="number" value="01326" />
-      <option name="presentableId" value="LOCAL-01326" />
-      <option name="project" value="LOCAL" />
-      <updated>1773762676864</updated>
-    </task>
-    <task id="LOCAL-01327" summary="VERDE: testProtezioneMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773762825097</created>
-      <option name="number" value="01327" />
-      <option name="presentableId" value="LOCAL-01327" />
-      <option name="project" value="LOCAL" />
-      <updated>1773762825097</updated>
-    </task>
-    <task id="LOCAL-01328" summary="ROSSO: testProtezioneMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1773763961789</created>
-      <option name="number" value="01328" />
-      <option name="presentableId" value="LOCAL-01328" />
-      <option name="project" value="LOCAL" />
-      <updated>1773763961790</updated>
-    </task>
-    <task id="LOCAL-01329" summary="ROSSO: testProtezioneMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1773764206010</created>
-      <option name="number" value="01329" />
-      <option name="presentableId" value="LOCAL-01329" />
-      <option name="project" value="LOCAL" />
-      <updated>1773764206010</updated>
-    </task>
-    <task id="LOCAL-01330" summary="VERDE: testProtezioneMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773766669616</created>
-      <option name="number" value="01330" />
-      <option name="presentableId" value="LOCAL-01330" />
-      <option name="project" value="LOCAL" />
-      <updated>1773766669616</updated>
-    </task>
-    <task id="LOCAL-01331" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1773778983079</created>
-      <option name="number" value="01331" />
-      <option name="presentableId" value="LOCAL-01331" />
-      <option name="project" value="LOCAL" />
-      <updated>1773778983080</updated>
-    </task>
-    <task id="LOCAL-01332" summary="REFACTORING: definizione del metodo verificaPresenza">
-      <option name="closed" value="true" />
-      <created>1773779122729</created>
-      <option name="number" value="01332" />
-      <option name="presentableId" value="LOCAL-01332" />
-      <option name="project" value="LOCAL" />
-      <updated>1773779122729</updated>
-    </task>
-    <task id="LOCAL-01333" summary="ROSSO: testLupi non riuscito">
-      <option name="closed" value="true" />
-      <created>1773779688403</created>
-      <option name="number" value="01333" />
-      <option name="presentableId" value="LOCAL-01333" />
-      <option name="project" value="LOCAL" />
-      <updated>1773779688403</updated>
-    </task>
-    <task id="LOCAL-01334" summary="VERDE: testLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1773780707896</created>
-      <option name="number" value="01334" />
-      <option name="presentableId" value="LOCAL-01334" />
-      <option name="project" value="LOCAL" />
-      <updated>1773780707896</updated>
-    </task>
-    <task id="LOCAL-01335" summary="REFACTORING: definizione del metodo toArray">
-      <option name="closed" value="true" />
-      <created>1773783279743</created>
-      <option name="number" value="01335" />
-      <option name="presentableId" value="LOCAL-01335" />
-      <option name="project" value="LOCAL" />
-      <updated>1773783279744</updated>
-    </task>
-    <task id="LOCAL-01336" summary="REFACTORING: utilizzo del metodo getLupi per semplificare il codice">
-      <option name="closed" value="true" />
-      <created>1773851114147</created>
-      <option name="number" value="01336" />
-      <option name="presentableId" value="LOCAL-01336" />
-      <option name="project" value="LOCAL" />
-      <updated>1773851114148</updated>
-    </task>
-    <task id="LOCAL-01337" summary="REFACTORING: definizione del metodo verificaAssenza">
-      <option name="closed" value="true" />
-      <created>1773851813489</created>
-      <option name="number" value="01337" />
-      <option name="presentableId" value="LOCAL-01337" />
-      <option name="project" value="LOCAL" />
-      <updated>1773851813489</updated>
-    </task>
-    <task id="LOCAL-01338" summary="ROSSO: testMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1773852516949</created>
-      <option name="number" value="01338" />
-      <option name="presentableId" value="LOCAL-01338" />
-      <option name="project" value="LOCAL" />
-      <updated>1773852516950</updated>
-    </task>
-    <task id="LOCAL-01339" summary="VERDE: testMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773852802759</created>
-      <option name="number" value="01339" />
-      <option name="presentableId" value="LOCAL-01339" />
-      <option name="project" value="LOCAL" />
-      <updated>1773852802759</updated>
-    </task>
-    <task id="LOCAL-01340" summary="REFACTORING: definizione del metodo getRuoli">
-      <option name="closed" value="true" />
-      <created>1773854887097</created>
-      <option name="number" value="01340" />
-      <option name="presentableId" value="LOCAL-01340" />
-      <option name="project" value="LOCAL" />
-      <updated>1773854887097</updated>
-    </task>
-    <task id="LOCAL-01341" summary="ROSSO: testMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1773872766947</created>
-      <option name="number" value="01341" />
-      <option name="presentableId" value="LOCAL-01341" />
-      <option name="project" value="LOCAL" />
-      <updated>1773872766947</updated>
-    </task>
-    <task id="LOCAL-01342" summary="REFACTORING: ridefinizione gestione mistici">
-      <option name="closed" value="true" />
-      <created>1773873004371</created>
-      <option name="number" value="01342" />
-      <option name="presentableId" value="LOCAL-01342" />
-      <option name="project" value="LOCAL" />
-      <updated>1773873004372</updated>
-    </task>
-    <task id="LOCAL-01343" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1773873208760</created>
-      <option name="number" value="01343" />
-      <option name="presentableId" value="LOCAL-01343" />
-      <option name="project" value="LOCAL" />
-      <updated>1773873208761</updated>
-    </task>
-    <task id="LOCAL-01344" summary="REFACTORING: correzione gestione protezioni Goblin">
-      <option name="closed" value="true" />
-      <created>1773874427258</created>
-      <option name="number" value="01344" />
-      <option name="presentableId" value="LOCAL-01344" />
-      <option name="project" value="LOCAL" />
-      <updated>1773874427258</updated>
-    </task>
-    <task id="LOCAL-01345" summary="REFACTORING: utilizzo della classe RuoliFactory">
-      <option name="closed" value="true" />
-      <created>1773874833693</created>
-      <option name="number" value="01345" />
-      <option name="presentableId" value="LOCAL-01345" />
-      <option name="project" value="LOCAL" />
-      <updated>1773874833693</updated>
-    </task>
-    <task id="LOCAL-01346" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1773875732996</created>
-      <option name="number" value="01346" />
-      <option name="presentableId" value="LOCAL-01346" />
-      <option name="project" value="LOCAL" />
-      <updated>1773875732996</updated>
-    </task>
-    <task id="LOCAL-01347" summary="VERDE DIRETTO: testProtezioneMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773876151708</created>
-      <option name="number" value="01347" />
-      <option name="presentableId" value="LOCAL-01347" />
-      <option name="project" value="LOCAL" />
-      <updated>1773876151708</updated>
-    </task>
-    <task id="LOCAL-01348" summary="ROSSO: testTratto non riuscito">
-      <option name="closed" value="true" />
-      <created>1773876579303</created>
-      <option name="number" value="01348" />
-      <option name="presentableId" value="LOCAL-01348" />
-      <option name="project" value="LOCAL" />
-      <updated>1773876579303</updated>
-    </task>
-    <task id="LOCAL-01349" summary="VERDE: testTratto riuscito">
-      <option name="closed" value="true" />
-      <created>1773876782716</created>
-      <option name="number" value="01349" />
-      <option name="presentableId" value="LOCAL-01349" />
-      <option name="project" value="LOCAL" />
-      <updated>1773876782716</updated>
-    </task>
-    <task id="LOCAL-01350" summary="VERDE DIRETTO: testTratto riuscito">
-      <option name="closed" value="true" />
-      <created>1773876892301</created>
-      <option name="number" value="01350" />
-      <option name="presentableId" value="LOCAL-01350" />
-      <option name="project" value="LOCAL" />
-      <updated>1773876892301</updated>
-    </task>
-    <task id="LOCAL-01351" summary="VERDE DIRETTO: testTratto riuscito">
-      <option name="closed" value="true" />
-      <created>1773876991770</created>
-      <option name="number" value="01351" />
-      <option name="presentableId" value="LOCAL-01351" />
-      <option name="project" value="LOCAL" />
-      <updated>1773876991771</updated>
-    </task>
-    <task id="LOCAL-01352" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1773877182702</created>
-      <option name="number" value="01352" />
-      <option name="presentableId" value="LOCAL-01352" />
-      <option name="project" value="LOCAL" />
-      <updated>1773877182702</updated>
-    </task>
-    <task id="LOCAL-01353" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1773877385720</created>
-      <option name="number" value="01353" />
-      <option name="presentableId" value="LOCAL-01353" />
-      <option name="project" value="LOCAL" />
-      <updated>1773877385720</updated>
-    </task>
-    <task id="LOCAL-01354" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1773914841614</created>
-      <option name="number" value="01354" />
-      <option name="presentableId" value="LOCAL-01354" />
-      <option name="project" value="LOCAL" />
-      <updated>1773914841615</updated>
-    </task>
-    <task id="LOCAL-01355" summary="ROSSO: testSceltaAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1773916404004</created>
-      <option name="number" value="01355" />
-      <option name="presentableId" value="LOCAL-01355" />
-      <option name="project" value="LOCAL" />
-      <updated>1773916404005</updated>
-    </task>
-    <task id="LOCAL-01356" summary="VERDE: testSceltaAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1773917705835</created>
-      <option name="number" value="01356" />
-      <option name="presentableId" value="LOCAL-01356" />
-      <option name="project" value="LOCAL" />
-      <updated>1773917705835</updated>
-    </task>
-    <task id="LOCAL-01357" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1773918407656</created>
-      <option name="number" value="01357" />
-      <option name="presentableId" value="LOCAL-01357" />
-      <option name="project" value="LOCAL" />
-      <updated>1773918407656</updated>
-    </task>
-    <task id="LOCAL-01358" summary="REFACTORING: definizione del metodo verificaProtetto">
-      <option name="closed" value="true" />
-      <created>1773918598691</created>
-      <option name="number" value="01358" />
-      <option name="presentableId" value="LOCAL-01358" />
-      <option name="project" value="LOCAL" />
-      <updated>1773918598691</updated>
-    </task>
-    <task id="LOCAL-01359" summary="REFACTORING: definizione del metodo gedtPersonaggioProtetto">
-      <option name="closed" value="true" />
-      <created>1773932106289</created>
-      <option name="number" value="01359" />
-      <option name="presentableId" value="LOCAL-01359" />
-      <option name="project" value="LOCAL" />
-      <updated>1773932106289</updated>
-    </task>
-    <task id="LOCAL-01360" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1773934918784</created>
-      <option name="number" value="01360" />
-      <option name="presentableId" value="LOCAL-01360" />
-      <option name="project" value="LOCAL" />
-      <updated>1773934918784</updated>
-    </task>
-    <task id="LOCAL-01361" summary="REFACTORING: definizione di RuoliFactory come oggetto pubblico statico">
-      <option name="closed" value="true" />
-      <created>1774112230050</created>
-      <option name="number" value="01361" />
-      <option name="presentableId" value="LOCAL-01361" />
-      <option name="project" value="LOCAL" />
-      <updated>1774112230051</updated>
-    </task>
-    <task id="LOCAL-01362" summary="REFACTORING: definizione del metodo isProtezionePresente">
-      <option name="closed" value="true" />
-      <created>1774114308759</created>
-      <option name="number" value="01362" />
-      <option name="presentableId" value="LOCAL-01362" />
-      <option name="project" value="LOCAL" />
-      <updated>1774114308759</updated>
-    </task>
     <task id="LOCAL-01363" summary="REFACTORING: definizione della costante NOME">
       <option name="closed" value="true" />
       <created>1774114960525</created>
@@ -666,7 +318,351 @@
       <option name="project" value="LOCAL" />
       <updated>1774115783136</updated>
     </task>
-    <option name="localTasksCounter" value="1369" />
+    <task id="LOCAL-01369" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1774115996086</created>
+      <option name="number" value="01369" />
+      <option name="presentableId" value="LOCAL-01369" />
+      <option name="project" value="LOCAL" />
+      <updated>1774115996086</updated>
+    </task>
+    <task id="LOCAL-01370" summary="ROSSO: testNome non riuscito">
+      <option name="closed" value="true" />
+      <created>1774116593227</created>
+      <option name="number" value="01370" />
+      <option name="presentableId" value="LOCAL-01370" />
+      <option name="project" value="LOCAL" />
+      <updated>1774116593227</updated>
+    </task>
+    <task id="LOCAL-01371" summary="ROSSO: testNome non riuscito">
+      <option name="closed" value="true" />
+      <created>1774116910685</created>
+      <option name="number" value="01371" />
+      <option name="presentableId" value="LOCAL-01371" />
+      <option name="project" value="LOCAL" />
+      <updated>1774116910685</updated>
+    </task>
+    <task id="LOCAL-01372" summary="VERDE: testNome riuscito">
+      <option name="closed" value="true" />
+      <created>1774116973225</created>
+      <option name="number" value="01372" />
+      <option name="presentableId" value="LOCAL-01372" />
+      <option name="project" value="LOCAL" />
+      <updated>1774116973225</updated>
+    </task>
+    <task id="LOCAL-01373" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1774117097744</created>
+      <option name="number" value="01373" />
+      <option name="presentableId" value="LOCAL-01373" />
+      <option name="project" value="LOCAL" />
+      <updated>1774117097744</updated>
+    </task>
+    <task id="LOCAL-01374" summary="ROSSO: testAura non riuscito">
+      <option name="closed" value="true" />
+      <created>1774117214142</created>
+      <option name="number" value="01374" />
+      <option name="presentableId" value="LOCAL-01374" />
+      <option name="project" value="LOCAL" />
+      <updated>1774117214142</updated>
+    </task>
+    <task id="LOCAL-01375" summary="VERDE: testAura riuscito">
+      <option name="closed" value="true" />
+      <created>1774138847075</created>
+      <option name="number" value="01375" />
+      <option name="presentableId" value="LOCAL-01375" />
+      <option name="project" value="LOCAL" />
+      <updated>1774138847075</updated>
+    </task>
+    <task id="LOCAL-01376" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1774139029813</created>
+      <option name="number" value="01376" />
+      <option name="presentableId" value="LOCAL-01376" />
+      <option name="project" value="LOCAL" />
+      <updated>1774139029813</updated>
+    </task>
+    <task id="LOCAL-01377" summary="ROSSO: testLune non riuscito">
+      <option name="closed" value="true" />
+      <created>1774139232029</created>
+      <option name="number" value="01377" />
+      <option name="presentableId" value="LOCAL-01377" />
+      <option name="project" value="LOCAL" />
+      <updated>1774139232029</updated>
+    </task>
+    <task id="LOCAL-01378" summary="VERDE: testLune riuscito">
+      <option name="closed" value="true" />
+      <created>1774139371012</created>
+      <option name="number" value="01378" />
+      <option name="presentableId" value="LOCAL-01378" />
+      <option name="project" value="LOCAL" />
+      <updated>1774139371012</updated>
+    </task>
+    <task id="LOCAL-01379" summary="ROSSO: testDescrizione non riuscito">
+      <option name="closed" value="true" />
+      <created>1774139620057</created>
+      <option name="number" value="01379" />
+      <option name="presentableId" value="LOCAL-01379" />
+      <option name="project" value="LOCAL" />
+      <updated>1774139620057</updated>
+    </task>
+    <task id="LOCAL-01380" summary="VERDE: testDescrizione riuscito">
+      <option name="closed" value="true" />
+      <created>1774139885803</created>
+      <option name="number" value="01380" />
+      <option name="presentableId" value="LOCAL-01380" />
+      <option name="project" value="LOCAL" />
+      <updated>1774139885803</updated>
+    </task>
+    <task id="LOCAL-01381" summary="REFACTORING: definizione del metodo verificaStringa">
+      <option name="closed" value="true" />
+      <created>1774140087611</created>
+      <option name="number" value="01381" />
+      <option name="presentableId" value="LOCAL-01381" />
+      <option name="project" value="LOCAL" />
+      <updated>1774140087611</updated>
+    </task>
+    <task id="LOCAL-01382" summary="ROSSO: testMistico non riuscito">
+      <option name="closed" value="true" />
+      <created>1774259247272</created>
+      <option name="number" value="01382" />
+      <option name="presentableId" value="LOCAL-01382" />
+      <option name="project" value="LOCAL" />
+      <updated>1774259247272</updated>
+    </task>
+    <task id="LOCAL-01383" summary="VERDE: testMistico riuscito">
+      <option name="closed" value="true" />
+      <created>1774259408115</created>
+      <option name="number" value="01383" />
+      <option name="presentableId" value="LOCAL-01383" />
+      <option name="project" value="LOCAL" />
+      <updated>1774259408115</updated>
+    </task>
+    <task id="LOCAL-01384" summary="VERDE DIRETTO: testContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1774259580380</created>
+      <option name="number" value="01384" />
+      <option name="presentableId" value="LOCAL-01384" />
+      <option name="project" value="LOCAL" />
+      <updated>1774259580380</updated>
+    </task>
+    <task id="LOCAL-01385" summary="VERDE DIRETTO: testBardo riuscito">
+      <option name="closed" value="true" />
+      <created>1774259754349</created>
+      <option name="number" value="01385" />
+      <option name="presentableId" value="LOCAL-01385" />
+      <option name="project" value="LOCAL" />
+      <updated>1774259754350</updated>
+    </task>
+    <task id="LOCAL-01386" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1774259995101</created>
+      <option name="number" value="01386" />
+      <option name="presentableId" value="LOCAL-01386" />
+      <option name="project" value="LOCAL" />
+      <updated>1774259995102</updated>
+    </task>
+    <task id="LOCAL-01387" summary="VERDE DIRETTO: testBracconiere riuscito">
+      <option name="closed" value="true" />
+      <created>1774260178970</created>
+      <option name="number" value="01387" />
+      <option name="presentableId" value="LOCAL-01387" />
+      <option name="project" value="LOCAL" />
+      <updated>1774260178970</updated>
+    </task>
+    <task id="LOCAL-01388" summary="VERDE DIRETTO: testCacciatore riuscito">
+      <option name="closed" value="true" />
+      <created>1774260426283</created>
+      <option name="number" value="01388" />
+      <option name="presentableId" value="LOCAL-01388" />
+      <option name="project" value="LOCAL" />
+      <updated>1774260426283</updated>
+    </task>
+    <task id="LOCAL-01389" summary="VERDE DIRETTO: testCacciatoreDiVampiri riuscito">
+      <option name="closed" value="true" />
+      <created>1774260694029</created>
+      <option name="number" value="01389" />
+      <option name="presentableId" value="LOCAL-01389" />
+      <option name="project" value="LOCAL" />
+      <updated>1774260694029</updated>
+    </task>
+    <task id="LOCAL-01390" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
+      <option name="closed" value="true" />
+      <created>1774260807289</created>
+      <option name="number" value="01390" />
+      <option name="presentableId" value="LOCAL-01390" />
+      <option name="project" value="LOCAL" />
+      <updated>1774260807290</updated>
+    </task>
+    <task id="LOCAL-01391" summary="VERDE DIRETTO: testEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1774261002130</created>
+      <option name="number" value="01391" />
+      <option name="presentableId" value="LOCAL-01391" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261002130</updated>
+    </task>
+    <task id="LOCAL-01392" summary="VERDE DIRETTO: testGuardia riuscito">
+      <option name="closed" value="true" />
+      <created>1774261174203</created>
+      <option name="number" value="01392" />
+      <option name="presentableId" value="LOCAL-01392" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261174203</updated>
+    </task>
+    <task id="LOCAL-01393" summary="VERDE DIRETTO: testGuaritore riuscito">
+      <option name="closed" value="true" />
+      <created>1774261298488</created>
+      <option name="number" value="01393" />
+      <option name="presentableId" value="LOCAL-01393" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261298488</updated>
+    </task>
+    <task id="LOCAL-01394" summary="VERDE DIRETTO: testVillaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1774261484060</created>
+      <option name="number" value="01394" />
+      <option name="presentableId" value="LOCAL-01394" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261484060</updated>
+    </task>
+    <task id="LOCAL-01395" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1774261833446</created>
+      <option name="number" value="01395" />
+      <option name="presentableId" value="LOCAL-01395" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261833446</updated>
+    </task>
+    <task id="LOCAL-01396" summary="ROSSO: testMago non riuscito">
+      <option name="closed" value="true" />
+      <created>1774262020289</created>
+      <option name="number" value="01396" />
+      <option name="presentableId" value="LOCAL-01396" />
+      <option name="project" value="LOCAL" />
+      <updated>1774262020289</updated>
+    </task>
+    <task id="LOCAL-01397" summary="VERDE: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774262212713</created>
+      <option name="number" value="01397" />
+      <option name="presentableId" value="LOCAL-01397" />
+      <option name="project" value="LOCAL" />
+      <updated>1774262212713</updated>
+    </task>
+    <task id="LOCAL-01398" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774264966498</created>
+      <option name="number" value="01398" />
+      <option name="presentableId" value="LOCAL-01398" />
+      <option name="project" value="LOCAL" />
+      <updated>1774264966498</updated>
+    </task>
+    <task id="LOCAL-01399" summary="VERDE DIRETTO: testContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1774265122514</created>
+      <option name="number" value="01399" />
+      <option name="presentableId" value="LOCAL-01399" />
+      <option name="project" value="LOCAL" />
+      <updated>1774265122514</updated>
+    </task>
+    <task id="LOCAL-01400" summary="VERDE DIRETTO: testContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1774265358937</created>
+      <option name="number" value="01400" />
+      <option name="presentableId" value="LOCAL-01400" />
+      <option name="project" value="LOCAL" />
+      <updated>1774265358937</updated>
+    </task>
+    <task id="LOCAL-01401" summary="VERDE DIRETTO: testContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1774265529693</created>
+      <option name="number" value="01401" />
+      <option name="presentableId" value="LOCAL-01401" />
+      <option name="project" value="LOCAL" />
+      <updated>1774265529694</updated>
+    </task>
+    <task id="LOCAL-01402" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774265714797</created>
+      <option name="number" value="01402" />
+      <option name="presentableId" value="LOCAL-01402" />
+      <option name="project" value="LOCAL" />
+      <updated>1774265714798</updated>
+    </task>
+    <task id="LOCAL-01403" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774274092773</created>
+      <option name="number" value="01403" />
+      <option name="presentableId" value="LOCAL-01403" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274092773</updated>
+    </task>
+    <task id="LOCAL-01404" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774274282976</created>
+      <option name="number" value="01404" />
+      <option name="presentableId" value="LOCAL-01404" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274282976</updated>
+    </task>
+    <task id="LOCAL-01405" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774274366949</created>
+      <option name="number" value="01405" />
+      <option name="presentableId" value="LOCAL-01405" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274366949</updated>
+    </task>
+    <task id="LOCAL-01406" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774274501356</created>
+      <option name="number" value="01406" />
+      <option name="presentableId" value="LOCAL-01406" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274501356</updated>
+    </task>
+    <task id="LOCAL-01407" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774274666155</created>
+      <option name="number" value="01407" />
+      <option name="presentableId" value="LOCAL-01407" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274666155</updated>
+    </task>
+    <task id="LOCAL-01408" summary="VERDE DIRETTO: testProtezioneMistici riuscito">
+      <option name="closed" value="true" />
+      <created>1774274798767</created>
+      <option name="number" value="01408" />
+      <option name="presentableId" value="LOCAL-01408" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274798767</updated>
+    </task>
+    <task id="LOCAL-01409" summary="VERDE DIRETTO: testProtezioneMistici riuscito">
+      <option name="closed" value="true" />
+      <created>1774275234770</created>
+      <option name="number" value="01409" />
+      <option name="presentableId" value="LOCAL-01409" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275234770</updated>
+    </task>
+    <task id="LOCAL-01410" summary="VERDE DIRETTO: testProtezioni riuscito">
+      <option name="closed" value="true" />
+      <created>1774275456283</created>
+      <option name="number" value="01410" />
+      <option name="presentableId" value="LOCAL-01410" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275456283</updated>
+    </task>
+    <task id="LOCAL-01411" summary="REFACTORING: definizione del metodo getNumeroRuoli">
+      <option name="closed" value="true" />
+      <created>1774275584952</created>
+      <option name="number" value="01411" />
+      <option name="presentableId" value="LOCAL-01411" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275584952</updated>
+    </task>
+    <option name="localTasksCounter" value="1412" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -681,31 +677,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo toArray" />
-    <MESSAGE value="REFACTORING: utilizzo del metodo getLupi per semplificare il codice" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAssenza" />
-    <MESSAGE value="VERDE: testMistici riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuoli" />
-    <MESSAGE value="ROSSO: testMistici non riuscito" />
-    <MESSAGE value="REFACTORING: ridefinizione gestione mistici" />
-    <MESSAGE value="REFACTORING: ridefinizione gestione mistici" />
-    <MESSAGE value="REFACTORING: correzione gestione protezioni Goblin" />
-    <MESSAGE value="REFACTORING: utilizzo della classe RuoliFactory" />
+    <MESSAGE value="ROSSO: testLune non riuscito" />
+    <MESSAGE value="VERDE: testLune riuscito" />
+    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
+    <MESSAGE value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
+    <MESSAGE value="ROSSO: testMistico non riuscito" />
+    <MESSAGE value="VERDE: testMistico riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testEremita riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuardia riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="ROSSO: testMago non riuscito" />
+    <MESSAGE value="VERDE: testMago riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMago riuscito" />
     <MESSAGE value="VERDE DIRETTO: testProtezioneMistici riuscito" />
-    <MESSAGE value="ROSSO: testTratto non riuscito" />
-    <MESSAGE value="VERDE: testTratto riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testTratto riuscito" />
-    <MESSAGE value="ROSSO: testSceltaAngeloCustode non riuscito" />
-    <MESSAGE value="VERDE: testSceltaAngeloCustode riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaProtetto" />
-    <MESSAGE value="REFACTORING: definizione del metodo gedtPersonaggioProtetto" />
-    <MESSAGE value="REFACTORING: definizione di RuoliFactory come oggetto pubblico statico" />
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
-    <MESSAGE value="REFACTORING: parametrizzazione del metodo testMistici" />
-    <MESSAGE value="REFACTORING: parametrizzazione del metodo testProtezioneMistici" />
-    <MESSAGE value="REFACTORING: parametrizzazione del metodo getRuolo" />
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
+    <MESSAGE value="VERDE DIRETTO: testProtezioni riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNumeroRuoli" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNumeroRuoli" />
   </component>
 </project>

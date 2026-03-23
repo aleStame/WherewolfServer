@@ -207,6 +207,8 @@ public class Ruolo
 
     public void aggiungiProtezioneCreatureOmbra() { tratti.aggiungiProtezioneCreatureOmbra(); }
 
+    public boolean isMago() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();

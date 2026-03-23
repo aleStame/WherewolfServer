@@ -67,6 +67,8 @@ public final class TestCappuccettoRosso
         verificaFalso(isProtezionePresente(getRuolo(nome)));
     }
 
+    @Test public void testMago() { verificaFalso(ruolo.isMago()); }
+
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

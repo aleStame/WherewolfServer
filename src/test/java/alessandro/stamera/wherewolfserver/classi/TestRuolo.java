@@ -93,8 +93,15 @@ public final class TestRuolo
 
     @Test public void testAttaccoRuoloNonProtetto()
     {
-        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(FACTORY.getNome(i))));
+        for(int i = 0; i < getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(i)));
     }
+
+    @Test public void testProtezioni()
+    {
+        for(int i = 0; i < getNumeroRuoli(); i++) verificaFalso(ruolo.isProtezionePresente(getRuolo(i)));
+    }
+
+    private int getNumeroRuoli() { return FACTORY.getNumeroRuoli(); }
 
     private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
 
@@ -119,6 +126,8 @@ public final class TestRuolo
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
+
+    private Ruolo getRuolo(int posizione) { return getRuolo(FACTORY.getNome(posizione)); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
