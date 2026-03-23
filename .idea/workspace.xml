@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testVillaggio riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMago.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMago non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mago.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,22 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01346" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1773875732996</created>
-      <option name="number" value="01346" />
-      <option name="presentableId" value="LOCAL-01346" />
-      <option name="project" value="LOCAL" />
-      <updated>1773875732996</updated>
-    </task>
-    <task id="LOCAL-01347" summary="VERDE DIRETTO: testProtezioneMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1773876151708</created>
-      <option name="number" value="01347" />
-      <option name="presentableId" value="LOCAL-01347" />
-      <option name="project" value="LOCAL" />
-      <updated>1773876151708</updated>
     </task>
     <task id="LOCAL-01348" summary="ROSSO: testTratto non riuscito">
       <option name="closed" value="true" />
@@ -664,7 +648,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774261484060</updated>
     </task>
-    <option name="localTasksCounter" value="1395" />
+    <task id="LOCAL-01395" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1774261833446</created>
+      <option name="number" value="01395" />
+      <option name="presentableId" value="LOCAL-01395" />
+      <option name="project" value="LOCAL" />
+      <updated>1774261833446</updated>
+    </task>
+    <task id="LOCAL-01396" summary="ROSSO: testMago non riuscito">
+      <option name="closed" value="true" />
+      <created>1774262020289</created>
+      <option name="number" value="01396" />
+      <option name="presentableId" value="LOCAL-01396" />
+      <option name="project" value="LOCAL" />
+      <updated>1774262020289</updated>
+    </task>
+    <option name="localTasksCounter" value="1397" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,8 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: parametrizzazione del metodo getRuolo" />
-    <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
@@ -704,6 +702,8 @@
     <MESSAGE value="VERDE DIRETTO: testGuardia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVillaggio riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="ROSSO: testMago non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMago non riuscito" />
   </component>
 </project>
