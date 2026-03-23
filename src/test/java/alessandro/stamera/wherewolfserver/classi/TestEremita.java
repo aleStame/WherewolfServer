@@ -44,6 +44,8 @@ public final class TestEremita
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
+    @Test public void testMago() { verificaFalso(ruolo.isMago()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @ParameterizedTest
