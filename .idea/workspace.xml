@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testProtezioneMistici riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGoblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGoblin.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNumeroRuoli" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,30 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01360" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1773934918784</created>
-      <option name="number" value="01360" />
-      <option name="presentableId" value="LOCAL-01360" />
-      <option name="project" value="LOCAL" />
-      <updated>1773934918784</updated>
-    </task>
-    <task id="LOCAL-01361" summary="REFACTORING: definizione di RuoliFactory come oggetto pubblico statico">
-      <option name="closed" value="true" />
-      <created>1774112230050</created>
-      <option name="number" value="01361" />
-      <option name="presentableId" value="LOCAL-01361" />
-      <option name="project" value="LOCAL" />
-      <updated>1774112230051</updated>
-    </task>
-    <task id="LOCAL-01362" summary="REFACTORING: definizione del metodo isProtezionePresente">
-      <option name="closed" value="true" />
-      <created>1774114308759</created>
-      <option name="number" value="01362" />
-      <option name="presentableId" value="LOCAL-01362" />
-      <option name="project" value="LOCAL" />
-      <updated>1774114308759</updated>
     </task>
     <task id="LOCAL-01363" summary="REFACTORING: definizione della costante NOME">
       <option name="closed" value="true" />
@@ -664,7 +638,31 @@
       <option name="project" value="LOCAL" />
       <updated>1774274798767</updated>
     </task>
-    <option name="localTasksCounter" value="1409" />
+    <task id="LOCAL-01409" summary="VERDE DIRETTO: testProtezioneMistici riuscito">
+      <option name="closed" value="true" />
+      <created>1774275234770</created>
+      <option name="number" value="01409" />
+      <option name="presentableId" value="LOCAL-01409" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275234770</updated>
+    </task>
+    <task id="LOCAL-01410" summary="VERDE DIRETTO: testProtezioni riuscito">
+      <option name="closed" value="true" />
+      <created>1774275456283</created>
+      <option name="number" value="01410" />
+      <option name="presentableId" value="LOCAL-01410" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275456283</updated>
+    </task>
+    <task id="LOCAL-01411" summary="REFACTORING: definizione del metodo getNumeroRuoli">
+      <option name="closed" value="true" />
+      <created>1774275584952</created>
+      <option name="number" value="01411" />
+      <option name="presentableId" value="LOCAL-01411" />
+      <option name="project" value="LOCAL" />
+      <updated>1774275584952</updated>
+    </task>
+    <option name="localTasksCounter" value="1412" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,8 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAura riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
@@ -704,6 +700,8 @@
     <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMago riuscito" />
     <MESSAGE value="VERDE DIRETTO: testProtezioneMistici riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testProtezioneMistici riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testProtezioni riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNumeroRuoli" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNumeroRuoli" />
   </component>
 </project>
