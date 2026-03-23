@@ -43,6 +43,8 @@ public final class TestMago
 
     @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
 
+    @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
