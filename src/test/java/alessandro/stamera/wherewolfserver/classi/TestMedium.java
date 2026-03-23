@@ -15,14 +15,15 @@ public final class TestMedium
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
     {
-        assertThat(ruolo.getDescrizione())
-            .isEqualTo("Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.");
+        verificaStringa(ruolo.getDescrizione(), "Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.");
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testDescrizione non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testDescrizione riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMedium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMedium.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,14 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01372" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1774116973225</created>
-      <option name="number" value="01372" />
-      <option name="presentableId" value="LOCAL-01372" />
-      <option name="project" value="LOCAL" />
-      <updated>1774116973225</updated>
     </task>
     <task id="LOCAL-01373" summary="REFACTORING: definizione della costante NOME">
       <option name="closed" value="true" />
@@ -662,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774277535658</updated>
     </task>
-    <option name="localTasksCounter" value="1421" />
+    <task id="LOCAL-01421" summary="VERDE: testDescrizione riuscito">
+      <option name="closed" value="true" />
+      <created>1774277698146</created>
+      <option name="number" value="01421" />
+      <option name="presentableId" value="LOCAL-01421" />
+      <option name="project" value="LOCAL" />
+      <updated>1774277698146</updated>
+    </task>
+    <option name="localTasksCounter" value="1422" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -677,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
@@ -702,6 +703,7 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testDescrizione non riuscito" />
+    <MESSAGE value="VERDE: testDescrizione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testDescrizione riuscito" />
   </component>
 </project>
