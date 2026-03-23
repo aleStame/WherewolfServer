@@ -30,6 +30,8 @@ public final class TestMedium
 
     @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
 
+    @Test public void testBracconiere() { assertThat(ruolo.isBracconiere()).isFalse(); }
+
     @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
