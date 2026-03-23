@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMago riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCacciatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCacciatore.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testProtezioneMistici riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGoblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGoblin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,22 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01358" summary="REFACTORING: definizione del metodo verificaProtetto">
-      <option name="closed" value="true" />
-      <created>1773918598691</created>
-      <option name="number" value="01358" />
-      <option name="presentableId" value="LOCAL-01358" />
-      <option name="project" value="LOCAL" />
-      <updated>1773918598691</updated>
-    </task>
-    <task id="LOCAL-01359" summary="REFACTORING: definizione del metodo gedtPersonaggioProtetto">
-      <option name="closed" value="true" />
-      <created>1773932106289</created>
-      <option name="number" value="01359" />
-      <option name="presentableId" value="LOCAL-01359" />
-      <option name="project" value="LOCAL" />
-      <updated>1773932106289</updated>
     </task>
     <task id="LOCAL-01360" summary="REFACTORING: definizione della costante NOME">
       <option name="closed" value="true" />
@@ -664,7 +648,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774274501356</updated>
     </task>
-    <option name="localTasksCounter" value="1407" />
+    <task id="LOCAL-01407" summary="VERDE DIRETTO: testMago riuscito">
+      <option name="closed" value="true" />
+      <created>1774274666155</created>
+      <option name="number" value="01407" />
+      <option name="presentableId" value="LOCAL-01407" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274666155</updated>
+    </task>
+    <task id="LOCAL-01408" summary="VERDE DIRETTO: testProtezioneMistici riuscito">
+      <option name="closed" value="true" />
+      <created>1774274798767</created>
+      <option name="number" value="01408" />
+      <option name="presentableId" value="LOCAL-01408" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274798767</updated>
+    </task>
+    <option name="localTasksCounter" value="1409" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
@@ -704,6 +703,7 @@
     <MESSAGE value="VERDE: testMago riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMago riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMago riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testProtezioneMistici riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testProtezioneMistici riuscito" />
   </component>
 </project>
