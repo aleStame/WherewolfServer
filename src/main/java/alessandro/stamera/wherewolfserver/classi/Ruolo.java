@@ -44,7 +44,7 @@ public class Ruolo
 
     public Aura getAura()
     {
-        Aura risultato = aura;
+        Aura risultato = controlloMedium();
         if(controlloTrattiOscuri()) risultato = NERA;
         return risultato;
     }
@@ -211,7 +211,7 @@ public class Ruolo
 
     public boolean isMedium() { return false; }
 
-    public Aura controlloMedium() { return null; }
+    public Aura controlloMedium() { return aura; }
 
     private boolean controlloTrattiOscuri()
     {
