@@ -29,7 +29,7 @@ public final class TestMago
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
-    //@Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
+    @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
