@@ -31,6 +31,8 @@ public final class TestMago
 
     @Test public void testContadino() { assertThat(ruolo.isContadino()).isFalse(); }
 
+    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
