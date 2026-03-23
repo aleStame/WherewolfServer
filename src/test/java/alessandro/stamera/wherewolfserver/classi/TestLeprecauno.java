@@ -64,6 +64,7 @@ public final class TestLeprecauno
     @ParameterizedTest @CsvSource({ "Goblin, Guaritore, Mago" }) public void testProtezioneMistici(String nome)
     {
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
+        verificaFalso(ruolo.isProtezionePresente(FACTORY.getRuolo("Medium")));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
