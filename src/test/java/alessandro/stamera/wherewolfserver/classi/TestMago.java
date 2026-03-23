@@ -27,7 +27,7 @@ public final class TestMago
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
@@ -47,9 +47,11 @@ public final class TestMago
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
