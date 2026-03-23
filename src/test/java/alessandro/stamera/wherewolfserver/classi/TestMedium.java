@@ -28,6 +28,8 @@ public final class TestMedium
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
+    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
