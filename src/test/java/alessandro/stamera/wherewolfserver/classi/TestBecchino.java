@@ -61,6 +61,8 @@ public final class TestBecchino
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
+    @Test public void testMago() { verificaFalso(ruolo.isMago()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testVillaggio riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBardo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMedium riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBecchino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBecchino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,22 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01390" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
-      <option name="closed" value="true" />
-      <created>1774260807289</created>
-      <option name="number" value="01390" />
-      <option name="presentableId" value="LOCAL-01390" />
-      <option name="project" value="LOCAL" />
-      <updated>1774260807290</updated>
-    </task>
-    <task id="LOCAL-01391" summary="VERDE DIRETTO: testEremita riuscito">
-      <option name="closed" value="true" />
-      <created>1774261002130</created>
-      <option name="number" value="01391" />
-      <option name="presentableId" value="LOCAL-01391" />
-      <option name="project" value="LOCAL" />
-      <updated>1774261002130</updated>
     </task>
     <task id="LOCAL-01392" summary="VERDE DIRETTO: testGuardia riuscito">
       <option name="closed" value="true" />
@@ -664,7 +648,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774283111929</updated>
     </task>
-    <option name="localTasksCounter" value="1439" />
+    <task id="LOCAL-01439" summary="ROSSO: testMedium non riuscito">
+      <option name="closed" value="true" />
+      <created>1774283995488</created>
+      <option name="number" value="01439" />
+      <option name="presentableId" value="LOCAL-01439" />
+      <option name="project" value="LOCAL" />
+      <updated>1774283995488</updated>
+    </task>
+    <task id="LOCAL-01440" summary="VERDE: testMedium riuscito">
+      <option name="closed" value="true" />
+      <created>1774284095222</created>
+      <option name="number" value="01440" />
+      <option name="presentableId" value="LOCAL-01440" />
+      <option name="project" value="LOCAL" />
+      <updated>1774284095222</updated>
+    </task>
+    <option name="localTasksCounter" value="1441" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,8 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNome non riuscito" />
-    <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
@@ -704,6 +702,8 @@
     <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMago riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVillaggio riuscito" />
+    <MESSAGE value="ROSSO: testMedium non riuscito" />
+    <MESSAGE value="VERDE: testMedium riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMedium riuscito" />
   </component>
 </project>
