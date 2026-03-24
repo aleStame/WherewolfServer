@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtezionePresente">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloMedium riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAltraGuardia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAltraGuardia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -273,22 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01410" summary="VERDE DIRETTO: testProtezioni riuscito">
-      <option name="closed" value="true" />
-      <created>1774275456283</created>
-      <option name="number" value="01410" />
-      <option name="presentableId" value="LOCAL-01410" />
-      <option name="project" value="LOCAL" />
-      <updated>1774275456283</updated>
-    </task>
-    <task id="LOCAL-01411" summary="REFACTORING: definizione del metodo getNumeroRuoli">
-      <option name="closed" value="true" />
-      <created>1774275584952</created>
-      <option name="number" value="01411" />
-      <option name="presentableId" value="LOCAL-01411" />
-      <option name="project" value="LOCAL" />
-      <updated>1774275584952</updated>
     </task>
     <task id="LOCAL-01412" summary="REFACTORING: definizione di una nuova variante del metodo getRuolo">
       <option name="closed" value="true" />
@@ -666,7 +649,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774289286164</updated>
     </task>
-    <option name="localTasksCounter" value="1459" />
+    <task id="LOCAL-01459" summary="ROSSO: testControlloMedium non riuscito">
+      <option name="closed" value="true" />
+      <created>1774289661055</created>
+      <option name="number" value="01459" />
+      <option name="presentableId" value="LOCAL-01459" />
+      <option name="project" value="LOCAL" />
+      <updated>1774289661055</updated>
+    </task>
+    <task id="LOCAL-01460" summary="VERDE: testControlloMedium riuscito">
+      <option name="closed" value="true" />
+      <created>1774289879643</created>
+      <option name="number" value="01460" />
+      <option name="presentableId" value="LOCAL-01460" />
+      <option name="project" value="LOCAL" />
+      <updated>1774289879643</updated>
+    </task>
+    <option name="localTasksCounter" value="1461" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -681,8 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
@@ -706,6 +703,8 @@
     <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
     <MESSAGE value="VERDE: testProtezioneMistici riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtezionePresente" />
+    <MESSAGE value="ROSSO: testControlloMedium non riuscito" />
+    <MESSAGE value="VERDE: testControlloMedium riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloMedium riuscito" />
   </component>
 </project>
