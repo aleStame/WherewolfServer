@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -40,6 +41,8 @@ public final class TestAngeloCustode
     }
 
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
+
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
