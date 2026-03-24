@@ -54,6 +54,8 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
