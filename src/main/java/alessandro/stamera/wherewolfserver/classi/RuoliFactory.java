@@ -65,7 +65,7 @@ public final class RuoliFactory
 
     private Ruolo getPersonaggioProtetto(String nome)
     {
-        Ruolo ruolo = ruoli.get(nome);
+        Ruolo ruolo = ottieniRuolo(nome);
         ruolo.aggiungiProtezione(getCreatureOmbra());
         return ruolo;
     }
@@ -74,7 +74,7 @@ public final class RuoliFactory
 
     private Ruolo getPiccoloPopolo(String nome, Predicate<Ruolo> condizione)
     {
-        Ruolo ruolo = ruoli.get(nome);
+        Ruolo ruolo = ottieniRuolo(nome);
         ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(condizione).filter(mistico -> !mistico.isMedium()).toList()));
         return ruolo;
     }
@@ -111,5 +111,7 @@ public final class RuoliFactory
         lista.toArray(array);
         return array;
     }
+
+    private Ruolo ottieniRuolo(String nome) { return ruoli.get(nome); }
 
 }
