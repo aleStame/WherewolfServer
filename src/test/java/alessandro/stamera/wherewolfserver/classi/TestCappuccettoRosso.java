@@ -17,7 +17,7 @@ public final class TestCappuccettoRosso
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
     @Test public void testDescrizione()
     {
@@ -71,7 +71,9 @@ public final class TestCappuccettoRosso
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
