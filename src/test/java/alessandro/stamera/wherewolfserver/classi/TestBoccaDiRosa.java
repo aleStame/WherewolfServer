@@ -41,6 +41,8 @@ public final class TestBoccaDiRosa
 
     @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
