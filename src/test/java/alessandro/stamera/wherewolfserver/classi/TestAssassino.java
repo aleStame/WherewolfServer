@@ -35,6 +35,8 @@ public final class TestAssassino
 
     @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
