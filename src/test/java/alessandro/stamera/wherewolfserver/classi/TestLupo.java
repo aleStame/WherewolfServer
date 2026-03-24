@@ -49,6 +49,8 @@ public final class TestLupo
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
