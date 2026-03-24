@@ -17,7 +17,7 @@ public final class TestEremita
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Eremita"); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
     @Test
     public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
@@ -52,7 +52,9 @@ public final class TestEremita
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
     public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome))); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
