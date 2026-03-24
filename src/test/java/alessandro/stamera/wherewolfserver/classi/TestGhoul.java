@@ -45,6 +45,8 @@ public final class TestGhoul
 
     @Test public void testLeprecauno() { verificaFalso(ruolo.isLeprecauno()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
