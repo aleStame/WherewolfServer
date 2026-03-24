@@ -14,7 +14,7 @@ public final class TestLupo
 
     @BeforeEach public void setUp() { ruolo = new Lupo(null, null, 0); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
@@ -49,7 +49,9 @@ public final class TestLupo
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+    @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
+
+    private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
