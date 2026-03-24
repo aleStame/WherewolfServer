@@ -17,7 +17,7 @@ public final class TestBoccaDiRosa
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
     @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
 
@@ -41,7 +41,9 @@ public final class TestBoccaDiRosa
 
     @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+    @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
+
+    private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
