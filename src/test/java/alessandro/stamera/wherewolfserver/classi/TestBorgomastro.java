@@ -35,6 +35,8 @@ public final class TestBorgomastro
 
     @Test public void testBorgomastro() { verificaVero(ruolo.isBorgomastro()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
