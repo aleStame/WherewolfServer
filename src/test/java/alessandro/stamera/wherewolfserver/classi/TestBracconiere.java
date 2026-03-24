@@ -59,6 +59,8 @@ public class TestBracconiere
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
