@@ -67,6 +67,8 @@ public final class TestBecchino
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
