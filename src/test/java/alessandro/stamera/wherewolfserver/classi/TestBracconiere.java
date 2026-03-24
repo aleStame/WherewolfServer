@@ -17,7 +17,7 @@ public class TestBracconiere
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
     @Test public void testDescrizione()
     {
@@ -59,7 +59,9 @@ public class TestBracconiere
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
