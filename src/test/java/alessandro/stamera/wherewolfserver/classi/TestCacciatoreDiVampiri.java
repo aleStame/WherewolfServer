@@ -50,7 +50,13 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
+    @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

@@ -17,7 +17,7 @@ public final class TestAssassino
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
     @Test public void tesDescrizione()
     {
@@ -34,6 +34,10 @@ public final class TestAssassino
     @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
 
     @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
+
+    @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
+
+    private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 

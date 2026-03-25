@@ -32,7 +32,7 @@ public final class TestGoblin
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
@@ -66,6 +66,10 @@ public final class TestGoblin
         verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
+
+    @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
+
+    private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
