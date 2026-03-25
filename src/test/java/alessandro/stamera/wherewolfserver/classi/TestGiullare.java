@@ -51,6 +51,8 @@ public final class TestGiullare
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
