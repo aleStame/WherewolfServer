@@ -8,11 +8,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestMegera
 {
 
+    private static final String NOME = "Megera";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Megera"); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Megera"); }
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
     @Test public void testDescrizione()
     {
