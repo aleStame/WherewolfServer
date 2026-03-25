@@ -29,6 +29,10 @@ public final class TestGuardiaCorrotta
 
     @Test public void testGuardiaCorrotta() { assertThat(ruolo.isGuardiaCorrotta()).isTrue(); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+
+    //private void verificaAuraNera(Aura aura) { assertThat(aura).i }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
