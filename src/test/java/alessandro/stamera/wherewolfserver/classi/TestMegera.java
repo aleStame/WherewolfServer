@@ -18,6 +18,8 @@ public final class TestMegera
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 
+    @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
+
     @Test public void testDescrizione()
     {
         String descrizione =
