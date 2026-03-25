@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraNera">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiullare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiullare.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraBianca" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,22 +269,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01449" summary="VERDE DIRETTO: testMedium riuscito">
-      <option name="closed" value="true" />
-      <created>1774286847420</created>
-      <option name="number" value="01449" />
-      <option name="presentableId" value="LOCAL-01449" />
-      <option name="project" value="LOCAL" />
-      <updated>1774286847420</updated>
-    </task>
-    <task id="LOCAL-01450" summary="VERDE DIRETTO: testGuardia riuscito">
-      <option name="closed" value="true" />
-      <created>1774287049545</created>
-      <option name="number" value="01450" />
-      <option name="presentableId" value="LOCAL-01450" />
-      <option name="project" value="LOCAL" />
-      <updated>1774287049545</updated>
     </task>
     <task id="LOCAL-01451" summary="VERDE DIRETTO: testMedium riuscito">
       <option name="closed" value="true" />
@@ -664,7 +646,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774456964567</updated>
     </task>
-    <option name="localTasksCounter" value="1498" />
+    <task id="LOCAL-01498" summary="VERDE DIRETTO: testControlloMedium riuscito">
+      <option name="closed" value="true" />
+      <created>1774457218426</created>
+      <option name="number" value="01498" />
+      <option name="presentableId" value="LOCAL-01498" />
+      <option name="project" value="LOCAL" />
+      <updated>1774457218427</updated>
+    </task>
+    <task id="LOCAL-01499" summary="REFACTORING: definizione del metodo verificaAuraBianca">
+      <option name="closed" value="true" />
+      <created>1774457391909</created>
+      <option name="number" value="01499" />
+      <option name="presentableId" value="LOCAL-01499" />
+      <option name="project" value="LOCAL" />
+      <updated>1774457391909</updated>
+    </task>
+    <option name="localTasksCounter" value="1500" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,9 +699,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo ottieniRuolo" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo veriricaAuraBianca" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
-    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraNera" />
+    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraBianca" />
   </component>
 </project>

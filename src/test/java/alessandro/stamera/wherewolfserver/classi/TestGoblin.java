@@ -67,6 +67,8 @@ public final class TestGoblin
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
