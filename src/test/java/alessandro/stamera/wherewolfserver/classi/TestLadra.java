@@ -26,7 +26,7 @@ public final class TestLadra
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
@@ -47,9 +47,9 @@ public final class TestLadra
         for(Ruolo lupo : lupi) verificaFalso(isProtezionePresente(lupo));
     }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    //private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
