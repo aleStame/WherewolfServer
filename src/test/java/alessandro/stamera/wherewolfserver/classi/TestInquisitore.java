@@ -33,6 +33,8 @@ public final class TestInquisitore
 
     @Test public void testInquisitore() { verificaVero(ruolo.isInquisitore()); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
