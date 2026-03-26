@@ -17,6 +17,8 @@ public final class Megera extends Ruolo
         );
     }
 
+    @Override public boolean isMegera() { return true; }
+
     public static Ruolo getInstance() { return new Megera(); }
 
 }
