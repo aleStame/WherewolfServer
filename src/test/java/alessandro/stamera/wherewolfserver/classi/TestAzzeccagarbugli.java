@@ -33,6 +33,8 @@ public final class TestAzzeccagarbugli
 
     @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
 
+    @Test public void testMercante() { verificaFalso(ruolo.isMercante()); }
+
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
