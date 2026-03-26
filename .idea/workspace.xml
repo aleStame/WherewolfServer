@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNome riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMonaco non riuscito">
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestMonaco.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestMonaco.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestMonaco.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" afterDir="false" />
@@ -408,22 +408,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-01507" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1774459231029</created>
-      <option name="number" value="01507" />
-      <option name="presentableId" value="LOCAL-01507" />
-      <option name="project" value="LOCAL" />
-      <updated>1774459231029</updated>
-    </task>
-    <task id="LOCAL-01508" summary="ROSSO: testFazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1774459602104</created>
-      <option name="number" value="01508" />
-      <option name="presentableId" value="LOCAL-01508" />
-      <option name="project" value="LOCAL" />
-      <updated>1774459602104</updated>
-    </task>
     <task id="LOCAL-01509" summary="VERDE: testFazione riuscito">
       <option name="closed" value="true" />
       <created>1774459791659</created>
@@ -800,7 +784,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774543174168</updated>
     </task>
-    <option name="localTasksCounter" value="1556" />
+    <task id="LOCAL-01556" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1774543426722</created>
+      <option name="number" value="01556" />
+      <option name="presentableId" value="LOCAL-01556" />
+      <option name="project" value="LOCAL" />
+      <updated>1774543426722</updated>
+    </task>
+    <task id="LOCAL-01557" summary="ROSSO: testMonaco non riuscito">
+      <option name="closed" value="true" />
+      <created>1774543701689</created>
+      <option name="number" value="01557" />
+      <option name="presentableId" value="LOCAL-01557" />
+      <option name="project" value="LOCAL" />
+      <updated>1774543701689</updated>
+    </task>
+    <option name="localTasksCounter" value="1558" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -815,13 +815,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
     <MESSAGE value="ROSSO: testMegera non riuscito" />
     <MESSAGE value="VERDE: testMegera riuscito" />
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMegera riuscito" />
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
@@ -840,6 +838,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNome riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <MESSAGE value="ROSSO: testMonaco non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMonaco non riuscito" />
   </component>
 </project>
