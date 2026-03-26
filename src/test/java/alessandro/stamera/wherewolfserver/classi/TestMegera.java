@@ -34,7 +34,7 @@ public final class TestMegera
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
@@ -50,11 +50,13 @@ public final class TestMegera
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testMegera() { assertThat(ruolo.isMegera()).isTrue(); }
+    @Test public void testMegera() { verificaVero(ruolo.isMegera()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
