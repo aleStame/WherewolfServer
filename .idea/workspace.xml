@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testGiullare riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testInquisizione riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMegera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMegera.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,14 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01467" summary="VERDE DIRETTO: testControlloMedium riuscito">
-      <option name="closed" value="true" />
-      <created>1774363662913</created>
-      <option name="number" value="01467" />
-      <option name="presentableId" value="LOCAL-01467" />
-      <option name="project" value="LOCAL" />
-      <updated>1774363662913</updated>
     </task>
     <task id="LOCAL-01468" summary="REFACTORING: definizione del metodo verificaAuraBianca">
       <option name="closed" value="true" />
@@ -662,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774521640074</updated>
     </task>
-    <option name="localTasksCounter" value="1516" />
+    <task id="LOCAL-01516" summary="VERDE DIRETTO: testInquisizione riuscito">
+      <option name="closed" value="true" />
+      <created>1774521954910</created>
+      <option name="number" value="01516" />
+      <option name="presentableId" value="LOCAL-01516" />
+      <option name="project" value="LOCAL" />
+      <updated>1774521954910</updated>
+    </task>
+    <option name="localTasksCounter" value="1517" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -677,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
     <MESSAGE value="VERDE: testProtezioneMistici riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
     <MESSAGE value="ROSSO: testControlloMedium non riuscito" />
@@ -702,6 +704,7 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGhoul riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiullare riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGiullare riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testInquisizione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testInquisizione riuscito" />
   </component>
 </project>
