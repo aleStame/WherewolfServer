@@ -215,6 +215,8 @@ public class Ruolo
 
     public boolean isMegera() { return false; }
 
+    public boolean isMercante() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
