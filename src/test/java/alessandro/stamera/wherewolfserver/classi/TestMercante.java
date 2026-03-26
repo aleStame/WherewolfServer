@@ -20,6 +20,14 @@ public final class TestMercante
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Può votare al ballottaggio anche se è accusato. In ogni votazione, non ha limite sul numero di giocatori per cui può votare. I " +
+            "voti che il Mercante riceve vengono ridotti di uno per ogni altro giocatore della fazione Città in gioco.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
