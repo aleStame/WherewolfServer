@@ -36,6 +36,8 @@ public final class TestMegera
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
