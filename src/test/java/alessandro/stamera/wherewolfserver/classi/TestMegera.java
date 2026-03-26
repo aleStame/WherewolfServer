@@ -21,9 +21,9 @@ public final class TestMegera
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+    @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testDescrizione()
     {
@@ -37,5 +37,7 @@ public final class TestMegera
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
 }
