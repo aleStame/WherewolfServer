@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMegera riuscito">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mercante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestMercante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNome non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/IstanzaRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/IstanzaRuolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mercante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Mercante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,14 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01483" summary="REFACTORING: definizione del metodo verificaAuraBianca">
-      <option name="closed" value="true" />
-      <created>1774369299050</created>
-      <option name="number" value="01483" />
-      <option name="presentableId" value="LOCAL-01483" />
-      <option name="project" value="LOCAL" />
-      <updated>1774369299050</updated>
     </task>
     <task id="LOCAL-01484" summary="VERDE DIRETTO: testControlloMedium riuscito">
       <option name="closed" value="true" />
@@ -666,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774534945397</updated>
     </task>
-    <option name="localTasksCounter" value="1532" />
+    <task id="LOCAL-01532" summary="ROSSO: testNome non riuscito">
+      <option name="closed" value="true" />
+      <created>1774535593730</created>
+      <option name="number" value="01532" />
+      <option name="presentableId" value="LOCAL-01532" />
+      <option name="project" value="LOCAL" />
+      <updated>1774535593730</updated>
+    </task>
+    <option name="localTasksCounter" value="1533" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -682,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
-    <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
@@ -706,6 +704,7 @@
     <MESSAGE value="ROSSO: testLune non riuscito" />
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMegera riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMegera riuscito" />
+    <MESSAGE value="ROSSO: testNome non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNome non riuscito" />
   </component>
 </project>
