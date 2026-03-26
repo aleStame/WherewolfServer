@@ -35,6 +35,8 @@ public final class TestBorgomastro
 
     @Test public void testBorgomastro() { verificaVero(ruolo.isBorgomastro()); }
 
+    @Test public void testMercante() { verificaFalso(ruolo.isMercante()); }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
