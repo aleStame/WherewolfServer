@@ -26,6 +26,10 @@ public final class TestMercante
 
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
+    @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
+
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
