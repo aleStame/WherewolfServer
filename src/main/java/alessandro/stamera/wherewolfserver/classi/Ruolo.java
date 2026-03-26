@@ -213,6 +213,8 @@ public class Ruolo
 
     public Aura controlloMedium() { return aura; }
 
+    public boolean isMegera() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();

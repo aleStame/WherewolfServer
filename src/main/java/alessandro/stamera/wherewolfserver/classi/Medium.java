@@ -5,7 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Medium extends Villaggio
 {
 
-    public Medium()
+    private Medium()
     {
         super
         (

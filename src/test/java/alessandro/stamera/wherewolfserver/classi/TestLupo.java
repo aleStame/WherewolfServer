@@ -47,6 +47,8 @@ public final class TestLupo
 
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
+    @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
