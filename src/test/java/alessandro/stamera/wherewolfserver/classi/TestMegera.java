@@ -32,6 +32,8 @@ public final class TestMegera
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
