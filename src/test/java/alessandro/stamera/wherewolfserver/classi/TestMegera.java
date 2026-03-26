@@ -44,6 +44,8 @@ public final class TestMegera
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
