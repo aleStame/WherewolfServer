@@ -28,11 +28,13 @@ public final class TestMercante
 
     @Test public void testBorgomastro() { verificaFalso(ruolo.isBorgomastro()); }
 
-    @Test public void testMercante() { assertThat(ruolo.isMercante()).isTrue(); }
+    @Test public void testMercante() { verificaVero(ruolo.isMercante()); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+    @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
