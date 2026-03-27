@@ -30,6 +30,8 @@ public final class TestMonaco
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
