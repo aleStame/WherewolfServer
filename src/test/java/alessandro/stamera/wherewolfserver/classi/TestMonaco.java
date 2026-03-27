@@ -17,6 +17,15 @@ public final class TestMonaco
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testMonaco() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte scopre almeno due ruoli che non sono presenti nel gioco, fra quelli che sono tra i ruoli possibili per quella partita.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
 
 }
