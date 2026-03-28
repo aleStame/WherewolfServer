@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.117s</div>
+<div class="counter">0.109s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Tests</a>
 </li>
-<li>
-<a href="#tab2">Standard output</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -77,7 +74,7 @@
 <h3 class="failures">testAttaccoRuoloNonProtetto()</h3>
 <span class="code">
 <pre>java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -185,7 +182,7 @@
 <h3 class="failures">testProtezioni()</h3>
 <span class="code">
 <pre>java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -293,7 +290,7 @@
 <h3 class="failures">[1] nome=Assassino</h3>
 <span class="code">
 <pre>java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -309,8 +306,8 @@
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.getCreatureOmbra(RuoliFactory.java:48)
 	at alessandro.stamera.wherewolfserver.classi.Protezioni.aggiungiProtezioneCreatureOmbra(Protezioni.java:14)
 	at alessandro.stamera.wherewolfserver.classi.Tratti.aggiungiProtezioneCreatureOmbra(Tratti.java:38)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:209)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.romeizzazione(Ruolo.java:162)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:208)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.romeizzazione(Ruolo.java:161)
 	at alessandro.stamera.wherewolfserver.classi.TestRuolo.testRomeizzazioneMorte(TestRuolo.java:81)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -444,7 +441,7 @@
 <h3 class="failures">[1] nome=Capo branco</h3>
 <span class="code">
 <pre>java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -460,8 +457,8 @@
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.getCreatureOmbra(RuoliFactory.java:48)
 	at alessandro.stamera.wherewolfserver.classi.Protezioni.aggiungiProtezioneCreatureOmbra(Protezioni.java:14)
 	at alessandro.stamera.wherewolfserver.classi.Tratti.aggiungiProtezioneCreatureOmbra(Tratti.java:38)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:209)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.sceltaAngeloCustode(Ruolo.java:77)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:208)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.sceltaAngeloCustode(Ruolo.java:76)
 	at alessandro.stamera.wherewolfserver.classi.TestRuolo.testSceltaAngeloCustode(TestRuolo.java:62)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -605,7 +602,7 @@
 <tr>
 <td class="success">testAccusato()</td>
 <td class="success">testAccusato()</td>
-<td class="success">0.011s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -617,68 +614,52 @@
 <tr>
 <td class="success">testGildata()</td>
 <td class="success">testGildata()</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInizializzazione()</td>
 <td class="success">testInizializzazione()</td>
-<td class="success">0.007s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">testProtezioni()</td>
 <td class="failures">testProtezioni()</td>
-<td class="failures">0.006s</td>
+<td class="failures">0.009s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">[1] nome=Assassino</td>
 <td class="failures">testRomeizzazioneMorte(String)[1]</td>
-<td class="failures">0.008s</td>
+<td class="failures">0.034s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">[1] nome=Capo branco</td>
 <td class="failures">testSceltaAngeloCustode(String)[1]</td>
-<td class="failures">0.008s</td>
+<td class="failures">0.003s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">testSegnalazioneAzzeccagarbugli()</td>
 <td class="success">testSegnalazioneAzzeccagarbugli()</td>
-<td class="success">0.035s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitore()</td>
-<td class="success">testSegnalazioneInquisitore()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSegnalazioneInquisitore()</td>
+<td class="success">testSegnalazioneInquisitore()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testVoti()</td>
 <td class="success">testVoti()</td>
-<td class="success">0.031s</td>
+<td class="success">0.034s</td>
 <td class="success">passed</td>
 </tr>
 </table>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -688,7 +669,7 @@ null
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 28 mar 2026, 18:20:28</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 28 mar 2026, 18:25:04</p>
 </div>
 </div>
 </body>

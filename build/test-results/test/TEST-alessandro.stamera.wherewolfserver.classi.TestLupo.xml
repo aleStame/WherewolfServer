@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLupo" tests="17" skipped="0" failures="1" errors="0" timestamp="2026-03-28T17:20:06" hostname="ALESSANDRO" time="0.586">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLupo" tests="17" skipped="0" failures="1" errors="0" timestamp="2026-03-28T17:24:39" hostname="ALESSANDRO" time="0.922">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.335"/>
-  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.004"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.002"/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.008"/>
-  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.019">
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.561"/>
+  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.005"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.003"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.009"/>
+  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.044">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -23,8 +23,8 @@
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.getCreatureOmbra(RuoliFactory.java:48)
 	at alessandro.stamera.wherewolfserver.classi.Protezioni.aggiungiProtezioneCreatureOmbra(Protezioni.java:14)
 	at alessandro.stamera.wherewolfserver.classi.Tratti.aggiungiProtezioneCreatureOmbra(Tratti.java:38)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:209)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.sceltaAngeloCustode(Ruolo.java:77)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:208)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.sceltaAngeloCustode(Ruolo.java:76)
 	at alessandro.stamera.wherewolfserver.classi.TestLupo.testAmato(TestLupo.java:34)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -108,35 +108,18 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.017"/>
-  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.011"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.025"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.004"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.003"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.007"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.006"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.006"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.01"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.005"/>
-  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.012"/>
-  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.004"/>
-  <system-out><![CDATA[null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-]]></system-out>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.02"/>
+  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.005"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.021"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.002"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.004"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.002"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.002"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.016"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.007"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.042"/>
+  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.003"/>
+  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.TestLupo" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLadra" tests="9" skipped="0" failures="9" errors="0" timestamp="2026-03-28T17:20:06" hostname="ALESSANDRO" time="0.185">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLadra" tests="9" skipped="0" failures="9" errors="0" timestamp="2026-03-28T17:24:39" hostname="ALESSANDRO" time="0.311">
   <properties/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.007">
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.024">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -107,9 +107,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.043">
+  <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.002">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -213,9 +213,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.008">
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.006">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -319,9 +319,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.003">
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.004">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -425,9 +425,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.007">
+  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.002">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -533,7 +533,7 @@
   </testcase>
   <testcase name="testUtilizzoPotere()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.007">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -637,9 +637,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.012">
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.007">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -743,9 +743,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.006">
+  <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.016">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -849,9 +849,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.005">
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLadra" time="0.01">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)

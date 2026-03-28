@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.478s</div>
+<div class="counter">0.751s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Tests</a>
 </li>
-<li>
-<a href="#tab2">Standard output</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -77,7 +74,7 @@
 <h3 class="failures">testAmato()</h3>
 <span class="code">
 <pre>java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:57)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:56)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
 	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
@@ -93,8 +90,8 @@
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.getCreatureOmbra(RuoliFactory.java:48)
 	at alessandro.stamera.wherewolfserver.classi.Protezioni.aggiungiProtezioneCreatureOmbra(Protezioni.java:14)
 	at alessandro.stamera.wherewolfserver.classi.Tratti.aggiungiProtezioneCreatureOmbra(Tratti.java:38)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:209)
-	at alessandro.stamera.wherewolfserver.classi.Ruolo.sceltaAngeloCustode(Ruolo.java:77)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.aggiungiProtezioneCreatureOmbra(Ruolo.java:208)
+	at alessandro.stamera.wherewolfserver.classi.Ruolo.sceltaAngeloCustode(Ruolo.java:76)
 	at alessandro.stamera.wherewolfserver.classi.TestLupo.testAmato(TestLupo.java:34)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -192,113 +189,90 @@
 </thead>
 <tr>
 <td class="success">testAmanti()</td>
-<td class="success">0.010s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">testAmato()</td>
-<td class="failures">0.019s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">testAngeloCustode()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAura()</td>
-<td class="success">0.025s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testCategoria()</td>
-<td class="success">0.335s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testCitta()</td>
-<td class="success">0.017s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testControlloMedium()</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testCriminale()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testFazione()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGhoul()</td>
-<td class="success">0.011s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGiullare()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGoblin()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testInquisizione()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testLupo()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testMegera()</td>
-<td class="success">0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testMistico()</td>
 <td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="failures">testAmato()</td>
+<td class="failures">0.044s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">testAngeloCustode()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAura()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCategoria()</td>
+<td class="success">0.561s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCitta()</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testControlloMedium()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCriminale()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFazione()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGhoul()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGiullare()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGoblin()</td>
+<td class="success">0.042s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInquisizione()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testLupo()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMegera()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMistico()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testVillaggio()</td>
-<td class="success">0.006s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 </table>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -308,7 +282,7 @@ null
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 28 mar 2026, 18:20:28</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 28 mar 2026, 18:25:03</p>
 </div>
 </div>
 </body>
