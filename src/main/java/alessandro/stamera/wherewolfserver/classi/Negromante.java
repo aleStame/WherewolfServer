@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class Negromante extends Ruolo
 {
 
-    public Negromante() { super(null, null, null, null, 0, false); }
+    private Negromante() { super("Negromante", null, null, null, 0, false); }
+
+    public static Ruolo getInstance() { return new Negromante(); }
 
 }
