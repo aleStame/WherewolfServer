@@ -52,6 +52,8 @@ public final class TestMonaco
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
+    @Test public void testMonaco() { assertThat(ruolo.isMonaco()).isTrue(); }
+
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
