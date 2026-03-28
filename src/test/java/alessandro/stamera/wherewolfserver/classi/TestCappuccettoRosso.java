@@ -71,6 +71,8 @@ public final class TestCappuccettoRosso
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
+    @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
