@@ -22,4 +22,13 @@ public final class TestNegromante
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte individua la Megera, riconosce il Becchino e indica due giocatori che diventano maledetti fino a che il Negromante è" +
+            " in gioco. Se all'inizio del giorno sono stati maledetti due o più giocatori maledetti, il Moderatore lo comunica pubblicamente. Il " +
+            "mattino successivo, se il Negromante è ancora in gioco, tutti i giocatori di fazione diversa da Negromante vengono eliminati.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
 }
