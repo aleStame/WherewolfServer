@@ -15,6 +15,8 @@ public final class Monaco extends Villaggio
         );
     }
 
+    @Override public boolean isMonaco() { return true; }
+
     public static Ruolo getInstance() { return new Monaco(); }
 
 }
