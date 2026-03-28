@@ -52,6 +52,8 @@ public final class TestMonaco
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
+    @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
