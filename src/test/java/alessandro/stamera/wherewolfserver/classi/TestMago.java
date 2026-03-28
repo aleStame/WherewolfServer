@@ -52,6 +52,8 @@ public final class TestMago
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
+    @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
