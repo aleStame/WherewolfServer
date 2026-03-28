@@ -52,13 +52,15 @@ public final class TestMonaco
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
-    @Test public void testMonaco() { assertThat(ruolo.isMonaco()).isTrue(); }
+    @Test public void testMonaco() { verificaVero(ruolo.isMonaco()); }
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
