@@ -48,6 +48,8 @@ public final class TestMonaco
 
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
 
+    @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
