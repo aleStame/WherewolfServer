@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -51,10 +52,22 @@ public final class TestEremita
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi, Negromante" })
     public void testProtezioni(String nome) { verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome))); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    /*@Test public void testVoti()
+    {
+        incrementaVoti();
+        verificaVoti(ESEMPIO_VOTI);
+        ruolo.annullaVoti();
+        verificaNessunVoto();
+        ruolo.maledizione();
+        verificaVoti(1);
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+    }*/
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
