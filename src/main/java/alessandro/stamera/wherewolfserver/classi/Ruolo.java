@@ -219,6 +219,8 @@ public class Ruolo
 
     public boolean isMonaco() { return false; }
 
+    public boolean isNegromante() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
