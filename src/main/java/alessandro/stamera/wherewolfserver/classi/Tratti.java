@@ -52,7 +52,7 @@ public final class Tratti
         tratti.remove(PROTETTO);
     }
 
-    public boolean isProtezioneLupiPresente() { return false; }
+    public boolean isProtezioneLupiPresente() { return protezioni.isProtezioneLupiPresente(); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
