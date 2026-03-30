@@ -31,6 +31,8 @@ public final class TestNegromante
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
