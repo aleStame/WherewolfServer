@@ -24,11 +24,11 @@ public final class TestTratti
     @ParameterizedTest @EnumSource(Tratto.class)
     public void testTrattoAssente(Tratto tratto) { assertThat(isPresente(tratto)).isFalse(); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testCappuccettoRosso(String nome)
+    @Test public void testCappuccettoRosso()
     {
+        assertThat(tratti.isProtezioneLupiPresente()).isFalse();
         tratti.aggiungiProtezioneLupi();
-        verificaProtezione(nome);
+        verificaVero(tratti.isProtezioneLupiPresente());
     }
 
     @Test public void testMaledizione()

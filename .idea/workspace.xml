@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaLupiPresenti">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestProtezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestProtezioni.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaLupiAssenti">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Tratti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Tratti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestTratti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestTratti.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,14 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01534" summary="VERDE: testNome riuscito">
-      <option name="closed" value="true" />
-      <created>1774535970720</created>
-      <option name="number" value="01534" />
-      <option name="presentableId" value="LOCAL-01534" />
-      <option name="project" value="LOCAL" />
-      <updated>1774535970720</updated>
     </task>
     <task id="LOCAL-01535" summary="REFACTORING: definizione della costante NOME">
       <option name="closed" value="true" />
@@ -664,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774889190966</updated>
     </task>
-    <option name="localTasksCounter" value="1583" />
+    <task id="LOCAL-01583" summary="REFACTORING: definizione del metodo verificaLupiAssenti">
+      <option name="closed" value="true" />
+      <created>1774889577027</created>
+      <option name="number" value="01583" />
+      <option name="presentableId" value="LOCAL-01583" />
+      <option name="project" value="LOCAL" />
+      <updated>1774889577027</updated>
+    </task>
+    <option name="localTasksCounter" value="1584" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testMonaco non riuscito" />
     <MESSAGE value="VERDE: testMonaco riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
@@ -704,6 +704,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isNegromantePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaLupiPresenti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaLupiPresenti" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaLupiAssenti" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaLupiAssenti" />
   </component>
 </project>
