@@ -14,8 +14,8 @@ public final class TestProtezioni
 
     @Test public void testCreatureOmbra()
     {
-        assertThat(protezioni.isProtezioneLupiPresente()).isFalse();
-        assertThat(protezioni.isNegromantePresente()).isFalse();
+        verificaFalso(protezioni.isProtezioneLupiPresente());
+        verificaFalso(protezioni.isNegromantePresente());
         protezioni.aggiungiProtezioneCreatureOmbra();
         assertThat(protezioni.isProtezioneLupiPresente()).isTrue();
         assertThat(protezioni.isNegromantePresente()).isTrue();
@@ -23,7 +23,7 @@ public final class TestProtezioni
 
     @Test public void testCappuccettoRosso()
     {
-        assertThat(protezioni.isProtezioneLupiPresente()).isFalse();
+        verificaFalso(protezioni.isProtezioneLupiPresente());
         protezioni.aggiungiProtezioneLupi();
         assertThat(protezioni.isProtezioneLupiPresente()).isTrue();
     }
@@ -31,13 +31,11 @@ public final class TestProtezioni
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaAssenza(getRuolo(FACTORY.getNome(i)));
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(protezioni.isPresente(getRuolo(FACTORY.getNome(i))));
     }
-
-    private void verificaAssenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isFalse(); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
-    private boolean isPresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
