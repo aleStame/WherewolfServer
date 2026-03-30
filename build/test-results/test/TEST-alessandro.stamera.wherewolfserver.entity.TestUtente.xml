@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.entity.TestUtente" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-03-30T15:36:39" hostname="ALESSANDRO" time="0.076">
+<testsuite name="alessandro.stamera.wherewolfserver.entity.TestUtente" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-03-30T16:39:20" hostname="ALESSANDRO" time="0.062">
   <properties/>
   <testcase name="cambioPasswordRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.005"/>
-  <testcase name="loginRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.002"/>
+  <testcase name="loginRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.001"/>
   <testcase name="[1] username=alessandro, password=passworderrata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.002"/>
-  <testcase name="[2] username=marco, password=passwordsupersegreta" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.003"/>
-  <testcase name="[3] username=pino, password=passwordsbagliata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.004"/>
+  <testcase name="[2] username=marco, password=passwordsupersegreta" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.015"/>
+  <testcase name="[3] username=pino, password=passwordsbagliata" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.001"/>
   <testcase name="controlloPasswordErrata()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.003"/>
-  <testcase name="controlloPasswordGiusta()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.003"/>
-  <testcase name="username()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.006"/>
-  <testcase name="cambioPasswordNonRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.006"/>
+  <testcase name="controlloPasswordGiusta()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.001"/>
+  <testcase name="username()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.002"/>
+  <testcase name="cambioPasswordNonRiuscito()" classname="alessandro.stamera.wherewolfserver.entity.TestUtente" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
