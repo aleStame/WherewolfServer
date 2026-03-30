@@ -2,8 +2,6 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,9 +14,11 @@ public final class TestProtezioni
 
     @Test public void testCreatureOmbra()
     {
-        assertThat(isProtezioneCreatureOmbraPresente()).isFalse();
+        assertThat(protezioni.isProtezioneLupiPresente()).isFalse();
+        assertThat(protezioni.isNegromantePresente()).isFalse();
         protezioni.aggiungiProtezioneCreatureOmbra();
-        assertThat(isProtezioneCreatureOmbraPresente()).isTrue();
+        assertThat(protezioni.isProtezioneLupiPresente()).isTrue();
+        assertThat(protezioni.isNegromantePresente()).isTrue();
     }
 
     @Test public void testCappuccettoRosso()
@@ -36,14 +36,8 @@ public final class TestProtezioni
 
     private void verificaAssenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isFalse(); }
 
-    private void verificaPresenza(String nome) { verificaPresenza(getRuolo(nome)); }
-
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
-    private void verificaPresenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isTrue(); }
-
     private boolean isPresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
-
-    private boolean isProtezioneCreatureOmbraPresente() { return protezioni.isProtezioneCreatureOmbraPresente(); }
 
 }
