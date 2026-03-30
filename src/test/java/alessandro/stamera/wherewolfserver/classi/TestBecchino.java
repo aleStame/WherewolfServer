@@ -38,9 +38,9 @@ public final class TestBecchino
     @Test public void testRiconoscimentoNegromante()
     {
         assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO);
-        verificaFalso(ruolo.isFazioneNegromante());
+        verificaFalso(isFazioneNegromante());
         ruolo.riconosciNegromante();
-        verificaVero(ruolo.isFazioneNegromante());
+        verificaVero(isFazioneNegromante());
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
@@ -80,5 +80,7 @@ public final class TestBecchino
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isFazioneNegromante() { return ruolo.isFazioneNegromante(); }
 
 }
