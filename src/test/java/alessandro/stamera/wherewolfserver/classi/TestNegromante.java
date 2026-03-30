@@ -33,12 +33,14 @@ public final class TestNegromante
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
 
-    @Test public void testNegromante() { assertThat(ruolo.isNegromante()).isTrue(); }
+    @Test public void testNegromante() { verificaVero(ruolo.isNegromante()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
