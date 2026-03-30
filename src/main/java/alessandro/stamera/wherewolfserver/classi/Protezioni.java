@@ -24,4 +24,6 @@ public final class Protezioni
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
 
+    public boolean isNegromantePresente() { return ruoli.stream().anyMatch(Ruolo::isNegromante); }
+
 }
