@@ -57,17 +57,17 @@ public final class TestEremita
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    /*@Test public void testVoti()
+    @Test public void testVoti()
     {
-        incrementaVoti();
-        verificaVoti(ESEMPIO_VOTI);
-        ruolo.annullaVoti();
-        verificaNessunVoto();
+        int numeroVoti = 2;
+        ruolo.incrementaVoti(numeroVoti);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+        verificaFalso(ruolo.isMaledetto());
         ruolo.maledizione();
-        verificaVoti(1);
-        verificaVero(ruolo.isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
-    }*/
+        verificaFalso(ruolo.isMaledetto());
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+        assertThat(ruolo.getAura()).isEqualTo(BIANCA);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
