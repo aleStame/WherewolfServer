@@ -16,9 +16,9 @@ public final class TestProtezioni
 
     @Test public void testCreatureOmbra()
     {
-        assertThat(protezioni.isProtezioneCreatureOmbraPresente()).isFalse();
+        assertThat(isProtezioneCreatureOmbraPresente()).isFalse();
         protezioni.aggiungiProtezioneCreatureOmbra();
-        assertThat(protezioni.isProtezioneCreatureOmbraPresente()).isTrue();
+        assertThat(isProtezioneCreatureOmbraPresente()).isTrue();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
@@ -43,5 +43,7 @@ public final class TestProtezioni
     private void verificaPresenza(Ruolo ruolo) { assertThat(isPresente(ruolo)).isTrue(); }
 
     private boolean isPresente(Ruolo ruolo) { return protezioni.isPresente(ruolo); }
+
+    private boolean isProtezioneCreatureOmbraPresente() { return protezioni.isProtezioneCreatureOmbraPresente(); }
 
 }
