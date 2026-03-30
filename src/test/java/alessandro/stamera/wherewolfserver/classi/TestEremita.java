@@ -22,7 +22,7 @@ public final class TestEremita
     @Test
     public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -60,17 +60,19 @@ public final class TestEremita
     {
         int numeroVoti = 2;
         ruolo.incrementaVoti(numeroVoti);
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
         verificaNonMaledetto();
         ruolo.maledizione();
         verificaNonMaledetto();
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
-        assertThat(ruolo.getAura()).isEqualTo(BIANCA);
+        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
+        verificaAuraBianca(ruolo.getAura());
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaNonMaledetto() { verificaFalso(ruolo.isMaledetto()); }
 
