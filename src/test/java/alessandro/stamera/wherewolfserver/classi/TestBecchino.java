@@ -67,6 +67,8 @@ public final class TestBecchino
 
     @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
 
+    @Test public void testNegromante() { verificaFalso(ruolo.isNegromante()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
