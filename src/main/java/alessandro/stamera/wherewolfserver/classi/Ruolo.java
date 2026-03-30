@@ -55,6 +55,8 @@ public class Ruolo
 
     public Categoria getCategoria() { return getFazione().getCategoria(); }
 
+    public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
+
     public Fazione getFazione() { return fazione; }
 
     public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
@@ -220,8 +222,6 @@ public class Ruolo
     public boolean isMonaco() { return false; }
 
     public boolean isNegromante() { return false; }
-
-    public boolean isFazioneNegromante() { return false; }
 
     private boolean controlloTrattiOscuri()
     {
