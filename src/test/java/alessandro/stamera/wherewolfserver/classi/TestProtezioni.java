@@ -17,7 +17,7 @@ public final class TestProtezioni
         verificaFalso(isProtezioneLupiPresente());
         verificaFalso(isNegromantePresente());
         protezioni.aggiungiProtezioneCreatureOmbra();
-        verificaVero(isProtezioneLupiPresente());
+        verificaLupiPresenti();
         verificaVero(isNegromantePresente());
     }
 
@@ -25,7 +25,7 @@ public final class TestProtezioni
     {
         verificaFalso(isProtezioneLupiPresente());
         protezioni.aggiungiProtezioneLupi();
-        verificaVero(isProtezioneLupiPresente());
+        verificaLupiPresenti();
     }
 
     @Test public void testPerdiProtezioni()
@@ -33,6 +33,8 @@ public final class TestProtezioni
         protezioni.perdiProtezioni();
         for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(protezioni.isPresente(getRuolo(FACTORY.getNome(i))));
     }
+
+    private void verificaLupiPresenti() { verificaVero(isProtezioneLupiPresente()); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
