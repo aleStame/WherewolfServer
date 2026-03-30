@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,9 +37,10 @@ public final class TestBecchino
 
     @Test public void testRiconoscimentoNegromante()
     {
-        verificaFazione(VILLAGGIO);
+        assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO);
+        verificaFalso(ruolo.isFazioneNegromante());
         ruolo.riconosciNegromante();
-        verificaFazione(NEGROMANTE);
+        verificaVero(ruolo.isFazioneNegromante());
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
@@ -76,8 +76,6 @@ public final class TestBecchino
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
