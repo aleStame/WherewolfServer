@@ -39,6 +39,8 @@ public final class TestNegromante
 
     @Test public void testNegromante() { verificaVero(ruolo.isNegromante()); }
 
+    @Test public void testFazioneNegromante() { verificaVero(ruolo.isFazioneNegromante()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
