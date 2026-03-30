@@ -11,6 +11,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestEremita
 {
 
+    private static final int ESEMPIO_VOTI = 2;
+
     private Ruolo ruolo;
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Eremita"); }
@@ -58,19 +60,20 @@ public final class TestEremita
 
     @Test public void testVoti()
     {
-        int numeroVoti = 2;
-        ruolo.incrementaVoti(numeroVoti);
-        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
+        ruolo.incrementaVoti(ESEMPIO_VOTI);
+        verificaNumeroVoti();
         verificaNonMaledetto();
         ruolo.maledizione();
         verificaNonMaledetto();
-        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
+        verificaNumeroVoti();
         verificaAuraBianca(ruolo.getAura());
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaNumeroVoti() { verificaNumeroIntero(ruolo.getNumeroVoti(), ESEMPIO_VOTI); }
 
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 

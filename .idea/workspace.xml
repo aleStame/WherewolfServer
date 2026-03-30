@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNonMaledetto">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroIntero">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestEremita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -271,14 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01522" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1774533630814</created>
-      <option name="number" value="01522" />
-      <option name="presentableId" value="LOCAL-01522" />
-      <option name="project" value="LOCAL" />
-      <updated>1774533630814</updated>
     </task>
     <task id="LOCAL-01523" summary="ROSSO: testLune non riuscito">
       <option name="closed" value="true" />
@@ -664,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774877898354</updated>
     </task>
-    <option name="localTasksCounter" value="1571" />
+    <task id="LOCAL-01571" summary="REFACTORING: definizione del metodo verificaNumeroIntero">
+      <option name="closed" value="true" />
+      <created>1774878307239</created>
+      <option name="number" value="01571" />
+      <option name="presentableId" value="LOCAL-01571" />
+      <option name="project" value="LOCAL" />
+      <updated>1774878307239</updated>
+    </task>
+    <option name="localTasksCounter" value="1572" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -679,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="VERDE DIRETTO: testAzzeccagarbugli riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBoccaDiRosa riuscito" />
@@ -704,6 +703,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="VERDE: testVoti riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonMaledetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNonMaledetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroIntero" />
   </component>
 </project>
