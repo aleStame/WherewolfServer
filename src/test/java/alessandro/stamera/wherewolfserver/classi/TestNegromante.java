@@ -35,6 +35,8 @@ public final class TestNegromante
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
 
+    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
