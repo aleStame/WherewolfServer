@@ -2,7 +2,9 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.ArrayList;
 import java.util.List;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 
 public final class Protezioni
 {
@@ -25,5 +27,11 @@ public final class Protezioni
     }
 
     public boolean isNegromantePresente() { return ruoli.stream().anyMatch(Ruolo::isNegromante); }
+
+    public boolean isProtezioneCreatureOmbraPresente()
+    {
+        //return ruoli.stream().anyMatch(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
+        return true;
+    }
 
 }

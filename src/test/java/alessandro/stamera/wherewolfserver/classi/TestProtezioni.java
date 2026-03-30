@@ -14,11 +14,11 @@ public final class TestProtezioni
 
     @BeforeEach public void setUp() { protezioni = new Protezioni(); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
-    public void testCreatureOmbra(String nome)
+    @Test public void testCreatureOmbra()
     {
+        assertThat(protezioni.isProtezioneCreatureOmbraPresente()).isFalse();
         protezioni.aggiungiProtezioneCreatureOmbra();
-        verificaPresenza(nome);
+        assertThat(protezioni.isProtezioneCreatureOmbraPresente()).isTrue();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
