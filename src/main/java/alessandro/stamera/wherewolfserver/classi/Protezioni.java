@@ -33,4 +33,6 @@ public final class Protezioni
         return ruoli.stream().anyMatch(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
     }
 
+    public boolean isProtezioneLupiPresente() { return false; }
+
 }

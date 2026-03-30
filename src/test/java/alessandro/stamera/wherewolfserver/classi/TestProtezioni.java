@@ -21,11 +21,11 @@ public final class TestProtezioni
         assertThat(isProtezioneCreatureOmbraPresente()).isTrue();
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo" })
-    public void testCappuccettoRosso(String nome)
+    @Test public void testCappuccettoRosso()
     {
+        assertThat(protezioni.isProtezioneLupiPresente()).isFalse();
         protezioni.aggiungiProtezioneLupi();
-        verificaPresenza(nome);
+        assertThat(protezioni.isProtezioneLupiPresente()).isTrue();
     }
 
     @Test public void testPerdiProtezioni()
