@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,19 +22,18 @@ public final class TestTratti
         verificaTrattoPresente(tratto);
     }
 
-    @ParameterizedTest @EnumSource(Tratto.class)
-    public void testTrattoAssente(Tratto tratto) { assertThat(isPresente(tratto)).isFalse(); }
+    @ParameterizedTest @EnumSource(Tratto.class) public void testTrattoAssente(Tratto tratto) { verificaFalso(isPresente(tratto)); }
 
     @Test public void testCappuccettoRosso()
     {
-        assertThat(tratti.isProtezioneLupiPresente()).isFalse();
+        verificaFalso(tratti.isProtezioneLupiPresente());
         tratti.aggiungiProtezioneLupi();
         verificaVero(tratti.isProtezioneLupiPresente());
     }
 
     @Test public void testMaledizione()
     {
-        assertThat(isMaledetto()).isFalse();
+        verificaFalso(isMaledetto());
         tratti.maledizione();
         verificaVero(isMaledetto());
     }
@@ -50,7 +50,7 @@ public final class TestTratti
     private void verificaProtezione(String nome)
     {
         verificaTrattoPresente(PROTETTO);
-        verificaVero(tratti.isProtezionePresente(new RuoliFactory().getRuolo(nome)));
+        verificaVero(tratti.isProtezionePresente(FACTORY.getRuolo(nome)));
     }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
@@ -58,5 +58,7 @@ public final class TestTratti
     private boolean isPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
