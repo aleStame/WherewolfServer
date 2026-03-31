@@ -52,8 +52,7 @@ public final class TestCappuccettoRosso
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testProtezioni(String nome) { verificaVero(isProtezionePresente(getRuolo(nome))); }
+    @Test public void testProtezioni() { verificaVero(ruolo.isProtezioneLupiPresente()); }
 
     @ParameterizedTest @CsvSource
     (
