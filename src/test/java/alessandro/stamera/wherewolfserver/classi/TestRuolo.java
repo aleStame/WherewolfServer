@@ -23,6 +23,8 @@ public final class TestRuolo
         verificaNessunVoto();
         verificaFalso(isAmato());
         verificaLibero();
+        verificaFalso(ruolo.isProtezioneLupiPresente());
+        verificaFalso(ruolo.isProtezioneNegromantePresente());
     }
 
     @Test public void testAccusato()
