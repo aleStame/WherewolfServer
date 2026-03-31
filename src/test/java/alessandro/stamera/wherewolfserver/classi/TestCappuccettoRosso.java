@@ -50,12 +50,12 @@ public final class TestCappuccettoRosso
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @Test public void testProtezioni() { verificaVero(ruolo.isProtezioneLupiPresente()); }
+    @Test public void testProtezioni() { verificaVero(isProtezioneLupiPresente()); }
 
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
-        verificaFalso(ruolo.isProtezioneLupiPresente());
+        verificaFalso(isProtezioneLupiPresente());
     }
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
@@ -73,5 +73,7 @@ public final class TestCappuccettoRosso
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
 }
