@@ -3,10 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
-import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestTratti
@@ -26,9 +23,9 @@ public final class TestTratti
 
     @Test public void testCappuccettoRosso()
     {
-        verificaFalso(tratti.isProtezioneLupiPresente());
+        verificaFalso(isProtezioneLupiPresente());
         tratti.aggiungiProtezioneLupi();
-        verificaVero(tratti.isProtezioneLupiPresente());
+        verificaVero(isProtezioneLupiPresente());
     }
 
     @Test public void testMaledizione()
@@ -40,10 +37,10 @@ public final class TestTratti
 
     @Test public void testCreatureOmbra()
     {
-        verificaFalso(tratti.isProtezioneLupiPresente());
+        verificaFalso(isProtezioneLupiPresente());
         verificaFalso(tratti.isProtezioneNegromantePresente());
         tratti.aggiungiProtezioneCreatureOmbra();
-        verificaVero(tratti.isProtezioneLupiPresente());
+        verificaVero(isProtezioneLupiPresente());
         verificaVero(tratti.isProtezioneNegromantePresente());
     }
 
@@ -56,5 +53,7 @@ public final class TestTratti
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isProtezioneLupiPresente() { return tratti.isProtezioneLupiPresente(); }
 
 }
