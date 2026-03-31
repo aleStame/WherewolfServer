@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static java.util.Arrays.stream;
 
 public final class Protezioni
 {
@@ -23,5 +24,9 @@ public final class Protezioni
     {
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
+
+    public boolean isNegromantePresente() { return ruoli.stream().anyMatch(Ruolo::isNegromante); }
+
+    public boolean isProtezioneLupiPresente() { return stream(FACTORY.getLupi()).allMatch(ruoli::contains); }
 
 }

@@ -2,8 +2,6 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -11,11 +9,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestCappuccettoRosso
 {
 
+    private static final String NOME = "Cappuccetto rosso";
+
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Cappuccetto rosso"); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { verificaStringa(ruolo.getNome(), "Cappuccetto rosso"); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
@@ -52,19 +52,12 @@ public final class TestCappuccettoRosso
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testProtezioni(String nome) { verificaVero(isProtezionePresente(getRuolo(nome))); }
+    @Test public void testProtezioni() { verificaVero(isProtezioneLupiPresente()); }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Capo branco", "Contadino discendente dei lupi", "Giovane lupo", "Lupo branco", "Lupo reietto", "Lupo solitario"
-        }
-    )
-    public void testPerditaProtezioni(String nome)
+    @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
-        verificaFalso(isProtezionePresente(getRuolo(nome)));
+        verificaFalso(isProtezioneLupiPresente());
     }
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
@@ -77,14 +70,12 @@ public final class TestCappuccettoRosso
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
-    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
-
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
-    private boolean isProtezionePresente(Ruolo ruolo) { return this.ruolo.isProtezionePresente(ruolo); }
+    private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
 }

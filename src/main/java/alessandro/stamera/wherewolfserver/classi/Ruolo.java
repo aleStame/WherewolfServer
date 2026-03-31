@@ -55,6 +55,8 @@ public class Ruolo
 
     public Categoria getCategoria() { return getFazione().getCategoria(); }
 
+    public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
+
     public Fazione getFazione() { return fazione; }
 
     public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
@@ -185,7 +187,8 @@ public class Ruolo
     public boolean attacco(Ruolo ruolo)
     {
         boolean esito = !isProtezionePresente(ruolo);
-        if(!esito && romeo && ruolo.isLupo()) esito = true;
+        if(isAmato()) perdiProtezioni();
+        if(!esito && romeo) esito = true;
         return esito;
     }
 
@@ -218,6 +221,12 @@ public class Ruolo
     public boolean isMercante() { return false; }
 
     public boolean isMonaco() { return false; }
+
+    public boolean isNegromante() { return false; }
+
+    public boolean isProtezioneLupiPresente() { return tratti.isProtezioneLupiPresente(); }
+
+    public boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
 
     private boolean controlloTrattiOscuri()
     {

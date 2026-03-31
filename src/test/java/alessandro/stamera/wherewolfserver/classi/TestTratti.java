@@ -3,9 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestTratti
@@ -21,42 +19,47 @@ public final class TestTratti
         verificaTrattoPresente(tratto);
     }
 
-    @ParameterizedTest @EnumSource(Tratto.class)
-    public void testTrattoAssente(Tratto tratto) { assertThat(isPresente(tratto)).isFalse(); }
+    @ParameterizedTest @EnumSource(Tratto.class) public void testTrattoAssente(Tratto tratto) { verificaFalso(isPresente(tratto)); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testCappuccettoRosso(String nome)
+    @Test public void testCappuccettoRosso()
     {
+        verificaLupiAssenti();
         tratti.aggiungiProtezioneLupi();
-        verificaProtezione(nome);
+        verificaLupiPresenti();
     }
 
     @Test public void testMaledizione()
     {
-        assertThat(isMaledetto()).isFalse();
+        verificaFalso(isMaledetto());
         tratti.maledizione();
         verificaVero(isMaledetto());
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testCreatureOmbra(String nome)
+    @Test public void testCreatureOmbra()
     {
+        verificaLupiAssenti();
+        verificaFalso(isProtezioneNegromantePresente());
         tratti.aggiungiProtezioneCreatureOmbra();
-        verificaProtezione(nome);
+        verificaLupiPresenti();
+        verificaVero(isProtezioneNegromantePresente());
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
-
-    private void verificaProtezione(String nome)
-    {
-        verificaTrattoPresente(PROTETTO);
-        verificaVero(tratti.isProtezionePresente(new RuoliFactory().getRuolo(nome)));
-    }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
 
     private boolean isPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
+    private void verificaLupiPresenti() { verificaVero(isProtezioneLupiPresente()); }
+
+    private void verificaLupiAssenti() { verificaFalso(isProtezioneLupiPresente()); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isProtezioneLupiPresente() { return tratti.isProtezioneLupiPresente(); }
+
+    private boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
 
 }

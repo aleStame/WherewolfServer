@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,9 +37,10 @@ public final class TestBecchino
 
     @Test public void testRiconoscimentoNegromante()
     {
-        verificaFazione(VILLAGGIO);
+        assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO);
+        verificaFalso(isFazioneNegromante());
         ruolo.riconosciNegromante();
-        verificaFazione(NEGROMANTE);
+        verificaVero(isFazioneNegromante());
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
@@ -67,6 +67,8 @@ public final class TestBecchino
 
     @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
 
+    @Test public void testNegromante() { verificaFalso(ruolo.isNegromante()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
@@ -75,10 +77,10 @@ public final class TestBecchino
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
-    private void verificaFazione(Fazione risultato) { assertThat(ruolo.getFazione()).isEqualTo(risultato); }
-
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isFazioneNegromante() { return ruolo.isFazioneNegromante(); }
 
 }
