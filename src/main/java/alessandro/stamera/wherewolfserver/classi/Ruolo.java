@@ -223,7 +223,7 @@ public class Ruolo
 
     public boolean isNegromante() { return false; }
 
-    public boolean isProtezioneLupiPresente() { return false; }
+    public boolean isProtezioneLupiPresente() { return true; }
 
     public boolean isProtezioneNegromantePresente() { return true; }
 
