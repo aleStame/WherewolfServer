@@ -24,7 +24,7 @@ public final class TestRuolo
         verificaFalso(isAmato());
         verificaLibero();
         verificaFalso(isProtezioneLupiPresente());
-        verificaFalso(ruolo.isProtezioneNegromantePresente());
+        verificaFalso(isProtezioneNegromantePresente());
     }
 
     @Test public void testAccusato()
@@ -61,7 +61,7 @@ public final class TestRuolo
         verificaVero(isAmato());
         verificaProtetto();
         verificaVero(isProtezioneLupiPresente());
-        verificaVero(ruolo.isProtezioneNegromantePresente());
+        verificaVero(isProtezioneNegromantePresente());
     }
 
     @Test public void testGildata()
@@ -123,5 +123,7 @@ public final class TestRuolo
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
+
+    private boolean isProtezioneNegromantePresente() { return ruolo.isProtezioneNegromantePresente(); }
 
 }
