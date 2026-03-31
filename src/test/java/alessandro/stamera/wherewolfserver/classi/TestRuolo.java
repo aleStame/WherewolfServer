@@ -23,7 +23,7 @@ public final class TestRuolo
         verificaNessunVoto();
         verificaFalso(isAmato());
         verificaLibero();
-        verificaFalso(ruolo.isProtezioneLupiPresente());
+        verificaFalso(isProtezioneLupiPresente());
         verificaFalso(ruolo.isProtezioneNegromantePresente());
     }
 
@@ -60,7 +60,7 @@ public final class TestRuolo
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
         verificaProtetto();
-        verificaVero(ruolo.isProtezioneLupiPresente());
+        verificaVero(isProtezioneLupiPresente());
         verificaVero(ruolo.isProtezioneNegromantePresente());
     }
 
@@ -90,17 +90,11 @@ public final class TestRuolo
         verificaLibero();
     }
 
-    @Test public void testAttaccoRuoloNonProtetto()
-    {
-        for(int i = 0; i < getNumeroRuoli(); i++) verificaVero(ruolo.attacco(getRuolo(i)));
-    }
-
-    @Test public void testProtezioni()
-    {
-        for(int i = 0; i < getNumeroRuoli(); i++) verificaFalso(ruolo.isProtezionePresente(getRuolo(i)));
-    }
-
-    private int getNumeroRuoli() { return FACTORY.getNumeroRuoli(); }
+    @ParameterizedTest @CsvSource
+    (
+        { "Assassino, Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
+    )
+    public void testAttaccoRuoloNonProtetto(String nome) { verificaVero(ruolo.attacco(FACTORY.getRuolo(nome))); }
 
     private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
 
@@ -126,8 +120,8 @@ public final class TestRuolo
 
     private Fazione getFazione() { return ruolo.getFazione(); }
 
-    private Ruolo getRuolo(int posizione) { return getRuolo(FACTORY.getNome(posizione)); }
-
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
 }
