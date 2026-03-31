@@ -53,16 +53,13 @@ public final class TestRuolo
         verificaAccusato();
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        { "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
-    )
-    public void testSceltaAngeloCustode(String nome)
+    @Test public void testSceltaAngeloCustode()
     {
         ruolo.sceltaAngeloCustode();
         verificaVero(isAmato());
         verificaProtetto();
-        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
+        verificaVero(ruolo.isProtezioneLupiPresente());
+        verificaVero(ruolo.isProtezioneNegromantePresente());
     }
 
     @Test public void testGildata()

@@ -52,7 +52,6 @@ public final class TestEremita
 
     @Test public void testProtezioni()
     {
-        ruolo.aggiungiProtezioneCreatureOmbra();
         verificaVero(ruolo.isProtezioneLupiPresente());
         verificaVero(ruolo.isProtezioneNegromantePresente());
     }
