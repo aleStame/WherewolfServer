@@ -54,6 +54,8 @@ public final class Tratti
 
     public boolean isProtezioneLupiPresente() { return protezioni.isProtezioneLupiPresente(); }
 
+    public boolean isProtezioneNegromantePresente() { return false; }
+
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
 }

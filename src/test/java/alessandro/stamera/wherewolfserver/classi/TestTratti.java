@@ -38,20 +38,16 @@ public final class TestTratti
         verificaVero(isMaledetto());
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
-    public void testCreatureOmbra(String nome)
+    @Test public void testCreatureOmbra()
     {
+        verificaFalso(tratti.isProtezioneLupiPresente());
+        verificaFalso(tratti.isProtezioneNegromantePresente());
         tratti.aggiungiProtezioneCreatureOmbra();
-        verificaProtezione(nome);
+        verificaVero(tratti.isProtezioneLupiPresente());
+        verificaVero(tratti.isProtezioneNegromantePresente());
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
-
-    private void verificaProtezione(String nome)
-    {
-        verificaTrattoPresente(PROTETTO);
-        verificaVero(tratti.isProtezionePresente(FACTORY.getRuolo(nome)));
-    }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
 
