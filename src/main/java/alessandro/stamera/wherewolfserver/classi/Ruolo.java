@@ -223,9 +223,9 @@ public class Ruolo
 
     public boolean isNegromante() { return false; }
 
-    public boolean isProtezioneLupiPresente() { return true; }
+    public boolean isProtezioneLupiPresente() { return tratti.isProtezioneLupiPresente(); }
 
-    public boolean isProtezioneNegromantePresente() { return true; }
+    public boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
 
     private boolean controlloTrattiOscuri()
     {
