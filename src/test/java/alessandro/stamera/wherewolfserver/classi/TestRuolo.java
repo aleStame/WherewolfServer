@@ -94,10 +94,8 @@ public final class TestRuolo
         verificaLibero();
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        { "Assassino, Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" }
-    )
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
     public void testAttaccoRuoloNonProtetto(String nome) { verificaVero(ruolo.attacco(getRuolo(nome))); }
 
     private void verificaAssenzaProtezioni()

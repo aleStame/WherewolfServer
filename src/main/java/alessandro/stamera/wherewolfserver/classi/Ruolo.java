@@ -187,7 +187,8 @@ public class Ruolo
     public boolean attacco(Ruolo ruolo)
     {
         boolean esito = !isProtezionePresente(ruolo);
-        if(!esito && romeo && ruolo.isLupo()) esito = true;
+        if(isAmato()) perdiProtezioni();
+        if(!esito && romeo) esito = true;
         return esito;
     }
 
