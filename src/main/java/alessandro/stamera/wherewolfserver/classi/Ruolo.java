@@ -223,6 +223,10 @@ public class Ruolo
 
     public boolean isNegromante() { return false; }
 
+    public boolean isProtezioneLupiPresente() { return false; }
+
+    public boolean isProtezioneNegromantePresente() { return true; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
