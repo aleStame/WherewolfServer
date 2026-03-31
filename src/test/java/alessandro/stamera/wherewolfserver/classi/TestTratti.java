@@ -38,10 +38,10 @@ public final class TestTratti
     @Test public void testCreatureOmbra()
     {
         verificaFalso(isProtezioneLupiPresente());
-        verificaFalso(tratti.isProtezioneNegromantePresente());
+        verificaFalso(isProtezioneNegromantePresente());
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaVero(isProtezioneLupiPresente());
-        verificaVero(tratti.isProtezioneNegromantePresente());
+        verificaVero(isProtezioneNegromantePresente());
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
@@ -55,5 +55,7 @@ public final class TestTratti
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isProtezioneLupiPresente() { return tratti.isProtezioneLupiPresente(); }
+
+    private boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
 
 }
