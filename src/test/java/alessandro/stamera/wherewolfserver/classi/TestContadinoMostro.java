@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
@@ -42,6 +43,8 @@ public final class TestContadinoMostro
     @Test public void testContadinoEroe() { verificaFalso(ruolo.isContadinoEroe()); }
 
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
+
+    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
