@@ -230,6 +230,8 @@ public class Ruolo
 
     public boolean isNosferatu() { return false; }
 
+    public EsitoAttacco attaccoNosferatu() { return null; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
