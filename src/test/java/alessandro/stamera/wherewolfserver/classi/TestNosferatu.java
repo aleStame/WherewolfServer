@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static org.assertj.core.api.Assertions.assertThat;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 
@@ -28,6 +29,8 @@ public final class TestNosferatu
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
+    @Test public void testCreatureOmbra() { assertThat(ruolo.isTrattoPresente(CREATURA_OMBRA)).isTrue(); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
