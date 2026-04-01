@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -71,6 +72,8 @@ public final class TestLeprecauno
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
