@@ -107,7 +107,7 @@ public final class TestRuolo
 
     private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
-    private EsitoAttacco attaccoLupi(String nome) { return ruolo.attaccoLupi(getRuolo(nome)); }
+    private EsitoAttacco attaccoLupi(String nome) { return ruolo.attaccoLupi(FACTORY.getRuolo(nome)); }
 
     private void verificaAssenzaProtezioni()
     {
@@ -142,7 +142,5 @@ public final class TestRuolo
     private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
     private boolean isProtezioneNegromantePresente() { return ruolo.isProtezioneNegromantePresente(); }
-
-    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }
