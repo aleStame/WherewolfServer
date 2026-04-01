@@ -15,16 +15,18 @@ public final class ContadinoLupo extends Contadino
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco esito = super.attaccoLupi(ruolo);
-        if(esito == RIUSCITO)
-        {
-            aggiungiTrattiOscuri();
-            esito = FALLITO;
-        }
+        if(esito == RIUSCITO) esito = attivazioneLupo();
         return esito;
     }
 
     public static Ruolo getInstance() { return new ContadinoLupo(); }
 
     private void aggiungiTrattiOscuri() { aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO); }
+
+    private EsitoAttacco attivazioneLupo()
+    {
+        aggiungiTrattiOscuri();
+        return FALLITO;
+    }
 
 }
