@@ -36,6 +36,8 @@ public final class TestNosferatu
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
