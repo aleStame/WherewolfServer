@@ -9,7 +9,7 @@ public final class ContadinoEroe extends Contadino
 
     @Override public boolean isContadinoEroe() { return true; }
 
-    //@Override public EsitoAttacco attaccoLupi(Ruolo ruolo) { return MORTO; }
+    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo) { return MORTO; }
 
     public static Ruolo getInstance() { return new ContadinoEroe(); }
 
