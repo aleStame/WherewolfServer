@@ -28,16 +28,18 @@ public final class TestNosferatu
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testCreatureOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
 
     @Test public void testNosferatu() { verificaVero(ruolo.isNosferatu()); }
 
-    @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isFalse(); }
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
