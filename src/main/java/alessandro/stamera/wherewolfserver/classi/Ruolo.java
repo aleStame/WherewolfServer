@@ -186,12 +186,11 @@ public class Ruolo
 
     public boolean isLadra() { return false; }
 
-    public boolean attacco(Ruolo ruolo)
+    public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
-        boolean esito = !isProtezionePresente(ruolo);
-        if(isAmato()) perdiProtezioni();
-        if(!esito && romeo) esito = true;
-        return esito;
+        EsitoAttacco risultato = RIUSCITO;
+        if(isProtezionePresente(ruolo)) risultato = getEsitoAttaccoRuoloProtetto(risultato);
+        return risultato;
     }
 
     public boolean isProtezionePresente(Ruolo ruolo) { return tratti.isProtezionePresente(ruolo); }
@@ -249,5 +248,12 @@ public class Ruolo
     private void setAmato(boolean amato) { this.amato = amato; }
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
+
+    private EsitoAttacco getEsitoAttaccoRuoloProtetto(EsitoAttacco risultato)
+    {
+        if(isAmato()) perdiProtezioni();
+        if(!romeo) risultato = FALLITO;
+        return risultato;
+    }
 
 }
