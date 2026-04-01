@@ -1,9 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
+
 public final class Nosferatu extends Ruolo
 {
 
-    private Nosferatu() { super("Nosferatu", null, null, null, 0, true); }
+    private Nosferatu() { super("Nosferatu", NOSFERATU, null, null, 0, true); }
 
     public static Ruolo getInstance() { return new Nosferatu(); }
 
