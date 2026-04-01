@@ -85,7 +85,7 @@ public final class TestRuolo
     {
         ruolo.romeizzazione();
         verificaProtetto();
-        verificaAttacco(attaccoLupi(nome), RIUSCITO);
+        verificaAttaccoRiuscito(attaccoLupi(nome));
     }
 
     @Test public void testSegnalazioneInquisitore()
@@ -97,9 +97,11 @@ public final class TestRuolo
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
-    public void testAttaccoRuoloNonProtetto(String nome) { verificaAttacco(attaccoLupi(nome), RIUSCITO); }
+    public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
-    @Test public void testAttaccoNosferatu() { verificaAttacco(ruolo.attaccoNosferatu(), RIUSCITO); }
+    @Test public void testAttaccoNosferatu() { verificaAttaccoRiuscito(ruolo.attaccoNosferatu()); }
+
+    private void verificaAttaccoRiuscito(EsitoAttacco esito) { verificaAttacco(esito, RIUSCITO); }
 
     private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
