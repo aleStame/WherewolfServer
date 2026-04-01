@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
@@ -11,8 +12,12 @@ public final class TestNosferatu
 
     private static final String NOME = "Nosferatu";
 
-    @Test public void testNome() { assertThat(FACTORY.getRuolo(NOME).getNome()).isEqualTo(NOME); }
+    private Ruolo ruolo;
 
-    @Test public void testFazione() { assertThat(FACTORY.getRuolo(NOME).getFazione()).isEqualTo(NOSFERATU); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+
+    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU); }
 
 }
