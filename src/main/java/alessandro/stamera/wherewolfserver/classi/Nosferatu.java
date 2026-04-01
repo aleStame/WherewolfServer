@@ -13,6 +13,8 @@ public final class Nosferatu extends Ruolo
         aggiungiTratti(CREATURA_OMBRA);
     }
 
+    @Override public boolean isNosferatu() { return true; }
+
     public static Ruolo getInstance() { return new Nosferatu(); }
 
 }
