@@ -228,6 +228,8 @@ public class Ruolo
 
     public boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
 
+    public boolean isNosferatu() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();

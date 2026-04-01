@@ -32,6 +32,8 @@ public final class TestNosferatu
 
     @Test public void testCreatureOmbra() { assertThat(ruolo.isTrattoPresente(CREATURA_OMBRA)).isTrue(); }
 
+    @Test public void testNosferatu() { assertThat(ruolo.isNosferatu()).isTrue(); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
 }
