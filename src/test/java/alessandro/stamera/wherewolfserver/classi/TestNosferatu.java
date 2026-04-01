@@ -30,10 +30,12 @@ public final class TestNosferatu
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
-    @Test public void testCreatureOmbra() { assertThat(ruolo.isTrattoPresente(CREATURA_OMBRA)).isTrue(); }
+    @Test public void testCreatureOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
 
-    @Test public void testNosferatu() { assertThat(ruolo.isNosferatu()).isTrue(); }
+    @Test public void testNosferatu() { verificaVero(ruolo.isNosferatu()); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
