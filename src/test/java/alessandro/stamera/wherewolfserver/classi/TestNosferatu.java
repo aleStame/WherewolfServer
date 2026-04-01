@@ -7,6 +7,8 @@ import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 public final class TestNosferatu
 {
 
-    @Test public void testNome() { assertThat(FACTORY.getRuolo("Nosferatu").getNome()).isEqualTo("Nosferatu"); }
+    private static final String NOME = "Nosferatu";
+
+    @Test public void testNome() { assertThat(FACTORY.getRuolo(NOME).getNome()).isEqualTo(NOME); }
 
 }
