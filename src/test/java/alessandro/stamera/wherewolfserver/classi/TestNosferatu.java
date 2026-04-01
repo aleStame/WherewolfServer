@@ -25,4 +25,6 @@ public final class TestNosferatu
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
 }
