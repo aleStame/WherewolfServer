@@ -61,14 +61,14 @@ public final class TestLupo
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Contadino discendente dei lupi" })
-    public void testAttaccoLupi(String nome) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), RIUSCITO); }
+    public void testAttaccoLupi(String nome) { verificaAttaccoLupi(nome, RIUSCITO); }
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoAmato(String nome)
     {
         ruolo.sceltaAngeloCustode();
-        verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), FALLITO);
+        verificaAttaccoLupi(nome, FALLITO);
     }
 
     @ParameterizedTest
@@ -76,8 +76,10 @@ public final class TestLupo
     public void testAttaccoRomeo(String nome)
     {
         ruolo.romeizzazione();
-        verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), FALLITO);
+        verificaAttaccoLupi(nome, FALLITO);
     }
+
+    private void verificaAttaccoLupi(String nome, EsitoAttacco esito) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), esito); }
 
     private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
