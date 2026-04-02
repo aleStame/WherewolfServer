@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoMorto">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupiRomeo non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ContadinoMostro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,14 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01566" summary="VERDE: testMistico riuscito">
-      <option name="closed" value="true" />
-      <created>1774606751252</created>
-      <option name="number" value="01566" />
-      <option name="presentableId" value="LOCAL-01566" />
-      <option name="project" value="LOCAL" />
-      <updated>1774606751252</updated>
     </task>
     <task id="LOCAL-01567" summary="VERDE: testDescrizione riuscito">
       <option name="closed" value="true" />
@@ -674,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775122402616</updated>
     </task>
-    <option name="localTasksCounter" value="1615" />
+    <task id="LOCAL-01615" summary="ROSSO: testAttaccoLupiRomeo non riuscito">
+      <option name="closed" value="true" />
+      <created>1775122758396</created>
+      <option name="number" value="01615" />
+      <option name="presentableId" value="LOCAL-01615" />
+      <option name="project" value="LOCAL" />
+      <updated>1775122758396</updated>
+    </task>
+    <option name="localTasksCounter" value="1616" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -704,7 +704,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiRiuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiNonProtetto non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiNonProtetto riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoLupiRomeo non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
@@ -714,6 +713,7 @@
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoMorto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoMorto" />
+    <MESSAGE value="ROSSO: testAttaccoLupiRomeo non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupiRomeo non riuscito" />
   </component>
 </project>
