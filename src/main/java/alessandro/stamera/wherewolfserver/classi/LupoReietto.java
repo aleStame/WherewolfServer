@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+
 public final class LupoReietto extends Lupo
 {
 
@@ -15,6 +17,8 @@ public final class LupoReietto extends Lupo
     }
 
     @Override public boolean isLupoReietto() { return true; }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo) { return FALLITO; }
 
     public static Ruolo getInstance() { return new LupoReietto(); }
 
