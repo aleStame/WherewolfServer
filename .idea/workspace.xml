@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupi non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getRuolo">
       <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadinoMostro.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
@@ -144,7 +144,6 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadinoEroe.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoMostro.java" afterDir="false" />
     </list>
@@ -422,22 +421,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01562" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1774605813762</created>
-      <option name="number" value="01562" />
-      <option name="presentableId" value="LOCAL-01562" />
-      <option name="project" value="LOCAL" />
-      <updated>1774605813762</updated>
-    </task>
-    <task id="LOCAL-01563" summary="ROSSO: testLune non riuscito">
-      <option name="closed" value="true" />
-      <created>1774606082717</created>
-      <option name="number" value="01563" />
-      <option name="presentableId" value="LOCAL-01563" />
-      <option name="project" value="LOCAL" />
-      <updated>1774606082717</updated>
     </task>
     <task id="LOCAL-01564" summary="VERDE: testLune riuscito">
       <option name="closed" value="true" />
@@ -815,7 +798,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775121548852</updated>
     </task>
-    <option name="localTasksCounter" value="1611" />
+    <task id="LOCAL-01611" summary="ROSSO: testAttaccoLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1775121803953</created>
+      <option name="number" value="01611" />
+      <option name="presentableId" value="LOCAL-01611" />
+      <option name="project" value="LOCAL" />
+      <updated>1775121803953</updated>
+    </task>
+    <task id="LOCAL-01612" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1775121947830</created>
+      <option name="number" value="01612" />
+      <option name="presentableId" value="LOCAL-01612" />
+      <option name="project" value="LOCAL" />
+      <updated>1775121947830</updated>
+    </task>
+    <option name="localTasksCounter" value="1613" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -830,7 +829,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isNegromantePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaLupiPresenti" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaLupiAssenti" />
@@ -851,10 +849,11 @@
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getRuolo" />
   </component>
 </project>
