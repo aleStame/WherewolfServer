@@ -58,10 +58,10 @@ public final class TestContadinoMostro
     public void testAttaccoLupiRomeo(String nome)
     {
         ruolo.romeizzazione();
-        assertThat(attaccoLupi(nome)).isEqualTo(FALLITO);
+        verificaAttacco(attaccoLupi(nome), FALLITO);
     }
 
-    private void verificaAttaccoMorto(EsitoAttacco esito) { assertThat(esito).isEqualTo(MORTO); }
+    private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
@@ -70,5 +70,7 @@ public final class TestContadinoMostro
     private EsitoAttacco attaccoLupi(String nome) { return ruolo.attaccoLupi(getRuolo(nome)); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
