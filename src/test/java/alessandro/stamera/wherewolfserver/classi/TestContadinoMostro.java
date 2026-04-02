@@ -2,6 +2,9 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
@@ -45,6 +48,10 @@ public final class TestContadinoMostro
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(MORTO); }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
