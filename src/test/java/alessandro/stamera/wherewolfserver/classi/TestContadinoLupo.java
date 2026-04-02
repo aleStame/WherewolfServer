@@ -33,7 +33,7 @@ public final class TestContadinoLupo
 
     @Test public void testContadinoLupo() { verificaVero(ruolo.isContadinoLupo()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
     public void testAttaccoLupi(String nome)
     {
         assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO);

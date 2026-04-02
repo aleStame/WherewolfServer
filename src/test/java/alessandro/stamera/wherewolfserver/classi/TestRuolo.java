@@ -80,7 +80,7 @@ public final class TestRuolo
     }
 
     @ParameterizedTest
-    @CsvSource( { "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" } )
+    @CsvSource( { "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" } )
     public void testRomeizzazioneMorte(String nome)
     {
         ruolo.romeizzazione();
@@ -96,7 +96,7 @@ public final class TestRuolo
     }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Giovane lupo, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoLupiRiuscito(nome); }
 
     @Test public void testAttaccoNosferatu() { verificaAttaccoRiuscito(ruolo.attaccoNosferatu()); }

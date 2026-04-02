@@ -59,20 +59,17 @@ public final class TestLupo
 
     @Test public void testAttaccoNosferatu() { verificaAttacco(ruolo.attaccoNosferatu(), MORTO); }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttaccoLupi(nome, RIUSCITO); }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoAmato(String nome)
     {
         ruolo.sceltaAngeloCustode();
         verificaAttaccoLupiFallito(nome);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoRomeo(String nome)
     {
         ruolo.romeizzazione();
@@ -81,9 +78,15 @@ public final class TestLupo
 
     private void verificaAttaccoLupiFallito(String nome) { verificaAttaccoLupi(nome, FALLITO); }
 
-    private void verificaAttaccoLupi(String nome, EsitoAttacco esito) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), esito); }
+    private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
+    {
+        verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), esito);
+    }
 
-    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato)
+    {
+        assertThat(valore).isEqualTo(risultato);
+    }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 

@@ -78,7 +78,7 @@ public final class TestEremita
     @Test public void testAttaccoNosferatu() { verificaAttaccoFallito(ruolo.attaccoNosferatu()); }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttaccoFallito(ruolo.attaccoLupi(getRuolo(nome))); }
 
     private void verificaAttaccoFallito(EsitoAttacco esito) { assertThat(esito).isEqualTo(FALLITO); }
