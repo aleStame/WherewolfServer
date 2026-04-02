@@ -45,13 +45,18 @@ public final class TestLadra
     public void testUtilizzoPotereLupi(String nome)
     {
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
-        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(FALLITO);
+        verificaAttaccoLupi(nome, FALLITO);
         verificaVero(ruolo.isPotereUtilizzato());
         verificaFalso(ruolo.isTrattoPresente(PROTETTO));
-        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(RIUSCITO);
+        verificaAttaccoLupi(nome, RIUSCITO);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
+    {
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(esito);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 

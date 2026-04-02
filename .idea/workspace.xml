@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REDFACTORING: definizione del metodo getRuolo" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testUtilizzoPotereLupi riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLadra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLadra.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,46 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01583" summary="REFACTORING: definizione del metodo verificaLupiAssenti">
-      <option name="closed" value="true" />
-      <created>1774889577027</created>
-      <option name="number" value="01583" />
-      <option name="presentableId" value="LOCAL-01583" />
-      <option name="project" value="LOCAL" />
-      <updated>1774889577027</updated>
-    </task>
-    <task id="LOCAL-01584" summary="ROSSO: testCappuccettoRosso non riuscito">
-      <option name="closed" value="true" />
-      <created>1774889863375</created>
-      <option name="number" value="01584" />
-      <option name="presentableId" value="LOCAL-01584" />
-      <option name="project" value="LOCAL" />
-      <updated>1774889863375</updated>
-    </task>
-    <task id="LOCAL-01585" summary="VERDE: testCappuccettoRosso riuscito">
-      <option name="closed" value="true" />
-      <created>1774890030773</created>
-      <option name="number" value="01585" />
-      <option name="presentableId" value="LOCAL-01585" />
-      <option name="project" value="LOCAL" />
-      <updated>1774890030773</updated>
-    </task>
-    <task id="LOCAL-01586" summary="ROSSO: testAttaccoNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1775061603091</created>
-      <option name="number" value="01586" />
-      <option name="presentableId" value="LOCAL-01586" />
-      <option name="project" value="LOCAL" />
-      <updated>1775061603092</updated>
-    </task>
-    <task id="LOCAL-01587" summary="VERDE: testAttaccoNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1775061767869</created>
-      <option name="number" value="01587" />
-      <option name="presentableId" value="LOCAL-01587" />
-      <option name="project" value="LOCAL" />
-      <updated>1775061767869</updated>
     </task>
     <task id="LOCAL-01588" summary="ROSSO: testAttaccoNosferatu non riuscito">
       <option name="closed" value="true" />
@@ -672,7 +634,47 @@
       <option name="project" value="LOCAL" />
       <updated>1775138198557</updated>
     </task>
-    <option name="localTasksCounter" value="1632" />
+    <task id="LOCAL-01632" summary="ROSSO: testAttaccoLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1775139523207</created>
+      <option name="number" value="01632" />
+      <option name="presentableId" value="LOCAL-01632" />
+      <option name="project" value="LOCAL" />
+      <updated>1775139523208</updated>
+    </task>
+    <task id="LOCAL-01633" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1775139753779</created>
+      <option name="number" value="01633" />
+      <option name="presentableId" value="LOCAL-01633" />
+      <option name="project" value="LOCAL" />
+      <updated>1775139753779</updated>
+    </task>
+    <task id="LOCAL-01634" summary="REFACTORING: definizione del metodo getRuolo">
+      <option name="closed" value="true" />
+      <created>1775140067574</created>
+      <option name="number" value="01634" />
+      <option name="presentableId" value="LOCAL-01634" />
+      <option name="project" value="LOCAL" />
+      <updated>1775140067574</updated>
+    </task>
+    <task id="LOCAL-01635" summary="ROSSO: testUtilizzoPotereLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1775140584070</created>
+      <option name="number" value="01635" />
+      <option name="presentableId" value="LOCAL-01635" />
+      <option name="project" value="LOCAL" />
+      <updated>1775140584070</updated>
+    </task>
+    <task id="LOCAL-01636" summary="VERDE: testUtilizzoPotereLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1775140993871</created>
+      <option name="number" value="01636" />
+      <option name="presentableId" value="LOCAL-01636" />
+      <option name="project" value="LOCAL" />
+      <updated>1775140993871</updated>
+    </task>
+    <option name="localTasksCounter" value="1637" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -687,8 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getEsitoAttaccoRuoloProtetto" />
-    <MESSAGE value="REFACTORING: definizione del metodo attivazioneLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoRiuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiRiuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiNonProtetto non riuscito" />
@@ -700,7 +700,6 @@
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupi" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
@@ -709,9 +708,12 @@
     <MESSAGE value="VERDE: testAttaccoRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
+    <MESSAGE value="REDFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
-    <MESSAGE value="REDFACTORING: definizione del metodo getRuolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REDFACTORING: definizione del metodo getRuolo" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
+    <MESSAGE value="ROSSO: testUtilizzoPotereLupi non riuscito" />
+    <MESSAGE value="VERDE: testUtilizzoPotereLupi riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testUtilizzoPotereLupi riuscito" />
   </component>
 </project>
