@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoLupi riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoAmato riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,22 +279,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01574" summary="VERDE: testCreatureOmbra riuscito">
-      <option name="closed" value="true" />
-      <created>1774880674997</created>
-      <option name="number" value="01574" />
-      <option name="presentableId" value="LOCAL-01574" />
-      <option name="project" value="LOCAL" />
-      <updated>1774880674997</updated>
-    </task>
-    <task id="LOCAL-01575" summary="REFACTORING: definizione del metodo isProtezioneCreatureOmbra">
-      <option name="closed" value="true" />
-      <created>1774880954678</created>
-      <option name="number" value="01575" />
-      <option name="presentableId" value="LOCAL-01575" />
-      <option name="project" value="LOCAL" />
-      <updated>1774880954678</updated>
     </task>
     <task id="LOCAL-01576" summary="ROSSO: testCappuccettoRosso riuscito">
       <option name="closed" value="true" />
@@ -674,7 +656,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775134888613</updated>
     </task>
-    <option name="localTasksCounter" value="1623" />
+    <task id="LOCAL-01623" summary="REFACTORING: definizione del metodo verificaAttacco">
+      <option name="closed" value="true" />
+      <created>1775135285043</created>
+      <option name="number" value="01623" />
+      <option name="presentableId" value="LOCAL-01623" />
+      <option name="project" value="LOCAL" />
+      <updated>1775135285043</updated>
+    </task>
+    <task id="LOCAL-01624" summary="VERDE DIRETTO: testAttaccoAmato riuscito">
+      <option name="closed" value="true" />
+      <created>1775135599690</created>
+      <option name="number" value="01624" />
+      <option name="presentableId" value="LOCAL-01624" />
+      <option name="project" value="LOCAL" />
+      <updated>1775135599690</updated>
+    </task>
+    <option name="localTasksCounter" value="1625" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCappuccettoRosso non riuscito" />
     <MESSAGE value="VERDE: testCappuccettoRosso riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatu non riuscito" />
     <MESSAGE value="ROSSO: testAttaccoNosferatu non riuscito" />
@@ -710,10 +707,11 @@
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupi" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupi riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupi riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAmato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAmato riuscito" />
   </component>
 </project>
