@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoAttacco">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoEroe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoEroe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -281,14 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01558" summary="VERDE: testMonaco riuscito">
-      <option name="closed" value="true" />
-      <created>1774543833800</created>
-      <option name="number" value="01558" />
-      <option name="presentableId" value="LOCAL-01558" />
-      <option name="project" value="LOCAL" />
-      <updated>1774543833800</updated>
     </task>
     <task id="LOCAL-01559" summary="REFACTORING: definizione di un metodo di set up">
       <option name="closed" value="true" />
@@ -674,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775120354880</updated>
     </task>
-    <option name="localTasksCounter" value="1607" />
+    <task id="LOCAL-01607" summary="REFACTORING: definizione del metodo verificaEsitoAttacco">
+      <option name="closed" value="true" />
+      <created>1775120874180</created>
+      <option name="number" value="01607" />
+      <option name="presentableId" value="LOCAL-01607" />
+      <option name="project" value="LOCAL" />
+      <updated>1775120874180</updated>
+    </task>
+    <option name="localTasksCounter" value="1608" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testCreatureOmbra riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezioneCreatureOmbra" />
     <MESSAGE value="ROSSO: testCappuccettoRosso riuscito" />
     <MESSAGE value="REFACTORING: eliminazione metodi inutili" />
@@ -714,6 +713,7 @@
     <MESSAGE value="ROSSO: testAttaccoLupiRomeo non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
   </component>
 </project>

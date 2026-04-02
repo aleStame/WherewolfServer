@@ -15,7 +15,7 @@ public final class TestContadinoEroe
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Contadino eroe"); }
+    @BeforeEach public void setUp() { ruolo = getRuolo("Contadino eroe"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
@@ -43,10 +43,15 @@ public final class TestContadinoEroe
         verificaEsitoAttacco(nome, FALLITO);
     }
 
-    private void verificaEsitoAttacco(String nome, EsitoAttacco esito) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(esito); }
+    private void verificaEsitoAttacco(String nome, EsitoAttacco esito)
+    {
+        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(esito);
+    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }
