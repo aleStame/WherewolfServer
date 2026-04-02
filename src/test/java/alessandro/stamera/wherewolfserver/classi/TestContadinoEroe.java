@@ -40,7 +40,7 @@ public final class TestContadinoEroe
     public void testAttaccoLupiRomeo(String nome)
     {
         ruolo.romeizzazione();
-        verificaEsitoAttacco(nome, FALLITO);
+        verificaAttaccoFallito(nome);
     }
 
     @ParameterizedTest
@@ -48,8 +48,10 @@ public final class TestContadinoEroe
     public void testAttaccoLupiAmato(String nome)
     {
         ruolo.sceltaAngeloCustode();
-        verificaEsitoAttacco(nome, FALLITO);
+        verificaAttaccoFallito(nome);
     }
+
+    private void verificaAttaccoFallito(String nome) { verificaEsitoAttacco(nome, FALLITO); }
 
     private void verificaEsitoAttacco(String nome, EsitoAttacco esito)
     {

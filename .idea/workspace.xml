@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoAttacco">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoLupiAmato riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoEroe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestContadinoEroe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -281,22 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01559" summary="REFACTORING: definizione di un metodo di set up">
-      <option name="closed" value="true" />
-      <created>1774544015501</created>
-      <option name="number" value="01559" />
-      <option name="presentableId" value="LOCAL-01559" />
-      <option name="project" value="LOCAL" />
-      <updated>1774544015501</updated>
-    </task>
-    <task id="LOCAL-01560" summary="ROSSO: testDescrizione non riuscito">
-      <option name="closed" value="true" />
-      <created>1774605359215</created>
-      <option name="number" value="01560" />
-      <option name="presentableId" value="LOCAL-01560" />
-      <option name="project" value="LOCAL" />
-      <updated>1774605359215</updated>
     </task>
     <task id="LOCAL-01561" summary="VERDE: testDescrizione riuscito">
       <option name="closed" value="true" />
@@ -674,7 +658,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775120874180</updated>
     </task>
-    <option name="localTasksCounter" value="1608" />
+    <task id="LOCAL-01608" summary="REFACTORING: definizione del metodo getRuolo">
+      <option name="closed" value="true" />
+      <created>1775121095590</created>
+      <option name="number" value="01608" />
+      <option name="presentableId" value="LOCAL-01608" />
+      <option name="project" value="LOCAL" />
+      <updated>1775121095590</updated>
+    </task>
+    <task id="LOCAL-01609" summary="VERDE DIRETTO: testAttaccoLupiAmato riuscito">
+      <option name="closed" value="true" />
+      <created>1775121278003</created>
+      <option name="number" value="01609" />
+      <option name="presentableId" value="LOCAL-01609" />
+      <option name="project" value="LOCAL" />
+      <updated>1775121278003</updated>
+    </task>
+    <option name="localTasksCounter" value="1610" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,8 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezioneCreatureOmbra" />
-    <MESSAGE value="ROSSO: testCappuccettoRosso riuscito" />
     <MESSAGE value="REFACTORING: eliminazione metodi inutili" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="REFACTORING: definizione del metodo isNegromantePresente" />
@@ -714,6 +712,8 @@
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAmato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupiAmato riuscito" />
   </component>
 </project>
