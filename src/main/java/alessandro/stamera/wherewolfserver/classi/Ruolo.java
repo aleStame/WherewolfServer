@@ -238,6 +238,8 @@ public class Ruolo
         return risultato;
     }
 
+    boolean isRomeo() { return romeo; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
@@ -252,7 +254,7 @@ public class Ruolo
     private EsitoAttacco getEsitoAttaccoRuoloProtetto(EsitoAttacco risultato)
     {
         if(isAmato()) perdiProtezioni();
-        if(!romeo) risultato = FALLITO;
+        if(!isRomeo()) risultato = FALLITO;
         return risultato;
     }
 
