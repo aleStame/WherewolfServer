@@ -68,7 +68,7 @@ public final class TestLupo
     public void testAttaccoAmato(String nome)
     {
         ruolo.sceltaAngeloCustode();
-        verificaAttaccoLupi(nome, FALLITO);
+        verificaAttaccoLupiFallito(nome);
     }
 
     @ParameterizedTest
@@ -76,8 +76,10 @@ public final class TestLupo
     public void testAttaccoRomeo(String nome)
     {
         ruolo.romeizzazione();
-        verificaAttaccoLupi(nome, FALLITO);
+        verificaAttaccoLupiFallito(nome);
     }
+
+    private void verificaAttaccoLupiFallito(String nome) { verificaAttaccoLupi(nome, FALLITO); }
 
     private void verificaAttaccoLupi(String nome, EsitoAttacco esito) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), esito); }
 
