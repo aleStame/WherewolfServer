@@ -2,7 +2,11 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -36,15 +40,15 @@ public final class TestLadra
 
     @Test public void testLadra() { verificaVero(ruolo.isLadra()); }
 
-    @Test public void testUtilizzoPotere()
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testUtilizzoPotereLupi(String nome)
     {
-        verificaFalso(isPotereUtilizzato());
-        Ruolo[] lupi = FACTORY.getLupi();
-        for(Ruolo lupo : lupi) verificaVero(isProtezionePresente(lupo));
-        ruolo.utilizzaPotere();
-        verificaVero(isPotereUtilizzato());
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(FALLITO);
+        verificaVero(ruolo.isPotereUtilizzato());
         verificaFalso(ruolo.isTrattoPresente(PROTETTO));
-        for(Ruolo lupo : lupi) verificaFalso(isProtezionePresente(lupo));
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(RIUSCITO);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
@@ -56,9 +60,5 @@ public final class TestLadra
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
-
-    private boolean isProtezionePresente(Ruolo ruolo) { return this.ruolo.isProtezionePresente(ruolo); }
 
 }
