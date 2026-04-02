@@ -15,14 +15,17 @@ public final class ContadinoEroe extends Contadino
     {
         EsitoAttacco esito;
         if(isRomeo()) esito = FALLITO;
-        else
-        {
-            esito = super.attaccoLupi(ruolo);
-            if(esito == RIUSCITO) esito = MORTO;
-        }
+        else esito = attaccoLupiContadinoNonRomeizzato(ruolo);
         return esito;
     }
 
     public static Ruolo getInstance() { return new ContadinoEroe(); }
+
+    private EsitoAttacco attaccoLupiContadinoNonRomeizzato(Ruolo ruolo)
+    {
+        EsitoAttacco esito = super.attaccoLupi(ruolo);
+        if(esito == RIUSCITO) esito = MORTO;
+        return esito;
+    }
 
 }
