@@ -43,6 +43,14 @@ public final class TestContadinoEroe
         verificaEsitoAttacco(nome, FALLITO);
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testAttaccoLupiAmato(String nome)
+    {
+        ruolo.sceltaAngeloCustode();
+        verificaEsitoAttacco(nome, FALLITO);
+    }
+
     private void verificaEsitoAttacco(String nome, EsitoAttacco esito)
     {
         assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(esito);
