@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupi non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REDFACTORING: definizione del metodo getRuolo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,22 +279,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01581" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1774888992675</created>
-      <option name="number" value="01581" />
-      <option name="presentableId" value="LOCAL-01581" />
-      <option name="project" value="LOCAL" />
-      <updated>1774888992676</updated>
-    </task>
-    <task id="LOCAL-01582" summary="REFACTORING: definizione del metodo verificaLupiPresenti">
-      <option name="closed" value="true" />
-      <created>1774889190966</created>
-      <option name="number" value="01582" />
-      <option name="presentableId" value="LOCAL-01582" />
-      <option name="project" value="LOCAL" />
-      <updated>1774889190966</updated>
     </task>
     <task id="LOCAL-01583" summary="REFACTORING: definizione del metodo verificaLupiAssenti">
       <option name="closed" value="true" />
@@ -672,7 +656,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775137844699</updated>
     </task>
-    <option name="localTasksCounter" value="1630" />
+    <task id="LOCAL-01630" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1775138026019</created>
+      <option name="number" value="01630" />
+      <option name="presentableId" value="LOCAL-01630" />
+      <option name="project" value="LOCAL" />
+      <updated>1775138026019</updated>
+    </task>
+    <task id="LOCAL-01631" summary="REDFACTORING: definizione del metodo getRuolo">
+      <option name="closed" value="true" />
+      <created>1775138198557</created>
+      <option name="number" value="01631" />
+      <option name="presentableId" value="LOCAL-01631" />
+      <option name="project" value="LOCAL" />
+      <updated>1775138198557</updated>
+    </task>
+    <option name="localTasksCounter" value="1632" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -687,7 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoAttaccoRuoloProtetto" />
     <MESSAGE value="REFACTORING: definizione del metodo attivazioneLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoRiuscito" />
@@ -697,7 +696,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoAttacco" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAmato riuscito" />
-    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoMorto" />
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
@@ -712,6 +710,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <MESSAGE value="REDFACTORING: definizione del metodo getRuolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REDFACTORING: definizione del metodo getRuolo" />
   </component>
 </project>
