@@ -51,14 +51,14 @@ public final class TestContadinoMostro
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
-    public void testAttaccoLupi(String nome) { verificaAttaccoMorto(ruolo.attaccoLupi(getRuolo(nome))); }
+    public void testAttaccoLupi(String nome) { verificaAttaccoMorto(attaccoLupi(nome)); }
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testAttaccoLupiRomeo(String nome)
     {
         ruolo.romeizzazione();
-        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO);
+        assertThat(attaccoLupi(nome)).isEqualTo(FALLITO);
     }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { assertThat(esito).isEqualTo(MORTO); }
@@ -66,6 +66,8 @@ public final class TestContadinoMostro
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private EsitoAttacco attaccoLupi(String nome) { return ruolo.attaccoLupi(getRuolo(nome)); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
