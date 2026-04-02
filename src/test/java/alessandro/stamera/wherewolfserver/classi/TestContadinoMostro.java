@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
@@ -52,6 +52,14 @@ public final class TestContadinoMostro
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttaccoMorto(ruolo.attaccoLupi(getRuolo(nome))); }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testAttaccoLupiRomeo(String nome)
+    {
+        ruolo.romeizzazione();
+        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO);
+    }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { assertThat(esito).isEqualTo(MORTO); }
 
