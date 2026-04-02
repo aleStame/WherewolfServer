@@ -15,7 +15,7 @@ public final class TestLupoSolitario
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
@@ -39,10 +39,12 @@ public final class TestLupoSolitario
     public void testTratto(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
-    public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(FALLITO); }
+    public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }
