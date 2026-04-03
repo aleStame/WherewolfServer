@@ -44,14 +44,16 @@ public final class TestLadra
     @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testUtilizzoPotereLupi(String nome)
     {
-        verificaVero(ruolo.isTrattoPresente(PROTETTO));
+        verificaVero(isProtetto());
         verificaAttaccoLupi(nome, FALLITO);
         verificaVero(ruolo.isPotereUtilizzato());
-        verificaFalso(ruolo.isTrattoPresente(PROTETTO));
+        verificaFalso(isProtetto());
         verificaAttaccoLupi(nome, RIUSCITO);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private boolean isProtetto() { return ruolo.isTrattoPresente(PROTETTO); }
 
     private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
     {
