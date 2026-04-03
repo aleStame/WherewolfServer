@@ -61,7 +61,7 @@ public final class Tratti
 
     public boolean isProtezioneNegromantePresente() { return protezioni.isNegromantePresente(); }
 
-    public boolean isProtezioneNosferatuPresente() { return false; }
+    public boolean isProtezioneNosferatuPresente() { return protezioni.isNosferatuPresente(); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
