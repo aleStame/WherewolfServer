@@ -31,7 +31,7 @@ public final class TestLadra
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
+    @Test public void testAura() { verificaAuraBianca(getAura()); }
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
@@ -70,10 +70,12 @@ public final class TestLadra
         verificaNonProtetto();
         verificaVero(maledizione());
         verificaVero(isMaledetto());
-        verificaAura(ruolo.getAura(), NERA);
+        verificaAura(getAura(), NERA);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private Aura getAura() { return ruolo.getAura(); }
 
     private boolean maledizione() { return ruolo.maledizione(); }
 
