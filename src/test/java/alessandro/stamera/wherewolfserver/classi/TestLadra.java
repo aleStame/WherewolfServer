@@ -66,16 +66,18 @@ public final class TestLadra
         verificaProtetto();
         verificaFalso(maledizione());
         verificaPotereUtilizzato();
-        verificaFalso(ruolo.isMaledetto());
+        verificaFalso(isMaledetto());
         verificaNonProtetto();
         verificaVero(maledizione());
-        verificaVero(ruolo.isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        verificaVero(isMaledetto());
+        verificaAura(ruolo.getAura(), NERA);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private boolean maledizione() { return ruolo.maledizione(); }
+
+    private boolean isMaledetto() { return ruolo.isMaledetto(); }
 
     private void verificaProtetto() { verificaVero(isProtetto()); }
 
@@ -92,7 +94,9 @@ public final class TestLadra
 
     private void verificaAttaccoNosferatu(EsitoAttacco esito) { assertThat(ruolo.attaccoNosferatu()).isEqualTo(esito); }
 
-    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+    private void verificaAuraBianca(Aura aura) { verificaAura(aura, BIANCA); }
+
+    private void verificaAura(Aura valore, Aura risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
