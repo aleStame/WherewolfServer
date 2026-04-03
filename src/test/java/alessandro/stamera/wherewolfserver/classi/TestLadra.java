@@ -64,16 +64,18 @@ public final class TestLadra
     @Test public void testAttaccoNegromante()
     {
         verificaProtetto();
-        verificaFalso(ruolo.maledizione());
+        verificaFalso(maledizione());
         verificaPotereUtilizzato();
         verificaFalso(ruolo.isMaledetto());
         verificaNonProtetto();
-        verificaVero(ruolo.maledizione());
+        verificaVero(maledizione());
         verificaVero(ruolo.isMaledetto());
         assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private boolean maledizione() { return ruolo.maledizione(); }
 
     private void verificaProtetto() { verificaVero(isProtetto()); }
 
