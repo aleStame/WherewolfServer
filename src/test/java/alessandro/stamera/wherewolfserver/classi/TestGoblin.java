@@ -21,7 +21,7 @@ public final class TestGoblin
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
 
     @Test public void testDescrizione()
     {
@@ -78,8 +78,10 @@ public final class TestGoblin
         verificaFalso(ruolo.isMaledetto());
         int numeroVoti = 2;
         ruolo.incrementaVoti(numeroVoti);
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
     }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
