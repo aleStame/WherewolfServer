@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroIntero">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCreatureOmbra riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestProtezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestProtezioni.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,22 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01605" summary="VERDE: testAttaccoLupiRomeo riuscito">
-      <option name="closed" value="true" />
-      <created>1775120113016</created>
-      <option name="number" value="01605" />
-      <option name="presentableId" value="LOCAL-01605" />
-      <option name="project" value="LOCAL" />
-      <updated>1775120113017</updated>
-    </task>
-    <task id="LOCAL-01606" summary="REFACTORING: definizione del metodo attaccoLupiContadinoNonRomeizzato">
-      <option name="closed" value="true" />
-      <created>1775120354880</created>
-      <option name="number" value="01606" />
-      <option name="presentableId" value="LOCAL-01606" />
-      <option name="project" value="LOCAL" />
-      <updated>1775120354880</updated>
     </task>
     <task id="LOCAL-01607" summary="REFACTORING: definizione del metodo verificaEsitoAttacco">
       <option name="closed" value="true" />
@@ -676,7 +659,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775221669324</updated>
     </task>
-    <option name="localTasksCounter" value="1654" />
+    <task id="LOCAL-01654" summary="ROSSO: testCreatureOmbra non riuscito">
+      <option name="closed" value="true" />
+      <created>1775222274947</created>
+      <option name="number" value="01654" />
+      <option name="presentableId" value="LOCAL-01654" />
+      <option name="project" value="LOCAL" />
+      <updated>1775222274948</updated>
+    </task>
+    <task id="LOCAL-01655" summary="VERDE: testCreatureOmbra riuscito">
+      <option name="closed" value="true" />
+      <created>1775222427664</created>
+      <option name="number" value="01655" />
+      <option name="presentableId" value="LOCAL-01655" />
+      <option name="project" value="LOCAL" />
+      <updated>1775222427664</updated>
+    </task>
+    <option name="localTasksCounter" value="1656" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,8 +690,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoRomeo non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
     <MESSAGE value="REDFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
@@ -716,6 +713,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getAura" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNegromante riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroIntero" />
+    <MESSAGE value="ROSSO: testCreatureOmbra non riuscito" />
+    <MESSAGE value="VERDE: testCreatureOmbra riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCreatureOmbra riuscito" />
   </component>
 </project>
