@@ -39,14 +39,16 @@ public final class TestTratti
     {
         verificaLupiAssenti();
         verificaFalso(isProtezioneNegromantePresente());
-        verificaFalso(tratti.isProtezioneNosferatuPresente());
+        verificaFalso(isProtezioneNosferatuPresente());
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
-        verificaVero(tratti.isProtezioneNosferatuPresente());
+        verificaVero(isProtezioneNosferatuPresente());
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
+
+    private boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
 
