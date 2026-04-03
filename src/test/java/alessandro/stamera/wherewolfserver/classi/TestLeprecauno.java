@@ -75,6 +75,15 @@ public final class TestLeprecauno
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
+    @Test public void testAttaccoNegromante()
+    {
+        verificaFalso(ruolo.maledizione());
+        verificaFalso(ruolo.isMaledetto());
+        int numeroVoti = 2;
+        ruolo.incrementaVoti(numeroVoti);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
