@@ -6,9 +6,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -59,6 +62,9 @@ public final class TestLadra
         verificaPotereUtilizzato();
         verificaNonProtetto();
         verificaAttaccoNosferatu(RIUSCITO);
+        verificaVero(ruolo.isTrattoPresente(NON_MORTO));
+        assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
+        assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA);
     }
 
     @Test public void testAttaccoNegromante()
