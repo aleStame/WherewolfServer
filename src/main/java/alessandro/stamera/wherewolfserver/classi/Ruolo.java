@@ -4,9 +4,11 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 
 public class Ruolo
 {
@@ -235,6 +237,11 @@ public class Ruolo
     {
         EsitoAttacco risultato = RIUSCITO;
         if(isMistico() || tratti.isProtezioneNosferatuPresente()) risultato = FALLITO;
+        if(risultato == RIUSCITO)
+        {
+            aggiungiTratti(NON_MORTO);
+            cambiaFazione(NOSFERATU);
+        }
         return risultato;
     }
 
