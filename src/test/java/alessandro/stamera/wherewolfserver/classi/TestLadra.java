@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
@@ -58,6 +59,18 @@ public final class TestLadra
         verificaPotereUtilizzato();
         verificaNonProtetto();
         verificaAttaccoNosferatu(RIUSCITO);
+    }
+
+    @Test public void testAttaccoNegromante()
+    {
+        verificaProtetto();
+        verificaFalso(ruolo.maledizione());
+        verificaPotereUtilizzato();
+        verificaFalso(ruolo.isMaledetto());
+        verificaNonProtetto();
+        verificaVero(ruolo.maledizione());
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
