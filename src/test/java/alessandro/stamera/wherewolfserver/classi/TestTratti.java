@@ -31,7 +31,7 @@ public final class TestTratti
     @Test public void testMaledizione()
     {
         verificaFalso(isMaledetto());
-        tratti.maledizione();
+        verificaVero(tratti.maledizione());
         verificaVero(isMaledetto());
     }
 

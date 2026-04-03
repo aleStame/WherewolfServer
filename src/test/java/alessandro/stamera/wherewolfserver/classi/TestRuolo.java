@@ -45,7 +45,7 @@ public final class TestRuolo
         verificaVoti(ESEMPIO_VOTI);
         ruolo.annullaVoti();
         verificaNessunVoto();
-        ruolo.maledizione();
+        verificaVero(ruolo.maledizione());
         verificaVoti(1);
         verificaVero(ruolo.isMaledetto());
         assertThat(ruolo.getAura()).isEqualTo(NERA);

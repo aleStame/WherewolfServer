@@ -206,7 +206,7 @@ public class Ruolo
 
     public void aggiungiTratti(Tratto... tratti) { for(Tratto tratto : tratti) this.tratti.aggiungi(tratto); }
 
-    public void maledizione() { tratti.maledizione(); }
+    public boolean maledizione() { return tratti.maledizione(); }
 
     public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
 

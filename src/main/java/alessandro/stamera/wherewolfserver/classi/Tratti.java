@@ -20,7 +20,12 @@ public final class Tratti
 
     public boolean isMaledetto() { return isPresente(MALEDETTO); }
 
-    public void maledizione() { if(!protezioni.isNegromantePresente()) aggiungi(MALEDETTO); }
+    public boolean maledizione()
+    {
+        boolean esito = !protezioni.isNegromantePresente();
+        if(esito) aggiungi(MALEDETTO);
+        return esito;
+    }
 
     public boolean isPresente(Tratto tratto) { return tratti.contains(tratto); }
 
