@@ -28,6 +28,13 @@ public final class Ladra extends Criminale
         return esito;
     }
 
+    @Override public EsitoAttacco attaccoNosferatu()
+    {
+        EsitoAttacco esito = super.attaccoNosferatu();
+        if(esito == FALLITO) utilizzaPotere();
+        return esito;
+    }
+
     @Override public void utilizzaPotere()
     {
         perdiProtezioni();

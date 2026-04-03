@@ -4,6 +4,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
@@ -234,7 +235,7 @@ public class Ruolo
     public EsitoAttacco attaccoNosferatu()
     {
         EsitoAttacco risultato = RIUSCITO;
-        if(isMistico()) risultato = FALLITO;
+        if(isMistico() || isProtezionePresente(FACTORY.getRuolo("Nosferatu"))) risultato = FALLITO;
         return risultato;
     }
 
