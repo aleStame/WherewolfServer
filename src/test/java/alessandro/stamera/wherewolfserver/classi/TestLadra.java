@@ -44,7 +44,7 @@ public final class TestLadra
     @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testUtilizzoPotereLupi(String nome)
     {
-        verificaVero(isProtetto());
+        verificaProtetto();
         verificaAttaccoLupi(nome, FALLITO);
         verificaVero(ruolo.isPotereUtilizzato());
         verificaFalso(isProtetto());
@@ -53,7 +53,7 @@ public final class TestLadra
 
     @Test public void testAttaccoNosferatu()
     {
-        verificaVero(isProtetto());
+        verificaProtetto();
         assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO);
         verificaVero(ruolo.isPotereUtilizzato());
         verificaFalso(isProtetto());
@@ -61,6 +61,8 @@ public final class TestLadra
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaProtetto() { verificaVero(isProtetto()); }
 
     private boolean isProtetto() { return ruolo.isTrattoPresente(PROTETTO); }
 
