@@ -33,7 +33,7 @@ public final class TestLeprecauno
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
@@ -81,8 +81,11 @@ public final class TestLeprecauno
         verificaFalso(ruolo.isMaledetto());
         int numeroVoti = 2;
         ruolo.incrementaVoti(numeroVoti);
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
+        verificaAuraBianca(ruolo.getAura());
     }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
