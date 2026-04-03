@@ -35,6 +35,13 @@ public final class Ladra extends Criminale
         return esito;
     }
 
+    @Override public boolean maledizione()
+    {
+        boolean esito = super.maledizione();
+        if(!esito) utilizzaPotere();
+        return esito;
+    }
+
     @Override public void utilizzaPotere()
     {
         perdiProtezioni();
