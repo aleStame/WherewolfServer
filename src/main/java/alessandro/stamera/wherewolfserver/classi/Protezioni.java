@@ -29,6 +29,6 @@ public final class Protezioni
 
     public boolean isProtezioneLupiPresente() { return stream(FACTORY.getLupi()).allMatch(ruoli::contains); }
 
-    public boolean isNosferatuPresente() { return false; }
+    public boolean isNosferatuPresente() { return ruoli.stream().anyMatch(Ruolo::isNosferatu); }
 
 }
