@@ -237,15 +237,17 @@ public class Ruolo
     {
         EsitoAttacco risultato = RIUSCITO;
         if(isMistico() || tratti.isProtezioneNosferatuPresente()) risultato = FALLITO;
-        if(risultato == RIUSCITO)
-        {
-            aggiungiTratti(NON_MORTO);
-            cambiaFazione(NOSFERATU);
-        }
+        if(risultato == RIUSCITO) trasformazioneNosferatu();
         return risultato;
     }
 
     boolean isRomeo() { return romeo; }
+
+    private void trasformazioneNosferatu()
+    {
+        aggiungiTratti(NON_MORTO);
+        cambiaFazione(NOSFERATU);
+    }
 
     private boolean controlloTrattiOscuri()
     {
