@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoLupi">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtetto">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLadra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLadra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,14 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01589" summary="VERDE: testAttaccoNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1775062461038</created>
-      <option name="number" value="01589" />
-      <option name="presentableId" value="LOCAL-01589" />
-      <option name="project" value="LOCAL" />
-      <updated>1775062461038</updated>
     </task>
     <task id="LOCAL-01590" summary="ROSSO: testAttaccoNosferatu non riuscito">
       <option name="closed" value="true" />
@@ -674,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775141291389</updated>
     </task>
-    <option name="localTasksCounter" value="1638" />
+    <task id="LOCAL-01638" summary="REFACTORING: definizione del metodo isProtetto">
+      <option name="closed" value="true" />
+      <created>1775216715903</created>
+      <option name="number" value="01638" />
+      <option name="presentableId" value="LOCAL-01638" />
+      <option name="project" value="LOCAL" />
+      <updated>1775216715903</updated>
+    </task>
+    <option name="localTasksCounter" value="1639" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoRiuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiRiuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiNonProtetto non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiNonProtetto riuscito" />
@@ -714,6 +713,7 @@
     <MESSAGE value="ROSSO: testUtilizzoPotereLupi non riuscito" />
     <MESSAGE value="VERDE: testUtilizzoPotereLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtetto" />
   </component>
 </project>

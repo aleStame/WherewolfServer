@@ -51,6 +51,15 @@ public final class TestLadra
         verificaAttaccoLupi(nome, RIUSCITO);
     }
 
+    @Test public void testAttaccoNosferatu()
+    {
+        verificaVero(isProtetto());
+        assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO);
+        verificaVero(ruolo.isPotereUtilizzato());
+        verificaFalso(isProtetto());
+        assertThat(ruolo.attaccoNosferatu()).isEqualTo(RIUSCITO);
+    }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private boolean isProtetto() { return ruolo.isTrattoPresente(PROTETTO); }
