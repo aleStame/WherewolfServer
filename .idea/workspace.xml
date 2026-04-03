@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCreatureOmbra riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNosferatuPresente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Protezioni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Tratti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Tratti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestTratti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestTratti.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01607" summary="REFACTORING: definizione del metodo verificaEsitoAttacco">
-      <option name="closed" value="true" />
-      <created>1775120874180</created>
-      <option name="number" value="01607" />
-      <option name="presentableId" value="LOCAL-01607" />
-      <option name="project" value="LOCAL" />
-      <updated>1775120874180</updated>
     </task>
     <task id="LOCAL-01608" summary="REFACTORING: definizione del metodo getRuolo">
       <option name="closed" value="true" />
@@ -675,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775222427664</updated>
     </task>
-    <option name="localTasksCounter" value="1656" />
+    <task id="LOCAL-01656" summary="REFACTORING: definizione del metodo isNosferatuPresente">
+      <option name="closed" value="true" />
+      <created>1775229995698</created>
+      <option name="number" value="01656" />
+      <option name="presentableId" value="LOCAL-01656" />
+      <option name="project" value="LOCAL" />
+      <updated>1775229995698</updated>
+    </task>
+    <option name="localTasksCounter" value="1657" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
     <MESSAGE value="REDFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
@@ -715,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
     <MESSAGE value="ROSSO: testCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testCreatureOmbra riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCreatureOmbra riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatuPresente" />
   </component>
 </project>

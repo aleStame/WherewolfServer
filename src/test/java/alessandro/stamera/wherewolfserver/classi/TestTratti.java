@@ -39,9 +39,11 @@ public final class TestTratti
     {
         verificaLupiAssenti();
         verificaFalso(isProtezioneNegromantePresente());
+        verificaFalso(tratti.isProtezioneNosferatuPresente());
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
+        verificaVero(tratti.isProtezioneNosferatuPresente());
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
