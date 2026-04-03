@@ -54,10 +54,10 @@ public final class TestLadra
     @Test public void testAttaccoNosferatu()
     {
         verificaProtetto();
-        assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO);
+        verificaAttaccoNosferatu(FALLITO);
         verificaPotereUtilizzato();
         verificaNonProtetto();
-        assertThat(ruolo.attaccoNosferatu()).isEqualTo(RIUSCITO);
+        verificaAttaccoNosferatu(RIUSCITO);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
@@ -74,6 +74,8 @@ public final class TestLadra
     {
         assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(esito);
     }
+
+    private void verificaAttaccoNosferatu(EsitoAttacco esito) { assertThat(ruolo.attaccoNosferatu()).isEqualTo(esito); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
