@@ -65,7 +65,7 @@ public final class TestRuolo
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nome)
     {
-        ruolo.sceltaAngeloCustode();
+        sceltaAngeloCustode();
         verificaVero(isAmato());
         verificaProtetto();
         verificaVero(isProtezioneLupiPresente());
@@ -118,7 +118,7 @@ public final class TestRuolo
 
     @Test public void testAttaccoNosferatuAmato()
     {
-        ruolo.sceltaAngeloCustode();
+        sceltaAngeloCustode();
         assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO);
         verificaAssenzaProtezioni();
     }
@@ -129,6 +129,8 @@ public final class TestRuolo
         verificaFalso(maledizione());
         verificaFalso(isMaledetto());
     }
+
+    private void sceltaAngeloCustode() { ruolo.sceltaAngeloCustode(); }
 
     private boolean maledizione() { return ruolo.maledizione(); }
 
