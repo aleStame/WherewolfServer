@@ -93,7 +93,7 @@ public final class TestRuolo
     @CsvSource( { "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" } )
     public void testAttaccoLupoRomeo(String nome)
     {
-        ruolo.romeizzazione();
+        romeizzazione();
         verificaProtetto();
         verificaAttaccoLupiRiuscito(nome);
     }
@@ -125,10 +125,12 @@ public final class TestRuolo
 
     @Test public void testAttaccoNegromanteRomeo()
     {
-        ruolo.romeizzazione();
+        romeizzazione();
         verificaFalso(maledizione());
         verificaFalso(isMaledetto());
     }
+
+    private void romeizzazione() { ruolo.romeizzazione(); }
 
     private void sceltaAngeloCustode() { ruolo.sceltaAngeloCustode(); }
 
