@@ -237,15 +237,20 @@ public class Ruolo
     {
         EsitoAttacco risultato = RIUSCITO;
         if(isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo()) risultato = FALLITO;
+        gestioneConseguenzeNosferatu(risultato);
+        return risultato;
+    }
+
+    boolean isRomeo() { return romeo; }
+
+    private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
+    {
         switch(risultato)
         {
             case RIUSCITO -> trasformazioneNosferatu();
             case FALLITO -> perdiProtezioni();
         }
-        return risultato;
     }
-
-    boolean isRomeo() { return romeo; }
 
     private void trasformazioneNosferatu()
     {
