@@ -49,7 +49,7 @@ public final class TestRuolo
         verificaNessunVoto();
         verificaVero(ruolo.maledizione());
         verificaVoti(1);
-        verificaVero(ruolo.isMaledetto());
+        verificaVero(isMaledetto());
         assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
@@ -127,8 +127,10 @@ public final class TestRuolo
     {
         ruolo.romeizzazione();
         ruolo.maledizione();
-        verificaFalso(ruolo.isMaledetto());
+        verificaFalso(isMaledetto());
     }
+
+    private boolean isMaledetto() { return ruolo.isMaledetto(); }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
