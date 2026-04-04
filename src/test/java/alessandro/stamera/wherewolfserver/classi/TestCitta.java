@@ -40,6 +40,8 @@ public final class TestCitta
 
     @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
 
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
