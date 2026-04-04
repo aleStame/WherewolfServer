@@ -81,6 +81,8 @@ public final class TestGoblin
         verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
     }
 
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
