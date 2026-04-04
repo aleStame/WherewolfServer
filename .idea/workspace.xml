@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAmanti riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNosferatu riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLupo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,22 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01621" summary="REFACTORING: definizione del metodo verificaAttaccoFallito">
-      <option name="closed" value="true" />
-      <created>1775124776285</created>
-      <option name="number" value="01621" />
-      <option name="presentableId" value="LOCAL-01621" />
-      <option name="project" value="LOCAL" />
-      <updated>1775124776285</updated>
-    </task>
-    <task id="LOCAL-01622" summary="VERDE DIRETTO: testAttaccoLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1775134888613</created>
-      <option name="number" value="01622" />
-      <option name="presentableId" value="LOCAL-01622" />
-      <option name="project" value="LOCAL" />
-      <updated>1775134888613</updated>
     </task>
     <task id="LOCAL-01623" summary="REFACTORING: definizione del metodo verificaAttacco">
       <option name="closed" value="true" />
@@ -672,7 +658,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775298891461</updated>
     </task>
-    <option name="localTasksCounter" value="1670" />
+    <task id="LOCAL-01670" summary="VERDE DIRETTO: testAmanti riuscito">
+      <option name="closed" value="true" />
+      <created>1775298983485</created>
+      <option name="number" value="01670" />
+      <option name="presentableId" value="LOCAL-01670" />
+      <option name="project" value="LOCAL" />
+      <updated>1775298983485</updated>
+    </task>
+    <task id="LOCAL-01671" summary="VERDE DIRETTO: testNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1775299127537</created>
+      <option name="number" value="01671" />
+      <option name="presentableId" value="LOCAL-01671" />
+      <option name="project" value="LOCAL" />
+      <updated>1775299127537</updated>
+    </task>
+    <option name="localTasksCounter" value="1672" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -687,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testUtilizzoPotereLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaProtetto" />
@@ -712,6 +713,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo trasformazioneNosferatu" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAmanti riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAmanti riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testNosferatu riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNosferatu riuscito" />
   </component>
 </project>
