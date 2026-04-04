@@ -78,7 +78,7 @@ public final class TestRuolo
     {
         Fazione fazione = getFazione();
         ruolo.gildata();
-        assertThat(getFazione()).isEqualTo(fazione);
+        verificaFazione(fazione);
     }
 
     @ParameterizedTest
@@ -105,7 +105,7 @@ public final class TestRuolo
     {
         verificaAttaccoRiuscito(ruolo.attaccoNosferatu());
         verificaVero(isTrattoPresente(NON_MORTO));
-        assertThat(getFazione()).isEqualTo(NOSFERATU);
+        verificaFazione(NOSFERATU);
     }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
@@ -143,6 +143,8 @@ public final class TestRuolo
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaFazione(Fazione risultato) { assertThat(getFazione()).isEqualTo(risultato); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
 
