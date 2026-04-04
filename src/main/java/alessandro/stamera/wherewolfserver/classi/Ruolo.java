@@ -236,7 +236,7 @@ public class Ruolo
     public EsitoAttacco attaccoNosferatu()
     {
         EsitoAttacco risultato = RIUSCITO;
-        if(isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo()) risultato = FALLITO;
+        if(isAttaccoNosferatuFallito()) risultato = FALLITO;
         gestioneConseguenzeNosferatu(risultato);
         return risultato;
     }
@@ -251,6 +251,8 @@ public class Ruolo
             case FALLITO -> perdiProtezioni();
         }
     }
+
+    private boolean isAttaccoNosferatuFallito() { return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo(); }
 
     private void trasformazioneNosferatu()
     {
