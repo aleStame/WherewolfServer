@@ -104,8 +104,8 @@ public final class TestRuolo
     @Test public void testAttaccoNosferatu()
     {
         verificaAttaccoRiuscito(ruolo.attaccoNosferatu());
-        verificaVero(ruolo.isTrattoPresente(NON_MORTO));
-        assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
+        verificaVero(isTrattoPresente(NON_MORTO));
+        assertThat(getFazione()).isEqualTo(NOSFERATU);
     }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
@@ -122,7 +122,7 @@ public final class TestRuolo
         verificaFalso(isProtezioneNegromantePresente());
     }
 
-    private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
+    private void verificaProtetto() { verificaVero(isTrattoPresente(PROTETTO)); }
 
     private void verificaAccusato() { verificaVero(isAccusato()); }
 
@@ -149,5 +149,7 @@ public final class TestRuolo
     private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
     private boolean isProtezioneNegromantePresente() { return ruolo.isProtezioneNegromantePresente(); }
+
+    private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
 
 }
