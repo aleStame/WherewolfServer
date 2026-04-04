@@ -47,7 +47,7 @@ public final class TestRuolo
         verificaVoti(ESEMPIO_VOTI);
         ruolo.annullaVoti();
         verificaNessunVoto();
-        verificaVero(ruolo.maledizione());
+        verificaVero(maledizione());
         verificaVoti(1);
         verificaVero(isMaledetto());
         assertThat(ruolo.getAura()).isEqualTo(NERA);
@@ -126,9 +126,11 @@ public final class TestRuolo
     @Test public void testAttaccoNegromanteRomeo()
     {
         ruolo.romeizzazione();
-        ruolo.maledizione();
+        verificaFalso(maledizione());
         verificaFalso(isMaledetto());
     }
+
+    private boolean maledizione() { return ruolo.maledizione(); }
 
     private boolean isMaledetto() { return ruolo.isMaledetto(); }
 
