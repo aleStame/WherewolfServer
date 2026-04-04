@@ -79,7 +79,7 @@ public final class TestRuolo
         verificaVero(ruolo.isRomeo());
         verificaProtetto();
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo("Nosferatu")));
-        verificaAttacco(ruolo.attaccoNosferatu(), FALLITO);
+        verificaAttacco(attaccoNosferatu(), FALLITO);
     }
 
     @Test public void testGildata()
@@ -111,7 +111,7 @@ public final class TestRuolo
 
     @Test public void testAttaccoNosferatu()
     {
-        verificaAttaccoRiuscito(ruolo.attaccoNosferatu());
+        verificaAttaccoRiuscito(attaccoNosferatu());
         verificaVero(isTrattoPresente(NON_MORTO));
         verificaFazione(NOSFERATU);
     }
@@ -119,7 +119,7 @@ public final class TestRuolo
     @Test public void testAttaccoNosferatuAmato()
     {
         sceltaAngeloCustode();
-        assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO);
+        assertThat(attaccoNosferatu()).isEqualTo(FALLITO);
         verificaAssenzaProtezioni();
     }
 
@@ -129,6 +129,8 @@ public final class TestRuolo
         verificaFalso(maledizione());
         verificaFalso(isMaledetto());
     }
+
+    private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 
