@@ -9,7 +9,9 @@ import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 
 public final class TestRuolo
 {
@@ -99,7 +101,12 @@ public final class TestRuolo
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoLupiRiuscito(nome); }
 
-    @Test public void testAttaccoNosferatu() { verificaAttaccoRiuscito(ruolo.attaccoNosferatu()); }
+    @Test public void testAttaccoNosferatu()
+    {
+        verificaAttaccoRiuscito(ruolo.attaccoNosferatu());
+        verificaVero(ruolo.isTrattoPresente(NON_MORTO));
+        assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
+    }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
