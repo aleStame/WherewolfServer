@@ -62,7 +62,7 @@ public final class TestLadra
         verificaPotereUtilizzato();
         verificaNonProtetto();
         verificaAttaccoNosferatu(RIUSCITO);
-        verificaVero(ruolo.isTrattoPresente(NON_MORTO));
+        verificaVero(isTrattoPresente(NON_MORTO));
         assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
         assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA);
     }
@@ -93,7 +93,9 @@ public final class TestLadra
 
     private void verificaNonProtetto() { verificaFalso(isProtetto()); }
 
-    private boolean isProtetto() { return ruolo.isTrattoPresente(PROTETTO); }
+    private boolean isProtetto() { return isTrattoPresente(PROTETTO); }
+
+    private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
 
     private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
     {
