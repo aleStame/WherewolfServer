@@ -123,6 +123,13 @@ public final class TestRuolo
         verificaAssenzaProtezioni();
     }
 
+    @Test public void testAttaccoNegromanteRomeo()
+    {
+        ruolo.romeizzazione();
+        ruolo.maledizione();
+        verificaFalso(ruolo.isMaledetto());
+    }
+
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
     private void verificaAttaccoRiuscito(EsitoAttacco esito) { verificaAttacco(esito, RIUSCITO); }

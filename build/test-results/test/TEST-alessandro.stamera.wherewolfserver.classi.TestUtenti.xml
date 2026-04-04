@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestUtenti" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-04-04T15:58:27" hostname="ALESSANDRO" time="3.513">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestUtenti" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-04-04T16:04:04" hostname="ALESSANDRO" time="8.802">
   <properties/>
-  <testcase name="cambioPasswordRiuscito()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="2.823"/>
-  <testcase name="[1] username=andrea, password=andrea1998" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.041"/>
-  <testcase name="[2] username=marco, password=passwordsecret" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.028"/>
-  <testcase name="[3] username=bruce, password=batmanbeyond" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.033"/>
-  <testcase name="disiscrizioneRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.033"/>
-  <testcase name="registrazioneNonRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.037"/>
-  <testcase name="[1] username=andrea, password=pwdsbagliata" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.034"/>
+  <testcase name="cambioPasswordRiuscito()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="8.272"/>
+  <testcase name="[1] username=andrea, password=andrea1998" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.019"/>
+  <testcase name="[2] username=marco, password=passwordsecret" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.009"/>
+  <testcase name="[3] username=bruce, password=batmanbeyond" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.005"/>
+  <testcase name="disiscrizioneRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.025"/>
+  <testcase name="registrazioneNonRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.023"/>
+  <testcase name="[1] username=andrea, password=pwdsbagliata" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.023"/>
   <testcase name="[2] username=gino, password=batmanbeyond" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.012"/>
-  <testcase name="[3] username=utentefinto, password=pwdfinta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.014"/>
-  <testcase name="registrazioneRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.02"/>
-  <testcase name="[1] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.039"/>
-  <testcase name="[2] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.03"/>
-  <testcase name="[3] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.015"/>
-  <testcase name="[1] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.065"/>
-  <testcase name="[2] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.019"/>
+  <testcase name="[3] username=utentefinto, password=pwdfinta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.01"/>
+  <testcase name="registrazioneRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.015"/>
+  <testcase name="[1] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.044"/>
+  <testcase name="[2] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.079"/>
+  <testcase name="[3] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.021"/>
+  <testcase name="[1] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.098"/>
+  <testcase name="[2] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta" classname="alessandro.stamera.wherewolfserver.classi.TestUtenti" time="0.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
