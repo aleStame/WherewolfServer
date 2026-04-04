@@ -32,6 +32,8 @@ public final class TestVillaggio
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
