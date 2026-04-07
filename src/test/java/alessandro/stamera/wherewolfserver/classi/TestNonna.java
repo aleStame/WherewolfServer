@@ -31,12 +31,14 @@ public final class TestNonna
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
