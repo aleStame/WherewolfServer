@@ -15,7 +15,7 @@ public final class TestNonna
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
@@ -24,7 +24,7 @@ public final class TestNonna
         String descrizione =
             "Non ci sono più creature dell'ombra ed almeno un giocatore è in gioco. Non ci sono Criminali in gioco a fine partita o, se almeno" +
             " un Criminale è ancora in gioco, lo è anche almeno uno tra Guardia e Altra guardia";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
@@ -32,6 +32,8 @@ public final class TestNonna
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
