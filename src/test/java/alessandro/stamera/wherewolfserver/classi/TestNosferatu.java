@@ -28,6 +28,8 @@ public final class TestNosferatu
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
+
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     @Test public void testCreatureOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
