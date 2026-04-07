@@ -19,6 +19,14 @@ public final class TestNonna
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Non ci sono più creature dell'ombra ed almeno un giocatore è in gioco. Non ci sono Criminali in gioco a fine partita o, se almeno" +
+            " un Criminale è ancora in gioco, lo è anche almeno uno tra Guardia e Altra guardia";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
