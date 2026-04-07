@@ -241,7 +241,7 @@ public class Ruolo
         return risultato;
     }
 
-    public boolean isProtezioneNosferatuPresente() { return false; }
+    public boolean isNonna() { return false; }
 
     boolean isRomeo() { return romeo; }
 
