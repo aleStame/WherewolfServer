@@ -58,6 +58,8 @@ public final class TestBardo
 
     @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
 
+    @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
