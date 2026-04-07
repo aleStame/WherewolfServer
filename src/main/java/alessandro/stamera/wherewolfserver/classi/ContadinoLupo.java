@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 
@@ -10,19 +12,21 @@ public final class ContadinoLupo extends Contadino
 
     @Override public boolean isContadinoLupo() { return true; }
 
-    @Override public boolean attacco(Ruolo ruolo)
+    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
-        boolean esito = super.attacco(ruolo);
-        if(esito && ruolo.isLupo())
-        {
-            aggiungiTrattiOscuri();
-            esito = false;
-        }
+        EsitoAttacco esito = super.attaccoLupi(ruolo);
+        if(esito == RIUSCITO) esito = attivazioneLupo();
         return esito;
     }
 
     public static Ruolo getInstance() { return new ContadinoLupo(); }
 
     private void aggiungiTrattiOscuri() { aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO); }
+
+    private EsitoAttacco attivazioneLupo()
+    {
+        aggiungiTrattiOscuri();
+        return FALLITO;
+    }
 
 }

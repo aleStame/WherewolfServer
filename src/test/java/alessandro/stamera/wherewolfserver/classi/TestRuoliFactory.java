@@ -8,7 +8,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestRuoliFactory
 {
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario, Contadino discendente dei lupi" })
     public void testLupi(String nome) { verificaPresenza(FACTORY.getLupi(), getRuolo(nome)); }
 
     @ParameterizedTest @CsvSource({ "Goblin, Guaritore, Leprecauno" })

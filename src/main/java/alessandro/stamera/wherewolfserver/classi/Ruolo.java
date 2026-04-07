@@ -1,10 +1,14 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 
 public class Ruolo
 {
@@ -184,12 +188,11 @@ public class Ruolo
 
     public boolean isLadra() { return false; }
 
-    public boolean attacco(Ruolo ruolo)
+    public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
-        boolean esito = !isProtezionePresente(ruolo);
-        if(isAmato()) perdiProtezioni();
-        if(!esito && romeo) esito = true;
-        return esito;
+        EsitoAttacco risultato = RIUSCITO;
+        if(isProtezionePresente(ruolo)) risultato = getEsitoAttaccoRuoloProtetto(risultato);
+        return risultato;
     }
 
     public boolean isProtezionePresente(Ruolo ruolo) { return tratti.isProtezionePresente(ruolo); }
@@ -204,7 +207,7 @@ public class Ruolo
 
     public void aggiungiTratti(Tratto... tratti) { for(Tratto tratto : tratti) this.tratti.aggiungi(tratto); }
 
-    public void maledizione() { tratti.maledizione(); }
+    public boolean maledizione() { return tratti.maledizione(); }
 
     public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
 
@@ -228,6 +231,37 @@ public class Ruolo
 
     public boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
 
+    public boolean isNosferatu() { return false; }
+
+    public EsitoAttacco attaccoNosferatu()
+    {
+        EsitoAttacco risultato = RIUSCITO;
+        if(isAttaccoNosferatuFallito()) risultato = FALLITO;
+        gestioneConseguenzeNosferatu(risultato);
+        return risultato;
+    }
+
+    public boolean isProtezioneNosferatuPresente() { return false; }
+
+    boolean isRomeo() { return romeo; }
+
+    private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
+    {
+        switch(risultato)
+        {
+            case RIUSCITO -> trasformazioneNosferatu();
+            case FALLITO -> perdiProtezioni();
+        }
+    }
+
+    private boolean isAttaccoNosferatuFallito() { return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo(); }
+
+    private void trasformazioneNosferatu()
+    {
+        aggiungiTratti(NON_MORTO);
+        cambiaFazione(NOSFERATU);
+    }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
@@ -238,5 +272,12 @@ public class Ruolo
     private void setAmato(boolean amato) { this.amato = amato; }
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
+
+    private EsitoAttacco getEsitoAttaccoRuoloProtetto(EsitoAttacco risultato)
+    {
+        if(isAmato()) perdiProtezioni();
+        if(!isRomeo()) risultato = FALLITO;
+        return risultato;
+    }
 
 }

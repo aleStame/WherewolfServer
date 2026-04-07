@@ -31,7 +31,7 @@ public final class TestTratti
     @Test public void testMaledizione()
     {
         verificaFalso(isMaledetto());
-        tratti.maledizione();
+        verificaVero(tratti.maledizione());
         verificaVero(isMaledetto());
     }
 
@@ -39,12 +39,16 @@ public final class TestTratti
     {
         verificaLupiAssenti();
         verificaFalso(isProtezioneNegromantePresente());
+        verificaFalso(isProtezioneNosferatuPresente());
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
+        verificaVero(isProtezioneNosferatuPresente());
     }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
+
+    private boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isPresente(tratto)); }
 

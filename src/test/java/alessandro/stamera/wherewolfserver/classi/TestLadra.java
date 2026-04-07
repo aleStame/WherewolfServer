@@ -2,8 +2,16 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -26,7 +34,7 @@ public final class TestLadra
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
+    @Test public void testAura() { verificaAuraBianca(getAura()); }
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
@@ -36,29 +44,74 @@ public final class TestLadra
 
     @Test public void testLadra() { verificaVero(ruolo.isLadra()); }
 
-    @Test public void testUtilizzoPotere()
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testUtilizzoPotereLupi(String nome)
     {
-        verificaFalso(isPotereUtilizzato());
-        Ruolo[] lupi = FACTORY.getLupi();
-        for(Ruolo lupo : lupi) verificaVero(isProtezionePresente(lupo));
-        ruolo.utilizzaPotere();
-        verificaVero(isPotereUtilizzato());
-        verificaFalso(ruolo.isTrattoPresente(PROTETTO));
-        for(Ruolo lupo : lupi) verificaFalso(isProtezionePresente(lupo));
+        verificaProtetto();
+        verificaAttaccoLupi(nome, FALLITO);
+        verificaPotereUtilizzato();
+        verificaNonProtetto();
+        verificaAttaccoLupi(nome, RIUSCITO);
+    }
+
+    @Test public void testAttaccoNosferatu()
+    {
+        verificaProtetto();
+        verificaAttaccoNosferatu(FALLITO);
+        verificaPotereUtilizzato();
+        verificaNonProtetto();
+        verificaAttaccoNosferatu(RIUSCITO);
+        verificaVero(isTrattoPresente(NON_MORTO));
+        assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
+        assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA);
+    }
+
+    @Test public void testAttaccoNegromante()
+    {
+        verificaProtetto();
+        verificaFalso(maledizione());
+        verificaPotereUtilizzato();
+        verificaFalso(isMaledetto());
+        verificaNonProtetto();
+        verificaVero(maledizione());
+        verificaVero(isMaledetto());
+        verificaAura(getAura(), NERA);
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+    private Aura getAura() { return ruolo.getAura(); }
+
+    private boolean maledizione() { return ruolo.maledizione(); }
+
+    private boolean isMaledetto() { return ruolo.isMaledetto(); }
+
+    private void verificaProtetto() { verificaVero(isProtetto()); }
+
+    private void verificaPotereUtilizzato() { verificaVero(ruolo.isPotereUtilizzato()); }
+
+    private void verificaNonProtetto() { verificaFalso(isProtetto()); }
+
+    private boolean isProtetto() { return isTrattoPresente(PROTETTO); }
+
+    private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
+
+    private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
+    {
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(esito);
+    }
+
+    private void verificaAttaccoNosferatu(EsitoAttacco esito) { assertThat(ruolo.attaccoNosferatu()).isEqualTo(esito); }
+
+    private void verificaAuraBianca(Aura aura) { verificaAura(aura, BIANCA); }
+
+    private void verificaAura(Aura valore, Aura risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
-
-    private boolean isProtezionePresente(Ruolo ruolo) { return this.ruolo.isProtezionePresente(ruolo); }
 
 }

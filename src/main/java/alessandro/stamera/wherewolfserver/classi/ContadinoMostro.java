@@ -1,5 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.MORTO;
+
 public final class ContadinoMostro extends Contadino
 {
 
@@ -10,6 +13,15 @@ public final class ContadinoMostro extends Contadino
     }
 
     @Override public boolean isContadinoMostro() { return true; }
+
+    @Override public EsitoAttacco attaccoNosferatu() { return MORTO; }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
+    {
+        EsitoAttacco esito = MORTO;
+        if(isRomeo()) esito = FALLITO;
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new ContadinoMostro(); }
 

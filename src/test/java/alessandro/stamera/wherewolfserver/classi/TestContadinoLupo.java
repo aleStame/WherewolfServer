@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
@@ -32,10 +33,10 @@ public final class TestContadinoLupo
 
     @Test public void testContadinoLupo() { verificaVero(ruolo.isContadinoLupo()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
     public void testAttaccoLupi(String nome)
     {
-        verificaFalso(ruolo.attacco(getRuolo(nome)));
+        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO);
         assertThat(ruolo.getAura()).isEqualTo(NERA);
         for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
     }

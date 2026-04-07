@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static java.util.Arrays.stream;
+import java.util.function.Predicate;
 
 public final class Protezioni
 {
@@ -25,8 +26,12 @@ public final class Protezioni
         for(Ruolo ruolo : ruoli) if(!this.ruoli.contains(ruolo)) this.ruoli.add(ruolo);
     }
 
-    public boolean isNegromantePresente() { return ruoli.stream().anyMatch(Ruolo::isNegromante); }
+    public boolean isNegromantePresente() { return cercaRuolo(Ruolo::isNegromante); }
 
     public boolean isProtezioneLupiPresente() { return stream(FACTORY.getLupi()).allMatch(ruoli::contains); }
+
+    public boolean isNosferatuPresente() { return cercaRuolo(Ruolo::isNosferatu); }
+
+    private boolean cercaRuolo(Predicate<Ruolo> condizione) { return ruoli.stream().anyMatch(condizione); }
 
 }

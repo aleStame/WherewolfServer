@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 
 public final class Eremita extends Villaggio
 {
@@ -11,6 +12,8 @@ public final class Eremita extends Villaggio
     }
 
     @Override public boolean isEremita() { return true; }
+
+    @Override public EsitoAttacco attaccoNosferatu() { return FALLITO; }
 
     public static Ruolo getInstance() { return new Eremita(); }
 

@@ -2,7 +2,11 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
@@ -13,7 +17,7 @@ public final class TestContadinoMostro
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Contadino mostro"); }
+    @BeforeEach public void setUp() { ruolo = getRuolo("Contadino mostro"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
@@ -43,8 +47,30 @@ public final class TestContadinoMostro
 
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
+    @Test public void testAttaccoNosferatu() { verificaAttaccoMorto(ruolo.attaccoNosferatu()); }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testAttaccoLupi(String nome) { verificaAttaccoMorto(attaccoLupi(nome)); }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testAttaccoLupiRomeo(String nome)
+    {
+        ruolo.romeizzazione();
+        verificaAttacco(attaccoLupi(nome), FALLITO);
+    }
+
+    private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private EsitoAttacco attaccoLupi(String nome) { return ruolo.attaccoLupi(getRuolo(nome)); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }

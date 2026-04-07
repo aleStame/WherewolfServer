@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,7 +33,7 @@ public final class TestLeprecauno
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+    @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
@@ -71,6 +72,20 @@ public final class TestLeprecauno
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
+
+    @Test public void testAttaccoNegromante()
+    {
+        verificaFalso(ruolo.maledizione());
+        verificaFalso(ruolo.isMaledetto());
+        int numeroVoti = 2;
+        ruolo.incrementaVoti(numeroVoti);
+        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
+        verificaAuraBianca(ruolo.getAura());
+    }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
