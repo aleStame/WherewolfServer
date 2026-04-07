@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testEremita riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testGuardia riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestNonna.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestNonna.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" afterDir="false" />
@@ -424,14 +425,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-01670" summary="VERDE DIRETTO: testAmanti riuscito">
-      <option name="closed" value="true" />
-      <created>1775298983485</created>
-      <option name="number" value="01670" />
-      <option name="presentableId" value="LOCAL-01670" />
-      <option name="project" value="LOCAL" />
-      <updated>1775298983485</updated>
-    </task>
     <task id="LOCAL-01671" summary="VERDE DIRETTO: testNosferatu riuscito">
       <option name="closed" value="true" />
       <created>1775299127537</created>
@@ -816,7 +809,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775571294906</updated>
     </task>
-    <option name="localTasksCounter" value="1719" />
+    <task id="LOCAL-01719" summary="VERDE DIRETTO: testGuardia riuscito">
+      <option name="closed" value="true" />
+      <created>1775571607868</created>
+      <option name="number" value="01719" />
+      <option name="presentableId" value="LOCAL-01719" />
+      <option name="project" value="LOCAL" />
+      <updated>1775571607868</updated>
+    </task>
+    <option name="localTasksCounter" value="1720" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -831,7 +832,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
@@ -856,6 +856,7 @@
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEremita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEremita riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuardia riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGuardia riuscito" />
   </component>
 </project>
