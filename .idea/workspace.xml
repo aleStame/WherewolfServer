@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloLune riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMistico non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Nonna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Nonna.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,14 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01656" summary="REFACTORING: definizione del metodo isNosferatuPresente">
-      <option name="closed" value="true" />
-      <created>1775229995698</created>
-      <option name="number" value="01656" />
-      <option name="presentableId" value="LOCAL-01656" />
-      <option name="project" value="LOCAL" />
-      <updated>1775229995698</updated>
     </task>
     <task id="LOCAL-01657" summary="ROSSO: testCreatureOmbra non riuscito">
       <option name="closed" value="true" />
@@ -672,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775566424330</updated>
     </task>
-    <option name="localTasksCounter" value="1705" />
+    <task id="LOCAL-01705" summary="ROSSO: testMistico non riuscito">
+      <option name="closed" value="true" />
+      <created>1775567141615</created>
+      <option name="number" value="01705" />
+      <option name="presentableId" value="LOCAL-01705" />
+      <option name="project" value="LOCAL" />
+      <updated>1775567141615</updated>
+    </task>
+    <option name="localTasksCounter" value="1706" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -687,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoNegromanteRomeo" />
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
     <MESSAGE value="REFACTORING: definizione del metodo sceltaAngeloCustode" />
@@ -712,6 +713,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="ROSSO: testControlloLune non riuscito" />
     <MESSAGE value="VERDE: testControlloLune riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloLune riuscito" />
+    <MESSAGE value="ROSSO: testMistico non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMistico non riuscito" />
   </component>
 </project>
