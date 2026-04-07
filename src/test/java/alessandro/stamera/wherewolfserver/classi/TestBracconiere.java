@@ -6,7 +6,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestBracconiere
+public final class TestBracconiere
 {
 
     private static final String NOME = "Bracconiere";
@@ -58,6 +58,8 @@ public class TestBracconiere
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
     @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
+
+    @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
