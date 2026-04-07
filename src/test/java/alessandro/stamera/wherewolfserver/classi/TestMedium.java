@@ -52,6 +52,8 @@ public final class TestMedium
 
     @Test public void testMedium() { verificaVero(ruolo.isMedium()); }
 
+    @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
