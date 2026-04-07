@@ -16,6 +16,8 @@ public final class Nonna extends Villaggio
         );
     }
 
+    @Override public boolean isNonna() { return true; }
+
     public static Ruolo getInstance() { return new Nonna(); }
 
 }
