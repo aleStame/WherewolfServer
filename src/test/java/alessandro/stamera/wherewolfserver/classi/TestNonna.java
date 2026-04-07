@@ -21,6 +21,8 @@ public final class TestNonna
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testControlloLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }

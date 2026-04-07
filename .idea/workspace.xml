@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestNonna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestNonna.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraBianca" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,22 +279,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01652" summary="VERDE DIRETTO: testAttaccoNegromante riuscito">
-      <option name="closed" value="true" />
-      <created>1775221040119</created>
-      <option name="number" value="01652" />
-      <option name="presentableId" value="LOCAL-01652" />
-      <option name="project" value="LOCAL" />
-      <updated>1775221040119</updated>
-    </task>
-    <task id="LOCAL-01653" summary="REFACTORING: definizione del metodo verificaNumeroIntero">
-      <option name="closed" value="true" />
-      <created>1775221669324</created>
-      <option name="number" value="01653" />
-      <option name="presentableId" value="LOCAL-01653" />
-      <option name="project" value="LOCAL" />
-      <updated>1775221669324</updated>
     </task>
     <task id="LOCAL-01654" summary="ROSSO: testCreatureOmbra non riuscito">
       <option name="closed" value="true" />
@@ -674,7 +656,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775556407851</updated>
     </task>
-    <option name="localTasksCounter" value="1701" />
+    <task id="LOCAL-01701" summary="VERDE DIRETTO: testControlloMedium riuscito">
+      <option name="closed" value="true" />
+      <created>1775556609038</created>
+      <option name="number" value="01701" />
+      <option name="presentableId" value="LOCAL-01701" />
+      <option name="project" value="LOCAL" />
+      <updated>1775556609038</updated>
+    </task>
+    <task id="LOCAL-01702" summary="REFACTORING: definizione del metodo verificaAuraBianca">
+      <option name="closed" value="true" />
+      <created>1775556813475</created>
+      <option name="number" value="01702" />
+      <option name="presentableId" value="LOCAL-01702" />
+      <option name="project" value="LOCAL" />
+      <updated>1775556813475</updated>
+    </task>
+    <option name="localTasksCounter" value="1703" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,8 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoNosferatuAmato non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoNosferatuAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneConseguenzeNosferatu" />
     <MESSAGE value="REFACTORING: definizione del metodo isAttaccoNosferatuFallito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNegromanteRomeo" />
@@ -714,6 +710,8 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
+    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraBianca" />
   </component>
 </project>
