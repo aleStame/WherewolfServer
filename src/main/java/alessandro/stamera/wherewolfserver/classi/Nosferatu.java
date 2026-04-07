@@ -9,7 +9,7 @@ public final class Nosferatu extends Ruolo
 
     private Nosferatu()
     {
-        super("Nosferatu", NOSFERATU, NERA, null, 0, false);
+        super("Nosferatu", NOSFERATU, NERA, null, 3, false);
         aggiungiTratti(CREATURA_OMBRA);
     }
 
