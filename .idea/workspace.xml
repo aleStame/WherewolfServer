@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testControlloLune non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloLune riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,14 +279,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01655" summary="VERDE: testCreatureOmbra riuscito">
-      <option name="closed" value="true" />
-      <created>1775222427664</created>
-      <option name="number" value="01655" />
-      <option name="presentableId" value="LOCAL-01655" />
-      <option name="project" value="LOCAL" />
-      <updated>1775222427664</updated>
     </task>
     <task id="LOCAL-01656" summary="REFACTORING: definizione del metodo isNosferatuPresente">
       <option name="closed" value="true" />
@@ -672,7 +664,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775557031658</updated>
     </task>
-    <option name="localTasksCounter" value="1704" />
+    <task id="LOCAL-01704" summary="VERDE: testControlloLune riuscito">
+      <option name="closed" value="true" />
+      <created>1775566424329</created>
+      <option name="number" value="01704" />
+      <option name="presentableId" value="LOCAL-01704" />
+      <option name="project" value="LOCAL" />
+      <updated>1775566424330</updated>
+    </task>
+    <option name="localTasksCounter" value="1705" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -687,7 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isAttaccoNosferatuFallito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNegromanteRomeo" />
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
@@ -712,6 +711,7 @@
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="ROSSO: testControlloLune non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testControlloLune non riuscito" />
+    <MESSAGE value="VERDE: testControlloLune riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloLune riuscito" />
   </component>
 </project>
