@@ -1,9 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
+
 public final class Nonna extends Villaggio
 {
 
-    private Nonna() { super("Nonna", null, null, 0, true); }
+    private Nonna() { super("Nonna", BIANCA, null, 0, true); }
 
     public static Ruolo getInstance() { return new Nonna(); }
 
