@@ -18,7 +18,7 @@ public final class TestNosferatu
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU); }
 
@@ -36,7 +36,7 @@ public final class TestNosferatu
             "La prima notte riconosce il Ghoul e individua la Megera. Dalla seconda notte, individua i giocatori uccisi quella notte, può " +
             "indicarne uno e farlo tornare in vita. Se è un lupo mannaro o il Cacciatore di vampiri, il Nosferatu viene ucciso. Se è un " +
             "mistico, non accade nulla. Altrimenti, lo riconosce e diventa una progenie vampirica con aura oscura e fazione Nosferatu";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
@@ -62,6 +62,8 @@ public final class TestNosferatu
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
