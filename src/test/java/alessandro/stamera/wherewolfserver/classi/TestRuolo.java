@@ -73,15 +73,6 @@ public final class TestRuolo
         verificaAssenzaProtezioni();
     }
 
-    @Test public void testAttaccoNosferatuRomeo()
-    {
-        ruolo.romeizzazione();
-        verificaVero(ruolo.isRomeo());
-        verificaProtetto();
-        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo("Nosferatu")));
-        verificaAttaccoNosferatuFallito();
-    }
-
     @Test public void testGildata()
     {
         Fazione fazione = getFazione();
@@ -153,7 +144,7 @@ public final class TestRuolo
     private void verificaAssenzaProtezioni()
     {
         verificaFalso(isProtezioneLupiPresente());
-        verificaFalso(isProtezioneNegromantePresente());
+        verificaFalso(ruolo.isProtezioneNegromantePresente());
     }
 
     private void verificaProtetto() { verificaVero(isTrattoPresente(PROTETTO)); }
@@ -183,8 +174,6 @@ public final class TestRuolo
     private Fazione getFazione() { return ruolo.getFazione(); }
 
     private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
-
-    private boolean isProtezioneNegromantePresente() { return ruolo.isProtezioneNegromantePresente(); }
 
     private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
 

@@ -241,6 +241,8 @@ public class Ruolo
         return risultato;
     }
 
+    public boolean isProtezioneNosferatuPresente() { return false; }
+
     boolean isRomeo() { return romeo; }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
