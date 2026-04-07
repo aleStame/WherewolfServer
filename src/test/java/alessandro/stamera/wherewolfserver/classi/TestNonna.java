@@ -33,6 +33,8 @@ public final class TestNonna
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
