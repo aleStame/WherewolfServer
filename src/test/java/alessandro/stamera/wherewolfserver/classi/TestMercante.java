@@ -37,6 +37,8 @@ public final class TestMercante
 
     @Test public void testMercante() { verificaVero(ruolo.isMercante()); }
 
+    @Test public void testOratore() { verificaFalso(ruolo.isOratore()); }
+
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
