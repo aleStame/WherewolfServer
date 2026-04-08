@@ -16,7 +16,8 @@ public enum IstanzaRuolo
     LADRA(Ladra.getInstance()), LEPRECAUNO(Leprecauno.getInstance()), LUPO_BRANCO(LupoBranco.getInstance()),
     LUPO_REIETTO(LupoReietto.getInstance()), LUPO_SOLITARIO(LupoSolitario.getInstance()), MAGO(Mago.getInstance()),
     MEDIUM(Medium.getInstance()), MEGERA(Megera.getInstance()), MERCANTE(Mercante.getInstance()), MONACO(Monaco.getInstance()),
-    NEGROMANTE(Negromante.getInstance()), NONNA(Nonna.getInstance()), NOSFERATU(Nosferatu.getInstance()), ORATORE(Oratore.getInstance());
+    NEGROMANTE(Negromante.getInstance()), NONNA(Nonna.getInstance()), NOSFERATU(Nosferatu.getInstance()), ORATORE(Oratore.getInstance()),
+    OSTE(Oste.getInstance());
 
     private final Ruolo ruolo;
 
