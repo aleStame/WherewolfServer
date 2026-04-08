@@ -31,6 +31,8 @@ public final class TestOratore
 
     @Test public void testOratore() { assertThat(ruolo.isOratore()).isTrue(); }
 
+    @Test public void testCitta() { assertThat(ruolo.isCitta()).isTrue(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
