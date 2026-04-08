@@ -14,6 +14,8 @@ public final class Oste extends Villaggio
         );
     }
 
+    @Override public boolean isOste() { return true; }
+
     public static Ruolo getInstance() { return new Oste(); }
 
 }
