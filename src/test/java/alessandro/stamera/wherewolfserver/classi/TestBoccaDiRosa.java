@@ -43,6 +43,8 @@ public final class TestBoccaDiRosa
 
     @Test public void testMercante() { verificaFalso(ruolo.isMercante()); }
 
+    @Test public void testOratore() { verificaFalso(ruolo.isOratore()); }
+
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
