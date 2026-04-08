@@ -60,6 +60,8 @@ public final class TestOste
 
     @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
 
+    @Test public void testOste() { assertThat(ruolo.isOste()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
