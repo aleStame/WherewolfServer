@@ -56,9 +56,16 @@ public final class TestRuolo
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         incrementaVoti();
-        ruolo.segnalazioneAzzeccagarbugli();
+        segnalazioneAzzeccagarbugli();
         verificaVoti(ESEMPIO_VOTI);
         verificaAccusato();
+    }
+
+    @Test public void testSegnalazioneOratore()
+    {
+        segnalazioneAzzeccagarbugli();
+        ruolo.segnalazioneOratore();
+        verificaFalso(ruolo.isAccusato());
     }
 
     @ParameterizedTest
@@ -120,6 +127,8 @@ public final class TestRuolo
         verificaFalso(maledizione());
         verificaFalso(isMaledetto());
     }
+
+    private void segnalazioneAzzeccagarbugli() { ruolo.segnalazioneAzzeccagarbugli(); }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 

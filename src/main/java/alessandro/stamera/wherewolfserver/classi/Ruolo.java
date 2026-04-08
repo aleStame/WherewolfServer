@@ -243,6 +243,10 @@ public class Ruolo
 
     public boolean isNonna() { return false; }
 
+    public boolean isOratore() { return false; }
+
+    public void segnalazioneOratore() {  libera(); }
+
     boolean isRomeo() { return romeo; }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
