@@ -19,6 +19,15 @@ public final class TestOratore
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Può votare al ballottaggio anche se è accusato. Se un altro giocatore con fazione Città dovesse andare al rogo, il rogo viene " +
+            "annullato. Se non è accusato, può segnalare uno o più giocatori durante il ballottaggio: se uno di quei giocatori dovesse andare al " +
+            "rogo, il rogo viene annullato";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
