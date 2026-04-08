@@ -5,7 +5,14 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Oste extends Villaggio
 {
 
-    private Oste() { super("Oste", BIANCA, null, 0, true); }
+    private Oste()
+    {
+        super
+        (
+    "Oste", BIANCA,
+"Ogni mattino se la Veggente quella notte ha scoperto un'aura oscura, il moderatore lo comunica pubblicamente", 0, true
+        );
+    }
 
     public static Ruolo getInstance() { return new Oste(); }
 
