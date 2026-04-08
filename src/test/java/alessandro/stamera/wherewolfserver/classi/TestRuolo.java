@@ -61,6 +61,13 @@ public final class TestRuolo
         verificaAccusato();
     }
 
+    @Test public void testSegnalazioneOratore()
+    {
+        ruolo.segnalazioneAzzeccagarbugli();
+        ruolo.segnalazioneOratore();
+        verificaFalso(ruolo.isAccusato());
+    }
+
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nome)

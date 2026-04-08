@@ -245,6 +245,8 @@ public class Ruolo
 
     public boolean isOratore() { return false; }
 
+    public void segnalazioneOratore() { }
+
     boolean isRomeo() { return romeo; }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
