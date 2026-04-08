@@ -34,6 +34,8 @@ public final class TestOste
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
