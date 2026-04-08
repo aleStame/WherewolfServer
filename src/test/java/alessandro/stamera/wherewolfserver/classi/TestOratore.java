@@ -23,6 +23,8 @@ public final class TestOratore
 
     @Test public void testAzzeccagarbugli() { assertThat(ruolo.isAzzeccagarbugli()).isFalse(); }
 
+    @Test public void testBoccaDiRosa() { assertThat(ruolo.isBoccaDiRosa()).isFalse(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }
