@@ -15,14 +15,19 @@ public final class TestOste
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
     @Test public void testDescrizione()
     {
-        String descrizione = "Ogni mattino se la Veggente quella notte ha scoperto un'aura oscura, il moderatore lo comunica pubblicamente";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa
+        (
+            ruolo.getDescrizione(),
+    "Ogni mattino se la Veggente quella notte ha scoperto un'aura oscura, il moderatore lo comunica pubblicamente"
+        );
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
