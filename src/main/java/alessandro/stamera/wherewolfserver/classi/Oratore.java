@@ -7,6 +7,8 @@ public final class Oratore extends Citta
 
     private Oratore() { super("Oratore", BIANCA, null); }
 
+    @Override public boolean isOratore() { return true; }
+
     public static Ruolo getInstance() { return new Oratore(); }
 
 }
