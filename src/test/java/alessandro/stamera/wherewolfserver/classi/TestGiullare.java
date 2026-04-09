@@ -53,6 +53,8 @@ public final class TestGiullare
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
+    @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }

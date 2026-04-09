@@ -11,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestCriminale.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestCriminale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestGiullare.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestGiullare.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.html" afterDir="false" />
@@ -152,7 +152,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCriminale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestCriminale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiullare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiullare.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,22 +429,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01799" summary="VERDE DIRETTO: testOste riuscito">
-      <option name="closed" value="true" />
-      <created>1775722924163</created>
-      <option name="number" value="01799" />
-      <option name="presentableId" value="LOCAL-01799" />
-      <option name="project" value="LOCAL" />
-      <updated>1775722924164</updated>
-    </task>
-    <task id="LOCAL-01800" summary="VERDE DIRETTO: testOste riuscito">
-      <option name="closed" value="true" />
-      <created>1775723105251</created>
-      <option name="number" value="01800" />
-      <option name="presentableId" value="LOCAL-01800" />
-      <option name="project" value="LOCAL" />
-      <updated>1775723105251</updated>
     </task>
     <task id="LOCAL-01801" summary="VERDE DIRETTO: testOste riuscito">
       <option name="closed" value="true" />
@@ -822,7 +806,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775744548639</updated>
     </task>
-    <option name="localTasksCounter" value="1848" />
+    <task id="LOCAL-01848" summary="VERDE DIRETTO: testVillaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1775744666373</created>
+      <option name="number" value="01848" />
+      <option name="presentableId" value="LOCAL-01848" />
+      <option name="project" value="LOCAL" />
+      <updated>1775744666373</updated>
+    </task>
+    <task id="LOCAL-01849" summary="VERDE DIRETTO: testPazzo riuscito">
+      <option name="closed" value="true" />
+      <created>1775744785431</created>
+      <option name="number" value="01849" />
+      <option name="presentableId" value="LOCAL-01849" />
+      <option name="project" value="LOCAL" />
+      <updated>1775744785431</updated>
+    </task>
+    <option name="localTasksCounter" value="1850" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -837,7 +837,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
     <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
@@ -861,6 +860,7 @@
     <MESSAGE value="ROSSO: testPazzo non riuscito" />
     <MESSAGE value="VERDE: testPazzo riuscito" />
     <MESSAGE value="VERDE: testVillaggio riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPazzo riuscito" />
     <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testPazzo riuscito" />
   </component>
