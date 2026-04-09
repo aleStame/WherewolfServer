@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestTratti" tests="13" skipped="0" failures="1" errors="0" timestamp="2026-04-09T09:42:30" hostname="ALESSANDRO" time="0.183">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestTratti" tests="13" skipped="0" failures="1" errors="0" timestamp="2026-04-09T09:47:00" hostname="ALESSANDRO" time="0.146">
   <properties/>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
-  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.001"/>
-  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.001"/>
-  <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.001"/>
-  <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
-  <testcase name="testMaledizione()" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.007"/>
-  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.064">
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.006"/>
+  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.007"/>
+  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.018"/>
+  <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.009"/>
+  <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
+  <testcase name="testMaledizione()" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.013"/>
+  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.005">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
 	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:60)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
@@ -109,11 +109,11 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
-  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.004"/>
-  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.003"/>
-  <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.004"/>
-  <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.006"/>
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.005"/>
+  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
+  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.005"/>
+  <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.002"/>
+  <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.TestTratti" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
