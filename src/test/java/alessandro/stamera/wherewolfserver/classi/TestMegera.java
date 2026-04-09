@@ -54,6 +54,8 @@ public final class TestMegera
 
     @Test public void testMegera() { verificaVero(ruolo.isMegera()); }
 
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
     @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
