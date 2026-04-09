@@ -16,6 +16,8 @@ public final class Pazzo extends Ruolo
         );
     }
 
+    @Override public boolean isPazzo() { return true; }
+
     public static Ruolo getInstance() { return new Pazzo(); }
 
 }
