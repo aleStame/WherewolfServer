@@ -15,9 +15,18 @@ public final class TestOratore
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
+
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Può votare al ballottaggio anche se è accusato. Se un altro giocatore con fazione Città dovesse andare al rogo, il rogo viene " +
+            "annullato. Se non è accusato, può segnalare uno o più giocatori durante il ballottaggio: se uno di quei giocatori dovesse andare al " +
+            "rogo, il rogo viene annullato";
+        verificaStringa(ruolo.getDescrizione(), descrizione);
+    }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
@@ -32,6 +41,8 @@ public final class TestOratore
     @Test public void testOratore() { verificaVero(ruolo.isOratore()); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 

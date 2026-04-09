@@ -245,7 +245,9 @@ public class Ruolo
 
     public boolean isOratore() { return false; }
 
-    public void segnalazioneOratore() {  libera(); }
+    public void segnalazioneOratore() { libera(); }
+
+    public boolean isOste() { return false; }
 
     boolean isRomeo() { return romeo; }
 

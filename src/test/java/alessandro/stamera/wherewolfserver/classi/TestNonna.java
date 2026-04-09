@@ -61,6 +61,8 @@ public final class TestNonna
 
     @Test public void testNonna() { verificaVero(ruolo.isNonna()); }
 
+    @Test public void testOste() { verificaFalso(ruolo.isOste()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
