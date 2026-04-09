@@ -12,7 +12,7 @@ public final class Pazzo extends Ruolo
     "Pazzo", Fazione.NESSUNA, BIANCA,
 "Se viene eliminato perché ucciso dai lupi mannari, la notte successiva il loro attacco sarà annullato. Vince se viene eliminato " +
           "dall'attacco dei lupi mannari",
-     1, true
+     1, false
         );
     }
 
