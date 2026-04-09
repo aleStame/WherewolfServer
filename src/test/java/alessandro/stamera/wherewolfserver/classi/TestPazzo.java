@@ -53,6 +53,8 @@ public final class TestPazzo
 
     @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
 
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String descrizione, String risultato) { assertThat(descrizione).isEqualTo(risultato); }
