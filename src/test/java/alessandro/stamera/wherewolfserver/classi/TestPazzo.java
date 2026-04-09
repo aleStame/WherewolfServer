@@ -25,6 +25,14 @@ public final class TestPazzo
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Se viene eliminato perché ucciso dai lupi mannari, la notte successiva il loro attacco sarà annullato. Vince se viene eliminato " +
+            "dall'attacco dei lupi mannari";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }
