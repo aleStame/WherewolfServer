@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNome non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/IstanzaRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/IstanzaRuolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Peccatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Peccatore.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPeccatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPeccatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,22 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01811" summary="VERDE DIRETTO: testOste riuscito">
-      <option name="closed" value="true" />
-      <created>1775725010075</created>
-      <option name="number" value="01811" />
-      <option name="presentableId" value="LOCAL-01811" />
-      <option name="project" value="LOCAL" />
-      <updated>1775725010075</updated>
-    </task>
-    <task id="LOCAL-01812" summary="VERDE DIRETTO: testOste riuscito">
-      <option name="closed" value="true" />
-      <created>1775725070582</created>
-      <option name="number" value="01812" />
-      <option name="presentableId" value="LOCAL-01812" />
-      <option name="project" value="LOCAL" />
-      <updated>1775725070583</updated>
     </task>
     <task id="LOCAL-01813" summary="VERDE DIRETTO: testOste riuscito">
       <option name="closed" value="true" />
@@ -676,7 +659,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775746873908</updated>
     </task>
-    <option name="localTasksCounter" value="1860" />
+    <task id="LOCAL-01860" summary="VERDE: testNome riuscito">
+      <option name="closed" value="true" />
+      <created>1775747057526</created>
+      <option name="number" value="01860" />
+      <option name="presentableId" value="LOCAL-01860" />
+      <option name="project" value="LOCAL" />
+      <updated>1775747057527</updated>
+    </task>
+    <task id="LOCAL-01861" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1775747232046</created>
+      <option name="number" value="01861" />
+      <option name="presentableId" value="LOCAL-01861" />
+      <option name="project" value="LOCAL" />
+      <updated>1775747232046</updated>
+    </task>
+    <option name="localTasksCounter" value="1862" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,8 +690,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testFazione riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
@@ -716,6 +713,8 @@
     <MESSAGE value="VERDE DIRETTO: testNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPazzo riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNome non riuscito" />
+    <MESSAGE value="VERDE: testNome riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
   </component>
 </project>
