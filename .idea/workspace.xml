@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraBianca" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testFazione riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,22 +279,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01774" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1775678127542</created>
-      <option name="number" value="01774" />
-      <option name="presentableId" value="LOCAL-01774" />
-      <option name="project" value="LOCAL" />
-      <updated>1775678127542</updated>
-    </task>
-    <task id="LOCAL-01775" summary="VERDE DIRETTO: testControlloMedium riuscito">
-      <option name="closed" value="true" />
-      <created>1775678322939</created>
-      <option name="number" value="01775" />
-      <option name="presentableId" value="LOCAL-01775" />
-      <option name="project" value="LOCAL" />
-      <updated>1775678322939</updated>
     </task>
     <task id="LOCAL-01776" summary="REFACTORING: definizione del metodo verificaAuraBianca">
       <option name="closed" value="true" />
@@ -672,7 +656,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775728696018</updated>
     </task>
-    <option name="localTasksCounter" value="1823" />
+    <task id="LOCAL-01823" summary="ROSSO: testFazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1775728863624</created>
+      <option name="number" value="01823" />
+      <option name="presentableId" value="LOCAL-01823" />
+      <option name="project" value="LOCAL" />
+      <updated>1775728863624</updated>
+    </task>
+    <task id="LOCAL-01824" summary="VERDE: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1775729024746</created>
+      <option name="number" value="01824" />
+      <option name="presentableId" value="LOCAL-01824" />
+      <option name="project" value="LOCAL" />
+      <updated>1775729024746</updated>
+    </task>
+    <option name="localTasksCounter" value="1825" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -687,8 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testBecchino riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiri riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
@@ -712,6 +710,8 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraBianca" />
+    <MESSAGE value="ROSSO: testFazione non riuscito" />
+    <MESSAGE value="VERDE: testFazione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testFazione riuscito" />
   </component>
 </project>
