@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class Peccatore extends Villaggio
 {
 
-    private Peccatore() { super(null, null, null, 0, true); }
+    private Peccatore() { super("Peccatore", null, null, 0, true); }
+
+    public static Ruolo getInstance() { return new Peccatore(); }
 
 }
