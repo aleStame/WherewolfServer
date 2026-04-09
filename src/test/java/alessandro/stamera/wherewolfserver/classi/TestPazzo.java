@@ -17,8 +17,10 @@ public final class TestPazzo
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testBianca() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testBianca() { verificaAuraBianca(ruolo.getAura()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }

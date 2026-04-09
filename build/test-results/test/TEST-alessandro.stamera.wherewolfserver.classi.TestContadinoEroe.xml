@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" tests="10" skipped="0" failures="2" errors="0" timestamp="2026-04-09T09:53:11" hostname="ALESSANDRO" time="0.567">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" tests="10" skipped="0" failures="2" errors="0" timestamp="2026-04-09T09:57:23" hostname="ALESSANDRO" time="0.459">
   <properties/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.274"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.012"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.049"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.004"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.004"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.005"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.009"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.005"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.002"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.001"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.002"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.001"/>
   <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.002"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.002"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.023">
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.001"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.043">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
 	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:60)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
@@ -156,7 +156,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.012">
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.TestContadinoEroe" time="0.114">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.Fazione.getCategoria()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.Ruolo.getFazione()&quot; is null
 	at alessandro.stamera.wherewolfserver.classi.Ruolo.getCategoria(Ruolo.java:60)
 	at alessandro.stamera.wherewolfserver.classi.RuoliFactory.lambda$getCreatureOmbra$0(RuoliFactory.java:48)
