@@ -43,6 +43,8 @@ public final class TestInquisizione
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
+    @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
