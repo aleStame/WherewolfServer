@@ -35,12 +35,14 @@ public final class TestPazzo
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCitta()).isFalse(); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String descrizione, String risultato) { assertThat(descrizione).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
