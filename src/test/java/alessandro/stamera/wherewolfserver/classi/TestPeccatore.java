@@ -19,4 +19,6 @@ public final class TestPeccatore
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(NERA); }
+
 }
