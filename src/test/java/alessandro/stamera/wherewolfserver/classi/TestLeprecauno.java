@@ -55,6 +55,8 @@ public final class TestLeprecauno
 
     @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
 
+    @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testSegnalazioneInquisitore()
