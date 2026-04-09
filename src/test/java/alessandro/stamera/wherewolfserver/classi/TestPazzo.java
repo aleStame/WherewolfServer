@@ -55,6 +55,8 @@ public final class TestPazzo
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
+    @Test public void testPazzo() { assertThat(ruolo.isPazzo()).isTrue(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String descrizione, String risultato) { assertThat(descrizione).isEqualTo(risultato); }

@@ -249,7 +249,9 @@ public class Ruolo
 
     public boolean isOste() { return false; }
 
-    boolean isRomeo() { return romeo; }
+    public boolean isPazzo() { return false; }
+
+    public boolean isRomeo() { return romeo; }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
