@@ -15,7 +15,7 @@ public final class TestPazzo
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testBianca() { verificaAuraBianca(ruolo.getAura()); }
 
@@ -30,9 +30,11 @@ public final class TestPazzo
         String descrizione =
             "Se viene eliminato perché ucciso dai lupi mannari, la notte successiva il loro attacco sarà annullato. Vince se viene eliminato " +
             "dall'attacco dei lupi mannari";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaStringa(String descrizione, String risultato) { assertThat(descrizione).isEqualTo(risultato); }
 
 }
