@@ -45,6 +45,8 @@ public final class TestPeccatore
 
     @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
     @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
