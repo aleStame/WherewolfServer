@@ -25,7 +25,7 @@ public final class TestPeccatore
     {
         String descrizione =
             "La prima notte viene individuato dal Prete e apre gli occhi nel turno del Posseduto. Se rimane in gioco, vince con una vittoria " +
-            "degli uomini, altrimenti con il Posseduto.";
+            "degli uomini, altrimenti con il Posseduto";
         assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
     }
 
