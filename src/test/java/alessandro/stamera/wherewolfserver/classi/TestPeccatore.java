@@ -61,6 +61,8 @@ public final class TestPeccatore
 
     @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
 
+    @Test public void testOste() { verificaFalso(ruolo.isOste()); }
+
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
