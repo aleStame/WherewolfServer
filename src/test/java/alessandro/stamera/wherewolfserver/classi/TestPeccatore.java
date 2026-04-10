@@ -53,6 +53,8 @@ public final class TestPeccatore
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
+    @Test public void testMago() { verificaFalso(ruolo.isMago()); }
+
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
