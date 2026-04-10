@@ -53,6 +53,8 @@ public final class TestPeccatore
 
     @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
 
+    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
+
     @Test public void testGuardia() { verificaFalso(ruolo.isGuardia()); }
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
