@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraNera">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPeccatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPeccatore.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMistico non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -283,14 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01818" summary="VERDE: testAura riuscito">
-      <option name="closed" value="true" />
-      <created>1775727798751</created>
-      <option name="number" value="01818" />
-      <option name="presentableId" value="LOCAL-01818" />
-      <option name="project" value="LOCAL" />
-      <updated>1775727798751</updated>
     </task>
     <task id="LOCAL-01819" summary="REFACTORING: definizione di un metodo di set up">
       <option name="closed" value="true" />
@@ -676,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775749803146</updated>
     </task>
-    <option name="localTasksCounter" value="1867" />
+    <task id="LOCAL-01867" summary="ROSSO: testMistico non riuscito">
+      <option name="closed" value="true" />
+      <created>1775827622699</created>
+      <option name="number" value="01867" />
+      <option name="presentableId" value="LOCAL-01867" />
+      <option name="project" value="LOCAL" />
+      <updated>1775827622700</updated>
+    </task>
+    <option name="localTasksCounter" value="1868" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,7 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testMistico non riuscito" />
     <MESSAGE value="VERDE: testMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCitta non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
@@ -716,6 +712,7 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraNera" />
+    <MESSAGE value="ROSSO: testMistico non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMistico non riuscito" />
   </component>
 </project>
