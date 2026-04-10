@@ -31,12 +31,14 @@ public final class TestPeccatore
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
