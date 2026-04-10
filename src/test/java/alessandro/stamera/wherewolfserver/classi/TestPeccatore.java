@@ -21,6 +21,14 @@ public final class TestPeccatore
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte viene individuato dal Prete e apre gli occhi nel turno del Posseduto. Se rimane in gioco, vince con una vittoria " +
+            "degli uomini, altrimenti con il Posseduto.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
