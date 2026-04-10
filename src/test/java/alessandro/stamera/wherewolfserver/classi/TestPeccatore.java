@@ -21,6 +21,8 @@ public final class TestPeccatore
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
 }
