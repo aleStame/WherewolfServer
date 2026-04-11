@@ -6,6 +6,7 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPosseduto
@@ -39,6 +40,8 @@ public final class TestPosseduto
             "diventa il Posseduto. Se viene ucciso al rogo perde tutti i poteri.";
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
+
+    @Test public void testCreaturaOmbra() { assertThat(ruolo.isTrattoPresente(CREATURA_OMBRA)).isTrue(); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
