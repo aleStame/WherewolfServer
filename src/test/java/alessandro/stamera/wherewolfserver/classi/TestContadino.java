@@ -51,6 +51,8 @@ public final class TestContadino
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
+    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
