@@ -73,6 +73,8 @@ public final class TestPeccatore
 
     @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
 
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
     @Test public void testOste() { verificaFalso(ruolo.isOste()); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
