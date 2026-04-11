@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 
 public final class Posseduto extends Ruolo
 {
@@ -16,6 +17,7 @@ public final class Posseduto extends Ruolo
            "diventa il Posseduto. Se viene ucciso al rogo perde tutti i poteri.",
      3, false
         );
+        aggiungiTratti(CREATURA_OMBRA);
     }
 
     public static Ruolo getInstance() { return new Posseduto(); }
