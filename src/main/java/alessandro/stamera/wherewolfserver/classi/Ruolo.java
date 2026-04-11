@@ -253,6 +253,8 @@ public class Ruolo
 
     public boolean isRomeo() { return romeo; }
 
+    public boolean isPeccatore() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
