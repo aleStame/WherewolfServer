@@ -16,6 +16,8 @@ public final class Peccatore extends Villaggio
         );
     }
 
+    @Override public boolean isPeccatore() { return true; }
+
     public static Ruolo getInstance() { return new Peccatore(); }
 
 }
