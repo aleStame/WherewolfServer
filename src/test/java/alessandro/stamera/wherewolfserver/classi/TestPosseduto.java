@@ -53,6 +53,8 @@ public final class TestPosseduto
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
+    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
