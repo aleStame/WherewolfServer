@@ -20,6 +20,8 @@ public final class Posseduto extends Ruolo
         aggiungiTratti(CREATURA_OMBRA);
     }
 
+    @Override public boolean isPosseduto() { return true; }
+
     public static Ruolo getInstance() { return new Posseduto(); }
 
 }
