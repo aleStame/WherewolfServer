@@ -61,6 +61,8 @@ public final class TestPeccatore
 
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
+    @Test public void testLeprecauno() { verificaFalso(ruolo.isLeprecauno()); }
+
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
