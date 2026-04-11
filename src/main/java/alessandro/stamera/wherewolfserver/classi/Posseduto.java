@@ -6,7 +6,17 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.POSSEDUTO;
 public final class Posseduto extends Ruolo
 {
 
-    private Posseduto() { super("Posseduto", POSSEDUTO, NERA, null, 3, false); }
+    private Posseduto()
+    {
+        super
+        (
+    "Posseduto", POSSEDUTO, NERA,
+"La prima notte individua la Megera e riconosce il Peccatore. Anche se è stato ucciso, non è considerato eliminato dal gioco finché " +
+           "un altro giocatore non diventa il Posseduto. Se è stato ucciso, indica un giocatore che lo riconosce: il ruolo di quel giocatore " +
+           "diventa il Posseduto. Se viene ucciso al rogo perde tutti i poteri.",
+     3, false
+        );
+    }
 
     public static Ruolo getInstance() { return new Posseduto(); }
 
