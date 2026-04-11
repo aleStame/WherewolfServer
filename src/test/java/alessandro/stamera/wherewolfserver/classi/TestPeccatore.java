@@ -79,13 +79,15 @@ public final class TestPeccatore
 
     @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
 
-    @Test public void testPeccatore() { assertThat(ruolo.isPeccatore()).isTrue(); }
+    @Test public void testPeccatore() { verificaVero(ruolo.isPeccatore()); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
