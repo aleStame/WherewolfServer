@@ -15,4 +15,6 @@ public final class TestPiccoloPopolo
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+
 }
