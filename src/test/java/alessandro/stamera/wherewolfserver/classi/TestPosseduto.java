@@ -31,6 +31,15 @@ public final class TestPosseduto
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte individua la Megera e riconosce il Peccatore. Anche se è stato ucciso, non è considerato eliminato dal gioco finché " +
+            "un altro giocatore non diventa il Posseduto. Se è stato ucciso, indica un giocatore che lo riconosce: il ruolo di quel giocatore " +
+            "diventa il Posseduto. Se viene ucciso al rogo perde tutti i poteri.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
 }
