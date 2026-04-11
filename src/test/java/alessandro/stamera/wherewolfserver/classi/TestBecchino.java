@@ -73,6 +73,8 @@ public final class TestBecchino
 
     @Test public void testOste() { verificaFalso(ruolo.isOste()); }
 
+    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
