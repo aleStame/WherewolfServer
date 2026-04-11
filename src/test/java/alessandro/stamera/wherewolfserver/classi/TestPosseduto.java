@@ -43,6 +43,8 @@ public final class TestPosseduto
 
     @Test public void testCreaturaOmbra() { assertThat(ruolo.isTrattoPresente(CREATURA_OMBRA)).isTrue(); }
 
+    @Test public void testNosferatu() { assertThat(ruolo.isNosferatu()).isFalse(); }
+
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
