@@ -17,13 +17,17 @@ public final class TestPiccoloPopolo
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
     @Test public void testSegnalazioneInquisitore()
     {
-        assertThat(ruolo.isAccusato()).isFalse();
+        assertThat(isAccusato()).isFalse();
         ruolo.segnalazioneInquisitore();
-        assertThat(ruolo.isAccusato()).isTrue();
+        verificaVero(isAccusato());
     }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }
