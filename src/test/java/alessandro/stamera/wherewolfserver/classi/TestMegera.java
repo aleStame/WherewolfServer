@@ -58,6 +58,8 @@ public final class TestMegera
 
     @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
 
+    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
