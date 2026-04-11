@@ -49,6 +49,8 @@ public final class TestPosseduto
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
+
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
