@@ -17,4 +17,13 @@ public final class TestPiccoloPopolo
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+
+    /*@Test public void testSegnalazioneInquisitore()
+    {
+        assertThat(ruolo.isAccusato()).isFalse();
+        ruolo.segnalazioneInquisitore();
+        assertThat(ruolo.isAccusato()).isTrue();
+    }*/
+
 }
