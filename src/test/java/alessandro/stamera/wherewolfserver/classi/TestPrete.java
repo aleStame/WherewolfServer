@@ -31,6 +31,8 @@ public final class TestPrete
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
+    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
