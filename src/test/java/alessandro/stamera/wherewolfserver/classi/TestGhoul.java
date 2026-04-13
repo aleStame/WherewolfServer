@@ -55,6 +55,8 @@ public final class TestGhoul
 
     @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
 
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
