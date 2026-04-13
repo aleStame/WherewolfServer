@@ -259,6 +259,8 @@ public class Ruolo
 
     public boolean isPiccoloPopolo() { return false; }
 
+    public boolean isPrete() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
