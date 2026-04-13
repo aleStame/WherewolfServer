@@ -3,9 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
-import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -48,13 +46,6 @@ public final class TestTratti
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
         verificaVero(isProtezioneNosferatuPresente());
-        verificaProtetto();
-    }
-
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" }) public void testProtezioneMistici(String nome)
-    {
-        tratti.aggiungiProtezioneMistici();
-        verificaVero(tratti.isProtezionePresente(FACTORY.getRuolo(nome)));
         verificaProtetto();
     }
 

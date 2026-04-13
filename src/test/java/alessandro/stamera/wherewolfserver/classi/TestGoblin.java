@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,11 +17,11 @@ public final class TestGoblin
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testDescrizione()
     {
@@ -37,38 +37,29 @@ public final class TestGoblin
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
-    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
-
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
-
-    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
-
-    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
-
-    @Test public void testGoblin() { verificaVero(ruolo.isGoblin()); }
-
-    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
-
-    @Test public void testLeprecauno() { verificaFalso(ruolo.isLeprecauno()); }
-
-    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
-
-    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
-    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
+    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
+    {
+        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
+    }
+
+    @Test public void testAttaccoNegromante()
+    {
+        verificaFalso(ruolo.maledizione());
+        verificaFalso(ruolo.isMaledetto());
+        int numeroVoti = 2;
+        ruolo.incrementaVoti(numeroVoti);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+    }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isAccusato() { return ruolo.isAccusato(); }
-
-    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
 }

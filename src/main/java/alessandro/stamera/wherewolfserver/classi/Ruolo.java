@@ -259,8 +259,6 @@ public class Ruolo
 
     public boolean isPiccoloPopolo() { return false; }
 
-    void aggiungiProtezioneMistici() { tratti.aggiungiProtezioneMistici(); }
-
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
