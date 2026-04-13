@@ -51,6 +51,8 @@ public final class TestPiccoloPopolo
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
