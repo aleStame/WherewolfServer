@@ -43,6 +43,8 @@ public final class TestPrete
 
     @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
 
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
