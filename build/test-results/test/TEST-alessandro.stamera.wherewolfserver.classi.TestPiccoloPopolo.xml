@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-04-13T08:41:52" hostname="ALESSANDRO" time="0.038">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-04-13T08:46:46" hostname="ALESSANDRO" time="0.045">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.001"/>
-  <testcase name="[1] nome=Guaritore" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.001"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.001"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.0"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.005"/>
+  <testcase name="[1] nome=Guaritore" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.005"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.004"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.004"/>
   <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.001"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.002"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.001"/>
+  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.TestPiccoloPopolo" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

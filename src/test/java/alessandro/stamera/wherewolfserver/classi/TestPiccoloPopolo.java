@@ -30,10 +30,19 @@ public final class TestPiccoloPopolo
         verificaVero(isAccusato());
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" }) public void testProtezioneMistici(String nome)
+    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
     {
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
+    }
+
+    @Test public void testAttaccoNegromante()
+    {
+        assertThat(ruolo.maledizione()).isFalse();
+        assertThat(ruolo.isMaledetto()).isFalse();
+        int numeroVoti = 2;
+        ruolo.incrementaVoti(numeroVoti);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

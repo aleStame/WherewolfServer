@@ -59,15 +59,6 @@ public final class TestGoblin
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
-    @Test public void testAttaccoNegromante()
-    {
-        verificaFalso(ruolo.maledizione());
-        verificaFalso(ruolo.isMaledetto());
-        int numeroVoti = 2;
-        ruolo.incrementaVoti(numeroVoti);
-        verificaNumeroIntero(ruolo.getNumeroVoti(), numeroVoti);
-    }
-
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
