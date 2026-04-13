@@ -49,6 +49,8 @@ public final class TestPiccoloPopolo
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
