@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" tests="23" skipped="0" failures="1" errors="0" timestamp="2026-04-13T09:57:49" hostname="ALESSANDRO" time="0.729">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" tests="23" skipped="0" failures="1" errors="0" timestamp="2026-04-13T10:00:38" hostname="ALESSANDRO" time="1.041">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.258"/>
-  <testcase name="[1] nome=Goblin" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.116">
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.341"/>
+  <testcase name="[1] nome=Goblin" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.152">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -138,24 +138,24 @@ Expecting value to be true but was false
   <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
   <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
   <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
-  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.003"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.001"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.006"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.001"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.017"/>
-  <testcase name="testAttaccoNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.004"/>
-  <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.001"/>
+  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.004"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.004"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.015"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.031"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.066"/>
+  <testcase name="testAttaccoNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.003"/>
+  <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.006"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.005"/>
   <testcase name="testLeprecauno()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.001"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.015"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.012"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
-  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.002"/>
-  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.025"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.006"/>
-  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.019"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.058"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.008"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.007"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.008"/>
+  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.009"/>
+  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.005"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.005"/>
+  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.TestLeprecauno" time="0.023"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
