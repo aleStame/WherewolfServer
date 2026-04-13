@@ -75,7 +75,14 @@ public final class RuoliFactory
     private Ruolo getPiccoloPopolo(String nome, Predicate<Ruolo> condizione)
     {
         Ruolo ruolo = ottieniRuolo(nome);
-        ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(condizione).filter(mistico -> !mistico.isMedium()).toList()));
+        ruolo.aggiungiProtezione
+        (
+            toArray
+            (
+                stream(getMistici()).filter(condizione)
+                .filter(mistico -> !mistico.isMedium() && !mistico.isGoblin() && !mistico.isLeprecauno()).toList()
+            )
+        );
         return ruolo;
     }
 

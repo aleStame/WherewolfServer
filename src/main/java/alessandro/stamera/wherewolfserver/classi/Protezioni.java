@@ -17,8 +17,7 @@ public final class Protezioni
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(FACTORY.getLupi()); }
 
-    public void aggiungiProtezioneMistici() { //aggiungiProtezione(FACTORY.getMistici());
-         }
+    public void aggiungiProtezioneMistici() { aggiungiProtezione(FACTORY.getMistici()); }
 
     public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
 
