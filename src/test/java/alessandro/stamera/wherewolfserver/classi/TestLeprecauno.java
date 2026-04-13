@@ -45,6 +45,8 @@ public final class TestLeprecauno
         assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
     }
 
+    @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
