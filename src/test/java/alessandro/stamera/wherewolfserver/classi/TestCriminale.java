@@ -53,6 +53,8 @@ public final class TestCriminale
 
     @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
 
+    @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
+
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
