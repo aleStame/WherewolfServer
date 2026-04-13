@@ -53,8 +53,6 @@ public final class TestPosseduto
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
-    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
-
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }

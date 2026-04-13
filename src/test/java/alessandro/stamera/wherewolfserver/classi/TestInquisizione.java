@@ -49,6 +49,8 @@ public final class TestInquisizione
 
     @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
 
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
