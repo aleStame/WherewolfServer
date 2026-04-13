@@ -60,6 +60,8 @@ public final class TestGoblin
 
     @Test public void testGoblin() { verificaVero(ruolo.isGoblin()); }
 
+    @Test public void testLeprecauno() { verificaFalso(ruolo.isLeprecauno()); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
