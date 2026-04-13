@@ -33,8 +33,10 @@ public final class TestProtezioni
     @Test public void testPerdiProtezioni()
     {
         protezioni.perdiProtezioni();
-        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(protezioni.isPresente(FACTORY.getRuolo(FACTORY.getNome(i))));
+        for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(isProtezionePresente(FACTORY.getNome(i)));
     }
+
+    private boolean isProtezionePresente(String nome) { return protezioni.isPresente(FACTORY.getRuolo(nome)); }
 
     private void verificaLupiPresenti() { verificaVero(isProtezioneLupiPresente()); }
 

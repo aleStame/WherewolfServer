@@ -67,6 +67,10 @@ public final class TestNosferatu
 
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
+    @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
+
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }

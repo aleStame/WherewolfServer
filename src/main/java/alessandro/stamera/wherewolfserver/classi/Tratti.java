@@ -63,6 +63,12 @@ public final class Tratti
 
     public boolean isProtezioneNosferatuPresente() { return protezioni.isNosferatuPresente(); }
 
+    public void aggiungiProtezioneMistici()
+    {
+        proteggi();
+        protezioni.aggiungiProtezioneMistici();
+    }
+
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
 }

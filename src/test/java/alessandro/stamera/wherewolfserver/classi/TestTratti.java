@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestTratti
@@ -26,6 +27,7 @@ public final class TestTratti
         verificaLupiAssenti();
         tratti.aggiungiProtezioneLupi();
         verificaLupiPresenti();
+        verificaProtetto();
     }
 
     @Test public void testMaledizione()
@@ -44,7 +46,10 @@ public final class TestTratti
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
         verificaVero(isProtezioneNosferatuPresente());
+        verificaProtetto();
     }
+
+    private void verificaProtetto() { verificaTrattoPresente(PROTETTO); }
 
     private boolean isMaledetto() { return tratti.isMaledetto(); }
 

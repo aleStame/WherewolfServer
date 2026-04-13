@@ -34,13 +34,15 @@ public final class TestAmanti
 
     @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
 
-    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
-
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
+    @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
+
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 

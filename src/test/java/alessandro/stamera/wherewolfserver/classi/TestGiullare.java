@@ -55,6 +55,10 @@ public final class TestGiullare
 
     @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
 
+    @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
+
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }

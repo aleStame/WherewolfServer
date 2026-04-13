@@ -255,6 +255,10 @@ public class Ruolo
 
     public boolean isPeccatore() { return false; }
 
+    public boolean isPosseduto() { return false; }
+
+    public boolean isPiccoloPopolo() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)

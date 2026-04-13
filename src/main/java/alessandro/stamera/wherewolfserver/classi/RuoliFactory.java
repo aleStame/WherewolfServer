@@ -7,7 +7,6 @@ import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
-import static java.util.Arrays.stream;
 
 public final class RuoliFactory
 {
@@ -41,7 +40,7 @@ public final class RuoliFactory
 
     public Ruolo[] getLupi() { return filtraRuoli(Ruolo::isLupo); }
 
-    public Ruolo[] getMistici() { return filtraRuoli(Ruolo::isMistico); }
+    public Ruolo[] getMistici() { return filtraRuoli(mistico -> mistico.isMistico() && !mistico.isMedium() && !mistico.isPiccoloPopolo()); }
 
     public Ruolo[] getCreatureOmbra()
     {
@@ -55,13 +54,13 @@ public final class RuoliFactory
         return ruolo;
     }
 
-    private Ruolo getGoblin() { return getPiccoloPopolo("Goblin", (ruolo -> !ruolo.isGoblin())); }
+    private Ruolo getGoblin() { return getPiccoloPopolo("Goblin"); }
 
     private Ruolo getEremita() { return getPersonaggioProtetto("Eremita"); }
 
     private Ruolo getLadra() { return getPersonaggioProtetto("Ladra"); }
 
-    private Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno", (ruolo -> !ruolo.isLeprecauno())); }
+    private Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno"); }
 
     private Ruolo getPersonaggioProtetto(String nome)
     {
@@ -72,14 +71,17 @@ public final class RuoliFactory
 
     private void caricaRuoli() { for(IstanzaRuolo istanza : values()) aggiungiRuolo(istanza); }
 
-    private Ruolo getPiccoloPopolo(String nome, Predicate<Ruolo> condizione)
+    private Ruolo getPiccoloPopolo(String nome)
     {
         Ruolo ruolo = ottieniRuolo(nome);
-        ruolo.aggiungiProtezione(toArray(stream(getMistici()).filter(condizione).filter(mistico -> !mistico.isMedium()).toList()));
+        ruolo.aggiungiProtezione(getMistici());
         return ruolo;
     }
 
-    private Ruolo[] filtraRuoli(Predicate<Ruolo> predicato) { return toArray(ruoli.values().stream().filter(predicato).toList()); }
+    private Ruolo[] filtraRuoli(Predicate<Ruolo> predicato)
+    {
+        return toArray(ruoli.values().stream().filter(predicato).toList());
+    }
 
     private void aggiungiRuolo(IstanzaRuolo istanza)
     {
