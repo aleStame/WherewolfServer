@@ -56,6 +56,8 @@ public final class TestGoblin
         assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
     }
 
+    @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
