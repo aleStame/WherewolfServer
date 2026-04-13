@@ -38,14 +38,16 @@ public final class TestPiccoloPopolo
 
     @Test public void testAttaccoNegromante()
     {
-        assertThat(ruolo.maledizione()).isFalse();
-        assertThat(ruolo.isMaledetto()).isFalse();
+        verificaFalso(ruolo.maledizione());
+        verificaFalso(ruolo.isMaledetto());
         int numeroVoti = 2;
         ruolo.incrementaVoti(numeroVoti);
         assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
 
