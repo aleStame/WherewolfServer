@@ -59,6 +59,8 @@ public final class TestPazzo
 
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
