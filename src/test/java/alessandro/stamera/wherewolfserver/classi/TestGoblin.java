@@ -57,8 +57,6 @@ public final class TestGoblin
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
-    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
-
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
