@@ -257,6 +257,8 @@ public class Ruolo
 
     public boolean isPosseduto() { return false; }
 
+    void aggiungiProtezioneMistici() { }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)

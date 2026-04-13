@@ -128,6 +128,13 @@ public final class TestRuolo
         verificaFalso(isMaledetto());
     }
 
+    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" }) public void testProtezioneMistici(String nome)
+    {
+        ruolo.aggiungiProtezioneMistici();
+        verificaProtetto();
+        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
+    }
+
     private void segnalazioneAzzeccagarbugli() { ruolo.segnalazioneAzzeccagarbugli(); }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }

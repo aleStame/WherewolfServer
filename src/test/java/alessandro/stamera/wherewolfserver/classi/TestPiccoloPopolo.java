@@ -30,7 +30,7 @@ public final class TestPiccoloPopolo
         verificaVero(isAccusato());
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
+    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" }) public void testProtezioneMistici(String nome)
     {
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
