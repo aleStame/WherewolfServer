@@ -11,4 +11,6 @@ public final class PiccoloPopolo extends Ruolo
         aggiungiProtezioneMistici();
     }
 
+    @Override public boolean isPiccoloPopolo() { return true; }
+
 }
