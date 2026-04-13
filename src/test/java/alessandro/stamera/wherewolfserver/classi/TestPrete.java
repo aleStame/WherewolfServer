@@ -19,4 +19,12 @@ public final class TestPrete
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte individua il Peccatore e scopre se Bocca di rosa e il Posseduto sono in gioco. È protetto dal Posseduto e, se viene " +
+            "attaccato, viene avvisato e gli fa perdere tutti i poteri.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
 }
