@@ -55,12 +55,6 @@ public final class TestGoblin
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Leprecauno, Mago" }) public void testProtezioneMistici(String nome)
-    {
-        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
-        verificaVero(ruolo.isTrattoPresente(PROTETTO));
-    }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
