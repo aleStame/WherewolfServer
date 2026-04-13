@@ -2,6 +2,9 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -34,6 +37,12 @@ public final class TestProtezioni
     {
         protezioni.perdiProtezioni();
         for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(protezioni.isPresente(FACTORY.getRuolo(FACTORY.getNome(i))));
+    }
+
+    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" }) public void testProtezioneMistici(String nome)
+    {
+        protezioni.aggiungiProtezioneMistici();
+        verificaVero(protezioni.isPresente(FACTORY.getRuolo(nome)));
     }
 
     private void verificaLupiPresenti() { verificaVero(isProtezioneLupiPresente()); }
