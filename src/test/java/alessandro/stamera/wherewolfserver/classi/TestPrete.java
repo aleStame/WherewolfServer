@@ -33,12 +33,14 @@ public final class TestPrete
 
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
 
-    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
-    @Test public void testBecchino() { assertThat(ruolo.isBecchino()).isFalse(); }
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
