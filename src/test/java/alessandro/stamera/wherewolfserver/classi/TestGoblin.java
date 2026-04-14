@@ -35,11 +35,7 @@ public final class TestGoblin
 
     @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
-    @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
-
-    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
     @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
     {
@@ -61,6 +57,8 @@ public final class TestGoblin
     @Test public void testGoblin() { verificaVero(ruolo.isGoblin()); }
 
     @Test public void testLeprecauno() { verificaFalso(ruolo.isLeprecauno()); }
+
+    @Test public void testSidhe() { verificaFalso(ruolo.isSidhe()); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 

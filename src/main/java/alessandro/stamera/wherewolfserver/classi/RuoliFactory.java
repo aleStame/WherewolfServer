@@ -29,6 +29,7 @@ public final class RuoliFactory
             case "Eremita" -> ruolo = getEremita();
             case "Ladra" -> ruolo = getLadra();
             case "Leprecauno" -> ruolo = getLeprecauno();
+            case "Sidhe" -> ruolo = getSidhe();
             default -> ruolo = ruoli.get(nome);
         }
         return ruolo;
@@ -61,6 +62,8 @@ public final class RuoliFactory
     private Ruolo getLadra() { return getPersonaggioProtetto("Ladra"); }
 
     private Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno"); }
+
+    private Ruolo getSidhe() { return getPiccoloPopolo("Sidhe"); }
 
     private Ruolo getPersonaggioProtetto(String nome)
     {
