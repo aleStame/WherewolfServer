@@ -12,7 +12,7 @@ public final class TestRuoliFactory
     @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario, Contadino discendente dei lupi" })
     public void testLupi(String nome) { verificaPresenza(FACTORY.getLupi(), getRuolo(nome)); }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" })
+    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" })
     public void testMistici(String nome) { verificaPresenza(FACTORY.getMistici(), getRuolo(nome)); }
 
     private void verificaPresenza(Ruolo[] ruoli, Ruolo ruolo) { assertThat(ruoli).contains(ruolo); }
