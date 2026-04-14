@@ -48,6 +48,8 @@ public final class TestSidhe
 
     @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }
 
+    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
