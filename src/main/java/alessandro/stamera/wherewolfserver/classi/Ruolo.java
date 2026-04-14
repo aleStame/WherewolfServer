@@ -261,6 +261,8 @@ public class Ruolo
 
     public boolean isPrete() { return false; }
 
+    public boolean isSidhe() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
