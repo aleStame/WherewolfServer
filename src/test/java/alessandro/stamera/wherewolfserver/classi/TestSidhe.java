@@ -50,6 +50,8 @@ public final class TestSidhe
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
 
+    @Test public void testLeprecauno() { verificaFalso(ruolo.isLeprecauno()); }
+
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
