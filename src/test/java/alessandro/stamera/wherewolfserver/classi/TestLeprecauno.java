@@ -51,6 +51,8 @@ public final class TestLeprecauno
 
     @Test public void testLeprecauno() { verificaVero(ruolo.isLeprecauno()); }
 
+    @Test public void testSidhe() { verificaFalso(ruolo.isSidhe()); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
