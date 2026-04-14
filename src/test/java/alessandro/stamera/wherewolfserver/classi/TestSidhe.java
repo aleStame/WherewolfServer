@@ -17,7 +17,7 @@ public final class TestSidhe
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
@@ -33,9 +33,11 @@ public final class TestSidhe
 
     @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
     {
-        assertThat(ruolo.isProtezionePresente(FACTORY.getRuolo(nome))).isTrue();
+        assertThat(ruolo.isProtezionePresente(getRuolo(nome))).isTrue();
         assertThat(ruolo.isTrattoPresente(PROTETTO)).isTrue();
     }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
