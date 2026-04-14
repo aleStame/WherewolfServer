@@ -27,6 +27,8 @@ public final class TestSpia
 
     @Test public void testCapoGilda() { verificaFalso(ruolo.isCapoGilda()); }
 
+    @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
