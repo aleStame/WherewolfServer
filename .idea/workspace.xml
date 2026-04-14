@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNome riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSpia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSpia.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,14 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02012" summary="VERDE DIRETTO: testGuardia riuscito">
-      <option name="closed" value="true" />
-      <created>1776112925338</created>
-      <option name="number" value="02012" />
-      <option name="presentableId" value="LOCAL-02012" />
-      <option name="project" value="LOCAL" />
-      <updated>1776112925339</updated>
     </task>
     <task id="LOCAL-02013" summary="VERDE DIRETTO: testGuaritore riuscito">
       <option name="closed" value="true" />
@@ -673,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776177284817</updated>
     </task>
-    <option name="localTasksCounter" value="2061" />
+    <task id="LOCAL-02061" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1776177539057</created>
+      <option name="number" value="02061" />
+      <option name="presentableId" value="LOCAL-02061" />
+      <option name="project" value="LOCAL" />
+      <updated>1776177539057</updated>
+    </task>
+    <option name="localTasksCounter" value="2062" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +696,6 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
@@ -713,6 +714,7 @@
     <MESSAGE value="VERDE DIRETTO: testSidhe riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNome riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
   </component>
 </project>
