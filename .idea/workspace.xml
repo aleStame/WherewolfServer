@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -159,6 +159,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestSidhe.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestSidhe.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
@@ -439,14 +440,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02001" summary="VERDE: testLune riuscito">
-      <option name="closed" value="true" />
-      <created>1776110886732</created>
-      <option name="number" value="02001" />
-      <option name="presentableId" value="LOCAL-02001" />
-      <option name="project" value="LOCAL" />
-      <updated>1776110886733</updated>
     </task>
     <task id="LOCAL-02002" summary="VERDE DIRETTO: testVillaggio riuscito">
       <option name="closed" value="true" />
@@ -832,7 +825,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776173259428</updated>
     </task>
-    <option name="localTasksCounter" value="2050" />
+    <task id="LOCAL-02050" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1776173430529</created>
+      <option name="number" value="02050" />
+      <option name="presentableId" value="LOCAL-02050" />
+      <option name="project" value="LOCAL" />
+      <updated>1776173430529</updated>
+    </task>
+    <option name="localTasksCounter" value="2051" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -847,7 +848,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGuaritore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMago riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMedium riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMonaco riuscito" />
@@ -872,6 +872,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNegromante riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>

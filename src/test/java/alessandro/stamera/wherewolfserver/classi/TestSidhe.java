@@ -46,6 +46,8 @@ public final class TestSidhe
         assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
     }
 
+    @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }
+
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
