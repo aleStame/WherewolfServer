@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCreatureOmbra riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLeprecauno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestLeprecauno.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSidhe riuscito">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Spia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSpia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/sidhe",
+    "git-widget-placeholder": "feature/spia",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -282,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02009" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
-      <option name="closed" value="true" />
-      <created>1776112324665</created>
-      <option name="number" value="02009" />
-      <option name="presentableId" value="LOCAL-02009" />
-      <option name="project" value="LOCAL" />
-      <updated>1776112324665</updated>
     </task>
     <task id="LOCAL-02010" summary="VERDE DIRETTO: testContadino riuscito">
       <option name="closed" value="true" />
@@ -675,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776175220700</updated>
     </task>
-    <option name="localTasksCounter" value="2058" />
+    <task id="LOCAL-02058" summary="VERDE DIRETTO: testSidhe riuscito">
+      <option name="closed" value="true" />
+      <created>1776175427425</created>
+      <option name="number" value="02058" />
+      <option name="presentableId" value="LOCAL-02058" />
+      <option name="project" value="LOCAL" />
+      <updated>1776175427425</updated>
+    </task>
+    <option name="localTasksCounter" value="2059" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPrete non riuscito" />
     <MESSAGE value="VERDE: testPrete riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPrete riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
@@ -715,6 +716,7 @@
     <MESSAGE value="ROSSO: testSidhe non riuscito" />
     <MESSAGE value="VERDE: testSidhe riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCreatureOmbra riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCreatureOmbra riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSidhe riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSidhe riuscito" />
   </component>
 </project>
