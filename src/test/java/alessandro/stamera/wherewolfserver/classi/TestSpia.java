@@ -23,6 +23,8 @@ public final class TestSpia
 
     @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
 
+    @Test public void testAssassino() { assertThat(ruolo.isAssassino()).isFalse(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }

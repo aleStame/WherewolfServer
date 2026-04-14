@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testControlloMedium riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSpia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSpia.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCriminale riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,22 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02017" summary="VERDE DIRETTO: testNonna riuscito">
-      <option name="closed" value="true" />
-      <created>1776113889543</created>
-      <option name="number" value="02017" />
-      <option name="presentableId" value="LOCAL-02017" />
-      <option name="project" value="LOCAL" />
-      <updated>1776113889543</updated>
-    </task>
-    <task id="LOCAL-02018" summary="VERDE DIRETTO: testOste riuscito">
-      <option name="closed" value="true" />
-      <created>1776114250812</created>
-      <option name="number" value="02018" />
-      <option name="presentableId" value="LOCAL-02018" />
-      <option name="project" value="LOCAL" />
-      <updated>1776114250813</updated>
     </task>
     <task id="LOCAL-02019" summary="VERDE DIRETTO: testPeccatore riuscito">
       <option name="closed" value="true" />
@@ -675,7 +657,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776178344199</updated>
     </task>
-    <option name="localTasksCounter" value="2066" />
+    <task id="LOCAL-02066" summary="REFACTORING: definizione del metodo verificaAuraBianca">
+      <option name="closed" value="true" />
+      <created>1776178529671</created>
+      <option name="number" value="02066" />
+      <option name="presentableId" value="LOCAL-02066" />
+      <option name="project" value="LOCAL" />
+      <updated>1776178529671</updated>
+    </task>
+    <task id="LOCAL-02067" summary="VERDE DIRETTO: testCriminale riuscito">
+      <option name="closed" value="true" />
+      <created>1776178732284</created>
+      <option name="number" value="02067" />
+      <option name="presentableId" value="LOCAL-02067" />
+      <option name="project" value="LOCAL" />
+      <updated>1776178732285</updated>
+    </task>
+    <option name="localTasksCounter" value="2068" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,10 +688,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testNome non riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="ROSSO: testProtezioneMistici non riuscito" />
     <MESSAGE value="VERDE: testProtezioneMistici riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
@@ -715,6 +711,8 @@
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testControlloMedium riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
+    <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCriminale riuscito" />
   </component>
 </project>
