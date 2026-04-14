@@ -33,8 +33,8 @@ public final class TestSidhe
 
     @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
     {
-        assertThat(ruolo.isProtezionePresente(getRuolo(nome))).isTrue();
-        assertThat(ruolo.isTrattoPresente(PROTETTO)).isTrue();
+        verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
+        verificaVero(ruolo.isTrattoPresente(PROTETTO));
     }
 
     @Test public void testAttaccoNegromante()
@@ -47,6 +47,8 @@ public final class TestSidhe
     }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
