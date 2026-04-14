@@ -36,6 +36,8 @@ public final class TestCapoGilda
 
     @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
 
+    @Test public void testSpia() { verificaFalso(ruolo.isSpia()); }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
