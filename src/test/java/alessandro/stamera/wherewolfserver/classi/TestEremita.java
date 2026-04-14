@@ -60,6 +60,8 @@ public final class TestEremita
 
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
+    @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testProtezioni()
