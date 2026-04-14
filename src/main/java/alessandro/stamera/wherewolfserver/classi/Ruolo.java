@@ -263,6 +263,8 @@ public class Ruolo
 
     public boolean isSidhe() { return false; }
 
+    public boolean isSpia() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
