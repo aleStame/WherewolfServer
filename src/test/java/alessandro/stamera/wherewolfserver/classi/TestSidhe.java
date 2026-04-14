@@ -14,4 +14,9 @@ public final class TestSidhe
 
     @Test public void testAura() { assertThat(FACTORY.getRuolo(NOME).getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        assertThat(FACTORY.getRuolo(NOME).getDescrizione()).isEqualTo("La prima notte riconosce le altre creature del Piccolo Popolo (Goblin, Leprecauno). È protetta da tutti i Mistici.");
+    }
+
 }
