@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testDescrizione riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSidhe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSidhe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -282,14 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-01992" summary="ROSSO: testAura non riuscito">
-      <option name="closed" value="true" />
-      <created>1776095320048</created>
-      <option name="number" value="01992" />
-      <option name="presentableId" value="LOCAL-01992" />
-      <option name="project" value="LOCAL" />
-      <updated>1776095320048</updated>
     </task>
     <task id="LOCAL-01993" summary="VERDE: testAura riuscito">
       <option name="closed" value="true" />
@@ -675,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776170867819</updated>
     </task>
-    <option name="localTasksCounter" value="2041" />
+    <task id="LOCAL-02041" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1776171095748</created>
+      <option name="number" value="02041" />
+      <option name="presentableId" value="LOCAL-02041" />
+      <option name="project" value="LOCAL" />
+      <updated>1776171095748</updated>
+    </task>
+    <option name="localTasksCounter" value="2042" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -710,11 +710,11 @@
     <MESSAGE value="VERDE DIRETTO: testPrete riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome non riuscito" />
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
   </component>
 </project>
