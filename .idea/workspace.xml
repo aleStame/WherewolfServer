@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNome riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NOME">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,14 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02029" summary="VERDE DIRETTO: testPrete riuscito">
-      <option name="closed" value="true" />
-      <created>1776167969102</created>
-      <option name="number" value="02029" />
-      <option name="presentableId" value="LOCAL-02029" />
-      <option name="project" value="LOCAL" />
-      <updated>1776167969102</updated>
     </task>
     <task id="LOCAL-02030" summary="VERDE DIRETTO: testPrete riuscito">
       <option name="closed" value="true" />
@@ -673,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776184647210</updated>
     </task>
-    <option name="localTasksCounter" value="2078" />
+    <task id="LOCAL-02078" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1776184863573</created>
+      <option name="number" value="02078" />
+      <option name="presentableId" value="LOCAL-02078" />
+      <option name="project" value="LOCAL" />
+      <updated>1776184863573</updated>
+    </task>
+    <option name="localTasksCounter" value="2079" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +698,6 @@
     <MESSAGE value="VERDE: testSidhe riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCreatureOmbra riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSidhe riuscito" />
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
@@ -713,6 +714,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/feature/spia' into feature/spia&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNome riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NOME" />
   </component>
 </project>
