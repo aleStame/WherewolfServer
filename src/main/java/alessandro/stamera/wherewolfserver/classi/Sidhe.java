@@ -14,6 +14,8 @@ public final class Sidhe extends PiccoloPopolo
         );
     }
 
+    @Override public boolean isSidhe() { return true; }
+
     public static Ruolo getInstance() { return new Sidhe(); }
 
 }
