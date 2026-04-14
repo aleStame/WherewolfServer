@@ -17,14 +17,16 @@ public final class TestSidhe
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testDescrizione()
     {
         String descrizione = "La prima notte riconosce le altre creature del Piccolo Popolo (Goblin, Leprecauno). È protetta da tutti i Mistici.";
         assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
     }
+
+    private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }
