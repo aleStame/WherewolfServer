@@ -37,6 +37,15 @@ public final class TestSidhe
         assertThat(ruolo.isTrattoPresente(PROTETTO)).isTrue();
     }
 
+    @Test public void testAttaccoNegromante()
+    {
+        assertThat(ruolo.maledizione()).isFalse();
+        assertThat(ruolo.isMaledetto()).isFalse();
+        int numeroVoti = 2;
+        ruolo.incrementaVoti(numeroVoti);
+        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
+    }
+
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
