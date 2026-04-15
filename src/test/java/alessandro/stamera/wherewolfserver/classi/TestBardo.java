@@ -66,6 +66,8 @@ public final class TestBardo
 
     @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
 
+    @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
