@@ -5,7 +5,17 @@ import static alessandro.stamera.wherewolfserver.classi.Aura.BIANCA;
 public final class Sensitiva extends Villaggio
 {
 
-    private Sensitiva() { super("Sensitiva", BIANCA, null, 0, false); }
+    private Sensitiva()
+    {
+        super
+        (
+    "Sensitiva", BIANCA,
+"Se è in gioco, lo è al posto della Veggente. Ogni notte indica un giocatore (compresa sé stessa) e scopre se possiede fazione " +
+          "Villaggio. I giocatori maledetti hanno fazione Maledetto solo ai fini delle condizioni di fine gioco, quindi vengono visti dalla " +
+          "Sensitiva con la loro fazione originale",
+     0, false
+        );
+    }
 
     public static Ruolo getInstance() { return new Sensitiva(); }
 
