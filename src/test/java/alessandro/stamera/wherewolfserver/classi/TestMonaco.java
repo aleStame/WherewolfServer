@@ -64,6 +64,8 @@ public final class TestMonaco
 
     @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
 
+    @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
+
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
