@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testControlloMedium riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLune riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,30 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02036" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1776169811244</created>
-      <option name="number" value="02036" />
-      <option name="presentableId" value="LOCAL-02036" />
-      <option name="project" value="LOCAL" />
-      <updated>1776169811245</updated>
-    </task>
-    <task id="LOCAL-02037" summary="ROSSO: testAura non riuscito">
-      <option name="closed" value="true" />
-      <created>1776169985284</created>
-      <option name="number" value="02037" />
-      <option name="presentableId" value="LOCAL-02037" />
-      <option name="project" value="LOCAL" />
-      <updated>1776169985284</updated>
-    </task>
-    <task id="LOCAL-02038" summary="VERDE: testAura riuscito">
-      <option name="closed" value="true" />
-      <created>1776170242928</created>
-      <option name="number" value="02038" />
-      <option name="presentableId" value="LOCAL-02038" />
-      <option name="project" value="LOCAL" />
-      <updated>1776170242928</updated>
     </task>
     <task id="LOCAL-02039" summary="ROSSO: testDescrizione non riuscito">
       <option name="closed" value="true" />
@@ -675,7 +649,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776243372028</updated>
     </task>
-    <option name="localTasksCounter" value="2085" />
+    <task id="LOCAL-02085" summary="REFACTORING: definizione del metodo verificaAuraBianca">
+      <option name="closed" value="true" />
+      <created>1776243551629</created>
+      <option name="number" value="02085" />
+      <option name="presentableId" value="LOCAL-02085" />
+      <option name="project" value="LOCAL" />
+      <updated>1776243551629</updated>
+    </task>
+    <task id="LOCAL-02086" summary="ROSSO: testLune non riuscito">
+      <option name="closed" value="true" />
+      <created>1776243672840</created>
+      <option name="number" value="02086" />
+      <option name="presentableId" value="LOCAL-02086" />
+      <option name="project" value="LOCAL" />
+      <updated>1776243672840</updated>
+    </task>
+    <task id="LOCAL-02087" summary="VERDE: testLune riuscito">
+      <option name="closed" value="true" />
+      <created>1776243772146</created>
+      <option name="number" value="02087" />
+      <option name="presentableId" value="LOCAL-02087" />
+      <option name="project" value="LOCAL" />
+      <updated>1776243772146</updated>
+    </task>
+    <option name="localTasksCounter" value="2088" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,13 +688,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testLeprecauno riuscito" />
-    <MESSAGE value="ROSSO: testSidhe non riuscito" />
     <MESSAGE value="VERDE: testSidhe riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCreatureOmbra riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSidhe riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoGilda riuscito" />
@@ -715,6 +710,9 @@
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testControlloMedium riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
+    <MESSAGE value="ROSSO: testLune non riuscito" />
+    <MESSAGE value="VERDE: testLune riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLune riuscito" />
   </component>
 </project>
