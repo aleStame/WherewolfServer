@@ -52,6 +52,8 @@ public final class TestSensitiva
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
 
+    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
     @Test public void testCacciatoreDiVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
 
     @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
