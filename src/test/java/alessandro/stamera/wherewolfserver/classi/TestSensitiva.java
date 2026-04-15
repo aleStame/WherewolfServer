@@ -19,4 +19,13 @@ public final class TestSensitiva
 
     @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "Se è in gioco, lo è al posto della VEGGENTE. Ogni notte indica un giocatore (compresa sé stessa) e scopre se possiede fazione " +
+            "Villaggio. I giocatori maledetti hanno fazione Maledetto solo ai fini delle condizioni di fine gioco, quindi vengono visti dalla " +
+            "Sensitiva con la loro fazione originale";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
 }
