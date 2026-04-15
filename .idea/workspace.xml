@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAccusato">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuaritore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGuaritore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,22 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02046" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1776172634458</created>
-      <option name="number" value="02046" />
-      <option name="presentableId" value="LOCAL-02046" />
-      <option name="project" value="LOCAL" />
-      <updated>1776172634458</updated>
-    </task>
-    <task id="LOCAL-02047" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1776172753250</created>
-      <option name="number" value="02047" />
-      <option name="presentableId" value="LOCAL-02047" />
-      <option name="project" value="LOCAL" />
-      <updated>1776172753250</updated>
     </task>
     <task id="LOCAL-02048" summary="VERDE DIRETTO: testAttaccoNegromante riuscito">
       <option name="closed" value="true" />
@@ -677,7 +657,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776245748678</updated>
     </task>
-    <option name="localTasksCounter" value="2095" />
+    <task id="LOCAL-02095" summary="VERDE DIRETTO: testBardo riuscito">
+      <option name="closed" value="true" />
+      <created>1776260387180</created>
+      <option name="number" value="02095" />
+      <option name="presentableId" value="LOCAL-02095" />
+      <option name="project" value="LOCAL" />
+      <updated>1776260387180</updated>
+    </task>
+    <task id="LOCAL-02096" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1776260577790</created>
+      <option name="number" value="02096" />
+      <option name="presentableId" value="LOCAL-02096" />
+      <option name="project" value="LOCAL" />
+      <updated>1776260577790</updated>
+    </task>
+    <option name="localTasksCounter" value="2097" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,8 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testLadra riuscito" />
-    <MESSAGE value="ROSSO: testSpia non riuscito" />
     <MESSAGE value="VERDE: testSpia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSpia riuscito" />
     <MESSAGE value="Merge remote-tracking branch 'origin/feature/spia' into feature/spia&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
@@ -717,6 +711,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAccusato" />
+    <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
