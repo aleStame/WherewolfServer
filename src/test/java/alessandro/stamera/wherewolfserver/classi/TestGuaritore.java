@@ -30,6 +30,8 @@ public final class TestGuaritore
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
