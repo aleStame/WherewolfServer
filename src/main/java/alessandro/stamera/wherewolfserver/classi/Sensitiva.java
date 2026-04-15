@@ -17,6 +17,8 @@ public final class Sensitiva extends Villaggio
         );
     }
 
+    @Override public boolean isSensitiva() { return true; }
+
     public static Ruolo getInstance() { return new Sensitiva(); }
 
 }
