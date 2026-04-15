@@ -72,6 +72,8 @@ public final class TestSensitiva
 
     @Test public void testOste() { verificaFalso(ruolo.isOste()); }
 
+    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
