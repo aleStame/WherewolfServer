@@ -39,6 +39,13 @@ public final class TestSensitiva
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
+    @Test public void testSegnalazioneInquisitore()
+    {
+        assertThat(ruolo.isAccusato()).isFalse();
+        ruolo.segnalazioneInquisitore();
+        verificaVero(ruolo.isAccusato());
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
