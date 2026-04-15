@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testDescrizione riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testControlloMedium riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestSensitiva.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -282,22 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02034" summary="ROSSO: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1776169462304</created>
-      <option name="number" value="02034" />
-      <option name="presentableId" value="LOCAL-02034" />
-      <option name="project" value="LOCAL" />
-      <updated>1776169462304</updated>
-    </task>
-    <task id="LOCAL-02035" summary="VERDE: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1776169651204</created>
-      <option name="number" value="02035" />
-      <option name="presentableId" value="LOCAL-02035" />
-      <option name="project" value="LOCAL" />
-      <updated>1776169651204</updated>
     </task>
     <task id="LOCAL-02036" summary="REFACTORING: definizione della costante NOME">
       <option name="closed" value="true" />
@@ -675,7 +659,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776243024012</updated>
     </task>
-    <option name="localTasksCounter" value="2083" />
+    <task id="LOCAL-02083" summary="REFACTORING: definizione del metodo verificaStringa">
+      <option name="closed" value="true" />
+      <created>1776243220095</created>
+      <option name="number" value="02083" />
+      <option name="presentableId" value="LOCAL-02083" />
+      <option name="project" value="LOCAL" />
+      <updated>1776243220095</updated>
+    </task>
+    <task id="LOCAL-02084" summary="VERDE DIRETTO: testControlloMedium riuscito">
+      <option name="closed" value="true" />
+      <created>1776243372028</created>
+      <option name="number" value="02084" />
+      <option name="presentableId" value="LOCAL-02084" />
+      <option name="project" value="LOCAL" />
+      <updated>1776243372028</updated>
+    </task>
+    <option name="localTasksCounter" value="2085" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,14 +690,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGoblin riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLeprecauno riuscito" />
     <MESSAGE value="ROSSO: testSidhe non riuscito" />
     <MESSAGE value="VERDE: testSidhe riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCreatureOmbra riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSidhe riuscito" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAssassino riuscito" />
@@ -715,6 +713,8 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
+    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testControlloMedium riuscito" />
   </component>
 </project>
