@@ -30,6 +30,8 @@ public final class TestSensitiva
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
