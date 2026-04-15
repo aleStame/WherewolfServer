@@ -41,12 +41,12 @@ public final class TestSensitiva
 
     @Test public void testSegnalazioneInquisitore()
     {
-        assertThat(isAccusato()).isFalse();
+        verificaFalso(isAccusato());
         ruolo.segnalazioneInquisitore();
         verificaVero(isAccusato());
     }
 
-    @Test public void testBardo() { assertThat(ruolo.isBardo()).isFalse(); }
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
@@ -55,5 +55,7 @@ public final class TestSensitiva
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private boolean isAccusato() { return ruolo.isAccusato(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
