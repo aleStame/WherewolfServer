@@ -64,6 +64,8 @@ public final class TestSensitiva
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
 
+    @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
