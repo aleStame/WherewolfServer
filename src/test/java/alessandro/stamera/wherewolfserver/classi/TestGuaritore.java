@@ -30,6 +30,8 @@ public final class TestGuaritore
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
 
     @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
@@ -59,6 +61,8 @@ public final class TestGuaritore
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
     @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
+
+    @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 

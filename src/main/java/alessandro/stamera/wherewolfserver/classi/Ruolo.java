@@ -265,6 +265,8 @@ public class Ruolo
 
     public boolean isSpia() { return false; }
 
+    public boolean isSensitiva() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)

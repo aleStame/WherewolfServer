@@ -65,6 +65,8 @@ public final class TestPrete
 
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
+    @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
+
     @Test public void testPrete() { assertThat(ruolo.isPrete()).isTrue(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
