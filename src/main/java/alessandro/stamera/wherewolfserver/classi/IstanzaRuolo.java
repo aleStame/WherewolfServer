@@ -18,7 +18,8 @@ public enum IstanzaRuolo
     MEDIUM(Medium.getInstance()), MEGERA(Megera.getInstance()), MERCANTE(Mercante.getInstance()), MONACO(Monaco.getInstance()),
     NEGROMANTE(Negromante.getInstance()), NONNA(Nonna.getInstance()), NOSFERATU(Nosferatu.getInstance()), ORATORE(Oratore.getInstance()),
     OSTE(Oste.getInstance()), PAZZO(Pazzo.getInstance()), PECCATORE(Peccatore.getInstance()), POSSEDUTO(Posseduto.getInstance()),
-    PRETE(Prete.getInstance()), SIDHE(Sidhe.getInstance()), SPIA(Spia.getInstance()), SENSITIVA(Sensitiva.getInstance());
+    PRETE(Prete.getInstance()), SIDHE(Sidhe.getInstance()), SPIA(Spia.getInstance()), SENSITIVA(Sensitiva.getInstance()),
+    TEMPLARE(Templare.getInstance());
 
     private final Ruolo ruolo;
 
