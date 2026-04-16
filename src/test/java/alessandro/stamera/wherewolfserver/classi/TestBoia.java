@@ -29,9 +29,9 @@ public final class TestBoia
 
     @Test public void testBoia() { verificaVero(ruolo.isBoia()); }
 
-    @Test public void testInquisitore() { assertThat(ruolo.isInquisitore()).isFalse(); }
+    @Test public void testInquisitore() { verificaFalso(ruolo.isInquisitore()); }
 
-    @Test public void testTemplare() { assertThat(ruolo.isTemplare()).isFalse(); }
+    @Test public void testTemplare() { verificaFalso(ruolo.isTemplare()); }
 
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
@@ -42,5 +42,7 @@ public final class TestBoia
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
