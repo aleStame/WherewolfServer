@@ -29,17 +29,19 @@ public final class TestInquisitore
 
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
-    @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     @Test public void testInquisitore() { verificaVero(ruolo.isInquisitore()); }
 
-    @Test public void testTemplare() { assertThat(ruolo.isTemplare()).isFalse(); }
+    @Test public void testTemplare() { verificaFalso(ruolo.isTemplare()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
