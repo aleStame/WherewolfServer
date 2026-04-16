@@ -21,15 +21,17 @@ public final class TestTemplare
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
+    @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     @Test public void testInquisitore() { verificaFalso(ruolo.isInquisitore()); }
 
-    @Test public void testTemplare() { assertThat(ruolo.isTemplare()).isTrue(); }
+    @Test public void testTemplare() { verificaVero(ruolo.isTemplare()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
