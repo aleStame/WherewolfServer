@@ -11,7 +11,17 @@ public final class TestGiocatori
     {
         Giocatori giocatori = new Giocatori();
         giocatori.aggiungiGiocatore("Antonio", FACTORY.getRuolo("Capo branco"));
-        assertThat(giocatori.getNumeroGiocatore()).isEqualTo(1);
+        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(1);
+    }
+
+    @Test public void testEliminazioneGiocatori()
+    {
+        Giocatori giocatori = new Giocatori();
+        String eliminato = "Elena";
+        String[][] abbinamenti = new String[][] { { "Tommaso", "Veggente" }, { eliminato, "Mercante" } };
+        for (String[] strings : abbinamenti) giocatori.aggiungiGiocatore(strings[0], FACTORY.getRuolo(strings[1]));
+        giocatori.eliminaGiocatore(eliminato);
+        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(1);
     }
 
 }

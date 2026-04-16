@@ -12,6 +12,8 @@ public class Giocatori
 
     public void aggiungiGiocatore(String nome, Ruolo ruolo) { giocatori.put(nome, ruolo); }
 
-    public int getNumeroGiocatore() { return giocatori.size(); }
+    public int getNumeroGiocatori() { return giocatori.size(); }
+
+    public void eliminaGiocatore(String nome) { }
 
 }
