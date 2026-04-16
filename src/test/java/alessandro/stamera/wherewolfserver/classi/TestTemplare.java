@@ -23,10 +23,12 @@ public final class TestTemplare
 
     @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
 
-    @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
+    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
-    @Test public void testInquisitore() { assertThat(ruolo.isInquisitore()).isFalse(); }
+    @Test public void testInquisitore() { verificaFalso(ruolo.isInquisitore()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
