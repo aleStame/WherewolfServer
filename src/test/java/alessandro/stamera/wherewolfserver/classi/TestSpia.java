@@ -15,7 +15,7 @@ public final class TestSpia
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
@@ -26,7 +26,7 @@ public final class TestSpia
         String descrizione =
             "La prima notte riconosce gli altri criminali. Può tenere gli occhi aperti durante le votazioni per le accuse. Se lo fa, in quella" +
             " votazione può votare per sé stesso";
-        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+        verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
     @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
@@ -38,6 +38,8 @@ public final class TestSpia
     @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
 
     @Test public void testSpia() { assertThat(ruolo.isSpia()).isTrue(); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
