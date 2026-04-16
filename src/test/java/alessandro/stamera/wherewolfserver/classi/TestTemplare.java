@@ -21,6 +21,8 @@ public final class TestTemplare
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }
