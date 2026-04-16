@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVotazione non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,30 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02110" summary="VERDE DIRETTO: testPrete riuscito">
-      <option name="closed" value="true" />
-      <created>1776262611310</created>
-      <option name="number" value="02110" />
-      <option name="presentableId" value="LOCAL-02110" />
-      <option name="project" value="LOCAL" />
-      <updated>1776262611310</updated>
-    </task>
-    <task id="LOCAL-02111" summary="ROSSO: testSensitiva non riuscito">
-      <option name="closed" value="true" />
-      <created>1776262823254</created>
-      <option name="number" value="02111" />
-      <option name="presentableId" value="LOCAL-02111" />
-      <option name="project" value="LOCAL" />
-      <updated>1776262823254</updated>
-    </task>
-    <task id="LOCAL-02112" summary="VERDE: testSensitiva riuscito">
-      <option name="closed" value="true" />
-      <created>1776263007533</created>
-      <option name="number" value="02112" />
-      <option name="presentableId" value="LOCAL-02112" />
-      <option name="project" value="LOCAL" />
-      <updated>1776263007533</updated>
     </task>
     <task id="LOCAL-02113" summary="VERDE DIRETTO: testSensitiva riuscito">
       <option name="closed" value="true" />
@@ -673,7 +649,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776346952285</updated>
     </task>
-    <option name="localTasksCounter" value="2159" />
+    <task id="LOCAL-02159" summary="REFACTORING: definizione del metodo verificaNumeroGiocatori">
+      <option name="closed" value="true" />
+      <created>1776347191319</created>
+      <option name="number" value="02159" />
+      <option name="presentableId" value="LOCAL-02159" />
+      <option name="project" value="LOCAL" />
+      <updated>1776347191319</updated>
+    </task>
+    <task id="LOCAL-02160" summary="REFACTORING: definizione della costante ESEMPIO_GIOCATORE">
+      <option name="closed" value="true" />
+      <created>1776347448388</created>
+      <option name="number" value="02160" />
+      <option name="presentableId" value="LOCAL-02160" />
+      <option name="project" value="LOCAL" />
+      <updated>1776347448388</updated>
+    </task>
+    <task id="LOCAL-02161" summary="ROSSO: testVotazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1776347766796</created>
+      <option name="number" value="02161" />
+      <option name="presentableId" value="LOCAL-02161" />
+      <option name="project" value="LOCAL" />
+      <updated>1776347766796</updated>
+    </task>
+    <option name="localTasksCounter" value="2162" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,9 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNome non riuscito" />
-    <MESSAGE value="VERDE: testNome riuscito" />
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
@@ -713,6 +710,9 @@
     <MESSAGE value="VERDE: testEliminazioneGiocatori riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroGiocatori" />
+    <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_GIOCATORE" />
+    <MESSAGE value="ROSSO: testVotazione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVotazione non riuscito" />
   </component>
 </project>
