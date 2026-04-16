@@ -23,6 +23,8 @@ public final class TestTemplare
 
     @Test public void testInquisizione() { assertThat(ruolo.isInquisizione()).isTrue(); }
 
+    @Test public void testBoia() { assertThat(ruolo.isBoia()).isFalse(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
 }
