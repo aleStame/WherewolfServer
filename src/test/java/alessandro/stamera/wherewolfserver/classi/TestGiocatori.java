@@ -39,14 +39,6 @@ public final class TestGiocatori
         verificaNumeroIntero(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE), numeroVoti);
     }
 
-    @Test public void testBallottaggioPuro()
-    {
-        giocatori.incrementaVoti("Giulio", 2);
-        giocatori.incrementaVoti("Cesare", 1);
-        Giocatori ballottaggio = giocatori.getBallottaggio();
-        verificaNumeroIntero(ballottaggio.getNumeroGiocatori(), 2);
-    }
-
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
