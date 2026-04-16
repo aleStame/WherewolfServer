@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNome riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAura non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Templare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Templare.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,22 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02082" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1776243024011</created>
-      <option name="number" value="02082" />
-      <option name="presentableId" value="LOCAL-02082" />
-      <option name="project" value="LOCAL" />
-      <updated>1776243024012</updated>
-    </task>
-    <task id="LOCAL-02083" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1776243220095</created>
-      <option name="number" value="02083" />
-      <option name="presentableId" value="LOCAL-02083" />
-      <option name="project" value="LOCAL" />
-      <updated>1776243220095</updated>
     </task>
     <task id="LOCAL-02084" summary="VERDE DIRETTO: testControlloMedium riuscito">
       <option name="closed" value="true" />
@@ -673,7 +659,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776329198056</updated>
     </task>
-    <option name="localTasksCounter" value="2131" />
+    <task id="LOCAL-02131" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1776329385224</created>
+      <option name="number" value="02131" />
+      <option name="presentableId" value="LOCAL-02131" />
+      <option name="project" value="LOCAL" />
+      <updated>1776329385224</updated>
+    </task>
+    <task id="LOCAL-02132" summary="ROSSO: testAura non riuscito">
+      <option name="closed" value="true" />
+      <created>1776329591609</created>
+      <option name="number" value="02132" />
+      <option name="presentableId" value="LOCAL-02132" />
+      <option name="project" value="LOCAL" />
+      <updated>1776329591609</updated>
+    </task>
+    <option name="localTasksCounter" value="2133" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,8 +690,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
@@ -713,6 +713,8 @@
     <MESSAGE value="VERDE DIRETTO: testSensitiva riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNome riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <MESSAGE value="ROSSO: testAura non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAura non riuscito" />
   </component>
 </project>
