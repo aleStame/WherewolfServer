@@ -19,18 +19,23 @@ public final class TestGiocatori
     @Test public void testInserimentoGiocatori()
     {
         aggiungiGiocatore("Antonio", "Capo branco");
-        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(2);
+        verificaNumeroGiocatori(2);
     }
 
     @Test public void testEliminazioneGiocatori()
     {
         giocatori.eliminaGiocatore("Elena");
-        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(0);
+        verificaNumeroGiocatori(0);
     }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
+    }
+
+    private void verificaNumeroGiocatori(int numeroGiocatori)
+    {
+        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(numeroGiocatori);
     }
 
 }

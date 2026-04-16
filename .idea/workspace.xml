@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testEliminazioneGiocatori riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatori.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,22 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02108" summary="VERDE DIRETTO: testOste riuscito">
-      <option name="closed" value="true" />
-      <created>1776262291965</created>
-      <option name="number" value="02108" />
-      <option name="presentableId" value="LOCAL-02108" />
-      <option name="project" value="LOCAL" />
-      <updated>1776262291965</updated>
-    </task>
-    <task id="LOCAL-02109" summary="VERDE DIRETTO: testPeccatore riuscito">
-      <option name="closed" value="true" />
-      <created>1776262452336</created>
-      <option name="number" value="02109" />
-      <option name="presentableId" value="LOCAL-02109" />
-      <option name="project" value="LOCAL" />
-      <updated>1776262452336</updated>
     </task>
     <task id="LOCAL-02110" summary="VERDE DIRETTO: testPrete riuscito">
       <option name="closed" value="true" />
@@ -675,7 +657,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776346366616</updated>
     </task>
-    <option name="localTasksCounter" value="2157" />
+    <task id="LOCAL-02157" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1776346742261</created>
+      <option name="number" value="02157" />
+      <option name="presentableId" value="LOCAL-02157" />
+      <option name="project" value="LOCAL" />
+      <updated>1776346742261</updated>
+    </task>
+    <task id="LOCAL-02158" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1776346952285</created>
+      <option name="number" value="02158" />
+      <option name="presentableId" value="LOCAL-02158" />
+      <option name="project" value="LOCAL" />
+      <updated>1776346952285</updated>
+    </task>
+    <option name="localTasksCounter" value="2159" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,13 +688,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testSensitiva riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
     <MESSAGE value="VERDE: testNome riuscito" />
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testAura non riuscito" />
     <MESSAGE value="VERDE: testAura riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraBianca" />
     <MESSAGE value="VERDE DIRETTO: testInquisizione riuscito" />
@@ -715,6 +711,8 @@
     <MESSAGE value="VERDE: testInserimentoGiocatori riuscito" />
     <MESSAGE value="ROSSO: testEliminazioneGiocatori non riuscito" />
     <MESSAGE value="VERDE: testEliminazioneGiocatori riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEliminazioneGiocatori riuscito" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiGiocatore" />
   </component>
 </project>
