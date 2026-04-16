@@ -20,6 +20,8 @@ public class Giocatori
 
     public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
 
+    public Giocatori getBallottaggio() { return null; }
+
     private Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
 }

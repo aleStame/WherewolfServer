@@ -15,19 +15,21 @@ public final class TestGiocatori
     @BeforeEach public void setUp()
     {
         giocatori = new Giocatori();
-        aggiungiGiocatore(ESEMPIO_GIOCATORE, "Mercante");
+        aggiungiGiocatore(ESEMPIO_GIOCATORE, "Angelo custode");
+        aggiungiGiocatore("Giulio", "Pazzo");
+        aggiungiGiocatore("Cesare", "Peccatore");
     }
 
     @Test public void testInserimentoGiocatori()
     {
         aggiungiGiocatore("Antonio", "Capo branco");
-        verificaNumeroGiocatori(2);
+        verificaNumeroGiocatori(4);
     }
 
     @Test public void testEliminazioneGiocatori()
     {
         giocatori.eliminaGiocatore(ESEMPIO_GIOCATORE);
-        verificaNumeroGiocatori(0);
+        verificaNumeroGiocatori(2);
     }
 
     @Test public void testVotazione()
@@ -35,6 +37,14 @@ public final class TestGiocatori
         int numeroVoti = 3;
         giocatori.incrementaVoti(ESEMPIO_GIOCATORE, numeroVoti);
         verificaNumeroIntero(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE), numeroVoti);
+    }
+
+    @Test public void testBallottaggioPuro()
+    {
+        giocatori.incrementaVoti("Giulio", 2);
+        giocatori.incrementaVoti("Cesare", 1);
+        Giocatori ballottaggio = giocatori.getBallottaggio();
+        verificaNumeroIntero(ballottaggio.getNumeroGiocatori(), 2);
     }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
