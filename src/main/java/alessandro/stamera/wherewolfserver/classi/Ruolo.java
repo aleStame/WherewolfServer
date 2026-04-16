@@ -267,6 +267,8 @@ public class Ruolo
 
     public boolean isSensitiva() { return false; }
 
+    public boolean isTemplare() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)

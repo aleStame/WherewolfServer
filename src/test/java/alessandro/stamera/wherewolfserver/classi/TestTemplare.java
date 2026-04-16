@@ -27,6 +27,8 @@ public final class TestTemplare
 
     @Test public void testInquisitore() { verificaFalso(ruolo.isInquisitore()); }
 
+    @Test public void testTemplare() { assertThat(ruolo.isTemplare()).isTrue(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
