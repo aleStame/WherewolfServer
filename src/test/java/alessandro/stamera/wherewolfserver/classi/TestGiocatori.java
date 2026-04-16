@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -7,21 +8,24 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestGiocatori
 {
 
+    private Giocatori giocatori;
+
+    @BeforeEach public void setUp()
+    {
+        giocatori = new Giocatori();
+        giocatori.aggiungiGiocatore("Elena", FACTORY.getRuolo("Mercante"));
+    }
+
     @Test public void testInserimentoGiocatori()
     {
-        Giocatori giocatori = new Giocatori();
         giocatori.aggiungiGiocatore("Antonio", FACTORY.getRuolo("Capo branco"));
-        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(1);
+        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(2);
     }
 
     @Test public void testEliminazioneGiocatori()
     {
-        Giocatori giocatori = new Giocatori();
-        String eliminato = "Elena";
-        String[][] abbinamenti = new String[][] { { "Tommaso", "Veggente" }, { eliminato, "Mercante" } };
-        for (String[] strings : abbinamenti) giocatori.aggiungiGiocatore(strings[0], FACTORY.getRuolo(strings[1]));
-        giocatori.eliminaGiocatore(eliminato);
-        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(1);
+        giocatori.eliminaGiocatore("Elena");
+        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(0);
     }
 
 }
