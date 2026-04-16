@@ -16,4 +16,8 @@ public class Giocatori
 
     public void eliminaGiocatore(String nome) { giocatori.remove(nome); }
 
+    public void incrementaVoti(String nome, int voti) { }
+
+    public int getNumeroVoti(String nome) { return -1; }
+
 }

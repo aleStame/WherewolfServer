@@ -30,6 +30,13 @@ public final class TestGiocatori
         verificaNumeroGiocatori(0);
     }
 
+    @Test public void testVotazione()
+    {
+        int numeroVoti = 3;
+        giocatori.incrementaVoti(ESEMPIO_GIOCATORE, numeroVoti);
+        assertThat(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE)).isEqualTo(numeroVoti);
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
