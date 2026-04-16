@@ -8,12 +8,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestGiocatori
 {
 
+    private static final String ESEMPIO_GIOCATORE = "Marco";
+
     private Giocatori giocatori;
 
     @BeforeEach public void setUp()
     {
         giocatori = new Giocatori();
-        aggiungiGiocatore("Elena", "Mercante");
+        aggiungiGiocatore(ESEMPIO_GIOCATORE, "Mercante");
     }
 
     @Test public void testInserimentoGiocatori()
@@ -24,7 +26,7 @@ public final class TestGiocatori
 
     @Test public void testEliminazioneGiocatori()
     {
-        giocatori.eliminaGiocatore("Elena");
+        giocatori.eliminaGiocatore(ESEMPIO_GIOCATORE);
         verificaNumeroGiocatori(0);
     }
 
