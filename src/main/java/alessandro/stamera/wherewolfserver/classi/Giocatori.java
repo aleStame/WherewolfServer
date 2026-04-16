@@ -14,6 +14,6 @@ public class Giocatori
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
-    public void eliminaGiocatore(String nome) { }
+    public void eliminaGiocatore(String nome) { giocatori.remove(nome); }
 
 }
