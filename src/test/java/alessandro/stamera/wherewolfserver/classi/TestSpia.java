@@ -21,6 +21,14 @@ public final class TestSpia
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte riconosce gli altri criminali. Può tenere gli occhi aperti durante le votazioni per le accuse. Se lo fa, in quella" +
+            " votazione può votare per sé stesso";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
 
     @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
