@@ -34,7 +34,7 @@ public final class TestGiocatori
     {
         int numeroVoti = 3;
         giocatori.incrementaVoti(ESEMPIO_GIOCATORE, numeroVoti);
-        assertThat(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE)).isEqualTo(numeroVoti);
+        verificaNumeroIntero(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE), numeroVoti);
     }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
@@ -44,7 +44,9 @@ public final class TestGiocatori
 
     private void verificaNumeroGiocatori(int numeroGiocatori)
     {
-        assertThat(giocatori.getNumeroGiocatori()).isEqualTo(numeroGiocatori);
+        verificaNumeroIntero(giocatori.getNumeroGiocatori(), numeroGiocatori);
     }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
