@@ -33,6 +33,8 @@ public final class TestInquisitore
 
     @Test public void testInquisitore() { verificaVero(ruolo.isInquisitore()); }
 
+    @Test public void testTemplare() { assertThat(ruolo.isTemplare()).isFalse(); }
+
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
