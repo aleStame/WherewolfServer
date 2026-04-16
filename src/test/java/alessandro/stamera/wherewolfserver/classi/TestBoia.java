@@ -31,6 +31,8 @@ public final class TestBoia
 
     @Test public void testInquisitore() { assertThat(ruolo.isInquisitore()).isFalse(); }
 
+    @Test public void testTemplare() { assertThat(ruolo.isTemplare()).isFalse(); }
+
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
