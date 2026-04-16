@@ -13,12 +13,12 @@ public final class TestGiocatori
     @BeforeEach public void setUp()
     {
         giocatori = new Giocatori();
-        giocatori.aggiungiGiocatore("Elena", FACTORY.getRuolo("Mercante"));
+        aggiungiGiocatore("Elena", "Mercante");
     }
 
     @Test public void testInserimentoGiocatori()
     {
-        giocatori.aggiungiGiocatore("Antonio", FACTORY.getRuolo("Capo branco"));
+        aggiungiGiocatore("Antonio", "Capo branco");
         assertThat(giocatori.getNumeroGiocatori()).isEqualTo(2);
     }
 
@@ -26,6 +26,11 @@ public final class TestGiocatori
     {
         giocatori.eliminaGiocatore("Elena");
         assertThat(giocatori.getNumeroGiocatori()).isEqualTo(0);
+    }
+
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
+    {
+        giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
     }
 
 }
