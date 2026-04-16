@@ -16,8 +16,10 @@ public class Giocatori
 
     public void eliminaGiocatore(String nome) { giocatori.remove(nome); }
 
-    public void incrementaVoti(String nome, int voti) { giocatori.get(nome).incrementaVoti(voti); }
+    public void incrementaVoti(String nome, int voti) { getRuolo(nome).incrementaVoti(voti); }
 
-    public int getNumeroVoti(String nome) { return giocatori.get(nome).getNumeroVoti(); }
+    public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
+
+    private Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
 }
