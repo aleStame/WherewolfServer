@@ -15,13 +15,21 @@ public final class TestSpia
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testCriminale() { assertThat(ruolo.isCriminale()).isTrue(); }
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte riconosce gli altri criminali. Può tenere gli occhi aperti durante le votazioni per le accuse. Se lo fa, in quella" +
+            " votazione può votare per sé stesso";
+        verificaStringa(ruolo.getDescrizione(), descrizione);
+    }
+
+    @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
     @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
 
@@ -29,9 +37,13 @@ public final class TestSpia
 
     @Test public void testLadra() { verificaFalso(ruolo.isLadra()); }
 
-    @Test public void testSpia() { assertThat(ruolo.isSpia()).isTrue(); }
+    @Test public void testSpia() { verificaVero(ruolo.isSpia()); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
