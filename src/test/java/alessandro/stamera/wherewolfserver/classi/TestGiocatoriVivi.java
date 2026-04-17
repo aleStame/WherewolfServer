@@ -9,7 +9,7 @@ public final class TestGiocatoriVivi
 
     @Test public void testBallottaggioPuro()
     {
-        Giocatori giocatori = new GiocatoriVivi();
+        GiocatoriVivi giocatori = new GiocatoriVivi();
         giocatori.aggiungiGiocatore("Marco", FACTORY.getRuolo("Angelo custode"));
         giocatori.aggiungiGiocatore("Giulio", FACTORY.getRuolo("Pazzo"));
         giocatori.aggiungiGiocatore("Cesare", FACTORY.getRuolo("Peccatore"));

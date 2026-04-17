@@ -1,8 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
+import static java.util.stream.Collectors.toMap;
 import java.util.Map.Entry;
 
 public class Giocatori
@@ -18,26 +18,17 @@ public class Giocatori
 
     public void eliminaGiocatore(String nome) { giocatori.remove(nome); }
 
-    public void incrementaVoti(String nome, int voti) { getRuolo(nome).incrementaVoti(voti); }
+    public void incrementaVoti(String nome, int voti)
+    {
+        getRuolo(nome).incrementaVoti(voti);
+        giocatori.entrySet().stream().sorted(new ComparatoreVoti())
+            .collect(toMap(Entry::getKey, Entry::getValue, (giocatore1, giocatore2) -> giocatore1, LinkedHashMap::new));
+    }
 
     public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
 
-    public Giocatori getBallottaggio()
-    {
-        Ballottaggio ballottaggio = new Ballottaggio();
-        List<Entry<String, Ruolo>> giocatori = new java.util.ArrayList<>(this.giocatori.entrySet().stream().toList());
-        giocatori.sort(new ComparatoreVoti());
-        this.giocatori.clear();
-        for(Entry<String, Ruolo> giocatore : giocatori) this.giocatori.put(giocatore.getKey(), giocatore.getValue());
-        List<String> chiavi = this.giocatori.keySet().stream().toList();
-        for(int i = 0; i < 2; i++)
-        {
-            String chiave = chiavi.get(i);
-            ballottaggio.aggiungiGiocatore(chiave, getRuolo(chiave));
-        }
-        return ballottaggio;
-    }
+    public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
-    private Ruolo getRuolo(String nome) { return giocatori.get(nome); }
+    public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
 }
