@@ -17,4 +17,15 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.getBallottaggio().getNumeroGiocatori()).isEqualTo(2);
     }
 
+    @Test public void testUnanimita()
+    {
+        GiocatoriVivi giocatori = new GiocatoriVivi();
+        String[][] esempi = new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
+        for(String[] esempio : esempi) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+        giocatori.incrementaVoti("Marco", 3);
+        Giocatori ballottaggio = giocatori.getBallottaggio();
+        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(1);
+        assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo("Marco");
+    }
+
 }
