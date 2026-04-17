@@ -10,13 +10,11 @@ public final class TestGiocatoriVivi
     @Test public void testBallottaggioPuro()
     {
         GiocatoriVivi giocatori = new GiocatoriVivi();
-        giocatori.aggiungiGiocatore("Marco", FACTORY.getRuolo("Angelo custode"));
-        giocatori.aggiungiGiocatore("Giulio", FACTORY.getRuolo("Pazzo"));
-        giocatori.aggiungiGiocatore("Cesare", FACTORY.getRuolo("Peccatore"));
-        giocatori.incrementaVoti("Giulio", 2);
-        giocatori.incrementaVoti("Cesare", 1);
-        Giocatori ballottaggio = giocatori.getBallottaggio();
-        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(2);
+        String[][] esempi = new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
+        for(String[] esempio : esempi) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+        int[] numeroVoti = new int[] { 2, 1 };
+        for(int i = 0; i < numeroVoti.length; i++) giocatori.incrementaVoti(esempi[i + 1][0], numeroVoti[i]);
+        assertThat(giocatori.getBallottaggio().getNumeroGiocatori()).isEqualTo(2);
     }
 
 }
