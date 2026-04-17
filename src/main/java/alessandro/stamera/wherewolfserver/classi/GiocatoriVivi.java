@@ -11,9 +11,11 @@ public final class GiocatoriVivi extends Giocatori
             String nome = getNomeGiocatore(i);
             if(getNumeroVoti(nome) > 0) ballottaggio.aggiungiGiocatore(nome, getRuolo(nome));
         }
-        for(int i = 0; i < getNumeroGiocatori(); i++) annullaVoti(getNomeGiocatore(i));
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) ballottaggio.annullaVoti(ballottaggio.getNomeGiocatore(i));
+        annullaVoti();
+        ballottaggio.annullaVoti();
         return ballottaggio;
     }
+
+    //private Giocatori creaBallottaggio() {}
 
 }

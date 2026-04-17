@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import static java.util.stream.Collectors.toMap;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class Giocatori
 {
@@ -27,10 +28,14 @@ public class Giocatori
 
     public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
 
+    public void annullaVoti() { for(String nome : getChiavi()) annullaVoti(nome); }
+
     public void annullaVoti(String nome) { getRuolo(nome).annullaVoti(); }
 
     public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
-    public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
+    public String getNomeGiocatore(int posizione) { return getChiavi().stream().toList().get(posizione); }
+
+    private Set<String> getChiavi() { return giocatori.keySet(); }
 
 }
