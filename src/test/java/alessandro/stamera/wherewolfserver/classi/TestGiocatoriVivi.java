@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -7,25 +8,30 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestGiocatoriVivi
 {
 
+    private static final String[][] ESEMPI_GIOCATORI =
+        new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
+
+    private GiocatoriVivi giocatori;
+
+    @BeforeEach public void setUp()
+    {
+        giocatori = new GiocatoriVivi();
+        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+    }
+
     @Test public void testBallottaggioPuro()
     {
-        GiocatoriVivi giocatori = new GiocatoriVivi();
-        String[][] esempi = new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
-        for(String[] esempio : esempi) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) giocatori.incrementaVoti(esempi[i + 1][0], numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) giocatori.incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
         assertThat(giocatori.getBallottaggio().getNumeroGiocatori()).isEqualTo(2);
     }
 
     @Test public void testUnanimita()
     {
-        GiocatoriVivi giocatori2 = new GiocatoriVivi();
-        String[][] esempi = new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
-        for(String[] esempio : esempi) giocatori2.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
-        giocatori2.incrementaVoti("Marco", 3);
-        Giocatori ballottaggio = giocatori2.getBallottaggio();
+        giocatori.incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
+        Giocatori ballottaggio = giocatori.getBallottaggio();
         assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(1);
-        assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo("Marco");
+        assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo(ESEMPI_GIOCATORI[0][0]);
     }
 
 }
