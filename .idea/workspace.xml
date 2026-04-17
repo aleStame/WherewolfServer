@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo incrementaVoti" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomeGiocatore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,14 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02128" summary="VERDE DIRETTO: testSensitiva riuscito">
-      <option name="closed" value="true" />
-      <created>1776269264581</created>
-      <option name="number" value="02128" />
-      <option name="presentableId" value="LOCAL-02128" />
-      <option name="project" value="LOCAL" />
-      <updated>1776269264581</updated>
     </task>
     <task id="LOCAL-02129" summary="ROSSO: testNome non riuscito">
       <option name="closed" value="true" />
@@ -673,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776422879380</updated>
     </task>
-    <option name="localTasksCounter" value="2177" />
+    <task id="LOCAL-02177" summary="REFACTORING: definizione del metodo getNomeGiocatore">
+      <option name="closed" value="true" />
+      <created>1776424462934</created>
+      <option name="number" value="02177" />
+      <option name="presentableId" value="LOCAL-02177" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424462934</updated>
+    </task>
+    <option name="localTasksCounter" value="2178" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,7 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'feature/templare' into develop" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="ROSSO: testInserimentoGiocatori non riuscito" />
     <MESSAGE value="VERDE: testInserimentoGiocatori riuscito" />
@@ -713,6 +712,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo creaBallottaggio" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo incrementaVoti" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeGiocatore" />
   </component>
 </project>
