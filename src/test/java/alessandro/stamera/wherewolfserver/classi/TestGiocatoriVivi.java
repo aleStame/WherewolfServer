@@ -19,11 +19,11 @@ public final class TestGiocatoriVivi
 
     @Test public void testUnanimita()
     {
-        GiocatoriVivi giocatori = new GiocatoriVivi();
+        GiocatoriVivi giocatori2 = new GiocatoriVivi();
         String[][] esempi = new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
-        for(String[] esempio : esempi) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
-        giocatori.incrementaVoti("Marco", 3);
-        Giocatori ballottaggio = giocatori.getBallottaggio();
+        for(String[] esempio : esempi) giocatori2.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+        giocatori2.incrementaVoti("Marco", 3);
+        Giocatori ballottaggio = giocatori2.getBallottaggio();
         assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(1);
         assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo("Marco");
     }

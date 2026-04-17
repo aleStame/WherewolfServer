@@ -27,6 +27,8 @@ public class Giocatori
 
     public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
 
+    public void annullaVoti(String nome) { getRuolo(nome).annullaVoti(); }
+
     public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
     public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
