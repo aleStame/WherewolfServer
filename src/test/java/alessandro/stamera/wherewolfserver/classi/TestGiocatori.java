@@ -15,9 +15,8 @@ public final class TestGiocatori
     @BeforeEach public void setUp()
     {
         giocatori = new Giocatori();
-        aggiungiGiocatore(ESEMPIO_GIOCATORE, "Angelo custode");
-        aggiungiGiocatore("Giulio", "Pazzo");
-        aggiungiGiocatore("Cesare", "Peccatore");
+        String[][] esempi = new String[][] { { ESEMPIO_GIOCATORE, "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
+        for(String[] esempio : esempi) aggiungiGiocatore(esempio[0], esempio[1]);
     }
 
     @Test public void testInserimentoGiocatori()
