@@ -22,16 +22,21 @@ public final class TestGiocatoriVivi
     @Test public void testBallottaggioPuro()
     {
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) giocatori.incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, 0, numeroVoti[i]);
         assertThat(giocatori.getBallottaggio().getNumeroGiocatori()).isEqualTo(2);
     }
 
     @Test public void testUnanimita()
     {
-        giocatori.incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
+        incrementaVoti(0, 0, 3);
         Giocatori ballottaggio = giocatori.getBallottaggio();
         assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(1);
         assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo(ESEMPI_GIOCATORI[0][0]);
+    }
+
+    private void incrementaVoti(int posizioneGiocatore, int posizioneRuolo, int voti)
+    {
+        giocatori.incrementaVoti(ESEMPI_GIOCATORI[posizioneGiocatore][posizioneRuolo], voti);
     }
 
 }

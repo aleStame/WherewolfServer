@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo creaBallottaggio">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di un metodo di set up">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,14 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02126" summary="VERDE DIRETTO: testSensitiva riuscito">
-      <option name="closed" value="true" />
-      <created>1776268731797</created>
-      <option name="number" value="02126" />
-      <option name="presentableId" value="LOCAL-02126" />
-      <option name="project" value="LOCAL" />
-      <updated>1776268731797</updated>
     </task>
     <task id="LOCAL-02127" summary="VERDE DIRETTO: testSensitiva riuscito">
       <option name="closed" value="true" />
@@ -676,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776421415810</updated>
     </task>
-    <option name="localTasksCounter" value="2175" />
+    <task id="LOCAL-02175" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1776422399530</created>
+      <option name="number" value="02175" />
+      <option name="presentableId" value="LOCAL-02175" />
+      <option name="project" value="LOCAL" />
+      <updated>1776422399530</updated>
+    </task>
+    <option name="localTasksCounter" value="2176" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -698,7 +697,6 @@
     <MESSAGE value="VERDE: testInserimentoGiocatori riuscito" />
     <MESSAGE value="ROSSO: testEliminazioneGiocatori non riuscito" />
     <MESSAGE value="VERDE: testEliminazioneGiocatori riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroGiocatori" />
     <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_GIOCATORE" />
@@ -716,6 +714,7 @@
     <MESSAGE value="VERDE: testUnanimita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
     <MESSAGE value="REFACTORING: definizione del metodo creaBallottaggio" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo creaBallottaggio" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di un metodo di set up" />
   </component>
 </project>
