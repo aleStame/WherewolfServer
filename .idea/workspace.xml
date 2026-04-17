@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomeGiocatore" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroAccusati">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02129" summary="ROSSO: testNome non riuscito">
-      <option name="closed" value="true" />
-      <created>1776329029071</created>
-      <option name="number" value="02129" />
-      <option name="presentableId" value="LOCAL-02129" />
-      <option name="project" value="LOCAL" />
-      <updated>1776329029072</updated>
     </task>
     <task id="LOCAL-02130" summary="VERDE: testNome riuscito">
       <option name="closed" value="true" />
@@ -673,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776424462934</updated>
     </task>
-    <option name="localTasksCounter" value="2178" />
+    <task id="LOCAL-02178" summary="REFACTORING: definizione del metodo verificaNumeroAccusati">
+      <option name="closed" value="true" />
+      <created>1776424763330</created>
+      <option name="number" value="02178" />
+      <option name="presentableId" value="LOCAL-02178" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424763330</updated>
+    </task>
+    <option name="localTasksCounter" value="2179" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="ROSSO: testInserimentoGiocatori non riuscito" />
     <MESSAGE value="VERDE: testInserimentoGiocatori riuscito" />
     <MESSAGE value="ROSSO: testEliminazioneGiocatori non riuscito" />
@@ -713,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeGiocatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroAccusati" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroAccusati" />
   </component>
 </project>

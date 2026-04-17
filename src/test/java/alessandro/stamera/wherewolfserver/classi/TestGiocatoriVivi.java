@@ -9,7 +9,7 @@ public final class TestGiocatoriVivi
 {
 
     private static final String[][] ESEMPI_GIOCATORI =
-        new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
+        new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" } };
 
     private GiocatoriVivi giocatori;
 
@@ -32,6 +32,12 @@ public final class TestGiocatoriVivi
         Giocatori ballottaggio = giocatori.getBallottaggio();
         verificaNumeroAccusati(ballottaggio, 1);
         assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo(getNomeGiocatore(0));
+    }
+
+    @Test public void testPareggioPrimoPosto()
+    {
+        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) giocatori.incrementaVoti(getNomeGiocatore(i), 1);
+        verificaNumeroAccusati(giocatori.getBallottaggio(), 3);
     }
 
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
