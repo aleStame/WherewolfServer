@@ -16,4 +16,11 @@ public final class TestBallottaggio
         assertThat(ballottaggio.isAmatoPresente()).isTrue();
     }
 
+    @Test public void testAmatoAssente()
+    {
+        Ballottaggio ballottaggio = new Ballottaggio();
+        ballottaggio.aggiungiGiocatore("Gabriella", FACTORY.getRuolo("Pazzo"));
+        assertThat(ballottaggio.isAmatoPresente()).isFalse();
+    }
+
 }
