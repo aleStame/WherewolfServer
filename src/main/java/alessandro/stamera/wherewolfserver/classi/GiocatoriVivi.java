@@ -19,8 +19,10 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
-        ballottaggio.annullaVoti();return ballottaggio;
+        ballottaggio.annullaVoti();
+        return ballottaggio;
     }
+
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
     {
         Map<String, Ruolo> giocatori = estraiGiocatori(numeroVoti);

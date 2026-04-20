@@ -17,7 +17,7 @@ public class Giocatori
     public void aggiungiGiocatore(String nome, Ruolo ruolo)
     {
         giocatori.put(nome, ruolo);
-        ordinaGiocatori(new ComparatoreAlfabetico());
+        ordinaAlfabeticamente();
     }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
@@ -35,7 +35,7 @@ public class Giocatori
     public void annullaVoti()
     {
         for(String nome : getChiavi()) annullaVoti(nome);
-        ordinaGiocatori(new ComparatoreAlfabetico());
+        ordinaAlfabeticamente();
     }
 
     public void annullaVoti(String nome) { getRuolo(nome).annullaVoti(); }
@@ -54,5 +54,7 @@ public class Giocatori
         giocatori.clear();
         for(String nome : copia.keySet()) giocatori.put(nome, copia.get(nome));
     }
+
+    private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
 
 }
