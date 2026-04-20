@@ -35,7 +35,7 @@ public final class TestGiocatoriVivi
         incrementaVoti(0, 3);
         Giocatori ballottaggio = getBallottaggio();
         verificaNumeroAccusati(ballottaggio, 1);
-        assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo(getNomeGiocatore(0));
+        verificaGiocatoreAccusato(ballottaggio, 0, getNomeGiocatore(0));
     }
 
     @Test public void testPareggioPrimoPosto()
@@ -45,6 +45,11 @@ public final class TestGiocatoriVivi
     }
 
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
+
+    private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)
+    {
+        assertThat(ballottaggio.getNomeGiocatore(posizione)).isEqualTo(nome);
+    }
 
     private String getNomeGiocatore(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
