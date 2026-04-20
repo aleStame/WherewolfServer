@@ -19,7 +19,6 @@ public final class TestGiocatoriVivi
         factory.annullaVoti();
         giocatori = new GiocatoriVivi();
         for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], factory.getRuolo(esempio[1]));
-        giocatori.getRuolo(getNomeGiocatore(2)).togliAmato();
     }
 
     @Test public void testBallottaggioPuro()
