@@ -16,17 +16,18 @@ public final class GiocatoriVivi extends Giocatori
     private Giocatori creaBallottaggio()
     {
         Giocatori ballottaggio = new Ballottaggio();
-        Map<String, Ruolo> primoPosto = estraiGiocatori(getNumeroVotiPrimoClassificato());
-        for(String nome : primoPosto.keySet()) ballottaggio.aggiungiGiocatore(nome, primoPosto.get(nome));
+        aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         int numeroVoti = getNumeroVotiPrimoClassificato();
-        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0)
-        {
-            Map<String, Ruolo> secondoPosto = estraiGiocatori(numeroVoti);
-            for(String nome : secondoPosto.keySet()) ballottaggio.aggiungiGiocatore(nome, secondoPosto.get(nome));
-        }
+        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         ballottaggio.annullaVoti();
         return ballottaggio;
     }
+    private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
+    {
+        Map<String, Ruolo> giocatori = estraiGiocatori(numeroVoti);
+        for(String nome : giocatori.keySet()) ballottaggio.aggiungiGiocatore(nome, giocatori.get(nome));
+    }
+
 
     private Map<String, Ruolo> estraiGiocatori(int numeroVoti)
     {
