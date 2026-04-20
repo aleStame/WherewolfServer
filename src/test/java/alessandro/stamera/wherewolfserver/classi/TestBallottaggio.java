@@ -15,14 +15,14 @@ public final class TestBallottaggio
     @Test public void testAmatoPresente()
     {
         String nome = "Gabriella";
-        aggiungiGiocatore(nome, getPazzoAmato());
+        aggiungiGiocatore(nome, getMercanteAmato());
         assertThat(isAmatoPresente()).isTrue();
-        assertThat(ballottaggio.getNomeAmato()).isEqualTo("Gabriella");
+        assertThat(ballottaggio.getNomeAmato()).isEqualTo(nome);
     }
 
     @Test public void testAmatoAssente()
     {
-        aggiungiGiocatore("Lucia", getPazzo());
+        aggiungiGiocatore("Lucia", getMercante());
         assertThat(isAmatoPresente()).isFalse();
     }
 
@@ -30,13 +30,13 @@ public final class TestBallottaggio
 
     private void aggiungiGiocatore(String nome, Ruolo ruolo) { ballottaggio.aggiungiGiocatore(nome, ruolo); }
 
-    private Ruolo getPazzoAmato()
+    private Ruolo getMercanteAmato()
     {
-        Ruolo ruolo = getPazzo();
+        Ruolo ruolo = getMercante();
         ruolo.sceltaAngeloCustode();
         return ruolo;
     }
 
-    private Ruolo getPazzo() { return FACTORY.getRuolo("Pazzo"); }
+    private Ruolo getMercante() { return FACTORY.getRuolo("Mercante"); }
 
 }

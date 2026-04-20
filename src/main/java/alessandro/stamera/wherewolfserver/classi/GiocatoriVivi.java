@@ -9,7 +9,8 @@ public final class GiocatoriVivi extends Giocatori
     public Giocatori getBallottaggio()
     {
         Giocatori ballottaggio = creaBallottaggio();
-        annullaVoti();
+        this.annullaVoti();
+        ballottaggio.annullaVoti();
         return ballottaggio;
     }
 
@@ -31,35 +32,40 @@ public final class GiocatoriVivi extends Giocatori
 
     private Giocatori creaBallottaggio()
     {
-        Giocatori ballottaggio = new Ballottaggio();
+        Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
-        int numeroVoti = getNumeroVotiPrimoClassificato();
-        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
-        ballottaggio.annullaVoti();
-        int posizioneAmato = -1;
-        for(int i = 0; posizioneAmato == -1 && i < ballottaggio.getNumeroGiocatori(); i++)
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
         {
             String nome = ballottaggio.getNomeGiocatore(i);
-            if(ballottaggio.isAmato(nome)) posizioneAmato = i;
+            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
         }
-        int posizioneAngeloCustode = -1;
-        for(int i = 0; posizioneAngeloCustode == -1 && i < getNumeroGiocatori(); i++)
+        System.out.println();
+        int numeroVoti = getNumeroVotiPrimoClassificato();
+        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
         {
-            String nome =  getNomeGiocatore(i);
-            if(isAngeloCustode(nome)) posizioneAngeloCustode = i;
+            String nome = ballottaggio.getNomeGiocatore(i);
+            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
         }
-        if(posizioneAmato != -1 && posizioneAngeloCustode != -1)
+        System.out.println();
+        if(ballottaggio.isAmatoPresente()) if(isAngeloCustodePresente()) scambioAngeloCustodeAmato(ballottaggio);
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
         {
-            String nomeAmato = ballottaggio.getNomeGiocatore(posizioneAmato);
-            Ruolo amato = ballottaggio.getRuolo(nomeAmato);
-            String nomeAngeloCustode = getNomeGiocatore(posizioneAngeloCustode);
-            Ruolo angeloCustode = getRuolo(nomeAngeloCustode);
-            ballottaggio.eliminaGiocatore(nomeAmato);
-            ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
-            aggiungiGiocatore(nomeAmato, amato);
-            eliminaGiocatore(nomeAngeloCustode);
+            String nome = ballottaggio.getNomeGiocatore(i);
+            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
         }
-         return ballottaggio;
+        System.out.println();
+        return ballottaggio;
+    }
+
+    private void scambioAngeloCustodeAmato(Ballottaggio ballottaggio)
+    {
+        String nomeAngeloCustode = getNomeAngeloCustode(), nomeAmato = ballottaggio.getNomeAmato();
+        Ruolo angeloCustode = getRuolo(nomeAngeloCustode), amato = ballottaggio.getRuolo(nomeAmato);
+        eliminaGiocatore(nomeAngeloCustode);
+        ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
+        ballottaggio.eliminaGiocatore(nomeAmato);
+        aggiungiGiocatore(nomeAmato, amato);
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
@@ -73,13 +79,10 @@ public final class GiocatoriVivi extends Giocatori
         Map<String, Ruolo> giocatori = new LinkedHashMap<>();
         String[] nomi = new String[getNumeroGiocatori()];
         for(int i = 0; i < nomi.length; i++) nomi[i] = getNomeGiocatore(i);
-        for(String nome : nomi)
+        for(String nome : nomi) if(numeroVoti == getNumeroVoti(nome))
         {
-            if(numeroVoti == getNumeroVoti(nome))
-            {
-                giocatori.put(nome, getRuolo(nome));
-                eliminaGiocatore(nome);
-            }
+            giocatori.put(nome, getRuolo(nome));
+            eliminaGiocatore(nome);
         }
         return giocatori;
     }
