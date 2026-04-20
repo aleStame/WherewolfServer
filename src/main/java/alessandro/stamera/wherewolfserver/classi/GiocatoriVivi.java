@@ -34,27 +34,9 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
-        {
-            String nome = ballottaggio.getNomeGiocatore(i);
-            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
-        }
-        System.out.println();
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
-        {
-            String nome = ballottaggio.getNomeGiocatore(i);
-            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
-        }
-        System.out.println();
         if(ballottaggio.isAmatoPresente()) if(isAngeloCustodePresente()) scambioAngeloCustodeAmato(ballottaggio);
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
-        {
-            String nome = ballottaggio.getNomeGiocatore(i);
-            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
-        }
-        System.out.println();
         return ballottaggio;
     }
 

@@ -1,55 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-04-20T21:00:56" hostname="ALESSANDRO" time="0.095">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-04-20T21:06:12" hostname="ALESSANDRO" time="0.146">
   <properties/>
-  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.045"/>
-  <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.036"/>
-  <testcase name="testAngeloCustodePresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.003"/>
-  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testSegnalazioneAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.032"/>
+  <testcase name="testAngeloCustodePresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.043"/>
+  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.006"/>
+  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.018"/>
+  <testcase name="testSegnalazioneAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.002"/>
   <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.002"/>
-  <system-out><![CDATA[Giulio 2
-
-Cesare 1
-Giulio 2
-
-Cesare 1
-Giulio 2
-
-Augusto 1
-Cesare 1
-Giulio 1
-
-Augusto 1
-Cesare 1
-Giulio 1
-
-Augusto 1
-Cesare 1
-Giulio 1
-
-Cesare 3
-
-Cesare 3
-
-Marco 0
-
-Marco 2
-
-Cesare 1
-Giulio 1
-Marco 2
-
-Cesare 1
-Giulio 1
-Marco 2
-
-Marco 3
-
-Marco 3
-
-Marco 3
-
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
