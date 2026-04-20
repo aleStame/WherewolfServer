@@ -6,6 +6,8 @@ import java.util.Map;
 public final class GiocatoriVivi extends Giocatori
 {
 
+    private static final int NON_TROVATO = -1;
+
     public Giocatori getBallottaggio()
     {
         Giocatori ballottaggio = creaBallottaggio();
@@ -16,14 +18,14 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
 
-    public boolean isAngeloCustodePresente() { return getPosizioneAngeloCustode() != -1; }
+    public boolean isAngeloCustodePresente() { return getPosizioneAngeloCustode() != NON_TROVATO; }
 
     public String getNomeAngeloCustode() { return getNomeGiocatore(getPosizioneAngeloCustode()); }
 
     private int getPosizioneAngeloCustode()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(isAngeloCustode(getNomeGiocatore(i))) posizione = i;
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAngeloCustode(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
 
