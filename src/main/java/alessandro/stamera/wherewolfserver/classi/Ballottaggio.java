@@ -10,6 +10,11 @@ public final class Ballottaggio extends Giocatori
         return esito;
     }
 
-    public String getNomeAmato() { return null; }
+    public String getNomeAmato()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isAmato()) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
 
 }
