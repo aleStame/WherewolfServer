@@ -20,6 +20,11 @@ public final class GiocatoriVivi extends Giocatori
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         ballottaggio.annullaVoti();
+        /*for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
+        {
+            String nome = ballottaggio.getNomeGiocatore(i);
+            System.out.println(nome + " " + ballottaggio.getNumeroVoti(nome));
+        }*/
         return ballottaggio;
     }
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
@@ -28,13 +33,13 @@ public final class GiocatoriVivi extends Giocatori
         for(String nome : giocatori.keySet()) ballottaggio.aggiungiGiocatore(nome, giocatori.get(nome));
     }
 
-
     private Map<String, Ruolo> estraiGiocatori(int numeroVoti)
     {
         Map<String, Ruolo> giocatori = new LinkedHashMap<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++)
+        String[] nomi = new String[getNumeroGiocatori()];
+        for(int i = 0; i < nomi.length; i++) nomi[i] = getNomeGiocatore(i);
+        for(String nome : nomi)
         {
-            String nome = getNomeGiocatore(i);
             if(numeroVoti == getNumeroVoti(nome))
             {
                 giocatori.put(nome, getRuolo(nome));

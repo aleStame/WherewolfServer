@@ -23,11 +23,10 @@ public final class TestGiocatoriVivi
     {
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
-        Ballottaggio ballottaggio = new Ballottaggio();
+        Giocatori ballottaggio = getBallottaggio();
         verificaNumeroAccusati(ballottaggio, 2);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1) };
         int numeroGiocatoriBallottaggio = ballottaggio.getNumeroGiocatori();
-        verificaNumeroAccusati(ballottaggio, 2);
+        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1) };
         for(int i = 0; i < numeroGiocatoriBallottaggio; i++) assertThat(ballottaggio.getNomeGiocatore(i)).isEqualTo(soluzioni[i]);
     }
 
