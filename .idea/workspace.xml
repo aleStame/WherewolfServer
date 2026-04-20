@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNumeroVotiPrimoClassificato">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getBallottaggio">
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02133" summary="VERDE: testAura riuscito">
-      <option name="closed" value="true" />
-      <created>1776329725309</created>
-      <option name="number" value="02133" />
-      <option name="presentableId" value="LOCAL-02133" />
-      <option name="project" value="LOCAL" />
-      <updated>1776329725309</updated>
-    </task>
-    <task id="LOCAL-02134" summary="REFACTORING: definizione di un metodo di set up">
-      <option name="closed" value="true" />
-      <created>1776329928796</created>
-      <option name="number" value="02134" />
-      <option name="presentableId" value="LOCAL-02134" />
-      <option name="project" value="LOCAL" />
-      <updated>1776329928796</updated>
     </task>
     <task id="LOCAL-02135" summary="VERDE DIRETTO: testControlloMedium riuscito">
       <option name="closed" value="true" />
@@ -676,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776675714250</updated>
     </task>
-    <option name="localTasksCounter" value="2182" />
+    <task id="LOCAL-02182" summary="REFACTORING: definizione del metodo aggiungiGiocatoriBallottaggio">
+      <option name="closed" value="true" />
+      <created>1776676155874</created>
+      <option name="number" value="02182" />
+      <option name="presentableId" value="LOCAL-02182" />
+      <option name="project" value="LOCAL" />
+      <updated>1776676155874</updated>
+    </task>
+    <task id="LOCAL-02183" summary="REFACTORING: definizione del metodo getBallottaggio">
+      <option name="closed" value="true" />
+      <created>1776676376397</created>
+      <option name="number" value="02183" />
+      <option name="presentableId" value="LOCAL-02183" />
+      <option name="project" value="LOCAL" />
+      <updated>1776676376398</updated>
+    </task>
+    <option name="localTasksCounter" value="2184" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testEliminazioneGiocatori riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroGiocatori" />
     <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_GIOCATORE" />
     <MESSAGE value="ROSSO: testVotazione non riuscito" />
@@ -716,6 +716,8 @@
     <MESSAGE value="VERDE: testPareggioPrimoPosto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiGiocatori" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroVotiPrimoClassificato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNumeroVotiPrimoClassificato" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatoriBallottaggio" />
+    <MESSAGE value="REFACTORING: definizione del metodo getBallottaggio" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getBallottaggio" />
   </component>
 </project>

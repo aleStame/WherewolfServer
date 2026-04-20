@@ -23,7 +23,12 @@ public final class TestGiocatoriVivi
     {
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
-        verificaNumeroAccusati(getBallottaggio(), 2);
+        Ballottaggio ballottaggio = new Ballottaggio();
+        verificaNumeroAccusati(ballottaggio, 2);
+        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1) };
+        int numeroGiocatoriBallottaggio = ballottaggio.getNumeroGiocatori();
+        verificaNumeroAccusati(ballottaggio, 2);
+        for(int i = 0; i < numeroGiocatoriBallottaggio; i++) assertThat(ballottaggio.getNomeGiocatore(i)).isEqualTo(soluzioni[i]);
     }
 
     @Test public void testUnanimita()
