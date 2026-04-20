@@ -58,7 +58,7 @@ public final class TestGiocatoriVivi
     {
         String nome = getNomeGiocatore(3);
         segnalazioneAngeloCustode(nome);
-        assertThat(giocatori.isAmato(nome)).isTrue();
+        verificaVero(giocatori.isAmato(nome));
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
@@ -71,9 +71,19 @@ public final class TestGiocatoriVivi
 
     @Test public void testAngeloCustodePresente()
     {
-        assertThat(giocatori.isAngeloCustodePresente()).isTrue();
+        verificaVero(giocatori.isAngeloCustodePresente());
         verificaNomeGiocatore(giocatori.getNomeAngeloCustode(), getNomeGiocatore(0));
     }
+
+    @Test public void testAngeloCustodeAccusatoPresente()
+    {
+        for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
+        segnalazioneAngeloCustode(getNomeGiocatore(1));
+        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(0) };
+        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(getBallottaggio(), i, soluzioni[i]);
+    }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void segnalazioneAngeloCustode(String nome) { giocatori.segnalazioneAngeloCustode(nome); }
 
