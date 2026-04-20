@@ -23,21 +23,21 @@ public final class TestGiocatoriVivi
     {
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
-        verificaNumeroAccusati(giocatori.getBallottaggio(), 2);
+        verificaNumeroAccusati(getBallottaggio(), 2);
     }
 
     @Test public void testUnanimita()
     {
         incrementaVoti(0, 3);
-        Giocatori ballottaggio = giocatori.getBallottaggio();
+        Giocatori ballottaggio = getBallottaggio();
         verificaNumeroAccusati(ballottaggio, 1);
         assertThat(ballottaggio.getNomeGiocatore(0)).isEqualTo(getNomeGiocatore(0));
     }
 
     @Test public void testPareggioPrimoPosto()
     {
-        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) giocatori.incrementaVoti(getNomeGiocatore(i), 1);
-        verificaNumeroAccusati(giocatori.getBallottaggio(), 3);
+        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        verificaNumeroAccusati(getBallottaggio(), 3);
     }
 
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
@@ -48,5 +48,7 @@ public final class TestGiocatoriVivi
     {
         assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(numeroAccusati);
     }
+
+    private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
 
 }
