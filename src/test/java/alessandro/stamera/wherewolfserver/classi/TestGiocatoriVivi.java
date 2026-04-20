@@ -60,6 +60,14 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.isAmato(nome)).isTrue();
     }
 
+    @Test public void testAngeloCustodeAccusatoNonPresente()
+    {
+        int posizione = 2;
+        giocatori.segnalazioneAngeloCustode(getNomeGiocatore(posizione));
+        incrementaVoti(posizione, 3);
+        verificaGiocatoreAccusato(getBallottaggio(), 0, getNomeGiocatore(0));
+    }
+
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
 
     private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)
