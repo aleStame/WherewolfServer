@@ -56,17 +56,19 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneAngeloCustode()
     {
         String nome = getNomeGiocatore(3);
-        giocatori.segnalazioneAngeloCustode(nome);
+        segnalazioneAngeloCustode(nome);
         assertThat(giocatori.isAmato(nome)).isTrue();
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
     {
         int posizione = 2;
-        giocatori.segnalazioneAngeloCustode(getNomeGiocatore(posizione));
+        segnalazioneAngeloCustode(getNomeGiocatore(posizione));
         incrementaVoti(posizione, 3);
         verificaGiocatoreAccusato(getBallottaggio(), 0, getNomeGiocatore(0));
     }
+
+    private void segnalazioneAngeloCustode(String nome) { giocatori.segnalazioneAngeloCustode(nome); }
 
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
 
