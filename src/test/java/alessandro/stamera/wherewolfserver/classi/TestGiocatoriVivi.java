@@ -53,6 +53,13 @@ public final class TestGiocatoriVivi
         for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
+    @Test public void testSegnalazioneAngeloCustode()
+    {
+        String nome = getNomeGiocatore(3);
+        giocatori.segnalazioneAngeloCustode(nome);
+        assertThat(giocatori.isAmato(nome)).isTrue();
+    }
+
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
 
     private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)

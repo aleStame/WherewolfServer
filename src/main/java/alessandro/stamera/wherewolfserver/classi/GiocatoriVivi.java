@@ -47,4 +47,8 @@ public final class GiocatoriVivi extends Giocatori
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
+    public void segnalazioneAngeloCustode(String nome) { }
+
+    public boolean isAmato(String nome) { return false; }
+
 }
