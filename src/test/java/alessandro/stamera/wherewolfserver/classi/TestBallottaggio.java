@@ -17,13 +17,15 @@ public final class TestBallottaggio
         Ruolo ruolo = FACTORY.getRuolo("Pazzo");
         ruolo.sceltaAngeloCustode();
         ballottaggio.aggiungiGiocatore("Gabriella", ruolo);
-        assertThat(ballottaggio.isAmatoPresente()).isTrue();
+        assertThat(isAmatoPresente()).isTrue();
     }
 
     @Test public void testAmatoAssente()
     {
-        ballottaggio.aggiungiGiocatore("Gabriella", FACTORY.getRuolo("Pazzo"));
-        assertThat(ballottaggio.isAmatoPresente()).isFalse();
+        ballottaggio.aggiungiGiocatore("Lucia", FACTORY.getRuolo("Pazzo"));
+        assertThat(isAmatoPresente()).isFalse();
     }
+
+    private boolean isAmatoPresente() { return ballottaggio.isAmatoPresente(); }
 
 }
