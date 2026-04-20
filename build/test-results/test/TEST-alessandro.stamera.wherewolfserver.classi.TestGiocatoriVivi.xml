@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-20T13:59:26" hostname="ALESSANDRO" time="0.383">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-04-20T14:18:03" hostname="ALESSANDRO" time="0.281">
   <properties/>
-  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.357"/>
-  <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.004"/>
-  <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.012"/>
+  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.253"/>
+  <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.006"/>
+  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
