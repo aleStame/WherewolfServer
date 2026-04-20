@@ -10,4 +10,6 @@ public final class Ballottaggio extends Giocatori
         return esito;
     }
 
+    public String getNomeAmato() { return null; }
+
 }

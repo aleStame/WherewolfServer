@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del ,metodo isAmatoPresente">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPazzoAmato">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ballottaggio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,30 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02151" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1776333941149</created>
-      <option name="number" value="02151" />
-      <option name="presentableId" value="LOCAL-02151" />
-      <option name="project" value="LOCAL" />
-      <updated>1776333941149</updated>
-    </task>
-    <task id="LOCAL-02152" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1776344202677</created>
-      <option name="number" value="02152" />
-      <option name="presentableId" value="LOCAL-02152" />
-      <option name="project" value="LOCAL" />
-      <updated>1776344202677</updated>
-    </task>
-    <task id="LOCAL-02153" summary="ROSSO: testInserimentoGiocatori non riuscito">
-      <option name="closed" value="true" />
-      <created>1776345517355</created>
-      <option name="number" value="02153" />
-      <option name="presentableId" value="LOCAL-02153" />
-      <option name="project" value="LOCAL" />
-      <updated>1776345517355</updated>
     </task>
     <task id="LOCAL-02154" summary="VERDE: testInserimentoGiocatori riuscito">
       <option name="closed" value="true" />
@@ -676,7 +652,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776699871225</updated>
     </task>
-    <option name="localTasksCounter" value="2200" />
+    <task id="LOCAL-02200" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1776701896122</created>
+      <option name="number" value="02200" />
+      <option name="presentableId" value="LOCAL-02200" />
+      <option name="project" value="LOCAL" />
+      <updated>1776701896122</updated>
+    </task>
+    <task id="LOCAL-02201" summary="REFACTORING: definizione del metodo getPazzo">
+      <option name="closed" value="true" />
+      <created>1776702085372</created>
+      <option name="number" value="02201" />
+      <option name="presentableId" value="LOCAL-02201" />
+      <option name="project" value="LOCAL" />
+      <updated>1776702085372</updated>
+    </task>
+    <task id="LOCAL-02202" summary="REFACTORING: definizione del metodo getPazzoAmato">
+      <option name="closed" value="true" />
+      <created>1776702199150</created>
+      <option name="number" value="02202" />
+      <option name="presentableId" value="LOCAL-02202" />
+      <option name="project" value="LOCAL" />
+      <updated>1776702199150</updated>
+    </task>
+    <option name="localTasksCounter" value="2203" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,9 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo creaBallottaggio" />
-    <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
-    <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroAccusati" />
     <MESSAGE value="VERDE: testPareggioPrimoPosto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiGiocatori" />
@@ -716,6 +713,9 @@
     <MESSAGE value="VERDE DIRETTO: testAmatoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del ,metodo isAmatoPresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del ,metodo isAmatoPresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPazzo" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPazzoAmato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPazzoAmato" />
   </component>
 </project>

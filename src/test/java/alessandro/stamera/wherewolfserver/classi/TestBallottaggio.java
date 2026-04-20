@@ -14,8 +14,10 @@ public final class TestBallottaggio
 
     @Test public void testAmatoPresente()
     {
-        aggiungiGiocatore("Gabriella", getPazzoAmato());
+        String nome = "Gabriella";
+        aggiungiGiocatore(nome, getPazzoAmato());
         assertThat(isAmatoPresente()).isTrue();
+        assertThat(ballottaggio.getNomeAmato()).isEqualTo("Gabriella");
     }
 
     @Test public void testAmatoAssente()
