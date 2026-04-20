@@ -15,9 +15,19 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
 
-    public boolean isAngeloCustodePresente() { return false; }
+    public boolean isAngeloCustodePresente()
+    {
+        boolean esito = false;
+        for(int i = 0; i < getNumeroGiocatori() && !esito; i++) esito = isAngeloCustode(getNomeGiocatore(i));
+        return esito;
+    }
 
-    public String getNomeAngeloCustode() { return null; }
+    public String getNomeAngeloCustode()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(isAngeloCustode(getNomeGiocatore(i))) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
 
     private Giocatori creaBallottaggio()
     {
