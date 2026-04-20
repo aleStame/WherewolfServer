@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPosizioneAmato" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NON_TROVATO" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,22 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02160" summary="REFACTORING: definizione della costante ESEMPIO_GIOCATORE">
-      <option name="closed" value="true" />
-      <created>1776347448388</created>
-      <option name="number" value="02160" />
-      <option name="presentableId" value="LOCAL-02160" />
-      <option name="project" value="LOCAL" />
-      <updated>1776347448388</updated>
-    </task>
-    <task id="LOCAL-02161" summary="ROSSO: testVotazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1776347766796</created>
-      <option name="number" value="02161" />
-      <option name="presentableId" value="LOCAL-02161" />
-      <option name="project" value="LOCAL" />
-      <updated>1776347766796</updated>
     </task>
     <task id="LOCAL-02162" summary="VERDE: testVotazione riuscito">
       <option name="closed" value="true" />
@@ -673,7 +657,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776719223070</updated>
     </task>
-    <option name="localTasksCounter" value="2209" />
+    <task id="LOCAL-02209" summary="REFACTORING: definizione del metodo getPosizioneAngeloCustode">
+      <option name="closed" value="true" />
+      <created>1776719503855</created>
+      <option name="number" value="02209" />
+      <option name="presentableId" value="LOCAL-02209" />
+      <option name="project" value="LOCAL" />
+      <updated>1776719503855</updated>
+    </task>
+    <task id="LOCAL-02210" summary="REFACTORING: definizione della costante NON_TROVATO">
+      <option name="closed" value="true" />
+      <created>1776719629522</created>
+      <option name="number" value="02210" />
+      <option name="presentableId" value="LOCAL-02210" />
+      <option name="project" value="LOCAL" />
+      <updated>1776719629522</updated>
+    </task>
+    <option name="localTasksCounter" value="2211" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,8 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatoriBallottaggio" />
-    <MESSAGE value="REFACTORING: definizione del metodo getBallottaggio" />
     <MESSAGE value="ROSSO: testBallottaggioPuro non riuscito" />
     <MESSAGE value="VERDE: testBallottaggioPuro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaGiocatoreAccusato" />
@@ -713,6 +711,8 @@
     <MESSAGE value="VERDE: testAngeloCustodePresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo scambioAngeloCustodeAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAmato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPosizioneAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAngeloCustode" />
+    <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NON_TROVATO" />
   </component>
 </project>

@@ -3,14 +3,16 @@ package alessandro.stamera.wherewolfserver.classi;
 public final class Ballottaggio extends Giocatori
 {
 
-    public boolean isAmatoPresente() { return getPosizioneAmato() != -1; }
+    private static final int NON_TROVATO = -1;
+
+    public boolean isAmatoPresente() { return getPosizioneAmato() != NON_TROVATO; }
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
     private int getPosizioneAmato()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isAmato()) posizione = i;
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAmato()) posizione = i;
         return posizione;
     }
 
