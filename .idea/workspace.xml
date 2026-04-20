@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testBallottaggioPuro riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSegnalazioneAngeloCustode non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,46 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02137" summary="VERDE DIRETTO: testInquisizione riuscito">
-      <option name="closed" value="true" />
-      <created>1776330528664</created>
-      <option name="number" value="02137" />
-      <option name="presentableId" value="LOCAL-02137" />
-      <option name="project" value="LOCAL" />
-      <updated>1776330528664</updated>
-    </task>
-    <task id="LOCAL-02138" summary="VERDE DIRETTO: testBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1776330669639</created>
-      <option name="number" value="02138" />
-      <option name="presentableId" value="LOCAL-02138" />
-      <option name="project" value="LOCAL" />
-      <updated>1776330669639</updated>
-    </task>
-    <task id="LOCAL-02139" summary="VERDE DIRETTO: testInquisitore riuscito">
-      <option name="closed" value="true" />
-      <created>1776330855952</created>
-      <option name="number" value="02139" />
-      <option name="presentableId" value="LOCAL-02139" />
-      <option name="project" value="LOCAL" />
-      <updated>1776330855952</updated>
-    </task>
-    <task id="LOCAL-02140" summary="REFACTORING: definizione del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1776331076650</created>
-      <option name="number" value="02140" />
-      <option name="presentableId" value="LOCAL-02140" />
-      <option name="project" value="LOCAL" />
-      <updated>1776331076650</updated>
-    </task>
-    <task id="LOCAL-02141" summary="ROSSO: testTemplare non riuscito">
-      <option name="closed" value="true" />
-      <created>1776331304148</created>
-      <option name="number" value="02141" />
-      <option name="presentableId" value="LOCAL-02141" />
-      <option name="project" value="LOCAL" />
-      <updated>1776331304148</updated>
     </task>
     <task id="LOCAL-02142" summary="VERDE: testTemplare riuscito">
       <option name="closed" value="true" />
@@ -677,7 +633,47 @@
       <option name="project" value="LOCAL" />
       <updated>1776691214863</updated>
     </task>
-    <option name="localTasksCounter" value="2186" />
+    <task id="LOCAL-02186" summary="REFACTORING: definizione del metodo verificaGiocatoreAccusato">
+      <option name="closed" value="true" />
+      <created>1776693430870</created>
+      <option name="number" value="02186" />
+      <option name="presentableId" value="LOCAL-02186" />
+      <option name="project" value="LOCAL" />
+      <updated>1776693430870</updated>
+    </task>
+    <task id="LOCAL-02187" summary="REFACTORING: definizione del metodo ordinaAlfabeticamente">
+      <option name="closed" value="true" />
+      <created>1776693649733</created>
+      <option name="number" value="02187" />
+      <option name="presentableId" value="LOCAL-02187" />
+      <option name="project" value="LOCAL" />
+      <updated>1776693649734</updated>
+    </task>
+    <task id="LOCAL-02188" summary="ROSSO: testPareggioSecondoPosto non riuscito">
+      <option name="closed" value="true" />
+      <created>1776694507607</created>
+      <option name="number" value="02188" />
+      <option name="presentableId" value="LOCAL-02188" />
+      <option name="project" value="LOCAL" />
+      <updated>1776694507607</updated>
+    </task>
+    <task id="LOCAL-02189" summary="ROSSO: testPareggioSecondoPosto non riuscito">
+      <option name="closed" value="true" />
+      <created>1776694726713</created>
+      <option name="number" value="02189" />
+      <option name="presentableId" value="LOCAL-02189" />
+      <option name="project" value="LOCAL" />
+      <updated>1776694726713</updated>
+    </task>
+    <task id="LOCAL-02190" summary="ROSSO: testSegnalazioneAngeloCustode non riuscito">
+      <option name="closed" value="true" />
+      <created>1776695009953</created>
+      <option name="number" value="02190" />
+      <option name="presentableId" value="LOCAL-02190" />
+      <option name="project" value="LOCAL" />
+      <updated>1776695009953</updated>
+    </task>
+    <option name="localTasksCounter" value="2191" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,10 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroGiocatori" />
-    <MESSAGE value="REFACTORING: definizione della costante ESEMPIO_GIOCATORE" />
-    <MESSAGE value="ROSSO: testVotazione non riuscito" />
-    <MESSAGE value="VERDE: testVotazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
     <MESSAGE value="VERDE DIRETTO: testBallottaggioPuro riuscito" />
@@ -717,6 +709,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo getBallottaggio" />
     <MESSAGE value="ROSSO: testBallottaggioPuro non riuscito" />
     <MESSAGE value="VERDE: testBallottaggioPuro riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBallottaggioPuro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaGiocatoreAccusato" />
+    <MESSAGE value="REFACTORING: definizione del metodo ordinaAlfabeticamente" />
+    <MESSAGE value="ROSSO: testPareggioSecondoPosto non riuscito" />
+    <MESSAGE value="ROSSO: testSegnalazioneAngeloCustode non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSegnalazioneAngeloCustode non riuscito" />
   </component>
 </project>

@@ -13,6 +13,10 @@ public final class GiocatoriVivi extends Giocatori
         return ballottaggio;
     }
 
+    public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
+
+    public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
+
     private Giocatori creaBallottaggio()
     {
         Giocatori ballottaggio = new Ballottaggio();
@@ -46,9 +50,5 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
-
-    public void segnalazioneAngeloCustode(String nome) { }
-
-    public boolean isAmato(String nome) { return false; }
 
 }
