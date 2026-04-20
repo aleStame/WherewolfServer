@@ -15,10 +15,9 @@ public final class TestGiocatoriVivi
 
     @BeforeEach public void setUp()
     {
-        RuoliFactory factory = new RuoliFactory();
-        factory.annullaVoti();
+        FACTORY.annullaVoti();
         giocatori = new GiocatoriVivi();
-        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], factory.getRuolo(esempio[1]));
+        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
     }
 
     @Test public void testBallottaggioPuro()
@@ -73,7 +72,7 @@ public final class TestGiocatoriVivi
     @Test public void testAngeloCustodePresente()
     {
         assertThat(giocatori.isAngeloCustodePresente()).isTrue();
-        assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(getNomeGiocatore(0));
+        verificaNomeGiocatore(giocatori.getNomeAngeloCustode(), getNomeGiocatore(0));
     }
 
     private void segnalazioneAngeloCustode(String nome) { giocatori.segnalazioneAngeloCustode(nome); }
@@ -82,8 +81,10 @@ public final class TestGiocatoriVivi
 
     private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)
     {
-        assertThat(ballottaggio.getNomeGiocatore(posizione)).isEqualTo(nome);
+        verificaNomeGiocatore(ballottaggio.getNomeGiocatore(posizione), nome);
     }
+
+    private void verificaNomeGiocatore(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private String getNomeGiocatore(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
