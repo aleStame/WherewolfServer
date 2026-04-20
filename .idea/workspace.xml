@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPareggioPrimoPosto riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo estraiGiocatori" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,14 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02131" summary="REFACTORING: definizione della costante NOME">
-      <option name="closed" value="true" />
-      <created>1776329385224</created>
-      <option name="number" value="02131" />
-      <option name="presentableId" value="LOCAL-02131" />
-      <option name="project" value="LOCAL" />
-      <updated>1776329385224</updated>
     </task>
     <task id="LOCAL-02132" summary="ROSSO: testAura non riuscito">
       <option name="closed" value="true" />
@@ -673,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776674721559</updated>
     </task>
-    <option name="localTasksCounter" value="2180" />
+    <task id="LOCAL-02180" summary="REFACTORING: definizione del metodo estraiGiocatori">
+      <option name="closed" value="true" />
+      <created>1776675372760</created>
+      <option name="number" value="02180" />
+      <option name="presentableId" value="LOCAL-02180" />
+      <option name="project" value="LOCAL" />
+      <updated>1776675372760</updated>
+    </task>
+    <option name="localTasksCounter" value="2181" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,7 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testInserimentoGiocatori riuscito" />
     <MESSAGE value="ROSSO: testEliminazioneGiocatori non riuscito" />
     <MESSAGE value="VERDE: testEliminazioneGiocatori riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
@@ -713,6 +712,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroAccusati" />
     <MESSAGE value="VERDE: testPareggioPrimoPosto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPareggioPrimoPosto riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo estraiGiocatori" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo estraiGiocatori" />
   </component>
 </project>
