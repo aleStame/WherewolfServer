@@ -44,6 +44,10 @@ public class Giocatori
 
     public String getNomeGiocatore(int posizione) { return getChiavi().stream().toList().get(posizione); }
 
+    public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
+
+    public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
