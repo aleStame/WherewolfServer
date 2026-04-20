@@ -15,6 +15,10 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
 
+    public boolean isAngeloCustodePresente() { return false; }
+
+    public String getNomeAngeloCustode() { return null; }
+
     private Giocatori creaBallottaggio()
     {
         Giocatori ballottaggio = new Ballottaggio();

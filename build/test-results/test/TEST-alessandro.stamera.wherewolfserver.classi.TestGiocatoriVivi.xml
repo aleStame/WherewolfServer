@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" tests="6" skipped="0" failures="1" errors="0" timestamp="2026-04-20T16:30:19" hostname="ALESSANDRO" time="0.077">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" tests="7" skipped="0" failures="1" errors="0" timestamp="2026-04-20T16:38:32" hostname="ALESSANDRO" time="0.347">
   <properties/>
-  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.056">
-    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: &quot;Cesare&quot;&#13;&#10; but was: &quot;Giulio&quot;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
-expected: &quot;Cesare&quot;
- but was: &quot;Giulio&quot;
+  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.257"/>
+  <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.008"/>
+  <testcase name="testAngeloCustodePresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.043">
+    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.verificaGiocatoreAccusato(TestGiocatoriVivi.java:77)
-	at app//alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.testBallottaggioPuro(TestGiocatoriVivi.java:29)
+	at app//alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.testAngeloCustodePresente(TestGiocatoriVivi.java:73)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -91,11 +91,10 @@ expected: &quot;Cesare&quot;
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.004"/>
-  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.006"/>
-  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.003"/>
-  <testcase name="testSegnalazioneAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.0"/>
-  <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.004"/>
+  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.005"/>
+  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.007"/>
+  <testcase name="testSegnalazioneAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.006"/>
+  <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
