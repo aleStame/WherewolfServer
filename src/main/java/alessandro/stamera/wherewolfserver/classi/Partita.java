@@ -9,9 +9,12 @@ public final class Partita
 
     private Giocatori ballottaggio;
 
+    private final Giocatori eliminati;
+
     public Partita(String[][] giocatori)
     {
         vivi = new GiocatoriVivi();
+        eliminati = new Giocatori();
         FACTORY.annullaVoti();
         for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
         vivi.resettaAmato();
@@ -25,8 +28,13 @@ public final class Partita
 
     public void segnalazioneAngeloCustode(String nome) { vivi.segnalazioneAngeloCustode(nome); }
 
-    public void attaccoAssassino(String nome) { }
+    public void attaccoAssassino(String nome)
+    {
+        vivi.attaccoAssassino(nome);
+        Ruolo ruolo = vivi.getRuolo(nome);
+        eliminati.aggiungiGiocatore(nome, ruolo);
+    }
 
-    public boolean isEliminato(String nome) { return false; }
+    public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
 
 }
