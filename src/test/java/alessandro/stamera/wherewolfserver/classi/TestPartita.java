@@ -48,6 +48,15 @@ public final class TestPartita
         for(String soluzione : soluzioni) verificaAccusato(soluzione);
     }
 
+    @Test public void testAngeloCustodeAccusatoNonPresente()
+    {
+        int posizione = 2;
+        partita.segnalazioneAngeloCustode(getNomeGiocatoreEsempio(2));
+        incrementaVoti(posizione, 3);
+        terminaVotazioni();
+        verificaAccusato(getNomeGiocatoreEsempio(0));
+    }
+
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
