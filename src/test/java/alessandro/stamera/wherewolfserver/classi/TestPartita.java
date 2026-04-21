@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPartita
@@ -18,6 +17,14 @@ public final class TestPartita
         partita.terminaVotazioni();
         String[] soluzioni = new String[] { ESEMPI_GIOCATORI[2][0], ESEMPI_GIOCATORI[1][0] };
         for(String esempio : soluzioni) assertThat(partita.isAccusato(esempio)).isTrue();
+    }
+
+    @Test public void testUnanimita()
+    {
+        Partita partita = new Partita(ESEMPI_GIOCATORI);
+        partita.incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
+        partita.terminaVotazioni();
+        assertThat(partita.isAccusato(ESEMPI_GIOCATORI[0][0])).isTrue();
     }
 
 }
