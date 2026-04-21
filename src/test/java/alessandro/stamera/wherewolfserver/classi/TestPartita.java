@@ -17,7 +17,7 @@ public final class TestPartita
     @Test public void testBallottaggioPuro()
     {
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(getNomeGiocatoreEsempio(i + 1), numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
         terminaVotazioni();
         String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1) };
         for(String esempio : soluzioni) verificaAccusato(esempio);
@@ -25,13 +25,21 @@ public final class TestPartita
 
     @Test public void testUnanimita()
     {
-        String nome = getNomeGiocatoreEsempio(0);
-        incrementaVoti(nome, 3);
+        int posizione = 0;
+        incrementaVoti(posizione, 3);
         terminaVotazioni();
-        verificaAccusato(nome);
+        verificaAccusato(getNomeGiocatoreEsempio(0));
     }
 
-    private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
+    @Test public void testPareggioPrimoPosto()
+    {
+        int numeroGiocatori = ESEMPI_GIOCATORI.length;
+        for(int i = 1; i < numeroGiocatori; i++) incrementaVoti(i, 1);
+        terminaVotazioni();
+        for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
+    }
+
+    private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
