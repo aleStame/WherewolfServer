@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo spostamentoAmato">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo spostamentoAngeloCustode">
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02168" summary="REFACTORING: ridistribuzione del codice tra Giocatori, GiocatoriVivi e Ballottaggio">
-      <option name="closed" value="true" />
-      <created>1776414638844</created>
-      <option name="number" value="02168" />
-      <option name="presentableId" value="LOCAL-02168" />
-      <option name="project" value="LOCAL" />
-      <updated>1776414638844</updated>
     </task>
     <task id="LOCAL-02169" summary="REFACTORING: semplificazione del metodo di set up">
       <option name="closed" value="true" />
@@ -675,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776776713362</updated>
     </task>
-    <option name="localTasksCounter" value="2217" />
+    <task id="LOCAL-02217" summary="REFACTORING: definizione del metodo spostamentoAngeloCustode">
+      <option name="closed" value="true" />
+      <created>1776777054238</created>
+      <option name="number" value="02217" />
+      <option name="presentableId" value="LOCAL-02217" />
+      <option name="project" value="LOCAL" />
+      <updated>1776777054238</updated>
+    </task>
+    <option name="localTasksCounter" value="2218" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSegnalazioneAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneAngeloCustode riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPareggioSecondoPosto riuscito" />
     <MESSAGE value="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito" />
@@ -715,6 +716,7 @@
     <MESSAGE value="VERDE: testAngeloCustodeAccusatoPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo spostamentoAmato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo spostamentoAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo spostamentoAngeloCustode" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo spostamentoAngeloCustode" />
   </component>
 </project>
