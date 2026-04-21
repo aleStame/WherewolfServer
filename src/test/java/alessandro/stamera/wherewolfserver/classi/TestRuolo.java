@@ -103,15 +103,17 @@ public final class TestRuolo
         verificaFalso(isMaledetto());
     }
 
-    @Test public void attaccoAssassino() { verificaAttaccoRiuscito(ruolo.attaccoAssassino()); }
+    @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }
 
     @Test public void attaccoAssassinoAmato()
     {
         sceltaAngeloCustode();
-        verificaAttaccoFallito(ruolo.attaccoAssassino());
+        verificaAttaccoFallito(assassinio());
     }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
+
+    private EsitoAttacco assassinio() { return ruolo.attaccoAssassino(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 
