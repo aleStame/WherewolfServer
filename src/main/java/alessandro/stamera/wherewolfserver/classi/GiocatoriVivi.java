@@ -27,7 +27,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAzzeccagarbugli(String nome) { ruoloAzzeccagarbugli = getRuolo(nome); }
 
-    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return null; }
+    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return getRuolo(nome).attaccoLupi(attaccante); }
 
     private Giocatori creaBallottaggio()
     {
@@ -53,7 +53,10 @@ public final class GiocatoriVivi extends Giocatori
         if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
     }
 
-    private void spostamentoAngeloCustode(Ballottaggio ballottaggio) { mandaBallottaggio(ballottaggio, getNomeAngeloCustode()); }
+    private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
+    {
+        mandaBallottaggio(ballottaggio, getNomeAngeloCustode());
+    }
 
     private void mandaBallottaggio(Ballottaggio ballottaggio, String nome)
     {
