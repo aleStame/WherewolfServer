@@ -83,14 +83,14 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeAmato);
         attaccoAssassino(nomeAmato);
         verificaEliminazione(nomeAngeloCustode);
-        assertThat(isVivo(nomeAmato)).isTrue();
+        verificaVero(isVivo(nomeAmato));
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
-    private void verificaAccusato(String nome) { assertThat(isAccusato(nome)).isTrue(); }
+    private void verificaAccusato(String nome) { verificaVero(isAccusato(nome)); }
 
     private void verificaNonAccusato(String nome) { assertThat(isAccusato(nome)).isFalse(); }
 
@@ -104,10 +104,12 @@ public final class TestPartita
 
     private void verificaEliminazione(String nome)
     {
-        assertThat(partita.isEliminato(nome)).isTrue();
+        verificaVero(partita.isEliminato(nome));
         assertThat(isVivo(nome)).isFalse();
     }
 
     private boolean isVivo(String nome) { return partita.isVivo(nome); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
