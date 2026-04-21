@@ -17,7 +17,7 @@ public final class TestPartita
     @Test public void testBallottaggioPuro()
     {
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) partita.incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
         partita.terminaVotazioni();
         String[] soluzioni = new String[] { ESEMPI_GIOCATORI[2][0], ESEMPI_GIOCATORI[1][0] };
         for(String esempio : soluzioni) assertThat(partita.isAccusato(esempio)).isTrue();
@@ -25,9 +25,11 @@ public final class TestPartita
 
     @Test public void testUnanimita()
     {
-        partita.incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
+        incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
         partita.terminaVotazioni();
         assertThat(partita.isAccusato(ESEMPI_GIOCATORI[0][0])).isTrue();
     }
+
+    private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 
 }
