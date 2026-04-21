@@ -25,4 +25,6 @@ public final class Partita
 
     public void segnalazioneAngeloCustode(String nome) { vivi.segnalazioneAngeloCustode(nome); }
 
+    public EsitoAttacco attaccoAssassino(String nome) { return null; }
+
 }
