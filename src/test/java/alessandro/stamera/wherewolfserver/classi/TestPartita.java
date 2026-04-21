@@ -51,10 +51,23 @@ public final class TestPartita
     @Test public void testAngeloCustodeAccusatoNonPresente()
     {
         int posizione = 2;
-        partita.segnalazioneAngeloCustode(getNomeGiocatoreEsempio(2));
+        String nome = getNomeGiocatoreEsempio(posizione);
+        partita.segnalazioneAngeloCustode(nome);
         incrementaVoti(posizione, 3);
         terminaVotazioni();
         verificaAccusato(getNomeGiocatoreEsempio(0));
+        assertThat(partita.isAccusato(nome)).isFalse();
+    }
+
+    @Test public void testAngeloCustodeAccusatoPresente()
+    {
+        String nome = getNomeGiocatoreEsempio(1);
+        partita.segnalazioneAngeloCustode(nome);
+        for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
+        terminaVotazioni();
+        String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(0) };
+        for(String soluzione : soluzioni) verificaAccusato(soluzione);
+        assertThat(partita.isAccusato(nome)).isFalse();
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
