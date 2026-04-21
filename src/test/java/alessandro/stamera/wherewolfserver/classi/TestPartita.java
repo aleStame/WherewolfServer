@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,9 +10,12 @@ public final class TestPartita
     private static final String[][] ESEMPI_GIOCATORI =
             new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" } };
 
+    private Partita partita;
+
+    @BeforeEach public void setUp() { partita = new Partita(ESEMPI_GIOCATORI); }
+
     @Test public void testBallottaggioPuro()
     {
-        Partita partita = new Partita(ESEMPI_GIOCATORI);
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) partita.incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
         partita.terminaVotazioni();
@@ -21,7 +25,6 @@ public final class TestPartita
 
     @Test public void testUnanimita()
     {
-        Partita partita = new Partita(ESEMPI_GIOCATORI);
         partita.incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
         partita.terminaVotazioni();
         assertThat(partita.isAccusato(ESEMPI_GIOCATORI[0][0])).isTrue();
