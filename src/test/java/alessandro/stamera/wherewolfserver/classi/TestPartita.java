@@ -35,9 +35,7 @@ public final class TestPartita
         int numeroGiocatori = getNumeroGiocatoriEsempio();
         for(int i = 1; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
-        String[] soluzioni = new String[getNumeroGiocatoriEsempio() - 1];
-        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 1);
-        verificaAccusati(soluzioni);
+        verificaAccusati(estraiUltimiTreEsempi());
     }
 
     @Test public void testPareggioSecondoPosto()
@@ -91,9 +89,7 @@ public final class TestPartita
         int numeroGiocatori = getNumeroGiocatoriEsempio();
         for(int i = 2; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
-        String[] soluzioni = new String[getNumeroGiocatoriEsempio() - 1];
-        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 1);
-        verificaAccusati(soluzioni);
+        verificaAccusati(estraiUltimiTreEsempi());
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -114,6 +110,13 @@ public final class TestPartita
     private void verificaAccusati(String... nomi) { for(String nome : nomi) verificaVero(isAccusato(nome)); }
 
     private void verificaNonAccusato(String nome) { verificaFalso(isAccusato(nome)); }
+
+    private String[] estraiUltimiTreEsempi()
+    {
+        String[] soluzioni = new String[getNumeroGiocatoriEsempio() - 1];
+        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 1);
+        return soluzioni;
+    }
 
     private String getNomeGiocatoreEsempio(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
