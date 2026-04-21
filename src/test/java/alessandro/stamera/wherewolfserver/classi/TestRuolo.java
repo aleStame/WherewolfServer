@@ -34,7 +34,7 @@ public final class TestRuolo
 
     @Test public void testVoti()
     {
-        incrementaVoti();
+        ruolo.incrementaVoti(ESEMPIO_VOTI);
         verificaVoti(ESEMPIO_VOTI);
         ruolo.annullaVoti();
         verificaNessunVoto();
@@ -42,12 +42,6 @@ public final class TestRuolo
         verificaVoti(1);
         verificaVero(isMaledetto());
         assertThat(ruolo.getAura()).isEqualTo(NERA);
-    }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        incrementaVoti();
-        verificaVoti(ESEMPIO_VOTI);
     }
 
     @ParameterizedTest
@@ -92,7 +86,7 @@ public final class TestRuolo
     @Test public void testAttaccoNosferatuAmato()
     {
         sceltaAngeloCustode();
-        verificaAttaccoNosferatuFallito();
+        verificaAttaccoFallito(ruolo.attaccoNosferatu());
         verificaAssenzaProtezioni();
     }
 
@@ -123,8 +117,6 @@ public final class TestRuolo
 
     private boolean isMaledetto() { return ruolo.isMaledetto(); }
 
-    private void verificaAttaccoNosferatuFallito() { verificaAttaccoFallito(attaccoNosferatu()); }
-
     private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
@@ -142,8 +134,6 @@ public final class TestRuolo
     }
 
     private void verificaProtetto() { verificaVero(isTrattoPresente(PROTETTO)); }
-
-    private void incrementaVoti() { ruolo.incrementaVoti(ESEMPIO_VOTI); }
 
     private boolean isAmato() { return ruolo.isAmato(); }
 

@@ -92,6 +92,16 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nome, FALLITO);
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        giocatori.segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
+        for(int i = 0; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        Giocatori ballottaggio = getBallottaggio();
+        verificaNumeroAccusati(ballottaggio, 3);
+        String[] soluzioni = { getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1) };
+        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+    }
+
     private void verificaAttaccoAssassino(String nome, EsitoAttacco esito) { assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

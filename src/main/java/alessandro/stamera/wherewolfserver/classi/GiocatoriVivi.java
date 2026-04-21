@@ -18,6 +18,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
 
+    public void segnalazioneAzzeccagarbugli(String nome) { }
+
     private Giocatori creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();

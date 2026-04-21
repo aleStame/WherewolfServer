@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isVivo">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,22 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02208" summary="REFACTORING: definizione del metodo getPosizioneAmato">
-      <option name="closed" value="true" />
-      <created>1776719223070</created>
-      <option name="number" value="02208" />
-      <option name="presentableId" value="LOCAL-02208" />
-      <option name="project" value="LOCAL" />
-      <updated>1776719223070</updated>
-    </task>
-    <task id="LOCAL-02209" summary="REFACTORING: definizione del metodo getPosizioneAngeloCustode">
-      <option name="closed" value="true" />
-      <created>1776719503855</created>
-      <option name="number" value="02209" />
-      <option name="presentableId" value="LOCAL-02209" />
-      <option name="project" value="LOCAL" />
-      <updated>1776719503855</updated>
     </task>
     <task id="LOCAL-02210" summary="REFACTORING: definizione della costante NON_TROVATO">
       <option name="closed" value="true" />
@@ -675,7 +657,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776789336041</updated>
     </task>
-    <option name="localTasksCounter" value="2257" />
+    <task id="LOCAL-02257" summary="VERDE DIRETTO: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1776790691717</created>
+      <option name="number" value="02257" />
+      <option name="presentableId" value="LOCAL-02257" />
+      <option name="project" value="LOCAL" />
+      <updated>1776790691717</updated>
+    </task>
+    <task id="LOCAL-02258" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1776790919011</created>
+      <option name="number" value="02258" />
+      <option name="presentableId" value="LOCAL-02258" />
+      <option name="project" value="LOCAL" />
+      <updated>1776790919011</updated>
+    </task>
+    <option name="localTasksCounter" value="2259" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,8 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito" />
-    <MESSAGE value="VERDE: testAngeloCustodeAccusatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonAccusato" />
     <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
@@ -715,6 +711,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo attaccoAssassino" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEliminazione" />
     <MESSAGE value="REFACTORING: definizione del metodo isVivo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isVivo" />
+    <MESSAGE value="VERDE DIRETTO: definizione del metodo verificaVero" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
