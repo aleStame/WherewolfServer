@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo gestioneSegnalazioneAzzeccagarbugli">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione della costante NON_TROVATO">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02218" summary="ROSSO: testBallottaggioPuro non riuscito">
-      <option name="closed" value="true" />
-      <created>1776777876599</created>
-      <option name="number" value="02218" />
-      <option name="presentableId" value="LOCAL-02218" />
-      <option name="project" value="LOCAL" />
-      <updated>1776777876599</updated>
     </task>
     <task id="LOCAL-02219" summary="VERDE: testBallottaggioPuro riuscito">
       <option name="closed" value="true" />
@@ -676,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776803407829</updated>
     </task>
-    <option name="localTasksCounter" value="2267" />
+    <task id="LOCAL-02267" summary="REFACTORING: definizione della costante NON_TROVATO">
+      <option name="closed" value="true" />
+      <created>1776803695656</created>
+      <option name="number" value="02267" />
+      <option name="presentableId" value="LOCAL-02267" />
+      <option name="project" value="LOCAL" />
+      <updated>1776803695656</updated>
+    </task>
+    <option name="localTasksCounter" value="2268" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo assassinio" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAssassino" />
     <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
@@ -716,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo mandaBallottaggio" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneSegnalazioneAzzeccagarbugli" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo gestioneSegnalazioneAzzeccagarbugli" />
+    <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione della costante NON_TROVATO" />
   </component>
 </project>

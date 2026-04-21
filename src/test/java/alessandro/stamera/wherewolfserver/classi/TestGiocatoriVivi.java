@@ -89,6 +89,15 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1));
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugliAmato()
+    {
+        String nome = getNomeGiocatore(2);
+        giocatori.segnalazioneAzzeccagarbugli(nome);
+        segnalazioneAngeloCustode(nome);
+        for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(0));
+    }
+
     private void verificaAccusati(String... soluzioni)
     {
         int numeroSoluzioni = soluzioni.length;
