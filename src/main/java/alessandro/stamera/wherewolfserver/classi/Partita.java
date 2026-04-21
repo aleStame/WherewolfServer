@@ -23,6 +23,6 @@ public final class Partita
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
 
-    public void segnalazioneAngeloCustode(String nome) { }
+    public void segnalazioneAngeloCustode(String nome) { vivi.segnalazioneAngeloCustode(nome); }
 
 }
