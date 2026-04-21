@@ -19,8 +19,7 @@ public final class TestPartita
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
         terminaVotazioni();
-        String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1) };
-        for(String esempio : soluzioni) verificaAccusato(esempio);
+        verificaAccusati(getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1));
     }
 
     @Test public void testUnanimita()
@@ -28,7 +27,7 @@ public final class TestPartita
         int posizione = 0;
         incrementaVoti(posizione, 3);
         terminaVotazioni();
-        verificaAccusato(getNomeGiocatoreEsempio(0));
+        verificaAccusati(getNomeGiocatoreEsempio(0));
     }
 
     @Test public void testPareggioPrimoPosto()
@@ -36,7 +35,9 @@ public final class TestPartita
         int numeroGiocatori = getNumeroGiocatoriEsempio();
         for(int i = 1; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
-        for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
+        String[] soluzioni = new String[getNumeroGiocatoriEsempio() - 1];
+        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 1);
+        verificaAccusati(soluzioni);
     }
 
     @Test public void testPareggioSecondoPosto()
@@ -44,8 +45,7 @@ public final class TestPartita
         int[] numeroVoti = new int[]{ 2, 1, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i, numeroVoti[i]);
         terminaVotazioni();
-        String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1), getNomeGiocatoreEsempio(0) };
-        for(String soluzione : soluzioni) verificaAccusato(soluzione);
+        verificaAccusati(getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1), getNomeGiocatoreEsempio(0));
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
@@ -55,7 +55,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         incrementaVoti(posizione, 3);
         terminaVotazioni();
-        verificaAccusato(getNomeGiocatoreEsempio(0));
+        verificaAccusati(getNomeGiocatoreEsempio(0));
         verificaNonAccusato(nome);
     }
 
@@ -65,8 +65,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
         terminaVotazioni();
-        String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(0) };
-        for(String soluzione : soluzioni) verificaAccusato(soluzione);
+        verificaAccusati(getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(0));
         verificaNonAccusato(nome);
     }
 
@@ -92,7 +91,9 @@ public final class TestPartita
         int numeroGiocatori = getNumeroGiocatoriEsempio();
         for(int i = 2; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
-        for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
+        String[] soluzioni = new String[getNumeroGiocatoriEsempio() - 1];
+        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 1);
+        verificaAccusati(soluzioni);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -102,15 +103,15 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         terminaVotazioni();
-        String[] soluzioni = { getNomeGiocatoreEsempio(3), getNomeGiocatoreEsempio(0) };
-        for(String soluzione : soluzioni) verificaAccusato(soluzione);
+        verificaAccusati(getNomeGiocatoreEsempio(3), getNomeGiocatoreEsempio(0));
+        verificaNonAccusato(nome);
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
-    private void verificaAccusato(String nome) { verificaVero(isAccusato(nome)); }
+    private void verificaAccusati(String... nomi) { for(String nome : nomi) verificaVero(isAccusato(nome)); }
 
     private void verificaNonAccusato(String nome) { verificaFalso(isAccusato(nome)); }
 
