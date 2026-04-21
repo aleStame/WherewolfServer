@@ -114,11 +114,10 @@ public final class TestPartita
 
     @Test public void testAttaccoLupiAmato()
     {
-        String nome = getNomeGiocatoreEsempio(0);
+        String nome = getNomeGiocatoreEsempio(1);
+        segnalazioneAngeloCustode(nome);
         partita.attaccoLupi(nome);
         assertThat(partita.isVivo(nome)).isTrue();
-        partita.attaccoLupi(nome);
-        verificaEliminazione(nome);
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }

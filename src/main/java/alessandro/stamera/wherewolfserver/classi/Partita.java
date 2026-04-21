@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+
 public final class Partita
 {
 
@@ -35,7 +37,6 @@ public final class Partita
             case RIUSCITO -> eliminaGiocatore(nome);
             case FALLITO -> eliminazioneAngeloCustode();
         }
-
     }
 
     public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
@@ -44,8 +45,7 @@ public final class Partita
 
     public void attaccoLupi(String nome)
     {
-        vivi.attaccoLupi(FACTORY.getRuolo("Capo branco"), nome);
-        eliminaGiocatore(nome);
+        if(vivi.attaccoLupi(FACTORY.getRuolo("Capo branco"), nome) == RIUSCITO) eliminaGiocatore(nome);
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
