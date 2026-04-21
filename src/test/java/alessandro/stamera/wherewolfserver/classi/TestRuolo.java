@@ -58,7 +58,7 @@ public final class TestRuolo
         verificaVero(isAmato());
         verificaProtetto();
         verificaVero(isProtezioneLupiPresente());
-        verificaAttacco(attaccoLupi(nome), FALLITO);
+        verificaAttaccoFallito(attaccoLupi(nome));
         verificaAssenzaProtezioni();
     }
 
@@ -108,7 +108,7 @@ public final class TestRuolo
     @Test public void attaccoAssassinoAmato()
     {
         sceltaAngeloCustode();
-        verificaAttacco(ruolo.attaccoAssassino(), FALLITO);
+        verificaAttaccoFallito(ruolo.attaccoAssassino());
     }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
@@ -121,7 +121,9 @@ public final class TestRuolo
 
     private boolean isMaledetto() { return ruolo.isMaledetto(); }
 
-    private void verificaAttaccoNosferatuFallito() { verificaAttacco(attaccoNosferatu(), FALLITO); }
+    private void verificaAttaccoNosferatuFallito() { verificaAttaccoFallito(attaccoNosferatu()); }
+
+    private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
