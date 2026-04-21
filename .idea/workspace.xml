@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoCapoBranco">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02231" summary="REFACTORING: definizione del metodo verificaNonAccusato">
-      <option name="closed" value="true" />
-      <created>1776783208020</created>
-      <option name="number" value="02231" />
-      <option name="presentableId" value="LOCAL-02231" />
-      <option name="project" value="LOCAL" />
-      <updated>1776783208020</updated>
     </task>
     <task id="LOCAL-02232" summary="REFACTORING: definizione del metodo isAccusato">
       <option name="closed" value="true" />
@@ -676,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776811266801</updated>
     </task>
-    <option name="localTasksCounter" value="2280" />
+    <task id="LOCAL-02280" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
+      <option name="closed" value="true" />
+      <created>1776812091471</created>
+      <option name="number" value="02280" />
+      <option name="presentableId" value="LOCAL-02280" />
+      <option name="project" value="LOCAL" />
+      <updated>1776812091471</updated>
+    </task>
+    <option name="localTasksCounter" value="2281" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -712,10 +712,10 @@
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugliAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAccusati" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiUltimiTreEsempi" />
-    <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoCapoBranco" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoCapoBranco" />
+    <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
   </component>
 </project>
