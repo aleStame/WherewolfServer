@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo incrementaVoti" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAccusato" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,22 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02174" summary="REFACTORING: definizione del metodo creaBallottaggio">
-      <option name="closed" value="true" />
-      <created>1776421415810</created>
-      <option name="number" value="02174" />
-      <option name="presentableId" value="LOCAL-02174" />
-      <option name="project" value="LOCAL" />
-      <updated>1776421415810</updated>
-    </task>
-    <task id="LOCAL-02175" summary="REFACTORING: definizione di un metodo di set up">
-      <option name="closed" value="true" />
-      <created>1776422399530</created>
-      <option name="number" value="02175" />
-      <option name="presentableId" value="LOCAL-02175" />
-      <option name="project" value="LOCAL" />
-      <updated>1776422399530</updated>
     </task>
     <task id="LOCAL-02176" summary="REFACTORING: definizione del metodo incrementaVoti">
       <option name="closed" value="true" />
@@ -673,7 +657,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776781100586</updated>
     </task>
-    <option name="localTasksCounter" value="2223" />
+    <task id="LOCAL-02223" summary="REFACTORING: definizione del metodo terminaVotazioni">
+      <option name="closed" value="true" />
+      <created>1776781271298</created>
+      <option name="number" value="02223" />
+      <option name="presentableId" value="LOCAL-02223" />
+      <option name="project" value="LOCAL" />
+      <updated>1776781271298</updated>
+    </task>
+    <task id="LOCAL-02224" summary="REFACTORING: definizione del metodo verificaAccusato">
+      <option name="closed" value="true" />
+      <created>1776781447479</created>
+      <option name="number" value="02224" />
+      <option name="presentableId" value="LOCAL-02224" />
+      <option name="project" value="LOCAL" />
+      <updated>1776781447479</updated>
+    </task>
+    <option name="localTasksCounter" value="2225" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,8 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneAngeloCustode" />
-    <MESSAGE value="VERDE DIRETTO: testAmatoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del ,metodo isAmatoPresente" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo getPazzo" />
@@ -713,6 +711,8 @@
     <MESSAGE value="VERDE DIRETTO: testUnanimita riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo incrementaVoti" />
+    <MESSAGE value="REFACTORING: definizione del metodo terminaVotazioni" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAccusato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAccusato" />
   </component>
 </project>

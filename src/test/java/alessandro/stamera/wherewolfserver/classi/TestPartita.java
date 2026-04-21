@@ -17,17 +17,18 @@ public final class TestPartita
     @Test public void testBallottaggioPuro()
     {
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(getNomeGiocatoreEsempio(i + 1), numeroVoti[i]);
         terminaVotazioni();
-        String[] soluzioni = new String[] { ESEMPI_GIOCATORI[2][0], ESEMPI_GIOCATORI[1][0] };
+        String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1) };
         for(String esempio : soluzioni) verificaAccusato(esempio);
     }
 
     @Test public void testUnanimita()
     {
-        incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
+        String nome = getNomeGiocatoreEsempio(0);
+        incrementaVoti(nome, 3);
         terminaVotazioni();
-        verificaAccusato(ESEMPI_GIOCATORI[0][0]);
+        verificaAccusato(nome);
     }
 
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
@@ -35,5 +36,7 @@ public final class TestPartita
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
     private void verificaAccusato(String nome) { assertThat(partita.isAccusato(nome)).isTrue(); }
+
+    private String getNomeGiocatoreEsempio(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
 }
