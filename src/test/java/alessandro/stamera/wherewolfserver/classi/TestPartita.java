@@ -39,6 +39,15 @@ public final class TestPartita
         for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
     }
 
+    @Test public void testPareggioSecondoPosto()
+    {
+        int[] numeroVoti = new int[]{ 2, 1, 1 };
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i, numeroVoti[i]);
+        terminaVotazioni();
+        String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1), getNomeGiocatoreEsempio(0) };
+        for(String soluzione : soluzioni) verificaAccusato(soluzione);
+    }
+
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
