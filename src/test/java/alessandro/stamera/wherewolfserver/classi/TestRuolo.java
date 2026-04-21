@@ -103,6 +103,8 @@ public final class TestRuolo
         verificaFalso(isMaledetto());
     }
 
+    @Test public void attaccoAssassino() { assertThat(ruolo.attaccoAssassino()).isEqualTo(RIUSCITO); }
+
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }

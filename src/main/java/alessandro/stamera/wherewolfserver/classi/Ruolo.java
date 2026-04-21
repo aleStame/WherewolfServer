@@ -258,6 +258,8 @@ public class Ruolo
 
     public void resettaAmato() { setAmato(false); }
 
+    public EsitoAttacco attaccoAssassino() { return null; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
