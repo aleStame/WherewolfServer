@@ -20,13 +20,6 @@ public final class TestPiccoloPopolo
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
-    @Test public void testSegnalazioneInquisitore()
-    {
-        assertThat(isAccusato()).isFalse();
-        ruolo.segnalazioneInquisitore();
-        verificaVero(isAccusato());
-    }
-
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
@@ -52,7 +45,5 @@ public final class TestPiccoloPopolo
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }

@@ -29,16 +29,7 @@ public final class TestRuolo
     {
         verificaNessunVoto();
         verificaFalso(isAmato());
-        verificaLibero();
         verificaAssenzaProtezioni();
-    }
-
-    @Test public void testAccusato()
-    {
-        ruolo.accusa();
-        verificaAccusato();
-        ruolo.libera();
-        verificaLibero();
     }
 
     @Test public void testVoti()
@@ -56,16 +47,7 @@ public final class TestRuolo
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         incrementaVoti();
-        segnalazioneAzzeccagarbugli();
         verificaVoti(ESEMPIO_VOTI);
-        verificaAccusato();
-    }
-
-    @Test public void testSegnalazioneOratore()
-    {
-        segnalazioneAzzeccagarbugli();
-        ruolo.segnalazioneOratore();
-        verificaFalso(ruolo.isAccusato());
     }
 
     @ParameterizedTest
@@ -96,13 +78,6 @@ public final class TestRuolo
         verificaAttaccoLupiRiuscito(nome);
     }
 
-    @Test public void testSegnalazioneInquisitore()
-    {
-        verificaLibero();
-        ruolo.segnalazioneInquisitore();
-        verificaLibero();
-    }
-
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoLupiRiuscito(nome); }
@@ -127,8 +102,6 @@ public final class TestRuolo
         verificaFalso(maledizione());
         verificaFalso(isMaledetto());
     }
-
-    private void segnalazioneAzzeccagarbugli() { ruolo.segnalazioneAzzeccagarbugli(); }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
@@ -158,13 +131,7 @@ public final class TestRuolo
 
     private void verificaProtetto() { verificaVero(isTrattoPresente(PROTETTO)); }
 
-    private void verificaAccusato() { verificaVero(isAccusato()); }
-
-    private void verificaLibero() { verificaFalso(isAccusato()); }
-
     private void incrementaVoti() { ruolo.incrementaVoti(ESEMPIO_VOTI); }
-
-    private boolean isAccusato() { return ruolo.isAccusato(); }
 
     private boolean isAmato() { return ruolo.isAmato(); }
 

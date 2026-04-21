@@ -23,7 +23,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, accusato, romeo;
+    private boolean amato, romeo;
 
     private final boolean mistico;
 
@@ -39,7 +39,6 @@ public class Ruolo
         annullaVoti();
         setAmato(false);
         this.mistico = mistico;
-        libera();
         tratti = new Tratti();
         setRomeo(false);
     }
@@ -88,11 +87,7 @@ public class Ruolo
 
     public void gildata() { }
 
-    public void segnalazioneInquisitore() { if(isMistico()) accusa(); }
-
     public boolean isMistico() { return mistico; }
-
-    public boolean isAccusato() { return accusato; }
 
     public boolean isAzzeccagarbugli() { return false; }
 
@@ -107,10 +102,6 @@ public class Ruolo
     public boolean isBoccaDiRosa() { return false; }
 
     public boolean isLupo() { return false; }
-
-    public void segnalazioneAzzeccagarbugli() { accusa(); }
-
-    public void accusa() { setAccusato(true); }
 
     public boolean isCapoBranco() { return false; }
 
@@ -141,8 +132,6 @@ public class Ruolo
     public boolean isCriminale() { return false; }
 
     public boolean isBoia() { return false; }
-
-    public void libera() { setAccusato(false); }
 
     public boolean isCitta() { return false; }
 
@@ -245,8 +234,6 @@ public class Ruolo
 
     public boolean isOratore() { return false; }
 
-    public void segnalazioneOratore() { libera(); }
-
     public boolean isOste() { return false; }
 
     public boolean isPazzo() { return false; }
@@ -292,8 +279,6 @@ public class Ruolo
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
     }
-
-    private void setAccusato(boolean accusato) { this.accusato = accusato; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
 

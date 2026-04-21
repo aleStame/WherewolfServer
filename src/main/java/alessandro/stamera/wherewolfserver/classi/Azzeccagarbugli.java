@@ -17,8 +17,6 @@ public final class Azzeccagarbugli extends Citta
 
     @Override public boolean isAzzeccagarbugli() { return true; }
 
-    @Override public void segnalazioneAzzeccagarbugli() { }
-
     public static Ruolo getInstance() { return new Azzeccagarbugli(); }
 
 }

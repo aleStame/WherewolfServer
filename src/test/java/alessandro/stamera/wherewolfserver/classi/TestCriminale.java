@@ -21,14 +21,6 @@ public final class TestCriminale
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        ruolo.incrementaVoti(2);
-        ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isZero();
-        verificaFalso(ruolo.isAccusato());
-    }
-
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }

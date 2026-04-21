@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: eliminazione codice inutile" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,30 +280,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02182" summary="REFACTORING: definizione del metodo aggiungiGiocatoriBallottaggio">
-      <option name="closed" value="true" />
-      <created>1776676155874</created>
-      <option name="number" value="02182" />
-      <option name="presentableId" value="LOCAL-02182" />
-      <option name="project" value="LOCAL" />
-      <updated>1776676155874</updated>
-    </task>
-    <task id="LOCAL-02183" summary="REFACTORING: definizione del metodo getBallottaggio">
-      <option name="closed" value="true" />
-      <created>1776676376397</created>
-      <option name="number" value="02183" />
-      <option name="presentableId" value="LOCAL-02183" />
-      <option name="project" value="LOCAL" />
-      <updated>1776676376398</updated>
-    </task>
-    <task id="LOCAL-02184" summary="ROSSO: testBallottaggioPuro non riuscito">
-      <option name="closed" value="true" />
-      <created>1776676817589</created>
-      <option name="number" value="02184" />
-      <option name="presentableId" value="LOCAL-02184" />
-      <option name="project" value="LOCAL" />
-      <updated>1776676817590</updated>
     </task>
     <task id="LOCAL-02185" summary="VERDE: testBallottaggioPuro riuscito">
       <option name="closed" value="true" />
@@ -675,7 +649,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776783060361</updated>
     </task>
-    <option name="localTasksCounter" value="2231" />
+    <task id="LOCAL-02231" summary="REFACTORING: definizione del metodo verificaNonAccusato">
+      <option name="closed" value="true" />
+      <created>1776783208020</created>
+      <option name="number" value="02231" />
+      <option name="presentableId" value="LOCAL-02231" />
+      <option name="project" value="LOCAL" />
+      <updated>1776783208020</updated>
+    </task>
+    <task id="LOCAL-02232" summary="REFACTORING: definizione del metodo isAccusato">
+      <option name="closed" value="true" />
+      <created>1776783335945</created>
+      <option name="number" value="02232" />
+      <option name="presentableId" value="LOCAL-02232" />
+      <option name="project" value="LOCAL" />
+      <updated>1776783335945</updated>
+    </task>
+    <task id="LOCAL-02233" summary="REFACTORING: eliminazione codice inutile">
+      <option name="closed" value="true" />
+      <created>1776783913998</created>
+      <option name="number" value="02233" />
+      <option name="presentableId" value="LOCAL-02233" />
+      <option name="project" value="LOCAL" />
+      <updated>1776783913998</updated>
+    </task>
+    <option name="localTasksCounter" value="2234" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -690,9 +688,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAngeloCustodePresente non riuscito" />
-    <MESSAGE value="VERDE: testAngeloCustodePresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo scambioAngeloCustodeAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
@@ -715,6 +710,9 @@
     <MESSAGE value="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito" />
     <MESSAGE value="VERDE: testAngeloCustodeAccusatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonAccusato" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
+    <MESSAGE value="REFACTORING: eliminazione codice inutile" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: eliminazione codice inutile" />
   </component>
 </project>

@@ -8,8 +8,6 @@ public class Citta extends Ruolo
 
     public Citta(String nome, Aura aura, String descrizione) { super(nome, CITTA, aura, descrizione, 2, false); }
 
-    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
-
     @Override public boolean isCitta() { return true; }
 
     @Override public void gildata() { cambiaFazione(CRIMINALI); }
