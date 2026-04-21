@@ -84,7 +84,7 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        giocatori.segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
+        segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
         for(int i = 1; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1));
     }
@@ -92,7 +92,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
         String nome = getNomeGiocatore(2);
-        giocatori.segnalazioneAzzeccagarbugli(nome);
+        segnalazioneAzzeccagarbugli(nome);
         segnalazioneAngeloCustode(nome);
         for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(0));
@@ -131,5 +131,7 @@ public final class TestGiocatoriVivi
     private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
 
     private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
+
+    private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
 }
