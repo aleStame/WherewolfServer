@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSegnalazioneAzzeccagarbugli riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNumeroEsempio">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02223" summary="REFACTORING: definizione del metodo terminaVotazioni">
-      <option name="closed" value="true" />
-      <created>1776781271298</created>
-      <option name="number" value="02223" />
-      <option name="presentableId" value="LOCAL-02223" />
-      <option name="project" value="LOCAL" />
-      <updated>1776781271298</updated>
     </task>
     <task id="LOCAL-02224" summary="REFACTORING: definizione del metodo verificaAccusato">
       <option name="closed" value="true" />
@@ -676,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776806396283</updated>
     </task>
-    <option name="localTasksCounter" value="2272" />
+    <task id="LOCAL-02272" summary="REFACTORING: definizione del metodo getNumeroEsempio">
+      <option name="closed" value="true" />
+      <created>1776806584824</created>
+      <option name="number" value="02272" />
+      <option name="presentableId" value="LOCAL-02272" />
+      <option name="project" value="LOCAL" />
+      <updated>1776806584824</updated>
+    </task>
+    <option name="localTasksCounter" value="2273" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
     <MESSAGE value="ROSSO: testAttaccoAmatoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAmatoAssassino riuscito" />
@@ -716,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli" />
     <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNumeroEsempio" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNumeroEsempio" />
   </component>
 </project>

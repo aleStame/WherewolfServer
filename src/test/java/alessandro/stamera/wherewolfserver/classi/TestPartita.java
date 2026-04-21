@@ -95,6 +95,17 @@ public final class TestPartita
         for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugliAmato()
+    {
+        String nome = getNomeGiocatoreEsempio(2);
+        partita.segnalazioneAzzeccagarbugli(nome);
+        segnalazioneAngeloCustode(nome);
+        for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        terminaVotazioni();
+        String[] soluzioni = { getNomeGiocatoreEsempio(3), getNomeGiocatoreEsempio(0) };
+        for(String soluzione : soluzioni) verificaAccusato(soluzione);
+    }
+
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
