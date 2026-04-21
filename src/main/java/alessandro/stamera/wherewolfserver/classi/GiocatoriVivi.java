@@ -2,15 +2,21 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import static alessandro.stamera.wherewolfserver.classi.RuoloNullo.getInstance;
 
 public final class GiocatoriVivi extends Giocatori
 {
+
+    private Ruolo ruoloAzzeccagarbugli;
+
+    public GiocatoriVivi() { ruoloAzzeccagarbugli = getInstance(); }
 
     public Giocatori getBallottaggio()
     {
         Giocatori ballottaggio = creaBallottaggio();
         this.annullaVoti();
         ballottaggio.annullaVoti();
+
         return ballottaggio;
     }
 
@@ -18,7 +24,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { }
+    public void segnalazioneAzzeccagarbugli(String nome) { ruoloAzzeccagarbugli = getRuolo(nome); }
 
     private Giocatori creaBallottaggio()
     {
@@ -27,6 +33,19 @@ public final class GiocatoriVivi extends Giocatori
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
+        boolean fatto = false;
+        for(int i = 0; i < getNumeroGiocatori() && !fatto; i++)
+        {
+            String nome = getNomeGiocatore(i);
+            Ruolo ruolo = getRuolo(nome);
+            if(ruoloAzzeccagarbugli == ruolo)
+            {
+                eliminaGiocatore(nome);
+                ballottaggio.aggiungiGiocatore(nome, ruolo);
+                fatto = true;
+            }
+        }
+        ruoloAzzeccagarbugli = getInstance();
         return ballottaggio;
     }
 
@@ -54,6 +73,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
     {
+        System.out.println(numeroVoti);
         Map<String, Ruolo> giocatori = estraiGiocatori(numeroVoti);
         for(String nome : giocatori.keySet()) ballottaggio.aggiungiGiocatore(nome, giocatori.get(nome));
     }

@@ -95,7 +95,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         giocatori.segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
-        for(int i = 0; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
         Giocatori ballottaggio = getBallottaggio();
         verificaNumeroAccusati(ballottaggio, 3);
         String[] soluzioni = { getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1) };
