@@ -83,14 +83,16 @@ public final class TestGiocatoriVivi
         for(int i = 0; i < numeroAccusati; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
-    @Test public void testAttaccoAssassino() { assertThat(giocatori.attaccoAssassino(getNomeGiocatore(3))).isEqualTo(RIUSCITO); }
+    @Test public void testAttaccoAssassino() { verificaAttaccoAssassino(getNomeGiocatore(3), RIUSCITO); }
 
     @Test public void testAttaccoAmatoAssassino()
     {
         String nome = getNomeGiocatore(2);
         segnalazioneAngeloCustode(nome);
-        assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(FALLITO);
+        verificaAttaccoAssassino(nome, FALLITO);
     }
+
+    private void verificaAttaccoAssassino(String nome, EsitoAttacco esito) { assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
