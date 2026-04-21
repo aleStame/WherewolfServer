@@ -2,7 +2,7 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -85,7 +85,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testAttaccoAssassino() { assertThat(giocatori.attaccoAssassino(getNomeGiocatore(3))).isEqualTo(RIUSCITO); }
 
-    //@Test public void testAttaccoAssassino() { assertThat(giocatori.attaccoAssassino(getNomeGiocatore(3))).isEqualTo(RIUSCITO); }
+    @Test public void testAttaccoAmatoAssassino()
+    {
+        String nome = getNomeGiocatore(2);
+        segnalazioneAngeloCustode(nome);
+        assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(FALLITO);
+    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

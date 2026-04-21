@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoFallito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoAssassino riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestRuolo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/TestRuolo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAltraGuardia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAmanti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestAngeloCustode.html" afterDir="false" />
@@ -173,11 +173,11 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestRuolo.class.uniqueId26" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestRuolo.class.uniqueId26" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GiocatoriVivi.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GiocatoriVivi.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,38 +454,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02190" summary="ROSSO: testSegnalazioneAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776695009953</created>
-      <option name="number" value="02190" />
-      <option name="presentableId" value="LOCAL-02190" />
-      <option name="project" value="LOCAL" />
-      <updated>1776695009953</updated>
-    </task>
-    <task id="LOCAL-02191" summary="VERDE: testSegnalazioneAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776695161357</created>
-      <option name="number" value="02191" />
-      <option name="presentableId" value="LOCAL-02191" />
-      <option name="project" value="LOCAL" />
-      <updated>1776695161357</updated>
-    </task>
-    <task id="LOCAL-02192" summary="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1776695910840</created>
-      <option name="number" value="02192" />
-      <option name="presentableId" value="LOCAL-02192" />
-      <option name="project" value="LOCAL" />
-      <updated>1776695910840</updated>
-    </task>
-    <task id="LOCAL-02193" summary="VERDE: testAngeloCustodeAccusatoNonPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1776698221846</created>
-      <option name="number" value="02193" />
-      <option name="presentableId" value="LOCAL-02193" />
-      <option name="project" value="LOCAL" />
-      <updated>1776698221846</updated>
     </task>
     <task id="LOCAL-02194" summary="REFACTORING: definizione del metodo segnalazioneAngeloCustode">
       <option name="closed" value="true" />
@@ -847,7 +815,39 @@
       <option name="project" value="LOCAL" />
       <updated>1776785235267</updated>
     </task>
-    <option name="localTasksCounter" value="2239" />
+    <task id="LOCAL-02239" summary="REFACTORING: definizione del metodo verificaAttaccoFallito">
+      <option name="closed" value="true" />
+      <created>1776785503573</created>
+      <option name="number" value="02239" />
+      <option name="presentableId" value="LOCAL-02239" />
+      <option name="project" value="LOCAL" />
+      <updated>1776785503573</updated>
+    </task>
+    <task id="LOCAL-02240" summary="REFACTORING: definizione del metodo assassinio">
+      <option name="closed" value="true" />
+      <created>1776785695878</created>
+      <option name="number" value="02240" />
+      <option name="presentableId" value="LOCAL-02240" />
+      <option name="project" value="LOCAL" />
+      <updated>1776785695878</updated>
+    </task>
+    <task id="LOCAL-02241" summary="ROSSO: testAttaccoAssassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1776785894361</created>
+      <option name="number" value="02241" />
+      <option name="presentableId" value="LOCAL-02241" />
+      <option name="project" value="LOCAL" />
+      <updated>1776785894361</updated>
+    </task>
+    <task id="LOCAL-02242" summary="ROSSO: testAttaccoAssassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1776786152132</created>
+      <option name="number" value="02242" />
+      <option name="presentableId" value="LOCAL-02242" />
+      <option name="project" value="LOCAL" />
+      <updated>1776786152132</updated>
+    </task>
+    <option name="localTasksCounter" value="2243" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -862,9 +862,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAngeloCustodeAccusatoPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo spostamentoAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo spostamentoAngeloCustode" />
     <MESSAGE value="ROSSO: testBallottaggioPuro non riuscito" />
     <MESSAGE value="VERDE: testBallottaggioPuro riuscito" />
@@ -887,6 +884,9 @@
     <MESSAGE value="ROSSO: attaccoAssassinoAmato non riuscito" />
     <MESSAGE value="VERDE: attaccoAssassinoAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
+    <MESSAGE value="REFACTORING: definizione del metodo assassinio" />
+    <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoAssassino riuscito" />
   </component>
 </project>
