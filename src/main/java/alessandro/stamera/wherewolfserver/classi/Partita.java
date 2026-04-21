@@ -30,13 +30,29 @@ public final class Partita
 
     public void attaccoAssassino(String nome)
     {
-        vivi.attaccoAssassino(nome);
-        Ruolo ruolo = vivi.getRuolo(nome);
-        eliminati.aggiungiGiocatore(nome, ruolo);
+        switch(vivi.attaccoAssassino(nome))
+        {
+            case RIUSCITO ->
+            {
+                Ruolo ruolo = vivi.getRuolo(nome);
+                vivi.eliminaGiocatore(nome);
+                eliminati.aggiungiGiocatore(nome, ruolo);
+            }
+            case FALLITO ->
+            {
+                String nomeAngelo;
+                if(vivi.isAngeloCustodePresente()) nomeAngelo = vivi.getNomeAngeloCustode();
+                else nomeAngelo = eliminati.getNomeAngeloCustode();
+                Ruolo ruolo = vivi.getRuolo(nomeAngelo);
+                vivi.eliminaGiocatore(nomeAngelo);
+                eliminati.aggiungiGiocatore(nomeAngelo, ruolo);
+            }
+        }
+
     }
 
     public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
 
-    public boolean isVivo(String nome) { return false; }
+    public boolean isVivo(String nome) { return vivi.isPresente(nome); }
 
 }
