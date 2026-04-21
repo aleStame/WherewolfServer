@@ -33,13 +33,7 @@ public final class GiocatoriVivi extends Giocatori
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
-        if(posizioneGiocatoreAzzeccagarbugli != -1)
-        {
-            String nome = getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli);
-            Ruolo ruolo = getRuolo(nome);
-            eliminaGiocatore(nome);
-            ballottaggio.aggiungiGiocatore(nome, ruolo);
-        }
+        if(posizioneGiocatoreAzzeccagarbugli != -1) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
         ruoloAzzeccagarbugli = getInstance();
         return ballottaggio;
     }
@@ -50,9 +44,10 @@ public final class GiocatoriVivi extends Giocatori
         if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
     }
 
-    private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
+    private void spostamentoAngeloCustode(Ballottaggio ballottaggio) { mandaBallottaggio(ballottaggio, getNomeAngeloCustode()); }
+
+    private void mandaBallottaggio(Ballottaggio ballottaggio, String nome)
     {
-        String nome = getNomeAngeloCustode();
         Ruolo ruolo = getRuolo(nome);
         eliminaGiocatore(nome);
         ballottaggio.aggiungiGiocatore(nome, ruolo);
