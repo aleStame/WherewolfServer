@@ -20,18 +20,20 @@ public final class TestPartita
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(ESEMPI_GIOCATORI[i + 1][0], numeroVoti[i]);
         terminaVotazioni();
         String[] soluzioni = new String[] { ESEMPI_GIOCATORI[2][0], ESEMPI_GIOCATORI[1][0] };
-        for(String esempio : soluzioni) assertThat(partita.isAccusato(esempio)).isTrue();
+        for(String esempio : soluzioni) verificaAccusato(esempio);
     }
 
     @Test public void testUnanimita()
     {
         incrementaVoti(ESEMPI_GIOCATORI[0][0], 3);
         terminaVotazioni();
-        assertThat(partita.isAccusato(ESEMPI_GIOCATORI[0][0])).isTrue();
+        verificaAccusato(ESEMPI_GIOCATORI[0][0]);
     }
 
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
+
+    private void verificaAccusato(String nome) { assertThat(partita.isAccusato(nome)).isTrue(); }
 
 }
