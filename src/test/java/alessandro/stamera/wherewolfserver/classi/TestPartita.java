@@ -33,7 +33,7 @@ public final class TestPartita
 
     @Test public void testPareggioPrimoPosto()
     {
-        int numeroGiocatori = ESEMPI_GIOCATORI.length;
+        int numeroGiocatori = getNumeroGiocatoriEsempio();
         for(int i = 1; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
         for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
@@ -89,9 +89,10 @@ public final class TestPartita
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         partita.segnalazioneAzzeccagarbugli(getNomeGiocatoreEsempio(1));
-        for(int i = 2; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        int numeroGiocatori = getNumeroGiocatoriEsempio();
+        for(int i = 2; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
-        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
+        for(int i = 1; i < numeroGiocatori; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
@@ -121,5 +122,7 @@ public final class TestPartita
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
 
 }
