@@ -30,13 +30,15 @@ public final class GiocatoriVivi extends Giocatori
     private void gestioneAmato(Ballottaggio ballottaggio)
     {
         spostamentoAmato(ballottaggio);
-        if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente())
-        {
-            String nomeAngelo = getNomeAngeloCustode();
-            Ruolo angelo = getRuolo(nomeAngelo);
-            eliminaGiocatore(nomeAngelo);
-            ballottaggio.aggiungiGiocatore(nomeAngelo, angelo);
-        }
+        if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
+    }
+
+    private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
+    {
+        String nome = getNomeAngeloCustode();
+        Ruolo ruolo = getRuolo(nome);
+        eliminaGiocatore(nome);
+        ballottaggio.aggiungiGiocatore(nome, ruolo);
     }
 
     private void spostamentoAmato(Ballottaggio ballottaggio)
