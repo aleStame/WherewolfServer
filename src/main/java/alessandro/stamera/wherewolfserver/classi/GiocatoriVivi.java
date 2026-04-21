@@ -29,10 +29,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestioneAmato(Ballottaggio ballottaggio)
     {
-        String nomeAmato = ballottaggio.getNomeAmato();
-        Ruolo amato = ballottaggio.getRuolo(nomeAmato);
-        ballottaggio.eliminaGiocatore(nomeAmato);
-        aggiungiGiocatore(nomeAmato, amato);
+        spostamentoAmato(ballottaggio);
         if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente())
         {
             String nomeAngelo = getNomeAngeloCustode();
@@ -40,6 +37,14 @@ public final class GiocatoriVivi extends Giocatori
             eliminaGiocatore(nomeAngelo);
             ballottaggio.aggiungiGiocatore(nomeAngelo, angelo);
         }
+    }
+
+    private void spostamentoAmato(Ballottaggio ballottaggio)
+    {
+        String nome = ballottaggio.getNomeAmato();
+        Ruolo ruolo = ballottaggio.getRuolo(nome);
+        ballottaggio.eliminaGiocatore(nome);
+        aggiungiGiocatore(nome, ruolo);
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
