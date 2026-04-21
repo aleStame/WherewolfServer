@@ -39,13 +39,6 @@ public final class TestSensitiva
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
-    @Test public void testSegnalazioneInquisitore()
-    {
-        verificaFalso(isAccusato());
-        ruolo.segnalazioneInquisitore();
-        verificaVero(isAccusato());
-    }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
@@ -85,8 +78,6 @@ public final class TestSensitiva
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
-
-    private boolean isAccusato() { return ruolo.isAccusato(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

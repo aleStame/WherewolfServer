@@ -73,13 +73,6 @@ public final class TestGuaritore
         verificaVero(isPotereUtilizzato());
     }
 
-    @Test public void testSegnalazioneInquisitore()
-    {
-        verificaFalso(isAccusato());
-        ruolo.segnalazioneInquisitore();
-        verificaVero(isAccusato());
-    }
-
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
@@ -93,7 +86,5 @@ public final class TestGuaritore
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
-
-    private boolean isAccusato() { return ruolo.isAccusato(); }
 
 }

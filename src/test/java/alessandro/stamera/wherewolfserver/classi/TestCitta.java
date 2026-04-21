@@ -52,14 +52,6 @@ public final class TestCitta
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        ruolo.incrementaVoti(3);
-        ruolo.segnalazioneAzzeccagarbugli();
-        assertThat(ruolo.getNumeroVoti()).isZero();
-        verificaFalso(ruolo.isAccusato());
-    }
-
     @Test public void testGildata()
     {
         ruolo.gildata();

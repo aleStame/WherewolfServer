@@ -13,8 +13,6 @@ public class Criminale extends Ruolo
         potere = new Potere();
     }
 
-    @Override public void segnalazioneAzzeccagarbugli() { annullaVoti(); }
-
     @Override public boolean isCriminale() { return true; }
 
     @Override public boolean isPotereUtilizzato() { return potere.isPotereUtilizzato(); }
