@@ -92,7 +92,7 @@ public final class TestPartita
 
     private void verificaAccusato(String nome) { verificaVero(isAccusato(nome)); }
 
-    private void verificaNonAccusato(String nome) { assertThat(isAccusato(nome)).isFalse(); }
+    private void verificaNonAccusato(String nome) { verificaFalso(isAccusato(nome)); }
 
     private String getNomeGiocatoreEsempio(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
@@ -105,11 +105,13 @@ public final class TestPartita
     private void verificaEliminazione(String nome)
     {
         verificaVero(partita.isEliminato(nome));
-        assertThat(isVivo(nome)).isFalse();
+        verificaFalso(isVivo(nome));
     }
 
     private boolean isVivo(String nome) { return partita.isVivo(nome); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
