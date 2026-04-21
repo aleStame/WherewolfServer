@@ -86,6 +86,14 @@ public final class TestPartita
         verificaVero(isVivo(nomeAmato));
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        partita.segnalazioneAzzeccagarbugli(getNomeGiocatoreEsempio(1));
+        for(int i = 2; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        terminaVotazioni();
+        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) verificaAccusato(getNomeGiocatoreEsempio(i));
+    }
+
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }

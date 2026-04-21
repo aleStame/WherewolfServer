@@ -42,6 +42,8 @@ public final class Partita
 
     public boolean isVivo(String nome) { return vivi.isPresente(nome); }
 
+    public void segnalazioneAzzeccagarbugli(String nome) { }
+
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
     private void eliminaGiocatore(String nome)

@@ -85,7 +85,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
-        for(int i = 1; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1));
     }
 
