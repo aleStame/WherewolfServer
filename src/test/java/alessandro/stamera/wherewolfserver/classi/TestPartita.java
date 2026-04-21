@@ -7,8 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestPartita
 {
 
-    private static final String[][] ESEMPI_GIOCATORI =
-            new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" } };
+    private static final String[][] ESEMPI_GIOCATORI = new String[][]
+    {
+        { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" }, { "Eva", "Capo branco" }
+    };
 
     private Partita partita;
 
@@ -101,6 +103,13 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(getNomeGiocatoreEsempio(3), getNomeGiocatoreEsempio(0));
         verificaNonAccusato(nome);
+    }
+
+    @Test public void testAttaccoLupiAngeloCustode()
+    {
+        String nome = getNomeGiocatoreEsempio(0);
+        partita.attaccoLupi(nome);
+        verificaEliminazione(nome);
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
