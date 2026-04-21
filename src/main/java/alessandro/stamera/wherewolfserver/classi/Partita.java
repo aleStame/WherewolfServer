@@ -5,10 +5,22 @@ public final class Partita
 
     public static final RuoliFactory FACTORY = new RuoliFactory();
 
-    public Partita(String[][] giocatori) { }
+    private final GiocatoriVivi vivi;
 
-    public void incrementaVoti(String nome, int numeroVoti) { }
+    private Giocatori ballottaggio;
 
-    public boolean isAccusato(String nome) { return false; }
+    public Partita(String[][] giocatori)
+    {
+        vivi = new GiocatoriVivi();
+        FACTORY.annullaVoti();
+        for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        vivi.resettaAmato();
+    }
+
+    public void incrementaVoti(String nome, int numeroVoti) { vivi.incrementaVoti(nome, numeroVoti); }
+
+    public void terminaVotazioni() { ballottaggio = vivi.getBallottaggio(); }
+
+    public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
 
 }

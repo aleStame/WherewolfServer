@@ -63,6 +63,8 @@ public class Giocatori
 
     public void resettaAmato() { for(String chiave : getChiavi()) giocatori.get(chiave).resettaAmato(); }
 
+    public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
