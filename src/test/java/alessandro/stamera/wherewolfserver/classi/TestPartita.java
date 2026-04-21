@@ -70,6 +70,13 @@ public final class TestPartita
         verificaNonAccusato(nome);
     }
 
+    @Test public void testAttaccoAssassino()
+    {
+        String nome = getNomeGiocatoreEsempio(2);
+        partita.attaccoAssassino(nome);
+        assertThat(partita.isEliminato(nome)).isTrue();
+    }
+
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
