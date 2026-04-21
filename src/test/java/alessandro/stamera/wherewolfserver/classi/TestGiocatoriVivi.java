@@ -19,7 +19,7 @@ public final class TestGiocatoriVivi
     {
         FACTORY.annullaVoti();
         giocatori = new GiocatoriVivi();
-        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], getRuolo(esempio[1]));
         giocatori.resettaAmato();
     }
 
@@ -98,16 +98,13 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(0));
     }
 
-    @Test public void testAttaccoLupiAngeloCustode()
-    {
-        assertThat(giocatori.attaccoLupi(FACTORY.getRuolo("Capo branco"), getNomeGiocatore(0))).isEqualTo(RIUSCITO);
-    }
+    @Test public void testAttaccoLupiAngeloCustode() { verificaAttaccoCapoBranco(getNomeGiocatore(0), RIUSCITO); }
 
     @Test public void testAttaccoLupiAmato()
     {
         String nome = getNomeGiocatore(2);
         segnalazioneAngeloCustode(nome);
-        assertThat(giocatori.attaccoLupi(FACTORY.getRuolo("Capo branco"), nome)).isEqualTo(FALLITO);
+        verificaAttaccoCapoBranco(nome, FALLITO);
     }
 
     private void verificaAccusati(String... soluzioni)
@@ -145,5 +142,12 @@ public final class TestGiocatoriVivi
     private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
 
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaAttaccoCapoBranco(String nome, EsitoAttacco esito)
+    {
+        assertThat(giocatori.attaccoLupi(getRuolo("Capo branco"), nome)).isEqualTo(esito);
+    }
 
 }
