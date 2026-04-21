@@ -16,7 +16,6 @@ public final class GiocatoriVivi extends Giocatori
         Giocatori ballottaggio = creaBallottaggio();
         this.annullaVoti();
         ballottaggio.annullaVoti();
-
         return ballottaggio;
     }
 
@@ -33,17 +32,13 @@ public final class GiocatoriVivi extends Giocatori
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
-        boolean fatto = false;
-        for(int i = 0; i < getNumeroGiocatori() && !fatto; i++)
+        int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
+        if(posizioneGiocatoreAzzeccagarbugli != -1)
         {
-            String nome = getNomeGiocatore(i);
+            String nome = getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli);
             Ruolo ruolo = getRuolo(nome);
-            if(ruoloAzzeccagarbugli == ruolo)
-            {
-                eliminaGiocatore(nome);
-                ballottaggio.aggiungiGiocatore(nome, ruolo);
-                fatto = true;
-            }
+            eliminaGiocatore(nome);
+            ballottaggio.aggiungiGiocatore(nome, ruolo);
         }
         ruoloAzzeccagarbugli = getInstance();
         return ballottaggio;
@@ -73,7 +68,6 @@ public final class GiocatoriVivi extends Giocatori
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
     {
-        System.out.println(numeroVoti);
         Map<String, Ruolo> giocatori = estraiGiocatori(numeroVoti);
         for(String nome : giocatori.keySet()) ballottaggio.aggiungiGiocatore(nome, giocatori.get(nome));
     }
@@ -92,5 +86,12 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
+
+    private int getPosizioneGiocatoreSegnalazioneAzzeccagarbugli()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
 
 }
