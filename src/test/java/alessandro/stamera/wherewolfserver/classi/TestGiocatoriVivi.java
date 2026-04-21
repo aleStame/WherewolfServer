@@ -85,6 +85,8 @@ public final class TestGiocatoriVivi
 
     @Test public void testAttaccoAssassino() { assertThat(giocatori.attaccoAssassino(getNomeGiocatore(3))).isEqualTo(RIUSCITO); }
 
+    //@Test public void testAttaccoAssassino() { assertThat(giocatori.attaccoAssassino(getNomeGiocatore(3))).isEqualTo(RIUSCITO); }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void segnalazioneAngeloCustode(String nome) { giocatori.segnalazioneAngeloCustode(nome); }
