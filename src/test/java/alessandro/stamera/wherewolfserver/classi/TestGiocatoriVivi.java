@@ -40,7 +40,7 @@ public final class TestGiocatoriVivi
 
     @Test public void testPareggioPrimoPosto()
     {
-        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        for(int i = 1; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         verificaNumeroAccusati(getBallottaggio(), 3);
     }
 
@@ -85,7 +85,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         giocatori.segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
-        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        for(int i = 1; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1));
     }
 
@@ -120,5 +120,7 @@ public final class TestGiocatoriVivi
     }
 
     private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
+
+    private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
 
 }
