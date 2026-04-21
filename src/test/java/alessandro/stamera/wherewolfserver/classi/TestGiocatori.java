@@ -38,6 +38,12 @@ public final class TestGiocatori
         verificaNumeroIntero(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE), numeroVoti);
     }
 
+    @Test public void testAngeloCustodePresente()
+    {
+        assertThat(giocatori.isAngeloCustodePresente()).isTrue();
+        assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(ESEMPIO_GIOCATORE);
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));

@@ -6,8 +6,6 @@ import java.util.Map;
 public final class GiocatoriVivi extends Giocatori
 {
 
-    private static final int NON_TROVATO = -1;
-
     public Giocatori getBallottaggio()
     {
         Giocatori ballottaggio = creaBallottaggio();
@@ -18,35 +16,28 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
 
-    public boolean isAngeloCustodePresente() { return getPosizioneAngeloCustode() != NON_TROVATO; }
-
-    public String getNomeAngeloCustode() { return getNomeGiocatore(getPosizioneAngeloCustode()); }
-
-    private int getPosizioneAngeloCustode()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAngeloCustode(getNomeGiocatore(i))) posizione = i;
-        return posizione;
-    }
-
     private Giocatori creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
-        if(ballottaggio.isAmatoPresente()) if(isAngeloCustodePresente()) scambioAngeloCustodeAmato(ballottaggio);
+        if(ballottaggio.isAmatoPresente())
+        {
+            String nomeAmato = ballottaggio.getNomeAmato();
+            Ruolo amato = ballottaggio.getRuolo(nomeAmato);
+            ballottaggio.eliminaGiocatore(nomeAmato);
+            aggiungiGiocatore(nomeAmato, amato);
+            if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente())
+            {
+                String nomeAngelo = getNomeAngeloCustode();
+                Ruolo angelo = getRuolo(nomeAngelo);
+                eliminaGiocatore(nomeAngelo);
+                ballottaggio.aggiungiGiocatore(nomeAngelo, angelo);
+            }
+        }
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) System.out.println(ballottaggio.getNomeGiocatore(i));
         return ballottaggio;
-    }
-
-    private void scambioAngeloCustodeAmato(Ballottaggio ballottaggio)
-    {
-        String nomeAngeloCustode = getNomeAngeloCustode(), nomeAmato = ballottaggio.getNomeAmato();
-        Ruolo angeloCustode = getRuolo(nomeAngeloCustode), amato = ballottaggio.getRuolo(nomeAmato);
-        eliminaGiocatore(nomeAngeloCustode);
-        ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
-        ballottaggio.eliminaGiocatore(nomeAmato);
-        aggiungiGiocatore(nomeAmato, amato);
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)

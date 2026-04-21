@@ -10,6 +10,8 @@ import java.util.Set;
 public class Giocatori
 {
 
+    private static final int NON_TROVATO = -1;
+
     private final Map<String, Ruolo> giocatori;
 
     public Giocatori() { giocatori = new LinkedHashMap<>(); }
@@ -46,7 +48,20 @@ public class Giocatori
 
     public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
 
+    public boolean isAngeloCustodePresente() { return getPosizioneAngeloCustode() != NON_TROVATO; }
+
+    public String getNomeAngeloCustode() { return getNomeGiocatore(getPosizioneAngeloCustode()); }
+
+    private int getPosizioneAngeloCustode()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAngeloCustode(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
+
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
+
+    public void resettaAmato() { for(String chiave : getChiavi()) giocatori.get(chiave).resettaAmato(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 

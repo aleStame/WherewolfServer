@@ -269,6 +269,8 @@ public class Ruolo
 
     public boolean isTemplare() { return false; }
 
+    public void resettaAmato() { setAmato(false); }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)

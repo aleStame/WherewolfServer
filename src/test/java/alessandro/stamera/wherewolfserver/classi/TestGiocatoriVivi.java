@@ -18,6 +18,7 @@ public final class TestGiocatoriVivi
         FACTORY.annullaVoti();
         giocatori = new GiocatoriVivi();
         for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+        giocatori.resettaAmato();
     }
 
     @Test public void testBallottaggioPuro()
@@ -69,18 +70,15 @@ public final class TestGiocatoriVivi
         verificaGiocatoreAccusato(getBallottaggio(), 0, getNomeGiocatore(0));
     }
 
-    @Test public void testAngeloCustodePresente()
-    {
-        verificaVero(giocatori.isAngeloCustodePresente());
-        verificaNomeGiocatore(giocatori.getNomeAngeloCustode(), getNomeGiocatore(0));
-    }
-
     @Test public void testAngeloCustodeAccusatoPresente()
     {
-        for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
         segnalazioneAngeloCustode(getNomeGiocatore(1));
+        for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
         String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(0) };
-        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(getBallottaggio(), i, soluzioni[i]);
+        int numeroAccusati = soluzioni.length;
+        Giocatori ballottaggio = getBallottaggio();
+        verificaNumeroAccusati(ballottaggio, numeroAccusati);
+        for(int i = 0; i < numeroAccusati; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
