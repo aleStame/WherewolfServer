@@ -33,7 +33,7 @@ public final class Partita
         switch(vivi.attaccoAssassino(nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case FALLITO -> eliminaGiocatore(getNomeAngeloCustode());
+            case FALLITO -> eliminazioneAngeloCustode();
         }
 
     }
@@ -41,6 +41,8 @@ public final class Partita
     public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
 
     public boolean isVivo(String nome) { return vivi.isPresente(nome); }
+
+    private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
     private void eliminaGiocatore(String nome)
     {
