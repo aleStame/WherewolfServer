@@ -75,6 +75,16 @@ public final class TestPartita
         String nome = getNomeGiocatoreEsempio(2);
         partita.attaccoAssassino(nome);
         assertThat(partita.isEliminato(nome)).isTrue();
+        assertThat(partita.isVivo(nome)).isFalse();
+    }
+
+    @Test public void testAttaccoAmatoAssassino()
+    {
+        String nomeAngeloCustode = getNomeGiocatoreEsempio(0), nomeAmato = getNomeGiocatoreEsempio(3);
+        partita.segnalazioneAngeloCustode(nomeAmato);
+        partita.attaccoAssassino(nomeAmato);
+        assertThat(partita.isEliminato(nomeAngeloCustode)).isTrue();
+        assertThat(partita.isVivo(nomeAmato)).isTrue();
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }

@@ -37,4 +37,6 @@ public final class Partita
 
     public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
 
+    public boolean isVivo(String nome) { return false; }
+
 }
