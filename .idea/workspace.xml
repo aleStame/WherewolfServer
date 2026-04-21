@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoAssassino riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eliminazioneAngeloCustode">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -173,8 +173,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId2" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" afterDir="false" />
     </list>
@@ -453,38 +454,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02199" summary="REFACTORING: definizione del ,metodo isAmatoPresente">
-      <option name="closed" value="true" />
-      <created>1776699871225</created>
-      <option name="number" value="02199" />
-      <option name="presentableId" value="LOCAL-02199" />
-      <option name="project" value="LOCAL" />
-      <updated>1776699871225</updated>
-    </task>
-    <task id="LOCAL-02200" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
-      <option name="closed" value="true" />
-      <created>1776701896122</created>
-      <option name="number" value="02200" />
-      <option name="presentableId" value="LOCAL-02200" />
-      <option name="project" value="LOCAL" />
-      <updated>1776701896122</updated>
-    </task>
-    <task id="LOCAL-02201" summary="REFACTORING: definizione del metodo getPazzo">
-      <option name="closed" value="true" />
-      <created>1776702085372</created>
-      <option name="number" value="02201" />
-      <option name="presentableId" value="LOCAL-02201" />
-      <option name="project" value="LOCAL" />
-      <updated>1776702085372</updated>
-    </task>
-    <task id="LOCAL-02202" summary="REFACTORING: definizione del metodo getPazzoAmato">
-      <option name="closed" value="true" />
-      <created>1776702199150</created>
-      <option name="number" value="02202" />
-      <option name="presentableId" value="LOCAL-02202" />
-      <option name="project" value="LOCAL" />
-      <updated>1776702199150</updated>
     </task>
     <task id="LOCAL-02203" summary="ROSSO: testAmatoPresente non riuscito">
       <option name="closed" value="true" />
@@ -846,7 +815,39 @@
       <option name="project" value="LOCAL" />
       <updated>1776787071417</updated>
     </task>
-    <option name="localTasksCounter" value="2248" />
+    <task id="LOCAL-02248" summary="ROSSO: testAttaccoAmatoAssassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1776787416554</created>
+      <option name="number" value="02248" />
+      <option name="presentableId" value="LOCAL-02248" />
+      <option name="project" value="LOCAL" />
+      <updated>1776787416554</updated>
+    </task>
+    <task id="LOCAL-02249" summary="VERDE: testAttaccoAmatoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1776787933168</created>
+      <option name="number" value="02249" />
+      <option name="presentableId" value="LOCAL-02249" />
+      <option name="project" value="LOCAL" />
+      <updated>1776787933168</updated>
+    </task>
+    <task id="LOCAL-02250" summary="REFACTORING: definizione del metodo eliminaGiocatore">
+      <option name="closed" value="true" />
+      <created>1776788139200</created>
+      <option name="number" value="02250" />
+      <option name="presentableId" value="LOCAL-02250" />
+      <option name="project" value="LOCAL" />
+      <updated>1776788139200</updated>
+    </task>
+    <task id="LOCAL-02251" summary="REFACTORING: definizione del metodo getNomeAngeloCustode">
+      <option name="closed" value="true" />
+      <created>1776788270482</created>
+      <option name="number" value="02251" />
+      <option name="presentableId" value="LOCAL-02251" />
+      <option name="project" value="LOCAL" />
+      <updated>1776788270482</updated>
+    </task>
+    <option name="localTasksCounter" value="2252" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -861,11 +862,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testBallottaggioPuro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testUnanimita riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
-    <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
-    <MESSAGE value="REFACTORING: definizione del metodo terminaVotazioni" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAccusato" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatoreEsempio" />
     <MESSAGE value="VERDE DIRETTO: testPareggioPrimoPosto riuscito" />
@@ -886,6 +882,11 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAssassino" />
     <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoAssassino riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoAmatoAssassino non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoAmatoAssassino riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeAngeloCustode" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminazioneAngeloCustode" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminazioneAngeloCustode" />
   </component>
 </project>
