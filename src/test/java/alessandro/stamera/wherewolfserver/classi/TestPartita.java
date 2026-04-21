@@ -74,10 +74,12 @@ public final class TestPartita
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
-    private void verificaAccusato(String nome) { assertThat(partita.isAccusato(nome)).isTrue(); }
+    private void verificaAccusato(String nome) { assertThat(isAccusato(nome)).isTrue(); }
 
-    private void verificaNonAccusato(String nome) { assertThat(partita.isAccusato(nome)).isFalse(); }
+    private void verificaNonAccusato(String nome) { assertThat(isAccusato(nome)).isFalse(); }
 
     private String getNomeGiocatoreEsempio(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
+
+    private boolean isAccusato(String nome) { return partita.isAccusato(nome); }
 
 }
