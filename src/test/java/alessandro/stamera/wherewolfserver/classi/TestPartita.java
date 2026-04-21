@@ -74,8 +74,7 @@ public final class TestPartita
     {
         String nome = getNomeGiocatoreEsempio(2);
         attaccoAssassino(nome);
-        assertThat(partita.isEliminato(nome)).isTrue();
-        assertThat(partita.isVivo(nome)).isFalse();
+        verificaEliminazione(nome);
     }
 
     @Test public void testAttaccoAmatoAssassino()
@@ -83,7 +82,7 @@ public final class TestPartita
         String nomeAngeloCustode = getNomeGiocatoreEsempio(0), nomeAmato = getNomeGiocatoreEsempio(3);
         segnalazioneAngeloCustode(nomeAmato);
         attaccoAssassino(nomeAmato);
-        assertThat(partita.isEliminato(nomeAngeloCustode)).isTrue();
+        verificaEliminazione(nomeAngeloCustode);
         assertThat(partita.isVivo(nomeAmato)).isTrue();
     }
 
@@ -102,5 +101,11 @@ public final class TestPartita
     private void segnalazioneAngeloCustode(String nome) { partita.segnalazioneAngeloCustode(nome); }
 
     private void attaccoAssassino(String nome) { partita.attaccoAssassino(nome); }
+
+    private void verificaEliminazione(String nome)
+    {
+        assertThat(partita.isEliminato(nome)).isTrue();
+        assertThat(partita.isVivo(nome)).isFalse();
+    }
 
 }
