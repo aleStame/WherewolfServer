@@ -98,6 +98,11 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(0));
     }
 
+    @Test public void testAttaccoLupiAngeloCustode()
+    {
+        assertThat(giocatori.attaccoLupi(FACTORY.getRuolo("Capo branco"), getNomeGiocatore(0))).isEqualTo(RIUSCITO);
+    }
+
     private void verificaAccusati(String... soluzioni)
     {
         int numeroSoluzioni = soluzioni.length;

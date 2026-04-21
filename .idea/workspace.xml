@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSegnalazioneAzzeccagarbugliAmato riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo estraiUltimiTreEsempi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,22 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02225" summary="REFACTORING: definizione del metodo getNomeGiocatoreEsempio">
-      <option name="closed" value="true" />
-      <created>1776781625501</created>
-      <option name="number" value="02225" />
-      <option name="presentableId" value="LOCAL-02225" />
-      <option name="project" value="LOCAL" />
-      <updated>1776781625501</updated>
-    </task>
-    <task id="LOCAL-02226" summary="VERDE DIRETTO: testPareggioPrimoPosto riuscito">
-      <option name="closed" value="true" />
-      <created>1776782008026</created>
-      <option name="number" value="02226" />
-      <option name="presentableId" value="LOCAL-02226" />
-      <option name="project" value="LOCAL" />
-      <updated>1776782008026</updated>
     </task>
     <task id="LOCAL-02227" summary="VERDE DIRETTO: testPareggioSecondoPosto riuscito">
       <option name="closed" value="true" />
@@ -677,7 +660,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776806981956</updated>
     </task>
-    <option name="localTasksCounter" value="2274" />
+    <task id="LOCAL-02274" summary="REFACTORING: definizione del metodo verificaAccusati">
+      <option name="closed" value="true" />
+      <created>1776807579466</created>
+      <option name="number" value="02274" />
+      <option name="presentableId" value="LOCAL-02274" />
+      <option name="project" value="LOCAL" />
+      <updated>1776807579467</updated>
+    </task>
+    <task id="LOCAL-02275" summary="REFACTORING: definizione del metodo estraiUltimiTreEsempi">
+      <option name="closed" value="true" />
+      <created>1776807815408</created>
+      <option name="number" value="02275" />
+      <option name="presentableId" value="LOCAL-02275" />
+      <option name="project" value="LOCAL" />
+      <updated>1776807815408</updated>
+    </task>
+    <option name="localTasksCounter" value="2276" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
     <MESSAGE value="ROSSO: testAttaccoAmatoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAmatoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatore" />
@@ -705,7 +703,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAccusati" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroGiocatoriEsempio" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo mandaBallottaggio" />
@@ -717,6 +714,8 @@
     <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroEsempio" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugliAmato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugliAmato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAccusati" />
+    <MESSAGE value="REFACTORING: definizione del metodo estraiUltimiTreEsempi" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo estraiUltimiTreEsempi" />
   </component>
 </project>

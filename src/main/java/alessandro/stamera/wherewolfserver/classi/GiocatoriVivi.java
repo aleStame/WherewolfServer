@@ -27,6 +27,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAzzeccagarbugli(String nome) { ruoloAzzeccagarbugli = getRuolo(nome); }
 
+    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return null; }
+
     private Giocatori creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();
