@@ -56,7 +56,7 @@ public final class TestPartita
         incrementaVoti(posizione, 3);
         terminaVotazioni();
         verificaAccusato(getNomeGiocatoreEsempio(0));
-        assertThat(partita.isAccusato(nome)).isFalse();
+        verificaNonAccusato(nome);
     }
 
     @Test public void testAngeloCustodeAccusatoPresente()
@@ -67,7 +67,7 @@ public final class TestPartita
         terminaVotazioni();
         String[] soluzioni = new String[] { getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(0) };
         for(String soluzione : soluzioni) verificaAccusato(soluzione);
-        assertThat(partita.isAccusato(nome)).isFalse();
+        verificaNonAccusato(nome);
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
@@ -75,6 +75,8 @@ public final class TestPartita
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
     private void verificaAccusato(String nome) { assertThat(partita.isAccusato(nome)).isTrue(); }
+
+    private void verificaNonAccusato(String nome) { assertThat(partita.isAccusato(nome)).isFalse(); }
 
     private String getNomeGiocatoreEsempio(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
