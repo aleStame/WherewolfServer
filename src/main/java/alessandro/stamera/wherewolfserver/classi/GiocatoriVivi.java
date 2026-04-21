@@ -22,22 +22,24 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
-        if(ballottaggio.isAmatoPresente())
-        {
-            String nomeAmato = ballottaggio.getNomeAmato();
-            Ruolo amato = ballottaggio.getRuolo(nomeAmato);
-            ballottaggio.eliminaGiocatore(nomeAmato);
-            aggiungiGiocatore(nomeAmato, amato);
-            if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente())
-            {
-                String nomeAngelo = getNomeAngeloCustode();
-                Ruolo angelo = getRuolo(nomeAngelo);
-                eliminaGiocatore(nomeAngelo);
-                ballottaggio.aggiungiGiocatore(nomeAngelo, angelo);
-            }
-        }
+        if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) System.out.println(ballottaggio.getNomeGiocatore(i));
         return ballottaggio;
+    }
+
+    private void gestioneAmato(Ballottaggio ballottaggio)
+    {
+        String nomeAmato = ballottaggio.getNomeAmato();
+        Ruolo amato = ballottaggio.getRuolo(nomeAmato);
+        ballottaggio.eliminaGiocatore(nomeAmato);
+        aggiungiGiocatore(nomeAmato, amato);
+        if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente())
+        {
+            String nomeAngelo = getNomeAngeloCustode();
+            Ruolo angelo = getRuolo(nomeAngelo);
+            eliminaGiocatore(nomeAngelo);
+            ballottaggio.aggiungiGiocatore(nomeAngelo, angelo);
+        }
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
