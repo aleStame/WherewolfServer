@@ -9,7 +9,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private Ruolo ruoloAzzeccagarbugli;
 
-    public GiocatoriVivi() { ruoloAzzeccagarbugli = getInstance(); }
+    public GiocatoriVivi() { annullaSegnalazioneAzzeccagarbugli(); }
 
     public Giocatori getBallottaggio()
     {
@@ -34,7 +34,7 @@ public final class GiocatoriVivi extends Giocatori
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
         if(posizioneGiocatoreAzzeccagarbugli != -1) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
-        ruoloAzzeccagarbugli = getInstance();
+        annullaSegnalazioneAzzeccagarbugli();
         return ballottaggio;
     }
 
@@ -88,5 +88,7 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
+
+    private void annullaSegnalazioneAzzeccagarbugli() { ruoloAzzeccagarbugli = getInstance(); }
 
 }
