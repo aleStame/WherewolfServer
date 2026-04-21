@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoLupiAngeloCustode riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02228" summary="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1776782401995</created>
-      <option name="number" value="02228" />
-      <option name="presentableId" value="LOCAL-02228" />
-      <option name="project" value="LOCAL" />
-      <updated>1776782401995</updated>
     </task>
     <task id="LOCAL-02229" summary="VERDE: testAngeloCustodeAccusatoNonPresente riuscito">
       <option name="closed" value="true" />
@@ -674,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776810190678</updated>
     </task>
-    <option name="localTasksCounter" value="2277" />
+    <task id="LOCAL-02277" summary="VERDE: testAttaccoLupiAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1776810395358</created>
+      <option name="number" value="02277" />
+      <option name="presentableId" value="LOCAL-02277" />
+      <option name="project" value="LOCAL" />
+      <updated>1776810395358</updated>
+    </task>
+    <option name="localTasksCounter" value="2278" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoAmatoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminazioneAngeloCustode" />
@@ -714,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAccusati" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiUltimiTreEsempi" />
     <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
   </component>
 </project>

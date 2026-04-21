@@ -103,6 +103,13 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.attaccoLupi(FACTORY.getRuolo("Capo branco"), getNomeGiocatore(0))).isEqualTo(RIUSCITO);
     }
 
+    @Test public void testAttaccoLupiAmato()
+    {
+        String nome = getNomeGiocatore(2);
+        segnalazioneAngeloCustode(nome);
+        assertThat(giocatori.attaccoLupi(FACTORY.getRuolo("Capo branco"), nome)).isEqualTo(FALLITO);
+    }
+
     private void verificaAccusati(String... soluzioni)
     {
         int numeroSoluzioni = soluzioni.length;
