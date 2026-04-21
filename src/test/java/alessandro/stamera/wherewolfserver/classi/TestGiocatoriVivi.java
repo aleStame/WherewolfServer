@@ -27,10 +27,7 @@ public final class TestGiocatoriVivi
     {
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
-        Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, 2);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1) };
-        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        verificaAccusati(getNomeGiocatore(2), getNomeGiocatore(1));
     }
 
     @Test public void testUnanimita()
@@ -51,10 +48,7 @@ public final class TestGiocatoriVivi
     {
         int[] numeroVoti = new int[]{ 2, 1, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i, numeroVoti[i]);
-        Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, 3);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1), getNomeGiocatore(0) };
-        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        verificaAccusati(getNomeGiocatore(2), getNomeGiocatore(1), getNomeGiocatore(0));
     }
 
     @Test public void testSegnalazioneAngeloCustode()
@@ -76,11 +70,7 @@ public final class TestGiocatoriVivi
     {
         segnalazioneAngeloCustode(getNomeGiocatore(1));
         for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(0) };
-        int numeroAccusati = soluzioni.length;
-        Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, numeroAccusati);
-        for(int i = 0; i < numeroAccusati; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        verificaAccusati(getNomeGiocatore(2), getNomeGiocatore(0));
     }
 
     @Test public void testAttaccoAssassino() { verificaAttaccoAssassino(getNomeGiocatore(3), RIUSCITO); }
@@ -96,10 +86,15 @@ public final class TestGiocatoriVivi
     {
         giocatori.segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
         for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
+        verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1));
+    }
+
+    private void verificaAccusati(String... soluzioni)
+    {
+        int numeroSoluzioni = soluzioni.length;
         Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, 3);
-        String[] soluzioni = { getNomeGiocatore(3), getNomeGiocatore(2), getNomeGiocatore(1) };
-        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        verificaNumeroAccusati(ballottaggio, numeroSoluzioni);
+        for (int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
     private void verificaAttaccoAssassino(String nome, EsitoAttacco esito) { assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito); }
