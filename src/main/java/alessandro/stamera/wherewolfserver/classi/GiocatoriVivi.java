@@ -7,6 +7,8 @@ import static alessandro.stamera.wherewolfserver.classi.RuoloNullo.getInstance;
 public final class GiocatoriVivi extends Giocatori
 {
 
+    private static final int NON_TROVATO = -1;
+
     private Ruolo ruoloAzzeccagarbugli;
 
     public GiocatoriVivi() { annullaSegnalazioneAzzeccagarbugli(); }
@@ -39,7 +41,7 @@ public final class GiocatoriVivi extends Giocatori
     private void gestisciSegnalazioneAzzeccagarbugli(Ballottaggio ballottaggio)
     {
         int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
-        if(posizioneGiocatoreAzzeccagarbugli != -1) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
+        if(posizioneGiocatoreAzzeccagarbugli != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
         annullaSegnalazioneAzzeccagarbugli();
     }
 
@@ -89,8 +91,8 @@ public final class GiocatoriVivi extends Giocatori
 
     private int getPosizioneGiocatoreSegnalazioneAzzeccagarbugli()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i))) posizione = i;
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
 
