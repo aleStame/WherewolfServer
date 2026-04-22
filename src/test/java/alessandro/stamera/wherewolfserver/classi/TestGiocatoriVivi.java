@@ -111,7 +111,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
         String nomeMistico = getNomeGiocatore(getNumeroGiocatoriEsempio() - 1);
-        giocatori.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         int posizioneVoto = 1;
         incrementaVoti(posizioneVoto, 2);
         verificaAccusati(nomeMistico, getNomeGiocatore(posizioneVoto));
@@ -121,7 +121,7 @@ public final class TestGiocatoriVivi
     {
         int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
         String nomeMistico = getNomeGiocatore(posizioneMistico);
-        giocatori.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(3, 2);
         verificaAccusati(nomeMistico, getNomeGiocatore(posizioneMistico - 1));
     }
@@ -129,7 +129,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
         String nomeMistico = getNomeGiocatore(getNumeroGiocatoriEsempio() - 1);
-        giocatori.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         segnalazioneAngeloCustode(nomeMistico);
         int posizioneVoto = 1;
         incrementaVoti(posizioneVoto, 2);
@@ -140,7 +140,7 @@ public final class TestGiocatoriVivi
     {
         int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
         String nomeMistico = getNomeGiocatore(posizioneMistico);
-        giocatori.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         segnalazioneAngeloCustode(nomeMistico);
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(3, 2);
         verificaAccusati(getNomeGiocatore(posizioneMistico - 1), getNomeGiocatore(0));
@@ -159,6 +159,8 @@ public final class TestGiocatoriVivi
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void segnalazioneAngeloCustode(String nome) { giocatori.segnalazioneAngeloCustode(nome); }
+
+    private void segnalazioneInquisitore(String nome) { giocatori.segnalazioneInquisitore(nome); }
 
     private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
 

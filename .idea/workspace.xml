@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,14 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02242" summary="ROSSO: testAttaccoAssassino non riuscito">
-      <option name="closed" value="true" />
-      <created>1776786152132</created>
-      <option name="number" value="02242" />
-      <option name="presentableId" value="LOCAL-02242" />
-      <option name="project" value="LOCAL" />
-      <updated>1776786152132</updated>
     </task>
     <task id="LOCAL-02243" summary="VERDE: testAttaccoAssassino riuscito">
       <option name="closed" value="true" />
@@ -674,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776851722930</updated>
     </task>
-    <option name="localTasksCounter" value="2291" />
+    <task id="LOCAL-02291" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito">
+      <option name="closed" value="true" />
+      <created>1776852067131</created>
+      <option name="number" value="02291" />
+      <option name="presentableId" value="LOCAL-02291" />
+      <option name="project" value="LOCAL" />
+      <updated>1776852067131</updated>
+    </task>
+    <option name="localTasksCounter" value="2292" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,9 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getNumeroGiocatoriEsempio" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneAzzeccagarbugli" />
-    <MESSAGE value="REFACTORING: definizione del metodo mandaBallottaggio" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
@@ -708,12 +705,15 @@
     <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiAmato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiAmato riuscito" />
-    <MESSAGE value="ROSSo: testSegnalazioneInquisitoreMisticoAssente non riuscito" />
+    <MESSAGE value="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneInquisitoreMisticoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciSegnalazioneInquisizione" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneInquisitore" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito" />
-    <MESSAGE value="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssenteAmato riuscito" />
+    <MESSAGE value="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssenteAmato riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito" />
   </component>
 </project>
