@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definiizone del metodo gestisciSegnalazioni">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAngeloCustode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAngeloCustode.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testResetRomeo non riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,30 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02276" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776810190678</created>
-      <option name="number" value="02276" />
-      <option name="presentableId" value="LOCAL-02276" />
-      <option name="project" value="LOCAL" />
-      <updated>1776810190678</updated>
-    </task>
-    <task id="LOCAL-02277" summary="VERDE: testAttaccoLupiAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776810395358</created>
-      <option name="number" value="02277" />
-      <option name="presentableId" value="LOCAL-02277" />
-      <option name="project" value="LOCAL" />
-      <updated>1776810395358</updated>
-    </task>
-    <task id="LOCAL-02278" summary="VERDE DIRETTO: testAttaccoLupiAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776810803070</created>
-      <option name="number" value="02278" />
-      <option name="presentableId" value="LOCAL-02278" />
-      <option name="project" value="LOCAL" />
-      <updated>1776810803070</updated>
     </task>
     <task id="LOCAL-02279" summary="REFACTORING: definizione del metodo verificaAttaccoCapoBranco">
       <option name="closed" value="true" />
@@ -676,7 +652,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776895512586</updated>
     </task>
-    <option name="localTasksCounter" value="2325" />
+    <task id="LOCAL-02325" summary="REFACTORING: definizione del metodo verificaEsitoPartita">
+      <option name="closed" value="true" />
+      <created>1776895831017</created>
+      <option name="number" value="02325" />
+      <option name="presentableId" value="LOCAL-02325" />
+      <option name="project" value="LOCAL" />
+      <updated>1776895831018</updated>
+    </task>
+    <task id="LOCAL-02326" summary="REFACTORING: definizione del metodo getChiavi">
+      <option name="closed" value="true" />
+      <created>1776895999256</created>
+      <option name="number" value="02326" />
+      <option name="presentableId" value="LOCAL-02326" />
+      <option name="project" value="LOCAL" />
+      <updated>1776895999256</updated>
+    </task>
+    <task id="LOCAL-02327" summary="ROSSO: testResetRomeo non riuscito">
+      <option name="closed" value="true" />
+      <created>1776896493413</created>
+      <option name="number" value="02327" />
+      <option name="presentableId" value="LOCAL-02327" />
+      <option name="project" value="LOCAL" />
+      <updated>1776896493414</updated>
+    </task>
+    <option name="localTasksCounter" value="2328" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,9 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo attaccoLupi" />
-    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneInquisitore" />
-    <MESSAGE value="ROSSO: testAttaccoNosferatuAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatuAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: vampirizzazione non riuscito" />
     <MESSAGE value="VERDE: vampirizzazione riuscito" />
@@ -716,6 +713,9 @@
     <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
     <MESSAGE value="VERDE: testSconfittaViaggio riuscito" />
     <MESSAGE value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
+    <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
+    <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testResetRomeo non riuscito" />
   </component>
 </project>

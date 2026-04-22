@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.IstanzaRuolo.values;
@@ -37,7 +38,7 @@ public final class RuoliFactory
 
     public int getNumeroRuoli() { return ruoli.size(); }
 
-    public String getNome(int posizione) { return ruoli.keySet().stream().toList().get(posizione); }
+    public String getNome(int posizione) { return getChiavi().stream().toList().get(posizione); }
 
     public Ruolo[] getLupi() { return filtraRuoli(Ruolo::isLupo); }
 
@@ -48,9 +49,11 @@ public final class RuoliFactory
         return filtraRuoli(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
     }
 
-    public void annullaVoti() { for(String chiave : ruoli.keySet()) ottieniRuolo(chiave).annullaVoti(); }
+    public void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
 
-    public void resettaRomeo() { for(String chiave : ruoli.keySet()) ottieniRuolo(chiave).resettaRomeo(); }
+    public void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
+
+    private Set<String> getChiavi() { return ruoli.keySet(); }
 
     private Ruolo getCappuccettoRosso()
     {

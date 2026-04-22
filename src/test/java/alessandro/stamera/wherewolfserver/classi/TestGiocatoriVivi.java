@@ -11,6 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiocatoriVivi
@@ -171,6 +172,15 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeAmato);
         verificaProgenie(nomeAmato, nomeAngelo, VAMPIRO);
         resettaAngeloCustode();
+    }
+
+    @Test public void testResetRomeo()
+    {
+        String nome = getNomeGiocatore(1);
+        segnalazioneAngeloCustode(nome);
+        giocatori.eliminaGiocatore(giocatori.getNomeAngeloCustode());
+        verificaNonAmato(nome);
+        assertThat(giocatori.isTrattoPresente(nome, PROTETTO)).isFalse();
     }
 
     @Test public void testPossedutoAngeloCustode()
