@@ -59,7 +59,7 @@ public final class TestGiocatoriVivi
     {
         String nome = getNomeGiocatore(3);
         segnalazioneAngeloCustode(nome);
-        verificaVero(giocatori.isAmato(nome));
+        verificaVero(isAmato(nome));
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
@@ -172,7 +172,7 @@ public final class TestGiocatoriVivi
             case VAMPIRO -> esito = giocatori.attaccoVampiro(nomeAngelo);
         }
         assertThat(esito).isEqualTo(RIUSCITO);
-        assertThat(giocatori.isAmato(nomeAmato)).isFalse();
+        assertThat(isAmato(nomeAmato)).isFalse();
         verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
         assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(fazione);
     }
@@ -181,7 +181,7 @@ public final class TestGiocatoriVivi
     {
         int numeroSoluzioni = soluzioni.length;
         Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, numeroSoluzioni);
+        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(numeroSoluzioni);
         for (int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
@@ -204,11 +204,6 @@ public final class TestGiocatoriVivi
 
     private String getNomeGiocatore(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
-    private void verificaNumeroAccusati(Giocatori ballottaggio, int numeroAccusati)
-    {
-        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(numeroAccusati);
-    }
-
     private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
 
     private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
@@ -221,5 +216,7 @@ public final class TestGiocatoriVivi
     {
         assertThat(giocatori.attaccoLupi(getRuolo("Capo branco"), nome)).isEqualTo(esito);
     }
+
+    private boolean isAmato(String nome) { return giocatori.isAmato(nome); }
 
 }
