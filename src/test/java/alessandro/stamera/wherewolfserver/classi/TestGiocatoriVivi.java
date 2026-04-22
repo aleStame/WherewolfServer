@@ -122,7 +122,7 @@ public final class TestGiocatoriVivi
         int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
         String nomeMistico = getNomeGiocatore(posizioneMistico);
         segnalazioneInquisitore(nomeMistico);
-        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(3, 2);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
         verificaAccusati(nomeMistico, getNomeGiocatore(posizioneMistico - 1));
     }
 
