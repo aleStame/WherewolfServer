@@ -75,10 +75,15 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
-        gestisciSegnalazioneAzzeccagarbugli(ballottaggio);
-        gestisciSegnalazioneInquisitore(ballottaggio);
+        gestisciSegnalazioni(ballottaggio);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         return ballottaggio;
+    }
+
+    private void gestisciSegnalazioni(Ballottaggio ballottaggio)
+    {
+        gestisciSegnalazioneAzzeccagarbugli(ballottaggio);
+        gestisciSegnalazioneInquisitore(ballottaggio);
     }
 
     private void gestisciSegnalazioneAzzeccagarbugli(Ballottaggio ballottaggio)
