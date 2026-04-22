@@ -269,7 +269,7 @@ public class Ruolo
     public EsitoAttacco vampirizzazione()
     {
         cambiaFazione(VAMPIRO);
-        aggiungiTratti(CREATURA_OMBRA);
+        aggiungiTratti(NON_MORTO);
         return RIUSCITO;
     }
 
@@ -292,7 +292,7 @@ public class Ruolo
 
     private boolean controlloTrattiOscuri()
     {
-        return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
+        return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
 
     private void setAmato(boolean amato) { this.amato = amato; }

@@ -48,7 +48,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
 
-    public EsitoAttacco attaccoVampiro(String nome) { return null; }
+    public EsitoAttacco attaccoVampiro(String nome)
+    {
+        EsitoAttacco esito = getRuolo(nome).vampirizzazione();
+        if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
+        return esito;
+    }
 
     private Giocatori creaBallottaggio()
     {

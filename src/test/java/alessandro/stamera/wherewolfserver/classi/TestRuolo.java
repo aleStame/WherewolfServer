@@ -10,7 +10,6 @@ import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
@@ -112,7 +111,7 @@ public final class TestRuolo
         verificaAttaccoRiuscito(ruolo.vampirizzazione());
         verificaAuraNera();
         verificaFazione(VAMPIRO);
-        verificaTrattoPresente(CREATURA_OMBRA);
+        verificaTrattoPresente(NON_MORTO);
     }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
