@@ -55,6 +55,10 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
+    public void attaccoPosseduto(String nome) { }
+
+    public boolean isPosseduto(String nome) { return false; }
+
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
         if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();

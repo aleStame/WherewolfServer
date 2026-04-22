@@ -163,6 +163,15 @@ public final class TestGiocatoriVivi
         verificaProgenie(nomeAmato, nomeAngelo, VAMPIRO);
     }
 
+    @Test public void testPossedutoAngeloCustode()
+    {
+        String nomeAngelo = getNomeGiocatore(0), nomeAmato = getNomeGiocatore(1);
+        segnalazioneAngeloCustode(nomeAmato);
+        giocatori.attaccoPosseduto(nomeAngelo);
+        assertThat(giocatori.isPosseduto(nomeAngelo)).isTrue();
+        assertThat(isAmato(nomeAmato)).isFalse();
+    }
+
     private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
     {
         EsitoAttacco esito = null;

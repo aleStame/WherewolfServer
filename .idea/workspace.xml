@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaProgenie">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAmato" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -283,14 +281,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02264" summary="REFACTORING: definizione del metodo mandaBallottaggio">
-      <option name="closed" value="true" />
-      <created>1776803102594</created>
-      <option name="number" value="02264" />
-      <option name="presentableId" value="LOCAL-02264" />
-      <option name="project" value="LOCAL" />
-      <updated>1776803102594</updated>
     </task>
     <task id="LOCAL-02265" summary="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli">
       <option name="closed" value="true" />
@@ -676,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776866348305</updated>
     </task>
-    <option name="localTasksCounter" value="2313" />
+    <task id="LOCAL-02313" summary="REFACTORING: definizione del metodo isAmato">
+      <option name="closed" value="true" />
+      <created>1776866564424</created>
+      <option name="number" value="02313" />
+      <option name="presentableId" value="LOCAL-02313" />
+      <option name="project" value="LOCAL" />
+      <updated>1776866564424</updated>
+    </task>
+    <option name="localTasksCounter" value="2314" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSegnalazioneInquisitoreMisticoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciSegnalazioneInquisizione" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneInquisitore" />
     <MESSAGE value="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito" />
@@ -716,6 +713,7 @@
     <MESSAGE value="VERDE: testAttaccoVampiroAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciResetAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaProgenie" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaProgenie" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAmato" />
   </component>
 </project>
