@@ -126,6 +126,25 @@ public final class TestGiocatoriVivi
         verificaAccusati(nomeMistico, getNomeGiocatore(posizioneMistico - 1));
     }
 
+    @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
+    {
+        String nomeMistico = getNomeGiocatore(getNumeroGiocatoriEsempio() - 1);
+        giocatori.segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
+        int posizioneVoto = 1;
+        incrementaVoti(posizioneVoto, 2);
+        verificaAccusati(getNomeGiocatore(posizioneVoto), getNomeGiocatore(0));
+    }
+
+    /*@Test public void testSegnalazioneInquisitoreMisticoPresente()
+    {
+        int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
+        String nomeMistico = getNomeGiocatore(posizioneMistico);
+        giocatori.segnalazioneInquisitore(nomeMistico);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(3, 2);
+        verificaAccusati(nomeMistico, getNomeGiocatore(posizioneMistico - 1));
+    }*/
+
     private void verificaAccusati(String... soluzioni)
     {
         int numeroSoluzioni = soluzioni.length;
