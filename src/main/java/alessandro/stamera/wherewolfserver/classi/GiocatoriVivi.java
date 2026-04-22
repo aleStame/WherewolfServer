@@ -136,8 +136,10 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private void annullaSegnalazioneAzzeccagarbugli() { ruoloAzzeccagarbugli = getInstance(); }
+    private void annullaSegnalazioneAzzeccagarbugli() { annullaSegnalazione(ruoloAzzeccagarbugli); }
 
-    private void annullaSegnalazioneInquisitore() { ruoloInquisitore = getInstance(); }
+    private void annullaSegnalazioneInquisitore() { annullaSegnalazione(ruoloInquisitore); }
+
+    private void annullaSegnalazione(Ruolo ruolo) { ruolo = getInstance(); }
 
 }
