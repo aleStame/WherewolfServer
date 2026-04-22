@@ -88,7 +88,7 @@ public final class TestPartita
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        partita.segnalazioneAzzeccagarbugli(getNomeGiocatoreEsempio(1));
+        segnalazioneAzzeccagarbugli(getNomeGiocatoreEsempio(1));
         int numeroGiocatori = getNumeroGiocatoriEsempio();
         for(int i = 2; i < numeroGiocatori; i++) incrementaVoti(i, 1);
         terminaVotazioni();
@@ -98,7 +98,7 @@ public final class TestPartita
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
         String nome = getNomeGiocatoreEsempio(2);
-        partita.segnalazioneAzzeccagarbugli(nome);
+        segnalazioneAzzeccagarbugli(nome);
         segnalazioneAngeloCustode(nome);
         for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         terminaVotazioni();
@@ -118,7 +118,7 @@ public final class TestPartita
         String nome = getNomeGiocatoreEsempio(1);
         segnalazioneAngeloCustode(nome);
         partita.attaccoLupi(nome);
-        assertThat(partita.isVivo(nome)).isTrue();
+        assertThat(isVivo(nome)).isTrue();
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -199,5 +199,7 @@ public final class TestPartita
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
+
+    private void segnalazioneAzzeccagarbugli(String nome) { partita.segnalazioneAzzeccagarbugli(nome); }
 
 }
