@@ -169,7 +169,7 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeAmato);
         giocatori.attaccoPosseduto(nomeAngelo);
         assertThat(giocatori.isPosseduto(nomeAngelo)).isTrue();
-        assertThat(isAmato(nomeAmato)).isFalse();
+        verificaNonAmato(nomeAmato);
     }
 
     private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
@@ -181,7 +181,7 @@ public final class TestGiocatoriVivi
             case VAMPIRO -> esito = giocatori.attaccoVampiro(nomeAngelo);
         }
         assertThat(esito).isEqualTo(RIUSCITO);
-        assertThat(isAmato(nomeAmato)).isFalse();
+        verificaNonAmato(nomeAmato);
         verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
         assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(fazione);
     }
@@ -225,6 +225,8 @@ public final class TestGiocatoriVivi
     {
         assertThat(giocatori.attaccoLupi(getRuolo("Capo branco"), nome)).isEqualTo(esito);
     }
+
+    private void verificaNonAmato(String nome) { assertThat(isAmato(nome)).isFalse(); }
 
     private boolean isAmato(String nome) { return giocatori.isAmato(nome); }
 
