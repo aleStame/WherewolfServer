@@ -35,6 +35,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneInquisitore(String nome) { ruoloInquisitore = getRuolo(nome); }
 
+    public EsitoAttacco attaccoNosferatu(String nome) { return null; }
+
+    public boolean isTrattoPresente(String nome, Tratto tratto) { return false; }
+
+    public Fazione getFazione(String nome) { return null; }
+
     private Giocatori creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();
