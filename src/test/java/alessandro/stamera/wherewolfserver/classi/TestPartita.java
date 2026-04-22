@@ -109,7 +109,7 @@ public final class TestPartita
     @Test public void testAttaccoLupiAngeloCustode()
     {
         String nome = getNomeGiocatoreEsempio(0);
-        partita.attaccoLupi(nome);
+        attaccoLupi(nome);
         verificaEliminazione(nome);
     }
 
@@ -117,7 +117,7 @@ public final class TestPartita
     {
         String nome = getNomeGiocatoreEsempio(1);
         segnalazioneAngeloCustode(nome);
-        partita.attaccoLupi(nome);
+        attaccoLupi(nome);
         assertThat(isVivo(nome)).isTrue();
     }
 
@@ -201,5 +201,7 @@ public final class TestPartita
     private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
 
     private void segnalazioneAzzeccagarbugli(String nome) { partita.segnalazioneAzzeccagarbugli(nome); }
+
+    private void attaccoLupi(String nome) { partita.attaccoLupi(nome); }
 
 }
