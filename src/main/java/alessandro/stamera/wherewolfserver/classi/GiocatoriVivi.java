@@ -42,11 +42,7 @@ public final class GiocatoriVivi extends Giocatori
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         gestisciSegnalazioneAzzeccagarbugli(ballottaggio);
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++)
-            if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore) posizione = i;
-        if(posizione != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizione));
-        ruoloInquisitore = RuoloNullo.getInstance();
+        gestisciSegnalazioneInquisitore(ballottaggio);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         return ballottaggio;
     }
@@ -56,6 +52,15 @@ public final class GiocatoriVivi extends Giocatori
         int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
         if(posizioneGiocatoreAzzeccagarbugli != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
         annullaSegnalazioneAzzeccagarbugli();
+    }
+
+    private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio)
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++)
+            if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore) posizione = i;
+        if(posizione != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizione));
+        ruoloInquisitore = RuoloNullo.getInstance();
     }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
