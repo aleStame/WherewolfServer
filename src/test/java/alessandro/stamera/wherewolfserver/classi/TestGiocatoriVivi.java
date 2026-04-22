@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -156,6 +157,16 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.isAmato(nomeAmato)).isFalse();
         verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
         assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(NOSFERATU);
+    }
+
+    @Test public void testAttaccoVampiroAngeloCustode()
+    {
+        String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
+        segnalazioneAngeloCustode(nomeAmato);
+        assertThat(giocatori.attaccoVampiro(nomeAngelo)).isEqualTo(RIUSCITO);
+        assertThat(giocatori.isAmato(nomeAmato)).isFalse();
+        verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
+        assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(VAMPIRO);
     }
 
     private void verificaAccusati(String... soluzioni)

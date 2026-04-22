@@ -48,6 +48,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
 
+    public EsitoAttacco attaccoVampiro(String nome) { return null; }
+
     private Giocatori creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();
