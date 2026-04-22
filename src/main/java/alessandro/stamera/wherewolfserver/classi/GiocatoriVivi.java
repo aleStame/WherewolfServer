@@ -2,8 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.RuoloNullo.getInstance;
 
 public final class GiocatoriVivi extends Giocatori
@@ -55,9 +55,14 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public void attaccoPosseduto(String nome) { }
+    public void attaccoPosseduto(String nome)
+    {
+        eliminaGiocatore(nome);
+        aggiungiGiocatore(nome, FACTORY.getRuolo("Posseduto"));
+        resettaAmato();
+    }
 
-    public boolean isPosseduto(String nome) { return false; }
+    public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
 
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {

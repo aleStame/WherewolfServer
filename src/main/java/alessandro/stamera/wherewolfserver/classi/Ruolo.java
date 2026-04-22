@@ -306,4 +306,5 @@ public class Ruolo
         return risultato;
     }
 
+
 }
