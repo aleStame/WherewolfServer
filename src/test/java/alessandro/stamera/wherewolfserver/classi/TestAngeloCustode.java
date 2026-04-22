@@ -45,7 +45,7 @@ public final class TestAngeloCustode
         Partita partita = getPartitaEsempio();
         when(partita.isFinita()).thenReturn(true);
         when(partita.isGiuliettaViva()).thenReturn(true);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        verificaEsitoPartita(partita, VITTORIA);
         ruolo.resettaRomeo();
     }
 
@@ -54,7 +54,12 @@ public final class TestAngeloCustode
         Partita partita = getPartitaEsempio();
         when(partita.isViaggioPartito()).thenReturn(true);
         when(partita.isViaggiatoreAmato()).thenReturn(true);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        verificaEsitoPartita(partita, SCONFITTA);
+    }
+
+    private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
     private Partita getPartitaEsempio() { return mock(Partita.class); }

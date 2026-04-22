@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSconfittaViaggio riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definiizone del metodo gestisciSegnalazioni">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAngeloCustode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestAngeloCustode.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02275" summary="REFACTORING: definizione del metodo estraiUltimiTreEsempi">
-      <option name="closed" value="true" />
-      <created>1776807815408</created>
-      <option name="number" value="02275" />
-      <option name="presentableId" value="LOCAL-02275" />
-      <option name="project" value="LOCAL" />
-      <updated>1776807815408</updated>
     </task>
     <task id="LOCAL-02276" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
       <option name="closed" value="true" />
@@ -674,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776895295567</updated>
     </task>
-    <option name="localTasksCounter" value="2324" />
+    <task id="LOCAL-02324" summary="REFACTORING: definiizone del metodo gestisciSegnalazioni">
+      <option name="closed" value="true" />
+      <created>1776895512586</created>
+      <option name="number" value="02324" />
+      <option name="presentableId" value="LOCAL-02324" />
+      <option name="project" value="LOCAL" />
+      <updated>1776895512586</updated>
+    </task>
+    <option name="localTasksCounter" value="2325" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneInquisitore" />
     <MESSAGE value="ROSSO: testAttaccoNosferatuAngeloCustode non riuscito" />
@@ -714,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getPartita" />
     <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
     <MESSAGE value="VERDE: testSconfittaViaggio riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSconfittaViaggio riuscito" />
+    <MESSAGE value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
   </component>
 </project>
