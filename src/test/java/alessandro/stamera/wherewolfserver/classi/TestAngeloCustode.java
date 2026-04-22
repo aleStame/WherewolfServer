@@ -2,8 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -42,16 +42,21 @@ public final class TestAngeloCustode
     @Test public void testVittoriaRomeo()
     {
         ruolo.romeizzazione();
-        assertThat(ruolo.getEsitoPartita(getPartitaEsempio())).isEqualTo(VITTORIA);
-    }
-
-    private Partita getPartitaEsempio()
-    {
-        Partita partita = mock(Partita.class);
+        Partita partita = getPartitaEsempio();
         when(partita.isFinita()).thenReturn(true);
         when(partita.isGiuliettaViva()).thenReturn(true);
-        return partita;
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
+
+    @Test public void testSconfittaViaggio()
+    {
+        Partita partita = getPartitaEsempio();
+        when(partita.isViaggioPartito()).thenReturn(true);
+        when(partita.isViaggiatoreAmato()).thenReturn(true);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
+
+    private Partita getPartitaEsempio() { return mock(Partita.class); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 

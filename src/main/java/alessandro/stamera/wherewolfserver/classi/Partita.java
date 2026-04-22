@@ -56,6 +56,10 @@ public final class Partita
 
     public boolean isGiuliettaViva() { return false; }
 
+    public boolean isViaggioPartito() { return false; }
+
+    public boolean isViaggiatoreAmato() { return false; }
+
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
     private void eliminaGiocatore(String nome)

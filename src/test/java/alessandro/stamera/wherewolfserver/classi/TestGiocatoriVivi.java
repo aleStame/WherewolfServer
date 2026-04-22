@@ -106,10 +106,12 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(0));
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo) { verificaAttaccoLupo(nomeLupo, getNomeGiocatore(0), RIUSCITO); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
         String nome = getNomeGiocatore(2);
@@ -202,7 +204,10 @@ public final class TestGiocatoriVivi
         for (int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
-    private void verificaAttaccoAssassino(String nome, EsitoAttacco esito) { assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito); }
+    private void verificaAttaccoAssassino(String nome, EsitoAttacco esito)
+    {
+        assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito);
+    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
@@ -210,7 +215,10 @@ public final class TestGiocatoriVivi
 
     private void segnalazioneInquisitore(String nome) { giocatori.segnalazioneInquisitore(nome); }
 
-    private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
+    private void incrementaVoti(int posizione, int voti)
+    {
+        giocatori.incrementaVoti(getNomeGiocatore(posizione), voti);
+    }
 
     private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)
     {
