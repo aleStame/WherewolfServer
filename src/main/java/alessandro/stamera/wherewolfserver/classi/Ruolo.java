@@ -275,6 +275,8 @@ public class Ruolo
         return RIUSCITO;
     }
 
+    public void resettaRomeo() { setRomeo(false); }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
@@ -307,6 +309,5 @@ public class Ruolo
         if(!isRomeo()) risultato = FALLITO;
         return risultato;
     }
-
 
 }

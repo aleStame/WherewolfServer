@@ -28,6 +28,7 @@ public final class TestGiocatoriVivi
         giocatori = new GiocatoriVivi();
         for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], getRuolo(esempio[1]));
         giocatori.resettaAmato();
+        giocatori.resettaRomeo();
     }
 
     @Test public void testBallottaggioPuro()
