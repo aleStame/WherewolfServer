@@ -43,7 +43,7 @@ public final class TestRuolo
         verificaVero(maledizione());
         verificaVoti(1);
         verificaVero(isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        verificaAuraNera();
     }
 
     @ParameterizedTest
@@ -109,10 +109,10 @@ public final class TestRuolo
 
     @Test public void vampirizzazione()
     {
-        assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        verificaAttaccoRiuscito(ruolo.vampirizzazione());
+        verificaAuraNera();
         verificaFazione(VAMPIRO);
-        verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA));
+        verificaVero(isTrattoPresente(CREATURA_OMBRA));
     }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
@@ -164,5 +164,7 @@ public final class TestRuolo
     private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
     private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
+
+    private void verificaAuraNera() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
 }
