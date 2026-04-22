@@ -152,6 +152,17 @@ public final class TestPartita
         verificaAccusati(getNomeGiocatoreEsempio(posizioneVoto), getNomeGiocatoreEsempio(0));
     }
 
+    @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
+    {
+        int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
+        String nomeMistico = getNomeGiocatoreEsempio(posizioneMistico);
+        partita.segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
+        terminaVotazioni();
+        verificaAccusati(getNomeGiocatoreEsempio(posizioneMistico - 1), getNomeGiocatoreEsempio(0));
+    }
+
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
