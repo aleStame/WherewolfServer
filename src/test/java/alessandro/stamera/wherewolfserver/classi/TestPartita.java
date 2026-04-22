@@ -124,7 +124,7 @@ public final class TestPartita
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
         String nomeMistico = getNomeGiocatoreEsempio(getNumeroGiocatoriEsempio() - 1);
-        partita.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         int posizioneVoto = 1;
         incrementaVoti(posizioneVoto, 2);
         terminaVotazioni();
@@ -135,7 +135,7 @@ public final class TestPartita
     {
         int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
         String nomeMistico = getNomeGiocatoreEsempio(posizioneMistico);
-        partita.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
         terminaVotazioni();
         verificaAccusati(nomeMistico, getNomeGiocatoreEsempio(posizioneMistico - 1));
@@ -144,7 +144,7 @@ public final class TestPartita
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
         String nomeMistico = getNomeGiocatoreEsempio(getNumeroGiocatoriEsempio() - 1);
-        partita.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         segnalazioneAngeloCustode(nomeMistico);
         int posizioneVoto = 1;
         incrementaVoti(posizioneVoto, 2);
@@ -156,7 +156,7 @@ public final class TestPartita
     {
         int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
         String nomeMistico = getNomeGiocatoreEsempio(posizioneMistico);
-        partita.segnalazioneInquisitore(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
         segnalazioneAngeloCustode(nomeMistico);
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
         terminaVotazioni();
@@ -203,5 +203,7 @@ public final class TestPartita
     private void segnalazioneAzzeccagarbugli(String nome) { partita.segnalazioneAzzeccagarbugli(nome); }
 
     private void attaccoLupi(String nome) { partita.attaccoLupi(nome); }
+
+    private void segnalazioneInquisitore(String nome) { partita.segnalazioneInquisitore(nome); }
 
 }
