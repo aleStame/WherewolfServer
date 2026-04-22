@@ -5,6 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
@@ -265,7 +266,12 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoAttacco vampirizzazione() { return null; }
+    public EsitoAttacco vampirizzazione()
+    {
+        cambiaFazione(VAMPIRO);
+        aggiungiTratti(CREATURA_OMBRA);
+        return RIUSCITO;
+    }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
