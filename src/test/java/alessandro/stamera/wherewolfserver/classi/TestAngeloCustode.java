@@ -42,10 +42,15 @@ public final class TestAngeloCustode
     @Test public void testVittoriaRomeo()
     {
         ruolo.romeizzazione();
+        assertThat(ruolo.getEsitoPartita(getPartitaEsempio())).isEqualTo(VITTORIA);
+    }
+
+    private Partita getPartitaEsempio()
+    {
         Partita partita = mock(Partita.class);
         when(partita.isFinita()).thenReturn(true);
         when(partita.isGiuliettaViva()).thenReturn(true);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        return partita;
     }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }

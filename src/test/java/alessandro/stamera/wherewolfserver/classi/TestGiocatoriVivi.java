@@ -8,6 +8,7 @@ import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -159,6 +160,7 @@ public final class TestGiocatoriVivi
         String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
         segnalazioneAngeloCustode(nomeAmato);
         verificaProgenie(nomeAmato, nomeAngelo, NOSFERATU);
+        resettaAngeloCustode();
     }
 
     @Test public void testAttaccoVampiroAngeloCustode()
@@ -166,6 +168,7 @@ public final class TestGiocatoriVivi
         String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
         segnalazioneAngeloCustode(nomeAmato);
         verificaProgenie(nomeAmato, nomeAngelo, VAMPIRO);
+        resettaAngeloCustode();
     }
 
     @Test public void testPossedutoAngeloCustode()
@@ -234,5 +237,12 @@ public final class TestGiocatoriVivi
     private void verificaNonAmato(String nome) { assertThat(isAmato(nome)).isFalse(); }
 
     private boolean isAmato(String nome) { return giocatori.isAmato(nome); }
+
+    private void resettaAngeloCustode()
+    {
+        Ruolo ruolo = giocatori.getRuolo(getNomeGiocatore(0));
+        ruolo.cambiaFazione(AMANTI);
+        ruolo.eliminaTratto(NON_MORTO);
+    }
 
 }

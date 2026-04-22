@@ -275,6 +275,8 @@ public class Ruolo
         return RIUSCITO;
     }
 
+    public void eliminaTratto(Tratto tratto) { tratti.eliminaTratto(tratto); }
+
     public void resettaRomeo() { setRomeo(false); }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
