@@ -16,7 +16,7 @@ public final class GiocatoriVivi extends Giocatori
     public GiocatoriVivi()
     {
         annullaSegnalazioneAzzeccagarbugli();
-        ruoloInquisitore = RuoloNullo.getInstance();
+        annullaSegnalazioneInquisitore();
     }
 
     public Giocatori getBallottaggio()
@@ -71,7 +71,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         int posizione = getPosizioneGiocatoreSegnalazioneInquisitore();
         if(posizione != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizione));
-        ruoloInquisitore = RuoloNullo.getInstance();
+        annullaSegnalazioneInquisitore();
     }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
@@ -137,5 +137,7 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private void annullaSegnalazioneAzzeccagarbugli() { ruoloAzzeccagarbugli = getInstance(); }
+
+    private void annullaSegnalazioneInquisitore() { ruoloInquisitore = getInstance(); }
 
 }
