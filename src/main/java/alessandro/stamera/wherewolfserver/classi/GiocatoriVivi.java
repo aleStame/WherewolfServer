@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.RuoloNullo.getInstance;
 
 public final class GiocatoriVivi extends Giocatori
@@ -35,11 +37,16 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneInquisitore(String nome) { ruoloInquisitore = getRuolo(nome); }
 
-    public EsitoAttacco attaccoNosferatu(String nome) { return null; }
+    public EsitoAttacco attaccoNosferatu(String nome)
+    {
+        EsitoAttacco esito = getRuolo(nome).attaccoNosferatu();
+        if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
+        return esito;
+    }
 
-    public boolean isTrattoPresente(String nome, Tratto tratto) { return false; }
+    public boolean isTrattoPresente(String nome, Tratto tratto) { return getRuolo(nome).isTrattoPresente(tratto); }
 
-    public Fazione getFazione(String nome) { return null; }
+    public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
 
     private Giocatori creaBallottaggio()
     {
