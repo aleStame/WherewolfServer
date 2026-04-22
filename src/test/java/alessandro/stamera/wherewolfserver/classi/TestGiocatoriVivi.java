@@ -153,20 +153,28 @@ public final class TestGiocatoriVivi
     {
         String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
         segnalazioneAngeloCustode(nomeAmato);
-        assertThat(giocatori.attaccoNosferatu(nomeAngelo)).isEqualTo(RIUSCITO);
-        assertThat(giocatori.isAmato(nomeAmato)).isFalse();
-        verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
-        assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(NOSFERATU);
+        verificaProgenie(nomeAmato, nomeAngelo, NOSFERATU);
     }
 
     @Test public void testAttaccoVampiroAngeloCustode()
     {
         String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
         segnalazioneAngeloCustode(nomeAmato);
-        assertThat(giocatori.attaccoVampiro(nomeAngelo)).isEqualTo(RIUSCITO);
+        verificaProgenie(nomeAmato, nomeAngelo, VAMPIRO);
+    }
+
+    private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
+    {
+        EsitoAttacco esito = null;
+        switch(fazione)
+        {
+            case NOSFERATU -> esito = giocatori.attaccoNosferatu(nomeAngelo);
+            case VAMPIRO -> esito = giocatori.attaccoVampiro(nomeAngelo);
+        }
+        assertThat(esito).isEqualTo(RIUSCITO);
         assertThat(giocatori.isAmato(nomeAmato)).isFalse();
         verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
-        assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(VAMPIRO);
+        assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(fazione);
     }
 
     private void verificaAccusati(String... soluzioni)
