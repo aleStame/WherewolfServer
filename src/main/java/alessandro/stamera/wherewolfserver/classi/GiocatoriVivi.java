@@ -56,9 +56,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio)
     {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++)
-            if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore) posizione = i;
+        int posizione = getPosizioneGiocatoreSegnalazioneInquisitore();
         if(posizione != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizione));
         ruoloInquisitore = RuoloNullo.getInstance();
     }
@@ -113,7 +111,15 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneGiocatoreSegnalazioneAzzeccagarbugli()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i)))
+            posizione = i;
+        return posizione;
+    }
+
+    private int getPosizioneGiocatoreSegnalazioneInquisitore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore) posizione = i;
         return posizione;
     }
 
