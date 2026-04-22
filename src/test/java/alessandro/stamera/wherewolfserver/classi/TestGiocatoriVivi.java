@@ -136,14 +136,15 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(posizioneVoto), getNomeGiocatore(0));
     }
 
-    /*@Test public void testSegnalazioneInquisitoreMisticoPresente()
+    @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
     {
         int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
         String nomeMistico = getNomeGiocatore(posizioneMistico);
         giocatori.segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(3, 2);
-        verificaAccusati(nomeMistico, getNomeGiocatore(posizioneMistico - 1));
-    }*/
+        verificaAccusati(getNomeGiocatore(posizioneMistico - 1), getNomeGiocatore(0));
+    }
 
     private void verificaAccusati(String... soluzioni)
     {
