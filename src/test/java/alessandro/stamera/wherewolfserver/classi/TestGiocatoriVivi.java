@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
@@ -102,13 +104,15 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(0));
     }
 
-    @Test public void testAttaccoLupiAngeloCustode() { verificaAttaccoCapoBranco(getNomeGiocatore(0), RIUSCITO); }
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    public void testAttaccoLupiAngeloCustode(String nomeLupo) { verificaAttaccoLupo(nomeLupo, getNomeGiocatore(0), RIUSCITO); }
 
-    @Test public void testAttaccoLupiAmato()
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    public void testAttaccoLupiAmato(String nomeLupo)
     {
         String nome = getNomeGiocatore(2);
         segnalazioneAngeloCustode(nome);
-        verificaAttaccoCapoBranco(nome, FALLITO);
+        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -221,9 +225,9 @@ public final class TestGiocatoriVivi
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
-    private void verificaAttaccoCapoBranco(String nome, EsitoAttacco esito)
+    private void verificaAttaccoLupo(String nomeLupo, String nome, EsitoAttacco esito)
     {
-        assertThat(giocatori.attaccoLupi(getRuolo("Capo branco"), nome)).isEqualTo(esito);
+        assertThat(giocatori.attaccoLupi(getRuolo(nomeLupo), nome)).isEqualTo(esito);
     }
 
     private void verificaNonAmato(String nome) { assertThat(isAmato(nome)).isFalse(); }

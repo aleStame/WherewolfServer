@@ -43,9 +43,9 @@ public final class Partita
 
     public boolean isVivo(String nome) { return vivi.isPresente(nome); }
 
-    public void attaccoLupi(String nome)
+    public void attaccoLupi(String nomeLupo, String nome)
     {
-        if(vivi.attaccoLupi(FACTORY.getRuolo("Capo branco"), nome) == RIUSCITO) eliminaGiocatore(nome);
+        if(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome) == RIUSCITO) eliminaGiocatore(nome);
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }

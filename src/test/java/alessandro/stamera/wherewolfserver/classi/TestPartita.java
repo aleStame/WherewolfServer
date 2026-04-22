@@ -2,6 +2,9 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPartita
@@ -106,18 +109,20 @@ public final class TestPartita
         verificaNonAccusato(nome);
     }
 
-    @Test public void testAttaccoLupiAngeloCustode()
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
         String nome = getNomeGiocatoreEsempio(0);
-        attaccoLupi(nome);
+        attaccoLupi(nomeLupo, nome);
         verificaEliminazione(nome);
     }
 
-    @Test public void testAttaccoLupiAmato()
+    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    public void testAttaccoLupiAmato(String nomeLupo)
     {
         String nome = getNomeGiocatoreEsempio(1);
         segnalazioneAngeloCustode(nome);
-        attaccoLupi(nome);
+        attaccoLupi(nomeLupo, nome);
         assertThat(isVivo(nome)).isTrue();
     }
 
@@ -202,7 +207,7 @@ public final class TestPartita
 
     private void segnalazioneAzzeccagarbugli(String nome) { partita.segnalazioneAzzeccagarbugli(nome); }
 
-    private void attaccoLupi(String nome) { partita.attaccoLupi(nome); }
+    private void attaccoLupi(String nomeLupo, String nome) { partita.attaccoLupi(nomeLupo, nome); }
 
     private void segnalazioneInquisitore(String nome) { partita.segnalazioneInquisitore(nome); }
 
