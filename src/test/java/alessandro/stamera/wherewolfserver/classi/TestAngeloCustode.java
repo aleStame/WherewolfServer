@@ -2,8 +2,12 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public final class TestAngeloCustode
 {
@@ -27,12 +31,6 @@ public final class TestAngeloCustode
 
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
 
-    @Test public void testSceltaAngeloCustode()
-    {
-        ruolo.sceltaAngeloCustode();
-        verificaFalso(ruolo.isAmato());
-    }
-
     @Test public void testAmato()
     {
         ruolo.sceltaAngeloCustode();
@@ -40,6 +38,15 @@ public final class TestAngeloCustode
     }
 
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
+
+    @Test public void testVittoriaRomeo()
+    {
+        ruolo.romeizzazione();
+        Partita partita = mock(Partita.class);
+        when(partita.isFinita()).thenReturn(true);
+        when(partita.isGiuliettaViva()).thenReturn(true);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 

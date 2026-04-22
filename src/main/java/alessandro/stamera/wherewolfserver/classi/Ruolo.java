@@ -266,6 +266,8 @@ public class Ruolo
         return esito;
     }
 
+    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
+
     public EsitoAttacco vampirizzazione()
     {
         cambiaFazione(VAMPIRO);

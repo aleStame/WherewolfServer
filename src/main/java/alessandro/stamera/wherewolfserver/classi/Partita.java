@@ -52,6 +52,10 @@ public final class Partita
 
     public void segnalazioneInquisitore(String nome) { vivi.segnalazioneInquisitore(nome); }
 
+    public boolean isFinita() { return false; }
+
+    public boolean isGiuliettaViva() { return false; }
+
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
     private void eliminaGiocatore(String nome)
