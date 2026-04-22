@@ -103,4 +103,6 @@ public final class GiocatoriVivi extends Giocatori
 
     private void annullaSegnalazioneAzzeccagarbugli() { ruoloAzzeccagarbugli = getInstance(); }
 
+    public void segnalazioneInquisitore(String nome) { }
+
 }
