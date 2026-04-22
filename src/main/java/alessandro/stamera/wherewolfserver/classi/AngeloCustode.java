@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.NON_FINITO;
-import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.*;
 
 public final class AngeloCustode extends Amanti
 {
@@ -26,7 +25,8 @@ public final class AngeloCustode extends Amanti
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = NON_FINITO;
-        if(partita.isFinita()) if(partita.isGiuliettaViva()) esito = VITTORIA;
+        if(partita.isViaggiatoreAmato() && partita.isViaggioPartito()) esito = SCONFITTA;
+        else if(partita.isFinita()) if(partita.isGiuliettaViva()) esito = VITTORIA;
         return esito;
     }
 

@@ -28,8 +28,8 @@ public final class TestGiocatoriVivi
         FACTORY.annullaVoti();
         giocatori = new GiocatoriVivi();
         for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], getRuolo(esempio[1]));
+        FACTORY.resettaRomeo();
         giocatori.resettaAmato();
-        giocatori.resettaRomeo();
     }
 
     @Test public void testBallottaggioPuro()

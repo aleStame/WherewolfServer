@@ -50,6 +50,8 @@ public final class RuoliFactory
 
     public void annullaVoti() { for(String chiave : ruoli.keySet()) ottieniRuolo(chiave).annullaVoti(); }
 
+    public void resettaRomeo() { for(String chiave : ruoli.keySet()) ottieniRuolo(chiave).resettaRomeo(); }
+
     private Ruolo getCappuccettoRosso()
     {
         Ruolo ruolo = ruoli.get("Cappuccetto rosso");

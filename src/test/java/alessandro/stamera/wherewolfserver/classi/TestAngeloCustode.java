@@ -46,6 +46,7 @@ public final class TestAngeloCustode
         when(partita.isFinita()).thenReturn(true);
         when(partita.isGiuliettaViva()).thenReturn(true);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        ruolo.resettaRomeo();
     }
 
     @Test public void testSconfittaViaggio()
