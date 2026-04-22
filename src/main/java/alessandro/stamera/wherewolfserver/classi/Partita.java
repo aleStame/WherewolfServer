@@ -50,6 +50,8 @@ public final class Partita
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
 
+    public void segnalazioneInquisitore(String nome) { }
+
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
     private void eliminaGiocatore(String nome)

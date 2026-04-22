@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo segnalazioneInquisitore">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02243" summary="VERDE: testAttaccoAssassino riuscito">
-      <option name="closed" value="true" />
-      <created>1776786294347</created>
-      <option name="number" value="02243" />
-      <option name="presentableId" value="LOCAL-02243" />
-      <option name="project" value="LOCAL" />
-      <updated>1776786294347</updated>
     </task>
     <task id="LOCAL-02244" summary="VERDE DIRETTO: testAttaccoAssassino riuscito">
       <option name="closed" value="true" />
@@ -674,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776852067131</updated>
     </task>
-    <option name="localTasksCounter" value="2292" />
+    <task id="LOCAL-02292" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
+      <option name="closed" value="true" />
+      <created>1776852265313</created>
+      <option name="number" value="02292" />
+      <option name="presentableId" value="LOCAL-02292" />
+      <option name="project" value="LOCAL" />
+      <updated>1776852265313</updated>
+    </task>
+    <option name="localTasksCounter" value="2293" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli" />
@@ -714,6 +716,7 @@
     <MESSAGE value="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssenteAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneInquisitore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo segnalazioneInquisitore" />
   </component>
 </project>

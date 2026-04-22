@@ -9,7 +9,8 @@ public final class TestPartita
 
     private static final String[][] ESEMPI_GIOCATORI = new String[][]
     {
-        { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" }, { "Eva", "Capo branco" }
+        { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" }, { "Eva", "Capo branco" },
+        { "Annibale", "Guaritore" }
     };
 
     private Partita partita;
@@ -118,6 +119,16 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         partita.attaccoLupi(nome);
         assertThat(partita.isVivo(nome)).isTrue();
+    }
+
+    @Test public void testSegnalazioneInquisitoreMisticoAssente()
+    {
+        String nomeMistico = getNomeGiocatoreEsempio(getNumeroGiocatoriEsempio() - 1);
+        partita.segnalazioneInquisitore(nomeMistico);
+        int posizioneVoto = 1;
+        incrementaVoti(posizioneVoto, 2);
+        terminaVotazioni();
+        verificaAccusati(nomeMistico, getNomeGiocatoreEsempio(posizioneVoto));
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
