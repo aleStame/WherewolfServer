@@ -7,9 +7,11 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 
@@ -103,6 +105,14 @@ public final class TestRuolo
     {
         sceltaAngeloCustode();
         verificaAttaccoFallito(assassinio());
+    }
+
+    @Test public void vampirizzazione()
+    {
+        assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        verificaFazione(VAMPIRO);
+        verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA));
     }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }

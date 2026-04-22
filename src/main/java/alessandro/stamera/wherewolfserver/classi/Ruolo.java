@@ -265,6 +265,8 @@ public class Ruolo
         return esito;
     }
 
+    public EsitoAttacco vampirizzazione() { return null; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
