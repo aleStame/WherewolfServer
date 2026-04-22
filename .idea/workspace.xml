@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: vampirizzazione riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraNera">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02256" summary="REFACTORING: definizione del metodo isVivo">
-      <option name="closed" value="true" />
-      <created>1776789336041</created>
-      <option name="number" value="02256" />
-      <option name="presentableId" value="LOCAL-02256" />
-      <option name="project" value="LOCAL" />
-      <updated>1776789336041</updated>
     </task>
     <task id="LOCAL-02257" summary="VERDE DIRETTO: definizione del metodo verificaVero">
       <option name="closed" value="true" />
@@ -676,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776863508444</updated>
     </task>
-    <option name="localTasksCounter" value="2305" />
+    <task id="LOCAL-02305" summary="REFACTORING: definizione del metodo verificaAuraNera">
+      <option name="closed" value="true" />
+      <created>1776863934322</created>
+      <option name="number" value="02305" />
+      <option name="presentableId" value="LOCAL-02305" />
+      <option name="project" value="LOCAL" />
+      <updated>1776863934322</updated>
+    </task>
+    <option name="localTasksCounter" value="2306" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo estraiUltimiTreEsempi" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoCapoBranco" />
     <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
@@ -716,6 +716,7 @@
     <MESSAGE value="VERDE: testAttaccoNosferatuAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: vampirizzazione non riuscito" />
     <MESSAGE value="VERDE: vampirizzazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: vampirizzazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraNera" />
   </component>
 </project>
