@@ -40,7 +40,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoNosferatu(String nome)
     {
         EsitoAttacco esito = getRuolo(nome).attaccoNosferatu();
-        if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
+        gestisciResetAmato(nome, esito);
         return esito;
     }
 
@@ -51,8 +51,13 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoVampiro(String nome)
     {
         EsitoAttacco esito = getRuolo(nome).vampirizzazione();
-        if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
+        gestisciResetAmato(nome, esito);
         return esito;
+    }
+
+    private void gestisciResetAmato(String nome, EsitoAttacco esito)
+    {
+        if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
     }
 
     private Giocatori creaBallottaggio()
@@ -139,7 +144,8 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneGiocatoreSegnalazioneInquisitore()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore)
+            posizione = i;
         return posizione;
     }
 
