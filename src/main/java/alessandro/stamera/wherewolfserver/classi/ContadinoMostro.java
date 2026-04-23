@@ -23,6 +23,8 @@ public final class ContadinoMostro extends Contadino
         return esito;
     }
 
+    @Override public EsitoAttacco attaccoAssassino() { return MORTO; }
+
     public static Ruolo getInstance() { return new ContadinoMostro(); }
 
 }
