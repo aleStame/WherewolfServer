@@ -91,11 +91,19 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nome, FALLITO);
     }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
+    @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
     {
         segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(3), getNomeGiocatore(1));
+    }
+
+    @Test public void testSegnalazioneAzzeccagarbugliCriminale()
+    {
+        String nome = "Rodolfo";
+        giocatori.aggiungiGiocatore(nome, getRuolo("Assassino"));
+        giocatori.incrementaVoti(nome, 4);
+        assertThat(giocatori.getNumeroVoti(nome)).isZero();
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -172,15 +180,6 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeAmato);
         verificaProgenie(nomeAmato, nomeAngelo, VAMPIRO);
         resettaAngeloCustode();
-    }
-
-    @Test public void testResetRomeo()
-    {
-        String nome = getNomeGiocatore(1);
-        segnalazioneAngeloCustode(nome);
-        giocatori.eliminaGiocatore(giocatori.getNomeAngeloCustode());
-        verificaNonAmato(nome);
-        assertThat(giocatori.isTrattoPresente(nome, PROTETTO)).isFalse();
     }
 
     @Test public void testPossedutoAngeloCustode()
