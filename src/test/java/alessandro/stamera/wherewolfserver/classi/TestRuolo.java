@@ -116,11 +116,11 @@ public final class TestRuolo
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        verificaFalso(isSegnalatoAzzeccagarbugli());
+        verificaNonSegnalato();
         ruolo.segnalazioneAzzeccagarbugli();
         verificaVero(isSegnalatoAzzeccagarbugli());
         ruolo.annullaSegnalazioneAzzeccagarbugli();
-        verificaFalso(isSegnalatoAzzeccagarbugli());
+        verificaNonSegnalato();
     }
 
     @Test public void testSegnalazioneInquisitore()
@@ -131,6 +131,8 @@ public final class TestRuolo
         ruolo.annullaSegnalazioneInquisitore();
         verificaNonInquisito();
     }
+
+    private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
 
     private void verificaNonInquisito() { verificaFalso(isInquisito()); }
 
