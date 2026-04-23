@@ -53,6 +53,13 @@ public final class TestCriminale
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        ruolo.incrementaVoti(4);
+        ruolo.segnalazioneAzzeccagarbugli();
+        assertThat(ruolo.getNumeroVoti()).isZero();
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
