@@ -116,12 +116,14 @@ public final class TestRuolo
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaFalso(isSegnalatoAzzeccagarbugli());
         ruolo.segnalazioneAzzeccagarbugli();
-        verificaVero(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaVero(isSegnalatoAzzeccagarbugli());
         ruolo.annullaSegnalazioneAzzeccagarbugli();
-        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaFalso(isSegnalatoAzzeccagarbugli());
     }
+
+    private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testResetRomeo riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSegnalazioneAzzeccagarbugli riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestRuolo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,22 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02280" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776812091471</created>
-      <option name="number" value="02280" />
-      <option name="presentableId" value="LOCAL-02280" />
-      <option name="project" value="LOCAL" />
-      <updated>1776812091471</updated>
-    </task>
-    <task id="LOCAL-02281" summary="VERDE: testAttaccoLupiAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776812334888</created>
-      <option name="number" value="02281" />
-      <option name="presentableId" value="LOCAL-02281" />
-      <option name="project" value="LOCAL" />
-      <updated>1776812334889</updated>
     </task>
     <task id="LOCAL-02282" summary="ROSSO: testAttaccoLupiAmato non riuscito">
       <option name="closed" value="true" />
@@ -674,7 +660,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776949646137</updated>
     </task>
-    <option name="localTasksCounter" value="2329" />
+    <task id="LOCAL-02329" summary="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito">
+      <option name="closed" value="true" />
+      <created>1776949945938</created>
+      <option name="number" value="02329" />
+      <option name="presentableId" value="LOCAL-02329" />
+      <option name="project" value="LOCAL" />
+      <updated>1776949945938</updated>
+    </task>
+    <task id="LOCAL-02330" summary="VERDE: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1776950132916</created>
+      <option name="number" value="02330" />
+      <option name="presentableId" value="LOCAL-02330" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950132916</updated>
+    </task>
+    <option name="localTasksCounter" value="2331" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,8 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: vampirizzazione non riuscito" />
-    <MESSAGE value="VERDE: vampirizzazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoPresente" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
@@ -714,6 +714,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
     <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
     <MESSAGE value="VERDE: testResetRomeo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testResetRomeo riuscito" />
+    <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
+    <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
   </component>
 </project>
