@@ -65,6 +65,8 @@ public class Giocatori
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
+    public void resettaRomeo() { for(String chiave : getChiavi()) giocatori.get(chiave).resettaRomeo(); }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)

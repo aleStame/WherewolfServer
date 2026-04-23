@@ -2,14 +2,25 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiocatoriVivi
 {
 
-    private static final String[][] ESEMPI_GIOCATORI =
-        new String[][] { { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" } };
+    private static final String[][] ESEMPI_GIOCATORI = new String[][]
+    {
+        { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" }, { "Annibale", "Guaritore" }
+    };
 
     private GiocatoriVivi giocatori;
 
@@ -17,49 +28,43 @@ public final class TestGiocatoriVivi
     {
         FACTORY.annullaVoti();
         giocatori = new GiocatoriVivi();
-        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], FACTORY.getRuolo(esempio[1]));
+        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], getRuolo(esempio[1]));
+        FACTORY.resettaRomeo();
         giocatori.resettaAmato();
     }
 
     @Test public void testBallottaggioPuro()
     {
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
-        Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, 2);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1) };
-        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 3, numeroVoti[i]);
+        verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(3));
     }
 
     @Test public void testUnanimita()
     {
-        incrementaVoti(0, 3);
-        Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, 1);
-        verificaGiocatoreAccusato(ballottaggio, 0, getNomeGiocatore(0));
+        int posizione = 0;
+        incrementaVoti(posizione, 3);
+        verificaAccusati(getNomeGiocatore(posizione));
     }
 
     @Test public void testPareggioPrimoPosto()
     {
-        for(int i = 1; i < ESEMPI_GIOCATORI.length; i++) incrementaVoti(i, 1);
-        verificaNumeroAccusati(getBallottaggio(), 3);
+        for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(3), getNomeGiocatore(2));
     }
 
     @Test public void testPareggioSecondoPosto()
     {
         int[] numeroVoti = new int[]{ 2, 1, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i, numeroVoti[i]);
-        Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, 3);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(1), getNomeGiocatore(0) };
-        for(int i = 0; i < soluzioni.length; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        verificaAccusati(getNomeGiocatore(2), getNomeGiocatore(1), getNomeGiocatore(0));
     }
 
     @Test public void testSegnalazioneAngeloCustode()
     {
         String nome = getNomeGiocatore(3);
         segnalazioneAngeloCustode(nome);
-        verificaVero(giocatori.isAmato(nome));
+        verificaVero(isAmato(nome));
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
@@ -74,18 +79,156 @@ public final class TestGiocatoriVivi
     {
         segnalazioneAngeloCustode(getNomeGiocatore(1));
         for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
-        String[] soluzioni = new String[] { getNomeGiocatore(2), getNomeGiocatore(0) };
-        int numeroAccusati = soluzioni.length;
+        verificaAccusati(getNomeGiocatore(2), getNomeGiocatore(0));
+    }
+
+    @Test public void testAttaccoAssassino() { verificaAttaccoAssassino(getNomeGiocatore(3), RIUSCITO); }
+
+    @Test public void testAttaccoAmatoAssassino()
+    {
+        String nome = getNomeGiocatore(2);
+        segnalazioneAngeloCustode(nome);
+        verificaAttaccoAssassino(nome, FALLITO);
+    }
+
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        segnalazioneAzzeccagarbugli(getNomeGiocatore(1));
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(3), getNomeGiocatore(1));
+    }
+
+    @Test public void testSegnalazioneAzzeccagarbugliAmato()
+    {
+        String nome = getNomeGiocatore(3);
+        segnalazioneAzzeccagarbugli(nome);
+        segnalazioneAngeloCustode(nome);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(0));
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    public void testAttaccoLupiAngeloCustode(String nomeLupo) { verificaAttaccoLupo(nomeLupo, getNomeGiocatore(0), RIUSCITO); }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, contadino discendente dei lupi" })
+    public void testAttaccoLupiAmato(String nomeLupo)
+    {
+        String nome = getNomeGiocatore(2);
+        segnalazioneAngeloCustode(nome);
+        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
+    }
+
+    @Test public void testSegnalazioneInquisitoreMisticoAssente()
+    {
+        String nomeMistico = getNomeGiocatore(getNumeroGiocatoriEsempio() - 1);
+        segnalazioneInquisitore(nomeMistico);
+        int posizioneVoto = 1;
+        incrementaVoti(posizioneVoto, 2);
+        verificaAccusati(nomeMistico, getNomeGiocatore(posizioneVoto));
+    }
+
+    @Test public void testSegnalazioneInquisitoreMisticoPresente()
+    {
+        int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
+        String nomeMistico = getNomeGiocatore(posizioneMistico);
+        segnalazioneInquisitore(nomeMistico);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
+        verificaAccusati(nomeMistico, getNomeGiocatore(posizioneMistico - 1));
+    }
+
+    @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
+    {
+        String nomeMistico = getNomeGiocatore(getNumeroGiocatoriEsempio() - 1);
+        segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
+        int posizioneVoto = 1;
+        incrementaVoti(posizioneVoto, 2);
+        verificaAccusati(getNomeGiocatore(posizioneVoto), getNomeGiocatore(0));
+    }
+
+    @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
+    {
+        int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
+        String nomeMistico = getNomeGiocatore(posizioneMistico);
+        segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
+        verificaAccusati(getNomeGiocatore(posizioneMistico - 1), getNomeGiocatore(0));
+    }
+
+    @Test public void testAttaccoNosferatuAngeloCustode()
+    {
+        String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaProgenie(nomeAmato, nomeAngelo, NOSFERATU);
+        resettaAngeloCustode();
+    }
+
+    @Test public void testAttaccoVampiroAngeloCustode()
+    {
+        String nomeAmato = getNomeGiocatore(3), nomeAngelo = getNomeGiocatore(0);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaProgenie(nomeAmato, nomeAngelo, VAMPIRO);
+        resettaAngeloCustode();
+    }
+
+    @Test public void testResetRomeo()
+    {
+        String nome = getNomeGiocatore(1);
+        segnalazioneAngeloCustode(nome);
+        giocatori.eliminaGiocatore(giocatori.getNomeAngeloCustode());
+        verificaNonAmato(nome);
+        assertThat(giocatori.isTrattoPresente(nome, PROTETTO)).isFalse();
+    }
+
+    @Test public void testPossedutoAngeloCustode()
+    {
+        String nomeAngelo = getNomeGiocatore(0), nomeAmato = getNomeGiocatore(1);
+        segnalazioneAngeloCustode(nomeAmato);
+        giocatori.attaccoPosseduto(nomeAngelo);
+        assertThat(giocatori.isPosseduto(nomeAngelo)).isTrue();
+        verificaNonAmato(nomeAmato);
+    }
+
+    private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
+    {
+        EsitoAttacco esito = null;
+        switch(fazione)
+        {
+            case NOSFERATU -> esito = giocatori.attaccoNosferatu(nomeAngelo);
+            case VAMPIRO -> esito = giocatori.attaccoVampiro(nomeAngelo);
+        }
+        assertThat(esito).isEqualTo(RIUSCITO);
+        verificaNonAmato(nomeAmato);
+        verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
+        assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(fazione);
+    }
+
+    private void verificaAccusati(String... soluzioni)
+    {
+        int numeroSoluzioni = soluzioni.length;
         Giocatori ballottaggio = getBallottaggio();
-        verificaNumeroAccusati(ballottaggio, numeroAccusati);
-        for(int i = 0; i < numeroAccusati; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(numeroSoluzioni);
+        for (int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+    }
+
+    private void verificaAttaccoAssassino(String nome, EsitoAttacco esito)
+    {
+        assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void segnalazioneAngeloCustode(String nome) { giocatori.segnalazioneAngeloCustode(nome); }
 
-    private void incrementaVoti(int posizione, int voti) { giocatori.incrementaVoti(getNomeGiocatore(posizione), voti); }
+    private void segnalazioneInquisitore(String nome) { giocatori.segnalazioneInquisitore(nome); }
+
+    private void incrementaVoti(int posizione, int voti)
+    {
+        giocatori.incrementaVoti(getNomeGiocatore(posizione), voti);
+    }
 
     private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)
     {
@@ -96,11 +239,28 @@ public final class TestGiocatoriVivi
 
     private String getNomeGiocatore(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
-    private void verificaNumeroAccusati(Giocatori ballottaggio, int numeroAccusati)
+    private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
+
+    private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
+
+    private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaAttaccoLupo(String nomeLupo, String nome, EsitoAttacco esito)
     {
-        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(numeroAccusati);
+        assertThat(giocatori.attaccoLupi(getRuolo(nomeLupo), nome)).isEqualTo(esito);
     }
 
-    private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
+    private void verificaNonAmato(String nome) { assertThat(isAmato(nome)).isFalse(); }
+
+    private boolean isAmato(String nome) { return giocatori.isAmato(nome); }
+
+    private void resettaAngeloCustode()
+    {
+        Ruolo ruolo = giocatori.getRuolo(getNomeGiocatore(0));
+        ruolo.cambiaFazione(AMANTI);
+        ruolo.eliminaTratto(NON_MORTO);
+    }
 
 }

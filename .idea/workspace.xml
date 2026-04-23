@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: eliminazione codice inutile" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testResetRomeo non riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,9 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -80,6 +82,7 @@
     &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
@@ -94,7 +97,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/votazioneAngeloCustode&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/interazioniAngeloCustde&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -144,7 +147,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCappuccettoRosso.testPerditaProtezioni" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +160,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestCappuccettoRosso.testPerditaProtezioni&quot;" />
+            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -265,10 +268,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
+        <item itemvalue="Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli" />
         <item itemvalue="Gradle.TestLadra" />
         <item itemvalue="Gradle.TestTratti" />
         <item itemvalue="Gradle.TestProtezioni" />
-        <item itemvalue="Gradle.TestCappuccettoRosso.testPerditaProtezioni" />
       </list>
     </recent_temporary>
   </component>
@@ -281,399 +284,399 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-02185" summary="VERDE: testBallottaggioPuro riuscito">
+    <task id="LOCAL-02279" summary="REFACTORING: definizione del metodo verificaAttaccoCapoBranco">
       <option name="closed" value="true" />
-      <created>1776691214863</created>
-      <option name="number" value="02185" />
-      <option name="presentableId" value="LOCAL-02185" />
+      <created>1776811266801</created>
+      <option name="number" value="02279" />
+      <option name="presentableId" value="LOCAL-02279" />
       <option name="project" value="LOCAL" />
-      <updated>1776691214863</updated>
+      <updated>1776811266801</updated>
     </task>
-    <task id="LOCAL-02186" summary="REFACTORING: definizione del metodo verificaGiocatoreAccusato">
+    <task id="LOCAL-02280" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
       <option name="closed" value="true" />
-      <created>1776693430870</created>
-      <option name="number" value="02186" />
-      <option name="presentableId" value="LOCAL-02186" />
+      <created>1776812091471</created>
+      <option name="number" value="02280" />
+      <option name="presentableId" value="LOCAL-02280" />
       <option name="project" value="LOCAL" />
-      <updated>1776693430870</updated>
+      <updated>1776812091471</updated>
     </task>
-    <task id="LOCAL-02187" summary="REFACTORING: definizione del metodo ordinaAlfabeticamente">
+    <task id="LOCAL-02281" summary="VERDE: testAttaccoLupiAngeloCustode riuscito">
       <option name="closed" value="true" />
-      <created>1776693649733</created>
-      <option name="number" value="02187" />
-      <option name="presentableId" value="LOCAL-02187" />
+      <created>1776812334888</created>
+      <option name="number" value="02281" />
+      <option name="presentableId" value="LOCAL-02281" />
       <option name="project" value="LOCAL" />
-      <updated>1776693649734</updated>
+      <updated>1776812334889</updated>
     </task>
-    <task id="LOCAL-02188" summary="ROSSO: testPareggioSecondoPosto non riuscito">
+    <task id="LOCAL-02282" summary="ROSSO: testAttaccoLupiAmato non riuscito">
       <option name="closed" value="true" />
-      <created>1776694507607</created>
-      <option name="number" value="02188" />
-      <option name="presentableId" value="LOCAL-02188" />
+      <created>1776812616767</created>
+      <option name="number" value="02282" />
+      <option name="presentableId" value="LOCAL-02282" />
       <option name="project" value="LOCAL" />
-      <updated>1776694507607</updated>
+      <updated>1776812616767</updated>
     </task>
-    <task id="LOCAL-02189" summary="ROSSO: testPareggioSecondoPosto non riuscito">
+    <task id="LOCAL-02283" summary="VERDE: testAttaccoLupiAmato riuscito">
       <option name="closed" value="true" />
-      <created>1776694726713</created>
-      <option name="number" value="02189" />
-      <option name="presentableId" value="LOCAL-02189" />
+      <created>1776813352344</created>
+      <option name="number" value="02283" />
+      <option name="presentableId" value="LOCAL-02283" />
       <option name="project" value="LOCAL" />
-      <updated>1776694726713</updated>
+      <updated>1776813352344</updated>
     </task>
-    <task id="LOCAL-02190" summary="ROSSO: testSegnalazioneAngeloCustode non riuscito">
+    <task id="LOCAL-02284" summary="ROSSo: testSegnalazioneInquisitoreMisticoAssente non riuscito">
       <option name="closed" value="true" />
-      <created>1776695009953</created>
-      <option name="number" value="02190" />
-      <option name="presentableId" value="LOCAL-02190" />
+      <created>1776849974354</created>
+      <option name="number" value="02284" />
+      <option name="presentableId" value="LOCAL-02284" />
       <option name="project" value="LOCAL" />
-      <updated>1776695009953</updated>
+      <updated>1776849974354</updated>
     </task>
-    <task id="LOCAL-02191" summary="VERDE: testSegnalazioneAngeloCustode riuscito">
+    <task id="LOCAL-02285" summary="VERDE: testSegnalazioneInquisitoreMisticoAssente riuscito">
       <option name="closed" value="true" />
-      <created>1776695161357</created>
-      <option name="number" value="02191" />
-      <option name="presentableId" value="LOCAL-02191" />
+      <created>1776850503190</created>
+      <option name="number" value="02285" />
+      <option name="presentableId" value="LOCAL-02285" />
       <option name="project" value="LOCAL" />
-      <updated>1776695161357</updated>
+      <updated>1776850503190</updated>
     </task>
-    <task id="LOCAL-02192" summary="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito">
+    <task id="LOCAL-02286" summary="REFACTORING: definizione del metodo gestisciSegnalazioneInquisizione">
       <option name="closed" value="true" />
-      <created>1776695910840</created>
-      <option name="number" value="02192" />
-      <option name="presentableId" value="LOCAL-02192" />
+      <created>1776850695972</created>
+      <option name="number" value="02286" />
+      <option name="presentableId" value="LOCAL-02286" />
       <option name="project" value="LOCAL" />
-      <updated>1776695910840</updated>
+      <updated>1776850695972</updated>
     </task>
-    <task id="LOCAL-02193" summary="VERDE: testAngeloCustodeAccusatoNonPresente riuscito">
+    <task id="LOCAL-02287" summary="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneInquisitore">
       <option name="closed" value="true" />
-      <created>1776698221846</created>
-      <option name="number" value="02193" />
-      <option name="presentableId" value="LOCAL-02193" />
+      <created>1776850914355</created>
+      <option name="number" value="02287" />
+      <option name="presentableId" value="LOCAL-02287" />
       <option name="project" value="LOCAL" />
-      <updated>1776698221846</updated>
+      <updated>1776850914356</updated>
     </task>
-    <task id="LOCAL-02194" summary="REFACTORING: definizione del metodo segnalazioneAngeloCustode">
+    <task id="LOCAL-02288" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito">
       <option name="closed" value="true" />
-      <created>1776698428487</created>
-      <option name="number" value="02194" />
-      <option name="presentableId" value="LOCAL-02194" />
+      <created>1776851198949</created>
+      <option name="number" value="02288" />
+      <option name="presentableId" value="LOCAL-02288" />
       <option name="project" value="LOCAL" />
-      <updated>1776698428487</updated>
+      <updated>1776851198949</updated>
     </task>
-    <task id="LOCAL-02195" summary="ROSSO: testAmatoPresente non riuscito">
+    <task id="LOCAL-02289" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito">
       <option name="closed" value="true" />
-      <created>1776698807459</created>
-      <option name="number" value="02195" />
-      <option name="presentableId" value="LOCAL-02195" />
+      <created>1776851548960</created>
+      <option name="number" value="02289" />
+      <option name="presentableId" value="LOCAL-02289" />
       <option name="project" value="LOCAL" />
-      <updated>1776698807459</updated>
+      <updated>1776851548960</updated>
     </task>
-    <task id="LOCAL-02196" summary="VERDE: testAmatoPresente riuscito">
+    <task id="LOCAL-02290" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito">
       <option name="closed" value="true" />
-      <created>1776699012592</created>
-      <option name="number" value="02196" />
-      <option name="presentableId" value="LOCAL-02196" />
+      <created>1776851722930</created>
+      <option name="number" value="02290" />
+      <option name="presentableId" value="LOCAL-02290" />
       <option name="project" value="LOCAL" />
-      <updated>1776699012592</updated>
+      <updated>1776851722930</updated>
     </task>
-    <task id="LOCAL-02197" summary="VERDE DIRETTO: testAmatoAssente riuscito">
+    <task id="LOCAL-02291" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito">
       <option name="closed" value="true" />
-      <created>1776699229197</created>
-      <option name="number" value="02197" />
-      <option name="presentableId" value="LOCAL-02197" />
+      <created>1776852067131</created>
+      <option name="number" value="02291" />
+      <option name="presentableId" value="LOCAL-02291" />
       <option name="project" value="LOCAL" />
-      <updated>1776699229197</updated>
+      <updated>1776852067131</updated>
     </task>
-    <task id="LOCAL-02198" summary="REFACTORING: definizione di un metodo di set up">
+    <task id="LOCAL-02292" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
       <option name="closed" value="true" />
-      <created>1776699536917</created>
-      <option name="number" value="02198" />
-      <option name="presentableId" value="LOCAL-02198" />
+      <created>1776852265313</created>
+      <option name="number" value="02292" />
+      <option name="presentableId" value="LOCAL-02292" />
       <option name="project" value="LOCAL" />
-      <updated>1776699536917</updated>
+      <updated>1776852265313</updated>
     </task>
-    <task id="LOCAL-02199" summary="REFACTORING: definizione del ,metodo isAmatoPresente">
+    <task id="LOCAL-02293" summary="ROSSO: tesrSegnalazioneInquisitoreMisticoAssente non riuscito">
       <option name="closed" value="true" />
-      <created>1776699871225</created>
-      <option name="number" value="02199" />
-      <option name="presentableId" value="LOCAL-02199" />
+      <created>1776852518639</created>
+      <option name="number" value="02293" />
+      <option name="presentableId" value="LOCAL-02293" />
       <option name="project" value="LOCAL" />
-      <updated>1776699871225</updated>
+      <updated>1776852518639</updated>
     </task>
-    <task id="LOCAL-02200" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+    <task id="LOCAL-02294" summary="VERDE: testSegnalazioneInquisitoreMisticoAssente non riuscito">
       <option name="closed" value="true" />
-      <created>1776701896122</created>
-      <option name="number" value="02200" />
-      <option name="presentableId" value="LOCAL-02200" />
+      <created>1776858376510</created>
+      <option name="number" value="02294" />
+      <option name="presentableId" value="LOCAL-02294" />
       <option name="project" value="LOCAL" />
-      <updated>1776701896122</updated>
+      <updated>1776858376510</updated>
     </task>
-    <task id="LOCAL-02201" summary="REFACTORING: definizione del metodo getPazzo">
+    <task id="LOCAL-02295" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito">
       <option name="closed" value="true" />
-      <created>1776702085372</created>
-      <option name="number" value="02201" />
-      <option name="presentableId" value="LOCAL-02201" />
+      <created>1776858645881</created>
+      <option name="number" value="02295" />
+      <option name="presentableId" value="LOCAL-02295" />
       <option name="project" value="LOCAL" />
-      <updated>1776702085372</updated>
+      <updated>1776858645881</updated>
     </task>
-    <task id="LOCAL-02202" summary="REFACTORING: definizione del metodo getPazzoAmato">
+    <task id="LOCAL-02296" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssenteAmato riuscito">
       <option name="closed" value="true" />
-      <created>1776702199150</created>
-      <option name="number" value="02202" />
-      <option name="presentableId" value="LOCAL-02202" />
+      <created>1776858820640</created>
+      <option name="number" value="02296" />
+      <option name="presentableId" value="LOCAL-02296" />
       <option name="project" value="LOCAL" />
-      <updated>1776702199150</updated>
+      <updated>1776858820640</updated>
     </task>
-    <task id="LOCAL-02203" summary="ROSSO: testAmatoPresente non riuscito">
+    <task id="LOCAL-02297" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito">
       <option name="closed" value="true" />
-      <created>1776702384465</created>
-      <option name="number" value="02203" />
-      <option name="presentableId" value="LOCAL-02203" />
+      <created>1776859233393</created>
+      <option name="number" value="02297" />
+      <option name="presentableId" value="LOCAL-02297" />
       <option name="project" value="LOCAL" />
-      <updated>1776702384465</updated>
+      <updated>1776859233393</updated>
     </task>
-    <task id="LOCAL-02204" summary="VERDE: testAmatoPresente riuscito">
+    <task id="LOCAL-02298" summary="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli">
       <option name="closed" value="true" />
-      <created>1776702717508</created>
-      <option name="number" value="02204" />
-      <option name="presentableId" value="LOCAL-02204" />
+      <created>1776859693212</created>
+      <option name="number" value="02298" />
+      <option name="presentableId" value="LOCAL-02298" />
       <option name="project" value="LOCAL" />
-      <updated>1776702717508</updated>
+      <updated>1776859693212</updated>
     </task>
-    <task id="LOCAL-02205" summary="ROSSO: testAngeloCustodePresente non riuscito">
+    <task id="LOCAL-02299" summary="REFACTORING: definizione del metodo attaccoLupi">
       <option name="closed" value="true" />
-      <created>1776703179853</created>
-      <option name="number" value="02205" />
-      <option name="presentableId" value="LOCAL-02205" />
+      <created>1776859981386</created>
+      <option name="number" value="02299" />
+      <option name="presentableId" value="LOCAL-02299" />
       <option name="project" value="LOCAL" />
-      <updated>1776703179853</updated>
+      <updated>1776859981386</updated>
     </task>
-    <task id="LOCAL-02206" summary="VERDE: testAngeloCustodePresente riuscito">
+    <task id="LOCAL-02300" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
       <option name="closed" value="true" />
-      <created>1776703523119</created>
-      <option name="number" value="02206" />
-      <option name="presentableId" value="LOCAL-02206" />
+      <created>1776860411198</created>
+      <option name="number" value="02300" />
+      <option name="presentableId" value="LOCAL-02300" />
       <option name="project" value="LOCAL" />
-      <updated>1776703523119</updated>
+      <updated>1776860411198</updated>
     </task>
-    <task id="LOCAL-02207" summary="REFACTORING: definizione del metodo scambioAngeloCustodeAmato">
+    <task id="LOCAL-02301" summary="ROSSO: testAttaccoNosferatuAngeloCustode non riuscito">
       <option name="closed" value="true" />
-      <created>1776718981085</created>
-      <option name="number" value="02207" />
-      <option name="presentableId" value="LOCAL-02207" />
+      <created>1776861704021</created>
+      <option name="number" value="02301" />
+      <option name="presentableId" value="LOCAL-02301" />
       <option name="project" value="LOCAL" />
-      <updated>1776718981085</updated>
+      <updated>1776861704021</updated>
     </task>
-    <task id="LOCAL-02208" summary="REFACTORING: definizione del metodo getPosizioneAmato">
+    <task id="LOCAL-02302" summary="VERDE: testAttaccoNosferatuAngeloCustode riuscito">
       <option name="closed" value="true" />
-      <created>1776719223070</created>
-      <option name="number" value="02208" />
-      <option name="presentableId" value="LOCAL-02208" />
+      <created>1776862130090</created>
+      <option name="number" value="02302" />
+      <option name="presentableId" value="LOCAL-02302" />
       <option name="project" value="LOCAL" />
-      <updated>1776719223070</updated>
+      <updated>1776862130090</updated>
     </task>
-    <task id="LOCAL-02209" summary="REFACTORING: definizione del metodo getPosizioneAngeloCustode">
+    <task id="LOCAL-02303" summary="ROSSO: vampirizzazione non riuscito">
       <option name="closed" value="true" />
-      <created>1776719503855</created>
-      <option name="number" value="02209" />
-      <option name="presentableId" value="LOCAL-02209" />
+      <created>1776863263815</created>
+      <option name="number" value="02303" />
+      <option name="presentableId" value="LOCAL-02303" />
       <option name="project" value="LOCAL" />
-      <updated>1776719503855</updated>
+      <updated>1776863263816</updated>
     </task>
-    <task id="LOCAL-02210" summary="REFACTORING: definizione della costante NON_TROVATO">
+    <task id="LOCAL-02304" summary="VERDE: vampirizzazione riuscito">
       <option name="closed" value="true" />
-      <created>1776719629522</created>
-      <option name="number" value="02210" />
-      <option name="presentableId" value="LOCAL-02210" />
+      <created>1776863508444</created>
+      <option name="number" value="02304" />
+      <option name="presentableId" value="LOCAL-02304" />
       <option name="project" value="LOCAL" />
-      <updated>1776719629522</updated>
+      <updated>1776863508444</updated>
     </task>
-    <task id="LOCAL-02211" summary="REFACTORING: definizione della costante NON_TROVATO">
+    <task id="LOCAL-02305" summary="REFACTORING: definizione del metodo verificaAuraNera">
       <option name="closed" value="true" />
-      <created>1776719835121</created>
-      <option name="number" value="02211" />
-      <option name="presentableId" value="LOCAL-02211" />
+      <created>1776863934322</created>
+      <option name="number" value="02305" />
+      <option name="presentableId" value="LOCAL-02305" />
       <option name="project" value="LOCAL" />
-      <updated>1776719835121</updated>
+      <updated>1776863934322</updated>
     </task>
-    <task id="LOCAL-02212" summary="REFACTORING: definizione del metodo verificaNomeGiocatore">
+    <task id="LOCAL-02306" summary="REFACTORING: definizione del metodo verificaTrattoPresente">
       <option name="closed" value="true" />
-      <created>1776720467132</created>
-      <option name="number" value="02212" />
-      <option name="presentableId" value="LOCAL-02212" />
+      <created>1776864422686</created>
+      <option name="number" value="02306" />
+      <option name="presentableId" value="LOCAL-02306" />
       <option name="project" value="LOCAL" />
-      <updated>1776720467132</updated>
+      <updated>1776864422686</updated>
     </task>
-    <task id="LOCAL-02213" summary="ROSSO: testAngeloCustodeAccusatoPresente non riuscito">
+    <task id="LOCAL-02307" summary="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore">
       <option name="closed" value="true" />
-      <created>1776721461329</created>
-      <option name="number" value="02213" />
-      <option name="presentableId" value="LOCAL-02213" />
+      <created>1776864570047</created>
+      <option name="number" value="02307" />
+      <option name="presentableId" value="LOCAL-02307" />
       <option name="project" value="LOCAL" />
-      <updated>1776721461329</updated>
+      <updated>1776864570047</updated>
     </task>
-    <task id="LOCAL-02214" summary="VERDE: testAngeloCustodeAccusatoPresente riuscito">
+    <task id="LOCAL-02308" summary="REFACTORING: definizione del metodo annullaSegnalazione">
       <option name="closed" value="true" />
-      <created>1776776185411</created>
-      <option name="number" value="02214" />
-      <option name="presentableId" value="LOCAL-02214" />
+      <created>1776864812816</created>
+      <option name="number" value="02308" />
+      <option name="presentableId" value="LOCAL-02308" />
       <option name="project" value="LOCAL" />
-      <updated>1776776185411</updated>
+      <updated>1776864812816</updated>
     </task>
-    <task id="LOCAL-02215" summary="REFACTORING: definizione del metodo gestioneAmato">
+    <task id="LOCAL-02309" summary="ROSSO: testAttaccoVampiroAngeloCustode non riuscito">
       <option name="closed" value="true" />
-      <created>1776776458318</created>
-      <option name="number" value="02215" />
-      <option name="presentableId" value="LOCAL-02215" />
+      <created>1776865139847</created>
+      <option name="number" value="02309" />
+      <option name="presentableId" value="LOCAL-02309" />
       <option name="project" value="LOCAL" />
-      <updated>1776776458318</updated>
+      <updated>1776865139847</updated>
     </task>
-    <task id="LOCAL-02216" summary="REFACTORING: definizione del metodo spostamentoAmato">
+    <task id="LOCAL-02310" summary="VERDE: testAttaccoVampiroAngeloCustode riuscito">
       <option name="closed" value="true" />
-      <created>1776776713362</created>
-      <option name="number" value="02216" />
-      <option name="presentableId" value="LOCAL-02216" />
+      <created>1776865775331</created>
+      <option name="number" value="02310" />
+      <option name="presentableId" value="LOCAL-02310" />
       <option name="project" value="LOCAL" />
-      <updated>1776776713362</updated>
+      <updated>1776865775331</updated>
     </task>
-    <task id="LOCAL-02217" summary="REFACTORING: definizione del metodo spostamentoAngeloCustode">
+    <task id="LOCAL-02311" summary="REFACTORING: definizione del metodo gestisciResetAmato">
       <option name="closed" value="true" />
-      <created>1776777054238</created>
-      <option name="number" value="02217" />
-      <option name="presentableId" value="LOCAL-02217" />
+      <created>1776865976499</created>
+      <option name="number" value="02311" />
+      <option name="presentableId" value="LOCAL-02311" />
       <option name="project" value="LOCAL" />
-      <updated>1776777054238</updated>
+      <updated>1776865976499</updated>
     </task>
-    <task id="LOCAL-02218" summary="ROSSO: testBallottaggioPuro non riuscito">
+    <task id="LOCAL-02312" summary="REFACTORING: definizione del metodo verificaProgenie">
       <option name="closed" value="true" />
-      <created>1776777876599</created>
-      <option name="number" value="02218" />
-      <option name="presentableId" value="LOCAL-02218" />
+      <created>1776866348304</created>
+      <option name="number" value="02312" />
+      <option name="presentableId" value="LOCAL-02312" />
       <option name="project" value="LOCAL" />
-      <updated>1776777876599</updated>
+      <updated>1776866348305</updated>
     </task>
-    <task id="LOCAL-02219" summary="VERDE: testBallottaggioPuro riuscito">
+    <task id="LOCAL-02313" summary="REFACTORING: definizione del metodo isAmato">
       <option name="closed" value="true" />
-      <created>1776780564594</created>
-      <option name="number" value="02219" />
-      <option name="presentableId" value="LOCAL-02219" />
+      <created>1776866564424</created>
+      <option name="number" value="02313" />
+      <option name="presentableId" value="LOCAL-02313" />
       <option name="project" value="LOCAL" />
-      <updated>1776780564594</updated>
+      <updated>1776866564424</updated>
     </task>
-    <task id="LOCAL-02220" summary="VERDE DIRETTO: testUnanimita riuscito">
+    <task id="LOCAL-02314" summary="ROSSO: testPossedutoAngeloCustode non riuscito">
       <option name="closed" value="true" />
-      <created>1776780818576</created>
-      <option name="number" value="02220" />
-      <option name="presentableId" value="LOCAL-02220" />
+      <created>1776868821151</created>
+      <option name="number" value="02314" />
+      <option name="presentableId" value="LOCAL-02314" />
       <option name="project" value="LOCAL" />
-      <updated>1776780818576</updated>
+      <updated>1776868821151</updated>
     </task>
-    <task id="LOCAL-02221" summary="REFACTORING: definizione di un metodo di set up">
+    <task id="LOCAL-02315" summary="VERDE: testPossedutoAngeloCustode riuscito">
       <option name="closed" value="true" />
-      <created>1776780970005</created>
-      <option name="number" value="02221" />
-      <option name="presentableId" value="LOCAL-02221" />
+      <created>1776869568489</created>
+      <option name="number" value="02315" />
+      <option name="presentableId" value="LOCAL-02315" />
       <option name="project" value="LOCAL" />
-      <updated>1776780970005</updated>
+      <updated>1776869568490</updated>
     </task>
-    <task id="LOCAL-02222" summary="REFACTORING: definizione del metodo incrementaVoti">
+    <task id="LOCAL-02316" summary="REFACTORING: definizione del metodo verificaNonAmato">
       <option name="closed" value="true" />
-      <created>1776781100586</created>
-      <option name="number" value="02222" />
-      <option name="presentableId" value="LOCAL-02222" />
+      <created>1776886332732</created>
+      <option name="number" value="02316" />
+      <option name="presentableId" value="LOCAL-02316" />
       <option name="project" value="LOCAL" />
-      <updated>1776781100586</updated>
+      <updated>1776886332732</updated>
     </task>
-    <task id="LOCAL-02223" summary="REFACTORING: definizione del metodo terminaVotazioni">
+    <task id="LOCAL-02317" summary="REFACTORING: parametrizzazione dei metodi testAttaccoLupiAngeloCustode e testAttaccoLupiAmato">
       <option name="closed" value="true" />
-      <created>1776781271298</created>
-      <option name="number" value="02223" />
-      <option name="presentableId" value="LOCAL-02223" />
+      <created>1776887218039</created>
+      <option name="number" value="02317" />
+      <option name="presentableId" value="LOCAL-02317" />
       <option name="project" value="LOCAL" />
-      <updated>1776781271298</updated>
+      <updated>1776887218039</updated>
     </task>
-    <task id="LOCAL-02224" summary="REFACTORING: definizione del metodo verificaAccusato">
+    <task id="LOCAL-02318" summary="ROSSO: testVittoriaRomeo non riuscito">
       <option name="closed" value="true" />
-      <created>1776781447479</created>
-      <option name="number" value="02224" />
-      <option name="presentableId" value="LOCAL-02224" />
+      <created>1776888501030</created>
+      <option name="number" value="02318" />
+      <option name="presentableId" value="LOCAL-02318" />
       <option name="project" value="LOCAL" />
-      <updated>1776781447479</updated>
+      <updated>1776888501030</updated>
     </task>
-    <task id="LOCAL-02225" summary="REFACTORING: definizione del metodo getNomeGiocatoreEsempio">
+    <task id="LOCAL-02319" summary="ROSSO: testVittoriaRomeo non riuscito">
       <option name="closed" value="true" />
-      <created>1776781625501</created>
-      <option name="number" value="02225" />
-      <option name="presentableId" value="LOCAL-02225" />
+      <created>1776888794588</created>
+      <option name="number" value="02319" />
+      <option name="presentableId" value="LOCAL-02319" />
       <option name="project" value="LOCAL" />
-      <updated>1776781625501</updated>
+      <updated>1776888794588</updated>
     </task>
-    <task id="LOCAL-02226" summary="VERDE DIRETTO: testPareggioPrimoPosto riuscito">
+    <task id="LOCAL-02320" summary="VERDE: testVittoriaRomeo riuscito">
       <option name="closed" value="true" />
-      <created>1776782008026</created>
-      <option name="number" value="02226" />
-      <option name="presentableId" value="LOCAL-02226" />
+      <created>1776890158792</created>
+      <option name="number" value="02320" />
+      <option name="presentableId" value="LOCAL-02320" />
       <option name="project" value="LOCAL" />
-      <updated>1776782008026</updated>
+      <updated>1776890158792</updated>
     </task>
-    <task id="LOCAL-02227" summary="VERDE DIRETTO: testPareggioSecondoPosto riuscito">
+    <task id="LOCAL-02321" summary="REFACTORING: definizione del metodo getPartita">
       <option name="closed" value="true" />
-      <created>1776782178529</created>
-      <option name="number" value="02227" />
-      <option name="presentableId" value="LOCAL-02227" />
+      <created>1776891486974</created>
+      <option name="number" value="02321" />
+      <option name="presentableId" value="LOCAL-02321" />
       <option name="project" value="LOCAL" />
-      <updated>1776782178529</updated>
+      <updated>1776891486974</updated>
     </task>
-    <task id="LOCAL-02228" summary="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito">
+    <task id="LOCAL-02322" summary="ROSSO: testSconfittaViaggio non riuscito">
       <option name="closed" value="true" />
-      <created>1776782401995</created>
-      <option name="number" value="02228" />
-      <option name="presentableId" value="LOCAL-02228" />
+      <created>1776892930313</created>
+      <option name="number" value="02322" />
+      <option name="presentableId" value="LOCAL-02322" />
       <option name="project" value="LOCAL" />
-      <updated>1776782401995</updated>
+      <updated>1776892930314</updated>
     </task>
-    <task id="LOCAL-02229" summary="VERDE: testAngeloCustodeAccusatoNonPresente riuscito">
+    <task id="LOCAL-02323" summary="VERDE: testSconfittaViaggio riuscito">
       <option name="closed" value="true" />
-      <created>1776782511051</created>
-      <option name="number" value="02229" />
-      <option name="presentableId" value="LOCAL-02229" />
+      <created>1776895295566</created>
+      <option name="number" value="02323" />
+      <option name="presentableId" value="LOCAL-02323" />
       <option name="project" value="LOCAL" />
-      <updated>1776782511052</updated>
+      <updated>1776895295567</updated>
     </task>
-    <task id="LOCAL-02230" summary="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito">
+    <task id="LOCAL-02324" summary="REFACTORING: definiizone del metodo gestisciSegnalazioni">
       <option name="closed" value="true" />
-      <created>1776783060361</created>
-      <option name="number" value="02230" />
-      <option name="presentableId" value="LOCAL-02230" />
+      <created>1776895512586</created>
+      <option name="number" value="02324" />
+      <option name="presentableId" value="LOCAL-02324" />
       <option name="project" value="LOCAL" />
-      <updated>1776783060361</updated>
+      <updated>1776895512586</updated>
     </task>
-    <task id="LOCAL-02231" summary="REFACTORING: definizione del metodo verificaNonAccusato">
+    <task id="LOCAL-02325" summary="REFACTORING: definizione del metodo verificaEsitoPartita">
       <option name="closed" value="true" />
-      <created>1776783208020</created>
-      <option name="number" value="02231" />
-      <option name="presentableId" value="LOCAL-02231" />
+      <created>1776895831017</created>
+      <option name="number" value="02325" />
+      <option name="presentableId" value="LOCAL-02325" />
       <option name="project" value="LOCAL" />
-      <updated>1776783208020</updated>
+      <updated>1776895831018</updated>
     </task>
-    <task id="LOCAL-02232" summary="REFACTORING: definizione del metodo isAccusato">
+    <task id="LOCAL-02326" summary="REFACTORING: definizione del metodo getChiavi">
       <option name="closed" value="true" />
-      <created>1776783335945</created>
-      <option name="number" value="02232" />
-      <option name="presentableId" value="LOCAL-02232" />
+      <created>1776895999256</created>
+      <option name="number" value="02326" />
+      <option name="presentableId" value="LOCAL-02326" />
       <option name="project" value="LOCAL" />
-      <updated>1776783335945</updated>
+      <updated>1776895999256</updated>
     </task>
-    <task id="LOCAL-02233" summary="REFACTORING: eliminazione codice inutile">
+    <task id="LOCAL-02327" summary="ROSSO: testResetRomeo non riuscito">
       <option name="closed" value="true" />
-      <created>1776783913998</created>
-      <option name="number" value="02233" />
-      <option name="presentableId" value="LOCAL-02233" />
+      <created>1776896493413</created>
+      <option name="number" value="02327" />
+      <option name="presentableId" value="LOCAL-02327" />
       <option name="project" value="LOCAL" />
-      <updated>1776783913998</updated>
+      <updated>1776896493414</updated>
     </task>
-    <option name="localTasksCounter" value="2234" />
+    <option name="localTasksCounter" value="2328" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -688,31 +691,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAngeloCustode" />
-    <MESSAGE value="REFACTORING: definizione della costante NON_TROVATO" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNomeGiocatore" />
-    <MESSAGE value="ROSSO: testAngeloCustodeAccusatoPresente non riuscito" />
-    <MESSAGE value="VERDE: testAngeloCustodeAccusatoPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo spostamentoAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo spostamentoAngeloCustode" />
-    <MESSAGE value="ROSSO: testBallottaggioPuro non riuscito" />
-    <MESSAGE value="VERDE: testBallottaggioPuro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testUnanimita riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
-    <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
-    <MESSAGE value="REFACTORING: definizione del metodo terminaVotazioni" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAccusato" />
-    <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatoreEsempio" />
-    <MESSAGE value="VERDE DIRETTO: testPareggioPrimoPosto riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testPareggioSecondoPosto riuscito" />
-    <MESSAGE value="ROSSO: testAngeloCustodeAccusatoNonPresente non riuscito" />
-    <MESSAGE value="VERDE: testAngeloCustodeAccusatoNonPresente riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNonAccusato" />
-    <MESSAGE value="REFACTORING: definizione del metodo isAccusato" />
-    <MESSAGE value="REFACTORING: eliminazione codice inutile" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: eliminazione codice inutile" />
+    <MESSAGE value="VERDE: testAttaccoNosferatuAngeloCustode riuscito" />
+    <MESSAGE value="ROSSO: vampirizzazione non riuscito" />
+    <MESSAGE value="VERDE: vampirizzazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoPresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
+    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazione" />
+    <MESSAGE value="ROSSO: testAttaccoVampiroAngeloCustode non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoVampiroAngeloCustode riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestisciResetAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaProgenie" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
+    <MESSAGE value="ROSSO: testPossedutoAngeloCustode non riuscito" />
+    <MESSAGE value="VERDE: testPossedutoAngeloCustode riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonAmato" />
+    <MESSAGE value="REFACTORING: parametrizzazione dei metodi testAttaccoLupiAngeloCustode e testAttaccoLupiAmato" />
+    <MESSAGE value="ROSSO: testVittoriaRomeo non riuscito" />
+    <MESSAGE value="VERDE: testVittoriaRomeo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPartita" />
+    <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
+    <MESSAGE value="VERDE: testSconfittaViaggio riuscito" />
+    <MESSAGE value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
+    <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
+    <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testResetRomeo non riuscito" />
   </component>
 </project>

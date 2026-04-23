@@ -2,9 +2,22 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
+import static alessandro.stamera.wherewolfserver.classi.RuoloNullo.getInstance;
 
 public final class GiocatoriVivi extends Giocatori
 {
+
+    private static final int NON_TROVATO = -1;
+
+    private Ruolo ruoloAzzeccagarbugli, ruoloInquisitore;
+
+    public GiocatoriVivi()
+    {
+        annullaSegnalazioneAzzeccagarbugli();
+        annullaSegnalazioneInquisitore();
+    }
 
     public Giocatori getBallottaggio()
     {
@@ -16,14 +29,75 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
 
+    public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
+
+    public void segnalazioneAzzeccagarbugli(String nome) { ruoloAzzeccagarbugli = getRuolo(nome); }
+
+    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return getRuolo(nome).attaccoLupi(attaccante); }
+
+    public void segnalazioneInquisitore(String nome) { ruoloInquisitore = getRuolo(nome); }
+
+    public EsitoAttacco attaccoNosferatu(String nome)
+    {
+        EsitoAttacco esito = getRuolo(nome).attaccoNosferatu();
+        gestisciResetAmato(nome, esito);
+        return esito;
+    }
+
+    public boolean isTrattoPresente(String nome, Tratto tratto) { return getRuolo(nome).isTrattoPresente(tratto); }
+
+    public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
+
+    public EsitoAttacco attaccoVampiro(String nome)
+    {
+        EsitoAttacco esito = getRuolo(nome).vampirizzazione();
+        gestisciResetAmato(nome, esito);
+        return esito;
+    }
+
+    public void attaccoPosseduto(String nome)
+    {
+        eliminaGiocatore(nome);
+        aggiungiGiocatore(nome, FACTORY.getRuolo("Posseduto"));
+        resettaAmato();
+    }
+
+    public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
+
+    private void gestisciResetAmato(String nome, EsitoAttacco esito)
+    {
+        if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
+    }
+
     private Giocatori creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         int numeroVoti = getNumeroVotiPrimoClassificato();
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
+        gestisciSegnalazioni(ballottaggio);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         return ballottaggio;
+    }
+
+    private void gestisciSegnalazioni(Ballottaggio ballottaggio)
+    {
+        gestisciSegnalazioneAzzeccagarbugli(ballottaggio);
+        gestisciSegnalazioneInquisitore(ballottaggio);
+    }
+
+    private void gestisciSegnalazioneAzzeccagarbugli(Ballottaggio ballottaggio)
+    {
+        int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
+        if(posizioneGiocatoreAzzeccagarbugli != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
+        annullaSegnalazioneAzzeccagarbugli();
+    }
+
+    private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio)
+    {
+        int posizione = getPosizioneGiocatoreSegnalazioneInquisitore();
+        if(posizione != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizione));
+        annullaSegnalazioneInquisitore();
     }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
@@ -34,7 +108,11 @@ public final class GiocatoriVivi extends Giocatori
 
     private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
     {
-        String nome = getNomeAngeloCustode();
+        mandaBallottaggio(ballottaggio, getNomeAngeloCustode());
+    }
+
+    private void mandaBallottaggio(Ballottaggio ballottaggio, String nome)
+    {
         Ruolo ruolo = getRuolo(nome);
         eliminaGiocatore(nome);
         ballottaggio.aggiungiGiocatore(nome, ruolo);
@@ -68,5 +146,27 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
+
+    private int getPosizioneGiocatoreSegnalazioneAzzeccagarbugli()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i)))
+            posizione = i;
+        return posizione;
+    }
+
+    private int getPosizioneGiocatoreSegnalazioneInquisitore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore)
+            posizione = i;
+        return posizione;
+    }
+
+    private void annullaSegnalazioneAzzeccagarbugli() { annullaSegnalazione(ruoloAzzeccagarbugli); }
+
+    private void annullaSegnalazioneInquisitore() { annullaSegnalazione(ruoloInquisitore); }
+
+    private void annullaSegnalazione(Ruolo ruolo) { ruolo = getInstance(); }
 
 }

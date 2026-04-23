@@ -5,6 +5,7 @@ import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.MALEDETTO;
@@ -258,6 +259,30 @@ public class Ruolo
 
     public void resettaAmato() { setAmato(false); }
 
+    public EsitoAttacco attaccoAssassino()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isAmato()) esito = FALLITO;
+        return esito;
+    }
+
+    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
+
+    public EsitoAttacco vampirizzazione()
+    {
+        cambiaFazione(VAMPIRO);
+        aggiungiTratti(NON_MORTO);
+        return RIUSCITO;
+    }
+
+    public void eliminaTratto(Tratto tratto) { tratti.eliminaTratto(tratto); }
+
+    public void resettaRomeo()
+    {
+        setRomeo(false);
+        perdiProtezioni();
+    }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
@@ -277,7 +302,7 @@ public class Ruolo
 
     private boolean controlloTrattiOscuri()
     {
-        return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isMaledetto();
+        return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
 
     private void setAmato(boolean amato) { this.amato = amato; }

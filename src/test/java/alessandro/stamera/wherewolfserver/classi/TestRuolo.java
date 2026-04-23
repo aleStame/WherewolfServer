@@ -7,9 +7,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 
@@ -34,20 +35,14 @@ public final class TestRuolo
 
     @Test public void testVoti()
     {
-        incrementaVoti();
+        ruolo.incrementaVoti(ESEMPIO_VOTI);
         verificaVoti(ESEMPIO_VOTI);
         ruolo.annullaVoti();
         verificaNessunVoto();
         verificaVero(maledizione());
         verificaVoti(1);
         verificaVero(isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
-    }
-
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        incrementaVoti();
-        verificaVoti(ESEMPIO_VOTI);
+        verificaAuraNera();
     }
 
     @ParameterizedTest
@@ -58,7 +53,7 @@ public final class TestRuolo
         verificaVero(isAmato());
         verificaProtetto();
         verificaVero(isProtezioneLupiPresente());
-        verificaAttacco(attaccoLupi(nome), FALLITO);
+        verificaAttaccoFallito(attaccoLupi(nome));
         verificaAssenzaProtezioni();
     }
 
@@ -85,14 +80,14 @@ public final class TestRuolo
     @Test public void testAttaccoNosferatu()
     {
         verificaAttaccoRiuscito(attaccoNosferatu());
-        verificaVero(isTrattoPresente(NON_MORTO));
+        verificaTrattoPresente(NON_MORTO);
         verificaFazione(NOSFERATU);
     }
 
     @Test public void testAttaccoNosferatuAmato()
     {
         sceltaAngeloCustode();
-        verificaAttaccoNosferatuFallito();
+        verificaAttaccoFallito(ruolo.attaccoNosferatu());
         verificaAssenzaProtezioni();
     }
 
@@ -103,7 +98,25 @@ public final class TestRuolo
         verificaFalso(isMaledetto());
     }
 
+    @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }
+
+    @Test public void attaccoAssassinoAmato()
+    {
+        sceltaAngeloCustode();
+        verificaAttaccoFallito(assassinio());
+    }
+
+    @Test public void vampirizzazione()
+    {
+        verificaAttaccoRiuscito(ruolo.vampirizzazione());
+        verificaAuraNera();
+        verificaFazione(VAMPIRO);
+        verificaTrattoPresente(NON_MORTO);
+    }
+
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
+
+    private EsitoAttacco assassinio() { return ruolo.attaccoAssassino(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 
@@ -113,7 +126,7 @@ public final class TestRuolo
 
     private boolean isMaledetto() { return ruolo.isMaledetto(); }
 
-    private void verificaAttaccoNosferatuFallito() { verificaAttacco(attaccoNosferatu(), FALLITO); }
+    private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
@@ -129,9 +142,7 @@ public final class TestRuolo
         verificaFalso(ruolo.isProtezioneNegromantePresente());
     }
 
-    private void verificaProtetto() { verificaVero(isTrattoPresente(PROTETTO)); }
-
-    private void incrementaVoti() { ruolo.incrementaVoti(ESEMPIO_VOTI); }
+    private void verificaProtetto() { verificaTrattoPresente(PROTETTO); }
 
     private boolean isAmato() { return ruolo.isAmato(); }
 
@@ -140,6 +151,8 @@ public final class TestRuolo
     private void verificaVoti(int voti) { assertThat(getNumeroVoti()).isEqualTo(voti); }
 
     private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
+
+    private void verificaTrattoPresente(Tratto tratto) { verificaVero(isTrattoPresente(tratto)); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
@@ -152,5 +165,7 @@ public final class TestRuolo
     private boolean isProtezioneLupiPresente() { return ruolo.isProtezioneLupiPresente(); }
 
     private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
+
+    private void verificaAuraNera() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
 }
