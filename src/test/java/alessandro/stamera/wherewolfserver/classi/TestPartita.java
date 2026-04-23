@@ -13,7 +13,7 @@ public final class TestPartita
     private static final String[][] ESEMPI_GIOCATORI = new String[][]
     {
         { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" }, { "Eva", "Capo branco" },
-        { "Annibale", "Guaritore" }
+        { "Annibale", "Guaritore" }, { "Matilde", "Contadino mostro" }, { "Rodolfo", "Assassino" }
     };
 
     private Partita partita;
@@ -166,6 +166,14 @@ public final class TestPartita
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
         terminaVotazioni();
         verificaAccusati(getNomeGiocatoreEsempio(posizioneMistico - 1), getNomeGiocatoreEsempio(0));
+    }
+
+    @Test public void testAttaccoAssassinoContadinoMostro()
+    {
+        String[] soluzioni = new String[2];
+        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 6);
+        attaccoAssassino(soluzioni[0]);
+        for(String nome : soluzioni) verificaEliminazione(nome);
     }
 
     private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
