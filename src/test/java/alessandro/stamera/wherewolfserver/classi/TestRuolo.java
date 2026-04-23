@@ -116,8 +116,9 @@ public final class TestRuolo
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        verificaVero(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
         ruolo.segnalazioneAzzeccagarbugli();
+        verificaVero(ruolo.isSegnalatoAzzeccagarbugli());
         ruolo.annullaSegnalazioneAzzeccagarbugli();
         verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
     }

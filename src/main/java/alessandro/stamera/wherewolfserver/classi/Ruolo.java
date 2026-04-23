@@ -24,7 +24,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, romeo;
+    private boolean amato, romeo, segnalazioneAzzeccagarbugli;
 
     private final boolean mistico;
 
@@ -42,6 +42,7 @@ public class Ruolo
         this.mistico = mistico;
         tratti = new Tratti();
         setRomeo(false);
+        segnalazioneAzzeccagarbugli = false;
     }
 
     public String getNome() { return nome; }
@@ -283,11 +284,11 @@ public class Ruolo
         perdiProtezioni();
     }
 
-    public boolean isSegnalatoAzzeccagarbugli() { return false; }
+    public boolean isSegnalatoAzzeccagarbugli() { return segnalazioneAzzeccagarbugli; }
 
-    public void segnalazioneAzzeccagarbugli() { }
+    public void segnalazioneAzzeccagarbugli() { segnalazioneAzzeccagarbugli = true; }
 
-    public void annullaSegnalazioneAzzeccagarbugli() { }
+    public void annullaSegnalazioneAzzeccagarbugli() { segnalazioneAzzeccagarbugli = false; }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
