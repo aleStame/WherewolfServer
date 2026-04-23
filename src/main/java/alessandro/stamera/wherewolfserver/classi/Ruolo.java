@@ -290,7 +290,16 @@ public class Ruolo
 
     public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
 
-    private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli) { this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli; }
+    public boolean isInquisito() { return false; }
+
+    public void segnalazioneInquisitore() { }
+
+    public void annullaSegnalazioneInquisitore() { }
+
+    private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
+    {
+        this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli;
+    }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
@@ -301,7 +310,10 @@ public class Ruolo
         }
     }
 
-    private boolean isAttaccoNosferatuFallito() { return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo(); }
+    private boolean isAttaccoNosferatuFallito()
+    {
+        return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo();
+    }
 
     private void trasformazioneNosferatu()
     {

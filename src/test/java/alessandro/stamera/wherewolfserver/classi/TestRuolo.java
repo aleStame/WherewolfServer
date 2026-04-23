@@ -123,7 +123,18 @@ public final class TestRuolo
         verificaFalso(isSegnalatoAzzeccagarbugli());
     }
 
+    @Test public void testSegnalazioneInquisitore()
+    {
+        verificaFalso(isInquisito());
+        ruolo.segnalazioneInquisitore();
+        verificaVero(isInquisito());
+        ruolo.annullaSegnalazioneInquisitore();
+        verificaFalso(isInquisito());
+    }
+
     private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
+
+    private boolean isInquisito() { return ruolo.isInquisito(); }
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
