@@ -61,6 +61,8 @@ public final class TestContadinoMostro
         verificaAttacco(attaccoLupi(nome), FALLITO);
     }
 
+    @Test public void testAttaccoAssassino() { verificaAttacco(ruolo.attaccoAssassino(), MORTO); }
+
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
