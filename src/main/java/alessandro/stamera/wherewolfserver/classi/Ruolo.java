@@ -24,7 +24,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, romeo, segnalazioneAzzeccagarbugli;
+    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito;
 
     private final boolean mistico;
 
@@ -43,6 +43,7 @@ public class Ruolo
         tratti = new Tratti();
         setRomeo(false);
         annullaSegnalazioneAzzeccagarbugli();
+        inquisito = false;
     }
 
     public String getNome() { return nome; }
@@ -290,11 +291,11 @@ public class Ruolo
 
     public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
 
-    public boolean isInquisito() { return false; }
+    public boolean isInquisito() { return inquisito; }
 
-    public void segnalazioneInquisitore() { }
+    public void segnalazioneInquisitore() { inquisito = true; }
 
-    public void annullaSegnalazioneInquisitore() { }
+    public void annullaSegnalazioneInquisitore() { inquisito = false; }
 
     private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
     {
