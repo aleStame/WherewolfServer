@@ -22,6 +22,8 @@ public class Giocatori
         ordinaAlfabeticamente();
     }
 
+    public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
+
     public int getNumeroGiocatori() { return giocatori.size(); }
 
     public void eliminaGiocatore(String nome) { giocatori.remove(nome); }
@@ -31,8 +33,6 @@ public class Giocatori
         getRuolo(nome).incrementaVoti(voti);
         ordinaGiocatori(new ComparatoreVoti());
     }
-
-    public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
 
     public void annullaVoti()
     {
@@ -64,8 +64,6 @@ public class Giocatori
     public void resettaAmato() { for(String chiave : getChiavi()) giocatori.get(chiave).resettaAmato(); }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
-
-    public void resettaRomeo() { for(String chiave : getChiavi()) giocatori.get(chiave).resettaRomeo(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 

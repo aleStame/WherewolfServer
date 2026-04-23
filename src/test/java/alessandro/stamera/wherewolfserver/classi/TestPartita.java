@@ -100,10 +100,10 @@ public final class TestPartita
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
-        String nome = getNomeGiocatoreEsempio(2);
+        String nome = getNomeGiocatoreEsempio(4);
         segnalazioneAzzeccagarbugli(nome);
         segnalazioneAngeloCustode(nome);
-        for(int i = 2; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
         terminaVotazioni();
         verificaAccusati(getNomeGiocatoreEsempio(3), getNomeGiocatoreEsempio(0));
         verificaNonAccusato(nome);

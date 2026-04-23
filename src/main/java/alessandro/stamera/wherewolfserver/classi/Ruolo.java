@@ -283,6 +283,8 @@ public class Ruolo
         perdiProtezioni();
     }
 
+    public boolean isRuoloNullo() { return false; }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)

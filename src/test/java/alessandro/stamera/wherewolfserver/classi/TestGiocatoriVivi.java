@@ -11,7 +11,6 @@ import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.Tratto.NON_MORTO;
-import static alessandro.stamera.wherewolfserver.classi.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiocatoriVivi
@@ -102,17 +101,18 @@ public final class TestGiocatoriVivi
     {
         String nome = "Rodolfo";
         giocatori.aggiungiGiocatore(nome, getRuolo("Assassino"));
+        segnalazioneAzzeccagarbugli(nome);
         giocatori.incrementaVoti(nome, 4);
         assertThat(giocatori.getNumeroVoti(nome)).isZero();
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
-        String nome = getNomeGiocatore(3);
+        String nome = getNomeGiocatore(4);
         segnalazioneAzzeccagarbugli(nome);
         segnalazioneAngeloCustode(nome);
         for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
-        verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(0));
+        verificaAccusati(getNomeGiocatore(3), getNomeGiocatore(0));
     }
 
     @ParameterizedTest

@@ -9,9 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.RuoloNullo.getInstance;
 public final class GiocatoriVivi extends Giocatori
 {
 
-    private static final int NON_TROVATO = -1;
-
-    private Ruolo ruoloAzzeccagarbugli, ruoloInquisitore;
+    private String nomeAzzeccagarbugli, nomeInquisitore;
 
     public GiocatoriVivi()
     {
@@ -22,7 +20,7 @@ public final class GiocatoriVivi extends Giocatori
     public Giocatori getBallottaggio()
     {
         Giocatori ballottaggio = creaBallottaggio();
-        this.annullaVoti();
+        annullaVoti();
         ballottaggio.annullaVoti();
         return ballottaggio;
     }
@@ -31,11 +29,11 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { ruoloAzzeccagarbugli = getRuolo(nome); }
+    public void segnalazioneAzzeccagarbugli(String nome) { nomeAzzeccagarbugli = nome; }
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return getRuolo(nome).attaccoLupi(attaccante); }
 
-    public void segnalazioneInquisitore(String nome) { ruoloInquisitore = getRuolo(nome); }
+    public void segnalazioneInquisitore(String nome) { nomeInquisitore = nome; }
 
     public EsitoAttacco attaccoNosferatu(String nome)
     {
@@ -64,6 +62,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
 
+    @Override public int getNumeroVoti(String nome)
+    {
+        Ruolo ruolo = getRuolo(nome);
+        if(nomeAzzeccagarbugli.equals(nome)) ruolo.annullaVoti();
+        return ruolo.getNumeroVoti();
+    }
+
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
         if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
@@ -82,21 +87,19 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestisciSegnalazioni(Ballottaggio ballottaggio)
     {
-        gestisciSegnalazioneAzzeccagarbugli(ballottaggio);
-        gestisciSegnalazioneInquisitore(ballottaggio);
+        if(!nomeAzzeccagarbugli.isBlank()) gestisciSegnalazioneAzzeccagarbugli(ballottaggio);
+        if(!nomeInquisitore.isBlank()) gestisciSegnalazioneInquisitore(ballottaggio);
     }
 
     private void gestisciSegnalazioneAzzeccagarbugli(Ballottaggio ballottaggio)
     {
-        int posizioneGiocatoreAzzeccagarbugli = getPosizioneGiocatoreSegnalazioneAzzeccagarbugli();
-        if(posizioneGiocatoreAzzeccagarbugli != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizioneGiocatoreAzzeccagarbugli));
+        if(isPresente(nomeAzzeccagarbugli) && !getRuolo(nomeAzzeccagarbugli).isCriminale()) mandaBallottaggio(ballottaggio, nomeAzzeccagarbugli);
         annullaSegnalazioneAzzeccagarbugli();
     }
 
     private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio)
     {
-        int posizione = getPosizioneGiocatoreSegnalazioneInquisitore();
-        if(posizione != NON_TROVATO) mandaBallottaggio(ballottaggio, getNomeGiocatore(posizione));
+        if(isPresente(nomeInquisitore)) mandaBallottaggio(ballottaggio, nomeInquisitore);
         annullaSegnalazioneInquisitore();
     }
 
@@ -124,6 +127,7 @@ public final class GiocatoriVivi extends Giocatori
         Ruolo ruolo = ballottaggio.getRuolo(nome);
         ballottaggio.eliminaGiocatore(nome);
         aggiungiGiocatore(nome, ruolo);
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) System.out.println(ballottaggio.getNomeGiocatore(i));
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
@@ -147,26 +151,8 @@ public final class GiocatoriVivi extends Giocatori
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
-    private int getPosizioneGiocatoreSegnalazioneAzzeccagarbugli()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(ruoloAzzeccagarbugli == getRuolo(getNomeGiocatore(i)))
-            posizione = i;
-        return posizione;
-    }
+    private void annullaSegnalazioneAzzeccagarbugli() { nomeAzzeccagarbugli = new String(); }
 
-    private int getPosizioneGiocatoreSegnalazioneInquisitore()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)) == ruoloInquisitore)
-            posizione = i;
-        return posizione;
-    }
-
-    private void annullaSegnalazioneAzzeccagarbugli() { annullaSegnalazione(ruoloAzzeccagarbugli); }
-
-    private void annullaSegnalazioneInquisitore() { annullaSegnalazione(ruoloInquisitore); }
-
-    private void annullaSegnalazione(Ruolo ruolo) { ruolo = getInstance(); }
+    private void annullaSegnalazioneInquisitore() { nomeInquisitore = new String(); }
 
 }
