@@ -125,12 +125,14 @@ public final class TestRuolo
 
     @Test public void testSegnalazioneInquisitore()
     {
-        verificaFalso(isInquisito());
+        verificaNonInquisito();
         ruolo.segnalazioneInquisitore();
         verificaVero(isInquisito());
         ruolo.annullaSegnalazioneInquisitore();
-        verificaFalso(isInquisito());
+        verificaNonInquisito();
     }
+
+    private void verificaNonInquisito() { verificaFalso(isInquisito()); }
 
     private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
 
