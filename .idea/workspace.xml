@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSegnalazioneInquisitore non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSegnalazioneInquisitore riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,14 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02285" summary="VERDE: testSegnalazioneInquisitoreMisticoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1776850503190</created>
-      <option name="number" value="02285" />
-      <option name="presentableId" value="LOCAL-02285" />
-      <option name="project" value="LOCAL" />
-      <updated>1776850503190</updated>
     </task>
     <task id="LOCAL-02286" summary="REFACTORING: definizione del metodo gestisciSegnalazioneInquisizione">
       <option name="closed" value="true" />
@@ -674,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776950741714</updated>
     </task>
-    <option name="localTasksCounter" value="2334" />
+    <task id="LOCAL-02334" summary="VERDE: testSegnalazioneInquisitore riuscito">
+      <option name="closed" value="true" />
+      <created>1776950938997</created>
+      <option name="number" value="02334" />
+      <option name="presentableId" value="LOCAL-02334" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950938997</updated>
+    </task>
+    <option name="localTasksCounter" value="2335" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazione" />
     <MESSAGE value="ROSSO: testAttaccoVampiroAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiroAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciResetAmato" />
@@ -714,6 +715,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="ROSSO: testSegnalazioneInquisitore non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSegnalazioneInquisitore non riuscito" />
+    <MESSAGE value="VERDE: testSegnalazioneInquisitore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSegnalazioneInquisitore riuscito" />
   </component>
 </project>

@@ -43,7 +43,7 @@ public class Ruolo
         tratti = new Tratti();
         setRomeo(false);
         annullaSegnalazioneAzzeccagarbugli();
-        inquisito = false;
+        annullaSegnalazioneInquisitore();
     }
 
     public String getNome() { return nome; }
@@ -293,9 +293,11 @@ public class Ruolo
 
     public boolean isInquisito() { return inquisito; }
 
-    public void segnalazioneInquisitore() { inquisito = true; }
+    public void segnalazioneInquisitore() { setInquisito(true); }
 
-    public void annullaSegnalazioneInquisitore() { inquisito = false; }
+    public void annullaSegnalazioneInquisitore() { setInquisito(false); }
+
+    private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
 
     private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
     {
