@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+
+import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.AMANTI;
@@ -189,6 +189,13 @@ public final class TestGiocatoriVivi
         giocatori.attaccoPosseduto(nomeAngelo);
         assertThat(giocatori.isPosseduto(nomeAngelo)).isTrue();
         verificaNonAmato(nomeAmato);
+    }
+
+    @Test public void testAttaccoAssassinoContadinoMostro()
+    {
+        String nome = "Matilde";
+        giocatori.aggiungiGiocatore(nome, getRuolo("Contadino mostro"));
+        verificaAttaccoAssassino(nome, MORTO);
     }
 
     private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
