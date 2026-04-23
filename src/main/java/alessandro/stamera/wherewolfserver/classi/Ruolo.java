@@ -42,7 +42,7 @@ public class Ruolo
         this.mistico = mistico;
         tratti = new Tratti();
         setRomeo(false);
-        segnalazioneAzzeccagarbugli = false;
+        annullaSegnalazioneAzzeccagarbugli();
     }
 
     public String getNome() { return nome; }
@@ -286,9 +286,11 @@ public class Ruolo
 
     public boolean isSegnalatoAzzeccagarbugli() { return segnalazioneAzzeccagarbugli; }
 
-    public void segnalazioneAzzeccagarbugli() { segnalazioneAzzeccagarbugli = true; }
+    public void segnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(true); }
 
-    public void annullaSegnalazioneAzzeccagarbugli() { segnalazioneAzzeccagarbugli = false; }
+    public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
+
+    private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli) { this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli; }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
