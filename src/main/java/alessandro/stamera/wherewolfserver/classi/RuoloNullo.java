@@ -7,6 +7,4 @@ public final class RuoloNullo extends Ruolo
 
     public static Ruolo getInstance() { return new RuoloNullo(); }
 
-    @Override public boolean isRuoloNullo() { return true; }
-
 }

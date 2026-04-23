@@ -283,7 +283,11 @@ public class Ruolo
         perdiProtezioni();
     }
 
-    public boolean isRuoloNullo() { return false; }
+    public boolean isSegnalatoAzzeccagarbugli() { return false; }
+
+    public void segnalazioneAzzeccagarbugli() { }
+
+    public void annullaSegnalazioneAzzeccagarbugli() { }
 
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
