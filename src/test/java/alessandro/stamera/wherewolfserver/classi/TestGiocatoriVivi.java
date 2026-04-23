@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
@@ -27,7 +26,7 @@ public final class TestGiocatoriVivi
     {
         FACTORY.annullaVoti();
         giocatori = new GiocatoriVivi();
-        for(String[] esempio : ESEMPI_GIOCATORI) giocatori.aggiungiGiocatore(esempio[0], getRuolo(esempio[1]));
+        for(String[] esempio : ESEMPI_GIOCATORI) aggiungiGiocatore(esempio[0], esempio[1]);
         FACTORY.resettaRomeo();
         giocatori.resettaAmato();
     }
@@ -100,7 +99,7 @@ public final class TestGiocatoriVivi
     @Test public void testSegnalazioneAzzeccagarbugliCriminale()
     {
         String nome = "Rodolfo";
-        giocatori.aggiungiGiocatore(nome, getRuolo("Assassino"));
+        aggiungiGiocatore(nome, "Assassino");
         segnalazioneAzzeccagarbugli(nome);
         giocatori.incrementaVoti(nome, 4);
         assertThat(giocatori.getNumeroVoti(nome)).isZero();
@@ -194,9 +193,11 @@ public final class TestGiocatoriVivi
     @Test public void testAttaccoAssassinoContadinoMostro()
     {
         String nome = "Matilde";
-        giocatori.aggiungiGiocatore(nome, getRuolo("Contadino mostro"));
+        aggiungiGiocatore(nome, "Contadino mostro");
         verificaAttaccoAssassino(nome, MORTO);
     }
+
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo)); }
 
     private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
     {
