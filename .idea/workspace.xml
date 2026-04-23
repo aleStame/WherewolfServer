@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSegnalazioneInquisitore riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ruolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Criminale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Criminale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,38 +283,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02286" summary="REFACTORING: definizione del metodo gestisciSegnalazioneInquisizione">
-      <option name="closed" value="true" />
-      <created>1776850695972</created>
-      <option name="number" value="02286" />
-      <option name="presentableId" value="LOCAL-02286" />
-      <option name="project" value="LOCAL" />
-      <updated>1776850695972</updated>
-    </task>
-    <task id="LOCAL-02287" summary="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1776850914355</created>
-      <option name="number" value="02287" />
-      <option name="presentableId" value="LOCAL-02287" />
-      <option name="project" value="LOCAL" />
-      <updated>1776850914356</updated>
-    </task>
-    <task id="LOCAL-02288" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1776851198949</created>
-      <option name="number" value="02288" />
-      <option name="presentableId" value="LOCAL-02288" />
-      <option name="project" value="LOCAL" />
-      <updated>1776851198949</updated>
-    </task>
-    <task id="LOCAL-02289" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1776851548960</created>
-      <option name="number" value="02289" />
-      <option name="presentableId" value="LOCAL-02289" />
-      <option name="project" value="LOCAL" />
-      <updated>1776851548960</updated>
     </task>
     <task id="LOCAL-02290" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito">
       <option name="closed" value="true" />
@@ -676,7 +644,39 @@
       <option name="project" value="LOCAL" />
       <updated>1776950938997</updated>
     </task>
-    <option name="localTasksCounter" value="2335" />
+    <task id="LOCAL-02335" summary="REFACTORING: definizione del metodo setInquisito">
+      <option name="closed" value="true" />
+      <created>1776951107357</created>
+      <option name="number" value="02335" />
+      <option name="presentableId" value="LOCAL-02335" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951107357</updated>
+    </task>
+    <task id="LOCAL-02336" summary="REFACTORING: definizione del metodo verificaNonInquisito">
+      <option name="closed" value="true" />
+      <created>1776951228042</created>
+      <option name="number" value="02336" />
+      <option name="presentableId" value="LOCAL-02336" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951228042</updated>
+    </task>
+    <task id="LOCAL-02337" summary="REFACTORING: definizione del metodo verificaNonSegnalato">
+      <option name="closed" value="true" />
+      <created>1776951338960</created>
+      <option name="number" value="02337" />
+      <option name="presentableId" value="LOCAL-02337" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951338960</updated>
+    </task>
+    <task id="LOCAL-02338" summary="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito">
+      <option name="closed" value="true" />
+      <created>1776951485293</created>
+      <option name="number" value="02338" />
+      <option name="presentableId" value="LOCAL-02338" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951485293</updated>
+    </task>
+    <option name="localTasksCounter" value="2339" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,9 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoVampiroAngeloCustode non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoVampiroAngeloCustode riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestisciResetAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaProgenie" />
     <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
     <MESSAGE value="ROSSO: testPossedutoAngeloCustode non riuscito" />
@@ -710,12 +707,15 @@
     <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
     <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
     <MESSAGE value="VERDE: testResetRomeo riuscito" />
-    <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="ROSSO: testSegnalazioneInquisitore non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneInquisitore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSegnalazioneInquisitore riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo setInquisito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonInquisito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalato" />
+    <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
   </component>
 </project>
