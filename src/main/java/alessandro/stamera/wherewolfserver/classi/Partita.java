@@ -64,6 +64,8 @@ public final class Partita
 
     public boolean isSoloCreatureOmbra() { return getNumeroCreatureOmbra() == getNumeroGiocatoriVivi(); }
 
+    public boolean isSoloGuardie() { return false; }
+
     private int getNumeroCreatureOmbra()
     {
         int numeroCreatureOmbra = 0;

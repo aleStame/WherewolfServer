@@ -199,6 +199,13 @@ public final class TestPartita
         verificaVero(partita.isSoloCreatureOmbra());
     }
 
+    @Test public void testSoloGuardie()
+    {
+        String[][] guardie = new String[][] { { "Sara", "Guardia" }, { "Elisa", "Altra guardia" } };
+        partita = new Partita(guardie);
+        verificaVero(partita.isSoloGuardie());
+    }
+
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
