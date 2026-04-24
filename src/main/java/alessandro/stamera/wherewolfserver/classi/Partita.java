@@ -62,12 +62,14 @@ public final class Partita
 
     public boolean isViaggiatoreAmato() { return false; }
 
-    public boolean isSoloCreatureOmbra()
+    public boolean isSoloCreatureOmbra() { return getNumeroCreatureOmbra() == vivi.getNumeroGiocatori(); }
+
+    private int getNumeroCreatureOmbra()
     {
-        int numeroCreatureOmbra = 0, numeroGiocatoriVivi = vivi.getNumeroGiocatori();
-        for(int i = 0; i < numeroGiocatoriVivi; i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).getCategoria() == CREATURE_OMBRA)
+        int numeroCreatureOmbra = 0;
+        for(int i = 0; i < vivi.getNumeroGiocatori(); i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).getCategoria() == CREATURE_OMBRA)
             numeroCreatureOmbra++;
-        return numeroCreatureOmbra == numeroGiocatoriVivi;
+        return numeroCreatureOmbra;
     }
 
     private void assassinioContadinoMostro(String nome)
