@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloVittoriaRomeo riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testPartitaNonFinita">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +102,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/interazioniAssassino&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/condizioneVittoriaAssassino&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -284,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02305" summary="REFACTORING: definizione del metodo verificaAuraNera">
-      <option name="closed" value="true" />
-      <created>1776863934322</created>
-      <option name="number" value="02305" />
-      <option name="presentableId" value="LOCAL-02305" />
-      <option name="project" value="LOCAL" />
-      <updated>1776863934322</updated>
-    </task>
-    <task id="LOCAL-02306" summary="REFACTORING: definizione del metodo verificaTrattoPresente">
-      <option name="closed" value="true" />
-      <created>1776864422686</created>
-      <option name="number" value="02306" />
-      <option name="presentableId" value="LOCAL-02306" />
-      <option name="project" value="LOCAL" />
-      <updated>1776864422686</updated>
     </task>
     <task id="LOCAL-02307" summary="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore">
       <option name="closed" value="true" />
@@ -677,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777024113807</updated>
     </task>
-    <option name="localTasksCounter" value="2354" />
+    <task id="LOCAL-02354" summary="VERDE: testControlloVittoriaRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1777024232605</created>
+      <option name="number" value="02354" />
+      <option name="presentableId" value="LOCAL-02354" />
+      <option name="project" value="LOCAL" />
+      <updated>1777024232605</updated>
+    </task>
+    <task id="LOCAL-02355" summary="VERDE DIRETTO: testPartitaNonFinita">
+      <option name="closed" value="true" />
+      <created>1777024647560</created>
+      <option name="number" value="02355" />
+      <option name="presentableId" value="LOCAL-02355" />
+      <option name="project" value="LOCAL" />
+      <updated>1777024647560</updated>
+    </task>
+    <option name="localTasksCounter" value="2356" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
     <MESSAGE value="VERDE: testResetRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli" />
@@ -717,6 +720,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioni" />
     <MESSAGE value="ROSSO: testControlloVittoriaRomeo non riuscito" />
     <MESSAGE value="VERDE: testControlloVittoriaRomeo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloVittoriaRomeo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testPartitaNonFinita" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testPartitaNonFinita" />
   </component>
 </project>

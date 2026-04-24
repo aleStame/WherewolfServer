@@ -62,12 +62,17 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
-        int numeroVoti = getNumeroVotiPrimoClassificato();
-        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
+        if(getNumeroGiocatori() > 0) estraiSecondoPosto(ballottaggio);
         gestisciSegnalazioni(ballottaggio);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
         return ballottaggio;
+    }
+
+    private void estraiSecondoPosto(Ballottaggio ballottaggio)
+    {
+        int numeroVoti = getNumeroVotiPrimoClassificato();
+        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
     }
 
     private void gestisciSegnalazioni(Ballottaggio ballottaggio)

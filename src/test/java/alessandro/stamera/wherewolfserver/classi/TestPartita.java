@@ -1,197 +1,204 @@
 package alessandro.stamera.wherewolfserver.classi;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPartita
 {
 
-    private static final String[][] ESEMPI_GIOCATORI = new String[][]
-    {
-        { "Marco", "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" }, { "Eva", "Capo branco" },
-        { "Annibale", "Guaritore" }, { "Matilde", "Contadino mostro" }, { "Rodolfo", "Assassino" }
-    };
-
     private Partita partita;
-
-    @BeforeEach public void setUp() { partita = new Partita(ESEMPI_GIOCATORI); }
 
     @Test public void testBallottaggioPuro()
     {
+        String[][] giocatori = new String[][] { { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" } };
+        partita = new Partita(giocatori);
         int[] numeroVoti = new int[] { 2, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i + 1, numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1));
+        verificaAccusati(giocatori[0][0], giocatori[1][0]);
     }
 
     @Test public void testUnanimita()
     {
+        String[][] giocatori = new String[][] { { "Annibale", "Guaritore" }, { "Rodolfo", "Assassino" } };
+        partita = new Partita(giocatori);
         int posizione = 0;
-        incrementaVoti(posizione, 3);
+        incrementaVoti(giocatori[posizione][0], 3);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(0));
+        verificaAccusati(giocatori[posizione][0]);
     }
 
     @Test public void testPareggioPrimoPosto()
     {
-        int numeroGiocatori = getNumeroGiocatoriEsempio();
-        for(int i = 1; i < numeroGiocatori; i++) incrementaVoti(i, 1);
+        String[][] soluzioni = new String[][] { { "Gabriella", "Capo branco" }, { "Ezio", "Giullare" }, { "Marta", "Prete" } };
+        partita = new Partita(soluzioni);
+        for(String[] soluzione : soluzioni) incrementaVoti(soluzione[0], 1);
         terminaVotazioni();
-        verificaAccusati(estraiUltimiTreEsempi());
+        verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
     }
 
     @Test public void testPareggioSecondoPosto()
     {
+        String[][] soluzioni = new String[][] { { "Aldo", "Pazzo" }, { "Giovanni", "Guaritore" }, { "Giacomo", "Leprecauno" } };
+        partita = new Partita(soluzioni);
         int[] numeroVoti = new int[]{ 2, 1, 1 };
-        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(i, numeroVoti[i]);
+        for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(soluzioni[i][0], numeroVoti[i]);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(1), getNomeGiocatoreEsempio(0));
+        verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
     {
+        String[][] giocatori = new String[][] { { "Domenico", "Angelo custode" }, { "Franco", "Goblin" }, { "Pamela", "Sidhe" } };
+        partita = new Partita(giocatori);
         int posizione = 2;
-        String nome = getNomeGiocatoreEsempio(posizione);
-        segnalazioneAngeloCustode(nome);
-        incrementaVoti(posizione, 3);
+        segnalazioneAngeloCustode(giocatori[posizione][0]);
+        incrementaVoti(giocatori[posizione][0], 3);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(0));
-        verificaNonAccusato(nome);
+        verificaAccusati(giocatori[0][0]);
+        verificaNonAccusato(giocatori[posizione][0]);
     }
 
     @Test public void testAngeloCustodeAccusatoPresente()
     {
-        String nome = getNomeGiocatoreEsempio(1);
-        segnalazioneAngeloCustode(nome);
-        for(int i = 0; i < 3; i++) incrementaVoti(i, 2);
+        String[][] giocatori = new String[][] { { "Michelle", "Angelo custode" }, { "Fiona", "Altra guardia" }, { "Biagio", "Ladra" } };
+        partita = new Partita(giocatori);
+        int posizione = 1;
+        segnalazioneAngeloCustode(giocatori[posizione][0]);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(2), getNomeGiocatoreEsempio(0));
-        verificaNonAccusato(nome);
+        verificaAccusati(giocatori[2][0], giocatori[0][0]);
+        verificaNonAccusato(giocatori[posizione][0]);
     }
 
     @Test public void testAttaccoAssassino()
     {
-        String nome = getNomeGiocatoreEsempio(2);
-        attaccoAssassino(nome);
-        verificaEliminazione(nome);
+        String[][] giocatori = new String[][] { { "Giovanni", "Assassino" }, { "Federico", "Lupo reietto" } };
+        partita = new Partita(giocatori);
+        int posizione = 1;
+        attaccoAssassino(giocatori[posizione][0]);
+        verificaEliminazione(giocatori[posizione][0]);
     }
 
     @Test public void testAttaccoAmatoAssassino()
     {
-        String nomeAngeloCustode = getNomeGiocatoreEsempio(0), nomeAmato = getNomeGiocatoreEsempio(3);
-        segnalazioneAngeloCustode(nomeAmato);
-        attaccoAssassino(nomeAmato);
-        verificaEliminazione(nomeAngeloCustode);
-        verificaVero(isVivo(nomeAmato));
+        String[][] giocatori = new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Bardo" }, { "Maddalena", "Oste" } };
+        int posizione = 1;
+        partita = new Partita(giocatori);
+        segnalazioneAngeloCustode(giocatori[posizione][0]);
+        attaccoAssassino(giocatori[posizione][0]);
+        verificaEliminazione(giocatori[0][0]);
+        verificaVero(isVivo(giocatori[posizione][0]));
     }
 
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
-        segnalazioneAzzeccagarbugli(getNomeGiocatoreEsempio(1));
-        int numeroGiocatori = getNumeroGiocatoriEsempio();
-        for(int i = 2; i < numeroGiocatori; i++) incrementaVoti(i, 1);
+        String[][] giocatori = new String[][] { { "Matteo", "Guardia" }, { "Ivan", "Altra guardia" }, { "Miriam", "Guardia corrotta" } };
+        partita = new Partita(giocatori);
+        segnalazioneAzzeccagarbugli(giocatori[0][0]);
+        for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
-        verificaAccusati(estraiUltimiTreEsempi());
+        verificaAccusati(giocatori[0][0], giocatori[1][0], giocatori[2][0]);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
-        String nome = getNomeGiocatoreEsempio(4);
-        segnalazioneAzzeccagarbugli(nome);
-        segnalazioneAngeloCustode(nome);
-        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 1);
+        String[][] giocatori = new String[][]
+                { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
+        int posizione1 = 3, posizione2 = 1;
+        partita = new Partita(giocatori);
+        segnalazioneAzzeccagarbugli(giocatori[posizione1][0]);
+        segnalazioneAngeloCustode(giocatori[posizione1][0]);
+        incrementaVoti(giocatori[posizione2][0], 2);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(3), getNomeGiocatoreEsempio(0));
-        verificaNonAccusato(nome);
+        verificaAccusati(giocatori[0][0], giocatori[posizione2][0]);
+        verificaNonAccusato(giocatori[posizione1][0]);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
-        String nome = getNomeGiocatoreEsempio(0);
-        attaccoLupi(nomeLupo, nome);
-        verificaEliminazione(nome);
+        String[][] giocatori = new String[][] { { "Walter", "Mago" }, { "Amelia", "Spia" } };
+        partita = new Partita(giocatori);
+        int posizione = 0;
+        attaccoLupi(nomeLupo, giocatori[posizione][0]);
+        verificaEliminazione(giocatori[posizione][0]);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
-        String nome = getNomeGiocatoreEsempio(1);
-        segnalazioneAngeloCustode(nome);
-        attaccoLupi(nomeLupo, nome);
-        assertThat(isVivo(nome)).isTrue();
+        String[][] giocatori = new String[][] { { "Fabrizio", "Bocca di rosa" }, { "Franca", "Peccatore" } };
+        partita = new Partita(giocatori);
+        int posizione = 1;
+        segnalazioneAngeloCustode(giocatori[posizione][0]);
+        attaccoLupi(nomeLupo, giocatori[posizione][0]);
+        assertThat(isVivo(giocatori[posizione][0])).isTrue();
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
-        String nomeMistico = getNomeGiocatoreEsempio(getNumeroGiocatoriEsempio() - 1);
-        segnalazioneInquisitore(nomeMistico);
-        int posizioneVoto = 1;
-        incrementaVoti(posizioneVoto, 2);
+        String[][] giocatori = new String[][] { { "Merlino", "Mago" }, { "Lidia", "Inquisitore" }, { "Noemi", "Boia" } };
+        partita = new Partita(giocatori);
+        int posizioneMistico = 0, posizioneVoto = 2;
+        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
+        incrementaVoti(giocatori[posizioneVoto][0], 2);
         terminaVotazioni();
-        verificaAccusati(nomeMistico, getNomeGiocatoreEsempio(posizioneVoto));
+        verificaAccusati(giocatori[posizioneMistico][0], giocatori[posizioneVoto][0]);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoPresente()
     {
-        int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
-        String nomeMistico = getNomeGiocatoreEsempio(posizioneMistico);
-        segnalazioneInquisitore(nomeMistico);
-        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
+        String[][] giocatori = new String[][] { { "Alberto", "Guaritore" }, { "Tania", "Pazzo" } };
+        partita = new Partita(giocatori);
+        int posizioneMistico = 0;
+        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
         terminaVotazioni();
-        verificaAccusati(nomeMistico, getNomeGiocatoreEsempio(posizioneMistico - 1));
+        verificaAccusati(giocatori[posizioneMistico][0], giocatori[1][0]);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
-        String nomeMistico = getNomeGiocatoreEsempio(getNumeroGiocatoriEsempio() - 1);
-        segnalazioneInquisitore(nomeMistico);
-        segnalazioneAngeloCustode(nomeMistico);
-        int posizioneVoto = 1;
-        incrementaVoti(posizioneVoto, 2);
+        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { "Irvano", "Medium" }, { "Luca", "Inquisitore" } };
+        partita = new Partita(giocatori);
+        int posizioneMistico = 1, posizioneVoto = 2;
+        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
+        segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
+        incrementaVoti(giocatori[posizioneVoto][0], 2);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(posizioneVoto), getNomeGiocatoreEsempio(0));
+        verificaAccusati(giocatori[posizioneVoto][0], giocatori[0][0]);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
     {
-        int posizioneMistico = getNumeroGiocatoriEsempio() - 1;
-        String nomeMistico = getNomeGiocatoreEsempio(posizioneMistico);
-        segnalazioneInquisitore(nomeMistico);
-        segnalazioneAngeloCustode(nomeMistico);
-        for(int i = 3; i < getNumeroGiocatoriEsempio(); i++) incrementaVoti(i, 2);
+        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { "Davide", "Leprecauno" }, { "Matteo", "Inquisitore" } };
+        partita = new Partita(giocatori);
+        int posizioneMistico = 1;
+        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
+        segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
+        incrementaVoti(giocatori[posizioneMistico][0], 2);
         terminaVotazioni();
-        verificaAccusati(getNomeGiocatoreEsempio(posizioneMistico - 1), getNomeGiocatoreEsempio(0));
+        verificaAccusati(giocatori[0][0]);
     }
 
     @Test public void testAttaccoAssassinoContadinoMostro()
     {
-        String[] soluzioni = new String[2];
-        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 6);
-        attaccoAssassino(soluzioni[0]);
-        for(String nome : soluzioni) verificaEliminazione(nome);
+        String[][] soluzioni = new String[][] { { "Pietro", "Assassino" }, { "Mario", "Contadino mostro" }, { "Maria", "Contadino eroe" } };
+        partita = new Partita(soluzioni);
+        attaccoAssassino(soluzioni[1][0]);
+        for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);
     }
 
-    private void incrementaVoti(int posizione, int numeroVoti) { partita.incrementaVoti(getNomeGiocatoreEsempio(posizione), numeroVoti); }
+    private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
 
     private void verificaAccusati(String... nomi) { for(String nome : nomi) verificaVero(isAccusato(nome)); }
 
     private void verificaNonAccusato(String nome) { verificaFalso(isAccusato(nome)); }
-
-    private String[] estraiUltimiTreEsempi()
-    {
-        String[] soluzioni = new String[getNumeroGiocatoriEsempio() - 1];
-        for(int i = 0; i < soluzioni.length; i++) soluzioni[i] = getNomeGiocatoreEsempio(i + 1);
-        return soluzioni;
-    }
-
-    private String getNomeGiocatoreEsempio(int posizione) { return ESEMPI_GIOCATORI[posizione][0]; }
 
     private boolean isAccusato(String nome) { return partita.isAccusato(nome); }
 
@@ -210,8 +217,6 @@ public final class TestPartita
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
 
     private void segnalazioneAzzeccagarbugli(String nome) { partita.segnalazioneAzzeccagarbugli(nome); }
 
