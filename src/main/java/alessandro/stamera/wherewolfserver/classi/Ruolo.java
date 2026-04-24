@@ -274,7 +274,6 @@ public class Ruolo
     {
         EsitoPartita esito = NON_FINITO;
         if(partita.isFinita()) if(partita.isGiuliettaViva()) esito = VITTORIA;
-        System.out.println(esito);
         return esito;
     }
 

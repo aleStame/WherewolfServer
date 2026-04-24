@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.NON_FINITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.SCONFITTA;
 
 public final class Assassino extends Criminale
 {
@@ -16,6 +18,14 @@ public final class Assassino extends Criminale
     }
 
     @Override public boolean isAssassino() { return true; }
+
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito;
+        if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
+        else esito = super.getEsitoPartita(partita);
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new Assassino(); }
 

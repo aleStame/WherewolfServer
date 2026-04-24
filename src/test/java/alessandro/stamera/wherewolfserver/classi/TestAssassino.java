@@ -48,6 +48,7 @@ public final class TestAssassino
         Partita partita = mock(Partita.class);
         when(partita.isFinita()).thenReturn(true);
         when(partita.isGiuliettaViva()).thenReturn(true);
+        when(partita.isSoloCreatureOmbra()).thenReturn(false);
         ruolo.romeizzazione();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
