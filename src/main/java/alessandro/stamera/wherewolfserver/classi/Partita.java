@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi;
 
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 
 public final class Partita
@@ -61,7 +62,13 @@ public final class Partita
 
     public boolean isViaggiatoreAmato() { return false; }
 
-    public boolean isSoloCreatureOmbra() { return false; }
+    public boolean isSoloCreatureOmbra()
+    {
+        int numeroCreatureOmbra = 0, numeroGiocatoriVivi = vivi.getNumeroGiocatori();
+        for(int i = 0; i < numeroGiocatoriVivi; i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).getCategoria() == CREATURE_OMBRA)
+            numeroCreatureOmbra++;
+        return numeroCreatureOmbra == numeroGiocatoriVivi;
+    }
 
     private void assassinioContadinoMostro(String nome)
     {
