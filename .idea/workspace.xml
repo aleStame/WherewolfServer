@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSoloGuardie non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSoloGuardie riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,14 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02315" summary="VERDE: testPossedutoAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776869568489</created>
-      <option name="number" value="02315" />
-      <option name="presentableId" value="LOCAL-02315" />
-      <option name="project" value="LOCAL" />
-      <updated>1776869568490</updated>
     </task>
     <task id="LOCAL-02316" summary="REFACTORING: definizione del metodo verificaNonAmato">
       <option name="closed" value="true" />
@@ -677,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777046124822</updated>
     </task>
-    <option name="localTasksCounter" value="2364" />
+    <task id="LOCAL-02364" summary="VERDE: testSoloGuardie riuscito">
+      <option name="closed" value="true" />
+      <created>1777046341236</created>
+      <option name="number" value="02364" />
+      <option name="presentableId" value="LOCAL-02364" />
+      <option name="project" value="LOCAL" />
+      <updated>1777046341236</updated>
+    </task>
+    <option name="localTasksCounter" value="2365" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
@@ -717,6 +718,7 @@
     <MESSAGE value="ROSSO: testSconfittaCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testSconfittaCreatureOmbra riuscito" />
     <MESSAGE value="ROSSO: testSoloGuardie non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSoloGuardie non riuscito" />
+    <MESSAGE value="VERDE: testSoloGuardie riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSoloGuardie riuscito" />
   </component>
 </project>
