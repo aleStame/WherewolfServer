@@ -114,6 +114,32 @@ public final class TestRuolo
         verificaTrattoPresente(NON_MORTO);
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        verificaNonSegnalato();
+        ruolo.segnalazioneAzzeccagarbugli();
+        verificaVero(isSegnalatoAzzeccagarbugli());
+        ruolo.annullaSegnalazioneAzzeccagarbugli();
+        verificaNonSegnalato();
+    }
+
+    @Test public void testSegnalazioneInquisitore()
+    {
+        verificaNonInquisito();
+        ruolo.segnalazioneInquisitore();
+        verificaVero(isInquisito());
+        ruolo.annullaSegnalazioneInquisitore();
+        verificaNonInquisito();
+    }
+
+    private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
+
+    private void verificaNonInquisito() { verificaFalso(isInquisito()); }
+
+    private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
+
+    private boolean isInquisito() { return ruolo.isInquisito(); }
+
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
     private EsitoAttacco assassinio() { return ruolo.attaccoAssassino(); }

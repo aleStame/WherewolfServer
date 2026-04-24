@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.NON_FINITO;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.Fazione.VAMPIRO;
@@ -24,7 +26,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, romeo;
+    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito;
 
     private final boolean mistico;
 
@@ -42,6 +44,8 @@ public class Ruolo
         this.mistico = mistico;
         tratti = new Tratti();
         setRomeo(false);
+        annullaSegnalazioneAzzeccagarbugli();
+        annullaSegnalazioneInquisitore();
     }
 
     public String getNome() { return nome; }
@@ -266,7 +270,13 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
+    public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = NON_FINITO;
+        if(partita.isFinita()) if(partita.isGiuliettaViva()) esito = VITTORIA;
+        System.out.println(esito);
+        return esito;
+    }
 
     public EsitoAttacco vampirizzazione()
     {
@@ -283,6 +293,25 @@ public class Ruolo
         perdiProtezioni();
     }
 
+    public boolean isSegnalatoAzzeccagarbugli() { return segnalazioneAzzeccagarbugli; }
+
+    public void segnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(true); }
+
+    public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
+
+    public boolean isInquisito() { return inquisito; }
+
+    public void segnalazioneInquisitore() { setInquisito(true); }
+
+    public void annullaSegnalazioneInquisitore() { setInquisito(false); }
+
+    private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
+
+    private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
+    {
+        this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli;
+    }
+
     private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
     {
         switch(risultato)
@@ -292,7 +321,10 @@ public class Ruolo
         }
     }
 
-    private boolean isAttaccoNosferatuFallito() { return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo(); }
+    private boolean isAttaccoNosferatuFallito()
+    {
+        return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo();
+    }
 
     private void trasformazioneNosferatu()
     {

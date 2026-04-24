@@ -3,8 +3,11 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public final class TestAssassino
 {
@@ -38,6 +41,15 @@ public final class TestAssassino
     @Test public void testSpia() { verificaFalso(ruolo.isSpia()); }
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
+
+    @Test public void testControllaVittoriaRomeo()
+    {
+        Partita partita = mock(Partita.class);
+        when(partita.isFinita()).thenReturn(true);
+        when(partita.isGiuliettaViva()).thenReturn(true);
+        ruolo.romeizzazione();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 

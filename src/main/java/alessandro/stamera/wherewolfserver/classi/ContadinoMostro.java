@@ -14,15 +14,19 @@ public final class ContadinoMostro extends Contadino
 
     @Override public boolean isContadinoMostro() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return MORTO; }
+    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
 
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
-        EsitoAttacco esito = MORTO;
+        EsitoAttacco esito = getEsitoAttaccoDefault();
         if(isRomeo()) esito = FALLITO;
         return esito;
     }
 
+    @Override public EsitoAttacco attaccoAssassino() { return getEsitoAttaccoDefault(); }
+
     public static Ruolo getInstance() { return new ContadinoMostro(); }
+
+    private EsitoAttacco getEsitoAttaccoDefault() { return MORTO; }
 
 }

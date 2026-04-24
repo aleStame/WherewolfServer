@@ -19,4 +19,10 @@ public class Criminale extends Ruolo
 
     @Override public void utilizzaPotere() { potere.utilizzaPotere(); }
 
+    @Override public int getNumeroVoti()
+    {
+        if(isSegnalatoAzzeccagarbugli()) annullaVoti();
+        return super.getNumeroVoti();
+    }
+
 }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testResetRomeo non riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloVittoriaRomeo riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +80,10 @@
     &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
@@ -97,7 +98,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/interazioniAngeloCustde&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/interazioniAssassino&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -147,6 +148,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -171,7 +196,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestLadra" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,7 +209,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestLadra&quot;" />
+            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -195,7 +220,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestProtezioni" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -208,31 +233,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestProtezioni&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestTratti" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestTratti&quot;" />
+            <option value="&quot;alessandro.stamera.wherewolfserver.classi.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -268,10 +269,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
+        <item itemvalue="Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente" />
+        <item itemvalue="Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente" />
+        <item itemvalue="Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato" />
         <item itemvalue="Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli" />
-        <item itemvalue="Gradle.TestLadra" />
-        <item itemvalue="Gradle.TestTratti" />
-        <item itemvalue="Gradle.TestProtezioni" />
       </list>
     </recent_temporary>
   </component>
@@ -283,214 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02279" summary="REFACTORING: definizione del metodo verificaAttaccoCapoBranco">
-      <option name="closed" value="true" />
-      <created>1776811266801</created>
-      <option name="number" value="02279" />
-      <option name="presentableId" value="LOCAL-02279" />
-      <option name="project" value="LOCAL" />
-      <updated>1776811266801</updated>
-    </task>
-    <task id="LOCAL-02280" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776812091471</created>
-      <option name="number" value="02280" />
-      <option name="presentableId" value="LOCAL-02280" />
-      <option name="project" value="LOCAL" />
-      <updated>1776812091471</updated>
-    </task>
-    <task id="LOCAL-02281" summary="VERDE: testAttaccoLupiAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776812334888</created>
-      <option name="number" value="02281" />
-      <option name="presentableId" value="LOCAL-02281" />
-      <option name="project" value="LOCAL" />
-      <updated>1776812334889</updated>
-    </task>
-    <task id="LOCAL-02282" summary="ROSSO: testAttaccoLupiAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1776812616767</created>
-      <option name="number" value="02282" />
-      <option name="presentableId" value="LOCAL-02282" />
-      <option name="project" value="LOCAL" />
-      <updated>1776812616767</updated>
-    </task>
-    <task id="LOCAL-02283" summary="VERDE: testAttaccoLupiAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776813352344</created>
-      <option name="number" value="02283" />
-      <option name="presentableId" value="LOCAL-02283" />
-      <option name="project" value="LOCAL" />
-      <updated>1776813352344</updated>
-    </task>
-    <task id="LOCAL-02284" summary="ROSSo: testSegnalazioneInquisitoreMisticoAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1776849974354</created>
-      <option name="number" value="02284" />
-      <option name="presentableId" value="LOCAL-02284" />
-      <option name="project" value="LOCAL" />
-      <updated>1776849974354</updated>
-    </task>
-    <task id="LOCAL-02285" summary="VERDE: testSegnalazioneInquisitoreMisticoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1776850503190</created>
-      <option name="number" value="02285" />
-      <option name="presentableId" value="LOCAL-02285" />
-      <option name="project" value="LOCAL" />
-      <updated>1776850503190</updated>
-    </task>
-    <task id="LOCAL-02286" summary="REFACTORING: definizione del metodo gestisciSegnalazioneInquisizione">
-      <option name="closed" value="true" />
-      <created>1776850695972</created>
-      <option name="number" value="02286" />
-      <option name="presentableId" value="LOCAL-02286" />
-      <option name="project" value="LOCAL" />
-      <updated>1776850695972</updated>
-    </task>
-    <task id="LOCAL-02287" summary="REFACTORING: definizione del metodo getPosizioneGiocatoreSegnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1776850914355</created>
-      <option name="number" value="02287" />
-      <option name="presentableId" value="LOCAL-02287" />
-      <option name="project" value="LOCAL" />
-      <updated>1776850914356</updated>
-    </task>
-    <task id="LOCAL-02288" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1776851198949</created>
-      <option name="number" value="02288" />
-      <option name="presentableId" value="LOCAL-02288" />
-      <option name="project" value="LOCAL" />
-      <updated>1776851198949</updated>
-    </task>
-    <task id="LOCAL-02289" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1776851548960</created>
-      <option name="number" value="02289" />
-      <option name="presentableId" value="LOCAL-02289" />
-      <option name="project" value="LOCAL" />
-      <updated>1776851548960</updated>
-    </task>
-    <task id="LOCAL-02290" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssenteAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1776851722930</created>
-      <option name="number" value="02290" />
-      <option name="presentableId" value="LOCAL-02290" />
-      <option name="project" value="LOCAL" />
-      <updated>1776851722930</updated>
-    </task>
-    <task id="LOCAL-02291" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776852067131</created>
-      <option name="number" value="02291" />
-      <option name="presentableId" value="LOCAL-02291" />
-      <option name="project" value="LOCAL" />
-      <updated>1776852067131</updated>
-    </task>
-    <task id="LOCAL-02292" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1776852265313</created>
-      <option name="number" value="02292" />
-      <option name="presentableId" value="LOCAL-02292" />
-      <option name="project" value="LOCAL" />
-      <updated>1776852265313</updated>
-    </task>
-    <task id="LOCAL-02293" summary="ROSSO: tesrSegnalazioneInquisitoreMisticoAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1776852518639</created>
-      <option name="number" value="02293" />
-      <option name="presentableId" value="LOCAL-02293" />
-      <option name="project" value="LOCAL" />
-      <updated>1776852518639</updated>
-    </task>
-    <task id="LOCAL-02294" summary="VERDE: testSegnalazioneInquisitoreMisticoAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1776858376510</created>
-      <option name="number" value="02294" />
-      <option name="presentableId" value="LOCAL-02294" />
-      <option name="project" value="LOCAL" />
-      <updated>1776858376510</updated>
-    </task>
-    <task id="LOCAL-02295" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1776858645881</created>
-      <option name="number" value="02295" />
-      <option name="presentableId" value="LOCAL-02295" />
-      <option name="project" value="LOCAL" />
-      <updated>1776858645881</updated>
-    </task>
-    <task id="LOCAL-02296" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssenteAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776858820640</created>
-      <option name="number" value="02296" />
-      <option name="presentableId" value="LOCAL-02296" />
-      <option name="project" value="LOCAL" />
-      <updated>1776858820640</updated>
-    </task>
-    <task id="LOCAL-02297" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776859233393</created>
-      <option name="number" value="02297" />
-      <option name="presentableId" value="LOCAL-02297" />
-      <option name="project" value="LOCAL" />
-      <updated>1776859233393</updated>
-    </task>
-    <task id="LOCAL-02298" summary="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli">
-      <option name="closed" value="true" />
-      <created>1776859693212</created>
-      <option name="number" value="02298" />
-      <option name="presentableId" value="LOCAL-02298" />
-      <option name="project" value="LOCAL" />
-      <updated>1776859693212</updated>
-    </task>
-    <task id="LOCAL-02299" summary="REFACTORING: definizione del metodo attaccoLupi">
-      <option name="closed" value="true" />
-      <created>1776859981386</created>
-      <option name="number" value="02299" />
-      <option name="presentableId" value="LOCAL-02299" />
-      <option name="project" value="LOCAL" />
-      <updated>1776859981386</updated>
-    </task>
-    <task id="LOCAL-02300" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1776860411198</created>
-      <option name="number" value="02300" />
-      <option name="presentableId" value="LOCAL-02300" />
-      <option name="project" value="LOCAL" />
-      <updated>1776860411198</updated>
-    </task>
-    <task id="LOCAL-02301" summary="ROSSO: testAttaccoNosferatuAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776861704021</created>
-      <option name="number" value="02301" />
-      <option name="presentableId" value="LOCAL-02301" />
-      <option name="project" value="LOCAL" />
-      <updated>1776861704021</updated>
-    </task>
-    <task id="LOCAL-02302" summary="VERDE: testAttaccoNosferatuAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776862130090</created>
-      <option name="number" value="02302" />
-      <option name="presentableId" value="LOCAL-02302" />
-      <option name="project" value="LOCAL" />
-      <updated>1776862130090</updated>
-    </task>
-    <task id="LOCAL-02303" summary="ROSSO: vampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1776863263815</created>
-      <option name="number" value="02303" />
-      <option name="presentableId" value="LOCAL-02303" />
-      <option name="project" value="LOCAL" />
-      <updated>1776863263816</updated>
-    </task>
-    <task id="LOCAL-02304" summary="VERDE: vampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1776863508444</created>
-      <option name="number" value="02304" />
-      <option name="presentableId" value="LOCAL-02304" />
-      <option name="project" value="LOCAL" />
-      <updated>1776863508444</updated>
     </task>
     <task id="LOCAL-02305" summary="REFACTORING: definizione del metodo verificaAuraNera">
       <option name="closed" value="true" />
@@ -676,7 +469,215 @@
       <option name="project" value="LOCAL" />
       <updated>1776896493414</updated>
     </task>
-    <option name="localTasksCounter" value="2328" />
+    <task id="LOCAL-02328" summary="VERDE: testResetRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1776949646137</created>
+      <option name="number" value="02328" />
+      <option name="presentableId" value="LOCAL-02328" />
+      <option name="project" value="LOCAL" />
+      <updated>1776949646137</updated>
+    </task>
+    <task id="LOCAL-02329" summary="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito">
+      <option name="closed" value="true" />
+      <created>1776949945938</created>
+      <option name="number" value="02329" />
+      <option name="presentableId" value="LOCAL-02329" />
+      <option name="project" value="LOCAL" />
+      <updated>1776949945938</updated>
+    </task>
+    <task id="LOCAL-02330" summary="VERDE: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1776950132916</created>
+      <option name="number" value="02330" />
+      <option name="presentableId" value="LOCAL-02330" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950132916</updated>
+    </task>
+    <task id="LOCAL-02331" summary="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli">
+      <option name="closed" value="true" />
+      <created>1776950272364</created>
+      <option name="number" value="02331" />
+      <option name="presentableId" value="LOCAL-02331" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950272364</updated>
+    </task>
+    <task id="LOCAL-02332" summary="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli">
+      <option name="closed" value="true" />
+      <created>1776950488907</created>
+      <option name="number" value="02332" />
+      <option name="presentableId" value="LOCAL-02332" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950488907</updated>
+    </task>
+    <task id="LOCAL-02333" summary="ROSSO: testSegnalazioneInquisitore non riuscito">
+      <option name="closed" value="true" />
+      <created>1776950741714</created>
+      <option name="number" value="02333" />
+      <option name="presentableId" value="LOCAL-02333" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950741714</updated>
+    </task>
+    <task id="LOCAL-02334" summary="VERDE: testSegnalazioneInquisitore riuscito">
+      <option name="closed" value="true" />
+      <created>1776950938997</created>
+      <option name="number" value="02334" />
+      <option name="presentableId" value="LOCAL-02334" />
+      <option name="project" value="LOCAL" />
+      <updated>1776950938997</updated>
+    </task>
+    <task id="LOCAL-02335" summary="REFACTORING: definizione del metodo setInquisito">
+      <option name="closed" value="true" />
+      <created>1776951107357</created>
+      <option name="number" value="02335" />
+      <option name="presentableId" value="LOCAL-02335" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951107357</updated>
+    </task>
+    <task id="LOCAL-02336" summary="REFACTORING: definizione del metodo verificaNonInquisito">
+      <option name="closed" value="true" />
+      <created>1776951228042</created>
+      <option name="number" value="02336" />
+      <option name="presentableId" value="LOCAL-02336" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951228042</updated>
+    </task>
+    <task id="LOCAL-02337" summary="REFACTORING: definizione del metodo verificaNonSegnalato">
+      <option name="closed" value="true" />
+      <created>1776951338960</created>
+      <option name="number" value="02337" />
+      <option name="presentableId" value="LOCAL-02337" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951338960</updated>
+    </task>
+    <task id="LOCAL-02338" summary="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito">
+      <option name="closed" value="true" />
+      <created>1776951485293</created>
+      <option name="number" value="02338" />
+      <option name="presentableId" value="LOCAL-02338" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951485293</updated>
+    </task>
+    <task id="LOCAL-02339" summary="VERDE: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1776951614562</created>
+      <option name="number" value="02339" />
+      <option name="presentableId" value="LOCAL-02339" />
+      <option name="project" value="LOCAL" />
+      <updated>1776951614562</updated>
+    </task>
+    <task id="LOCAL-02340" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1776961430836</created>
+      <option name="number" value="02340" />
+      <option name="presentableId" value="LOCAL-02340" />
+      <option name="project" value="LOCAL" />
+      <updated>1776961430836</updated>
+    </task>
+    <task id="LOCAL-02341" summary="ROSSO: testAttaccoAssassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1776963582720</created>
+      <option name="number" value="02341" />
+      <option name="presentableId" value="LOCAL-02341" />
+      <option name="project" value="LOCAL" />
+      <updated>1776963582720</updated>
+    </task>
+    <task id="LOCAL-02342" summary="VERDE: testAttaccoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1776963689043</created>
+      <option name="number" value="02342" />
+      <option name="presentableId" value="LOCAL-02342" />
+      <option name="project" value="LOCAL" />
+      <updated>1776963689043</updated>
+    </task>
+    <task id="LOCAL-02343" summary="REFACTORING: defiknizione del metodo getEsitoAttaccoDefault">
+      <option name="closed" value="true" />
+      <created>1776963843385</created>
+      <option name="number" value="02343" />
+      <option name="presentableId" value="LOCAL-02343" />
+      <option name="project" value="LOCAL" />
+      <updated>1776963843385</updated>
+    </task>
+    <task id="LOCAL-02344" summary="VERDE DIRETTO: testAttaccoAssassinoContadinoMostro riuscito">
+      <option name="closed" value="true" />
+      <created>1776964070645</created>
+      <option name="number" value="02344" />
+      <option name="presentableId" value="LOCAL-02344" />
+      <option name="project" value="LOCAL" />
+      <updated>1776964070645</updated>
+    </task>
+    <task id="LOCAL-02345" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1776964280383</created>
+      <option name="number" value="02345" />
+      <option name="presentableId" value="LOCAL-02345" />
+      <option name="project" value="LOCAL" />
+      <updated>1776964280383</updated>
+    </task>
+    <task id="LOCAL-02346" summary="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito">
+      <option name="closed" value="true" />
+      <created>1776964621787</created>
+      <option name="number" value="02346" />
+      <option name="presentableId" value="LOCAL-02346" />
+      <option name="project" value="LOCAL" />
+      <updated>1776964621787</updated>
+    </task>
+    <task id="LOCAL-02347" summary="VERDE: testAttaccoAssassinoContadinoMostro riuscito">
+      <option name="closed" value="true" />
+      <created>1777021731131</created>
+      <option name="number" value="02347" />
+      <option name="presentableId" value="LOCAL-02347" />
+      <option name="project" value="LOCAL" />
+      <updated>1777021731131</updated>
+    </task>
+    <task id="LOCAL-02348" summary="REFACTORING: definizione del metodo assassinioContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1777022048971</created>
+      <option name="number" value="02348" />
+      <option name="presentableId" value="LOCAL-02348" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022048971</updated>
+    </task>
+    <task id="LOCAL-02349" summary="ROSSO: testNessunaSegnalazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1777022290468</created>
+      <option name="number" value="02349" />
+      <option name="presentableId" value="LOCAL-02349" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022290468</updated>
+    </task>
+    <task id="LOCAL-02350" summary="VERDE: testNessunaSegnalazione riuscito">
+      <option name="closed" value="true" />
+      <created>1777022595296</created>
+      <option name="number" value="02350" />
+      <option name="presentableId" value="LOCAL-02350" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022595296</updated>
+    </task>
+    <task id="LOCAL-02351" summary="REFACTORING: definizione del metodo annullaSegnalazioni">
+      <option name="closed" value="true" />
+      <created>1777022997397</created>
+      <option name="number" value="02351" />
+      <option name="presentableId" value="LOCAL-02351" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022997397</updated>
+    </task>
+    <task id="LOCAL-02352" summary="ROSSO: testControlloVittoriaRomeo non riuscito">
+      <option name="closed" value="true" />
+      <created>1777023377346</created>
+      <option name="number" value="02352" />
+      <option name="presentableId" value="LOCAL-02352" />
+      <option name="project" value="LOCAL" />
+      <updated>1777023377346</updated>
+    </task>
+    <task id="LOCAL-02353" summary="VERDE: testControlloVittoriaRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1777024113807</created>
+      <option name="number" value="02353" />
+      <option name="presentableId" value="LOCAL-02353" />
+      <option name="project" value="LOCAL" />
+      <updated>1777024113807</updated>
+    </task>
+    <option name="localTasksCounter" value="2354" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,31 +692,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoNosferatuAngeloCustode riuscito" />
-    <MESSAGE value="ROSSO: vampirizzazione non riuscito" />
-    <MESSAGE value="VERDE: vampirizzazione riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoPresente" />
-    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
-    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazione" />
-    <MESSAGE value="ROSSO: testAttaccoVampiroAngeloCustode non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoVampiroAngeloCustode riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestisciResetAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaProgenie" />
-    <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
-    <MESSAGE value="ROSSO: testPossedutoAngeloCustode non riuscito" />
-    <MESSAGE value="VERDE: testPossedutoAngeloCustode riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNonAmato" />
-    <MESSAGE value="REFACTORING: parametrizzazione dei metodi testAttaccoLupiAngeloCustode e testAttaccoLupiAmato" />
-    <MESSAGE value="ROSSO: testVittoriaRomeo non riuscito" />
-    <MESSAGE value="VERDE: testVittoriaRomeo riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPartita" />
-    <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
-    <MESSAGE value="VERDE: testSconfittaViaggio riuscito" />
-    <MESSAGE value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
-    <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
     <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testResetRomeo non riuscito" />
+    <MESSAGE value="VERDE: testResetRomeo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli" />
+    <MESSAGE value="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli" />
+    <MESSAGE value="ROSSO: testSegnalazioneInquisitore non riuscito" />
+    <MESSAGE value="VERDE: testSegnalazioneInquisitore riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo setInquisito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonInquisito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalato" />
+    <MESSAGE value="ROSSO: testSegnalazioneAzzeccagarbugli non riuscito" />
+    <MESSAGE value="VERDE: testSegnalazioneAzzeccagarbugli riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
+    <MESSAGE value="REFACTORING: defiknizione del metodo getEsitoAttaccoDefault" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoContadinoMostro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <MESSAGE value="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoAssassinoContadinoMostro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo assassinioContadinoMostro" />
+    <MESSAGE value="ROSSO: testNessunaSegnalazione non riuscito" />
+    <MESSAGE value="VERDE: testNessunaSegnalazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioni" />
+    <MESSAGE value="ROSSO: testControlloVittoriaRomeo non riuscito" />
+    <MESSAGE value="VERDE: testControlloVittoriaRomeo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloVittoriaRomeo riuscito" />
   </component>
 </project>

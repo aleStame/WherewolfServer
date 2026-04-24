@@ -9,11 +9,43 @@ public final class Ballottaggio extends Giocatori
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
+    public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
+
+    public void annullaSegnalazioni()
+    {
+        annullaSegnalazioneAzzeccagarbugli();
+        annullaSegnalazioneInquisitore();
+    }
+
     private int getPosizioneAmato()
     {
         int posizione = NON_TROVATO;
         for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAmato()) posizione = i;
         return posizione;
+    }
+
+    private boolean controlloNessunInquisito()
+    {
+        boolean esito = true;
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !getRuolo(getNomeGiocatore(i)).isInquisito();
+        return esito;
+    }
+
+    private boolean controlloNienteAzzeccagarbugli()
+    {
+        boolean esito = true;
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !getRuolo(getNomeGiocatore(i)).isSegnalatoAzzeccagarbugli();
+        return esito;
+    }
+
+    private void annullaSegnalazioneInquisitore()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneInquisitore();
+    }
+
+    private void annullaSegnalazioneAzzeccagarbugli()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneAzzeccagarbugli();
     }
 
 }
