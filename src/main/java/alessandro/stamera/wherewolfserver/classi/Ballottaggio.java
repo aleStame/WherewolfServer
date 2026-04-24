@@ -9,12 +9,13 @@ public final class Ballottaggio extends Giocatori
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
-    public boolean isSegnalazioneAssente()
-    {
-        return controlloNessunInquisito() && controlloNienteAzzeccagarbugli() && controlloNessunAmato();
-    }
+    public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
 
-    private boolean controlloNessunAmato() { return getPosizioneAmato() == NON_TROVATO; }
+    public void annullaSegnalazioni()
+    {
+        annullaSegnalazioneAzzeccagarbugli();
+        annullaSegnalazioneInquisitore();
+    }
 
     private int getPosizioneAmato()
     {
@@ -35,6 +36,16 @@ public final class Ballottaggio extends Giocatori
         boolean esito = true;
         for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !getRuolo(getNomeGiocatore(i)).isSegnalatoAzzeccagarbugli();
         return esito;
+    }
+
+    private void annullaSegnalazioneInquisitore()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneInquisitore();
+    }
+
+    private void annullaSegnalazioneAzzeccagarbugli()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneAzzeccagarbugli();
     }
 
 }

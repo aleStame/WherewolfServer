@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo assassinioContadinoMostro" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNessunaSegnalazione riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ballottaggio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestBallottaggio.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02300" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1776860411198</created>
-      <option name="number" value="02300" />
-      <option name="presentableId" value="LOCAL-02300" />
-      <option name="project" value="LOCAL" />
-      <updated>1776860411198</updated>
-    </task>
-    <task id="LOCAL-02301" summary="ROSSO: testAttaccoNosferatuAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776861704021</created>
-      <option name="number" value="02301" />
-      <option name="presentableId" value="LOCAL-02301" />
-      <option name="project" value="LOCAL" />
-      <updated>1776861704021</updated>
     </task>
     <task id="LOCAL-02302" summary="VERDE: testAttaccoNosferatuAngeloCustode riuscito">
       <option name="closed" value="true" />
@@ -677,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777022048971</updated>
     </task>
-    <option name="localTasksCounter" value="2349" />
+    <task id="LOCAL-02349" summary="ROSSO: testNessunaSegnalazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1777022290468</created>
+      <option name="number" value="02349" />
+      <option name="presentableId" value="LOCAL-02349" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022290468</updated>
+    </task>
+    <task id="LOCAL-02350" summary="VERDE: testNessunaSegnalazione riuscito">
+      <option name="closed" value="true" />
+      <created>1777022595296</created>
+      <option name="number" value="02350" />
+      <option name="presentableId" value="LOCAL-02350" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022595296</updated>
+    </task>
+    <option name="localTasksCounter" value="2351" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
-    <MESSAGE value="VERDE: testSconfittaViaggio riuscito" />
     <MESSAGE value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
     <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
@@ -717,6 +718,8 @@
     <MESSAGE value="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassinoContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo assassinioContadinoMostro" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo assassinioContadinoMostro" />
+    <MESSAGE value="ROSSO: testNessunaSegnalazione non riuscito" />
+    <MESSAGE value="VERDE: testNessunaSegnalazione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNessunaSegnalazione riuscito" />
   </component>
 </project>

@@ -66,12 +66,7 @@ public final class GiocatoriVivi extends Giocatori
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
         gestisciSegnalazioni(ballottaggio);
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
-        {
-            String nome = ballottaggio.getNomeGiocatore(i);
-            ballottaggio.getRuolo(nome).annullaSegnalazioneInquisitore();
-            ballottaggio.getRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
-        }
+        if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
         return ballottaggio;
     }
 

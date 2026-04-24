@@ -40,5 +40,7 @@ public final class TestBallottaggio
     }
 
     private Ruolo getMercante() { return FACTORY.getRuolo("Mercante"); }
+    
+    
 
 }
