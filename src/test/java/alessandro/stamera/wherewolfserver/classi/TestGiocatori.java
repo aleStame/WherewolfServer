@@ -24,7 +24,9 @@ public final class TestGiocatori
 
     @Test public void testEliminazioneGiocatori()
     {
-        aggiungiGiocatore("Francesca", "Nonna");
+        String nome = "Francesca";
+        aggiungiGiocatore(nome, "Nonna");
+        giocatori.eliminaGiocatore(nome);
         verificaNumeroGiocatori(0);
     }
 

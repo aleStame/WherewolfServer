@@ -65,7 +65,7 @@ public class Giocatori
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
-    public boolean isCriminale(String nome) { return false; }
+    public boolean isCriminale(String nome) { return getRuolo(nome).isCriminale(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
