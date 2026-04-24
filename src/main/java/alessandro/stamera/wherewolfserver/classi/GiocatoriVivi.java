@@ -87,9 +87,8 @@ public final class GiocatoriVivi extends Giocatori
     private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
     {
         String nome = getNomeGiocatore(posizione);
-        Ruolo ruolo = getRuolo(nome);
-        if(!ruolo.isCriminale()) mandaBallottaggio(ballottaggio, nome);
-        ruolo.annullaSegnalazioneAzzeccagarbugli();
+        if(!isCriminale(nome)) mandaBallottaggio(ballottaggio, nome);
+        ballottaggio.getRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
     }
 
     private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio, int posizione)
