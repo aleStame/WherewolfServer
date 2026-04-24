@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testPartitaNonFinita">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNumeroCreatureOmbra" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,38 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02307" summary="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1776864570047</created>
-      <option name="number" value="02307" />
-      <option name="presentableId" value="LOCAL-02307" />
-      <option name="project" value="LOCAL" />
-      <updated>1776864570047</updated>
-    </task>
-    <task id="LOCAL-02308" summary="REFACTORING: definizione del metodo annullaSegnalazione">
-      <option name="closed" value="true" />
-      <created>1776864812816</created>
-      <option name="number" value="02308" />
-      <option name="presentableId" value="LOCAL-02308" />
-      <option name="project" value="LOCAL" />
-      <updated>1776864812816</updated>
-    </task>
-    <task id="LOCAL-02309" summary="ROSSO: testAttaccoVampiroAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1776865139847</created>
-      <option name="number" value="02309" />
-      <option name="presentableId" value="LOCAL-02309" />
-      <option name="project" value="LOCAL" />
-      <updated>1776865139847</updated>
-    </task>
-    <task id="LOCAL-02310" summary="VERDE: testAttaccoVampiroAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1776865775331</created>
-      <option name="number" value="02310" />
-      <option name="presentableId" value="LOCAL-02310" />
-      <option name="project" value="LOCAL" />
-      <updated>1776865775331</updated>
     </task>
     <task id="LOCAL-02311" summary="REFACTORING: definizione del metodo gestisciResetAmato">
       <option name="closed" value="true" />
@@ -681,7 +645,39 @@
       <option name="project" value="LOCAL" />
       <updated>1777024647560</updated>
     </task>
-    <option name="localTasksCounter" value="2356" />
+    <task id="LOCAL-02356" summary="REFACTORING: definizione del metodo estraiSecondoPosto">
+      <option name="closed" value="true" />
+      <created>1777044627801</created>
+      <option name="number" value="02356" />
+      <option name="presentableId" value="LOCAL-02356" />
+      <option name="project" value="LOCAL" />
+      <updated>1777044627802</updated>
+    </task>
+    <task id="LOCAL-02357" summary="ROSSO: testSoloCreatureOmbra non riuscito">
+      <option name="closed" value="true" />
+      <created>1777044839799</created>
+      <option name="number" value="02357" />
+      <option name="presentableId" value="LOCAL-02357" />
+      <option name="project" value="LOCAL" />
+      <updated>1777044839799</updated>
+    </task>
+    <task id="LOCAL-02358" summary="VERDE: testSoloCreatureOmbra riuscito">
+      <option name="closed" value="true" />
+      <created>1777045073837</created>
+      <option name="number" value="02358" />
+      <option name="presentableId" value="LOCAL-02358" />
+      <option name="project" value="LOCAL" />
+      <updated>1777045073837</updated>
+    </task>
+    <task id="LOCAL-02359" summary="REFACTORING: definizione del metodo getNumeroCreatureOmbra">
+      <option name="closed" value="true" />
+      <created>1777045222460</created>
+      <option name="number" value="02359" />
+      <option name="presentableId" value="LOCAL-02359" />
+      <option name="project" value="LOCAL" />
+      <updated>1777045222460</updated>
+    </task>
+    <option name="localTasksCounter" value="2360" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,10 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testResetRomeo riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli" />
-    <MESSAGE value="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli" />
-    <MESSAGE value="ROSSO: testSegnalazioneInquisitore non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneInquisitore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo setInquisito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonInquisito" />
@@ -721,6 +713,10 @@
     <MESSAGE value="ROSSO: testControlloVittoriaRomeo non riuscito" />
     <MESSAGE value="VERDE: testControlloVittoriaRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPartitaNonFinita" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testPartitaNonFinita" />
+    <MESSAGE value="REFACTORING: definizione del metodo estraiSecondoPosto" />
+    <MESSAGE value="ROSSO: testSoloCreatureOmbra non riuscito" />
+    <MESSAGE value="VERDE: testSoloCreatureOmbra riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNumeroCreatureOmbra" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNumeroCreatureOmbra" />
   </component>
 </project>
