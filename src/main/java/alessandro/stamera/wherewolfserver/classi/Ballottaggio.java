@@ -9,6 +9,8 @@ public final class Ballottaggio extends Giocatori
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
+    public boolean isSegnalazioneAssente() { return false; }
+
     private int getPosizioneAmato()
     {
         int posizione = NON_TROVATO;

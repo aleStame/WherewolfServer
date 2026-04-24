@@ -26,6 +26,8 @@ public final class TestBallottaggio
         assertThat(isAmatoPresente()).isFalse();
     }
 
+    @Test public void testNessunaSegnalazione() { assertThat(ballottaggio.isSegnalazioneAssente()).isTrue(); }
+
     private boolean isAmatoPresente() { return ballottaggio.isAmatoPresente(); }
 
     private void aggiungiGiocatore(String nome, Ruolo ruolo) { ballottaggio.aggiungiGiocatore(nome, ruolo); }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoAssassinoContadinoMostro riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo assassinioContadinoMostro" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02299" summary="REFACTORING: definizione del metodo attaccoLupi">
-      <option name="closed" value="true" />
-      <created>1776859981386</created>
-      <option name="number" value="02299" />
-      <option name="presentableId" value="LOCAL-02299" />
-      <option name="project" value="LOCAL" />
-      <updated>1776859981386</updated>
     </task>
     <task id="LOCAL-02300" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
       <option name="closed" value="true" />
@@ -677,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777021731131</updated>
     </task>
-    <option name="localTasksCounter" value="2348" />
+    <task id="LOCAL-02348" summary="REFACTORING: definizione del metodo assassinioContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1777022048971</created>
+      <option name="number" value="02348" />
+      <option name="presentableId" value="LOCAL-02348" />
+      <option name="project" value="LOCAL" />
+      <updated>1777022048971</updated>
+    </task>
+    <option name="localTasksCounter" value="2349" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getPartita" />
     <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
     <MESSAGE value="VERDE: testSconfittaViaggio riuscito" />
     <MESSAGE value="REFACTORING: definiizone del metodo gestisciSegnalazioni" />
@@ -717,6 +716,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <MESSAGE value="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassinoContadinoMostro riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoAssassinoContadinoMostro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo assassinioContadinoMostro" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo assassinioContadinoMostro" />
   </component>
 </project>
