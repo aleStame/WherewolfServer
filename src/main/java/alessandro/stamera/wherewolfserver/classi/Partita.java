@@ -69,17 +69,18 @@ public final class Partita
     private int getNumeroGuardie()
     {
         int numeroGuardie = 0;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isGuardia()) numeroGuardie++;
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(getRuolo(i).isGuardia()) numeroGuardie++;
         return numeroGuardie;
     }
 
     private int getNumeroCreatureOmbra()
     {
         int numeroCreatureOmbra = 0;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).getCategoria() == CREATURE_OMBRA)
-            numeroCreatureOmbra++;
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(getRuolo(i).getCategoria() == CREATURE_OMBRA) numeroCreatureOmbra++;
         return numeroCreatureOmbra;
     }
+
+    private Ruolo getRuolo(int posizione) { return vivi.getRuolo(vivi.getNomeGiocatore(posizione)); }
 
     private int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
