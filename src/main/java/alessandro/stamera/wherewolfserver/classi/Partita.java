@@ -36,11 +36,7 @@ public final class Partita
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case FALLITO -> eliminazioneAngeloCustode();
-            case MORTO ->
-            {
-                String[] eliminazioni = { nome, vivi.getNomeAssassino() };
-                for(String eliminazione : eliminazioni) eliminaGiocatore(eliminazione);
-            }
+            case MORTO -> assassinioContadinoMostro(nome);
         }
     }
 
@@ -64,6 +60,11 @@ public final class Partita
     public boolean isViaggioPartito() { return false; }
 
     public boolean isViaggiatoreAmato() { return false; }
+
+    private void assassinioContadinoMostro(String nome)
+    {
+        for(String eliminazione : new String[] { nome, vivi.getNomeAssassino() }) eliminaGiocatore(eliminazione);
+    }
 
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
