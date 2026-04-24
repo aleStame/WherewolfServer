@@ -61,6 +61,8 @@ public final class Partita
 
     public boolean isViaggiatoreAmato() { return false; }
 
+    public boolean isSoloCreatureOmbra() { return false; }
+
     private void assassinioContadinoMostro(String nome)
     {
         for(String eliminazione : new String[] { nome, vivi.getNomeAssassino() }) eliminaGiocatore(eliminazione);

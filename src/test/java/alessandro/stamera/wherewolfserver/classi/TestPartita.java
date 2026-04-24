@@ -192,6 +192,13 @@ public final class TestPartita
         for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);
     }
 
+    @Test public void testSoloCreatureOmbra()
+    {
+        String[][] creature = new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } };
+        partita = new Partita(creature);
+        verificaVero(partita.isSoloCreatureOmbra());
+    }
+
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
