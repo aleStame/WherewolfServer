@@ -109,8 +109,7 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneSegnalatoAzzeccagarbugli()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isSegnalatoAzzeccagarbugli())
-            posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isSegnalatoAzzeccagarbugli(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
 
