@@ -62,7 +62,7 @@ public final class GiocatoriVivi extends Giocatori
         return getNomeGiocatore(posizione);
     }
 
-    public boolean isSegnalatoAzzeccagarbugli(String nome) { return false; }
+    public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
 
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
