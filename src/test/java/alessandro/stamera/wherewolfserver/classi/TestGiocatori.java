@@ -2,46 +2,55 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiocatori
 {
 
-    private static final String ESEMPIO_GIOCATORE = "Marco";
-
     private Giocatori giocatori;
 
-    @BeforeEach public void setUp()
-    {
-        giocatori = new Giocatori();
-        String[][] esempi = new String[][] { { ESEMPIO_GIOCATORE, "Angelo custode" }, { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" } };
-        for(String[] esempio : esempi) aggiungiGiocatore(esempio[0], esempio[1]);
-    }
+    @BeforeEach public void setUp() { giocatori = new Giocatori(); }
 
     @Test public void testInserimentoGiocatori()
     {
-        aggiungiGiocatore("Antonio", "Capo branco");
-        verificaNumeroGiocatori(4);
+        String[][] giocatori = new String[][] { { "Antonio", "Capo branco" }, { "Stefano", "Prete" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        verificaNumeroGiocatori(2);
     }
 
     @Test public void testEliminazioneGiocatori()
     {
-        giocatori.eliminaGiocatore(ESEMPIO_GIOCATORE);
-        verificaNumeroGiocatori(2);
+        aggiungiGiocatore("Francesca", "Nonna");
+        verificaNumeroGiocatori(0);
     }
 
     @Test public void testVotazione()
     {
         int numeroVoti = 3;
-        giocatori.incrementaVoti(ESEMPIO_GIOCATORE, numeroVoti);
-        verificaNumeroIntero(giocatori.getNumeroVoti(ESEMPIO_GIOCATORE), numeroVoti);
+        String nome = "Anna";
+        aggiungiGiocatore(nome, "Cappuccetto rosso");
+        giocatori.incrementaVoti(nome, numeroVoti);
+        verificaNumeroIntero(giocatori.getNumeroVoti(nome), numeroVoti);
     }
 
     @Test public void testAngeloCustodePresente()
     {
+        String nome = "Otello";
+        aggiungiGiocatore(nome, "Angelo custode");
         assertThat(giocatori.isAngeloCustodePresente()).isTrue();
-        assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(ESEMPIO_GIOCATORE);
+        assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Assassino, Capo gilda, Guardia corrotta, Ladra, Spia" })
+    public void testCriminale(String nomeCriminale)
+    {
+        String nome = "Sofia";
+        aggiungiGiocatore(nome, nomeCriminale);
+        assertThat(giocatori.isCriminale(nome)).isTrue();
     }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
