@@ -55,6 +55,14 @@ public final class TestGiocatori
         assertThat(giocatori.isCriminale(nome)).isTrue();
     }
 
+    @Test public void testInquisito()
+    {
+        String nome = "Andrea";
+        aggiungiGiocatore(nome, "Sidhe");
+        giocatori.segnalazioneInquisitore(nome);
+        assertThat(giocatori.isInquisito()).isTrue();
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));

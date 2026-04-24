@@ -67,6 +67,10 @@ public class Giocatori
 
     public boolean isCriminale(String nome) { return getRuolo(nome).isCriminale(); }
 
+    public void segnalazioneInquisitore(String nome) { }
+
+    public boolean isInquisito() { return false; }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)

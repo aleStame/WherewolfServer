@@ -123,7 +123,7 @@ public final class GiocatoriVivi extends Giocatori
     private void gestioneAmato(Ballottaggio ballottaggio)
     {
         spostamentoAmato(ballottaggio);
-        if(isAngeloCustodePresente() && !ballottaggio.isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
+        if(isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
     }
 
     private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
