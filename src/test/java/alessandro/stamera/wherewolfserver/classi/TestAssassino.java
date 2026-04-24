@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -49,6 +50,12 @@ public final class TestAssassino
         when(partita.isGiuliettaViva()).thenReturn(true);
         ruolo.romeizzazione();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
+    @Test public void testSconfittaCreatureOmbra()
+    {
+        Partita partita = new Partita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } });
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
     }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
