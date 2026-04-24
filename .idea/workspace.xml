@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo annullaSegnalazioni" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloVittoriaRomeo riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,22 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02303" summary="ROSSO: vampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1776863263815</created>
-      <option name="number" value="02303" />
-      <option name="presentableId" value="LOCAL-02303" />
-      <option name="project" value="LOCAL" />
-      <updated>1776863263816</updated>
-    </task>
-    <task id="LOCAL-02304" summary="VERDE: vampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1776863508444</created>
-      <option name="number" value="02304" />
-      <option name="presentableId" value="LOCAL-02304" />
-      <option name="project" value="LOCAL" />
-      <updated>1776863508444</updated>
     </task>
     <task id="LOCAL-02305" summary="REFACTORING: definizione del metodo verificaAuraNera">
       <option name="closed" value="true" />
@@ -677,7 +661,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777022997397</updated>
     </task>
-    <option name="localTasksCounter" value="2352" />
+    <task id="LOCAL-02352" summary="ROSSO: testControlloVittoriaRomeo non riuscito">
+      <option name="closed" value="true" />
+      <created>1777023377346</created>
+      <option name="number" value="02352" />
+      <option name="presentableId" value="LOCAL-02352" />
+      <option name="project" value="LOCAL" />
+      <updated>1777023377346</updated>
+    </task>
+    <task id="LOCAL-02353" summary="VERDE: testControlloVittoriaRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1777024113807</created>
+      <option name="number" value="02353" />
+      <option name="presentableId" value="LOCAL-02353" />
+      <option name="project" value="LOCAL" />
+      <updated>1777024113807</updated>
+    </task>
+    <option name="localTasksCounter" value="2354" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,8 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
-    <MESSAGE value="REFACTORING: definizione del metodo getChiavi" />
     <MESSAGE value="ROSSO: testResetRomeo non riuscito" />
     <MESSAGE value="VERDE: testResetRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli" />
@@ -717,6 +715,8 @@
     <MESSAGE value="ROSSO: testNessunaSegnalazione non riuscito" />
     <MESSAGE value="VERDE: testNessunaSegnalazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo annullaSegnalazioni" />
+    <MESSAGE value="ROSSO: testControlloVittoriaRomeo non riuscito" />
+    <MESSAGE value="VERDE: testControlloVittoriaRomeo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloVittoriaRomeo riuscito" />
   </component>
 </project>

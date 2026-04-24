@@ -26,7 +26,7 @@ public final class AngeloCustode extends Amanti
     {
         EsitoPartita esito = NON_FINITO;
         if(partita.isViaggiatoreAmato() && partita.isViaggioPartito()) esito = SCONFITTA;
-        else if(partita.isFinita()) if(partita.isGiuliettaViva()) esito = VITTORIA;
+        else esito = super.getEsitoPartita(partita);
         return esito;
     }
 
