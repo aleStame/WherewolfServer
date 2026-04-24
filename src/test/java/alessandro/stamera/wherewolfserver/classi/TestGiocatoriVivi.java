@@ -197,6 +197,14 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nome, MORTO);
     }
 
+    @Test public void testSegnalatoAzzeccagarbugli()
+    {
+        String nome = "Anna";
+        aggiungiGiocatore(nome, "Leprecauno");
+        segnalazioneAzzeccagarbugli(nome);
+        verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo)); }
 
     private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)

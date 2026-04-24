@@ -55,6 +55,15 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
 
+    public String getNomeAssassino()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAssassino()) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
+
+    public boolean isSegnalatoAzzeccagarbugli(String nome) { return false; }
+
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
         if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
@@ -82,20 +91,19 @@ public final class GiocatoriVivi extends Giocatori
         int posizioneSegnalatoAzzeccagarbugli = getPosizioneSegnalatoAzzeccagarbugli(), posizioneInquisito = getPosizioneInquisito();
         if(posizioneSegnalatoAzzeccagarbugli != NON_TROVATO) gestisciSegnalazioneAzzeccagarbugli(ballottaggio, posizioneSegnalatoAzzeccagarbugli);
         if(posizioneInquisito != NON_TROVATO) gestisciSegnalazioneInquisitore(ballottaggio, posizioneInquisito);
+        ballottaggio.annullaSegnalazioni();
     }
 
     private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
     {
         String nome = getNomeGiocatore(posizione);
         if(!isCriminale(nome)) mandaBallottaggio(ballottaggio, nome);
-        ballottaggio.getRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
     }
 
     private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio, int posizione)
     {
         String nome = getNomeGiocatore(posizione);
         mandaBallottaggio(ballottaggio, nome);
-        ballottaggio.getRuolo(nome).annullaSegnalazioneInquisitore();
     }
 
     private int getPosizioneSegnalatoAzzeccagarbugli()
@@ -158,12 +166,5 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
-
-    public String getNomeAssassino()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAssassino()) posizione = i;
-        return getNomeGiocatore(posizione);
-    }
 
 }
