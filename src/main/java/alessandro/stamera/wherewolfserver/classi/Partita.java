@@ -36,6 +36,11 @@ public final class Partita
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case FALLITO -> eliminazioneAngeloCustode();
+            case MORTO ->
+            {
+                String[] eliminazioni = { nome, vivi.getNomeAssassino() };
+                for(String eliminazione : eliminazioni) eliminaGiocatore(eliminazione);
+            }
         }
     }
 

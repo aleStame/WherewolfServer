@@ -158,4 +158,11 @@ public final class GiocatoriVivi extends Giocatori
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
+    public String getNomeAssassino()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isAssassino()) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
+
 }

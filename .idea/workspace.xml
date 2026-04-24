@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: defiknizione del metodo getEsitoAttaccoDefault" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Partita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,37 +78,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
-    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
-    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
-    "Gradle.TestLadra.executor": "Run",
-    "Gradle.TestLupo.testGildata.executor": "Run",
-    "Gradle.TestProtezioni.executor": "Run",
-    "Gradle.TestTratti.executor": "Run",
-    "Gradle.TestUtente.executor": "Run",
-    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
-    "Gradle.wherewolf.server.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/interazioniAssassino",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/interazioniAssassino&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -284,30 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02295" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1776858645881</created>
-      <option name="number" value="02295" />
-      <option name="presentableId" value="LOCAL-02295" />
-      <option name="project" value="LOCAL" />
-      <updated>1776858645881</updated>
-    </task>
-    <task id="LOCAL-02296" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssenteAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776858820640</created>
-      <option name="number" value="02296" />
-      <option name="presentableId" value="LOCAL-02296" />
-      <option name="project" value="LOCAL" />
-      <updated>1776858820640</updated>
-    </task>
-    <task id="LOCAL-02297" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresenteAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1776859233393</created>
-      <option name="number" value="02297" />
-      <option name="presentableId" value="LOCAL-02297" />
-      <option name="project" value="LOCAL" />
-      <updated>1776859233393</updated>
     </task>
     <task id="LOCAL-02298" summary="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli">
       <option name="closed" value="true" />
@@ -677,7 +657,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776963843385</updated>
     </task>
-    <option name="localTasksCounter" value="2344" />
+    <task id="LOCAL-02344" summary="VERDE DIRETTO: testAttaccoAssassinoContadinoMostro riuscito">
+      <option name="closed" value="true" />
+      <created>1776964070645</created>
+      <option name="number" value="02344" />
+      <option name="presentableId" value="LOCAL-02344" />
+      <option name="project" value="LOCAL" />
+      <updated>1776964070645</updated>
+    </task>
+    <task id="LOCAL-02345" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1776964280383</created>
+      <option name="number" value="02345" />
+      <option name="presentableId" value="LOCAL-02345" />
+      <option name="project" value="LOCAL" />
+      <updated>1776964280383</updated>
+    </task>
+    <task id="LOCAL-02346" summary="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito">
+      <option name="closed" value="true" />
+      <created>1776964621787</created>
+      <option name="number" value="02346" />
+      <option name="presentableId" value="LOCAL-02346" />
+      <option name="project" value="LOCAL" />
+      <updated>1776964621787</updated>
+    </task>
+    <option name="localTasksCounter" value="2347" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,9 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNonAmato" />
-    <MESSAGE value="REFACTORING: parametrizzazione dei metodi testAttaccoLupiAngeloCustode e testAttaccoLupiAmato" />
-    <MESSAGE value="ROSSO: testVittoriaRomeo non riuscito" />
     <MESSAGE value="VERDE: testVittoriaRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartita" />
     <MESSAGE value="ROSSO: testSconfittaViaggio non riuscito" />
@@ -717,6 +718,9 @@
     <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
     <MESSAGE value="REFACTORING: defiknizione del metodo getEsitoAttaccoDefault" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: defiknizione del metodo getEsitoAttaccoDefault" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoContadinoMostro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <MESSAGE value="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoAssassinoContadinoMostro non riuscito" />
   </component>
 </project>
