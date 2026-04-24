@@ -60,7 +60,7 @@ public final class TestGiocatori
         String nome = "Andrea";
         aggiungiGiocatore(nome, "Sidhe");
         giocatori.segnalazioneInquisitore(nome);
-        assertThat(giocatori.isInquisito()).isTrue();
+        assertThat(giocatori.isInquisito(nome)).isTrue();
     }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)

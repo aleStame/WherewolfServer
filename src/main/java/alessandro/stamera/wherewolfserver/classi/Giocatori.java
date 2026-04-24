@@ -67,9 +67,9 @@ public class Giocatori
 
     public boolean isCriminale(String nome) { return getRuolo(nome).isCriminale(); }
 
-    public void segnalazioneInquisitore(String nome) { }
+    public void segnalazioneInquisitore(String nome) { getRuolo(nome).segnalazioneInquisitore(); }
 
-    public boolean isInquisito() { return false; }
+    public boolean isInquisito(String nome) { return getRuolo(nome).isInquisito(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
