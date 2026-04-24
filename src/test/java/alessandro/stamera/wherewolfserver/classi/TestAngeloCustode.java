@@ -2,8 +2,8 @@ package alessandro.stamera.wherewolfserver.classi;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.VITTORIA;
-import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.SCONFITTA;
+
+import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -47,6 +47,12 @@ public final class TestAngeloCustode
         when(partita.isGiuliettaViva()).thenReturn(true);
         verificaEsitoPartita(partita, VITTORIA);
         ruolo.resettaRomeo();
+    }
+
+    @Test public void testPartitaNonFinita()
+    {
+        Partita partita = new Partita(new String[][] { { "Francesco", "Guardia" }, { "Leone", "Prete" } });
+        verificaEsitoPartita(partita, NON_FINITO);
     }
 
     @Test public void testSconfittaViaggio()
