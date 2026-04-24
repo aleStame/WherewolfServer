@@ -64,7 +64,12 @@ public final class Partita
 
     public boolean isSoloCreatureOmbra() { return getNumeroCreatureOmbra() == getNumeroGiocatoriVivi(); }
 
-    public boolean isSoloGuardie() { return false; }
+    public boolean isSoloGuardie()
+    {
+        int numeroGiocatoriVivi = getNumeroGiocatoriVivi(), numeroGuardie = 0;
+        for(int i = 0; i < numeroGiocatoriVivi; i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isGuardia()) numeroGuardie++;
+        return numeroGuardie == numeroGiocatoriVivi;
+    }
 
     private int getNumeroCreatureOmbra()
     {
