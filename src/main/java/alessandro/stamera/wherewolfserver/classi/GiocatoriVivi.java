@@ -8,6 +8,8 @@ import static alessandro.stamera.wherewolfserver.classi.Partita.FACTORY;
 public final class GiocatoriVivi extends Giocatori
 {
 
+    private static final int NON_TROVATO = -1;
+
     public Giocatori getBallottaggio()
     {
         Giocatori ballottaggio = creaBallottaggio();
@@ -78,8 +80,8 @@ public final class GiocatoriVivi extends Giocatori
     private void gestisciSegnalazioni(Ballottaggio ballottaggio)
     {
         int posizioneSegnalatoAzzeccagarbugli = getPosizioneSegnalatoAzzeccagarbugli(), posizioneInquisito = getPosizioneInquisito();
-        if(posizioneSegnalatoAzzeccagarbugli != -1) gestisciSegnalazioneAzzeccagarbugli(ballottaggio, posizioneSegnalatoAzzeccagarbugli);
-        if(posizioneInquisito != -1) gestisciSegnalazioneInquisitore(ballottaggio, posizioneInquisito);
+        if(posizioneSegnalatoAzzeccagarbugli != NON_TROVATO) gestisciSegnalazioneAzzeccagarbugli(ballottaggio, posizioneSegnalatoAzzeccagarbugli);
+        if(posizioneInquisito != NON_TROVATO) gestisciSegnalazioneInquisitore(ballottaggio, posizioneInquisito);
     }
 
     private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
@@ -99,16 +101,16 @@ public final class GiocatoriVivi extends Giocatori
 
     private int getPosizioneSegnalatoAzzeccagarbugli()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isSegnalatoAzzeccagarbugli())
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isSegnalatoAzzeccagarbugli())
             posizione = i;
         return posizione;
     }
 
     private int getPosizioneInquisito()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isInquisito()) posizione = i;
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isInquisito()) posizione = i;
         return posizione;
     }
 
@@ -160,8 +162,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeAssassino()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isAssassino()) posizione = i;
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAssassino()) posizione = i;
         return getNomeGiocatore(posizione);
     }
 
