@@ -210,6 +210,12 @@ public final class TestPartita
         verificaVero(partita.isNoGuardie());
     }
 
+    @Test public void testNoCreatureOmbra()
+    {
+        inizializzaPartita(new String[][] { { "Clark", "Angelo custode" }, { "Lois", "Azzeccgaarbugli" }, { "Jonathan", "Contadino eroe" } });
+        verificaVero(partita.isNoCreatureOmbra());
+    }
+
     private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
 
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }

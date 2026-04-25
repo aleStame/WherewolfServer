@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-04-25T14:50:41" hostname="ALESSANDRO" time="0.242">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-04-25T14:56:54" hostname="ALESSANDRO" time="0.071">
   <properties/>
-  <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.008"/>
-  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.006"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoPresenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.006"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.007"/>
-  <testcase name="testContaGuardie()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testSegnalazioneAzzeccagarbugliAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.005"/>
+  <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.004"/>
+  <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.004"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoPresenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testContaGuardie()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testSegnalazioneAzzeccagarbugliAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
   <testcase name="testAttaccoAmatoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
   <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testContaCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.008"/>
-  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.003"/>
-  <testcase name="testSegnalazioneAzzeccagarbugliAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.006"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.079"/>
+  <testcase name="testContaCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testSegnalazioneAzzeccagarbugliAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
   <testcase name="testPossedutoAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
   <testcase name="testAttaccoVampiroAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.004"/>
-  <testcase name="testAttaccoAssassinoContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.006"/>
-  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.008"/>
-  <testcase name="testAttaccoNosferatuAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoAssenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.004"/>
-  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.004"/>
-  <testcase name="testCreaturaOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.01"/>
+  <testcase name="testAttaccoAssassinoContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testAttaccoNosferatuAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoAssenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testCreaturaOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
   <testcase name="testSegnalazioneAzzeccagarbugliCriminale()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
-  <testcase name="testSegnalatoAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.007"/>
-  <testcase name="testSegnalazioneAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
-  <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.003"/>
-  <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.003"/>
-  <testcase name="testAngeloCustodeAccusatoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testSegnalatoAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="testSegnalazioneAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.002"/>
+  <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
+  <testcase name="testAngeloCustodeAccusatoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

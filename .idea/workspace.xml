@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testContaCreatureOmbra riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroIntero">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02362" summary="VERDE: testSconfittaCreatureOmbra riuscito">
-      <option name="closed" value="true" />
-      <created>1777045901390</created>
-      <option name="number" value="02362" />
-      <option name="presentableId" value="LOCAL-02362" />
-      <option name="project" value="LOCAL" />
-      <updated>1777045901390</updated>
     </task>
     <task id="LOCAL-02363" summary="ROSSO: testSoloGuardie non riuscito">
       <option name="closed" value="true" />
@@ -679,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777128512481</updated>
     </task>
-    <option name="localTasksCounter" value="2411" />
+    <task id="LOCAL-02411" summary="REFACTORING: definizione del metodo verificaNumeroIntero">
+      <option name="closed" value="true" />
+      <created>1777128704687</created>
+      <option name="number" value="02411" />
+      <option name="presentableId" value="LOCAL-02411" />
+      <option name="project" value="LOCAL" />
+      <updated>1777128704687</updated>
+    </task>
+    <option name="localTasksCounter" value="2412" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testGuardia non riuscito" />
     <MESSAGE value="VERDE: testGuardia riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGuardia" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatoreVivo" />
@@ -719,6 +719,7 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testContaCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testContaCreatureOmbra riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testContaCreatureOmbra riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroIntero" />
   </component>
 </project>
