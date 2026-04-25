@@ -27,7 +27,7 @@ public final class Assassino extends Criminale
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito;
-        if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
+        if(partita.isSoloCreatureOmbra() || partita.isSoloGuardie()) esito = SCONFITTA;
         else if(partita.isNoCreatureOmbra() && partita.isNoGuardie()) esito = VITTORIA;
         else esito = super.getEsitoPartita(partita);
         return esito;
