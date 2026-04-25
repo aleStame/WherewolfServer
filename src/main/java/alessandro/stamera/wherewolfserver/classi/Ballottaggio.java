@@ -40,12 +40,14 @@ public final class Ballottaggio extends Giocatori
 
     private void annullaSegnalazioneInquisitore()
     {
-        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneInquisitore();
+        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(getNomeGiocatore(i));
     }
 
     private void annullaSegnalazioneAzzeccagarbugli()
     {
         for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneAzzeccagarbugli();
     }
+
+    private void annullaSegnalazioneInquisitore(String nome) { getRuolo(nome).annullaSegnalazioneInquisitore(); }
 
 }

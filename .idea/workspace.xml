@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testInquisito riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Ballottaggio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/Giocatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,14 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02327" summary="ROSSO: testResetRomeo non riuscito">
-      <option name="closed" value="true" />
-      <created>1776896493413</created>
-      <option name="number" value="02327" />
-      <option name="presentableId" value="LOCAL-02327" />
-      <option name="project" value="LOCAL" />
-      <updated>1776896493414</updated>
     </task>
     <task id="LOCAL-02328" summary="VERDE: testResetRomeo riuscito">
       <option name="closed" value="true" />
@@ -683,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777066097038</updated>
     </task>
-    <option name="localTasksCounter" value="2376" />
+    <task id="LOCAL-02376" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1777104700855</created>
+      <option name="number" value="02376" />
+      <option name="presentableId" value="LOCAL-02376" />
+      <option name="project" value="LOCAL" />
+      <updated>1777104700856</updated>
+    </task>
+    <option name="localTasksCounter" value="2377" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -720,9 +716,9 @@
     <MESSAGE value="VERDE: testCriminale &#10;riuscito" />
     <MESSAGE value="ROSSO: testSegnalatoAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE: testSegnalatoAzzeccagarbugli riuscito" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testInquisito non riuscito" />
     <MESSAGE value="VERDE: testInquisito riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testInquisito riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
   </component>
 </project>
