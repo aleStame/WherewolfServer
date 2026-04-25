@@ -70,16 +70,7 @@ public final class Partita
 
     public boolean isNoGuardie() { return controllaNumeroGuardie(0); }
 
-    private boolean controllaNumeroGuardie(int valore) { return getNumeroGuardie() == valore; }
-
-    private int getNumeroGuardie()
-    {
-        int numeroGuardie = 0;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(isGuardia(i)) numeroGuardie++;
-        return numeroGuardie;
-    }
-
-    private boolean isGuardia(int posizione) { return vivi.isGuardia(getNomeGiocatoreVivo(posizione)); }
+    private boolean controllaNumeroGuardie(int valore) { return vivi.getNumeroGuardie() == valore; }
 
     private int getNumeroCreatureOmbra()
     {
