@@ -26,13 +26,14 @@ public final class Assassino extends Criminale
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito;
+        EsitoPartita esito = super.getEsitoPartita(partita);
         if(partita.isSoloCreatureOmbra() || partita.isSoloGuardie()) esito = SCONFITTA;
-        else if(partita.isNoCreatureOmbra() && partita.isNoGuardie()) esito = VITTORIA;
-        else esito = super.getEsitoPartita(partita);
+        else if(isPartitaPersa(partita)) esito = VITTORIA;
         return esito;
     }
 
     public static Ruolo getInstance() { return new Assassino(); }
+
+    private boolean isPartitaPersa(Partita partita) { return partita.isNoCreatureOmbra() && partita.isNoGuardie(); }
 
 }
