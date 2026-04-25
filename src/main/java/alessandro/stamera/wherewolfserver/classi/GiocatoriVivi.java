@@ -62,7 +62,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
 
-    public boolean isCreaturaOmbra(String nome) { return false; }
+    public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
 
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {

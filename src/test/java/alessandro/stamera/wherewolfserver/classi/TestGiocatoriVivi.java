@@ -215,7 +215,7 @@ public final class TestGiocatoriVivi
 
     @Test public void testCreaturaOmbra()
     {
-        String[][] giocatori = new String[][] { { "Luisa, Prete" }, { "Matteo, Nosferatu" } };
+        String[][] giocatori = new String[][] { { "Luisa", "Prete" }, { "Matteo", "Nosferatu" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
         assertThat(this.giocatori.isCreaturaOmbra(giocatori[0][0]));
         verificaVero(this.giocatori.isCreaturaOmbra(giocatori[1][0]));
