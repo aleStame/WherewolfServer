@@ -68,6 +68,8 @@ public final class Partita
 
     public boolean isSoloGuardie() { return getNumeroGuardie() == getNumeroGiocatoriVivi(); }
 
+    public boolean isNoGuardie() { return false; }
+
     private int getNumeroGuardie()
     {
         int numeroGuardie = 0;

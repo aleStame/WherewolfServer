@@ -206,6 +206,13 @@ public final class TestPartita
         verificaVero(partita.isSoloGuardie());
     }
 
+    @Test public void testNoGuardie()
+    {
+        String[][] giocatori = new String[][] { { "Cristian", "Pazzo" }, { "Alessio", "Capo gilda" } };
+        partita = new Partita(giocatori);
+        verificaVero(partita.isNoGuardie());
+    }
+
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 
     private void terminaVotazioni() { partita.terminaVotazioni(); }
