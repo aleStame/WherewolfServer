@@ -13,7 +13,7 @@ public final class TestPartita
     @Test public void testBallottaggioPuro()
     {
         String[][] giocatori = new String[][] { { "Giulio", "Pazzo" }, { "Cesare", "Peccatore" }, { "Augusto", "Prete" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int[] numeroVoti = new int[] { 2, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
         terminaVotazioni();
@@ -23,7 +23,7 @@ public final class TestPartita
     @Test public void testUnanimita()
     {
         String[][] giocatori = new String[][] { { "Annibale", "Guaritore" }, { "Rodolfo", "Assassino" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizione = 0;
         incrementaVoti(giocatori[posizione][0], 3);
         terminaVotazioni();
@@ -33,7 +33,7 @@ public final class TestPartita
     @Test public void testPareggioPrimoPosto()
     {
         String[][] soluzioni = new String[][] { { "Gabriella", "Capo branco" }, { "Ezio", "Giullare" }, { "Marta", "Prete" } };
-        partita = new Partita(soluzioni);
+        inizializzaPartita(soluzioni);
         for(String[] soluzione : soluzioni) incrementaVoti(soluzione[0], 1);
         terminaVotazioni();
         verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
@@ -42,7 +42,7 @@ public final class TestPartita
     @Test public void testPareggioSecondoPosto()
     {
         String[][] soluzioni = new String[][] { { "Aldo", "Pazzo" }, { "Giovanni", "Guaritore" }, { "Giacomo", "Leprecauno" } };
-        partita = new Partita(soluzioni);
+        inizializzaPartita(soluzioni);
         int[] numeroVoti = new int[]{ 2, 1, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(soluzioni[i][0], numeroVoti[i]);
         terminaVotazioni();
@@ -52,7 +52,7 @@ public final class TestPartita
     @Test public void testAngeloCustodeAccusatoNonPresente()
     {
         String[][] giocatori = new String[][] { { "Domenico", "Angelo custode" }, { "Franco", "Goblin" }, { "Pamela", "Sidhe" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizione = 2;
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         incrementaVoti(giocatori[posizione][0], 3);
@@ -64,7 +64,7 @@ public final class TestPartita
     @Test public void testAngeloCustodeAccusatoPresente()
     {
         String[][] giocatori = new String[][] { { "Michelle", "Angelo custode" }, { "Fiona", "Altra guardia" }, { "Biagio", "Ladra" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizione = 1;
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
@@ -76,7 +76,7 @@ public final class TestPartita
     @Test public void testAttaccoAssassino()
     {
         String[][] giocatori = new String[][] { { "Giovanni", "Assassino" }, { "Federico", "Lupo reietto" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizione = 1;
         attaccoAssassino(giocatori[posizione][0]);
         verificaEliminazione(giocatori[posizione][0]);
@@ -86,7 +86,7 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Bardo" }, { "Maddalena", "Oste" } };
         int posizione = 1;
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         attaccoAssassino(giocatori[posizione][0]);
         verificaEliminazione(giocatori[0][0]);
@@ -96,7 +96,7 @@ public final class TestPartita
     @Test public void testSegnalazioneAzzeccagarbugli()
     {
         String[][] giocatori = new String[][] { { "Matteo", "Guardia" }, { "Ivan", "Altra guardia" }, { "Miriam", "Guardia corrotta" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         segnalazioneAzzeccagarbugli(giocatori[0][0]);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
@@ -108,7 +108,7 @@ public final class TestPartita
         String[][] giocatori = new String[][]
                 { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         int posizione1 = 3, posizione2 = 1;
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         segnalazioneAzzeccagarbugli(giocatori[posizione1][0]);
         segnalazioneAngeloCustode(giocatori[posizione1][0]);
         incrementaVoti(giocatori[posizione2][0], 2);
@@ -121,7 +121,7 @@ public final class TestPartita
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Walter", "Mago" }, { "Amelia", "Spia" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizione = 0;
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
         verificaEliminazione(giocatori[posizione][0]);
@@ -131,7 +131,7 @@ public final class TestPartita
     public void testAttaccoLupiAmato(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Fabrizio", "Bocca di rosa" }, { "Franca", "Peccatore" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizione = 1;
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
@@ -141,7 +141,7 @@ public final class TestPartita
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
         String[][] giocatori = new String[][] { { "Merlino", "Mago" }, { "Lidia", "Inquisitore" }, { "Noemi", "Boia" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizioneMistico = 0, posizioneVoto = 2;
         segnalazioneInquisitore(giocatori[posizioneMistico][0]);
         incrementaVoti(giocatori[posizioneVoto][0], 2);
@@ -152,7 +152,7 @@ public final class TestPartita
     @Test public void testSegnalazioneInquisitoreMisticoPresente()
     {
         String[][] giocatori = new String[][] { { "Alberto", "Guaritore" }, { "Tania", "Pazzo" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizioneMistico = 0;
         segnalazioneInquisitore(giocatori[posizioneMistico][0]);
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
@@ -163,7 +163,7 @@ public final class TestPartita
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
         String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { "Irvano", "Medium" }, { "Luca", "Inquisitore" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizioneMistico = 1, posizioneVoto = 2;
         segnalazioneInquisitore(giocatori[posizioneMistico][0]);
         segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
@@ -175,7 +175,7 @@ public final class TestPartita
     @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
     {
         String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { "Davide", "Leprecauno" }, { "Matteo", "Inquisitore" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(giocatori);
         int posizioneMistico = 1;
         segnalazioneInquisitore(giocatori[posizioneMistico][0]);
         segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
@@ -187,31 +187,30 @@ public final class TestPartita
     @Test public void testAttaccoAssassinoContadinoMostro()
     {
         String[][] soluzioni = new String[][] { { "Pietro", "Assassino" }, { "Mario", "Contadino mostro" }, { "Maria", "Contadino eroe" } };
-        partita = new Partita(soluzioni);
+        inizializzaPartita(soluzioni);
         attaccoAssassino(soluzioni[1][0]);
         for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);
     }
 
     @Test public void testSoloCreatureOmbra()
     {
-        String[][] creature = new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } };
-        partita = new Partita(creature);
+        inizializzaPartita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } });
         verificaVero(partita.isSoloCreatureOmbra());
     }
 
     @Test public void testSoloGuardie()
     {
-        String[][] guardie = new String[][] { { "Sara", "Guardia" }, { "Elisa", "Altra guardia" } };
-        partita = new Partita(guardie);
+        inizializzaPartita(new String[][] { { "Sara", "Guardia" }, { "Elisa", "Altra guardia" } });
         verificaVero(partita.isSoloGuardie());
     }
 
     @Test public void testNoGuardie()
     {
-        String[][] giocatori = new String[][] { { "Cristian", "Pazzo" }, { "Alessio", "Capo gilda" } };
-        partita = new Partita(giocatori);
+        inizializzaPartita(new String[][] { { "Cristian", "Pazzo" }, { "Alessio", "Capo gilda" } });
         verificaVero(partita.isNoGuardie());
     }
+
+    private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
 
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
 

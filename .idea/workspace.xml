@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNoGuardie non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo controllaNumeroGuardie">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,22 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02354" summary="VERDE: testControlloVittoriaRomeo riuscito">
-      <option name="closed" value="true" />
-      <created>1777024232605</created>
-      <option name="number" value="02354" />
-      <option name="presentableId" value="LOCAL-02354" />
-      <option name="project" value="LOCAL" />
-      <updated>1777024232605</updated>
-    </task>
-    <task id="LOCAL-02355" summary="VERDE DIRETTO: testPartitaNonFinita">
-      <option name="closed" value="true" />
-      <created>1777024647560</created>
-      <option name="number" value="02355" />
-      <option name="presentableId" value="LOCAL-02355" />
-      <option name="project" value="LOCAL" />
-      <updated>1777024647560</updated>
     </task>
     <task id="LOCAL-02356" summary="REFACTORING: definizione del metodo estraiSecondoPosto">
       <option name="closed" value="true" />
@@ -679,7 +663,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777124613656</updated>
     </task>
-    <option name="localTasksCounter" value="2403" />
+    <task id="LOCAL-02403" summary="VERDE: testNoGuardie riuscito">
+      <option name="closed" value="true" />
+      <created>1777124834594</created>
+      <option name="number" value="02403" />
+      <option name="presentableId" value="LOCAL-02403" />
+      <option name="project" value="LOCAL" />
+      <updated>1777124834594</updated>
+    </task>
+    <task id="LOCAL-02404" summary="REFACTORING: definizione del metodo controllaNumeroGuardie">
+      <option name="closed" value="true" />
+      <created>1777125081968</created>
+      <option name="number" value="02404" />
+      <option name="presentableId" value="LOCAL-02404" />
+      <option name="project" value="LOCAL" />
+      <updated>1777125081968</updated>
+    </task>
+    <option name="localTasksCounter" value="2405" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,8 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testInquisito non riuscito" />
-    <MESSAGE value="VERDE: testInquisito riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
@@ -719,6 +717,8 @@
     <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
     <MESSAGE value="REFACTORING: riorganizzazione delle classi in diverse sottocartelle" />
     <MESSAGE value="ROSSO: testNoGuardie non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNoGuardie non riuscito" />
+    <MESSAGE value="VERDE: testNoGuardie riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo controllaNumeroGuardie" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo controllaNumeroGuardie" />
   </component>
 </project>
