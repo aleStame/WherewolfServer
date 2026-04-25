@@ -61,11 +61,16 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
 
+    public int getNumeroGuardie()
+    {
+        int numeroGuardie = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isGuardia(i)) numeroGuardie++;
+        return numeroGuardie;
+    }
+
     public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
 
     public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
-
-    public int getNumeroGuardie() { return 0; }
 
     private int getPosizioneAssassino()
     {
@@ -199,5 +204,7 @@ public final class GiocatoriVivi extends Giocatori
     private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }
 
     private boolean isAssassino(String nome) { return getRuolo(nome).isAssassino(); }
+
+    private boolean isGuardia(int posizione) { return isGuardia(getNomeGiocatore(posizione)); }
 
 }
