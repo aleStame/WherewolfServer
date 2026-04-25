@@ -52,16 +52,9 @@ public class Giocatori
 
     public String getNomeAngeloCustode() { return getNomeGiocatore(getPosizioneAngeloCustode()); }
 
-    private int getPosizioneAngeloCustode()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAngeloCustode(getNomeGiocatore(i))) posizione = i;
-        return posizione;
-    }
-
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
 
-    public void resettaAmato() { for(String chiave : getChiavi()) giocatori.get(chiave).resettaAmato(); }
+    public void resettaAmato() { for(String chiave : getChiavi()) getRuolo(chiave).resettaAmato(); }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
@@ -74,6 +67,15 @@ public class Giocatori
     public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
+
+    private int getPosizioneAngeloCustode()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAngeloCustode(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isAngeloCustode(int posizione) { return isAngeloCustode(getNomeGiocatore(posizione)); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
     {
