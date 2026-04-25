@@ -1,10 +1,15 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -56,22 +61,10 @@ public final class TestAssassino
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
-    @Test public void testSconfittaCreatureOmbra()
+    @ParameterizedTest @MethodSource("getCasiEsitoPartita")
+    public void testSconfittaCreatureOmbra(String[][] giocatori, EsitoPartita esito)
     {
-        Partita partita = new Partita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } });
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
-    }
-
-    @Test public void testSconfittaGuardie()
-    {
-        Partita partita = new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } });
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
-    }
-
-    @Test public void testVittoria()
-    {
-        Partita partita = new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } });
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        assertThat(ruolo.getEsitoPartita(new Partita(giocatori))).isEqualTo(esito);
     }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
@@ -81,5 +74,15 @@ public final class TestAssassino
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private static Stream<Arguments> getCasiEsitoPartita()
+    {
+        return Stream.of
+        (
+            Arguments.of(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } }, SCONFITTA),
+            Arguments.of(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }, SCONFITTA),
+            Arguments.of(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }, VITTORIA)
+        );
+    }
 
 }
