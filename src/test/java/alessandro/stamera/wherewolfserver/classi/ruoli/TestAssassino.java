@@ -53,12 +53,8 @@ public final class TestAssassino
 
     @Test public void testControllaVittoriaRomeo()
     {
-        Partita partita = mock(Partita.class);
-        when(partita.isFinita()).thenReturn(true);
-        when(partita.isGiuliettaViva()).thenReturn(true);
-        when(partita.isSoloCreatureOmbra()).thenReturn(false);
         ruolo.romeizzazione();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        assertThat(ruolo.getEsitoPartita(getEsempioPartita())).isEqualTo(VITTORIA);
     }
 
     @ParameterizedTest @MethodSource("getCasiEsitoPartita")
@@ -83,6 +79,15 @@ public final class TestAssassino
             Arguments.of(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }, SCONFITTA),
             Arguments.of(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }, VITTORIA)
         );
+    }
+
+    private Partita getEsempioPartita()
+    {
+        Partita partita = mock(Partita.class);
+        when(partita.isFinita()).thenReturn(true);
+        when(partita.isGiuliettaViva()).thenReturn(true);
+        when(partita.isSoloCreatureOmbra()).thenReturn(false);
+        return partita;
     }
 
 }
