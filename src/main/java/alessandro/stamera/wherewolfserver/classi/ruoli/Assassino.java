@@ -7,6 +7,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 
 public final class Assassino extends Criminale
 {
@@ -27,6 +28,7 @@ public final class Assassino extends Criminale
     {
         EsitoPartita esito;
         if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
+        else if(partita.isNoCreatureOmbra() && partita.isNoGuardie()) esito = VITTORIA;
         else esito = super.getEsitoPartita(partita);
         return esito;
     }
