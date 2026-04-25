@@ -51,18 +51,20 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
 
-    public String getNomeAssassino()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAssassino(i)) posizione = i;
-        return getNomeGiocatore(posizione);
-    }
+    public String getNomeAssassino() { return getNomeGiocatore(getPosizioneAssassino()); }
 
     public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
 
     public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
 
     public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
+
+    private int getPosizioneAssassino()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAssassino(i)) posizione = i;
+        return posizione;
+    }
 
     private boolean isAssassino(int posizione) { return isAssassino(getNomeGiocatore(posizione)); }
 
