@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testContaGuardie riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02359" summary="REFACTORING: definizione del metodo getNumeroCreatureOmbra">
-      <option name="closed" value="true" />
-      <created>1777045222460</created>
-      <option name="number" value="02359" />
-      <option name="presentableId" value="LOCAL-02359" />
-      <option name="project" value="LOCAL" />
-      <updated>1777045222460</updated>
     </task>
     <task id="LOCAL-02360" summary="REFACTORING: definizione del metodo getNumeroGiocatoriVivi">
       <option name="closed" value="true" />
@@ -679,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777126926971</updated>
     </task>
-    <option name="localTasksCounter" value="2408" />
+    <task id="LOCAL-02408" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1777127109457</created>
+      <option name="number" value="02408" />
+      <option name="presentableId" value="LOCAL-02408" />
+      <option name="project" value="LOCAL" />
+      <updated>1777127109457</updated>
+    </task>
+    <option name="localTasksCounter" value="2409" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo toArray" />
     <MESSAGE value="REFACTORING: definizione del metodo getListaNomi" />
     <MESSAGE value="REFACTORING: definizione del metodo sistemazioneBallottaggio" />
     <MESSAGE value="ROSSO: testGuardia non riuscito" />
@@ -719,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo inizializzaPartita" />
     <MESSAGE value="ROSSO: testContaGuardie non riuscito" />
     <MESSAGE value="VERDE: testContaGuardie riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testContaGuardie riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
   </component>
 </project>

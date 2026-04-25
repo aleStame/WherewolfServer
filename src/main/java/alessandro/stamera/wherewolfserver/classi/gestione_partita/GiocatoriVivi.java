@@ -72,6 +72,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
 
+    public int getNumeroCreatureOmbra() { return 0; }
+
     private int getPosizioneAssassino()
     {
         int posizione = NON_TROVATO;
