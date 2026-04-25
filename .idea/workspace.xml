@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getListaNomi" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo sistemazioneBallottaggio" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02333" summary="ROSSO: testSegnalazioneInquisitore non riuscito">
-      <option name="closed" value="true" />
-      <created>1776950741714</created>
-      <option name="number" value="02333" />
-      <option name="presentableId" value="LOCAL-02333" />
-      <option name="project" value="LOCAL" />
-      <updated>1776950741714</updated>
     </task>
     <task id="LOCAL-02334" summary="VERDE: testSegnalazioneInquisitore riuscito">
       <option name="closed" value="true" />
@@ -677,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777107648790</updated>
     </task>
-    <option name="localTasksCounter" value="2382" />
+    <task id="LOCAL-02382" summary="REFACTORING: definizione del metodo sistemazioneBallottaggio">
+      <option name="closed" value="true" />
+      <created>1777107783303</created>
+      <option name="number" value="02382" />
+      <option name="presentableId" value="LOCAL-02382" />
+      <option name="project" value="LOCAL" />
+      <updated>1777107783303</updated>
+    </task>
+    <option name="localTasksCounter" value="2383" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testControlloVittoriaRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPartitaNonFinita" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiSecondoPosto" />
     <MESSAGE value="ROSSO: testSoloCreatureOmbra non riuscito" />
@@ -717,6 +716,7 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
     <MESSAGE value="REFACTORING: definizione del metodo getListaNomi" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getListaNomi" />
+    <MESSAGE value="REFACTORING: definizione del metodo sistemazioneBallottaggio" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo sistemazioneBallottaggio" />
   </component>
 </project>

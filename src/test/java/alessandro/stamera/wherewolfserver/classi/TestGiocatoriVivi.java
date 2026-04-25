@@ -205,6 +205,14 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.isSegnalatoAzzeccagarbugli(nome)).isTrue();
     }
 
+    @Test public void testGuardia()
+    {
+        String[][] giocatori = new String[][] { { "Federico", "Altra guardia" }, { "Jacopo", "Assassino" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        assertThat(this.giocatori.isGuardia(giocatori[0][0])).isTrue();
+        assertThat(this.giocatori.isGuardia(giocatori[1][0])).isFalse();
+    }
+
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo)); }
