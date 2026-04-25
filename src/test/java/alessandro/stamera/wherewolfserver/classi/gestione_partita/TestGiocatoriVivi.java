@@ -228,7 +228,7 @@ public final class TestGiocatoriVivi
     {
         String[][] players = new String[][] { { "Sara", "Guardia" }, { "Elisa", "Altra guardia" }, { "Mario", "Pazzo" } };
         for(String[] giocatore : players) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        assertThat(giocatori.getNumeroGuardie()).isEqualTo(2);
+        verificaNumeroIntero(giocatori.getNumeroGuardie(), 2);
     }
 
     @Test public void testContaCreatureOmbra()
@@ -236,8 +236,10 @@ public final class TestGiocatoriVivi
         String[][] players =
             new String[][] { { "Ivan", "Lupo del branco" }, { "Giulia", "Giovane lupo" }, { "Beatrice", "Nosferatu" }, { "Mario", "Goblin" } };
         for(String[] giocatore : players) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        assertThat(giocatori.getNumeroCreatureOmbra()).isEqualTo(3);
+        verificaNumeroIntero(giocatori.getNumeroCreatureOmbra(), 3);
     }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
