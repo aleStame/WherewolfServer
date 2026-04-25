@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi;
 
 import static alessandro.stamera.wherewolfserver.classi.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.EsitoPartita.NON_FINITO;
@@ -48,7 +49,7 @@ public class Ruolo
         annullaSegnalazioneInquisitore();
     }
 
-    public boolean isCreaturaOmbra() { return true; }
+    public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
 
     public String getNome() { return nome; }
 
