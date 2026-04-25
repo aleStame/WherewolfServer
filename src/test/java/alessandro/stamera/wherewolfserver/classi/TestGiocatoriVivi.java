@@ -201,9 +201,11 @@ public final class TestGiocatoriVivi
     {
         String nome = "Anna";
         aggiungiGiocatore(nome, "Leprecauno");
-        segnalazioneAzzeccagarbugli(nome);
-        verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
+        giocatori.segnalazioneAzzeccagarbugli(nome);
+        assertThat(giocatori.isSegnalatoAzzeccagarbugli(nome)).isTrue();
     }
+
+    private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo)); }
 
@@ -257,8 +259,6 @@ public final class TestGiocatoriVivi
     private Giocatori getBallottaggio() { return giocatori.getBallottaggio(); }
 
     private int getNumeroGiocatoriEsempio() { return ESEMPI_GIOCATORI.length; }
-
-    private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 

@@ -71,6 +71,8 @@ public class Giocatori
 
     public boolean isInquisito(String nome) { return getRuolo(nome).isInquisito(); }
 
+    public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)

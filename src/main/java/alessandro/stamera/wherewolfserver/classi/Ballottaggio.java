@@ -27,14 +27,14 @@ public final class Ballottaggio extends Giocatori
     private boolean controlloNessunInquisito()
     {
         boolean esito = true;
-        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !getRuolo(getNomeGiocatore(i)).isInquisito();
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isInquisito(getNomeGiocatore(i));
         return esito;
     }
 
     private boolean controlloNienteAzzeccagarbugli()
     {
         boolean esito = true;
-        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !getRuolo(getNomeGiocatore(i)).isSegnalatoAzzeccagarbugli();
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isSegnalatoAzzeccagarbugli(getNomeGiocatore(i));
         return esito;
     }
 

@@ -22,11 +22,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
-
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return getRuolo(nome).attaccoLupi(attaccante); }
-
-    public void segnalazioneInquisitore(String nome) { getRuolo(nome).segnalazioneInquisitore(); }
 
     public EsitoAttacco attaccoNosferatu(String nome)
     {
@@ -62,7 +58,7 @@ public final class GiocatoriVivi extends Giocatori
         return getNomeGiocatore(posizione);
     }
 
-    public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
+    public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
 
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
@@ -116,7 +112,7 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneInquisito()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isInquisito()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisito(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
 
