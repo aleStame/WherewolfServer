@@ -155,8 +155,13 @@ public final class GiocatoriVivi extends Giocatori
             String nome = getNomeGiocatore(i);
             if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
         }
+        return toArray(nomi);
+    }
+
+    private String[] toArray(List<String> nomi)
+    {
         String[] risultato = new String[nomi.size()];
-        for(int i = 0; i < risultato.length; i++) risultato[i] = nomi.get(i);
+        nomi.toArray(risultato);
         return risultato;
     }
 
