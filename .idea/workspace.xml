@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getListaNomi" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,22 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02331" summary="REFACTORING: definizione del metodo isSegnalatoAzzeccagarbugli">
-      <option name="closed" value="true" />
-      <created>1776950272364</created>
-      <option name="number" value="02331" />
-      <option name="presentableId" value="LOCAL-02331" />
-      <option name="project" value="LOCAL" />
-      <updated>1776950272364</updated>
-    </task>
-    <task id="LOCAL-02332" summary="REFACTORING: definizione del metodo setSegnalazioneAzzeccagarbugli">
-      <option name="closed" value="true" />
-      <created>1776950488907</created>
-      <option name="number" value="02332" />
-      <option name="presentableId" value="LOCAL-02332" />
-      <option name="project" value="LOCAL" />
-      <updated>1776950488907</updated>
     </task>
     <task id="LOCAL-02333" summary="ROSSO: testSegnalazioneInquisitore non riuscito">
       <option name="closed" value="true" />
@@ -677,7 +661,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777106831193</updated>
     </task>
-    <option name="localTasksCounter" value="2380" />
+    <task id="LOCAL-02380" summary="REFACTORING: definizione del metodo toArray">
+      <option name="closed" value="true" />
+      <created>1777107536159</created>
+      <option name="number" value="02380" />
+      <option name="presentableId" value="LOCAL-02380" />
+      <option name="project" value="LOCAL" />
+      <updated>1777107536159</updated>
+    </task>
+    <task id="LOCAL-02381" summary="REFACTORING: definizione del metodo getListaNomi">
+      <option name="closed" value="true" />
+      <created>1777107648790</created>
+      <option name="number" value="02381" />
+      <option name="presentableId" value="LOCAL-02381" />
+      <option name="project" value="LOCAL" />
+      <updated>1777107648790</updated>
+    </task>
+    <option name="localTasksCounter" value="2382" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,8 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioni" />
-    <MESSAGE value="ROSSO: testControlloVittoriaRomeo non riuscito" />
     <MESSAGE value="VERDE: testControlloVittoriaRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPartitaNonFinita" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiSecondoPosto" />
@@ -717,6 +715,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="REFACTORING: definizione del metodo toArray" />
+    <MESSAGE value="REFACTORING: definizione del metodo getListaNomi" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getListaNomi" />
   </component>
 </project>

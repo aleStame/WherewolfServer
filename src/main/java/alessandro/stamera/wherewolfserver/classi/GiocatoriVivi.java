@@ -71,9 +71,14 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         if(getNumeroGiocatori() > 0) estraiSecondoPosto(ballottaggio);
         gestisciSegnalazioni(ballottaggio);
+        sistemazioneBallottaggio(ballottaggio);
+        return ballottaggio;
+    }
+
+    private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
+    {
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
         if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
-        return ballottaggio;
     }
 
     private void estraiSecondoPosto(Ballottaggio ballottaggio)
