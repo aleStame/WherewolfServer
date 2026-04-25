@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo controllaNumeroGuardie">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo inizializzaPartita">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02356" summary="REFACTORING: definizione del metodo estraiSecondoPosto">
-      <option name="closed" value="true" />
-      <created>1777044627801</created>
-      <option name="number" value="02356" />
-      <option name="presentableId" value="LOCAL-02356" />
-      <option name="project" value="LOCAL" />
-      <updated>1777044627802</updated>
     </task>
     <task id="LOCAL-02357" summary="ROSSO: testSoloCreatureOmbra non riuscito">
       <option name="closed" value="true" />
@@ -679,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777125081968</updated>
     </task>
-    <option name="localTasksCounter" value="2405" />
+    <task id="LOCAL-02405" summary="REFACTORING: definizione del metodo inizializzaPartita">
+      <option name="closed" value="true" />
+      <created>1777125567449</created>
+      <option name="number" value="02405" />
+      <option name="presentableId" value="LOCAL-02405" />
+      <option name="project" value="LOCAL" />
+      <updated>1777125567449</updated>
+    </task>
+    <option name="localTasksCounter" value="2406" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
@@ -719,6 +719,7 @@
     <MESSAGE value="ROSSO: testNoGuardie non riuscito" />
     <MESSAGE value="VERDE: testNoGuardie riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo controllaNumeroGuardie" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo controllaNumeroGuardie" />
+    <MESSAGE value="REFACTORING: definizione del metodo inizializzaPartita" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo inizializzaPartita" />
   </component>
 </project>

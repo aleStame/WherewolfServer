@@ -224,6 +224,13 @@ public final class TestGiocatoriVivi
         verificaVero(isCreaturaOmbra(giocatori[1][0]));
     }
 
+    @Test public void testContaGuardie()
+    {
+        String[][] players = new String[][] { { "Sara", "Guardia" }, { "Elisa", "Altra guardia" }, { "Mario", "Pazzo" } };
+        for(String[] giocatore : players) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        assertThat(giocatori.getNumeroGuardie()).isEqualTo(2);
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isCreaturaOmbra(String nome) { return giocatori.isCreaturaOmbra(nome); }
