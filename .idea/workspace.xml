@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: riorganizzazione delle classi in diverse sottocartelle">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNoGuardie non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,14 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02353" summary="VERDE: testControlloVittoriaRomeo riuscito">
-      <option name="closed" value="true" />
-      <created>1777024113807</created>
-      <option name="number" value="02353" />
-      <option name="presentableId" value="LOCAL-02353" />
-      <option name="project" value="LOCAL" />
-      <updated>1777024113807</updated>
     </task>
     <task id="LOCAL-02354" summary="VERDE: testControlloVittoriaRomeo riuscito">
       <option name="closed" value="true" />
@@ -679,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777124175518</updated>
     </task>
-    <option name="localTasksCounter" value="2402" />
+    <task id="LOCAL-02402" summary="ROSSO: testNoGuardie non riuscito">
+      <option name="closed" value="true" />
+      <created>1777124613656</created>
+      <option name="number" value="02402" />
+      <option name="presentableId" value="LOCAL-02402" />
+      <option name="project" value="LOCAL" />
+      <updated>1777124613656</updated>
+    </task>
+    <option name="localTasksCounter" value="2403" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSegnalatoAzzeccagarbugli riuscito" />
     <MESSAGE value="ROSSO: testInquisito non riuscito" />
     <MESSAGE value="VERDE: testInquisito riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore" />
@@ -719,6 +718,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCreaturaOmbra" />
     <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
     <MESSAGE value="REFACTORING: riorganizzazione delle classi in diverse sottocartelle" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: riorganizzazione delle classi in diverse sottocartelle" />
+    <MESSAGE value="ROSSO: testNoGuardie non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNoGuardie non riuscito" />
   </component>
 </project>
