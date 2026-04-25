@@ -60,6 +60,8 @@ public final class TestCriminale
         assertThat(ruolo.getNumeroVoti()).isZero();
     }
 
+    @Test public void testCreaturaOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
