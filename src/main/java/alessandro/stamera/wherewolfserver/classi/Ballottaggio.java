@@ -20,7 +20,7 @@ public final class Ballottaggio extends Giocatori
     private int getPosizioneAmato()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAmato()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAmato(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
 

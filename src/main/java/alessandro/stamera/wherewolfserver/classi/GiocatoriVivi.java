@@ -26,7 +26,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoNosferatu(String nome)
     {
-        EsitoAttacco esito = getRuolo(nome).attaccoNosferatu();
+        EsitoAttacco esito = attaccoNosferatuRuolo(nome);
         gestisciResetAmato(nome, esito);
         return esito;
     }
@@ -37,7 +37,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoVampiro(String nome)
     {
-        EsitoAttacco esito = getRuolo(nome).vampirizzazione();
+        EsitoAttacco esito = vampirizzazioneRuolo(nome);
         gestisciResetAmato(nome, esito);
         return esito;
     }
@@ -54,7 +54,7 @@ public final class GiocatoriVivi extends Giocatori
     public String getNomeAssassino()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isAssassino()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAssassino(getNomeGiocatore(i))) posizione = i;
         return getNomeGiocatore(posizione);
     }
 
@@ -161,5 +161,11 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
+
+    private EsitoAttacco attaccoNosferatuRuolo(String nome) { return getRuolo(nome).attaccoNosferatu(); }
+
+    private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }
+
+    private boolean isAssassino(String nome) { return getRuolo(nome).isAssassino(); }
 
 }
