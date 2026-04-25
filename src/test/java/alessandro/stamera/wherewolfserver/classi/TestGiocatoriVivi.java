@@ -186,7 +186,7 @@ public final class TestGiocatoriVivi
         String nomeAngelo = getNomeGiocatore(0), nomeAmato = getNomeGiocatore(1);
         segnalazioneAngeloCustode(nomeAmato);
         giocatori.attaccoPosseduto(nomeAngelo);
-        assertThat(giocatori.isPosseduto(nomeAngelo)).isTrue();
+        verificaVero(giocatori.isPosseduto(nomeAngelo));
         verificaNonAmato(nomeAmato);
     }
 
@@ -202,15 +202,23 @@ public final class TestGiocatoriVivi
         String nome = "Anna";
         aggiungiGiocatore(nome, "Leprecauno");
         giocatori.segnalazioneAzzeccagarbugli(nome);
-        assertThat(giocatori.isSegnalatoAzzeccagarbugli(nome)).isTrue();
+        verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
     }
 
     @Test public void testGuardia()
     {
         String[][] giocatori = new String[][] { { "Federico", "Altra guardia" }, { "Jacopo", "Assassino" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        assertThat(isGuardia(giocatori[0][0])).isTrue();
+        verificaVero(isGuardia(giocatori[0][0]));
         assertThat(isGuardia(giocatori[1][0])).isFalse();
+    }
+
+    @Test public void testCreaturaOmbra()
+    {
+        String[][] giocatori = new String[][] { { "Luisa, Prete" }, { "Matteo, Nosferatu" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        assertThat(this.giocatori.isCreaturaOmbra(giocatori[0][0]));
+        verificaVero(this.giocatori.isCreaturaOmbra(giocatori[1][0]));
     }
 
     private boolean isGuardia(String nome) { return giocatori.isGuardia(nome); }
