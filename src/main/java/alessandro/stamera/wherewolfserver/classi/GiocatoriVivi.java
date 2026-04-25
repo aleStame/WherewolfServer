@@ -60,7 +60,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
 
-    public boolean isGuardia(String nome) { return false; }
+    public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
 
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
