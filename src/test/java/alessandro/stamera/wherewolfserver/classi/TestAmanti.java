@@ -48,6 +48,8 @@ public final class TestAmanti
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testCreatuaeOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }

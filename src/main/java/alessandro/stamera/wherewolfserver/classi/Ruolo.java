@@ -48,6 +48,8 @@ public class Ruolo
         annullaSegnalazioneInquisitore();
     }
 
+    public boolean isCreaturaOmbra() { return true; }
+
     public String getNome() { return nome; }
 
     public Aura getAura()
