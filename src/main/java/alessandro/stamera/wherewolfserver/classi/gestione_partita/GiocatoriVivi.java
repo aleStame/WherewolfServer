@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.ruoli.Ballottaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
@@ -72,7 +71,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
 
-    public int getNumeroCreatureOmbra() { return 0; }
+    public int getNumeroCreatureOmbra()
+    {
+        int numeroCreatureOmbra = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isCreaturaOmbra(getNomeGiocatore(i))) numeroCreatureOmbra++;
+        return numeroCreatureOmbra;
+    }
 
     private int getPosizioneAssassino()
     {

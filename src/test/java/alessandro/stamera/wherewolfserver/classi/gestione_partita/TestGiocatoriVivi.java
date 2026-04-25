@@ -234,7 +234,7 @@ public final class TestGiocatoriVivi
     @Test public void testContaCreatureOmbra()
     {
         String[][] players =
-            new String[][] { { "Ivan", "Lupo del branco" }, { "Giulia", "Vampiro" }, { "Beatrice", "Nosferatu" }, { "Mario", "Prete" } };
+            new String[][] { { "Ivan", "Lupo del branco" }, { "Giulia", "Giovane lupo" }, { "Beatrice", "Nosferatu" }, { "Mario", "Goblin" } };
         for(String[] giocatore : players) aggiungiGiocatore(giocatore[0], giocatore[1]);
         assertThat(giocatori.getNumeroCreatureOmbra()).isEqualTo(3);
     }
