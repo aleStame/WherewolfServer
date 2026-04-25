@@ -64,24 +64,15 @@ public final class Partita
 
     public boolean isViaggiatoreAmato() { return false; }
 
-    public boolean isSoloCreatureOmbra() { return getNumeroCreatureOmbra() == getNumeroGiocatoriVivi(); }
+    public boolean isSoloCreatureOmbra() { return vivi.getNumeroCreatureOmbra() == getNumeroGiocatoriVivi(); }
 
     public boolean isSoloGuardie() { return controllaNumeroGuardie(getNumeroGiocatoriVivi()); }
 
     public boolean isNoGuardie() { return controllaNumeroGuardie(0); }
 
-    public boolean isNoCreatureOmbra() { return false; }
+    public boolean isNoCreatureOmbra() { return vivi.getNumeroCreatureOmbra() == 0; }
 
     private boolean controllaNumeroGuardie(int valore) { return vivi.getNumeroGuardie() == valore; }
-
-    private int getNumeroCreatureOmbra()
-    {
-        int numeroCreatureOmbra = 0;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(isCreaturaOmbra(i)) numeroCreatureOmbra++;
-        return numeroCreatureOmbra;
-    }
-
-    private boolean isCreaturaOmbra(int posizione) { return vivi.isCreaturaOmbra(getNomeGiocatoreVivo(posizione)); }
 
     private int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 

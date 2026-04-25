@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroIntero">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNoCreatureOmbra non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02363" summary="ROSSO: testSoloGuardie non riuscito">
-      <option name="closed" value="true" />
-      <created>1777046124822</created>
-      <option name="number" value="02363" />
-      <option name="presentableId" value="LOCAL-02363" />
-      <option name="project" value="LOCAL" />
-      <updated>1777046124822</updated>
     </task>
     <task id="LOCAL-02364" summary="VERDE: testSoloGuardie riuscito">
       <option name="closed" value="true" />
@@ -680,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777128704687</updated>
     </task>
-    <option name="localTasksCounter" value="2412" />
+    <task id="LOCAL-02412" summary="ROSSO: testNoCreatureOmbra non riuscito">
+      <option name="closed" value="true" />
+      <created>1777129401396</created>
+      <option name="number" value="02412" />
+      <option name="presentableId" value="LOCAL-02412" />
+      <option name="project" value="LOCAL" />
+      <updated>1777129401396</updated>
+    </task>
+    <option name="localTasksCounter" value="2413" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testGuardia riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGuardia" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatoreVivo" />
     <MESSAGE value="REFACTORING: definizione di una variante del metodo isGuardia che accetta come parametro l'indice del giocatore" />
@@ -720,6 +716,7 @@
     <MESSAGE value="ROSSO: testContaCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testContaCreatureOmbra riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroIntero" />
+    <MESSAGE value="ROSSO: testNoCreatureOmbra non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNoCreatureOmbra non riuscito" />
   </component>
 </project>

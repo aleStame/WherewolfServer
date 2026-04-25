@@ -212,7 +212,7 @@ public final class TestPartita
 
     @Test public void testNoCreatureOmbra()
     {
-        inizializzaPartita(new String[][] { { "Clark", "Angelo custode" }, { "Lois", "Azzeccgaarbugli" }, { "Jonathan", "Contadino eroe" } });
+        inizializzaPartita(new String[][] { { "Clark", "Angelo custode" }, { "Lois", "Azzeccagarbugli" }, { "Jonathan", "Contadino eroe" } });
         verificaVero(partita.isNoCreatureOmbra());
     }
 
