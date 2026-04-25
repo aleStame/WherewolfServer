@@ -210,16 +210,18 @@ public final class TestGiocatoriVivi
         String[][] giocatori = new String[][] { { "Federico", "Altra guardia" }, { "Jacopo", "Assassino" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
         verificaVero(isGuardia(giocatori[0][0]));
-        assertThat(isGuardia(giocatori[1][0])).isFalse();
+        verificaFalso(isGuardia(giocatori[1][0]));
     }
 
     @Test public void testCreaturaOmbra()
     {
         String[][] giocatori = new String[][] { { "Luisa", "Prete" }, { "Matteo", "Nosferatu" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        assertThat(this.giocatori.isCreaturaOmbra(giocatori[0][0]));
+        verificaFalso(this.giocatori.isCreaturaOmbra(giocatori[0][0]));
         verificaVero(this.giocatori.isCreaturaOmbra(giocatori[1][0]));
     }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isGuardia(String nome) { return giocatori.isGuardia(nome); }
 
