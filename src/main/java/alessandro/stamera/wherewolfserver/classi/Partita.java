@@ -69,9 +69,11 @@ public final class Partita
     private int getNumeroGuardie()
     {
         int numeroGuardie = 0;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(vivi.isGuardia(getNomeGiocatoreVivo(i))) numeroGuardie++;
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(isGuardia(i)) numeroGuardie++;
         return numeroGuardie;
     }
+
+    private boolean isGuardia(int posizione) { return vivi.isGuardia(getNomeGiocatoreVivo(posizione)); }
 
     private int getNumeroCreatureOmbra()
     {
