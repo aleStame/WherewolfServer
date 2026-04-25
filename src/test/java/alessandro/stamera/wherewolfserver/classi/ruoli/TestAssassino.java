@@ -62,6 +62,12 @@ public final class TestAssassino
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
     }
 
+    @Test public void testSconfittaGuardie()
+    {
+        Partita partita = new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } });
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
+
     @Test public void testVittoria()
     {
         Partita partita = new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } });
