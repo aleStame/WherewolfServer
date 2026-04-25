@@ -209,9 +209,11 @@ public final class TestGiocatoriVivi
     {
         String[][] giocatori = new String[][] { { "Federico", "Altra guardia" }, { "Jacopo", "Assassino" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        assertThat(this.giocatori.isGuardia(giocatori[0][0])).isTrue();
-        assertThat(this.giocatori.isGuardia(giocatori[1][0])).isFalse();
+        assertThat(isGuardia(giocatori[0][0])).isTrue();
+        assertThat(isGuardia(giocatori[1][0])).isFalse();
     }
+
+    private boolean isGuardia(String nome) { return giocatori.isGuardia(nome); }
 
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
