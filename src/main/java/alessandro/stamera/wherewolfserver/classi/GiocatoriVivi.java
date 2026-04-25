@@ -54,7 +54,7 @@ public final class GiocatoriVivi extends Giocatori
     public String getNomeAssassino()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAssassino(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAssassino(i)) posizione = i;
         return getNomeGiocatore(posizione);
     }
 
@@ -63,6 +63,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
 
     public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
+
+    private boolean isAssassino(int posizione) { return isAssassino(getNomeGiocatore(posizione)); }
 
     private void gestisciResetAmato(String nome, EsitoAttacco esito)
     {
