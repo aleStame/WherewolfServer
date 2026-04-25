@@ -127,9 +127,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneInquisito()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisito(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisito(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isInquisito(int posizione) { return isInquisito(getNomeGiocatore(posizione)); }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
     {
