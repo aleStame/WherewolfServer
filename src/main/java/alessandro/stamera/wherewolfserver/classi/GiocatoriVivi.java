@@ -147,7 +147,9 @@ public final class GiocatoriVivi extends Giocatori
         for(String nome : estraiGiocatori(numeroVoti)) mandaBallottaggio(ballottaggio, nome);
     }
 
-    private String[] estraiGiocatori(int numeroVoti)
+    private String[] estraiGiocatori(int numeroVoti) { return toArray(getListaNomi(numeroVoti)); }
+
+    private List<String> getListaNomi(int numeroVoti)
     {
         List<String> nomi = new ArrayList<>();
         for(int i = 0; i < getNumeroGiocatori(); i++)
@@ -155,7 +157,7 @@ public final class GiocatoriVivi extends Giocatori
             String nome = getNomeGiocatore(i);
             if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
         }
-        return toArray(nomi);
+        return nomi;
     }
 
     private String[] toArray(List<String> nomi)
