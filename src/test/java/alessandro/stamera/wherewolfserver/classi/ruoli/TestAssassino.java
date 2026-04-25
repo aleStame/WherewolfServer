@@ -54,14 +54,11 @@ public final class TestAssassino
     @Test public void testControllaVittoriaRomeo()
     {
         ruolo.romeizzazione();
-        assertThat(ruolo.getEsitoPartita(getEsempioPartita())).isEqualTo(VITTORIA);
+        verificaEsitoPartita(getEsempioPartita(), VITTORIA);
     }
 
     @ParameterizedTest @MethodSource("getCasiEsitoPartita")
-    public void testSconfittaCreatureOmbra(String[][] giocatori, EsitoPartita esito)
-    {
-        assertThat(ruolo.getEsitoPartita(new Partita(giocatori))).isEqualTo(esito);
-    }
+    public void testSconfittaCreatureOmbra(String[][] giocatori, EsitoPartita esito) { verificaEsitoPartita(new Partita(giocatori), esito); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
@@ -88,6 +85,11 @@ public final class TestAssassino
         when(partita.isGiuliettaViva()).thenReturn(true);
         when(partita.isSoloCreatureOmbra()).thenReturn(false);
         return partita;
+    }
+
+    private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
 }

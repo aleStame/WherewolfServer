@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getEsempioPartita" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02374" summary="ROSSO: testInquisito non riuscito">
-      <option name="closed" value="true" />
-      <created>1777065879631</created>
-      <option name="number" value="02374" />
-      <option name="presentableId" value="LOCAL-02374" />
-      <option name="project" value="LOCAL" />
-      <updated>1777065879631</updated>
     </task>
     <task id="LOCAL-02375" summary="VERDE: testInquisito riuscito">
       <option name="closed" value="true" />
@@ -677,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777133145489</updated>
     </task>
-    <option name="localTasksCounter" value="2423" />
+    <task id="LOCAL-02423" summary="REFACTORING: definizione del metodo getEsempioPartita">
+      <option name="closed" value="true" />
+      <created>1777133460653</created>
+      <option name="number" value="02423" />
+      <option name="presentableId" value="LOCAL-02423" />
+      <option name="project" value="LOCAL" />
+      <updated>1777133460659</updated>
+    </task>
+    <option name="localTasksCounter" value="2424" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="REFACTORING: definizione del metodo isCreaturaOmbra" />
     <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
     <MESSAGE value="REFACTORING: riorganizzazione delle classi in diverse sottocartelle" />
@@ -717,6 +716,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaPersa" />
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
     <MESSAGE value="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartita" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsempioPartita" />
   </component>
 </project>
