@@ -51,13 +51,7 @@ public final class TestAzzeccagarbugli
 
     @Test public void testSconfittaNessunGiocatore() { verificaEsitoPartita(getEsempioPartitaNessunGiocatore(), SCONFITTA); }
 
-    @Test public void testPartitaNonFinita()
-    {
-        Partita partita = mock(Partita.class);
-        when(partita.isFinita()).thenReturn(false);
-        when(partita.getNumeroGiocatoriVivi()).thenReturn(5);
-        verificaEsitoPartita(partita, NON_FINITO);
-    }
+    @Test public void testPartitaNonFinita() { verificaEsitoPartita(getEsempioPartitaNonFinita(), NON_FINITO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
@@ -77,6 +71,14 @@ public final class TestAzzeccagarbugli
         String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Patrizia", "Peccatore" } };
         Partita partita = new Partita(giocatori);
         for(String[] giocatore : giocatori) partita.attaccoLupi("Capo branco", giocatore[0]);
+        return partita;
+    }
+
+    private static Partita getEsempioPartitaNonFinita()
+    {
+        Partita partita = mock(Partita.class);
+        when(partita.isFinita()).thenReturn(false);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(5);
         return partita;
     }
 
