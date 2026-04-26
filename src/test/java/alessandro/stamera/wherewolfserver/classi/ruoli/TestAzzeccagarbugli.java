@@ -81,7 +81,7 @@ public final class TestAzzeccagarbugli
 
     private Partita getEsempioPartitaNonFinita()
     {
-        Partita partita = mock(Partita.class);
+        Partita partita = getEsempioPartita();
         when(partita.isFinita()).thenReturn(false);
         when(partita.getNumeroGiocatoriVivi()).thenReturn(5);
         return partita;
@@ -89,19 +89,21 @@ public final class TestAzzeccagarbugli
 
     private Partita getEsempioPartitaSconfitta()
     {
-        Partita partita = mock(Partita.class);
+        Partita partita = getEsempioPartita();
         when(partita.isFinita()).thenReturn(true);
         when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
-        when(partita.getNumeroCreatureOmbra()).thenReturn(1);
+        when(partita.getNumeroCreatureOmbraVive()).thenReturn(1);
         return partita;
     }
 
     private Partita getEsempioPartitaVinta()
     {
-        Partita partita = mock(Partita.class);
+        Partita partita = getEsempioPartita();
         when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
         when(partita.isNoCreatureOmbra()).thenReturn(true);
         return partita;
     }
+
+    private Partita getEsempioPartita() { return mock(Partita.class); }
 
 }

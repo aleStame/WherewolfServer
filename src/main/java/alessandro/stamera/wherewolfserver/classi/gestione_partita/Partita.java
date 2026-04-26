@@ -72,11 +72,11 @@ public final class Partita
 
     public boolean isNoCreatureOmbra() { return controllaNumeroCreatureOmbra(0); }
 
-    public int getNumeroCreatureOmbra() { return 0; }
+    public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
-    private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(vivi.getNumeroCreatureOmbra(), valore); }
+    private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
 
     private boolean confrontaValori(int valore1, int valore2) { return valore1 == valore2; }
 
