@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaPartitaSconfitta">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPartitaVinta riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Azzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Azzeccagarbugli.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,30 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02390" summary="ROSSO: testCreaturaOmbra non riuscito">
-      <option name="closed" value="true" />
-      <created>1777110482510</created>
-      <option name="number" value="02390" />
-      <option name="presentableId" value="LOCAL-02390" />
-      <option name="project" value="LOCAL" />
-      <updated>1777110482510</updated>
-    </task>
-    <task id="LOCAL-02391" summary="VERDE: testCreaturaOmbra riuscito">
-      <option name="closed" value="true" />
-      <created>1777110751414</created>
-      <option name="number" value="02391" />
-      <option name="presentableId" value="LOCAL-02391" />
-      <option name="project" value="LOCAL" />
-      <updated>1777110751414</updated>
-    </task>
-    <task id="LOCAL-02392" summary="REFACTORING: definizione del metodo isCreaturaOmbra">
-      <option name="closed" value="true" />
-      <created>1777111053977</created>
-      <option name="number" value="02392" />
-      <option name="presentableId" value="LOCAL-02392" />
-      <option name="project" value="LOCAL" />
-      <updated>1777111053977</updated>
     </task>
     <task id="LOCAL-02393" summary="REFACTORING: definizione del metodo isAngeloCustode">
       <option name="closed" value="true" />
@@ -679,7 +655,31 @@
       <option name="project" value="LOCAL" />
       <updated>1777234062859</updated>
     </task>
-    <option name="localTasksCounter" value="2439" />
+    <task id="LOCAL-02439" summary="REFACTORING: definizione del metodo getEsempioPartitaSconfitta">
+      <option name="closed" value="true" />
+      <created>1777234383005</created>
+      <option name="number" value="02439" />
+      <option name="presentableId" value="LOCAL-02439" />
+      <option name="project" value="LOCAL" />
+      <updated>1777234383005</updated>
+    </task>
+    <task id="LOCAL-02440" summary="ROSSO: testPartitaVinta non riuscito">
+      <option name="closed" value="true" />
+      <created>1777234617197</created>
+      <option name="number" value="02440" />
+      <option name="presentableId" value="LOCAL-02440" />
+      <option name="project" value="LOCAL" />
+      <updated>1777234617197</updated>
+    </task>
+    <task id="LOCAL-02441" summary="VERDE: testPartitaVinta riuscito">
+      <option name="closed" value="true" />
+      <created>1777234785767</created>
+      <option name="number" value="02441" />
+      <option name="presentableId" value="LOCAL-02441" />
+      <option name="project" value="LOCAL" />
+      <updated>1777234785767</updated>
+    </task>
+    <option name="localTasksCounter" value="2442" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,9 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNoCreatureOmbra non riuscito" />
-    <MESSAGE value="VERDE: testNoCreatureOmbra riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo controllaNumeroCreatureOmbra" />
     <MESSAGE value="REFACTORING: definizione del metodo confrontaValori riuscito" />
     <MESSAGE value="ROSSO: testVittoria non riuscito" />
     <MESSAGE value="VERDE: testVittoria riuscito" />
@@ -719,6 +716,9 @@
     <MESSAGE value="VERDE: testPartitaSconfitta riuscito" />
     <MESSAGE value="REFACTORING: definiizone del metodo isPartitaSconfitta" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaPartitaSconfitta" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaPartitaSconfitta" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartitaSconfitta" />
+    <MESSAGE value="ROSSO: testPartitaVinta non riuscito" />
+    <MESSAGE value="VERDE: testPartitaVinta riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPartitaVinta riuscito" />
   </component>
 </project>
