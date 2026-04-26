@@ -35,12 +35,14 @@ public final class Azzeccagarbugli extends Citta
 
     private boolean isPartitaSconfitta(Partita partita)
     {
-        return partita.getNumeroGiocatoriVivi() == 0 || (partita.isFinita() && partita.getNumeroCreatureOmbra() >= 1);
+        return getNumeroGiocatoriVivi(partita) == 0 || (partita.isFinita() && partita.getNumeroCreatureOmbra() >= 1);
     }
 
     private boolean isPartitaVinta(Partita partita)
     {
-        return partita.isNoCreatureOmbra() && partita.getNumeroGiocatoriVivi() >= 1;
+        return partita.isNoCreatureOmbra() && getNumeroGiocatoriVivi(partita) >= 1;
     }
+
+    private int getNumeroGiocatoriVivi(Partita partita) { return partita.getNumeroGiocatoriVivi(); }
 
 }
