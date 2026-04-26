@@ -78,7 +78,7 @@ public final class Partita
 
     private boolean confrontaValori(int valore1, int valore2) { return valore1 == valore2; }
 
-    private int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
+    public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
     private void assassinioContadinoMostro(String nome)
     {
