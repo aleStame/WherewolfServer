@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getEsempioPartita" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoPartita">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +101,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/condizioneVittoriaAssassino&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/potereAzzeccagarbugli&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -284,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02375" summary="VERDE: testInquisito riuscito">
-      <option name="closed" value="true" />
-      <created>1777066097038</created>
-      <option name="number" value="02375" />
-      <option name="presentableId" value="LOCAL-02375" />
-      <option name="project" value="LOCAL" />
-      <updated>1777066097038</updated>
     </task>
     <task id="LOCAL-02376" summary="REFACTORING: semplificazione del codice">
       <option name="closed" value="true" />
@@ -677,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777133460659</updated>
     </task>
-    <option name="localTasksCounter" value="2424" />
+    <task id="LOCAL-02424" summary="REFACTORING: definizione del metodo verificaEsitoPartita">
+      <option name="closed" value="true" />
+      <created>1777133747059</created>
+      <option name="number" value="02424" />
+      <option name="presentableId" value="LOCAL-02424" />
+      <option name="project" value="LOCAL" />
+      <updated>1777133747059</updated>
+    </task>
+    <option name="localTasksCounter" value="2425" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -692,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isCreaturaOmbra" />
     <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
     <MESSAGE value="REFACTORING: riorganizzazione delle classi in diverse sottocartelle" />
     <MESSAGE value="ROSSO: testNoGuardie non riuscito" />
@@ -717,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
     <MESSAGE value="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartita" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsempioPartita" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoPartita" />
   </component>
 </project>

@@ -99,10 +99,11 @@ public final class TestGiocatoriVivi
         verificaAccusati(getNomeGiocatore(4), getNomeGiocatore(3), getNomeGiocatore(1));
     }
 
-    @Test public void testSegnalazioneAzzeccagarbugliCriminale()
+    @ParameterizedTest @CsvSource({ "Assassino, Capo gilda, Spia, Ladra, Bocca di rosa, Borgomastro, Mercante, Oratore" })
+    public void testAzzeramentoAzzeccagarbugli(String nomeRuolo)
     {
         String nome = "Rodolfo";
-        aggiungiGiocatore(nome, "Assassino");
+        aggiungiGiocatore(nome, nomeRuolo);
         segnalazioneAzzeccagarbugli(nome);
         giocatori.incrementaVoti(nome, 4);
         assertThat(giocatori.getNumeroVoti(nome)).isZero();
