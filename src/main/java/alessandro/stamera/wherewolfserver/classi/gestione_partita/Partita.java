@@ -72,6 +72,8 @@ public final class Partita
 
     public boolean isNoCreatureOmbra() { return controllaNumeroCreatureOmbra(0); }
 
+    public int getNumeroCreatureOmbra() { return 0; }
+
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
     private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(vivi.getNumeroCreatureOmbra(), valore); }

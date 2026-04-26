@@ -53,6 +53,15 @@ public final class TestAzzeccagarbugli
 
     @Test public void testPartitaNonFinita() { verificaEsitoPartita(getEsempioPartitaNonFinita(), NON_FINITO); }
 
+    @Test public void testPartitaSconfitta()
+    {
+        Partita partita = mock(Partita.class);
+        when(partita.isFinita()).thenReturn(true);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
+        when(partita.getNumeroCreatureOmbra()).thenReturn(1);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -74,7 +83,7 @@ public final class TestAzzeccagarbugli
         return partita;
     }
 
-    private static Partita getEsempioPartitaNonFinita()
+    private Partita getEsempioPartitaNonFinita()
     {
         Partita partita = mock(Partita.class);
         when(partita.isFinita()).thenReturn(false);
