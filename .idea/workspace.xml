@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoPartita">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,46 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02376" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1777104700855</created>
-      <option name="number" value="02376" />
-      <option name="presentableId" value="LOCAL-02376" />
-      <option name="project" value="LOCAL" />
-      <updated>1777104700856</updated>
-    </task>
-    <task id="LOCAL-02377" summary="REFACTORING: definizione del metodo annullaSegnalazioneInquisitore">
-      <option name="closed" value="true" />
-      <created>1777105037683</created>
-      <option name="number" value="02377" />
-      <option name="presentableId" value="LOCAL-02377" />
-      <option name="project" value="LOCAL" />
-      <updated>1777105037683</updated>
-    </task>
-    <task id="LOCAL-02378" summary="REFACTORING: definizione del metodo annullaSegnalazioneAzzeccagarbugli">
-      <option name="closed" value="true" />
-      <created>1777105465685</created>
-      <option name="number" value="02378" />
-      <option name="presentableId" value="LOCAL-02378" />
-      <option name="project" value="LOCAL" />
-      <updated>1777105465685</updated>
-    </task>
-    <task id="LOCAL-02379" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1777106831193</created>
-      <option name="number" value="02379" />
-      <option name="presentableId" value="LOCAL-02379" />
-      <option name="project" value="LOCAL" />
-      <updated>1777106831193</updated>
-    </task>
-    <task id="LOCAL-02380" summary="REFACTORING: definizione del metodo toArray">
-      <option name="closed" value="true" />
-      <created>1777107536159</created>
-      <option name="number" value="02380" />
-      <option name="presentableId" value="LOCAL-02380" />
-      <option name="project" value="LOCAL" />
-      <updated>1777107536159</updated>
     </task>
     <task id="LOCAL-02381" summary="REFACTORING: definizione del metodo getListaNomi">
       <option name="closed" value="true" />
@@ -680,7 +639,47 @@
       <option name="project" value="LOCAL" />
       <updated>1777133747059</updated>
     </task>
-    <option name="localTasksCounter" value="2425" />
+    <task id="LOCAL-02425" summary="VERDE DIRETTO: testAzzeramentoAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1777219117877</created>
+      <option name="number" value="02425" />
+      <option name="presentableId" value="LOCAL-02425" />
+      <option name="project" value="LOCAL" />
+      <updated>1777219117878</updated>
+    </task>
+    <task id="LOCAL-02426" summary="VERDE: testAzzeramentoAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1777220276462</created>
+      <option name="number" value="02426" />
+      <option name="presentableId" value="LOCAL-02426" />
+      <option name="project" value="LOCAL" />
+      <updated>1777220276462</updated>
+    </task>
+    <task id="LOCAL-02427" summary="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1777220599942</created>
+      <option name="number" value="02427" />
+      <option name="presentableId" value="LOCAL-02427" />
+      <option name="project" value="LOCAL" />
+      <updated>1777220599943</updated>
+    </task>
+    <task id="LOCAL-02428" summary="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1777220788961</created>
+      <option name="number" value="02428" />
+      <option name="presentableId" value="LOCAL-02428" />
+      <option name="project" value="LOCAL" />
+      <updated>1777220788961</updated>
+    </task>
+    <task id="LOCAL-02429" summary="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1777220943948</created>
+      <option name="number" value="02429" />
+      <option name="presentableId" value="LOCAL-02429" />
+      <option name="project" value="LOCAL" />
+      <updated>1777220943948</updated>
+    </task>
+    <option name="localTasksCounter" value="2430" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,10 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
-    <MESSAGE value="REFACTORING: riorganizzazione delle classi in diverse sottocartelle" />
-    <MESSAGE value="ROSSO: testNoGuardie non riuscito" />
-    <MESSAGE value="VERDE: testNoGuardie riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo controllaNumeroGuardie" />
     <MESSAGE value="REFACTORING: definizione del metodo inizializzaPartita" />
     <MESSAGE value="ROSSO: testContaGuardie non riuscito" />
@@ -720,6 +715,10 @@
     <MESSAGE value="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartita" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoPartita" />
+    <MESSAGE value="ROSSO: testAzzeramentoAzzeccagarbugli non riuscito" />
+    <MESSAGE value="ROSSO: testAzzeramentoAzzeccagarbugli non riuscito" />
+    <MESSAGE value="VERDE: testAzzeramentoAzzeccagarbugli riuscito" />
+    <MESSAGE value="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito" />
   </component>
 </project>

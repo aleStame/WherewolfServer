@@ -125,8 +125,12 @@ public final class GiocatoriVivi extends Giocatori
     private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
     {
         String nome = getNomeGiocatore(posizione);
-        if(!isCriminale(nome)) mandaBallottaggio(ballottaggio, nome);
+        if(controlloBallottaggioAzzeccagarbugli(nome)) mandaBallottaggio(ballottaggio, nome);
     }
+
+    private boolean controlloBallottaggioAzzeccagarbugli(String nome) { return !isCriminale(nome) && !isCitta(nome); }
+
+    private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
     private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio, int posizione)
     {

@@ -107,6 +107,10 @@ public final class TestGiocatoriVivi
         segnalazioneAzzeccagarbugli(nome);
         giocatori.incrementaVoti(nome, 4);
         assertThat(giocatori.getNumeroVoti(nome)).isZero();
+        int posizione = 1;
+        aggiungiGiocatore(getNomeGiocatore(posizione), ESEMPI_GIOCATORI[posizione][1]);
+        giocatori.incrementaVoti(getNomeGiocatore(posizione), 3);
+        verificaAccusati(getNomeGiocatore(posizione));
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
