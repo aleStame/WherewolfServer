@@ -1,10 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -42,6 +44,14 @@ public final class TestAzzeccagarbugli
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testSconfittaNessunGiocatore()
+    {
+        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Patrizia", "Peccatore" } };
+        Partita partita = new Partita(giocatori);
+        for(String[] giocatore : giocatori) partita.attaccoLupi("Capo branco", giocatore[0]);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
