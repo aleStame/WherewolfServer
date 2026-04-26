@@ -49,7 +49,7 @@ public final class TestAzzeccagarbugli
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testSconfittaNessunGiocatore() { verificaEsitoPartita(getEsempioPartitaNessunGiocatore(), SCONFITTA); }
+    @Test public void testSconfittaNessunGiocatore() { verificaPartitaSconfitta(getEsempioPartitaNessunGiocatore()); }
 
     @Test public void testPartitaNonFinita() { verificaEsitoPartita(getEsempioPartitaNonFinita(), NON_FINITO); }
 
@@ -59,7 +59,7 @@ public final class TestAzzeccagarbugli
         when(partita.isFinita()).thenReturn(true);
         when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
         when(partita.getNumeroCreatureOmbra()).thenReturn(1);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        verificaPartitaSconfitta(partita);
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
@@ -69,6 +69,8 @@ public final class TestAzzeccagarbugli
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaPartitaSconfitta(Partita partita) { verificaEsitoPartita(partita, SCONFITTA); }
 
     private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
     {
