@@ -7,8 +7,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -54,6 +53,14 @@ public final class TestAzzeccagarbugli
     @Test public void testPartitaNonFinita() { verificaEsitoPartita(getEsempioPartitaNonFinita(), NON_FINITO); }
 
     @Test public void testPartitaSconfitta() { verificaPartitaSconfitta(getEsempioPartitaSconfitta()); }
+
+    @Test public void testPartitaVinta()
+    {
+        Partita partita = mock(Partita.class);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
+        when(partita.isNoCreatureOmbra()).thenReturn(true);
+        verificaEsitoPartita(partita, VITTORIA);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
