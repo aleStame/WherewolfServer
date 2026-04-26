@@ -26,6 +26,7 @@ public final class Azzeccagarbugli extends Citta
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(partita.getNumeroGiocatoriVivi() == 0) esito = SCONFITTA;
+        else if(partita.isFinita() && partita.getNumeroCreatureOmbra() >= 1) esito = SCONFITTA;
         return esito;
     }
 
