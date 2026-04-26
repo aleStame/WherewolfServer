@@ -54,13 +54,7 @@ public final class TestAzzeccagarbugli
 
     @Test public void testPartitaSconfitta() { verificaPartitaSconfitta(getEsempioPartitaSconfitta()); }
 
-    @Test public void testPartitaVinta()
-    {
-        Partita partita = mock(Partita.class);
-        when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
-        when(partita.isNoCreatureOmbra()).thenReturn(true);
-        verificaEsitoPartita(partita, VITTORIA);
-    }
+    @Test public void testPartitaVinta() { verificaEsitoPartita(getEsempioPartitaVinta(), VITTORIA); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
@@ -99,6 +93,14 @@ public final class TestAzzeccagarbugli
         when(partita.isFinita()).thenReturn(true);
         when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
         when(partita.getNumeroCreatureOmbra()).thenReturn(1);
+        return partita;
+    }
+
+    private Partita getEsempioPartitaVinta()
+    {
+        Partita partita = mock(Partita.class);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
+        when(partita.isNoCreatureOmbra()).thenReturn(true);
         return partita;
     }
 

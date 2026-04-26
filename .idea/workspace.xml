@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPartitaVinta riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Azzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Azzeccagarbugli.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNumeroGiocatoriVivi">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,22 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02393" summary="REFACTORING: definizione del metodo isAngeloCustode">
-      <option name="closed" value="true" />
-      <created>1777111271231</created>
-      <option name="number" value="02393" />
-      <option name="presentableId" value="LOCAL-02393" />
-      <option name="project" value="LOCAL" />
-      <updated>1777111271231</updated>
-    </task>
-    <task id="LOCAL-02394" summary="REFACTORING: definizione del metodo isAssassino">
-      <option name="closed" value="true" />
-      <created>1777111485090</created>
-      <option name="number" value="02394" />
-      <option name="presentableId" value="LOCAL-02394" />
-      <option name="project" value="LOCAL" />
-      <updated>1777111485090</updated>
     </task>
     <task id="LOCAL-02395" summary="REFACTORING: definizione del metodo getPosizioneAssassino">
       <option name="closed" value="true" />
@@ -679,7 +663,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777234785767</updated>
     </task>
-    <option name="localTasksCounter" value="2442" />
+    <task id="LOCAL-02442" summary="REFACTORING: definizione del metodo isPartitaVinta">
+      <option name="closed" value="true" />
+      <created>1777234973454</created>
+      <option name="number" value="02442" />
+      <option name="presentableId" value="LOCAL-02442" />
+      <option name="project" value="LOCAL" />
+      <updated>1777234973454</updated>
+    </task>
+    <task id="LOCAL-02443" summary="REFACTORING: definizione del metodo getNumeroGiocatoriVivi">
+      <option name="closed" value="true" />
+      <created>1777235126472</created>
+      <option name="number" value="02443" />
+      <option name="presentableId" value="LOCAL-02443" />
+      <option name="project" value="LOCAL" />
+      <updated>1777235126472</updated>
+    </task>
+    <option name="localTasksCounter" value="2444" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,13 +694,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo confrontaValori riuscito" />
     <MESSAGE value="ROSSO: testVittoria non riuscito" />
     <MESSAGE value="VERDE: testVittoria riuscito" />
     <MESSAGE value="ROSSO: testSconfittaGuardie non riuscito" />
     <MESSAGE value="VERDE: testSconfittaGuardie riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaPersa" />
-    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
     <MESSAGE value="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartita" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
@@ -719,6 +717,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartitaSconfitta" />
     <MESSAGE value="ROSSO: testPartitaVinta non riuscito" />
     <MESSAGE value="VERDE: testPartitaVinta riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPartitaVinta riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNumeroGiocatoriVivi" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNumeroGiocatoriVivi" />
   </component>
 </project>
