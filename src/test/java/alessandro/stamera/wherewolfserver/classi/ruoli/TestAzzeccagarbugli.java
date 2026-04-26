@@ -1,14 +1,18 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public final class TestAzzeccagarbugli
 {
@@ -45,12 +49,14 @@ public final class TestAzzeccagarbugli
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testSconfittaNessunGiocatore()
+    @Test public void testSconfittaNessunGiocatore() { verificaEsitoPartita(getEsempioPartitaNessunGiocatore(), SCONFITTA); }
+
+    @Test public void testPartitaNonFinita()
     {
-        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Patrizia", "Peccatore" } };
-        Partita partita = new Partita(giocatori);
-        for(String[] giocatore : giocatori) partita.attaccoLupi("Capo branco", giocatore[0]);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        Partita partita = mock(Partita.class);
+        when(partita.isFinita()).thenReturn(false);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(5);
+        verificaEsitoPartita(partita, NON_FINITO);
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
@@ -60,5 +66,18 @@ public final class TestAzzeccagarbugli
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    private Partita getEsempioPartitaNessunGiocatore()
+    {
+        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Patrizia", "Peccatore" } };
+        Partita partita = new Partita(giocatori);
+        for(String[] giocatore : giocatori) partita.attaccoLupi("Capo branco", giocatore[0]);
+        return partita;
+    }
 
 }
