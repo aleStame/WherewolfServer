@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definiizone del metodo isPartitaSconfitta">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaPartitaSconfitta">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,14 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02389" summary="REFACTORING: definizione di una variante del metodo isGuardia che accetta come parametro l'indice del giocatore">
-      <option name="closed" value="true" />
-      <created>1777109967150</created>
-      <option name="number" value="02389" />
-      <option name="presentableId" value="LOCAL-02389" />
-      <option name="project" value="LOCAL" />
-      <updated>1777109967150</updated>
     </task>
     <task id="LOCAL-02390" summary="ROSSO: testCreaturaOmbra non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777233623539</updated>
     </task>
-    <option name="localTasksCounter" value="2438" />
+    <task id="LOCAL-02438" summary="REFACTORING: definizione del metodo verificaPartitaSconfitta">
+      <option name="closed" value="true" />
+      <created>1777234062859</created>
+      <option name="number" value="02438" />
+      <option name="presentableId" value="LOCAL-02438" />
+      <option name="project" value="LOCAL" />
+      <updated>1777234062859</updated>
+    </task>
+    <option name="localTasksCounter" value="2439" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroIntero" />
     <MESSAGE value="ROSSO: testNoCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testNoCreatureOmbra riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo controllaNumeroCreatureOmbra" />
@@ -720,6 +718,7 @@
     <MESSAGE value="ROSSO: testPartitaSconfitta non riuscito" />
     <MESSAGE value="VERDE: testPartitaSconfitta riuscito" />
     <MESSAGE value="REFACTORING: definiizone del metodo isPartitaSconfitta" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definiizone del metodo isPartitaSconfitta" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaPartitaSconfitta" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaPartitaSconfitta" />
   </component>
 </project>
