@@ -60,10 +60,9 @@ public final class RuoliFactory
         resettaMaledetto();
     }
 
-    private void resettaNonMorto()
-    {
-        for(String nome : getChiavi()) if(ottieniRuolo(nome).isTrattoPresente(NON_MORTO)) resettaNonMorto(nome);
-    }
+    private void resettaNonMorto() { for(String nome : getChiavi()) if(isNonMorto(nome)) resettaNonMorto(nome); }
+
+    private boolean isNonMorto(String nome) { return ottieniRuolo(nome).isTrattoPresente(NON_MORTO); }
 
     private void resettaMaledetto()
     {
