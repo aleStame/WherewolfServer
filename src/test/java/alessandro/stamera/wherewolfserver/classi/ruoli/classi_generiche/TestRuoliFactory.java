@@ -37,12 +37,11 @@ public final class TestRuoliFactory
     {
         FACTORY.annullaSegnalazioni();
         Ruolo ruolo = FACTORY.getRuolo(nome);
-        assertThat(ruolo.isRomeo()).isFalse();
-        assertThat(ruolo.isAmato()).isFalse();
-        assertThat(ruolo.isInquisito()).isFalse();
-        assertThat(ruolo.isSegnalatoAzzeccagarbugli()).isFalse();
-        assertThat(ruolo.isTrattoPresente(NON_MORTO)).isFalse();
-        System.out.println(ruolo.isMaledetto());
+        verificaFalso(ruolo.isRomeo());
+        verificaFalso(ruolo.isAmato());
+        verificaFalso(ruolo.isInquisito());
+        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
         if(nome.equals("Contadino mostro")) assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
         else assertThat(ruolo.getNumeroVoti()).isZero();
     }
@@ -50,5 +49,7 @@ public final class TestRuoliFactory
     private void verificaPresenza(Ruolo[] ruoli, Ruolo ruolo) { assertThat(ruoli).contains(ruolo); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
