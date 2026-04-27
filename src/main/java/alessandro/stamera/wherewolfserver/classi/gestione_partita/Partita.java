@@ -91,6 +91,13 @@ public final class Partita
         return esito;
     }
 
+    public int getNumeroCriminali()
+    {
+        int numeroCriminali = 0;
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isCriminale()) numeroCriminali++;
+        return numeroCriminali;
+    }
+
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
     private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
