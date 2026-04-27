@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -244,6 +245,14 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         assertThat(partita.getControlloVeggente(giocatori[1][0])).isEqualTo(BIANCA);
         verificaVero(partita.getCantoBardo());
+    }
+
+    @Test public void testPotereBardoAuraOscura()
+    {
+        String[][] giocatori = new String[][] { { "Ezio", "Posseduto" }, { "Virginio", "Bardo" } };
+        inizializzaPartita(giocatori);
+        assertThat(partita.getControlloVeggente(giocatori[0][0])).isEqualTo(NERA);
+        verificaFalso(partita.getCantoBardo());
     }
 
     private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
