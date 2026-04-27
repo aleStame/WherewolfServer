@@ -25,6 +25,8 @@ public class Ruolo
 
     private Fazione fazione;
 
+    private final Fazione fazioneOriginale;
+
     private final Aura aura;
 
     private final int lune;
@@ -51,6 +53,7 @@ public class Ruolo
         setRomeo(false);
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
+        fazioneOriginale = fazione;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -310,6 +313,8 @@ public class Ruolo
     public void segnalazioneInquisitore() { setInquisito(true); }
 
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
+
+    public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
 
     private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
 

@@ -106,7 +106,7 @@ public final class TestPartita
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
         String[][] giocatori = new String[][]
-                { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
+            { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         int posizione1 = 3, posizione2 = 1;
         inizializzaPartita(giocatori);
         segnalazioneAzzeccagarbugli(giocatori[posizione1][0]);

@@ -1,12 +1,17 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public final class TestAzzeccagarbugli
 {
@@ -43,6 +48,14 @@ public final class TestAzzeccagarbugli
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testSconfittaNessunGiocatore() { verificaPartitaSconfitta(getEsempioPartitaNessunGiocatore()); }
+
+    @Test public void testPartitaNonFinita() { verificaEsitoPartita(getEsempioPartitaNonFinita(), NON_FINITO); }
+
+    @Test public void testPartitaSconfitta() { verificaPartitaSconfitta(getEsempioPartitaSconfitta()); }
+
+    @Test public void testPartitaVinta() { verificaEsitoPartita(getEsempioPartitaVinta(), VITTORIA); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -50,5 +63,47 @@ public final class TestAzzeccagarbugli
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaPartitaSconfitta(Partita partita) { verificaEsitoPartita(partita, SCONFITTA); }
+
+    private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    private Partita getEsempioPartitaNessunGiocatore()
+    {
+        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Patrizia", "Peccatore" } };
+        Partita partita = new Partita(giocatori);
+        for(String[] giocatore : giocatori) partita.attaccoLupi("Capo branco", giocatore[0]);
+        return partita;
+    }
+
+    private Partita getEsempioPartitaNonFinita()
+    {
+        Partita partita = getEsempioPartita();
+        when(partita.isFinita()).thenReturn(false);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(5);
+        return partita;
+    }
+
+    private Partita getEsempioPartitaSconfitta()
+    {
+        Partita partita = getEsempioPartita();
+        when(partita.isFinita()).thenReturn(true);
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
+        when(partita.getNumeroCreatureOmbraVive()).thenReturn(1);
+        return partita;
+    }
+
+    private Partita getEsempioPartitaVinta()
+    {
+        Partita partita = getEsempioPartita();
+        when(partita.getNumeroGiocatoriVivi()).thenReturn(2);
+        when(partita.isNoCreatureOmbra()).thenReturn(true);
+        return partita;
+    }
+
+    private Partita getEsempioPartita() { return mock(Partita.class); }
 
 }
