@@ -3,7 +3,8 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 
 public final class Partita
@@ -17,6 +18,8 @@ public final class Partita
 
     private final Giocatori eliminati;
 
+    private Aura ultimoControllo;
+
     public Partita(String[][] giocatori)
     {
         vivi = new GiocatoriVivi();
@@ -24,6 +27,7 @@ public final class Partita
         FACTORY.annullaVoti();
         for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
         vivi.resettaAmato();
+        ultimoControllo = NERA;
     }
 
     public void incrementaVoti(String nome, int numeroVoti) { vivi.incrementaVoti(nome, numeroVoti); }
@@ -75,14 +79,21 @@ public final class Partita
 
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
-    public Aura getControlloVeggente(String nome) { return vivi.getControlloVeggente(nome); }
+    public Aura getControlloVeggente(String nome)
+    {
+        ultimoControllo = vivi.getControlloVeggente(nome);
+        return ultimoControllo;
+    }
 
     public boolean getCantoBardo()
     {
         int posizione = -1;
         for(int i = 0; i < eliminati.getNumeroGiocatori() && posizione == -1; i++) if(eliminati.getRuolo(eliminati.getNomeGiocatore(i)).isBardo())
             posizione = i;
-        return posizione != -1;
+        boolean esito = posizione == -1;
+        System.out.println(posizione);
+        if(esito) esito = (ultimoControllo == BIANCA);
+        return esito;
     }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
