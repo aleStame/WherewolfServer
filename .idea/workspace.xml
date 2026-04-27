@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isBardoPresente">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,14 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02414" summary="REFACTORING: definizione del metodo controllaNumeroCreatureOmbra">
-      <option name="closed" value="true" />
-      <created>1777130385828</created>
-      <option name="number" value="02414" />
-      <option name="presentableId" value="LOCAL-02414" />
-      <option name="project" value="LOCAL" />
-      <updated>1777130385828</updated>
     </task>
     <task id="LOCAL-02415" summary="REFACTORING: definizione del metodo confrontaValori riuscito">
       <option name="closed" value="true" />
@@ -680,7 +670,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777306986146</updated>
     </task>
-    <option name="localTasksCounter" value="2463" />
+    <task id="LOCAL-02463" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1777307300987</created>
+      <option name="number" value="02463" />
+      <option name="presentableId" value="LOCAL-02463" />
+      <option name="project" value="LOCAL" />
+      <updated>1777307300987</updated>
+    </task>
+    <option name="localTasksCounter" value="2464" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -711,7 +709,6 @@
     <MESSAGE value="VERDE: testAuraChiara riuscito" />
     <MESSAGE value="ROSSO: testAuraOscura non riuscito" />
     <MESSAGE value="VERDE: testAuraOscura riuscito" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testPotereBardoAuraChiara non riuscito" />
     <MESSAGE value="VERDE: testPotereBardoAuraChiara riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBardoAuraOscura riuscito" />
@@ -720,6 +717,7 @@
     <MESSAGE value="VERDE DIRETTO: testBardoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo isBardoPresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isBardoPresente" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
   </component>
 </project>
