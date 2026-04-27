@@ -26,7 +26,7 @@ public final class Bardo extends Villaggio
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(isPartitaVinta(partita)) esito = VITTORIA;
-        else if(partita.isSoloCreatureOmbra() || partita.getNumeroCreatureOmbraVive() == 0) esito = SCONFITTA;
+        else if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
         return esito;
     }
 
