@@ -74,6 +74,10 @@ public final class Partita
 
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
+    public boolean getControlloVeggente(String nome) { return false; }
+
+    public boolean getCantoBardo() { return true; }
+
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
     private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }

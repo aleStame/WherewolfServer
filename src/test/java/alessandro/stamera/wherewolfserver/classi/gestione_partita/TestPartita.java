@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPartita
@@ -214,6 +216,15 @@ public final class TestPartita
     {
         inizializzaPartita(new String[][] { { "Clark", "Angelo custode" }, { "Lois", "Azzeccagarbugli" }, { "Jonathan", "Contadino eroe" } });
         verificaVero(partita.isNoCreatureOmbra());
+    }
+
+    @Test public void testPotereBardoNienteBardo()
+    {
+        String[][] giocatori = new String[][] { { "Stefano", "Bardo" }, { "Francesco", "Veggente" }, { "Adriano", "Mago" } };
+        inizializzaPartita(giocatori);
+        assertThat(partita.getControlloVeggente(giocatori[2][0])).isEqualTo(BIANCA);
+        partita.attaccoLupi("Lupo del branco", giocatori[0][0]);
+        verificaFalso(partita.getCantoBardo());
     }
 
     private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
