@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
@@ -8,7 +9,6 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -78,6 +78,8 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori(); i++) if(isCreaturaOmbra(getNomeGiocatore(i))) numeroCreatureOmbra++;
         return numeroCreatureOmbra;
     }
+
+    public Aura getControlloVeggente(String nome) { return null; }
 
     private int getPosizioneAssassino()
     {
