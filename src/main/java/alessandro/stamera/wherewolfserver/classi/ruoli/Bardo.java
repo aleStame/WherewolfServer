@@ -30,6 +30,8 @@ public final class Bardo extends Villaggio
         return esito;
     }
 
+    public static Ruolo getInstance() { return new Bardo(); }
+
     private boolean isPartitaVinta(Partita partita)
     {
         return partita.getNumeroGiocatoriVivi() > 1 && partita.isNoCreatureOmbra();
@@ -37,9 +39,12 @@ public final class Bardo extends Villaggio
 
     private boolean isPartitaSconfitta(Partita partita)
     {
-        return partita.isSoloCreatureOmbra() || (partita.isNoGuardie() && partita.getNumeroCriminali() >= 1);
+        return partita.isSoloCreatureOmbra() || isCriminaleSenzaGuardie(partita);
     }
 
-    public static Ruolo getInstance() { return new Bardo(); }
+    private boolean isCriminaleSenzaGuardie(Partita partita)
+    {
+        return partita.isNoGuardie() && partita.getNumeroCriminali() >= 1;
+    }
 
 }
