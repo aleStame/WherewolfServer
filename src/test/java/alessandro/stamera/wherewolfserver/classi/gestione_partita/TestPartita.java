@@ -1,8 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPartita
@@ -215,6 +218,40 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Clark", "Angelo custode" }, { "Lois", "Azzeccagarbugli" }, { "Jonathan", "Contadino eroe" } });
         verificaVero(partita.isNoCreatureOmbra());
     }
+
+    @Test public void testPotereBardoNienteBardo()
+    {
+        String[][] giocatori = new String[][] { { "Stefano", "Bardo" }, { "Francesco", "Guaritore" }, { "Adriano", "Mago" } };
+        inizializzaPartita(giocatori);
+        assertThat(partita.getControlloVeggente(giocatori[2][0])).isEqualTo(BIANCA);
+        partita.attaccoLupi("Lupo del branco", giocatori[0][0]);
+        verificaNienteCantoBardo();
+    }
+
+    @Test public void testPotereBardoAuraChiara()
+    {
+        String[][] giocatori = new String[][] { { "Isabella", "Bardo" }, { "Otello", "Mago" } };
+        inizializzaPartita(giocatori);
+        verificaControlloVeggente(giocatori[1][0], BIANCA);
+        verificaVero(getCantoBardo());
+    }
+
+    @Test public void testPotereBardoAuraOscura()
+    {
+        String[][] giocatori = new String[][] { { "Ezio", "Posseduto" }, { "Virginio", "Bardo" } };
+        inizializzaPartita(giocatori);
+        verificaControlloVeggente(giocatori[0][0], NERA);
+        verificaNienteCantoBardo();
+    }
+
+    private void verificaControlloVeggente(String nome, Aura aura)
+    {
+        assertThat(partita.getControlloVeggente(nome)).isEqualTo(aura);
+    }
+
+    private void verificaNienteCantoBardo() { verificaFalso(getCantoBardo()); }
+
+    private boolean getCantoBardo() { return partita.getCantoBardo(); }
 
     private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
 

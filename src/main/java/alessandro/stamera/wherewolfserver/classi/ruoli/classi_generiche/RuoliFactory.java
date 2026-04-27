@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,8 +8,7 @@ import java.util.Set;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo.values;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 
 public final class RuoliFactory
 {
@@ -52,29 +50,48 @@ public final class RuoliFactory
         return filtraRuoli(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
     }
 
-    public void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
-
-    public void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
-
-    public void resettaAmato() { for(String nome : getChiavi()) ottieniRuolo(nome).resettaAmato(); }
-
-    public void resettaSegnalazioneAzzeccagarbugli()
+    public void annullaSegnalazioni()
     {
-        for(String nome : getChiavi()) ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
+        annullaVoti();
+        resettaRomeo();
+        resettaAmato();
+        resettaSegnalazioneAzzeccagarbugli();
+        resettaNonMorto();
+        resettaMaledetto();
     }
 
-    public void resettaNonMorto()
+    private void resettaNonMorto() { for(String nome : getChiavi()) if(isNonMorto(nome)) resettaNonMorto(nome); }
+
+    private boolean isNonMorto(String nome) { return ottieniRuolo(nome).isTrattoPresente(NON_MORTO); }
+
+    private void resettaMaledetto() { for(String nome : getChiavi()) if(!isContadinoMostro(nome)) annullaMaledizione(nome); }
+
+    private boolean isContadinoMostro(String nome) { return ottieniRuolo(nome).isContadinoMostro(); }
+
+    private void annullaMaledizione(String nome) { ottieniRuolo(nome).eliminaTratto(MALEDETTO); }
+
+    private void resettaNonMorto(String nome)
     {
-        for(String nome : getChiavi())
-        {
-            Ruolo ruolo = ottieniRuolo(nome);
-            if(ruolo.isTrattoPresente(NON_MORTO))
-            {
-                ruolo.eliminaTratto(NON_MORTO);
-                ruolo.ripristinaFazioneOriginale();
-            }
-        }
+        Ruolo ruolo = ottieniRuolo(nome);
+        ruolo.eliminaTratto(NON_MORTO);
+        ruolo.ripristinaFazioneOriginale();
     }
+
+    private void annullaVoti() { for(String chiave : getChiavi()) annullaVoti(chiave); }
+
+    private void annullaVoti(String chiave) { ottieniRuolo(chiave).annullaVoti(); }
+
+    private void resettaRomeo() { for(String chiave : getChiavi()) resettaRomeo(chiave); }
+
+    private void resettaRomeo(String chiave) { ottieniRuolo(chiave).resettaRomeo(); }
+
+    private void resettaAmato() { for(String nome : getChiavi()) getResettaAmato(nome); }
+
+    private void getResettaAmato(String nome) { ottieniRuolo(nome).resettaAmato(); }
+
+    private void resettaSegnalazioneAzzeccagarbugli() { for(String nome : getChiavi()) annullaSegnalazioneAzzeccagarbugli(nome); }
+
+    private void annullaSegnalazioneAzzeccagarbugli(String nome) { ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli(); }
 
     private Set<String> getChiavi() { return ruoli.keySet(); }
 

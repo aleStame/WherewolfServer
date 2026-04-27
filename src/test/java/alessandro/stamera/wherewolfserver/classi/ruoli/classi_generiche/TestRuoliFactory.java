@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,8 +22,34 @@ public final class TestRuoliFactory
     )
     public void testCreatureOmbra(String nome) { verificaPresenza(FACTORY.getCreatureOmbra(), getRuolo(nome)); }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testNessunaSegnalazione(String nome)
+    {
+        FACTORY.annullaSegnalazioni();
+        Ruolo ruolo = FACTORY.getRuolo(nome);
+        verificaFalso(ruolo.isRomeo());
+        verificaFalso(ruolo.isAmato());
+        verificaFalso(ruolo.isInquisito());
+        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
+        if(nome.equals("Contadino mostro")) assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+        else assertThat(ruolo.getNumeroVoti()).isZero();
+    }
+
     private void verificaPresenza(Ruolo[] ruoli, Ruolo ruolo) { assertThat(ruoli).contains(ruolo); }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
