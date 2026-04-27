@@ -75,7 +75,7 @@ public final class Partita
 
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
-    public Aura getControlloVeggente(String nome) { return vivi.getRuolo(nome).getAura(); }
+    public Aura getControlloVeggente(String nome) { return vivi.getControlloVeggente(nome); }
 
     public boolean getCantoBardo()
     {

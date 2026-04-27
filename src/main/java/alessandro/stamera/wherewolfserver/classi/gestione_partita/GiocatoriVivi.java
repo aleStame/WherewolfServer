@@ -75,11 +75,13 @@ public final class GiocatoriVivi extends Giocatori
     public int getNumeroCreatureOmbra()
     {
         int numeroCreatureOmbra = 0;
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(isCreaturaOmbra(getNomeGiocatore(i))) numeroCreatureOmbra++;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isCreaturaOmbra(i)) numeroCreatureOmbra++;
         return numeroCreatureOmbra;
     }
 
     public Aura getControlloVeggente(String nome) { return getRuolo(nome).getAura(); }
+
+    private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }
 
     private int getPosizioneAssassino()
     {
