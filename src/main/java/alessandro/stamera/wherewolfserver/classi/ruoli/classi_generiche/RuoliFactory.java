@@ -64,10 +64,9 @@ public final class RuoliFactory
 
     private boolean isNonMorto(String nome) { return ottieniRuolo(nome).isTrattoPresente(NON_MORTO); }
 
-    private void resettaMaledetto()
-    {
-        for(String nome : getChiavi()) if(!ottieniRuolo(nome).isContadinoMostro()) annullaMaledizione(nome);
-    }
+    private void resettaMaledetto() { for(String nome : getChiavi()) if(!isContadinoMostro(nome)) annullaMaledizione(nome); }
+
+    private boolean isContadinoMostro(String nome) { return ottieniRuolo(nome).isContadinoMostro(); }
 
     private void annullaMaledizione(String nome) { ottieniRuolo(nome).eliminaTratto(MALEDETTO); }
 
