@@ -91,7 +91,6 @@ public final class Partita
         for(int i = 0; i < eliminati.getNumeroGiocatori() && posizione == -1; i++) if(eliminati.getRuolo(eliminati.getNomeGiocatore(i)).isBardo())
             posizione = i;
         boolean esito = posizione == -1;
-        System.out.println(posizione);
         if(esito) esito = (ultimoControllo == BIANCA);
         return esito;
     }
