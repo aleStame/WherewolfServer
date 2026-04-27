@@ -32,10 +32,7 @@ public final class Bardo extends Villaggio
 
     public static Ruolo getInstance() { return new Bardo(); }
 
-    private boolean isPartitaVinta(Partita partita)
-    {
-        return partita.getNumeroGiocatoriVivi() > 1 && partita.isNoCreatureOmbra();
-    }
+    private boolean isPartitaVinta(Partita partita) { return !partita.isNoGiocatoriVivi() && partita.isNoCreatureOmbra(); }
 
     private boolean isPartitaSconfitta(Partita partita)
     {
