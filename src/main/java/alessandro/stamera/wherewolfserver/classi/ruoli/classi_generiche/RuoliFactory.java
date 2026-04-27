@@ -77,7 +77,9 @@ public final class RuoliFactory
         ruolo.ripristinaFazioneOriginale();
     }
 
-    private void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
+    private void annullaVoti() { for(String chiave : getChiavi()) annullaVoti(chiave); }
+
+    private void annullaVoti(String chiave) { ottieniRuolo(chiave).annullaVoti(); }
 
     private void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
 

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo annullaMaledizione" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isContadinoMostro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02425" summary="VERDE DIRETTO: testAzzeramentoAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1777219117877</created>
-      <option name="number" value="02425" />
-      <option name="presentableId" value="LOCAL-02425" />
-      <option name="project" value="LOCAL" />
-      <updated>1777219117878</updated>
     </task>
     <task id="LOCAL-02426" summary="VERDE: testAzzeramentoAzzeccagarbugli riuscito">
       <option name="closed" value="true" />
@@ -678,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777317951750</updated>
     </task>
-    <option name="localTasksCounter" value="2474" />
+    <task id="LOCAL-02474" summary="REFACTORING: definizione del metodo isContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1777318115715</created>
+      <option name="number" value="02474" />
+      <option name="presentableId" value="LOCAL-02474" />
+      <option name="project" value="LOCAL" />
+      <updated>1777318115715</updated>
+    </task>
+    <option name="localTasksCounter" value="2475" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPotereBardoNienteBardo non riuscito" />
     <MESSAGE value="VERDE: testPotereBardoNienteBardo riuscito" />
     <MESSAGE value="ROSSO: testAuraChiara non riuscito" />
     <MESSAGE value="VERDE: testAuraChiara riuscito" />
@@ -718,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo resettaNonMorto" />
     <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaMaledizione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo annullaMaledizione" />
+    <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isContadinoMostro" />
   </component>
 </project>
