@@ -91,12 +91,13 @@ public final class TestBardo
         {
             new Partita(new String[][] { { "Noemi", "Bardo" }, { "Elisa", "Pazzo" } }),
             new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } }),
-            new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } })
+            new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }),
+            new Partita(new String[][] {})
         };
         return Stream.of
         (
             Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA),
-            Arguments.of(null, SCONFITTA)
+            Arguments.of(partite[3], SCONFITTA)
         );
     }
 
