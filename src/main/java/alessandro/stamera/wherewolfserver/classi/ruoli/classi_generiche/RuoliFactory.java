@@ -52,20 +52,16 @@ public final class RuoliFactory
         return filtraRuoli(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
     }
 
-    public void annullaSegnalazioni() { }
-
-    public void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
-
-    public void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
-
-    public void resettaAmato() { for(String nome : getChiavi()) ottieniRuolo(nome).resettaAmato(); }
-
-    public void resettaSegnalazioneAzzeccagarbugli()
+    public void annullaSegnalazioni()
     {
-        for(String nome : getChiavi()) ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
+        annullaVoti();
+        resettaRomeo();
+        resettaAmato();
+        resettaSegnalazioneAzzeccagarbugli();
+        resettaNonMorto();
     }
 
-    public void resettaNonMorto()
+    private void resettaNonMorto()
     {
         for(String nome : getChiavi())
         {
@@ -76,6 +72,17 @@ public final class RuoliFactory
                 ruolo.ripristinaFazioneOriginale();
             }
         }
+    }
+
+    private void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
+
+    private void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
+
+    private void resettaAmato() { for(String nome : getChiavi()) ottieniRuolo(nome).resettaAmato(); }
+
+    private void resettaSegnalazioneAzzeccagarbugli()
+    {
+        for(String nome : getChiavi()) ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
     }
 
     private Set<String> getChiavi() { return ruoli.keySet(); }

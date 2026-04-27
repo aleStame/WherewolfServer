@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaControlloVeggente">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNessunaSegnalazione non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/RuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/RuoliFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuoliFactory.java" afterDir="false" />
     </list>
@@ -289,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02420" summary="REFACTORING: definizione del metodo isPartitaPersa">
-      <option name="closed" value="true" />
-      <created>1777132244333</created>
-      <option name="number" value="02420" />
-      <option name="presentableId" value="LOCAL-02420" />
-      <option name="project" value="LOCAL" />
-      <updated>1777132244333</updated>
     </task>
     <task id="LOCAL-02421" summary="REFACTORING: definizione del metodo isPartitaVinta">
       <option name="closed" value="true" />
@@ -682,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777310831401</updated>
     </task>
-    <option name="localTasksCounter" value="2469" />
+    <task id="LOCAL-02469" summary="ROSSO: testNessunaSegnalazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1777316293081</created>
+      <option name="number" value="02469" />
+      <option name="presentableId" value="LOCAL-02469" />
+      <option name="project" value="LOCAL" />
+      <updated>1777316293081</updated>
+    </task>
+    <option name="localTasksCounter" value="2470" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
     <MESSAGE value="REFACTORING: definizione del metodo getNumeroGiocatoriVivi" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartitaVinta" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartita" />
@@ -722,6 +720,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getCantoBardo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNienteCantoBardo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaControlloVeggente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaControlloVeggente" />
+    <MESSAGE value="ROSSO: testNessunaSegnalazione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNessunaSegnalazione non riuscito" />
   </component>
 </project>

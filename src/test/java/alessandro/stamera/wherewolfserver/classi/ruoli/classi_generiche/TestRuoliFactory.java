@@ -1,16 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
-import alessandro.stamera.wherewolfserver.classi.ruoli.*;
-import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe;
-import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo;
-import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro;
-import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale;
-import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia;
-import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta;
-import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale;
-import alessandro.stamera.wherewolfserver.classi.ruoli.lupi.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -49,6 +41,9 @@ public final class TestRuoliFactory
         assertThat(ruolo.isAmato()).isFalse();
         assertThat(ruolo.isInquisito()).isFalse();
         assertThat(ruolo.isSegnalatoAzzeccagarbugli()).isFalse();
+        assertThat(ruolo.isTrattoPresente(NON_MORTO)).isFalse();
+        if(nome.equals("Contadino mostro")) assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
+        else assertThat(ruolo.getNumeroVoti()).isZero();
     }
 
     private void verificaPresenza(Ruolo[] ruoli, Ruolo ruolo) { assertThat(ruoli).contains(ruolo); }

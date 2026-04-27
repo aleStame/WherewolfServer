@@ -24,9 +24,8 @@ public final class Partita
     {
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
-        FACTORY.annullaVoti();
+        FACTORY.annullaSegnalazioni();
         for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
-        vivi.resettaAmato();
         ultimoControllo = NERA;
     }
 

@@ -23,12 +23,8 @@ public final class TestGiocatoriVivi
 
     @BeforeEach public void setUp()
     {
-        FACTORY.annullaVoti();
+        FACTORY.annullaSegnalazioni();
         giocatori = new GiocatoriVivi();
-        FACTORY.resettaRomeo();
-        FACTORY.resettaAmato();
-        FACTORY.resettaSegnalazioneAzzeccagarbugli();
-        FACTORY.resettaNonMorto();
     }
 
     @Test public void testBallottaggioPuro()
