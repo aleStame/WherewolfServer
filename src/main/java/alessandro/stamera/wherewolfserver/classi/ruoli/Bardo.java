@@ -25,7 +25,7 @@ public final class Bardo extends Villaggio
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.isSoloCreatureOmbra() || (partita.isNoGuardie() && partita.getNumeroCriminali() >= 1)) esito = SCONFITTA;
+        if(isPartitaSconfitta(partita)) esito = SCONFITTA;
         else if(isPartitaVinta(partita)) esito = VITTORIA;
         return esito;
     }
@@ -33,6 +33,11 @@ public final class Bardo extends Villaggio
     private boolean isPartitaVinta(Partita partita)
     {
         return partita.getNumeroGiocatoriVivi() > 1 && partita.isNoCreatureOmbra();
+    }
+
+    private boolean isPartitaSconfitta(Partita partita)
+    {
+        return partita.isSoloCreatureOmbra() || (partita.isNoGuardie() && partita.getNumeroCriminali() >= 1);
     }
 
     public static Ruolo getInstance() { return new Bardo(); }
