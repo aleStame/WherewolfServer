@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testEsitoPartita (caso 3) non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Bardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Bardo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCriminaleSenzaGuardie">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAzzeccagarbugli.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,70 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02436" summary="VERDE: testPartitaSconfitta riuscito">
-      <option name="closed" value="true" />
-      <created>1777233390539</created>
-      <option name="number" value="02436" />
-      <option name="presentableId" value="LOCAL-02436" />
-      <option name="project" value="LOCAL" />
-      <updated>1777233390539</updated>
-    </task>
-    <task id="LOCAL-02437" summary="REFACTORING: definiizone del metodo isPartitaSconfitta">
-      <option name="closed" value="true" />
-      <created>1777233623539</created>
-      <option name="number" value="02437" />
-      <option name="presentableId" value="LOCAL-02437" />
-      <option name="project" value="LOCAL" />
-      <updated>1777233623539</updated>
-    </task>
-    <task id="LOCAL-02438" summary="REFACTORING: definizione del metodo verificaPartitaSconfitta">
-      <option name="closed" value="true" />
-      <created>1777234062859</created>
-      <option name="number" value="02438" />
-      <option name="presentableId" value="LOCAL-02438" />
-      <option name="project" value="LOCAL" />
-      <updated>1777234062859</updated>
-    </task>
-    <task id="LOCAL-02439" summary="REFACTORING: definizione del metodo getEsempioPartitaSconfitta">
-      <option name="closed" value="true" />
-      <created>1777234383005</created>
-      <option name="number" value="02439" />
-      <option name="presentableId" value="LOCAL-02439" />
-      <option name="project" value="LOCAL" />
-      <updated>1777234383005</updated>
-    </task>
-    <task id="LOCAL-02440" summary="ROSSO: testPartitaVinta non riuscito">
-      <option name="closed" value="true" />
-      <created>1777234617197</created>
-      <option name="number" value="02440" />
-      <option name="presentableId" value="LOCAL-02440" />
-      <option name="project" value="LOCAL" />
-      <updated>1777234617197</updated>
-    </task>
-    <task id="LOCAL-02441" summary="VERDE: testPartitaVinta riuscito">
-      <option name="closed" value="true" />
-      <created>1777234785767</created>
-      <option name="number" value="02441" />
-      <option name="presentableId" value="LOCAL-02441" />
-      <option name="project" value="LOCAL" />
-      <updated>1777234785767</updated>
-    </task>
-    <task id="LOCAL-02442" summary="REFACTORING: definizione del metodo isPartitaVinta">
-      <option name="closed" value="true" />
-      <created>1777234973454</created>
-      <option name="number" value="02442" />
-      <option name="presentableId" value="LOCAL-02442" />
-      <option name="project" value="LOCAL" />
-      <updated>1777234973454</updated>
-    </task>
-    <task id="LOCAL-02443" summary="REFACTORING: definizione del metodo getNumeroGiocatoriVivi">
-      <option name="closed" value="true" />
-      <created>1777235126472</created>
-      <option name="number" value="02443" />
-      <option name="presentableId" value="LOCAL-02443" />
-      <option name="project" value="LOCAL" />
-      <updated>1777235126472</updated>
     </task>
     <task id="LOCAL-02444" summary="REFACTORING: definizione del metodo getEsempioPartitaVinta">
       <option name="closed" value="true" />
@@ -680,7 +617,71 @@
       <option name="project" value="LOCAL" />
       <updated>1777324487139</updated>
     </task>
-    <option name="localTasksCounter" value="2485" />
+    <task id="LOCAL-02485" summary="VERDE: testEsitoPartita (caso 3) riuscito">
+      <option name="closed" value="true" />
+      <created>1777324678727</created>
+      <option name="number" value="02485" />
+      <option name="presentableId" value="LOCAL-02485" />
+      <option name="project" value="LOCAL" />
+      <updated>1777324678727</updated>
+    </task>
+    <task id="LOCAL-02486" summary="ROSSO: testEsitoPartita (caso 4) non riuscito">
+      <option name="closed" value="true" />
+      <created>1777324796663</created>
+      <option name="number" value="02486" />
+      <option name="presentableId" value="LOCAL-02486" />
+      <option name="project" value="LOCAL" />
+      <updated>1777324796663</updated>
+    </task>
+    <task id="LOCAL-02487" summary="VERDE: testEsitoPartita (caso 4) riuscito">
+      <option name="closed" value="true" />
+      <created>1777324991307</created>
+      <option name="number" value="02487" />
+      <option name="presentableId" value="LOCAL-02487" />
+      <option name="project" value="LOCAL" />
+      <updated>1777324991307</updated>
+    </task>
+    <task id="LOCAL-02488" summary="VERDE DIRETTO: testEsitoPartita (caso 5) riuscito">
+      <option name="closed" value="true" />
+      <created>1777325167560</created>
+      <option name="number" value="02488" />
+      <option name="presentableId" value="LOCAL-02488" />
+      <option name="project" value="LOCAL" />
+      <updated>1777325167560</updated>
+    </task>
+    <task id="LOCAL-02489" summary="ROSSO: testEsitoPartita (caso 6) non riuscito">
+      <option name="closed" value="true" />
+      <created>1777325472059</created>
+      <option name="number" value="02489" />
+      <option name="presentableId" value="LOCAL-02489" />
+      <option name="project" value="LOCAL" />
+      <updated>1777325472059</updated>
+    </task>
+    <task id="LOCAL-02490" summary="VERDE: testEsitoPartita (caso 6) riuscito">
+      <option name="closed" value="true" />
+      <created>1777325817753</created>
+      <option name="number" value="02490" />
+      <option name="presentableId" value="LOCAL-02490" />
+      <option name="project" value="LOCAL" />
+      <updated>1777325817753</updated>
+    </task>
+    <task id="LOCAL-02491" summary="REFACTORING: definizione del metodo isPartitaSconfitta">
+      <option name="closed" value="true" />
+      <created>1777325993004</created>
+      <option name="number" value="02491" />
+      <option name="presentableId" value="LOCAL-02491" />
+      <option name="project" value="LOCAL" />
+      <updated>1777325993004</updated>
+    </task>
+    <task id="LOCAL-02492" summary="REFACTORING: definizione del metodo isCriminaleSenzaGuardie">
+      <option name="closed" value="true" />
+      <created>1777326153057</created>
+      <option name="number" value="02492" />
+      <option name="presentableId" value="LOCAL-02492" />
+      <option name="project" value="LOCAL" />
+      <updated>1777326153057</updated>
+    </task>
+    <option name="localTasksCounter" value="2493" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,14 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testBardoAssente riuscito" />
-    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
-    <MESSAGE value="REFACTORING: definizione del metodo isBardoPresente" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <MESSAGE value="REFACTORING: definizione del metodo isBardo" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
-    <MESSAGE value="REFACTORING: definizione del metodo getCantoBardo" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNienteCantoBardo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaControlloVeggente" />
     <MESSAGE value="ROSSO: testNessunaSegnalazione non riuscito" />
     <MESSAGE value="VERDE: testNessunaSegnalazione riuscito" />
@@ -720,6 +713,14 @@
     <MESSAGE value="VERDE DIRETTO: testVittoriaConCriminali riuscito" />
     <MESSAGE value="REFACTORING: parametrizzazione dei metodi che controllano le condizioni di vittoria" />
     <MESSAGE value="ROSSO: testEsitoPartita (caso 3) non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsitoPartita (caso 3) non riuscito" />
+    <MESSAGE value="VERDE: testEsitoPartita (caso 3) riuscito" />
+    <MESSAGE value="ROSSO: testEsitoPartita (caso 4) non riuscito" />
+    <MESSAGE value="VERDE: testEsitoPartita (caso 4) riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testEsitoPartita (caso 5) riuscito" />
+    <MESSAGE value="ROSSO: testEsitoPartita (caso 6) non riuscito" />
+    <MESSAGE value="VERDE: testEsitoPartita (caso 6) riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPartitaSconfitta" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCriminaleSenzaGuardie" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCriminaleSenzaGuardie" />
   </component>
 </project>
