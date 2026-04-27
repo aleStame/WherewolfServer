@@ -81,7 +81,9 @@ public final class RuoliFactory
 
     private void annullaVoti(String chiave) { ottieniRuolo(chiave).annullaVoti(); }
 
-    private void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
+    private void resettaRomeo() { for(String chiave : getChiavi()) resettaRomeo(chiave); }
+
+    private void resettaRomeo(String chiave) { ottieniRuolo(chiave).resettaRomeo(); }
 
     private void resettaAmato() { for(String nome : getChiavi()) ottieniRuolo(nome).resettaAmato(); }
 
