@@ -15,9 +15,11 @@ public final class TestGiocatoriEliminati
     @Test public void testBardoPresente()
     {
         giocatori.aggiungiGiocatore("Pino", FACTORY.getRuolo("Bardo"));
-        assertThat(giocatori.isBardoPresente()).isTrue();
+        assertThat(isBardoPresente()).isTrue();
     }
 
-    @Test public void testBardoAssente() { assertThat(giocatori.isBardoPresente()).isFalse(); }
+    @Test public void testBardoAssente() { assertThat(isBardoPresente()).isFalse(); }
+
+    private boolean isBardoPresente() { return giocatori.isBardoPresente(); }
 
 }
