@@ -79,7 +79,7 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCreatureOmbra;
     }
 
-    public Aura getControlloVeggente(String nome) { return null; }
+    public Aura getControlloVeggente(String nome) { return getRuolo(nome).getAura(); }
 
     private int getPosizioneAssassino()
     {

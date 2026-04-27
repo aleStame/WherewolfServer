@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPotereBardoNienteBardo riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAuraChiara non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,14 +284,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02401" summary="REFACTORING: riorganizzazione delle classi in diverse sottocartelle">
-      <option name="closed" value="true" />
-      <created>1777124175518</created>
-      <option name="number" value="02401" />
-      <option name="presentableId" value="LOCAL-02401" />
-      <option name="project" value="LOCAL" />
-      <updated>1777124175518</updated>
     </task>
     <task id="LOCAL-02402" summary="ROSSO: testNoGuardie non riuscito">
       <option name="closed" value="true" />
@@ -679,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777298824477</updated>
     </task>
-    <option name="localTasksCounter" value="2450" />
+    <task id="LOCAL-02450" summary="ROSSO: testAuraChiara non riuscito">
+      <option name="closed" value="true" />
+      <created>1777299995226</created>
+      <option name="number" value="02450" />
+      <option name="presentableId" value="LOCAL-02450" />
+      <option name="project" value="LOCAL" />
+      <updated>1777299995226</updated>
+    </task>
+    <option name="localTasksCounter" value="2451" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isPartitaPersa" />
     <MESSAGE value="REFACTORING: definizione di un unico caso di test parametrico per ilo controllo dell'esito della partita" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
     <MESSAGE value="ROSSO: testAzzeramentoAzzeccagarbugli non riuscito" />
@@ -719,6 +716,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo inizializzaGiocatori" />
     <MESSAGE value="ROSSO: testPotereBardoNienteBardo non riuscito" />
     <MESSAGE value="VERDE: testPotereBardoNienteBardo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPotereBardoNienteBardo riuscito" />
+    <MESSAGE value="ROSSO: testAuraChiara non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAuraChiara non riuscito" />
   </component>
 </project>
