@@ -35,7 +35,7 @@ public final class Azzeccagarbugli extends Citta
 
     private boolean isPartitaSconfitta(Partita partita)
     {
-        return getNumeroGiocatoriVivi(partita) == 0 || (partita.isFinita() && partita.getNumeroCreatureOmbra() >= 1);
+        return getNumeroGiocatoriVivi(partita) == 0 || (partita.isFinita() && partita.getNumeroCreatureOmbraVive() >= 1);
     }
 
     private boolean isPartitaVinta(Partita partita)

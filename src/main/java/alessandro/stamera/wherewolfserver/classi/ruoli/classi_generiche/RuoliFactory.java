@@ -10,6 +10,7 @@ import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo.values;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 
 public final class RuoliFactory
 {
@@ -54,6 +55,26 @@ public final class RuoliFactory
     public void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
 
     public void resettaRomeo() { for(String chiave : getChiavi()) ottieniRuolo(chiave).resettaRomeo(); }
+
+    public void resettaAmato() { for(String nome : getChiavi()) ottieniRuolo(nome).resettaAmato(); }
+
+    public void resettaSegnalazioneAzzeccagarbugli()
+    {
+        for(String nome : getChiavi()) ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
+    }
+
+    public void resettaNonMorto()
+    {
+        for(String nome : getChiavi())
+        {
+            Ruolo ruolo = ottieniRuolo(nome);
+            if(ruolo.isTrattoPresente(NON_MORTO))
+            {
+                ruolo.eliminaTratto(NON_MORTO);
+                ruolo.ripristinaFazioneOriginale();
+            }
+        }
+    }
 
     private Set<String> getChiavi() { return ruoli.keySet(); }
 

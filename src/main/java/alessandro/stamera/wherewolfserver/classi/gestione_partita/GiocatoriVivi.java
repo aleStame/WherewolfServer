@@ -8,6 +8,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -105,6 +106,7 @@ public final class GiocatoriVivi extends Giocatori
     private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
     {
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) System.out.println(ballottaggio.getNomeGiocatore(i));
         if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
     }
 
