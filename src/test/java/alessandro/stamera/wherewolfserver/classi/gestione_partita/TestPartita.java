@@ -227,6 +227,14 @@ public final class TestPartita
         verificaFalso(partita.getCantoBardo());
     }
 
+    @Test public void testPotereBardoAuraChiara()
+    {
+        String[][] giocatori = new String[][] { { "Isabella", "Bardo" }, { "Otello", "Mago" } };
+        inizializzaPartita(giocatori);
+        assertThat(partita.getControlloVeggente(giocatori[1][0])).isEqualTo(BIANCA);
+        verificaVero(partita.getCantoBardo());
+    }
+
     private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
 
     private void incrementaVoti(String nome, int numeroVoti) { partita.incrementaVoti(nome, numeroVoti); }
