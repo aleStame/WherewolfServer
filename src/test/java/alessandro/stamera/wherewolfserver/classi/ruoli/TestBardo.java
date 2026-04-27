@@ -5,6 +5,10 @@ import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -76,15 +80,17 @@ public final class TestBardo
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testVittoriaSenzaOmbre()
-    {
-        assertThat(ruolo.getEsitoPartita(new Partita(new String[][] { { "Noemi", "Bardo" }, { "Elisa", "Pazzo" } }))).isEqualTo(VITTORIA);
-    }
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
+    public void testVittoriaSenzaOmbre(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
 
-    @Test public void testVittoriaConCriminali()
+    private static Stream<Arguments> getEsempiEsitiPartita()
     {
-        assertThat(ruolo.getEsitoPartita(new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } })))
-            .isEqualTo(VITTORIA);
+        Partita[] partite = new Partita[]
+        {
+            new Partita(new String[][] { { "Noemi", "Bardo" }, { "Elisa", "Pazzo" } }),
+            new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } })
+        };
+        return Stream.of(Arguments.of(partite[0]), Arguments.of(partite[1]));
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
