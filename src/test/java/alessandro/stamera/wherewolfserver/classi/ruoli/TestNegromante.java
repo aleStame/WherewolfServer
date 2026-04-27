@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,7 +21,7 @@ public final class TestNegromante
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(NEGROMANTE); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testDescrizione()
     {
