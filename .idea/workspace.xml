@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo resettaSegnalazioneAzzeccagarbugli" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBardo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBardo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +101,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/cantoBardo",
+    "git-widget-placeholder": "feature/condizioneVittoriaBardo",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -285,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02430" summary="REFACTORING: controlloBallottaggioAzzeccagarbugli riuscito">
-      <option name="closed" value="true" />
-      <created>1777221053753</created>
-      <option name="number" value="02430" />
-      <option name="presentableId" value="LOCAL-02430" />
-      <option name="project" value="LOCAL" />
-      <updated>1777221053753</updated>
     </task>
     <task id="LOCAL-02431" summary="ROSSO:testSconfittaNessunGiocatore non riuscito">
       <option name="closed" value="true" />
@@ -678,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777321889980</updated>
     </task>
-    <option name="localTasksCounter" value="2479" />
+    <task id="LOCAL-02479" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1777322101072</created>
+      <option name="number" value="02479" />
+      <option name="presentableId" value="LOCAL-02479" />
+      <option name="project" value="LOCAL" />
+      <updated>1777322101072</updated>
+    </task>
+    <option name="localTasksCounter" value="2480" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAuraOscura riuscito" />
     <MESSAGE value="ROSSO: testPotereBardoAuraChiara non riuscito" />
     <MESSAGE value="VERDE: testPotereBardoAuraChiara riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBardoAuraOscura riuscito" />
@@ -718,6 +720,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo resettaRomeo" />
     <MESSAGE value="REFACTORING: definizione del metodo resettaAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo resettaSegnalazioneAzzeccagarbugli" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo resettaSegnalazioneAzzeccagarbugli" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>
