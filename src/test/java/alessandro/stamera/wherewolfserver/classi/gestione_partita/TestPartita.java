@@ -236,7 +236,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         assertThat(partita.getControlloVeggente(giocatori[2][0])).isEqualTo(BIANCA);
         partita.attaccoLupi("Lupo del branco", giocatori[0][0]);
-        verificaFalso(partita.getCantoBardo());
+        verificaFalso(getCantoBardo());
     }
 
     @Test public void testPotereBardoAuraChiara()
@@ -244,7 +244,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Isabella", "Bardo" }, { "Otello", "Mago" } };
         inizializzaPartita(giocatori);
         assertThat(partita.getControlloVeggente(giocatori[1][0])).isEqualTo(BIANCA);
-        verificaVero(partita.getCantoBardo());
+        verificaVero(getCantoBardo());
     }
 
     @Test public void testPotereBardoAuraOscura()
@@ -252,8 +252,10 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Ezio", "Posseduto" }, { "Virginio", "Bardo" } };
         inizializzaPartita(giocatori);
         assertThat(partita.getControlloVeggente(giocatori[0][0])).isEqualTo(NERA);
-        verificaFalso(partita.getCantoBardo());
+        verificaFalso(getCantoBardo());
     }
+
+    private boolean getCantoBardo() { return partita.getCantoBardo(); }
 
     private void inizializzaPartita(String[][] giocatori) { partita = new Partita(giocatori); }
 
