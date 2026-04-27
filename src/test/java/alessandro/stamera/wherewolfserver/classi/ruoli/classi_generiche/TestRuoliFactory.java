@@ -42,6 +42,7 @@ public final class TestRuoliFactory
         assertThat(ruolo.isInquisito()).isFalse();
         assertThat(ruolo.isSegnalatoAzzeccagarbugli()).isFalse();
         assertThat(ruolo.isTrattoPresente(NON_MORTO)).isFalse();
+        System.out.println(ruolo.isMaledetto());
         if(nome.equals("Contadino mostro")) assertThat(ruolo.getNumeroVoti()).isEqualTo(1);
         else assertThat(ruolo.getNumeroVoti()).isZero();
     }

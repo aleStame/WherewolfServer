@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,8 +8,7 @@ import java.util.Set;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo.values;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 
 public final class RuoliFactory
 {
@@ -59,19 +57,28 @@ public final class RuoliFactory
         resettaAmato();
         resettaSegnalazioneAzzeccagarbugli();
         resettaNonMorto();
+        resettaMaledetto();
     }
 
     private void resettaNonMorto()
     {
+        for(String nome : getChiavi()) if(ottieniRuolo(nome).isTrattoPresente(NON_MORTO)) resettaNonMorto(nome);
+    }
+
+    private void resettaMaledetto()
+    {
         for(String nome : getChiavi())
         {
             Ruolo ruolo = ottieniRuolo(nome);
-            if(ruolo.isTrattoPresente(NON_MORTO))
-            {
-                ruolo.eliminaTratto(NON_MORTO);
-                ruolo.ripristinaFazioneOriginale();
-            }
+            if(!ruolo.isContadinoMostro()) ruolo.eliminaTratto(MALEDETTO);
         }
+    }
+
+    private void resettaNonMorto(String nome)
+    {
+        Ruolo ruolo = ottieniRuolo(nome);
+        ruolo.eliminaTratto(NON_MORTO);
+        ruolo.ripristinaFazioneOriginale();
     }
 
     private void annullaVoti() { for(String chiave : getChiavi()) ottieniRuolo(chiave).annullaVoti(); }
