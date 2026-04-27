@@ -1,9 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 
 public final class Bardo extends Villaggio
 {
@@ -19,6 +22,26 @@ public final class Bardo extends Villaggio
 
     @Override public boolean isBardo() { return true; }
 
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(isPartitaSconfitta(partita)) esito = SCONFITTA;
+        else if(isPartitaVinta(partita)) esito = VITTORIA;
+        return esito;
+    }
+
     public static Ruolo getInstance() { return new Bardo(); }
+
+    private boolean isPartitaVinta(Partita partita) { return !partita.isNoGiocatoriVivi() && partita.isNoCreatureOmbra(); }
+
+    private boolean isPartitaSconfitta(Partita partita)
+    {
+        return partita.isSoloCreatureOmbra() || isCriminaleSenzaGuardie(partita);
+    }
+
+    private boolean isCriminaleSenzaGuardie(Partita partita)
+    {
+        return partita.isNoGuardie() && partita.getNumeroCriminali() >= 1;
+    }
 
 }

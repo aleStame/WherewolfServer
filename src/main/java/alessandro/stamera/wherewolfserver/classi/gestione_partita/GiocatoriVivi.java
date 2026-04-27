@@ -81,6 +81,15 @@ public final class GiocatoriVivi extends Giocatori
 
     public Aura getControlloVeggente(String nome) { return getRuolo(nome).getAura(); }
 
+    public int getNumeroCriminali()
+    {
+        int numeroCriminali = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isCriminale(i)) numeroCriminali++;
+        return numeroCriminali;
+    }
+
+    private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
+
     private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }
 
     private int getPosizioneAssassino()

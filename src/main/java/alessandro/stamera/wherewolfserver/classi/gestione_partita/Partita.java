@@ -91,6 +91,10 @@ public final class Partita
         return esito;
     }
 
+    public int getNumeroCriminali() { return vivi.getNumeroCriminali(); }
+
+    public boolean isNoGiocatoriVivi() { return confrontaValori(getNumeroGiocatoriVivi(), 0); }
+
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
     private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
