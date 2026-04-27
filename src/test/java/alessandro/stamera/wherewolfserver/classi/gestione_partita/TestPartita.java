@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -243,7 +244,7 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Isabella", "Bardo" }, { "Otello", "Mago" } };
         inizializzaPartita(giocatori);
-        assertThat(partita.getControlloVeggente(giocatori[1][0])).isEqualTo(BIANCA);
+        verificaControlloVeggente(giocatori[1][0], BIANCA);
         verificaVero(getCantoBardo());
     }
 
@@ -251,8 +252,13 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Ezio", "Posseduto" }, { "Virginio", "Bardo" } };
         inizializzaPartita(giocatori);
-        assertThat(partita.getControlloVeggente(giocatori[0][0])).isEqualTo(NERA);
+        verificaControlloVeggente(giocatori[0][0], NERA);
         verificaNienteCantoBardo();
+    }
+
+    private void verificaControlloVeggente(String nome, Aura aura)
+    {
+        assertThat(partita.getControlloVeggente(nome)).isEqualTo(aura);
     }
 
     private void verificaNienteCantoBardo() { verificaFalso(getCantoBardo()); }
