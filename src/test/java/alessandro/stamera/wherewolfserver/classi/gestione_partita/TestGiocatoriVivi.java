@@ -310,6 +310,12 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(NERA);
     }
 
+    @Test public void testNumeroCriminali()
+    {
+        inizializzaGiocatori(new String[][] { { "Claudia", "Assassino" }, { "Pamela", "Capo gilda" } });
+        assertThat(giocatori.getNumeroCriminali()).isEqualTo(2);
+    }
+
     private void inizializzaGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
