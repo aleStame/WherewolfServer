@@ -11,8 +11,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -92,12 +91,13 @@ public final class TestBardo
             new Partita(new String[][] { { "Noemi", "Bardo" }, { "Elisa", "Pazzo" } }),
             new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } }),
             new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }),
-            new Partita(new String[][] {})
+            new Partita(new String[][] { }),
+            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } })
         };
         return Stream.of
         (
             Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA),
-            Arguments.of(partite[3], SCONFITTA)
+            Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO)
         );
     }
 
