@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testPotereBardoAuraOscura riuscito">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriEliminati.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriEliminati.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testBardoPresente riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +113,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
       <recent name="alessandro.stamera.wherewolfserver.classi" />
       <recent name="alessandro.stamera.wherewolfserver.entity" />
     </key>
@@ -288,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02409" summary="ROSSO: testContaCreatureOmbra non riuscito">
-      <option name="closed" value="true" />
-      <created>1777127536208</created>
-      <option name="number" value="02409" />
-      <option name="presentableId" value="LOCAL-02409" />
-      <option name="project" value="LOCAL" />
-      <updated>1777127536208</updated>
-    </task>
-    <task id="LOCAL-02410" summary="VERDE: testContaCreatureOmbra riuscito">
-      <option name="closed" value="true" />
-      <created>1777128512481</created>
-      <option name="number" value="02410" />
-      <option name="presentableId" value="LOCAL-02410" />
-      <option name="project" value="LOCAL" />
-      <updated>1777128512481</updated>
     </task>
     <task id="LOCAL-02411" summary="REFACTORING: definizione del metodo verificaNumeroIntero">
       <option name="closed" value="true" />
@@ -681,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777305628253</updated>
     </task>
-    <option name="localTasksCounter" value="2458" />
+    <task id="LOCAL-02458" summary="ROSSO: testBardoPresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1777306000808</created>
+      <option name="number" value="02458" />
+      <option name="presentableId" value="LOCAL-02458" />
+      <option name="project" value="LOCAL" />
+      <updated>1777306000808</updated>
+    </task>
+    <task id="LOCAL-02459" summary="VERDE: testBardoPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1777306178307</created>
+      <option name="number" value="02459" />
+      <option name="presentableId" value="LOCAL-02459" />
+      <option name="project" value="LOCAL" />
+      <updated>1777306178307</updated>
+    </task>
+    <option name="localTasksCounter" value="2460" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSconfittaNessunGiocatore riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartitaNessunGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartitaNonFinita" />
     <MESSAGE value="ROSSO: testPartitaSconfitta non riuscito" />
     <MESSAGE value="VERDE: testPartitaSconfitta riuscito" />
@@ -721,6 +716,8 @@
     <MESSAGE value="ROSSO: testPotereBardoAuraChiara non riuscito" />
     <MESSAGE value="VERDE: testPotereBardoAuraChiara riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBardoAuraOscura riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testPotereBardoAuraOscura riuscito" />
+    <MESSAGE value="ROSSO: testBardoPresente non riuscito" />
+    <MESSAGE value="VERDE: testBardoPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBardoPresente riuscito" />
   </component>
 </project>

@@ -14,4 +14,10 @@ public final class TestGiocatoriEliminati
         assertThat(giocatori.isBardoPresente()).isTrue();
     }
 
+    @Test public void testBardoAssente()
+    {
+        GiocatoriEliminati giocatori = new GiocatoriEliminati();
+        assertThat(giocatori.isBardoPresente()).isFalse();
+    }
+
 }
