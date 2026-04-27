@@ -93,7 +93,11 @@ public final class TestBardo
             new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } }),
             new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } })
         };
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
+        return Stream.of
+        (
+            Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA),
+            Arguments.of(null, SCONFITTA)
+        );
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
