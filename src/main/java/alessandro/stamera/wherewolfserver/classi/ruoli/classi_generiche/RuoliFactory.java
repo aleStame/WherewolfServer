@@ -89,10 +89,9 @@ public final class RuoliFactory
 
     private void getResettaAmato(String nome) { ottieniRuolo(nome).resettaAmato(); }
 
-    private void resettaSegnalazioneAzzeccagarbugli()
-    {
-        for(String nome : getChiavi()) ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
-    }
+    private void resettaSegnalazioneAzzeccagarbugli() { for(String nome : getChiavi()) annullaSegnalazioneAzzeccagarbugli(nome); }
+
+    private void annullaSegnalazioneAzzeccagarbugli(String nome) { ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli(); }
 
     private Set<String> getChiavi() { return ruoli.keySet(); }
 
