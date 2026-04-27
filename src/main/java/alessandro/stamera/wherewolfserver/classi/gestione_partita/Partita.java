@@ -16,14 +16,14 @@ public final class Partita
 
     private Giocatori ballottaggio;
 
-    private final Giocatori eliminati;
+    private final GiocatoriEliminati eliminati;
 
     private Aura ultimoControllo;
 
     public Partita(String[][] giocatori)
     {
         vivi = new GiocatoriVivi();
-        eliminati = new Giocatori();
+        eliminati = new GiocatoriEliminati();
         FACTORY.annullaVoti();
         for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
         vivi.resettaAmato();
@@ -87,10 +87,7 @@ public final class Partita
 
     public boolean getCantoBardo()
     {
-        int posizione = -1;
-        for(int i = 0; i < eliminati.getNumeroGiocatori() && posizione == -1; i++) if(eliminati.getRuolo(eliminati.getNomeGiocatore(i)).isBardo())
-            posizione = i;
-        boolean esito = posizione == -1;
+        boolean esito = !eliminati.isBardoPresente();
         if(esito) esito = (ultimoControllo == BIANCA);
         return esito;
     }
