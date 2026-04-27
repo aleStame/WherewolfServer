@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
@@ -286,10 +287,10 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia, Angelo custode", "Azzeccagarbugli", "Bardo", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
-            "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Guardia",
-            "Guaritore", "Inquisitore", "Ladra", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Prete", "Spia",
-            "Templare"
+            "Altra guardia, Angelo custode", "Azzeccagarbugli", "Bardo", "Borgomastro", "Becchino", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta",
+            "Giullare", "Guardia", "Guaritore", "Inquisitore", "Ladra", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste",
+            "Pazzo", "Prete", "Spia", "Templare"
         }
     )
     public void testAuraChiara(String nomeRuolo)
@@ -297,6 +298,20 @@ public final class TestGiocatoriVivi
         String nome = "Concetta";
         aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(BIANCA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Megera",
+            "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
+        }
+    )
+    public void testAuraOscura(String nomeRuolo)
+    {
+        String nome = "Gervaso";
+        aggiungiGiocatore(nome, nomeRuolo);
+        assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(NERA);
     }
 
     private void inizializzaGiocatori(String[][] giocatori)

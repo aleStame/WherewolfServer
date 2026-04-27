@@ -108,7 +108,6 @@ public final class GiocatoriVivi extends Giocatori
     private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
     {
         if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) System.out.println(ballottaggio.getNomeGiocatore(i));
         if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
     }
 
