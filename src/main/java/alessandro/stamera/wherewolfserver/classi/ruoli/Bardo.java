@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 
 public final class Bardo extends Villaggio
@@ -25,6 +26,7 @@ public final class Bardo extends Villaggio
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(isPartitaVinta(partita)) esito = VITTORIA;
+        else if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
         return esito;
     }
 
