@@ -220,7 +220,7 @@ public final class TestPartita
 
     @Test public void testPotereBardoNienteBardo()
     {
-        String[][] giocatori = new String[][] { { "Stefano", "Bardo" }, { "Francesco", "Veggente" }, { "Adriano", "Mago" } };
+        String[][] giocatori = new String[][] { { "Stefano", "Bardo" }, { "Francesco", "Guaritore" }, { "Adriano", "Mago" } };
         inizializzaPartita(giocatori);
         assertThat(partita.getControlloVeggente(giocatori[2][0])).isEqualTo(BIANCA);
         partita.attaccoLupi("Lupo del branco", giocatori[0][0]);

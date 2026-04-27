@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
@@ -74,9 +75,15 @@ public final class Partita
 
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
-    public boolean getControlloVeggente(String nome) { return false; }
+    public Aura getControlloVeggente(String nome) { return vivi.getRuolo(nome).getAura(); }
 
-    public boolean getCantoBardo() { return true; }
+    public boolean getCantoBardo()
+    {
+        int posizione = -1;
+        for(int i = 0; i < eliminati.getNumeroGiocatori() && posizione == -1; i++) if(eliminati.getRuolo(eliminati.getNomeGiocatore(i)).isBardo())
+            posizione = i;
+        return posizione != -1;
+    }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
