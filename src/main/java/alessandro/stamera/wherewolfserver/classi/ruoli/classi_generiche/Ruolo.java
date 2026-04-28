@@ -3,15 +3,12 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
@@ -72,7 +69,7 @@ public class Ruolo
 
     public Categoria getCategoria() { return getFazione().getCategoria(); }
 
-    public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
+    public boolean isFazioneNegromante() { return false; }
 
     public Fazione getFazione() { return fazione; }
 
@@ -95,7 +92,7 @@ public class Ruolo
         aggiungiProtezioneCreatureOmbra();
     }
 
-    public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
+    public void riconosciNegromante() { }
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
@@ -169,6 +166,7 @@ public class Ruolo
     {
         aggiungiProtezioneCreatureOmbra();
         setRomeo(true);
+        cambiaFazione(AMANTI);
     }
 
     public boolean isAmanti() { return false; }

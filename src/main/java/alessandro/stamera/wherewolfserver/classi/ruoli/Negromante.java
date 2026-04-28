@@ -21,6 +21,8 @@ public final class Negromante extends Ruolo
 
     @Override public boolean isNegromante() { return true; }
 
+    @Override public boolean isFazioneNegromante() { return true; }
+
     public static Ruolo getInstance() { return new Negromante(); }
 
 }

@@ -16,7 +16,11 @@ public final class TestBecchino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp()
+    {
+        ruolo = FACTORY.getRuolo(NOME);
+        ruolo.ripristinaFazioneOriginale();
+    }
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
@@ -42,7 +46,11 @@ public final class TestBecchino
         assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO);
         verificaFalso(isFazioneNegromante());
         ruolo.riconosciNegromante();
-        verificaVero(isFazioneNegromante());
+        verificaFazioneNegromante();
+        ruolo.gildata();
+        verificaFazioneNegromante();
+        ruolo.romeizzazione();
+        verificaFazioneNegromante();
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
@@ -84,6 +92,8 @@ public final class TestBecchino
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaFazioneNegromante() { verificaVero(isFazioneNegromante()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
