@@ -8,8 +8,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categori
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
@@ -167,6 +166,7 @@ public class Ruolo
     {
         aggiungiProtezioneCreatureOmbra();
         setRomeo(true);
+        cambiaFazione(AMANTI);
     }
 
     public boolean isAmanti() { return false; }
