@@ -30,10 +30,15 @@ public final class Negromante extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
-        if(partita.getNumeroGiocatoriVivi() == 1 && partita.isNegromantePresente()) esito = VITTORIA;
+        if(isPartitaVinta(partita)) esito = VITTORIA;
         return esito;
     }
 
     public static Ruolo getInstance() { return new Negromante(); }
+
+    private boolean isPartitaVinta(Partita partita)
+    {
+        return partita.getNumeroGiocatoriVivi() == 1 && partita.isNegromantePresente();
+    }
 
 }
