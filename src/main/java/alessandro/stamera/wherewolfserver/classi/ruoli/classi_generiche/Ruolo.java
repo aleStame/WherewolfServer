@@ -280,7 +280,7 @@ public class Ruolo
     public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = controlloVittoriaUmani(partita);
-        if(isRomeo() && partita.isGiuliettaViva()) esito = VITTORIA;
+        if(isVittoriaAmanti(partita)) esito = VITTORIA;
         return esito;
     }
 
@@ -312,6 +312,8 @@ public class Ruolo
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
 
     public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
+
+    private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
 
     private EsitoPartita controlloVittoriaUmani(Partita partita)
     {
