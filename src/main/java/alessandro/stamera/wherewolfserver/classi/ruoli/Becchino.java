@@ -1,13 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
-import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 
 public class Becchino extends Villaggio
@@ -53,13 +48,6 @@ public class Becchino extends Villaggio
         super.romeizzazione();
         if(!isVillaggio()) trasformaNegromante();
     }
-    @Override public EsitoPartita getEsitoPartita(Partita partita)
-    {
-        EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.getNumeroCriminali() > 0) esito = getEsitoPartitaGuardie(partita);
-        return esito;
-    }
-
 
     public static Ruolo getInstance() { return new Becchino(); }
 
@@ -68,12 +56,4 @@ public class Becchino extends Villaggio
     private void setVillaggio(boolean villaggio) { this.villaggio = villaggio; }
 
     private void stabilisciVillaggio() { setVillaggio(true); }
-
-    private EsitoPartita getEsitoPartitaGuardie(Partita partita)
-    {
-        EsitoPartita esito = VITTORIA;
-        if(partita.isNoGuardie()) esito = SCONFITTA;
-        return esito;
-    }
-
 }
