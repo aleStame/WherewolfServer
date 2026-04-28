@@ -72,7 +72,7 @@ public class Ruolo
 
     public Categoria getCategoria() { return getFazione().getCategoria(); }
 
-    public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
+    public boolean isFazioneNegromante() { return false; }
 
     public Fazione getFazione() { return fazione; }
 
@@ -95,7 +95,7 @@ public class Ruolo
         aggiungiProtezioneCreatureOmbra();
     }
 
-    public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
+    public void riconosciNegromante() { }
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 

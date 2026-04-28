@@ -4,9 +4,12 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 
 public class Becchino extends Villaggio
 {
+
+    private boolean villaggio;
 
     private Becchino()
     {
@@ -18,9 +21,28 @@ public class Becchino extends Villaggio
           "annuncia pubblicamente",
      3, false
         );
+        villaggio = true;
     }
 
     @Override public boolean isBecchino() { return true; }
+
+    @Override public void riconosciNegromante()
+    {
+        cambiaFazione(NEGROMANTE);
+        villaggio = false;
+    }
+
+    @Override public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
+
+    @Override public void gildata() { if(isVillaggio()) super.gildata(); }
+
+    @Override public boolean isVillaggio() { return villaggio; }
+
+    @Override public void ripristinaFazioneOriginale()
+    {
+        super.ripristinaFazioneOriginale();
+        villaggio = true;
+    }
 
     public static Ruolo getInstance() { return new Becchino(); }
 

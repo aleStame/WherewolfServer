@@ -16,7 +16,11 @@ public final class TestBecchino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp()
+    {
+        ruolo = FACTORY.getRuolo(NOME);
+        ruolo.ripristinaFazioneOriginale();
+    }
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
