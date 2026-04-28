@@ -21,7 +21,7 @@ public class Becchino extends Villaggio
           "annuncia pubblicamente",
      3, false
         );
-        villaggio = true;
+        setVillaggio(true);
     }
 
     @Override public boolean isBecchino() { return true; }
@@ -29,7 +29,7 @@ public class Becchino extends Villaggio
     @Override public void riconosciNegromante()
     {
         cambiaFazione(NEGROMANTE);
-        villaggio = false;
+        setVillaggio(false);
     }
 
     @Override public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
@@ -41,9 +41,11 @@ public class Becchino extends Villaggio
     @Override public void ripristinaFazioneOriginale()
     {
         super.ripristinaFazioneOriginale();
-        villaggio = true;
+        setVillaggio(true);
     }
 
     public static Ruolo getInstance() { return new Becchino(); }
+
+    private void setVillaggio(boolean villaggio) { this.villaggio = villaggio; }
 
 }
