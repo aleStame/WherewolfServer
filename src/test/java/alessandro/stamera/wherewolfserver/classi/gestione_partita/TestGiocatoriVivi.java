@@ -322,6 +322,12 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isNegromantePresente());
     }
 
+    @Test public void testNegromanteAssente()
+    {
+        inizializzaGiocatori(new String[][] { { "Salvatore", "Lupo del branco" }, { "Franca", "Mercante" } });
+        verificaFalso(giocatori.isNegromantePresente());
+    }
+
     private void inizializzaGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
