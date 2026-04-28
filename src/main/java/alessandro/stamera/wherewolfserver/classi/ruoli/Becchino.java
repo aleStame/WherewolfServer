@@ -44,6 +44,12 @@ public class Becchino extends Villaggio
         stabilisciVillaggio();
     }
 
+    @Override public void romeizzazione()
+    {
+        super.romeizzazione();
+        if(!isVillaggio()) cambiaFazione(NEGROMANTE);
+    }
+
     public static Ruolo getInstance() { return new Becchino(); }
 
     private void setVillaggio(boolean villaggio) { this.villaggio = villaggio; }
