@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNumeroCriminali non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCriminale">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/condizioneVittoriaBardo",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -288,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02447" summary="REFACTORING: definizione del metodo inizializzaGiocatori">
-      <option name="closed" value="true" />
-      <created>1777296909744</created>
-      <option name="number" value="02447" />
-      <option name="presentableId" value="LOCAL-02447" />
-      <option name="project" value="LOCAL" />
-      <updated>1777296909745</updated>
-    </task>
-    <task id="LOCAL-02448" summary="ROSSO: testPotereBardoNienteBardo non riuscito">
-      <option name="closed" value="true" />
-      <created>1777298345680</created>
-      <option name="number" value="02448" />
-      <option name="presentableId" value="LOCAL-02448" />
-      <option name="project" value="LOCAL" />
-      <updated>1777298345680</updated>
     </task>
     <task id="LOCAL-02449" summary="VERDE: testPotereBardoNienteBardo riuscito">
       <option name="closed" value="true" />
@@ -681,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777328224290</updated>
     </task>
-    <option name="localTasksCounter" value="2496" />
+    <task id="LOCAL-02496" summary="VERDE: testNumeroCriminali riuscito">
+      <option name="closed" value="true" />
+      <created>1777328481093</created>
+      <option name="number" value="02496" />
+      <option name="presentableId" value="LOCAL-02496" />
+      <option name="project" value="LOCAL" />
+      <updated>1777328481093</updated>
+    </task>
+    <task id="LOCAL-02497" summary="REFACTORING: definizione del metodo isCriminale">
+      <option name="closed" value="true" />
+      <created>1777328648290</created>
+      <option name="number" value="02497" />
+      <option name="presentableId" value="LOCAL-02497" />
+      <option name="project" value="LOCAL" />
+      <updated>1777328648290</updated>
+    </task>
+    <option name="localTasksCounter" value="2498" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo resettaNonMorto" />
-    <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaMaledizione" />
     <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaVoti" />
@@ -721,6 +718,8 @@
     <MESSAGE value="REFACTORING: parametrizzazione del metodo che controlla la condizione di vittoria" />
     <MESSAGE value="REFACTORING: definizione del metodo isNoGiocatoriVivi" />
     <MESSAGE value="ROSSO: testNumeroCriminali non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNumeroCriminali non riuscito" />
+    <MESSAGE value="VERDE: testNumeroCriminali riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCriminale" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCriminale" />
   </component>
 </project>
