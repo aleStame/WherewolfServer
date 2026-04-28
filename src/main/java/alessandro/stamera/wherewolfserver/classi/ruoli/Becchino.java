@@ -28,7 +28,7 @@ public class Becchino extends Villaggio
 
     @Override public void riconosciNegromante()
     {
-        cambiaFazione(NEGROMANTE);
+        trasformaNegromante();
         setVillaggio(false);
     }
 
@@ -47,10 +47,12 @@ public class Becchino extends Villaggio
     @Override public void romeizzazione()
     {
         super.romeizzazione();
-        if(!isVillaggio()) cambiaFazione(NEGROMANTE);
+        if(!isVillaggio()) trasformaNegromante();
     }
 
     public static Ruolo getInstance() { return new Becchino(); }
+
+    private void trasformaNegromante() { cambiaFazione(NEGROMANTE); }
 
     private void setVillaggio(boolean villaggio) { this.villaggio = villaggio; }
 
