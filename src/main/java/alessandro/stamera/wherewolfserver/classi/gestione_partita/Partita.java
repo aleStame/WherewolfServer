@@ -95,7 +95,12 @@ public final class Partita
 
     public boolean isNoGiocatoriVivi() { return confrontaValori(getNumeroGiocatoriVivi(), 0); }
 
-    public boolean isNegromantePresente() { return false; }
+    public boolean isNegromantePresente()
+    {
+        boolean esito = false;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && !esito; i++) esito = (vivi.getRuolo(vivi.getNomeGiocatore(i)).isNegromante());
+        return esito;
+    }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
