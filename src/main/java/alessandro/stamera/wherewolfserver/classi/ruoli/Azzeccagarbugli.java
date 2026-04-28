@@ -23,24 +23,6 @@ public final class Azzeccagarbugli extends Citta
 
     @Override public boolean isAzzeccagarbugli() { return true; }
 
-    @Override public EsitoPartita getEsitoPartita(Partita partita)
-    {
-        EsitoPartita esito = super.getEsitoPartita(partita);
-        if(isPartitaSconfitta(partita)) esito = SCONFITTA;
-        else if(isPartitaVinta(partita)) esito = VITTORIA;
-        return esito;
-    }
-
     public static Ruolo getInstance() { return new Azzeccagarbugli(); }
-
-    private boolean isPartitaSconfitta(Partita partita)
-    {
-        return partita.isNoGiocatoriVivi() || partita.isSoloCreatureOmbra();
-    }
-
-    private boolean isPartitaVinta(Partita partita)
-    {
-        return partita.isNoCreatureOmbra() && !partita.isNoGiocatoriVivi();
-    }
 
 }

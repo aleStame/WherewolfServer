@@ -8,8 +8,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
@@ -283,7 +282,9 @@ public class Ruolo
     public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = NON_FINITO;
-        if(partita.isFinita()) if(partita.isGiuliettaViva()) esito = VITTORIA;
+        if(partita.isFinita() && isRomeo() && partita.isGiuliettaViva()) esito = VITTORIA;
+        else if(isPartitaSconfitta(partita)) esito = SCONFITTA;
+        else if(isPartitaVinta(partita)) esito = VITTORIA;
         return esito;
     }
 
@@ -357,6 +358,16 @@ public class Ruolo
         if(isAmato()) perdiProtezioni();
         if(!isRomeo()) risultato = FALLITO;
         return risultato;
+    }
+
+    private boolean isPartitaSconfitta(Partita partita)
+    {
+        return partita.isNoGiocatoriVivi() || partita.isSoloCreatureOmbra();
+    }
+
+    private boolean isPartitaVinta(Partita partita)
+    {
+        return partita.isNoCreatureOmbra() && !partita.isNoGiocatoriVivi();
     }
 
 }

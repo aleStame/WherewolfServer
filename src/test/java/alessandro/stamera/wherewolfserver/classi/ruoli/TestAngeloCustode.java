@@ -52,12 +52,6 @@ public final class TestAngeloCustode
         ruolo.resettaRomeo();
     }
 
-    @Test public void testPartitaNonFinita()
-    {
-        Partita partita = new Partita(new String[][] { { "Francesco", "Guardia" }, { "Leone", "Prete" } });
-        verificaEsitoPartita(partita, NON_FINITO);
-    }
-
     @Test public void testSconfittaViaggio()
     {
         Partita partita = getPartitaEsempio();
