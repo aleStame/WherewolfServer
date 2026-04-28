@@ -49,6 +49,8 @@ public final class TestBecchino
         verificaVero(isFazioneNegromante());
         ruolo.gildata();
         verificaVero(isFazioneNegromante());
+        ruolo.romeizzazione();
+        verificaVero(isFazioneNegromante());
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
