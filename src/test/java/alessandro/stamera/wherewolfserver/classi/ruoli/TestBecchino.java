@@ -46,11 +46,11 @@ public final class TestBecchino
         assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO);
         verificaFalso(isFazioneNegromante());
         ruolo.riconosciNegromante();
-        verificaVero(isFazioneNegromante());
+        verificaFazioneNegromante();
         ruolo.gildata();
-        verificaVero(isFazioneNegromante());
+        verificaFazioneNegromante();
         ruolo.romeizzazione();
-        verificaVero(isFazioneNegromante());
+        verificaFazioneNegromante();
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
@@ -92,6 +92,8 @@ public final class TestBecchino
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    private void verificaFazioneNegromante() { verificaVero(isFazioneNegromante()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
