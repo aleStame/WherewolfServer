@@ -88,7 +88,12 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCriminali;
     }
 
-    public boolean isNegromantePresente() { return false; }
+    public boolean isNegromantePresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = (getRuolo(getNomeGiocatore(i)).isNegromante());
+        return trovato;
+    }
 
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 
