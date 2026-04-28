@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-04-28T16:05:28" hostname="ALESSANDRO" time="0.124">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-04-28T16:09:35" hostname="ALESSANDRO" time="0.095">
   <properties/>
   <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.004"/>
   <testcase name="testBallottaggioPuro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.005"/>
-  <testcase name="testNoCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoPresenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.011"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.016"/>
+  <testcase name="testNoCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoPresenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
   <testcase name="testSoloGuardie()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
-  <testcase name="testPotereBardoAuraChiara()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
-  <testcase name="testSegnalazioneAzzeccagarbugliAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
+  <testcase name="testPotereBardoAuraChiara()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
+  <testcase name="testSegnalazioneAzzeccagarbugliAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.004"/>
   <testcase name="testAttaccoAmatoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.004"/>
-  <testcase name="testPotereBardoAuraOscura()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
+  <testcase name="testPotereBardoAuraOscura()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
   <testcase name="testPareggioPrimoPosto()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
-  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.009"/>
-  <testcase name="testAttaccoAssassinoContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
-  <testcase name="testSegnalazioneInquisitoreMisticoAssenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.004"/>
-  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
-  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
+  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.004"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
+  <testcase name="testAttaccoAssassinoContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
+  <testcase name="testSegnalazioneInquisitoreMisticoAssenteAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
+  <testcase name="testAngeloCustodeAccusatoNonPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
+  <testcase name="testPareggioSecondoPosto()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
   <testcase name="testUnanimita()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
-  <testcase name="testNoGuardie()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.001"/>
+  <testcase name="testNoGuardie()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
   <testcase name="testPotereBardoNienteBardo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
-  <testcase name="testSoloCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
-  <testcase name="testSegnalazioneAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.003"/>
+  <testcase name="testSoloCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
+  <testcase name="testSegnalazioneAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
   <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
   <testcase name="testAngeloCustodeAccusatoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita" time="0.002"/>
   <system-out><![CDATA[]]></system-out>

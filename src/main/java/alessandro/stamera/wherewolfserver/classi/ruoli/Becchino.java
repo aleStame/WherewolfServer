@@ -21,7 +21,7 @@ public class Becchino extends Villaggio
           "annuncia pubblicamente",
      3, false
         );
-        setVillaggio(true);
+        stabilisciVillaggio();
     }
 
     @Override public boolean isBecchino() { return true; }
@@ -41,11 +41,13 @@ public class Becchino extends Villaggio
     @Override public void ripristinaFazioneOriginale()
     {
         super.ripristinaFazioneOriginale();
-        setVillaggio(true);
+        stabilisciVillaggio();
     }
 
     public static Ruolo getInstance() { return new Becchino(); }
 
     private void setVillaggio(boolean villaggio) { this.villaggio = villaggio; }
+
+    private void stabilisciVillaggio() { setVillaggio(true); }
 
 }
