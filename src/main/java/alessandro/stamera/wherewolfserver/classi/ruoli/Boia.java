@@ -27,10 +27,17 @@ public final class Boia extends Inquisizione
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == VITTORIA) if(partita.isMisticiPresenti()) esito = SCONFITTA;
+        if(esito == VITTORIA) esito = verificaPartitaMistici(partita);
         return esito;
     }
 
     public static Ruolo getInstance() { return new Boia(); }
+
+    private EsitoPartita verificaPartitaMistici(Partita partita)
+    {
+        EsitoPartita esito = VITTORIA;
+        if(partita.isMisticiPresenti()) esito = SCONFITTA;
+        return esito;
+    }
 
 }
