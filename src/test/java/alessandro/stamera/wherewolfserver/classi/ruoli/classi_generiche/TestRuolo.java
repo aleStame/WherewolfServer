@@ -25,7 +25,7 @@ public final class TestRuolo
 
     @BeforeEach public void setUp()
     {
-        ruolo = new Ruolo(null, null, null, null, -1, false);
+        ruolo = new Ruolo(null, NESSUNA, null, null, -1, false);
     }
 
     @Test public void testInizializzazione()
