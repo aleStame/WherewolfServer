@@ -43,7 +43,7 @@ public final class TestPosseduto
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testCreaturaOmbra() { assertThat(ruolo.isTrattoPresente(CREATURA_OMBRA)).isTrue(); }
+    @Test public void testCreaturaOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
 
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
@@ -65,14 +65,14 @@ public final class TestPosseduto
 
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
-    @Test public void testPosseduto() {  assertThat(ruolo.isPosseduto()).isTrue(); }
+    @Test public void testPosseduto() { verificaVero(ruolo.isPosseduto()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
-        assertThat(ruolo.isSegnalatoBoia()).isTrue();
+        verificaVero(ruolo.isSegnalatoBoia());
         ruolo.annullaSegnalazioneBoia();
         verificaFalso(ruolo.isSegnalatoBoia());
     }
@@ -80,6 +80,8 @@ public final class TestPosseduto
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
