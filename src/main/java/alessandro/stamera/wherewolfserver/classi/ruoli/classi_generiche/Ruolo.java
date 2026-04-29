@@ -315,7 +315,7 @@ public class Ruolo
 
     public void segnalazioneBoia() { }
 
-    public boolean isSegnalatoBoia() { return true; }
+    public boolean isSegnalatoBoia() { return false; }
 
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
 
