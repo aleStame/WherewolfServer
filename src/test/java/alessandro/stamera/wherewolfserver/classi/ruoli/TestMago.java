@@ -76,10 +76,12 @@ public final class TestMago
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
-        verificaVero(ruolo.isSegnalatoBoia());
+        verificaVero(isSegnalatoBoia());
         ruolo.annullaSegnalazioneBoia();
-        verificaFalso(ruolo.isSegnalatoBoia());
+        verificaFalso(isSegnalatoBoia());
     }
+
+    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
