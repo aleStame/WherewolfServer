@@ -106,7 +106,9 @@ public final class Partita
         return esito;
     }
 
-    private EsitoPartita getEsitoPartitaNegromante() { return vivi.getRuolo(vivi.getNomeNegromante()).getEsitoPartita(this); }
+    private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
+
+    private Ruolo getNegromante() { return vivi.getRuolo(vivi.getNomeNegromante()); }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
