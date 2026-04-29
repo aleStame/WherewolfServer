@@ -102,12 +102,16 @@ public final class Partita
     public EsitoPartita isNegromanteVincitore()
     {
         EsitoPartita esito = SCONFITTA;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
-        {
-            Ruolo ruolo = vivi.getRuolo(vivi.getNomeGiocatore(i));
-            if(ruolo.isNegromante()) esito = ruolo.getEsitoPartita(this);
-        }
+        int posizione = getPosizioneNegromante();
+        if(posizione != -1) esito = vivi.getRuolo(vivi.getNomeGiocatore(posizione)).getEsitoPartita(this);
         return esito;
+    }
+
+    private int getPosizioneNegromante()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isNegromante()) posizione = i;
+        return posizione;
     }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
