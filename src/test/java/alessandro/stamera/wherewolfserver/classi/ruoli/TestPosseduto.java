@@ -69,6 +69,14 @@ public final class TestPosseduto
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        assertThat(ruolo.isSegnalatoBoia()).isTrue();
+        ruolo.annullaSegnalazioneBoia();
+        verificaFalso(ruolo.isSegnalatoBoia());
+    }
+
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
