@@ -106,6 +106,8 @@ public final class Partita
         return esito;
     }
 
+    public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
+
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
     private Ruolo getNegromante() { return getRuoloVivo(vivi.getNomeNegromante()); }

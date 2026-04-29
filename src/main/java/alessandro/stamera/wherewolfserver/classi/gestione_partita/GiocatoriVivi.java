@@ -92,6 +92,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeNegromante() { return getNomeGiocatore(getPosizioneNegromante()); }
 
+    public int getNumeroMistici()
+    {
+        int numeroMistici = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(getRuolo(getNomeGiocatore(i)).isMistico()) numeroMistici++;
+        return numeroMistici;
+    }
+
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 
     private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }

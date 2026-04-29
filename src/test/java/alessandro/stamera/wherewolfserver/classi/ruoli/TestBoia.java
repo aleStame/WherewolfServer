@@ -1,10 +1,17 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -39,6 +46,9 @@ public final class TestBoia
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
+    public void testEsitiPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -46,5 +56,21 @@ public final class TestBoia
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private static Stream<Arguments> getEsempiEsitiPartita()
+    {
+        Partita[] partite = new Partita[]
+        {
+            new Partita(new String[][] { { "Biagio", "Nosferatu" }, { "Francesco", "Giovane lupo" } }),
+            new Partita(new String[][] { { "Michela", "Lupo del branco" }, { "Daniele", "Giullare" } }),
+            new Partita(new String[][] { { "Iris", "Leprecauno" }, { "Filippo", "Prete" } }),
+            new Partita(new String[][] { { "Alessandro", "Oratore" }, { "Alessio", "Mercante" } })
+        };
+        return Stream.of
+        (
+    Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], SCONFITTA),
+            Arguments.of(partite[3], VITTORIA)
+        );
+    }
 
 }

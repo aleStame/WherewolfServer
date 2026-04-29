@@ -313,7 +313,7 @@ public final class TestGiocatoriVivi
     @Test public void testNumeroCriminali()
     {
         inizializzaGiocatori(new String[][] { { "Claudia", "Assassino" }, { "Pamela", "Capo gilda" } });
-        assertThat(giocatori.getNumeroCriminali()).isEqualTo(2);
+        verificaNumeroIntero(giocatori.getNumeroCriminali(), 2);
     }
 
     @Test public void testNegromantePresente()
@@ -328,6 +328,12 @@ public final class TestGiocatoriVivi
     {
         inizializzaGiocatori(new String[][] { { "Salvatore", "Lupo del branco" }, { "Franca", "Mercante" } });
         verificaFalso(isNegromantePresente());
+    }
+
+    @Test public void testNumeroMistici()
+    {
+        inizializzaGiocatori(new String[][] { { "Tizio", "Guaritore" }, { "Caio", "Goblin" }, { "Sempronio", "Bocca di rosa" } });
+        verificaNumeroIntero(giocatori.getNumeroMistici(), 2);
     }
 
     private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
@@ -367,7 +373,7 @@ public final class TestGiocatoriVivi
     {
         int numeroSoluzioni = soluzioni.length;
         Giocatori ballottaggio = getBallottaggio();
-        assertThat(ballottaggio.getNumeroGiocatori()).isEqualTo(numeroSoluzioni);
+        verificaNumeroIntero(ballottaggio.getNumeroGiocatori(), numeroSoluzioni);
         for (int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 

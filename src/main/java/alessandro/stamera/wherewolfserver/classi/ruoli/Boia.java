@@ -1,9 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Inquisizione;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 
 public final class Boia extends Inquisizione
 {
@@ -20,6 +24,20 @@ public final class Boia extends Inquisizione
 
     @Override public boolean isBoia() { return true; }
 
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(esito == VITTORIA) esito = verificaPartitaMistici(partita);
+        return esito;
+    }
+
     public static Ruolo getInstance() { return new Boia(); }
+
+    private EsitoPartita verificaPartitaMistici(Partita partita)
+    {
+        EsitoPartita esito = VITTORIA;
+        if(partita.isMisticiPresenti()) esito = SCONFITTA;
+        return esito;
+    }
 
 }
