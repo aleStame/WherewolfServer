@@ -95,6 +95,8 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
+    public String getNomeNegromante(String nome) { return null; }
+
     private boolean isNegromante(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isNegromante(); }
 
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
