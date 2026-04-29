@@ -279,10 +279,8 @@ public class Ruolo
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito = NON_FINITO;
-        if(partita.isFinita() && isRomeo() && partita.isGiuliettaViva()) esito = VITTORIA;
-        else if(isPartitaSconfitta(partita)) esito = SCONFITTA;
-        else if(isPartitaVinta(partita)) esito = VITTORIA;
+        EsitoPartita esito = controlloVittoriaUmani(partita);
+        if(isVittoriaAmanti(partita)) esito = VITTORIA;
         return esito;
     }
 
@@ -314,6 +312,16 @@ public class Ruolo
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
 
     public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
+
+    private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
+
+    private EsitoPartita controlloVittoriaUmani(Partita partita)
+    {
+        EsitoPartita esito = NON_FINITO;
+        if(isPartitaSconfitta(partita)) esito = SCONFITTA;
+        else if(isPartitaVinta(partita)) esito = VITTORIA;
+        return esito;
+    }
 
     private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
 

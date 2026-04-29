@@ -1,7 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 
 public final class Negromante extends Ruolo
@@ -23,6 +27,18 @@ public final class Negromante extends Ruolo
 
     @Override public boolean isFazioneNegromante() { return true; }
 
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(isPartitaVinta(partita)) esito = VITTORIA;
+        return esito;
+    }
+
     public static Ruolo getInstance() { return new Negromante(); }
+
+    private boolean isPartitaVinta(Partita partita)
+    {
+        return partita.getNumeroGiocatoriVivi() == 1 && partita.isNegromantePresente();
+    }
 
 }

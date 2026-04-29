@@ -316,6 +316,22 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.getNumeroCriminali()).isEqualTo(2);
     }
 
+    @Test public void testNegromantePresente()
+    {
+        String nome = "Giorgia";
+        inizializzaGiocatori(new String[][] { { "Pino", "Capo branco" }, { nome, "Negromante" } });
+        verificaVero(isNegromantePresente());
+        assertThat(giocatori.getNomeNegromante()).isEqualTo(nome);
+    }
+
+    @Test public void testNegromanteAssente()
+    {
+        inizializzaGiocatori(new String[][] { { "Salvatore", "Lupo del branco" }, { "Franca", "Mercante" } });
+        verificaFalso(isNegromantePresente());
+    }
+
+    private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
+
     private void inizializzaGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);

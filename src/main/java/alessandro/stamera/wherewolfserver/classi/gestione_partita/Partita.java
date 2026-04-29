@@ -1,11 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 
 public final class Partita
 {
@@ -95,6 +97,19 @@ public final class Partita
 
     public boolean isNoGiocatoriVivi() { return confrontaValori(getNumeroGiocatoriVivi(), 0); }
 
+    public boolean isNegromantePresente() { return vivi.isNegromantePresente(); }
+
+    public EsitoPartita isNegromanteVincitore()
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(vivi.isNegromantePresente()) esito = getEsitoPartitaNegromante();
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
+
+    private Ruolo getNegromante() { return getRuoloVivo(vivi.getNomeNegromante()); }
+
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
     private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
@@ -112,7 +127,7 @@ public final class Partita
 
     private void eliminaGiocatore(String nome)
     {
-        Ruolo ruolo = vivi.getRuolo(nome);
+        Ruolo ruolo = getRuoloVivo(nome);
         vivi.eliminaGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
     }
@@ -124,5 +139,7 @@ public final class Partita
         else nome = eliminati.getNomeAngeloCustode();
         return nome;
     }
+
+    private Ruolo getRuoloVivo(String nome) { return vivi.getRuolo(nome); }
 
 }

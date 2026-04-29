@@ -88,6 +88,10 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCriminali;
     }
 
+    public boolean isNegromantePresente() { return getPosizioneNegromante() != NON_TROVATO; }
+
+    public String getNomeNegromante() { return getNomeGiocatore(getPosizioneNegromante()); }
+
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 
     private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }
@@ -98,6 +102,15 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAssassino(i)) posizione = i;
         return posizione;
     }
+
+    private int getPosizioneNegromante()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isNegromante(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isNegromante(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isNegromante(); }
 
     private boolean isAssassino(int posizione) { return isAssassino(getNomeGiocatore(posizione)); }
 
