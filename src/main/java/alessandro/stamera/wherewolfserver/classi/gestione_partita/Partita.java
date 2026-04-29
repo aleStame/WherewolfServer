@@ -1,11 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 
 public final class Partita
 {
@@ -96,6 +98,17 @@ public final class Partita
     public boolean isNoGiocatoriVivi() { return confrontaValori(getNumeroGiocatoriVivi(), 0); }
 
     public boolean isNegromantePresente() { return vivi.isNegromantePresente(); }
+
+    public EsitoPartita isNegromanteVincitore()
+    {
+        EsitoPartita esito = SCONFITTA;
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
+        {
+            Ruolo ruolo = vivi.getRuolo(vivi.getNomeGiocatore(i));
+            if(ruolo.isNegromante()) esito = ruolo.getEsitoPartita(this);
+        }
+        return esito;
+    }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 

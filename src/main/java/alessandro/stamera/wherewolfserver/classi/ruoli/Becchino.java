@@ -1,8 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 
 public class Becchino extends Villaggio
@@ -47,6 +50,17 @@ public class Becchino extends Villaggio
     {
         super.romeizzazione();
         if(!isVillaggio()) trasformaNegromante();
+    }
+
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(isFazioneNegromante())
+        {
+            if(partita.isNegromantePresente()) esito = partita.isNegromanteVincitore();
+            else esito = SCONFITTA;
+        }
+        return esito;
     }
 
     public static Ruolo getInstance() { return new Becchino(); }
