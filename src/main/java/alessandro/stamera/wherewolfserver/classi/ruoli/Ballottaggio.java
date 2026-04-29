@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori;
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 public final class Ballottaggio extends Giocatori
 {
@@ -14,11 +13,10 @@ public final class Ballottaggio extends Giocatori
 
     public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
 
-    public void segnalazioneBoia(String nome)
+    @Override public void segnalazioneBoia(String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
-        ruolo.segnalazioneBoia();
-        if(ruolo.isSegnalatoBoia()) annullaVotiBoia(nome);
+        super.segnalazioneBoia(nome);
+        if(isSegnalatoBoia(nome)) annullaVotiBoia(nome);
     }
 
     public void annullaSegnalazioni()
