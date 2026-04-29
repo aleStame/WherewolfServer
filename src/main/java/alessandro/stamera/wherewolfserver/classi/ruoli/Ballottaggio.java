@@ -13,6 +13,8 @@ public final class Ballottaggio extends Giocatori
 
     public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
 
+    public void segnalazioneBoia() { }
+
     public void annullaSegnalazioni()
     {
         annullaSegnalazioneAzzeccagarbugli();
