@@ -66,6 +66,14 @@ public final class TestMegera
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaVero(ruolo.isSegnalatoBoia());
+        ruolo.annullaSegnalazioneBoia();
+        verificaFalso(ruolo.isSegnalatoBoia());
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
