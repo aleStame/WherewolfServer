@@ -68,6 +68,14 @@ public final class TestMedium
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaVero(ruolo.isSegnalatoBoia());
+        ruolo.annullaSegnalazioneBoia();
+        verificaFalso(ruolo.isSegnalatoBoia());
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
