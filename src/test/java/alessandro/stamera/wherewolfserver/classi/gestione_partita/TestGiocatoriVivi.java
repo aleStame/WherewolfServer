@@ -321,7 +321,7 @@ public final class TestGiocatoriVivi
         String nome = "Giorgia";
         inizializzaGiocatori(new String[][] { { "Pino", "Capo branco" }, { nome, "Negromante" } });
         verificaVero(isNegromantePresente());
-        assertThat(giocatori.getNomeNegromante(nome)).isEqualTo(nome);
+        assertThat(giocatori.getNomeNegromante()).isEqualTo(nome);
     }
 
     @Test public void testNegromanteAssente()
