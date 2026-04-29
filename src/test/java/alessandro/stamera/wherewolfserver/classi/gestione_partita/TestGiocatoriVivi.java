@@ -336,6 +336,23 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroMistici(), 2);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco", "Giovane lupo", "Goblin", "Guaritore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Negromante", "Nosferatu", "Posseduto", "Sensitiva", "Sidhe"
+        }
+    )
+    public void testSegnalazioneBoiaRiuscita(String nomeRuolo)
+    {
+        String nome = "Claudio";
+        aggiungiGiocatore(nome, nomeRuolo);
+        giocatori.segnalazioneBoia(nome);
+        verificaVero(giocatori.isSegnalatoBoia(nome));
+        giocatori.annullaSegnalazioneBoia(nome);
+        verificaFalso(giocatori.isSegnalatoBoia(nome));
+    }
+
     private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
 
     private void inizializzaGiocatori(String[][] giocatori)
