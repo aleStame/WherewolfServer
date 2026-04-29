@@ -41,7 +41,7 @@ public final class TestBallottaggio
         int numeroVoti = 2;
         for(String[] giocatore : giocatori) ballottaggio.incrementaVoti(giocatore[0], numeroVoti);
         ballottaggio.segnalazioneBoia(nome);
-        assertThat(ballottaggio.getNumeroVoti(giocatori[0][0])).isEqualTo(numeroVoti);
+        assertThat(ballottaggio.getNumeroVoti(nome)).isEqualTo(numeroVoti);
         for(int i = 1; i < giocatori.length; i++) assertThat(ballottaggio.getNumeroVoti(giocatori[i][0])).isEqualTo(risultato);
     }
 

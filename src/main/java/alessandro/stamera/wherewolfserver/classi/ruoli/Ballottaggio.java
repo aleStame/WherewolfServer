@@ -27,13 +27,12 @@ public final class Ballottaggio extends Giocatori
         annullaSegnalazioneInquisitore();
     }
 
-    private void annullaVotiBoia(String nome)
+    private void annullaVotiBoia(String nome) { for(int i = 0; i < getNumeroGiocatori(); i++) annullaVotiBoia(nome, i); }
+
+    private void annullaVotiBoia(String nome, int posizione)
     {
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String chiave = getNomeGiocatore(i);
-            if(!chiave.equals(nome)) annullaVoti(chiave);
-        }
+        String chiave = getNomeGiocatore(posizione);
+        if(!chiave.equals(nome)) annullaVoti(chiave);
     }
 
     private int getPosizioneAmato()
