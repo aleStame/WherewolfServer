@@ -104,14 +104,16 @@ public final class TestBecchino
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
-    public void testeEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+    public void testeEsitoPartita(Partita partita, EsitoPartita esito) { verificaEsitoPartita(partita, esito); }
 
     @ParameterizedTest @MethodSource("getEsempiEsitiPartitaNegromante")
     public void testEsitoPartitaNegromante(Partita partita, EsitoPartita esito)
     {
         ruolo.riconosciNegromante();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+        verificaEsitoPartita(partita, esito);
     }
+
+    private void verificaEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
