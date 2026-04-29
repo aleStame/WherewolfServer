@@ -106,6 +106,13 @@ public final class TestBecchino
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
     public void testeEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaNegromante")
+    public void testEsitoPartitaNegromante(Partita partita, EsitoPartita esito)
+    {
+        ruolo.riconosciNegromante();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
         Partita[] partite = new Partita[]
@@ -120,6 +127,16 @@ public final class TestBecchino
         (
             Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA),
             Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], SCONFITTA)
+        );
+    }
+
+    private static Stream<Arguments> getEsempiEsitiPartitaNegromante()
+    {
+        String nome = "Antonella", ruolo = "Negromante";
+        return Stream.of
+        (
+            Arguments.of(new Partita(new String[][] { { nome, ruolo } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { nome, ruolo }, { "Valerio", "Capo branco" } }), SCONFITTA)
         );
     }
 
