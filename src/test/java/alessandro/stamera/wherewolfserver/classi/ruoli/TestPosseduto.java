@@ -72,10 +72,12 @@ public final class TestPosseduto
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
-        verificaVero(ruolo.isSegnalatoBoia());
+        verificaVero(isSegnalatoBoia());
         ruolo.annullaSegnalazioneBoia();
-        verificaFalso(ruolo.isSegnalatoBoia());
+        verificaFalso(isSegnalatoBoia());
     }
+
+    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
