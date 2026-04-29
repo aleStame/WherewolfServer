@@ -313,6 +313,10 @@ public class Ruolo
 
     public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
 
+    public void segnalazioneBoia() { }
+
+    public boolean isSegnalatoBoia() { return true; }
+
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
 
     private EsitoPartita controlloVittoriaUmani(Partita partita)

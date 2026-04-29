@@ -144,6 +144,12 @@ public final class TestRuolo
         verificaNonInquisito();
     }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaFalso(ruolo.isSegnalatoBoia());
+    }
+
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
 
     private void verificaNonInquisito() { verificaFalso(isInquisito()); }
