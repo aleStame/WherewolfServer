@@ -108,7 +108,7 @@ public final class Partita
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
-    private Ruolo getNegromante() { return vivi.getRuolo(vivi.getNomeNegromante()); }
+    private Ruolo getNegromante() { return getRuoloVivo(vivi.getNomeNegromante()); }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
@@ -127,7 +127,7 @@ public final class Partita
 
     private void eliminaGiocatore(String nome)
     {
-        Ruolo ruolo = vivi.getRuolo(nome);
+        Ruolo ruolo = getRuoloVivo(nome);
         vivi.eliminaGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
     }
@@ -139,5 +139,7 @@ public final class Partita
         else nome = eliminati.getNomeAngeloCustode();
         return nome;
     }
+
+    private Ruolo getRuoloVivo(String nome) { return vivi.getRuolo(nome); }
 
 }
