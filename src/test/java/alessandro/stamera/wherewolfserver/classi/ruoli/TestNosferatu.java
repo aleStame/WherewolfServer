@@ -76,9 +76,13 @@ public final class TestNosferatu
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
-        verificaVero(ruolo.isSegnalatoBoia());
+        verificaVero(isSegnalatoBoia());
         ruolo.annullaSegnalazioneBoia();
-        verificaFalso(ruolo.isSegnalatoBoia());
+        verificaFalso(isSegnalatoBoia());
+    }
+
+    private boolean isSegnalatoBoia() {
+        return ruolo.isSegnalatoBoia();
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
