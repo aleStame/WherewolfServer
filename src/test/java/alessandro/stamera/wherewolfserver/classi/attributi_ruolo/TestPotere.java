@@ -12,6 +12,8 @@ public final class TestPotere
         assertThat(potere.isPotereUtilizzato()).isFalse();
         potere.utilizzaPotere();
         assertThat(potere.isPotereUtilizzato()).isTrue();
+        potere.riabilitaPotere();
+        assertThat(potere.isPotereUtilizzato()).isFalse();
     }
 
 }

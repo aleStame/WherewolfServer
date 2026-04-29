@@ -11,6 +11,8 @@ public class Potere
 
     public void utilizzaPotere() { setUtilizzoPotere(true); }
 
+    public void riabilitaPotere() { }
+
     private void setUtilizzoPotere(boolean potereUtilizzato) { this.potereUtilizzato = potereUtilizzato; }
 
 }
