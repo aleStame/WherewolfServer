@@ -18,17 +18,22 @@ public final class Ballottaggio extends Giocatori
     {
         Ruolo ruolo = getRuolo(nome);
         ruolo.segnalazioneBoia();
-        if(ruolo.isSegnalatoBoia()) for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String chiave = getNomeGiocatore(i);
-            if(!chiave.equals(nome)) annullaVoti(chiave);
-        }
+        if(ruolo.isSegnalatoBoia()) annullaVotiBoia(nome);
     }
 
     public void annullaSegnalazioni()
     {
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
+    }
+
+    private void annullaVotiBoia(String nome)
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++)
+        {
+            String chiave = getNomeGiocatore(i);
+            if(!chiave.equals(nome)) annullaVoti(chiave);
+        }
     }
 
     private int getPosizioneAmato()
