@@ -106,12 +106,7 @@ public final class Partita
         return esito;
     }
 
-    public boolean isMisticiPresenti()
-    {
-        int numeroMistici = 0;
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isMistico()) numeroMistici++;
-        return numeroMistici > 0;
-    }
+    public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
