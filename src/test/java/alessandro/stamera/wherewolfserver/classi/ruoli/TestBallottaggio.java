@@ -53,19 +53,21 @@ public final class TestBallottaggio
         aggiungiGiocatori(giocatori);
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
-        assertThat(ballottaggio.getNomeGiocatorePerdente()).isEqualTo(giocatori[1][0]);
+        assertThat(getNomeGiocatorePerdente()).isEqualTo(giocatori[1][0]);
     }
 
     @Test public void testPareggioBallottaggio()
     {
         String[][] giocatori = new String[][]{ { "Francesco", "Capo branco" }, { "Luca", "Altra guardia" } };
         aggiungiGiocatori(giocatori);
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) incrementaVoti(giocatori[i][0], 1);
-        assertThatIllegalArgumentException().isThrownBy(() -> ballottaggio.getNomeGiocatorePerdente())
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        assertThatIllegalArgumentException().isThrownBy(this::getNomeGiocatorePerdente)
             .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
     }
 
     private void incrementaVoti(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
+
+    private String getNomeGiocatorePerdente() { return ballottaggio.getNomeGiocatorePerdente(); }
 
     private void aggiungiGiocatori(String[][] giocatori)
     {
