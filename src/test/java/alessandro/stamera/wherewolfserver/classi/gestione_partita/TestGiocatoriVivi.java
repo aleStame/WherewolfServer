@@ -350,7 +350,7 @@ public final class TestGiocatoriVivi
         segnalazioneBoia(nome);
         verificaVero(isSegnalatoBoia(nome));
         giocatori.annullaSegnalazioneBoia(nome);
-        verificaFalso(isSegnalatoBoia(nome));
+        verificaNonSegnalatoBoia(nome);
     }
 
     @ParameterizedTest @CsvSource
@@ -367,8 +367,10 @@ public final class TestGiocatoriVivi
         String nome = "Vanessa";
         aggiungiGiocatore(nome, nomeRuolo);
         segnalazioneBoia(nome);
-        verificaFalso(isSegnalatoBoia(nome));
+        verificaNonSegnalatoBoia(nome);
     }
+
+    private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
 
     private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
 

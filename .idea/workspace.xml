@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isSegnalatoBoia">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02530" summary="ROSSO: testEsitoPartitaNegromante non riuscito">
-      <option name="closed" value="true" />
-      <created>1777452153838</created>
-      <option name="number" value="02530" />
-      <option name="presentableId" value="LOCAL-02530" />
-      <option name="project" value="LOCAL" />
-      <updated>1777452153838</updated>
-    </task>
-    <task id="LOCAL-02531" summary="VERDE: testEsitoPartitaNegromante riuscito">
-      <option name="closed" value="true" />
-      <created>1777452937941</created>
-      <option name="number" value="02531" />
-      <option name="presentableId" value="LOCAL-02531" />
-      <option name="project" value="LOCAL" />
-      <updated>1777452937941</updated>
     </task>
     <task id="LOCAL-02532" summary="REFACTORING: definizione del metodo getPosizioneNegromante">
       <option name="closed" value="true" />
@@ -678,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777542349050</updated>
     </task>
-    <option name="localTasksCounter" value="2579" />
+    <task id="LOCAL-02579" summary="REFACTORING: definizione del metodo segnalazioneBoia">
+      <option name="closed" value="true" />
+      <created>1777542541541</created>
+      <option name="number" value="02579" />
+      <option name="presentableId" value="LOCAL-02579" />
+      <option name="project" value="LOCAL" />
+      <updated>1777542541541</updated>
+    </task>
+    <task id="LOCAL-02580" summary="REFACTORING: definizione del metodo isSegnalatoBoia">
+      <option name="closed" value="true" />
+      <created>1777542760018</created>
+      <option name="number" value="02580" />
+      <option name="presentableId" value="LOCAL-02580" />
+      <option name="project" value="LOCAL" />
+      <updated>1777542760018</updated>
+    </task>
+    <option name="localTasksCounter" value="2581" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testNegromantePresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isNegromanteVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo getNegromante" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoloVivo" />
@@ -708,7 +709,6 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia non riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
     <MESSAGE value="ROSSO: testSegnalazioneBoia non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneBoia riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaVotiBoia" />
@@ -718,6 +718,8 @@
     <MESSAGE value="ROSSO: testSegnalazioneBoiaNonRiuscita non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneBoiaNonRiuscita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneBoia" />
+    <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isSegnalatoBoia" />
   </component>
 </project>
