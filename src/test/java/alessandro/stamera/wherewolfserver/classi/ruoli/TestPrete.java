@@ -71,6 +71,8 @@ public final class TestPrete
 
     @Test public void testPrete() { assertThat(ruolo.isPrete()).isTrue(); }
 
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
