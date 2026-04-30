@@ -33,7 +33,7 @@ public final class TestPrete
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
-    @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
+    @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
@@ -69,13 +69,15 @@ public final class TestPrete
 
     @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
 
-    @Test public void testPrete() { assertThat(ruolo.isPrete()).isTrue(); }
+    @Test public void testPrete() { verificaVero(ruolo.isPrete()); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
