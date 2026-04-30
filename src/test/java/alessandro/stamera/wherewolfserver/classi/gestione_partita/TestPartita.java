@@ -254,7 +254,7 @@ public final class TestPartita
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
         partita.terminaBallottaggio();
         verificaEliminazione(giocatori[1][0]);
-        verificaFalso(partita.isEliminato(giocatori[0][0]));
+        verificaNonEliminato(giocatori[0][0]);
     }
 
     @Test public void testPareggioBallottaggio()
@@ -264,8 +264,10 @@ public final class TestPartita
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
         terminaVotazioni();
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
-        for(String[] giocatore : giocatori) verificaFalso(partita.isEliminato(giocatore[0]));
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
+
+    private void verificaNonEliminato(String nome) { verificaFalso(partita.isEliminato(nome)); }
 
     private void verificaControlloVeggente(String nome, Aura aura)
     {
