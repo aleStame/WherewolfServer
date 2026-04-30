@@ -9,9 +9,13 @@ public final class TestPotere
     @Test public void testUtilizzoPotere()
     {
         Potere potere = new Potere();
-        assertThat(potere.isPotereUtilizzato()).isFalse();
+        verificaFalso(potere.isPotereUtilizzato());
         potere.utilizzaPotere();
         assertThat(potere.isPotereUtilizzato()).isTrue();
+        potere.riabilitaPotere();
+        verificaFalso(potere.isPotereUtilizzato());
     }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

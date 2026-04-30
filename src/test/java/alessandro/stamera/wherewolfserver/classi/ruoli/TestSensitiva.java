@@ -75,6 +75,16 @@ public final class TestSensitiva
 
     @Test public void testSensitiva() { verificaVero(ruolo.isSensitiva()); }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaVero(isSegnalatoBoia());
+        ruolo.annullaSegnalazioneBoia();
+        verificaFalso(isSegnalatoBoia());
+    }
+
+    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }

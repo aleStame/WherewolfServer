@@ -29,7 +29,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito;
+    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia;
 
     private final boolean mistico;
 
@@ -50,6 +50,7 @@ public class Ruolo
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
         fazioneOriginale = fazione;
+        annullaSegnalazioneBoia();
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -312,6 +313,12 @@ public class Ruolo
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
 
     public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
+
+    public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
+
+    public void annullaSegnalazioneBoia() { segnalatoBoia = false; }
+
+    public boolean isSegnalatoBoia() { return segnalatoBoia; }
 
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
 

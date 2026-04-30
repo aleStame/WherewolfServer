@@ -13,10 +13,24 @@ public final class Ballottaggio extends Giocatori
 
     public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
 
+    @Override public void segnalazioneBoia(String nome)
+    {
+        super.segnalazioneBoia(nome);
+        if(isSegnalatoBoia(nome)) annullaVotiBoia(nome);
+    }
+
     public void annullaSegnalazioni()
     {
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
+    }
+
+    private void annullaVotiBoia(String nome) { for(int i = 0; i < getNumeroGiocatori(); i++) annullaVotiBoia(nome, i); }
+
+    private void annullaVotiBoia(String nome, int posizione)
+    {
+        String chiave = getNomeGiocatore(posizione);
+        if(!chiave.equals(nome)) annullaVoti(chiave);
     }
 
     private int getPosizioneAmato()

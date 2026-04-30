@@ -86,6 +86,16 @@ public final class TestLupo
         verificaAttaccoLupiFallito(nome);
     }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaVero(isSegnalatoBoia());
+        ruolo.annullaSegnalazioneBoia();
+        verificaFalso(isSegnalatoBoia());
+    }
+
+    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
+
     private void verificaAttaccoLupiFallito(String nome) { verificaAttaccoLupi(nome, FALLITO); }
 
     private void verificaAttaccoLupi(String nome, EsitoAttacco esito)

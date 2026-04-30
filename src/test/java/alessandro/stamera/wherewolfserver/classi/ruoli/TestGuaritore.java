@@ -79,6 +79,16 @@ public final class TestGuaritore
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
 
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaVero(isSegnalatoBoia());
+        ruolo.annullaSegnalazioneBoia();
+        verificaFalso(isSegnalatoBoia());
+    }
+
+    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

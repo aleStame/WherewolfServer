@@ -70,6 +70,12 @@ public class Giocatori
 
     public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
 
+    public void segnalazioneBoia(String nome) { getRuolo(nome).segnalazioneBoia(); }
+
+    public boolean isSegnalatoBoia(String nome) { return getRuolo(nome).isSegnalatoBoia(); }
+
+    public void annullaSegnalazioneBoia(String nome) { getRuolo(nome).annullaSegnalazioneBoia(); }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private int getPosizioneAngeloCustode()

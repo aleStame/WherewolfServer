@@ -25,7 +25,7 @@ public final class TestRuolo
 
     @BeforeEach public void setUp()
     {
-        ruolo = new Ruolo(null, null, null, null, -1, false);
+        ruolo = new Ruolo(null, NESSUNA, null, null, -1, false);
     }
 
     @Test public void testInizializzazione()
@@ -142,6 +142,12 @@ public final class TestRuolo
         verificaVero(isInquisito());
         ruolo.annullaSegnalazioneInquisitore();
         verificaNonInquisito();
+    }
+
+    @Test public void testSegnalazioneBoia()
+    {
+        ruolo.segnalazioneBoia();
+        verificaFalso(ruolo.isSegnalatoBoia());
     }
 
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }

@@ -336,6 +336,46 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroMistici(), 2);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco", "Giovane lupo", "Goblin", "Guaritore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Negromante", "Nosferatu", "Posseduto", "Sensitiva", "Sidhe"
+        }
+    )
+    public void testSegnalazioneBoiaRiuscita(String nomeRuolo)
+    {
+        String nome = "Claudio";
+        aggiungiGiocatore(nome, nomeRuolo);
+        segnalazioneBoia(nome);
+        verificaVero(isSegnalatoBoia(nome));
+        giocatori.annullaSegnalazioneBoia(nome);
+        verificaNonSegnalatoBoia(nome);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Guardia", "Ghoul", "Giulietta", "Giullare", "Guardia corrotta", "Inquisitore",
+            "Ladra", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+        }
+    )
+    public void testSegnalazioneBoiaNonRiuscita(String nomeRuolo)
+    {
+        String nome = "Vanessa";
+        aggiungiGiocatore(nome, nomeRuolo);
+        segnalazioneBoia(nome);
+        verificaNonSegnalatoBoia(nome);
+    }
+
+    private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
+
+    private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
+
+    private boolean isSegnalatoBoia(String nome) { return giocatori.isSegnalatoBoia(nome); }
+
     private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
 
     private void inizializzaGiocatori(String[][] giocatori)

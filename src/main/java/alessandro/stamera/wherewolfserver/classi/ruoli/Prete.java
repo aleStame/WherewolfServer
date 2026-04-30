@@ -15,7 +15,7 @@ public final class Prete extends Villaggio
     "Prete", BIANCA,
 "La prima notte individua il Peccatore e scopre se Bocca di rosa e il Posseduto sono in gioco. È protetto dal Posseduto e, se viene " +
           "attaccato, viene avvisato e gli fa perdere tutti i poteri.",
-     1, true
+     1, false
         );
     }
 
