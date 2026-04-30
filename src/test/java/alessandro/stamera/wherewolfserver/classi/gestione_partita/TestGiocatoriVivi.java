@@ -347,7 +347,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Claudio";
         aggiungiGiocatore(nome, nomeRuolo);
-        giocatori.segnalazioneBoia(nome);
+        segnalazioneBoia(nome);
         verificaVero(giocatori.isSegnalatoBoia(nome));
         giocatori.annullaSegnalazioneBoia(nome);
         verificaFalso(giocatori.isSegnalatoBoia(nome));
@@ -366,9 +366,11 @@ public final class TestGiocatoriVivi
     {
         String nome = "Vanessa";
         aggiungiGiocatore(nome, nomeRuolo);
-        giocatori.segnalazioneBoia(nome);
+        segnalazioneBoia(nome);
         verificaFalso(giocatori.isSegnalatoBoia(nome));
     }
+
+    private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
 
     private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
 

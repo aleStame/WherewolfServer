@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSegnalazioneBoiaNonRiuscita non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Prete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Prete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestPrete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestPrete.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02528" summary="REFACTORING: definizione del metodo isVittoriaAmanti">
-      <option name="closed" value="true" />
-      <created>1777408847591</created>
-      <option name="number" value="02528" />
-      <option name="presentableId" value="LOCAL-02528" />
-      <option name="project" value="LOCAL" />
-      <updated>1777408847591</updated>
-    </task>
-    <task id="LOCAL-02529" summary="REFACTORING: definizione del metodo isVittoriaAmanti">
-      <option name="closed" value="true" />
-      <created>1777451042169</created>
-      <option name="number" value="02529" />
-      <option name="presentableId" value="LOCAL-02529" />
-      <option name="project" value="LOCAL" />
-      <updated>1777451042170</updated>
     </task>
     <task id="LOCAL-02530" summary="ROSSO: testEsitoPartitaNegromante non riuscito">
       <option name="closed" value="true" />
@@ -682,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777541847585</updated>
     </task>
-    <option name="localTasksCounter" value="2577" />
+    <task id="LOCAL-02577" summary="VERDE: testSegnalazioneBoiaNonRiuscita riuscito">
+      <option name="closed" value="true" />
+      <created>1777542144371</created>
+      <option name="number" value="02577" />
+      <option name="presentableId" value="LOCAL-02577" />
+      <option name="project" value="LOCAL" />
+      <updated>1777542144371</updated>
+    </task>
+    <task id="LOCAL-02578" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1777542349050</created>
+      <option name="number" value="02578" />
+      <option name="presentableId" value="LOCAL-02578" />
+      <option name="project" value="LOCAL" />
+      <updated>1777542349050</updated>
+    </task>
+    <option name="localTasksCounter" value="2579" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNegromantePresente non riuscito" />
     <MESSAGE value="VERDE: testNegromantePresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isNegromanteVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo getNegromante" />
@@ -711,7 +706,6 @@
     <MESSAGE value="ROSSO: testUtilizzoPotere non riuscito" />
     <MESSAGE value="VERDE: testUtilizzoPotere riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
@@ -722,6 +716,8 @@
     <MESSAGE value="VERDE: testSegnalazioneBoiaRiuscita riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testSegnalazioneBoiaNonRiuscita non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSegnalazioneBoiaNonRiuscita non riuscito" />
+    <MESSAGE value="VERDE: testSegnalazioneBoiaNonRiuscita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
   </component>
 </project>
