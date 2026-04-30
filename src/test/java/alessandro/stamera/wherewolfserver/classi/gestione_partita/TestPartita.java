@@ -257,6 +257,16 @@ public final class TestPartita
         verificaFalso(partita.isEliminato(giocatori[0][0]));
     }
 
+    @Test public void testPareggioBallottaggio()
+    {
+        String[][] giocatori = new String[][]{ { "Francesco", "Capo branco" }, { "Luca", "Altra guardia" } };
+        inizializzaPartita(giocatori);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
+        terminaVotazioni();
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        for(String[] giocatore : giocatori) verificaFalso(partita.isEliminato(giocatore[0]));
+    }
+
     private void verificaControlloVeggente(String nome, Aura aura)
     {
         assertThat(partita.getControlloVeggente(nome)).isEqualTo(aura);
