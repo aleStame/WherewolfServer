@@ -33,7 +33,11 @@ public final class Partita
         ballottaggio = new Ballottaggio();
     }
 
-    public void incrementaVoti(String nome, int numeroVoti) { vivi.incrementaVoti(nome, numeroVoti); }
+    public void incrementaVoti(String nome, int numeroVoti)
+    {
+        if(vivi.isPresente(nome)) vivi.incrementaVoti(nome, numeroVoti);
+        else ballottaggio.incrementaVoti(nome, numeroVoti);
+    }
 
     public void terminaVotazioni()
     {
