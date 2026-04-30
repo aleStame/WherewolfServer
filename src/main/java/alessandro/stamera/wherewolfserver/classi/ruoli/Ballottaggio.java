@@ -36,7 +36,9 @@ public final class Ballottaggio extends Giocatori
         return soluzione;
     }
 
-    private boolean isPareggioPresente()
+    private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
+
+    private List<String> getNomiPerdenti()
     {
         int numeroVoti = getNumeroVotiPrimoClassificato();
         List<String> soluzioni = new ArrayList<>();
@@ -45,7 +47,7 @@ public final class Ballottaggio extends Giocatori
             String nome = getNomeGiocatore(i);
             if(getNumeroVoti(nome) == numeroVoti) soluzioni.add(nome);
         }
-        return soluzioni.size() > 1;
+        return soluzioni;
     }
 
     private void annullaVotiBoia(String nome) { for(int i = 0; i < getNumeroGiocatori(); i++) annullaVotiBoia(nome, i); }
