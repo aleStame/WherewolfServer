@@ -241,8 +241,6 @@ public final class GiocatoriVivi extends Giocatori
         return risultato;
     }
 
-    private int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
-
     private EsitoAttacco attaccoNosferatuRuolo(String nome) { return getRuolo(nome).attaccoNosferatu(); }
 
     private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }

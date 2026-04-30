@@ -76,6 +76,8 @@ public class Giocatori
 
     public void annullaSegnalazioneBoia(String nome) { getRuolo(nome).annullaSegnalazioneBoia(); }
 
+    public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
+
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private int getPosizioneAngeloCustode()

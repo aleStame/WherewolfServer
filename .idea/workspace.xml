@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testPareggioBallottaggio non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPareggioBallottaggio non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02539" summary="VERDE: testEsitiPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1777466934393</created>
-      <option name="number" value="02539" />
-      <option name="presentableId" value="LOCAL-02539" />
-      <option name="project" value="LOCAL" />
-      <updated>1777466934393</updated>
     </task>
     <task id="LOCAL-02540" summary="REFACTORING: definizione del metodo verificaPartitaMistici">
       <option name="closed" value="true" />
@@ -680,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777555709912</updated>
     </task>
-    <option name="localTasksCounter" value="2588" />
+    <task id="LOCAL-02588" summary="VERDE: testPareggioBallottaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1777556212394</created>
+      <option name="number" value="02588" />
+      <option name="presentableId" value="LOCAL-02588" />
+      <option name="project" value="LOCAL" />
+      <updated>1777556212394</updated>
+    </task>
+    <option name="localTasksCounter" value="2589" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaPartitaMistici" />
     <MESSAGE value="ROSSO: testNumeroMistici non riuscito" />
     <MESSAGE value="VERDE: testNumeroMistici riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
@@ -720,6 +721,7 @@
     <MESSAGE value="ROSSO: testPerdenteBallottaggio non riuscito" />
     <MESSAGE value="VERDE: testPerdenteBallottaggio riuscito" />
     <MESSAGE value="ROSSO: testPareggioBallottaggio non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testPareggioBallottaggio non riuscito" />
+    <MESSAGE value="VERDE: testPareggioBallottaggio non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPareggioBallottaggio non riuscito" />
   </component>
 </project>

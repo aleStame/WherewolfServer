@@ -31,16 +31,21 @@ public final class Ballottaggio extends Giocatori
     public String getNomeGiocatorePerdente()
     {
         String soluzione = getNomeGiocatore(0);
-        List<String> soluzioni = new ArrayList<>();
-        soluzioni.add(soluzione);
-        for(int i = 1; i < getNumeroGiocatori(); i++)
-        {
-            String nome = getNomeGiocatore(i);
-            if(getNumeroVoti(nome) == getNumeroVoti(soluzione)) soluzioni.add(nome);
-        }
-        if(soluzioni.size() > 1)
+        if(isPareggioPresente())
             throw new IllegalArgumentException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
         return soluzione;
+    }
+
+    private boolean isPareggioPresente()
+    {
+        int numeroVoti = getNumeroVotiPrimoClassificato();
+        List<String> soluzioni = new ArrayList<>();
+        for(int i = 0; i < getNumeroGiocatori(); i++)
+        {
+            String nome = getNomeGiocatore(i);
+            if(getNumeroVoti(nome) == numeroVoti) soluzioni.add(nome);
+        }
+        return soluzioni.size() > 1;
     }
 
     private void annullaVotiBoia(String nome) { for(int i = 0; i < getNumeroGiocatori(); i++) annullaVotiBoia(nome, i); }
