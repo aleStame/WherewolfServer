@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testPerdenteBallottaggio non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPerdenteBallottaggio riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02537" summary="REFACTORING: definizione del metodo getRuoloVivo">
-      <option name="closed" value="true" />
-      <created>1777455425620</created>
-      <option name="number" value="02537" />
-      <option name="presentableId" value="LOCAL-02537" />
-      <option name="project" value="LOCAL" />
-      <updated>1777455425621</updated>
     </task>
     <task id="LOCAL-02538" summary="ROSSO: testEsitiPartita non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777555031090</updated>
     </task>
-    <option name="localTasksCounter" value="2586" />
+    <task id="LOCAL-02586" summary="VERDE: testPerdenteBallottaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1777555428396</created>
+      <option name="number" value="02586" />
+      <option name="presentableId" value="LOCAL-02586" />
+      <option name="project" value="LOCAL" />
+      <updated>1777555428396</updated>
+    </task>
+    <option name="localTasksCounter" value="2587" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testEsitiPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitiPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaPartitaMistici" />
     <MESSAGE value="ROSSO: testNumeroMistici non riuscito" />
@@ -720,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroVoti" />
     <MESSAGE value="ROSSO: testPerdenteBallottaggio non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testPerdenteBallottaggio non riuscito" />
+    <MESSAGE value="VERDE: testPerdenteBallottaggio riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPerdenteBallottaggio riuscito" />
   </component>
 </project>

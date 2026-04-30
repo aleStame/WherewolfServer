@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 public final class TestBallottaggio
 {
@@ -52,6 +53,15 @@ public final class TestBallottaggio
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) ballottaggio.incrementaVoti(giocatori[i][0], numeroVoti[i]);
         assertThat(ballottaggio.getNomeGiocatorePerdente()).isEqualTo(giocatori[1][0]);
+    }
+
+    @Test public void testPareggioBallottaggio()
+    {
+        String[][] giocatori = new String[][] { { "Francesco", "Capo branco" }, { "Luca", "Altra guardia" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) ballottaggio.incrementaVoti(giocatori[i][0], 1);
+        assertThatIllegalArgumentException().isThrownBy(() -> ballottaggio.getNomeGiocatorePerdente())
+            .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
     }
 
     private void verificaNumeroVoti(String nome, int numeroVoti)
