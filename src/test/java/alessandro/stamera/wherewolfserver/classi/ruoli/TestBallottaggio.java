@@ -45,6 +45,15 @@ public final class TestBallottaggio
         for(int i = 1; i < giocatori.length; i++) verificaNumeroVoti(giocatori[i][0], risultato);
     }
 
+    @Test public void testPerdenteBallottaggio()
+    {
+        String[][] giocatori = new String[][] { { "Davide", "Prete" }, { "Margherita", "Guardia" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        int[] numeroVoti = new int[] { 1, 2 };
+        for(int i = 0; i < numeroVoti.length; i++) ballottaggio.incrementaVoti(giocatori[i][0], numeroVoti[i]);
+        assertThat(ballottaggio.getNomeGiocatorePerdente()).isEqualTo(giocatori[1][0]);
+    }
+
     private void verificaNumeroVoti(String nome, int numeroVoti)
     {
         assertThat(ballottaggio.getNumeroVoti(nome)).isEqualTo(numeroVoti);
