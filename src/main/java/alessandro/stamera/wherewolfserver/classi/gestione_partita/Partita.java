@@ -52,13 +52,7 @@ public final class Partita
     public void terminaBallottaggio()
     {
         String nomePerdente = ballottaggio.getNomeGiocatorePerdente();
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
-        {
-            String nome = ballottaggio.getNomeGiocatore(i);
-            Ruolo ruolo = ballottaggio.getRuolo(nome);
-            ballottaggio.eliminaGiocatore(nome);
-            vivi.aggiungiGiocatore(nome, ruolo);
-        }
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));
         eliminaGiocatore(nomePerdente);
     }
 
@@ -134,6 +128,13 @@ public final class Partita
     }
 
     public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
+
+    private void terminaBallottaggio(String nome)
+    {
+        Ruolo ruolo = ballottaggio.getRuolo(nome);
+        ballottaggio.eliminaGiocatore(nome);
+        vivi.aggiungiGiocatore(nome, ruolo);
+    }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
