@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isSegnalatoBoia">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroVoti" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,30 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02532" summary="REFACTORING: definizione del metodo getPosizioneNegromante">
-      <option name="closed" value="true" />
-      <created>1777453995756</created>
-      <option name="number" value="02532" />
-      <option name="presentableId" value="LOCAL-02532" />
-      <option name="project" value="LOCAL" />
-      <updated>1777453995756</updated>
-    </task>
-    <task id="LOCAL-02533" summary="ROSSO: testNegromantePresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1777454410341</created>
-      <option name="number" value="02533" />
-      <option name="presentableId" value="LOCAL-02533" />
-      <option name="project" value="LOCAL" />
-      <updated>1777454410342</updated>
-    </task>
-    <task id="LOCAL-02534" summary="VERDE: testNegromantePresente riuscito">
-      <option name="closed" value="true" />
-      <created>1777454824408</created>
-      <option name="number" value="02534" />
-      <option name="presentableId" value="LOCAL-02534" />
-      <option name="project" value="LOCAL" />
-      <updated>1777454824408</updated>
     </task>
     <task id="LOCAL-02535" summary="REFACTORING: definizione del metodo isNegromanteVincitore">
       <option name="closed" value="true" />
@@ -680,7 +654,31 @@
       <option name="project" value="LOCAL" />
       <updated>1777542760018</updated>
     </task>
-    <option name="localTasksCounter" value="2581" />
+    <task id="LOCAL-02581" summary="REFACTORING: definizione del metodo verificaNonSegnalatoBoia">
+      <option name="closed" value="true" />
+      <created>1777543015964</created>
+      <option name="number" value="02581" />
+      <option name="presentableId" value="LOCAL-02581" />
+      <option name="project" value="LOCAL" />
+      <updated>1777543015964</updated>
+    </task>
+    <task id="LOCAL-02582" summary="REFACTORING: definizione del metodo verificaNumeroVoti">
+      <option name="closed" value="true" />
+      <created>1777543388584</created>
+      <option name="number" value="02582" />
+      <option name="presentableId" value="LOCAL-02582" />
+      <option name="project" value="LOCAL" />
+      <updated>1777543388584</updated>
+    </task>
+    <task id="LOCAL-02583" summary="REFACTORING: definizione del metodo verificaNumeroVoti">
+      <option name="closed" value="true" />
+      <created>1777543480526</created>
+      <option name="number" value="02583" />
+      <option name="presentableId" value="LOCAL-02583" />
+      <option name="project" value="LOCAL" />
+      <updated>1777543480526</updated>
+    </task>
+    <option name="localTasksCounter" value="2584" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isNegromanteVincitore" />
-    <MESSAGE value="REFACTORING: definizione del metodo getNegromante" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoloVivo" />
     <MESSAGE value="ROSSO: testEsitiPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitiPartita riuscito" />
@@ -720,6 +716,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isSegnalatoBoia" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalatoBoia" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroVoti" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroVoti" />
   </component>
 </project>
