@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPareggioBallottaggio non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomiPerdenti">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02540" summary="REFACTORING: definizione del metodo verificaPartitaMistici">
-      <option name="closed" value="true" />
-      <created>1777467297538</created>
-      <option name="number" value="02540" />
-      <option name="presentableId" value="LOCAL-02540" />
-      <option name="project" value="LOCAL" />
-      <updated>1777467297538</updated>
-    </task>
-    <task id="LOCAL-02541" summary="ROSSO: testNumeroMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1777467553230</created>
-      <option name="number" value="02541" />
-      <option name="presentableId" value="LOCAL-02541" />
-      <option name="project" value="LOCAL" />
-      <updated>1777467553230</updated>
     </task>
     <task id="LOCAL-02542" summary="VERDE: testNumeroMistici riuscito">
       <option name="closed" value="true" />
@@ -682,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777556212394</updated>
     </task>
-    <option name="localTasksCounter" value="2589" />
+    <task id="LOCAL-02589" summary="REFACTORING: definizione del metodo isPareggioPresente">
+      <option name="closed" value="true" />
+      <created>1777556857480</created>
+      <option name="number" value="02589" />
+      <option name="presentableId" value="LOCAL-02589" />
+      <option name="project" value="LOCAL" />
+      <updated>1777556857480</updated>
+    </task>
+    <task id="LOCAL-02590" summary="REFACTORING: definizione del metodo getNomiPerdenti">
+      <option name="closed" value="true" />
+      <created>1777557031481</created>
+      <option name="number" value="02590" />
+      <option name="presentableId" value="LOCAL-02590" />
+      <option name="project" value="LOCAL" />
+      <updated>1777557031481</updated>
+    </task>
+    <option name="localTasksCounter" value="2591" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNumeroMistici non riuscito" />
-    <MESSAGE value="VERDE: testNumeroMistici riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
     <MESSAGE value="ROSSO: testUtilizzoPotere non riuscito" />
     <MESSAGE value="VERDE: testUtilizzoPotere riuscito" />
@@ -722,6 +719,8 @@
     <MESSAGE value="VERDE: testPerdenteBallottaggio riuscito" />
     <MESSAGE value="ROSSO: testPareggioBallottaggio non riuscito" />
     <MESSAGE value="VERDE: testPareggioBallottaggio non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPareggioBallottaggio non riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPareggioPresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomiPerdenti" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomiPerdenti" />
   </component>
 </project>
