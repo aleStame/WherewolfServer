@@ -16,9 +16,9 @@ public final class GiocatoriVivi extends Giocatori
 
     private static final int NON_TROVATO = -1;
 
-    public Giocatori getBallottaggio()
+    public Ballottaggio getBallottaggio()
     {
-        Giocatori ballottaggio = creaBallottaggio();
+        Ballottaggio ballottaggio = creaBallottaggio();
         annullaVoti();
         ballottaggio.annullaVoti();
         return ballottaggio;
@@ -126,7 +126,7 @@ public final class GiocatoriVivi extends Giocatori
         if(esito == RIUSCITO && isAngeloCustode(nome)) resettaAmato();
     }
 
-    private Giocatori creaBallottaggio()
+    private Ballottaggio creaBallottaggio()
     {
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
