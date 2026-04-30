@@ -25,7 +25,7 @@ public final class Ballottaggio extends Giocatori
         annullaSegnalazioneInquisitore();
     }
 
-    public String getNomeGiocatorePerdente() { return null; }
+    public String getNomeGiocatorePerdente() { return getNomeGiocatore(0); }
 
     private void annullaVotiBoia(String nome) { for(int i = 0; i < getNumeroGiocatori(); i++) annullaVotiBoia(nome, i); }
 
