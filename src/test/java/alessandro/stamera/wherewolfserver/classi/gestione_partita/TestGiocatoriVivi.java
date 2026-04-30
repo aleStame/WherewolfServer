@@ -353,6 +353,23 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isSegnalatoBoia(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Guardia", "Ghoul", "Giulietta", "Giullare", "Guardia corrotta", "Inquisitore",
+            "Ladra", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+        }
+    )
+    public void testSegnalazioneBoiaNonRiuscita(String nomeRuolo)
+    {
+        String nome = "Vanessa";
+        aggiungiGiocatore(nome, nomeRuolo);
+        giocatori.segnalazioneBoia(nome);
+        verificaFalso(giocatori.isSegnalatoBoia(nome));
+    }
+
     private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
 
     private void inizializzaGiocatori(String[][] giocatori)

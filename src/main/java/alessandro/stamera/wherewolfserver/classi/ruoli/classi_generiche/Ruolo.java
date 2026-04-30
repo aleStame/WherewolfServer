@@ -314,7 +314,7 @@ public class Ruolo
 
     public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
 
-    public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
+    public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; System.out.println(isMistico() + " " + isCreaturaOmbra()); }
 
     public void annullaSegnalazioneBoia() { segnalatoBoia = false; }
 
