@@ -38,6 +38,8 @@ public final class Ballottaggio extends Giocatori
 
     public boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
+    public void segnalazioneOratore(String nome) { }
+
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 
     private List<String> getNomiPerdenti()

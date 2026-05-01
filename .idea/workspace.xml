@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaVero">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFalso">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02568" summary="REFACTORING: definizione del metodo isSegnalatoBoia">
-      <option name="closed" value="true" />
-      <created>1777475750098</created>
-      <option name="number" value="02568" />
-      <option name="presentableId" value="LOCAL-02568" />
-      <option name="project" value="LOCAL" />
-      <updated>1777475750098</updated>
     </task>
     <task id="LOCAL-02569" summary="ROSSO: testSegnalazioneBoia non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777649357775</updated>
     </task>
-    <option name="localTasksCounter" value="2617" />
+    <task id="LOCAL-02617" summary="REFACTORING: definizione del metodo verificaFalso">
+      <option name="closed" value="true" />
+      <created>1777649586443</created>
+      <option name="number" value="02617" />
+      <option name="presentableId" value="LOCAL-02617" />
+      <option name="project" value="LOCAL" />
+      <updated>1777649586444</updated>
+    </task>
+    <option name="localTasksCounter" value="2618" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPareggioBallottaggio non riuscito" />
     <MESSAGE value="VERDE: testPareggioBallottaggio non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPareggioPresente" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomiPerdenti" />
@@ -720,6 +721,7 @@
     <MESSAGE value="VERDE: testCitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCitta" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFalso" />
   </component>
 </project>

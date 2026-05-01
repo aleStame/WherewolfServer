@@ -7,8 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
+import static org.assertj.core.api.Assertions.*;
 
 public final class TestBallottaggio
 {
@@ -71,6 +70,16 @@ public final class TestBallottaggio
         aggiungiGiocatori(giocatori);
         verificaVero(isCitta(giocatori[0][0]));
         verificaFalso(isCitta(giocatori[1][0]));
+    }
+
+    @Test public void testSegnalazioneOratore()
+    {
+        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Luca", "Peccatore" }, { "Margherita", "Azzeccagarbugli" } };
+        aggiungiGiocatori(giocatori);
+        for(int i = 0; i < giocatori.length - 1; i++) ballottaggio.segnalazioneOratore(giocatori[i][0]);
+        incrementaVoti(giocatori[1][0], 3);
+        assertThatIllegalStateException().isThrownBy(() -> ballottaggio.getNomeGiocatorePerdente())
+            .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
