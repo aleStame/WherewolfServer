@@ -69,9 +69,11 @@ public final class TestBallottaggio
     {
         String[][] giocatori = new String[][] { { "Davide", "Bocca di rosa" }, { "Dina", "Inquisitore" } };
         aggiungiGiocatori(giocatori);
-        assertThat(ballottaggio.isCitta(giocatori[0][0])).isTrue();
-        assertThat(ballottaggio.isCitta(giocatori[1][0])).isFalse();
+        assertThat(isCitta(giocatori[0][0])).isTrue();
+        assertThat(isCitta(giocatori[1][0])).isFalse();
     }
+
+    private boolean isCitta(String nome) { return ballottaggio.isCitta(nome); }
 
     private void incrementaVoti(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
 

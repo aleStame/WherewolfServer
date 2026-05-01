@@ -141,10 +141,7 @@ public final class Partita
         eliminaGiocatore(nome);
     }
 
-    private boolean isEccezioneOratore(String nome)
-    {
-        return ballottaggio.getRuolo(nome).isCitta() && isOratorePresente();
-    }
+    private boolean isEccezioneOratore(String nome) { return ballottaggio.isCitta(nome) && isOratorePresente(); }
 
     private boolean isOratorePresente() { return vivi.isOratorePresente() || ballottaggio.isOratorePresente(); }
 
