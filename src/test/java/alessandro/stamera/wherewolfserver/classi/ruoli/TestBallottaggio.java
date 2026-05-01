@@ -22,7 +22,7 @@ public final class TestBallottaggio
         String nome = "Gabriella";
         setMercanteAmato();
         aggiungiGiocatore(nome, "Mercante");
-        assertThat(isAmatoPresente()).isTrue();
+        verificaVero(isAmatoPresente());
         assertThat(ballottaggio.getNomeAmato()).isEqualTo(nome);
     }
 
@@ -69,9 +69,11 @@ public final class TestBallottaggio
     {
         String[][] giocatori = new String[][] { { "Davide", "Bocca di rosa" }, { "Dina", "Inquisitore" } };
         aggiungiGiocatori(giocatori);
-        assertThat(isCitta(giocatori[0][0])).isTrue();
+        verificaVero(isCitta(giocatori[0][0]));
         assertThat(isCitta(giocatori[1][0])).isFalse();
     }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private boolean isCitta(String nome) { return ballottaggio.isCitta(nome); }
 
