@@ -31,14 +31,17 @@ public final class Ballottaggio extends Giocatori
     public String getNomeGiocatorePerdente()
     {
         String soluzione = getNomeGiocatore(0);
-        if(isPareggioPresente())
-            throw new IllegalArgumentException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        String messaggio = "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
+        boolean pareggio = isPareggioPresente();
+        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaVoti();
+        if(pareggio) throw new IllegalArgumentException(messaggio);
+        if(getRuolo(soluzione).isSegnalatoOratore()) throw new IllegalStateException(messaggio);
         return soluzione;
     }
 
     public boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
-    public void segnalazioneOratore(String nome) { }
+    public void segnalazioneOratore(String nome) { getRuolo(nome).segnalazioneOratore(); }
 
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 
