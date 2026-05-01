@@ -2,6 +2,9 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public final class Ballottaggio extends Giocatori
 {
 
@@ -23,6 +26,28 @@ public final class Ballottaggio extends Giocatori
     {
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
+    }
+
+    public String getNomeGiocatorePerdente()
+    {
+        String soluzione = getNomeGiocatore(0);
+        if(isPareggioPresente())
+            throw new IllegalArgumentException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        return soluzione;
+    }
+
+    private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
+
+    private List<String> getNomiPerdenti()
+    {
+        int numeroVoti = getNumeroVotiPrimoClassificato();
+        List<String> soluzioni = new ArrayList<>();
+        for(int i = 0; i < getNumeroGiocatori(); i++)
+        {
+            String nome = getNomeGiocatore(i);
+            if(getNumeroVoti(nome) == numeroVoti) soluzioni.add(nome);
+        }
+        return soluzioni;
     }
 
     private void annullaVotiBoia(String nome) { for(int i = 0; i < getNumeroGiocatori(); i++) annullaVotiBoia(nome, i); }

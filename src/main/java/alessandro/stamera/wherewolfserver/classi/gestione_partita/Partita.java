@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.ruoli.Ballottaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -16,7 +17,7 @@ public final class Partita
 
     private final GiocatoriVivi vivi;
 
-    private Giocatori ballottaggio;
+    private final Ballottaggio ballottaggio;
 
     private final GiocatoriEliminati eliminati;
 
@@ -29,11 +30,29 @@ public final class Partita
         FACTORY.annullaSegnalazioni();
         for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
         ultimoControllo = NERA;
+        ballottaggio = new Ballottaggio();
     }
 
-    public void incrementaVoti(String nome, int numeroVoti) { vivi.incrementaVoti(nome, numeroVoti); }
+    public void incrementaVoti(String nome, int numeroVoti)
+    {
+        if(vivi.isPresente(nome)) vivi.incrementaVoti(nome, numeroVoti);
+        else ballottaggio.incrementaVoti(nome, numeroVoti);
+    }
 
-    public void terminaVotazioni() { ballottaggio = vivi.getBallottaggio(); }
+    public void terminaVotazioni()
+    {
+        Ballottaggio temp = vivi.getBallottaggio();
+        for(int i = 0; i < temp.getNumeroGiocatori(); i++)
+        {
+            String nome = temp.getNomeGiocatore(i);
+            ballottaggio.aggiungiGiocatore(nome, temp.getRuolo(nome));
+        }
+    }
+
+    public void terminaBallottaggio()
+    {
+        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
+    }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
 
@@ -107,6 +126,25 @@ public final class Partita
     }
 
     public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
+
+    private void svuotaBallottaggio()
+    {
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));
+    }
+
+    private void eliminaPerdente()
+    {
+        String nomePerdente = ballottaggio.getNomeGiocatorePerdente();
+        terminaBallottaggio(nomePerdente);
+        eliminaGiocatore(nomePerdente);
+    }
+
+    private void terminaBallottaggio(String nome)
+    {
+        Ruolo ruolo = ballottaggio.getRuolo(nome);
+        ballottaggio.eliminaGiocatore(nome);
+        vivi.aggiungiGiocatore(nome, ruolo);
+    }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 

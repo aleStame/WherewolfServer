@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNumeroVoti" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo svuotaBallottaggio" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +98,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/potereBoia&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/ballottaggio&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -285,158 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02535" summary="REFACTORING: definizione del metodo isNegromanteVincitore">
-      <option name="closed" value="true" />
-      <created>1777455100919</created>
-      <option name="number" value="02535" />
-      <option name="presentableId" value="LOCAL-02535" />
-      <option name="project" value="LOCAL" />
-      <updated>1777455100919</updated>
-    </task>
-    <task id="LOCAL-02536" summary="REFACTORING: definizione del metodo getNegromante">
-      <option name="closed" value="true" />
-      <created>1777455228083</created>
-      <option name="number" value="02536" />
-      <option name="presentableId" value="LOCAL-02536" />
-      <option name="project" value="LOCAL" />
-      <updated>1777455228084</updated>
-    </task>
-    <task id="LOCAL-02537" summary="REFACTORING: definizione del metodo getRuoloVivo">
-      <option name="closed" value="true" />
-      <created>1777455425620</created>
-      <option name="number" value="02537" />
-      <option name="presentableId" value="LOCAL-02537" />
-      <option name="project" value="LOCAL" />
-      <updated>1777455425621</updated>
-    </task>
-    <task id="LOCAL-02538" summary="ROSSO: testEsitiPartita non riuscito">
-      <option name="closed" value="true" />
-      <created>1777456589832</created>
-      <option name="number" value="02538" />
-      <option name="presentableId" value="LOCAL-02538" />
-      <option name="project" value="LOCAL" />
-      <updated>1777456589832</updated>
-    </task>
-    <task id="LOCAL-02539" summary="VERDE: testEsitiPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1777466934393</created>
-      <option name="number" value="02539" />
-      <option name="presentableId" value="LOCAL-02539" />
-      <option name="project" value="LOCAL" />
-      <updated>1777466934393</updated>
-    </task>
-    <task id="LOCAL-02540" summary="REFACTORING: definizione del metodo verificaPartitaMistici">
-      <option name="closed" value="true" />
-      <created>1777467297538</created>
-      <option name="number" value="02540" />
-      <option name="presentableId" value="LOCAL-02540" />
-      <option name="project" value="LOCAL" />
-      <updated>1777467297538</updated>
-    </task>
-    <task id="LOCAL-02541" summary="ROSSO: testNumeroMistici non riuscito">
-      <option name="closed" value="true" />
-      <created>1777467553230</created>
-      <option name="number" value="02541" />
-      <option name="presentableId" value="LOCAL-02541" />
-      <option name="project" value="LOCAL" />
-      <updated>1777467553230</updated>
-    </task>
-    <task id="LOCAL-02542" summary="VERDE: testNumeroMistici riuscito">
-      <option name="closed" value="true" />
-      <created>1777467757896</created>
-      <option name="number" value="02542" />
-      <option name="presentableId" value="LOCAL-02542" />
-      <option name="project" value="LOCAL" />
-      <updated>1777467757896</updated>
-    </task>
-    <task id="LOCAL-02543" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1777467919779</created>
-      <option name="number" value="02543" />
-      <option name="presentableId" value="LOCAL-02543" />
-      <option name="project" value="LOCAL" />
-      <updated>1777467919779</updated>
-    </task>
-    <task id="LOCAL-02544" summary="REFACTORING: definizione del metodo verificaEsitoPartita">
-      <option name="closed" value="true" />
-      <created>1777468164773</created>
-      <option name="number" value="02544" />
-      <option name="presentableId" value="LOCAL-02544" />
-      <option name="project" value="LOCAL" />
-      <updated>1777468164773</updated>
-    </task>
-    <task id="LOCAL-02545" summary="ROSSO: testUtilizzoPotere non riuscito">
-      <option name="closed" value="true" />
-      <created>1777468986877</created>
-      <option name="number" value="02545" />
-      <option name="presentableId" value="LOCAL-02545" />
-      <option name="project" value="LOCAL" />
-      <updated>1777468986877</updated>
-    </task>
-    <task id="LOCAL-02546" summary="VERDE: testUtilizzoPotere riuscito">
-      <option name="closed" value="true" />
-      <created>1777469121374</created>
-      <option name="number" value="02546" />
-      <option name="presentableId" value="LOCAL-02546" />
-      <option name="project" value="LOCAL" />
-      <updated>1777469121374</updated>
-    </task>
-    <task id="LOCAL-02547" summary="REFACTORING: definizione del metodo verificaFalso">
-      <option name="closed" value="true" />
-      <created>1777469307384</created>
-      <option name="number" value="02547" />
-      <option name="presentableId" value="LOCAL-02547" />
-      <option name="project" value="LOCAL" />
-      <updated>1777469307384</updated>
-    </task>
-    <task id="LOCAL-02548" summary="ROSSO: testSegnalazioneBoia non riuscito">
-      <option name="closed" value="true" />
-      <created>1777469573430</created>
-      <option name="number" value="02548" />
-      <option name="presentableId" value="LOCAL-02548" />
-      <option name="project" value="LOCAL" />
-      <updated>1777469573430</updated>
-    </task>
-    <task id="LOCAL-02549" summary="VERDE: testSegnalazioneBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1777469852410</created>
-      <option name="number" value="02549" />
-      <option name="presentableId" value="LOCAL-02549" />
-      <option name="project" value="LOCAL" />
-      <updated>1777469852410</updated>
-    </task>
-    <task id="LOCAL-02550" summary="ROSSO: testSegnalazioneBoia non riuscito">
-      <option name="closed" value="true" />
-      <created>1777470527003</created>
-      <option name="number" value="02550" />
-      <option name="presentableId" value="LOCAL-02550" />
-      <option name="project" value="LOCAL" />
-      <updated>1777470527003</updated>
-    </task>
-    <task id="LOCAL-02551" summary="VERDE: testSegnalazioneBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1777471065727</created>
-      <option name="number" value="02551" />
-      <option name="presentableId" value="LOCAL-02551" />
-      <option name="project" value="LOCAL" />
-      <updated>1777471065727</updated>
-    </task>
-    <task id="LOCAL-02552" summary="REFACTORING: definizione del metodo isSegnalatoBoia">
-      <option name="closed" value="true" />
-      <created>1777471220443</created>
-      <option name="number" value="02552" />
-      <option name="presentableId" value="LOCAL-02552" />
-      <option name="project" value="LOCAL" />
-      <updated>1777471220443</updated>
-    </task>
-    <task id="LOCAL-02553" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1777471423336</created>
-      <option name="number" value="02553" />
-      <option name="presentableId" value="LOCAL-02553" />
-      <option name="project" value="LOCAL" />
-      <updated>1777471423336</updated>
     </task>
     <task id="LOCAL-02554" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
       <option name="closed" value="true" />
@@ -678,7 +526,159 @@
       <option name="project" value="LOCAL" />
       <updated>1777543480526</updated>
     </task>
-    <option name="localTasksCounter" value="2584" />
+    <task id="LOCAL-02584" summary="REFACTORING: definizione del metodo verificaNumeroVoti">
+      <option name="closed" value="true" />
+      <created>1777543718175</created>
+      <option name="number" value="02584" />
+      <option name="presentableId" value="LOCAL-02584" />
+      <option name="project" value="LOCAL" />
+      <updated>1777543718175</updated>
+    </task>
+    <task id="LOCAL-02585" summary="ROSSO: testPerdenteBallottaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1777555031090</created>
+      <option name="number" value="02585" />
+      <option name="presentableId" value="LOCAL-02585" />
+      <option name="project" value="LOCAL" />
+      <updated>1777555031090</updated>
+    </task>
+    <task id="LOCAL-02586" summary="VERDE: testPerdenteBallottaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1777555428396</created>
+      <option name="number" value="02586" />
+      <option name="presentableId" value="LOCAL-02586" />
+      <option name="project" value="LOCAL" />
+      <updated>1777555428396</updated>
+    </task>
+    <task id="LOCAL-02587" summary="ROSSO: testPareggioBallottaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1777555709912</created>
+      <option name="number" value="02587" />
+      <option name="presentableId" value="LOCAL-02587" />
+      <option name="project" value="LOCAL" />
+      <updated>1777555709912</updated>
+    </task>
+    <task id="LOCAL-02588" summary="VERDE: testPareggioBallottaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1777556212394</created>
+      <option name="number" value="02588" />
+      <option name="presentableId" value="LOCAL-02588" />
+      <option name="project" value="LOCAL" />
+      <updated>1777556212394</updated>
+    </task>
+    <task id="LOCAL-02589" summary="REFACTORING: definizione del metodo isPareggioPresente">
+      <option name="closed" value="true" />
+      <created>1777556857480</created>
+      <option name="number" value="02589" />
+      <option name="presentableId" value="LOCAL-02589" />
+      <option name="project" value="LOCAL" />
+      <updated>1777556857480</updated>
+    </task>
+    <task id="LOCAL-02590" summary="REFACTORING: definizione del metodo getNomiPerdenti">
+      <option name="closed" value="true" />
+      <created>1777557031481</created>
+      <option name="number" value="02590" />
+      <option name="presentableId" value="LOCAL-02590" />
+      <option name="project" value="LOCAL" />
+      <updated>1777557031481</updated>
+    </task>
+    <task id="LOCAL-02591" summary="REFACTORING: definizione del metodo aggiungiGiocatori">
+      <option name="closed" value="true" />
+      <created>1777558817536</created>
+      <option name="number" value="02591" />
+      <option name="presentableId" value="LOCAL-02591" />
+      <option name="project" value="LOCAL" />
+      <updated>1777558817536</updated>
+    </task>
+    <task id="LOCAL-02592" summary="REFACTORING: definizione del metodo incrementaVoti">
+      <option name="closed" value="true" />
+      <created>1777559043465</created>
+      <option name="number" value="02592" />
+      <option name="presentableId" value="LOCAL-02592" />
+      <option name="project" value="LOCAL" />
+      <updated>1777559043465</updated>
+    </task>
+    <task id="LOCAL-02593" summary="REFACTORING: definizione del metodo getNomeGiocatorePerdente">
+      <option name="closed" value="true" />
+      <created>1777559255753</created>
+      <option name="number" value="02593" />
+      <option name="presentableId" value="LOCAL-02593" />
+      <option name="project" value="LOCAL" />
+      <updated>1777559255753</updated>
+    </task>
+    <task id="LOCAL-02594" summary="ROSSO: testPerdenteBallottaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1777559543771</created>
+      <option name="number" value="02594" />
+      <option name="presentableId" value="LOCAL-02594" />
+      <option name="project" value="LOCAL" />
+      <updated>1777559543771</updated>
+    </task>
+    <task id="LOCAL-02595" summary="ROSSO: testPerdenteBallottaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1777561561573</created>
+      <option name="number" value="02595" />
+      <option name="presentableId" value="LOCAL-02595" />
+      <option name="project" value="LOCAL" />
+      <updated>1777561561573</updated>
+    </task>
+    <task id="LOCAL-02596" summary="VERDE: testPerdenteBallottaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1777561746246</created>
+      <option name="number" value="02596" />
+      <option name="presentableId" value="LOCAL-02596" />
+      <option name="project" value="LOCAL" />
+      <updated>1777561746246</updated>
+    </task>
+    <task id="LOCAL-02597" summary="REFACTORING: definizione di una variante del metodo terminaBallottaggio con presenza come parametro del nome del giocatore da rimettere tra i vivi">
+      <option name="closed" value="true" />
+      <created>1777561969921</created>
+      <option name="number" value="02597" />
+      <option name="presentableId" value="LOCAL-02597" />
+      <option name="project" value="LOCAL" />
+      <updated>1777561969921</updated>
+    </task>
+    <task id="LOCAL-02598" summary="VERDE DIRETTO: testPareggioBallottaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1777564284924</created>
+      <option name="number" value="02598" />
+      <option name="presentableId" value="LOCAL-02598" />
+      <option name="project" value="LOCAL" />
+      <updated>1777564284924</updated>
+    </task>
+    <task id="LOCAL-02599" summary="REFACTORING: definizione del metodo verificaNonEliminato">
+      <option name="closed" value="true" />
+      <created>1777564851598</created>
+      <option name="number" value="02599" />
+      <option name="presentableId" value="LOCAL-02599" />
+      <option name="project" value="LOCAL" />
+      <updated>1777564851598</updated>
+    </task>
+    <task id="LOCAL-02600" summary="REFACTORING: definizione del metodo terminaBallottaggio">
+      <option name="closed" value="true" />
+      <created>1777624514571</created>
+      <option name="number" value="02600" />
+      <option name="presentableId" value="LOCAL-02600" />
+      <option name="project" value="LOCAL" />
+      <updated>1777624514571</updated>
+    </task>
+    <task id="LOCAL-02601" summary="REFACTORING: definizione del metodo eliminaPerdente">
+      <option name="closed" value="true" />
+      <created>1777625191825</created>
+      <option name="number" value="02601" />
+      <option name="presentableId" value="LOCAL-02601" />
+      <option name="project" value="LOCAL" />
+      <updated>1777625191825</updated>
+    </task>
+    <task id="LOCAL-02602" summary="REFACTORING: definizione del metodo svuotaBallottaggio">
+      <option name="closed" value="true" />
+      <created>1777625433197</created>
+      <option name="number" value="02602" />
+      <option name="presentableId" value="LOCAL-02602" />
+      <option name="project" value="LOCAL" />
+      <updated>1777625433197</updated>
+    </task>
+    <option name="localTasksCounter" value="2603" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,21 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getRuoloVivo" />
-    <MESSAGE value="ROSSO: testEsitiPartita non riuscito" />
-    <MESSAGE value="VERDE: testEsitiPartita riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaPartitaMistici" />
-    <MESSAGE value="ROSSO: testNumeroMistici non riuscito" />
-    <MESSAGE value="VERDE: testNumeroMistici riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
-    <MESSAGE value="ROSSO: testUtilizzoPotere non riuscito" />
-    <MESSAGE value="VERDE: testUtilizzoPotere riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia non riuscito" />
-    <MESSAGE value="ROSSO: testSegnalazioneBoia non riuscito" />
-    <MESSAGE value="VERDE: testSegnalazioneBoia riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo annullaVotiBoia" />
     <MESSAGE value="ROSSO: testSegnalazioneBoiaRiuscita non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneBoiaRiuscita riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
@@ -718,6 +703,21 @@
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroVoti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNumeroVoti" />
+    <MESSAGE value="ROSSO: testPareggioBallottaggio non riuscito" />
+    <MESSAGE value="VERDE: testPareggioBallottaggio non riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPareggioPresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomiPerdenti" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatori" />
+    <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeGiocatorePerdente" />
+    <MESSAGE value="ROSSO: testPerdenteBallottaggio non riuscito" />
+    <MESSAGE value="VERDE: testPerdenteBallottaggio riuscito" />
+    <MESSAGE value="REFACTORING: definizione di una variante del metodo terminaBallottaggio con presenza come parametro del nome del giocatore da rimettere tra i vivi" />
+    <MESSAGE value="VERDE DIRETTO: testPareggioBallottaggio riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonEliminato" />
+    <MESSAGE value="REFACTORING: definizione del metodo terminaBallottaggio" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaPerdente" />
+    <MESSAGE value="REFACTORING: definizione del metodo svuotaBallottaggio" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo svuotaBallottaggio" />
   </component>
 </project>
