@@ -63,6 +63,13 @@ public final class TestGiocatori
         assertThat(giocatori.isInquisito(nome)).isTrue();
     }
 
+    @Test public void testOratorePresente()
+    {
+        String nome = "Marco";
+        aggiungiGiocatore(nome, "Oratore");
+        assertThat(giocatori.isOratorePresente()).isTrue();
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
