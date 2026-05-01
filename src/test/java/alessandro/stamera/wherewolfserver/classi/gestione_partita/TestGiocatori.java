@@ -43,7 +43,7 @@ public final class TestGiocatori
     {
         String nome = "Otello";
         aggiungiGiocatore(nome, "Angelo custode");
-        assertThat(giocatori.isAngeloCustodePresente()).isTrue();
+        verificaVero(giocatori.isAngeloCustodePresente());
         assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(nome);
     }
 
@@ -52,7 +52,7 @@ public final class TestGiocatori
     {
         String nome = "Sofia";
         aggiungiGiocatore(nome, nomeCriminale);
-        assertThat(giocatori.isCriminale(nome)).isTrue();
+        verificaVero(giocatori.isCriminale(nome));
     }
 
     @Test public void testInquisito()
@@ -60,17 +60,19 @@ public final class TestGiocatori
         String nome = "Andrea";
         aggiungiGiocatore(nome, "Sidhe");
         giocatori.segnalazioneInquisitore(nome);
-        assertThat(giocatori.isInquisito(nome)).isTrue();
+        verificaVero(giocatori.isInquisito(nome));
     }
 
     @Test public void testOratorePresente()
     {
         String nome = "Marco";
         aggiungiGiocatore(nome, "Oratore");
-        assertThat(giocatori.isOratorePresente()).isTrue();
+        verificaVero(giocatori.isOratorePresente());
     }
 
     @Test public void testOratoreAssente() { assertThat(giocatori.isOratorePresente()).isFalse(); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
