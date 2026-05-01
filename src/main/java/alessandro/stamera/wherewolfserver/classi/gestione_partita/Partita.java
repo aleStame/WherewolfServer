@@ -51,9 +51,14 @@ public final class Partita
 
     public void terminaBallottaggio()
     {
-        String nomePerdente = ballottaggio.getNomeGiocatorePerdente();
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));
-        eliminaGiocatore(nomePerdente);
+        try
+        {
+            String nomePerdente = ballottaggio.getNomeGiocatorePerdente();
+            terminaBallottaggio(nomePerdente);
+            eliminaGiocatore(nomePerdente);
+        }
+        catch(IllegalArgumentException ex) { System.out.println(ex.getMessage()); }
+        finally { for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i)); }
     }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }

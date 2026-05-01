@@ -252,7 +252,7 @@ public final class TestPartita
         terminaVotazioni();
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
-        partita.terminaBallottaggio();
+        terminaBallottaggio();
         verificaEliminazione(giocatori[1][0]);
         verificaNonEliminato(giocatori[0][0]);
     }
@@ -264,8 +264,11 @@ public final class TestPartita
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
         terminaVotazioni();
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        terminaBallottaggio();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
+
+    private void terminaBallottaggio() { partita.terminaBallottaggio(); }
 
     private void verificaNonEliminato(String nome) { verificaFalso(partita.isEliminato(nome)); }
 
