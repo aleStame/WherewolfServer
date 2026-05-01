@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isOratorePresente">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCitta non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02564" summary="REFACTORING: definizione del metodo isSegnalatoBoia">
-      <option name="closed" value="true" />
-      <created>1777475023516</created>
-      <option name="number" value="02564" />
-      <option name="presentableId" value="LOCAL-02564" />
-      <option name="project" value="LOCAL" />
-      <updated>1777475023516</updated>
     </task>
     <task id="LOCAL-02565" summary="VERDE DIRETTO: testSegnalazioneBoia non riuscito">
       <option name="closed" value="true" />
@@ -681,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777648075767</updated>
     </task>
-    <option name="localTasksCounter" value="2613" />
+    <task id="LOCAL-02613" summary="ROSSO: testCitta non riuscito">
+      <option name="closed" value="true" />
+      <created>1777648520155</created>
+      <option name="number" value="02613" />
+      <option name="presentableId" value="LOCAL-02613" />
+      <option name="project" value="LOCAL" />
+      <updated>1777648520155</updated>
+    </task>
+    <option name="localTasksCounter" value="2614" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroVoti" />
     <MESSAGE value="ROSSO: testPareggioBallottaggio non riuscito" />
@@ -721,6 +719,7 @@
     <MESSAGE value="VERDE DIRETTO: testOratoreAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo isOratorePresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isOratorePresente" />
+    <MESSAGE value="ROSSO: testCitta non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCitta non riuscito" />
   </component>
 </project>
