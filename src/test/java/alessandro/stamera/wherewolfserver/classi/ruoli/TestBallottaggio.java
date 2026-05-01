@@ -29,10 +29,10 @@ public final class TestBallottaggio
     @Test public void testAmatoAssente()
     {
         aggiungiGiocatore("Lucia", "Mercante");
-        assertThat(isAmatoPresente()).isFalse();
+        verificaFalso(isAmatoPresente());
     }
 
-    @Test public void testNessunaSegnalazione() { assertThat(ballottaggio.isSegnalazioneAssente()).isTrue(); }
+    @Test public void testNessunaSegnalazione() { verificaVero(ballottaggio.isSegnalazioneAssente()); }
 
     @ParameterizedTest @CsvSource({ "Guaritore, 0", "Lupo del branco, 0", "Peccatore, 2" })
     public void testSegnalazioneBoia(String nomeRuolo, int risultato)
@@ -70,10 +70,12 @@ public final class TestBallottaggio
         String[][] giocatori = new String[][] { { "Davide", "Bocca di rosa" }, { "Dina", "Inquisitore" } };
         aggiungiGiocatori(giocatori);
         verificaVero(isCitta(giocatori[0][0]));
-        assertThat(isCitta(giocatori[1][0])).isFalse();
+        verificaFalso(isCitta(giocatori[1][0]));
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isCitta(String nome) { return ballottaggio.isCitta(nome); }
 
