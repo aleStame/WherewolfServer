@@ -51,8 +51,7 @@ public final class Partita
 
     public void terminaBallottaggio()
     {
-        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  }
-        finally { for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i)); }
+        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
     }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
@@ -127,6 +126,11 @@ public final class Partita
     }
 
     public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
+
+    private void svuotaBallottaggio()
+    {
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));
+    }
 
     private void eliminaPerdente()
     {
