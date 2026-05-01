@@ -70,6 +70,8 @@ public final class TestGiocatori
         assertThat(giocatori.isOratorePresente()).isTrue();
     }
 
+    @Test public void testOratoreAssente() { assertThat(giocatori.isOratorePresente()).isFalse(); }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
