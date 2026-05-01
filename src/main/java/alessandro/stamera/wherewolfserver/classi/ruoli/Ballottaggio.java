@@ -36,6 +36,8 @@ public final class Ballottaggio extends Giocatori
         return soluzione;
     }
 
+    public boolean isCitta(String nome) { return false; }
+
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 
     private List<String> getNomiPerdenti()

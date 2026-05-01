@@ -65,6 +65,14 @@ public final class TestBallottaggio
             .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
     }
 
+    @Test public void testCitta()
+    {
+        String[][] giocatori = new String[][] { { "Davide", "Bocca di rosa" }, { "Dina", "Inquisitore" } };
+        aggiungiGiocatori(giocatori);
+        assertThat(ballottaggio.isCitta(giocatori[0][0])).isTrue();
+        assertThat(ballottaggio.isCitta(giocatori[1][0])).isFalse();
+    }
+
     private void incrementaVoti(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
 
     private String getNomeGiocatorePerdente() { return ballottaggio.getNomeGiocatorePerdente(); }

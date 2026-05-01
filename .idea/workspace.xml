@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testOratoreAssente riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isOratorePresente">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ballottaggio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02562" summary="REFACTORING: definizione del metodo isSegnalatoBoia">
-      <option name="closed" value="true" />
-      <created>1777474507480</created>
-      <option name="number" value="02562" />
-      <option name="presentableId" value="LOCAL-02562" />
-      <option name="project" value="LOCAL" />
-      <updated>1777474507480</updated>
-    </task>
-    <task id="LOCAL-02563" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1777474819320</created>
-      <option name="number" value="02563" />
-      <option name="presentableId" value="LOCAL-02563" />
-      <option name="project" value="LOCAL" />
-      <updated>1777474819320</updated>
     </task>
     <task id="LOCAL-02564" summary="REFACTORING: definizione del metodo isSegnalatoBoia">
       <option name="closed" value="true" />
@@ -680,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777646023604</updated>
     </task>
-    <option name="localTasksCounter" value="2611" />
+    <task id="LOCAL-02611" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1777647886189</created>
+      <option name="number" value="02611" />
+      <option name="presentableId" value="LOCAL-02611" />
+      <option name="project" value="LOCAL" />
+      <updated>1777647886189</updated>
+    </task>
+    <task id="LOCAL-02612" summary="REFACTORING: definizione del metodo isOratorePresente">
+      <option name="closed" value="true" />
+      <created>1777648075767</created>
+      <option name="number" value="02612" />
+      <option name="presentableId" value="LOCAL-02612" />
+      <option name="project" value="LOCAL" />
+      <updated>1777648075767</updated>
+    </task>
+    <option name="localTasksCounter" value="2613" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonSegnalatoBoia" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroVoti" />
@@ -720,6 +719,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isEccezioneOratore" />
     <MESSAGE value="VERDE DIRETTO: testOratorePresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testOratoreAssente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testOratoreAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="REFACTORING: definizione del metodo isOratorePresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isOratorePresente" />
   </component>
 </project>
