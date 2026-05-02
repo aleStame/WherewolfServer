@@ -80,6 +80,7 @@ public final class TestBallottaggio
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(() -> ballottaggio.getNomeGiocatorePerdente())
             .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        verificaFalso(ballottaggio.isSegnalazioneAssente());
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
