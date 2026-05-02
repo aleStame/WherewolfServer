@@ -127,6 +127,8 @@ public final class Partita
 
     public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
 
+    public void segnalazioneOratore(String nome) { }
+
     private void svuotaBallottaggio()
     {
         for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));

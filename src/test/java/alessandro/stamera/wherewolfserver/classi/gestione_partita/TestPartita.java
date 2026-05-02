@@ -280,6 +280,18 @@ public final class TestPartita
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
+    @Test public void testSegnalazioneOratore()
+    {
+        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Luca", "Peccatore" }, { "Margherita", "Azzeccagarbugli" } };
+        inizializzaPartita(giocatori);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        terminaVotazioni();
+        for(int i = 0; i < giocatori.length - 1; i++) partita.segnalazioneOratore(giocatori[i][0]);
+        incrementaVoti(giocatori[1][0], 3);
+        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio)
+                .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+    }
+
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }
 
     private void verificaNonEliminato(String nome) { verificaFalso(partita.isEliminato(nome)); }
