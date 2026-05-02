@@ -11,6 +11,9 @@ import static org.assertj.core.api.Assertions.*;
 public final class TestPartita
 {
 
+    private static final String ERRORE_ROGO_SALTATO =
+        "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
+
     private Partita partita;
 
     @Test public void testBallottaggioPuro()
@@ -275,8 +278,7 @@ public final class TestPartita
         for(int i = 0; i < giocatori.length - 1; i++) incrementaVoti(giocatori[i][0], 2);
         terminaVotazioni();
         incrementaVoti(giocatori[0][0], 3);
-        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio)
-            .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -288,8 +290,8 @@ public final class TestPartita
         terminaVotazioni();
         for(int i = 0; i < giocatori.length - 1; i++) partita.segnalazioneOratore(giocatori[i][0]);
         incrementaVoti(giocatori[1][0], 3);
-        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio)
-                .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }
