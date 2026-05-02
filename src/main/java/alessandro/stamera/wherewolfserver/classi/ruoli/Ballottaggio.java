@@ -14,7 +14,17 @@ public final class Ballottaggio extends Giocatori
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
-    public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
+    public boolean isSegnalazioneAssente()
+    {
+        return controlloNessunInquisito() && controlloNienteAzzeccagarbugli() && controlloNessunaSegnalazioneOratore();
+    }
+
+    private boolean controlloNessunaSegnalazioneOratore()
+    {
+        boolean esito = true;
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = getRuolo(getNomeGiocatore(i)).isInquisito();
+        return esito;
+    }
 
     @Override public void segnalazioneBoia(String nome)
     {
