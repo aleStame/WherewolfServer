@@ -5,12 +5,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
 public final class TestBallottaggio
 {
+
+    private static final String ERRORE_ROGO_SALTATO =
+            "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
 
     private Ballottaggio ballottaggio;
 
@@ -40,7 +42,7 @@ public final class TestBallottaggio
         String[][] giocatori = new String[][] { { nome, nomeRuolo }, { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
         int numeroVoti = 2;
-        for(String[] giocatore : giocatori) ballottaggio.incrementaVoti(giocatore[0], numeroVoti);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], numeroVoti);
         ballottaggio.segnalazioneBoia(nome);
         verificaNumeroVoti(nome, numeroVoti);
         for(int i = 1; i < giocatori.length; i++) verificaNumeroVoti(giocatori[i][0], risultato);
@@ -60,8 +62,7 @@ public final class TestBallottaggio
         String[][] giocatori = new String[][]{ { "Francesco", "Capo branco" }, { "Luca", "Altra guardia" } };
         aggiungiGiocatori(giocatori);
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
-        assertThatIllegalArgumentException().isThrownBy(this::getNomeGiocatorePerdente)
-            .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        assertThatIllegalArgumentException().isThrownBy(this::getNomeGiocatorePerdente).withMessage(ERRORE_ROGO_SALTATO);
     }
 
     @Test public void testCitta()
@@ -78,9 +79,8 @@ public final class TestBallottaggio
         aggiungiGiocatori(giocatori);
         for(int i = 0; i < giocatori.length - 1; i++) ballottaggio.segnalazioneOratore(giocatori[i][0]);
         incrementaVoti(giocatori[1][0], 3);
-        assertThatIllegalStateException().isThrownBy(() -> ballottaggio.getNomeGiocatorePerdente())
-            .withMessage("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
-        verificaFalso(ballottaggio.isSegnalazioneAssente());
+        assertThatIllegalStateException().isThrownBy(this::getNomeGiocatorePerdente).withMessage(ERRORE_ROGO_SALTATO);
+        verificaVero(ballottaggio.isSegnalazioneAssente());
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
@@ -105,7 +105,10 @@ public final class TestBallottaggio
 
     private boolean isAmatoPresente() { return ballottaggio.isAmatoPresente(); }
 
-    private void aggiungiGiocatore(String nome, String nomeRuolo) { ballottaggio.aggiungiGiocatore(nome, FACTORY.getRuolo(nomeRuolo)); }
+    private void aggiungiGiocatore(String nome, String nomeRuolo)
+    {
+        ballottaggio.aggiungiGiocatore(nome, FACTORY.getRuolo(nomeRuolo));
+    }
 
     private void setMercanteAmato()
     {

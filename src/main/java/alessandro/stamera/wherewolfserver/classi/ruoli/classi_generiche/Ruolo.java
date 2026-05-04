@@ -325,6 +325,8 @@ public class Ruolo
 
     public void segnalazioneOratore() { segnalatoOratore = true; }
 
+    public void annullaSegnalazioneOratore() { segnalatoOratore = false; }
+
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
 
     private EsitoPartita controlloVittoriaUmani(Partita partita)
