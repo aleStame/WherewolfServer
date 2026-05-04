@@ -69,11 +69,13 @@ public final class TestGiocatori
         String[][] giocatori = new String[][] { { nome, "Oratore" }, { "Gianna", "Guaritore" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
         verificaVero(isOratorePresente());
-        verificaVero(this.giocatori.isOratore(giocatori[0][0]));
-        assertThat(this.giocatori.isOratore(giocatori[1][0])).isFalse();
+        verificaVero(isOratore(giocatori[0][0]));
+        assertThat(isOratore(giocatori[1][0])).isFalse();
     }
 
     @Test public void testOratoreAssente() { assertThat(isOratorePresente()).isFalse(); }
+
+    private boolean isOratore(String nome) { return giocatori.isOratore(nome); }
 
     private boolean isOratorePresente() { return giocatori.isOratorePresente(); }
 
