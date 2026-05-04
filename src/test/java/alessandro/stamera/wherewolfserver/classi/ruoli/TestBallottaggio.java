@@ -98,10 +98,12 @@ public final class TestBallottaggio
 
     @Test public void testSegnalazioneBorgomastro()
     {
-        verificaFalso(ballottaggio.isSegnalazioneBorgomastroAvvenuta());
+        verificaFalso(isSegnalazioneBorgomastroAvvenuta());
         ballottaggio.segnalazioneBorgomastro();
-        verificaVero(ballottaggio.isSegnalazioneBorgomastroAvvenuta());
+        verificaVero(isSegnalazioneBorgomastroAvvenuta());
     }
+
+    private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
 
     private void verificaSegnalazioneAssente() { verificaVero(ballottaggio.isSegnalazioneAssente()); }
 
