@@ -136,6 +136,8 @@ public final class Partita
         ballottaggio.segnalazioneBorgomastro();
     }
 
+    public void segnalazioneBracconiere() { }
+
     private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
 
     private int getNumeroRuoliCittaPresenti() { return vivi.getNumeroRuoliCitta() + ballottaggio.getNumeroRuoliCitta(); }

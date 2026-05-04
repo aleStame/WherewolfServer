@@ -325,6 +325,15 @@ public final class TestPartita
         assertThat(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti()).isEqualTo(3);
     }
 
+    @Test public void testPotereBracconiereUnLupo()
+    {
+        String[][] giocatori = new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } };
+        inizializzaPartita(giocatori);
+        partita.segnalazioneBracconiere();
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(giocatori[1][1], giocatori[2][0]))
+            .withMessage("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
+    }
+
     private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }
 
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
