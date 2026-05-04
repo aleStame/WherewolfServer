@@ -43,7 +43,7 @@ public final class Ballottaggio extends Giocatori
         String soluzione = getNomeGiocatore(0);
         String messaggio = "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
         boolean pareggio = isPareggioPresente();
-        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaVoti();
+        annullaVoti();
         if(pareggio) throw new IllegalArgumentException(messaggio);
         boolean segnalato = isSegnalatoOratore(soluzione);
         annullaSegnalazioneOratore();
@@ -57,10 +57,9 @@ public final class Ballottaggio extends Giocatori
 
     private boolean isSegnalatoOratore(String nome) { return getRuolo(nome).isSegnalatoOratore(); }
 
-    private void annullaSegnalazioneOratore()
-    {
-        for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaSegnalazioneOratore();
-    }
+    private void annullaSegnalazioneOratore() { for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneOratore(i); }
+
+    private void annullaSegnalazioneOratore(int posizione) { getRuolo(getNomeGiocatore(posizione)).annullaSegnalazioneOratore(); }
 
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 
