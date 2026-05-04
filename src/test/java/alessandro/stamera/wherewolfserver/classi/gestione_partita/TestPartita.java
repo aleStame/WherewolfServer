@@ -6,10 +6,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 public final class TestPartita
 {
+
+    private static final String ERRORE_ROGO_SALTATO =
+        "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
 
     private Partita partita;
 
@@ -267,6 +270,44 @@ public final class TestPartita
         terminaBallottaggio();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
+
+    @ParameterizedTest @CsvSource({ "Bocca di rosa", "Azzeccagarbugli" }) public void testRogoAnnullatoOratore(String nomeRuolo)
+    {
+        String[][] giocatori = new String[][] { { "Mario", nomeRuolo }, { "Dina", "Negromante" }, { "Enrica", "Oratore" } };
+        inizializzaPartita(giocatori);
+        for(int i = 0; i < giocatori.length - 1; i++) incrementaVoti(giocatori[i][0], 2);
+        terminaVotazioni();
+        incrementaVoti(giocatori[0][0], 3);
+        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+    }
+
+    @Test public void testSegnalazioneOratore()
+    {
+        String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Luca", "Peccatore" }, { "Margherita", "Azzeccagarbugli" } };
+        inizializzaPartita(giocatori);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        terminaVotazioni();
+        for(int i = 0; i < giocatori.length - 1; i++) segnalazioneOratore(giocatori[i][0]);
+        incrementaVoti(giocatori[1][0], 3);
+        assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+    }
+
+    @Test public void testSegnalazioneOratoreNonRiuscita()
+    {
+        String[][] giocatori = new String[][] { { "Aldo", "Capo branco" }, { "Giovanni", "Lupo del branco" }, { "Giacomo", "Giovane lupo" } };
+        inizializzaPartita(giocatori);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        terminaVotazioni();
+        int posizione = 2;
+        segnalazioneOratore(giocatori[0][0]);
+        incrementaVoti(giocatori[posizione][0], 3);
+        terminaBallottaggio();
+        verificaEliminazione(giocatori[posizione][0]);
+    }
+
+    private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
 
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }
 

@@ -3,7 +3,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreAlfabetico;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreVoti;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -77,6 +76,10 @@ public class Giocatori
     public void annullaSegnalazioneBoia(String nome) { getRuolo(nome).annullaSegnalazioneBoia(); }
 
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
+
+    public boolean isOratorePresente() { return getChiavi().stream().anyMatch(this::isOratore); }
+
+    public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 

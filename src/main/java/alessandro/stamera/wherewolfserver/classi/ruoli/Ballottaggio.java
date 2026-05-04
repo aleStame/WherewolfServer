@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,17 @@ public final class Ballottaggio extends Giocatori
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
-    public boolean isSegnalazioneAssente() { return controlloNessunInquisito() && controlloNienteAzzeccagarbugli(); }
+    public boolean isSegnalazioneAssente()
+    {
+        return controlloNessunInquisito() && controlloNienteAzzeccagarbugli() && controlloNessunaSegnalazioneOratore();
+    }
+
+    private boolean controlloNessunaSegnalazioneOratore()
+    {
+        boolean esito = true;
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isSegnalatoOratore(getNomeGiocatore(i));
+        return esito;
+    }
 
     @Override public void segnalazioneBoia(String nome)
     {
@@ -26,15 +35,36 @@ public final class Ballottaggio extends Giocatori
     {
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
+        annullaSegnalazioneOratore();
     }
 
     public String getNomeGiocatorePerdente()
     {
         String soluzione = getNomeGiocatore(0);
-        if(isPareggioPresente())
-            throw new IllegalArgumentException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        String messaggio = "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
+        boolean pareggio = isPareggioPresente();
+        annullaVoti();
+        if(pareggio) throw new IllegalArgumentException(messaggio);
+        boolean segnalato = isSegnalatoOratore(soluzione);
+        annullaSegnalazioneOratore();
+        if(segnalato) throw new IllegalStateException(messaggio);
         return soluzione;
     }
+
+    public boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
+
+    public void segnalazioneOratore(String nome) { getRuolo(nome).segnalazioneOratore(); }
+
+    private boolean isSegnalatoOratore(String nome) { return getRuolo(nome).isSegnalatoOratore(); }
+
+    private void annullaSegnalazioneOratore()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneOratore(i);
+    }
+
+    private void annullaSegnalazioneOratore(int posizione) { annullaSegnalazioneOratore(getNomeGiocatore(posizione)); }
+
+    private void annullaSegnalazioneOratore(String nome) { getRuolo(nome).annullaSegnalazioneOratore(); }
 
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 
@@ -61,33 +91,40 @@ public final class Ballottaggio extends Giocatori
     private int getPosizioneAmato()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAmato(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAmato(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isAmato(int posizione) { return isAmato(getNomeGiocatore(posizione)); }
 
     private boolean controlloNessunInquisito()
     {
         boolean esito = true;
-        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isInquisito(getNomeGiocatore(i));
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isInquisito(i);
         return esito;
     }
+
+    private boolean isInquisito(int posizione) { return isInquisito(getNomeGiocatore(posizione)); }
 
     private boolean controlloNienteAzzeccagarbugli()
     {
         boolean esito = true;
-        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isSegnalatoAzzeccagarbugli(getNomeGiocatore(i));
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isSegnalatoAzzeccagarbugli(i);
         return esito;
     }
 
-    private void annullaSegnalazioneInquisitore()
-    {
-        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(getNomeGiocatore(i));
-    }
+    private boolean isSegnalatoAzzeccagarbugli(int posizione) { return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione)); }
+
+    private void annullaSegnalazioneInquisitore() { for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(i); }
+
+    private void annullaSegnalazioneInquisitore(int posizione) { annullaSegnalazioneInquisitore(getNomeGiocatore(posizione)); }
 
     private void annullaSegnalazioneAzzeccagarbugli()
     {
-        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(i));
+        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneAzzeccagarbugli(i);
     }
+
+    private void annullaSegnalazioneAzzeccagarbugli(int posizione) { annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione)); }
 
     private void annullaSegnalazioneInquisitore(String nome) { getRuolo(nome).annullaSegnalazioneInquisitore(); }
 

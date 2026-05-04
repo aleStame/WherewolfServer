@@ -43,7 +43,7 @@ public final class TestGiocatori
     {
         String nome = "Otello";
         aggiungiGiocatore(nome, "Angelo custode");
-        assertThat(giocatori.isAngeloCustodePresente()).isTrue();
+        verificaVero(giocatori.isAngeloCustodePresente());
         assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(nome);
     }
 
@@ -52,7 +52,7 @@ public final class TestGiocatori
     {
         String nome = "Sofia";
         aggiungiGiocatore(nome, nomeCriminale);
-        assertThat(giocatori.isCriminale(nome)).isTrue();
+        verificaVero(giocatori.isCriminale(nome));
     }
 
     @Test public void testInquisito()
@@ -60,8 +60,28 @@ public final class TestGiocatori
         String nome = "Andrea";
         aggiungiGiocatore(nome, "Sidhe");
         giocatori.segnalazioneInquisitore(nome);
-        assertThat(giocatori.isInquisito(nome)).isTrue();
+        verificaVero(giocatori.isInquisito(nome));
     }
+
+    @Test public void testOratorePresente()
+    {
+        String nome = "Marco";
+        String[][] giocatori = new String[][] { { nome, "Oratore" }, { "Gianna", "Guaritore" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        verificaVero(isOratorePresente());
+        verificaVero(isOratore(giocatori[0][0]));
+        verificaFalso(isOratore(giocatori[1][0]));
+    }
+
+    @Test public void testOratoreAssente() { verificaFalso(isOratorePresente()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private boolean isOratore(String nome) { return giocatori.isOratore(nome); }
+
+    private boolean isOratorePresente() { return giocatori.isOratorePresente(); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {

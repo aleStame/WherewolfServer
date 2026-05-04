@@ -127,6 +127,8 @@ public final class Partita
 
     public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
 
+    public void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
+
     private void svuotaBallottaggio()
     {
         for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));
@@ -134,10 +136,16 @@ public final class Partita
 
     private void eliminaPerdente()
     {
-        String nomePerdente = ballottaggio.getNomeGiocatorePerdente();
-        terminaBallottaggio(nomePerdente);
-        eliminaGiocatore(nomePerdente);
+        String nome = ballottaggio.getNomeGiocatorePerdente();
+        if(isEccezioneOratore(nome))
+            throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        terminaBallottaggio(nome);
+        eliminaGiocatore(nome);
     }
+
+    private boolean isEccezioneOratore(String nome) { return ballottaggio.isCitta(nome) && isOratorePresente(); }
+
+    private boolean isOratorePresente() { return vivi.isOratorePresente() || ballottaggio.isOratorePresente(); }
 
     private void terminaBallottaggio(String nome)
     {
