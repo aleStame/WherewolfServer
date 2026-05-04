@@ -318,12 +318,14 @@ public final class TestPartita
         incrementaVoti(giocatori[1][0], 2);
         incrementaVoti(giocatori[posizione][0], 3);
         terminaVotazioni();
-        verificaFalso(partita.segnalazioneBorgomastroAvvenuta());
+        verificaFalso(isSegnalazioneBorgomastroAvvenuta());
         partita.segnalazioneBorgomastro(giocatori[posizione][0]);
-        verificaVero(partita.segnalazioneBorgomastroAvvenuta());
+        verificaVero(isSegnalazioneBorgomastroAvvenuta());
         incrementaVoti(giocatori[posizione][0], 1);
         assertThat(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti()).isEqualTo(3);
     }
+
+    private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }
 
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
 
