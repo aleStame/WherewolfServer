@@ -54,7 +54,7 @@ public final class TestBallottaggio
         aggiungiGiocatori(giocatori);
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
-        assertThat(getNomeGiocatorePerdente()).isEqualTo(giocatori[1][0]);
+        verificaNomeEliminato(giocatori[1][0]);
     }
 
     @Test public void testPareggioBallottaggio()
@@ -90,9 +90,11 @@ public final class TestBallottaggio
         ballottaggio.segnalazioneOratore(giocatori[0][0]);
         int posizione = 2;
         incrementaVoti(giocatori[posizione][0], 3);
-        assertThat(getNomeGiocatorePerdente()).isEqualTo(giocatori[posizione][0]);
+        verificaNomeEliminato(giocatori[posizione][0]);
         verificaVero(ballottaggio.isSegnalazioneAssente());
     }
+
+    private void verificaNomeEliminato(String nome) { assertThat(getNomeGiocatorePerdente()).isEqualTo(nome); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
