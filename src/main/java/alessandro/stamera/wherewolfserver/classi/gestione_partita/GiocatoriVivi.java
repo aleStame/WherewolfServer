@@ -101,9 +101,11 @@ public final class GiocatoriVivi extends Giocatori
     public int getNumeroLupi()
     {
         int numeroLupi = 0;
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(getRuolo(getNomeGiocatore(i)).isLupo()) numeroLupi++;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isLupo(i)) numeroLupi++;
         return numeroLupi;
     }
+
+    private boolean isLupo(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isLupo(); }
 
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 
