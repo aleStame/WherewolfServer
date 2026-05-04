@@ -370,6 +370,13 @@ public final class TestGiocatoriVivi
         verificaNonSegnalatoBoia(nome);
     }
 
+    @Test public void testNumeroLupi()
+    {
+        String[][] giocatori = new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo del branco" }, { "Mohamed", "Bracconiere" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        verificaNumeroIntero(this.giocatori.getNumeroLupi(), 2);
+    }
+
     private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
 
     private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
