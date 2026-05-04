@@ -294,6 +294,19 @@ public final class TestPartita
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
+    @Test public void testSegnalazioneOratoreNonRiuscita()
+    {
+        String[][] giocatori = new String[][] { { "Aldo", "Capo branco" }, { "Giovanni", "Lupo del branco" }, { "Giacomo", "Giovane lupo" } };
+        inizializzaPartita(giocatori);
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
+        terminaVotazioni();
+        int posizione = 2;
+        partita.segnalazioneOratore(giocatori[0][0]);
+        incrementaVoti(giocatori[posizione][0], 3);
+        terminaBallottaggio();
+        verificaEliminazione(giocatori[posizione][0]);
+    }
+
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }
 
     private void verificaNonEliminato(String nome) { verificaFalso(partita.isEliminato(nome)); }
