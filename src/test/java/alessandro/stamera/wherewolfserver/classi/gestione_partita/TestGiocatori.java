@@ -75,6 +75,13 @@ public final class TestGiocatori
 
     @Test public void testOratoreAssente() { verificaFalso(isOratorePresente()); }
 
+    @Test public void testNumeroRuoliCitta()
+    {
+        String[][] giocatori = new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Mercante" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        verificaNumeroIntero(this.giocatori.getNumeroRuoliCitta(), 2);
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isOratore(String nome) { return giocatori.isOratore(nome); }

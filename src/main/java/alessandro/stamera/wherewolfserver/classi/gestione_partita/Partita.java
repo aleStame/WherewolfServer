@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
-import alessandro.stamera.wherewolfserver.classi.ruoli.Ballottaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -36,7 +35,7 @@ public final class Partita
     public void incrementaVoti(String nome, int numeroVoti)
     {
         if(vivi.isPresente(nome)) vivi.incrementaVoti(nome, numeroVoti);
-        else ballottaggio.incrementaVoti(nome, numeroVoti);
+        else incrementaVotiBallottaggio(nome, numeroVoti);
     }
 
     public void terminaVotazioni()
@@ -128,6 +127,18 @@ public final class Partita
     public boolean isMisticiPresenti() { return vivi.getNumeroMistici() > 0; }
 
     public void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
+
+    public boolean segnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
+
+    public void segnalazioneBorgomastro(String nome)
+    {
+        incrementaVotiBallottaggio(nome, getNumeroRuoliCittaPresenti());
+        ballottaggio.segnalazioneBorgomastro();
+    }
+
+    private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
+
+    private int getNumeroRuoliCittaPresenti() { return vivi.getNumeroRuoliCitta() + ballottaggio.getNumeroRuoliCitta(); }
 
     private void svuotaBallottaggio()
     {

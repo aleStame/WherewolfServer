@@ -1,4 +1,4 @@
-package alessandro.stamera.wherewolfserver.classi.ruoli;
+package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
@@ -95,6 +95,15 @@ public final class TestBallottaggio
         verificaNomeEliminato(giocatori[posizione][0]);
         verificaSegnalazioneAssente();
     }
+
+    @Test public void testSegnalazioneBorgomastro()
+    {
+        verificaFalso(isSegnalazioneBorgomastroAvvenuta());
+        ballottaggio.segnalazioneBorgomastro();
+        verificaVero(isSegnalazioneBorgomastroAvvenuta());
+    }
+
+    private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
 
     private void verificaSegnalazioneAssente() { verificaVero(ballottaggio.isSegnalazioneAssente()); }
 

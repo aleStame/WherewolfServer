@@ -1,6 +1,5 @@
-package alessandro.stamera.wherewolfserver.classi.ruoli;
+package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +7,10 @@ public final class Ballottaggio extends Giocatori
 {
 
     private static final int NON_TROVATO = -1;
+
+    private boolean segnalazioneBorgomastro;
+
+    public Ballottaggio() { segnalazioneBorgomastro = false; }
 
     public boolean isAmatoPresente() { return getPosizioneAmato() != NON_TROVATO; }
 
@@ -17,6 +20,8 @@ public final class Ballottaggio extends Giocatori
     {
         return controlloNessunInquisito() && controlloNienteAzzeccagarbugli() && controlloNessunaSegnalazioneOratore();
     }
+
+    public void segnalazioneBorgomastro() { segnalazioneBorgomastro = true; }
 
     private boolean controlloNessunaSegnalazioneOratore()
     {
@@ -54,6 +59,8 @@ public final class Ballottaggio extends Giocatori
     public boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
     public void segnalazioneOratore(String nome) { getRuolo(nome).segnalazioneOratore(); }
+
+    public boolean isSegnalazioneBorgomastroAvvenuta() { return segnalazioneBorgomastro; }
 
     private boolean isSegnalatoOratore(String nome) { return getRuolo(nome).isSegnalatoOratore(); }
 
@@ -113,18 +120,30 @@ public final class Ballottaggio extends Giocatori
         return esito;
     }
 
-    private boolean isSegnalatoAzzeccagarbugli(int posizione) { return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione)); }
+    private boolean isSegnalatoAzzeccagarbugli(int posizione)
+    {
+        return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione));
+    }
 
-    private void annullaSegnalazioneInquisitore() { for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(i); }
+    private void annullaSegnalazioneInquisitore()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(i);
+    }
 
-    private void annullaSegnalazioneInquisitore(int posizione) { annullaSegnalazioneInquisitore(getNomeGiocatore(posizione)); }
+    private void annullaSegnalazioneInquisitore(int posizione)
+    {
+        annullaSegnalazioneInquisitore(getNomeGiocatore(posizione));
+    }
 
     private void annullaSegnalazioneAzzeccagarbugli()
     {
         for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneAzzeccagarbugli(i);
     }
 
-    private void annullaSegnalazioneAzzeccagarbugli(int posizione) { annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione)); }
+    private void annullaSegnalazioneAzzeccagarbugli(int posizione)
+    {
+        annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione));
+    }
 
     private void annullaSegnalazioneInquisitore(String nome) { getRuolo(nome).annullaSegnalazioneInquisitore(); }
 
