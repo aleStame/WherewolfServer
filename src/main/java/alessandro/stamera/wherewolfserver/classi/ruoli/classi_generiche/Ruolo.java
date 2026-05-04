@@ -51,7 +51,7 @@ public class Ruolo
         annullaSegnalazioneInquisitore();
         fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
-        segnalatoOratore = false;
+        annullaSegnalazioneOratore();
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -323,9 +323,11 @@ public class Ruolo
 
     public boolean isSegnalatoOratore() { return segnalatoOratore; }
 
-    public void segnalazioneOratore() { segnalatoOratore = true; }
+    public void segnalazioneOratore() { setSegnalazioneOratore(true); }
 
-    public void annullaSegnalazioneOratore() { segnalatoOratore = false; }
+    public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
+
+    private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
 
