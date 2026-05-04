@@ -121,18 +121,30 @@ public final class Ballottaggio extends Giocatori
         return esito;
     }
 
-    private boolean isSegnalatoAzzeccagarbugli(int posizione) { return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione)); }
+    private boolean isSegnalatoAzzeccagarbugli(int posizione)
+    {
+        return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione));
+    }
 
-    private void annullaSegnalazioneInquisitore() { for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(i); }
+    private void annullaSegnalazioneInquisitore()
+    {
+        for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneInquisitore(i);
+    }
 
-    private void annullaSegnalazioneInquisitore(int posizione) { annullaSegnalazioneInquisitore(getNomeGiocatore(posizione)); }
+    private void annullaSegnalazioneInquisitore(int posizione)
+    {
+        annullaSegnalazioneInquisitore(getNomeGiocatore(posizione));
+    }
 
     private void annullaSegnalazioneAzzeccagarbugli()
     {
         for(int i = 0; i < getNumeroGiocatori(); i++) annullaSegnalazioneAzzeccagarbugli(i);
     }
 
-    private void annullaSegnalazioneAzzeccagarbugli(int posizione) { annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione)); }
+    private void annullaSegnalazioneAzzeccagarbugli(int posizione)
+    {
+        annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione));
+    }
 
     private void annullaSegnalazioneInquisitore(String nome) { getRuolo(nome).annullaSegnalazioneInquisitore(); }
 

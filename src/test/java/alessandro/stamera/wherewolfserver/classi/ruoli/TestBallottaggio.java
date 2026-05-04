@@ -96,6 +96,13 @@ public final class TestBallottaggio
         verificaSegnalazioneAssente();
     }
 
+    @Test public void testSegnalazioneBorgomastro()
+    {
+        verificaFalso(ballottaggio.isSegnalazioneBorgomastroAvvenuta());
+        ballottaggio.segnalazioneBorgomastro();
+        verificaVero(ballottaggio.isSegnalazioneBorgomastroAvvenuta());
+    }
+
     private void verificaSegnalazioneAssente() { verificaVero(ballottaggio.isSegnalazioneAssente()); }
 
     private void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
