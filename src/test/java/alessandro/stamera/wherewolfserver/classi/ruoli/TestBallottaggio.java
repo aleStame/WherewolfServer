@@ -83,6 +83,17 @@ public final class TestBallottaggio
         verificaVero(ballottaggio.isSegnalazioneAssente());
     }
 
+    @Test public void testSegnalazioneOratoreNonRiuscita()
+    {
+        String[][] giocatori = new String[][] { { "Aldo", "Capo branco" }, { "Giovanni", "Lupo del branco" }, { "Giacomo", "Giovane lupo" } };
+        aggiungiGiocatori(giocatori);
+        ballottaggio.segnalazioneOratore(giocatori[0][0]);
+        int posizione = 2;
+        incrementaVoti(giocatori[posizione][0], 3);
+        assertThat(getNomeGiocatorePerdente()).isEqualTo(giocatori[posizione][0]);
+        verificaVero(ballottaggio.isSegnalazioneAssente());
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
