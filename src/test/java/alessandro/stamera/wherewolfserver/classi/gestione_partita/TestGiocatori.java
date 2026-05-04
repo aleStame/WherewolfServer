@@ -66,8 +66,11 @@ public final class TestGiocatori
     @Test public void testOratorePresente()
     {
         String nome = "Marco";
-        aggiungiGiocatore(nome, "Oratore");
+        String[][] giocatori = new String[][] { { nome, "Oratore" }, { "Gianna", "Guaritore" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
         verificaVero(isOratorePresente());
+        verificaVero(this.giocatori.isOratore(giocatori[0][0]));
+        assertThat(this.giocatori.isOratore(giocatori[1][0])).isFalse();
     }
 
     @Test public void testOratoreAssente() { assertThat(isOratorePresente()).isFalse(); }

@@ -77,7 +77,9 @@ public class Giocatori
 
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
-    public boolean isOratorePresente() { return getChiavi().stream().anyMatch(nome -> getRuolo(nome).isOratore()); }
+    public boolean isOratorePresente() { return getChiavi().stream().anyMatch(this::isOratore); }
+
+    public boolean isOratore(String nome) { return false; }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
