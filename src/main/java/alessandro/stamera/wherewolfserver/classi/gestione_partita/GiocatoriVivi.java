@@ -98,7 +98,12 @@ public final class GiocatoriVivi extends Giocatori
         return numeroMistici;
     }
 
-    public int getNumeroLupi() { return -2; }
+    public int getNumeroLupi()
+    {
+        int numeroLupi = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(getRuolo(getNomeGiocatore(i)).isLupo()) numeroLupi++;
+        return numeroLupi;
+    }
 
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 
