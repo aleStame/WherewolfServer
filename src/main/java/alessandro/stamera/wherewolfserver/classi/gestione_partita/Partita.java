@@ -36,7 +36,7 @@ public final class Partita
     public void incrementaVoti(String nome, int numeroVoti)
     {
         if(vivi.isPresente(nome)) vivi.incrementaVoti(nome, numeroVoti);
-        else ballottaggio.incrementaVoti(nome, numeroVoti);
+        else incrementaVotiBallottaggio(nome, numeroVoti);
     }
 
     public void terminaVotazioni()
@@ -133,9 +133,11 @@ public final class Partita
 
     public void segnalazioneBorgomastro(String nome)
     {
-        ballottaggio.incrementaVoti(nome, getNumeroRuoliCittaPresenti());
+        incrementaVotiBallottaggio(nome, getNumeroRuoliCittaPresenti());
         ballottaggio.segnalazioneBorgomastro();
     }
+
+    private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
 
     private int getNumeroRuoliCittaPresenti() { return vivi.getNumeroRuoliCitta() + ballottaggio.getNumeroRuoliCitta(); }
 
