@@ -153,14 +153,16 @@ public final class TestRuolo
     @Test public void testSegnalazioneOratore()
     {
         ruolo.segnalazioneOratore();
-        verificaVero(ruolo.isSegnalatoOratore());
+        verificaVero(isSegnalatoOratore());
         ruolo.annullaSegnalazioneOratore();
-        verificaFalso(ruolo.isSegnalatoOratore());
+        verificaFalso(isSegnalatoOratore());
     }
 
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
 
     private void verificaNonInquisito() { verificaFalso(isInquisito()); }
+
+    private boolean isSegnalatoOratore() { return ruolo.isSegnalatoOratore(); }
 
     private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
 
