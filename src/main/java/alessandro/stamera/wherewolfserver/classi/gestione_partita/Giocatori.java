@@ -79,7 +79,12 @@ public class Giocatori
 
     public boolean isOratorePresente() { return getChiavi().stream().anyMatch(this::isOratore); }
 
-    public int getNumeroRuoliCitta() { return -1; }
+    public int getNumeroRuoliCitta()
+    {
+        int numeroCitta = 0;
+        for(String chiave : getChiavi()) if(getRuolo(chiave).isCitta()) numeroCitta++;
+        return numeroCitta;
+    }
 
     public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 

@@ -77,7 +77,7 @@ public final class TestGiocatori
 
     @Test public void testNumeroRuoliCitta()
     {
-        String[][] giocatori = new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Guaritore" } };
+        String[][] giocatori = new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Mercante" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
         assertThat(this.giocatori.getNumeroRuoliCitta()).isEqualTo(2);
     }
