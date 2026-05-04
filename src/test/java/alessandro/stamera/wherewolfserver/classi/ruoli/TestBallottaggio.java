@@ -77,7 +77,7 @@ public final class TestBallottaggio
     {
         String[][] giocatori = new String[][] { { "Antonella", "Prete" }, { "Luca", "Peccatore" }, { "Margherita", "Azzeccagarbugli" } };
         aggiungiGiocatori(giocatori);
-        for(int i = 0; i < giocatori.length - 1; i++) ballottaggio.segnalazioneOratore(giocatori[i][0]);
+        for(int i = 0; i < giocatori.length - 1; i++) segnalazioneOratore(giocatori[i][0]);
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(this::getNomeGiocatorePerdente).withMessage(ERRORE_ROGO_SALTATO);
         verificaVero(ballottaggio.isSegnalazioneAssente());
@@ -87,12 +87,14 @@ public final class TestBallottaggio
     {
         String[][] giocatori = new String[][] { { "Aldo", "Capo branco" }, { "Giovanni", "Lupo del branco" }, { "Giacomo", "Giovane lupo" } };
         aggiungiGiocatori(giocatori);
-        ballottaggio.segnalazioneOratore(giocatori[0][0]);
+        segnalazioneOratore(giocatori[0][0]);
         int posizione = 2;
         incrementaVoti(giocatori[posizione][0], 3);
         verificaNomeEliminato(giocatori[posizione][0]);
         verificaVero(ballottaggio.isSegnalazioneAssente());
     }
+
+    private void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
     private void verificaNomeEliminato(String nome) { assertThat(getNomeGiocatorePerdente()).isEqualTo(nome); }
 
