@@ -1,4 +1,4 @@
-package alessandro.stamera.wherewolfserver.classi.ruoli;
+package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;

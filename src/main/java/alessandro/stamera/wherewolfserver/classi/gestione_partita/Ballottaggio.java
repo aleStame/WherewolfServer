@@ -1,6 +1,5 @@
-package alessandro.stamera.wherewolfserver.classi.ruoli;
+package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori;
 import java.util.ArrayList;
 import java.util.List;
 

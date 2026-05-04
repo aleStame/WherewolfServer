@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
-import alessandro.stamera.wherewolfserver.classi.ruoli.Ballottaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;

@@ -4,7 +4,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.ruoli.Ballottaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
