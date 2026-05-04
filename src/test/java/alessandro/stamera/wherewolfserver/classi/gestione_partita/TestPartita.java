@@ -307,6 +307,18 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
+    @Test public void testNumeroRuoliCittaPresenti()
+    {
+        String[][] giocatori =
+            new String[][] { { "Jacopo", "Borgomastro" }, { "Isra", "Angelo custode" }, { "Tania", "Mercante" }, { "Francesco", "Bocca di rosa" } };
+        inizializzaPartita(giocatori);
+        attaccoLupi("Capo branco", giocatori[3][0]);
+        incrementaVoti(giocatori[1][0], 2);
+        incrementaVoti(giocatori[2][0], 3);
+        terminaVotazioni();
+        assertThat(partita.getNumeroRuoliCittaPresenti()).isEqualTo(2);
+    }
+
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
 
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }

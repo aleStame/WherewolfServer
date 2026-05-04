@@ -129,6 +129,8 @@ public final class Partita
 
     public void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
+    public int getNumeroRuoliCittaPresenti() { return -1; }
+
     private void svuotaBallottaggio()
     {
         for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaBallottaggio(ballottaggio.getNomeGiocatore(i));
