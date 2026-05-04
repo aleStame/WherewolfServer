@@ -129,9 +129,13 @@ public final class Partita
 
     public void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
-    public boolean segnalazioneBorgomastroAvvenuta() { return false; }
+    public boolean segnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
 
-    public void segnalazioneBorgomastro(String nome) { }
+    public void segnalazioneBorgomastro(String nome)
+    {
+        ballottaggio.incrementaVoti(nome, getNumeroRuoliCittaPresenti());
+        ballottaggio.segnalazioneBorgomastro();
+    }
 
     private int getNumeroRuoliCittaPresenti() { return vivi.getNumeroRuoliCitta() + ballottaggio.getNumeroRuoliCitta(); }
 

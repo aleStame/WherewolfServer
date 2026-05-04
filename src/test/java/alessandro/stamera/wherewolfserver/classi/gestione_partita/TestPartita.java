@@ -320,7 +320,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaFalso(partita.segnalazioneBorgomastroAvvenuta());
         partita.segnalazioneBorgomastro(giocatori[posizione][0]);
-        verificaFalso(partita.segnalazioneBorgomastroAvvenuta());
+        verificaVero(partita.segnalazioneBorgomastroAvvenuta());
         incrementaVoti(giocatori[posizione][0], 1);
         assertThat(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti()).isEqualTo(3);
     }
