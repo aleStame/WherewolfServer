@@ -70,10 +70,12 @@ public final class TestGiocatori
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
         verificaVero(isOratorePresente());
         verificaVero(isOratore(giocatori[0][0]));
-        assertThat(isOratore(giocatori[1][0])).isFalse();
+        verificaFalso(isOratore(giocatori[1][0]));
     }
 
-    @Test public void testOratoreAssente() { assertThat(isOratorePresente()).isFalse(); }
+    @Test public void testOratoreAssente() { verificaFalso(isOratorePresente()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isOratore(String nome) { return giocatori.isOratore(nome); }
 
