@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,9 +20,9 @@ public final class Ballottaggio extends Giocatori
 
     private boolean controlloNessunaSegnalazioneOratore()
     {
-        boolean esito = false;
-        for(int i = 0; i < getNumeroGiocatori() && !esito; i++) esito = getRuolo(getNomeGiocatore(i)).isSegnalatoOratore();
-        return !esito;
+        boolean esito = true;
+        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isSegnalatoOratore(getNomeGiocatore(i));
+        return esito;
     }
 
     @Override public void segnalazioneBoia(String nome)
@@ -46,7 +45,7 @@ public final class Ballottaggio extends Giocatori
         boolean pareggio = isPareggioPresente();
         for(int i = 0; i < getNumeroGiocatori(); i++) getRuolo(getNomeGiocatore(i)).annullaVoti();
         if(pareggio) throw new IllegalArgumentException(messaggio);
-        boolean segnalato = getRuolo(soluzione).isSegnalatoOratore();
+        boolean segnalato = isSegnalatoOratore(soluzione);
         annullaSegnalazioneOratore();
         if(segnalato) throw new IllegalStateException(messaggio);
         return soluzione;
@@ -55,6 +54,8 @@ public final class Ballottaggio extends Giocatori
     public boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
     public void segnalazioneOratore(String nome) { getRuolo(nome).segnalazioneOratore(); }
+
+    private boolean isSegnalatoOratore(String nome) { return getRuolo(nome).isSegnalatoOratore(); }
 
     private void annullaSegnalazioneOratore()
     {
