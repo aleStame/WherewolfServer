@@ -288,7 +288,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
         terminaVotazioni();
-        for(int i = 0; i < giocatori.length - 1; i++) partita.segnalazioneOratore(giocatori[i][0]);
+        for(int i = 0; i < giocatori.length - 1; i++) segnalazioneOratore(giocatori[i][0]);
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
@@ -301,11 +301,13 @@ public final class TestPartita
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
         terminaVotazioni();
         int posizione = 2;
-        partita.segnalazioneOratore(giocatori[0][0]);
+        segnalazioneOratore(giocatori[0][0]);
         incrementaVoti(giocatori[posizione][0], 3);
         terminaBallottaggio();
         verificaEliminazione(giocatori[posizione][0]);
     }
+
+    private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
 
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }
 
