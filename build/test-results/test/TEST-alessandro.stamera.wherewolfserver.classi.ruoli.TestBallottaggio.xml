@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-05-04T19:50:44" hostname="ALESSANDRO" time="0.435">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-05-04T20:56:48" hostname="ALESSANDRO" time="0.647">
   <properties/>
-  <testcase name="testAmatoAssente()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.084"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.001"/>
-  <testcase name="testPerdenteBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.018"/>
-  <testcase name="testPareggioBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.007"/>
-  <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.009"/>
-  <testcase name="[1] nomeRuolo=Guaritore, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.036"/>
-  <testcase name="[2] nomeRuolo=Lupo del branco, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.005"/>
-  <testcase name="[3] nomeRuolo=Peccatore, risultato=2" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.006"/>
+  <testcase name="testAmatoAssente()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.002"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.209"/>
+  <testcase name="testPerdenteBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.004"/>
+  <testcase name="testPareggioBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.019"/>
+  <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.038"/>
+  <testcase name="[1] nomeRuolo=Guaritore, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.025"/>
+  <testcase name="[2] nomeRuolo=Lupo del branco, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.01"/>
+  <testcase name="[3] nomeRuolo=Peccatore, risultato=2" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.021"/>
   <testcase name="testNessunaSegnalazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.004"/>
-  <testcase name="testAmatoPresente()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.086"/>
-  <testcase name="testSegnalazioneOratoreNonRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.009"/>
+  <testcase name="testAmatoPresente()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.002"/>
+  <testcase name="testSegnalazioneOratoreNonRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBallottaggio" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
 public final class TestPartita
@@ -307,16 +308,21 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @Test public void testNumeroRuoliCittaPresenti()
+    @Test public void testPotereBorgomastro()
     {
         String[][] giocatori =
             new String[][] { { "Jacopo", "Borgomastro" }, { "Isra", "Angelo custode" }, { "Tania", "Mercante" }, { "Francesco", "Bocca di rosa" } };
         inizializzaPartita(giocatori);
         attaccoLupi("Capo branco", giocatori[3][0]);
+        int posizione = 2;
         incrementaVoti(giocatori[1][0], 2);
-        incrementaVoti(giocatori[2][0], 3);
+        incrementaVoti(giocatori[posizione][0], 3);
         terminaVotazioni();
-        assertThat(partita.getNumeroRuoliCittaPresenti()).isEqualTo(2);
+        verificaFalso(partita.segnalazioneBorgomastroAvvenuta());
+        partita.segnalazioneBorgomastro(giocatori[posizione][0]);
+        verificaFalso(partita.segnalazioneBorgomastroAvvenuta());
+        incrementaVoti(giocatori[posizione][0], 1);
+        assertThat(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti()).isEqualTo(3);
     }
 
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
