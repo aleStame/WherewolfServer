@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testBracconierePresente non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPosizioneBracconiere">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02604" summary="ROSSO: testRogoAnnullatoOratore non riuscito">
-      <option name="closed" value="true" />
-      <created>1777626335092</created>
-      <option name="number" value="02604" />
-      <option name="presentableId" value="LOCAL-02604" />
-      <option name="project" value="LOCAL" />
-      <updated>1777626335092</updated>
-    </task>
-    <task id="LOCAL-02605" summary="ROSSO: testRogoAnnullatoOratore non riuscito">
-      <option name="closed" value="true" />
-      <created>1777626550096</created>
-      <option name="number" value="02605" />
-      <option name="presentableId" value="LOCAL-02605" />
-      <option name="project" value="LOCAL" />
-      <updated>1777626550096</updated>
     </task>
     <task id="LOCAL-02606" summary="VERDE: testRogoAnnullatoOratore riuscito">
       <option name="closed" value="true" />
@@ -680,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777985811003</updated>
     </task>
-    <option name="localTasksCounter" value="2653" />
+    <task id="LOCAL-02653" summary="VERDE: testBracconierePresente riuscito">
+      <option name="closed" value="true" />
+      <created>1777986169028</created>
+      <option name="number" value="02653" />
+      <option name="presentableId" value="LOCAL-02653" />
+      <option name="project" value="LOCAL" />
+      <updated>1777986169028</updated>
+    </task>
+    <task id="LOCAL-02654" summary="REFACTORING: definizione del metodo getPosizioneBracconiere">
+      <option name="closed" value="true" />
+      <created>1777986364672</created>
+      <option name="number" value="02654" />
+      <option name="presentableId" value="LOCAL-02654" />
+      <option name="project" value="LOCAL" />
+      <updated>1777986364672</updated>
+    </task>
+    <option name="localTasksCounter" value="2655" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSegnalazioneOratore riuscito" />
-    <MESSAGE value="Conflitti risolti" />
     <MESSAGE value="ROSSO: testNumeroRuoliCitta non riuscito" />
     <MESSAGE value="VERDE: testNumeroRuoliCitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCitta" />
@@ -720,6 +718,8 @@
     <MESSAGE value="VERDE DIRETTO: testUtilizzoPotere riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPotereUtilizzato" />
     <MESSAGE value="ROSSO: testBracconierePresente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testBracconierePresente non riuscito" />
+    <MESSAGE value="VERDE: testBracconierePresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneBracconiere" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPosizioneBracconiere" />
   </component>
 </project>

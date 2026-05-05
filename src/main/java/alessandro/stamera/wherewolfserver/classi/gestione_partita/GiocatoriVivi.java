@@ -112,9 +112,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneBracconiere()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isBracconiere()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isBracconiere(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isBracconiere(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isBracconiere(); }
 
     private boolean isMistico(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMistico(); }
 
