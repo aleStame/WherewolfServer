@@ -122,11 +122,14 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupoSolitarioPresente() { return getPosizioneLupoSolitario() != NON_TROVATO; }
 
-    private int getPosizioneLupoSolitario() {
+    private int getPosizioneLupoSolitario()
+    {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isLupoSolitario()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupoSolitario(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isLupoSolitario(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isLupoSolitario(); }
 
     private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
 
