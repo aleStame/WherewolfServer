@@ -371,6 +371,15 @@ public final class TestPartita
         for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
     }
 
+    @Test public void testAttaccoNormaleCacciatore()
+    {
+        String lupo = "Lupo del branco", nomeLupo = "Biagio", nomeCacciatore = "Francesco";
+        inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Giovane lupo" } });
+        attaccoLupi(nomeLupo, nomeCacciatore);
+        verificaEliminazione(nomeCacciatore);
+        verificaNonEliminato(nomeLupo);
+    }
+
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }

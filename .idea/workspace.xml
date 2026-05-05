@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoUltimoLupo riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoUltimoLupoBranco riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02633" summary="VERDE: testPotereBorgomastro riuscito">
-      <option name="closed" value="true" />
-      <created>1777928888673</created>
-      <option name="number" value="02633" />
-      <option name="presentableId" value="LOCAL-02633" />
-      <option name="project" value="LOCAL" />
-      <updated>1777928888673</updated>
     </task>
     <task id="LOCAL-02634" summary="REFACTORING: definizione del metodo isSegnalazioneBorgomastroAvvenuta">
       <option name="closed" value="true" />
@@ -680,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777995562734</updated>
     </task>
-    <option name="localTasksCounter" value="2682" />
+    <task id="LOCAL-02682" summary="VERDE DIRETTO: testAttaccoUltimoLupoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1777996220178</created>
+      <option name="number" value="02682" />
+      <option name="presentableId" value="LOCAL-02682" />
+      <option name="project" value="LOCAL" />
+      <updated>1777996220178</updated>
+    </task>
+    <option name="localTasksCounter" value="2683" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isBracconiere" />
     <MESSAGE value="VERDE DIRETTO: testBracconiereAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isBracconierePresente" />
     <MESSAGE value="ROSSO: testUtilizzoPotereBracconiere non riuscito" />
@@ -720,6 +720,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneLupoSolitario" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoUltimoLupo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoUltimoLupo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoUltimoLupoBranco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoUltimoLupoBranco riuscito" />
   </component>
 </project>
