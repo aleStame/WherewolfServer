@@ -393,12 +393,14 @@ public final class TestGiocatoriVivi
     @Test public void testUtilizzoPotereBracconiere()
     {
         inizializzaGiocatori(new String[][] { { "Ciccio", "Bracconiere" }, { "Piera", "Lupo del branco" } });
-        verificaFalso(giocatori.isPotereBracconiereUtilizzato());
+        verificaFalso(isPotereBracconiereUtilizzato());
         giocatori.utilizzaPotereBracconiere();
-        verificaVero(giocatori.isPotereBracconiereUtilizzato());
+        verificaVero(isPotereBracconiereUtilizzato());
         giocatori.riabilitaPotereBracconiere();
-        verificaFalso(giocatori.isPotereBracconiereUtilizzato());
+        verificaFalso(isPotereBracconiereUtilizzato());
     }
+
+    private boolean isPotereBracconiereUtilizzato() { return giocatori.isPotereBracconiereUtilizzato(); }
 
     private boolean isBracconierePresente() { return giocatori.isBracconierePresente(); }
 
