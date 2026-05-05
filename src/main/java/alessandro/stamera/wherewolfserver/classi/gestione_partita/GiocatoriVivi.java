@@ -120,6 +120,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public void riabilitaPotereBracconiere() { getBracconiere().riabilitaPotere(); }
 
+    public boolean isLupoSolitarioPresente() { return true; }
+
     private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
 
     private int getPosizioneBracconiere()

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupoSolitarioCacciatore non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo doppiaEliminazione">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/morteLupoSolitario",
+    "git-widget-placeholder": "feature/morteCacciatoreUltimoLupo",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -287,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02624" summary="VERDE: testSegnalazioneOratore riuscito">
-      <option name="closed" value="true" />
-      <created>1777717706401</created>
-      <option name="number" value="02624" />
-      <option name="presentableId" value="LOCAL-02624" />
-      <option name="project" value="LOCAL" />
-      <updated>1777717706401</updated>
-    </task>
-    <task id="LOCAL-02625" summary="Conflitti risolti">
-      <option name="closed" value="true" />
-      <created>1777915153429</created>
-      <option name="number" value="02625" />
-      <option name="presentableId" value="LOCAL-02625" />
-      <option name="project" value="LOCAL" />
-      <updated>1777915153429</updated>
     </task>
     <task id="LOCAL-02626" summary="ROSSO: testNumeroRuoliCitta non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777992508847</updated>
     </task>
-    <option name="localTasksCounter" value="2673" />
+    <task id="LOCAL-02673" summary="VERDE: testAttaccoLupoSolitarioCacciatore riuscito">
+      <option name="closed" value="true" />
+      <created>1777992791921</created>
+      <option name="number" value="02673" />
+      <option name="presentableId" value="LOCAL-02673" />
+      <option name="project" value="LOCAL" />
+      <updated>1777992791921</updated>
+    </task>
+    <task id="LOCAL-02674" summary="REFACTORING: definizione del metodo doppiaEliminazione">
+      <option name="closed" value="true" />
+      <created>1777992980621</created>
+      <option name="number" value="02674" />
+      <option name="presentableId" value="LOCAL-02674" />
+      <option name="project" value="LOCAL" />
+      <updated>1777992980621</updated>
+    </task>
+    <option name="localTasksCounter" value="2675" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPotereBracconiereUnLupo non riuscito" />
-    <MESSAGE value="VERDE: testPotereBracconiereUnLupo riuscito" />
     <MESSAGE value="ROSSO: testPotereBracconiereDueLupi non riuscito" />
     <MESSAGE value="VERDE: testPotereBracconiereDueLupi riuscito" />
     <MESSAGE value="VERDE DIRETTO: testUtilizzoPotere riuscito" />
@@ -720,6 +719,8 @@
     <MESSAGE value="VERDE: testMorteLupoSolitario riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCacciatore non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupoSolitarioCacciatore non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupoSolitarioCacciatore riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo doppiaEliminazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo doppiaEliminazione" />
   </component>
 </project>
