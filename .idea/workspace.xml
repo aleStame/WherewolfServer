@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLupoSolitarioAssente riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testLupoSolitarioPresente non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,14 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02628" summary="REFACTORING: definizione del metodo isCitta">
-      <option name="closed" value="true" />
-      <created>1777922982757</created>
-      <option name="number" value="02628" />
-      <option name="presentableId" value="LOCAL-02628" />
-      <option name="project" value="LOCAL" />
-      <updated>1777922982757</updated>
     </task>
     <task id="LOCAL-02629" summary="ROSSO: testNumeroRuoliCittaPresenti non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +670,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777993693920</updated>
     </task>
-    <option name="localTasksCounter" value="2677" />
+    <task id="LOCAL-02677" summary="ROSSO: testLupoSolitarioPresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1777994098191</created>
+      <option name="number" value="02677" />
+      <option name="presentableId" value="LOCAL-02677" />
+      <option name="project" value="LOCAL" />
+      <updated>1777994098191</updated>
+    </task>
+    <option name="localTasksCounter" value="2678" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testUtilizzoPotere riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPotereUtilizzato" />
     <MESSAGE value="ROSSO: testBracconierePresente non riuscito" />
     <MESSAGE value="VERDE: testBracconierePresente riuscito" />
@@ -720,6 +717,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo doppiaEliminazione" />
     <MESSAGE value="ROSSO: testLupoSolitarioAssente non riuscito" />
     <MESSAGE value="VERDE: testLupoSolitarioAssente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLupoSolitarioAssente riuscito" />
+    <MESSAGE value="ROSSO: testLupoSolitarioPresente non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testLupoSolitarioPresente non riuscito" />
   </component>
 </project>
