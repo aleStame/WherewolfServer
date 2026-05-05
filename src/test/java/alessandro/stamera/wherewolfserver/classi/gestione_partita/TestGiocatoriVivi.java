@@ -390,6 +390,16 @@ public final class TestGiocatoriVivi
         verificaFalso(isBracconierePresente());
     }
 
+    @Test public void testUtilizzoPotereBracconiere()
+    {
+        inizializzaGiocatori(new String[][] { { "Ciccio", "Bracconiere" }, { "Piera", "Lupo del branco" } });
+        verificaFalso(giocatori.isPotereBracconiereUtilizzato());
+        giocatori.utilizzaPotereBracconiere();
+        verificaVero(giocatori.isPotereBracconiereUtilizzato());
+        giocatori.riabilitaPotereBracconiere();
+        verificaFalso(giocatori.isPotereBracconiereUtilizzato());
+    }
+
     private boolean isBracconierePresente() { return giocatori.isBracconierePresente(); }
 
     private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
