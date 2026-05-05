@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -81,6 +82,8 @@ public final class TestCacciatore
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo("Nonna")));
     }
+
+    @Test public void testMorteLupoSolitario() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(MORTO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
