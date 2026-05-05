@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isPotereUtilizzato">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testBracconierePresente non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02603" summary="REFACTORING: definizione del metodo svuotaBallottaggio">
-      <option name="closed" value="true" />
-      <created>1777625528221</created>
-      <option name="number" value="02603" />
-      <option name="presentableId" value="LOCAL-02603" />
-      <option name="project" value="LOCAL" />
-      <updated>1777625528221</updated>
     </task>
     <task id="LOCAL-02604" summary="ROSSO: testRogoAnnullatoOratore non riuscito">
       <option name="closed" value="true" />
@@ -681,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777985500898</updated>
     </task>
-    <option name="localTasksCounter" value="2652" />
+    <task id="LOCAL-02652" summary="ROSSO: testBracconierePresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1777985811003</created>
+      <option name="number" value="02652" />
+      <option name="presentableId" value="LOCAL-02652" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985811003</updated>
+    </task>
+    <option name="localTasksCounter" value="2653" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSegnalazioneOratore non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneOratore riuscito" />
     <MESSAGE value="Conflitti risolti" />
     <MESSAGE value="ROSSO: testNumeroRuoliCitta non riuscito" />
@@ -721,6 +719,7 @@
     <MESSAGE value="VERDE: testPotereBracconiereDueLupi riuscito" />
     <MESSAGE value="VERDE DIRETTO: testUtilizzoPotere riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPotereUtilizzato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPotereUtilizzato" />
+    <MESSAGE value="ROSSO: testBracconierePresente non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testBracconierePresente non riuscito" />
   </component>
 </project>

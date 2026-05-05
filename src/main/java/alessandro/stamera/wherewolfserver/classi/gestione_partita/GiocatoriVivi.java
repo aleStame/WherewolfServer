@@ -105,9 +105,19 @@ public final class GiocatoriVivi extends Giocatori
         return numeroLupi;
     }
 
-    public boolean isBracconierePresente() { return false; }
+    public boolean isBracconierePresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isBracconiere()) posizione = i;
+        return posizione != NON_TROVATO;
+    }
 
-    public String getNomeBracconiere() { return null; }
+    public String getNomeBracconiere()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isBracconiere()) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
 
     private boolean isMistico(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMistico(); }
 
