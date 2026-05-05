@@ -77,10 +77,12 @@ public final class TestBracconiere
 
     @Test public void testUtilizzoPotere()
     {
-        verificaFalso(ruolo.isPotereUtilizzato());
+        verificaFalso(isPotereUtilizzato());
         ruolo.utilizzaPotere();
-        verificaVero(ruolo.isPotereUtilizzato());
+        verificaVero(isPotereUtilizzato());
     }
+
+    private boolean isPotereUtilizzato() { return ruolo.isPotereUtilizzato(); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
