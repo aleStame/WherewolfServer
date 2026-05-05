@@ -1,11 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 
-public class Cacciatore extends Villaggio
+public final class Cacciatore extends Villaggio
 {
 
     private Cacciatore()
@@ -21,6 +22,8 @@ public class Cacciatore extends Villaggio
     }
 
     @Override public boolean isCacciatore() { return true; }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return MORTO; }
 
     public static Ruolo getInstance() { return new Cacciatore(); }
 
