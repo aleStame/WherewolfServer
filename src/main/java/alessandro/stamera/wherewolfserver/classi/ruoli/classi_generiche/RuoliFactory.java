@@ -26,6 +26,7 @@ public final class RuoliFactory
         Ruolo ruolo;
         switch(nome)
         {
+            case "Cacciatore" -> ruolo = getCacciatore();
             case "Cappuccetto rosso" -> ruolo = getCappuccettoRosso();
             case "Goblin" -> ruolo = getGoblin();
             case "Eremita" -> ruolo = getEremita();
@@ -97,7 +98,7 @@ public final class RuoliFactory
 
     private Ruolo getCappuccettoRosso()
     {
-        Ruolo ruolo = ruoli.get("Cappuccetto rosso");
+        Ruolo ruolo = ottieniRuolo("Cappuccetto rosso");
         ruolo.aggiungiProtezione(getLupi());
         return ruolo;
     }
@@ -111,6 +112,13 @@ public final class RuoliFactory
     private Ruolo getLeprecauno() { return getPiccoloPopolo("Leprecauno"); }
 
     private Ruolo getSidhe() { return getPiccoloPopolo("Sidhe"); }
+
+    private Ruolo getCacciatore()
+    {
+        Ruolo ruolo = ottieniRuolo("Cacciatore");
+        ruolo.aggiungiProtezione(ottieniRuolo("Nonna"));
+        return ruolo;
+    }
 
     private Ruolo getPersonaggioProtetto(String nome)
     {
