@@ -109,11 +109,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeBracconiere() { return getNomeGiocatore(getPosizioneBracconiere()); }
 
-    public boolean isPotereBracconiereUtilizzato() { return getRuolo(getNomeBracconiere()).isPotereUtilizzato(); }
+    public boolean isPotereBracconiereUtilizzato() { return getBracconiere().isPotereUtilizzato(); }
 
-    public void utilizzaPotereBracconiere() { if(getNumeroLupi() == 1) getRuolo(getNomeBracconiere()).utilizzaPotere(); }
+    public void utilizzaPotereBracconiere() { if(getNumeroLupi() == 1) getBracconiere().utilizzaPotere(); }
 
-    public void riabilitaPotereBracconiere() { getRuolo(getNomeBracconiere()).riabilitaPotere(); }
+    public void riabilitaPotereBracconiere() { getBracconiere().riabilitaPotere(); }
+
+    private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
 
     private int getPosizioneBracconiere()
     {
