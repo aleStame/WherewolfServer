@@ -28,6 +28,8 @@ public final class Bracconiere extends Villaggio
 
     @Override public boolean isPotereUtilizzato() { return potere.isPotereUtilizzato(); }
 
+    @Override public void riabilitaPotere() { potere.riabilitaPotere(); }
+
     public static Ruolo getInstance() { return new Bracconiere(); }
 
 }

@@ -77,7 +77,11 @@ public final class Partita
         if(posizione != -1)
         {
             Ruolo bracconiere = vivi.getRuolo(vivi.getNomeGiocatore(getPosizioneBracconiere()));
-            if(bracconiere.isPotereUtilizzato()) throw new IllegalStateException("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
+            if(bracconiere.isPotereUtilizzato())
+            {
+                bracconiere.riabilitaPotere();
+                throw new IllegalStateException("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
+            }
         }
         if(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome) == RIUSCITO) eliminaGiocatore(nome);
     }
