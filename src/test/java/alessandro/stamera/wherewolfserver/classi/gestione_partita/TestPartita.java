@@ -336,6 +336,17 @@ public final class TestPartita
         verificaNonEliminato(giocatori[posizioneVittima][0]);
     }
 
+    @Test public void testPotereBracconiereDueLupi()
+    {
+        String[][] giocatori =
+            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Giovane lupo" }, { "Carmine", "Bracconiere" }, { "Luisa", "Prete" } };
+        inizializzaPartita(giocatori);
+        partita.segnalazioneBracconiere();
+        int posizioneVittima = 3;
+        attaccoLupi(giocatori[0][1], giocatori[posizioneVittima][0]);
+        verificaEliminazione(giocatori[posizioneVittima][0]);
+    }
+
     private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }
 
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
