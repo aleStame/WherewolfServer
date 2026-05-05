@@ -380,15 +380,17 @@ public final class TestGiocatoriVivi
     {
         String nome = "Gianfranco";
         inizializzaGiocatori(new String[][] { { "Rosalba", "Bocca di rosa" }, { nome, "Bracconiere" } });
-        verificaVero(giocatori.isBracconierePresente());
+        verificaVero(isBracconierePresente());
         assertThat(giocatori.getNomeBracconiere()).isEqualTo(nome);
     }
 
     @Test public void testBracconiereAssente()
     {
         aggiungiGiocatore("Franco", "Mercante");
-        verificaFalso(giocatori.isBracconierePresente());
+        verificaFalso(isBracconierePresente());
     }
+
+    private boolean isBracconierePresente() { return giocatori.isBracconierePresente(); }
 
     private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
 
