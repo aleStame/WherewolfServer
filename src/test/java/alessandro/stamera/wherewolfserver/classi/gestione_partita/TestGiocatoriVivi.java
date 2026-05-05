@@ -402,6 +402,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testLupoSolitarioAssente() { verificaFalso(giocatori.isLupoSolitarioPresente()); }
 
+    @Test public void testLupoSolitarioPresente()
+    {
+        inizializzaGiocatori(new String[][] { { "Anna", "Guardia" }, { "Maurizio", "Lupo solitario" } });
+        verificaVero(giocatori.isLupoSolitarioPresente());
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return giocatori.isPotereBracconiereUtilizzato(); }
