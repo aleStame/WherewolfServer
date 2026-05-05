@@ -6,7 +6,6 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFac
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 
 public final class Partita
@@ -74,7 +73,15 @@ public final class Partita
     public void attaccoLupi(String nomeLupo, String nome)
     {
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
-        if(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome) == RIUSCITO) eliminaGiocatore(nome);
+        switch(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
+        {
+            case RIUSCITO -> eliminaGiocatore(nome);
+            case MORTO ->
+            {
+                eliminaGiocatore(nome);
+                eliminaGiocatore(nomeLupo);
+            }
+        }
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
