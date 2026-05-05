@@ -80,10 +80,12 @@ public final class TestCacciatore
     @Test public void testProtezioneNonna()
     {
         verificaVero(ruolo.isTrattoPresente(PROTETTO));
-        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo("Nonna")));
+        verificaVero(ruolo.isProtezionePresente(getRuolo("Nonna")));
     }
 
-    @Test public void testMorteLupoSolitario() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(MORTO); }
+    @Test public void testMorteLupoSolitario() { assertThat(ruolo.attaccoLupi(getRuolo("Lupo solitario"))).isEqualTo(MORTO); }
+
+    private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 

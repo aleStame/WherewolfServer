@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testProtezioneNonna riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMorteLupoSolitario riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestCacciatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestCacciatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02620" summary="ROSSO: testSegnalazioneOratore non riuscito">
-      <option name="closed" value="true" />
-      <created>1777714423928</created>
-      <option name="number" value="02620" />
-      <option name="presentableId" value="LOCAL-02620" />
-      <option name="project" value="LOCAL" />
-      <updated>1777714423929</updated>
-    </task>
-    <task id="LOCAL-02621" summary="VERDE: testSegnalazioneOratore riuscito">
-      <option name="closed" value="true" />
-      <created>1777714572704</created>
-      <option name="number" value="02621" />
-      <option name="presentableId" value="LOCAL-02621" />
-      <option name="project" value="LOCAL" />
-      <updated>1777714572705</updated>
     </task>
     <task id="LOCAL-02622" summary="REFACTORING: definizione del metodo ERRORE_ROGO_SALTATO">
       <option name="closed" value="true" />
@@ -681,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777991280552</updated>
     </task>
-    <option name="localTasksCounter" value="2669" />
+    <task id="LOCAL-02669" summary="ROSSO: testMorteLupoSolitario non riuscito">
+      <option name="closed" value="true" />
+      <created>1777991598433</created>
+      <option name="number" value="02669" />
+      <option name="presentableId" value="LOCAL-02669" />
+      <option name="project" value="LOCAL" />
+      <updated>1777991598433</updated>
+    </task>
+    <task id="LOCAL-02670" summary="VERDE: testMorteLupoSolitario riuscito">
+      <option name="closed" value="true" />
+      <created>1777991777174</created>
+      <option name="number" value="02670" />
+      <option name="presentableId" value="LOCAL-02670" />
+      <option name="project" value="LOCAL" />
+      <updated>1777991777174</updated>
+    </task>
+    <option name="localTasksCounter" value="2671" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNumeroLupi non riuscito" />
-    <MESSAGE value="VERDE: testNumeroLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo isMistico" />
     <MESSAGE value="ROSSO: testPotereBracconiereUnLupo non riuscito" />
@@ -721,6 +718,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneBracconiere" />
     <MESSAGE value="ROSSO: testProtezioneNonna non riuscito" />
     <MESSAGE value="VERDE: testProtezioneNonna riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testProtezioneNonna riuscito" />
+    <MESSAGE value="ROSSO: testMorteLupoSolitario non riuscito" />
+    <MESSAGE value="VERDE: testMorteLupoSolitario riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMorteLupoSolitario riuscito" />
   </component>
 </project>
