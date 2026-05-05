@@ -76,11 +76,7 @@ public final class Partita
         switch(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case MORTO ->
-            {
-                eliminaGiocatore(nome);
-                eliminaGiocatore(nomeLupo);
-            }
+            case MORTO -> doppiaEliminazione(nomeLupo, nome);
         }
     }
 
@@ -145,6 +141,12 @@ public final class Partita
     }
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
+
+    private void doppiaEliminazione(String nomeLupo, String nome)
+    {
+        eliminaGiocatore(nome);
+        eliminaGiocatore(nomeLupo);
+    }
 
     private void gestisciPotereBracconiere()
     {
