@@ -384,6 +384,12 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.getNomeBracconiere()).isEqualTo(nome);
     }
 
+    @Test public void testBracconiereAssente()
+    {
+        aggiungiGiocatore("Franco", "Mercante");
+        verificaFalso(giocatori.isBracconierePresente());
+    }
+
     private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
 
     private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
