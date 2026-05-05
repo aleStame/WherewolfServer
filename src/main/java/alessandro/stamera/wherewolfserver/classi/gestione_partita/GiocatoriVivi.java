@@ -94,9 +94,46 @@ public final class GiocatoriVivi extends Giocatori
     public int getNumeroMistici()
     {
         int numeroMistici = 0;
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(getRuolo(getNomeGiocatore(i)).isMistico()) numeroMistici++;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isMistico(i)) numeroMistici++;
         return numeroMistici;
     }
+
+    public int getNumeroLupi()
+    {
+        int numeroLupi = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isLupo(i)) numeroLupi++;
+        return numeroLupi;
+    }
+
+    public boolean isBracconierePresente() { return getPosizioneBracconiere() != NON_TROVATO; }
+
+    public String getNomeBracconiere() { return getNomeGiocatore(getPosizioneBracconiere()); }
+
+    public boolean isPotereBracconiereUtilizzato()
+    {
+        boolean esito = isBracconierePresente();
+        if(esito) esito = getBracconiere().isPotereUtilizzato();
+        return esito;
+    }
+
+    public void utilizzaPotereBracconiere() { if(getNumeroLupi() == 1) getBracconiere().utilizzaPotere(); }
+
+    public void riabilitaPotereBracconiere() { getBracconiere().riabilitaPotere(); }
+
+    private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
+
+    private int getPosizioneBracconiere()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isBracconiere(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isBracconiere(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isBracconiere(); }
+
+    private boolean isMistico(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMistico(); }
+
+    private boolean isLupo(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isLupo(); }
 
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 

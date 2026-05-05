@@ -370,6 +370,42 @@ public final class TestGiocatoriVivi
         verificaNonSegnalatoBoia(nome);
     }
 
+    @Test public void testNumeroLupi()
+    {
+        inizializzaGiocatori(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo del branco" }, { "Mohamed", "Bracconiere" } });
+        verificaNumeroIntero(giocatori.getNumeroLupi(), 2);
+    }
+
+    @Test public void testBracconierePresente()
+    {
+        String nome = "Gianfranco";
+        inizializzaGiocatori(new String[][] { { "Rosalba", "Bocca di rosa" }, { nome, "Bracconiere" } });
+        verificaVero(isBracconierePresente());
+        assertThat(giocatori.getNomeBracconiere()).isEqualTo(nome);
+    }
+
+    @Test public void testBracconiereAssente()
+    {
+        aggiungiGiocatore("Franco", "Mercante");
+        verificaFalso(isBracconierePresente());
+    }
+
+    @Test public void testUtilizzoPotereBracconiere()
+    {
+        inizializzaGiocatori(new String[][] { { "Ciccio", "Bracconiere" }, { "Piera", "Lupo del branco" } });
+        verificaPotereBracconiereNonUtilizzato();
+        giocatori.utilizzaPotereBracconiere();
+        verificaVero(isPotereBracconiereUtilizzato());
+        giocatori.riabilitaPotereBracconiere();
+        verificaPotereBracconiereNonUtilizzato();
+    }
+
+    private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
+
+    private boolean isPotereBracconiereUtilizzato() { return giocatori.isPotereBracconiereUtilizzato(); }
+
+    private boolean isBracconierePresente() { return giocatori.isBracconierePresente(); }
+
     private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
 
     private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }

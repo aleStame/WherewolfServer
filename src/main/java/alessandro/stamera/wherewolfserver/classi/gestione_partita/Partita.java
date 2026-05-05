@@ -73,6 +73,7 @@ public final class Partita
 
     public void attaccoLupi(String nomeLupo, String nome)
     {
+        if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         if(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome) == RIUSCITO) eliminaGiocatore(nome);
     }
 
@@ -134,6 +135,14 @@ public final class Partita
     {
         incrementaVotiBallottaggio(nome, getNumeroRuoliCittaPresenti());
         ballottaggio.segnalazioneBorgomastro();
+    }
+
+    public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
+
+    private void gestisciPotereBracconiere()
+    {
+        vivi.riabilitaPotereBracconiere();
+        throw new IllegalStateException("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
     }
 
     private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
