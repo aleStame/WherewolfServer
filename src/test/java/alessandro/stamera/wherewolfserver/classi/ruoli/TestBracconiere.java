@@ -75,6 +75,13 @@ public final class TestBracconiere
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testUtilizzoPotere()
+    {
+        verificaFalso(ruolo.isPotereUtilizzato());
+        ruolo.utilizzaPotere();
+        verificaVero(ruolo.isPotereUtilizzato());
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
