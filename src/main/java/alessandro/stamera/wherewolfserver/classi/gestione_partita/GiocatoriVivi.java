@@ -105,6 +105,10 @@ public final class GiocatoriVivi extends Giocatori
         return numeroLupi;
     }
 
+    public boolean isBracconierePresente() { return false; }
+
+    public String getNomeBracconiere() { return null; }
+
     private boolean isMistico(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMistico(); }
 
     private boolean isLupo(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isLupo(); }

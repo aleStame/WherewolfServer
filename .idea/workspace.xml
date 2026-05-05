@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPotereBracconiereDueLupi riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBracconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestBracconiere.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isPotereUtilizzato">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02601" summary="REFACTORING: definizione del metodo eliminaPerdente">
-      <option name="closed" value="true" />
-      <created>1777625191825</created>
-      <option name="number" value="02601" />
-      <option name="presentableId" value="LOCAL-02601" />
-      <option name="project" value="LOCAL" />
-      <updated>1777625191825</updated>
-    </task>
-    <task id="LOCAL-02602" summary="REFACTORING: definizione del metodo svuotaBallottaggio">
-      <option name="closed" value="true" />
-      <created>1777625433197</created>
-      <option name="number" value="02602" />
-      <option name="presentableId" value="LOCAL-02602" />
-      <option name="project" value="LOCAL" />
-      <updated>1777625433197</updated>
     </task>
     <task id="LOCAL-02603" summary="REFACTORING: definizione del metodo svuotaBallottaggio">
       <option name="closed" value="true" />
@@ -680,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777985000931</updated>
     </task>
-    <option name="localTasksCounter" value="2650" />
+    <task id="LOCAL-02650" summary="VERDE DIRETTO: testUtilizzoPotere riuscito">
+      <option name="closed" value="true" />
+      <created>1777985379430</created>
+      <option name="number" value="02650" />
+      <option name="presentableId" value="LOCAL-02650" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985379430</updated>
+    </task>
+    <task id="LOCAL-02651" summary="REFACTORING: definizione del metodo isPotereUtilizzato">
+      <option name="closed" value="true" />
+      <created>1777985500898</created>
+      <option name="number" value="02651" />
+      <option name="presentableId" value="LOCAL-02651" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985500898</updated>
+    </task>
+    <option name="localTasksCounter" value="2652" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <MESSAGE value="REFACTORING: definizione del metodo ERRORE_ROGO_SALTATO" />
     <MESSAGE value="ROSSO: testSegnalazioneOratore non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneOratore riuscito" />
     <MESSAGE value="Conflitti risolti" />
@@ -720,6 +719,8 @@
     <MESSAGE value="VERDE: testPotereBracconiereUnLupo riuscito" />
     <MESSAGE value="ROSSO: testPotereBracconiereDueLupi non riuscito" />
     <MESSAGE value="VERDE: testPotereBracconiereDueLupi riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPotereBracconiereDueLupi riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testUtilizzoPotere riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPotereUtilizzato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPotereUtilizzato" />
   </component>
 </project>

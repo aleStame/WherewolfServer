@@ -376,6 +376,14 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroLupi(), 2);
     }
 
+    @Test public void testBracconierePresente()
+    {
+        String nome = "Gianfranco";
+        inizializzaGiocatori(new String[][] { { "Rosalba", "Bocca di rosa" }, { nome, "Bracconiere" } });
+        verificaVero(giocatori.isBracconierePresente());
+        assertThat(giocatori.getNomeBracconiere()).isEqualTo(nome);
+    }
+
     private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
 
     private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
