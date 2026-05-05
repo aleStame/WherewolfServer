@@ -351,7 +351,7 @@ public final class TestPartita
     {
         String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
-        attaccoLupi(nomeLupo, nomeCacciatore);
+        attaccoLupi(lupo, nomeCacciatore);
         for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
     }
 
@@ -359,7 +359,7 @@ public final class TestPartita
     {
         String lupo = "Lupo reietto", nomeLupo = "Salvatore", nomeCacciatore = "Pietro";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
-        attaccoLupi(nomeLupo, nomeCacciatore);
+        attaccoLupi(lupo, nomeCacciatore);
         for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
     }
 
@@ -367,7 +367,7 @@ public final class TestPartita
     {
         String lupo = "Lupo del branco", nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
-        attaccoLupi(nomeLupo, nomeCacciatore);
+        attaccoLupi(lupo, nomeCacciatore);
         for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
     }
 
@@ -375,9 +375,9 @@ public final class TestPartita
     {
         String lupo = "Lupo del branco", nomeLupo = "Biagio", nomeCacciatore = "Francesco";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Giovane lupo" } });
-        attaccoLupi(nomeLupo, nomeCacciatore);
+        attaccoLupi(lupo, nomeCacciatore);
         verificaEliminazione(nomeCacciatore);
-        verificaNonEliminato(nomeLupo);
+        verificaNonEliminato(lupo);
     }
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
