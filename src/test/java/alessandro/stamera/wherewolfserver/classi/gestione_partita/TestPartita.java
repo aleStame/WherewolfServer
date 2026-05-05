@@ -330,8 +330,10 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } };
         inizializzaPartita(giocatori);
         partita.segnalazioneBracconiere();
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(giocatori[1][1], giocatori[2][0]))
+        int posizioneVittima = 2;
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(giocatori[1][1], giocatori[posizioneVittima][0]))
             .withMessage("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
+        verificaNonEliminato(giocatori[posizioneVittima][0]);
     }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }

@@ -73,6 +73,12 @@ public final class Partita
 
     public void attaccoLupi(String nomeLupo, String nome)
     {
+        int posizione = getPosizioneBracconiere();
+        if(posizione != -1)
+        {
+            Ruolo bracconiere = vivi.getRuolo(vivi.getNomeGiocatore(getPosizioneBracconiere()));
+            if(bracconiere.isPotereUtilizzato()) throw new IllegalStateException("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
+        }
         if(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome) == RIUSCITO) eliminaGiocatore(nome);
     }
 
@@ -136,7 +142,22 @@ public final class Partita
         ballottaggio.segnalazioneBorgomastro();
     }
 
-    public void segnalazioneBracconiere() { }
+    public void segnalazioneBracconiere()
+    {
+        int posizione = getPosizioneBracconiere();
+        if(posizione != -1)
+        {
+            if(vivi.getNumeroLupi() == 1) vivi.getRuolo(vivi.getNomeGiocatore(posizione)).utilizzaPotere();
+        }
+    }
+
+    private int getPosizioneBracconiere()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isBracconiere())
+            posizione = i;
+        return posizione;
+    }
 
     private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
 
