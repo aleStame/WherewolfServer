@@ -76,10 +76,7 @@ public final class Partita
     public void attaccoLupi(String nomeLupo, String nome)
     {
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
-        EsitoAttacco esito = vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome);
-        int numeroLupi = vivi.getNumeroLupi();
-        if(esito == RIUSCITO && (numeroLupi == 1 || (numeroLupi == 2 && vivi.isLupoSolitarioPresente()))) esito = MORTO;
-        switch(esito)
+        switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
@@ -147,6 +144,14 @@ public final class Partita
     }
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
+
+    private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
+    {
+        EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
+        int numeroLupi = vivi.getNumeroLupi();
+        if(esito == RIUSCITO && (numeroLupi == 1 || (numeroLupi == 2 && vivi.isLupoSolitarioPresente()))) esito = MORTO;
+        return esito;
+    }
 
     private void doppiaEliminazione(String nomeLupo, String nome)
     {
