@@ -408,10 +408,11 @@ public final class TestPartita
         verificaEliminazione(giocatori[1][0]);
     }
 
-    @Test public void testAttaccoContadinoEroe()
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoContadino(String tipoContadino)
     {
         String nomeVittima = "Caio", nomeLupo = "Tizio", tipoLupo = "Capo branco";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Contadino eroe" }, { "Sempronio", "Peccatore" } });
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Sempronio", "Peccatore" } });
         attaccoLupi(tipoLupo, nomeVittima);
         verificaEliminati(nomeVittima, nomeLupo);
     }
