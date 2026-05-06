@@ -156,6 +156,8 @@ public final class Partita
 
     public int getNumeroSenzaFazioneVivi() { return vivi.getNumeroSenzaFazione(); }
 
+    public int getNumeroLupiVivi() { return -1; }
+
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);

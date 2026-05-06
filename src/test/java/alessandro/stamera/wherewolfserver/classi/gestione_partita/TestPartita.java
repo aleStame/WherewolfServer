@@ -394,6 +394,12 @@ public final class TestPartita
         assertThat(partita.getNumeroSenzaFazioneVivi()).isEqualTo(2);
     }
 
+    @Test public void testNumeroLupi()
+    {
+        inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo del branco" }, { "Mohamed", "Bracconiere" } });
+        assertThat(partita.getNumeroLupiVivi()).isEqualTo(2);
+    }
+
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
