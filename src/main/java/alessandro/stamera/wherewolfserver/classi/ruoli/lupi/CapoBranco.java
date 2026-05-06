@@ -27,7 +27,7 @@ public final class CapoBranco extends Lupo
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(isPresentiSoloLupiConSenzaFazione(partita)) esito = VITTORIA;
-        else if(partita.getNumeroLupiVivi() == 0) esito = SCONFITTA;
+        else if(isNessunLupoVivo(partita)) esito = SCONFITTA;
         return esito;
     }
 
@@ -42,5 +42,7 @@ public final class CapoBranco extends Lupo
     {
         return partita.getNumeroLupiVivi() + partita.getNumeroSenzaFazioneVivi();
     }
+
+    private boolean isNessunLupoVivo(Partita partita) { return partita.getNumeroLupiVivi() == 0; }
 
 }
