@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCacciatoreUltimoLupoBranco riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCacciatoreProtetto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02645" summary="ROSSO: testPotereBracconiereUnLupo non riuscito">
-      <option name="closed" value="true" />
-      <created>1777933571757</created>
-      <option name="number" value="02645" />
-      <option name="presentableId" value="LOCAL-02645" />
-      <option name="project" value="LOCAL" />
-      <updated>1777933571757</updated>
-    </task>
-    <task id="LOCAL-02646" summary="VERDE: testPotereBracconiereUnLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1777983583504</created>
-      <option name="number" value="02646" />
-      <option name="presentableId" value="LOCAL-02646" />
-      <option name="project" value="LOCAL" />
-      <updated>1777983583505</updated>
     </task>
     <task id="LOCAL-02647" summary="VERDE: testPotereBracconiereUnLupo riuscito">
       <option name="closed" value="true" />
@@ -680,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778059709678</updated>
     </task>
-    <option name="localTasksCounter" value="2694" />
+    <task id="LOCAL-02694" summary="VERDE DIRETTO: testCacciatoreNonProtetto riuscito">
+      <option name="closed" value="true" />
+      <created>1778060077771</created>
+      <option name="number" value="02694" />
+      <option name="presentableId" value="LOCAL-02694" />
+      <option name="project" value="LOCAL" />
+      <updated>1778060077771</updated>
+    </task>
+    <task id="LOCAL-02695" summary="REFACTORING: definizione del metodo isCacciatoreProtetto">
+      <option name="closed" value="true" />
+      <created>1778060241824</created>
+      <option name="number" value="02695" />
+      <option name="presentableId" value="LOCAL-02695" />
+      <option name="project" value="LOCAL" />
+      <updated>1778060241824</updated>
+    </task>
+    <option name="localTasksCounter" value="2696" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testMorteLupoSolitario non riuscito" />
-    <MESSAGE value="VERDE: testMorteLupoSolitario riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCacciatore non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupoSolitarioCacciatore riuscito" />
@@ -720,6 +716,8 @@
     <MESSAGE value="VERDE: testCacciatoreProtettoUnLupo riuscito" />
     <MESSAGE value="ROSSO: testCacciatoreUltimoLupoBranco non riuscito" />
     <MESSAGE value="VERDE: testCacciatoreUltimoLupoBranco riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCacciatoreUltimoLupoBranco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCacciatoreNonProtetto riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
   </component>
 </project>
