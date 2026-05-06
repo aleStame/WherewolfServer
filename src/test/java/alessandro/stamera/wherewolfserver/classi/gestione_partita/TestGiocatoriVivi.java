@@ -455,6 +455,13 @@ public final class TestGiocatoriVivi
         verificaAttacco(giocatori.gildata(nome), MORTO);
     }
 
+    @Test public void testNomeCapoGilda()
+    {
+        String nome = "Barbara";
+        inizializzaGiocatori(new String[][] { { nome, "Capo gilda" }, { "Alessandro", "Bocca di rosa" } });
+        verificaStringa(giocatori.getNomeCapoGilda(), nome);
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
