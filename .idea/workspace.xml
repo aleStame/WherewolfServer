@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVampirizzazione non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/CacciatoreDiVampiri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/CacciatoreDiVampiri.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02652" summary="ROSSO: testBracconierePresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1777985811003</created>
-      <option name="number" value="02652" />
-      <option name="presentableId" value="LOCAL-02652" />
-      <option name="project" value="LOCAL" />
-      <updated>1777985811003</updated>
     </task>
     <task id="LOCAL-02653" summary="VERDE: testBracconierePresente riuscito">
       <option name="closed" value="true" />
@@ -680,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778068859115</updated>
     </task>
-    <option name="localTasksCounter" value="2701" />
+    <task id="LOCAL-02701" summary="ROSSO: testVampirizzazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1778069391209</created>
+      <option name="number" value="02701" />
+      <option name="presentableId" value="LOCAL-02701" />
+      <option name="project" value="LOCAL" />
+      <updated>1778069391209</updated>
+    </task>
+    <option name="localTasksCounter" value="2702" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoLupoSolitarioCacciatore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo doppiaEliminazione" />
     <MESSAGE value="ROSSO: testLupoSolitarioAssente non riuscito" />
     <MESSAGE value="VERDE: testLupoSolitarioAssente riuscito" />
@@ -720,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
     <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVampirizzazione non riuscito" />
   </component>
 </project>
