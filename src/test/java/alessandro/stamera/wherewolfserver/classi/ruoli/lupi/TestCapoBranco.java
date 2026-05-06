@@ -13,8 +13,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -53,7 +52,7 @@ public final class TestCapoBranco
     public void testTratti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     @ParameterizedTest @MethodSource("getEsitiPartite")
-    public void testVittoria(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+    public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
@@ -66,9 +65,10 @@ public final class TestCapoBranco
         Partita[] partite = new Partita[]
         {
             new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }),
-            new Partita(new String[][] { { "Manfredi", "Azzeccagarbugli" }, { "Massimo", "Giullare" }, { "Luana", "Guaritore" } })
+            new Partita(new String[][] { { "Manfredi", "Azzeccagarbugli" }, { "Massimo", "Giullare" }, { "Luana", "Guaritore" } }),
+            new Partita(new String[][] { { "Chiara", "Oratore" }, { "Giuseppe", "Capo branco" } })
         };
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA));
+        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
     }
 
 }
