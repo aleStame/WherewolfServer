@@ -424,7 +424,7 @@ public final class TestGiocatoriVivi
     {
         inizializzaGiocatori
         (
-            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Giovane lupo" }, { "Carmine", "Bracconiere" }, { "Luisa", "Prete" } }
+            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Lupo solitario" }, { "Carmine", "Bracconiere" }, { "Luisa", "Prete" } }
         );
         verificaCacciatoreProtetto();
     }
