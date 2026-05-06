@@ -352,7 +352,7 @@ public final class TestPartita
         String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
         attaccoLupi(lupo, nomeCacciatore);
-        for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
+        verificaEliminati(nomeLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoUltimoLupo()
@@ -360,7 +360,7 @@ public final class TestPartita
         String lupo = "Lupo reietto", nomeLupo = "Salvatore", nomeCacciatore = "Pietro";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         attaccoLupi(lupo, nomeCacciatore);
-        for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
+        verificaEliminati(nomeLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoUltimoLupoBranco()
@@ -368,7 +368,7 @@ public final class TestPartita
         String lupo = "Lupo del branco", nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         attaccoLupi(lupo, nomeCacciatore);
-        for(String nome : new String[] { nomeLupo, nomeCacciatore }) verificaEliminazione(nome);
+        verificaEliminati(nomeLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoNormaleCacciatore()
@@ -385,8 +385,10 @@ public final class TestPartita
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", "Prete" } });
         partita.attaccoNosferatu(nomeVittima);
-        for(String nome : new String[] { nomeVittima, nomeNosferatu }) verificaEliminazione(nome);
+        verificaEliminati(nomeVittima, nomeNosferatu);
     }
+
+    private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
 
