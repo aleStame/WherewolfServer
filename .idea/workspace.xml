@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaMorto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,37 +76,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/morteCacciatoreUltimoLupo&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
+    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
+    "Gradle.TestLadra.executor": "Run",
+    "Gradle.TestLupo.testGildata.executor": "Run",
+    "Gradle.TestProtezioni.executor": "Run",
+    "Gradle.TestTratti.executor": "Run",
+    "Gradle.TestUtente.executor": "Run",
+    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
+    "Gradle.wherewolf.server.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature/vampirizzazioneCacciatoreVampiri",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -285,46 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02651" summary="REFACTORING: definizione del metodo isPotereUtilizzato">
-      <option name="closed" value="true" />
-      <created>1777985500898</created>
-      <option name="number" value="02651" />
-      <option name="presentableId" value="LOCAL-02651" />
-      <option name="project" value="LOCAL" />
-      <updated>1777985500898</updated>
-    </task>
-    <task id="LOCAL-02652" summary="ROSSO: testBracconierePresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1777985811003</created>
-      <option name="number" value="02652" />
-      <option name="presentableId" value="LOCAL-02652" />
-      <option name="project" value="LOCAL" />
-      <updated>1777985811003</updated>
-    </task>
-    <task id="LOCAL-02653" summary="VERDE: testBracconierePresente riuscito">
-      <option name="closed" value="true" />
-      <created>1777986169028</created>
-      <option name="number" value="02653" />
-      <option name="presentableId" value="LOCAL-02653" />
-      <option name="project" value="LOCAL" />
-      <updated>1777986169028</updated>
-    </task>
-    <task id="LOCAL-02654" summary="REFACTORING: definizione del metodo getPosizioneBracconiere">
-      <option name="closed" value="true" />
-      <created>1777986364672</created>
-      <option name="number" value="02654" />
-      <option name="presentableId" value="LOCAL-02654" />
-      <option name="project" value="LOCAL" />
-      <updated>1777986364672</updated>
-    </task>
-    <task id="LOCAL-02655" summary="REFACTORING: definizione del metodo isBracconiere">
-      <option name="closed" value="true" />
-      <created>1777986576087</created>
-      <option name="number" value="02655" />
-      <option name="presentableId" value="LOCAL-02655" />
-      <option name="project" value="LOCAL" />
-      <updated>1777986576087</updated>
     </task>
     <task id="LOCAL-02656" summary="VERDE DIRETTO: testBracconiereAssente riuscito">
       <option name="closed" value="true" />
@@ -678,7 +640,47 @@
       <option name="project" value="LOCAL" />
       <updated>1778068591656</updated>
     </task>
-    <option name="localTasksCounter" value="2700" />
+    <task id="LOCAL-02700" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778068859115</created>
+      <option name="number" value="02700" />
+      <option name="presentableId" value="LOCAL-02700" />
+      <option name="project" value="LOCAL" />
+      <updated>1778068859115</updated>
+    </task>
+    <task id="LOCAL-02701" summary="ROSSO: testVampirizzazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1778069391209</created>
+      <option name="number" value="02701" />
+      <option name="presentableId" value="LOCAL-02701" />
+      <option name="project" value="LOCAL" />
+      <updated>1778069391209</updated>
+    </task>
+    <task id="LOCAL-02702" summary="VERDE: testVampirizzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1778069581404</created>
+      <option name="number" value="02702" />
+      <option name="presentableId" value="LOCAL-02702" />
+      <option name="project" value="LOCAL" />
+      <updated>1778069581404</updated>
+    </task>
+    <task id="LOCAL-02703" summary="REFACTORING: definizione del metodo getMorto">
+      <option name="closed" value="true" />
+      <created>1778069775127</created>
+      <option name="number" value="02703" />
+      <option name="presentableId" value="LOCAL-02703" />
+      <option name="project" value="LOCAL" />
+      <updated>1778069775127</updated>
+    </task>
+    <task id="LOCAL-02704" summary="REFACTORING: definizione del metodo verificaMorto">
+      <option name="closed" value="true" />
+      <created>1778070301124</created>
+      <option name="number" value="02704" />
+      <option name="presentableId" value="LOCAL-02704" />
+      <option name="project" value="LOCAL" />
+      <updated>1778070301124</updated>
+    </task>
+    <option name="localTasksCounter" value="2705" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,10 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoLupoSolitarioCacciatore riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo doppiaEliminazione" />
-    <MESSAGE value="ROSSO: testLupoSolitarioAssente non riuscito" />
-    <MESSAGE value="VERDE: testLupoSolitarioAssente riuscito" />
     <MESSAGE value="ROSSO: testLupoSolitarioPresente non riuscito" />
     <MESSAGE value="VERDE: testLupoSolitarioPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneLupoSolitario" />
@@ -718,6 +716,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
     <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
+    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMorto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMorto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMorto" />
   </component>
 </project>
