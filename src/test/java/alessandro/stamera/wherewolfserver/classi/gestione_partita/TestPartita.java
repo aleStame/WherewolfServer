@@ -388,6 +388,12 @@ public final class TestPartita
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
+    @Test public void testNumeroSenzaFazione()
+    {
+        inizializzaPartita(new String[][] { { "Raffaello", "Ghoul" }, { "Mattia", "Peccatore" }, { "Leonardo", "Pazzo" } });
+        assertThat(partita.getNumeroSenzaFazioneVivi()).isEqualTo(2);
+    }
+
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
