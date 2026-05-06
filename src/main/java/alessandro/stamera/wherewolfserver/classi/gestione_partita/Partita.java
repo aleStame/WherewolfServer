@@ -147,18 +147,10 @@ public final class Partita
 
     public void attaccoNosferatu(String nome)
     {
-        EsitoAttacco esito = vivi.attaccoNosferatu(nome);
-        if(esito == RIUSCITO) eliminaGiocatore(nome);
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
+        switch(vivi.attaccoNosferatu(nome))
         {
-            String nomeGiocatore = vivi.getNomeGiocatore(i);
-            if(vivi.getRuolo(nomeGiocatore).isNosferatu()) posizione = i;
-        }
-        if(esito == MORTO)
-        {
-            eliminaGiocatore(nome);
-            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
+            case RIUSCITO -> eliminaGiocatore(nome);
+            case MORTO -> eliminaGiocatori(nome, vivi.getNomeNosferatu());
         }
     }
 
@@ -231,12 +223,11 @@ public final class Partita
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
-    private void assassinioContadinoMostro(String nome)
-    {
-        for(String eliminazione : new String[] { nome, vivi.getNomeAssassino() }) eliminaGiocatore(eliminazione);
-    }
+    private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
 
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
+
+    private void eliminaGiocatori(String... nomi) { for(String nome : nomi) eliminaGiocatore(nome); }
 
     private void eliminaGiocatore(String nome)
     {
