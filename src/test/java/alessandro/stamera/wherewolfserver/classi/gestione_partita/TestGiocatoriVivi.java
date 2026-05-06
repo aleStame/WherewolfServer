@@ -414,6 +414,12 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isCacciatoreProtetto());
     }
 
+    @Test public void testCacciatoreProtettoUnLupo()
+    {
+        inizializzaGiocatori(new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } });
+        verificaVero(giocatori.isCacciatoreProtetto());
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return giocatori.isPotereBracconiereUtilizzato(); }
