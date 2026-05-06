@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVampirizzazione non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/CacciatoreDiVampiri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/CacciatoreDiVampiri.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaMorto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,30 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02653" summary="VERDE: testBracconierePresente riuscito">
-      <option name="closed" value="true" />
-      <created>1777986169028</created>
-      <option name="number" value="02653" />
-      <option name="presentableId" value="LOCAL-02653" />
-      <option name="project" value="LOCAL" />
-      <updated>1777986169028</updated>
-    </task>
-    <task id="LOCAL-02654" summary="REFACTORING: definizione del metodo getPosizioneBracconiere">
-      <option name="closed" value="true" />
-      <created>1777986364672</created>
-      <option name="number" value="02654" />
-      <option name="presentableId" value="LOCAL-02654" />
-      <option name="project" value="LOCAL" />
-      <updated>1777986364672</updated>
-    </task>
-    <task id="LOCAL-02655" summary="REFACTORING: definizione del metodo isBracconiere">
-      <option name="closed" value="true" />
-      <created>1777986576087</created>
-      <option name="number" value="02655" />
-      <option name="presentableId" value="LOCAL-02655" />
-      <option name="project" value="LOCAL" />
-      <updated>1777986576087</updated>
     </task>
     <task id="LOCAL-02656" summary="VERDE DIRETTO: testBracconiereAssente riuscito">
       <option name="closed" value="true" />
@@ -680,7 +656,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778069391209</updated>
     </task>
-    <option name="localTasksCounter" value="2702" />
+    <task id="LOCAL-02702" summary="VERDE: testVampirizzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1778069581404</created>
+      <option name="number" value="02702" />
+      <option name="presentableId" value="LOCAL-02702" />
+      <option name="project" value="LOCAL" />
+      <updated>1778069581404</updated>
+    </task>
+    <task id="LOCAL-02703" summary="REFACTORING: definizione del metodo getMorto">
+      <option name="closed" value="true" />
+      <created>1778069775127</created>
+      <option name="number" value="02703" />
+      <option name="presentableId" value="LOCAL-02703" />
+      <option name="project" value="LOCAL" />
+      <updated>1778069775127</updated>
+    </task>
+    <task id="LOCAL-02704" summary="REFACTORING: definizione del metodo verificaMorto">
+      <option name="closed" value="true" />
+      <created>1778070301124</created>
+      <option name="number" value="02704" />
+      <option name="presentableId" value="LOCAL-02704" />
+      <option name="project" value="LOCAL" />
+      <updated>1778070301124</updated>
+    </task>
+    <option name="localTasksCounter" value="2705" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,9 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo doppiaEliminazione" />
-    <MESSAGE value="ROSSO: testLupoSolitarioAssente non riuscito" />
-    <MESSAGE value="VERDE: testLupoSolitarioAssente riuscito" />
     <MESSAGE value="ROSSO: testLupoSolitarioPresente non riuscito" />
     <MESSAGE value="VERDE: testLupoSolitarioPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneLupoSolitario" />
@@ -720,6 +717,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVampirizzazione non riuscito" />
+    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMorto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMorto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMorto" />
   </component>
 </project>

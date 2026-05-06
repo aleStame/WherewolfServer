@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -71,9 +72,11 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(MORTO); }
+    @Test public void testAttaccoNosferatu() { verificaMorto(ruolo.attaccoNosferatu()); }
 
-    @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(MORTO); }
+    @Test public void testVampirizzazione() { verificaMorto(ruolo.vampirizzazione()); }
+
+    private void verificaMorto(EsitoAttacco esito) { assertThat(esito).isEqualTo(MORTO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
