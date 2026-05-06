@@ -8,6 +8,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -125,6 +126,17 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isCacciatoreProtetto() { return isUltimoLupoBrancoRimasto() || getNumeroLupi() == 1; }
 
     public String getNomeNosferatu() { return getNomeGiocatore(getPosizioneNosferatu()); }
+
+    public int getNumeroSenzaFazione()
+    {
+        int numeroSenzaFazione = 0;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isSenzaFazione(i)) numeroSenzaFazione++;
+        return numeroSenzaFazione;
+    }
+
+    private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
+
+    private Fazione getFazione(int posizione) { return getRuolo(getNomeGiocatore(posizione)).getFazione(); }
 
     private int getPosizioneNosferatu()
     {

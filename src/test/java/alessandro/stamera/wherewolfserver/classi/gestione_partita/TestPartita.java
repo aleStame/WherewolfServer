@@ -388,6 +388,20 @@ public final class TestPartita
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
+    @Test public void testNumeroSenzaFazione()
+    {
+        inizializzaPartita(new String[][] { { "Raffaello", "Ghoul" }, { "Mattia", "Peccatore" }, { "Leonardo", "Pazzo" } });
+        verificaNumeroIntero(partita.getNumeroSenzaFazioneVivi(), 2);
+    }
+
+    @Test public void testNumeroLupi()
+    {
+        inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo reietto" }, { "Mohamed", "Capo branco" } });
+        verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
+    }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
+
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
