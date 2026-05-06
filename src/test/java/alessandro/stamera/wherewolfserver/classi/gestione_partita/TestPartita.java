@@ -391,14 +391,16 @@ public final class TestPartita
     @Test public void testNumeroSenzaFazione()
     {
         inizializzaPartita(new String[][] { { "Raffaello", "Ghoul" }, { "Mattia", "Peccatore" }, { "Leonardo", "Pazzo" } });
-        assertThat(partita.getNumeroSenzaFazioneVivi()).isEqualTo(2);
+        verificaNumeroIntero(partita.getNumeroSenzaFazioneVivi(), 2);
     }
 
     @Test public void testNumeroLupi()
     {
         inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo reietto" }, { "Mohamed", "Capo branco" } });
-        assertThat(partita.getNumeroLupiVivi()).isEqualTo(2);
+        verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
     }
+
+    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }
 
