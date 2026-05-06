@@ -149,9 +149,11 @@ public final class Partita
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
         int numeroLupi = vivi.getNumeroLupi();
-        if(esito == RIUSCITO && (numeroLupi == 1 || (numeroLupi == 2 && vivi.isLupoSolitarioPresente()))) esito = MORTO;
+        if(esito == RIUSCITO && isUltimoLupoRimasto(numeroLupi)) esito = MORTO;
         return esito;
     }
+
+    private boolean isUltimoLupoRimasto(int numeroLupi) { return numeroLupi == 1 || (numeroLupi == 2 && vivi.isLupoSolitarioPresente()); }
 
     private void doppiaEliminazione(String nomeLupo, String nome)
     {
