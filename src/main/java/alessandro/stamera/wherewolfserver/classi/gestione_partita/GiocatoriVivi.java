@@ -127,10 +127,11 @@ public final class GiocatoriVivi extends Giocatori
     public String getNomeNosferatu()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isNosferatu()) posizione = i;
-        System.out.println(posizione);
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isNosferatu(i)) posizione = i;
         return getNomeGiocatore(posizione);
     }
+
+    private boolean isNosferatu(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isNosferatu(); }
 
     private boolean isUltimoLupoBrancoRimasto() { return getNumeroLupi() == 2 && isLupoSolitarioPresente(); }
 
