@@ -130,9 +130,11 @@ public final class GiocatoriVivi extends Giocatori
     public int getNumeroSenzaFazione()
     {
         int numeroSenzaFazione = 0;
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(getRuolo(getNomeGiocatore(i)).getFazione() == NESSUNA) numeroSenzaFazione++;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isSenzaFazione(i)) numeroSenzaFazione++;
         return numeroSenzaFazione;
     }
+
+    private boolean isSenzaFazione(int posizione) { return getRuolo(getNomeGiocatore(posizione)).getFazione() == NESSUNA; }
 
     private int getPosizioneNosferatu()
     {
