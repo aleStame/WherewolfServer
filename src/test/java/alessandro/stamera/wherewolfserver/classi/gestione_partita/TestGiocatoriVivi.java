@@ -448,6 +448,13 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroSenzaFazione(), 2);
     }
 
+    @Test public void testGildataCapoBranco()
+    {
+        String nome = "Giuseppe";
+        aggiungiGiocatore(nome, "Capo branco");
+        assertThat(giocatori.gildata(nome)).isEqualTo(MORTO);
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
