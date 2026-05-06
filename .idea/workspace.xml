@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCacciatoreProtettoUnLupo non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCacciatoreProtettoUnLupo riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02642" summary="VERDE: testNumeroLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1777932374004</created>
-      <option name="number" value="02642" />
-      <option name="presentableId" value="LOCAL-02642" />
-      <option name="project" value="LOCAL" />
-      <updated>1777932374004</updated>
     </task>
     <task id="LOCAL-02643" summary="REFACTORING: definizione del metodo isLupo">
       <option name="closed" value="true" />
@@ -680,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778058825298</updated>
     </task>
-    <option name="localTasksCounter" value="2691" />
+    <task id="LOCAL-02691" summary="VERDE: testCacciatoreProtettoUnLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1778059119183</created>
+      <option name="number" value="02691" />
+      <option name="presentableId" value="LOCAL-02691" />
+      <option name="project" value="LOCAL" />
+      <updated>1778059119183</updated>
+    </task>
+    <option name="localTasksCounter" value="2692" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneBracconiere" />
     <MESSAGE value="ROSSO: testProtezioneNonna non riuscito" />
     <MESSAGE value="VERDE: testProtezioneNonna riuscito" />
     <MESSAGE value="ROSSO: testMorteLupoSolitario non riuscito" />
@@ -720,6 +719,7 @@
     <MESSAGE value="ROSSO: testCacciatoreProtettoLupoSolitario non riuscito" />
     <MESSAGE value="VERDE: testCacciatoreProtettoLupoSolitario riuscito" />
     <MESSAGE value="ROSSO: testCacciatoreProtettoUnLupo non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCacciatoreProtettoUnLupo non riuscito" />
+    <MESSAGE value="VERDE: testCacciatoreProtettoUnLupo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCacciatoreProtettoUnLupo riuscito" />
   </component>
 </project>

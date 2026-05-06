@@ -420,6 +420,15 @@ public final class TestGiocatoriVivi
         verificaCacciatoreProtetto();
     }
 
+    @Test public void testCacciatoreUltimoLupoBranco()
+    {
+        inizializzaGiocatori
+        (
+            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Giovane lupo" }, { "Carmine", "Bracconiere" }, { "Luisa", "Prete" } }
+        );
+        verificaCacciatoreProtetto();
+    }
+
     private void verificaCacciatoreProtetto() { verificaVero(giocatori.isCacciatoreProtetto()); }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
