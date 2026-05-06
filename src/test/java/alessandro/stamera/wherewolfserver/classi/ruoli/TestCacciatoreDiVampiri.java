@@ -73,6 +73,8 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(MORTO); }
 
+    @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(MORTO); }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
