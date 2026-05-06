@@ -1,10 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
@@ -18,7 +19,11 @@ public class Villaggio extends Ruolo
         super(nome, VILLAGGIO, aura, descrizione, lune, mistico);
     }
 
-    @Override public void gildata() { cambiaFazione(CRIMINALI); }
+    @Override public EsitoAttacco gildata()
+    {
+        cambiaFazione(CRIMINALI);
+        return RIUSCITO;
+    }
 
     @Override public boolean isVillaggio() { return true; }
 

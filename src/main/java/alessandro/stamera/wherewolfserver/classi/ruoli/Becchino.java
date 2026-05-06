@@ -1,10 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 
 public class Becchino extends Villaggio
@@ -35,7 +37,12 @@ public class Becchino extends Villaggio
 
     @Override public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
 
-    @Override public void gildata() { if(isVillaggio()) super.gildata(); }
+    @Override public EsitoAttacco gildata()
+    {
+        EsitoAttacco esito = FALLITO;
+        if(isVillaggio()) esito = super.gildata();
+        return esito;
+    }
 
     @Override public boolean isVillaggio() { return villaggio; }
 

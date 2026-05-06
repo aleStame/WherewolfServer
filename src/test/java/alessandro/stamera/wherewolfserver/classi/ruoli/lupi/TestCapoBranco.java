@@ -10,9 +10,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.stream.Stream;
-
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -53,6 +52,8 @@ public final class TestCapoBranco
 
     @ParameterizedTest @MethodSource("getEsitiPartite")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
+    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(MORTO); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 

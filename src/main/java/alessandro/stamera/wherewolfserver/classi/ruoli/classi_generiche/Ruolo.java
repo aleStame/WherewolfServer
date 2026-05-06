@@ -98,7 +98,7 @@ public class Ruolo
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
-    public void gildata() { }
+    public EsitoAttacco gildata() { return null; }
 
     public boolean isMistico() { return mistico; }
 
