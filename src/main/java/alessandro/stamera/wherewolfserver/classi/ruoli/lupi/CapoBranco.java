@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 
 public final class CapoBranco extends Lupo
 {
@@ -26,6 +27,7 @@ public final class CapoBranco extends Lupo
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(isPresentiSoloLupiConSenzaFazione(partita)) esito = VITTORIA;
+        else if(partita.getNumeroLupiVivi() == 0) esito = SCONFITTA;
         return esito;
     }
 
