@@ -134,7 +134,7 @@ public final class GiocatoriVivi extends Giocatori
         return numeroSenzaFazione;
     }
 
-    public EsitoAttacco gildata(String nome) { return null; }
+    public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
 
     private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
 
