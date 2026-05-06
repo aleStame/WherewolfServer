@@ -153,7 +153,9 @@ public final class Partita
         return esito;
     }
 
-    private boolean isUltimoLupoRimasto(int numeroLupi) { return numeroLupi == 1 || (numeroLupi == 2 && vivi.isLupoSolitarioPresente()); }
+    private boolean isUltimoLupoRimasto(int numeroLupi) { return numeroLupi == 1 || isUltimoLupoTranneSolitario(numeroLupi); }
+
+    private boolean isUltimoLupoTranneSolitario(int numeroLupi) { return numeroLupi == 2 && vivi.isLupoSolitarioPresente(); }
 
     private void doppiaEliminazione(String nomeLupo, String nome)
     {
