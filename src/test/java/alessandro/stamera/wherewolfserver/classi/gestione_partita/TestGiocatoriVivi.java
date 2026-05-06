@@ -321,7 +321,7 @@ public final class TestGiocatoriVivi
         String nome = "Giorgia";
         inizializzaGiocatori(new String[][] { { "Pino", "Capo branco" }, { nome, "Negromante" } });
         verificaVero(isNegromantePresente());
-        assertThat(giocatori.getNomeNegromante()).isEqualTo(nome);
+        verificaStringa(giocatori.getNomeNegromante(), nome);
     }
 
     @Test public void testNegromanteAssente()
@@ -381,7 +381,7 @@ public final class TestGiocatoriVivi
         String nome = "Gianfranco";
         inizializzaGiocatori(new String[][] { { "Rosalba", "Bocca di rosa" }, { nome, "Bracconiere" } });
         verificaVero(isBracconierePresente());
-        assertThat(giocatori.getNomeBracconiere()).isEqualTo(nome);
+        verificaStringa(giocatori.getNomeBracconiere(), nome);
     }
 
     @Test public void testBracconiereAssente()
@@ -439,8 +439,10 @@ public final class TestGiocatoriVivi
     {
         String soluzione = "Donatello";
         inizializzaGiocatori(new String[][] { { "Michelangelo", "Prete" }, { soluzione, "Nosferatu" } });
-        assertThat(giocatori.getNomeNosferatu()).isEqualTo(soluzione);
+        verificaStringa(giocatori.getNomeNosferatu(), soluzione);
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
