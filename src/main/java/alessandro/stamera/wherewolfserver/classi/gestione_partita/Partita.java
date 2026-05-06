@@ -145,6 +145,8 @@ public final class Partita
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
+    public void attaccoNosferatu(String nome) { }
+
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);

@@ -380,6 +380,14 @@ public final class TestPartita
         verificaNonEliminato(lupo);
     }
 
+    @Test public void testAttaccoNosferatuMorto()
+    {
+        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta";
+        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", "Prete" } });
+        partita.attaccoNosferatu(nomeVittima);
+        for(String nome : new String[] { nomeVittima, nomeNosferatu }) verificaEliminazione(nome);
+    }
+
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }
