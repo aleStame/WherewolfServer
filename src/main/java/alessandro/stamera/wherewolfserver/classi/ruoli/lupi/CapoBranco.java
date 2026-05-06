@@ -25,10 +25,20 @@ public final class CapoBranco extends Lupo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.getNumeroGiocatoriVivi() == partita.getNumeroLupiVivi() + partita.getNumeroSenzaFazioneVivi()) esito = VITTORIA;
+        if(isPresentiSoloLupiConSenzaFazione(partita)) esito = VITTORIA;
         return esito;
     }
 
     public static Ruolo getInstance() { return new CapoBranco(); }
+
+    private boolean isPresentiSoloLupiConSenzaFazione(Partita partita)
+    {
+        return partita.getNumeroGiocatoriVivi() == getNumeroLupiConSenzaFazione(partita);
+    }
+
+    private int getNumeroLupiConSenzaFazione(Partita partita)
+    {
+        return partita.getNumeroLupiVivi() + partita.getNumeroSenzaFazioneVivi();
+    }
 
 }
