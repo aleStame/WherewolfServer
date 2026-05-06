@@ -1,7 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.lupi;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 
 public final class CapoBranco extends Lupo
 {
@@ -18,6 +21,13 @@ public final class CapoBranco extends Lupo
     }
 
     @Override public boolean isCapoBranco() { return true; }
+
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(partita.getNumeroGiocatoriVivi() == partita.getNumeroLupiVivi() + partita.getNumeroSenzaFazioneVivi()) esito = VITTORIA;
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new CapoBranco(); }
 
