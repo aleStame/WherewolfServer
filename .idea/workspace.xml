@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCacciatoreProtetto" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,38 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02647" summary="VERDE: testPotereBracconiereUnLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1777984177433</created>
-      <option name="number" value="02647" />
-      <option name="presentableId" value="LOCAL-02647" />
-      <option name="project" value="LOCAL" />
-      <updated>1777984177433</updated>
-    </task>
-    <task id="LOCAL-02648" summary="ROSSO: testPotereBracconiereDueLupi non riuscito">
-      <option name="closed" value="true" />
-      <created>1777984672082</created>
-      <option name="number" value="02648" />
-      <option name="presentableId" value="LOCAL-02648" />
-      <option name="project" value="LOCAL" />
-      <updated>1777984672082</updated>
-    </task>
-    <task id="LOCAL-02649" summary="VERDE: testPotereBracconiereDueLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1777985000931</created>
-      <option name="number" value="02649" />
-      <option name="presentableId" value="LOCAL-02649" />
-      <option name="project" value="LOCAL" />
-      <updated>1777985000931</updated>
-    </task>
-    <task id="LOCAL-02650" summary="VERDE DIRETTO: testUtilizzoPotere riuscito">
-      <option name="closed" value="true" />
-      <created>1777985379430</created>
-      <option name="number" value="02650" />
-      <option name="presentableId" value="LOCAL-02650" />
-      <option name="project" value="LOCAL" />
-      <updated>1777985379430</updated>
     </task>
     <task id="LOCAL-02651" summary="REFACTORING: definizione del metodo isPotereUtilizzato">
       <option name="closed" value="true" />
@@ -678,7 +646,39 @@
       <option name="project" value="LOCAL" />
       <updated>1778060241824</updated>
     </task>
-    <option name="localTasksCounter" value="2696" />
+    <task id="LOCAL-02696" summary="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto">
+      <option name="closed" value="true" />
+      <created>1778060492505</created>
+      <option name="number" value="02696" />
+      <option name="presentableId" value="LOCAL-02696" />
+      <option name="project" value="LOCAL" />
+      <updated>1778060492505</updated>
+    </task>
+    <task id="LOCAL-02697" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778060810920</created>
+      <option name="number" value="02697" />
+      <option name="presentableId" value="LOCAL-02697" />
+      <option name="project" value="LOCAL" />
+      <updated>1778060810920</updated>
+    </task>
+    <task id="LOCAL-02698" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778061240769</created>
+      <option name="number" value="02698" />
+      <option name="presentableId" value="LOCAL-02698" />
+      <option name="project" value="LOCAL" />
+      <updated>1778061240769</updated>
+    </task>
+    <task id="LOCAL-02699" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778068591655</created>
+      <option name="number" value="02699" />
+      <option name="presentableId" value="LOCAL-02699" />
+      <option name="project" value="LOCAL" />
+      <updated>1778068591656</updated>
+    </task>
+    <option name="localTasksCounter" value="2700" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
-    <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCacciatore non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupoSolitarioCacciatore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo doppiaEliminazione" />
     <MESSAGE value="ROSSO: testLupoSolitarioAssente non riuscito" />
@@ -718,6 +716,8 @@
     <MESSAGE value="VERDE: testCacciatoreUltimoLupoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatoreNonProtetto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
   </component>
 </project>
