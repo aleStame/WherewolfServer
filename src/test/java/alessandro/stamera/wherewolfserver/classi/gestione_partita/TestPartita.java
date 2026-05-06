@@ -400,6 +400,14 @@ public final class TestPartita
         verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
     }
 
+    @Test public void testGildataCapoBranco()
+    {
+        String[][] giocatori = new String[][] { { "Pasquale", "Capo branco" }, { "Pina", "Capo gilda" } };
+        inizializzaPartita(giocatori);
+        partita.gildata(giocatori[0][0]);
+        verificaEliminazione(giocatori[1][0]);
+    }
+
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }

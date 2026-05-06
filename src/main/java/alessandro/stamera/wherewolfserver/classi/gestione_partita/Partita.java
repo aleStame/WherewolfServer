@@ -158,6 +158,8 @@ public final class Partita
 
     public int getNumeroLupiVivi() { return vivi.getNumeroLupi(); }
 
+    public void gildata(String nome) { }
+
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
