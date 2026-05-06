@@ -145,6 +145,15 @@ public final class Partita
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
+    public void attaccoNosferatu(String nome)
+    {
+        switch(vivi.attaccoNosferatu(nome))
+        {
+            case RIUSCITO -> eliminaGiocatore(nome);
+            case MORTO -> eliminaGiocatori(nome, vivi.getNomeNosferatu());
+        }
+    }
+
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
@@ -214,12 +223,11 @@ public final class Partita
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
-    private void assassinioContadinoMostro(String nome)
-    {
-        for(String eliminazione : new String[] { nome, vivi.getNomeAssassino() }) eliminaGiocatore(eliminazione);
-    }
+    private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
 
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
+
+    private void eliminaGiocatori(String... nomi) { for(String nome : nomi) eliminaGiocatore(nome); }
 
     private void eliminaGiocatore(String nome)
     {
