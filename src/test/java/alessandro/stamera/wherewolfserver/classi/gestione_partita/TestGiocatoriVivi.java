@@ -432,10 +432,12 @@ public final class TestGiocatoriVivi
     @Test public void testCacciatoreNonProtetto()
     {
         inizializzaGiocatori(new String[][] { { "Cristian", "Cacciatore" }, { "Carmine", "Capo branco" }, { "Mario", "Lupo reietto" } });
-        verificaFalso(giocatori.isCacciatoreProtetto());
+        verificaFalso(isCacciatoreProtetto());
     }
 
-    private void verificaCacciatoreProtetto() { verificaVero(giocatori.isCacciatoreProtetto()); }
+    private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
+
+    private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
