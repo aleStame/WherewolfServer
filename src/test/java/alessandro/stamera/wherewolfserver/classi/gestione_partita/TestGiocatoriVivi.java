@@ -435,6 +435,13 @@ public final class TestGiocatoriVivi
         verificaFalso(isCacciatoreProtetto());
     }
 
+    @Test public void testNosferatu()
+    {
+        String soluzione = "Donatello";
+        inizializzaGiocatori(new String[][] { { "Michelangelo", "Vampiro" }, { soluzione, "Nosferatu" } });
+        assertThat(giocatori.getNomeNosferatu()).isEqualTo(soluzione);
+    }
+
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
     private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }

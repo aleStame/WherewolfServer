@@ -124,6 +124,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCacciatoreProtetto() { return isUltimoLupoBrancoRimasto() || getNumeroLupi() == 1; }
 
+    public String getNomeNosferatu() { return null; }
+
     private boolean isUltimoLupoBrancoRimasto() { return getNumeroLupi() == 2 && isLupoSolitarioPresente(); }
 
     private int getPosizioneLupoSolitario()
