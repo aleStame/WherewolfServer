@@ -452,7 +452,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Giuseppe";
         aggiungiGiocatore(nome, "Capo branco");
-        assertThat(giocatori.gildata(nome)).isEqualTo(MORTO);
+        verificaAttacco(giocatori.gildata(nome), MORTO);
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -500,7 +500,7 @@ public final class TestGiocatoriVivi
             case NOSFERATU -> esito = giocatori.attaccoNosferatu(nomeAngelo);
             case VAMPIRO -> esito = giocatori.attaccoVampiro(nomeAngelo);
         }
-        assertThat(esito).isEqualTo(RIUSCITO);
+        verificaAttacco(esito, RIUSCITO);
         verificaNonAmato(nomeAmato);
         verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
         assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(fazione);
@@ -516,7 +516,7 @@ public final class TestGiocatoriVivi
 
     private void verificaAttaccoAssassino(String nome, EsitoAttacco esito)
     {
-        assertThat(giocatori.attaccoAssassino(nome)).isEqualTo(esito);
+        verificaAttacco(giocatori.attaccoAssassino(nome), esito);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
@@ -546,5 +546,7 @@ public final class TestGiocatoriVivi
     private void verificaNonAmato(String nome) { assertThat(isAmato(nome)).isFalse(); }
 
     private boolean isAmato(String nome) { return giocatori.isAmato(nome); }
+
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
