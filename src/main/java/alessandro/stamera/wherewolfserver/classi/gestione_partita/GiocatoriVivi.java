@@ -122,6 +122,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupoSolitarioPresente() { return getPosizioneLupoSolitario() != NON_TROVATO; }
 
+    public boolean isGiocatoreProtetto() { return false; }
+
     private int getPosizioneLupoSolitario()
     {
         int posizione = NON_TROVATO;

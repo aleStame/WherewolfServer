@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo attaccoLupi">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isUltimoLupoTranneSolitario">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02637" summary="REFACTORING: definizione del metodo isSegnalazioneBorgomastroAvvenuta">
-      <option name="closed" value="true" />
-      <created>1777929844999</created>
-      <option name="number" value="02637" />
-      <option name="presentableId" value="LOCAL-02637" />
-      <option name="project" value="LOCAL" />
-      <updated>1777929844999</updated>
-    </task>
-    <task id="LOCAL-02638" summary="REFACTORING: definizione del metodo isSegnalazioneBorgomastroAvvenuta">
-      <option name="closed" value="true" />
-      <created>1777929897820</created>
-      <option name="number" value="02638" />
-      <option name="presentableId" value="LOCAL-02638" />
-      <option name="project" value="LOCAL" />
-      <updated>1777929897820</updated>
     </task>
     <task id="LOCAL-02639" summary="VERDE DIRETTO: testEsitoPartita riuscito">
       <option name="closed" value="true" />
@@ -680,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778057424653</updated>
     </task>
-    <option name="localTasksCounter" value="2686" />
+    <task id="LOCAL-02686" summary="REFACTORING: definizione del metodo isUltimoLupoRimasto">
+      <option name="closed" value="true" />
+      <created>1778057585304</created>
+      <option name="number" value="02686" />
+      <option name="presentableId" value="LOCAL-02686" />
+      <option name="project" value="LOCAL" />
+      <updated>1778057585305</updated>
+    </task>
+    <task id="LOCAL-02687" summary="REFACTORING: definizione del metodo isUltimoLupoTranneSolitario">
+      <option name="closed" value="true" />
+      <created>1778057806044</created>
+      <option name="number" value="02687" />
+      <option name="presentableId" value="LOCAL-02687" />
+      <option name="project" value="LOCAL" />
+      <updated>1778057806044</updated>
+    </task>
+    <option name="localTasksCounter" value="2688" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testUtilizzoPotereBracconiere riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getBracconiere" />
     <MESSAGE value="REFACTORING: definizione del metodo isPotereBracconiereUtilizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaPotereBracconiereNonUtilizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciPotereBracconiere" />
@@ -720,6 +719,8 @@
     <MESSAGE value="ROSSO: testAttaccoNormaleCacciatore non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNormaleCacciatore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoLupi" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo attaccoLupi" />
+    <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoRimasto" />
+    <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoTranneSolitario" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isUltimoLupoTranneSolitario" />
   </component>
 </project>
