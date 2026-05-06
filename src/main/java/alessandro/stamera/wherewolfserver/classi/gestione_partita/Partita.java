@@ -161,13 +161,7 @@ public final class Partita
     public void gildata(String nome)
     {
         EsitoAttacco esito = vivi.gildata(nome);
-        if(esito == MORTO)
-        {
-            int posizione = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isCapoGilda())
-                posizione = i;
-            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
-        }
+        if(esito == MORTO) eliminaGiocatore(vivi.getNomeCapoGilda());
     }
 
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
