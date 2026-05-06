@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCacciatoreProtettoLupoSolitario non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCacciatoreProtettoUnLupo non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02640" summary="REFACTORING: spostamento della classe Ballottaggio e relativa classe di test">
-      <option name="closed" value="true" />
-      <created>1777930412212</created>
-      <option name="number" value="02640" />
-      <option name="presentableId" value="LOCAL-02640" />
-      <option name="project" value="LOCAL" />
-      <updated>1777930412212</updated>
-    </task>
-    <task id="LOCAL-02641" summary="ROSSO: testNumeroLupi non riuscito">
-      <option name="closed" value="true" />
-      <created>1777931958235</created>
-      <option name="number" value="02641" />
-      <option name="presentableId" value="LOCAL-02641" />
-      <option name="project" value="LOCAL" />
-      <updated>1777931958235</updated>
     </task>
     <task id="LOCAL-02642" summary="VERDE: testNumeroLupi riuscito">
       <option name="closed" value="true" />
@@ -678,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778058498308</updated>
     </task>
-    <option name="localTasksCounter" value="2689" />
+    <task id="LOCAL-02689" summary="VERDE: testCacciatoreProtettoLupoSolitario riuscito">
+      <option name="closed" value="true" />
+      <created>1778058671195</created>
+      <option name="number" value="02689" />
+      <option name="presentableId" value="LOCAL-02689" />
+      <option name="project" value="LOCAL" />
+      <updated>1778058671196</updated>
+    </task>
+    <task id="LOCAL-02690" summary="ROSSO: testCacciatoreProtettoUnLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1778058825298</created>
+      <option name="number" value="02690" />
+      <option name="presentableId" value="LOCAL-02690" />
+      <option name="project" value="LOCAL" />
+      <updated>1778058825298</updated>
+    </task>
+    <option name="localTasksCounter" value="2691" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaPotereBracconiereNonUtilizzato" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestisciPotereBracconiere" />
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneBracconiere" />
     <MESSAGE value="ROSSO: testProtezioneNonna non riuscito" />
     <MESSAGE value="VERDE: testProtezioneNonna riuscito" />
@@ -718,6 +718,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoRimasto" />
     <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoTranneSolitario" />
     <MESSAGE value="ROSSO: testCacciatoreProtettoLupoSolitario non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCacciatoreProtettoLupoSolitario non riuscito" />
+    <MESSAGE value="VERDE: testCacciatoreProtettoLupoSolitario riuscito" />
+    <MESSAGE value="ROSSO: testCacciatoreProtettoUnLupo non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCacciatoreProtettoUnLupo non riuscito" />
   </component>
 </project>
