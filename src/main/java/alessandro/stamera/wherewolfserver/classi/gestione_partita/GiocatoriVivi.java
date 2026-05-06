@@ -134,6 +134,19 @@ public final class GiocatoriVivi extends Giocatori
         return numeroSenzaFazione;
     }
 
+    public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
+
+    public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
+
+    private int getPosizioneCapoGilda()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isCapoGilda(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isCapoGilda(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCapoGilda(); }
+
     private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
 
     private Fazione getFazione(int posizione) { return getRuolo(getNomeGiocatore(posizione)).getFazione(); }
