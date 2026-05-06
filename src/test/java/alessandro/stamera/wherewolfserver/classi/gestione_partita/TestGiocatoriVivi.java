@@ -400,6 +400,45 @@ public final class TestGiocatoriVivi
         verificaPotereBracconiereNonUtilizzato();
     }
 
+    @Test public void testLupoSolitarioAssente() { verificaFalso(giocatori.isLupoSolitarioPresente()); }
+
+    @Test public void testLupoSolitarioPresente()
+    {
+        inizializzaGiocatori(new String[][] { { "Anna", "Guardia" }, { "Maurizio", "Lupo solitario" } });
+        verificaVero(giocatori.isLupoSolitarioPresente());
+    }
+
+    @Test public void testCacciatoreProtettoLupoSolitario()
+    {
+        inizializzaGiocatori(new String[][] { { "Andrea", "Cacciatore" }, { "Piero", "Lupo solitario" } });
+        verificaCacciatoreProtetto();
+    }
+
+    @Test public void testCacciatoreProtettoUnLupo()
+    {
+        inizializzaGiocatori(new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } });
+        verificaCacciatoreProtetto();
+    }
+
+    @Test public void testCacciatoreUltimoLupoBranco()
+    {
+        inizializzaGiocatori
+        (
+            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Lupo solitario" }, { "Carmine", "Bracconiere" }, { "Luisa", "Prete" } }
+        );
+        verificaCacciatoreProtetto();
+    }
+
+    @Test public void testCacciatoreNonProtetto()
+    {
+        inizializzaGiocatori(new String[][] { { "Cristian", "Cacciatore" }, { "Carmine", "Capo branco" }, { "Mario", "Lupo reietto" } });
+        verificaFalso(isCacciatoreProtetto());
+    }
+
+    private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
+
+    private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return giocatori.isPotereBracconiereUtilizzato(); }

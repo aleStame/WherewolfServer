@@ -120,6 +120,21 @@ public final class GiocatoriVivi extends Giocatori
 
     public void riabilitaPotereBracconiere() { getBracconiere().riabilitaPotere(); }
 
+    public boolean isLupoSolitarioPresente() { return getPosizioneLupoSolitario() != NON_TROVATO; }
+
+    public boolean isCacciatoreProtetto() { return isUltimoLupoBrancoRimasto() || getNumeroLupi() == 1; }
+
+    private boolean isUltimoLupoBrancoRimasto() { return getNumeroLupi() == 2 && isLupoSolitarioPresente(); }
+
+    private int getPosizioneLupoSolitario()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupoSolitario(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isLupoSolitario(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isLupoSolitario(); }
+
     private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
 
     private int getPosizioneBracconiere()

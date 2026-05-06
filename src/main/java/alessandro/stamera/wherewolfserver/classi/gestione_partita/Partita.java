@@ -1,11 +1,14 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 
 public final class Partita
@@ -73,7 +76,7 @@ public final class Partita
     public void attaccoLupi(String nomeLupo, String nome)
     {
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
-        switch(vivi.attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
+        switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
@@ -142,10 +145,26 @@ public final class Partita
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
+    private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
+    {
+        EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
+        if(esito == RIUSCITO && vivi.isCacciatoreProtetto()) esito = MORTO;
+        return esito;
+    }
+
     private void doppiaEliminazione(String nomeLupo, String nome)
     {
         eliminaGiocatore(nome);
-        eliminaGiocatore(nomeLupo);
+        boolean fatto = false;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && !fatto; i++)
+        {
+            String x = vivi.getNomeGiocatore(i);
+            if(vivi.getRuolo(x).getNome().equals(nomeLupo))
+            {
+                eliminaGiocatore(x);
+                fatto = true;
+            }
+        }
     }
 
     private void gestisciPotereBracconiere()

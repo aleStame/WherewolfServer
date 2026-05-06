@@ -23,7 +23,12 @@ public final class Cacciatore extends Villaggio
 
     @Override public boolean isCacciatore() { return true; }
 
-    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return MORTO; }
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo)
+    {
+        EsitoAttacco esito = super.attaccoLupi(lupo);
+        if(lupo.isLupoSolitario()) esito = MORTO;
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new Cacciatore(); }
 
