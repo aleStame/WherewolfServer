@@ -396,7 +396,7 @@ public final class TestPartita
 
     @Test public void testNumeroLupi()
     {
-        inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo del branco" }, { "Mohamed", "Bracconiere" } });
+        inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo reietto" }, { "Mohamed", "Capo branco" } });
         assertThat(partita.getNumeroLupiVivi()).isEqualTo(2);
     }
 
