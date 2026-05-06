@@ -145,7 +145,22 @@ public final class Partita
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
-    public void attaccoNosferatu(String nome) { }
+    public void attaccoNosferatu(String nome)
+    {
+        EsitoAttacco esito = vivi.attaccoNosferatu(nome);
+        if(esito == RIUSCITO) eliminaGiocatore(nome);
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
+        {
+            String nomeGiocatore = vivi.getNomeGiocatore(i);
+            if(vivi.getRuolo(nomeGiocatore).isNosferatu()) posizione = i;
+        }
+        if(esito == MORTO)
+        {
+            eliminaGiocatore(nome);
+            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
+        }
+    }
 
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
