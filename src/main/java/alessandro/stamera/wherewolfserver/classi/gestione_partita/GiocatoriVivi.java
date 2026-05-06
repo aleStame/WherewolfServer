@@ -126,6 +126,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeNosferatu() { return getNomeGiocatore(getPosizioneNosferatu()); }
 
+    public int getNumeroSenzaFazione() { return -1; }
+
     private int getPosizioneNosferatu()
     {
         int posizione = NON_TROVATO;

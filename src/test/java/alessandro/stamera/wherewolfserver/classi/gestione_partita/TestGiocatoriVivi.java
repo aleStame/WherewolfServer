@@ -442,6 +442,12 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeNosferatu(), soluzione);
     }
 
+    @Test public void testNumeroSenzaFazione()
+    {
+        inizializzaGiocatori(new String[][] { { "Raffaello", "Ghoul" }, { "Mattia", "Peccatore" }, { "Leonardo", "Pazzo" } });
+        verificaNumeroIntero(giocatori.getNumeroSenzaFazione(), 2);
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
