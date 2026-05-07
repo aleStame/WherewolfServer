@@ -417,6 +417,15 @@ public final class TestPartita
         verificaEliminati(nomeVittima, nomeLupo);
     }
 
+    @Test public void testAttaccoNosferatuRiuscito()
+    {
+        String nome = "Marco";
+        inizializzaPartita(new String[][] { { nome, "Prete" }, { "Tina", "Nosferatu" } });
+        attaccoLupi("Capo branco", nome);
+        partita.progenizzazioneNosferatu(nome);
+        verificaNonEliminato(nome);
+    }
+
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }

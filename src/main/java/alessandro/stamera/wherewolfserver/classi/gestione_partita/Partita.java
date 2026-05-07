@@ -164,6 +164,8 @@ public final class Partita
         if(esito == MORTO) eliminaGiocatore(vivi.getNomeCapoGilda());
     }
 
+    public void progenizzazioneNosferatu(String nome) { }
+
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
