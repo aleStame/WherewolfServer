@@ -22,6 +22,8 @@ public final class Partita
 
     private final GiocatoriEliminati eliminati;
 
+    private final GiocatoriMortiNotte mortiNotte;
+
     private Aura ultimoControllo;
 
     public Partita(String[][] giocatori)
@@ -32,6 +34,7 @@ public final class Partita
         for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
+        mortiNotte = new GiocatoriMortiNotte();
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -145,12 +148,17 @@ public final class Partita
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
-    public void attaccoNosferatu(String nome)
+    public void progenizzazioneNosferatu(String nome)
     {
-        switch(vivi.attaccoNosferatu(nome))
+        switch(mortiNotte.progenizzazioneNosferatu(nome))
         {
-            case RIUSCITO -> eliminaGiocatore(nome);
-            case MORTO -> eliminaGiocatori(nome, vivi.getNomeNosferatu());
+            case RIUSCITO ->
+            {
+                Ruolo ruolo = mortiNotte.getRuolo(nome);
+                mortiNotte.eliminaGiocatore(nome);
+                vivi.aggiungiGiocatore(nome, ruolo);
+            }
+            case MORTO -> eliminaGiocatore(vivi.getNomeNosferatu());
         }
     }
 
@@ -164,12 +172,10 @@ public final class Partita
         if(esito == MORTO) eliminaGiocatore(vivi.getNomeCapoGilda());
     }
 
-    public void progenizzazioneNosferatu(String nome) { }
-
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
-        if(esito == RIUSCITO && vivi.isCacciatoreProtetto()) esito = MORTO;
+        if(esito == RIUSCITO && vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto()) esito = MORTO;
         return esito;
     }
 
@@ -235,6 +241,18 @@ public final class Partita
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
+    public void confermaEliminazioneMortiNotte()
+    {
+        String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
+        for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
+        for(String nome : nomi)
+        {
+            Ruolo ruolo = mortiNotte.getRuolo(nome);
+            mortiNotte.eliminaGiocatore(nome);
+            eliminati.aggiungiGiocatore(nome, ruolo);
+        }
+    }
+
     private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
 
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
@@ -245,7 +263,7 @@ public final class Partita
     {
         Ruolo ruolo = getRuoloVivo(nome);
         vivi.eliminaGiocatore(nome);
-        eliminati.aggiungiGiocatore(nome, ruolo);
+        mortiNotte.aggiungiGiocatore(nome, ruolo);
     }
 
     private String getNomeAngeloCustode()

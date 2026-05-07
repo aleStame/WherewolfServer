@@ -123,6 +123,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupoSolitarioPresente() { return getPosizioneLupoSolitario() != NON_TROVATO; }
 
+    public boolean isCacciatorePresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isCacciatore()) posizione = i;
+        return posizione != NON_TROVATO;
+    }
+
     public boolean isCacciatoreProtetto() { return isUltimoLupoBrancoRimasto() || getNumeroLupi() == 1; }
 
     public String getNomeNosferatu() { return getNomeGiocatore(getPosizioneNosferatu()); }

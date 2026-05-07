@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-05-07T09:44:02" hostname="ALESSANDRO" time="0.368">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-05-07T13:56:19" hostname="ALESSANDRO" time="0.155">
   <properties/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
-  <testcase name="testControllaVittoriaRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.028"/>
-  <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.003"/>
+  <testcase name="testControllaVittoriaRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.011"/>
+  <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.007"/>
   <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
-  <testcase name="testSpia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.016"/>
-  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
-  <testcase name="tesDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.003"/>
-  <testcase name="[1] giocatori=[[Raffaele, Nosferatu], [Aurora, Capo branco]], esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.013"/>
-  <testcase name="[2] giocatori=[[Matteo, Guardia], [Marghe, Altra guardia]], esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.005"/>
-  <testcase name="[3] giocatori=[[Giuseppe, Prete], [Salvatore, Peccatore], [Marino, Bocca di rosa]], esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.003"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.099"/>
-  <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.011"/>
+  <testcase name="testSpia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.011"/>
+  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
+  <testcase name="tesDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
+  <testcase name="[1] giocatori=[[Raffaele, Nosferatu], [Aurora, Capo branco]], esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.026"/>
+  <testcase name="[2] giocatori=[[Matteo, Guardia], [Marghe, Altra guardia]], esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.011"/>
+  <testcase name="[3] giocatori=[[Giuseppe, Prete], [Salvatore, Peccatore], [Marino, Bocca di rosa]], esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.014"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
+  <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
