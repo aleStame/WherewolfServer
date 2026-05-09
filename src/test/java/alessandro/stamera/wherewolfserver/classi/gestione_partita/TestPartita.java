@@ -448,6 +448,17 @@ public final class TestPartita
         verificaNonEliminato(nome);
     }
 
+    @Test public void testSuicidioCapoBranco()
+    {
+        String[][] giocatori = new String[][] { { "Marco", "Capo branco" }, { "Luca", "Nosferatu" } };
+        inizializzaPartita(giocatori);
+        attaccoLupi(giocatori[0][1], giocatori[0][0]);
+        partita.progenizzazioneNosferatu(giocatori[0][0]);
+        partita.confermaEliminazioneMortiNotte();
+        verificaEliminati(giocatori[1][0]);
+        verificaNonEliminato(giocatori[0][0]);
+    }
+
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaEliminati(String... nomi) { for(String nome : nomi) verificaEliminazione(nome); }
