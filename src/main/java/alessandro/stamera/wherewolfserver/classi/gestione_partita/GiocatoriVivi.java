@@ -143,9 +143,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneCacciatore()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isCacciatore()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isCacciatore(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isCacciatore(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCacciatore(); }
 
     private int getPosizioneCapoGilda()
     {

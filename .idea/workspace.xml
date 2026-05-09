@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isLupo" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCacciatorePresente">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,14 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02709" summary="VERDE: testNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1778081106122</created>
-      <option name="number" value="02709" />
-      <option name="presentableId" value="LOCAL-02709" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081106122</updated>
     </task>
     <task id="LOCAL-02710" summary="REFACTORING: definizione del metodo verificaStringa">
       <option name="closed" value="true" />
@@ -678,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778333157553</updated>
     </task>
-    <option name="localTasksCounter" value="2758" />
+    <task id="LOCAL-02758" summary="REFACTORING: definizione del metodo isCacciatorePresente">
+      <option name="closed" value="true" />
+      <created>1778333431422</created>
+      <option name="number" value="02758" />
+      <option name="presentableId" value="LOCAL-02758" />
+      <option name="project" value="LOCAL" />
+      <updated>1778333431422</updated>
+    </task>
+    <option name="localTasksCounter" value="2759" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testNomeCapoGilda riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCapoGilda" />
     <MESSAGE value="REFACTORING: definizione del metodo isCapoGilda" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
@@ -718,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isLupo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCacciatorePresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCacciatorePresente" />
   </component>
 </project>
