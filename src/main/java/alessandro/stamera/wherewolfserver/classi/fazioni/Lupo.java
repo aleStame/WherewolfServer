@@ -27,8 +27,10 @@ public class Lupo extends Ruolo
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco esito = super.attaccoLupi(ruolo);
-        if(esito == RIUSCITO && (isRomeo() || isAmato())) esito = FALLITO;
+        if(esito == RIUSCITO && isProtetto()) esito = FALLITO;
         return esito;
     }
+
+    private boolean isProtetto() { return isRomeo() || isAmato(); }
 
 }
