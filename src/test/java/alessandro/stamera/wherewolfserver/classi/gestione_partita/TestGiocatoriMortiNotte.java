@@ -23,10 +23,15 @@ public final class TestGiocatoriMortiNotte
     {
         String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0],giocatore[1]);
-        assertThat(this.giocatori.isLupo(giocatori[0][0])).isFalse();
-        assertThat(this.giocatori.isLupo(giocatori[1][0])).isTrue();
+        assertThat(isLupo(giocatori[0][0])).isFalse();
+        assertThat(isLupo(giocatori[1][0])).isTrue();
     }
 
-    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo)); }
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
+    {
+        giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
+    }
+
+    private boolean isLupo(String nome) { return giocatori.isLupo(nome); }
 
 }

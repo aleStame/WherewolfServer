@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtetto" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02706" summary="RO0SSO: testAttaccoNosferatuMorto non riuscito">
-      <option name="closed" value="true" />
-      <created>1778072439100</created>
-      <option name="number" value="02706" />
-      <option name="presentableId" value="LOCAL-02706" />
-      <option name="project" value="LOCAL" />
-      <updated>1778072439100</updated>
-    </task>
-    <task id="LOCAL-02707" summary="VERDE: testAttaccoNosferatuMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1778077473635</created>
-      <option name="number" value="02707" />
-      <option name="presentableId" value="LOCAL-02707" />
-      <option name="project" value="LOCAL" />
-      <updated>1778077473635</updated>
     </task>
     <task id="LOCAL-02708" summary="ROSSO: testNosferatu non riuscito">
       <option name="closed" value="true" />
@@ -678,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778332355324</updated>
     </task>
-    <option name="localTasksCounter" value="2755" />
+    <task id="LOCAL-02755" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1778332547198</created>
+      <option name="number" value="02755" />
+      <option name="presentableId" value="LOCAL-02755" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332547198</updated>
+    </task>
+    <task id="LOCAL-02756" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1778332849718</created>
+      <option name="number" value="02756" />
+      <option name="presentableId" value="LOCAL-02756" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332849718</updated>
+    </task>
+    <option name="localTasksCounter" value="2757" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testGildataCapoBranco riuscito" />
-    <MESSAGE value="ROSSO: testNomeCapoGilda non riuscito" />
     <MESSAGE value="VERDE: testNomeCapoGilda riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCapoGilda" />
     <MESSAGE value="REFACTORING: definizione del metodo isCapoGilda" />
@@ -718,6 +716,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatoreVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtetto" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiGiocatore" />
   </component>
 </project>
