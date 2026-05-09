@@ -466,7 +466,7 @@ public final class TestGiocatoriVivi
     {
         String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };
         inizializzaGiocatori(giocatori);
-        verificaVero(this.giocatori.isLupo(giocatori[0][0]));
+        verificaVero(this.giocatori.isLupo(giocatori[1][0]));
         verificaFalso(this.giocatori.isLupo(giocatori[0][0]));
     }
 

@@ -143,7 +143,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
 
-    public boolean isLupo(String nome) { return false; }
+    public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
@@ -193,7 +193,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isMistico(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMistico(); }
 
-    private boolean isLupo(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isLupo(); }
+    private boolean isLupo(int posizione) { return isLupo(getNomeGiocatore(posizione)); }
 
     private boolean isCriminale(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCriminale(); }
 
