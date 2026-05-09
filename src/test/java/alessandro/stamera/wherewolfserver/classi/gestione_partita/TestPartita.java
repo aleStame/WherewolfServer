@@ -402,7 +402,7 @@ public final class TestPartita
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", tipoLupo } });
         attaccoLupi(tipoLupo, nomeVittima);
-        partita.progenizzazioneNosferatu(nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
@@ -443,7 +443,7 @@ public final class TestPartita
         String nome = "Marco";
         inizializzaPartita(new String[][] { { nome, "Prete" }, { "Tina", "Nosferatu" } });
         attaccoLupi("Capo branco", nome);
-        partita.progenizzazioneNosferatu(nome);
+        progenizzazioneNosferatu(nome);
         confermaEliminazioneMortiNotte();
         verificaNonEliminato(nome);
     }
@@ -453,11 +453,13 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Marco", "Capo branco" }, { "Luca", "Nosferatu" } };
         inizializzaPartita(giocatori);
         attaccoLupi(giocatori[0][1], giocatori[0][0]);
-        partita.progenizzazioneNosferatu(giocatori[0][0]);
+        progenizzazioneNosferatu(giocatori[0][0]);
         confermaEliminazioneMortiNotte();
         verificaEliminati(giocatori[1][0]);
         verificaNonEliminato(giocatori[0][0]);
     }
+
+    private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
 
     private void confermaEliminazioneMortiNotte() { partita.confermaEliminazioneMortiNotte(); }
 

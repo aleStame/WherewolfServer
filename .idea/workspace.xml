@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCacciatorePresente">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo progenizzazioneNosferatu">
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,30 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02710" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1778081333274</created>
-      <option name="number" value="02710" />
-      <option name="presentableId" value="LOCAL-02710" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081333274</updated>
-    </task>
-    <task id="LOCAL-02711" summary="REFACTORING: definizione del metodo isNosferatu">
-      <option name="closed" value="true" />
-      <created>1778081471735</created>
-      <option name="number" value="02711" />
-      <option name="presentableId" value="LOCAL-02711" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081471735</updated>
-    </task>
-    <task id="LOCAL-02712" summary="REFACTORING: definizione del metodo eliminaGiocatori">
-      <option name="closed" value="true" />
-      <created>1778081888745</created>
-      <option name="number" value="02712" />
-      <option name="presentableId" value="LOCAL-02712" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081888745</updated>
     </task>
     <task id="LOCAL-02713" summary="REFACTORING: definizione del metodo getPosiziolneNosferatu">
       <option name="closed" value="true" />
@@ -680,7 +656,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778333431422</updated>
     </task>
-    <option name="localTasksCounter" value="2759" />
+    <task id="LOCAL-02759" summary="REFACTORING: definizione del metodo isCacciatore">
+      <option name="closed" value="true" />
+      <created>1778333697640</created>
+      <option name="number" value="02759" />
+      <option name="presentableId" value="LOCAL-02759" />
+      <option name="project" value="LOCAL" />
+      <updated>1778333697640</updated>
+    </task>
+    <task id="LOCAL-02760" summary="REFACTORING: definizione del metodo confermaEliminazioneMortiNotte">
+      <option name="closed" value="true" />
+      <created>1778334023366</created>
+      <option name="number" value="02760" />
+      <option name="presentableId" value="LOCAL-02760" />
+      <option name="project" value="LOCAL" />
+      <updated>1778334023366</updated>
+    </task>
+    <task id="LOCAL-02761" summary="REFACTORING: definizione del metodo progenizzazioneNosferatu">
+      <option name="closed" value="true" />
+      <created>1778334246609</created>
+      <option name="number" value="02761" />
+      <option name="presentableId" value="LOCAL-02761" />
+      <option name="project" value="LOCAL" />
+      <updated>1778334246609</updated>
+    </task>
+    <option name="localTasksCounter" value="2762" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,9 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCapoGilda" />
-    <MESSAGE value="REFACTORING: definizione del metodo isCapoGilda" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoContadinoEroe riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoContadino riuscito" />
     <MESSAGE value="ROSSO: testProgenieNosferatu non riuscito" />
@@ -720,6 +717,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo isCacciatorePresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCacciatorePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCacciatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortiNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo progenizzazioneNosferatu" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo progenizzazioneNosferatu" />
   </component>
 </project>
