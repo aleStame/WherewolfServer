@@ -153,16 +153,7 @@ public final class Partita
         switch(mortiNotte.progenizzazioneNosferatu(nome))
         {
             case RIUSCITO -> risorgiGiocatore(nome);
-            case MORTO ->
-            {
-                eliminaGiocatore(vivi.getNomeNosferatu());
-                Ruolo ruolo = mortiNotte.getRuolo(nome);
-                if(ruolo.isLupo())
-                {
-                    mortiNotte.eliminaGiocatore(nome);
-                    vivi.aggiungiGiocatore(nome, ruolo);
-                }
-            }
+            case MORTO -> nosferatuControLupo(nome);
         }
     }
 
@@ -174,6 +165,12 @@ public final class Partita
     {
         EsitoAttacco esito = vivi.gildata(nome);
         if(esito == MORTO) eliminaGiocatore(vivi.getNomeCapoGilda());
+    }
+
+    private void nosferatuControLupo(String nome)
+    {
+        eliminaGiocatore(vivi.getNomeNosferatu());
+        if(mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
 
     private void risorgiGiocatore(String nome)
