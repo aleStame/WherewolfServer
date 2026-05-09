@@ -175,7 +175,7 @@ public final class Partita
 
     private void risorgiGiocatore(String nome)
     {
-        Ruolo ruolo = mortiNotte.getRuolo(nome);
+        Ruolo ruolo = getRuoloMortoNotte(nome);
         mortiNotte.eliminaGiocatore(nome);
         vivi.aggiungiGiocatore(nome, ruolo);
     }
@@ -260,7 +260,7 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        Ruolo ruolo = mortiNotte.getRuolo(nome);
+        Ruolo ruolo = getRuoloMortoNotte(nome);
         mortiNotte.eliminaGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
     }
@@ -287,5 +287,7 @@ public final class Partita
     }
 
     private Ruolo getRuoloVivo(String nome) { return vivi.getRuolo(nome); }
+
+    private Ruolo getRuoloMortoNotte(String nome) { return mortiNotte.getRuolo(nome); }
 
 }
