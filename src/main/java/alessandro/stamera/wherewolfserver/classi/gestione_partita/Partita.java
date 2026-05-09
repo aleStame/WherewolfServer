@@ -176,7 +176,7 @@ public final class Partita
     private void risorgiGiocatore(String nome)
     {
         Ruolo ruolo = getRuoloMortoNotte(nome);
-        mortiNotte.eliminaGiocatore(nome);
+        eliminaGiocatoreMortoNotte(nome);
         vivi.aggiungiGiocatore(nome, ruolo);
     }
 
@@ -261,9 +261,11 @@ public final class Partita
     private void confermaEliminazioneMortoNotte(String nome)
     {
         Ruolo ruolo = getRuoloMortoNotte(nome);
-        mortiNotte.eliminaGiocatore(nome);
+        eliminaGiocatoreMortoNotte(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
     }
+
+    private void eliminaGiocatoreMortoNotte(String nome) { mortiNotte.eliminaGiocatore(nome); }
 
     private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
 
