@@ -459,6 +459,18 @@ public final class TestPartita
         verificaNonEliminato(giocatori[0][0]);
     }
 
+    @Test public void testBloccoAttaccoPazzo()
+    {
+        String tipoLupo = "Lupo reietto", nomePazzo = "Angel", nomeVittima = "Xander";
+        inizializzaPartita(new String[][] { { "Spike", "Lupo reietto" }, { nomePazzo, "Pazzo" }, { "Xander", "Giullare" } });
+        attaccoLupi(tipoLupo, nomePazzo);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomePazzo);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima))
+            .withMessage("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
+        verificaNonEliminato(nomeVittima);
+    }
+
     private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
 
     private void confermaEliminazioneMortiNotte() { partita.confermaEliminazioneMortiNotte(); }

@@ -26,6 +26,8 @@ public final class Partita
 
     private Aura ultimoControllo;
 
+    private boolean pazzoUcciso;
+
     public Partita(String[][] giocatori)
     {
         vivi = new GiocatoriVivi();
@@ -35,6 +37,7 @@ public final class Partita
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
+        setPazzoUcciso(false);
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -78,6 +81,7 @@ public final class Partita
 
     public void attaccoLupi(String nomeLupo, String nome)
     {
+        if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
@@ -279,8 +283,11 @@ public final class Partita
     {
         Ruolo ruolo = getRuoloVivo(nome);
         vivi.eliminaGiocatore(nome);
+        if(ruolo.isPazzo()) setPazzoUcciso(true);
         mortiNotte.aggiungiGiocatore(nome, ruolo);
     }
+
+    private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }
 
     private String getNomeAngeloCustode()
     {
