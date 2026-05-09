@@ -471,6 +471,16 @@ public final class TestPartita
         verificaNonEliminato(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario" })
+    public void attaccoAltriLupi(String tipoLupo)
+    {
+        String lupoAttaccante = "Capo branco", nomeVittima = "Mattia";
+        inizializzaPartita(new String[][] { { "Andrea", lupoAttaccante }, { nomeVittima, tipoLupo } });
+        attaccoLupi(lupoAttaccante, nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaNonEliminato(nomeVittima);
+    }
+
     private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
 
     private void confermaEliminazioneMortiNotte() { partita.confermaEliminazioneMortiNotte(); }
