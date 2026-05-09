@@ -152,12 +152,7 @@ public final class Partita
     {
         switch(mortiNotte.progenizzazioneNosferatu(nome))
         {
-            case RIUSCITO ->
-            {
-                Ruolo ruolo = mortiNotte.getRuolo(nome);
-                mortiNotte.eliminaGiocatore(nome);
-                vivi.aggiungiGiocatore(nome, ruolo);
-            }
+            case RIUSCITO -> risorgiGiocatore(nome);
             case MORTO ->
             {
                 eliminaGiocatore(vivi.getNomeNosferatu());
@@ -179,6 +174,13 @@ public final class Partita
     {
         EsitoAttacco esito = vivi.gildata(nome);
         if(esito == MORTO) eliminaGiocatore(vivi.getNomeCapoGilda());
+    }
+
+    private void risorgiGiocatore(String nome)
+    {
+        Ruolo ruolo = mortiNotte.getRuolo(nome);
+        mortiNotte.eliminaGiocatore(nome);
+        vivi.aggiungiGiocatore(nome, ruolo);
     }
 
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)

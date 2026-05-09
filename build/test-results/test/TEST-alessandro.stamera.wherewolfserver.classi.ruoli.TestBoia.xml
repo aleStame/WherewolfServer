@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-09T09:24:33" hostname="ALESSANDRO" time="0.179">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-09T09:43:55" hostname="ALESSANDRO" time="0.153">
   <properties/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.004"/>
   <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.002"/>
-  <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.002"/>
+  <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.005"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
   <testcase name="testTemplare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.005"/>
-  <testcase name="testInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.004"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5fef2aac, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.004"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7f973a14, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@76130a29, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.007"/>
-  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@124d02b2, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.0"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
+  <testcase name="testInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@118dcbbd, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7d979d34, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.043"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@350ec690, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.004"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@49cb1baf, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.01"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

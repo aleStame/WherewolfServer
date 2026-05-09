@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testSuicidioCapoBranco non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testSuicidioCapoBranco riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -476,14 +476,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-02694" summary="VERDE DIRETTO: testCacciatoreNonProtetto riuscito">
-      <option name="closed" value="true" />
-      <created>1778060077771</created>
-      <option name="number" value="02694" />
-      <option name="presentableId" value="LOCAL-02694" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060077771</updated>
-    </task>
     <task id="LOCAL-02695" summary="REFACTORING: definizione del metodo isCacciatoreProtetto">
       <option name="closed" value="true" />
       <created>1778060241824</created>
@@ -868,7 +860,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778317658231</updated>
     </task>
-    <option name="localTasksCounter" value="2743" />
+    <task id="LOCAL-02743" summary="VERDE: testSuicidioCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1778319550407</created>
+      <option name="number" value="02743" />
+      <option name="presentableId" value="LOCAL-02743" />
+      <option name="project" value="LOCAL" />
+      <updated>1778319550407</updated>
+    </task>
+    <option name="localTasksCounter" value="2744" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -883,7 +883,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNumeroSenzaFazione non riuscito" />
     <MESSAGE value="VERDE: testNumeroSenzaFazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isSenzaFazione" />
     <MESSAGE value="ROSSO: testSconfitta non riuscito" />
@@ -908,6 +907,7 @@
     <MESSAGE value="ROSSO: testAttaccoNosferatuRiuscito non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatuRiuscito riuscito" />
     <MESSAGE value="ROSSO: testSuicidioCapoBranco non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSuicidioCapoBranco non riuscito" />
+    <MESSAGE value="VERDE: testSuicidioCapoBranco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSuicidioCapoBranco riuscito" />
   </component>
 </project>
