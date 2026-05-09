@@ -158,7 +158,16 @@ public final class Partita
                 mortiNotte.eliminaGiocatore(nome);
                 vivi.aggiungiGiocatore(nome, ruolo);
             }
-            case MORTO -> eliminaGiocatore(vivi.getNomeNosferatu());
+            case MORTO ->
+            {
+                eliminaGiocatore(vivi.getNomeNosferatu());
+                Ruolo ruolo = mortiNotte.getRuolo(nome);
+                if(ruolo.isLupo())
+                {
+                    mortiNotte.eliminaGiocatore(nome);
+                    vivi.aggiungiGiocatore(nome, ruolo);
+                }
+            }
         }
     }
 
