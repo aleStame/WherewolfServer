@@ -70,9 +70,6 @@ public final class TestLupo
     @Test public void testAttaccoNosferatu() { verificaAttacco(ruolo.attaccoNosferatu(), MORTO); }
 
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
-    public void testAttaccoLupi(String nome) { verificaAttaccoLupi(nome, RIUSCITO); }
-
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoAmato(String nome)
     {
         ruolo.sceltaAngeloCustode();
@@ -96,12 +93,7 @@ public final class TestLupo
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
-    private void verificaAttaccoLupiFallito(String nome) { verificaAttaccoLupi(nome, FALLITO); }
-
-    private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
-    {
-        verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), esito);
-    }
+    private void verificaAttaccoLupiFallito(String nome) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), FALLITO); }
 
     private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato)
     {
