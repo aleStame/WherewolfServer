@@ -462,6 +462,14 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeCapoGilda(), nome);
     }
 
+    @Test public void testLupo()
+    {
+        String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };
+        inizializzaGiocatori(giocatori);
+        verificaVero(this.giocatori.isLupo(giocatori[0][0]));
+        verificaFalso(this.giocatori.isLupo(giocatori[0][0]));
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
