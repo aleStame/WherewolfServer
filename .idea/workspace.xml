@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtetto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,38 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02702" summary="VERDE: testVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1778069581404</created>
-      <option name="number" value="02702" />
-      <option name="presentableId" value="LOCAL-02702" />
-      <option name="project" value="LOCAL" />
-      <updated>1778069581404</updated>
-    </task>
-    <task id="LOCAL-02703" summary="REFACTORING: definizione del metodo getMorto">
-      <option name="closed" value="true" />
-      <created>1778069775127</created>
-      <option name="number" value="02703" />
-      <option name="presentableId" value="LOCAL-02703" />
-      <option name="project" value="LOCAL" />
-      <updated>1778069775127</updated>
-    </task>
-    <task id="LOCAL-02704" summary="REFACTORING: definizione del metodo verificaMorto">
-      <option name="closed" value="true" />
-      <created>1778070301124</created>
-      <option name="number" value="02704" />
-      <option name="presentableId" value="LOCAL-02704" />
-      <option name="project" value="LOCAL" />
-      <updated>1778070301124</updated>
-    </task>
-    <task id="LOCAL-02705" summary="REFACTORING: definizione del metodo verificaMorto">
-      <option name="closed" value="true" />
-      <created>1778071466838</created>
-      <option name="number" value="02705" />
-      <option name="presentableId" value="LOCAL-02705" />
-      <option name="project" value="LOCAL" />
-      <updated>1778071466839</updated>
     </task>
     <task id="LOCAL-02706" summary="RO0SSO: testAttaccoNosferatuMorto non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +646,39 @@
       <option name="project" value="LOCAL" />
       <updated>1778331873806</updated>
     </task>
-    <option name="localTasksCounter" value="2751" />
+    <task id="LOCAL-02751" summary="REFACTORING: definizione del metodo getRuoloMortoNotte">
+      <option name="closed" value="true" />
+      <created>1778332066502</created>
+      <option name="number" value="02751" />
+      <option name="presentableId" value="LOCAL-02751" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332066502</updated>
+    </task>
+    <task id="LOCAL-02752" summary="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte">
+      <option name="closed" value="true" />
+      <created>1778332136329</created>
+      <option name="number" value="02752" />
+      <option name="presentableId" value="LOCAL-02752" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332136329</updated>
+    </task>
+    <task id="LOCAL-02753" summary="REFACTORING: definizione del metodo aggiungiGiocatoreVivo">
+      <option name="closed" value="true" />
+      <created>1778332272563</created>
+      <option name="number" value="02753" />
+      <option name="presentableId" value="LOCAL-02753" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332272563</updated>
+    </task>
+    <task id="LOCAL-02754" summary="REFACTORING: definizione del metodo isProtetto">
+      <option name="closed" value="true" />
+      <created>1778332355324</created>
+      <option name="number" value="02754" />
+      <option name="presentableId" value="LOCAL-02754" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332355324</updated>
+    </task>
+    <option name="localTasksCounter" value="2755" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,10 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testGildata non riuscito" />
-    <MESSAGE value="VERDE: testGildata riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
-    <MESSAGE value="ROSSO: testGildataCapoBranco non riuscito" />
     <MESSAGE value="VERDE: testGildataCapoBranco riuscito" />
     <MESSAGE value="ROSSO: testNomeCapoGilda non riuscito" />
     <MESSAGE value="VERDE: testNomeCapoGilda riuscito" />
@@ -720,6 +714,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo nosferatuControLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezioneUltimoLupoAttiva" />
     <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuoloMortoNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatoreVivo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtetto" />
   </component>
 </project>
