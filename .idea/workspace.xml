@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo risorgiGiocatore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testLupo riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02696" summary="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto">
-      <option name="closed" value="true" />
-      <created>1778060492505</created>
-      <option name="number" value="02696" />
-      <option name="presentableId" value="LOCAL-02696" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060492505</updated>
-    </task>
-    <task id="LOCAL-02697" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1778060810920</created>
-      <option name="number" value="02697" />
-      <option name="presentableId" value="LOCAL-02697" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060810920</updated>
     </task>
     <task id="LOCAL-02698" summary="REFACTORING: semplificazione del codice">
       <option name="closed" value="true" />
@@ -682,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778319887462</updated>
     </task>
-    <option name="localTasksCounter" value="2745" />
+    <task id="LOCAL-02745" summary="ROSSO: testLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1778330418573</created>
+      <option name="number" value="02745" />
+      <option name="presentableId" value="LOCAL-02745" />
+      <option name="project" value="LOCAL" />
+      <updated>1778330418573</updated>
+    </task>
+    <task id="LOCAL-02746" summary="VERDE: testLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1778330678331</created>
+      <option name="number" value="02746" />
+      <option name="presentableId" value="LOCAL-02746" />
+      <option name="project" value="LOCAL" />
+      <updated>1778330678331</updated>
+    </task>
+    <option name="localTasksCounter" value="2747" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isSenzaFazione" />
-    <MESSAGE value="ROSSO: testSconfitta non riuscito" />
     <MESSAGE value="VERDE: testSconfitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isNessunLupoVivo" />
     <MESSAGE value="REFACTORING: parametrizzazione dei test di controllo dell'esito della partita" />
@@ -722,6 +716,8 @@
     <MESSAGE value="ROSSO: testSuicidioCapoBranco non riuscito" />
     <MESSAGE value="VERDE: testSuicidioCapoBranco riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo risorgiGiocatore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo risorgiGiocatore" />
+    <MESSAGE value="ROSSO: testLupo non riuscito" />
+    <MESSAGE value="VERDE: testLupo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testLupo riuscito" />
   </component>
 </project>
