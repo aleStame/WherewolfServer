@@ -255,12 +255,14 @@ public final class Partita
     {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
         for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
-        for(String nome : nomi)
-        {
-            Ruolo ruolo = mortiNotte.getRuolo(nome);
-            mortiNotte.eliminaGiocatore(nome);
-            eliminati.aggiungiGiocatore(nome, ruolo);
-        }
+        for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
+    }
+
+    private void confermaEliminazioneMortoNotte(String nome)
+    {
+        Ruolo ruolo = mortiNotte.getRuolo(nome);
+        mortiNotte.eliminaGiocatore(nome);
+        eliminati.aggiungiGiocatore(nome, ruolo);
     }
 
     private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
