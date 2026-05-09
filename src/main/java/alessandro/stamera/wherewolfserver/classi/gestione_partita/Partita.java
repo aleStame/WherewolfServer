@@ -183,9 +183,11 @@ public final class Partita
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
-        if(esito == RIUSCITO && vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto()) esito = MORTO;
+        if(esito == RIUSCITO && isProtezineUltimoLupoAttiva()) esito = MORTO;
         return esito;
     }
+
+    private boolean isProtezineUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto(); }
 
     private void doppiaEliminazione(String nomeLupo, String nome)
     {
