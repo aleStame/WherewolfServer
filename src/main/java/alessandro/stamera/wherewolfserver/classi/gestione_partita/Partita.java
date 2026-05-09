@@ -37,7 +37,7 @@ public final class Partita
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
-        pazzoUcciso = false;
+        setPazzoUcciso(false);
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -85,11 +85,7 @@ public final class Partita
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
-            case RIUSCITO ->
-            {
-                eliminaGiocatore(nome);
-                if(getRuoloMortoNotte(nome).isPazzo()) pazzoUcciso = true;
-            }
+            case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
         }
     }
@@ -287,8 +283,11 @@ public final class Partita
     {
         Ruolo ruolo = getRuoloVivo(nome);
         vivi.eliminaGiocatore(nome);
+        if(ruolo.isPazzo()) setPazzoUcciso(true);
         mortiNotte.aggiungiGiocatore(nome, ruolo);
     }
+
+    private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }
 
     private String getNomeAngeloCustode()
     {
