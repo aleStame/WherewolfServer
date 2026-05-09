@@ -16,16 +16,17 @@ public final class TestGiocatoriMortiNotte
     @Test public void testProgenieNosferatu()
     {
         String nome = "Marco";
-        giocatori.aggiungiGiocatore(nome, FACTORY.getRuolo("Prete"));
+        aggiungiGiocatore(nome, "Prete");
         assertThat(giocatori.progenizzazioneNosferatu(nome)).isEqualTo(RIUSCITO);
     }
     @Test public void testLupo()
     {
         String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };
-        for(String[] giocatore : giocatori) this.giocatori.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0],giocatore[1]);
         assertThat(this.giocatori.isLupo(giocatori[0][0])).isFalse();
         assertThat(this.giocatori.isLupo(giocatori[1][0])).isTrue();
     }
 
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo)); }
 
 }
