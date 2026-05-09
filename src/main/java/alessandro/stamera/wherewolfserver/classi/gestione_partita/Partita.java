@@ -31,7 +31,7 @@ public final class Partita
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
         FACTORY.annullaSegnalazioni();
-        for(String[] giocatore : giocatori) vivi.aggiungiGiocatore(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        for(String[] giocatore : giocatori) aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1]));
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
@@ -177,7 +177,7 @@ public final class Partita
     {
         Ruolo ruolo = getRuoloMortoNotte(nome);
         eliminaGiocatoreMortoNotte(nome);
-        vivi.aggiungiGiocatore(nome, ruolo);
+        aggiungiGiocatoreVivo(nome, ruolo);
     }
 
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
@@ -196,7 +196,7 @@ public final class Partita
         for(int i = 0; i < getNumeroGiocatoriVivi() && !fatto; i++)
         {
             String x = vivi.getNomeGiocatore(i);
-            if(vivi.getRuolo(x).getNome().equals(nomeLupo))
+            if(getRuoloVivo(x).getNome().equals(nomeLupo))
             {
                 eliminaGiocatore(x);
                 fatto = true;
@@ -236,8 +236,10 @@ public final class Partita
     {
         Ruolo ruolo = ballottaggio.getRuolo(nome);
         ballottaggio.eliminaGiocatore(nome);
-        vivi.aggiungiGiocatore(nome, ruolo);
+        aggiungiGiocatoreVivo(nome, ruolo);
     }
+
+    private void aggiungiGiocatoreVivo(String nome, Ruolo ruolo) { vivi.aggiungiGiocatore(nome, ruolo); }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
