@@ -4,190 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isSenzaFazione">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.fazioni.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.fazioni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.gestione_partita.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.gestione_partita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestUtenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestUtenti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GiocatoriVivi.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GiocatoriVivi.class.uniqueId1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo progenizzazioneNosferatu">
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,37 +76,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
-    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
-    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
-    "Gradle.TestLadra.executor": "Run",
-    "Gradle.TestLupo.testGildata.executor": "Run",
-    "Gradle.TestProtezioni.executor": "Run",
-    "Gradle.TestTratti.executor": "Run",
-    "Gradle.TestUtente.executor": "Run",
-    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
-    "Gradle.wherewolf.server.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/vittoriaCapoBranco",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/attaccoNosferatu&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -470,366 +288,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-02668" summary="VERDE: testProtezioneNonna riuscito">
-      <option name="closed" value="true" />
-      <created>1777991280552</created>
-      <option name="number" value="02668" />
-      <option name="presentableId" value="LOCAL-02668" />
-      <option name="project" value="LOCAL" />
-      <updated>1777991280552</updated>
-    </task>
-    <task id="LOCAL-02669" summary="ROSSO: testMorteLupoSolitario non riuscito">
-      <option name="closed" value="true" />
-      <created>1777991598433</created>
-      <option name="number" value="02669" />
-      <option name="presentableId" value="LOCAL-02669" />
-      <option name="project" value="LOCAL" />
-      <updated>1777991598433</updated>
-    </task>
-    <task id="LOCAL-02670" summary="VERDE: testMorteLupoSolitario riuscito">
-      <option name="closed" value="true" />
-      <created>1777991777174</created>
-      <option name="number" value="02670" />
-      <option name="presentableId" value="LOCAL-02670" />
-      <option name="project" value="LOCAL" />
-      <updated>1777991777174</updated>
-    </task>
-    <task id="LOCAL-02671" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1777992031943</created>
-      <option name="number" value="02671" />
-      <option name="presentableId" value="LOCAL-02671" />
-      <option name="project" value="LOCAL" />
-      <updated>1777992031943</updated>
-    </task>
-    <task id="LOCAL-02672" summary="ROSSO: testAttaccoLupoSolitarioCacciatore non riuscito">
-      <option name="closed" value="true" />
-      <created>1777992508847</created>
-      <option name="number" value="02672" />
-      <option name="presentableId" value="LOCAL-02672" />
-      <option name="project" value="LOCAL" />
-      <updated>1777992508847</updated>
-    </task>
-    <task id="LOCAL-02673" summary="VERDE: testAttaccoLupoSolitarioCacciatore riuscito">
-      <option name="closed" value="true" />
-      <created>1777992791921</created>
-      <option name="number" value="02673" />
-      <option name="presentableId" value="LOCAL-02673" />
-      <option name="project" value="LOCAL" />
-      <updated>1777992791921</updated>
-    </task>
-    <task id="LOCAL-02674" summary="REFACTORING: definizione del metodo doppiaEliminazione">
-      <option name="closed" value="true" />
-      <created>1777992980621</created>
-      <option name="number" value="02674" />
-      <option name="presentableId" value="LOCAL-02674" />
-      <option name="project" value="LOCAL" />
-      <updated>1777992980621</updated>
-    </task>
-    <task id="LOCAL-02675" summary="ROSSO: testLupoSolitarioAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1777993497741</created>
-      <option name="number" value="02675" />
-      <option name="presentableId" value="LOCAL-02675" />
-      <option name="project" value="LOCAL" />
-      <updated>1777993497741</updated>
-    </task>
-    <task id="LOCAL-02676" summary="VERDE: testLupoSolitarioAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1777993693920</created>
-      <option name="number" value="02676" />
-      <option name="presentableId" value="LOCAL-02676" />
-      <option name="project" value="LOCAL" />
-      <updated>1777993693920</updated>
-    </task>
-    <task id="LOCAL-02677" summary="ROSSO: testLupoSolitarioPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1777994098191</created>
-      <option name="number" value="02677" />
-      <option name="presentableId" value="LOCAL-02677" />
-      <option name="project" value="LOCAL" />
-      <updated>1777994098191</updated>
-    </task>
-    <task id="LOCAL-02678" summary="VERDE: testLupoSolitarioPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1777994428747</created>
-      <option name="number" value="02678" />
-      <option name="presentableId" value="LOCAL-02678" />
-      <option name="project" value="LOCAL" />
-      <updated>1777994428747</updated>
-    </task>
-    <task id="LOCAL-02679" summary="REFACTORING: definizione del metodo getPosizioneLupoSolitario">
-      <option name="closed" value="true" />
-      <created>1777994730098</created>
-      <option name="number" value="02679" />
-      <option name="presentableId" value="LOCAL-02679" />
-      <option name="project" value="LOCAL" />
-      <updated>1777994730098</updated>
-    </task>
-    <task id="LOCAL-02680" summary="REFACTORING: definizione del metodo isLupoSolitario">
-      <option name="closed" value="true" />
-      <created>1777994892111</created>
-      <option name="number" value="02680" />
-      <option name="presentableId" value="LOCAL-02680" />
-      <option name="project" value="LOCAL" />
-      <updated>1777994892111</updated>
-    </task>
-    <task id="LOCAL-02681" summary="VERDE DIRETTO: testAttaccoUltimoLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1777995562734</created>
-      <option name="number" value="02681" />
-      <option name="presentableId" value="LOCAL-02681" />
-      <option name="project" value="LOCAL" />
-      <updated>1777995562734</updated>
-    </task>
-    <task id="LOCAL-02682" summary="VERDE DIRETTO: testAttaccoUltimoLupoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1777996220178</created>
-      <option name="number" value="02682" />
-      <option name="presentableId" value="LOCAL-02682" />
-      <option name="project" value="LOCAL" />
-      <updated>1777996220178</updated>
-    </task>
-    <task id="LOCAL-02683" summary="ROSSO: testAttaccoNormaleCacciatore non riuscito">
-      <option name="closed" value="true" />
-      <created>1777998265340</created>
-      <option name="number" value="02683" />
-      <option name="presentableId" value="LOCAL-02683" />
-      <option name="project" value="LOCAL" />
-      <updated>1777998265340</updated>
-    </task>
-    <task id="LOCAL-02684" summary="VERDE: testAttaccoNormaleCacciatore riuscito">
-      <option name="closed" value="true" />
-      <created>1778001970566</created>
-      <option name="number" value="02684" />
-      <option name="presentableId" value="LOCAL-02684" />
-      <option name="project" value="LOCAL" />
-      <updated>1778001970566</updated>
-    </task>
-    <task id="LOCAL-02685" summary="REFACTORING: definizione del metodo attaccoLupi">
-      <option name="closed" value="true" />
-      <created>1778057424652</created>
-      <option name="number" value="02685" />
-      <option name="presentableId" value="LOCAL-02685" />
-      <option name="project" value="LOCAL" />
-      <updated>1778057424653</updated>
-    </task>
-    <task id="LOCAL-02686" summary="REFACTORING: definizione del metodo isUltimoLupoRimasto">
-      <option name="closed" value="true" />
-      <created>1778057585304</created>
-      <option name="number" value="02686" />
-      <option name="presentableId" value="LOCAL-02686" />
-      <option name="project" value="LOCAL" />
-      <updated>1778057585305</updated>
-    </task>
-    <task id="LOCAL-02687" summary="REFACTORING: definizione del metodo isUltimoLupoTranneSolitario">
-      <option name="closed" value="true" />
-      <created>1778057806044</created>
-      <option name="number" value="02687" />
-      <option name="presentableId" value="LOCAL-02687" />
-      <option name="project" value="LOCAL" />
-      <updated>1778057806044</updated>
-    </task>
-    <task id="LOCAL-02688" summary="ROSSO: testCacciatoreProtettoLupoSolitario non riuscito">
-      <option name="closed" value="true" />
-      <created>1778058498308</created>
-      <option name="number" value="02688" />
-      <option name="presentableId" value="LOCAL-02688" />
-      <option name="project" value="LOCAL" />
-      <updated>1778058498308</updated>
-    </task>
-    <task id="LOCAL-02689" summary="VERDE: testCacciatoreProtettoLupoSolitario riuscito">
-      <option name="closed" value="true" />
-      <created>1778058671195</created>
-      <option name="number" value="02689" />
-      <option name="presentableId" value="LOCAL-02689" />
-      <option name="project" value="LOCAL" />
-      <updated>1778058671196</updated>
-    </task>
-    <task id="LOCAL-02690" summary="ROSSO: testCacciatoreProtettoUnLupo non riuscito">
-      <option name="closed" value="true" />
-      <created>1778058825298</created>
-      <option name="number" value="02690" />
-      <option name="presentableId" value="LOCAL-02690" />
-      <option name="project" value="LOCAL" />
-      <updated>1778058825298</updated>
-    </task>
-    <task id="LOCAL-02691" summary="VERDE: testCacciatoreProtettoUnLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1778059119183</created>
-      <option name="number" value="02691" />
-      <option name="presentableId" value="LOCAL-02691" />
-      <option name="project" value="LOCAL" />
-      <updated>1778059119183</updated>
-    </task>
-    <task id="LOCAL-02692" summary="ROSSO: testCacciatoreUltimoLupoBranco non riuscito">
-      <option name="closed" value="true" />
-      <created>1778059315953</created>
-      <option name="number" value="02692" />
-      <option name="presentableId" value="LOCAL-02692" />
-      <option name="project" value="LOCAL" />
-      <updated>1778059315953</updated>
-    </task>
-    <task id="LOCAL-02693" summary="VERDE: testCacciatoreUltimoLupoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1778059709678</created>
-      <option name="number" value="02693" />
-      <option name="presentableId" value="LOCAL-02693" />
-      <option name="project" value="LOCAL" />
-      <updated>1778059709678</updated>
-    </task>
-    <task id="LOCAL-02694" summary="VERDE DIRETTO: testCacciatoreNonProtetto riuscito">
-      <option name="closed" value="true" />
-      <created>1778060077771</created>
-      <option name="number" value="02694" />
-      <option name="presentableId" value="LOCAL-02694" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060077771</updated>
-    </task>
-    <task id="LOCAL-02695" summary="REFACTORING: definizione del metodo isCacciatoreProtetto">
-      <option name="closed" value="true" />
-      <created>1778060241824</created>
-      <option name="number" value="02695" />
-      <option name="presentableId" value="LOCAL-02695" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060241824</updated>
-    </task>
-    <task id="LOCAL-02696" summary="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto">
-      <option name="closed" value="true" />
-      <created>1778060492505</created>
-      <option name="number" value="02696" />
-      <option name="presentableId" value="LOCAL-02696" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060492505</updated>
-    </task>
-    <task id="LOCAL-02697" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1778060810920</created>
-      <option name="number" value="02697" />
-      <option name="presentableId" value="LOCAL-02697" />
-      <option name="project" value="LOCAL" />
-      <updated>1778060810920</updated>
-    </task>
-    <task id="LOCAL-02698" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1778061240769</created>
-      <option name="number" value="02698" />
-      <option name="presentableId" value="LOCAL-02698" />
-      <option name="project" value="LOCAL" />
-      <updated>1778061240769</updated>
-    </task>
-    <task id="LOCAL-02699" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1778068591655</created>
-      <option name="number" value="02699" />
-      <option name="presentableId" value="LOCAL-02699" />
-      <option name="project" value="LOCAL" />
-      <updated>1778068591656</updated>
-    </task>
-    <task id="LOCAL-02700" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1778068859115</created>
-      <option name="number" value="02700" />
-      <option name="presentableId" value="LOCAL-02700" />
-      <option name="project" value="LOCAL" />
-      <updated>1778068859115</updated>
-    </task>
-    <task id="LOCAL-02701" summary="ROSSO: testVampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1778069391209</created>
-      <option name="number" value="02701" />
-      <option name="presentableId" value="LOCAL-02701" />
-      <option name="project" value="LOCAL" />
-      <updated>1778069391209</updated>
-    </task>
-    <task id="LOCAL-02702" summary="VERDE: testVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1778069581404</created>
-      <option name="number" value="02702" />
-      <option name="presentableId" value="LOCAL-02702" />
-      <option name="project" value="LOCAL" />
-      <updated>1778069581404</updated>
-    </task>
-    <task id="LOCAL-02703" summary="REFACTORING: definizione del metodo getMorto">
-      <option name="closed" value="true" />
-      <created>1778069775127</created>
-      <option name="number" value="02703" />
-      <option name="presentableId" value="LOCAL-02703" />
-      <option name="project" value="LOCAL" />
-      <updated>1778069775127</updated>
-    </task>
-    <task id="LOCAL-02704" summary="REFACTORING: definizione del metodo verificaMorto">
-      <option name="closed" value="true" />
-      <created>1778070301124</created>
-      <option name="number" value="02704" />
-      <option name="presentableId" value="LOCAL-02704" />
-      <option name="project" value="LOCAL" />
-      <updated>1778070301124</updated>
-    </task>
-    <task id="LOCAL-02705" summary="REFACTORING: definizione del metodo verificaMorto">
-      <option name="closed" value="true" />
-      <created>1778071466838</created>
-      <option name="number" value="02705" />
-      <option name="presentableId" value="LOCAL-02705" />
-      <option name="project" value="LOCAL" />
-      <updated>1778071466839</updated>
-    </task>
-    <task id="LOCAL-02706" summary="RO0SSO: testAttaccoNosferatuMorto non riuscito">
-      <option name="closed" value="true" />
-      <created>1778072439100</created>
-      <option name="number" value="02706" />
-      <option name="presentableId" value="LOCAL-02706" />
-      <option name="project" value="LOCAL" />
-      <updated>1778072439100</updated>
-    </task>
-    <task id="LOCAL-02707" summary="VERDE: testAttaccoNosferatuMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1778077473635</created>
-      <option name="number" value="02707" />
-      <option name="presentableId" value="LOCAL-02707" />
-      <option name="project" value="LOCAL" />
-      <updated>1778077473635</updated>
-    </task>
-    <task id="LOCAL-02708" summary="ROSSO: testNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1778080640212</created>
-      <option name="number" value="02708" />
-      <option name="presentableId" value="LOCAL-02708" />
-      <option name="project" value="LOCAL" />
-      <updated>1778080640212</updated>
-    </task>
-    <task id="LOCAL-02709" summary="VERDE: testNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1778081106122</created>
-      <option name="number" value="02709" />
-      <option name="presentableId" value="LOCAL-02709" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081106122</updated>
-    </task>
-    <task id="LOCAL-02710" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1778081333274</created>
-      <option name="number" value="02710" />
-      <option name="presentableId" value="LOCAL-02710" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081333274</updated>
-    </task>
-    <task id="LOCAL-02711" summary="REFACTORING: definizione del metodo isNosferatu">
-      <option name="closed" value="true" />
-      <created>1778081471735</created>
-      <option name="number" value="02711" />
-      <option name="presentableId" value="LOCAL-02711" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081471735</updated>
-    </task>
-    <task id="LOCAL-02712" summary="REFACTORING: definizione del metodo eliminaGiocatori">
-      <option name="closed" value="true" />
-      <created>1778081888745</created>
-      <option name="number" value="02712" />
-      <option name="presentableId" value="LOCAL-02712" />
-      <option name="project" value="LOCAL" />
-      <updated>1778081888745</updated>
-    </task>
     <task id="LOCAL-02713" summary="REFACTORING: definizione del metodo getPosiziolneNosferatu">
       <option name="closed" value="true" />
       <created>1778082051555</created>
@@ -862,7 +320,367 @@
       <option name="project" value="LOCAL" />
       <updated>1778084543550</updated>
     </task>
-    <option name="localTasksCounter" value="2717" />
+    <task id="LOCAL-02717" summary="ROSSO: testSconfitta non riuscito">
+      <option name="closed" value="true" />
+      <created>1778097294215</created>
+      <option name="number" value="02717" />
+      <option name="presentableId" value="LOCAL-02717" />
+      <option name="project" value="LOCAL" />
+      <updated>1778097294215</updated>
+    </task>
+    <task id="LOCAL-02718" summary="VERDE: testSconfitta riuscito">
+      <option name="closed" value="true" />
+      <created>1778097476173</created>
+      <option name="number" value="02718" />
+      <option name="presentableId" value="LOCAL-02718" />
+      <option name="project" value="LOCAL" />
+      <updated>1778097476173</updated>
+    </task>
+    <task id="LOCAL-02719" summary="REFACTORING: definizione del metodo isNessunLupoVivo">
+      <option name="closed" value="true" />
+      <created>1778097624859</created>
+      <option name="number" value="02719" />
+      <option name="presentableId" value="LOCAL-02719" />
+      <option name="project" value="LOCAL" />
+      <updated>1778097624859</updated>
+    </task>
+    <task id="LOCAL-02720" summary="REFACTORING: parametrizzazione dei test di controllo dell'esito della partita">
+      <option name="closed" value="true" />
+      <created>1778097933884</created>
+      <option name="number" value="02720" />
+      <option name="presentableId" value="LOCAL-02720" />
+      <option name="project" value="LOCAL" />
+      <updated>1778097933885</updated>
+    </task>
+    <task id="LOCAL-02721" summary="VERDE DIRETTO: testEsitoPartita riuscito">
+      <option name="closed" value="true" />
+      <created>1778098330549</created>
+      <option name="number" value="02721" />
+      <option name="presentableId" value="LOCAL-02721" />
+      <option name="project" value="LOCAL" />
+      <updated>1778098330549</updated>
+    </task>
+    <task id="LOCAL-02722" summary="VERDE DIRETTO: testEsitoPartita riuscito">
+      <option name="closed" value="true" />
+      <created>1778099270828</created>
+      <option name="number" value="02722" />
+      <option name="presentableId" value="LOCAL-02722" />
+      <option name="project" value="LOCAL" />
+      <updated>1778099270828</updated>
+    </task>
+    <task id="LOCAL-02723" summary="ROSSO: testGildata non riuscito">
+      <option name="closed" value="true" />
+      <created>1778099821230</created>
+      <option name="number" value="02723" />
+      <option name="presentableId" value="LOCAL-02723" />
+      <option name="project" value="LOCAL" />
+      <updated>1778099821230</updated>
+    </task>
+    <task id="LOCAL-02724" summary="VERDE: testGildata riuscito">
+      <option name="closed" value="true" />
+      <created>1778100151158</created>
+      <option name="number" value="02724" />
+      <option name="presentableId" value="LOCAL-02724" />
+      <option name="project" value="LOCAL" />
+      <updated>1778100151158</updated>
+    </task>
+    <task id="LOCAL-02725" summary="ROSSO: testGildataCapoBranco non riuscito">
+      <option name="closed" value="true" />
+      <created>1778100575884</created>
+      <option name="number" value="02725" />
+      <option name="presentableId" value="LOCAL-02725" />
+      <option name="project" value="LOCAL" />
+      <updated>1778100575884</updated>
+    </task>
+    <task id="LOCAL-02726" summary="VERDE: testGildataCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1778100807888</created>
+      <option name="number" value="02726" />
+      <option name="presentableId" value="LOCAL-02726" />
+      <option name="project" value="LOCAL" />
+      <updated>1778100807888</updated>
+    </task>
+    <task id="LOCAL-02727" summary="REFACTORING: definizione del metodo verificaAttacco">
+      <option name="closed" value="true" />
+      <created>1778101201130</created>
+      <option name="number" value="02727" />
+      <option name="presentableId" value="LOCAL-02727" />
+      <option name="project" value="LOCAL" />
+      <updated>1778101201130</updated>
+    </task>
+    <task id="LOCAL-02728" summary="ROSSO: testGildataCapoBranco non riuscito">
+      <option name="closed" value="true" />
+      <created>1778101614640</created>
+      <option name="number" value="02728" />
+      <option name="presentableId" value="LOCAL-02728" />
+      <option name="project" value="LOCAL" />
+      <updated>1778101614640</updated>
+    </task>
+    <task id="LOCAL-02729" summary="VERDE: testGildataCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1778102039196</created>
+      <option name="number" value="02729" />
+      <option name="presentableId" value="LOCAL-02729" />
+      <option name="project" value="LOCAL" />
+      <updated>1778102039196</updated>
+    </task>
+    <task id="LOCAL-02730" summary="ROSSO: testNomeCapoGilda non riuscito">
+      <option name="closed" value="true" />
+      <created>1778104874015</created>
+      <option name="number" value="02730" />
+      <option name="presentableId" value="LOCAL-02730" />
+      <option name="project" value="LOCAL" />
+      <updated>1778104874015</updated>
+    </task>
+    <task id="LOCAL-02731" summary="VERDE: testNomeCapoGilda riuscito">
+      <option name="closed" value="true" />
+      <created>1778105089239</created>
+      <option name="number" value="02731" />
+      <option name="presentableId" value="LOCAL-02731" />
+      <option name="project" value="LOCAL" />
+      <updated>1778105089239</updated>
+    </task>
+    <task id="LOCAL-02732" summary="REFACTORING: definizione del metodo getPosizioneCapoGilda">
+      <option name="closed" value="true" />
+      <created>1778105304895</created>
+      <option name="number" value="02732" />
+      <option name="presentableId" value="LOCAL-02732" />
+      <option name="project" value="LOCAL" />
+      <updated>1778105304895</updated>
+    </task>
+    <task id="LOCAL-02733" summary="REFACTORING: definizione del metodo isCapoGilda">
+      <option name="closed" value="true" />
+      <created>1778105412258</created>
+      <option name="number" value="02733" />
+      <option name="presentableId" value="LOCAL-02733" />
+      <option name="project" value="LOCAL" />
+      <updated>1778105412258</updated>
+    </task>
+    <task id="LOCAL-02734" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778105595756</created>
+      <option name="number" value="02734" />
+      <option name="presentableId" value="LOCAL-02734" />
+      <option name="project" value="LOCAL" />
+      <updated>1778105595756</updated>
+    </task>
+    <task id="LOCAL-02735" summary="VERDE DIRETTO: testAttaccoContadinoEroe riuscito">
+      <option name="closed" value="true" />
+      <created>1778107270713</created>
+      <option name="number" value="02735" />
+      <option name="presentableId" value="LOCAL-02735" />
+      <option name="project" value="LOCAL" />
+      <updated>1778107270713</updated>
+    </task>
+    <task id="LOCAL-02736" summary="VERDE DIRETTO: testAttaccoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1778107931983</created>
+      <option name="number" value="02736" />
+      <option name="presentableId" value="LOCAL-02736" />
+      <option name="project" value="LOCAL" />
+      <updated>1778107931983</updated>
+    </task>
+    <task id="LOCAL-02737" summary="ROSSO: testProgenieNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1778145811931</created>
+      <option name="number" value="02737" />
+      <option name="presentableId" value="LOCAL-02737" />
+      <option name="project" value="LOCAL" />
+      <updated>1778145811931</updated>
+    </task>
+    <task id="LOCAL-02738" summary="ROSSO: testProgenieNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1778146347712</created>
+      <option name="number" value="02738" />
+      <option name="presentableId" value="LOCAL-02738" />
+      <option name="project" value="LOCAL" />
+      <updated>1778146347713</updated>
+    </task>
+    <task id="LOCAL-02739" summary="VERDE: testProgenieNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1778146651819</created>
+      <option name="number" value="02739" />
+      <option name="presentableId" value="LOCAL-02739" />
+      <option name="project" value="LOCAL" />
+      <updated>1778146651819</updated>
+    </task>
+    <task id="LOCAL-02740" summary="ROSSO: testAttaccoNosferatuRiuscito non riuscito">
+      <option name="closed" value="true" />
+      <created>1778147128491</created>
+      <option name="number" value="02740" />
+      <option name="presentableId" value="LOCAL-02740" />
+      <option name="project" value="LOCAL" />
+      <updated>1778147128491</updated>
+    </task>
+    <task id="LOCAL-02741" summary="VERDE: testAttaccoNosferatuRiuscito riuscito">
+      <option name="closed" value="true" />
+      <created>1778162390604</created>
+      <option name="number" value="02741" />
+      <option name="presentableId" value="LOCAL-02741" />
+      <option name="project" value="LOCAL" />
+      <updated>1778162390605</updated>
+    </task>
+    <task id="LOCAL-02742" summary="ROSSO: testSuicidioCapoBranco non riuscito">
+      <option name="closed" value="true" />
+      <created>1778317658231</created>
+      <option name="number" value="02742" />
+      <option name="presentableId" value="LOCAL-02742" />
+      <option name="project" value="LOCAL" />
+      <updated>1778317658231</updated>
+    </task>
+    <task id="LOCAL-02743" summary="VERDE: testSuicidioCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1778319550407</created>
+      <option name="number" value="02743" />
+      <option name="presentableId" value="LOCAL-02743" />
+      <option name="project" value="LOCAL" />
+      <updated>1778319550407</updated>
+    </task>
+    <task id="LOCAL-02744" summary="REFACTORING: definizione del metodo risorgiGiocatore">
+      <option name="closed" value="true" />
+      <created>1778319887462</created>
+      <option name="number" value="02744" />
+      <option name="presentableId" value="LOCAL-02744" />
+      <option name="project" value="LOCAL" />
+      <updated>1778319887462</updated>
+    </task>
+    <task id="LOCAL-02745" summary="ROSSO: testLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1778330418573</created>
+      <option name="number" value="02745" />
+      <option name="presentableId" value="LOCAL-02745" />
+      <option name="project" value="LOCAL" />
+      <updated>1778330418573</updated>
+    </task>
+    <task id="LOCAL-02746" summary="VERDE: testLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1778330678331</created>
+      <option name="number" value="02746" />
+      <option name="presentableId" value="LOCAL-02746" />
+      <option name="project" value="LOCAL" />
+      <updated>1778330678331</updated>
+    </task>
+    <task id="LOCAL-02747" summary="REFACTORING: definizione del metodo isLupo">
+      <option name="closed" value="true" />
+      <created>1778330813461</created>
+      <option name="number" value="02747" />
+      <option name="presentableId" value="LOCAL-02747" />
+      <option name="project" value="LOCAL" />
+      <updated>1778330813461</updated>
+    </task>
+    <task id="LOCAL-02748" summary="REFACTORING: definizione del metodo nosferatuControLupo">
+      <option name="closed" value="true" />
+      <created>1778331567553</created>
+      <option name="number" value="02748" />
+      <option name="presentableId" value="LOCAL-02748" />
+      <option name="project" value="LOCAL" />
+      <updated>1778331567553</updated>
+    </task>
+    <task id="LOCAL-02749" summary="REFACTORING: definizione del metodo isProtezioneUltimoLupoAttiva">
+      <option name="closed" value="true" />
+      <created>1778331747566</created>
+      <option name="number" value="02749" />
+      <option name="presentableId" value="LOCAL-02749" />
+      <option name="project" value="LOCAL" />
+      <updated>1778331747566</updated>
+    </task>
+    <task id="LOCAL-02750" summary="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte">
+      <option name="closed" value="true" />
+      <created>1778331873806</created>
+      <option name="number" value="02750" />
+      <option name="presentableId" value="LOCAL-02750" />
+      <option name="project" value="LOCAL" />
+      <updated>1778331873806</updated>
+    </task>
+    <task id="LOCAL-02751" summary="REFACTORING: definizione del metodo getRuoloMortoNotte">
+      <option name="closed" value="true" />
+      <created>1778332066502</created>
+      <option name="number" value="02751" />
+      <option name="presentableId" value="LOCAL-02751" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332066502</updated>
+    </task>
+    <task id="LOCAL-02752" summary="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte">
+      <option name="closed" value="true" />
+      <created>1778332136329</created>
+      <option name="number" value="02752" />
+      <option name="presentableId" value="LOCAL-02752" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332136329</updated>
+    </task>
+    <task id="LOCAL-02753" summary="REFACTORING: definizione del metodo aggiungiGiocatoreVivo">
+      <option name="closed" value="true" />
+      <created>1778332272563</created>
+      <option name="number" value="02753" />
+      <option name="presentableId" value="LOCAL-02753" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332272563</updated>
+    </task>
+    <task id="LOCAL-02754" summary="REFACTORING: definizione del metodo isProtetto">
+      <option name="closed" value="true" />
+      <created>1778332355324</created>
+      <option name="number" value="02754" />
+      <option name="presentableId" value="LOCAL-02754" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332355324</updated>
+    </task>
+    <task id="LOCAL-02755" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1778332547198</created>
+      <option name="number" value="02755" />
+      <option name="presentableId" value="LOCAL-02755" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332547198</updated>
+    </task>
+    <task id="LOCAL-02756" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
+      <option name="closed" value="true" />
+      <created>1778332849718</created>
+      <option name="number" value="02756" />
+      <option name="presentableId" value="LOCAL-02756" />
+      <option name="project" value="LOCAL" />
+      <updated>1778332849718</updated>
+    </task>
+    <task id="LOCAL-02757" summary="REFACTORING: definizione del metodo isLupo">
+      <option name="closed" value="true" />
+      <created>1778333157552</created>
+      <option name="number" value="02757" />
+      <option name="presentableId" value="LOCAL-02757" />
+      <option name="project" value="LOCAL" />
+      <updated>1778333157553</updated>
+    </task>
+    <task id="LOCAL-02758" summary="REFACTORING: definizione del metodo isCacciatorePresente">
+      <option name="closed" value="true" />
+      <created>1778333431422</created>
+      <option name="number" value="02758" />
+      <option name="presentableId" value="LOCAL-02758" />
+      <option name="project" value="LOCAL" />
+      <updated>1778333431422</updated>
+    </task>
+    <task id="LOCAL-02759" summary="REFACTORING: definizione del metodo isCacciatore">
+      <option name="closed" value="true" />
+      <created>1778333697640</created>
+      <option name="number" value="02759" />
+      <option name="presentableId" value="LOCAL-02759" />
+      <option name="project" value="LOCAL" />
+      <updated>1778333697640</updated>
+    </task>
+    <task id="LOCAL-02760" summary="REFACTORING: definizione del metodo confermaEliminazioneMortiNotte">
+      <option name="closed" value="true" />
+      <created>1778334023366</created>
+      <option name="number" value="02760" />
+      <option name="presentableId" value="LOCAL-02760" />
+      <option name="project" value="LOCAL" />
+      <updated>1778334023366</updated>
+    </task>
+    <task id="LOCAL-02761" summary="REFACTORING: definizione del metodo progenizzazioneNosferatu">
+      <option name="closed" value="true" />
+      <created>1778334246609</created>
+      <option name="number" value="02761" />
+      <option name="presentableId" value="LOCAL-02761" />
+      <option name="project" value="LOCAL" />
+      <updated>1778334246609</updated>
+    </task>
+    <option name="localTasksCounter" value="2762" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -877,31 +695,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testCacciatoreProtettoLupoSolitario riuscito" />
-    <MESSAGE value="ROSSO: testCacciatoreProtettoUnLupo non riuscito" />
-    <MESSAGE value="VERDE: testCacciatoreProtettoUnLupo riuscito" />
-    <MESSAGE value="ROSSO: testCacciatoreUltimoLupoBranco non riuscito" />
-    <MESSAGE value="VERDE: testCacciatoreUltimoLupoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testCacciatoreNonProtetto riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreProtetto" />
-    <MESSAGE value="REFACTORING: definizione del metodo isUltimoLupoBrancoRimasto" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
-    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getMorto" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMorto" />
-    <MESSAGE value="ROSSO: testAttaccoNosferatuMorto non riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoNosferatuMorto non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoNosferatuMorto riuscito" />
-    <MESSAGE value="ROSSO: testNosferatu non riuscito" />
-    <MESSAGE value="VERDE: testNosferatu riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="REFACTORING: definizione del metodo isNosferatu" />
-    <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatori" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosiziolneNosferatu" />
-    <MESSAGE value="ROSSO: testNumeroSenzaFazione non riuscito" />
-    <MESSAGE value="VERDE: testNumeroSenzaFazione riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isSenzaFazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isSenzaFazione" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoContadinoEroe riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoContadino riuscito" />
+    <MESSAGE value="ROSSO: testProgenieNosferatu non riuscito" />
+    <MESSAGE value="VERDE: testProgenieNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoNosferatuRiuscito non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoNosferatuRiuscito riuscito" />
+    <MESSAGE value="ROSSO: testSuicidioCapoBranco non riuscito" />
+    <MESSAGE value="VERDE: testSuicidioCapoBranco riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo risorgiGiocatore" />
+    <MESSAGE value="ROSSO: testLupo non riuscito" />
+    <MESSAGE value="VERDE: testLupo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo nosferatuControLupo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtezioneUltimoLupoAttiva" />
+    <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuoloMortoNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatoreVivo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo isLupo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCacciatorePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCacciatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortiNotte" />
+    <MESSAGE value="REFACTORING: definizione del metodo progenizzazioneNosferatu" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo progenizzazioneNosferatu" />
   </component>
 </project>

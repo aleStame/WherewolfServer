@@ -123,6 +123,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupoSolitarioPresente() { return getPosizioneLupoSolitario() != NON_TROVATO; }
 
+    public boolean isCacciatorePresente() { return getPosizioneCacciatore() != NON_TROVATO; }
+
     public boolean isCacciatoreProtetto() { return isUltimoLupoBrancoRimasto() || getNumeroLupi() == 1; }
 
     public String getNomeNosferatu() { return getNomeGiocatore(getPosizioneNosferatu()); }
@@ -137,6 +139,15 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
+
+    private int getPosizioneCacciatore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isCacciatore(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isCacciatore(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isCacciatore(); }
 
     private int getPosizioneCapoGilda()
     {
