@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCriminalizzazioneCapoGildaMorto riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestLupo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testGildata riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/fazioni/Lupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/fazioni/Lupo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02745" summary="ROSSO: testLupo non riuscito">
-      <option name="closed" value="true" />
-      <created>1778330418573</created>
-      <option name="number" value="02745" />
-      <option name="presentableId" value="LOCAL-02745" />
-      <option name="project" value="LOCAL" />
-      <updated>1778330418573</updated>
-    </task>
-    <task id="LOCAL-02746" summary="VERDE: testLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1778330678331</created>
-      <option name="number" value="02746" />
-      <option name="presentableId" value="LOCAL-02746" />
-      <option name="project" value="LOCAL" />
-      <updated>1778330678331</updated>
     </task>
     <task id="LOCAL-02747" summary="REFACTORING: definizione del metodo isLupo">
       <option name="closed" value="true" />
@@ -680,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778516669357</updated>
     </task>
-    <option name="localTasksCounter" value="2794" />
+    <task id="LOCAL-02794" summary="VERDE DIRETTO: testGildata riuscito">
+      <option name="closed" value="true" />
+      <created>1778516881613</created>
+      <option name="number" value="02794" />
+      <option name="presentableId" value="LOCAL-02794" />
+      <option name="project" value="LOCAL" />
+      <updated>1778516881613</updated>
+    </task>
+    <task id="LOCAL-02795" summary="VERDE DIRETTO: testGildata riuscito">
+      <option name="closed" value="true" />
+      <created>1778517046760</created>
+      <option name="number" value="02795" />
+      <option name="presentableId" value="LOCAL-02795" />
+      <option name="project" value="LOCAL" />
+      <updated>1778517046760</updated>
+    </task>
+    <option name="localTasksCounter" value="2796" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortiNotte" />
     <MESSAGE value="REFACTORING: definizione del metodo progenizzazioneNosferatu" />
     <MESSAGE value="ROSSO: testBloccoAttaccoPazzo non riuscito" />
     <MESSAGE value="VERDE: testBloccoAttaccoPazzo riuscito" />
@@ -720,6 +719,7 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGilda riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneCapoGildaMorto non riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneCapoGildaMorto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCriminalizzazioneCapoGildaMorto riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGildata riuscito" />
   </component>
 </project>
