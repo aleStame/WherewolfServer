@@ -16,6 +16,10 @@ public final class GiocatoriVivi extends Giocatori
 
     private static final int NON_TROVATO = -1;
 
+    private boolean crociataAvviata;
+
+    public GiocatoriVivi() { crociataAvviata = false; }
+
     public Ballottaggio getBallottaggio()
     {
         Ballottaggio ballottaggio = creaBallottaggio();
@@ -28,7 +32,14 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
 
-    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return getRuolo(nome).attaccoLupi(attaccante); }
+    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
+    {
+        EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isInquisitore()) posizione = i;
+        if(esito == RIUSCITO && getRuolo(nome).isTemplare() && posizione != NON_TROVATO) crociataAvviata = true;
+        return esito;
+    }
 
     public EsitoAttacco attaccoNosferatu(String nome)
     {
@@ -140,7 +151,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
-    public boolean isCrociataAvviata() { return false; }
+    public boolean isCrociataAvviata() { return crociataAvviata; }
 
     private int getPosizioneCacciatore()
     {
