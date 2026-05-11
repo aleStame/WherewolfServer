@@ -288,22 +288,6 @@
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
     </task>
-    <task id="LOCAL-02727" summary="REFACTORING: definizione del metodo verificaAttacco">
-      <option name="closed" value="true" />
-      <created>1778101201130</created>
-      <option name="number" value="02727" />
-      <option name="presentableId" value="LOCAL-02727" />
-      <option name="project" value="LOCAL" />
-      <updated>1778101201130</updated>
-    </task>
-    <task id="LOCAL-02728" summary="ROSSO: testGildataCapoBranco non riuscito">
-      <option name="closed" value="true" />
-      <created>1778101614640</created>
-      <option name="number" value="02728" />
-      <option name="presentableId" value="LOCAL-02728" />
-      <option name="project" value="LOCAL" />
-      <updated>1778101614640</updated>
-    </task>
     <task id="LOCAL-02729" summary="VERDE: testGildataCapoBranco riuscito">
       <option name="closed" value="true" />
       <created>1778102039196</created>
@@ -680,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778493172138</updated>
     </task>
-    <option name="localTasksCounter" value="2776" />
+    <task id="LOCAL-02776" summary="REFACTORING: definizione del metodo setCrociataAvviata">
+      <option name="closed" value="true" />
+      <created>1778493474426</created>
+      <option name="number" value="02776" />
+      <option name="presentableId" value="LOCAL-02776" />
+      <option name="project" value="LOCAL" />
+      <updated>1778493474427</updated>
+    </task>
+    <task id="LOCAL-02777" summary="REFACTORING: definizione del metodo isInquisitore">
+      <option name="closed" value="true" />
+      <created>1778493652626</created>
+      <option name="number" value="02777" />
+      <option name="presentableId" value="LOCAL-02777" />
+      <option name="project" value="LOCAL" />
+      <updated>1778493652626</updated>
+    </task>
+    <option name="localTasksCounter" value="2778" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezioneUltimoLupoAttiva" />
     <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoloMortoNotte" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte" />
@@ -719,6 +718,7 @@
     <MESSAGE value="ROSSO: testInizioCrociata non riuscito" />
     <MESSAGE value="VERDE: testInizioCrociata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
+    <MESSAGE value="REFACTORING: definizione del metodo setCrociataAvviata" />
     <MESSAGE value="REFACTORING: definizione del metodo isInquisitore" />
     <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isInquisitore" />
   </component>
