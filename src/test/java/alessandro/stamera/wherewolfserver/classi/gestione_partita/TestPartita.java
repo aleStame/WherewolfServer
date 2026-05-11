@@ -488,7 +488,7 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminati(nomeVittima);
-        verificaVero(partita.isCrociataAvviata());
+        verificaVero(isCrociataAvviata());
     }
 
     @Test public void testMancatoInizioCrociata()
@@ -498,8 +498,10 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminati(nomeVittima);
-        verificaFalso(partita.isCrociataAvviata());
+        verificaFalso(isCrociataAvviata());
     }
+
+    private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
 
     private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testInizioCrociata non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCrociataAvviata" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,30 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02735" summary="VERDE DIRETTO: testAttaccoContadinoEroe riuscito">
-      <option name="closed" value="true" />
-      <created>1778107270713</created>
-      <option name="number" value="02735" />
-      <option name="presentableId" value="LOCAL-02735" />
-      <option name="project" value="LOCAL" />
-      <updated>1778107270713</updated>
-    </task>
-    <task id="LOCAL-02736" summary="VERDE DIRETTO: testAttaccoContadino riuscito">
-      <option name="closed" value="true" />
-      <created>1778107931983</created>
-      <option name="number" value="02736" />
-      <option name="presentableId" value="LOCAL-02736" />
-      <option name="project" value="LOCAL" />
-      <updated>1778107931983</updated>
-    </task>
-    <task id="LOCAL-02737" summary="ROSSO: testProgenieNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1778145811931</created>
-      <option name="number" value="02737" />
-      <option name="presentableId" value="LOCAL-02737" />
-      <option name="project" value="LOCAL" />
-      <updated>1778145811931</updated>
     </task>
     <task id="LOCAL-02738" summary="ROSSO: testProgenieNosferatu non riuscito">
       <option name="closed" value="true" />
@@ -678,7 +654,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778504478758</updated>
     </task>
-    <option name="localTasksCounter" value="2784" />
+    <task id="LOCAL-02784" summary="VERDE: testInizioCrociata riuscito">
+      <option name="closed" value="true" />
+      <created>1778504643372</created>
+      <option name="number" value="02784" />
+      <option name="presentableId" value="LOCAL-02784" />
+      <option name="project" value="LOCAL" />
+      <updated>1778504643372</updated>
+    </task>
+    <task id="LOCAL-02785" summary="VERDE DIRETTO: testMancatoInizioCrociata riuscito">
+      <option name="closed" value="true" />
+      <created>1778504847434</created>
+      <option name="number" value="02785" />
+      <option name="presentableId" value="LOCAL-02785" />
+      <option name="project" value="LOCAL" />
+      <updated>1778504847434</updated>
+    </task>
+    <task id="LOCAL-02786" summary="REFACTORING: definizione del metodo isCrociataAvviata">
+      <option name="closed" value="true" />
+      <created>1778505106010</created>
+      <option name="number" value="02786" />
+      <option name="presentableId" value="LOCAL-02786" />
+      <option name="project" value="LOCAL" />
+      <updated>1778505106010</updated>
+    </task>
+    <option name="localTasksCounter" value="2787" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -708,16 +708,16 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoAltriLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
-    <MESSAGE value="VERDE: testInizioCrociata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
     <MESSAGE value="REFACTORING: definizione del metodo setCrociataAvviata" />
     <MESSAGE value="REFACTORING: definizione del metodo isInquisitore" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneInquisitore" />
     <MESSAGE value="REFACTORING: definizione del metodo isInquisitorePresente" />
-    <MESSAGE value="VERDE DIRETTO: testMancatoInizioCrociata riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isCrociataAvviata" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupoRiuscito" />
     <MESSAGE value="ROSSO: testInizioCrociata non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testInizioCrociata non riuscito" />
+    <MESSAGE value="VERDE: testInizioCrociata riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMancatoInizioCrociata riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCrociataAvviata" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCrociataAvviata" />
   </component>
 </project>
