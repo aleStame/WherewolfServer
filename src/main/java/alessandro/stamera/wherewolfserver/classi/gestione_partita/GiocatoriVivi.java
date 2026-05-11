@@ -16,6 +16,10 @@ public final class GiocatoriVivi extends Giocatori
 
     private static final int NON_TROVATO = -1;
 
+    private boolean crociataAvviata;
+
+    public GiocatoriVivi() { setCrociataAvviata(false); }
+
     public Ballottaggio getBallottaggio()
     {
         Ballottaggio ballottaggio = creaBallottaggio();
@@ -28,7 +32,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
 
-    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome) { return getRuolo(nome).attaccoLupi(attaccante); }
+    public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
+    {
+        EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
+        if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
+        return esito;
+    }
 
     public EsitoAttacco attaccoNosferatu(String nome)
     {
@@ -139,6 +148,25 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
+
+    public boolean isCrociataAvviata() { return crociataAvviata; }
+
+    private boolean isInquisitorePresente() { return getPosizioneInquisitore() != NON_TROVATO; }
+
+    private void setCrociataAvviata(boolean crociataAvviata) { this.crociataAvviata = crociataAvviata; }
+
+    private int getPosizioneInquisitore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisitore(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isInquisitore(int posizione) { return isInquisitore(getNomeGiocatore(posizione)); }
+
+    private boolean isInquisitore(String nome) { return getRuolo(nome).isInquisitore(); }
+
+    private boolean isTemplare(String nome) { return getRuolo(nome).isTemplare(); }
 
     private int getPosizioneCacciatore()
     {

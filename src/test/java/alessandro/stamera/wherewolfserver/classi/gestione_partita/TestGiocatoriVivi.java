@@ -462,6 +462,29 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeCapoGilda(), nome);
     }
 
+    @Test public void testInizioCrociata()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Chloe";
+        inizializzaGiocatori(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
+        verificaVero(isCrociataAvviata());
+    }
+
+    @Test public void testMancatoInizioCrociata()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Eve";
+        inizializzaGiocatori(new String[][] { { "Daniel", tipoLupo }, { "Wesley", "Inquisitore" }, { nomeVittima, "Goblin" } });
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
+        verificaFalso(isCrociataAvviata());
+    }
+
+    private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
+    {
+        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+    }
+
+    private boolean isCrociataAvviata() { return giocatori.isCrociataAvviata(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }

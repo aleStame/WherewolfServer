@@ -481,6 +481,28 @@ public final class TestPartita
         verificaNonEliminato(nomeVittima);
     }
 
+    @Test public void testInizioCrociata()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Chloe";
+        inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminati(nomeVittima);
+        verificaVero(isCrociataAvviata());
+    }
+
+    @Test public void testMancatoInizioCrociata()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Eve";
+        inizializzaPartita(new String[][] { { "Daniel", tipoLupo }, { "Wesley", "Inquisitore" }, { nomeVittima, "Goblin" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminati(nomeVittima);
+        verificaFalso(isCrociataAvviata());
+    }
+
+    private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
+
     private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
 
     private void confermaEliminazioneMortiNotte() { partita.confermaEliminazioneMortiNotte(); }
