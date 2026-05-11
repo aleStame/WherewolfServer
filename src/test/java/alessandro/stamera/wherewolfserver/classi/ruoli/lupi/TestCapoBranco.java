@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.lupi;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
@@ -12,6 +13,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -53,7 +56,15 @@ public final class TestCapoBranco
     @ParameterizedTest @MethodSource("getEsitiPartite")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
-    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(MORTO); }
+    @Test public void testSuicidio() { verificaAttaccoLupi(ruolo, RIUSCITO); }
+
+    @ParameterizedTest
+    @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testAttaccoAltriLupi(String nome) { verificaAttaccoLupi(FACTORY.getRuolo(nome), FALLITO); }
+
+    @Test public void testGildata() { verificaAttacco(ruolo.gildata(), MORTO); }
+
+    private void verificaAttaccoLupi(Ruolo lupo, EsitoAttacco esito) { verificaAttacco(ruolo.attaccoLupi(lupo), esito); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
@@ -71,5 +82,7 @@ public final class TestCapoBranco
         };
         return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
     }
+
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
