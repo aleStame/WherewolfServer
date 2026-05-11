@@ -62,9 +62,9 @@ public final class TestCapoBranco
     @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoAltriLupi(String nome) { verificaAttaccoLupi(FACTORY.getRuolo(nome), FALLITO); }
 
-    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(MORTO); }
+    @Test public void testGildata() { verificaAttacco(ruolo.gildata(), MORTO); }
 
-    private void verificaAttaccoLupi(Ruolo lupo, EsitoAttacco esito) { assertThat(ruolo.attaccoLupi(lupo)).isEqualTo(esito); }
+    private void verificaAttaccoLupi(Ruolo lupo, EsitoAttacco esito) { verificaAttacco(ruolo.attaccoLupi(lupo), esito); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
@@ -82,5 +82,7 @@ public final class TestCapoBranco
         };
         return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
     }
+
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
