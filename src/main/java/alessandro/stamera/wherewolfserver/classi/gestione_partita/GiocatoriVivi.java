@@ -35,7 +35,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
-        if(esito == RIUSCITO && isTemplare(nome) && getPosizioneInquisitore() != NON_TROVATO) setCrociataAvviata(true);
+        if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
         return esito;
     }
 
@@ -150,6 +150,8 @@ public final class GiocatoriVivi extends Giocatori
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
     public boolean isCrociataAvviata() { return crociataAvviata; }
+
+    private boolean isInquisitorePresente() { return getPosizioneInquisitore() != NON_TROVATO; }
 
     private void setCrociataAvviata(boolean crociataAvviata) { this.crociataAvviata = crociataAvviata; }
 
