@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-05-11T13:09:56" hostname="ALESSANDRO" time="0.103">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-05-11T13:55:51" hostname="ALESSANDRO" time="2.997">
   <properties/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.003"/>
-  <testcase name="testControllaVittoriaRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.007"/>
-  <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.004"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.004"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.006"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.241"/>
+  <testcase name="testControllaVittoriaRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="2.615"/>
+  <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.007"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.007"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.036"/>
   <testcase name="testSpia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
-  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
-  <testcase name="tesDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.0"/>
-  <testcase name="[1] giocatori=[[Raffaele, Nosferatu], [Aurora, Capo branco]], esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.007"/>
-  <testcase name="[2] giocatori=[[Matteo, Guardia], [Marghe, Altra guardia]], esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.003"/>
-  <testcase name="[3] giocatori=[[Giuseppe, Prete], [Salvatore, Peccatore], [Marino, Bocca di rosa]], esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.003"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.001"/>
+  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
+  <testcase name="tesDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.005"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
   <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
 </testsuite>

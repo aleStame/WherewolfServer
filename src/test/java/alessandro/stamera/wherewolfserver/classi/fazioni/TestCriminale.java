@@ -1,9 +1,19 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -63,6 +73,19 @@ public final class TestCriminale
 
     @Test public void testCreaturaOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
 
+    @ParameterizedTest @MethodSource("getCasiEsitoPartita")
+    public void testSconfittaCreatureOmbra(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private static Stream<Arguments> getCasiEsitoPartita()
+    {
+        return Stream.of
+        (
+            Arguments.of(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } }, SCONFITTA),
+            Arguments.of(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }, SCONFITTA),
+            Arguments.of(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }, VITTORIA)
+        );
+    }
 
 }
