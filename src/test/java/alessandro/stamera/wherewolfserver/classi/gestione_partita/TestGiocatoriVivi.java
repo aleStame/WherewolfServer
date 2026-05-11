@@ -493,6 +493,15 @@ public final class TestGiocatoriVivi
         verificaAttacco(giocatori.gildata(nomeVittima), RIUSCITO);
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia", "Capo branco", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testCriminalizzazioneCapoGildaMorto(String nomeRuolo)
+    {
+        String nomeVittima = "Arturo";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Raffaele", "Capo gilda" } });
+        verificaAttacco(giocatori.gildata(nomeVittima), MORTO);
+    }
+
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
