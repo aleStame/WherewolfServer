@@ -82,9 +82,12 @@ public final class TestCriminale
     {
         return Stream.of
         (
-            Arguments.of(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } }, SCONFITTA),
-            Arguments.of(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }, SCONFITTA),
-            Arguments.of(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }, VITTORIA)
+            Arguments.of(new Partita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } }), SCONFITTA),
+            Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
+            Arguments.of
+            (
+                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), VITTORIA
+            )
         );
     }
 
