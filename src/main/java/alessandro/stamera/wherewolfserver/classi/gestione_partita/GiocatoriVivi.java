@@ -140,6 +140,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
+    public boolean isCrociataAvviata() { return false; }
+
     private int getPosizioneCacciatore()
     {
         int posizione = NON_TROVATO;
