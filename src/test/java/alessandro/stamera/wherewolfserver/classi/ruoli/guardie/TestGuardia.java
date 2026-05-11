@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -55,6 +56,8 @@ public final class TestGuardia
     @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
