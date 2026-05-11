@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testInizioCrociata non riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isTemplare">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02724" summary="VERDE: testGildata riuscito">
-      <option name="closed" value="true" />
-      <created>1778100151158</created>
-      <option name="number" value="02724" />
-      <option name="presentableId" value="LOCAL-02724" />
-      <option name="project" value="LOCAL" />
-      <updated>1778100151158</updated>
-    </task>
-    <task id="LOCAL-02725" summary="ROSSO: testGildataCapoBranco non riuscito">
-      <option name="closed" value="true" />
-      <created>1778100575884</created>
-      <option name="number" value="02725" />
-      <option name="presentableId" value="LOCAL-02725" />
-      <option name="project" value="LOCAL" />
-      <updated>1778100575884</updated>
     </task>
     <task id="LOCAL-02726" summary="VERDE: testGildataCapoBranco riuscito">
       <option name="closed" value="true" />
@@ -681,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778491892321</updated>
     </task>
-    <option name="localTasksCounter" value="2773" />
+    <task id="LOCAL-02773" summary="VERDE: testInizioCrociata riuscito">
+      <option name="closed" value="true" />
+      <created>1778492666450</created>
+      <option name="number" value="02773" />
+      <option name="presentableId" value="LOCAL-02773" />
+      <option name="project" value="LOCAL" />
+      <updated>1778492666450</updated>
+    </task>
+    <task id="LOCAL-02774" summary="REFACTORING: definizione del metodo isTemplare">
+      <option name="closed" value="true" />
+      <created>1778492834679</created>
+      <option name="number" value="02774" />
+      <option name="presentableId" value="LOCAL-02774" />
+      <option name="project" value="LOCAL" />
+      <updated>1778492834679</updated>
+    </task>
+    <option name="localTasksCounter" value="2775" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testLupo non riuscito" />
-    <MESSAGE value="VERDE: testLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo nosferatuControLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezioneUltimoLupoAttiva" />
     <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte" />
@@ -721,6 +718,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
     <MESSAGE value="ROSSO: testInizioCrociata non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testInizioCrociata non riuscito" />
+    <MESSAGE value="VERDE: testInizioCrociata riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isTemplare" />
   </component>
 </project>
