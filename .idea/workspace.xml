@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isInquisitore">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isInquisitorePresente">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02729" summary="VERDE: testGildataCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1778102039196</created>
-      <option name="number" value="02729" />
-      <option name="presentableId" value="LOCAL-02729" />
-      <option name="project" value="LOCAL" />
-      <updated>1778102039196</updated>
-    </task>
-    <task id="LOCAL-02730" summary="ROSSO: testNomeCapoGilda non riuscito">
-      <option name="closed" value="true" />
-      <created>1778104874015</created>
-      <option name="number" value="02730" />
-      <option name="presentableId" value="LOCAL-02730" />
-      <option name="project" value="LOCAL" />
-      <updated>1778104874015</updated>
     </task>
     <task id="LOCAL-02731" summary="VERDE: testNomeCapoGilda riuscito">
       <option name="closed" value="true" />
@@ -680,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778493652626</updated>
     </task>
-    <option name="localTasksCounter" value="2778" />
+    <task id="LOCAL-02778" summary="REFACTORING: definizione del metodo getPosizioneInquisitore">
+      <option name="closed" value="true" />
+      <created>1778494003626</created>
+      <option name="number" value="02778" />
+      <option name="presentableId" value="LOCAL-02778" />
+      <option name="project" value="LOCAL" />
+      <updated>1778494003626</updated>
+    </task>
+    <task id="LOCAL-02779" summary="REFACTORING: definizione del metodo isInquisitorePresente">
+      <option name="closed" value="true" />
+      <created>1778494265286</created>
+      <option name="number" value="02779" />
+      <option name="presentableId" value="LOCAL-02779" />
+      <option name="project" value="LOCAL" />
+      <updated>1778494265286</updated>
+    </task>
+    <option name="localTasksCounter" value="2780" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo confermaEliminazioneMortoNotte" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuoloMortoNotte" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatoreMortoNotte" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatoreVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtetto" />
@@ -720,6 +718,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
     <MESSAGE value="REFACTORING: definizione del metodo setCrociataAvviata" />
     <MESSAGE value="REFACTORING: definizione del metodo isInquisitore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isInquisitore" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneInquisitore" />
+    <MESSAGE value="REFACTORING: definizione del metodo isInquisitorePresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isInquisitorePresente" />
   </component>
 </project>
