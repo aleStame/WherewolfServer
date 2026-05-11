@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: attaccoAltriLupi riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/TestCapoBranco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/TestCapoBranco.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoAltriLupi riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,37 +76,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
-    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
-    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
-    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
-    "Gradle.TestLadra.executor": "Run",
-    "Gradle.TestLupo.testGildata.executor": "Run",
-    "Gradle.TestProtezioni.executor": "Run",
-    "Gradle.TestTratti.executor": "Run",
-    "Gradle.TestUtente.executor": "Run",
-    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
-    "Gradle.wherewolf.server.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/attaccoLupi",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/attaccoLupi&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -287,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02719" summary="REFACTORING: definizione del metodo isNessunLupoVivo">
-      <option name="closed" value="true" />
-      <created>1778097624859</created>
-      <option name="number" value="02719" />
-      <option name="presentableId" value="LOCAL-02719" />
-      <option name="project" value="LOCAL" />
-      <updated>1778097624859</updated>
-    </task>
-    <task id="LOCAL-02720" summary="REFACTORING: parametrizzazione dei test di controllo dell'esito della partita">
-      <option name="closed" value="true" />
-      <created>1778097933884</created>
-      <option name="number" value="02720" />
-      <option name="presentableId" value="LOCAL-02720" />
-      <option name="project" value="LOCAL" />
-      <updated>1778097933885</updated>
     </task>
     <task id="LOCAL-02721" summary="VERDE DIRETTO: testEsitoPartita riuscito">
       <option name="closed" value="true" />
@@ -680,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778338642305</updated>
     </task>
-    <option name="localTasksCounter" value="2768" />
+    <task id="LOCAL-02768" summary="VERDE DIRETTO: testSuicidio riuscito">
+      <option name="closed" value="true" />
+      <created>1778338906922</created>
+      <option name="number" value="02768" />
+      <option name="presentableId" value="LOCAL-02768" />
+      <option name="project" value="LOCAL" />
+      <updated>1778338906922</updated>
+    </task>
+    <task id="LOCAL-02769" summary="VERDE DIRETTO: testAttaccoAltriLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1778339114900</created>
+      <option name="number" value="02769" />
+      <option name="presentableId" value="LOCAL-02769" />
+      <option name="project" value="LOCAL" />
+      <updated>1778339114900</updated>
+    </task>
+    <option name="localTasksCounter" value="2770" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoNosferatuRiuscito non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoNosferatuRiuscito riuscito" />
     <MESSAGE value="ROSSO: testSuicidioCapoBranco non riuscito" />
     <MESSAGE value="VERDE: testSuicidioCapoBranco riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo risorgiGiocatore" />
@@ -720,6 +718,8 @@
     <MESSAGE value="VERDE: testBloccoAttaccoPazzo riuscito" />
     <MESSAGE value="ROSSO: attaccoAltriLupi non riuscito" />
     <MESSAGE value="VERDE: attaccoAltriLupi riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: attaccoAltriLupi riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSuicidio riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAltriLupi riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAltriLupi riuscito" />
   </component>
 </project>

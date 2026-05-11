@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.lupi;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
@@ -55,13 +56,15 @@ public final class TestCapoBranco
     @ParameterizedTest @MethodSource("getEsitiPartite")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
-    @Test public void testSuicidio() { assertThat(ruolo.attaccoLupi(ruolo)).isEqualTo(RIUSCITO); }
+    @Test public void testSuicidio() { verificaAttaccoLupi(ruolo, RIUSCITO); }
 
     @ParameterizedTest
     @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
-    public void testAttaccoAltriLupi(String nome) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(FALLITO); }
+    public void testAttaccoAltriLupi(String nome) { verificaAttaccoLupi(FACTORY.getRuolo(nome), FALLITO); }
 
     @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(MORTO); }
+
+    private void verificaAttaccoLupi(Ruolo lupo, EsitoAttacco esito) { assertThat(ruolo.attaccoLupi(lupo)).isEqualTo(esito); }
 
     private void verificaStringa(String valore, String descrizione) { assertThat(valore).isEqualTo(descrizione); }
 
