@@ -478,6 +478,21 @@ public final class TestGiocatoriVivi
         verificaFalso(isCrociataAvviata());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Eremita", "Guaritore", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete",
+            "Sensitiva"
+        }
+    )
+    public void testCriminalizzazioneCapoGilda(String nomeRuolo)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
+        verificaAttacco(giocatori.gildata(nomeVittima), RIUSCITO);
+    }
+
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
