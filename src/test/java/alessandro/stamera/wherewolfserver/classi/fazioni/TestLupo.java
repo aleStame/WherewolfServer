@@ -91,6 +91,8 @@ public final class TestLupo
         verificaFalso(isSegnalatoBoia());
     }
 
+    @Test public void testGildata() { verificaAttacco(ruolo.gildata(), MORTO); }
+
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
     private void verificaAttaccoLupiFallito(String nome) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), FALLITO); }
