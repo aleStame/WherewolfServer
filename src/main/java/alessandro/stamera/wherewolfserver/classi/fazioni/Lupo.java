@@ -31,6 +31,8 @@ public class Lupo extends Ruolo
         return esito;
     }
 
+    @Override public EsitoAttacco gildata() { return MORTO; }
+
     private boolean isProtetto() { return isRomeo() || isAmato(); }
 
 }
