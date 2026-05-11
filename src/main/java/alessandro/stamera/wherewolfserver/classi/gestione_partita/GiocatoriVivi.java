@@ -155,7 +155,9 @@ public final class GiocatoriVivi extends Giocatori
 
     private void setCrociataAvviata(boolean crociataAvviata) { this.crociataAvviata = crociataAvviata; }
 
-    private boolean isInquisitore(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isInquisitore(); }
+    private boolean isInquisitore(int posizione) { return isInquisitore(getNomeGiocatore(posizione)); }
+
+    private boolean isInquisitore(String nome) { return getRuolo(nome).isInquisitore(); }
 
     private boolean isTemplare(String nome) { return getRuolo(nome).isTemplare(); }
 
