@@ -466,7 +466,7 @@ public final class TestGiocatoriVivi
     {
         String tipoLupo = "Capo branco", nomeVittima = "Chloe";
         inizializzaGiocatori(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
         verificaVero(isCrociataAvviata());
     }
 
@@ -474,8 +474,13 @@ public final class TestGiocatoriVivi
     {
         String tipoLupo = "Capo branco", nomeVittima = "Eve";
         inizializzaGiocatori(new String[][] { { "Daniel", tipoLupo }, { "Wesley", "Inquisitore" }, { nomeVittima, "Goblin" } });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
         verificaFalso(isCrociataAvviata());
+    }
+
+    private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
+    {
+        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
 
     private boolean isCrociataAvviata() { return giocatori.isCrociataAvviata(); }
