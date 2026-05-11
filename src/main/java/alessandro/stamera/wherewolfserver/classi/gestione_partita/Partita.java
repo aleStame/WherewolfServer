@@ -187,7 +187,7 @@ public final class Partita
         eliminati.aggiungiGiocatore(nome, ruolo);
     }
 
-    public boolean isCrociataAvviata() { return false; }
+    public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
 
     private void nosferatuControLupo(String nome)
     {

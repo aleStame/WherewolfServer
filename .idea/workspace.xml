@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoLupoRiuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testInizioCrociata non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,14 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02734" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1778105595756</created>
-      <option name="number" value="02734" />
-      <option name="presentableId" value="LOCAL-02734" />
-      <option name="project" value="LOCAL" />
-      <updated>1778105595756</updated>
     </task>
     <task id="LOCAL-02735" summary="VERDE DIRETTO: testAttaccoContadinoEroe riuscito">
       <option name="closed" value="true" />
@@ -680,7 +670,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778504073299</updated>
     </task>
-    <option name="localTasksCounter" value="2783" />
+    <task id="LOCAL-02783" summary="ROSSO: testInizioCrociata non riuscito">
+      <option name="closed" value="true" />
+      <created>1778504478758</created>
+      <option name="number" value="02783" />
+      <option name="presentableId" value="LOCAL-02783" />
+      <option name="project" value="LOCAL" />
+      <updated>1778504478758</updated>
+    </task>
+    <option name="localTasksCounter" value="2784" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -710,7 +708,6 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoAltriLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
-    <MESSAGE value="ROSSO: testInizioCrociata non riuscito" />
     <MESSAGE value="VERDE: testInizioCrociata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
     <MESSAGE value="REFACTORING: definizione del metodo setCrociataAvviata" />
@@ -720,6 +717,7 @@
     <MESSAGE value="VERDE DIRETTO: testMancatoInizioCrociata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCrociataAvviata" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupoRiuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoLupoRiuscito" />
+    <MESSAGE value="ROSSO: testInizioCrociata non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testInizioCrociata non riuscito" />
   </component>
 </project>
