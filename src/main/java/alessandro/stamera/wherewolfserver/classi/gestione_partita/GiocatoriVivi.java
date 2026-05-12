@@ -151,6 +151,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCrociataAvviata() { return crociataAvviata; }
 
+    public void riconosciNegromante() { }
+
     private boolean isInquisitorePresente() { return getPosizioneInquisitore() != NON_TROVATO; }
 
     private void setCrociataAvviata(boolean crociataAvviata) { this.crociataAvviata = crociataAvviata; }
