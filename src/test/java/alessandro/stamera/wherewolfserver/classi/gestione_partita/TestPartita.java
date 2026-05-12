@@ -521,6 +521,15 @@ public final class TestPartita
         verificaEliminazione(nomeCapoGilda);
     }
 
+    @Test public void testCriminalizzazioneBecchino()
+    {
+        String nomeVittima = "Giulia";
+        inizializzaPartita(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
+        partita.riconosciNegromante();
+        gildata(nomeVittima);
+        verificaNumeroCriminali(1);
+    }
+
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }
