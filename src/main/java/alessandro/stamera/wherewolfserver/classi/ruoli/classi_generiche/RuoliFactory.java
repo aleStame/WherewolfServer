@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,13 +61,19 @@ public final class RuoliFactory
         resettaSegnalazioneAzzeccagarbugli();
         resettaNonMorto();
         resettaMaledetto();
-        ottieniRuolo("Contadino discendente dei lupi").eliminaTratto(CREATURA_OMBRA);
-        ottieniRuolo("Contadino discendente dei lupi").eliminaTratto(LUPO_MANNARO);
+        eliminaTrattiContadinoLupo();
         for(String nome : getChiavi())
         {
             Ruolo ruolo = ottieniRuolo(nome);
             if(!ruolo.isGuardiaCorrotta() && !ruolo.isLupoSolitario()) ottieniRuolo(nome).ripristinaFazioneOriginale();
         }
+    }
+
+    private void eliminaTrattiContadinoLupo()
+    {
+        Ruolo ruolo = ottieniRuolo("Contadino discendente dei lupi");
+        Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
+        for(Tratto tratto : tratti) ruolo.eliminaTratto(tratto);
     }
 
     private void resettaNonMorto() { for(String nome : getChiavi()) if(isNonMorto(nome)) resettaNonMorto(nome); }
