@@ -483,7 +483,8 @@ public final class TestGiocatoriVivi
         {
             "Altra guardia, MORTO", "Angelo custode, FALLITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO", "Becchino, RIUSCITO",
             "Bocca di rosa, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO", "Cacciatore, RIUSCITO", "Cacciatore di vampiri, RIUSCITO",
-            "Capo branco, MORTO", "Cappuccetto rosso, RIUSCITO", "Eremita, RIUSCITO", "Ghoul, FALLITO", "Giovane lupo, MORTO",
+            "Capo branco, MORTO", "Cappuccetto rosso, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO",
+            "Contadino normale, RIUSCITO", "Contadino mostro, RIUSCITO", "Eremita, RIUSCITO", "Ghoul, FALLITO", "Giovane lupo, MORTO",
             "Giulietta, FALLITO", "Giullare, FALLITO", "Goblin, FALLITO", "Guardia, MORTO", "Guaritore, RIUSCITO", "Inquisitore, FALLITO",
             "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, RIUSCITO", "Medium, RIUSCITO",
             "Megera, FALLITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, FALLITO", "Nonna, RIUSCITO", "Nosferatu, FALLITO",
@@ -504,6 +505,17 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
         verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
+    }
+
+    @Test public void testCriminalizzazioneContadinoLupo()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Alberto";
+        inizializzaGiocatori
+        (
+            new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { "Andrea, Capo gilda" } }
+        );
+        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+        verificaAttacco(giocatori.gildata(nomeVittima), MORTO);
     }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
