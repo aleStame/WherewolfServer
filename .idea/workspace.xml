@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCriminalizzazioneCapoGildaFallito riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo gildata">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,14 +298,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02757" summary="REFACTORING: definizione del metodo isLupo">
-      <option name="closed" value="true" />
-      <created>1778333157552</created>
-      <option name="number" value="02757" />
-      <option name="presentableId" value="LOCAL-02757" />
-      <option name="project" value="LOCAL" />
-      <updated>1778333157553</updated>
     </task>
     <task id="LOCAL-02758" summary="REFACTORING: definizione del metodo isCacciatorePresente">
       <option name="closed" value="true" />
@@ -681,7 +683,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778579710045</updated>
     </task>
-    <option name="localTasksCounter" value="2806" />
+    <task id="LOCAL-02806" summary="REFACTORING: definizione del metodo gildata">
+      <option name="closed" value="true" />
+      <created>1778589858616</created>
+      <option name="number" value="02806" />
+      <option name="presentableId" value="LOCAL-02806" />
+      <option name="project" value="LOCAL" />
+      <updated>1778589858616</updated>
+    </task>
+    <option name="localTasksCounter" value="2807" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +706,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
     <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
     <MESSAGE value="REFACTORING: definizione del metodo setCrociataAvviata" />
     <MESSAGE value="REFACTORING: definizione del metodo isInquisitore" />
@@ -721,6 +730,7 @@
     <MESSAGE value="VERDE: testCriminalizzazioneCapoGilda riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaFallito riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCriminalizzazioneCapoGildaFallito riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo gildata" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo gildata" />
   </component>
 </project>

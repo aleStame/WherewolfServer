@@ -333,7 +333,7 @@ public final class TestPartita
         partita.segnalazioneBorgomastro(giocatori[posizione][0]);
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
         incrementaVoti(giocatori[posizione][0], 1);
-        assertThat(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti()).isEqualTo(3);
+        verificaNumeroIntero(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti(), 3);
     }
 
     @Test public void testPotereBracconiereUnLupo()
@@ -505,7 +505,7 @@ public final class TestPartita
         String nomeVittima = "Antonio";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         gildata(nomeVittima);
-        assertThat(partita.getNumeroCriminali()).isEqualTo(2);
+        verificaNumeroCriminali(2);
     }
 
     @ParameterizedTest
@@ -531,8 +531,10 @@ public final class TestPartita
         String nomeVittima = "Samuele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Luigi", "Capo gilda" } });
         gildata(nomeVittima);
-        assertThat(partita.getNumeroCriminali()).isEqualTo(1);
+        verificaNumeroCriminali(1);
     }
+
+    private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }
 
