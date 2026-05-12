@@ -69,12 +69,13 @@ public final class RuoliFactory
     {
         for(String nome : getChiavi())
         {
-            Ruolo ruolo = ottieniRuolo(nome);
-            if(!isGuardiaCorrotta(nome) && !ruolo.isLupoSolitario()) ottieniRuolo(nome).ripristinaFazioneOriginale();
+            if(!isGuardiaCorrotta(nome) && !isLupoSolitario(nome)) ottieniRuolo(nome).ripristinaFazioneOriginale();
         }
     }
 
     private boolean isGuardiaCorrotta(String nome) { return ottieniRuolo(nome).isGuardiaCorrotta(); }
+
+    private boolean isLupoSolitario(String nome) { return ottieniRuolo(nome).isLupoSolitario(); }
 
     private void eliminaTrattiContadinoLupo()
     {

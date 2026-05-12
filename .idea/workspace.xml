@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isGuardiaCorrotta">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/RuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/RuoliFactory.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02772" summary="ROSSO: testInizioCrociata non riuscito">
-      <option name="closed" value="true" />
-      <created>1778491892321</created>
-      <option name="number" value="02772" />
-      <option name="presentableId" value="LOCAL-02772" />
-      <option name="project" value="LOCAL" />
-      <updated>1778491892321</updated>
-    </task>
-    <task id="LOCAL-02773" summary="VERDE: testInizioCrociata riuscito">
-      <option name="closed" value="true" />
-      <created>1778492666450</created>
-      <option name="number" value="02773" />
-      <option name="presentableId" value="LOCAL-02773" />
-      <option name="project" value="LOCAL" />
-      <updated>1778492666450</updated>
     </task>
     <task id="LOCAL-02774" summary="REFACTORING: definizione del metodo isTemplare">
       <option name="closed" value="true" />
@@ -678,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778601006017</updated>
     </task>
-    <option name="localTasksCounter" value="2821" />
+    <task id="LOCAL-02821" summary="REFACTORING: definizione del metodo ripristinaFazioniOriginali">
+      <option name="closed" value="true" />
+      <created>1778601155849</created>
+      <option name="number" value="02821" />
+      <option name="presentableId" value="LOCAL-02821" />
+      <option name="project" value="LOCAL" />
+      <updated>1778601155849</updated>
+    </task>
+    <task id="LOCAL-02822" summary="REFACTORING: definizione del metodo isGuardiaCorrotta">
+      <option name="closed" value="true" />
+      <created>1778601288957</created>
+      <option name="number" value="02822" />
+      <option name="presentableId" value="LOCAL-02822" />
+      <option name="project" value="LOCAL" />
+      <updated>1778601288957</updated>
+    </task>
+    <option name="localTasksCounter" value="2823" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -693,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSconfittaCreatureOmbra riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGilda riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneCapoGildaMorto non riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneCapoGildaMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
@@ -718,6 +718,8 @@
     <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
+    <MESSAGE value="REFACTORING: definizione del metodo ripristinaFazioniOriginali" />
+    <MESSAGE value="REFACTORING: definizione del metodo isGuardiaCorrotta" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGuardiaCorrotta" />
   </component>
 </project>
