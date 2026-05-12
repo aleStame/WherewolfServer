@@ -6,8 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
@@ -528,6 +527,21 @@ public final class TestPartita
         partita.gildata(nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminazione(nomeCapoGilda);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Angelo custode", "Ghoul", "Giulietta", "Giullare", "Goblin", "Inquisitore", "Leprecauno", "Megera", "Negromante", "Nosferatu",
+            "Pazzo", "Posseduto", "Sidhe", "Templare"
+        }
+    )
+    public void testCriminalizzazioneCapoGildaFallito(String nomeRuolo)
+    {
+        String nomeVittima = "Samuele";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Luigi", "Capo gilda" } });
+        partita.gildata(nomeVittima);
+        assertThat(partita.getNumeroCriminali()).isEqualTo(1);
     }
 
     private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
