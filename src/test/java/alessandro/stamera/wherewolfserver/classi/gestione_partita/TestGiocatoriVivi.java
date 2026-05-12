@@ -496,7 +496,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
-        verificaAttacco(giocatori.gildata(nomeVittima), esito);
+        verificaGildata(nomeVittima, esito);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -504,7 +504,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Giulia";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
-        verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
+        verificaGildata(nomeVittima, FALLITO);
     }
 
     @Test public void testCriminalizzazioneContadinoLupo()
@@ -515,8 +515,10 @@ public final class TestGiocatoriVivi
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { "Andrea", "Capo gilda" } }
         );
         verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
-        verificaAttacco(giocatori.gildata(nomeVittima), MORTO);
+        verificaGildata(nomeVittima, MORTO);
     }
+
+    private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
     {
