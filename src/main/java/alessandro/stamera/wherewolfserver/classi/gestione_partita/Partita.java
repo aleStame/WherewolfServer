@@ -180,7 +180,7 @@ public final class Partita
         for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
     }
 
-    public void riconosciNegromante() { }
+    public void riconosciNegromante() { vivi.riconosciNegromante(); }
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
