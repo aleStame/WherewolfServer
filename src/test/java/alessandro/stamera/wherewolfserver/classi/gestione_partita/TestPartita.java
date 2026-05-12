@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
@@ -499,6 +500,22 @@ public final class TestPartita
         confermaEliminazioneMortiNotte();
         verificaEliminati(nomeVittima);
         verificaFalso(isCrociataAvviata());
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Eremita", "Guaritore", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete",
+            "Sensitiva"
+        }
+    )
+    public void testCriminalizzazioneCapoGilda(String nomeRuolo)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
+        partita.gildata(nomeVittima);
+        assertThat(partita.getNumeroCriminali()).isEqualTo(2);
     }
 
     private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
