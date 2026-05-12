@@ -151,7 +151,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCrociataAvviata() { return crociataAvviata; }
 
-    public void riconosciNegromante() { }
+    public void riconosciNegromante()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isBecchino()) posizione = i;
+        getRuolo(getNomeGiocatore(posizione)).riconosciNegromante();
+    }
 
     private boolean isInquisitorePresente() { return getPosizioneInquisitore() != NON_TROVATO; }
 
