@@ -59,6 +59,11 @@ public final class RuoliFactory
         resettaSegnalazioneAzzeccagarbugli();
         resettaNonMorto();
         resettaMaledetto();
+        for(String nome : getChiavi())
+        {
+            Ruolo ruolo = ottieniRuolo(nome);
+            if(!ruolo.isGuardiaCorrotta() && !ruolo.isLupoSolitario()) ottieniRuolo(nome).ripristinaFazioneOriginale();
+        }
     }
 
     private void resettaNonMorto() { for(String nome : getChiavi()) if(isNonMorto(nome)) resettaNonMorto(nome); }
@@ -71,12 +76,7 @@ public final class RuoliFactory
 
     private void annullaMaledizione(String nome) { ottieniRuolo(nome).eliminaTratto(MALEDETTO); }
 
-    private void resettaNonMorto(String nome)
-    {
-        Ruolo ruolo = ottieniRuolo(nome);
-        ruolo.eliminaTratto(NON_MORTO);
-        ruolo.ripristinaFazioneOriginale();
-    }
+    private void resettaNonMorto(String nome) { ottieniRuolo(nome).eliminaTratto(NON_MORTO); }
 
     private void annullaVoti() { for(String chiave : getChiavi()) annullaVoti(chiave); }
 

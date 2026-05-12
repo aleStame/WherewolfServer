@@ -144,7 +144,7 @@ public class Ruolo
 
     public void riabilitaPotere() { }
 
-    public boolean isCriminale() { return false; }
+    public boolean isCriminale() { return getFazione() == CRIMINALI; }
 
     public boolean isBoia() { return false; }
 
