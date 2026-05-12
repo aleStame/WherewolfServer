@@ -156,9 +156,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneBecchino()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isBecchino()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isBecchino(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isBecchino(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isBecchino(); }
 
     private boolean isInquisitorePresente() { return getPosizioneInquisitore() != NON_TROVATO; }
 
