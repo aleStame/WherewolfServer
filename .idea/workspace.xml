@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaGildata">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCriminalizzazioneBecchino riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02768" summary="VERDE DIRETTO: testSuicidio riuscito">
-      <option name="closed" value="true" />
-      <created>1778338906922</created>
-      <option name="number" value="02768" />
-      <option name="presentableId" value="LOCAL-02768" />
-      <option name="project" value="LOCAL" />
-      <updated>1778338906922</updated>
-    </task>
-    <task id="LOCAL-02769" summary="VERDE DIRETTO: testAttaccoAltriLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1778339114900</created>
-      <option name="number" value="02769" />
-      <option name="presentableId" value="LOCAL-02769" />
-      <option name="project" value="LOCAL" />
-      <updated>1778339114900</updated>
     </task>
     <task id="LOCAL-02770" summary="REFACTORING: definizione del metodo verificaAttaccoLupi">
       <option name="closed" value="true" />
@@ -681,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778600051456</updated>
     </task>
-    <option name="localTasksCounter" value="2817" />
+    <task id="LOCAL-02817" summary="ROSSO: testCriminalizzazioneBecchino non riuscito">
+      <option name="closed" value="true" />
+      <created>1778600340648</created>
+      <option name="number" value="02817" />
+      <option name="presentableId" value="LOCAL-02817" />
+      <option name="project" value="LOCAL" />
+      <updated>1778600340649</updated>
+    </task>
+    <task id="LOCAL-02818" summary="VERDE: testCriminalizzazioneBecchino riuscito">
+      <option name="closed" value="true" />
+      <created>1778600441872</created>
+      <option name="number" value="02818" />
+      <option name="presentableId" value="LOCAL-02818" />
+      <option name="project" value="LOCAL" />
+      <updated>1778600441872</updated>
+    </task>
+    <option name="localTasksCounter" value="2819" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -714,13 +713,13 @@
     <MESSAGE value="REFACTORING: definizione del metodo gildata" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNumeroCriminali" />
     <MESSAGE value="REFACTORING: parametrizzazione del metodo di verifica della gildata" />
-    <MESSAGE value="ROSSO: testCriminalizzazioneBecchino non riuscito" />
-    <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneBecchino" />
     <MESSAGE value="REFACTORING: definizione del metodo isBecchino" />
     <MESSAGE value="ROSSO: testCriminalizzazioneContadinoLupo non riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneContadinoLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaGildata" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaGildata" />
+    <MESSAGE value="ROSSO: testCriminalizzazioneBecchino non riuscito" />
+    <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCriminalizzazioneBecchino riuscito" />
   </component>
 </project>
