@@ -543,6 +543,16 @@ public final class TestPartita
         verificaEliminazione(nomeCapoGilda);
     }
 
+    @Test public void testCriminalizzazioneContadinoMostro()
+    {
+        String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
+        inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
+        gildata(nomeVittima);
+        verificaNumeroCriminali(1);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeCapoGilda);
+    }
+
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }
