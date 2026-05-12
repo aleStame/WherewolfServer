@@ -518,6 +518,13 @@ public final class TestGiocatoriVivi
         verificaGildata(nomeVittima, MORTO);
     }
 
+    @Test public void testCriminalizzazioneContadinoMostro()
+    {
+        String nomeVittima = "Alberto";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Contadino mostro" }, { "Andrea", "Capo gilda" } });
+        verificaGildata(nomeVittima, MORTO);
+    }
+
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
