@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -91,7 +92,12 @@ public final class TestLupo
         verificaFalso(isSegnalatoBoia());
     }
 
-    @Test public void testGildata() { verificaAttacco(ruolo.gildata(), MORTO); }
+    @Test public void testGildata()
+    {
+        Fazione fazione = ruolo.getFazione();
+        verificaAttacco(ruolo.gildata(), MORTO);
+        assertThat(ruolo.getFazione()).isEqualTo(fazione);
+    }
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 

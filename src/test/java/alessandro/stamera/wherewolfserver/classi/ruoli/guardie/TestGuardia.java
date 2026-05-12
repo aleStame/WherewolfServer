@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.guardie;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -57,7 +58,12 @@ public final class TestGuardia
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(MORTO); }
+    @Test public void testGildata()
+    {
+        Fazione fazione = ruolo.getFazione();
+        assertThat(ruolo.gildata()).isEqualTo(MORTO);
+        assertThat(fazione).isEqualTo(ruolo.getFazione());
+    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
