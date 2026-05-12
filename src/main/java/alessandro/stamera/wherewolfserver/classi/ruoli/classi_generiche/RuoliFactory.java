@@ -67,11 +67,10 @@ public final class RuoliFactory
 
     private void ripristinaFazioniOriginali()
     {
-        for(String nome : getChiavi())
-        {
-            if(!isGuardiaCorrotta(nome) && !isLupoSolitario(nome)) ottieniRuolo(nome).ripristinaFazioneOriginale();
-        }
+        for(String nome : getChiavi()) if(!isGuardiaCorrotta(nome) && !isLupoSolitario(nome)) ripristinaFazioneOriginale(nome);
     }
+
+    private void ripristinaFazioneOriginale(String nome) { ottieniRuolo(nome).ripristinaFazioneOriginale(); }
 
     private boolean isGuardiaCorrotta(String nome) { return ottieniRuolo(nome).isGuardiaCorrotta(); }
 
