@@ -23,7 +23,7 @@ public final class TestLupo
 
     @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
+    @Test public void testFazione() { assertThat(getFazione()).isEqualTo(LUPO_BRANCO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
@@ -94,10 +94,12 @@ public final class TestLupo
 
     @Test public void testGildata()
     {
-        Fazione fazione = ruolo.getFazione();
+        Fazione fazione = getFazione();
         verificaAttacco(ruolo.gildata(), MORTO);
-        assertThat(ruolo.getFazione()).isEqualTo(fazione);
+        assertThat(getFazione()).isEqualTo(fazione);
     }
+
+    private Fazione getFazione() { return ruolo.getFazione(); }
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
