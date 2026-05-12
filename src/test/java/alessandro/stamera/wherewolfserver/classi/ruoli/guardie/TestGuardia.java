@@ -16,7 +16,7 @@ public final class TestGuardia
 
     @BeforeEach public void setUp() { ruolo = new Guardia(null, null, null); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testFazione() { assertThat(getFazione()).isEqualTo(VILLAGGIO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
@@ -60,10 +60,12 @@ public final class TestGuardia
 
     @Test public void testGildata()
     {
-        Fazione fazione = ruolo.getFazione();
+        Fazione fazione = getFazione();
         assertThat(ruolo.gildata()).isEqualTo(MORTO);
-        assertThat(fazione).isEqualTo(ruolo.getFazione());
+        assertThat(fazione).isEqualTo(getFazione());
     }
+
+    private Fazione getFazione() { return ruolo.getFazione(); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
