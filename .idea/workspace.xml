@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCriminalizzazioneBecchino riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02770" summary="REFACTORING: definizione del metodo verificaAttaccoLupi">
-      <option name="closed" value="true" />
-      <created>1778490653392</created>
-      <option name="number" value="02770" />
-      <option name="presentableId" value="LOCAL-02770" />
-      <option name="project" value="LOCAL" />
-      <updated>1778490653392</updated>
-    </task>
-    <task id="LOCAL-02771" summary="REFACTORING: definizione del metodo verificaAttacco">
-      <option name="closed" value="true" />
-      <created>1778490925803</created>
-      <option name="number" value="02771" />
-      <option name="presentableId" value="LOCAL-02771" />
-      <option name="project" value="LOCAL" />
-      <updated>1778490925803</updated>
     </task>
     <task id="LOCAL-02772" summary="ROSSO: testInizioCrociata non riuscito">
       <option name="closed" value="true" />
@@ -680,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778600441872</updated>
     </task>
-    <option name="localTasksCounter" value="2819" />
+    <task id="LOCAL-02819" summary="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1778600696818</created>
+      <option name="number" value="02819" />
+      <option name="presentableId" value="LOCAL-02819" />
+      <option name="project" value="LOCAL" />
+      <updated>1778600696818</updated>
+    </task>
+    <task id="LOCAL-02820" summary="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo">
+      <option name="closed" value="true" />
+      <created>1778601006017</created>
+      <option name="number" value="02820" />
+      <option name="presentableId" value="LOCAL-02820" />
+      <option name="project" value="LOCAL" />
+      <updated>1778601006017</updated>
+    </task>
+    <option name="localTasksCounter" value="2821" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isCrociataAvviata" />
-    <MESSAGE value="ROSSO: testSconfittaCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testSconfittaCreatureOmbra riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGilda riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneCapoGildaMorto non riuscito" />
@@ -720,6 +716,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaGildata" />
     <MESSAGE value="ROSSO: testCriminalizzazioneBecchino non riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCriminalizzazioneBecchino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
   </component>
 </project>

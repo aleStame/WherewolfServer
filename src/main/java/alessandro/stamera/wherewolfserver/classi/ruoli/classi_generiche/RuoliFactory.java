@@ -62,6 +62,11 @@ public final class RuoliFactory
         resettaNonMorto();
         resettaMaledetto();
         eliminaTrattiContadinoLupo();
+        ripristinaFazioniOriginali();
+    }
+
+    private void ripristinaFazioniOriginali()
+    {
         for(String nome : getChiavi())
         {
             Ruolo ruolo = ottieniRuolo(nome);
