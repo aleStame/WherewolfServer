@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isGuardiaCorrotta">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/RuoliFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/RuoliFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo ripristinaFazioneOriginale" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,22 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02774" summary="REFACTORING: definizione del metodo isTemplare">
-      <option name="closed" value="true" />
-      <created>1778492834679</created>
-      <option name="number" value="02774" />
-      <option name="presentableId" value="LOCAL-02774" />
-      <option name="project" value="LOCAL" />
-      <updated>1778492834679</updated>
-    </task>
-    <task id="LOCAL-02775" summary="REFACTORING: definizione del metodo isInquisitore">
-      <option name="closed" value="true" />
-      <created>1778493172137</created>
-      <option name="number" value="02775" />
-      <option name="presentableId" value="LOCAL-02775" />
-      <option name="project" value="LOCAL" />
-      <updated>1778493172138</updated>
     </task>
     <task id="LOCAL-02776" summary="REFACTORING: definizione del metodo setCrociataAvviata">
       <option name="closed" value="true" />
@@ -680,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778601288957</updated>
     </task>
-    <option name="localTasksCounter" value="2823" />
+    <task id="LOCAL-02823" summary="REFACTORING: definizione del metodo isLupoSolitario">
+      <option name="closed" value="true" />
+      <created>1778601576276</created>
+      <option name="number" value="02823" />
+      <option name="presentableId" value="LOCAL-02823" />
+      <option name="project" value="LOCAL" />
+      <updated>1778601576276</updated>
+    </task>
+    <task id="LOCAL-02824" summary="REFACTORING: definizione del metodo ripristinaFazioneOriginale">
+      <option name="closed" value="true" />
+      <created>1778601698215</created>
+      <option name="number" value="02824" />
+      <option name="presentableId" value="LOCAL-02824" />
+      <option name="project" value="LOCAL" />
+      <updated>1778601698215</updated>
+    </task>
+    <option name="localTasksCounter" value="2825" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCriminalizzazioneCapoGildaMorto non riuscito" />
-    <MESSAGE value="VERDE: testCriminalizzazioneCapoGildaMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getMorto" />
     <MESSAGE value="ROSSO: testGildata non riuscito" />
@@ -720,6 +716,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo ripristinaFazioniOriginali" />
     <MESSAGE value="REFACTORING: definizione del metodo isGuardiaCorrotta" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGuardiaCorrotta" />
+    <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
+    <MESSAGE value="REFACTORING: definizione del metodo ripristinaFazioneOriginale" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo ripristinaFazioneOriginale" />
   </component>
 </project>
