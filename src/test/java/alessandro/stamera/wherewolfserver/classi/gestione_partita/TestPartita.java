@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
@@ -420,15 +419,6 @@ public final class TestPartita
         verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
     }
 
-    @Test public void testGildataCapoBranco()
-    {
-        String[][] giocatori = new String[][] { { "Pasquale", "Capo branco" }, { "Pina", "Capo gilda" } };
-        inizializzaPartita(giocatori);
-        partita.gildata(giocatori[0][0]);
-        confermaEliminazioneMortiNotte();
-        verificaEliminazione(giocatori[1][0]);
-    }
-
     @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
     public void testAttaccoContadino(String tipoContadino)
     {
@@ -514,7 +504,7 @@ public final class TestPartita
     {
         String nomeVittima = "Antonio";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
-        partita.gildata(nomeVittima);
+        gildata(nomeVittima);
         assertThat(partita.getNumeroCriminali()).isEqualTo(2);
     }
 
@@ -524,7 +514,7 @@ public final class TestPartita
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
-        partita.gildata(nomeVittima);
+        gildata(nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminazione(nomeCapoGilda);
     }
@@ -540,9 +530,11 @@ public final class TestPartita
     {
         String nomeVittima = "Samuele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Luigi", "Capo gilda" } });
-        partita.gildata(nomeVittima);
+        gildata(nomeVittima);
         assertThat(partita.getNumeroCriminali()).isEqualTo(1);
     }
+
+    private void gildata(String nome) { partita.gildata(nome); }
 
     private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
 
