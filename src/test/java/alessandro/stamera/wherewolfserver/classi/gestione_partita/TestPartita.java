@@ -495,17 +495,19 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
-            "Cappuccetto rosso", "Eremita", "Guaritore", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete",
-            "Sensitiva"
+            "Angelo custode, 1", "Azzeccagarbugli, 2", "Bardo, 2", "Becchino, 2", "Bocca di rosa, 2", "Borgomastro, 2", "Bracconiere, 2",
+            "Cacciatore, 2", "Cacciatore di vampiri, 2", "Cappuccetto rosso, 2", "Eremita, 2", "Ghoul, 1", "Giulietta, 1", "Giullare, 1",
+            "Goblin, 1", "Guaritore, 2", "Inquisitore, 1", "Leprecauno, 1", "Mago, 2", "Medium, 2", "Megera, 1", "Mercante, 2", "Monaco, 2",
+            "Negromante, 1", "Nonna, 2", "Nosferatu, 1", "Oratore, 2", "Pazzo, 1", "Oste, 2", "Peccatore, 2", "Posseduto, 1", "Prete, 2",
+            "Sensitiva, 2", "Sidhe, 1", "Templare, 1"
         }
     )
-    public void testCriminalizzazioneCapoGilda(String nomeRuolo)
+    public void testCriminalizzazioneCapoGilda(String nomeRuolo, int numeroCriminali)
     {
         String nomeVittima = "Antonio";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         gildata(nomeVittima);
-        verificaNumeroCriminali(2);
+        verificaNumeroCriminali(numeroCriminali);
     }
 
     @ParameterizedTest
@@ -517,21 +519,6 @@ public final class TestPartita
         gildata(nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminazione(nomeCapoGilda);
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Angelo custode", "Ghoul", "Giulietta", "Giullare", "Goblin", "Inquisitore", "Leprecauno", "Megera", "Negromante", "Nosferatu",
-            "Pazzo", "Posseduto", "Sidhe", "Templare"
-        }
-    )
-    public void testCriminalizzazioneCapoGildaFallito(String nomeRuolo)
-    {
-        String nomeVittima = "Samuele";
-        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Luigi", "Capo gilda" } });
-        gildata(nomeVittima);
-        verificaNumeroCriminali(1);
     }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
