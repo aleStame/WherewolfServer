@@ -512,7 +512,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Lupo del branco", nomeVittima = "Alberto";
         inizializzaGiocatori
         (
-            new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { "Andrea, Capo gilda" } }
+            new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { "Andrea", "Capo gilda" } }
         );
         verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
         verificaAttacco(giocatori.gildata(nomeVittima), MORTO);

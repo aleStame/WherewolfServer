@@ -59,6 +59,8 @@ public final class RuoliFactory
         resettaSegnalazioneAzzeccagarbugli();
         resettaNonMorto();
         resettaMaledetto();
+        ottieniRuolo("Contadino discendente dei lupi").eliminaTratto(CREATURA_OMBRA);
+        ottieniRuolo("Contadino discendente dei lupi").eliminaTratto(LUPO_MANNARO);
         for(String nome : getChiavi())
         {
             Ruolo ruolo = ottieniRuolo(nome);
