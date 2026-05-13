@@ -557,14 +557,15 @@ public final class TestPartita
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testNessunaProtezioneCappuccettoRosso(String tipoLupo)
     {
-        String nomeVittima = "Manfredi";
-        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Damiano", tipoLupo } });
+        String nomeVittima = "Elena";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo } });
         attaccoLupi(tipoLupo, nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminazione(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testNessunaProtezioneCappuccettoRossoMorteNonna(String tipoLupo)
     {
         String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Pina";
@@ -576,6 +577,16 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeCappuccettoRosso);
         confermaEliminazioneMortiNotte();
         verificaEliminati(nomeNonna, nomeCappuccettoRosso);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testProtezioneCappuccettoRosso(String tipoLupo)
+    {
+        String nomeCappuccettoRosso = "Claudia";
+        inizializzaPartita(new String[][] { { "Salvatore", "Nonna" }, { "Noemi", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
+        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
+        confermaEliminazioneMortiNotte();
+        verificaNonEliminato(nomeCappuccettoRosso);
     }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
