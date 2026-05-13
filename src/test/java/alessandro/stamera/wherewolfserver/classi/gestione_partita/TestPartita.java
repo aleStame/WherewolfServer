@@ -553,6 +553,16 @@ public final class TestPartita
         verificaEliminazione(nomeCapoGilda);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testNessunaProtezioneCappuccettoRosso(String tipoLupo)
+    {
+        String nomeVittima = "Manfredi";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Damiano", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeVittima);
+    }
+
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }
