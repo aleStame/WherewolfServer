@@ -567,8 +567,8 @@ public final class TestPartita
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testNessunaProtezioneCappuccettoRossoMorteNonna(String tipoLupo)
     {
-        String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Cappuccetto rosso";
-        inizializzaPartita(new String[][] { { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { "Pina", nomeCappuccettoRosso } });
+        String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Pina";
+        inizializzaPartita(new String[][] { { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
         incrementaVoti(nomeNonna, 3);
         terminaVotazioni();
         incrementaVoti(nomeNonna, 2);

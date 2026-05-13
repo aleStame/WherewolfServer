@@ -38,10 +38,7 @@ public final class Partita
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
         setPazzoUcciso(false);
-        int posizioneCappuccettoRosso = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCappuccettoRosso == -1; i++)
-            if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isCappuccettoRosso()) posizioneCappuccettoRosso = i;
-        if(posizioneCappuccettoRosso != -1) vivi.getRuolo(vivi.getNomeGiocatore(posizioneCappuccettoRosso)).perdiProtezioni();
+        perdiProtezioniCappuccettoRosso();
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -201,6 +198,14 @@ public final class Partita
         if(mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
 
+    private void perdiProtezioniCappuccettoRosso()
+    {
+        int posizioneCappuccettoRosso = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCappuccettoRosso == -1; i++)
+            if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isCappuccettoRosso()) posizioneCappuccettoRosso = i;
+        if(posizioneCappuccettoRosso != -1) vivi.getRuolo(vivi.getNomeGiocatore(posizioneCappuccettoRosso)).perdiProtezioni();
+    }
+
     private void risorgiGiocatore(String nome)
     {
         Ruolo ruolo = getRuoloMortoNotte(nome);
@@ -265,6 +270,7 @@ public final class Partita
         Ruolo ruolo = ballottaggio.getRuolo(nome);
         ballottaggio.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, ruolo);
+        perdiProtezioniCappuccettoRosso();
     }
 
     private void aggiungiGiocatoreVivo(String nome, Ruolo ruolo) { vivi.aggiungiGiocatore(nome, ruolo); }
