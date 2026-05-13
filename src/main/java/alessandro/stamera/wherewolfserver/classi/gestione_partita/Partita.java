@@ -38,6 +38,10 @@ public final class Partita
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
         setPazzoUcciso(false);
+        int posizioneCappuccettoRosso = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCappuccettoRosso == -1; i++)
+            if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isCappuccettoRosso()) posizioneCappuccettoRosso = i;
+        if(posizioneCappuccettoRosso != -1) vivi.getRuolo(vivi.getNomeGiocatore(posizioneCappuccettoRosso)).perdiProtezioni();
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
