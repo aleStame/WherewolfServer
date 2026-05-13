@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
@@ -64,6 +65,12 @@ public final class TestContadinoMostro
     }
 
     @Test public void testAttaccoAssassino() { verificaAttacco(ruolo.attaccoAssassino(), MORTO); }
+
+    @Test public void testGildata()
+    {
+        verificaAttacco(ruolo.gildata(), MORTO);
+        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+    }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 

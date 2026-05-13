@@ -1,9 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.guardie;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,7 +16,7 @@ public final class TestGuardia
 
     @BeforeEach public void setUp() { ruolo = new Guardia(null, null, null); }
 
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
+    @Test public void testFazione() { assertThat(getFazione()).isEqualTo(VILLAGGIO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
@@ -55,6 +57,15 @@ public final class TestGuardia
     @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    @Test public void testGildata()
+    {
+        Fazione fazione = getFazione();
+        assertThat(ruolo.gildata()).isEqualTo(MORTO);
+        assertThat(fazione).isEqualTo(getFazione());
+    }
+
+    private Fazione getFazione() { return ruolo.getFazione(); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

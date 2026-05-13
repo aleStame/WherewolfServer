@@ -98,7 +98,7 @@ public class Ruolo
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
-    public EsitoAttacco gildata() { return null; }
+    public EsitoAttacco gildata() { return FALLITO; }
 
     public boolean isMistico() { return mistico; }
 
@@ -144,7 +144,7 @@ public class Ruolo
 
     public void riabilitaPotere() { }
 
-    public boolean isCriminale() { return false; }
+    public boolean isCriminale() { return getFazione() == CRIMINALI; }
 
     public boolean isBoia() { return false; }
 

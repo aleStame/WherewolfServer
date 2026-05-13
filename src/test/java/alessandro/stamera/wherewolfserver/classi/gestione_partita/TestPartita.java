@@ -333,7 +333,7 @@ public final class TestPartita
         partita.segnalazioneBorgomastro(giocatori[posizione][0]);
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
         incrementaVoti(giocatori[posizione][0], 1);
-        assertThat(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti()).isEqualTo(3);
+        verificaNumeroIntero(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti(), 3);
     }
 
     @Test public void testPotereBracconiereUnLupo()
@@ -419,15 +419,6 @@ public final class TestPartita
         verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
     }
 
-    @Test public void testGildataCapoBranco()
-    {
-        String[][] giocatori = new String[][] { { "Pasquale", "Capo branco" }, { "Pina", "Capo gilda" } };
-        inizializzaPartita(giocatori);
-        partita.gildata(giocatori[0][0]);
-        confermaEliminazioneMortiNotte();
-        verificaEliminazione(giocatori[1][0]);
-    }
-
     @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
     public void testAttaccoContadino(String tipoContadino)
     {
@@ -500,6 +491,71 @@ public final class TestPartita
         verificaEliminati(nomeVittima);
         verificaFalso(isCrociataAvviata());
     }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Angelo custode, 1", "Azzeccagarbugli, 2", "Bardo, 2", "Becchino, 2", "Bocca di rosa, 2", "Borgomastro, 2", "Bracconiere, 2",
+            "Cacciatore, 2", "Cacciatore di vampiri, 2", "Cappuccetto rosso, 2", "Eremita, 2", "Ghoul, 1", "Giulietta, 1", "Giullare, 1",
+            "Goblin, 1", "Guaritore, 2", "Inquisitore, 1", "Leprecauno, 1", "Mago, 2", "Medium, 2", "Megera, 1", "Mercante, 2", "Monaco, 2",
+            "Negromante, 1", "Nonna, 2", "Nosferatu, 1", "Oratore, 2", "Pazzo, 1", "Oste, 2", "Peccatore, 2", "Posseduto, 1", "Prete, 2",
+            "Sensitiva, 2", "Sidhe, 1", "Templare, 1"
+        }
+    )
+    public void testCriminalizzazioneCapoGilda(String nomeRuolo, int numeroCriminali)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
+        gildata(nomeVittima);
+        verificaNumeroCriminali(numeroCriminali);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia", "Capo branco", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testCriminalizzazioneCapoGildaMorto(String nomeRuolo)
+    {
+        String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
+        gildata(nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeCapoGilda);
+    }
+
+    @Test public void testCriminalizzazioneBecchino()
+    {
+        String nomeVittima = "Giulia";
+        inizializzaPartita(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
+        partita.riconosciNegromante();
+        gildata(nomeVittima);
+        verificaNumeroCriminali(1);
+    }
+
+    @Test public void testCriminalizzazioneContadinoLupo()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
+        inizializzaPartita
+        (
+            new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
+        );
+        attaccoLupi(tipoLupo, nomeVittima);
+        gildata(nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeCapoGilda);
+    }
+
+    @Test public void testCriminalizzazioneContadinoMostro()
+    {
+        String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
+        inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
+        gildata(nomeVittima);
+        verificaNumeroCriminali(1);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeCapoGilda);
+    }
+
+    private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
+
+    private void gildata(String nome) { partita.gildata(nome); }
 
     private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
 

@@ -478,6 +478,55 @@ public final class TestGiocatoriVivi
         verificaFalso(isCrociataAvviata());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, MORTO", "Angelo custode, FALLITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO", "Becchino, RIUSCITO",
+            "Bocca di rosa, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO", "Cacciatore, RIUSCITO", "Cacciatore di vampiri, RIUSCITO",
+            "Capo branco, MORTO", "Cappuccetto rosso, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO",
+            "Contadino normale, RIUSCITO", "Eremita, RIUSCITO", "Ghoul, FALLITO", "Giovane lupo, MORTO", "Giulietta, FALLITO",
+            "Giullare, FALLITO", "Goblin, FALLITO", "Guardia, MORTO", "Guaritore, RIUSCITO", "Inquisitore, FALLITO", "Leprecauno, FALLITO",
+            "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, RIUSCITO", "Medium, RIUSCITO", "Megera, FALLITO",
+            "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, FALLITO", "Nonna, RIUSCITO", "Nosferatu, FALLITO", "Oratore, RIUSCITO",
+            "Oste, RIUSCITO", "Pazzo, FALLITO", "Peccatore, RIUSCITO", "Posseduto, FALLITO", "Prete, RIUSCITO", "Sensitiva, RIUSCITO",
+            "Sidhe, FALLITO", "Templare, FALLITO"
+        }
+    )
+    public void testCriminalizzazioneCapoGilda(String nomeRuolo, EsitoAttacco esito)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
+        verificaGildata(nomeVittima, esito);
+    }
+
+    @Test public void testCriminalizzazioneBecchino()
+    {
+        String nomeVittima = "Giulia";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
+        giocatori.riconosciNegromante();
+        verificaGildata(nomeVittima, FALLITO);
+    }
+
+    @Test public void testCriminalizzazioneContadinoLupo()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Alberto";
+        inizializzaGiocatori
+        (
+            new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { "Andrea", "Capo gilda" } }
+        );
+        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+        verificaGildata(nomeVittima, MORTO);
+    }
+
+    @Test public void testCriminalizzazioneContadinoMostro()
+    {
+        String nomeVittima = "Alberto";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Contadino mostro" }, { "Andrea", "Capo gilda" } });
+        verificaGildata(nomeVittima, MORTO);
+    }
+
+    private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
+
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);

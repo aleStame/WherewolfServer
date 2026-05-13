@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,6 +61,26 @@ public final class RuoliFactory
         resettaSegnalazioneAzzeccagarbugli();
         resettaNonMorto();
         resettaMaledetto();
+        eliminaTrattiContadinoLupo();
+        ripristinaFazioniOriginali();
+    }
+
+    private void ripristinaFazioniOriginali()
+    {
+        for(String nome : getChiavi()) if(!isGuardiaCorrotta(nome) && !isLupoSolitario(nome)) ripristinaFazioneOriginale(nome);
+    }
+
+    private void ripristinaFazioneOriginale(String nome) { ottieniRuolo(nome).ripristinaFazioneOriginale(); }
+
+    private boolean isGuardiaCorrotta(String nome) { return ottieniRuolo(nome).isGuardiaCorrotta(); }
+
+    private boolean isLupoSolitario(String nome) { return ottieniRuolo(nome).isLupoSolitario(); }
+
+    private void eliminaTrattiContadinoLupo()
+    {
+        Ruolo ruolo = ottieniRuolo("Contadino discendente dei lupi");
+        Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
+        for(Tratto tratto : tratti) ruolo.eliminaTratto(tratto);
     }
 
     private void resettaNonMorto() { for(String nome : getChiavi()) if(isNonMorto(nome)) resettaNonMorto(nome); }
@@ -71,12 +93,7 @@ public final class RuoliFactory
 
     private void annullaMaledizione(String nome) { ottieniRuolo(nome).eliminaTratto(MALEDETTO); }
 
-    private void resettaNonMorto(String nome)
-    {
-        Ruolo ruolo = ottieniRuolo(nome);
-        ruolo.eliminaTratto(NON_MORTO);
-        ruolo.ripristinaFazioneOriginale();
-    }
+    private void resettaNonMorto(String nome) { ottieniRuolo(nome).eliminaTratto(NON_MORTO); }
 
     private void annullaVoti() { for(String chiave : getChiavi()) annullaVoti(chiave); }
 

@@ -62,7 +62,7 @@ public final class TestRuolo
     @Test public void testGildata()
     {
         Fazione fazione = getFazione();
-        ruolo.gildata();
+        assertThat(ruolo.gildata()).isEqualTo(FALLITO);
         verificaFazione(fazione);
     }
 

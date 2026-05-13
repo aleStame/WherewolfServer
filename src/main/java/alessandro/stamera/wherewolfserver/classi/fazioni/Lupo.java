@@ -22,7 +22,7 @@ public class Lupo extends Ruolo
 
     @Override public boolean isLupo() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return MORTO; }
+    @Override public EsitoAttacco attaccoNosferatu() { return getMorto(); }
 
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
@@ -31,6 +31,10 @@ public class Lupo extends Ruolo
         return esito;
     }
 
+    @Override public EsitoAttacco gildata() { return getMorto(); }
+
     private boolean isProtetto() { return isRomeo() || isAmato(); }
+
+    private EsitoAttacco getMorto() { return MORTO; }
 
 }
