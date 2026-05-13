@@ -553,7 +553,8 @@ public final class TestPartita
         verificaEliminazione(nomeCapoGilda);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testNessunaProtezioneCappuccettoRosso(String tipoLupo)
     {
         String nomeVittima = "Manfredi";
@@ -561,6 +562,20 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         confermaEliminazioneMortiNotte();
         verificaEliminazione(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testNessunaProtezioneCappuccettoRossoMorteNonna(String tipoLupo)
+    {
+        String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Cappuccetto rosso";
+        inizializzaPartita(new String[][] { { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { "Pina", nomeCappuccettoRosso } });
+        incrementaVoti(nomeNonna, 3);
+        terminaVotazioni();
+        incrementaVoti(nomeNonna, 2);
+        terminaBallottaggio();
+        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
+        confermaEliminazioneMortiNotte();
+        verificaEliminati(nomeNonna, nomeCappuccettoRosso);
     }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
