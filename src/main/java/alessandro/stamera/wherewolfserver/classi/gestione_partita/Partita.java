@@ -204,13 +204,7 @@ public final class Partita
         int posizioneCappuccettoRosso = -1;
         for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCappuccettoRosso == -1; i++)
             if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isCappuccettoRosso()) posizioneCappuccettoRosso = i;
-        if(posizioneCappuccettoRosso != -1)
-        {
-            int posizioneNonna = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneNonna == -1; i++)
-                if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isNonna()) posizioneNonna = i;
-            if(posizioneNonna == -1) vivi.annullaProtezioniCappuccettoRosso();
-        }
+        if(posizioneCappuccettoRosso != -1) if(!vivi.isNonnaPresente()) vivi.annullaProtezioniCappuccettoRosso();
     }
 
     private void risorgiGiocatore(String nome)
