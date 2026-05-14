@@ -209,11 +209,7 @@ public final class Partita
             int posizioneNonna = -1;
             for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneNonna == -1; i++)
                 if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isNonna()) posizioneNonna = i;
-            if(posizioneNonna == -1)
-            {
-                vivi.getRuolo(vivi.getNomeGiocatore(posizioneCappuccettoRosso)).perdiProtezioni();
-                System.out.println("protezioni perse");
-            }
+            if(posizioneNonna == -1) vivi.annullaProtezioniCappuccettoRosso();
         }
     }
 
