@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNonnaPresente riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getRuolo">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02794" summary="VERDE DIRETTO: testGildata riuscito">
-      <option name="closed" value="true" />
-      <created>1778516881613</created>
-      <option name="number" value="02794" />
-      <option name="presentableId" value="LOCAL-02794" />
-      <option name="project" value="LOCAL" />
-      <updated>1778516881613</updated>
     </task>
     <task id="LOCAL-02795" summary="VERDE DIRETTO: testGildata riuscito">
       <option name="closed" value="true" />
@@ -679,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778771888801</updated>
     </task>
-    <option name="localTasksCounter" value="2843" />
+    <task id="LOCAL-02843" summary="REFACTORING: definizione del metodo getRuolo">
+      <option name="closed" value="true" />
+      <created>1778772180904</created>
+      <option name="number" value="02843" />
+      <option name="presentableId" value="LOCAL-02843" />
+      <option name="project" value="LOCAL" />
+      <updated>1778772180905</updated>
+    </task>
+    <option name="localTasksCounter" value="2844" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaGildata" />
     <MESSAGE value="ROSSO: testCriminalizzazioneBecchino non riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito" />
@@ -719,6 +720,7 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testNonnaPresente non riuscito" />
     <MESSAGE value="VERDE: testNonnaPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNonnaPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getRuolo" />
   </component>
 </project>
