@@ -525,6 +525,16 @@ public final class TestGiocatoriVivi
         verificaGildata(nomeVittima, MORTO);
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testPerditaProtezioniCappuccettoRosso(String tipoLupo)
+    {
+        String nome = "Maria";
+        aggiungiGiocatore("Maria", "Cappuccetto rosso");
+        giocatori.annullaProtezioniCappuccettoRosso();
+        verificaAttaccoLupo(tipoLupo, nome, RIUSCITO);
+    }
+
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
