@@ -538,10 +538,12 @@ public final class TestGiocatoriVivi
     @Test public void testNonnaPresente()
     {
         aggiungiGiocatore("Francesca", "Nonna");
-        verificaVero(giocatori.isNonnaPresente());
+        verificaVero(isNonnaPresente());
     }
 
-    @Test public void testNonnaAssente() { verificaFalso(giocatori.isNonnaPresente()); }
+    @Test public void testNonnaAssente() { verificaFalso(isNonnaPresente()); }
+
+    private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
 
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
