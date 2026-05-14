@@ -535,6 +535,12 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nome, RIUSCITO);
     }
 
+    @Test public void testNonnaPresente()
+    {
+        aggiungiGiocatore("Francesca", "Nonna");
+        verificaVero(giocatori.isNonnaPresente());
+    }
+
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
