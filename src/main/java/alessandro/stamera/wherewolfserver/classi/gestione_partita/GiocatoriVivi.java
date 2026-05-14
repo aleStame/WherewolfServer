@@ -153,7 +153,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public void riconosciNegromante() { getRuolo(getNomeGiocatore(getPosizioneBecchino())).riconosciNegromante(); }
 
-    public void annullaProtezioniCappuccettoRosso() { }
+    public void annullaProtezioniCappuccettoRosso()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++)
+            if(getRuolo(getNomeGiocatore(i)).isCappuccettoRosso()) posizione = i;
+        getRuolo(getNomeGiocatore(posizione)).perdiProtezioni();
+    }
 
     private int getPosizioneBecchino()
     {
