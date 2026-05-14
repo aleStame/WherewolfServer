@@ -541,6 +541,8 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isNonnaPresente());
     }
 
+    @Test public void testNonnaAssente() { verificaFalso(giocatori.isNonnaPresente()); }
+
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
