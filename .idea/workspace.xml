@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getRuolo">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNonna">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,22 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02795" summary="VERDE DIRETTO: testGildata riuscito">
-      <option name="closed" value="true" />
-      <created>1778517046760</created>
-      <option name="number" value="02795" />
-      <option name="presentableId" value="LOCAL-02795" />
-      <option name="project" value="LOCAL" />
-      <updated>1778517046760</updated>
-    </task>
-    <task id="LOCAL-02796" summary="REFACTORING: definizione del metodo getMorto">
-      <option name="closed" value="true" />
-      <created>1778517180814</created>
-      <option name="number" value="02796" />
-      <option name="presentableId" value="LOCAL-02796" />
-      <option name="project" value="LOCAL" />
-      <updated>1778517180814</updated>
     </task>
     <task id="LOCAL-02797" summary="ROSSO: testGildata non riuscito">
       <option name="closed" value="true" />
@@ -681,7 +665,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778772180905</updated>
     </task>
-    <option name="localTasksCounter" value="2844" />
+    <task id="LOCAL-02844" summary="REFACTORING: definizione del metodo getPosizioneNonna">
+      <option name="closed" value="true" />
+      <created>1778772384135</created>
+      <option name="number" value="02844" />
+      <option name="presentableId" value="LOCAL-02844" />
+      <option name="project" value="LOCAL" />
+      <updated>1778772384135</updated>
+    </task>
+    <task id="LOCAL-02845" summary="REFACTORING: definizione del metodo isNonna">
+      <option name="closed" value="true" />
+      <created>1778772550915</created>
+      <option name="number" value="02845" />
+      <option name="presentableId" value="LOCAL-02845" />
+      <option name="project" value="LOCAL" />
+      <updated>1778772550915</updated>
+    </task>
+    <option name="localTasksCounter" value="2846" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCriminalizzazioneBecchino non riuscito" />
-    <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo" />
     <MESSAGE value="REFACTORING: definizione del metodo ripristinaFazioniOriginali" />
@@ -721,6 +719,8 @@
     <MESSAGE value="ROSSO: testNonnaPresente non riuscito" />
     <MESSAGE value="VERDE: testNonnaPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getRuolo" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneNonna" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNonna" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNonna" />
   </component>
 </project>

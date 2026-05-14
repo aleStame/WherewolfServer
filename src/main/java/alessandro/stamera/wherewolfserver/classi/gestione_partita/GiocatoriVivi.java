@@ -156,12 +156,13 @@ public final class GiocatoriVivi extends Giocatori
     public void annullaProtezioniCappuccettoRosso()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(i).isCappuccettoRosso())
-            posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isCappuccettoRosso(i)) posizione = i;
         getRuolo(posizione).perdiProtezioni();
     }
 
     public boolean isNonnaPresente() { return getPosizioneNonna() != NON_TROVATO; }
+
+    private boolean isCappuccettoRosso(int posizione) { return getRuolo(posizione).isCappuccettoRosso(); }
 
     private int getPosizioneNonna()
     {
