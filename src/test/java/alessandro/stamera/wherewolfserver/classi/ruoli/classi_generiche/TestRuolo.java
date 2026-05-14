@@ -48,7 +48,7 @@ public final class TestRuolo
     }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo solitario, Lupo reietto, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nome)
     {
         sceltaAngeloCustode();

@@ -3,10 +3,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo.values;
@@ -44,7 +41,7 @@ public final class RuoliFactory
 
     public String getNome(int posizione) { return getChiavi().stream().toList().get(posizione); }
 
-    public Ruolo[] getLupi() { return filtraRuoli(Ruolo::isLupo); }
+    public Ruolo[] getLupi() { return filtraRuoli(ruolo -> ruolo.isLupo() || ruolo.isContadinoLupo()); }
 
     public Ruolo[] getMistici() { return filtraRuoli(mistico -> mistico.isMistico() && !mistico.isMedium() && !mistico.isPiccoloPopolo()); }
 
@@ -141,6 +138,7 @@ public final class RuoliFactory
     {
         Ruolo ruolo = ottieniRuolo(nome);
         ruolo.aggiungiProtezione(getCreatureOmbra());
+        if(ruolo.isEremita()) ruolo.aggiungiProtezione(getRuolo("Contadino discendente dei lupi"));
         return ruolo;
     }
 

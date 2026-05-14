@@ -179,6 +179,7 @@ public final class Partita
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
         for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
         for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
+        perdiProtezioniCappuccettoRosso();
     }
 
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
@@ -203,7 +204,17 @@ public final class Partita
         int posizioneCappuccettoRosso = -1;
         for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCappuccettoRosso == -1; i++)
             if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isCappuccettoRosso()) posizioneCappuccettoRosso = i;
-        if(posizioneCappuccettoRosso != -1) vivi.getRuolo(vivi.getNomeGiocatore(posizioneCappuccettoRosso)).perdiProtezioni();
+        if(posizioneCappuccettoRosso != -1)
+        {
+            int posizioneNonna = -1;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneNonna == -1; i++)
+                if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isNonna()) posizioneNonna = i;
+            if(posizioneNonna == -1)
+            {
+                vivi.getRuolo(vivi.getNomeGiocatore(posizioneCappuccettoRosso)).perdiProtezioni();
+                System.out.println("protezioni perse");
+            }
+        }
     }
 
     private void risorgiGiocatore(String nome)
@@ -259,6 +270,7 @@ public final class Partita
             throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
         terminaBallottaggio(nome);
         eliminaGiocatore(nome);
+        perdiProtezioniCappuccettoRosso();
     }
 
     private boolean isEccezioneOratore(String nome) { return ballottaggio.isCitta(nome) && isOratorePresente(); }

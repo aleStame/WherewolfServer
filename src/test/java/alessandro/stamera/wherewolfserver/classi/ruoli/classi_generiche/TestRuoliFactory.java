@@ -10,10 +10,10 @@ public final class TestRuoliFactory
 {
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testLupi(String nome) { verificaPresenza(FACTORY.getLupi(), getRuolo(nome)); }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera, Negromante" })
+    @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Megera", "Negromante" })
     public void testMistici(String nome) { verificaPresenza(FACTORY.getMistici(), getRuolo(nome)); }
 
     @ParameterizedTest @CsvSource
