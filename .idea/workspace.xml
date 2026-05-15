@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCappuccettoRossoPresente non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCappuccettoRossoPresente riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02803" summary="VERDE: testCriminalizzazioneCapoGilda riuscito">
-      <option name="closed" value="true" />
-      <created>1778579019658</created>
-      <option name="number" value="02803" />
-      <option name="presentableId" value="LOCAL-02803" />
-      <option name="project" value="LOCAL" />
-      <updated>1778579019659</updated>
     </task>
     <task id="LOCAL-02804" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaMorto riuscito">
       <option name="closed" value="true" />
@@ -681,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778838789976</updated>
     </task>
-    <option name="localTasksCounter" value="2852" />
+    <task id="LOCAL-02852" summary="VERDE: testCappuccettoRossoPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1778839039306</created>
+      <option name="number" value="02852" />
+      <option name="presentableId" value="LOCAL-02852" />
+      <option name="project" value="LOCAL" />
+      <updated>1778839039306</updated>
+    </task>
+    <option name="localTasksCounter" value="2853" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo ripristinaFazioneOriginale" />
     <MESSAGE value="ROSSO: testGildata non riuscito" />
     <MESSAGE value="VERDE: testGildata riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneContadinoMostro non riuscito" />
@@ -721,6 +720,7 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo isNonnaPresente" />
     <MESSAGE value="ROSSO: testCappuccettoRossoPresente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCappuccettoRossoPresente non riuscito" />
+    <MESSAGE value="VERDE: testCappuccettoRossoPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCappuccettoRossoPresente riuscito" />
   </component>
 </project>

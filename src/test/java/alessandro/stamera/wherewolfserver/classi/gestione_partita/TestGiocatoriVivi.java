@@ -549,6 +549,8 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isCappuccettoRossoPresente());
     }
 
+    @Test public void testCappuccettoRossoAssente() { verificaFalso(giocatori.isCappuccettoRossoPresente()); }
+
     private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
 
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
