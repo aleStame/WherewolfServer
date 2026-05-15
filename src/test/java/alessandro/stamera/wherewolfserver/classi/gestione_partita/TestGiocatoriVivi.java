@@ -546,10 +546,12 @@ public final class TestGiocatoriVivi
     @Test public void testCappuccettoRossoPresente()
     {
         aggiungiGiocatore("Michela", "Cappuccetto rosso");
-        verificaVero(giocatori.isCappuccettoRossoPresente());
+        verificaVero(isCappuccettoRossoPresente());
     }
 
-    @Test public void testCappuccettoRossoAssente() { verificaFalso(giocatori.isCappuccettoRossoPresente()); }
+    @Test public void testCappuccettoRossoAssente() { verificaFalso(isCappuccettoRossoPresente()); }
+
+    private boolean isCappuccettoRossoPresente() { return giocatori.isCappuccettoRossoPresente(); }
 
     private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
 

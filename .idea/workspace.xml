@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCappuccettoRossoPresente riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,30 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02804" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1778579288135</created>
-      <option name="number" value="02804" />
-      <option name="presentableId" value="LOCAL-02804" />
-      <option name="project" value="LOCAL" />
-      <updated>1778579288135</updated>
-    </task>
-    <task id="LOCAL-02805" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaFallito riuscito">
-      <option name="closed" value="true" />
-      <created>1778579710045</created>
-      <option name="number" value="02805" />
-      <option name="presentableId" value="LOCAL-02805" />
-      <option name="project" value="LOCAL" />
-      <updated>1778579710045</updated>
-    </task>
-    <task id="LOCAL-02806" summary="REFACTORING: definizione del metodo gildata">
-      <option name="closed" value="true" />
-      <created>1778589858616</created>
-      <option name="number" value="02806" />
-      <option name="presentableId" value="LOCAL-02806" />
-      <option name="project" value="LOCAL" />
-      <updated>1778589858616</updated>
     </task>
     <task id="LOCAL-02807" summary="REFACTORING: definizione del metodo verificaNumeroCriminali">
       <option name="closed" value="true" />
@@ -681,7 +655,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778839039306</updated>
     </task>
-    <option name="localTasksCounter" value="2853" />
+    <task id="LOCAL-02853" summary="VERDE DIRETTO: testCappuccettoRossoAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1778839452729</created>
+      <option name="number" value="02853" />
+      <option name="presentableId" value="LOCAL-02853" />
+      <option name="project" value="LOCAL" />
+      <updated>1778839452729</updated>
+    </task>
+    <task id="LOCAL-02854" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778839581862</created>
+      <option name="number" value="02854" />
+      <option name="presentableId" value="LOCAL-02854" />
+      <option name="project" value="LOCAL" />
+      <updated>1778839581862</updated>
+    </task>
+    <task id="LOCAL-02855" summary="REFACTORING: definizione del metodo isCappuccettoRossoPresente">
+      <option name="closed" value="true" />
+      <created>1778839854380</created>
+      <option name="number" value="02855" />
+      <option name="presentableId" value="LOCAL-02855" />
+      <option name="project" value="LOCAL" />
+      <updated>1778839854381</updated>
+    </task>
+    <option name="localTasksCounter" value="2856" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testGildata non riuscito" />
-    <MESSAGE value="VERDE: testGildata riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneContadinoMostro non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostro riuscito" />
@@ -717,10 +713,12 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCappuccettoRosso" />
     <MESSAGE value="VERDE DIRETTO: testNonnaAssente riuscito" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo isNonnaPresente" />
     <MESSAGE value="ROSSO: testCappuccettoRossoPresente non riuscito" />
     <MESSAGE value="VERDE: testCappuccettoRossoPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCappuccettoRossoPresente riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCappuccettoRossoAssente riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
   </component>
 </project>
