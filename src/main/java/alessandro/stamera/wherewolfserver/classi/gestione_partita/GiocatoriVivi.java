@@ -157,7 +157,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isNonnaPresente() { return getPosizioneNonna() != NON_TROVATO; }
 
-    public boolean isCappuccettoRossoPresente() { return false; }
+    public boolean isCappuccettoRossoPresente() { return getPosizioneCappuccettoRosso() != NON_TROVATO; }
 
     private int getPosizioneCappuccettoRosso()
     {
