@@ -553,6 +553,42 @@ public final class TestPartita
         verificaEliminazione(nomeCapoGilda);
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testNessunaProtezioneCappuccettoRosso(String tipoLupo)
+    {
+        String nomeVittima = "Elena";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeVittima);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testNessunaProtezioneCappuccettoRossoMorteNonna(String tipoLupo)
+    {
+        String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Pina";
+        inizializzaPartita(new String[][] { { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
+        incrementaVoti(nomeNonna, 3);
+        terminaVotazioni();
+        incrementaVoti(nomeNonna, 2);
+        terminaBallottaggio();
+        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
+        confermaEliminazioneMortiNotte();
+        verificaEliminati(nomeNonna, nomeCappuccettoRosso);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testProtezioneCappuccettoRosso(String tipoLupo)
+    {
+        String nomeCappuccettoRosso = "Claudia";
+        inizializzaPartita(new String[][] { { "Salvatore", "Nonna" }, { "Noemi", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
+        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
+        confermaEliminazioneMortiNotte();
+        verificaNonEliminato(nomeCappuccettoRosso);
+    }
+
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }

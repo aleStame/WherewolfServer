@@ -15,11 +15,13 @@ public final class Protezioni
 
     public Protezioni() { ruoli = new ArrayList<>(); }
 
-    public void aggiungiProtezioneCreatureOmbra() { aggiungiProtezione(FACTORY.getCreatureOmbra()); }
+    public void aggiungiProtezioneCreatureOmbra()
+    {
+        aggiungiProtezione(FACTORY.getCreatureOmbra());
+        aggiungiProtezione(FACTORY.getRuolo("Contadino discendente dei lupi"));
+    }
 
     public void aggiungiProtezioneLupi() { aggiungiProtezione(FACTORY.getLupi()); }
-
-    public void aggiungiProtezioneMistici() { aggiungiProtezione(FACTORY.getMistici()); }
 
     public boolean isPresente(Ruolo ruolo) { return ruoli.contains(ruolo); }
 

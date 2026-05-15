@@ -38,6 +38,7 @@ public final class Partita
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
         setPazzoUcciso(false);
+        perdiProtezioniCappuccettoRosso();
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -178,6 +179,7 @@ public final class Partita
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
         for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
         for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
+        perdiProtezioniCappuccettoRosso();
     }
 
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
@@ -195,6 +197,11 @@ public final class Partita
     {
         eliminaGiocatore(vivi.getNomeNosferatu());
         if(mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
+    }
+
+    private void perdiProtezioniCappuccettoRosso()
+    {
+        if(vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente()) vivi.annullaProtezioniCappuccettoRosso();
     }
 
     private void risorgiGiocatore(String nome)
@@ -250,6 +257,7 @@ public final class Partita
             throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
         terminaBallottaggio(nome);
         eliminaGiocatore(nome);
+        perdiProtezioniCappuccettoRosso();
     }
 
     private boolean isEccezioneOratore(String nome) { return ballottaggio.isCitta(nome) && isOratorePresente(); }
@@ -261,6 +269,7 @@ public final class Partita
         Ruolo ruolo = ballottaggio.getRuolo(nome);
         ballottaggio.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, ruolo);
+        perdiProtezioniCappuccettoRosso();
     }
 
     private void aggiungiGiocatoreVivo(String nome, Ruolo ruolo) { vivi.aggiungiGiocatore(nome, ruolo); }
