@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNonnaAssente riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNonnaPresente">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
@@ -187,11 +186,6 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GiocatoriVivi.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita$1.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -474,22 +468,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02800" summary="REFACTORING: definizione del metodo getFazione">
-      <option name="closed" value="true" />
-      <created>1778575523476</created>
-      <option name="number" value="02800" />
-      <option name="presentableId" value="LOCAL-02800" />
-      <option name="project" value="LOCAL" />
-      <updated>1778575523476</updated>
-    </task>
-    <task id="LOCAL-02801" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaFallito riuscito">
-      <option name="closed" value="true" />
-      <created>1778576814891</created>
-      <option name="number" value="02801" />
-      <option name="presentableId" value="LOCAL-02801" />
-      <option name="project" value="LOCAL" />
-      <updated>1778576814891</updated>
     </task>
     <task id="LOCAL-02802" summary="ROSSO: testCriminalizzazioneCapoGilda non riuscito">
       <option name="closed" value="true" />
@@ -867,7 +845,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778773106109</updated>
     </task>
-    <option name="localTasksCounter" value="2849" />
+    <task id="LOCAL-02849" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1778774137457</created>
+      <option name="number" value="02849" />
+      <option name="presentableId" value="LOCAL-02849" />
+      <option name="project" value="LOCAL" />
+      <updated>1778774137457</updated>
+    </task>
+    <task id="LOCAL-02850" summary="REFACTORING: definizione del metodo isNonnaPresente">
+      <option name="closed" value="true" />
+      <created>1778774578932</created>
+      <option name="number" value="02850" />
+      <option name="presentableId" value="LOCAL-02850" />
+      <option name="project" value="LOCAL" />
+      <updated>1778774578932</updated>
+    </task>
+    <option name="localTasksCounter" value="2851" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -882,7 +876,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isGuardiaCorrotta" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
     <MESSAGE value="REFACTORING: definizione del metodo ripristinaFazioneOriginale" />
     <MESSAGE value="ROSSO: testGildata non riuscito" />
@@ -898,7 +891,6 @@
     <MESSAGE value="VERDE: testProtezioneCappuccettoRosso riuscito" />
     <MESSAGE value="ROSSO: testPerditaProtezioniCappuccettoRosso riuscito" />
     <MESSAGE value="VERDE: testPerditaProtezioniCappuccettoRosso riuscito" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testNonnaPresente non riuscito" />
     <MESSAGE value="VERDE: testNonnaPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
@@ -907,6 +899,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCappuccettoRosso" />
     <MESSAGE value="VERDE DIRETTO: testNonnaAssente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNonnaAssente riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNonnaPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNonnaPresente" />
   </component>
 </project>
