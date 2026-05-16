@@ -102,9 +102,19 @@ public final class TestPartita
         verificaVero(isVivo(giocatori[posizione][0]));
     }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Bardo", "Becchino", "Boia", "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco",
+            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul",
+            "Giulietta", "Giullare", "Goblin", "Guardia", "Guaritore", "Giovane lupo", "Inquisitore", "Leprecauno", "Lupo del branco",
+            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Monaco", "Negromante", "Nonna", "Nosferatu", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sensitiva", "Sidhe", "Templare"
+        }
+    )
+    public void testSegnalazioneAzzeccagarbugli(String ruolo)
     {
-        String[][] giocatori = new String[][] { { "Matteo", "Guardia" }, { "Ivan", "Altra guardia" }, { "Miriam", "Guardia corrotta" } };
+        String[][] giocatori = new String[][] { { "Matteo", ruolo }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
         inizializzaPartita(giocatori);
         segnalazioneAzzeccagarbugli(giocatori[0][0]);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);

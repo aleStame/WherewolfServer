@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,37 +75,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/protezioniCappuccettoRosso&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
+    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
+    "Gradle.TestLadra.executor": "Run",
+    "Gradle.TestLupo.testGildata.executor": "Run",
+    "Gradle.TestProtezioni.executor": "Run",
+    "Gradle.TestTratti.executor": "Run",
+    "Gradle.TestUtente.executor": "Run",
+    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
+    "Gradle.wherewolf.server.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature/segnalazioneAzzeccagarbugli",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -286,22 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02807" summary="REFACTORING: definizione del metodo verificaNumeroCriminali">
-      <option name="closed" value="true" />
-      <created>1778590169373</created>
-      <option name="number" value="02807" />
-      <option name="presentableId" value="LOCAL-02807" />
-      <option name="project" value="LOCAL" />
-      <updated>1778590169374</updated>
-    </task>
-    <task id="LOCAL-02808" summary="REFACTORING: parametrizzazione del metodo di verifica della gildata">
-      <option name="closed" value="true" />
-      <created>1778591082835</created>
-      <option name="number" value="02808" />
-      <option name="presentableId" value="LOCAL-02808" />
-      <option name="project" value="LOCAL" />
-      <updated>1778591082835</updated>
     </task>
     <task id="LOCAL-02809" summary="REFACTORING: parametrizzazione del metodo di verifica della gildata">
       <option name="closed" value="true" />
@@ -679,7 +663,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778839854381</updated>
     </task>
-    <option name="localTasksCounter" value="2856" />
+    <task id="LOCAL-02856" summary="REFACTORING: definizione del metodo isCappuccettoRossoPresente">
+      <option name="closed" value="true" />
+      <created>1778840161171</created>
+      <option name="number" value="02856" />
+      <option name="presentableId" value="LOCAL-02856" />
+      <option name="project" value="LOCAL" />
+      <updated>1778840161171</updated>
+    </task>
+    <task id="LOCAL-02857" summary="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1778841829051</created>
+      <option name="number" value="02857" />
+      <option name="presentableId" value="LOCAL-02857" />
+      <option name="project" value="LOCAL" />
+      <updated>1778841829051</updated>
+    </task>
+    <option name="localTasksCounter" value="2858" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCriminalizzazioneContadinoMostro non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostro riuscito" />
     <MESSAGE value="ROSSO: testNessunaProtezioneCappuccettoRosso non riuscito" />
@@ -719,6 +718,7 @@
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRossoAssente riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
   </component>
 </project>

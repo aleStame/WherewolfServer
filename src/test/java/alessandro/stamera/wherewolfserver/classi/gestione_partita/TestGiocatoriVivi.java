@@ -241,10 +241,21 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nome, MORTO);
     }
 
-    @Test public void testSegnalatoAzzeccagarbugli()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso",
+            "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giulietta",
+            "Giullare", "Goblin", "Guardia", "Guaritore", "Giovane lupo", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Templare"
+        }
+    )
+    public void testSegnalatoAzzeccagarbugli(String ruolo)
     {
         String nome = "Anna";
-        aggiungiGiocatore(nome, "Leprecauno");
+        aggiungiGiocatore(nome, ruolo);
         giocatori.segnalazioneAzzeccagarbugli(nome);
         verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
     }
