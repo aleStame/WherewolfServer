@@ -329,10 +329,11 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @Test public void testPotereBorgomastro()
+    @ParameterizedTest @CsvSource({ "Mercante, 3", "Contadino mostro, 2" })
+    public void testPotereBorgomastro(String ruolo, int numeroVoti)
     {
         String[][] giocatori =
-            new String[][] { { "Jacopo", "Borgomastro" }, { "Isra", "Angelo custode" }, { "Tania", "Mercante" }, { "Francesco", "Bocca di rosa" } };
+            new String[][] { { "Jacopo", "Borgomastro" }, { "Isra", "Angelo custode" }, { "Tania", ruolo }, { "Francesco", "Bocca di rosa" } };
         inizializzaPartita(giocatori);
         attaccoLupi("Capo branco", giocatori[3][0]);
         int posizione = 2;
@@ -343,7 +344,7 @@ public final class TestPartita
         partita.segnalazioneBorgomastro(giocatori[posizione][0]);
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
         incrementaVoti(giocatori[posizione][0], 1);
-        verificaNumeroIntero(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti(), 3);
+        verificaNumeroIntero(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti(), numeroVoti);
     }
 
     @Test public void testPotereBracconiereUnLupo()
