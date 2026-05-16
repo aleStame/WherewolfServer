@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCappuccettoRossoPresente">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,14 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02808" summary="REFACTORING: parametrizzazione del metodo di verifica della gildata">
-      <option name="closed" value="true" />
-      <created>1778591082835</created>
-      <option name="number" value="02808" />
-      <option name="presentableId" value="LOCAL-02808" />
-      <option name="project" value="LOCAL" />
-      <updated>1778591082835</updated>
     </task>
     <task id="LOCAL-02809" summary="REFACTORING: parametrizzazione del metodo di verifica della gildata">
       <option name="closed" value="true" />
@@ -682,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778840161171</updated>
     </task>
-    <option name="localTasksCounter" value="2857" />
+    <task id="LOCAL-02857" summary="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito">
+      <option name="closed" value="true" />
+      <created>1778841829051</created>
+      <option name="number" value="02857" />
+      <option name="presentableId" value="LOCAL-02857" />
+      <option name="project" value="LOCAL" />
+      <updated>1778841829051</updated>
+    </task>
+    <option name="localTasksCounter" value="2858" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCriminalizzazioneContadinoMostro non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostro riuscito" />
     <MESSAGE value="ROSSO: testNessunaProtezioneCappuccettoRosso non riuscito" />
@@ -722,6 +718,7 @@
     <MESSAGE value="VERDE DIRETTO: testCappuccettoRossoAssente riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCappuccettoRossoPresente" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneAzzeccagarbugli riuscito" />
   </component>
 </project>

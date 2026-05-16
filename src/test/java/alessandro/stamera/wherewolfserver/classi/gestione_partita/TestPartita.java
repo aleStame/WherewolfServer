@@ -112,9 +112,9 @@ public final class TestPartita
             "Posseduto", "Prete", "Sensitiva", "Sidhe", "Templare"
         }
     )
-    public void testSegnalazioneAzzeccagarbugli(String nome)
+    public void testSegnalazioneAzzeccagarbugli(String ruolo)
     {
-        String[][] giocatori = new String[][] { { "Matteo", nome }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
+        String[][] giocatori = new String[][] { { "Matteo", ruolo }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
         inizializzaPartita(giocatori);
         segnalazioneAzzeccagarbugli(giocatori[0][0]);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
