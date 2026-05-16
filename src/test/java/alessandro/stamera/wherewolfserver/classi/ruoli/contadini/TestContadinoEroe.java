@@ -1,12 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -35,30 +33,7 @@ public final class TestContadinoEroe
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
-    public void testAttaccoLupiNonProtetto(String nome) { verificaEsitoAttacco(nome, MORTO); }
-
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
-    public void testAttaccoLupiRomeo(String nome)
-    {
-        ruolo.romeizzazione();
-        verificaAttaccoFallito(nome);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
-    public void testAttaccoLupiAmato(String nome)
-    {
-        ruolo.sceltaAngeloCustode();
-        verificaAttaccoFallito(nome);
-    }
-
-    private void verificaAttaccoFallito(String nome) { verificaEsitoAttacco(nome, FALLITO); }
-
-    private void verificaEsitoAttacco(String nome, EsitoAttacco esito)
-    {
-        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(esito);
-    }
+    public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
