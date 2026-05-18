@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testContadinoMostroPresente non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testContadinoMostroPresente riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02818" summary="VERDE: testCriminalizzazioneBecchino riuscito">
-      <option name="closed" value="true" />
-      <created>1778600441872</created>
-      <option name="number" value="02818" />
-      <option name="presentableId" value="LOCAL-02818" />
-      <option name="project" value="LOCAL" />
-      <updated>1778600441872</updated>
     </task>
     <task id="LOCAL-02819" summary="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito">
       <option name="closed" value="true" />
@@ -681,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779113375840</updated>
     </task>
-    <option name="localTasksCounter" value="2867" />
+    <task id="LOCAL-02867" summary="VERDE: testContadinoMostroPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1779113764986</created>
+      <option name="number" value="02867" />
+      <option name="presentableId" value="LOCAL-02867" />
+      <option name="project" value="LOCAL" />
+      <updated>1779113764986</updated>
+    </task>
+    <option name="localTasksCounter" value="2868" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testProtezioneCappuccettoRosso non riuscito" />
     <MESSAGE value="VERDE: testProtezioneCappuccettoRosso riuscito" />
     <MESSAGE value="ROSSO: testPerditaProtezioniCappuccettoRosso riuscito" />
     <MESSAGE value="VERDE: testPerditaProtezioniCappuccettoRosso riuscito" />
@@ -721,6 +720,7 @@
     <MESSAGE value="ROSSO: testGuarigioneContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testGuarigioneContadinoMostro riuscito" />
     <MESSAGE value="ROSSO: testContadinoMostroPresente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testContadinoMostroPresente non riuscito" />
+    <MESSAGE value="VERDE: testContadinoMostroPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testContadinoMostroPresente riuscito" />
   </component>
 </project>
