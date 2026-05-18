@@ -574,11 +574,13 @@ public final class TestGiocatoriVivi
     {
         String nome = "Giuseppina";
         aggiungiGiocatore(nome, "Guaritore");
-        verificaVero(giocatori.isGuaritorePresente());
+        verificaVero(isGuaritorePresente());
         verificaStringa(giocatori.getNomeGuaritore(), nome);
         giocatori.eliminaGiocatore(nome);
-        verificaFalso(giocatori.isGuaritorePresente());
+        verificaFalso(isGuaritorePresente());
     }
+
+    private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }
 
     private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 

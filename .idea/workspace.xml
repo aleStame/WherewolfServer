@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isContadinoMostroPresente">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testPresenzaGuaritore riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,22 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02823" summary="REFACTORING: definizione del metodo isLupoSolitario">
-      <option name="closed" value="true" />
-      <created>1778601576276</created>
-      <option name="number" value="02823" />
-      <option name="presentableId" value="LOCAL-02823" />
-      <option name="project" value="LOCAL" />
-      <updated>1778601576276</updated>
-    </task>
-    <task id="LOCAL-02824" summary="REFACTORING: definizione del metodo ripristinaFazioneOriginale">
-      <option name="closed" value="true" />
-      <created>1778601698215</created>
-      <option name="number" value="02824" />
-      <option name="presentableId" value="LOCAL-02824" />
-      <option name="project" value="LOCAL" />
-      <updated>1778601698215</updated>
     </task>
     <task id="LOCAL-02825" summary="ROSSO: testGildata non riuscito">
       <option name="closed" value="true" />
@@ -684,7 +663,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779114488661</updated>
     </task>
-    <option name="localTasksCounter" value="2872" />
+    <task id="LOCAL-02872" summary="ROSSO: testPresenzaGuaritore non riuscito">
+      <option name="closed" value="true" />
+      <created>1779116171905</created>
+      <option name="number" value="02872" />
+      <option name="presentableId" value="LOCAL-02872" />
+      <option name="project" value="LOCAL" />
+      <updated>1779116171905</updated>
+    </task>
+    <task id="LOCAL-02873" summary="VERDE: testPresenzaGuaritore riuscito">
+      <option name="closed" value="true" />
+      <created>1779116417136</created>
+      <option name="number" value="02873" />
+      <option name="presentableId" value="LOCAL-02873" />
+      <option name="project" value="LOCAL" />
+      <updated>1779116417136</updated>
+    </task>
+    <option name="localTasksCounter" value="2874" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -699,8 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testNonnaPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo isNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRosso" />
@@ -724,6 +717,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
     <MESSAGE value="VERDE DIRETTO: testContadinoMostroAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostroPresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isContadinoMostroPresente" />
+    <MESSAGE value="ROSSO: testPresenzaGuaritore non riuscito" />
+    <MESSAGE value="VERDE: testPresenzaGuaritore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPresenzaGuaritore riuscito" />
   </component>
 </project>
