@@ -570,6 +570,8 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeContadinoMostro(), nome);
     }
 
+    @Test public void testContadinoMostroAssente() { verificaFalso(giocatori.isContadinoMostroPresente()); }
+
     private boolean isCappuccettoRossoPresente() { return giocatori.isCappuccettoRossoPresente(); }
 
     private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
