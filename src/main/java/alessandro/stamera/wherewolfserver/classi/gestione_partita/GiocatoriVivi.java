@@ -168,9 +168,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneGuaritore()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isGuaritore()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGuaritore(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isGuaritore(int posizione) { return getRuolo(posizione).isGuaritore(); }
 
     private int getPosizioneContadinoMostro()
     {
