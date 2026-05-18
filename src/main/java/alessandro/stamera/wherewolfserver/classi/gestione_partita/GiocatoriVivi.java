@@ -159,9 +159,19 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCappuccettoRossoPresente() { return getPosizioneCappuccettoRosso() != NON_TROVATO; }
 
-    public boolean isContadinoMostroPresente() { return false; }
+    public boolean isContadinoMostroPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(getNomeGiocatore(i)).isContadinoMostro();
+        return trovato;
+    }
 
-    public String getNomeContadinoMostro() { return null; }
+    public String getNomeContadinoMostro()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isContadinoMostro()) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
 
     private int getPosizioneCappuccettoRosso()
     {
