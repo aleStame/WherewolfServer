@@ -196,6 +196,8 @@ public final class Partita
 
     public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
 
+    public void guarisci(String nome) { }
+
     private void nosferatuControLupo(String nome)
     {
         eliminaGiocatore(vivi.getNomeNosferatu());

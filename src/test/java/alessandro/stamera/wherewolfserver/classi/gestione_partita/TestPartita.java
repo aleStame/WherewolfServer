@@ -589,7 +589,8 @@ public final class TestPartita
         verificaEliminati(nomeNonna, nomeCappuccettoRosso);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testProtezioneCappuccettoRosso(String tipoLupo)
     {
         String nomeCappuccettoRosso = "Claudia";
@@ -597,6 +598,18 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeCappuccettoRosso);
         confermaEliminazioneMortiNotte();
         verificaNonEliminato(nomeCappuccettoRosso);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    public void testGuarigioneContadinoMostro(String tipoLupo)
+    {
+        String nomeContadino = "Graziano", nomeGuaritore = "Perla", nomeLupo = "Leonardo";
+        inizializzaPartita(new String[][] { { nomeContadino, "Contadino mostro" }, { nomeLupo, tipoLupo }, { nomeGuaritore, "Guaritore" } });
+        attaccoLupi(tipoLupo, nomeContadino);
+        partita.guarisci(nomeContadino);
+        confermaEliminazioneMortiNotte();
+        verificaEliminati(nomeGuaritore, nomeLupo);
     }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
