@@ -161,7 +161,9 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isContadinoMostroPresente() { return getPosizioneContadinoMostro() != NON_TROVATO; }
 
-    public String getNomeContadinoMostro() { return getNomeGiocatore(getPosizioneContadinoMostro()); }
+    public boolean isGuaritorePresente() { return false; }
+
+    public String getNomeGuaritore() { return null; }
 
     private int getPosizioneContadinoMostro()
     {

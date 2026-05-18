@@ -201,7 +201,7 @@ public final class Partita
         Ruolo ruolo = getRuoloMortoNotte(nome);
         eliminati.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, ruolo);
-        if(ruolo.isContadinoMostro())
+        if(vivi.isContadinoMostroPresente())
         {
             int posizione = -1;
             for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isGuaritore()) posizione = i;

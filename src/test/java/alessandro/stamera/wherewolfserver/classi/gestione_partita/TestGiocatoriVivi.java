@@ -564,13 +564,21 @@ public final class TestGiocatoriVivi
 
     @Test public void testContadinoMostroPresente()
     {
-        String nome = "Gianluigi";
-        aggiungiGiocatore(nome, "Contadino mostro");
+        aggiungiGiocatore("Gianluigi", "Contadino mostro");
         verificaVero(isContadinoMostroPresente());
-        verificaStringa(giocatori.getNomeContadinoMostro(), nome);
     }
 
     @Test public void testContadinoMostroAssente() { verificaFalso(isContadinoMostroPresente()); }
+
+    @Test public void testPresenzaGuaritore()
+    {
+        String nome = "Giuseppina";
+        aggiungiGiocatore(nome, "Guaritore");
+        verificaVero(giocatori.isGuaritorePresente());
+        verificaStringa(giocatori.getNomeGuaritore(), nome);
+        giocatori.eliminaGiocatore(nome);
+        verificaFalso(giocatori.isGuaritorePresente());
+    }
 
     private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 
