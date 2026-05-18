@@ -609,6 +609,7 @@ public final class TestPartita
         partita.guarisci(nomeContadino);
         confermaEliminazioneMortiNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
+        verificaNonEliminato(nomeContadino);
     }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }

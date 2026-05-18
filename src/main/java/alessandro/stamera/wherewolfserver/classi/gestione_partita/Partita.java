@@ -198,16 +198,14 @@ public final class Partita
 
     public void guarisci(String nome)
     {
+        boolean assente = !vivi.isContadinoMostroPresente();
         Ruolo ruolo = getRuoloMortoNotte(nome);
-        eliminati.eliminaGiocatore(nome);
+        mortiNotte.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, ruolo);
-        if(vivi.isContadinoMostroPresente())
-        {
-            int posizione = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isGuaritore()) posizione = i;
-            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
-        }
+        if(assente && vivi.isContadinoMostroPresente()) eliminaGuaritore();
     }
+
+    private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
     private void nosferatuControLupo(String nome)
     {
