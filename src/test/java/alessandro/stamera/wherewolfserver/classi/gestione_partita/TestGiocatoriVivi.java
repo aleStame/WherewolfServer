@@ -566,11 +566,13 @@ public final class TestGiocatoriVivi
     {
         String nome = "Gianluigi";
         aggiungiGiocatore(nome, "Contadino mostro");
-        verificaVero(giocatori.isContadinoMostroPresente());
+        verificaVero(isContadinoMostroPresente());
         verificaStringa(giocatori.getNomeContadinoMostro(), nome);
     }
 
-    @Test public void testContadinoMostroAssente() { verificaFalso(giocatori.isContadinoMostroPresente()); }
+    @Test public void testContadinoMostroAssente() { verificaFalso(isContadinoMostroPresente()); }
+
+    private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 
     private boolean isCappuccettoRossoPresente() { return giocatori.isCappuccettoRossoPresente(); }
 

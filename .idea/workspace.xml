@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testContadinoMostroPresente riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testContadinoMostroAssente riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,30 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02819" summary="VERDE DIRETTO: testCriminalizzazioneContadinoLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1778600696818</created>
-      <option name="number" value="02819" />
-      <option name="presentableId" value="LOCAL-02819" />
-      <option name="project" value="LOCAL" />
-      <updated>1778600696818</updated>
-    </task>
-    <task id="LOCAL-02820" summary="REFACTORING: definizione del metodo eliminaTrattiContadinoLupo">
-      <option name="closed" value="true" />
-      <created>1778601006017</created>
-      <option name="number" value="02820" />
-      <option name="presentableId" value="LOCAL-02820" />
-      <option name="project" value="LOCAL" />
-      <updated>1778601006017</updated>
-    </task>
-    <task id="LOCAL-02821" summary="REFACTORING: definizione del metodo ripristinaFazioniOriginali">
-      <option name="closed" value="true" />
-      <created>1778601155849</created>
-      <option name="number" value="02821" />
-      <option name="presentableId" value="LOCAL-02821" />
-      <option name="project" value="LOCAL" />
-      <updated>1778601155849</updated>
     </task>
     <task id="LOCAL-02822" summary="REFACTORING: definizione del metodo isGuardiaCorrotta">
       <option name="closed" value="true" />
@@ -681,7 +657,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779113764986</updated>
     </task>
-    <option name="localTasksCounter" value="2868" />
+    <task id="LOCAL-02868" summary="REFACTORING: definizione del metodo getPosizioneContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1779114059356</created>
+      <option name="number" value="02868" />
+      <option name="presentableId" value="LOCAL-02868" />
+      <option name="project" value="LOCAL" />
+      <updated>1779114059356</updated>
+    </task>
+    <task id="LOCAL-02869" summary="REFACTORING: definizione del metodo isContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1779114183626</created>
+      <option name="number" value="02869" />
+      <option name="presentableId" value="LOCAL-02869" />
+      <option name="project" value="LOCAL" />
+      <updated>1779114183626</updated>
+    </task>
+    <task id="LOCAL-02870" summary="VERDE DIRETTO: testContadinoMostroAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1779114344922</created>
+      <option name="number" value="02870" />
+      <option name="presentableId" value="LOCAL-02870" />
+      <option name="project" value="LOCAL" />
+      <updated>1779114344922</updated>
+    </task>
+    <option name="localTasksCounter" value="2871" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,9 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testProtezioneCappuccettoRosso riuscito" />
-    <MESSAGE value="ROSSO: testPerditaProtezioniCappuccettoRosso riuscito" />
-    <MESSAGE value="VERDE: testPerditaProtezioniCappuccettoRosso riuscito" />
     <MESSAGE value="ROSSO: testNonnaPresente non riuscito" />
     <MESSAGE value="VERDE: testNonnaPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
@@ -721,6 +718,9 @@
     <MESSAGE value="VERDE: testGuarigioneContadinoMostro riuscito" />
     <MESSAGE value="ROSSO: testContadinoMostroPresente non riuscito" />
     <MESSAGE value="VERDE: testContadinoMostroPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testContadinoMostroPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneContadinoMostro" />
+    <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
+    <MESSAGE value="VERDE DIRETTO: testContadinoMostroAssente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testContadinoMostroAssente riuscito" />
   </component>
 </project>
