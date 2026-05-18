@@ -196,7 +196,18 @@ public final class Partita
 
     public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
 
-    public void guarisci(String nome) { }
+    public void guarisci(String nome)
+    {
+        Ruolo ruolo = getRuoloMortoNotte(nome);
+        eliminati.eliminaGiocatore(nome);
+        aggiungiGiocatoreVivo(nome, ruolo);
+        if(ruolo.isContadinoMostro())
+        {
+            int posizione = -1;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isGuaritore()) posizione = i;
+            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
+        }
+    }
 
     private void nosferatuControLupo(String nome)
     {

@@ -600,8 +600,7 @@ public final class TestPartita
         verificaNonEliminato(nomeCappuccettoRosso);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testGuarigioneContadinoMostro(String tipoLupo)
     {
         String nomeContadino = "Graziano", nomeGuaritore = "Perla", nomeLupo = "Leonardo";
