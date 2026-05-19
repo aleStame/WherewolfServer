@@ -153,7 +153,7 @@ public final class Partita
     public void segnalazioneBorgomastro(String nome)
     {
         int numeroVoti = getNumeroRuoliCittaPresenti();
-        if(ballottaggio.getRuolo(nome).isContadinoMostro()) numeroVoti = 1;
+        if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
         incrementaVotiBallottaggio(nome, numeroVoti);
         ballottaggio.segnalazioneBorgomastro();
     }
@@ -202,11 +202,10 @@ public final class Partita
 
     public void guarisci(String nome)
     {
-        boolean assente = !vivi.isContadinoMostroPresente();
         Ruolo ruolo = getRuoloMortoNotte(nome);
         mortiNotte.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, ruolo);
-        if(assente && vivi.isContadinoMostroPresente()) eliminaGuaritore();
+        if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
     }
 
     public void incrementaVotiContadinoMostro(String nome)
