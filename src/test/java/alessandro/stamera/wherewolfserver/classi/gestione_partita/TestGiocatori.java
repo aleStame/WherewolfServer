@@ -95,9 +95,11 @@ public final class TestGiocatori
     {
         String[][] giocatori = new String[][] { { "Peter", "Contadino mostro" }, { "Gwen", "Contadino normale" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        verificaVero(this.giocatori.isContadinoMostro(giocatori[0][0]));
-        verificaFalso(this.giocatori.isContadinoMostro(giocatori[1][0]));
+        verificaVero(isContadinoMostro(giocatori[0][0]));
+        verificaFalso(isContadinoMostro(giocatori[1][0]));
     }
+
+    private boolean isContadinoMostro(String nome) { return giocatori.isContadinoMostro(nome); }
 
     private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 
