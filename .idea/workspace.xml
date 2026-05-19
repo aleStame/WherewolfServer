@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo aggiungiGiocatori">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNumeroNotte non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,14 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02855" summary="REFACTORING: definizione del metodo isCappuccettoRossoPresente">
-      <option name="closed" value="true" />
-      <created>1778839854380</created>
-      <option name="number" value="02855" />
-      <option name="presentableId" value="LOCAL-02855" />
-      <option name="project" value="LOCAL" />
-      <updated>1778839854381</updated>
     </task>
     <task id="LOCAL-02856" summary="REFACTORING: definizione del metodo isCappuccettoRossoPresente">
       <option name="closed" value="true" />
@@ -682,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779226021817</updated>
     </task>
-    <option name="localTasksCounter" value="2904" />
+    <task id="LOCAL-02904" summary="ROSSO: testNumeroNotte non riuscito">
+      <option name="closed" value="true" />
+      <created>1779226871738</created>
+      <option name="number" value="02904" />
+      <option name="presentableId" value="LOCAL-02904" />
+      <option name="project" value="LOCAL" />
+      <updated>1779226871738</updated>
+    </task>
+    <option name="localTasksCounter" value="2905" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPresenzaGuaritore non riuscito" />
     <MESSAGE value="VERDE: testPresenzaGuaritore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGuaritorePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaGuaritore" />
@@ -722,6 +718,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatori" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiGiocatori" />
+    <MESSAGE value="ROSSO: testNumeroNotte non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNumeroNotte non riuscito" />
   </component>
 </project>

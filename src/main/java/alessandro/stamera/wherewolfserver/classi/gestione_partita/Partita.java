@@ -32,6 +32,8 @@ public final class Partita
 
     private boolean pazzoUcciso;
 
+    private int numeroNotte;
+
     public Partita(String[][] giocatori)
     {
         vivi = new GiocatoriVivi();
@@ -44,6 +46,7 @@ public final class Partita
         setPazzoUcciso(false);
         perdiProtezioniCappuccettoRosso();
         votantiContadinoMostro = new ArrayList<>();
+        numeroNotte = 1;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -187,6 +190,7 @@ public final class Partita
         for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
         for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
         perdiProtezioniCappuccettoRosso();
+        numeroNotte++;
     }
 
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
@@ -222,7 +226,7 @@ public final class Partita
         votantiContadinoMostro.clear();
     }
 
-    public int getNumeroNotte() { return -1; }
+    public int getNumeroNotte() { return numeroNotte; }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
