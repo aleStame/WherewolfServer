@@ -193,18 +193,16 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        Ruolo ruolo = getRuoloMortoNotte(nome);
+        eliminati.aggiungiGiocatore(nome, getRuoloMortoNotte(nome));
         eliminaGiocatoreMortoNotte(nome);
-        eliminati.aggiungiGiocatore(nome, ruolo);
     }
 
     public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
 
     public void guarisci(String nome)
     {
-        Ruolo ruolo = getRuoloMortoNotte(nome);
+        aggiungiGiocatoreVivo(nome, getRuoloMortoNotte(nome));
         mortiNotte.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, ruolo);
         if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
     }
 
@@ -239,9 +237,8 @@ public final class Partita
 
     private void risorgiGiocatore(String nome)
     {
-        Ruolo ruolo = getRuoloMortoNotte(nome);
+        aggiungiGiocatoreVivo(nome, getRuoloMortoNotte(nome));
         eliminaGiocatoreMortoNotte(nome);
-        aggiungiGiocatoreVivo(nome, ruolo);
     }
 
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
@@ -299,9 +296,8 @@ public final class Partita
 
     private void terminaBallottaggio(String nome)
     {
-        Ruolo ruolo = ballottaggio.getRuolo(nome);
+        aggiungiGiocatoreVivo(nome, ballottaggio.getRuolo(nome));
         ballottaggio.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, ruolo);
         perdiProtezioniCappuccettoRosso();
     }
 
