@@ -88,6 +88,16 @@ public class Giocatori
 
     public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 
+    public boolean isContadinoMostroPresente() { return giocatori.values().stream().anyMatch(Ruolo::isContadinoMostro); }
+
+    public String getNomeContadinoMostro()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isContadinoMostro())
+            posizione = i;
+        return getNomeGiocatore(posizione);
+    }
+
     private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
@@ -111,5 +121,4 @@ public class Giocatori
     }
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
-
 }
