@@ -23,7 +23,7 @@ public final class TestGiocatoriMortiNotte
     {
         String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0],giocatore[1]);
-        assertThat(isLupo(giocatori[0][0])).isFalse();
+        verificaFalso(isLupo(giocatori[0][0]));
         verificaVero(isLupo(giocatori[1][0]));
     }
 
@@ -31,11 +31,13 @@ public final class TestGiocatoriMortiNotte
     {
         String[][] giocatori = new String[][] { { "Pablo", "Templare" }, { "Pedro", "Pazzo" } };
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0],giocatore[1]);
-        assertThat(isPazzo(giocatori[0][0])).isFalse();
+        verificaFalso(isPazzo(giocatori[0][0]));
         verificaVero(isPazzo(giocatori[1][0]));
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isPazzo(String nome) { return this.giocatori.isPazzo(nome); }
 
