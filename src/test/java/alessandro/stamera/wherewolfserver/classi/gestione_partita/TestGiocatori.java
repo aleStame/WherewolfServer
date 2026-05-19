@@ -89,6 +89,8 @@ public final class TestGiocatori
         assertThat(giocatori.getNomeContadinoMostro()).isEqualTo(nome);
     }
 
+    @Test public void testContadinoMostroAssente() { verificaFalso(giocatori.isContadinoMostroPresente()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isOratore(String nome) { return giocatori.isOratore(nome); }

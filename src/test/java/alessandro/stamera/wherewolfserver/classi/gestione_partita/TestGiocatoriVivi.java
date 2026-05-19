@@ -562,8 +562,6 @@ public final class TestGiocatoriVivi
 
     @Test public void testCappuccettoRossoAssente() { verificaFalso(isCappuccettoRossoPresente()); }
 
-    @Test public void testContadinoMostroAssente() { verificaFalso(isContadinoMostroPresente()); }
-
     @Test public void testPresenzaGuaritore()
     {
         String nome = "Giuseppina";
@@ -575,8 +573,6 @@ public final class TestGiocatoriVivi
     }
 
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }
-
-    private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 
     private boolean isCappuccettoRossoPresente() { return giocatori.isCappuccettoRossoPresente(); }
 
