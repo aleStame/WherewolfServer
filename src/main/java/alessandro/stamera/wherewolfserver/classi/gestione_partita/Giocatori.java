@@ -92,6 +92,8 @@ public class Giocatori
 
     public String getNomeContadinoMostro() { return getNomeGiocatore(getPosizioneContadinoMostro()); }
 
+    public boolean isContadinoMostro(String nome) { return false; }
+
     private int getPosizioneContadinoMostro()
     {
         int posizione = NON_TROVATO;
@@ -99,9 +101,7 @@ public class Giocatori
         return posizione;
     }
 
-    private boolean isContadinoMostro(int i) {
-        return getRuolo(getNomeGiocatore(i)).isContadinoMostro();
-    }
+    private boolean isContadinoMostro(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isContadinoMostro(); }
 
     private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 

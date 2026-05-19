@@ -154,7 +154,6 @@ public final class Partita
     {
         int numeroVoti = getNumeroRuoliCittaPresenti();
         if(ballottaggio.getRuolo(nome).isContadinoMostro()) numeroVoti = 1;
-        System.out.println(numeroVoti);
         incrementaVotiBallottaggio(nome, numeroVoti);
         ballottaggio.segnalazioneBorgomastro();
     }

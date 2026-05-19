@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPosizioneContadinoMostro">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isContadinoMostro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +291,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02839" summary="VERDE: testPerditaProtezioniCappuccettoRosso riuscito">
-      <option name="closed" value="true" />
-      <created>1778771201486</created>
-      <option name="number" value="02839" />
-      <option name="presentableId" value="LOCAL-02839" />
-      <option name="project" value="LOCAL" />
-      <updated>1778771201486</updated>
     </task>
     <task id="LOCAL-02840" summary="REFACTORING: semplificazione del codice">
       <option name="closed" value="true" />
@@ -681,7 +676,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779199067752</updated>
     </task>
-    <option name="localTasksCounter" value="2888" />
+    <task id="LOCAL-02888" summary="REFACTORING: definizione del metodo isContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1779199237223</created>
+      <option name="number" value="02888" />
+      <option name="presentableId" value="LOCAL-02888" />
+      <option name="project" value="LOCAL" />
+      <updated>1779199237223</updated>
+    </task>
+    <option name="localTasksCounter" value="2889" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -705,7 +708,6 @@
     <MESSAGE value="VERDE: testGuarigioneContadinoMostro riuscito" />
     <MESSAGE value="ROSSO: testContadinoMostroPresente non riuscito" />
     <MESSAGE value="VERDE: testContadinoMostroPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
     <MESSAGE value="ROSSO: testPresenzaGuaritore non riuscito" />
     <MESSAGE value="VERDE: testPresenzaGuaritore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGuaritorePresente" />
@@ -721,6 +723,7 @@
     <MESSAGE value="ROSSO: testContrattaccoContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testContrattaccoContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneContadinoMostro" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPosizioneContadinoMostro" />
+    <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isContadinoMostro" />
   </component>
 </project>
