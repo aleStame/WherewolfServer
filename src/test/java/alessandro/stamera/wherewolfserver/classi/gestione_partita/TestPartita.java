@@ -612,6 +612,21 @@ public final class TestPartita
         verificaNonEliminato(nomeContadino);
     }
 
+    @ParameterizedTest @CsvSource({ "1, 2" }) public void testContrattaccoContadinoMostro(int posizioneVittima)
+    {
+        String[][] giocatori = new String[][] { { "Carmine", "Contadino mostro" }, { "Carmela", "Peccatore" }, { "Giulia", "Posseduto" } };
+        inizializzaPartita(giocatori);
+        int posizione = 0;
+        incrementaVoti(giocatori[posizione][0], 2);
+        terminaVotazioni();
+        for(int i = 1; i < giocatori.length; i++) partita.incrementaVotiContadinoMostro(giocatori[i][0]);
+        terminaBallottaggio();
+        String[] votantiContadinoMostro = partita.getVotatiContadinoMostro();
+        for(int i = 1; i < giocatori.length; i++) assertThat(votantiContadinoMostro).contains(giocatori[i][0]);
+        partita.contrattaccoContadinoMostro(giocatori[posizioneVittima][0]);
+        verificaEliminazione(giocatori[posizioneVittima][0]);
+    }
+
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }

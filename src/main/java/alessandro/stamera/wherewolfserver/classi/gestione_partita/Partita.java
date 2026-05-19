@@ -205,6 +205,12 @@ public final class Partita
         if(assente && vivi.isContadinoMostroPresente()) eliminaGuaritore();
     }
 
+    public void incrementaVotiContadinoMostro(String nome) { }
+
+    public String[] getVotatiContadinoMostro() { return null; }
+
+    public void contrattaccoContadinoMostro(String nome) { }
+
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
     private void nosferatuControLupo(String nome)
