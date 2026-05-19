@@ -327,10 +327,9 @@ public final class Partita
 
     private void eliminaGiocatore(String nome)
     {
-        Ruolo ruolo = getRuoloVivo(nome);
+        mortiNotte.aggiungiGiocatore(nome, getRuoloVivo(nome));
         vivi.eliminaGiocatore(nome);
-        if(ruolo.isPazzo()) setPazzoUcciso(true);
-        mortiNotte.aggiungiGiocatore(nome, ruolo);
+        setPazzoUcciso(mortiNotte.isPazzo(nome));
     }
 
     private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }
