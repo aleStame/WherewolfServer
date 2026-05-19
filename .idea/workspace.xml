@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isContadinoMostro">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02843" summary="REFACTORING: definizione del metodo getRuolo">
-      <option name="closed" value="true" />
-      <created>1778772180904</created>
-      <option name="number" value="02843" />
-      <option name="presentableId" value="LOCAL-02843" />
-      <option name="project" value="LOCAL" />
-      <updated>1778772180905</updated>
     </task>
     <task id="LOCAL-02844" summary="REFACTORING: definizione del metodo getPosizioneNonna">
       <option name="closed" value="true" />
@@ -681,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779201671817</updated>
     </task>
-    <option name="localTasksCounter" value="2892" />
+    <task id="LOCAL-02892" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1779202020363</created>
+      <option name="number" value="02892" />
+      <option name="presentableId" value="LOCAL-02892" />
+      <option name="project" value="LOCAL" />
+      <updated>1779202020363</updated>
+    </task>
+    <option name="localTasksCounter" value="2893" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -714,13 +714,13 @@
     <MESSAGE value="VERDE DIRETTO: testContadinoMostroPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testContadinoMostroAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostroPresente" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testContrattaccoContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testContrattaccoContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneContadinoMostro" />
     <MESSAGE value="ROSSO: testIsContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testIsContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isContadinoMostro" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isContadinoMostro" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
   </component>
 </project>

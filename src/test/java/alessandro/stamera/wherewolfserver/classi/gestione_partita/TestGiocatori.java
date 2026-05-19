@@ -43,7 +43,7 @@ public final class TestGiocatori
         String nome = "Otello";
         aggiungiGiocatore(nome, "Angelo custode");
         verificaVero(giocatori.isAngeloCustodePresente());
-        assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(nome);
+        verificaStringa(giocatori.getNomeAngeloCustode(), nome);
     }
 
     @ParameterizedTest @CsvSource({ "Assassino, Capo gilda, Guardia corrotta, Ladra, Spia" })
@@ -86,7 +86,7 @@ public final class TestGiocatori
         String nome = "Gianluigi";
         aggiungiGiocatore(nome, "Contadino mostro");
         verificaVero(isContadinoMostroPresente());
-        assertThat(giocatori.getNomeContadinoMostro()).isEqualTo(nome);
+        verificaStringa(giocatori.getNomeContadinoMostro(), nome);
     }
 
     @Test public void testContadinoMostroAssente() { verificaFalso(isContadinoMostroPresente()); }
@@ -98,6 +98,8 @@ public final class TestGiocatori
         verificaVero(isContadinoMostro(giocatori[0][0]));
         verificaFalso(isContadinoMostro(giocatori[1][0]));
     }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private boolean isContadinoMostro(String nome) { return giocatori.isContadinoMostro(nome); }
 
