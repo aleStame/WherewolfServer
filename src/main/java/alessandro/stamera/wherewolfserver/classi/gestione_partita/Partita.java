@@ -222,6 +222,8 @@ public final class Partita
         votantiContadinoMostro.clear();
     }
 
+    public int getNumeroNotte() { return -1; }
+
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
     private void nosferatuControLupo(String nome)

@@ -629,6 +629,14 @@ public final class TestPartita
         assertThat(partita.getVotatiContadinoMostro()).isEmpty();
     }
 
+    @Test public void testNumeroNotte()
+    {
+        inizializzaPartita(new String[][]{ });
+        verificaNumeroIntero(partita.getNumeroNotte(), 1);
+        confermaEliminazioneMortiNotte();
+        verificaNumeroIntero(partita.getNumeroNotte(), 2);
+    }
+
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
     private void gildata(String nome) { partita.gildata(nome); }
