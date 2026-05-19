@@ -632,10 +632,12 @@ public final class TestPartita
     @Test public void testNumeroNotte()
     {
         inizializzaPartita(new String[][]{ });
-        verificaNumeroIntero(partita.getNumeroNotte(), 1);
+        verificaNumeroNotte(1);
         confermaEliminazioneMortiNotte();
-        verificaNumeroIntero(partita.getNumeroNotte(), 2);
+        verificaNumeroNotte(2);
     }
+
+    private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
