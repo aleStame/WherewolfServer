@@ -205,10 +205,11 @@ public final class TestPartita
         verificaAccusati(giocatori[0][0]);
     }
 
-    @Test public void testAttaccoAssassinoContadinoMostro()
+    @Test public void testAttaccoAssassinoContadinoMostroNottiSuccessive()
     {
         String[][] soluzioni = new String[][] { { "Pietro", "Assassino" }, { "Mario", "Contadino mostro" }, { "Maria", "Contadino eroe" } };
         inizializzaPartita(soluzioni);
+        confermaEliminazioneMortiNotte();
         attaccoAssassino(soluzioni[1][0]);
         confermaEliminazioneMortiNotte();
         for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);

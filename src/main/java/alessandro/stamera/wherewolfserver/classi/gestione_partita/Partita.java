@@ -321,7 +321,11 @@ public final class Partita
 
     private void eliminaGiocatoreMortoNotte(String nome) { mortiNotte.eliminaGiocatore(nome); }
 
-    private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
+    private void assassinioContadinoMostro(String nome)
+    {
+        if(getNumeroNotte() > 1) eliminaGiocatori(nome, vivi.getNomeAssassino());
+        else eliminaGiocatore(nome);
+    }
 
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 
