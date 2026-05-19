@@ -624,6 +624,7 @@ public final class TestPartita
         String[] votantiContadinoMostro = partita.getVotatiContadinoMostro();
         for(int i = 1; i < giocatori.length; i++) assertThat(votantiContadinoMostro).contains(giocatori[i][0]);
         partita.contrattaccoContadinoMostro(giocatori[posizioneVittima][0]);
+        confermaEliminazioneMortiNotte();
         verificaEliminazione(giocatori[posizioneVittima][0]);
     }
 

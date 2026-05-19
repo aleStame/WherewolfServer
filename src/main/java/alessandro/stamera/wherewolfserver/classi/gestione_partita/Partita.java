@@ -5,6 +5,8 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import java.util.ArrayList;
+import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
@@ -26,6 +28,8 @@ public final class Partita
 
     private Aura ultimoControllo;
 
+    private final List<String> votantiContadinoMostro;
+
     private boolean pazzoUcciso;
 
     public Partita(String[][] giocatori)
@@ -39,6 +43,7 @@ public final class Partita
         mortiNotte = new GiocatoriMortiNotte();
         setPazzoUcciso(false);
         perdiProtezioniCappuccettoRosso();
+        votantiContadinoMostro = new ArrayList<>();
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -205,11 +210,18 @@ public final class Partita
         if(assente && vivi.isContadinoMostroPresente()) eliminaGuaritore();
     }
 
-    public void incrementaVotiContadinoMostro(String nome) { }
+    public void incrementaVotiContadinoMostro(String nome)
+    {
+        votantiContadinoMostro.add(nome);
+        int posizione = -1;
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori() && posizione == -1; i++) if(ballottaggio.getRuolo(ballottaggio.getNomeGiocatore(i)).isContadinoMostro()) posizione = i;
+        ballottaggio.annullaVoti(ballottaggio.getNomeGiocatore(posizione));
+        ballottaggio.incrementaVoti(ballottaggio.getNomeGiocatore(posizione), votantiContadinoMostro.size());
+    }
 
-    public String[] getVotatiContadinoMostro() { return null; }
+    public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
 
-    public void contrattaccoContadinoMostro(String nome) { }
+    public void contrattaccoContadinoMostro(String nome) { eliminaGiocatore(nome); }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
