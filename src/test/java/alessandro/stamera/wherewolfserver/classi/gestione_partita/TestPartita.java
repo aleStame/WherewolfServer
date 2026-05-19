@@ -626,6 +626,7 @@ public final class TestPartita
         partita.contrattaccoContadinoMostro(giocatori[posizioneVittima][0]);
         confermaEliminazioneMortiNotte();
         verificaEliminazione(giocatori[posizioneVittima][0]);
+        assertThat(partita.getVotatiContadinoMostro()).isNull();
     }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }

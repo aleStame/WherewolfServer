@@ -215,7 +215,7 @@ public final class Partita
         votantiContadinoMostro.add(nome);
         String nomeContadino = ballottaggio.getNomeContadinoMostro();
         ballottaggio.annullaVoti(nomeContadino);
-        ballottaggio.incrementaVoti(nomeContadino, votantiContadinoMostro.size());
+        incrementaVoti(nomeContadino, votantiContadinoMostro.size());
     }
 
     public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
