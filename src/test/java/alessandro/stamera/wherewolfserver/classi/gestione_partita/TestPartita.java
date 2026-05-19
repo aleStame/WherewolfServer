@@ -637,6 +637,16 @@ public final class TestPartita
         verificaNumeroNotte(2);
     }
 
+    @Test public void testAssassinioContadinoMostroPrimaNotte()
+    {
+        String nomeAssassino = "Maria", nomeVittima = "Giuseppe";
+        inizializzaPartita(new String[][] { { nomeAssassino, "Assassino" }, { nomeVittima, "Contadino mostro" } });
+        partita.attaccoAssassino(nomeVittima);
+        confermaEliminazioneMortiNotte();
+        verificaEliminazione(nomeVittima);
+        verificaNonEliminato(nomeAssassino);
+    }
+
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
