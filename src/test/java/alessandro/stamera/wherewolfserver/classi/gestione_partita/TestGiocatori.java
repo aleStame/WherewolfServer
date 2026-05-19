@@ -85,11 +85,13 @@ public final class TestGiocatori
     {
         String nome = "Gianluigi";
         aggiungiGiocatore(nome, "Contadino mostro");
-        verificaVero(giocatori.isContadinoMostroPresente());
+        verificaVero(isContadinoMostroPresente());
         assertThat(giocatori.getNomeContadinoMostro()).isEqualTo(nome);
     }
 
-    @Test public void testContadinoMostroAssente() { verificaFalso(giocatori.isContadinoMostroPresente()); }
+    @Test public void testContadinoMostroAssente() { verificaFalso(isContadinoMostroPresente()); }
+
+    private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
