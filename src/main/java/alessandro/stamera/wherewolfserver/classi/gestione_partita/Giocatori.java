@@ -90,12 +90,14 @@ public class Giocatori
 
     public boolean isContadinoMostroPresente() { return giocatori.values().stream().anyMatch(Ruolo::isContadinoMostro); }
 
-    public String getNomeContadinoMostro()
+    public String getNomeContadinoMostro() { return getNomeGiocatore(getPosizioneContadinoMostro()); }
+
+    private int getPosizioneContadinoMostro()
     {
         int posizione = NON_TROVATO;
         for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isContadinoMostro())
             posizione = i;
-        return getNomeGiocatore(posizione);
+        return posizione;
     }
 
     private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
