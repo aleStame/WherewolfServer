@@ -220,7 +220,11 @@ public final class Partita
 
     public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
 
-    public void contrattaccoContadinoMostro(String nome) { eliminaGiocatore(nome); }
+    public void contrattaccoContadinoMostro(String nome)
+    {
+        eliminaGiocatore(nome);
+        votantiContadinoMostro.clear();
+    }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
