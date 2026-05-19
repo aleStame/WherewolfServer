@@ -647,6 +647,12 @@ public final class TestPartita
         verificaNonEliminato(nomeAssassino);
     }
 
+    /*@Test public void testControlloMagoContadinoMostroPrimaNotte()
+    {
+        inizializzaPartita(new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } });
+        assertThat
+    }*/
+
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
