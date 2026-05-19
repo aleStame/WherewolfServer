@@ -27,6 +27,14 @@ public final class TestGiocatoriMortiNotte
         assertThat(isLupo(giocatori[1][0])).isTrue();
     }
 
+    @Test public void testPazzo()
+    {
+        String[][] giocatori = new String[][] { { "Pablo", "Templare" }, { "Pedro", "Pazzo" } };
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0],giocatore[1]);
+        assertThat(this.giocatori.isPazzo(giocatori[0][0])).isFalse();
+        assertThat(this.giocatori.isPazzo(giocatori[1][0])).isTrue();
+    }
+
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
