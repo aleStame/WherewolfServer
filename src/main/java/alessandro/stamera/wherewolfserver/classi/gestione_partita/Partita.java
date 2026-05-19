@@ -5,6 +5,8 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import java.util.ArrayList;
+import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
@@ -26,6 +28,8 @@ public final class Partita
 
     private Aura ultimoControllo;
 
+    private final List<String> votantiContadinoMostro;
+
     private boolean pazzoUcciso;
 
     public Partita(String[][] giocatori)
@@ -39,6 +43,7 @@ public final class Partita
         mortiNotte = new GiocatoriMortiNotte();
         setPazzoUcciso(false);
         perdiProtezioniCappuccettoRosso();
+        votantiContadinoMostro = new ArrayList<>();
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -148,8 +153,7 @@ public final class Partita
     public void segnalazioneBorgomastro(String nome)
     {
         int numeroVoti = getNumeroRuoliCittaPresenti();
-        if(ballottaggio.getRuolo(nome).isContadinoMostro()) numeroVoti = 1;
-        System.out.println(numeroVoti);
+        if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
         incrementaVotiBallottaggio(nome, numeroVoti);
         ballottaggio.segnalazioneBorgomastro();
     }
@@ -189,20 +193,33 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        Ruolo ruolo = getRuoloMortoNotte(nome);
+        eliminati.aggiungiGiocatore(nome, getRuoloMortoNotte(nome));
         eliminaGiocatoreMortoNotte(nome);
-        eliminati.aggiungiGiocatore(nome, ruolo);
     }
 
     public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
 
     public void guarisci(String nome)
     {
-        boolean assente = !vivi.isContadinoMostroPresente();
-        Ruolo ruolo = getRuoloMortoNotte(nome);
+        aggiungiGiocatoreVivo(nome, getRuoloMortoNotte(nome));
         mortiNotte.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, ruolo);
-        if(assente && vivi.isContadinoMostroPresente()) eliminaGuaritore();
+        if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
+    }
+
+    public void incrementaVotiContadinoMostro(String nome)
+    {
+        votantiContadinoMostro.add(nome);
+        String nomeContadino = ballottaggio.getNomeContadinoMostro();
+        ballottaggio.annullaVoti(nomeContadino);
+        incrementaVoti(nomeContadino, votantiContadinoMostro.size());
+    }
+
+    public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
+
+    public void contrattaccoContadinoMostro(String nome)
+    {
+        eliminaGiocatore(nome);
+        votantiContadinoMostro.clear();
     }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
@@ -220,9 +237,8 @@ public final class Partita
 
     private void risorgiGiocatore(String nome)
     {
-        Ruolo ruolo = getRuoloMortoNotte(nome);
+        aggiungiGiocatoreVivo(nome, getRuoloMortoNotte(nome));
         eliminaGiocatoreMortoNotte(nome);
-        aggiungiGiocatoreVivo(nome, ruolo);
     }
 
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
@@ -280,9 +296,8 @@ public final class Partita
 
     private void terminaBallottaggio(String nome)
     {
-        Ruolo ruolo = ballottaggio.getRuolo(nome);
+        aggiungiGiocatoreVivo(nome, ballottaggio.getRuolo(nome));
         ballottaggio.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, ruolo);
         perdiProtezioniCappuccettoRosso();
     }
 
@@ -308,10 +323,9 @@ public final class Partita
 
     private void eliminaGiocatore(String nome)
     {
-        Ruolo ruolo = getRuoloVivo(nome);
+        mortiNotte.aggiungiGiocatore(nome, getRuoloVivo(nome));
         vivi.eliminaGiocatore(nome);
-        if(ruolo.isPazzo()) setPazzoUcciso(true);
-        mortiNotte.aggiungiGiocatore(nome, ruolo);
+        setPazzoUcciso(mortiNotte.isPazzo(nome));
     }
 
     private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }

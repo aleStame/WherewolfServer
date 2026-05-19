@@ -9,4 +9,5 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 
+    public boolean isPazzo(String nome) { return getRuolo(nome).isPazzo(); }
 }

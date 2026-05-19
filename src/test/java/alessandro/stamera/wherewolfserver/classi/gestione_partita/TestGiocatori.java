@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,8 +16,7 @@ public final class TestGiocatori
 
     @Test public void testInserimentoGiocatori()
     {
-        String[][] giocatori = new String[][] { { "Antonio", "Capo branco" }, { "Stefano", "Prete" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        aggiungiGiocatori(new String[][] { { "Antonio", "Capo branco" }, { "Stefano", "Prete" } });
         verificaNumeroGiocatori(2);
     }
 
@@ -44,7 +42,7 @@ public final class TestGiocatori
         String nome = "Otello";
         aggiungiGiocatore(nome, "Angelo custode");
         verificaVero(giocatori.isAngeloCustodePresente());
-        assertThat(giocatori.getNomeAngeloCustode()).isEqualTo(nome);
+        verificaStringa(giocatori.getNomeAngeloCustode(), nome);
     }
 
     @ParameterizedTest @CsvSource({ "Assassino, Capo gilda, Guardia corrotta, Ladra, Spia" })
@@ -65,9 +63,8 @@ public final class TestGiocatori
 
     @Test public void testOratorePresente()
     {
-        String nome = "Marco";
-        String[][] giocatori = new String[][] { { nome, "Oratore" }, { "Gianna", "Guaritore" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        String[][] giocatori = new String[][] { { "Marco", "Oratore" }, { "Gianna", "Guaritore" } };
+        aggiungiGiocatori(giocatori);
         verificaVero(isOratorePresente());
         verificaVero(isOratore(giocatori[0][0]));
         verificaFalso(isOratore(giocatori[1][0]));
@@ -77,10 +74,38 @@ public final class TestGiocatori
 
     @Test public void testNumeroRuoliCitta()
     {
-        String[][] giocatori = new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Mercante" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        verificaNumeroIntero(this.giocatori.getNumeroRuoliCitta(), 2);
+        aggiungiGiocatori(new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Mercante" } });
+        verificaNumeroIntero(giocatori.getNumeroRuoliCitta(), 2);
     }
+
+    @Test public void testContadinoMostroPresente()
+    {
+        String nome = "Gianluigi";
+        aggiungiGiocatore(nome, "Contadino mostro");
+        verificaVero(isContadinoMostroPresente());
+        verificaStringa(giocatori.getNomeContadinoMostro(), nome);
+    }
+
+    @Test public void testContadinoMostroAssente() { verificaFalso(isContadinoMostroPresente()); }
+
+    @Test public void testIsContadinoMostro()
+    {
+        String[][] giocatori = new String[][] { { "Peter", "Contadino mostro" }, { "Gwen", "Contadino normale" } };
+        aggiungiGiocatori(giocatori);
+        verificaVero(isContadinoMostro(giocatori[0][0]));
+        verificaFalso(isContadinoMostro(giocatori[1][0]));
+    }
+
+    private void aggiungiGiocatori(String[][] giocatori)
+    {
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+    }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private boolean isContadinoMostro(String nome) { return giocatori.isContadinoMostro(nome); }
+
+    private boolean isContadinoMostroPresente() { return giocatori.isContadinoMostroPresente(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
