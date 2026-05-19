@@ -172,15 +172,6 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isGuaritore(int posizione) { return getRuolo(posizione).isGuaritore(); }
 
-    private int getPosizioneContadinoMostro()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isContadinoMostro(i)) posizione = i;
-        return posizione;
-    }
-
-    private boolean isContadinoMostro(int posizione) { return getRuolo(posizione).isContadinoMostro(); }
-
     private int getPosizioneCappuccettoRosso()
     {
         int posizione = NON_TROVATO;

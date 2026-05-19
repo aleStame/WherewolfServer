@@ -213,10 +213,9 @@ public final class Partita
     public void incrementaVotiContadinoMostro(String nome)
     {
         votantiContadinoMostro.add(nome);
-        int posizione = -1;
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori() && posizione == -1; i++) if(ballottaggio.getRuolo(ballottaggio.getNomeGiocatore(i)).isContadinoMostro()) posizione = i;
-        ballottaggio.annullaVoti(ballottaggio.getNomeGiocatore(posizione));
-        ballottaggio.incrementaVoti(ballottaggio.getNomeGiocatore(posizione), votantiContadinoMostro.size());
+        String nomeContadino = ballottaggio.getNomeContadinoMostro();
+        ballottaggio.annullaVoti(nomeContadino);
+        ballottaggio.incrementaVoti(nomeContadino, votantiContadinoMostro.size());
     }
 
     public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
