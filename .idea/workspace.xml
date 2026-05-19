@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAssassinioContadinoMostroPrimaNotte non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo terminaNotte" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,22 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02859" summary="REFACTORING: eliminazione metodi inutili">
-      <option name="closed" value="true" />
-      <created>1778938395680</created>
-      <option name="number" value="02859" />
-      <option name="presentableId" value="LOCAL-02859" />
-      <option name="project" value="LOCAL" />
-      <updated>1778938395680</updated>
-    </task>
-    <task id="LOCAL-02860" summary="ROSSO: testPotereBorgomastro (caso 2) non riuscito">
-      <option name="closed" value="true" />
-      <created>1778946520244</created>
-      <option name="number" value="02860" />
-      <option name="presentableId" value="LOCAL-02860" />
-      <option name="project" value="LOCAL" />
-      <updated>1778946520244</updated>
     </task>
     <task id="LOCAL-02861" summary="VERDE: testPotereBorgomastro (caso 2) riuscito">
       <option name="closed" value="true" />
@@ -681,7 +663,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779227866498</updated>
     </task>
-    <option name="localTasksCounter" value="2908" />
+    <task id="LOCAL-02908" summary="VERDE: testAssassinioContadinoMostroPrimaNotte riuscito">
+      <option name="closed" value="true" />
+      <created>1779228223357</created>
+      <option name="number" value="02908" />
+      <option name="presentableId" value="LOCAL-02908" />
+      <option name="project" value="LOCAL" />
+      <updated>1779228223357</updated>
+    </task>
+    <task id="LOCAL-02909" summary="REFACTORING: definizione del metodo terminaNotte">
+      <option name="closed" value="true" />
+      <created>1779229496390</created>
+      <option name="number" value="02909" />
+      <option name="presentableId" value="LOCAL-02909" />
+      <option name="project" value="LOCAL" />
+      <updated>1779229496390</updated>
+    </task>
+    <option name="localTasksCounter" value="2910" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo eliminaGuaritore" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGuaritore" />
     <MESSAGE value="REFACTORING: definizione del metodo isGuaritore" />
     <MESSAGE value="ROSSO: testStregaContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testStregaContadinoMostro riuscito" />
@@ -721,6 +717,8 @@
     <MESSAGE value="ROSSO: testNumeroNotte non riuscito" />
     <MESSAGE value="VERDE: testNumeroNotte riuscito" />
     <MESSAGE value="ROSSO: testAssassinioContadinoMostroPrimaNotte non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAssassinioContadinoMostroPrimaNotte non riuscito" />
+    <MESSAGE value="VERDE: testAssassinioContadinoMostroPrimaNotte riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo terminaNotte" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo terminaNotte" />
   </component>
 </project>
