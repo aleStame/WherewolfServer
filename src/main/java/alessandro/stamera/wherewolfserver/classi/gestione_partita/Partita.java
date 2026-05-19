@@ -32,6 +32,8 @@ public final class Partita
 
     private boolean pazzoUcciso;
 
+    private int numeroNotte;
+
     public Partita(String[][] giocatori)
     {
         vivi = new GiocatoriVivi();
@@ -44,6 +46,7 @@ public final class Partita
         setPazzoUcciso(false);
         perdiProtezioniCappuccettoRosso();
         votantiContadinoMostro = new ArrayList<>();
+        numeroNotte = 1;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -181,21 +184,7 @@ public final class Partita
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
-    public void confermaEliminazioneMortiNotte()
-    {
-        String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
-        for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
-        for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
-        perdiProtezioniCappuccettoRosso();
-    }
-
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
-
-    private void confermaEliminazioneMortoNotte(String nome)
-    {
-        eliminati.aggiungiGiocatore(nome, getRuoloMortoNotte(nome));
-        eliminaGiocatoreMortoNotte(nome);
-    }
 
     public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
 
@@ -220,6 +209,29 @@ public final class Partita
     {
         eliminaGiocatore(nome);
         votantiContadinoMostro.clear();
+        confermaEliminazioneMortiNotte();
+    }
+
+    public int getNumeroNotte() { return numeroNotte; }
+
+    public void terminaNotte()
+    {
+        confermaEliminazioneMortiNotte();
+        numeroNotte++;
+    }
+
+    private void confermaEliminazioneMortiNotte()
+    {
+        String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
+        for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
+        for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
+        perdiProtezioniCappuccettoRosso();
+    }
+
+    private void confermaEliminazioneMortoNotte(String nome)
+    {
+        eliminati.aggiungiGiocatore(nome, getRuoloMortoNotte(nome));
+        eliminaGiocatoreMortoNotte(nome);
     }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
@@ -315,7 +327,11 @@ public final class Partita
 
     private void eliminaGiocatoreMortoNotte(String nome) { mortiNotte.eliminaGiocatore(nome); }
 
-    private void assassinioContadinoMostro(String nome) { eliminaGiocatori(nome, vivi.getNomeAssassino()); }
+    private void assassinioContadinoMostro(String nome)
+    {
+        if(getNumeroNotte() > 1) eliminaGiocatori(nome, vivi.getNomeAssassino());
+        else eliminaGiocatore(nome);
+    }
 
     private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
 

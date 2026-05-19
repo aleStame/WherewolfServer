@@ -86,7 +86,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizione = 1;
         attaccoAssassino(giocatori[posizione][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(giocatori[posizione][0]);
     }
 
@@ -97,7 +97,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         attaccoAssassino(giocatori[posizione][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(giocatori[0][0]);
         verificaVero(isVivo(giocatori[posizione][0]));
     }
@@ -143,7 +143,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizione = 0;
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(giocatori[posizione][0]);
     }
 
@@ -155,7 +155,7 @@ public final class TestPartita
         int posizione = 1;
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaNonEliminato(giocatori[posizione][0]);
     }
 
@@ -205,12 +205,13 @@ public final class TestPartita
         verificaAccusati(giocatori[0][0]);
     }
 
-    @Test public void testAttaccoAssassinoContadinoMostro()
+    @Test public void testAttaccoAssassinoContadinoMostroNottiSuccessive()
     {
         String[][] soluzioni = new String[][] { { "Pietro", "Assassino" }, { "Mario", "Contadino mostro" }, { "Maria", "Contadino eroe" } };
         inizializzaPartita(soluzioni);
+        terminaNotte();
         attaccoAssassino(soluzioni[1][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);
     }
 
@@ -244,7 +245,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         assertThat(partita.getControlloVeggente(giocatori[2][0])).isEqualTo(BIANCA);
         partita.attaccoLupi("Lupo del branco", giocatori[0][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaNienteCantoBardo();
     }
 
@@ -273,7 +274,7 @@ public final class TestPartita
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
         terminaBallottaggio();
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(giocatori[1][0]);
         verificaNonEliminato(giocatori[0][0]);
     }
@@ -286,7 +287,7 @@ public final class TestPartita
         terminaVotazioni();
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
         terminaBallottaggio();
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -298,7 +299,7 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(giocatori[0][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -311,7 +312,7 @@ public final class TestPartita
         for(int i = 0; i < giocatori.length - 1; i++) segnalazioneOratore(giocatori[i][0]);
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -325,7 +326,7 @@ public final class TestPartita
         segnalazioneOratore(giocatori[0][0]);
         incrementaVoti(giocatori[posizione][0], 3);
         terminaBallottaggio();
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(giocatori[posizione][0]);
     }
 
@@ -354,7 +355,7 @@ public final class TestPartita
         int posizioneVittima = 2;
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(giocatori[1][1], giocatori[posizioneVittima][0]))
             .withMessage("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaNonEliminato(giocatori[posizioneVittima][0]);
     }
 
@@ -366,7 +367,7 @@ public final class TestPartita
         segnalazioneBracconiere();
         int posizioneVittima = 3;
         attaccoLupi(giocatori[0][1], giocatori[posizioneVittima][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(giocatori[posizioneVittima][0]);
     }
 
@@ -375,7 +376,7 @@ public final class TestPartita
         String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
         attaccoLupi(lupo, nomeCacciatore);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeLupo, nomeCacciatore);
     }
 
@@ -384,7 +385,7 @@ public final class TestPartita
         String lupo = "Lupo reietto", nomeLupo = "Salvatore", nomeCacciatore = "Pietro";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         attaccoLupi(lupo, nomeCacciatore);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeLupo, nomeCacciatore);
     }
 
@@ -393,7 +394,7 @@ public final class TestPartita
         String lupo = "Lupo del branco", nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         attaccoLupi(lupo, nomeCacciatore);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeLupo, nomeCacciatore);
     }
 
@@ -402,7 +403,7 @@ public final class TestPartita
         String lupo = "Lupo del branco", nomeLupo = "Biagio", nomeCacciatore = "Francesco";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Giovane lupo" } });
         attaccoLupi(lupo, nomeCacciatore);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(nomeCacciatore);
         verificaNonEliminato(lupo);
     }
@@ -413,7 +414,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", tipoLupo } });
         attaccoLupi(tipoLupo, nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
@@ -435,7 +436,7 @@ public final class TestPartita
         String nomeVittima = "Caio", nomeLupo = "Tizio", tipoLupo = "Capo branco";
         inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Sempronio", "Peccatore" } });
         attaccoLupi(tipoLupo, nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeVittima, nomeLupo);
     }
 
@@ -445,7 +446,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nome, "Prete" }, { "Tina", "Nosferatu" } });
         attaccoLupi("Capo branco", nome);
         progenizzazioneNosferatu(nome);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaNonEliminato(nome);
     }
 
@@ -455,7 +456,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         attaccoLupi(giocatori[0][1], giocatori[0][0]);
         progenizzazioneNosferatu(giocatori[0][0]);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(giocatori[1][0]);
         verificaNonEliminato(giocatori[0][0]);
     }
@@ -465,7 +466,7 @@ public final class TestPartita
         String tipoLupo = "Lupo reietto", nomePazzo = "Angel", nomeVittima = "Xander";
         inizializzaPartita(new String[][] { { "Spike", "Lupo reietto" }, { nomePazzo, "Pazzo" }, { "Xander", "Giullare" } });
         attaccoLupi(tipoLupo, nomePazzo);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(nomePazzo);
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima))
             .withMessage("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
@@ -478,7 +479,7 @@ public final class TestPartita
         String lupoAttaccante = "Capo branco", nomeVittima = "Mattia";
         inizializzaPartita(new String[][] { { "Andrea", lupoAttaccante }, { nomeVittima, tipoLupo } });
         attaccoLupi(lupoAttaccante, nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaNonEliminato(nomeVittima);
     }
 
@@ -487,7 +488,7 @@ public final class TestPartita
         String tipoLupo = "Capo branco", nomeVittima = "Chloe";
         inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
         attaccoLupi(tipoLupo, nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeVittima);
         verificaVero(isCrociataAvviata());
     }
@@ -497,7 +498,7 @@ public final class TestPartita
         String tipoLupo = "Capo branco", nomeVittima = "Eve";
         inizializzaPartita(new String[][] { { "Daniel", tipoLupo }, { "Wesley", "Inquisitore" }, { nomeVittima, "Goblin" } });
         attaccoLupi(tipoLupo, nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeVittima);
         verificaFalso(isCrociataAvviata());
     }
@@ -527,7 +528,7 @@ public final class TestPartita
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
         gildata(nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
 
@@ -549,7 +550,7 @@ public final class TestPartita
         );
         attaccoLupi(tipoLupo, nomeVittima);
         gildata(nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
 
@@ -559,7 +560,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
         gildata(nomeVittima);
         verificaNumeroCriminali(1);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
 
@@ -570,7 +571,7 @@ public final class TestPartita
         String nomeVittima = "Elena";
         inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo } });
         attaccoLupi(tipoLupo, nomeVittima);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminazione(nomeVittima);
     }
 
@@ -585,7 +586,7 @@ public final class TestPartita
         incrementaVoti(nomeNonna, 2);
         terminaBallottaggio();
         attaccoLupi(tipoLupo, nomeCappuccettoRosso);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeNonna, nomeCappuccettoRosso);
     }
 
@@ -596,7 +597,7 @@ public final class TestPartita
         String nomeCappuccettoRosso = "Claudia";
         inizializzaPartita(new String[][] { { "Salvatore", "Nonna" }, { "Noemi", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
         attaccoLupi(tipoLupo, nomeCappuccettoRosso);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaNonEliminato(nomeCappuccettoRosso);
     }
 
@@ -607,7 +608,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeContadino, "Contadino mostro" }, { nomeLupo, tipoLupo }, { nomeGuaritore, "Guaritore" } });
         attaccoLupi(tipoLupo, nomeContadino);
         partita.guarisci(nomeContadino);
-        confermaEliminazioneMortiNotte();
+        terminaNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
         verificaNonEliminato(nomeContadino);
     }
@@ -624,10 +625,29 @@ public final class TestPartita
         String[] votantiContadinoMostro = partita.getVotatiContadinoMostro();
         for(int i = 1; i < giocatori.length; i++) assertThat(votantiContadinoMostro).contains(giocatori[i][0]);
         partita.contrattaccoContadinoMostro(giocatori[posizioneVittima][0]);
-        confermaEliminazioneMortiNotte();
         verificaEliminazione(giocatori[posizioneVittima][0]);
         assertThat(partita.getVotatiContadinoMostro()).isEmpty();
     }
+
+    @Test public void testNumeroNotte()
+    {
+        inizializzaPartita(new String[][]{ });
+        verificaNumeroNotte(1);
+        terminaNotte();
+        verificaNumeroNotte(2);
+    }
+
+    @Test public void testAssassinioContadinoMostroPrimaNotte()
+    {
+        String nomeAssassino = "Maria", nomeVittima = "Giuseppe";
+        inizializzaPartita(new String[][] { { nomeAssassino, "Assassino" }, { nomeVittima, "Contadino mostro" } });
+        partita.attaccoAssassino(nomeVittima);
+        terminaNotte();
+        verificaEliminazione(nomeVittima);
+        verificaNonEliminato(nomeAssassino);
+    }
+
+    private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
 
@@ -637,7 +657,7 @@ public final class TestPartita
 
     private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
 
-    private void confermaEliminazioneMortiNotte() { partita.confermaEliminazioneMortiNotte(); }
+    private void terminaNotte() { partita.terminaNotte(); }
 
     private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
 
