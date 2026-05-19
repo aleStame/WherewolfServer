@@ -16,8 +16,7 @@ public final class TestGiocatori
 
     @Test public void testInserimentoGiocatori()
     {
-        String[][] giocatori = new String[][] { { "Antonio", "Capo branco" }, { "Stefano", "Prete" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        aggiungiGiocatori(new String[][] { { "Antonio", "Capo branco" }, { "Stefano", "Prete" } });
         verificaNumeroGiocatori(2);
     }
 
@@ -64,9 +63,8 @@ public final class TestGiocatori
 
     @Test public void testOratorePresente()
     {
-        String nome = "Marco";
-        String[][] giocatori = new String[][] { { nome, "Oratore" }, { "Gianna", "Guaritore" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        String[][] giocatori = new String[][] { { "Marco", "Oratore" }, { "Gianna", "Guaritore" } };
+        aggiungiGiocatori(giocatori);
         verificaVero(isOratorePresente());
         verificaVero(isOratore(giocatori[0][0]));
         verificaFalso(isOratore(giocatori[1][0]));
@@ -76,9 +74,8 @@ public final class TestGiocatori
 
     @Test public void testNumeroRuoliCitta()
     {
-        String[][] giocatori = new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Mercante" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
-        verificaNumeroIntero(this.giocatori.getNumeroRuoliCitta(), 2);
+        aggiungiGiocatori(new String[][] { { "Noemi", "Azzeccagarbugli" }, { "Elisa", "Inquisitore" }, { "Giuseppe", "Mercante" } });
+        verificaNumeroIntero(giocatori.getNumeroRuoliCitta(), 2);
     }
 
     @Test public void testContadinoMostroPresente()
@@ -94,9 +91,14 @@ public final class TestGiocatori
     @Test public void testIsContadinoMostro()
     {
         String[][] giocatori = new String[][] { { "Peter", "Contadino mostro" }, { "Gwen", "Contadino normale" } };
-        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
+        aggiungiGiocatori(giocatori);
         verificaVero(isContadinoMostro(giocatori[0][0]));
         verificaFalso(isContadinoMostro(giocatori[1][0]));
+    }
+
+    private void aggiungiGiocatori(String[][] giocatori)
+    {
+        for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
