@@ -329,6 +329,8 @@ public class Ruolo
 
     public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
 
+    public EsitoAttacco attaccoNegromante() { return null; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
