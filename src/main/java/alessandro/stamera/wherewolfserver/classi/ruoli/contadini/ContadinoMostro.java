@@ -34,7 +34,12 @@ public final class ContadinoMostro extends Contadino
         return getEsitoAttaccoDefault();
     }
 
-    @Override public EsitoAttacco attaccoNegromante() { return MORTO; }
+    @Override public EsitoAttacco attaccoNegromante()
+    {
+        EsitoAttacco esito = MORTO;
+        if(isRomeo()) esito = FALLITO;
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new ContadinoMostro(); }
 

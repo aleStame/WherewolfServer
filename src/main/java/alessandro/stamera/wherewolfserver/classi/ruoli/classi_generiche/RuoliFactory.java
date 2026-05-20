@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
-
 import java.util.*;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
@@ -34,6 +33,7 @@ public final class RuoliFactory
             case "Sidhe" -> ruolo = getSidhe();
             default -> ruolo = ruoli.get(nome);
         }
+        if(ruolo.isContadinoMostro()) ruolo.resettaRomeo();
         return ruolo;
     }
 
