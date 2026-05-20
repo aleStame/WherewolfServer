@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
+import static java.util.Arrays.stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 
@@ -30,19 +31,9 @@ public enum Fazione
 
     public Categoria getCategoria() { return categoria; }
 
-    public static Fazione getFazione(String descrizione) { return getFazione(getPosizione(descrizione)); }
-
-    private static int getPosizione(String descrizione)
+    public static Fazione getFazione(String descrizione)
     {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroFazioni() && posizione == NON_TROVATO; i++) if(descrizione.equals(getDescrizione(i))) posizione = i;
-        return posizione;
+        return stream(values()).filter(fazione -> fazione.toString().equals(descrizione)).findFirst().get();
     }
-
-    private static int getNumeroFazioni() { return values().length; }
-
-    private static String getDescrizione(int posizione) { return getFazione(posizione).toString(); }
-
-    private static Fazione getFazione(int posizione) { return values()[posizione]; }
 
 }
