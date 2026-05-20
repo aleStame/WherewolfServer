@@ -656,6 +656,17 @@ public final class TestPartita
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
+    @Test public void testControlloMagoContadinoMostro()
+    {
+        String[][] giocatori = new String[][] { { "Massimo", "Mago" }, { "Christian", "Contadino mostro" } };
+        inizializzaPartita(giocatori);
+        terminaNotte();
+        int indiceContadino = 1;
+        assertThat(partita.controlloMago(giocatori[indiceContadino][0])).isEqualTo(NON_MISTICO);
+        verificaEliminazione(giocatori[0][0]);
+        verificaNonEliminato(giocatori[indiceContadino][0]);
+    }
+
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }
