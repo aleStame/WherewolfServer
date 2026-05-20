@@ -72,6 +72,8 @@ public final class TestContadinoMostro
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
     }
 
+    @Test public void testAttaccoNegromante() { verificaAttaccoMorto(ruolo.attaccoNegromante()); }
+
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
