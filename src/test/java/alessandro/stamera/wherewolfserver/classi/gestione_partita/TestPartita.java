@@ -668,6 +668,16 @@ public final class TestPartita
         verificaNonEliminato(giocatori[indiceContadino][0]);
     }
 
+    @Test public void testMorteNegromante()
+    {
+        String[][] giocatori = new String[][] { { "Dina", "Contadino mostro" }, { "Giuseppe", "Negromante" } };
+        inizializzaPartita(giocatori);
+        int posizioneVittima = 0;
+        partita.attaccoNegromante(giocatori[posizioneVittima][0]);
+        verificaNonEliminato(giocatori[posizioneVittima][0]);
+        verificaEliminazione(giocatori[1][0]);
+    }
+
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoNegromante riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,22 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02886" summary="VERDE: testContrattaccoContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1779198889404</created>
-      <option name="number" value="02886" />
-      <option name="presentableId" value="LOCAL-02886" />
-      <option name="project" value="LOCAL" />
-      <updated>1779198889404</updated>
-    </task>
-    <task id="LOCAL-02887" summary="REFACTORING: definizione del metodo getPosizioneContadinoMostro">
-      <option name="closed" value="true" />
-      <created>1779199067752</created>
-      <option name="number" value="02887" />
-      <option name="presentableId" value="LOCAL-02887" />
-      <option name="project" value="LOCAL" />
-      <updated>1779199067752</updated>
     </task>
     <task id="LOCAL-02888" summary="REFACTORING: definizione del metodo isContadinoMostro">
       <option name="closed" value="true" />
@@ -683,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779292949590</updated>
     </task>
-    <option name="localTasksCounter" value="2935" />
+    <task id="LOCAL-02935" summary="ROSSO: testAttaccoNegromante non riuscito">
+      <option name="closed" value="true" />
+      <created>1779294086496</created>
+      <option name="number" value="02935" />
+      <option name="presentableId" value="LOCAL-02935" />
+      <option name="project" value="LOCAL" />
+      <updated>1779294086496</updated>
+    </task>
+    <task id="LOCAL-02936" summary="VERDE: testAttaccoNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1779294241915</created>
+      <option name="number" value="02936" />
+      <option name="presentableId" value="LOCAL-02936" />
+      <option name="project" value="LOCAL" />
+      <updated>1779294241915</updated>
+    </task>
+    <option name="localTasksCounter" value="2937" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

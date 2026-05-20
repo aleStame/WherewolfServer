@@ -228,6 +228,8 @@ public final class Partita
         return misticismo;
     }
 
+    public void attaccoNegromante(String nome) { }
+
     private void confermaEliminazioneMortiNotte()
     {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
