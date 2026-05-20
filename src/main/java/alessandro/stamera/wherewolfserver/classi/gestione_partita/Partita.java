@@ -231,14 +231,7 @@ public final class Partita
     public void attaccoNegromante(String nome)
     {
         EsitoAttacco esito = vivi.attaccoNegromante(nome);
-        if(esito == MORTO)
-        {
-            System.out.println("eccomi");
-            int posizione = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isNegromante())
-                posizione = i;
-            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
-        }
+        if(esito == MORTO) eliminaGiocatore(getNomeNegromante());
     }
 
     private void confermaEliminazioneMortiNotte()
@@ -338,7 +331,9 @@ public final class Partita
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
-    private Ruolo getNegromante() { return getRuoloVivo(vivi.getNomeNegromante()); }
+    private Ruolo getNegromante() { return getRuoloVivo(getNomeNegromante()); }
+
+    private String getNomeNegromante() { return vivi.getNomeNegromante(); }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
