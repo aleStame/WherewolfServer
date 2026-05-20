@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMagoAssente non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isMago">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,22 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02876" summary="REFACTORING: definizione del metodo getPosizioneGuaritore">
-      <option name="closed" value="true" />
-      <created>1779118324024</created>
-      <option name="number" value="02876" />
-      <option name="presentableId" value="LOCAL-02876" />
-      <option name="project" value="LOCAL" />
-      <updated>1779118324024</updated>
-    </task>
-    <task id="LOCAL-02877" summary="REFACTORING: definizione del metodo isGuaritore">
-      <option name="closed" value="true" />
-      <created>1779118480405</created>
-      <option name="number" value="02877" />
-      <option name="presentableId" value="LOCAL-02877" />
-      <option name="project" value="LOCAL" />
-      <updated>1779118480405</updated>
     </task>
     <task id="LOCAL-02878" summary="REFACTORING: definizione del metodo isGuaritore">
       <option name="closed" value="true" />
@@ -681,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779290349229</updated>
     </task>
-    <option name="localTasksCounter" value="2925" />
+    <task id="LOCAL-02925" summary="VERDE: testMagoAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1779290692593</created>
+      <option name="number" value="02925" />
+      <option name="presentableId" value="LOCAL-02925" />
+      <option name="project" value="LOCAL" />
+      <updated>1779290692594</updated>
+    </task>
+    <task id="LOCAL-02926" summary="REFACTORING: definizione del metodo isMago">
+      <option name="closed" value="true" />
+      <created>1779290849477</created>
+      <option name="number" value="02926" />
+      <option name="presentableId" value="LOCAL-02926" />
+      <option name="project" value="LOCAL" />
+      <updated>1779290849477</updated>
+    </task>
+    <option name="localTasksCounter" value="2927" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="ROSSO: testPazzo non riuscito" />
     <MESSAGE value="VERDE: testPazzo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPazzo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
@@ -721,6 +720,8 @@
     <MESSAGE value="VERDE: testMisticismo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isMistico" />
     <MESSAGE value="ROSSO: testMagoAssente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMagoAssente non riuscito" />
+    <MESSAGE value="VERDE: testMagoAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isMago" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isMago" />
   </component>
 </project>

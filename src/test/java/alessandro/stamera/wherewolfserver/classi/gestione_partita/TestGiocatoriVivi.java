@@ -599,6 +599,14 @@ public final class TestGiocatoriVivi
 
     @Test public void testMagoAssente() { verificaFalso(giocatori.isMagoPresente()); }
 
+    @Test public void testMagoPresente()
+    {
+        String nome = "Merlino";
+        aggiungiGiocatore(nome, "Mago");
+        verificaVero(giocatori.isMagoPresente());
+        verificaStringa(giocatori.getNomeMago(), nome);
+    }
+
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }
 
     private boolean isCappuccettoRossoPresente() { return giocatori.isCappuccettoRossoPresente(); }
