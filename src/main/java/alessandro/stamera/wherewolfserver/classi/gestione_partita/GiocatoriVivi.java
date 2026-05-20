@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -160,7 +162,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeGuaritore() { return getNomeGiocatore(getPosizioneGuaritore()); }
 
-    public Misticismo controlloMago(String nome) { return null; }
+    public Misticismo controlloMago(String nome)
+    {
+        Misticismo misticismo = NON_MISTICO;
+        if(getRuolo(nome).isMistico()) misticismo = MISTICO;
+        return misticismo;
+    }
 
     private int getPosizioneGuaritore()
     {
