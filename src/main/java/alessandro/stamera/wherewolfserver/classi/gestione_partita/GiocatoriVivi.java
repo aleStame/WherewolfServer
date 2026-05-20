@@ -172,9 +172,11 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isMagoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(getNomeGiocatore(i)).isMago();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = isMago(i);
         return trovato;
     }
+
+    private boolean isMago(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMago(); }
 
     private int getPosizioneGuaritore()
     {
