@@ -1,6 +1,5 @@
 package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
-import java.util.Arrays;
 import static java.util.Arrays.stream;
 
 public enum Misticismo
@@ -16,8 +15,7 @@ public enum Misticismo
 
     public static Misticismo getMisticismo(String descrizione)
     {
-        return null;
-        //return stream(values()).filter(valore -> valore.toString().equals(descrizione)).findFirst().get();
+        return stream(values()).filter(valore -> valore.toString().equals(descrizione)).findFirst().get();
     }
 
 }

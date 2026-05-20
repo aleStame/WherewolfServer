@@ -11,7 +11,7 @@ public final class TestMisticismo
     @ParameterizedTest @CsvSource({ "MISTICO, Mistico", "NON_MISTICO, Non mistico" })
     public void testStringaMistico(Misticismo misticismo, String messaggio) { assertThat(misticismo.toString()).isEqualTo(messaggio); }
 
-    @ParameterizedTest @CsvSource({ "Bianca, BIANCA", "Nera, NERA" })
+    @ParameterizedTest @CsvSource({ "Mistico, MISTICO", "Non mistico, NON_MISTICO" })
     public void testRicerca(String descrizione, Misticismo misticismo) { assertThat(getMisticismo(descrizione)).isEqualTo(misticismo); }
 
 }
