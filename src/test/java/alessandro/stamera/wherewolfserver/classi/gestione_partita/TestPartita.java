@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
@@ -647,11 +648,13 @@ public final class TestPartita
         verificaNonEliminato(nomeAssassino);
     }
 
-    /*@Test public void testControlloMagoContadinoMostroPrimaNotte()
+    @Test public void testControlloMagoContadinoMostroPrimaNotte()
     {
-        inizializzaPartita(new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } });
-        assertThat
-    }*/
+        String[][] giocatori = new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } };
+        inizializzaPartita(giocatori);
+        assertThat(partita.controlloMago(giocatori[1][0])).isEqualTo(NON_MISTICO);
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+    }
 
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
