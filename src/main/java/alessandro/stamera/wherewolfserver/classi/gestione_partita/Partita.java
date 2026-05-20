@@ -227,8 +227,9 @@ public final class Partita
     {
         Misticismo misticismo = NON_MISTICO;
         if(getRuoloVivo(nome).isMistico()) misticismo = MISTICO;
-        if(vivi.isContadinoMostro(nome))
+        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1)
         {
+            System.out.println("eccoci");
             int posizione = -1;
             for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isMago()) posizione = i;
             eliminaGiocatore(vivi.getNomeGiocatore(posizione));

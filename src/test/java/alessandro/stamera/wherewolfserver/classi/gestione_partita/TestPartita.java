@@ -663,6 +663,7 @@ public final class TestPartita
         terminaNotte();
         int indiceContadino = 1;
         assertThat(partita.controlloMago(giocatori[indiceContadino][0])).isEqualTo(NON_MISTICO);
+        terminaNotte();
         verificaEliminazione(giocatori[0][0]);
         verificaNonEliminato(giocatori[indiceContadino][0]);
     }
