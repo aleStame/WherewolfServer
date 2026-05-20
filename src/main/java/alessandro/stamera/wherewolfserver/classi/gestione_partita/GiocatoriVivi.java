@@ -169,6 +169,8 @@ public final class GiocatoriVivi extends Giocatori
         return misticismo;
     }
 
+    public boolean isMagoPresente() { return true; }
+
     private int getPosizioneGuaritore()
     {
         int posizione = NON_TROVATO;

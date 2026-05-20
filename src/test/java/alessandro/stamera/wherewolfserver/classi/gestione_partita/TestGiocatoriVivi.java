@@ -597,6 +597,8 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.controlloMago(nome)).isEqualTo(misticismo);
     }
 
+    @Test public void testMagoAssente() { verificaFalso(giocatori.isMagoPresente()); }
+
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }
 
     private boolean isCappuccettoRossoPresente() { return giocatori.isCappuccettoRossoPresente(); }
