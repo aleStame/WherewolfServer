@@ -173,6 +173,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeMago() { return getNomeGiocatore(getPosizioneMago()); }
 
+    public EsitoAttacco attaccoNegromante(String nome) { return null; }
+
     private int getPosizioneMago()
     {
         int posizione = NON_TROVATO;
