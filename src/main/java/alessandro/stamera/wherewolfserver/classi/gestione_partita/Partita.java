@@ -224,12 +224,7 @@ public final class Partita
     public Misticismo controlloMago(String nome)
     {
         Misticismo misticismo = vivi.controlloMago(nome);
-        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1)
-        {
-            int posizione = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isMago()) posizione = i;
-            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
-        }
+        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(vivi.getNomeMago());
         return misticismo;
     }
 

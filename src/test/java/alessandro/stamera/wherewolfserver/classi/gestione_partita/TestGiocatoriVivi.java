@@ -597,15 +597,17 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.controlloMago(nome)).isEqualTo(misticismo);
     }
 
-    @Test public void testMagoAssente() { verificaFalso(giocatori.isMagoPresente()); }
+    @Test public void testMagoAssente() { verificaFalso(isMagoPresente()); }
 
     @Test public void testMagoPresente()
     {
         String nome = "Merlino";
         aggiungiGiocatore(nome, "Mago");
-        verificaVero(giocatori.isMagoPresente());
+        verificaVero(isMagoPresente());
         verificaStringa(giocatori.getNomeMago(), nome);
     }
+
+    private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
 
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }
 
