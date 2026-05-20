@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
@@ -162,6 +159,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isGuaritorePresente() { return getPosizioneGuaritore() != NON_TROVATO; }
 
     public String getNomeGuaritore() { return getNomeGiocatore(getPosizioneGuaritore()); }
+
+    public Misticismo controlloMago(String nome) { return null; }
 
     private int getPosizioneGuaritore()
     {

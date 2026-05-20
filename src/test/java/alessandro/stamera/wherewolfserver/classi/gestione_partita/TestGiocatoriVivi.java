@@ -2,7 +2,17 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale;
+import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia;
+import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta;
+import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale;
+import alessandro.stamera.wherewolfserver.classi.ruoli.lupi.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -570,6 +580,30 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeGuaritore(), nome);
         giocatori.eliminaGiocatore(nome);
         verificaFalso(isGuaritorePresente());
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, NON_MISTICO", "Angelo custode, NON_MISTICO", "Assassino, NON_MISTICO", "Azzeccagarbugli, NON_MISTICO",
+            "Bardo, NON_MISTICO", "Becchino, NON_MISTICO", "Bocca di rosa, NON_MISTICO", "Boia, NON_MISTICO", "Borgomastro, NON_MISTICO",
+            "Bracconiere, NON_MISTICO", "Cacciatore, NON_MISTICO", "Cacciatore di vampiri, NON_MISTICO", "Capo branco, NON_MISTICO",
+            "Capo gilda, NON_MISTICO", "Cappuccetto rosso, NON_MISTICO", "Contadino eroe, NON_MISTICO",
+            "Contadino discendente dei lupi, NON_MISTICO", "Contadino mostro, NON_MISTICO", "Contadino normale, NON_MISTICO",
+            "Eremita, NON_MISTICO", "Ghoul, NON_MISTICO", "Giovane lupo, NON_MISTICO", "Giulietta, NON_MISTICO", "Giullare, NON_MISTICO",
+            "Goblin, MISTICO", "Guardia, NON_MISTICO", "Guardia corrotta, NON_MISTICO", "Guaritore, MISTICO", "Inquisitore, NON_MISTICO",
+            "Ladra, NON_MISTICO", "Leprecauno, MISTICO", "Lupo del branco, NON_MISTICO", "Lupo reietto, NON_MISTICO", "Lupo solitario, NON_MISTICO",
+            "Mago, MISTICO", "Medium, MISTICO", "Megera, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO", "Negromante, MISTICO",
+            "Nonna, NON_MISTICO", "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO", "Pazzo, NON_MISTICO",
+            "Peccatore, NON_MISTICO", "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO", "Spia, NON_MISTICO", "Sensitiva, MISTICO",
+            "Sensitiva, MISTICO", "Templare, NON_MISTICO"
+        }
+    )
+    public void testMisticismo(String nomeRuolo, Misticismo misticismo)
+    {
+        String nome = "Mario";
+        aggiungiGiocatore(nome, nomeRuolo);
+        assertThat(giocatori.controlloMago(nome)).isEqualTo(misticismo);
     }
 
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }
