@@ -329,7 +329,7 @@ public class Ruolo
 
     public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
 
-    public EsitoAttacco attaccoNegromante() { return null; }
+    public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
