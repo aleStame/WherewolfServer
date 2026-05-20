@@ -674,6 +674,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
         partita.attaccoNegromante(giocatori[posizioneVittima][0]);
+        terminaNotte();
         verificaNonEliminato(giocatori[posizioneVittima][0]);
         verificaEliminazione(giocatori[1][0]);
     }

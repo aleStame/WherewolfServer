@@ -228,7 +228,18 @@ public final class Partita
         return misticismo;
     }
 
-    public void attaccoNegromante(String nome) { }
+    public void attaccoNegromante(String nome)
+    {
+        EsitoAttacco esito = vivi.attaccoNegromante(nome);
+        if(esito == MORTO)
+        {
+            System.out.println("eccomi");
+            int posizione = -1;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(vivi.getNomeGiocatore(i)).isNegromante())
+                posizione = i;
+            eliminaGiocatore(vivi.getNomeGiocatore(posizione));
+        }
+    }
 
     private void confermaEliminazioneMortiNotte()
     {
