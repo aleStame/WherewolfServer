@@ -1,14 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -163,6 +162,26 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeGuaritore() { return getNomeGiocatore(getPosizioneGuaritore()); }
 
+    public Misticismo controlloMago(String nome)
+    {
+        Misticismo misticismo = NON_MISTICO;
+        if(isMistico(nome)) misticismo = MISTICO;
+        return misticismo;
+    }
+
+    public boolean isMagoPresente() { return getPosizioneMago() != NON_TROVATO; }
+
+    public String getNomeMago() { return getNomeGiocatore(getPosizioneMago()); }
+
+    private int getPosizioneMago()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isMago(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isMago(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMago(); }
+
     private int getPosizioneGuaritore()
     {
         int posizione = NON_TROVATO;
@@ -269,7 +288,9 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isBracconiere(int posizione) { return getRuolo(posizione).isBracconiere(); }
 
-    private boolean isMistico(int posizione) { return getRuolo(posizione).isMistico(); }
+    private boolean isMistico(int posizione) { return isMistico(getNomeGiocatore(posizione)); }
+
+    private boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
 
     private boolean isLupo(int posizione) { return getRuolo(posizione).isLupo(); }
 

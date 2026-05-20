@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
@@ -218,6 +219,13 @@ public final class Partita
     {
         confermaEliminazioneMortiNotte();
         numeroNotte++;
+    }
+
+    public Misticismo controlloMago(String nome)
+    {
+        Misticismo misticismo = vivi.controlloMago(nome);
+        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(vivi.getNomeMago());
+        return misticismo;
     }
 
     private void confermaEliminazioneMortiNotte()
