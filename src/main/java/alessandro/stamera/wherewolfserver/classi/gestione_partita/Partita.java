@@ -13,8 +13,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 
 public final class Partita
 {
@@ -225,8 +223,7 @@ public final class Partita
 
     public Misticismo controlloMago(String nome)
     {
-        Misticismo misticismo = NON_MISTICO;
-        if(getRuoloVivo(nome).isMistico()) misticismo = MISTICO;
+        Misticismo misticismo = vivi.controlloMago(nome);
         if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1)
         {
             int posizione = -1;

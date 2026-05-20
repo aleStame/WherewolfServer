@@ -165,7 +165,7 @@ public final class GiocatoriVivi extends Giocatori
     public Misticismo controlloMago(String nome)
     {
         Misticismo misticismo = NON_MISTICO;
-        if(getRuolo(nome).isMistico()) misticismo = MISTICO;
+        if(isMistico(nome)) misticismo = MISTICO;
         return misticismo;
     }
 
@@ -275,7 +275,9 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isBracconiere(int posizione) { return getRuolo(posizione).isBracconiere(); }
 
-    private boolean isMistico(int posizione) { return getRuolo(posizione).isMistico(); }
+    private boolean isMistico(int posizione) { return isMistico(getNomeGiocatore(posizione)); }
+
+    private boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
 
     private boolean isLupo(int posizione) { return getRuolo(posizione).isLupo(); }
 
