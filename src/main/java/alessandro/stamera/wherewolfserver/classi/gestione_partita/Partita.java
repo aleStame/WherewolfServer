@@ -9,6 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIA
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 
 public final class Partita
@@ -236,7 +237,12 @@ public final class Partita
 
     public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
 
-    public EsitoControlloSensitiva controlloSensitiva(String nome) { return vivi.controlloSensitiva(nome); }
+    public EsitoControlloSensitiva controlloSensitiva(String nome)
+    {
+        EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
+        if(esito == VILLAGGIO) if(getNumeroNotte() > 1 ) eliminaGiocatore(vivi.getNomeSensitiva());
+        return esito;
+    }
 
     private void confermaEliminazioneMortiNotte()
     {

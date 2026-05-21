@@ -708,6 +708,7 @@ public final class TestPartita
         terminaNotte();
         int posizioneContadino = 0;
         assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(VILLAGGIO);
+        terminaNotte();
         verificaEliminazione(giocatori[1][0]);
         verificaNonEliminato(giocatori[posizioneContadino][0]);
     }
