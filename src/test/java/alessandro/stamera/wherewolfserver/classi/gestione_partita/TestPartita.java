@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
@@ -688,6 +689,15 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+    }
+
+    @Test public void testControlloSensitivaContadinoMostroPrimaNotte()
+    {
+        String[][] giocatori = new String[][] { { "Elettra", "Contadino mostro" }, { "Gianluca", "Sensitiva" } };
+        inizializzaPartita(giocatori);
+        int posizioneContadino = 0;
+        assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(NON_VILLAGGIO);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
