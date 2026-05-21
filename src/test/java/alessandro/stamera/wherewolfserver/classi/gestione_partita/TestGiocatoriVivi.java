@@ -634,8 +634,9 @@ public final class TestGiocatoriVivi
     )
     public void testControlloSensitiva(String nomeRuolo, EsitoControlloSensitiva esito)
     {
-        aggiungiGiocatore("Chiara", nomeRuolo);
-        assertThat(giocatori.controlloSensitiva()).isEqualTo(esito);
+        String nome = "Chiara";
+        aggiungiGiocatore(nome, nomeRuolo);
+        assertThat(giocatori.controlloSensitiva(nome)).isEqualTo(esito);
     }
 
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
