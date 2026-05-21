@@ -639,7 +639,15 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.controlloSensitiva(nome)).isEqualTo(esito);
     }
 
-    @Test public void testSensitivaPresente() { verificaFalso(giocatori.isSensitivaPresente()); }
+    @Test public void testSensitivaPresente()
+    {
+        String nome = "Mariangela";
+        aggiungiGiocatore(nome, "Sensitiva");
+        verificaVero(giocatori.isSensitivaPresente());
+        verificaStringa(giocatori.getNomeSensitiva(), nome);
+    }
+
+    @Test public void testSensitivaAssente() { verificaFalso(giocatori.isSensitivaPresente()); }
 
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
 

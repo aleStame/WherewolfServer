@@ -186,6 +186,8 @@ public final class GiocatoriVivi extends Giocatori
         return posizione != NON_TROVATO;
     }
 
+    public String getNomeSensitiva() { return null; }
+
     private int getPosizioneMago()
     {
         int posizione = NON_TROVATO;
