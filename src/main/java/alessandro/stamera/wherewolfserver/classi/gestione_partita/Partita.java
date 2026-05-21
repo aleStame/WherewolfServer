@@ -230,11 +230,14 @@ public final class Partita
 
     public void attaccoNegromante(String nome)
     {
-        EsitoAttacco esito = vivi.attaccoNegromante(nome);
-        if(esito == MORTO) eliminaGiocatore(getNomeNegromante());
+        switch(vivi.attaccoNegromante(nome))
+        {
+            case MORTO -> eliminaGiocatore(getNomeNegromante());
+            case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
+        }
     }
 
-    public void romeizzazione(String nome) { }
+    public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
 
     private void confermaEliminazioneMortiNotte()
     {
