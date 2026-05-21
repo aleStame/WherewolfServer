@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
+import static java.util.Arrays.stream;
+
 public enum EsitoControlloSensitiva
 {
 
@@ -11,6 +13,9 @@ public enum EsitoControlloSensitiva
 
     @Override public String toString() { return messaggio; }
 
-    public static EsitoControlloSensitiva getEsitoControlloSensitiva(String messaggio) { return null; }
+    public static EsitoControlloSensitiva getEsitoControlloSensitiva(String messaggio)
+    {
+        return stream(values()).filter(esito -> esito.toString().equals(messaggio)).findFirst().get();
+    }
 
 }
