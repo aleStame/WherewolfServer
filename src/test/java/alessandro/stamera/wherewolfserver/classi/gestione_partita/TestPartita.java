@@ -701,6 +701,17 @@ public final class TestPartita
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
+    @Test public void testControlloSensitivaContadinoMostro()
+    {
+        String[][] giocatori = new String[][] { { "Antonio", "Contadino mostro" }, { "Carlo", "Sensitiva" } };
+        inizializzaPartita(giocatori);
+        terminaNotte();
+        int posizioneContadino = 0;
+        assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(VILLAGGIO);
+        verificaEliminazione(giocatori[1][0]);
+        verificaNonEliminato(giocatori[posizioneContadino][0]);
+    }
+
     private void verificaNonMistico(String nome) { assertThat(partita.controlloMago(nome)).isEqualTo(NON_MISTICO); }
 
     private void attaccoNegromante(String nome) { partita.attaccoNegromante(nome); }
