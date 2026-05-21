@@ -697,7 +697,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Elettra", "Contadino mostro" }, { "Gianluca", "Sensitiva" } };
         inizializzaPartita(giocatori);
         int posizioneContadino = 0;
-        assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(VILLAGGIO);
+        verificaVillaggio(giocatori[posizioneContadino][0]);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -707,11 +707,13 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         terminaNotte();
         int posizioneContadino = 0;
-        assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(VILLAGGIO);
+        verificaVillaggio(giocatori[posizioneContadino][0]);
         terminaNotte();
         verificaEliminazione(giocatori[1][0]);
         verificaNonEliminato(giocatori[posizioneContadino][0]);
     }
+
+    private void verificaVillaggio(String nome) { assertThat(partita.controlloSensitiva(nome)).isEqualTo(VILLAGGIO); }
 
     private void verificaNonMistico(String nome) { assertThat(partita.controlloMago(nome)).isEqualTo(NON_MISTICO); }
 
