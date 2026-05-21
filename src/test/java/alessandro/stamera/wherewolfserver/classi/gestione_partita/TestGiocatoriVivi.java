@@ -639,6 +639,8 @@ public final class TestGiocatoriVivi
         assertThat(giocatori.controlloSensitiva(nome)).isEqualTo(esito);
     }
 
+    @Test public void testSensitivaPresente() { verificaFalso(giocatori.isSensitivaPresente()); }
+
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
 
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }

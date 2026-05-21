@@ -179,6 +179,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoControlloSensitiva controlloSensitiva(String nome) { return getRuolo(nome).controlloSensitiva(); }
 
+    public boolean isSensitivaPresente() { return true; }
+
     private int getPosizioneMago()
     {
         int posizione = NON_TROVATO;
