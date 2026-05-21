@@ -643,11 +643,13 @@ public final class TestGiocatoriVivi
     {
         String nome = "Mariangela";
         aggiungiGiocatore(nome, "Sensitiva");
-        verificaVero(giocatori.isSensitivaPresente());
+        verificaVero(isSensitivaPresente());
         verificaStringa(giocatori.getNomeSensitiva(), nome);
     }
 
-    @Test public void testSensitivaAssente() { verificaFalso(giocatori.isSensitivaPresente()); }
+    @Test public void testSensitivaAssente() { verificaFalso(isSensitivaPresente()); }
+
+    private boolean isSensitivaPresente() { return giocatori.isSensitivaPresente(); }
 
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
 
