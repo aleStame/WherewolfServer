@@ -679,6 +679,18 @@ public final class TestPartita
         verificaEliminazione(giocatori[1][0]);
     }
 
+    @Test public void testNegromanteContadinoMostroRomeizzato()
+    {
+        String[][] giocatori = new String[][] { { "Lino", "Contadino mostro" }, { "Dino", "Negromante" }, { "Pino", "Giulietta" } };
+        inizializzaPartita(giocatori);
+        int posizioneVittima = 0;
+        partita.romeizzazione(giocatori[posizioneVittima][0]);
+        assertThatIllegalStateException().isThrownBy(() -> partita.attaccoNegromante(giocatori[posizioneVittima][0]))
+            .withMessage("Scegli un'altra persona da attaccare.");
+        terminaNotte();
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+    }
+
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
     private void verificaNumeroCriminali(int risultato) { verificaNumeroIntero(partita.getNumeroCriminali(), risultato); }

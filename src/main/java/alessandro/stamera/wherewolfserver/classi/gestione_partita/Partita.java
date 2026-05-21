@@ -234,6 +234,8 @@ public final class Partita
         if(esito == MORTO) eliminaGiocatore(getNomeNegromante());
     }
 
+    public void romeizzazione(String nome) { }
+
     private void confermaEliminazioneMortiNotte()
     {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];

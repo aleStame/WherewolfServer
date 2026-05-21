@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">162</div>
+<div class="counter">163</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.663s</div>
+<div class="counter">0.570s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">99%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,106 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testNegromanteContadinoMostroRomeizzato()"></a>
+<h3 class="failures">testNegromanteContadinoMostroRomeizzato()</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expecting code to raise a throwable.
+	at alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.testNegromanteContadinoMostroRomeizzato(TestPartita.java:688)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,7 +174,7 @@
 <tr>
 <td class="success">[1] tipoLupo=Lupo del branco</td>
 <td class="success">attaccoAltriLupi(String)[1]</td>
-<td class="success">0.007s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -96,37 +192,37 @@
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">attaccoAltriLupi(String)[4]</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
-<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAngeloCustodeAccusatoPresente()</td>
-<td class="success">testAngeloCustodeAccusatoPresente()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
-<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoAmatoAssassino()</td>
-<td class="success">testAttaccoAmatoAssassino()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testAttaccoAssassino()</td>
-<td class="success">testAttaccoAssassino()</td>
+<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
+<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAngeloCustodeAccusatoPresente()</td>
+<td class="success">testAngeloCustodeAccusatoPresente()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
+<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoAmatoAssassino()</td>
+<td class="success">testAttaccoAmatoAssassino()</td>
 <td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoAssassino()</td>
+<td class="success">testAttaccoAssassino()</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -138,97 +234,97 @@
 <tr>
 <td class="success">[1] tipoContadino=Contadino eroe</td>
 <td class="success">testAttaccoContadino(String)[1]</td>
-<td class="success">0.006s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoContadino=Contadino mostro</td>
 <td class="success">testAttaccoContadino(String)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeLupo=Capo branco</td>
 <td class="success">testAttaccoLupiAmato(String)[1]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeLupo=Capo branco</td>
 <td class="success">testAttaccoLupiAngeloCustode(String)[1]</td>
-<td class="success">0.003s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testAttaccoLupoSolitarioCacciatore()</td>
 <td class="success">testAttaccoLupoSolitarioCacciatore()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNormaleCacciatore()</td>
+<td class="success">testAttaccoNormaleCacciatore()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNosferatuMorto()</td>
+<td class="success">testAttaccoNosferatuMorto()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNosferatuRiuscito()</td>
+<td class="success">testAttaccoNosferatuRiuscito()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoUltimoLupo()</td>
+<td class="success">testAttaccoUltimoLupo()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testAttaccoNormaleCacciatore()</td>
-<td class="success">testAttaccoNormaleCacciatore()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuMorto()</td>
-<td class="success">testAttaccoNosferatuMorto()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuRiuscito()</td>
-<td class="success">testAttaccoNosferatuRiuscito()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoUltimoLupo()</td>
-<td class="success">testAttaccoUltimoLupo()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">testAttaccoUltimoLupoBranco()</td>
 <td class="success">testAttaccoUltimoLupoBranco()</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testBallottaggioPuro()</td>
 <td class="success">testBallottaggioPuro()</td>
-<td class="success">0.003s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testBloccoAttaccoPazzo()</td>
 <td class="success">testBloccoAttaccoPazzo()</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] posizioneVittima=1</td>
 <td class="success">testContrattaccoContadinoMostro(int)[1]</td>
-<td class="success">0.027s</td>
+<td class="success">0.038s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloMagoContadinoMostro()</td>
 <td class="success">testControlloMagoContadinoMostro()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloMagoContadinoMostroPrimaNotte()</td>
 <td class="success">testControlloMagoContadinoMostroPrimaNotte()</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCriminalizzazioneBecchino()</td>
 <td class="success">testCriminalizzazioneBecchino()</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -252,151 +348,151 @@
 <tr>
 <td class="success">[13] nomeRuolo=Giulietta, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[13]</td>
-<td class="success">0.003s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[14] nomeRuolo=Giullare, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[14]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[15] nomeRuolo=Goblin, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[15]</td>
-<td class="success">0.016s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[16] nomeRuolo=Guaritore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[16]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[17] nomeRuolo=Inquisitore, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[17]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[18] nomeRuolo=Leprecauno, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[18]</td>
-<td class="success">0.030s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[19] nomeRuolo=Mago, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[19]</td>
-<td class="success">0.009s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeRuolo=Angelo custode, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[1]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[20] nomeRuolo=Medium, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[20]</td>
-<td class="success">0.005s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[21] nomeRuolo=Megera, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[21]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[22] nomeRuolo=Mercante, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[22]</td>
-<td class="success">0.007s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[23] nomeRuolo=Monaco, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[23]</td>
-<td class="success">0.006s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[24] nomeRuolo=Negromante, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[24]</td>
-<td class="success">0.005s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[25] nomeRuolo=Nonna, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[25]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[26] nomeRuolo=Nosferatu, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[26]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[27] nomeRuolo=Oratore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[27]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[28] nomeRuolo=Pazzo, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[28]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[29] nomeRuolo=Oste, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[29]</td>
-<td class="success">0.005s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] nomeRuolo=Azzeccagarbugli, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[30] nomeRuolo=Peccatore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[30]</td>
-<td class="success">0.001s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[31] nomeRuolo=Posseduto, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[31]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[32] nomeRuolo=Prete, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[32]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[33] nomeRuolo=Sensitiva, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[33]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[34] nomeRuolo=Sidhe, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[34]</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[35] nomeRuolo=Templare, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[35]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -408,55 +504,55 @@
 <tr>
 <td class="success">[4] nomeRuolo=Becchino, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[4]</td>
-<td class="success">0.001s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] nomeRuolo=Bocca di rosa, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[5]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] nomeRuolo=Borgomastro, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[6]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[7] nomeRuolo=Bracconiere, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[7]</td>
-<td class="success">0.008s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[8] nomeRuolo=Cacciatore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[8]</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[9] nomeRuolo=Cacciatore di vampiri, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[9]</td>
-<td class="success">0.010s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeRuolo=Altra guardia</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[1]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] nomeRuolo=Capo branco</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] nomeRuolo=Giovane lupo</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[3]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -468,31 +564,31 @@
 <tr>
 <td class="success">[5] nomeRuolo=Lupo del branco</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[5]</td>
-<td class="success">0.001s</td>
+<td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] nomeRuolo=Lupo reietto</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[6]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[7] nomeRuolo=Lupo solitario</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[7]</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCriminalizzazioneContadinoLupo()</td>
 <td class="success">testCriminalizzazioneContadinoLupo()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testCriminalizzazioneContadinoMostro()</td>
-<td class="success">testCriminalizzazioneContadinoMostro()</td>
 <td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCriminalizzazioneContadinoMostro()</td>
+<td class="success">testCriminalizzazioneContadinoMostro()</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -504,154 +600,160 @@
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testGuarigioneContadinoMostro(String)[2]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testGuarigioneContadinoMostro(String)[3]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testGuarigioneContadinoMostro(String)[4]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInizioCrociata()</td>
+<td class="success">testInizioCrociata()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMancatoInizioCrociata()</td>
+<td class="success">testMancatoInizioCrociata()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMorteNegromante()</td>
+<td class="success">testMorteNegromante()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testInizioCrociata()</td>
-<td class="success">testInizioCrociata()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testMancatoInizioCrociata()</td>
-<td class="success">testMancatoInizioCrociata()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testMorteNegromante()</td>
-<td class="success">testMorteNegromante()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
+<td class="failures">testNegromanteContadinoMostroRomeizzato()</td>
+<td class="failures">testNegromanteContadinoMostroRomeizzato()</td>
+<td class="failures">0.056s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[1]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[2]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[3]</td>
-<td class="success">0.006s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[4]</td>
-<td class="success">0.007s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Contadino discendente dei lupi</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[5]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[1]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[2]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[3]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[4]</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Contadino discendente dei lupi</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[5]</td>
-<td class="success">0.006s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testNoCreatureOmbra()</td>
 <td class="success">testNoCreatureOmbra()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNoGuardie()</td>
-<td class="success">testNoGuardie()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumeroLupi()</td>
-<td class="success">testNumeroLupi()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumeroNotte()</td>
-<td class="success">testNumeroNotte()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumeroSenzaFazione()</td>
-<td class="success">testNumeroSenzaFazione()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPareggioBallottaggio()</td>
-<td class="success">testPareggioBallottaggio()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPareggioPrimoPosto()</td>
-<td class="success">testPareggioPrimoPosto()</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPareggioSecondoPosto()</td>
-<td class="success">testPareggioSecondoPosto()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPerdenteBallottaggio()</td>
-<td class="success">testPerdenteBallottaggio()</td>
 <td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testNoGuardie()</td>
+<td class="success">testNoGuardie()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNumeroLupi()</td>
+<td class="success">testNumeroLupi()</td>
+<td class="success">0.059s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNumeroNotte()</td>
+<td class="success">testNumeroNotte()</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNumeroSenzaFazione()</td>
+<td class="success">testNumeroSenzaFazione()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPareggioBallottaggio()</td>
+<td class="success">testPareggioBallottaggio()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPareggioPrimoPosto()</td>
+<td class="success">testPareggioPrimoPosto()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPareggioSecondoPosto()</td>
+<td class="success">testPareggioSecondoPosto()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPerdenteBallottaggio()</td>
+<td class="success">testPerdenteBallottaggio()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testPotereBardoAuraChiara()</td>
 <td class="success">testPotereBardoAuraChiara()</td>
 <td class="success">0.001s</td>
@@ -660,13 +762,13 @@
 <tr>
 <td class="success">testPotereBardoAuraOscura()</td>
 <td class="success">testPotereBardoAuraOscura()</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPotereBardoNienteBardo()</td>
 <td class="success">testPotereBardoNienteBardo()</td>
-<td class="success">0.009s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -678,49 +780,49 @@
 <tr>
 <td class="success">[2] ruolo=Contadino mostro</td>
 <td class="success">testPotereBorgomastro(String)[2]</td>
-<td class="success">0.018s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPotereBracconiereDueLupi()</td>
 <td class="success">testPotereBracconiereDueLupi()</td>
-<td class="success">0.004s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPotereBracconiereUnLupo()</td>
 <td class="success">testPotereBracconiereUnLupo()</td>
-<td class="success">0.012s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[1]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[3]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[4]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Contadino discendente dei lupi</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[5]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -738,79 +840,79 @@
 <tr>
 <td class="success">[10] ruolo=Cappuccetto rosso</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[10]</td>
-<td class="success">0.006s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[11] ruolo=Contadino discendente dei lupi</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[11]</td>
-<td class="success">0.008s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[12] ruolo=Contadino eroe</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[12]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[13] ruolo=Contadino mostro</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[13]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[14] ruolo=Contadino normale</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[14]</td>
-<td class="success">0.004s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[15] ruolo=Eremita</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[15]</td>
-<td class="success">0.001s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[16] ruolo=Ghoul</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[16]</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[17] ruolo=Giulietta</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[17]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[18] ruolo=Giullare</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[18]</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[19] ruolo=Goblin</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[19]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] ruolo=Altra guardia</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[1]</td>
-<td class="success">0.002s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[20] ruolo=Guardia</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[20]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[21] ruolo=Guaritore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[21]</td>
-<td class="success">0.002s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -822,43 +924,43 @@
 <tr>
 <td class="success">[23] ruolo=Inquisitore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[23]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[24] ruolo=Leprecauno</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[24]</td>
-<td class="success">0.006s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[25] ruolo=Lupo del branco</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[25]</td>
-<td class="success">0.005s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[26] ruolo=Lupo reietto</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[26]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[27] ruolo=Lupo solitario</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[27]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[28] ruolo=Mago</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[28]</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[29] ruolo=Medium</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[29]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -870,7 +972,7 @@
 <tr>
 <td class="success">[30] ruolo=Megera</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[30]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -882,49 +984,49 @@
 <tr>
 <td class="success">[32] ruolo=Negromante</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[32]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[33] ruolo=Nonna</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[33]</td>
-<td class="success">0.004s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[34] ruolo=Nosferatu</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[34]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[35] ruolo=Pazzo</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[35]</td>
-<td class="success">0.004s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[36] ruolo=Peccatore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[36]</td>
-<td class="success">0.008s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[37] ruolo=Posseduto</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[37]</td>
-<td class="success">0.004s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[38] ruolo=Prete</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[38]</td>
-<td class="success">0.007s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[39] ruolo=Sensitiva</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[39]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -936,85 +1038,85 @@
 <tr>
 <td class="success">[40] ruolo=Sidhe</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[40]</td>
-<td class="success">0.006s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[41] ruolo=Templare</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[41]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] ruolo=Becchino</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[4]</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] ruolo=Boia</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[5]</td>
-<td class="success">0.031s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] ruolo=Bracconiere</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[6]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[7] ruolo=Cacciatore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[7]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[8] ruolo=Cacciatore di vampiri</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[8]</td>
-<td class="success">0.004s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[9] ruolo=Capo branco</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[9]</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneAzzeccagarbugliAmato()</td>
-<td class="success">testSegnalazioneAzzeccagarbugliAmato()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitoreMisticoAssente()</td>
-<td class="success">testSegnalazioneInquisitoreMisticoAssente()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
-<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
-<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
 <td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSegnalazioneAzzeccagarbugliAmato()</td>
+<td class="success">testSegnalazioneAzzeccagarbugliAmato()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSegnalazioneInquisitoreMisticoAssente()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoAssente()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSegnalazioneInquisitoreMisticoPresenteAmato()</td>
 <td class="success">testSegnalazioneInquisitoreMisticoPresenteAmato()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSegnalazioneOratore()</td>
 <td class="success">testSegnalazioneOratore()</td>
-<td class="success">0.009s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1026,25 +1128,25 @@
 <tr>
 <td class="success">testSoloCreatureOmbra()</td>
 <td class="success">testSoloCreatureOmbra()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSoloGuardie()</td>
 <td class="success">testSoloGuardie()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSuicidioCapoBranco()</td>
+<td class="success">testSuicidioCapoBranco()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUnanimita()</td>
+<td class="success">testUnanimita()</td>
 <td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSuicidioCapoBranco()</td>
-<td class="success">testSuicidioCapoBranco()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testUnanimita()</td>
-<td class="success">testUnanimita()</td>
-<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -1057,7 +1159,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 21 mag 2026, 00:41:57</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 21 mag 2026, 10:44:34</p>
 </div>
 </div>
 </body>
