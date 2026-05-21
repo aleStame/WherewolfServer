@@ -652,7 +652,7 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } };
         inizializzaPartita(giocatori);
-        assertThat(partita.controlloMago(giocatori[1][0])).isEqualTo(NON_MISTICO);
+        verificaNonMistico(giocatori[1][0]);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -662,11 +662,38 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         terminaNotte();
         int indiceContadino = 1;
-        assertThat(partita.controlloMago(giocatori[indiceContadino][0])).isEqualTo(NON_MISTICO);
+        verificaNonMistico(giocatori[indiceContadino][0]);
         terminaNotte();
         verificaEliminazione(giocatori[0][0]);
         verificaNonEliminato(giocatori[indiceContadino][0]);
     }
+
+    @Test public void testMorteNegromante()
+    {
+        String[][] giocatori = new String[][] { { "Dina", "Contadino mostro" }, { "Giuseppe", "Negromante" } };
+        inizializzaPartita(giocatori);
+        int posizioneVittima = 0;
+        attaccoNegromante(giocatori[posizioneVittima][0]);
+        terminaNotte();
+        verificaNonEliminato(giocatori[posizioneVittima][0]);
+        verificaEliminazione(giocatori[1][0]);
+    }
+
+    @Test public void testNegromanteContadinoMostroRomeizzato()
+    {
+        String[][] giocatori = new String[][] { { "Lino", "Contadino mostro" }, { "Dino", "Negromante" }, { "Pino", "Giulietta" } };
+        inizializzaPartita(giocatori);
+        int posizioneVittima = 0;
+        partita.romeizzazione(giocatori[posizioneVittima][0]);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
+            .withMessage("Scegli un'altra persona da attaccare.");
+        terminaNotte();
+        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+    }
+
+    private void verificaNonMistico(String nome) { assertThat(partita.controlloMago(nome)).isEqualTo(NON_MISTICO); }
+
+    private void attaccoNegromante(String nome) { partita.attaccoNegromante(nome); }
 
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 

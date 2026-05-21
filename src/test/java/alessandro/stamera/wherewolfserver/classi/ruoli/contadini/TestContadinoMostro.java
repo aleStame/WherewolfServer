@@ -57,7 +57,7 @@ public final class TestContadinoMostro
     public void testAttaccoLupi(String nome) { verificaAttaccoMorto(attaccoLupi(nome)); }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiRomeo(String nome)
     {
         ruolo.romeizzazione();
@@ -70,6 +70,14 @@ public final class TestContadinoMostro
     {
         verificaAttacco(ruolo.gildata(), MORTO);
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+    }
+
+    @Test public void testAttaccoNegromante() { verificaAttaccoMorto(ruolo.attaccoNegromante()); }
+
+    @Test public void testAttaccoNegromanteRomeizzato()
+    {
+        ruolo.romeizzazione();
+        verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
     }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }

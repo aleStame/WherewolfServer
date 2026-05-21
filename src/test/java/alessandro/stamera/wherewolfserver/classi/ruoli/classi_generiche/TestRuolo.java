@@ -158,6 +158,8 @@ public final class TestRuolo
         verificaFalso(isSegnalatoOratore());
     }
 
+    @Test public void testAttaccoNegromante() { verificaAttaccoRiuscito(ruolo.attaccoNegromante()); }
+
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
 
     private void verificaNonInquisito() { verificaFalso(isInquisito()); }

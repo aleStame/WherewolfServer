@@ -21,8 +21,7 @@ public final class TestBallottaggio
     @Test public void testAmatoPresente()
     {
         String nome = "Gabriella";
-        setMercanteAmato();
-        aggiungiGiocatore(nome, "Mercante");
+        ballottaggio.aggiungiGiocatore(nome, getMercanteAmato());
         verificaVero(isAmatoPresente());
         assertThat(ballottaggio.getNomeAmato()).isEqualTo(nome);
     }
@@ -138,10 +137,11 @@ public final class TestBallottaggio
         ballottaggio.aggiungiGiocatore(nome, FACTORY.getRuolo(nomeRuolo));
     }
 
-    private void setMercanteAmato()
+    private Ruolo getMercanteAmato()
     {
         Ruolo ruolo = getMercante();
         ruolo.sceltaAngeloCustode();
+        return ruolo;
     }
 
     private Ruolo getMercante() { return FACTORY.getRuolo("Mercante"); }

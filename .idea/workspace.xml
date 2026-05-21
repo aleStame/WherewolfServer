@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPosizioneMago">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoNegromanteRomeizzato riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/magoContadinoMostro&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/negromanteContadinoMostro&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -288,102 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02881" summary="VERDE DIRETTO: testContadinoMostroPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1779197558173</created>
-      <option name="number" value="02881" />
-      <option name="presentableId" value="LOCAL-02881" />
-      <option name="project" value="LOCAL" />
-      <updated>1779197558173</updated>
-    </task>
-    <task id="LOCAL-02882" summary="VERDE DIRETTO: testContadinoMostroAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779197739067</created>
-      <option name="number" value="02882" />
-      <option name="presentableId" value="LOCAL-02882" />
-      <option name="project" value="LOCAL" />
-      <updated>1779197739068</updated>
-    </task>
-    <task id="LOCAL-02883" summary="REFACTORING: definizione del metodo isContadinoMostroPresente">
-      <option name="closed" value="true" />
-      <created>1779197838887</created>
-      <option name="number" value="02883" />
-      <option name="presentableId" value="LOCAL-02883" />
-      <option name="project" value="LOCAL" />
-      <updated>1779197838887</updated>
-    </task>
-    <task id="LOCAL-02884" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1779198211861</created>
-      <option name="number" value="02884" />
-      <option name="presentableId" value="LOCAL-02884" />
-      <option name="project" value="LOCAL" />
-      <updated>1779198211861</updated>
-    </task>
-    <task id="LOCAL-02885" summary="ROSSO: testContrattaccoContadinoMostro non riuscito">
-      <option name="closed" value="true" />
-      <created>1779198511163</created>
-      <option name="number" value="02885" />
-      <option name="presentableId" value="LOCAL-02885" />
-      <option name="project" value="LOCAL" />
-      <updated>1779198511164</updated>
-    </task>
-    <task id="LOCAL-02886" summary="VERDE: testContrattaccoContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1779198889404</created>
-      <option name="number" value="02886" />
-      <option name="presentableId" value="LOCAL-02886" />
-      <option name="project" value="LOCAL" />
-      <updated>1779198889404</updated>
-    </task>
-    <task id="LOCAL-02887" summary="REFACTORING: definizione del metodo getPosizioneContadinoMostro">
-      <option name="closed" value="true" />
-      <created>1779199067752</created>
-      <option name="number" value="02887" />
-      <option name="presentableId" value="LOCAL-02887" />
-      <option name="project" value="LOCAL" />
-      <updated>1779199067752</updated>
-    </task>
-    <task id="LOCAL-02888" summary="REFACTORING: definizione del metodo isContadinoMostro">
-      <option name="closed" value="true" />
-      <created>1779199237223</created>
-      <option name="number" value="02888" />
-      <option name="presentableId" value="LOCAL-02888" />
-      <option name="project" value="LOCAL" />
-      <updated>1779199237223</updated>
-    </task>
-    <task id="LOCAL-02889" summary="ROSSO: testIsContadinoMostro non riuscito">
-      <option name="closed" value="true" />
-      <created>1779201253712</created>
-      <option name="number" value="02889" />
-      <option name="presentableId" value="LOCAL-02889" />
-      <option name="project" value="LOCAL" />
-      <updated>1779201253712</updated>
-    </task>
-    <task id="LOCAL-02890" summary="VERDE: testIsContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1779201491875</created>
-      <option name="number" value="02890" />
-      <option name="presentableId" value="LOCAL-02890" />
-      <option name="project" value="LOCAL" />
-      <updated>1779201491875</updated>
-    </task>
-    <task id="LOCAL-02891" summary="REFACTORING: definizione del metodo isContadinoMostro">
-      <option name="closed" value="true" />
-      <created>1779201671817</created>
-      <option name="number" value="02891" />
-      <option name="presentableId" value="LOCAL-02891" />
-      <option name="project" value="LOCAL" />
-      <updated>1779201671817</updated>
-    </task>
-    <task id="LOCAL-02892" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1779202020363</created>
-      <option name="number" value="02892" />
-      <option name="presentableId" value="LOCAL-02892" />
-      <option name="project" value="LOCAL" />
-      <updated>1779202020363</updated>
     </task>
     <task id="LOCAL-02893" summary="REFACTORING: definizione del metodo verificaStringa">
       <option name="closed" value="true" />
@@ -681,7 +585,103 @@
       <option name="project" value="LOCAL" />
       <updated>1779291312817</updated>
     </task>
-    <option name="localTasksCounter" value="2930" />
+    <task id="LOCAL-02930" summary="REFACTORING: definizione del metodo isMagoPresente">
+      <option name="closed" value="true" />
+      <created>1779291488343</created>
+      <option name="number" value="02930" />
+      <option name="presentableId" value="LOCAL-02930" />
+      <option name="project" value="LOCAL" />
+      <updated>1779291488343</updated>
+    </task>
+    <task id="LOCAL-02931" summary="ROSSO: testAttaccoNegromante non riuscito">
+      <option name="closed" value="true" />
+      <created>1779292021250</created>
+      <option name="number" value="02931" />
+      <option name="presentableId" value="LOCAL-02931" />
+      <option name="project" value="LOCAL" />
+      <updated>1779292021250</updated>
+    </task>
+    <task id="LOCAL-02932" summary="VERDE: testAttaccoNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1779292594691</created>
+      <option name="number" value="02932" />
+      <option name="presentableId" value="LOCAL-02932" />
+      <option name="project" value="LOCAL" />
+      <updated>1779292594691</updated>
+    </task>
+    <task id="LOCAL-02933" summary="ROSSO: testAttaccoNegromante non riuscito">
+      <option name="closed" value="true" />
+      <created>1779292803966</created>
+      <option name="number" value="02933" />
+      <option name="presentableId" value="LOCAL-02933" />
+      <option name="project" value="LOCAL" />
+      <updated>1779292803966</updated>
+    </task>
+    <task id="LOCAL-02934" summary="VERDE: testAttaccoNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1779292949590</created>
+      <option name="number" value="02934" />
+      <option name="presentableId" value="LOCAL-02934" />
+      <option name="project" value="LOCAL" />
+      <updated>1779292949590</updated>
+    </task>
+    <task id="LOCAL-02935" summary="ROSSO: testAttaccoNegromante non riuscito">
+      <option name="closed" value="true" />
+      <created>1779294086496</created>
+      <option name="number" value="02935" />
+      <option name="presentableId" value="LOCAL-02935" />
+      <option name="project" value="LOCAL" />
+      <updated>1779294086496</updated>
+    </task>
+    <task id="LOCAL-02936" summary="VERDE: testAttaccoNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1779294241915</created>
+      <option name="number" value="02936" />
+      <option name="presentableId" value="LOCAL-02936" />
+      <option name="project" value="LOCAL" />
+      <updated>1779294241915</updated>
+    </task>
+    <task id="LOCAL-02937" summary="ROSSO: testMorteNegromante non riuscito">
+      <option name="closed" value="true" />
+      <created>1779294562995</created>
+      <option name="number" value="02937" />
+      <option name="presentableId" value="LOCAL-02937" />
+      <option name="project" value="LOCAL" />
+      <updated>1779294562995</updated>
+    </task>
+    <task id="LOCAL-02938" summary="VERDE: testMorteNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1779295290390</created>
+      <option name="number" value="02938" />
+      <option name="presentableId" value="LOCAL-02938" />
+      <option name="project" value="LOCAL" />
+      <updated>1779295290390</updated>
+    </task>
+    <task id="LOCAL-02939" summary="REFACTORING: definizione del metodo getNomeNegromante">
+      <option name="closed" value="true" />
+      <created>1779296162903</created>
+      <option name="number" value="02939" />
+      <option name="presentableId" value="LOCAL-02939" />
+      <option name="project" value="LOCAL" />
+      <updated>1779296162903</updated>
+    </task>
+    <task id="LOCAL-02940" summary="ROSSO: testAttaccoNegromanteRomeizzato non riuscito">
+      <option name="closed" value="true" />
+      <created>1779312731019</created>
+      <option name="number" value="02940" />
+      <option name="presentableId" value="LOCAL-02940" />
+      <option name="project" value="LOCAL" />
+      <updated>1779312731020</updated>
+    </task>
+    <task id="LOCAL-02941" summary="VERDE: testAttaccoNegromanteRomeizzato riuscito">
+      <option name="closed" value="true" />
+      <created>1779316938618</created>
+      <option name="number" value="02941" />
+      <option name="presentableId" value="LOCAL-02941" />
+      <option name="project" value="LOCAL" />
+      <updated>1779316938618</updated>
+    </task>
+    <option name="localTasksCounter" value="2942" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,14 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
-    <MESSAGE value="REFACTORING: definizione del metodo aggiungiGiocatori" />
-    <MESSAGE value="ROSSO: testNumeroNotte non riuscito" />
-    <MESSAGE value="VERDE: testNumeroNotte riuscito" />
-    <MESSAGE value="ROSSO: testAssassinioContadinoMostroPrimaNotte non riuscito" />
-    <MESSAGE value="VERDE: testAssassinioContadinoMostroPrimaNotte riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo terminaNotte" />
-    <MESSAGE value="ROSSO: testStringaMistico non riuscito" />
     <MESSAGE value="VERDE: testStringaMistico riuscito" />
     <MESSAGE value="ROSSO: testRicerca non riuscito" />
     <MESSAGE value="VERDE: testRicerca riuscito" />
@@ -721,6 +713,14 @@
     <MESSAGE value="ROSSO: testMagoPresente non riuscito" />
     <MESSAGE value="VERDE: testMagoPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneMago" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPosizioneMago" />
+    <MESSAGE value="REFACTORING: definizione del metodo isMagoPresente" />
+    <MESSAGE value="ROSSO: testAttaccoNegromante non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoNegromante riuscito" />
+    <MESSAGE value="ROSSO: testMorteNegromante non riuscito" />
+    <MESSAGE value="VERDE: testMorteNegromante riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeNegromante" />
+    <MESSAGE value="ROSSO: testAttaccoNegromanteRomeizzato non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoNegromanteRomeizzato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoNegromanteRomeizzato riuscito" />
   </component>
 </project>

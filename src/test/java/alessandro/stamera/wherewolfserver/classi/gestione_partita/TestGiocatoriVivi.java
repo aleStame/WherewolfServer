@@ -607,6 +607,13 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeMago(), nome);
     }
 
+    @Test public void testAttaccoNegromante()
+    {
+        String nome = "Mike";
+        aggiungiGiocatore(nome, "Contadino mostro");
+        verificaAttacco(giocatori.attaccoNegromante(nome), MORTO);
+    }
+
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
 
     private boolean isGuaritorePresente() { return giocatori.isGuaritorePresente(); }

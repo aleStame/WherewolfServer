@@ -52,11 +52,7 @@ public class Becchino extends Villaggio
         stabilisciVillaggio();
     }
 
-    @Override public void romeizzazione()
-    {
-        super.romeizzazione();
-        if(!isVillaggio()) trasformaNegromante();
-    }
+    @Override public void romeizzazione() { if(isVillaggio()) super.romeizzazione(); }
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {

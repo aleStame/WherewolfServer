@@ -228,6 +228,17 @@ public final class Partita
         return misticismo;
     }
 
+    public void attaccoNegromante(String nome)
+    {
+        switch(vivi.attaccoNegromante(nome))
+        {
+            case MORTO -> eliminaGiocatore(getNomeNegromante());
+            case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
+        }
+    }
+
+    public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
+
     private void confermaEliminazioneMortiNotte()
     {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
@@ -325,7 +336,9 @@ public final class Partita
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
-    private Ruolo getNegromante() { return getRuoloVivo(vivi.getNomeNegromante()); }
+    private Ruolo getNegromante() { return getRuoloVivo(getNomeNegromante()); }
+
+    private String getNomeNegromante() { return vivi.getNomeNegromante(); }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
