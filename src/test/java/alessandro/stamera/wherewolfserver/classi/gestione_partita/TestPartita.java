@@ -673,7 +673,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Dina", "Contadino mostro" }, { "Giuseppe", "Negromante" } };
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
-        partita.attaccoNegromante(giocatori[posizioneVittima][0]);
+        attaccoNegromante(giocatori[posizioneVittima][0]);
         terminaNotte();
         verificaNonEliminato(giocatori[posizioneVittima][0]);
         verificaEliminazione(giocatori[1][0]);
@@ -685,11 +685,13 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
         partita.romeizzazione(giocatori[posizioneVittima][0]);
-        assertThatIllegalStateException().isThrownBy(() -> partita.attaccoNegromante(giocatori[posizioneVittima][0]))
+        assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
+
+    private void attaccoNegromante(String nome) { partita.attaccoNegromante(nome); }
 
     private void verificaNumeroNotte(int numeroNotte) { verificaNumeroIntero(partita.getNumeroNotte(), numeroNotte); }
 
