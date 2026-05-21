@@ -9,6 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
+import static java.util.Arrays.stream;
 import static org.assertj.core.api.Assertions.*;
 
 public final class TestPartita
@@ -158,7 +159,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
         terminaNotte();
-        verificaNonEliminato(giocatori[posizione][0]);
+        verificaNonEliminati(giocatori[posizione][0]);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -278,7 +279,7 @@ public final class TestPartita
         terminaBallottaggio();
         terminaNotte();
         verificaEliminazione(giocatori[1][0]);
-        verificaNonEliminato(giocatori[0][0]);
+        verificaNonEliminati(giocatori[0][0]);
     }
 
     @Test public void testPareggioBallottaggio()
@@ -290,7 +291,7 @@ public final class TestPartita
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
         terminaBallottaggio();
         terminaNotte();
-        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
     }
 
     @ParameterizedTest @CsvSource({ "Bocca di rosa", "Azzeccagarbugli" }) public void testRogoAnnullatoOratore(String nomeRuolo)
@@ -302,7 +303,7 @@ public final class TestPartita
         incrementaVoti(giocatori[0][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         terminaNotte();
-        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
     }
 
     @Test public void testSegnalazioneOratore()
@@ -315,7 +316,7 @@ public final class TestPartita
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         terminaNotte();
-        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
     }
 
     @Test public void testSegnalazioneOratoreNonRiuscita()
@@ -358,7 +359,7 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(giocatori[1][1], giocatori[posizioneVittima][0]))
             .withMessage("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
         terminaNotte();
-        verificaNonEliminato(giocatori[posizioneVittima][0]);
+        verificaNonEliminati(giocatori[posizioneVittima][0]);
     }
 
     @Test public void testPotereBracconiereDueLupi()
@@ -407,7 +408,7 @@ public final class TestPartita
         attaccoLupi(lupo, nomeCacciatore);
         terminaNotte();
         verificaEliminazione(nomeCacciatore);
-        verificaNonEliminato(lupo);
+        verificaNonEliminati(lupo);
     }
 
     @Test public void testAttaccoNosferatuMorto()
@@ -449,7 +450,7 @@ public final class TestPartita
         attaccoLupi("Capo branco", nome);
         progenizzazioneNosferatu(nome);
         terminaNotte();
-        verificaNonEliminato(nome);
+        verificaNonEliminati(nome);
     }
 
     @Test public void testSuicidioCapoBranco()
@@ -460,7 +461,7 @@ public final class TestPartita
         progenizzazioneNosferatu(giocatori[0][0]);
         terminaNotte();
         verificaEliminati(giocatori[1][0]);
-        verificaNonEliminato(giocatori[0][0]);
+        verificaNonEliminati(giocatori[0][0]);
     }
 
     @Test public void testBloccoAttaccoPazzo()
@@ -472,7 +473,7 @@ public final class TestPartita
         verificaEliminazione(nomePazzo);
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima))
             .withMessage("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
-        verificaNonEliminato(nomeVittima);
+        verificaNonEliminati(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario" })
@@ -482,7 +483,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Andrea", lupoAttaccante }, { nomeVittima, tipoLupo } });
         attaccoLupi(lupoAttaccante, nomeVittima);
         terminaNotte();
-        verificaNonEliminato(nomeVittima);
+        verificaNonEliminati(nomeVittima);
     }
 
     @Test public void testInizioCrociata()
@@ -600,7 +601,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Salvatore", "Nonna" }, { "Noemi", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
         attaccoLupi(tipoLupo, nomeCappuccettoRosso);
         terminaNotte();
-        verificaNonEliminato(nomeCappuccettoRosso);
+        verificaNonEliminati(nomeCappuccettoRosso);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -612,7 +613,7 @@ public final class TestPartita
         partita.guarisci(nomeContadino);
         terminaNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
-        verificaNonEliminato(nomeContadino);
+        verificaNonEliminati(nomeContadino);
     }
 
     @ParameterizedTest @CsvSource({ "1, 2" }) public void testContrattaccoContadinoMostro(int posizioneVittima)
@@ -646,7 +647,7 @@ public final class TestPartita
         partita.attaccoAssassino(nomeVittima);
         terminaNotte();
         verificaEliminazione(nomeVittima);
-        verificaNonEliminato(nomeAssassino);
+        verificaNonEliminati(nomeAssassino);
     }
 
     @Test public void testControlloMagoContadinoMostroPrimaNotte()
@@ -654,7 +655,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } };
         inizializzaPartita(giocatori);
         verificaNonMistico(giocatori[1][0]);
-        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
     }
 
     @Test public void testControlloMagoContadinoMostro()
@@ -666,7 +667,7 @@ public final class TestPartita
         verificaNonMistico(giocatori[indiceContadino][0]);
         terminaNotte();
         verificaEliminazione(giocatori[0][0]);
-        verificaNonEliminato(giocatori[indiceContadino][0]);
+        verificaNonEliminati(giocatori[indiceContadino][0]);
     }
 
     @Test public void testMorteNegromante()
@@ -676,7 +677,7 @@ public final class TestPartita
         int posizioneVittima = 0;
         attaccoNegromante(giocatori[posizioneVittima][0]);
         terminaNotte();
-        verificaNonEliminato(giocatori[posizioneVittima][0]);
+        verificaNonEliminati(giocatori[posizioneVittima][0]);
         verificaEliminazione(giocatori[1][0]);
     }
 
@@ -689,7 +690,7 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
-        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
     }
 
     @Test public void testControlloSensitivaContadinoMostroPrimaNotte()
@@ -698,7 +699,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizioneContadino = 0;
         verificaVillaggio(giocatori[posizioneContadino][0]);
-        for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
+        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
     }
 
     @Test public void testControlloSensitivaContadinoMostro()
@@ -710,7 +711,7 @@ public final class TestPartita
         verificaVillaggio(giocatori[posizioneContadino][0]);
         terminaNotte();
         verificaEliminazione(giocatori[1][0]);
-        verificaNonEliminato(giocatori[posizioneContadino][0]);
+        verificaNonEliminati(giocatori[posizioneContadino][0]);
     }
 
     private void verificaVillaggio(String nome) { assertThat(partita.controlloSensitiva(nome)).isEqualTo(VILLAGGIO); }
@@ -743,7 +744,7 @@ public final class TestPartita
 
     private void terminaBallottaggio() { partita.terminaBallottaggio(); }
 
-    private void verificaNonEliminato(String nome) { verificaFalso(partita.isEliminato(nome)); }
+    private void verificaNonEliminati(String... nomi) { for(String nome : nomi) verificaFalso(partita.isEliminato(nome)); }
 
     private void verificaControlloVeggente(String nome, Aura aura)
     {
