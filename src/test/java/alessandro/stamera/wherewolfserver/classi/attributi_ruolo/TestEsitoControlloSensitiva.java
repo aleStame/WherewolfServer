@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.getEsitoControlloSensitiva;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestEsitoControlloSensitiva
@@ -9,5 +10,11 @@ public final class TestEsitoControlloSensitiva
 
     @ParameterizedTest @CsvSource({ "VILLAGGIO, Villaggio", "NON_VILLAGGIO, Non villaggio" })
     public void testStringaSensitiva(EsitoControlloSensitiva esito, String messaggio) { assertThat(esito.toString()).isEqualTo(messaggio); }
+
+    @ParameterizedTest @CsvSource({ "Villaggio, VILLAGGIO", "Non villaggio, NON_VILLAGGIO" })
+    public void testRicerca(String messaggio, EsitoControlloSensitiva esito)
+    {
+        assertThat(getEsitoControlloSensitiva(messaggio)).isEqualTo(esito);
+    }
 
 }

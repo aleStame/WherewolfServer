@@ -11,4 +11,6 @@ public enum EsitoControlloSensitiva
 
     @Override public String toString() { return messaggio; }
 
+    public static EsitoControlloSensitiva getEsitoControlloSensitiva(String messaggio) { return null; }
+
 }
