@@ -7,6 +7,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
@@ -331,6 +332,8 @@ public class Ruolo
 
     public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
+    public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
@@ -395,7 +398,5 @@ public class Ruolo
     {
         return partita.isNoCreatureOmbra() && !partita.isNoGiocatoriVivi();
     }
-
-    public EsitoControlloSensitiva controlloSensitiva() { return null; }
 
 }
