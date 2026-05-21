@@ -57,6 +57,8 @@ public final class TestVillaggio
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
     public void testeEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
+    @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(VILLAGGIO); }
+
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
         Partita[] partite = new Partita[]
