@@ -396,4 +396,6 @@ public class Ruolo
         return partita.isNoCreatureOmbra() && !partita.isNoGiocatoriVivi();
     }
 
+    public EsitoControlloSensitiva controlloSensitiva() { return null; }
+
 }
