@@ -6,7 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
@@ -697,7 +697,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Elettra", "Contadino mostro" }, { "Gianluca", "Sensitiva" } };
         inizializzaPartita(giocatori);
         int posizioneContadino = 0;
-        assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(NON_VILLAGGIO);
+        assertThat(partita.controlloSensitiva(giocatori[posizioneContadino][0])).isEqualTo(VILLAGGIO);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 

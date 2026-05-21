@@ -236,7 +236,7 @@ public final class Partita
 
     public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
 
-    public EsitoControlloSensitiva controlloSensitiva(String nome) { return null; }
+    public EsitoControlloSensitiva controlloSensitiva(String nome) { return vivi.controlloSensitiva(nome); }
 
     private void confermaEliminazioneMortiNotte()
     {
