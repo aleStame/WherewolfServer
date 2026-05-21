@@ -291,7 +291,7 @@ public final class TestPartita
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 1);
         terminaBallottaggio();
         terminaNotte();
-        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
     @ParameterizedTest @CsvSource({ "Bocca di rosa", "Azzeccagarbugli" }) public void testRogoAnnullatoOratore(String nomeRuolo)
@@ -303,7 +303,7 @@ public final class TestPartita
         incrementaVoti(giocatori[0][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         terminaNotte();
-        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
     @Test public void testSegnalazioneOratore()
@@ -316,7 +316,7 @@ public final class TestPartita
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         terminaNotte();
-        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
     @Test public void testSegnalazioneOratoreNonRiuscita()
@@ -655,7 +655,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } };
         inizializzaPartita(giocatori);
         verificaNonMistico(giocatori[1][0]);
-        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
     @Test public void testControlloMagoContadinoMostro()
@@ -690,7 +690,7 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
-        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
     @Test public void testControlloSensitivaContadinoMostroPrimaNotte()
@@ -699,7 +699,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizioneContadino = 0;
         verificaVillaggio(giocatori[posizioneContadino][0]);
-        verificaNonEliminati(stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
     @Test public void testControlloSensitivaContadinoMostro()
@@ -712,6 +712,11 @@ public final class TestPartita
         terminaNotte();
         verificaEliminazione(giocatori[1][0]);
         verificaNonEliminati(giocatori[posizioneContadino][0]);
+    }
+
+    private String[] estraiNomiGiocatori(String[][] giocatori)
+    {
+        return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
     }
 
     private void verificaVillaggio(String nome) { assertThat(partita.controlloSensitiva(nome)).isEqualTo(VILLAGGIO); }
