@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -33,6 +34,8 @@ public class Villaggio extends Ruolo
         if(partita.getNumeroCriminali() > 0) esito = getEsitoPartitaGuardie(partita);
         return esito;
     }
+
+    @Override public EsitoControlloSensitiva controlloSensitiva() { return EsitoControlloSensitiva.VILLAGGIO; }
 
     private EsitoPartita getEsitoPartitaGuardie(Partita partita)
     {

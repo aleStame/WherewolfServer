@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -613,6 +614,42 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, "Contadino mostro");
         verificaAttacco(giocatori.attaccoNegromante(nome), MORTO);
     }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Assassino, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
+            "Bardo, VILLAGGIO", "Becchino, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Boia, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO",
+            "Bracconiere, VILLAGGIO", "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO",
+            "Capo gilda, NON_VILLAGGIO", "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO", "Contadino discendente dei lupi, VILLAGGIO",
+            "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO", "Eremita, VILLAGGIO", "Ghoul, NON_VILLAGGIO",
+            "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO", "Goblin, NON_VILLAGGIO", "Guardia, VILLAGGIO",
+            "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO", "Inquisitore, NON_VILLAGGIO", "Ladra, NON_VILLAGGIO",
+            "Leprecauno, NON_VILLAGGIO", "Lupo del branco, NON_VILLAGGIO", "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO",
+            "Mago, VILLAGGIO", "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO", "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO",
+            "Negromante, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Nosferatu, NON_VILLAGGIO", "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO",
+            "Pazzo, NON_VILLAGGIO", "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO", "Prete, VILLAGGIO", "Sidhe, NON_VILLAGGIO",
+            "Spia, NON_VILLAGGIO", "Sensitiva, VILLAGGIO", "Templare, NON_VILLAGGIO"
+        }
+    )
+    public void testControlloSensitiva(String nomeRuolo, EsitoControlloSensitiva esito)
+    {
+        String nome = "Chiara";
+        aggiungiGiocatore(nome, nomeRuolo);
+        assertThat(giocatori.controlloSensitiva(nome)).isEqualTo(esito);
+    }
+
+    @Test public void testSensitivaPresente()
+    {
+        String nome = "Mariangela";
+        aggiungiGiocatore(nome, "Sensitiva");
+        verificaVero(isSensitivaPresente());
+        verificaStringa(giocatori.getNomeSensitiva(), nome);
+    }
+
+    @Test public void testSensitivaAssente() { verificaFalso(isSensitivaPresente()); }
+
+    private boolean isSensitivaPresente() { return giocatori.isSensitivaPresente(); }
 
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
 

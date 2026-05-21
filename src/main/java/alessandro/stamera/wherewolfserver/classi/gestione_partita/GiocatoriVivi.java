@@ -177,6 +177,19 @@ public final class GiocatoriVivi extends Giocatori
 
     public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
 
+    public EsitoControlloSensitiva controlloSensitiva(String nome) { return getRuolo(nome).controlloSensitiva(); }
+
+    public boolean isSensitivaPresente() { return getPosizioneSensitiva() != NON_TROVATO; }
+
+    public String getNomeSensitiva() { return getNomeGiocatore(getPosizioneSensitiva()); }
+
+    private int getPosizioneSensitiva()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isSensitiva()) posizione = i;
+        return posizione;
+    }
+
     private int getPosizioneMago()
     {
         int posizione = NON_TROVATO;

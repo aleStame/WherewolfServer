@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
@@ -56,6 +57,8 @@ public final class TestVillaggio
 
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
     public void testeEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
+    @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO); }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
