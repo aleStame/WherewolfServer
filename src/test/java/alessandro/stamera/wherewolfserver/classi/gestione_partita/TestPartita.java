@@ -652,7 +652,7 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } };
         inizializzaPartita(giocatori);
-        assertThat(partita.controlloMago(giocatori[1][0])).isEqualTo(NON_MISTICO);
+        verificaNonMistico(giocatori[1][0]);
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
 
@@ -662,7 +662,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         terminaNotte();
         int indiceContadino = 1;
-        assertThat(partita.controlloMago(giocatori[indiceContadino][0])).isEqualTo(NON_MISTICO);
+        verificaNonMistico(giocatori[indiceContadino][0]);
         terminaNotte();
         verificaEliminazione(giocatori[0][0]);
         verificaNonEliminato(giocatori[indiceContadino][0]);
@@ -690,6 +690,8 @@ public final class TestPartita
         terminaNotte();
         for(String[] giocatore : giocatori) verificaNonEliminato(giocatore[0]);
     }
+
+    private void verificaNonMistico(String nome) { assertThat(partita.controlloMago(nome)).isEqualTo(NON_MISTICO); }
 
     private void attaccoNegromante(String nome) { partita.attaccoNegromante(nome); }
 
