@@ -177,6 +177,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
 
+    public EsitoControlloSensitiva controlloSensitiva() { return null; }
+
     private int getPosizioneMago()
     {
         int posizione = NON_TROVATO;
