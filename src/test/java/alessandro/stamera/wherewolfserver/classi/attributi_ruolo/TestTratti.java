@@ -42,10 +42,12 @@ public final class TestTratti
         verificaLupiAssenti();
         verificaFalso(isProtezioneNegromantePresente());
         verificaFalso(isProtezioneNosferatuPresente());
+        verificaFalso(tratti.isProtezionePossedutoPresente());
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
         verificaVero(isProtezioneNosferatuPresente());
+        verificaVero(tratti.isProtezionePossedutoPresente());
         verificaProtetto();
     }
 
