@@ -73,6 +73,8 @@ public final class TestEremita
     {
         verificaVero(ruolo.isProtezioneLupiPresente());
         verificaVero(ruolo.isProtezioneNegromantePresente());
+        verificaVero(ruolo.isProtezioneNosferatuPresente());
+        verificaVero(ruolo.isProtezionePossedutoPresente());
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
