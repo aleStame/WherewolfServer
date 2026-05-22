@@ -17,10 +17,12 @@ public final class TestProtezioni
         verificaLupiAssenti();
         verificaFalso(isNegromantePresente());
         verificaFalso(isNosferatuPresente());
+        verificaFalso(protezioni.isPossedutoPresente());
         protezioni.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isNegromantePresente());
         verificaVero(isNosferatuPresente());
+        verificaVero(protezioni.isPossedutoPresente());
     }
 
     @Test public void testCappuccettoRosso()
