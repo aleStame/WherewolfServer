@@ -21,7 +21,7 @@ public final class RuoliFactory
 
     public Ruolo getRuolo(String nome)
     {
-        Ruolo ruolo;
+        Ruolo ruolo = RuoloNullo.getInstance();
         switch(nome)
         {
             case "Cacciatore" -> ruolo = getCacciatore();
@@ -33,6 +33,7 @@ public final class RuoliFactory
             case "Sidhe" -> ruolo = getSidhe();
             default -> ruolo = ruoli.get(nome);
         }
+        System.out.println(ruolo);
         if(ruolo.isContadinoMostro()) ruolo.resettaRomeo();
         return ruolo;
     }
