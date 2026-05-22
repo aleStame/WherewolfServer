@@ -65,6 +65,8 @@ public final class Tratti
 
     public boolean isProtezioneNosferatuPresente() { return protezioni.isNosferatuPresente(); }
 
+    public boolean isProtezionePossedutoPresente() { return protezioni.isPossedutoPresente(); }
+
     public void eliminaTratto(Tratto tratto) { tratti.remove(tratto); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }

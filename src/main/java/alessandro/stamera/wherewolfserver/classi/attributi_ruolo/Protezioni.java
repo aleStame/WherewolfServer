@@ -38,6 +38,8 @@ public final class Protezioni
 
     public boolean isNosferatuPresente() { return cercaRuolo(Ruolo::isNosferatu); }
 
+    public boolean isPossedutoPresente() { return cercaRuolo(Ruolo::isPosseduto); }
+
     private boolean cercaRuolo(Predicate<Ruolo> condizione) { return ruoli.stream().anyMatch(condizione); }
 
 }

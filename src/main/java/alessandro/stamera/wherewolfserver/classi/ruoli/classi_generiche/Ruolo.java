@@ -334,9 +334,9 @@ public class Ruolo
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 
-    public boolean isProtezioneNosferatuPresente() { return false; }
+    public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
-    public boolean isProtezionePossedutoPresente() { return false; }
+    public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
