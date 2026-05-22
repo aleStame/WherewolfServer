@@ -334,6 +334,10 @@ public class Ruolo
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 
+    public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
+
+    public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
