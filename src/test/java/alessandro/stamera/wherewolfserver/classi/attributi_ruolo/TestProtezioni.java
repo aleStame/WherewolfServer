@@ -17,12 +17,12 @@ public final class TestProtezioni
         verificaLupiAssenti();
         verificaFalso(isNegromantePresente());
         verificaFalso(isNosferatuPresente());
-        verificaFalso(protezioni.isPossedutoPresente());
+        verificaFalso(isPossedutoPresente());
         protezioni.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isNegromantePresente());
         verificaVero(isNosferatuPresente());
-        verificaVero(protezioni.isPossedutoPresente());
+        verificaVero(isPossedutoPresente());
     }
 
     @Test public void testCappuccettoRosso()
@@ -37,6 +37,8 @@ public final class TestProtezioni
         protezioni.perdiProtezioni();
         for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(isProtezionePresente(FACTORY.getNome(i)));
     }
+
+    private boolean isPossedutoPresente() { return protezioni.isPossedutoPresente(); }
 
     private boolean isProtezionePresente(String nome) { return protezioni.isPresente(FACTORY.getRuolo(nome)); }
 
