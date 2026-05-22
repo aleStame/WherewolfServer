@@ -714,6 +714,16 @@ public final class TestPartita
         verificaNonEliminati(giocatori[posizioneContadino][0]);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiEremita(String tipoLupo)
+    {
+        String[][] giocatori = new String[][] { { "Margerita", "Eremita" }, { "Tony", tipoLupo } };
+        inizializzaPartita(giocatori);
+        attaccoLupi(tipoLupo, giocatori[0][0]);
+        terminaNotte();
+        verificaNonEliminati(estraiNomiGiocatori(giocatori));
+    }
+
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
         return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
