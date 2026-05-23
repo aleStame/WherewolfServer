@@ -167,7 +167,7 @@ public final class Partita
         switch(mortiNotte.progenizzazioneNosferatu(nome))
         {
             case RIUSCITO -> risorgiGiocatore(nome);
-            case MORTO -> nosferatuControLupo(nome);
+            case MORTO -> morteNosferatu(nome);
         }
     }
 
@@ -260,10 +260,10 @@ public final class Partita
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
-    private void nosferatuControLupo(String nome)
+    private void morteNosferatu(String nome)
     {
         eliminaGiocatore(vivi.getNomeNosferatu());
-        if(mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
+        if(mortiNotte.isContadinoMostro(nome) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
 
     private void perdiProtezioniCappuccettoRosso()
