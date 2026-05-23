@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testControlloMedium riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metood getEsitoAttaccoFallito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,37 +75,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/magoEremita&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
+    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
+    "Gradle.TestLadra.executor": "Run",
+    "Gradle.TestLupo.testGildata.executor": "Run",
+    "Gradle.TestProtezioni.executor": "Run",
+    "Gradle.TestTratti.executor": "Run",
+    "Gradle.TestUtente.executor": "Run",
+    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
+    "Gradle.wherewolf.server.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature/negromanteEremita",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -286,38 +286,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02924" summary="ROSSO: testMagoAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1779290349229</created>
-      <option name="number" value="02924" />
-      <option name="presentableId" value="LOCAL-02924" />
-      <option name="project" value="LOCAL" />
-      <updated>1779290349229</updated>
-    </task>
-    <task id="LOCAL-02925" summary="VERDE: testMagoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779290692593</created>
-      <option name="number" value="02925" />
-      <option name="presentableId" value="LOCAL-02925" />
-      <option name="project" value="LOCAL" />
-      <updated>1779290692594</updated>
-    </task>
-    <task id="LOCAL-02926" summary="REFACTORING: definizione del metodo isMago">
-      <option name="closed" value="true" />
-      <created>1779290849477</created>
-      <option name="number" value="02926" />
-      <option name="presentableId" value="LOCAL-02926" />
-      <option name="project" value="LOCAL" />
-      <updated>1779290849477</updated>
-    </task>
-    <task id="LOCAL-02927" summary="ROSSO: testMagoPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1779291038312</created>
-      <option name="number" value="02927" />
-      <option name="presentableId" value="LOCAL-02927" />
-      <option name="project" value="LOCAL" />
-      <updated>1779291038312</updated>
     </task>
     <task id="LOCAL-02928" summary="VERDE: testMagoPresente riuscito">
       <option name="closed" value="true" />
@@ -679,7 +647,39 @@
       <option name="project" value="LOCAL" />
       <updated>1779523838086</updated>
     </task>
-    <option name="localTasksCounter" value="2973" />
+    <task id="LOCAL-02973" summary="VERDE: testControlloMedium riuscito">
+      <option name="closed" value="true" />
+      <created>1779524663859</created>
+      <option name="number" value="02973" />
+      <option name="presentableId" value="LOCAL-02973" />
+      <option name="project" value="LOCAL" />
+      <updated>1779524663859</updated>
+    </task>
+    <task id="LOCAL-02974" summary="ROSSO: testNegromanteEremita non riuscito">
+      <option name="closed" value="true" />
+      <created>1779525665279</created>
+      <option name="number" value="02974" />
+      <option name="presentableId" value="LOCAL-02974" />
+      <option name="project" value="LOCAL" />
+      <updated>1779525665279</updated>
+    </task>
+    <task id="LOCAL-02975" summary="VERDE: testNegromanteEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1779525879181</created>
+      <option name="number" value="02975" />
+      <option name="presentableId" value="LOCAL-02975" />
+      <option name="project" value="LOCAL" />
+      <updated>1779525879181</updated>
+    </task>
+    <task id="LOCAL-02976" summary="REFACTORING: definizione del metood getEsitoAttaccoFallito">
+      <option name="closed" value="true" />
+      <created>1779526222005</created>
+      <option name="number" value="02976" />
+      <option name="presentableId" value="LOCAL-02976" />
+      <option name="project" value="LOCAL" />
+      <updated>1779526222005</updated>
+    </task>
+    <option name="localTasksCounter" value="2977" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -694,9 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testControlloSensitiva non riuscito" />
-    <MESSAGE value="VERDE: testControlloSensitiva riuscito" />
-    <MESSAGE value="ROSSO: testSensitivaPresente non riuscito" />
     <MESSAGE value="VERDE: testSensitivaPresente riuscito" />
     <MESSAGE value="ROSSO: testSensitivaAssente non riuscito" />
     <MESSAGE value="VERDE: testSensitivaAssente riuscito" />
@@ -719,6 +716,9 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiEremita riuscito" />
     <MESSAGE value="ROSSO: testControlloMedium non riuscito" />
     <MESSAGE value="VERDE: testControlloMedium riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloMedium riuscito" />
+    <MESSAGE value="ROSSO: testNegromanteEremita non riuscito" />
+    <MESSAGE value="VERDE: testNegromanteEremita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metood getEsitoAttaccoFallito" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metood getEsitoAttaccoFallito" />
   </component>
 </project>
