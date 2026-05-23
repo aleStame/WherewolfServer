@@ -244,6 +244,14 @@ public final class Partita
         return esito;
     }
 
+    public String getNomeGiocatoreVivo(int posizione) { return vivi.getNomeGiocatore(posizione); }
+
+    public boolean isGhoulVivo(String nome) { return vivi.isGhoul(nome); }
+
+    public boolean isNosferatuVivo(String nome) { return vivi.isNosferatu(nome); }
+
+    public boolean isProgenieNosferatuViva(String nome) { return vivi.isProgenieNosferatu(nome); }
+
     private void confermaEliminazioneMortiNotte()
     {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
