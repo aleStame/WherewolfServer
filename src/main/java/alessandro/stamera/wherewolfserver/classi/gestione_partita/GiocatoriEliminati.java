@@ -13,7 +13,7 @@ public final class GiocatoriEliminati extends Giocatori
         return esito;
     }
 
-    public Aura controlloMedium(String nome) { return null; }
+    public Aura controlloMedium(String nome) { return getRuolo(nome).controlloMedium(); }
 
     private boolean isBardo(int posizione) { return getRuolo(posizione).isBardo(); }
 
