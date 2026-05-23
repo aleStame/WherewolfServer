@@ -432,15 +432,15 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
-    @Test public void testAttaccoNosferatuContadinoMostroAmato()
+    @Test public void testAttaccoNosferatuContadinoMostroRomeo()
     {
-        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco", nomeLupo = "Renato";
-        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, tipoLupo } });
+        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", nomeLupo = "Renato";
+        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" } });
         partita.romeizzazione(nomeVittima);
-        attaccoLupi(tipoLupo, nomeVittima);
+        partita.attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaEliminati(nomeVittima, nomeNosferatu, nomeLupo);
+        verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
     @Test public void testAttaccoNosferatuFallito()

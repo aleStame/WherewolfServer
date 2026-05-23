@@ -263,7 +263,7 @@ public final class Partita
     private void morteNosferatu(String nome)
     {
         eliminaGiocatore(vivi.getNomeNosferatu());
-        if(mortiNotte.isContadinoMostro(nome) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
+        if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.getRuolo(nome).isRomeo()) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
 
     private void perdiProtezioniCappuccettoRosso()
