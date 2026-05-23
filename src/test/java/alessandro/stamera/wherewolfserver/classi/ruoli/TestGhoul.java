@@ -8,6 +8,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -79,6 +80,11 @@ public final class TestGhoul
         partita.terminaBallottaggio();
         partita.terminaNotte();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
+    @Test public void testSconfitta()
+    {
+        assertThat(ruolo.getEsitoPartita(new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } }))).isEqualTo(SCONFITTA);
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
