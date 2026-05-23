@@ -421,6 +421,17 @@ public final class TestPartita
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
+    @Test public void testAttaccoNosferatuContadinoMostro()
+    {
+        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco", nomeLupo = "Renato";
+        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, tipoLupo } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeNosferatu, nomeLupo);
+        verificaNonEliminati(nomeVittima);
+    }
+
     @Test public void testAttaccoNosferatuFallito()
     {
         String nomeVittima = "Paolo";
