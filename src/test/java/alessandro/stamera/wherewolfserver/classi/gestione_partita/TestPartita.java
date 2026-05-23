@@ -421,6 +421,16 @@ public final class TestPartita
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
+    @Test public void testAttaccoNosferatuFallito()
+    {
+        String nomeVittima = "Paolo";
+        inizializzaPartita(new String[][] { { "Assunta", "Nosferatu" }, { nomeVittima, "Eremita" }, { "Franca", "Assassino" } });
+        attaccoAssassino(nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
+    }
+
     @Test public void testNumeroSenzaFazione()
     {
         inizializzaPartita(new String[][] { { "Raffaello", "Ghoul" }, { "Mattia", "Peccatore" }, { "Leonardo", "Pazzo" } });
