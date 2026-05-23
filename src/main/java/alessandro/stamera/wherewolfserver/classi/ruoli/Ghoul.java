@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
 
@@ -18,6 +19,13 @@ public class Ghoul extends Ruolo
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(isPartitaVinta(partita)) esito = VITTORIA;
+        else
+        {
+            boolean perso = true;
+            for(int i = 0; i < partita.getNumeroGiocatoriVivi() && perso; i++)
+                perso = !(isGiocatoreAlleato(partita, partita.getNomeGiocatoreVivo(i)));
+            if(perso) esito = SCONFITTA;
+        }
         return esito;
     }
 
