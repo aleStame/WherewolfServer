@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-22T16:27:26" hostname="ALESSANDRO" time="0.081">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-23T07:55:24" hostname="ALESSANDRO" time="2.283">
   <properties/>
-  <testcase name="testPerdiProtezioni()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" time="0.02"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" time="0.012"/>
-  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" time="0.028"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@133e019b
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@2db2cd5
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@4e9658b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@70e659aa
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@20312893
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@402f80f5
-alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@51a06cbe
-alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@73393584
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@384fc774
-alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@3dddbe65
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@cdc3aae
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@42a9a63e
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@31c269fd
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@50687efb
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@2449cff7
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@7646731d
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@238b521e
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@2449cff7
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@47747fb9
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@e3cee7b
-alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@344561e0
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@31500940
-alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@66d23e4a
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@5bbc9f97
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta@6cbe7d4d
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@2a7b6f69
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@77b7ffa4
-alessandro.stamera.wherewolfserver.classi.ruoli.Ladra@1b39fd82
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1734f68
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@40bffbca
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@615f972
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@285f09de
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@62da83ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Medium@36ac8a63
-alessandro.stamera.wherewolfserver.classi.ruoli.Megera@4d9d1b69
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@52c8295b
-alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@251f7d26
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@443dbe42
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@6e33c391
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@37d80fe7
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@70eecdc2
-alessandro.stamera.wherewolfserver.classi.ruoli.Oste@372b0d86
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@71e9a896
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@517bd097
-alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@3113a37
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6b9267b
-alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@52d10fb8
-alessandro.stamera.wherewolfserver.classi.ruoli.Spia@5d8445d7
-alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@77b21474
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@54ec8cc9
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@2449cff7
+  <testcase name="testPerdiProtezioni()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" time="2.181"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" time="0.018"/>
+  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni" time="0.072"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@536d97f8
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3c50ad4b
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@37496720
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@28f9fedd
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@17947e6d
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2e17a321
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@521bb1a4
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@35f3a22c
+alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@1a0c5e9
+alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@123d7057
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1d247525
+alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@35ee466f
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@32e652b6
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@4ba02375
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@3289079a
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@32fa809f
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@12a14b74
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@68ee3b6d
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@2be95d31
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@338b49d3
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@2aa7399c
+alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@11eed657
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@708f018e
+alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@a5bbaec
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@6d60899e
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta@65eb76cd
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@6415f61e
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@334ebcaa
+alessandro.stamera.wherewolfserver.classi.ruoli.Ladra@5a0bef24
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6468a7b6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@2f860823
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@696b4a95
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c1cfa53
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@4d68b571
+alessandro.stamera.wherewolfserver.classi.ruoli.Medium@52b06bef
+alessandro.stamera.wherewolfserver.classi.ruoli.Megera@61bcbcce
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@6af91cc8
+alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@6232ffdb
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@330c1f61
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@37d28f02
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@15efda6c
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@6056232d
+alessandro.stamera.wherewolfserver.classi.ruoli.Oste@33f2df51
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@107bfcb2
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@7bac686b
+alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@2ab26378
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@f9f3928
+alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@404eca05
+alessandro.stamera.wherewolfserver.classi.ruoli.Spia@58b91d57
+alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@61a91c9b
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@17092fff
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@788ba63e
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
