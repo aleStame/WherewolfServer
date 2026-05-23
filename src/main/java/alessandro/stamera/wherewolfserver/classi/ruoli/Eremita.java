@@ -17,9 +17,11 @@ public final class Eremita extends Villaggio
 
     @Override public boolean isEremita() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return FALLITO; }
+    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoFallito(); }
 
-    @Override public EsitoAttacco attaccoNegromante() { return FALLITO; }
+    @Override public EsitoAttacco attaccoNegromante() { return getEsitoAttaccoFallito(); }
+
+    private EsitoAttacco getEsitoAttaccoFallito() { return FALLITO; }
 
     public static Ruolo getInstance() { return new Eremita(); }
 
