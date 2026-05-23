@@ -16,17 +16,23 @@ public class Ghoul extends Ruolo
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
-        boolean vinto = true;
-        for(int i = 0; i < partita.getNumeroGiocatoriVivi(); i++)
-        {
-            String nome = partita.getNomeGiocatoreVivo(i);
-            vinto = (partita.isGhoulVivo(nome) || partita.isNosferatuVivo(nome) || partita.isProgenieNosferatuViva(nome));
-        }
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(vinto) esito = VITTORIA;
+        if(isPartitaVinta(partita)) esito = VITTORIA;
         return esito;
     }
 
+    private boolean isPartitaVinta(Partita partita)
+    {
+        boolean vinto = true;
+        for(int i = 0; i < partita.getNumeroGiocatoriVivi() && vinto; i++) vinto = isGiocatoreAlleato(partita, partita.getNomeGiocatoreVivo(i));
+        return vinto;
+    }
+
     public static Ruolo getInstance() { return new Ghoul(); }
+
+    private boolean isGiocatoreAlleato(Partita partita, String nome)
+    {
+        return partita.isGhoulVivo(nome) || partita.isNosferatuVivo(nome) || partita.isProgenieNosferatuViva(nome);
+    }
 
 }

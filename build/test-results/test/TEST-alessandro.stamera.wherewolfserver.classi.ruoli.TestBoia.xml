@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-23T14:53:44" hostname="ALESSANDRO" time="0.054">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-23T16:07:31" hostname="ALESSANDRO" time="0.048">
   <properties/>
   <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.002"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.002"/>
-  <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
+  <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
   <testcase name="testTemplare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
-  <testcase name="testInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.004"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2954f6ab, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@58fbd02e, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.004"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@163042ea, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@11d045b4, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.0"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
+  <testcase name="testInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.002"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@49469ffa, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4d9754a8, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7a3b7122, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@58b5a2f3, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.003"/>
   <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@2f08c4b
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@c017175
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@11e355ca
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@18371d89
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@4b31a708
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@5471388b
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@38830ea
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@69afa141
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@17092fff
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@6468a7b6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@15efda6c
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@696b4a95
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@37d28f02
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@49f40c00
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@2121d1f9
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@f9f3928
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@788ba63e
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

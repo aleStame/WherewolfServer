@@ -73,9 +73,9 @@ public final class TestGhoul
         partita.attaccoLupi(giocatori[2][1], giocatori[posizione][0]);
         partita.progenizzazioneNosferatu(giocatori[posizione][0]);
         partita.terminaNotte();
-        partita.incrementaVoti(giocatori[posizione][0], 3);
+        partita.incrementaVoti(giocatori[2][0], 2);
         partita.terminaVotazioni();
-        partita.incrementaVoti(giocatori[posizione][0], 3);
+        partita.incrementaVoti(giocatori[2][0], 2);
         partita.terminaBallottaggio();
         partita.terminaNotte();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
