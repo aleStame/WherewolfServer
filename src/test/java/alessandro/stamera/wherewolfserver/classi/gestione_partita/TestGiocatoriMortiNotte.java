@@ -1,8 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,11 +15,12 @@ public final class TestGiocatoriMortiNotte
 
     @BeforeEach public void setUp() { giocatori = new GiocatoriMortiNotte(); }
 
-    @Test public void testProgenieNosferatu()
+    @ParameterizedTest @CsvSource({ "Prete, RIUSCITO", "Eremita, FALLITO" })
+    public void testProgenieNosferatu(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Marco";
-        aggiungiGiocatore(nome, "Prete");
-        assertThat(giocatori.progenizzazioneNosferatu(nome)).isEqualTo(RIUSCITO);
+        aggiungiGiocatore(nome, nomeRuolo);
+        assertThat(giocatori.progenizzazioneNosferatu(nome)).isEqualTo(esito);
     }
     @Test public void testLupo()
     {
