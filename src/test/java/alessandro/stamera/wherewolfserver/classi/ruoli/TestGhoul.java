@@ -3,10 +3,12 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -62,6 +64,22 @@ public final class TestGhoul
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testVittoria()
+    {
+        String[][] giocatori = new String[][] { { "Angelo", "Nosferatu" }, { "Raf", "Ghoul" }, { "Aurora", "Capo branco" }, { "Giulia", "Prete" } };
+        Partita partita = new Partita(giocatori);
+        int posizione = 3;
+        partita.attaccoLupi(giocatori[2][1], giocatori[posizione][0]);
+        partita.progenizzazioneNosferatu(giocatori[posizione][0]);
+        partita.terminaNotte();
+        partita.incrementaVoti(giocatori[posizione][0], 3);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(giocatori[posizione][0], 3);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
