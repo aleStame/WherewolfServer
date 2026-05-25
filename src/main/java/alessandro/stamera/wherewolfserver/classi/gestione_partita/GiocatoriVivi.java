@@ -185,7 +185,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeSensitiva() { return getNomeGiocatore(getPosizioneSensitiva()); }
 
-    public boolean isGhoul(String nome) { return getRuolo(nome).isGhoul(); }
+    public boolean isGhoul(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getRuolo(nome).isGhoul();
+        return trovato;
+    }
 
     public boolean isNosferatu(String nome) { return getRuolo(nome).isNosferatu(); }
 
