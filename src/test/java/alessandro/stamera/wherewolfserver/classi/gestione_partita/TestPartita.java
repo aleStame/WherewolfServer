@@ -793,14 +793,14 @@ public final class TestPartita
         verificaFalso(partita.isNosferatuVivo(nome));
     }
 
-    /*@Test public void testGhoulMorto()
+    @Test public void testNosferatuMorto()
     {
-        String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
-        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
+        String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });
         attaccoLupi(tipoLupo, nomeGhoul);
         terminaNotte();
-        verificaFalso(partita.isGhoulVivo(nomeGhoul));
-    }*/
+        verificaFalso(partita.isNosferatuVivo(nomeGhoul));
+    }
 
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
