@@ -79,16 +79,21 @@ public final class TestGhoul
         String[][] giocatori = new String[][] { { "Angelo", "Nosferatu" }, { "Raf", "Ghoul" }, { "Aurora", "Capo branco" }, { "Giulia", "Prete" } };
         Partita[] partite =
             new Partita[] { new Partita(giocatori), new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } }) };
-        int posizione = 3, partitaVinta = 0;
-        partite[partitaVinta].attaccoLupi(giocatori[2][1], giocatori[posizione][0]);
-        partite[partitaVinta].progenizzazioneNosferatu(giocatori[posizione][0]);
-        partite[partitaVinta].terminaNotte();
-        partite[partitaVinta].incrementaVoti(giocatori[2][0], 2);
-        partite[partitaVinta].terminaVotazioni();
-        partite[partitaVinta].incrementaVoti(giocatori[2][0], 2);
-        partite[partitaVinta].terminaBallottaggio();
-        partite[partitaVinta].terminaNotte();
+        setPartitaVinta(partite[0], giocatori[2][1], giocatori[3][0], giocatori[2][0]);
         return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA));
+    }
+
+    private static void setPartitaVinta(Partita partita, String tipoLupo, String nomeVittima, String nomeLupo)
+    {
+        partita.attaccoLupi(tipoLupo, nomeVittima);
+        partita.progenizzazioneNosferatu(nomeVittima);
+        partita.terminaNotte();
+        int numeroVoti = 3;
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
