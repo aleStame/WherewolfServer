@@ -19,14 +19,15 @@ public class Ghoul extends Ruolo
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(isPartitaVinta(partita)) esito = VITTORIA;
-        else
-        {
-            boolean perso = true;
-            for(int i = 0; i < partita.getNumeroGiocatoriVivi() && perso; i++)
-                perso = !(isGiocatoreAlleato(partita, partita.getNomeGiocatoreVivo(i)));
-            if(perso) esito = SCONFITTA;
-        }
+        else if(isPartitaPersa(partita)) esito = SCONFITTA;
         return esito;
+    }
+
+    private boolean isPartitaPersa(Partita partita)
+    {
+        boolean perso = true;
+        for(int i = 0; i < partita.getNumeroGiocatoriVivi() && perso; i++) perso = !(isGiocatoreAlleato(partita, partita.getNomeGiocatoreVivo(i)));
+        return perso;
     }
 
     private boolean isPartitaVinta(Partita partita)

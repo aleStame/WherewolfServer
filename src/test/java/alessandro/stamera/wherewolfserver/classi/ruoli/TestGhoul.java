@@ -2,11 +2,16 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -66,25 +71,24 @@ public final class TestGhoul
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testVittoria()
+    @ParameterizedTest @MethodSource("getEsempioPartita")
+    public void testVittoria(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
+    private static Stream<Arguments> getEsempioPartita()
     {
         String[][] giocatori = new String[][] { { "Angelo", "Nosferatu" }, { "Raf", "Ghoul" }, { "Aurora", "Capo branco" }, { "Giulia", "Prete" } };
-        Partita partita = new Partita(giocatori);
-        int posizione = 3;
-        partita.attaccoLupi(giocatori[2][1], giocatori[posizione][0]);
-        partita.progenizzazioneNosferatu(giocatori[posizione][0]);
-        partita.terminaNotte();
-        partita.incrementaVoti(giocatori[2][0], 2);
-        partita.terminaVotazioni();
-        partita.incrementaVoti(giocatori[2][0], 2);
-        partita.terminaBallottaggio();
-        partita.terminaNotte();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
-    }
-
-    @Test public void testSconfitta()
-    {
-        assertThat(ruolo.getEsitoPartita(new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } }))).isEqualTo(SCONFITTA);
+        Partita[] partite =
+            new Partita[] { new Partita(giocatori), new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } }) };
+        int posizione = 3, partitaVinta = 0;
+        partite[partitaVinta].attaccoLupi(giocatori[2][1], giocatori[posizione][0]);
+        partite[partitaVinta].progenizzazioneNosferatu(giocatori[posizione][0]);
+        partite[partitaVinta].terminaNotte();
+        partite[partitaVinta].incrementaVoti(giocatori[2][0], 2);
+        partite[partitaVinta].terminaVotazioni();
+        partite[partitaVinta].incrementaVoti(giocatori[2][0], 2);
+        partite[partitaVinta].terminaBallottaggio();
+        partite[partitaVinta].terminaNotte();
+        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA));
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
