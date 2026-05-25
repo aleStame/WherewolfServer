@@ -786,14 +786,14 @@ public final class TestPartita
         verificaVero(partita.isNosferatuVivo(nome));
     }
 
-    /*@Test public void testGhoulVivoAssente()
+    @Test public void testNosferatulVivoAssente()
     {
-        String nome = "Margherita";
-        inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
-        verificaFalso(partita.isGhoulVivo(nome));
+        String nome = "Pamela";
+        inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
+        verificaFalso(partita.isNosferatuVivo(nome));
     }
 
-    @Test public void testGhoulMorto()
+    /*@Test public void testGhoulMorto()
     {
         String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
         inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
