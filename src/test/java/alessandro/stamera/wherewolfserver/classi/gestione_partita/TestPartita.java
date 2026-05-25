@@ -756,6 +756,13 @@ public final class TestPartita
         verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
 
+    @Test public void testGhoulVivoPresente()
+    {
+        String nome = "Tony";
+        inizializzaPartita(new String[][] { { nome, "Ghoul" } });
+        verificaVero(partita.isGhoulVivo(nome));
+    }
+
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
         return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
