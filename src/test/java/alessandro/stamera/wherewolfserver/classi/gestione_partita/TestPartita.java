@@ -779,6 +779,29 @@ public final class TestPartita
         verificaFalso(partita.isGhoulVivo(nomeGhoul));
     }
 
+    @Test public void testNosferatuVivoPresente()
+    {
+        String nome = "Matilde";
+        inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
+        verificaVero(partita.isNosferatuVivo(nome));
+    }
+
+    /*@Test public void testGhoulVivoAssente()
+    {
+        String nome = "Margherita";
+        inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
+        verificaFalso(partita.isGhoulVivo(nome));
+    }
+
+    @Test public void testGhoulMorto()
+    {
+        String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeGhoul);
+        terminaNotte();
+        verificaFalso(partita.isGhoulVivo(nomeGhoul));
+    }*/
+
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
         return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
