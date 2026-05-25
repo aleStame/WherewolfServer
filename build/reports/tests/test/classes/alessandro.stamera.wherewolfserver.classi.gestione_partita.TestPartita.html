@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">174</div>
+<div class="counter">178</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.599s</div>
+<div class="counter">2.274s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">99%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,110 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testGhoulMorto()"></a>
+<h3 class="failures">testGhoulMorto()</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo.isGhoul()&quot; because the return value of &quot;alessandro.stamera.wherewolfserver.classi.gestione_partita.GiocatoriVivi.getRuolo(String)&quot; is null
+	at alessandro.stamera.wherewolfserver.classi.gestione_partita.GiocatoriVivi.isGhoul(GiocatoriVivi.java:188)
+	at alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.isGhoulVivo(Partita.java:249)
+	at alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.testGhoulMorto(TestPartita.java:779)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,349 +178,367 @@
 <tr>
 <td class="success">[1] tipoLupo=Lupo del branco</td>
 <td class="success">attaccoAltriLupi(String)[1]</td>
-<td class="success">0.010s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Giovane lupo</td>
 <td class="success">attaccoAltriLupi(String)[2]</td>
-<td class="success">0.012s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">attaccoAltriLupi(String)[3]</td>
-<td class="success">0.010s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">attaccoAltriLupi(String)[4]</td>
-<td class="success">0.021s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
-<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAngeloCustodeAccusatoPresente()</td>
-<td class="success">testAngeloCustodeAccusatoPresente()</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
-<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoAmatoAssassino()</td>
-<td class="success">testAttaccoAmatoAssassino()</td>
 <td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
+<td class="success">testAngeloCustodeAccusatoNonPresente()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAngeloCustodeAccusatoPresente()</td>
+<td class="success">testAngeloCustodeAccusatoPresente()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
+<td class="success">testAssassinioContadinoMostroPrimaNotte()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoAmatoAssassino()</td>
+<td class="success">testAttaccoAmatoAssassino()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testAttaccoAssassino()</td>
 <td class="success">testAttaccoAssassino()</td>
-<td class="success">0.004s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testAttaccoAssassinoContadinoMostroNottiSuccessive()</td>
 <td class="success">testAttaccoAssassinoContadinoMostroNottiSuccessive()</td>
-<td class="success">0.007s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoContadino=Contadino eroe</td>
 <td class="success">testAttaccoContadino(String)[1]</td>
-<td class="success">0.336s</td>
+<td class="success">0.400s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoContadino=Contadino mostro</td>
 <td class="success">testAttaccoContadino(String)[2]</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeLupo=Capo branco</td>
 <td class="success">testAttaccoLupiAmato(String)[1]</td>
-<td class="success">0.007s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeLupo=Capo branco</td>
 <td class="success">testAttaccoLupiAngeloCustode(String)[1]</td>
-<td class="success">0.049s</td>
+<td class="success">0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] nomeLupo=Lupo del branco</td>
+<td class="success">testAttaccoLupiAngeloCustode(String)[2]</td>
+<td class="success">0.027s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] nomeLupo=Lupo reietto</td>
+<td class="success">testAttaccoLupiAngeloCustode(String)[3]</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] nomeLupo=Lupo solitario</td>
+<td class="success">testAttaccoLupiAngeloCustode(String)[4]</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testAttaccoLupiEremita(String)[1]</td>
-<td class="success">0.003s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testAttaccoLupiEremita(String)[2]</td>
-<td class="success">0.004s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testAttaccoLupiEremita(String)[3]</td>
-<td class="success">0.002s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testAttaccoLupiEremita(String)[4]</td>
-<td class="success">0.005s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testAttaccoLupoSolitarioCacciatore()</td>
 <td class="success">testAttaccoLupoSolitarioCacciatore()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNormaleCacciatore()</td>
-<td class="success">testAttaccoNormaleCacciatore()</td>
-<td class="success">0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuContadinoMostro()</td>
-<td class="success">testAttaccoNosferatuContadinoMostro()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuContadinoMostroRomeo()</td>
-<td class="success">testAttaccoNosferatuContadinoMostroRomeo()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuFallito()</td>
-<td class="success">testAttaccoNosferatuFallito()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuMorto()</td>
-<td class="success">testAttaccoNosferatuMorto()</td>
-<td class="success">0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoNosferatuRiuscito()</td>
-<td class="success">testAttaccoNosferatuRiuscito()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testAttaccoUltimoLupo()</td>
-<td class="success">testAttaccoUltimoLupo()</td>
 <td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testAttaccoUltimoLupoBranco()</td>
-<td class="success">testAttaccoUltimoLupoBranco()</td>
+<td class="success">testAttaccoNormaleCacciatore()</td>
+<td class="success">testAttaccoNormaleCacciatore()</td>
+<td class="success">0.035s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNosferatuContadinoMostro()</td>
+<td class="success">testAttaccoNosferatuContadinoMostro()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNosferatuContadinoMostroRomeo()</td>
+<td class="success">testAttaccoNosferatuContadinoMostroRomeo()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNosferatuFallito()</td>
+<td class="success">testAttaccoNosferatuFallito()</td>
 <td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testAttaccoNosferatuMorto()</td>
+<td class="success">testAttaccoNosferatuMorto()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoNosferatuRiuscito()</td>
+<td class="success">testAttaccoNosferatuRiuscito()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoUltimoLupo()</td>
+<td class="success">testAttaccoUltimoLupo()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAttaccoUltimoLupoBranco()</td>
+<td class="success">testAttaccoUltimoLupoBranco()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testBallottaggioPuro()</td>
 <td class="success">testBallottaggioPuro()</td>
-<td class="success">0.014s</td>
+<td class="success">0.024s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testBloccoAttaccoPazzo()</td>
 <td class="success">testBloccoAttaccoPazzo()</td>
-<td class="success">0.012s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] posizioneVittima=1</td>
 <td class="success">testContrattaccoContadinoMostro(int)[1]</td>
-<td class="success">0.028s</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloMagoContadinoMostro()</td>
 <td class="success">testControlloMagoContadinoMostro()</td>
-<td class="success">0.003s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloMagoContadinoMostroPrimaNotte()</td>
 <td class="success">testControlloMagoContadinoMostroPrimaNotte()</td>
-<td class="success">0.012s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloSensitivaContadinoMostro()</td>
 <td class="success">testControlloSensitivaContadinoMostro()</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloSensitivaContadinoMostroPrimaNotte()</td>
 <td class="success">testControlloSensitivaContadinoMostroPrimaNotte()</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCriminalizzazioneBecchino()</td>
 <td class="success">testCriminalizzazioneBecchino()</td>
-<td class="success">0.023s</td>
+<td class="success">0.038s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[10] nomeRuolo=Cappuccetto rosso, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[10]</td>
-<td class="success">0.003s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[11] nomeRuolo=Eremita, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[11]</td>
-<td class="success">0.006s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[12] nomeRuolo=Ghoul, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[12]</td>
-<td class="success">0.005s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[13] nomeRuolo=Giulietta, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[13]</td>
-<td class="success">0.004s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[14] nomeRuolo=Giullare, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[14]</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[15] nomeRuolo=Goblin, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[15]</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[16] nomeRuolo=Guaritore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[16]</td>
-<td class="success">0.003s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[17] nomeRuolo=Inquisitore, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[17]</td>
-<td class="success">0.004s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[18] nomeRuolo=Leprecauno, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[18]</td>
-<td class="success">0.005s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[19] nomeRuolo=Mago, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[19]</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeRuolo=Angelo custode, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[1]</td>
-<td class="success">0.014s</td>
+<td class="success">0.029s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[20] nomeRuolo=Medium, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[20]</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[21] nomeRuolo=Megera, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[21]</td>
-<td class="success">0.004s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[22] nomeRuolo=Mercante, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[22]</td>
-<td class="success">0.005s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[23] nomeRuolo=Monaco, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[23]</td>
-<td class="success">0.004s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[24] nomeRuolo=Negromante, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[24]</td>
-<td class="success">0.003s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[25] nomeRuolo=Nonna, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[25]</td>
-<td class="success">0.008s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[26] nomeRuolo=Nosferatu, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[26]</td>
-<td class="success">0.009s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[27] nomeRuolo=Oratore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[27]</td>
-<td class="success">0.006s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[28] nomeRuolo=Pazzo, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[28]</td>
-<td class="success">0.009s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[29] nomeRuolo=Oste, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[29]</td>
-<td class="success">0.005s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] nomeRuolo=Azzeccagarbugli, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[30] nomeRuolo=Peccatore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[30]</td>
-<td class="success">0.008s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -435,61 +550,61 @@
 <tr>
 <td class="success">[32] nomeRuolo=Prete, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[32]</td>
-<td class="success">0.008s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[33] nomeRuolo=Sensitiva, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[33]</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[34] nomeRuolo=Sidhe, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[34]</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[35] nomeRuolo=Templare, numeroCriminali=1</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[35]</td>
-<td class="success">0.005s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] nomeRuolo=Bardo, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[3]</td>
-<td class="success">0.014s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] nomeRuolo=Becchino, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[4]</td>
-<td class="success">0.007s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] nomeRuolo=Bocca di rosa, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[5]</td>
-<td class="success">0.007s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] nomeRuolo=Borgomastro, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[6]</td>
-<td class="success">0.004s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[7] nomeRuolo=Bracconiere, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[7]</td>
-<td class="success">0.003s</td>
+<td class="success">0.029s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[8] nomeRuolo=Cacciatore, numeroCriminali=2</td>
 <td class="success">testCriminalizzazioneCapoGilda(String, int)[8]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -501,37 +616,37 @@
 <tr>
 <td class="success">[1] nomeRuolo=Altra guardia</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[1]</td>
-<td class="success">0.004s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] nomeRuolo=Capo branco</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[2]</td>
-<td class="success">0.003s</td>
+<td class="success">0.102s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] nomeRuolo=Giovane lupo</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[3]</td>
-<td class="success">0.003s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] nomeRuolo=Guardia</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[4]</td>
-<td class="success">0.005s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] nomeRuolo=Lupo del branco</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[5]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] nomeRuolo=Lupo reietto</td>
 <td class="success">testCriminalizzazioneCapoGildaMorto(String)[6]</td>
-<td class="success">0.001s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -543,85 +658,91 @@
 <tr>
 <td class="success">testCriminalizzazioneContadinoLupo()</td>
 <td class="success">testCriminalizzazioneContadinoLupo()</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCriminalizzazioneContadinoMostro()</td>
+<td class="success">testCriminalizzazioneContadinoMostro()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">testGhoulMorto()</td>
+<td class="failures">testGhoulMorto()</td>
+<td class="failures">0.027s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">testGhoulVivoAssente()</td>
+<td class="success">testGhoulVivoAssente()</td>
 <td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testCriminalizzazioneContadinoMostro()</td>
-<td class="success">testCriminalizzazioneContadinoMostro()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGhoulVivoAssente()</td>
-<td class="success">testGhoulVivoAssente()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">testGhoulVivoPresente()</td>
 <td class="success">testGhoulVivoPresente()</td>
-<td class="success">0.009s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testGuarigioneContadinoMostro(String)[1]</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[2] tipoLupo=Lupo del branco</td>
-<td class="success">testGuarigioneContadinoMostro(String)[2]</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[3] tipoLupo=Lupo reietto</td>
-<td class="success">testGuarigioneContadinoMostro(String)[3]</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[4] tipoLupo=Lupo solitario</td>
-<td class="success">testGuarigioneContadinoMostro(String)[4]</td>
-<td class="success">0.009s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testInizioCrociata()</td>
-<td class="success">testInizioCrociata()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testMancatoInizioCrociata()</td>
-<td class="success">testMancatoInizioCrociata()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testMorteNegromante()</td>
-<td class="success">testMorteNegromante()</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNegromanteContadinoMostroRomeizzato()</td>
-<td class="success">testNegromanteContadinoMostroRomeizzato()</td>
-<td class="success">0.009s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[1] tipoLupo=Capo branco</td>
-<td class="success">testNessunaProtezioneCappuccettoRosso(String)[1]</td>
 <td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
-<td class="success">testNessunaProtezioneCappuccettoRosso(String)[2]</td>
+<td class="success">testGuarigioneContadinoMostro(String)[2]</td>
 <td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] tipoLupo=Lupo reietto</td>
+<td class="success">testGuarigioneContadinoMostro(String)[3]</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] tipoLupo=Lupo solitario</td>
+<td class="success">testGuarigioneContadinoMostro(String)[4]</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInizioCrociata()</td>
+<td class="success">testInizioCrociata()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMancatoInizioCrociata()</td>
+<td class="success">testMancatoInizioCrociata()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMorteNegromante()</td>
+<td class="success">testMorteNegromante()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNegromanteContadinoMostroRomeizzato()</td>
+<td class="success">testNegromanteContadinoMostroRomeizzato()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] tipoLupo=Capo branco</td>
+<td class="success">testNessunaProtezioneCappuccettoRosso(String)[1]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] tipoLupo=Lupo del branco</td>
+<td class="success">testNessunaProtezioneCappuccettoRosso(String)[2]</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -633,193 +754,193 @@
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[4]</td>
-<td class="success">0.007s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Contadino discendente dei lupi</td>
 <td class="success">testNessunaProtezioneCappuccettoRosso(String)[5]</td>
-<td class="success">0.008s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[1]</td>
-<td class="success">0.008s</td>
+<td class="success">0.027s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[2]</td>
-<td class="success">0.008s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[3]</td>
-<td class="success">0.007s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[4]</td>
-<td class="success">0.009s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Contadino discendente dei lupi</td>
 <td class="success">testNessunaProtezioneCappuccettoRossoMorteNonna(String)[5]</td>
-<td class="success">0.008s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testNoCreatureOmbra()</td>
 <td class="success">testNoCreatureOmbra()</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNoGuardie()</td>
-<td class="success">testNoGuardie()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumeroLupi()</td>
-<td class="success">testNumeroLupi()</td>
-<td class="success">0.028s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumeroNotte()</td>
-<td class="success">testNumeroNotte()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNumeroSenzaFazione()</td>
-<td class="success">testNumeroSenzaFazione()</td>
 <td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testPareggioBallottaggio()</td>
-<td class="success">testPareggioBallottaggio()</td>
+<td class="success">testNoGuardie()</td>
+<td class="success">testNoGuardie()</td>
 <td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testPareggioPrimoPosto()</td>
-<td class="success">testPareggioPrimoPosto()</td>
+<td class="success">testNumeroLupi()</td>
+<td class="success">testNumeroLupi()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNumeroNotte()</td>
+<td class="success">testNumeroNotte()</td>
 <td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNumeroSenzaFazione()</td>
+<td class="success">testNumeroSenzaFazione()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPareggioBallottaggio()</td>
+<td class="success">testPareggioBallottaggio()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPareggioPrimoPosto()</td>
+<td class="success">testPareggioPrimoPosto()</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPareggioSecondoPosto()</td>
 <td class="success">testPareggioSecondoPosto()</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPerdenteBallottaggio()</td>
 <td class="success">testPerdenteBallottaggio()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPotereBardoAuraChiara()</td>
-<td class="success">testPotereBardoAuraChiara()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPotereBardoAuraOscura()</td>
-<td class="success">testPotereBardoAuraOscura()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testPotereBardoNienteBardo()</td>
-<td class="success">testPotereBardoNienteBardo()</td>
 <td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPotereBardoAuraChiara()</td>
+<td class="success">testPotereBardoAuraChiara()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPotereBardoAuraOscura()</td>
+<td class="success">testPotereBardoAuraOscura()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPotereBardoNienteBardo()</td>
+<td class="success">testPotereBardoNienteBardo()</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] ruolo=Mercante</td>
 <td class="success">testPotereBorgomastro(String)[1]</td>
-<td class="success">0.010s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] ruolo=Contadino mostro</td>
 <td class="success">testPotereBorgomastro(String)[2]</td>
-<td class="success">0.011s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPotereBracconiereDueLupi()</td>
 <td class="success">testPotereBracconiereDueLupi()</td>
-<td class="success">0.010s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPotereBracconiereUnLupo()</td>
 <td class="success">testPotereBracconiereUnLupo()</td>
-<td class="success">0.027s</td>
+<td class="success">0.028s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] tipoLupo=Capo branco</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[1]</td>
-<td class="success">0.010s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] tipoLupo=Lupo del branco</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[2]</td>
-<td class="success">0.007s</td>
+<td class="success">0.024s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] tipoLupo=Lupo reietto</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[3]</td>
-<td class="success">0.005s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Lupo solitario</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[4]</td>
-<td class="success">0.008s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Contadino discendente dei lupi</td>
 <td class="success">testProtezioneCappuccettoRosso(String)[5]</td>
-<td class="success">0.006s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nomeRuolo=Bocca di rosa</td>
 <td class="success">testRogoAnnullatoOratore(String)[1]</td>
-<td class="success">0.016s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] nomeRuolo=Azzeccagarbugli</td>
 <td class="success">testRogoAnnullatoOratore(String)[2]</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[10] ruolo=Cappuccetto rosso</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[10]</td>
-<td class="success">0.008s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[11] ruolo=Contadino discendente dei lupi</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[11]</td>
-<td class="success">0.009s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -831,43 +952,43 @@
 <tr>
 <td class="success">[13] ruolo=Contadino mostro</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[13]</td>
-<td class="success">0.003s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[14] ruolo=Contadino normale</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[14]</td>
-<td class="success">0.004s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[15] ruolo=Eremita</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[15]</td>
-<td class="success">0.003s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[16] ruolo=Ghoul</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[16]</td>
-<td class="success">0.008s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[17] ruolo=Giulietta</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[17]</td>
-<td class="success">0.011s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[18] ruolo=Giullare</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[18]</td>
-<td class="success">0.007s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[19] ruolo=Goblin</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[19]</td>
-<td class="success">0.002s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -879,37 +1000,37 @@
 <tr>
 <td class="success">[20] ruolo=Guardia</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[20]</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[21] ruolo=Guaritore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[21]</td>
-<td class="success">0.003s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[22] ruolo=Giovane lupo</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[22]</td>
-<td class="success">0.004s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[23] ruolo=Inquisitore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[23]</td>
-<td class="success">0.001s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[24] ruolo=Leprecauno</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[24]</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[25] ruolo=Lupo del branco</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[25]</td>
-<td class="success">0.002s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -921,43 +1042,43 @@
 <tr>
 <td class="success">[27] ruolo=Lupo solitario</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[27]</td>
-<td class="success">0.008s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[28] ruolo=Mago</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[28]</td>
-<td class="success">0.009s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[29] ruolo=Medium</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[29]</td>
-<td class="success">0.006s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] ruolo=Angelo custode</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[2]</td>
-<td class="success">0.014s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[30] ruolo=Megera</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[30]</td>
-<td class="success">0.006s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[31] ruolo=Monaco</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[31]</td>
-<td class="success">0.003s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[32] ruolo=Negromante</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[32]</td>
-<td class="success">0.004s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -969,19 +1090,19 @@
 <tr>
 <td class="success">[34] ruolo=Nosferatu</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[34]</td>
-<td class="success">0.007s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[35] ruolo=Pazzo</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[35]</td>
-<td class="success">0.007s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[36] ruolo=Peccatore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[36]</td>
-<td class="success">0.007s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -993,31 +1114,31 @@
 <tr>
 <td class="success">[38] ruolo=Prete</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[38]</td>
-<td class="success">0.009s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[39] ruolo=Sensitiva</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[39]</td>
-<td class="success">0.007s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] ruolo=Bardo</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[3]</td>
-<td class="success">0.012s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[40] ruolo=Sidhe</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[40]</td>
-<td class="success">0.011s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[41] ruolo=Templare</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[41]</td>
-<td class="success">0.014s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1029,19 +1150,19 @@
 <tr>
 <td class="success">[5] ruolo=Boia</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[5]</td>
-<td class="success">0.006s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] ruolo=Bracconiere</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[6]</td>
-<td class="success">0.006s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[7] ruolo=Cacciatore</td>
 <td class="success">testSegnalazioneAzzeccagarbugli(String)[7]</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1059,581 +1180,596 @@
 <tr>
 <td class="success">testSegnalazioneAzzeccagarbugliAmato()</td>
 <td class="success">testSegnalazioneAzzeccagarbugliAmato()</td>
-<td class="success">0.006s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSegnalazioneInquisitoreMisticoAssente()</td>
 <td class="success">testSegnalazioneInquisitoreMisticoAssente()</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
-<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
-<td class="success">0.007s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
-<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSegnalazioneInquisitoreMisticoPresenteAmato()</td>
-<td class="success">testSegnalazioneInquisitoreMisticoPresenteAmato()</td>
 <td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testSegnalazioneOratore()</td>
-<td class="success">testSegnalazioneOratore()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoAssenteAmato()</td>
 <td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoPresente()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSegnalazioneInquisitoreMisticoPresenteAmato()</td>
+<td class="success">testSegnalazioneInquisitoreMisticoPresenteAmato()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSegnalazioneOratore()</td>
+<td class="success">testSegnalazioneOratore()</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSegnalazioneOratoreNonRiuscita()</td>
 <td class="success">testSegnalazioneOratoreNonRiuscita()</td>
-<td class="success">0.008s</td>
+<td class="success">0.089s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSoloCreatureOmbra()</td>
 <td class="success">testSoloCreatureOmbra()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSoloGuardie()</td>
-<td class="success">testSoloGuardie()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSuicidioCapoBranco()</td>
-<td class="success">testSuicidioCapoBranco()</td>
 <td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSoloGuardie()</td>
+<td class="success">testSoloGuardie()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSuicidioCapoBranco()</td>
+<td class="success">testSuicidioCapoBranco()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testUnanimita()</td>
 <td class="success">testUnanimita()</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@32fe9d0a
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.Spia@69adf72c
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@57f791c6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@30c31dd7
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@2ef8a8c3
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@32fe9d0a
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@57f791c6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@1e11bc55
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@7544a1e4
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@51684e4a
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@6ce1f601
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1e886a5b
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@6c451c9c
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@31c269fd
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@372b0d86
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@5528a42c
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@32fe9d0a
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@7544a1e4
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@5528a42c
-alessandro.stamera.wherewolfserver.classi.ruoli.Oste@ec2bf82
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@51684e4a
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@57f791c6
-alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@1e11bc55
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@cc62a3b
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@5528a42c
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@7544a1e4
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@7544a1e4
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@f5c79a6
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@6ce1f601
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@2ef8a8c3
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@6ce1f601
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@3dddbe65
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@2ef8a8c3
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@5528a42c
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@30c31dd7
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@f5c79a6
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@39c11e6c
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@1e11bc55
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@324dcd31
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@51684e4a
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@503d56b5
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@7544a1e4
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@72bca894
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1e886a5b
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Medium@433ffad1
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Megera@1fc793c2
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@2575f671
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@329a1243
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@6ce1f601
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Oste@ec2bf82
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@cc62a3b
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@ecf9fb3
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@2d35442b
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@3dddbe65
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1e886a5b
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@cc62a3b
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@31c269fd
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@372b0d86
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@2ef8a8c3
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@ecf9fb3
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Medium@433ffad1
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@72bca894
-alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@2d35442b
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@72bca894
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1e886a5b
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@6ce1f601
-alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@503d56b5
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@372b0d86
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@57f791c6
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@31c269fd
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@324dcd31
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@57f791c6
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@649f2009
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@5528a42c
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@ecf9fb3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@39c11e6c
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@2575f671
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@f5c79a6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@2575f671
-alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@39c11e6c
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@f5c79a6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@32fe9d0a
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@372b0d86
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@5528a42c
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@30c31dd7
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@6c451c9c
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@1e11bc55
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@324dcd31
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@32fe9d0a
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@29ad44e3
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@2a2bb0eb
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@49a64d82
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@51684e4a
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@503d56b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@7544a1e4
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@72bca894
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@31c269fd
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@32f61a31
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@57f791c6
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@d816dde
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1e886a5b
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@14bb2297
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Medium@433ffad1
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Megera@1fc793c2
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@329a1243
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@6ce1f601
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@2a551a63
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@797501a
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@51650883
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@cc62a3b
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@6c4f9535
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@ecf9fb3
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@2d35442b
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@3dddbe65
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@669253b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@29539e36
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@f5c79a6
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@c9413d8
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@3e587920
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@372b0d86
-alessandro.stamera.wherewolfserver.classi.ruoli.Ladra@3c291aad
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@1a15b789
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@1e886a5b
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4a9cc6cb
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@fac80
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@24f43aa3
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@63fd4873
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@1edb61b1
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
+<pre>alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@64da2a7
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Spia@57f791c6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Spia@57f791c6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Spia@57f791c6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Spia@57f791c6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@499b2a5c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@344344fa
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@70e0accd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@64da2a7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@499b2a5c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@7957dc72
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ab72419
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@1e886a5b
+Tony
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6c451c9c
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@47747fb9
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@3113a37
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@213e3629
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@64da2a7
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ab72419
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.Oste@29539e36
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@1e886a5b
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@499b2a5c
+alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@7957dc72
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@32f61a31
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ab72419
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ab72419
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@51a06cbe
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@70e0accd
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@66d23e4a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@70e0accd
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@344344fa
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@51a06cbe
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@72bca894
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@7957dc72
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@433ffad1
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@1e886a5b
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@1fc793c2
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ab72419
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@2575f671
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6c451c9c
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Medium@329a1243
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Megera@ecf9fb3
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@2d35442b
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@27f9e982
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Oste@29539e36
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@32f61a31
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@4593ff34
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@37d3d232
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@66d23e4a
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6c451c9c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@32f61a31
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+Margherita
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@3113a37
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@213e3629
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@70e0accd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@4593ff34
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Medium@329a1243
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@2575f671
+alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@37d3d232
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@2575f671
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6c451c9c
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@1e886a5b
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+Massimo
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@1fc793c2
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@213e3629
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@499b2a5c
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@3113a37
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@433ffad1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@499b2a5c
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@797501a
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@4593ff34
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@72bca894
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@2d35442b
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@51a06cbe
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@2d35442b
+alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@72bca894
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@51a06cbe
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@64da2a7
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@213e3629
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@344344fa
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@47747fb9
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@7957dc72
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@433ffad1
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@64da2a7
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@43c67247
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@2fa7ae9
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@36ac8a63
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@1e886a5b
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@1fc793c2
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ab72419
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@2575f671
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@3113a37
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@5305c37d
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@499b2a5c
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@31c269fd
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6c451c9c
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@1a15b789
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Medium@329a1243
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Megera@ecf9fb3
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@27f9e982
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@ec2bf82
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5bd1ceca
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@596df867
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@32f61a31
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@c1fca1e
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@4593ff34
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@37d3d232
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@66d23e4a
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@3dddbe65
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@669253b7
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@51a06cbe
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@46074492
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@7544a1e4
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@213e3629
+alessandro.stamera.wherewolfserver.classi.ruoli.Ladra@7577b641
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@30c31dd7
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@6c451c9c
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@56e07a08
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@14bb2297
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@51650883
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6c4f9535
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@6cc0bcf6
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@69adf72c
 </pre>
 </span>
 </div>
@@ -1645,7 +1781,7 @@ alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@726386ed
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 25 mag 2026, 11:51:03</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 25 mag 2026, 14:34:43</p>
 </div>
 </div>
 </body>

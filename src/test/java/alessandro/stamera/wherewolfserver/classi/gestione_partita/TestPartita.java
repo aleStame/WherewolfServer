@@ -139,7 +139,7 @@ public final class TestPartita
         verificaNonAccusato(giocatori[posizione1][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Walter", "Mago" }, { "Amelia", "Spia" } };
@@ -768,6 +768,15 @@ public final class TestPartita
         String nome = "Margherita";
         inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
         verificaFalso(partita.isGhoulVivo(nome));
+    }
+
+    @Test public void testGhoulMorto()
+    {
+        String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeGhoul);
+        terminaNotte();
+        verificaFalso(partita.isGhoulVivo(nomeGhoul));
     }
 
     private String[] estraiNomiGiocatori(String[][] giocatori)
