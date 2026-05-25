@@ -786,7 +786,7 @@ public final class TestPartita
         verificaVero(partita.isNosferatuVivo(nome));
     }
 
-    @Test public void testNosferatulVivoAssente()
+    @Test public void testNosferatuVivoAssente()
     {
         String nome = "Pamela";
         inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
@@ -812,14 +812,14 @@ public final class TestPartita
         verificaVero(partita.isProgenieNosferatuViva(nomeVittima));
     }
 
-    /*@Test public void testNosferatulVivoAssente()
+    @Test public void testNoProgenieNosferatu()
     {
-        String nome = "Pamela";
-        inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
-        verificaFalso(partita.isNosferatuVivo(nome));
+        String nome = "Mark";
+        inizializzaPartita(new String[][] { { nome, "Azzeccagarbugli" } });
+        verificaFalso(partita.isProgenieNosferatuViva(nome));
     }
 
-    @Test public void testNosferatuMorto()
+    /*@Test public void testNosferatuMorto()
     {
         String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
         inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });
