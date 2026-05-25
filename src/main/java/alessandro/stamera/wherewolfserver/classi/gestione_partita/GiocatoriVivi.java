@@ -201,8 +201,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isProgenieNosferatu(String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
-        return ruolo.isTrattoPresente(NON_MORTO) && ruolo.getFazione() == NOSFERATU;
+        boolean trovato = false;
+        if(isPresente(nome))
+        {
+            Ruolo ruolo = getRuolo(nome);
+            return ruolo.isTrattoPresente(NON_MORTO) && ruolo.getFazione() == NOSFERATU;
+        }
+        return trovato;
     }
 
     private int getPosizioneSensitiva()

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNoProgenieNosferatu riuscito">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testProgenieNosferatuMorta non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02951" summary="VERDE: testSensitivaAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779373713462</created>
-      <option name="number" value="02951" />
-      <option name="presentableId" value="LOCAL-02951" />
-      <option name="project" value="LOCAL" />
-      <updated>1779373713462</updated>
     </task>
     <task id="LOCAL-02952" summary="REFACTORING: definizione del metodo getPosizioneSensitiva">
       <option name="closed" value="true" />
@@ -683,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779722112997</updated>
     </task>
-    <option name="localTasksCounter" value="3000" />
+    <task id="LOCAL-03000" summary="ROSSO: testProgenieNosferatuMorta non riuscito">
+      <option name="closed" value="true" />
+      <created>1779724568526</created>
+      <option name="number" value="03000" />
+      <option name="presentableId" value="LOCAL-03000" />
+      <option name="project" value="LOCAL" />
+      <updated>1779724568526</updated>
+    </task>
+    <option name="localTasksCounter" value="3001" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -698,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metood getEsitoAttaccoFallito" />
     <MESSAGE value="VERDE DIRETTO: testProgenieNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatuFallito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatuFallito riuscito" />
@@ -723,6 +720,7 @@
     <MESSAGE value="VERDE DIRETTO: testNosferatuVivoAssente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testProgenieNosferatuViva riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNoProgenieNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNoProgenieNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testProgenieNosferatuMorta non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testProgenieNosferatuMorta non riuscito" />
   </component>
 </project>
