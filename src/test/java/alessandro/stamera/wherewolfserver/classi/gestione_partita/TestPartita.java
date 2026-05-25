@@ -819,14 +819,17 @@ public final class TestPartita
         verificaFalso(partita.isProgenieNosferatuViva(nome));
     }
 
-    /*@Test public void testNosferatuMorto()
+    @Test public void testProgenieNosferatuMorta()
     {
-        String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
-        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeGhoul);
+        String nomeVittima = "Clark", tipoLupo = "Lupo reietto";
+        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaFalso(partita.isNosferatuVivo(nomeGhoul));
-    }*/
+        attaccoLupi(tipoLupo, nomeVittima);
+        terminaNotte();
+        verificaFalso(partita.isProgenieNosferatuViva(nomeVittima));
+    }
 
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
