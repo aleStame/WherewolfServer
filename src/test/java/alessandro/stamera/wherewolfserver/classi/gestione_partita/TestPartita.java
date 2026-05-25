@@ -802,6 +802,32 @@ public final class TestPartita
         verificaFalso(partita.isNosferatuVivo(nomeGhoul));
     }
 
+    @Test public void testProgenieNosferatuViva()
+    {
+        String nomeVittima = "Pina", tipoLupo = "Lupo solitario";
+        inizializzaPartita(new String[][] { { nomeVittima, "Bocca di rosa" }, { "Ugo", tipoLupo }, { "Mariangela", "Nosferatu" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        verificaVero(partita.isProgenieNosferatuViva(nomeVittima));
+    }
+
+    /*@Test public void testNosferatulVivoAssente()
+    {
+        String nome = "Pamela";
+        inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
+        verificaFalso(partita.isNosferatuVivo(nome));
+    }
+
+    @Test public void testNosferatuMorto()
+    {
+        String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeGhoul);
+        terminaNotte();
+        verificaFalso(partita.isNosferatuVivo(nomeGhoul));
+    }*/
+
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
         return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
