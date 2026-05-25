@@ -192,7 +192,12 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
-    public boolean isNosferatu(String nome) { return getRuolo(nome).isNosferatu(); }
+    public boolean isNosferatu(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getRuolo(nome).isNosferatu();
+        return trovato;
+    }
 
     public boolean isProgenieNosferatu(String nome)
     {
