@@ -763,6 +763,13 @@ public final class TestPartita
         verificaVero(partita.isGhoulVivo(nome));
     }
 
+    @Test public void testGhoulVivoAssente()
+    {
+        String nome = "Margherita";
+        inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
+        verificaFalso(partita.isGhoulVivo(nome));
+    }
+
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
         return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
