@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaProgenieNosferatuNonViva">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testEsitoPartita non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/CapoBranco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/CapoBranco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/vittoriaLupi",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -288,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02965" summary="VERDE DIRETTO: testCreatureOmbra riuscito">
-      <option name="closed" value="true" />
-      <created>1779443322652</created>
-      <option name="number" value="02965" />
-      <option name="presentableId" value="LOCAL-02965" />
-      <option name="project" value="LOCAL" />
-      <updated>1779443322652</updated>
     </task>
     <task id="LOCAL-02966" summary="REFACTORING: definizione del metodo isPossedutoPresente">
       <option name="closed" value="true" />
@@ -681,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779806628418</updated>
     </task>
-    <option name="localTasksCounter" value="3014" />
+    <task id="LOCAL-03014" summary="ROSSO: testEsitoPartita non riuscito">
+      <option name="closed" value="true" />
+      <created>1779807279937</created>
+      <option name="number" value="03014" />
+      <option name="presentableId" value="LOCAL-03014" />
+      <option name="project" value="LOCAL" />
+      <updated>1779807279937</updated>
+    </task>
+    <option name="localTasksCounter" value="3015" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSconfitta non riuscito" />
     <MESSAGE value="VERDE: testSconfitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsempioPartita" />
     <MESSAGE value="REFACTORING: definizione del metodo setPartitaVinta" />
@@ -721,6 +720,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaNosferatuNonVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo isProgenieNosferatuViva" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaProgenieNosferatuNonViva" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaProgenieNosferatuNonViva" />
+    <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsitoPartita non riuscito" />
   </component>
 </project>
