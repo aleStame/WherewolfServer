@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoLupi riuscito">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Uomini.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +102,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/attaccoLupiGiovaneLupo",
+    "git-widget-placeholder": "feature/gestioneCategoria",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -288,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02975" summary="VERDE: testNegromanteEremita riuscito">
-      <option name="closed" value="true" />
-      <created>1779525879181</created>
-      <option name="number" value="02975" />
-      <option name="presentableId" value="LOCAL-02975" />
-      <option name="project" value="LOCAL" />
-      <updated>1779525879181</updated>
     </task>
     <task id="LOCAL-02976" summary="REFACTORING: definizione del metood getEsitoAttaccoFallito">
       <option name="closed" value="true" />
@@ -681,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779814841408</updated>
     </task>
-    <option name="localTasksCounter" value="3024" />
+    <task id="LOCAL-03024" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1779826978938</created>
+      <option name="number" value="03024" />
+      <option name="presentableId" value="LOCAL-03024" />
+      <option name="project" value="LOCAL" />
+      <updated>1779826978939</updated>
+    </task>
+    <option name="localTasksCounter" value="3025" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-05-26T16:56:46" hostname="ALESSANDRO" time="0.145">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-05-26T20:36:03" hostname="ALESSANDRO" time="0.149">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
   <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.009"/>
+  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
   <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
-  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@149b0577, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5740ff5e, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4a901445, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
-  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@67f77f6e, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2b0b7e5a, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="[6] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7be1ce6a, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
+  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@633cc6b5, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@6342ff7f, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@403c3a01, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.007"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2daf06fc, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
+  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@28237492, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="[6] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5ceecfee, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.016"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.015"/>
   <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@77b21474
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@f8908f6
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@324dcd31
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@f5c79a6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@21694e53
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@1c25b8a7
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@73393584
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@782a4fff
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@1827a871
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@425357dd
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@6232ffdb
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@11e355ca
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@61bcbcce
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@4d68b571
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2ab26378
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@6f044c58
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@70d63e05
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@f9f3928
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@52d6d273
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
