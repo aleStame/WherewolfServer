@@ -22,8 +22,7 @@ public class Inquisizione extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.isSoloCreatureOmbra() || partita.isMisticiPresenti()) esito = SCONFITTA;
-        if(partita.isNoCreatureOmbra() && !partita.isMisticiPresenti()) esito = VITTORIA;
+        if(esito == VITTORIA && partita.isMisticiPresenti()) esito = SCONFITTA;
         return esito;
     }
 

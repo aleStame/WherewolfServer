@@ -36,13 +36,8 @@ public class Criminale extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(isPartitaPersa(partita)) esito = SCONFITTA;
-        else if(isPartitaVinta(partita)) esito = VITTORIA;
+        if(esito == VITTORIA && !partita.isNoGuardie()) esito = SCONFITTA;
         return esito;
     }
-
-    private boolean isPartitaPersa(Partita partita) { return partita.isSoloCreatureOmbra() || partita.isSoloGuardie(); }
-
-    private boolean isPartitaVinta(Partita partita) { return partita.isNoCreatureOmbra() && partita.isNoGuardie(); }
 
 }
