@@ -656,12 +656,12 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isGhoul(nome));
     }
 
-//    @Test public void testGhoulVivoAssente()
-//    {
-//        String nome = "Margherita";
-//        inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
-//        verificaFalso(partita.isGhoulVivo(nome));
-//    }
+    @Test public void testGhoulVivoAssente()
+    {
+        String nome = "Margherita";
+        aggiungiGiocatore(nome, "Cacciatore");
+        verificaFalso(giocatori.isGhoul(nome));
+    }
 //
 //    @Test public void testGhoulMorto()
 //    {
