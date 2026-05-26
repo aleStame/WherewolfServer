@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/TestGiovaneLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/TestGiovaneLupo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/vittoriaLupi",
+    "git-widget-placeholder": "feature/attaccoLupiGiovaneLupo",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -288,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02971" summary="VERDE: testControlloMedium riuscito">
-      <option name="closed" value="true" />
-      <created>1779523454132</created>
-      <option name="number" value="02971" />
-      <option name="presentableId" value="LOCAL-02971" />
-      <option name="project" value="LOCAL" />
-      <updated>1779523454132</updated>
     </task>
     <task id="LOCAL-02972" summary="VERDE: testControlloMedium riuscito">
       <option name="closed" value="true" />
@@ -681,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779812021590</updated>
     </task>
-    <option name="localTasksCounter" value="3020" />
+    <task id="LOCAL-03020" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1779813434653</created>
+      <option name="number" value="03020" />
+      <option name="presentableId" value="LOCAL-03020" />
+      <option name="project" value="LOCAL" />
+      <updated>1779813434653</updated>
+    </task>
+    <option name="localTasksCounter" value="3021" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

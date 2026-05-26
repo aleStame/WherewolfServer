@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -49,6 +50,9 @@ public final class TestGiovaneLupo
 
     @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
     public void testTratti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testAttaccoLupi(String nomeLupo) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nomeLupo))).isEqualTo(RIUSCITO); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
