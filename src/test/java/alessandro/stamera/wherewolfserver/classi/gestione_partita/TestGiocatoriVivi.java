@@ -653,15 +653,17 @@ public final class TestGiocatoriVivi
     {
         String nome = "Tony";
         aggiungiGiocatore(nome, "Ghoul");
-        verificaVero(giocatori.isGhoul(nome));
+        verificaVero(isGhoul(nome));
     }
 
     @Test public void testGhoulVivoAssente()
     {
         String nome = "Margherita";
         aggiungiGiocatore(nome, "Cacciatore");
-        verificaFalso(giocatori.isGhoul(nome));
+        verificaFalso(isGhoul(nome));
     }
+
+    private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
 //
 //    @Test public void testGhoulMorto()
 //    {
