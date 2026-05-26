@@ -649,6 +649,38 @@ public final class TestGiocatoriVivi
 
     @Test public void testSensitivaAssente() { verificaFalso(isSensitivaPresente()); }
 
+    @Test public void testGhoulPresente()
+    {
+        String nome = "Tony";
+        aggiungiGiocatore(nome, "Ghoul");
+        verificaVero(isGhoul(nome));
+    }
+
+    @Test public void testGhoulAssente()
+    {
+        String nome = "Margherita";
+        aggiungiGiocatore(nome, "Cacciatore");
+        verificaFalso(isGhoul(nome));
+    }
+
+    @Test public void testNosferatuPresente()
+    {
+        String nome = "Matilde";
+        aggiungiGiocatore(nome, "Nosferatu");
+        verificaVero(isNosferatu(nome));
+    }
+
+    @Test public void testNosferatuAssente()
+    {
+        String nome = "Pamela";
+        aggiungiGiocatore(nome, "Cacciatore di vampiri");
+        verificaFalso(isNosferatu(nome));
+    }
+
+    private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
+
+    private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
+
     private boolean isSensitivaPresente() { return giocatori.isSensitivaPresente(); }
 
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }

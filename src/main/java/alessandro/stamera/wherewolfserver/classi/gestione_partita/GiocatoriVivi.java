@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -182,6 +184,31 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isSensitivaPresente() { return getPosizioneSensitiva() != NON_TROVATO; }
 
     public String getNomeSensitiva() { return getNomeGiocatore(getPosizioneSensitiva()); }
+
+    public boolean isGhoul(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getRuolo(nome).isGhoul();
+        return trovato;
+    }
+
+    public boolean isNosferatu(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getRuolo(nome).isNosferatu();
+        return trovato;
+    }
+
+    public boolean isProgenieNosferatu(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome))
+        {
+            Ruolo ruolo = getRuolo(nome);
+            return ruolo.isTrattoPresente(NON_MORTO) && ruolo.getFazione() == NOSFERATU;
+        }
+        return trovato;
+    }
 
     private int getPosizioneSensitiva()
     {

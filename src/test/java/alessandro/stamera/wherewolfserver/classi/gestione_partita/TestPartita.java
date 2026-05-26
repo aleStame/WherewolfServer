@@ -139,7 +139,7 @@ public final class TestPartita
         verificaNonAccusato(giocatori[posizione1][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Walter", "Mago" }, { "Amelia", "Spia" } };
@@ -755,6 +755,93 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
+
+    @Test public void testGhoulVivoPresente()
+    {
+        String nome = "Tony";
+        inizializzaPartita(new String[][] { { nome, "Ghoul" } });
+        verificaVero(isGhoulVivo(nome));
+    }
+
+    @Test public void testGhoulVivoAssente()
+    {
+        String nome = "Margherita";
+        inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
+        verificaGhoulNonVivo(nome);
+    }
+
+    @Test public void testGhoulMorto()
+    {
+        String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeGhoul);
+        terminaNotte();
+        verificaGhoulNonVivo(nomeGhoul);
+    }
+
+    @Test public void testNosferatuVivoPresente()
+    {
+        String nome = "Matilde";
+        inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
+        verificaVero(isNosferatuVivo(nome));
+    }
+
+    @Test public void testNosferatuVivoAssente()
+    {
+        String nome = "Pamela";
+        inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
+        verificaNosferatuNonVivo(nome);
+    }
+
+    @Test public void testNosferatuMorto()
+    {
+        String nomeNosferatu = "Cesare", tipoLupo = "Lupo del branco";
+        inizializzaPartita(new String[][] { { nomeNosferatu, "Nosferatu" }, { "Annibale", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeNosferatu);
+        terminaNotte();
+        verificaNosferatuNonVivo(nomeNosferatu);
+    }
+
+    @Test public void testProgenieNosferatuViva()
+    {
+        String nomeVittima = "Pina", tipoLupo = "Lupo solitario";
+        inizializzaPartita(new String[][] { { nomeVittima, "Bocca di rosa" }, { "Ugo", tipoLupo }, { "Mariangela", "Nosferatu" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        verificaVero(isProgenieNosferatuViva(nomeVittima));
+    }
+
+    @Test public void testNoProgenieNosferatu()
+    {
+        String nome = "Mark";
+        inizializzaPartita(new String[][] { { nome, "Azzeccagarbugli" } });
+        verificaProgenieNosferatuNonViva(nome);
+    }
+
+    @Test public void testProgenieNosferatuMorta()
+    {
+        String nomeVittima = "Clark", tipoLupo = "Lupo reietto";
+        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        attaccoLupi(tipoLupo, nomeVittima);
+        terminaNotte();
+        verificaProgenieNosferatuNonViva(nomeVittima);
+    }
+
+    private void verificaProgenieNosferatuNonViva(String nome) { verificaFalso(isProgenieNosferatuViva(nome)); }
+
+    private boolean isProgenieNosferatuViva(String nome) { return partita.isProgenieNosferatuViva(nome); }
+
+    private void verificaNosferatuNonVivo(String nome) { verificaFalso(isNosferatuVivo(nome)); }
+
+    private boolean isNosferatuVivo(String nome) { return partita.isNosferatuVivo(nome); }
+
+    private void verificaGhoulNonVivo(String nome) { verificaFalso(isGhoulVivo(nome)); }
+
+    private boolean isGhoulVivo(String nomeGhoul) { return partita.isGhoulVivo(nomeGhoul); }
 
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
