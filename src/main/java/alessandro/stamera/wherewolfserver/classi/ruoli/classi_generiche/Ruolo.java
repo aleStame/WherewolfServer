@@ -8,7 +8,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categori
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
@@ -282,12 +281,7 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoPartita getEsitoPartita(Partita partita)
-    {
-        EsitoPartita esito = controlloVittoriaUmani(partita);
-        if(isVittoriaAmanti(partita)) esito = VITTORIA;
-        return esito;
-    }
+    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
 
     public EsitoAttacco vampirizzazione()
     {
@@ -340,16 +334,6 @@ public class Ruolo
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
-    private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
-
-    private EsitoPartita controlloVittoriaUmani(Partita partita)
-    {
-        EsitoPartita esito = NON_FINITO;
-        if(isPartitaSconfitta(partita)) esito = SCONFITTA;
-        else if(isPartitaVinta(partita)) esito = VITTORIA;
-        return esito;
-    }
-
     private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
 
     private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
@@ -391,16 +375,6 @@ public class Ruolo
         if(isAmato()) perdiProtezioni();
         if(!isRomeo()) risultato = FALLITO;
         return risultato;
-    }
-
-    private boolean isPartitaSconfitta(Partita partita)
-    {
-        return partita.isNoGiocatoriVivi() || partita.isSoloCreatureOmbra();
-    }
-
-    private boolean isPartitaVinta(Partita partita)
-    {
-        return partita.isNoCreatureOmbra() && !partita.isNoGiocatoriVivi();
     }
 
 }
