@@ -649,6 +649,81 @@ public final class TestGiocatoriVivi
 
     @Test public void testSensitivaAssente() { verificaFalso(isSensitivaPresente()); }
 
+    @Test public void testGhoulVivoPresente()
+    {
+        String nome = "Tony";
+        aggiungiGiocatore(nome, "Ghoul");
+        verificaVero(giocatori.isGhoul(nome));
+    }
+
+//    @Test public void testGhoulVivoAssente()
+//    {
+//        String nome = "Margherita";
+//        inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
+//        verificaFalso(partita.isGhoulVivo(nome));
+//    }
+//
+//    @Test public void testGhoulMorto()
+//    {
+//        String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
+//        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
+//        attaccoLupi(tipoLupo, nomeGhoul);
+//        terminaNotte();
+//        verificaFalso(partita.isGhoulVivo(nomeGhoul));
+//    }
+//
+//    @Test public void testNosferatuVivoPresente()
+//    {
+//        String nome = "Matilde";
+//        inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
+//        verificaVero(partita.isNosferatuVivo(nome));
+//    }
+//
+//    @Test public void testNosferatuVivoAssente()
+//    {
+//        String nome = "Pamela";
+//        inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
+//        verificaFalso(partita.isNosferatuVivo(nome));
+//    }
+//
+//    @Test public void testNosferatuMorto()
+//    {
+//        String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
+//        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });
+//        attaccoLupi(tipoLupo, nomeGhoul);
+//        terminaNotte();
+//        verificaFalso(partita.isNosferatuVivo(nomeGhoul));
+//    }
+//
+//    @Test public void testProgenieNosferatuViva()
+//    {
+//        String nomeVittima = "Pina", tipoLupo = "Lupo solitario";
+//        inizializzaPartita(new String[][] { { nomeVittima, "Bocca di rosa" }, { "Ugo", tipoLupo }, { "Mariangela", "Nosferatu" } });
+//        attaccoLupi(tipoLupo, nomeVittima);
+//        progenizzazioneNosferatu(nomeVittima);
+//        terminaNotte();
+//        verificaVero(partita.isProgenieNosferatuViva(nomeVittima));
+//    }
+//
+//    @Test public void testNoProgenieNosferatu()
+//    {
+//        String nome = "Mark";
+//        inizializzaPartita(new String[][] { { nome, "Azzeccagarbugli" } });
+//        verificaFalso(partita.isProgenieNosferatuViva(nome));
+//    }
+//
+//    @Test public void testProgenieNosferatuMorta()
+//    {
+//        String nomeVittima = "Clark", tipoLupo = "Lupo reietto";
+//        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo } });
+//        attaccoLupi(tipoLupo, nomeVittima);
+//        progenizzazioneNosferatu(nomeVittima);
+//        terminaNotte();
+//        attaccoLupi(tipoLupo, nomeVittima);
+//        terminaNotte();
+//        verificaFalso(partita.isProgenieNosferatuViva(nomeVittima));
+//    }
+
     private boolean isSensitivaPresente() { return giocatori.isSensitivaPresente(); }
 
     private boolean isMagoPresente() { return giocatori.isMagoPresente(); }
