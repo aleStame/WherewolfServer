@@ -1,9 +1,17 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.INQUISIZIONE;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -51,6 +59,19 @@ public final class TestInquisizione
     @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
+    public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
+    private static Stream<Arguments> getEsempiEsitiPartita()
+    {
+        Partita[] partite = new Partita[]
+        {
+            new Partita(new String[][] { { "Iris", "Leprecauno" }, { "Filippo", "Prete" } }),
+            new Partita(new String[][] { { "Alessandro", "Oratore" }, { "Alessio", "Mercante" } })
+        };
+        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], VITTORIA));
+    }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

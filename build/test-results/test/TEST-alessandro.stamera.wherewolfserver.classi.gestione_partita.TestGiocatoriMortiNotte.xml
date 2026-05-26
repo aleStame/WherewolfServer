@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-26T22:17:13" hostname="ALESSANDRO" time="0.023">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-26T22:28:17" hostname="ALESSANDRO" time="0.016">
   <properties/>
   <testcase name="[1] nomeRuolo=Prete, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.004"/>
-  <testcase name="[2] nomeRuolo=Eremita, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.004"/>
+  <testcase name="[2] nomeRuolo=Eremita, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.002"/>
   <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.003"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.004"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Prete@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@643d2dae
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@22c75c01
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@63d5874f
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@3b705be7
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@43984213
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@3e5fd2b1
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.003"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Prete@43acd79e
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@49f40c00
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@6fbb4061
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@38830ea
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@485e13d7
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@46e64760
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
