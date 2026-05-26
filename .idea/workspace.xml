@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNosferatuVivo">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProgenieNosferatuViva">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,22 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02962" summary="VERDE: testProtezioni riuscito">
-      <option name="closed" value="true" />
-      <created>1779442738880</created>
-      <option name="number" value="02962" />
-      <option name="presentableId" value="LOCAL-02962" />
-      <option name="project" value="LOCAL" />
-      <updated>1779442738880</updated>
-    </task>
-    <task id="LOCAL-02963" summary="VERDE DIRETTO: testCreatureOmbra non riuscito">
-      <option name="closed" value="true" />
-      <created>1779442954918</created>
-      <option name="number" value="02963" />
-      <option name="presentableId" value="LOCAL-02963" />
-      <option name="project" value="LOCAL" />
-      <updated>1779442954918</updated>
     </task>
     <task id="LOCAL-02964" summary="VERDE DIRETTO: testCreatureOmbra riuscito">
       <option name="closed" value="true" />
@@ -681,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779800541643</updated>
     </task>
-    <option name="localTasksCounter" value="3011" />
+    <task id="LOCAL-03011" summary="REFACTORING: definizione del metodo verificaNosferatuNonVivo">
+      <option name="closed" value="true" />
+      <created>1779800702954</created>
+      <option name="number" value="03011" />
+      <option name="presentableId" value="LOCAL-03011" />
+      <option name="project" value="LOCAL" />
+      <updated>1779800702954</updated>
+    </task>
+    <task id="LOCAL-03012" summary="REFACTORING: definizione del metodo isProgenieNosferatuViva">
+      <option name="closed" value="true" />
+      <created>1779800955714</created>
+      <option name="number" value="03012" />
+      <option name="presentableId" value="LOCAL-03012" />
+      <option name="project" value="LOCAL" />
+      <updated>1779800955714</updated>
+    </task>
+    <option name="localTasksCounter" value="3013" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testVittoria non riuscito" />
-    <MESSAGE value="VERDE: testVittoria riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
     <MESSAGE value="ROSSO: testSconfitta non riuscito" />
     <MESSAGE value="VERDE: testSconfitta riuscito" />
@@ -721,6 +720,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isGhoulVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaGhoulNonVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVivo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatuVivo" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNosferatuNonVivo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProgenieNosferatuViva" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProgenieNosferatuViva" />
   </component>
 </project>
