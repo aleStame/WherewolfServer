@@ -7,8 +7,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 
@@ -31,16 +30,7 @@ public class Villaggio extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.getNumeroGiocatoriVivi() > 0)
-        {
-            if(partita.isNoCreatureOmbra())
-            {
-                if(partita.getNumeroCriminali() == 0) esito = VITTORIA;
-                else esito = getEsitoPartitaGuardie(partita);
-            }
-            else if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
-        }
-        else esito = SCONFITTA;
+        if(esito == VITTORIA && partita.getNumeroCriminali() > 0) esito = getEsitoPartitaGuardie(partita);
         return esito;
     }
 
