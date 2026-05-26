@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoLupi riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/TestGiovaneLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/lupi/TestGiovaneLupo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,30 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02972" summary="VERDE: testControlloMedium riuscito">
-      <option name="closed" value="true" />
-      <created>1779523838085</created>
-      <option name="number" value="02972" />
-      <option name="presentableId" value="LOCAL-02972" />
-      <option name="project" value="LOCAL" />
-      <updated>1779523838086</updated>
-    </task>
-    <task id="LOCAL-02973" summary="VERDE: testControlloMedium riuscito">
-      <option name="closed" value="true" />
-      <created>1779524663859</created>
-      <option name="number" value="02973" />
-      <option name="presentableId" value="LOCAL-02973" />
-      <option name="project" value="LOCAL" />
-      <updated>1779524663859</updated>
-    </task>
-    <task id="LOCAL-02974" summary="ROSSO: testNegromanteEremita non riuscito">
-      <option name="closed" value="true" />
-      <created>1779525665279</created>
-      <option name="number" value="02974" />
-      <option name="presentableId" value="LOCAL-02974" />
-      <option name="project" value="LOCAL" />
-      <updated>1779525665279</updated>
     </task>
     <task id="LOCAL-02975" summary="VERDE: testNegromanteEremita riuscito">
       <option name="closed" value="true" />
@@ -682,7 +657,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779813434653</updated>
     </task>
-    <option name="localTasksCounter" value="3021" />
+    <task id="LOCAL-03021" summary="ROSSO: testAttaccoLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1779814389355</created>
+      <option name="number" value="03021" />
+      <option name="presentableId" value="LOCAL-03021" />
+      <option name="project" value="LOCAL" />
+      <updated>1779814389355</updated>
+    </task>
+    <task id="LOCAL-03022" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1779814676210</created>
+      <option name="number" value="03022" />
+      <option name="presentableId" value="LOCAL-03022" />
+      <option name="project" value="LOCAL" />
+      <updated>1779814676210</updated>
+    </task>
+    <task id="LOCAL-03023" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1779814841408</created>
+      <option name="number" value="03023" />
+      <option name="presentableId" value="LOCAL-03023" />
+      <option name="project" value="LOCAL" />
+      <updated>1779814841408</updated>
+    </task>
+    <option name="localTasksCounter" value="3024" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testGhoulMorto riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testNosferatuVivoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNosferatuVivoAssente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testProgenieNosferatuViva riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNoProgenieNosferatu riuscito" />
@@ -722,6 +719,8 @@
     <MESSAGE value="VERDE: testEsitoPartitaDefault riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isVittoriaUomini" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupi riuscito" />
   </component>
 </project>
