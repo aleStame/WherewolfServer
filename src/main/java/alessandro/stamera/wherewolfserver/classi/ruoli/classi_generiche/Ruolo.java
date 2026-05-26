@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
@@ -284,8 +285,8 @@ public class Ruolo
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito = controlloVittoriaUmani(partita);
-        if(isVittoriaAmanti(partita)) esito = VITTORIA;
+        EsitoPartita esito = NON_FINITO;
+        if(getCategoria() == UOMINI) esito = isVittoriaUomini(partita, esito);
         return esito;
     }
 
@@ -338,17 +339,14 @@ public class Ruolo
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
-    private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
-
-    private boolean isVittoriaAmanti(Partita partita) { return isRomeo() && partita.isGiuliettaViva(); }
-
-    private EsitoPartita controlloVittoriaUmani(Partita partita)
+    private EsitoPartita isVittoriaUomini(Partita partita, EsitoPartita esito)
     {
-        EsitoPartita esito = NON_FINITO;
-        if(isPartitaSconfitta(partita)) esito = SCONFITTA;
-        else if(isPartitaVinta(partita)) esito = VITTORIA;
+        if(partita.isSoloCreatureOmbra() || partita.getNumeroGiocatoriVivi() == 0) esito = SCONFITTA;
+        else if(partita.isNoCreatureOmbra()) esito = VITTORIA;
         return esito;
     }
+
+    private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
 
@@ -391,16 +389,6 @@ public class Ruolo
         if(isAmato()) perdiProtezioni();
         if(!isRomeo()) risultato = FALLITO;
         return risultato;
-    }
-
-    private boolean isPartitaSconfitta(Partita partita)
-    {
-        return partita.isNoGiocatoriVivi() || partita.isSoloCreatureOmbra();
-    }
-
-    private boolean isPartitaVinta(Partita partita)
-    {
-        return partita.isNoCreatureOmbra() && !partita.isNoGiocatoriVivi();
     }
 
 }
