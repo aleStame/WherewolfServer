@@ -667,15 +667,17 @@ public final class TestGiocatoriVivi
     {
         String nome = "Matilde";
         aggiungiGiocatore(nome, "Nosferatu");
-        verificaVero(giocatori.isNosferatu(nome));
+        verificaVero(isNosferatu(nome));
     }
 
     @Test public void testNosferatuAssente()
     {
         String nome = "Pamela";
         aggiungiGiocatore(nome, "Cacciatore di vampiri");
-        verificaFalso(giocatori.isNosferatu(nome));
+        verificaFalso(isNosferatu(nome));
     }
+
+    private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
 
     private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
 //
