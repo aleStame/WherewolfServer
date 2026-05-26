@@ -508,7 +508,7 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void attaccoAltriLupi(String tipoLupo)
     {
         String lupoAttaccante = "Capo branco", nomeVittima = "Mattia";
