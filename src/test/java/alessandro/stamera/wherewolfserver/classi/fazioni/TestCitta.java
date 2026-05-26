@@ -1,10 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -61,6 +63,12 @@ public final class TestCitta
     }
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
+
+    @Test public void testVittoria()
+    {
+        Partita partita = new Partita(new String[][] { { "Paolo", "Contadino eroe" }, { "Michele", "Mercante" } });
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

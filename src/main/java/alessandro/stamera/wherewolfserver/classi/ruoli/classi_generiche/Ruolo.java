@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
@@ -283,12 +282,7 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoPartita getEsitoPartita(Partita partita)
-    {
-        EsitoPartita esito = NON_FINITO;
-        if(getCategoria() == UOMINI) esito = isVittoriaUomini(partita, esito);
-        return esito;
-    }
+    public EsitoPartita getEsitoPartita(Partita partita) { return NON_FINITO; }
 
     public EsitoAttacco vampirizzazione()
     {
@@ -338,13 +332,6 @@ public class Ruolo
     public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
-
-    private EsitoPartita isVittoriaUomini(Partita partita, EsitoPartita esito)
-    {
-        if(partita.isSoloCreatureOmbra() || partita.getNumeroGiocatoriVivi() == 0) esito = SCONFITTA;
-        else if(partita.isNoCreatureOmbra()) esito = VITTORIA;
-        return esito;
-    }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 

@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" tests="35" skipped="0" failures="0" errors="0" timestamp="2026-05-26T20:54:30" hostname="ALESSANDRO" time="0.066">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" tests="35" skipped="0" failures="0" errors="0" timestamp="2026-05-26T21:58:54" hostname="ALESSANDRO" time="0.252">
   <properties/>
-  <testcase name="testEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testNonna()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testPrete()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testMago()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testNonna()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="testPrete()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.006"/>
+  <testcase name="testMago()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
   <testcase name="testOste()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testRiconoscimentoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testRiconoscimentoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
   <testcase name="testCacciatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4a216eb4, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5ec88f9e, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3b11620a, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@357f6391, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@582e9152, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="[6] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@349c4d1c, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@60b5e80d, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@31aab981, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testCacciatoreDiVampiri()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
-  <testcase name="testSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.007"/>
-  <testcase name="testMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testMonaco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@70f68288, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.009"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@46911148, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.005"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2db1b657, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7e351d7, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.006"/>
+  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@43c57161, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="[6] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@d902300, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.0"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2db33feb, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@30c3ae63, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testCacciatoreDiVampiri()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.01"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.005"/>
+  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testMonaco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="testNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
   <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@6cbe7d4d
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@30c4e352
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@58015e56
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@2ae62bb6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@28ee7bee
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@2ddb3ae8
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@1fc713c9
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@73809e7
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@31e130bf
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@6ca8fcf3
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@1d408060
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@1d408060
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@28ee7bee
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@3679d92e
+  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@4667c4c1
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@7a45d714
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@643d2dae
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@69afa141
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@7249dadf
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@5984feef
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@38830ea
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@4483d35
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@6f044c58
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@5115f590
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@63d5874f
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@63d5874f
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@7249dadf
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2f9a4401
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

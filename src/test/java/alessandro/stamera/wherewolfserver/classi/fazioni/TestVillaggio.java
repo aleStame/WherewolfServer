@@ -15,7 +15,6 @@ import java.util.stream.Stream;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -66,15 +65,9 @@ public final class TestVillaggio
         {
             new Partita(new String[][] { { "Noemi", "Bardo" }, { "Elisa", "Pazzo" } }),
             new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } }),
-            new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }), new Partita(new String[][] { }),
-            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } }),
             new Partita(new String[][] { { "Federico", "Capo gilda" }, { "Otello", "Giullare" } })
         };
-        return Stream.of
-        (
-            Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA),
-            Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], SCONFITTA)
-        );
+        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
     }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }

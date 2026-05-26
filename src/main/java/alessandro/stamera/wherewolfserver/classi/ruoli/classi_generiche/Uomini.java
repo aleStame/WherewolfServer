@@ -22,7 +22,7 @@ public class Uomini extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && partita.isSoloCreatureOmbra()) esito = SCONFITTA;
+        if(esito == NON_FINITO) if(partita.isSoloCreatureOmbra() || partita.getNumeroGiocatoriVivi() == 0) esito = SCONFITTA;
         return esito;
     }
 
