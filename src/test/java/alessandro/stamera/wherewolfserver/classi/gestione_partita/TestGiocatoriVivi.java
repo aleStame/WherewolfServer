@@ -670,20 +670,16 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isNosferatu(nome));
     }
 
+    @Test public void testNosferatuAssente()
+    {
+        String nome = "Pamela";
+        aggiungiGiocatore(nome, "Cacciatore di vampiri");
+        verificaFalso(giocatori.isNosferatu(nome));
+    }
+
     private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
 //
-//
-//
-//
-//
-//    @Test public void testNosferatuVivoAssente()
-//    {
-//        String nome = "Pamela";
-//        inizializzaPartita(new String[][] { { nome, "Cacciatore di vampiri" } });
-//        verificaFalso(partita.isNosferatuVivo(nome));
-//    }
-//
-//    @Test public void testNosferatuMorto()
+//   @Test public void testNosferatuMorto()
 //    {
 //        String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
 //        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });

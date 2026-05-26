@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isGhoul">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNosferatuPresente riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,14 +288,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02956" summary="ROSSO: testControlloSensitivaContadinoMostro non riuscito">
-      <option name="closed" value="true" />
-      <created>1779379260995</created>
-      <option name="number" value="02956" />
-      <option name="presentableId" value="LOCAL-02956" />
-      <option name="project" value="LOCAL" />
-      <updated>1779379260996</updated>
     </task>
     <task id="LOCAL-02957" summary="VERDE: testControlloSensitivaContadinoMostro riuscito">
       <option name="closed" value="true" />
@@ -681,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779798341863</updated>
     </task>
-    <option name="localTasksCounter" value="3005" />
+    <task id="LOCAL-03005" summary="VERDE DIRETTO: testNosferatuPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1779798861956</created>
+      <option name="number" value="03005" />
+      <option name="presentableId" value="LOCAL-03005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779798861956</updated>
+    </task>
+    <option name="localTasksCounter" value="3006" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoNosferatuContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatuContadinoMostro riuscito" />
     <MESSAGE value="ROSSO: testAttaccoNosferatuContadinoMostroAmato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatuContadinoMostroAmato riuscito" />
@@ -721,6 +720,7 @@
     <MESSAGE value="VERDE DIRETTO: testGhoulVivoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGhoulVivoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGhoul" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGhoul" />
+    <MESSAGE value="VERDE DIRETTO: testNosferatuPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNosferatuPresente riuscito" />
   </component>
 </project>
