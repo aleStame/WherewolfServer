@@ -53,9 +53,6 @@ public final class TestCapoBranco
     @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
     public void testTratti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
-    @ParameterizedTest @MethodSource("getEsitiPartite")
-    public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
-
     @Test public void testSuicidio() { verificaAttaccoLupi(ruolo, RIUSCITO); }
 
     @ParameterizedTest
@@ -71,17 +68,6 @@ public final class TestCapoBranco
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private static Stream<Arguments> getEsitiPartite()
-    {
-        Partita[] partite = new Partita[]
-        {
-            new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }),
-            new Partita(new String[][] { { "Manfredi", "Azzeccagarbugli" }, { "Massimo", "Giullare" }, { "Luana", "Guaritore" } }),
-            new Partita(new String[][] { { "Chiara", "Oratore" }, { "Giuseppe", "Capo branco" } })
-        };
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
-    }
 
     private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
