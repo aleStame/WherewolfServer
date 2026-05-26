@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-26T22:07:39" hostname="ALESSANDRO" time="0.061">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-26T22:10:14" hostname="ALESSANDRO" time="0.07">
   <properties/>
   <testcase name="testInquisito()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
-  <testcase name="testInserimentoGiocatori()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.006"/>
-  <testcase name="testOratorePresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.005"/>
-  <testcase name="testAngeloCustodePresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.002"/>
-  <testcase name="testIsContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
-  <testcase name="testNumeroRuoliCitta()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.005"/>
-  <testcase name="testContadinoMostroPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.006"/>
-  <testcase name="testVotazione()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.002"/>
-  <testcase name="[1] nomeCriminale=Assassino" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.004"/>
-  <testcase name="testContadinoMostroAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
-  <testcase name="testEliminazioneGiocatori()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
+  <testcase name="testInserimentoGiocatori()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.002"/>
+  <testcase name="testOratorePresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
+  <testcase name="testAngeloCustodePresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.005"/>
+  <testcase name="testIsContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.005"/>
+  <testcase name="testNumeroRuoliCitta()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.008"/>
+  <testcase name="testContadinoMostroPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.002"/>
+  <testcase name="testVotazione()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
+  <testcase name="[1] nomeCriminale=Assassino" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.003"/>
+  <testcase name="testContadinoMostroAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.002"/>
+  <testcase name="testEliminazioneGiocatori()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.011"/>
   <testcase name="testOratoreAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@5e5aafc6
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2eed37f4
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@5d5b9ecb
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@48e8c32a
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@30839e44
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@52bf7bf6
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@40f35e52
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@443faa85
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@76a14c8d
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@1945113f
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@76a805b7
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@40f35e52
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@5562c2c9
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@22f4f8f2
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@53ed80d3
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@38f77cd9
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@31e2232f
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@1e1b061
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@2ff7a73
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@559cedee
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@6056232d
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@52d6d273
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@4667c4c1
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@107bfcb2
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@18371d89
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@11e355ca
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@52d6d273
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@69afa141
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@33f2df51
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@485e13d7
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

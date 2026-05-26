@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" tests="54" skipped="0" failures="0" errors="0" timestamp="2026-05-26T22:07:39" hostname="ALESSANDRO" time="0.359">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" tests="54" skipped="0" failures="0" errors="0" timestamp="2026-05-26T22:10:14" hostname="ALESSANDRO" time="0.512">
   <properties/>
-  <testcase name="testBardoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.001"/>
+  <testcase name="testBardoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.048"/>
   <testcase name="[1] nomeRuolo=Altra guardia, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[2] nomeRuolo=Angelo custode, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[3] nomeRuolo=Assassino, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[4] nomeRuolo=Azzeccagarbugli, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[5] nomeRuolo=Bardo, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[2] nomeRuolo=Angelo custode, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[3] nomeRuolo=Assassino, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
+  <testcase name="[4] nomeRuolo=Azzeccagarbugli, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.001"/>
+  <testcase name="[5] nomeRuolo=Bardo, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
   <testcase name="[6] nomeRuolo=Becchino, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
   <testcase name="[7] nomeRuolo=Bocca di rosa, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[8] nomeRuolo=Boia, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[9] nomeRuolo=Borgomastro, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[10] nomeRuolo=Bracconiere, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[11] nomeRuolo=Cacciatore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[12] nomeRuolo=Cacciatore di vampiri, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
+  <testcase name="[8] nomeRuolo=Boia, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
+  <testcase name="[9] nomeRuolo=Borgomastro, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[10] nomeRuolo=Bracconiere, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.006"/>
+  <testcase name="[11] nomeRuolo=Cacciatore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[12] nomeRuolo=Cacciatore di vampiri, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
   <testcase name="[13] nomeRuolo=Capo branco, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[14] nomeRuolo=Capo gilda, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[15] nomeRuolo=Cappuccetto rosso, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[16] nomeRuolo=Contadino eroe, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
+  <testcase name="[14] nomeRuolo=Capo gilda, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
+  <testcase name="[15] nomeRuolo=Cappuccetto rosso, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
+  <testcase name="[16] nomeRuolo=Contadino eroe, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
   <testcase name="[17] nomeRuolo=Contadino discendente dei lupi, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
-  <testcase name="[18] nomeRuolo=Contadino mostro, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[18] nomeRuolo=Contadino mostro, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
   <testcase name="[19] nomeRuolo=Contadino normale, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[20] nomeRuolo=Eremita, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
-  <testcase name="[21] nomeRuolo=Ghoul, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[22] nomeRuolo=Giovane lupo, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[23] nomeRuolo=Giulietta, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[24] nomeRuolo=Giullare, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[25] nomeRuolo=Goblin, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[20] nomeRuolo=Eremita, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
+  <testcase name="[21] nomeRuolo=Ghoul, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
+  <testcase name="[22] nomeRuolo=Giovane lupo, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[23] nomeRuolo=Giulietta, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
+  <testcase name="[24] nomeRuolo=Giullare, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
+  <testcase name="[25] nomeRuolo=Goblin, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
   <testcase name="[26] nomeRuolo=Guardia, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[27] nomeRuolo=Guardia corrotta, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[27] nomeRuolo=Guardia corrotta, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
   <testcase name="[28] nomeRuolo=Guaritore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
-  <testcase name="[29] nomeRuolo=Inquisitore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[30] nomeRuolo=Ladra, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
-  <testcase name="[31] nomeRuolo=Leprecauno, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[29] nomeRuolo=Inquisitore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.011"/>
+  <testcase name="[30] nomeRuolo=Ladra, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
+  <testcase name="[31] nomeRuolo=Leprecauno, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
   <testcase name="[32] nomeRuolo=Lupo del branco, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[33] nomeRuolo=Lupo reietto, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[34] nomeRuolo=Lupo solitario, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[35] nomeRuolo=Mago, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[36] nomeRuolo=Medium, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[37] nomeRuolo=Megera, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[38] nomeRuolo=Mercante, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.006"/>
-  <testcase name="[39] nomeRuolo=Monaco, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[40] nomeRuolo=Negromante, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
-  <testcase name="[41] nomeRuolo=Nonna, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.003"/>
-  <testcase name="[42] nomeRuolo=Nosferatu, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[43] nomeRuolo=Oratore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[33] nomeRuolo=Lupo reietto, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
+  <testcase name="[34] nomeRuolo=Lupo solitario, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.01"/>
+  <testcase name="[35] nomeRuolo=Mago, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
+  <testcase name="[36] nomeRuolo=Medium, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.001"/>
+  <testcase name="[37] nomeRuolo=Megera, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.001"/>
+  <testcase name="[38] nomeRuolo=Mercante, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.008"/>
+  <testcase name="[39] nomeRuolo=Monaco, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.001"/>
+  <testcase name="[40] nomeRuolo=Negromante, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.006"/>
+  <testcase name="[41] nomeRuolo=Nonna, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[42] nomeRuolo=Nosferatu, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.001"/>
+  <testcase name="[43] nomeRuolo=Oratore, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.019"/>
   <testcase name="[44] nomeRuolo=Oste, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
-  <testcase name="[45] nomeRuolo=Pazzo, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.006"/>
-  <testcase name="[46] nomeRuolo=Peccatore, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
-  <testcase name="[47] nomeRuolo=Posseduto, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
-  <testcase name="[48] nomeRuolo=Prete, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.006"/>
-  <testcase name="[49] nomeRuolo=Sidhe, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
-  <testcase name="[50] nomeRuolo=Spia, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
-  <testcase name="[51] nomeRuolo=Sensitiva, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
-  <testcase name="[52] nomeRuolo=Templare, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.007"/>
-  <testcase name="testBardoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.006"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@2a53f215
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@52bf7bf6
-alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@22f4f8f2
-alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@76a14c8d
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@6ee99964
-alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@59c70ceb
-alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@64f981e2
-alessandro.stamera.wherewolfserver.classi.ruoli.Boia@59bbb974
-alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@12f49ca8
-alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@1b2df3aa
-alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@7219ac49
-alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@551e4c6d
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2eed37f4
-alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@3fb9a67f
-alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@5562c2c9
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@3f36e8d1
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@794366a5
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@40f35e52
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@443faa85
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@794366a5
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@41da3aee
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@64920dc2
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@493ac8d3
-alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@67531e3a
-alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@1d50a7ca
-alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@3003e580
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@21a02556
-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta@138aa3cc
-alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@30839e44
-alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@1945113f
-alessandro.stamera.wherewolfserver.classi.ruoli.Ladra@697173d9
-alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@3d90eeb3
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7fb53256
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@27329d2a
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@2f894ad9
-alessandro.stamera.wherewolfserver.classi.ruoli.Mago@6993c8df
-alessandro.stamera.wherewolfserver.classi.ruoli.Medium@326e0b8e
-alessandro.stamera.wherewolfserver.classi.ruoli.Megera@41184371
-alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@76a805b7
-alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@167381c7
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@56382bc9
-alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@53ed80d3
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@7c51782d
-alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@48e8c32a
-alessandro.stamera.wherewolfserver.classi.ruoli.Oste@57c00115
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@4fe533ff
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@4e83a98
-alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@71b639d0
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@5d5b9ecb
-alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@5e5aafc6
-alessandro.stamera.wherewolfserver.classi.ruoli.Spia@5583098b
-alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@53a84ff4
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@316acbb5
-alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@6ee99964
+  <testcase name="[45] nomeRuolo=Pazzo, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[46] nomeRuolo=Peccatore, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
+  <testcase name="[47] nomeRuolo=Posseduto, aura=NERA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
+  <testcase name="[48] nomeRuolo=Prete, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="[49] nomeRuolo=Sidhe, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <testcase name="[50] nomeRuolo=Spia, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.002"/>
+  <testcase name="[51] nomeRuolo=Sensitiva, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.039"/>
+  <testcase name="[52] nomeRuolo=Templare, aura=BIANCA" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.005"/>
+  <testcase name="testBardoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati" time="0.004"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia@15efda6c
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@6056232d
+alessandro.stamera.wherewolfserver.classi.ruoli.Assassino@33f2df51
+alessandro.stamera.wherewolfserver.classi.ruoli.Azzeccagarbugli@107bfcb2
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@7bac686b
+alessandro.stamera.wherewolfserver.classi.ruoli.Becchino@2ab26378
+alessandro.stamera.wherewolfserver.classi.ruoli.BoccaDiRosa@f9f3928
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@404eca05
+alessandro.stamera.wherewolfserver.classi.ruoli.Borgomastro@58b91d57
+alessandro.stamera.wherewolfserver.classi.ruoli.Bracconiere@61a91c9b
+alessandro.stamera.wherewolfserver.classi.ruoli.Cacciatore@17092fff
+alessandro.stamera.wherewolfserver.classi.ruoli.CacciatoreDiVampiri@2121d1f9
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@31e2232f
+alessandro.stamera.wherewolfserver.classi.ruoli.CapoGilda@1806bc4c
+alessandro.stamera.wherewolfserver.classi.ruoli.CappuccettoRosso@69afa141
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@49f40c00
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@643d2dae
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro@52d6d273
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@4667c4c1
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@643d2dae
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@22c75c01
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@46e64760
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@3e5fd2b1
+alessandro.stamera.wherewolfserver.classi.ruoli.Giulietta@43982337
+alessandro.stamera.wherewolfserver.classi.ruoli.Giullare@5b275811
+alessandro.stamera.wherewolfserver.classi.ruoli.Goblin@6f044c58
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale@6d074b14
+alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta@c017175
+alessandro.stamera.wherewolfserver.classi.ruoli.Guaritore@559cedee
+alessandro.stamera.wherewolfserver.classi.ruoli.Inquisitore@18371d89
+alessandro.stamera.wherewolfserver.classi.ruoli.Ladra@4f3faa70
+alessandro.stamera.wherewolfserver.classi.ruoli.Leprecauno@4832f03b
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7af3874e
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@5a8816cc
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@68565bc7
+alessandro.stamera.wherewolfserver.classi.ruoli.Mago@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.Medium@5115f590
+alessandro.stamera.wherewolfserver.classi.ruoli.Megera@4b31a708
+alessandro.stamera.wherewolfserver.classi.ruoli.Mercante@11e355ca
+alessandro.stamera.wherewolfserver.classi.ruoli.Monaco@70d63e05
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@e11ecfa
+alessandro.stamera.wherewolfserver.classi.ruoli.Nonna@485e13d7
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@43984213
+alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@2ff7a73
+alessandro.stamera.wherewolfserver.classi.ruoli.Oste@38830ea
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@3b705be7
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@3a790e40
+alessandro.stamera.wherewolfserver.classi.ruoli.Posseduto@43acd79e
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@1e1b061
+alessandro.stamera.wherewolfserver.classi.ruoli.Sidhe@38f77cd9
+alessandro.stamera.wherewolfserver.classi.ruoli.Spia@4a8e6e89
+alessandro.stamera.wherewolfserver.classi.ruoli.Sensitiva@6fbb4061
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@63d5874f
+alessandro.stamera.wherewolfserver.classi.ruoli.Bardo@7bac686b
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

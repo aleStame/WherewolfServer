@@ -30,21 +30,23 @@ public class Villaggio extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && partita.isNoCreatureOmbra())
-        {
-            if(partita.getNumeroCriminali() == 0) esito = VITTORIA;
-            else esito = getEsitoPartitaGuardie(partita);
-        }
+        if(esito == NON_FINITO && partita.isNoCreatureOmbra()) esito = getEsitoPartitaCriminali(partita);
         return esito;
     }
 
     @Override public EsitoControlloSensitiva controlloSensitiva() { return EsitoControlloSensitiva.VILLAGGIO; }
 
+    private EsitoPartita getEsitoPartitaCriminali(Partita partita)
+    {
+        EsitoPartita esito = getEsitoPartitaGuardie(partita);
+        if(partita.getNumeroCriminali() == 0) esito = VITTORIA;
+        return esito;
+    }
+
     private EsitoPartita getEsitoPartitaGuardie(Partita partita)
     {
-        EsitoPartita esito;
+        EsitoPartita esito = VITTORIA;
         if(partita.isNoGuardie()) esito = SCONFITTA;
-        else esito = VITTORIA;
         return esito;
     }
 
