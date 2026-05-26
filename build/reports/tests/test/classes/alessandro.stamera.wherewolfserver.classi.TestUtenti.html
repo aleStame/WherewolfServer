@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.300s</div>
+<div class="counter">6.906s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,6 +63,9 @@
 <li>
 <a href="#tab0">Tests</a>
 </li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -78,94 +81,104 @@
 <tr>
 <td class="success">[1] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente</td>
 <td class="success">cambioPasswordNonRiuscito(String, String, String, String)[1]</td>
-<td class="success">0.030s</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta</td>
 <td class="success">cambioPasswordNonRiuscito(String, String, String, String)[2]</td>
-<td class="success">0.010s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">cambioPasswordRiuscito()</td>
 <td class="success">cambioPasswordRiuscito()</td>
-<td class="success">0.817s</td>
+<td class="success">6.550s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta</td>
 <td class="success">disiscrizioneNonRiuscita(String, String, String)[1]</td>
-<td class="success">0.016s</td>
+<td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente</td>
 <td class="success">disiscrizioneNonRiuscita(String, String, String)[2]</td>
-<td class="success">0.016s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente</td>
 <td class="success">disiscrizioneNonRiuscita(String, String, String)[3]</td>
-<td class="success">0.018s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">disiscrizioneRiuscita()</td>
 <td class="success">disiscrizioneRiuscita()</td>
-<td class="success">0.030s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=andrea, password=pwdsbagliata</td>
 <td class="success">loginNonRiuscito(String, String)[1]</td>
-<td class="success">0.012s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=gino, password=batmanbeyond</td>
 <td class="success">loginNonRiuscito(String, String)[2]</td>
-<td class="success">0.031s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=utentefinto, password=pwdfinta</td>
 <td class="success">loginNonRiuscito(String, String)[3]</td>
-<td class="success">0.018s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=andrea, password=andrea1998</td>
 <td class="success">loginRiuscito(String, String)[1]</td>
-<td class="success">0.217s</td>
+<td class="success">0.135s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=marco, password=passwordsecret</td>
 <td class="success">loginRiuscito(String, String)[2]</td>
-<td class="success">0.013s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=bruce, password=batmanbeyond</td>
 <td class="success">loginRiuscito(String, String)[3]</td>
+<td class="success">0.026s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">registrazioneNonRiuscita()</td>
+<td class="success">registrazioneNonRiuscita()</td>
 <td class="success">0.031s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">registrazioneNonRiuscita()</td>
-<td class="success">registrazioneNonRiuscita()</td>
-<td class="success">0.024s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">registrazioneRiuscita()</td>
 <td class="success">registrazioneRiuscita()</td>
-<td class="success">0.017s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 </table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">
@@ -175,7 +188,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 26 mag 2026, 22:42:12</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 26 mag 2026, 22:50:39</p>
 </div>
 </div>
 </body>
