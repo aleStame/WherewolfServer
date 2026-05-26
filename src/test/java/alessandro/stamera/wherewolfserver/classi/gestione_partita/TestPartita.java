@@ -767,7 +767,7 @@ public final class TestPartita
     {
         String nome = "Margherita";
         inizializzaPartita(new String[][] { { nome, "Cacciatore" } });
-        verificaFalso(isGhoulVivo(nome));
+        verificaGhoulNonVivo(nome);
     }
 
     @Test public void testGhoulMorto()
@@ -776,7 +776,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
         attaccoLupi(tipoLupo, nomeGhoul);
         terminaNotte();
-        verificaFalso(isGhoulVivo(nomeGhoul));
+        verificaGhoulNonVivo(nomeGhoul);
     }
 
     @Test public void testNosferatuVivoPresente()
@@ -830,6 +830,8 @@ public final class TestPartita
         terminaNotte();
         verificaFalso(partita.isProgenieNosferatuViva(nomeVittima));
     }
+
+    private void verificaGhoulNonVivo(String nome) { verificaFalso(isGhoulVivo(nome)); }
 
     private boolean isGhoulVivo(String nomeGhoul) { return partita.isGhoulVivo(nomeGhoul); }
 
