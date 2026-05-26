@@ -649,37 +649,32 @@ public final class TestGiocatoriVivi
 
     @Test public void testSensitivaAssente() { verificaFalso(isSensitivaPresente()); }
 
-    @Test public void testGhoulVivoPresente()
+    @Test public void testGhoulPresente()
     {
         String nome = "Tony";
         aggiungiGiocatore(nome, "Ghoul");
         verificaVero(isGhoul(nome));
     }
 
-    @Test public void testGhoulVivoAssente()
+    @Test public void testGhoulAssente()
     {
         String nome = "Margherita";
         aggiungiGiocatore(nome, "Cacciatore");
         verificaFalso(isGhoul(nome));
     }
 
+    @Test public void testNosferatuPresente()
+    {
+        String nome = "Matilde";
+        aggiungiGiocatore(nome, "Nosferatu");
+        verificaVero(giocatori.isNosferatu(nome));
+    }
+
     private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
 //
-//    @Test public void testGhoulMorto()
-//    {
-//        String nomeGhoul = "Massimo", tipoLupo = "Capo branco";
-//        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Tullio", tipoLupo } });
-//        attaccoLupi(tipoLupo, nomeGhoul);
-//        terminaNotte();
-//        verificaFalso(partita.isGhoulVivo(nomeGhoul));
-//    }
 //
-//    @Test public void testNosferatuVivoPresente()
-//    {
-//        String nome = "Matilde";
-//        inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
-//        verificaVero(partita.isNosferatuVivo(nome));
-//    }
+//
+//
 //
 //    @Test public void testNosferatuVivoAssente()
 //    {
