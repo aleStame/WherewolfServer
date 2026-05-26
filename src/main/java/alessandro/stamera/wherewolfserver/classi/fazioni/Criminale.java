@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Potere;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Uomini;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 
@@ -35,11 +34,14 @@ public class Criminale extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO)
-        {
-            esito = SCONFITTA;
-            if(partita.isNoGuardie()) esito = VITTORIA;
-        }
+        if(esito == NON_FINITO) esito = getEsitoPartitaGuardie(partita);
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaGuardie(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isNoGuardie()) esito = VITTORIA;
         return esito;
     }
 
