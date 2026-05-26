@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNosferatuPresente riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNosferatu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,22 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02957" summary="VERDE: testControlloSensitivaContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1779379698380</created>
-      <option name="number" value="02957" />
-      <option name="presentableId" value="LOCAL-02957" />
-      <option name="project" value="LOCAL" />
-      <updated>1779379698380</updated>
-    </task>
-    <task id="LOCAL-02958" summary="REFACTORING: definizione del metodo verificaVillaggio">
-      <option name="closed" value="true" />
-      <created>1779379978898</created>
-      <option name="number" value="02958" />
-      <option name="presentableId" value="LOCAL-02958" />
-      <option name="project" value="LOCAL" />
-      <updated>1779379978898</updated>
     </task>
     <task id="LOCAL-02959" summary="REFACTORING: definizione del metodo verificaNonEliminati">
       <option name="closed" value="true" />
@@ -681,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779798861956</updated>
     </task>
-    <option name="localTasksCounter" value="3006" />
+    <task id="LOCAL-03006" summary="VERDE DIRETTO: testNosferatuAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1779799136650</created>
+      <option name="number" value="03006" />
+      <option name="presentableId" value="LOCAL-03006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779799136650</updated>
+    </task>
+    <task id="LOCAL-03007" summary="REFACTORING: definizione del metodo isNosferatu">
+      <option name="closed" value="true" />
+      <created>1779799302177</created>
+      <option name="number" value="03007" />
+      <option name="presentableId" value="LOCAL-03007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779799302178</updated>
+    </task>
+    <option name="localTasksCounter" value="3008" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -696,8 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoNosferatuContadinoMostro riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoNosferatuContadinoMostroAmato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatuContadinoMostroAmato riuscito" />
     <MESSAGE value="Merge branch 'feature/attaccoNosferatuEremita' into develop" />
     <MESSAGE value="Correzione merge" />
@@ -721,6 +720,8 @@
     <MESSAGE value="VERDE DIRETTO: testGhoulVivoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGhoul" />
     <MESSAGE value="VERDE DIRETTO: testNosferatuPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNosferatuPresente riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testNosferatuAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNosferatu" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatu" />
   </component>
 </project>

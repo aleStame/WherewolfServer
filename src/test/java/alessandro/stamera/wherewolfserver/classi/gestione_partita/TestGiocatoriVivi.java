@@ -680,44 +680,6 @@ public final class TestGiocatoriVivi
     private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
 
     private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
-//
-//   @Test public void testNosferatuMorto()
-//    {
-//        String nomeGhoul = "Cesare", tipoLupo = "Lupo del branco";
-//        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Annibale", tipoLupo } });
-//        attaccoLupi(tipoLupo, nomeGhoul);
-//        terminaNotte();
-//        verificaFalso(partita.isNosferatuVivo(nomeGhoul));
-//    }
-//
-//    @Test public void testProgenieNosferatuViva()
-//    {
-//        String nomeVittima = "Pina", tipoLupo = "Lupo solitario";
-//        inizializzaPartita(new String[][] { { nomeVittima, "Bocca di rosa" }, { "Ugo", tipoLupo }, { "Mariangela", "Nosferatu" } });
-//        attaccoLupi(tipoLupo, nomeVittima);
-//        progenizzazioneNosferatu(nomeVittima);
-//        terminaNotte();
-//        verificaVero(partita.isProgenieNosferatuViva(nomeVittima));
-//    }
-//
-//    @Test public void testNoProgenieNosferatu()
-//    {
-//        String nome = "Mark";
-//        inizializzaPartita(new String[][] { { nome, "Azzeccagarbugli" } });
-//        verificaFalso(partita.isProgenieNosferatuViva(nome));
-//    }
-//
-//    @Test public void testProgenieNosferatuMorta()
-//    {
-//        String nomeVittima = "Clark", tipoLupo = "Lupo reietto";
-//        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo } });
-//        attaccoLupi(tipoLupo, nomeVittima);
-//        progenizzazioneNosferatu(nomeVittima);
-//        terminaNotte();
-//        attaccoLupi(tipoLupo, nomeVittima);
-//        terminaNotte();
-//        verificaFalso(partita.isProgenieNosferatuViva(nomeVittima));
-//    }
 
     private boolean isSensitivaPresente() { return giocatori.isSensitivaPresente(); }
 
