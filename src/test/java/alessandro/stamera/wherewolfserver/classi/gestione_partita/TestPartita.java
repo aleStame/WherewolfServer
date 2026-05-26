@@ -809,14 +809,14 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaVero(partita.isProgenieNosferatuViva(nomeVittima));
+        verificaVero(isProgenieNosferatuViva(nomeVittima));
     }
 
     @Test public void testNoProgenieNosferatu()
     {
         String nome = "Mark";
         inizializzaPartita(new String[][] { { nome, "Azzeccagarbugli" } });
-        verificaFalso(partita.isProgenieNosferatuViva(nome));
+        verificaFalso(isProgenieNosferatuViva(nome));
     }
 
     @Test public void testProgenieNosferatuMorta()
@@ -828,8 +828,10 @@ public final class TestPartita
         terminaNotte();
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
-        verificaFalso(partita.isProgenieNosferatuViva(nomeVittima));
+        verificaFalso(isProgenieNosferatuViva(nomeVittima));
     }
+
+    private boolean isProgenieNosferatuViva(String nome) { return partita.isProgenieNosferatuViva(nome); }
 
     private void verificaNosferatuNonVivo(String nome) { verificaFalso(isNosferatuVivo(nome)); }
 
