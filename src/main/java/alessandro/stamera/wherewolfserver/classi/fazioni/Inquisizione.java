@@ -1,8 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.INQUISIZIONE;
 
 public class Inquisizione extends Ruolo
@@ -14,5 +18,13 @@ public class Inquisizione extends Ruolo
     }
 
     @Override public boolean isInquisizione() { return true; }
+
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(partita.isSoloCreatureOmbra() || partita.isMisticiPresenti()) esito = SCONFITTA;
+        if(partita.isNoCreatureOmbra() && !partita.isMisticiPresenti()) esito = VITTORIA;
+        return esito;
+    }
 
 }

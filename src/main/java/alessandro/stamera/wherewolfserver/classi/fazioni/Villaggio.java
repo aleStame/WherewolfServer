@@ -31,7 +31,16 @@ public class Villaggio extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.getNumeroCriminali() > 0) esito = getEsitoPartitaGuardie(partita);
+        if(partita.getNumeroGiocatoriVivi() > 0)
+        {
+            if(partita.isNoCreatureOmbra())
+            {
+                if(partita.getNumeroCriminali() == 0) esito = VITTORIA;
+                else esito = getEsitoPartitaGuardie(partita);
+            }
+            else if(partita.isSoloCreatureOmbra()) esito = SCONFITTA;
+        }
+        else esito = SCONFITTA;
         return esito;
     }
 

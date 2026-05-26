@@ -68,7 +68,7 @@ public final class TestBoia
         };
         return Stream.of
         (
-    Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], SCONFITTA),
+            Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], SCONFITTA),
             Arguments.of(partite[3], VITTORIA)
         );
     }

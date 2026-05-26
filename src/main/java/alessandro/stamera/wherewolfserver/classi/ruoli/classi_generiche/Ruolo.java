@@ -8,6 +8,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categori
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
@@ -281,7 +282,7 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
+    public EsitoPartita getEsitoPartita(Partita partita) { return NON_FINITO; }
 
     public EsitoAttacco vampirizzazione()
     {

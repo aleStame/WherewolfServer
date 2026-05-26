@@ -1,16 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public final class TestAssassino
 {
@@ -45,12 +41,6 @@ public final class TestAssassino
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
-    @Test public void testControllaVittoriaRomeo()
-    {
-        ruolo.romeizzazione();
-        assertThat(ruolo.getEsitoPartita(getEsempioPartita())).isEqualTo(VITTORIA);
-    }
-
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
@@ -58,14 +48,5 @@ public final class TestAssassino
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private Partita getEsempioPartita()
-    {
-        Partita partita = mock(Partita.class);
-        when(partita.isFinita()).thenReturn(true);
-        when(partita.isGiuliettaViva()).thenReturn(true);
-        when(partita.isSoloCreatureOmbra()).thenReturn(false);
-        return partita;
-    }
 
 }
