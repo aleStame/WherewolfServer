@@ -27,8 +27,7 @@ public final class TestEremita
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
-    @Test
-    public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
+    @Test public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
 
     @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
 
