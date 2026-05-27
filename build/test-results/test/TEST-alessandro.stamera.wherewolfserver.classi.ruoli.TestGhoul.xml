@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-05-27T14:28:37" hostname="ALESSANDRO" time="0.15">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-05-27T14:31:34" hostname="ALESSANDRO" time="0.153">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@748a654a, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.005"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1d8b0500, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.006"/>
-  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.005"/>
-  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.004"/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.006"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.004"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.004"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testLeprecauno()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.023"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1e226bcd, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@35025a0a, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.052"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.004"/>
+  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.0"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.005"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.019"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.01"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testLeprecauno()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
+  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
   <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.0"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.0"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@e11ecfa
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@17092fff
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@3a790e40
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@17092fff
-alessandro.stamera.wherewolfserver.classi.ruoli.Oste@43984213
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@17092fff
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@2f9a4401
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.006"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@57a6a933
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@64da6cbd
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@41ccb3b9
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@64da6cbd
+alessandro.stamera.wherewolfserver.classi.ruoli.Oste@69aa7d76
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@64da6cbd
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@5c887052
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

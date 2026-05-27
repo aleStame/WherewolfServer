@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: sistemazione della gerarchia Villaggio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCategoria non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -291,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02988" summary="VERDE: testVittoria riuscito">
-      <option name="closed" value="true" />
-      <created>1779548080710</created>
-      <option name="number" value="02988" />
-      <option name="presentableId" value="LOCAL-02988" />
-      <option name="project" value="LOCAL" />
-      <updated>1779548080711</updated>
     </task>
     <task id="LOCAL-02989" summary="REFACTORING: definizione del metodo isPartitaVinta">
       <option name="closed" value="true" />
@@ -684,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779891025041</updated>
     </task>
-    <option name="localTasksCounter" value="3037" />
+    <task id="LOCAL-03037" summary="ROSSO: testCategoria non riuscito">
+      <option name="closed" value="true" />
+      <created>1779892152400</created>
+      <option name="number" value="03037" />
+      <option name="presentableId" value="LOCAL-03037" />
+      <option name="project" value="LOCAL" />
+      <updated>1779892152400</updated>
+    </task>
+    <option name="localTasksCounter" value="3038" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -712,7 +710,6 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
-    <MESSAGE value="ROSSO: testCategoria non riuscito" />
     <MESSAGE value="VERDE: testCategoria riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
@@ -724,6 +721,7 @@
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia Citta" />
     <MESSAGE value="REFACTORING: sistemazione della gerarchia Villaggio" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: sistemazione della gerarchia Villaggio" />
+    <MESSAGE value="ROSSO: testCategoria non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCategoria non riuscito" />
   </component>
 </project>
