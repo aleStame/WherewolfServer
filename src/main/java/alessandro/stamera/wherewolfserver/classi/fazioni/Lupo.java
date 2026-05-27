@@ -3,19 +3,18 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.CreatureOmbra;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
 
-public class Lupo extends Ruolo
+public class Lupo extends CreatureOmbra
 {
 
     public Lupo(String nome, String descrizione, int lune)
@@ -40,8 +39,7 @@ public class Lupo extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(isPresentiSoloLupiConSenzaFazione(partita)) esito = VITTORIA;
-        else if(isNessunLupoVivo(partita)) esito = SCONFITTA;
+        if(esito == NON_FINITO && isPresentiSoloLupiConSenzaFazione(partita)) esito = VITTORIA;
         return esito;
     }
 
@@ -54,8 +52,6 @@ public class Lupo extends Ruolo
     {
         return partita.getNumeroLupiVivi() + partita.getNumeroSenzaFazioneVivi();
     }
-
-    private boolean isNessunLupoVivo(Partita partita) { return partita.getNumeroLupiVivi() == 0; }
 
     private boolean isProtetto() { return isRomeo() || isAmato(); }
 

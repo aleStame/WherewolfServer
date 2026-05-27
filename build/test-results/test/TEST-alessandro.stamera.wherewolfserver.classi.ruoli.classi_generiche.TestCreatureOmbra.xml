@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-27T14:44:47" hostname="ALESSANDRO" time="7.238">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-27T15:08:57" hostname="ALESSANDRO" time="0.778">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="5.061"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@ea52184, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.309"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1ee27d73, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.036"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@542f6803, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.037"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@7d70638
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@67507df
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7301eebe
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@5f96f6a2
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.733"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@77cb452c, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.01"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7b5cc918, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.019"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@317890ea, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.007"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@43984213
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@43acd79e
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@4832f03b
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@3b705be7
 ]]></system-out>
-  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,21 +1,15 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.lupi;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
-import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
-import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
