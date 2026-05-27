@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCategoria riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestCreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestCreatureOmbra.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testEsitoPartita non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-02990" summary="ROSSO: testSconfitta non riuscito">
-      <option name="closed" value="true" />
-      <created>1779552753782</created>
-      <option name="number" value="02990" />
-      <option name="presentableId" value="LOCAL-02990" />
-      <option name="project" value="LOCAL" />
-      <updated>1779552753782</updated>
     </task>
     <task id="LOCAL-02991" summary="VERDE: testSconfitta riuscito">
       <option name="closed" value="true" />
@@ -682,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779892356824</updated>
     </task>
-    <option name="localTasksCounter" value="3039" />
+    <task id="LOCAL-03039" summary="ROSSO: testEsitoPartita non riuscito">
+      <option name="closed" value="true" />
+      <created>1779892852257</created>
+      <option name="number" value="03039" />
+      <option name="presentableId" value="LOCAL-03039" />
+      <option name="project" value="LOCAL" />
+      <updated>1779892852258</updated>
+    </task>
+    <option name="localTasksCounter" value="3040" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -710,7 +710,6 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
-    <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: sistemazione gerarchia Uomini" />
     <MESSAGE value="REFACTORING: mocking dei test" />
@@ -722,6 +721,7 @@
     <MESSAGE value="REFACTORING: sistemazione della gerarchia Villaggio" />
     <MESSAGE value="ROSSO: testCategoria non riuscito" />
     <MESSAGE value="VERDE: testCategoria riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCategoria riuscito" />
+    <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsitoPartita non riuscito" />
   </component>
 </project>

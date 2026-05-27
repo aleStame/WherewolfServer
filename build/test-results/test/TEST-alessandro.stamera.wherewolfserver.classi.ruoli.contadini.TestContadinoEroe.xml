@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-05-27T14:39:58" hostname="ALESSANDRO" time="0.021">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-05-27T14:45:12" hostname="ALESSANDRO" time="0.042">
   <properties/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.004"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.001"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.002"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.009"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.002"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.002"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.001"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.005"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.013"/>
   <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.001"/>
   <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.001"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@17092fff
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@462e1e64
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.0"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@1b5a1d85
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@765d55d5
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
