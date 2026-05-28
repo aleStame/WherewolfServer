@@ -177,9 +177,14 @@ public final class TestRuolo
 
     private static Stream<Arguments> getEsempiPartita()
     {
+        return Stream.of(Arguments.of(getPartitaGenerica(), NON_FINITO), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
+    }
+
+    private static Partita getPartitaGenerica()
+    {
         Partita partita = mock(Partita.class);
         when(partita.isNoGiocatoriVivi()).thenReturn(false);
-        return Stream.of(Arguments.of(partita, NON_FINITO), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
+        return partita;
     }
 
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
