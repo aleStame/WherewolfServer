@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: parametrizzazione del test che controlla l'esito della partita">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPartitaGenerica">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,14 +290,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03003" summary="VERDE DIRETTO: testGhoulVivoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779798203379</created>
-      <option name="number" value="03003" />
-      <option name="presentableId" value="LOCAL-03003" />
-      <option name="project" value="LOCAL" />
-      <updated>1779798203379</updated>
     </task>
     <task id="LOCAL-03004" summary="REFACTORING: definizione del metodo isGhoul">
       <option name="closed" value="true" />
@@ -682,7 +675,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779962042680</updated>
     </task>
-    <option name="localTasksCounter" value="3052" />
+    <task id="LOCAL-03052" summary="REFACTORING: definizione del metodo getPartitaGenerica">
+      <option name="closed" value="true" />
+      <created>1779962278442</created>
+      <option name="number" value="03052" />
+      <option name="presentableId" value="LOCAL-03052" />
+      <option name="project" value="LOCAL" />
+      <updated>1779962278442</updated>
+    </task>
+    <option name="localTasksCounter" value="3053" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isVittoriaUomini" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
@@ -722,6 +722,7 @@
     <MESSAGE value="VERDE: testPartitaSconfitta riuscito" />
     <MESSAGE value="REFACTORING: eliminazione codice ridondante" />
     <MESSAGE value="REFACTORING: parametrizzazione del test che controlla l'esito della partita" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: parametrizzazione del test che controlla l'esito della partita" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPartitaGenerica" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPartitaGenerica" />
   </component>
 </project>

@@ -39,7 +39,7 @@ public final class Partita
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
         FACTORY.annullaSegnalazioni();
-        stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
+        inizializzaGiocatori(giocatori);
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
@@ -252,6 +252,11 @@ public final class Partita
     public boolean isLupoReiettoVivo() { return vivi.isLupoReiettoPresente(); }
 
     public boolean isLupoAttaccanteVivo() { return vivi.isCapoBrancoPresente() || vivi.isLupoBrancoPresente(); }
+
+    private void inizializzaGiocatori(String[][] giocatori)
+    {
+        stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
+    }
 
     private void confermaEliminazioneMortiNotte()
     {
