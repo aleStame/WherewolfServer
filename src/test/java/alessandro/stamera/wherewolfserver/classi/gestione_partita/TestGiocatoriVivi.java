@@ -693,6 +693,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testCapoBrancoAssente() { verificaFalso(isCapoBrancoPresente()); }
 
+    @Test public void testLupoBrancoPresente()
+    {
+        aggiungiGiocatore("Morgana", "Lupo del branco");
+        verificaVero(giocatori.isLupoBrancoPresente());
+    }
+
     private boolean isCapoBrancoPresente() { return giocatori.isCapoBrancoPresente(); }
 
     private boolean isLupoReiettoPresente() { return giocatori.isLupoReiettoPresente(); }

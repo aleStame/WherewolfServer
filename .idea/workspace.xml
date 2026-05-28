@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCapoBrancoPresente riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCapoBrancoPresente">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,22 +290,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03015" summary="VERDE: testEsitoPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1779807496225</created>
-      <option name="number" value="03015" />
-      <option name="presentableId" value="LOCAL-03015" />
-      <option name="project" value="LOCAL" />
-      <updated>1779807496225</updated>
-    </task>
-    <task id="LOCAL-03016" summary="ROSSO: testEsitoPartitaDefault non riuscito">
-      <option name="closed" value="true" />
-      <created>1779807801499</created>
-      <option name="number" value="03016" />
-      <option name="presentableId" value="LOCAL-03016" />
-      <option name="project" value="LOCAL" />
-      <updated>1779807801499</updated>
     </task>
     <task id="LOCAL-03017" summary="VERDE: testEsitoPartitaDefault riuscito">
       <option name="closed" value="true" />
@@ -682,7 +667,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779973871890</updated>
     </task>
-    <option name="localTasksCounter" value="3064" />
+    <task id="LOCAL-03064" summary="VERDE DIRETTO: testCapoBrancoAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1779974065860</created>
+      <option name="number" value="03064" />
+      <option name="presentableId" value="LOCAL-03064" />
+      <option name="project" value="LOCAL" />
+      <updated>1779974065861</updated>
+    </task>
+    <task id="LOCAL-03065" summary="REFACTORING: definizione del metodo isCapoBrancoPresente">
+      <option name="closed" value="true" />
+      <created>1779974271813</created>
+      <option name="number" value="03065" />
+      <option name="presentableId" value="LOCAL-03065" />
+      <option name="project" value="LOCAL" />
+      <updated>1779974271814</updated>
+    </task>
+    <option name="localTasksCounter" value="3066" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,8 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCategoria non riuscito" />
-    <MESSAGE value="VERDE: testCategoria riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita non riuscito" />
     <MESSAGE value="REFACTORING: definizione della gerarchia CreatureOmbra" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
@@ -722,6 +721,8 @@
     <MESSAGE value="VERDE DIRETTO: testLupoReiettoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoReiettoPresente" />
     <MESSAGE value="VERDE DIRETTO: testCapoBrancoPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCapoBrancoPresente riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCapoBrancoAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCapoBrancoPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCapoBrancoPresente" />
   </component>
 </project>
