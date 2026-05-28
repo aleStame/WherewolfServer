@@ -683,6 +683,8 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isLupoReiettoPresente());
     }
 
+    @Test public void testLupoReiettoAssente() { verificaFalso(giocatori.isLupoReiettoPresente()); }
+
     private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
 
     private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }
