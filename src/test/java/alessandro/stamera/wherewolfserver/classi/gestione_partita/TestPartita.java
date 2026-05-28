@@ -880,6 +880,12 @@ public final class TestPartita
         verificaVero(isCriminaliPresenti());
     }
 
+    @Test public void testAmatoNonPresente()
+    {
+        inizializzaPartita(new String[][] { });
+        verificaFalso(partita.isAmatoVivo());
+    }
+
     private boolean isCriminaliPresenti() { return partita.isCriminaliPresenti(); }
 
     private boolean isLupoAttaccanteVivo() { return partita.isLupoAttaccanteVivo(); }

@@ -255,6 +255,8 @@ public final class Partita
 
     public boolean isCriminaliPresenti() { return getNumeroCriminali() > 0; }
 
+    public boolean isAmatoVivo() { return true; }
+
     private void inizializzaGiocatori(String[][] giocatori)
     {
         stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
