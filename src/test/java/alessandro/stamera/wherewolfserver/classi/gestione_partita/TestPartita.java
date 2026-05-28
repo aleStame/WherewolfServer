@@ -843,6 +843,12 @@ public final class TestPartita
         verificaFalso(isNoGiocatoriVivi());
     }
 
+    @Test public void testLupoReiettoNonVivo()
+    {
+        inizializzaPartita(new String[][]{ });
+        verificaFalso(partita.isLupoReiettoVivo());
+    }
+
     private boolean isNoGiocatoriVivi() { return partita.isNoGiocatoriVivi(); }
 
     private void verificaProgenieNosferatuNonViva(String nome) { verificaFalso(isProgenieNosferatuViva(nome)); }
