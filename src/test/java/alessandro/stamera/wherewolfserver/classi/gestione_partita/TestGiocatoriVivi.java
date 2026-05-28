@@ -685,6 +685,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testLupoReiettoAssente() { verificaFalso(isLupoReiettoPresente()); }
 
+    @Test public void testCapoBrancoPresente()
+    {
+        aggiungiGiocatore("Alessio", "Capo branco");
+        verificaVero(giocatori.isCapoBrancoPresente());
+    }
+
     private boolean isLupoReiettoPresente() { return giocatori.isLupoReiettoPresente(); }
 
     private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
