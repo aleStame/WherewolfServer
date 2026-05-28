@@ -1,13 +1,17 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
@@ -20,6 +24,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.N
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public final class TestRuolo
 {
@@ -167,12 +172,14 @@ public final class TestRuolo
 
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(NON_VILLAGGIO); }
 
-    @Test public void testEsitoPartitaDefault() { assertThat(ruolo.getEsitoPartita(mock(Partita.class))).isEqualTo(NON_FINITO); }
+    @ParameterizedTest @MethodSource("getEsempiPartita")
+    public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
-    @Test public void testPartitaSconfitta()
+    private static Stream<Arguments> getEsempiPartita()
     {
-        Partita partita = new Partita(new String[][]{ });
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        Partita partita = mock(Partita.class);
+        when(partita.isNoGiocatoriVivi()).thenReturn(false);
+        return Stream.of(Arguments.of(partita, NON_FINITO), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
     }
 
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
