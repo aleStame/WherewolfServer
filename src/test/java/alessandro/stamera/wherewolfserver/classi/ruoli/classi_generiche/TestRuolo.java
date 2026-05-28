@@ -13,6 +13,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
@@ -167,6 +168,12 @@ public final class TestRuolo
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(NON_VILLAGGIO); }
 
     @Test public void testEsitoPartitaDefault() { assertThat(ruolo.getEsitoPartita(mock(Partita.class))).isEqualTo(NON_FINITO); }
+
+    @Test public void testPartitaSconfitta()
+    {
+        Partita partita = new Partita(new String[][]{ });
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
 
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
 
