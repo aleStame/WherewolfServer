@@ -846,13 +846,13 @@ public final class TestPartita
     @Test public void testLupoReiettoNonVivo()
     {
         inizializzaPartita(new String[][]{ });
-        verificaFalso(partita.isLupoReiettoVivo());
+        verificaFalso(isLupoReiettoVivo());
     }
 
     @Test public void testLupoReiettoVivo()
     {
         inizializzaPartita(new String[][]{ { "Camilla", "Lupo reietto" } });
-        verificaVero(partita.isLupoReiettoVivo());
+        verificaVero(isLupoReiettoVivo());
     }
 
     @Test public void testLupoAttaccanteNonVivo()
@@ -860,6 +860,8 @@ public final class TestPartita
         inizializzaPartita(new String[][] { });
         verificaFalso(partita.isLupoAttaccanteVivo());
     }
+
+    private boolean isLupoReiettoVivo() { return partita.isLupoReiettoVivo(); }
 
     private boolean isNoGiocatoriVivi() { return partita.isNoGiocatoriVivi(); }
 

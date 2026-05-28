@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getPartitaGenerica">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testLupoAttaccanteNonVivo riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -290,38 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03004" summary="REFACTORING: definizione del metodo isGhoul">
-      <option name="closed" value="true" />
-      <created>1779798341863</created>
-      <option name="number" value="03004" />
-      <option name="presentableId" value="LOCAL-03004" />
-      <option name="project" value="LOCAL" />
-      <updated>1779798341863</updated>
-    </task>
-    <task id="LOCAL-03005" summary="VERDE DIRETTO: testNosferatuPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1779798861956</created>
-      <option name="number" value="03005" />
-      <option name="presentableId" value="LOCAL-03005" />
-      <option name="project" value="LOCAL" />
-      <updated>1779798861956</updated>
-    </task>
-    <task id="LOCAL-03006" summary="VERDE DIRETTO: testNosferatuAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779799136650</created>
-      <option name="number" value="03006" />
-      <option name="presentableId" value="LOCAL-03006" />
-      <option name="project" value="LOCAL" />
-      <updated>1779799136650</updated>
-    </task>
-    <task id="LOCAL-03007" summary="REFACTORING: definizione del metodo isNosferatu">
-      <option name="closed" value="true" />
-      <created>1779799302177</created>
-      <option name="number" value="03007" />
-      <option name="presentableId" value="LOCAL-03007" />
-      <option name="project" value="LOCAL" />
-      <updated>1779799302178</updated>
     </task>
     <task id="LOCAL-03008" summary="REFACTORING: definizione del metodo isGhoulVivo">
       <option name="closed" value="true" />
@@ -683,7 +648,39 @@
       <option name="project" value="LOCAL" />
       <updated>1779962278442</updated>
     </task>
-    <option name="localTasksCounter" value="3053" />
+    <task id="LOCAL-03053" summary="REFACTORING: definizione del metodo inizializzaGiocatori">
+      <option name="closed" value="true" />
+      <created>1779971783874</created>
+      <option name="number" value="03053" />
+      <option name="presentableId" value="LOCAL-03053" />
+      <option name="project" value="LOCAL" />
+      <updated>1779971783874</updated>
+    </task>
+    <task id="LOCAL-03054" summary="VERDE DIRETTO: testLupoReiettoNonVivo riuscito">
+      <option name="closed" value="true" />
+      <created>1779972082589</created>
+      <option name="number" value="03054" />
+      <option name="presentableId" value="LOCAL-03054" />
+      <option name="project" value="LOCAL" />
+      <updated>1779972082589</updated>
+    </task>
+    <task id="LOCAL-03055" summary="VERDE DIRETTO: testLupoReiettoVivo riuscito">
+      <option name="closed" value="true" />
+      <created>1779972219142</created>
+      <option name="number" value="03055" />
+      <option name="presentableId" value="LOCAL-03055" />
+      <option name="project" value="LOCAL" />
+      <updated>1779972219142</updated>
+    </task>
+    <task id="LOCAL-03056" summary="VERDE DIRETTO: testLupoAttaccanteNonVivo riuscito">
+      <option name="closed" value="true" />
+      <created>1779972396896</created>
+      <option name="number" value="03056" />
+      <option name="presentableId" value="LOCAL-03056" />
+      <option name="project" value="LOCAL" />
+      <updated>1779972396896</updated>
+    </task>
+    <option name="localTasksCounter" value="3057" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -698,10 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
-    <MESSAGE value="REFACTORING: sistemazione gerarchia Uomini" />
     <MESSAGE value="REFACTORING: mocking dei test" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCriminali" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaMistici" />
@@ -723,6 +716,10 @@
     <MESSAGE value="REFACTORING: eliminazione codice ridondante" />
     <MESSAGE value="REFACTORING: parametrizzazione del test che controlla l'esito della partita" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartitaGenerica" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPartitaGenerica" />
+    <MESSAGE value="REFACTORING: definizione del metodo inizializzaGiocatori" />
+    <MESSAGE value="VERDE DIRETTO: testLupoReiettoNonVivo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupoReiettoVivo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupoAttaccanteNonVivo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupoAttaccanteNonVivo riuscito" />
   </component>
 </project>
