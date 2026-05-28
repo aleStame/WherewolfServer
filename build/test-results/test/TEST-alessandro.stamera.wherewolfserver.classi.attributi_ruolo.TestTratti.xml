@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-05-28T15:07:19" hostname="ALESSANDRO" time="0.113">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-05-28T15:25:47" hostname="ALESSANDRO" time="0.091">
   <properties/>
   <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.002"/>
+  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.005"/>
+  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.004"/>
+  <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.004"/>
+  <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.007"/>
+  <testcase name="testMaledizione()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.005"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
+  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.003"/>
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.0"/>
   <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
   <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
   <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
   <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
-  <testcase name="testMaledizione()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.001"/>
-  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.002"/>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.002"/>
-  <testcase name="[2] tratto=LUPO_MANNARO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.05"/>
-  <testcase name="[3] tratto=MALEDETTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.004"/>
-  <testcase name="[4] tratto=NON_MORTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.003"/>
-  <testcase name="[5] tratto=PROTETTO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti" time="0.009"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@3b705be7
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@3d4d3fe7
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

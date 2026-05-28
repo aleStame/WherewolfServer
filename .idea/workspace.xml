@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isCriminaliPresenti">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAmatoNonPresente non riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,14 +290,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03024" summary="VERDE: testAttaccoLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1779826978938</created>
-      <option name="number" value="03024" />
-      <option name="presentableId" value="LOCAL-03024" />
-      <option name="project" value="LOCAL" />
-      <updated>1779826978939</updated>
     </task>
     <task id="LOCAL-03025" summary="ROSSO: testCategoria non riuscito">
       <option name="closed" value="true" />
@@ -684,7 +675,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779980302762</updated>
     </task>
-    <option name="localTasksCounter" value="3073" />
+    <task id="LOCAL-03073" summary="ROSSO: testAmatoNonPresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1779981108418</created>
+      <option name="number" value="03073" />
+      <option name="presentableId" value="LOCAL-03073" />
+      <option name="project" value="LOCAL" />
+      <updated>1779981108418</updated>
+    </task>
+    <option name="localTasksCounter" value="3074" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -699,7 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPartitaSconfitta non riuscito" />
     <MESSAGE value="VERDE: testPartitaSconfitta riuscito" />
     <MESSAGE value="REFACTORING: eliminazione codice ridondante" />
     <MESSAGE value="REFACTORING: parametrizzazione del test che controlla l'esito della partita" />
@@ -724,6 +722,7 @@
     <MESSAGE value="VERDE: testCriminaliAssenti riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminaliPresenti riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCriminaliPresenti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCriminaliPresenti" />
+    <MESSAGE value="ROSSO: testAmatoNonPresente non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAmatoNonPresente non riuscito" />
   </component>
 </project>

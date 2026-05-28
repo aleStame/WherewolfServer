@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-28T15:07:29" hostname="ALESSANDRO" time="0.165">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-28T15:25:53" hostname="ALESSANDRO" time="0.11">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.143"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4a058df8, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.005"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1283ca23, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.007"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@733e6df7, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.003"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@e11ecfa
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3ebe4ccc
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@5a034157
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@280d4882
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.089"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@365afe87, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.003"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1a1ccaaf, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.004"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@388c519, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.005"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@1a69561c
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@d816dde
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@210386e0
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@4efcf8a
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

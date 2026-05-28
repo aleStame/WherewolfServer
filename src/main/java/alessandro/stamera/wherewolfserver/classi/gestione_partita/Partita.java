@@ -255,7 +255,12 @@ public final class Partita
 
     public boolean isCriminaliPresenti() { return getNumeroCriminali() > 0; }
 
-    public boolean isAmatoVivo() { return true; }
+    public boolean isAmatoVivo()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getRuolo(vivi.getNomeGiocatore(i)).isAmato()) posizione = i;
+        return posizione != -1;
+    }
 
     private void inizializzaGiocatori(String[][] giocatori)
     {
