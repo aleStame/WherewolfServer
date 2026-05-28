@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testLupoReiettoPresente riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCapoBrancoPresente riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,30 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03012" summary="REFACTORING: definizione del metodo isProgenieNosferatuViva">
-      <option name="closed" value="true" />
-      <created>1779800955714</created>
-      <option name="number" value="03012" />
-      <option name="presentableId" value="LOCAL-03012" />
-      <option name="project" value="LOCAL" />
-      <updated>1779800955714</updated>
-    </task>
-    <task id="LOCAL-03013" summary="REFACTORING: definizione del metodo verificaProgenieNosferatuNonViva">
-      <option name="closed" value="true" />
-      <created>1779806628418</created>
-      <option name="number" value="03013" />
-      <option name="presentableId" value="LOCAL-03013" />
-      <option name="project" value="LOCAL" />
-      <updated>1779806628418</updated>
-    </task>
-    <task id="LOCAL-03014" summary="ROSSO: testEsitoPartita non riuscito">
-      <option name="closed" value="true" />
-      <created>1779807279937</created>
-      <option name="number" value="03014" />
-      <option name="presentableId" value="LOCAL-03014" />
-      <option name="project" value="LOCAL" />
-      <updated>1779807279937</updated>
     </task>
     <task id="LOCAL-03015" summary="VERDE: testEsitoPartita riuscito">
       <option name="closed" value="true" />
@@ -682,7 +658,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779973299237</updated>
     </task>
-    <option name="localTasksCounter" value="3061" />
+    <task id="LOCAL-03061" summary="VERDE DIRETTO: testLupoReiettoAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1779973473021</created>
+      <option name="number" value="03061" />
+      <option name="presentableId" value="LOCAL-03061" />
+      <option name="project" value="LOCAL" />
+      <updated>1779973473021</updated>
+    </task>
+    <task id="LOCAL-03062" summary="REFACTORING: definizione del metodo isLupoReiettoPresente">
+      <option name="closed" value="true" />
+      <created>1779973724805</created>
+      <option name="number" value="03062" />
+      <option name="presentableId" value="LOCAL-03062" />
+      <option name="project" value="LOCAL" />
+      <updated>1779973724805</updated>
+    </task>
+    <task id="LOCAL-03063" summary="VERDE DIRETTO: testCapoBrancoPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1779973871890</created>
+      <option name="number" value="03063" />
+      <option name="presentableId" value="LOCAL-03063" />
+      <option name="project" value="LOCAL" />
+      <updated>1779973871890</updated>
+    </task>
+    <option name="localTasksCounter" value="3064" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,9 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
-    <MESSAGE value="REFACTORING: sistemazione della gerarchia Citta" />
-    <MESSAGE value="REFACTORING: sistemazione della gerarchia Villaggio" />
     <MESSAGE value="ROSSO: testCategoria non riuscito" />
     <MESSAGE value="VERDE: testCategoria riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita non riuscito" />
@@ -722,6 +719,9 @@
     <MESSAGE value="VERDE DIRETTO: testLupoAttaccanteVivo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoAttaccanteVivo" />
     <MESSAGE value="VERDE DIRETTO: testLupoReiettoPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupoReiettoPresente riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupoReiettoAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isLupoReiettoPresente" />
+    <MESSAGE value="VERDE DIRETTO: testCapoBrancoPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCapoBrancoPresente riuscito" />
   </component>
 </project>
