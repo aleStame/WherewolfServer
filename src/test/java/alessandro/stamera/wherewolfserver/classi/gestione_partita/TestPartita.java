@@ -873,6 +873,13 @@ public final class TestPartita
         verificaFalso(partita.isCriminaliPresenti());
     }
 
+    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Ladra", "Spia" })
+    public void testCriminaliPresenti(String tipoLupo)
+    {
+        inizializzaPartita(new String[][] { { "Herbert", tipoLupo } });
+        verificaVero(partita.isCriminaliPresenti());
+    }
+
     private boolean isLupoAttaccanteVivo() { return partita.isLupoAttaccanteVivo(); }
 
     private boolean isLupoReiettoVivo() { return partita.isLupoReiettoVivo(); }
