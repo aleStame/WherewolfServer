@@ -102,10 +102,6 @@ public final class Partita
 
     public void segnalazioneInquisitore(String nome) { vivi.segnalazioneInquisitore(nome); }
 
-    public boolean isFinita() { return false; }
-
-    public boolean isGiuliettaViva() { return false; }
-
     public boolean isViaggioPartito() { return false; }
 
     public boolean isViaggiatoreAmato() { return false; }
@@ -251,6 +247,10 @@ public final class Partita
     public boolean isNosferatuVivo(String nome) { return vivi.isNosferatu(nome); }
 
     public boolean isProgenieNosferatuViva(String nome) { return vivi.isProgenieNosferatu(nome); }
+
+    public boolean isLupoReiettoVivo() { return vivi.isLupoReiettoPresente(); }
+
+    public boolean isLupoAttaccanteVivo() { return vivi.isCapoBrancoPresente() || vivi.isLupoBrancoPresente(); }
 
     private void confermaEliminazioneMortiNotte()
     {

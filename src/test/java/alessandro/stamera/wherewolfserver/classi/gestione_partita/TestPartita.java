@@ -831,6 +831,12 @@ public final class TestPartita
         verificaProgenieNosferatuNonViva(nomeVittima);
     }
 
+    @Test public void isNessunGiocatoreVivo()
+    {
+        inizializzaPartita(new String[][] { { } });
+        verificaVero(partita.isNoGiocatoriVivi());
+    }
+
     private void verificaProgenieNosferatuNonViva(String nome) { verificaFalso(isProgenieNosferatuViva(nome)); }
 
     private boolean isProgenieNosferatuViva(String nome) { return partita.isProgenieNosferatuViva(nome); }

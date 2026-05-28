@@ -210,6 +210,27 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
+    public boolean isLupoReiettoPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(i).isLupoReietto();
+        return trovato;
+    }
+
+    public boolean isCapoBrancoPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(i).isCapoBranco();
+        return trovato;
+    }
+
+    public boolean isLupoBrancoPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(i).isLupoBranco();
+        return trovato;
+    }
+
     private int getPosizioneSensitiva()
     {
         int posizione = NON_TROVATO;
