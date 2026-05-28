@@ -699,6 +699,8 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isLupoBrancoPresente());
     }
 
+    @Test public void testLupoBrancoAssente() { verificaFalso(giocatori.isLupoBrancoPresente()); }
+
     private boolean isCapoBrancoPresente() { return giocatori.isCapoBrancoPresente(); }
 
     private boolean isLupoReiettoPresente() { return giocatori.isLupoReiettoPresente(); }
