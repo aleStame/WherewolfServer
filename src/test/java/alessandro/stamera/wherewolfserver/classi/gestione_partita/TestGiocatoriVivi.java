@@ -680,10 +680,12 @@ public final class TestGiocatoriVivi
     @Test public void testLupoReiettoPresente()
     {
         aggiungiGiocatore("Giulia", "Lupo reietto");
-        verificaVero(giocatori.isLupoReiettoPresente());
+        verificaVero(isLupoReiettoPresente());
     }
 
-    @Test public void testLupoReiettoAssente() { verificaFalso(giocatori.isLupoReiettoPresente()); }
+    @Test public void testLupoReiettoAssente() { verificaFalso(isLupoReiettoPresente()); }
+
+    private boolean isLupoReiettoPresente() { return giocatori.isLupoReiettoPresente(); }
 
     private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
 
