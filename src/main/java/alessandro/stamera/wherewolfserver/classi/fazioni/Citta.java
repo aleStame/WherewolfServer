@@ -27,7 +27,7 @@ public class Citta extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO) if(partita.isNoCreatureOmbra() && partita.getNumeroGiocatoriVivi() > 0) esito = VITTORIA;
+        if(esito == NON_FINITO && partita.isNoCreatureOmbra()) esito = VITTORIA;
         return esito;
     }
 
