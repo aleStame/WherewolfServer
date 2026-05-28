@@ -867,6 +867,8 @@ public final class TestPartita
         verificaVero(isLupoAttaccanteVivo());
     }
 
+    @Test public void testCriminaliAssenti() { verificaFalso(partita.isCriminaliPresenti()); }
+
     private boolean isLupoAttaccanteVivo() { return partita.isLupoAttaccanteVivo(); }
 
     private boolean isLupoReiettoVivo() { return partita.isLupoReiettoVivo(); }

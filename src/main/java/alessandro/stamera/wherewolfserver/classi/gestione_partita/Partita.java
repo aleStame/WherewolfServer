@@ -253,6 +253,8 @@ public final class Partita
 
     public boolean isLupoAttaccanteVivo() { return vivi.isCapoBrancoPresente() || vivi.isLupoBrancoPresente(); }
 
+    public boolean isCriminaliPresenti() { return true; }
+
     private void inizializzaGiocatori(String[][] giocatori)
     {
         stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
