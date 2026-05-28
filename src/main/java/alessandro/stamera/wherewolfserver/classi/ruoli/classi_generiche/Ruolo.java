@@ -282,7 +282,12 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoPartita getEsitoPartita(Partita partita) { return NON_FINITO; }
+    public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito =  NON_FINITO;
+        if(partita.isNoGiocatoriVivi()) esito = SCONFITTA;
+        return esito;
+    }
 
     public EsitoAttacco vampirizzazione()
     {
