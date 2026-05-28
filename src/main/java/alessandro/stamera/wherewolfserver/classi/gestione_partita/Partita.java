@@ -253,7 +253,7 @@ public final class Partita
 
     public boolean isLupoAttaccanteVivo() { return vivi.isCapoBrancoPresente() || vivi.isLupoBrancoPresente(); }
 
-    public boolean isCriminaliPresenti() { return true; }
+    public boolean isCriminaliPresenti() { return getNumeroCriminali() > 0; }
 
     private void inizializzaGiocatori(String[][] giocatori)
     {
