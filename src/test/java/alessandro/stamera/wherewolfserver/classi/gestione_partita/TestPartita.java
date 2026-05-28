@@ -861,6 +861,12 @@ public final class TestPartita
         verificaFalso(partita.isLupoAttaccanteVivo());
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco" }) public void testLupoAttaccanteVivo(String tipoLupo)
+    {
+        inizializzaPartita(new String[][] { { "Adriana", tipoLupo } });
+        verificaVero(partita.isLupoAttaccanteVivo());
+    }
+
     private boolean isLupoReiettoVivo() { return partita.isLupoReiettoVivo(); }
 
     private boolean isNoGiocatoriVivi() { return partita.isNoGiocatoriVivi(); }

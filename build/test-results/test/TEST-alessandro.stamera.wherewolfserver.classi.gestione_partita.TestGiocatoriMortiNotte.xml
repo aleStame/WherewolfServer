@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-28T12:48:34" hostname="ALESSANDRO" time="0.027">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-28T12:51:54" hostname="ALESSANDRO" time="0.016">
   <properties/>
-  <testcase name="[1] nomeRuolo=Prete, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.004"/>
-  <testcase name="[2] nomeRuolo=Eremita, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.006"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.005"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.004"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Prete@7a45d714
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@2f0ed952
-alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@559cedee
-alessandro.stamera.wherewolfserver.classi.ruoli.Templare@1f67761b
-alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@5984feef
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6fbb4061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@4f3faa70
+  <testcase name="[1] nomeRuolo=Prete, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.003"/>
+  <testcase name="[2] nomeRuolo=Eremita, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.002"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.003"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte" time="0.003"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Prete@204abeff
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@6d074b14
+alessandro.stamera.wherewolfserver.classi.ruoli.Eremita@4f3faa70
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@2f4ba1ae
+alessandro.stamera.wherewolfserver.classi.ruoli.Pazzo@23a918c7
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@60c73e58
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@7af3874e
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
