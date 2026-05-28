@@ -833,7 +833,7 @@ public final class TestPartita
 
     @Test public void isNessunGiocatoreVivo()
     {
-        inizializzaPartita(new String[][] { { } });
+        inizializzaPartita(new String[][] { });
         verificaVero(partita.isNoGiocatoriVivi());
     }
 

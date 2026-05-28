@@ -11,6 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static java.util.Arrays.stream;
 
 public final class Partita
 {
@@ -38,7 +39,7 @@ public final class Partita
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
         FACTORY.annullaSegnalazioni();
-        for(String[] giocatore : giocatori) aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
