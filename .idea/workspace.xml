@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAmatoMorto riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAmatoVivo">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
@@ -195,7 +194,6 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
@@ -483,22 +481,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03027" summary="ROSSO: testEsitoPartita non riuscito">
-      <option name="closed" value="true" />
-      <created>1779828667843</created>
-      <option name="number" value="03027" />
-      <option name="presentableId" value="LOCAL-03027" />
-      <option name="project" value="LOCAL" />
-      <updated>1779828667843</updated>
-    </task>
-    <task id="LOCAL-03028" summary="VERDE: testEsitoPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1779828984259</created>
-      <option name="number" value="03028" />
-      <option name="presentableId" value="LOCAL-03028" />
-      <option name="project" value="LOCAL" />
-      <updated>1779828984260</updated>
     </task>
     <task id="LOCAL-03029" summary="REFACTORING: sistemazione gerarchia Uomini">
       <option name="closed" value="true" />
@@ -876,7 +858,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780057644185</updated>
     </task>
-    <option name="localTasksCounter" value="3076" />
+    <task id="LOCAL-03076" summary="VERDE DIRETTO: testAmatoPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1780058943678</created>
+      <option name="number" value="03076" />
+      <option name="presentableId" value="LOCAL-03076" />
+      <option name="project" value="LOCAL" />
+      <updated>1780058943678</updated>
+    </task>
+    <task id="LOCAL-03077" summary="REFACTORING: definizione del metodo isAmatoVivo">
+      <option name="closed" value="true" />
+      <created>1780059164907</created>
+      <option name="number" value="03077" />
+      <option name="presentableId" value="LOCAL-03077" />
+      <option name="project" value="LOCAL" />
+      <updated>1780059164907</updated>
+    </task>
+    <option name="localTasksCounter" value="3078" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -891,8 +889,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: parametrizzazione del test che controlla l'esito della partita" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPartitaGenerica" />
     <MESSAGE value="REFACTORING: definizione del metodo inizializzaGiocatori" />
     <MESSAGE value="VERDE DIRETTO: testLupoReiettoNonVivo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupoReiettoVivo riuscito" />
@@ -916,6 +912,8 @@
     <MESSAGE value="ROSSO: testAmatoNonPresente non riuscito" />
     <MESSAGE value="VERDE: testAmatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAmatoMorto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAmatoMorto riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAmatoPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAmatoVivo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAmatoVivo" />
   </component>
 </project>

@@ -883,7 +883,7 @@ public final class TestPartita
     @Test public void testAmatoNonPresente()
     {
         inizializzaPartita(new String[][] { });
-        verificaFalso(isAmatoVivo());
+        verificaAmatoNonVivo();
     }
 
     @Test public void testAmatoMorto()
@@ -896,7 +896,7 @@ public final class TestPartita
             attaccoLupi("Capo branco", nome);
             terminaNotte();
         }
-        verificaFalso(isAmatoVivo());
+        verificaAmatoNonVivo();
     }
 
     @Test public void testAmatoPresente()
@@ -906,6 +906,8 @@ public final class TestPartita
         partita.segnalazioneAngeloCustode(nome);
         verificaVero(isAmatoVivo());
     }
+
+    private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 
     private boolean isAmatoVivo() { return partita.isAmatoVivo(); }
 
