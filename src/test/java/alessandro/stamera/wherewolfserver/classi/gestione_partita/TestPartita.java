@@ -890,7 +890,7 @@ public final class TestPartita
     {
         String nome = "Maria";
         inizializzaPartita(new String[][] { { "Carlo", "Angelo custode" }, { nome, "Prete" } });
-        partita.segnalazioneAngeloCustode(nome);
+        segnalazioneAngeloCustode(nome);
         for(int i = 0; i < 2; i++)
         {
             attaccoLupi("Capo branco", nome);
@@ -903,7 +903,7 @@ public final class TestPartita
     {
         String nome = "Pina";
         inizializzaPartita(new String[][] { { "Francesco", "Angelo custode" }, { nome, "Peccatore" } });
-        partita.segnalazioneAngeloCustode(nome);
+        segnalazioneAngeloCustode(nome);
         verificaVero(isAmatoVivo());
     }
 
