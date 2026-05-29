@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testVittoriaAngeloCustodeVivo riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/AngeloCustode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/AngeloCustode.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo valutaPartitaNonFinita">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAngeloCustode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestAngeloCustode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,22 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03039" summary="ROSSO: testEsitoPartita non riuscito">
-      <option name="closed" value="true" />
-      <created>1779892852257</created>
-      <option name="number" value="03039" />
-      <option name="presentableId" value="LOCAL-03039" />
-      <option name="project" value="LOCAL" />
-      <updated>1779892852258</updated>
-    </task>
-    <task id="LOCAL-03040" summary="VERDE: testEsitoPartita non riuscito">
-      <option name="closed" value="true" />
-      <created>1779893195431</created>
-      <option name="number" value="03040" />
-      <option name="presentableId" value="LOCAL-03040" />
-      <option name="project" value="LOCAL" />
-      <updated>1779893195432</updated>
     </task>
     <task id="LOCAL-03041" summary="REFACTORING: definizione della gerarchia CreatureOmbra">
       <option name="closed" value="true" />
@@ -682,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780064723344</updated>
     </task>
-    <option name="localTasksCounter" value="3088" />
+    <task id="LOCAL-03088" summary="REFACTORING: definizione del metodo isPartitaVintaConAmato">
+      <option name="closed" value="true" />
+      <created>1780064916576</created>
+      <option name="number" value="03088" />
+      <option name="presentableId" value="LOCAL-03088" />
+      <option name="project" value="LOCAL" />
+      <updated>1780064916576</updated>
+    </task>
+    <task id="LOCAL-03089" summary="REFACTORING: definizione del metodo valutaPartitaNonFinita">
+      <option name="closed" value="true" />
+      <created>1780065079179</created>
+      <option name="number" value="03089" />
+      <option name="presentableId" value="LOCAL-03089" />
+      <option name="project" value="LOCAL" />
+      <updated>1780065079179</updated>
+    </task>
+    <option name="localTasksCounter" value="3090" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,8 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCapoBrancoPresente riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testCapoBrancoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCapoBrancoPresente" />
     <MESSAGE value="VERDE DIRETTO: testLupoBrancoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupoBrancoAssente riuscito" />
@@ -722,6 +720,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo isAmatoPresente" />
     <MESSAGE value="VERDE: testVittoriaAngeloCustodeVivo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVittoriaAngeloCustodeVivo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVintaConAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo valutaPartitaNonFinita" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo valutaPartitaNonFinita" />
   </component>
 </project>
