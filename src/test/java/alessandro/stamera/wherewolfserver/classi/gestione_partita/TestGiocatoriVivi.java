@@ -701,10 +701,18 @@ public final class TestGiocatoriVivi
 
     @Test public void testLupoBrancoAssente() { verificaFalso(isLupoBrancoPresente()); }
 
-    @Test public void testAmatoPresente()
+    @Test public void testAmatoAssente()
     {
         aggiungiGiocatore("Gabriele", "Angelo custode");
         verificaFalso(giocatori.isAmatoPresente());
+    }
+
+    @Test public void testAmatoPresente()
+    {
+        String nome = "Enrica";
+        inizializzaGiocatori(new String[][] { { "Libero", "Angelo custode" }, { nome, "Bocca di rosa" } });
+        giocatori.segnalazioneAngeloCustode(nome);
+        verificaVero(giocatori.isAmatoPresente());
     }
 
     private boolean isLupoBrancoPresente() { return giocatori.isLupoBrancoPresente(); }
