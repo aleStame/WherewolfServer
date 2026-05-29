@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestCitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestCitta.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testEsitoPartitaPostGildata riuscito">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/fazioni/Citta.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/fazioni/Citta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/fazioni/Citta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/fazioni/Citta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,22 +299,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03048" summary="ROSSO: testPartitaSconfitta non riuscito">
-      <option name="closed" value="true" />
-      <created>1779960397093</created>
-      <option name="number" value="03048" />
-      <option name="presentableId" value="LOCAL-03048" />
-      <option name="project" value="LOCAL" />
-      <updated>1779960397093</updated>
-    </task>
-    <task id="LOCAL-03049" summary="VERDE: testPartitaSconfitta riuscito">
-      <option name="closed" value="true" />
-      <created>1779960542012</created>
-      <option name="number" value="03049" />
-      <option name="presentableId" value="LOCAL-03049" />
-      <option name="project" value="LOCAL" />
-      <updated>1779960542012</updated>
     </task>
     <task id="LOCAL-03050" summary="REFACTORING: eliminazione codice ridondante">
       <option name="closed" value="true" />
@@ -682,7 +676,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780072549320</updated>
     </task>
-    <option name="localTasksCounter" value="3097" />
+    <task id="LOCAL-03097" summary="ROSSO: testEsitoPartitaPostGildata riuscito">
+      <option name="closed" value="true" />
+      <created>1780072808254</created>
+      <option name="number" value="03097" />
+      <option name="presentableId" value="LOCAL-03097" />
+      <option name="project" value="LOCAL" />
+      <updated>1780072808254</updated>
+    </task>
+    <task id="LOCAL-03098" summary="VERDE: testEsitoPartitaPostGildata riuscito">
+      <option name="closed" value="true" />
+      <created>1780072979462</created>
+      <option name="number" value="03098" />
+      <option name="presentableId" value="LOCAL-03098" />
+      <option name="project" value="LOCAL" />
+      <updated>1780072979462</updated>
+    </task>
+    <option name="localTasksCounter" value="3099" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +707,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isCriminaliPresenti" />
     <MESSAGE value="ROSSO: testAmatoNonPresente non riuscito" />
     <MESSAGE value="VERDE: testAmatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAmatoMorto riuscito" />
@@ -720,8 +729,9 @@
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCriminali" />
     <MESSAGE value="ROSSO: testEsitoPartitaPostGildata non riuscito" />
-    <MESSAGE value="VERDE: testEsitoPartitaPostGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre" />
+    <MESSAGE value="ROSSO: testEsitoPartitaPostGildata riuscito" />
+    <MESSAGE value="VERDE: testEsitoPartitaPostGildata riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEsitoPartitaPostGildata riuscito" />
   </component>
 </project>
