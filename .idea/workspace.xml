@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testEsitoPartitaPostGildata non riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/fazioni/Villaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/fazioni/Villaggio.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestCitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestCitta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,22 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03046" summary="VERDE DIRETTO: testGiocatoriViviPresenti riuscito">
-      <option name="closed" value="true" />
-      <created>1779959838080</created>
-      <option name="number" value="03046" />
-      <option name="presentableId" value="LOCAL-03046" />
-      <option name="project" value="LOCAL" />
-      <updated>1779959838080</updated>
-    </task>
-    <task id="LOCAL-03047" summary="REFACTORING: definizione del metodo isNoGiocatoriVivi">
-      <option name="closed" value="true" />
-      <created>1779959990026</created>
-      <option name="number" value="03047" />
-      <option name="presentableId" value="LOCAL-03047" />
-      <option name="project" value="LOCAL" />
-      <updated>1779959990026</updated>
     </task>
     <task id="LOCAL-03048" summary="ROSSO: testPartitaSconfitta non riuscito">
       <option name="closed" value="true" />
@@ -683,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780071896728</updated>
     </task>
-    <option name="localTasksCounter" value="3095" />
+    <task id="LOCAL-03095" summary="VERDE: testEsitoPartitaPostGildata riuscito">
+      <option name="closed" value="true" />
+      <created>1780072394990</created>
+      <option name="number" value="03095" />
+      <option name="presentableId" value="LOCAL-03095" />
+      <option name="project" value="LOCAL" />
+      <updated>1780072394990</updated>
+    </task>
+    <task id="LOCAL-03096" summary="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre">
+      <option name="closed" value="true" />
+      <created>1780072549320</created>
+      <option name="number" value="03096" />
+      <option name="presentableId" value="LOCAL-03096" />
+      <option name="project" value="LOCAL" />
+      <updated>1780072549320</updated>
+    </task>
+    <option name="localTasksCounter" value="3097" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -698,8 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testCriminaliAssenti riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testCriminaliPresenti riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCriminaliPresenti" />
     <MESSAGE value="ROSSO: testAmatoNonPresente non riuscito" />
     <MESSAGE value="VERDE: testAmatoNonPresente riuscito" />
@@ -723,6 +720,8 @@
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCriminali" />
     <MESSAGE value="ROSSO: testEsitoPartitaPostGildata non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsitoPartitaPostGildata non riuscito" />
+    <MESSAGE value="VERDE: testEsitoPartitaPostGildata riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre" />
   </component>
 </project>

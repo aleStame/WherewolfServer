@@ -1,11 +1,20 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
@@ -56,12 +65,6 @@ public final class TestCitta
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
-    @Test public void testGildata()
-    {
-        ruolo.gildata();
-        verificaFazione(CRIMINALI);
-    }
-
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
 
     @Test public void testVittoria()
@@ -70,8 +73,29 @@ public final class TestCitta
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaPostGildata")
+    public void testEsitoPartitaPostGildata(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.gildata()).isEqualTo(RIUSCITO);
+        verificaFazione(CRIMINALI);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
+
+    private static Stream<Arguments> getEsempiEsitiPartitaPostGildata()
+    {
+        return Stream.of
+        (
+            Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
+            Arguments.of
+            (
+                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
+            ),
+            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
+        );
+    }
 
 }
