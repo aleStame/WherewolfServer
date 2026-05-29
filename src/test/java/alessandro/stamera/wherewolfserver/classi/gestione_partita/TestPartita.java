@@ -883,7 +883,7 @@ public final class TestPartita
     @Test public void testAmatoNonPresente()
     {
         inizializzaPartita(new String[][] { });
-        verificaFalso(partita.isAmatoVivo());
+        verificaFalso(isAmatoVivo());
     }
 
     @Test public void testAmatoMorto()
@@ -896,7 +896,7 @@ public final class TestPartita
             attaccoLupi("Capo branco", nome);
             terminaNotte();
         }
-        verificaFalso(partita.isAmatoVivo());
+        verificaFalso(isAmatoVivo());
     }
 
     @Test public void testAmatoPresente()
@@ -904,8 +904,10 @@ public final class TestPartita
         String nome = "Pina";
         inizializzaPartita(new String[][] { { "Francesco", "Angelo custode" }, { nome, "Peccatore" } });
         partita.segnalazioneAngeloCustode(nome);
-        verificaVero(partita.isAmatoVivo());
+        verificaVero(isAmatoVivo());
     }
+
+    private boolean isAmatoVivo() { return partita.isAmatoVivo(); }
 
     private boolean isCriminaliPresenti() { return partita.isCriminaliPresenti(); }
 
