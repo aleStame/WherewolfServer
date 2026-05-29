@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isSensitiva">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAmato">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03035" summary="REFACTORING: sistemazione della gerarchia Citta">
-      <option name="closed" value="true" />
-      <created>1779889533516</created>
-      <option name="number" value="03035" />
-      <option name="presentableId" value="LOCAL-03035" />
-      <option name="project" value="LOCAL" />
-      <updated>1779889533517</updated>
     </task>
     <task id="LOCAL-03036" summary="REFACTORING: sistemazione della gerarchia Villaggio">
       <option name="closed" value="true" />
@@ -682,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780062291864</updated>
     </task>
-    <option name="localTasksCounter" value="3084" />
+    <task id="LOCAL-03084" summary="REFACTORING: definizione del metodo isAmato">
+      <option name="closed" value="true" />
+      <created>1780062582643</created>
+      <option name="number" value="03084" />
+      <option name="presentableId" value="LOCAL-03084" />
+      <option name="project" value="LOCAL" />
+      <updated>1780062582644</updated>
+    </task>
+    <option name="localTasksCounter" value="3085" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,7 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isLupoAttaccanteVivo" />
     <MESSAGE value="VERDE DIRETTO: testLupoReiettoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupoReiettoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoReiettoPresente" />
@@ -722,6 +721,7 @@
     <MESSAGE value="ROSSO: testAmatoAssente non riuscito" />
     <MESSAGE value="VERDE: testAmatoAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isSensitiva" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isSensitiva" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAmato" />
   </component>
 </project>
