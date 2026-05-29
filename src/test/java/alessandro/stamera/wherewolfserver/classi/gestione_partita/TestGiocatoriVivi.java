@@ -704,7 +704,7 @@ public final class TestGiocatoriVivi
     @Test public void testAmatoAssente()
     {
         aggiungiGiocatore("Gabriele", "Angelo custode");
-        verificaFalso(giocatori.isAmatoPresente());
+        verificaFalso(isAmatoPresente());
     }
 
     @Test public void testAmatoPresente()
@@ -712,8 +712,10 @@ public final class TestGiocatoriVivi
         String nome = "Enrica";
         inizializzaGiocatori(new String[][] { { "Libero", "Angelo custode" }, { nome, "Bocca di rosa" } });
         giocatori.segnalazioneAngeloCustode(nome);
-        verificaVero(giocatori.isAmatoPresente());
+        verificaVero(isAmatoPresente());
     }
+
+    private boolean isAmatoPresente() { return giocatori.isAmatoPresente(); }
 
     private boolean isLupoBrancoPresente() { return giocatori.isLupoBrancoPresente(); }
 
