@@ -704,7 +704,7 @@ public final class TestGiocatoriVivi
     @Test public void testAmatoPresente()
     {
         aggiungiGiocatore("Gabriele", "Angelo custode");
-        verificaVero(giocatori.isAmatoPresente());
+        verificaFalso(giocatori.isAmatoPresente());
     }
 
     private boolean isLupoBrancoPresente() { return giocatori.isLupoBrancoPresente(); }

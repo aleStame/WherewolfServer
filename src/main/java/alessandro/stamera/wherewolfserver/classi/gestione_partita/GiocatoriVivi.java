@@ -231,7 +231,12 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
-    public boolean isAmatoPresente() { return false; }
+    public boolean isAmatoPresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isSensitiva()) posizione = i;
+        return posizione != NON_TROVATO;
+    }
 
     private int getPosizioneSensitiva()
     {

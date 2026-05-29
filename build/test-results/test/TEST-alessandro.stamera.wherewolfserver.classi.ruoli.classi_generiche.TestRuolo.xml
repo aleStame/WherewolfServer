@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" tests="25" skipped="0" failures="0" errors="0" timestamp="2026-05-29T13:12:48" hostname="ALESSANDRO" time="0.214">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" tests="25" skipped="0" failures="0" errors="0" timestamp="2026-05-29T13:17:30" hostname="ALESSANDRO" time="0.151">
   <properties/>
-  <testcase name="testAttaccoNegromanteRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.006"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
-  <testcase name="attaccoAssassinoAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
+  <testcase name="testAttaccoNegromanteRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="attaccoAssassinoAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
   <testcase name="testVoti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="[1] partita=Mock for Partita, hashCode: 600661314, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3cc053, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
-  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
+  <testcase name="[1] partita=Mock for Partita, hashCode: 1296450832, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@359066bc, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003"/>
+  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.006"/>
   <testcase name="testAttaccoNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
-  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
+  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
   <testcase name="[1] nomeCreaturaOmbra=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="vampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="testInizializzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004"/>
+  <testcase name="vampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
+  <testcase name="testInizializzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
+  <testcase name="testSegnalazioneInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
   <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="attaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
+  <testcase name="attaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
+  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.0"/>
   <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
   <testcase name="testAttaccoNosferatuAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
   <testcase name="testSegnalazioneAzzeccagarbugli()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
   <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
-  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="[3] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
-  <testcase name="[4] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
-  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2ff7a73
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2ff7a73
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2ff7a73
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@2ff7a73
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@3762c4fc
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@59fbb34
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@77ab22be
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@1e1b061
+  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003"/>
+  <testcase name="[3] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="[4] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004"/>
+  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@425357dd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@425357dd
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@425357dd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@425357dd
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7fcbe147
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@2b46a8c1
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@22db8f4
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@36b0fcd5
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
