@@ -30,15 +30,18 @@ public final class AngeloCustode extends Amanti
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO)
-        {
-            esito = isPartitaVintaConAmato(partita);
-            if(partita.isViaggiatoreAmato() && partita.isViaggioPartito()) esito = SCONFITTA;
-        }
+        if(esito == NON_FINITO) esito = valutaPartitaNonFinita(partita);
         return esito;
     }
 
     public static Ruolo getInstance() { return new AngeloCustode(); }
+
+    private EsitoPartita valutaPartitaNonFinita(Partita partita)
+    {
+        EsitoPartita esito = isPartitaVintaConAmato(partita);
+        if(partita.isViaggiatoreAmato() && partita.isViaggioPartito()) esito = SCONFITTA;
+        return esito;
+    }
 
     private EsitoPartita isPartitaVintaConAmato(Partita partita)
     {
