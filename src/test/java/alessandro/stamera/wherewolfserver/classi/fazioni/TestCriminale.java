@@ -85,8 +85,9 @@ public final class TestCriminale
             Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
             Arguments.of
             (
-                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), VITTORIA
-            )
+                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
+            ),
+            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
         );
     }
 
