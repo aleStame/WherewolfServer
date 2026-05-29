@@ -4,6 +4,8 @@ import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -38,6 +40,14 @@ public final class TestAngeloCustode
     }
 
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
+
+    @Test public void testVittoriaAngeloCustodeVivo()
+    {
+        String nome = "Ezio";
+        Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, "Peccatore" } });
+        partita.segnalazioneAngeloCustode(nome);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
 
     @Test public void testSconfittaViaggio()
     {
