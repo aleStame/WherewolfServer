@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-05-29T16:24:00" hostname="ALESSANDRO" time="0.154">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-05-29T16:31:49" hostname="ALESSANDRO" time="0.091">
   <properties/>
-  <testcase name="testLupoBranco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
-  <testcase name="testSuicidio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.004"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@364b1061, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.006"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@172f4514, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.004"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@13d019a4, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
-  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@415a3f6a, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
-  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@19da993b, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
-  <testcase name="testLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
-  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.007"/>
-  <testcase name="testGiovaneLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.004"/>
+  <testcase name="testLupoBranco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
+  <testcase name="testSuicidio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.004"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@10980560, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@19b07407, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@49c099b, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1953bc95, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@549ac12c, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
+  <testcase name="testLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
+  <testcase name="testGiovaneLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
   <testcase name="testCapoBranco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.004"/>
-  <testcase name="[1] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.005"/>
-  <testcase name="[2] nome=Giovane lupo" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.007"/>
-  <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.006"/>
-  <testcase name="[4] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
-  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@141d3d43
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@3a8d467e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@141d3d43
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@4483d35
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@141d3d43
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6ca372ef
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@141d3d43
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@3a8d467e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@3a8d467e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@4483d35
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@141d3d43
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@6ca372ef
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@63d5874f
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@43acd79e
+  <testcase name="[1] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
+  <testcase name="[2] nome=Giovane lupo" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.005"/>
+  <testcase name="[4] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.001"/>
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.003"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco" time="0.002"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@2db4ad1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7c3e4b1a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@2db4ad1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@28237492
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@2db4ad1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@2db4ad1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7c3e4b1a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@7c3e4b1a
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.GiovaneLupo@28237492
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoReietto@2db4ad1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoSolitario@765d55d5
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@6f798482
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@36aa52d2
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
