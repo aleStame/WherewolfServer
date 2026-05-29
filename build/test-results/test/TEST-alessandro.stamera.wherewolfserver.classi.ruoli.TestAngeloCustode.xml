@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-05-29T14:24:28" hostname="ALESSANDRO" time="4.819">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-05-29T14:27:50" hostname="ALESSANDRO" time="0.498">
   <properties/>
-  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.509"/>
-  <testcase name="testVittoriaAngeloCustodeVivo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.041"/>
-  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.01"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.016"/>
-  <testcase name="testSconfittaViaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="4.112"/>
-  <testcase name="testGiulietta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.021"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.056"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@48c40605
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@25f9407e
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@43b4fe19
+  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.005"/>
+  <testcase name="testVittoriaAngeloCustodeVivo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.005"/>
+  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003"/>
+  <testcase name="testSconfittaViaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.427"/>
+  <testcase name="testGiulietta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.016"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.004"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@590adb41
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@6fbb4061
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@37baddde
 ]]></system-out>
-  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

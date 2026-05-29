@@ -32,16 +32,19 @@ public final class AngeloCustode extends Amanti
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(esito == NON_FINITO)
         {
+            esito = isPartitaVintaConAmato(partita);
             if(partita.isViaggiatoreAmato() && partita.isViaggioPartito()) esito = SCONFITTA;
-            else
-            {
-                esito = SCONFITTA;
-                if(partita.isAmatoVivo()) esito = VITTORIA;
-            }
         }
         return esito;
     }
 
     public static Ruolo getInstance() { return new AngeloCustode(); }
+
+    private EsitoPartita isPartitaVintaConAmato(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isAmatoVivo()) esito = VITTORIA;
+        return esito;
+    }
 
 }
