@@ -34,11 +34,14 @@ public class Criminale extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO)
-        {
-            esito = SCONFITTA;
-            if(partita.isCriminaliPresenti()) esito = getEsitoPartitaGuardie(partita);
-        }
+        if(esito == NON_FINITO) esito = getEsitoPartitaCriminali(partita);
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaCriminali(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isCriminaliPresenti()) esito = getEsitoPartitaGuardie(partita);
         return esito;
     }
 
