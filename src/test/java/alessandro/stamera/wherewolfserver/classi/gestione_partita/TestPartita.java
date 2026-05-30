@@ -907,6 +907,16 @@ public final class TestPartita
         verificaVero(isAmatoVivo());
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testMorteGhoulLupiNosferatu(String tipoLupo)
+    {
+        String[][] giocatori = new String[][] { { "Tizio", tipoLupo }, { "Caio", "Nosferatu" }, { "Sempronio", "Ghoul" } };
+        inizializzaPartita(giocatori);
+        attaccoLupi(tipoLupo, giocatori[1][0]);
+        terminaNotte();
+        verificaEliminati(giocatori[2][0]);
+    }
+
     private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 
     private boolean isAmatoVivo() { return partita.isAmatoVivo(); }
