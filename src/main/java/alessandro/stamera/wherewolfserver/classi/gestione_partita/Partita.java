@@ -94,7 +94,16 @@ public final class Partita
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
-            case RIUSCITO -> eliminaGiocatore(nome);
+            case RIUSCITO ->
+            {
+                if(vivi.isNosferatu(nome))
+                {
+                    int posizione = -1;
+                    for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(isGhoulVivo(getNomeGiocatoreVivo(i))) posizione = i;
+                    if(posizione != -1) nome = getNomeGiocatoreVivo(posizione);
+                }
+                eliminaGiocatore(nome);
+            }
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
         }
     }
@@ -365,7 +374,7 @@ public final class Partita
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
-    private boolean controllaNumeroCreatureOmbra(int valore) { System.out.println(getNumeroCreatureOmbraVive()); return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
+    private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
 
     private boolean confrontaValori(int valore1, int valore2) { return valore1 == valore2; }
 
