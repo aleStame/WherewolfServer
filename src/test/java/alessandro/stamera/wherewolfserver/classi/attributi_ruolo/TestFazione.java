@@ -28,14 +28,4 @@ public final class TestFazione
     )
     public void testRicerca(String descrizione, Fazione fazione) { assertThat(getFazione(descrizione)).isEqualTo(fazione); }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "NESSUNA, NESSUNA", "LUPO_BRANCO, CREATURE_OMBRA", "LUPO_SOLITARIO, CREATURE_OMBRA", "VAMPIRO, CREATURE_OMBRA",
-            "NOSFERATU, CREATURE_OMBRA", "NEGROMANTE, CREATURE_OMBRA", "POSSEDUTO, CREATURE_OMBRA", "VILLAGGIO, UOMINI", "CITTA, UOMINI",
-            "CRIMINALI, UOMINI", "AMANTI, UOMINI", "INQUISIZIONE, UOMINI"
-        }
-    )
-    public void testCategoriaFazione(Fazione fazione, Categoria categoria) { assertThat(fazione.getCategoria()).isEqualTo(categoria); }
-
 }

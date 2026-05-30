@@ -70,7 +70,7 @@ public class Ruolo
 
     public int getLune() { return lune; }
 
-    public Categoria getCategoria() { return getFazione().getCategoria(); }
+    public Categoria getCategoria() { return Categoria.NESSUNA; }
 
     public boolean isFazioneNegromante() { return false; }
 

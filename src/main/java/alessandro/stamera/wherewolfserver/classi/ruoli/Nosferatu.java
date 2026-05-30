@@ -1,12 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.CreatureOmbra;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 
-public final class Nosferatu extends Ruolo
+public final class Nosferatu extends CreatureOmbra
 {
 
     private Nosferatu()
