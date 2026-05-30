@@ -36,7 +36,16 @@ public class Ruolo
 
     private final Tratti tratti;
 
-    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
+    private Categoria categoria;
+
+    private final Categoria categoriaOriginale;
+
+    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    {
+        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA);
+    }
+
+    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, Categoria categoria)
     {
         this.nome = nome;
         cambiaFazione(fazione);
@@ -53,6 +62,8 @@ public class Ruolo
         fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
+        cambiaCategoria(categoria);
+        this.categoriaOriginale = categoria;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -70,7 +81,7 @@ public class Ruolo
 
     public int getLune() { return lune; }
 
-    public Categoria getCategoria() { return Categoria.NESSUNA; }
+    public Categoria getCategoria() { return categoria; }
 
     public boolean isFazioneNegromante() { return false; }
 
@@ -316,7 +327,11 @@ public class Ruolo
 
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
 
-    public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
+    public void ripristinaFazioneOriginale()
+    {
+        cambiaFazione(fazioneOriginale);
+        cambiaCategoria(categoriaOriginale);
+    }
 
     public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
 
@@ -337,6 +352,8 @@ public class Ruolo
     public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
+
+    private void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
@@ -365,6 +382,7 @@ public class Ruolo
     {
         aggiungiTratti(NON_MORTO);
         cambiaFazione(NOSFERATU);
+        this.categoria = CREATURE_OMBRA;
     }
 
     private boolean controlloTrattiOscuri()

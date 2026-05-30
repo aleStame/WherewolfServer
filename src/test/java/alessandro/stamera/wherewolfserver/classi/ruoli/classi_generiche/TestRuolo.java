@@ -33,10 +33,7 @@ public final class TestRuolo
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp()
-    {
-        ruolo = new Ruolo(null, NESSUNA, null, null, -1, false);
-    }
+    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, -1, false); }
 
     @Test public void testInizializzazione()
     {

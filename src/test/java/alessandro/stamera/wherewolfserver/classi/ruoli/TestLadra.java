@@ -70,7 +70,7 @@ public final class TestLadra
         verificaAttaccoNosferatu(RIUSCITO);
         verificaVero(isTrattoPresente(NON_MORTO));
         assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
-        //assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA);
+        assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA);
     }
 
     @Test public void testAttaccoNegromante()

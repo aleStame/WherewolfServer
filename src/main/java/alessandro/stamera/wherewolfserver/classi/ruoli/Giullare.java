@@ -1,9 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
 
 public final class Giullare extends Ruolo
 {
@@ -12,10 +10,10 @@ public final class Giullare extends Ruolo
     {
         super
         (
-    "Giullare", NESSUNA, BIANCA,
-"Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. Vince se viene " +
-          "messo al rogo.",
-    1, false
+            "Giullare", BIANCA,
+            "Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. " +
+            "Vince se viene messo al rogo.",
+            1, false
         );
     }
 

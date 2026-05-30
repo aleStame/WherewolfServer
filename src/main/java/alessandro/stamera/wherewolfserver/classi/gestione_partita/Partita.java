@@ -365,7 +365,7 @@ public final class Partita
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
-    private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
+    private boolean controllaNumeroCreatureOmbra(int valore) { System.out.println(getNumeroCreatureOmbraVive()); return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
 
     private boolean confrontaValori(int valore1, int valore2) { return valore1 == valore2; }
 
