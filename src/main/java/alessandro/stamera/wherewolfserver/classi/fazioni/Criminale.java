@@ -4,13 +4,11 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Potere;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Uomini;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 
-public class Criminale extends Ruolo
+public class Criminale extends Uomini
 {
 
     private final Potere potere;
@@ -36,7 +34,21 @@ public class Criminale extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == VITTORIA && !partita.isNoGuardie()) esito = SCONFITTA;
+        if(esito == NON_FINITO) esito = getEsitoPartitaCriminali(partita);
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaCriminali(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isCriminaliPresenti()) esito = getEsitoPartitaGuardie(partita);
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaGuardie(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isNoGuardie()) esito = VITTORIA;
         return esito;
     }
 

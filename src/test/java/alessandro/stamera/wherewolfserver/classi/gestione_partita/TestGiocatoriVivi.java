@@ -677,6 +677,52 @@ public final class TestGiocatoriVivi
         verificaFalso(isNosferatu(nome));
     }
 
+    @Test public void testLupoReiettoPresente()
+    {
+        aggiungiGiocatore("Giulia", "Lupo reietto");
+        verificaVero(isLupoReiettoPresente());
+    }
+
+    @Test public void testLupoReiettoAssente() { verificaFalso(isLupoReiettoPresente()); }
+
+    @Test public void testCapoBrancoPresente()
+    {
+        aggiungiGiocatore("Alessio", "Capo branco");
+        verificaVero(isCapoBrancoPresente());
+    }
+
+    @Test public void testCapoBrancoAssente() { verificaFalso(isCapoBrancoPresente()); }
+
+    @Test public void testLupoBrancoPresente()
+    {
+        aggiungiGiocatore("Morgana", "Lupo del branco");
+        verificaVero(isLupoBrancoPresente());
+    }
+
+    @Test public void testLupoBrancoAssente() { verificaFalso(isLupoBrancoPresente()); }
+
+    @Test public void testAmatoAssente()
+    {
+        aggiungiGiocatore("Gabriele", "Angelo custode");
+        verificaFalso(isAmatoPresente());
+    }
+
+    @Test public void testAmatoPresente()
+    {
+        String nome = "Enrica";
+        inizializzaGiocatori(new String[][] { { "Libero", "Angelo custode" }, { nome, "Bocca di rosa" } });
+        giocatori.segnalazioneAngeloCustode(nome);
+        verificaVero(isAmatoPresente());
+    }
+
+    private boolean isAmatoPresente() { return giocatori.isAmatoPresente(); }
+
+    private boolean isLupoBrancoPresente() { return giocatori.isLupoBrancoPresente(); }
+
+    private boolean isCapoBrancoPresente() { return giocatori.isCapoBrancoPresente(); }
+
+    private boolean isLupoReiettoPresente() { return giocatori.isLupoReiettoPresente(); }
+
     private boolean isNosferatu(String nome) { return giocatori.isNosferatu(nome); }
 
     private boolean isGhoul(String nome) { return giocatori.isGhoul(nome); }

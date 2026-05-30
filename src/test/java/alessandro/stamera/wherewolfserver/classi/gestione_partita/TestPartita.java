@@ -831,6 +831,94 @@ public final class TestPartita
         verificaProgenieNosferatuNonViva(nomeVittima);
     }
 
+    @Test public void testNessunGiocatoreVivo()
+    {
+        inizializzaPartita(new String[][] { });
+        verificaVero(isNoGiocatoriVivi());
+    }
+
+    @Test public void testGiocatoriViviPresenti()
+    {
+        inizializzaPartita(new String[][] { { "Clark", "Guaritore" } });
+        verificaFalso(isNoGiocatoriVivi());
+    }
+
+    @Test public void testLupoReiettoNonVivo()
+    {
+        inizializzaPartita(new String[][]{ });
+        verificaFalso(isLupoReiettoVivo());
+    }
+
+    @Test public void testLupoReiettoVivo()
+    {
+        inizializzaPartita(new String[][]{ { "Camilla", "Lupo reietto" } });
+        verificaVero(isLupoReiettoVivo());
+    }
+
+    @Test public void testLupoAttaccanteNonVivo()
+    {
+        inizializzaPartita(new String[][] { });
+        verificaFalso(isLupoAttaccanteVivo());
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco" }) public void testLupoAttaccanteVivo(String tipoLupo)
+    {
+        inizializzaPartita(new String[][] { { "Adriana", tipoLupo } });
+        verificaVero(isLupoAttaccanteVivo());
+    }
+
+    @Test public void testCriminaliAssenti()
+    {
+        inizializzaPartita(new String[][] { });
+        verificaFalso(isCriminaliPresenti());
+    }
+
+    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Ladra", "Spia" })
+    public void testCriminaliPresenti(String tipoLupo)
+    {
+        inizializzaPartita(new String[][] { { "Herbert", tipoLupo } });
+        verificaVero(isCriminaliPresenti());
+    }
+
+    @Test public void testAmatoNonPresente()
+    {
+        inizializzaPartita(new String[][] { });
+        verificaAmatoNonVivo();
+    }
+
+    @Test public void testAmatoMorto()
+    {
+        String nome = "Maria";
+        inizializzaPartita(new String[][] { { "Carlo", "Angelo custode" }, { nome, "Prete" } });
+        segnalazioneAngeloCustode(nome);
+        for(int i = 0; i < 2; i++)
+        {
+            attaccoLupi("Capo branco", nome);
+            terminaNotte();
+        }
+        verificaAmatoNonVivo();
+    }
+
+    @Test public void testAmatoPresente()
+    {
+        String nome = "Pina";
+        inizializzaPartita(new String[][] { { "Francesco", "Angelo custode" }, { nome, "Peccatore" } });
+        segnalazioneAngeloCustode(nome);
+        verificaVero(isAmatoVivo());
+    }
+
+    private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
+
+    private boolean isAmatoVivo() { return partita.isAmatoVivo(); }
+
+    private boolean isCriminaliPresenti() { return partita.isCriminaliPresenti(); }
+
+    private boolean isLupoAttaccanteVivo() { return partita.isLupoAttaccanteVivo(); }
+
+    private boolean isLupoReiettoVivo() { return partita.isLupoReiettoVivo(); }
+
+    private boolean isNoGiocatoriVivi() { return partita.isNoGiocatoriVivi(); }
+
     private void verificaProgenieNosferatuNonViva(String nome) { verificaFalso(isProgenieNosferatuViva(nome)); }
 
     private boolean isProgenieNosferatuViva(String nome) { return partita.isProgenieNosferatuViva(nome); }

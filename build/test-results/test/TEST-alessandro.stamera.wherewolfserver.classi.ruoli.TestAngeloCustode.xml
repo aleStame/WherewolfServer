@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-05-26T16:56:48" hostname="ALESSANDRO" time="0.403">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-05-30T14:11:17" hostname="ALESSANDRO" time="0.511">
   <properties/>
+  <testcase name="testSconfittaNienteAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003"/>
   <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001"/>
-  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001"/>
+  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.008"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001"/>
-  <testcase name="testSconfittaViaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.355"/>
-  <testcase name="testGiulietta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.016"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@133e019b
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@133e019b
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@133e019b
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@133e019b
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@133e019b
-alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@133e019b
+  <testcase name="testSconfittaViaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.486"/>
+  <testcase name="testGiulietta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001"/>
+  <testcase name="testVittoriaAmatoVivo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.005"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.0"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.Boia@5ccb85d6
+alessandro.stamera.wherewolfserver.classi.ruoli.Templare@7ef8eda7
+0
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@5fd62371
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo@467b0f6e
+0
+alessandro.stamera.wherewolfserver.classi.ruoli.AngeloCustode@e91b4f4
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

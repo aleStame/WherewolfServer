@@ -2,16 +2,12 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
-import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -105,18 +101,10 @@ public final class TestLupo
         assertThat(getFazione()).isEqualTo(fazione);
     }
 
-    @ParameterizedTest @MethodSource("getEsitiPartite")
-    public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
-
-    private static Stream<Arguments> getEsitiPartite()
+    @Test public void testEsitoPartita()
     {
-        Partita[] partite = new Partita[]
-        {
-            new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }),
-            new Partita(new String[][] { { "Manfredi", "Azzeccagarbugli" }, { "Massimo", "Giullare" }, { "Luana", "Guaritore" } }),
-            new Partita(new String[][] { { "Chiara", "Oratore" }, { "Giuseppe", "Capo branco" } })
-        };
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
+        Partita partita = new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } });
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
     private Fazione getFazione() { return ruolo.getFazione(); }

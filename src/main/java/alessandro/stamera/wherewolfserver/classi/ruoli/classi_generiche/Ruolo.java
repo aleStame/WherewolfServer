@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
@@ -37,7 +36,16 @@ public class Ruolo
 
     private final Tratti tratti;
 
-    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
+    private Categoria categoria;
+
+    private final Categoria categoriaOriginale;
+
+    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    {
+        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA);
+    }
+
+    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, Categoria categoria)
     {
         this.nome = nome;
         cambiaFazione(fazione);
@@ -54,6 +62,8 @@ public class Ruolo
         fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
+        cambiaCategoria(categoria);
+        this.categoriaOriginale = categoria;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -71,7 +81,7 @@ public class Ruolo
 
     public int getLune() { return lune; }
 
-    public Categoria getCategoria() { return getFazione().getCategoria(); }
+    public Categoria getCategoria() { return categoria; }
 
     public boolean isFazioneNegromante() { return false; }
 
@@ -285,8 +295,8 @@ public class Ruolo
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito = NON_FINITO;
-        if(getCategoria() == UOMINI) esito = isVittoriaUomini(partita, esito);
+        EsitoPartita esito =  NON_FINITO;
+        if(partita.isNoGiocatoriVivi()) esito = SCONFITTA;
         return esito;
     }
 
@@ -317,7 +327,11 @@ public class Ruolo
 
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
 
-    public void ripristinaFazioneOriginale() { cambiaFazione(fazioneOriginale); }
+    public void ripristinaFazioneOriginale()
+    {
+        cambiaFazione(fazioneOriginale);
+        cambiaCategoria(categoriaOriginale);
+    }
 
     public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
 
@@ -339,12 +353,7 @@ public class Ruolo
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
-    private EsitoPartita isVittoriaUomini(Partita partita, EsitoPartita esito)
-    {
-        if(partita.isSoloCreatureOmbra() || partita.getNumeroGiocatoriVivi() == 0) esito = SCONFITTA;
-        else if(partita.isNoCreatureOmbra()) esito = VITTORIA;
-        return esito;
-    }
+    private void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
@@ -373,6 +382,7 @@ public class Ruolo
     {
         aggiungiTratti(NON_MORTO);
         cambiaFazione(NOSFERATU);
+        this.categoria = CREATURE_OMBRA;
     }
 
     private boolean controlloTrattiOscuri()

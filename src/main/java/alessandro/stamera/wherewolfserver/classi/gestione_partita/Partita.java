@@ -11,6 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static java.util.Arrays.stream;
 
 public final class Partita
 {
@@ -38,7 +39,7 @@ public final class Partita
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
         FACTORY.annullaSegnalazioni();
-        for(String[] giocatore : giocatori) aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1]));
+        inizializzaGiocatori(giocatori);
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
         mortiNotte = new GiocatoriMortiNotte();
@@ -101,10 +102,6 @@ public final class Partita
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
 
     public void segnalazioneInquisitore(String nome) { vivi.segnalazioneInquisitore(nome); }
-
-    public boolean isFinita() { return false; }
-
-    public boolean isGiuliettaViva() { return false; }
 
     public boolean isViaggioPartito() { return false; }
 
@@ -252,6 +249,19 @@ public final class Partita
 
     public boolean isProgenieNosferatuViva(String nome) { return vivi.isProgenieNosferatu(nome); }
 
+    public boolean isLupoReiettoVivo() { return vivi.isLupoReiettoPresente(); }
+
+    public boolean isLupoAttaccanteVivo() { return vivi.isCapoBrancoPresente() || vivi.isLupoBrancoPresente(); }
+
+    public boolean isCriminaliPresenti() { return getNumeroCriminali() > 0; }
+
+    public boolean isAmatoVivo() { return vivi.isAmatoPresente(); }
+
+    private void inizializzaGiocatori(String[][] giocatori)
+    {
+        stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
+    }
+
     private void confermaEliminazioneMortiNotte()
     {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
@@ -355,7 +365,7 @@ public final class Partita
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
 
-    private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
+    private boolean controllaNumeroCreatureOmbra(int valore) { System.out.println(getNumeroCreatureOmbraVive()); return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
 
     private boolean confrontaValori(int valore1, int valore2) { return valore1 == valore2; }
 

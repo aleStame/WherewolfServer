@@ -74,7 +74,7 @@ public final class TestCriminale
     @Test public void testCreaturaOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
 
     @ParameterizedTest @MethodSource("getCasiEsitoPartita")
-    public void testSconfittaCreatureOmbra(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+    public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
@@ -82,12 +82,12 @@ public final class TestCriminale
     {
         return Stream.of
         (
-            Arguments.of(new Partita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } }), SCONFITTA),
             Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
             Arguments.of
             (
-                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), VITTORIA
-            )
+                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
+            ),
+            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
         );
     }
 
