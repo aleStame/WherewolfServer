@@ -27,7 +27,15 @@ public final class TestGhoul
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
+
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte riconosce la Megera, inoltre apre gli occhi nel turno del Vampiro e del Nosferatu. Se il Vampiro o il Nosferatu " +
+            "dovessero essere uccisi durante il proprio turno, al loro posto morirà il Nosferatu. Vince se vince uno dei due.";
+        verificaStringa(ruolo.getDescrizione(), descrizione);
+    }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 
@@ -99,5 +107,7 @@ public final class TestGhoul
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
