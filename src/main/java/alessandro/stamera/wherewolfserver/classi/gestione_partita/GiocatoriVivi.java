@@ -240,9 +240,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneGhoul()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGhoul(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGhoul(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isGhoul(int posizione) { return isGhoul(getNomeGiocatore(posizione)); }
 
     private int getPosizioneAmato()
     {
