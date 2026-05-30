@@ -233,6 +233,10 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isAmatoPresente() { return getPosizioneAmato() != NON_TROVATO; }
 
+    public boolean isGhoulPresente() { return false; }
+
+    public String getNomeGhoul() { return null; }
+
     private int getPosizioneAmato()
     {
         int posizione = NON_TROVATO;

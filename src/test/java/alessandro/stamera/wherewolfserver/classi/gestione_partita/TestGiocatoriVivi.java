@@ -654,6 +654,8 @@ public final class TestGiocatoriVivi
         String nome = "Tony";
         aggiungiGiocatore(nome, "Ghoul");
         verificaVero(isGhoul(nome));
+        verificaVero(giocatori.isGhoulPresente());
+        verificaStringa(giocatori.getNomeGhoul(), nome);
     }
 
     @Test public void testGhoulAssente()
