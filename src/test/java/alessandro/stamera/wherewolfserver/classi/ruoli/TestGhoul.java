@@ -29,6 +29,14 @@ public final class TestGhoul
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
+    @Test public void testDescrizione()
+    {
+        String descrizione =
+            "La prima notte riconosce la Megera, inoltre apre gli occhi nel turno del Vampiro e del Nosferatu. Se il Vampiro o il Nosferatu " +
+            "dovessero essere uccisi durante il proprio turno, alo loro posto morirà il Nosferatu. Vince se vince uno dei due.";
+        assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
+    }
+
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
