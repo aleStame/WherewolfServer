@@ -33,7 +33,7 @@ public final class TestGhoul
     {
         String descrizione =
             "La prima notte riconosce la Megera, inoltre apre gli occhi nel turno del Vampiro e del Nosferatu. Se il Vampiro o il Nosferatu " +
-            "dovessero essere uccisi durante il proprio turno, alo loro posto morirà il Nosferatu. Vince se vince uno dei due.";
+            "dovessero essere uccisi durante il proprio turno, al loro posto morirà il Nosferatu. Vince se vince uno dei due.";
         assertThat(ruolo.getDescrizione()).isEqualTo(descrizione);
     }
 
