@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-30T15:53:56" hostname="ALESSANDRO" time="0.727">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-30T15:59:13" hostname="ALESSANDRO" time="0.69">
   <properties/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@40c2ce52, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.698"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@faea4da, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.009"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@69f2cb04, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.006"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@2ae62bb6
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@43bf5397
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@1b6924cb
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@590adb41
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3069a360, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.681"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@519c6fcc, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.004"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@22da2fe6, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra" time="0.003"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Oratore@28c0b664
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@1edb61b1
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.LupoBranco@c7a975a
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@1a6f5124
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
