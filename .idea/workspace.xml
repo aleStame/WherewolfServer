@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMorteGhoulCacciatoreNosferatu riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +99,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/nosferatuGhoulCacciatore",
+    "git-widget-placeholder": "feature/nosferatuGhoulContadinoMostro",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -287,30 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03065" summary="REFACTORING: definizione del metodo isCapoBrancoPresente">
-      <option name="closed" value="true" />
-      <created>1779974271813</created>
-      <option name="number" value="03065" />
-      <option name="presentableId" value="LOCAL-03065" />
-      <option name="project" value="LOCAL" />
-      <updated>1779974271814</updated>
-    </task>
-    <task id="LOCAL-03066" summary="VERDE DIRETTO: testLupoBrancoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1779978418406</created>
-      <option name="number" value="03066" />
-      <option name="presentableId" value="LOCAL-03066" />
-      <option name="project" value="LOCAL" />
-      <updated>1779978418406</updated>
-    </task>
-    <task id="LOCAL-03067" summary="VERDE DIRETTO: testLupoBrancoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779978695030</created>
-      <option name="number" value="03067" />
-      <option name="presentableId" value="LOCAL-03067" />
-      <option name="project" value="LOCAL" />
-      <updated>1779978695030</updated>
     </task>
     <task id="LOCAL-03068" summary="REFACTORING: definizione del metodo isLupoBrancoPresente">
       <option name="closed" value="true" />
@@ -680,7 +656,31 @@
       <option name="project" value="LOCAL" />
       <updated>1780318035920</updated>
     </task>
-    <option name="localTasksCounter" value="3114" />
+    <task id="LOCAL-03114" summary="VERDE DIRETTO: testMorteGhoulCacciatoreNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1780318104397</created>
+      <option name="number" value="03114" />
+      <option name="presentableId" value="LOCAL-03114" />
+      <option name="project" value="LOCAL" />
+      <updated>1780318104398</updated>
+    </task>
+    <task id="LOCAL-03115" summary="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1780318883006</created>
+      <option name="number" value="03115" />
+      <option name="presentableId" value="LOCAL-03115" />
+      <option name="project" value="LOCAL" />
+      <updated>1780318883006</updated>
+    </task>
+    <task id="LOCAL-03116" summary="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1780319169531</created>
+      <option name="number" value="03116" />
+      <option name="presentableId" value="LOCAL-03116" />
+      <option name="project" value="LOCAL" />
+      <updated>1780319169531</updated>
+    </task>
+    <option name="localTasksCounter" value="3117" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVittoriaAngeloCustodeVivo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaVintaConAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo valutaPartitaNonFinita" />
     <MESSAGE value="VERDE DIRETTO: testSconfittaNienteAmato riuscito" />
@@ -720,6 +719,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isGhoul" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneEliminazioniLupi" />
     <MESSAGE value="VERDE DIRETTO: testMorteGhoulCacciatoreNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMorteGhoulCacciatoreNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
   </component>
 </project>

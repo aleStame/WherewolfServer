@@ -286,7 +286,9 @@ public final class Partita
 
     private void morteNosferatu(String nome)
     {
-        eliminaGiocatore(vivi.getNomeNosferatu());
+        String nomeVittima = vivi.getNomeNosferatu();
+        if(vivi.isGhoulPresente()) nomeVittima = vivi.getNomeGhoul();
+        eliminaGiocatore(nomeVittima);
         if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.getRuolo(nome).isRomeo()) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
 
