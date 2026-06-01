@@ -483,6 +483,7 @@ public final class TestPartita
         progenizzazioneNosferatu(nome);
         terminaNotte();
         verificaNonEliminati(nome);
+        verificaVero(isFazioneNosferatu(nome));
     }
 
     @Test public void testSuicidioCapoBranco()
@@ -951,7 +952,7 @@ public final class TestPartita
     {
         String nome = "Gigio";
         inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
-        verificaVero(partita.isFazioneNosferatu(nome));
+        verificaVero(isFazioneNosferatu(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -969,8 +970,10 @@ public final class TestPartita
     {
         String nome = "Gioele";
         inizializzaPartita(new String[][] { { nome, nomeRuolo } });
-        verificaFalso(partita.isFazioneNosferatu(nome));
+        verificaFalso(isFazioneNosferatu(nome));
     }
+
+    private boolean isFazioneNosferatu(String nome) { return partita.isFazioneNosferatu(nome); }
 
     private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 
