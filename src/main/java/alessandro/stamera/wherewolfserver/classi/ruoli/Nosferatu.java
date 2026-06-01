@@ -42,7 +42,10 @@ public final class Nosferatu extends CreatureOmbra
     {
         boolean vittoria = true;
         for(int i = 0; i < partita.getNumeroGiocatoriVivi() && vittoria; i++)
-            vittoria = partita.isFazioneNosferatu(partita.getNomeGiocatoreVivo(i));
+        {
+            String nome = partita.getNomeGiocatoreVivo(i);
+            vittoria = partita.isFazioneNosferatu(nome) || partita.isGhoulVivo(nome);
+        }
         return vittoria;
     }
 
