@@ -947,6 +947,13 @@ public final class TestPartita
         verificaEliminati(giocatori[0][0], giocatori[3][0]);
     }
 
+    @Test public void testFazioneNosferatu()
+    {
+        String nome = "Gigio";
+        inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
+        verificaVero(partita.isFazioneNosferatu(nome));
+    }
+
     private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 
     private boolean isAmatoVivo() { return partita.isAmatoVivo(); }

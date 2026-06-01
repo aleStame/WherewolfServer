@@ -257,6 +257,8 @@ public final class Partita
 
     public boolean isAmatoVivo() { return vivi.isAmatoPresente(); }
 
+    public boolean isFazioneNosferatu(String nome) { return false; }
+
     private void gestioneEliminazioneLupi(String nome)
     {
         if(vivi.isNosferatu(nome) && vivi.isGhoulPresente()) eliminaGiocatore(vivi.getNomeGhoul());
