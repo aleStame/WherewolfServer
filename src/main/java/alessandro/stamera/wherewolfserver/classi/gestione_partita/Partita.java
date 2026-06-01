@@ -257,7 +257,7 @@ public final class Partita
 
     public boolean isAmatoVivo() { return vivi.isAmatoPresente(); }
 
-    public boolean isFazioneNosferatu(String nome) { return false; }
+    public boolean isFazioneNosferatu(String nome) { return vivi.isFazioneNosferatu(nome); }
 
     private void gestioneEliminazioneLupi(String nome)
     {
