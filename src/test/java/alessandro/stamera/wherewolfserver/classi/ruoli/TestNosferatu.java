@@ -1,11 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -79,6 +81,33 @@ public final class TestNosferatu
         verificaVero(isSegnalatoBoia());
         ruolo.annullaSegnalazioneBoia();
         verificaFalso(isSegnalatoBoia());
+    }
+
+    @Test public void testVittoriaNosferatu()
+    {
+        String[] nomiVittime = { "Natasha", "Wanda" };
+        String nomeLupo = "Steve";
+        String[][] giocatori =
+            new String[][] { { "Tony", "Nosferatu" }, { nomeLupo, "Capo branco" }, { nomiVittime[0], "Prete" }, { nomiVittime[1], "Peccatore" } };
+        assertThat(ruolo.getEsitoPartita(getEsempioPartita(giocatori, nomiVittime, nomeLupo))).isEqualTo(VITTORIA);
+    }
+
+    private Partita getEsempioPartita(String[][] giocatori, String[] nomiVittime, String nomeLupo)
+    {
+        Partita partita = new Partita(giocatori);
+        for(String nome : nomiVittime)
+        {
+            partita.attaccoLupi(giocatori[2][1], nome);
+            partita.progenizzazioneNosferatu(nome);
+            partita.terminaNotte();
+        }
+        int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+        return partita;
     }
 
     private boolean isSegnalatoBoia() {

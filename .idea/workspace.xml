@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVittoriaNosferatu non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +99,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/nosferatuGhoulContadinoMostro",
+    "git-widget-placeholder": "feature/testVittoriaNosferatu",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -287,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03068" summary="REFACTORING: definizione del metodo isLupoBrancoPresente">
-      <option name="closed" value="true" />
-      <created>1779978881723</created>
-      <option name="number" value="03068" />
-      <option name="presentableId" value="LOCAL-03068" />
-      <option name="project" value="LOCAL" />
-      <updated>1779978881723</updated>
-    </task>
-    <task id="LOCAL-03069" summary="ROSSO: testCriminaliAssenti non riuscito">
-      <option name="closed" value="true" />
-      <created>1779979261416</created>
-      <option name="number" value="03069" />
-      <option name="presentableId" value="LOCAL-03069" />
-      <option name="project" value="LOCAL" />
-      <updated>1779979261416</updated>
     </task>
     <task id="LOCAL-03070" summary="VERDE: testCriminaliAssenti riuscito">
       <option name="closed" value="true" />
@@ -680,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780319169531</updated>
     </task>
-    <option name="localTasksCounter" value="3117" />
+    <task id="LOCAL-03117" summary="VERDE DIRETTO: testMorteGhoulContadinoMostroNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1780319756108</created>
+      <option name="number" value="03117" />
+      <option name="presentableId" value="LOCAL-03117" />
+      <option name="project" value="LOCAL" />
+      <updated>1780319756109</updated>
+    </task>
+    <task id="LOCAL-03118" summary="ROSSO: testVittoriaNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1780321317125</created>
+      <option name="number" value="03118" />
+      <option name="presentableId" value="LOCAL-03118" />
+      <option name="project" value="LOCAL" />
+      <updated>1780321317125</updated>
+    </task>
+    <option name="localTasksCounter" value="3119" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,9 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVintaConAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo valutaPartitaNonFinita" />
-    <MESSAGE value="VERDE DIRETTO: testSconfittaNienteAmato riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCriminali" />
@@ -720,6 +717,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo gestioneEliminazioniLupi" />
     <MESSAGE value="VERDE DIRETTO: testMorteGhoulCacciatoreNosferatu riuscito" />
     <MESSAGE value="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMorteGhoulContadinoMostroNosferatu riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMorteGhoulContadinoMostroNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testVittoriaNosferatu non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVittoriaNosferatu non riuscito" />
   </component>
 </project>
