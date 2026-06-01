@@ -92,6 +92,24 @@ public final class TestNosferatu
         assertThat(ruolo.getEsitoPartita(getEsempioPartita(giocatori, nomiVittime, nomeLupo))).isEqualTo(VITTORIA);
     }
 
+    @Test public void testVittoriaNosferatuConGhoul()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
+        String[][] giocatori =
+            new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Ghoul" }, { nomeVittima, "Contadino normale" }, { nomeLupo, tipoLupo } };
+        Partita partita = new Partita(giocatori);
+        partita.attaccoLupi(tipoLupo, nomeVittima);
+        partita.progenizzazioneNosferatu(nomeVittima);
+        partita.terminaNotte();
+        int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
     private Partita getEsempioPartita(String[][] giocatori, String[] nomiVittime, String nomeLupo)
     {
         Partita partita = new Partita(giocatori);
