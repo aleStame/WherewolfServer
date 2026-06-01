@@ -32,19 +32,18 @@ public final class Nosferatu extends CreatureOmbra
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO)
-        {
-            boolean vittoria = true;
-            for(int i = 0; i < partita.getNumeroGiocatoriVivi() && vittoria; i++)
-            {
-                String nome = partita.getNomeGiocatoreVivo(i);
-                vittoria = partita.isProgenieNosferatuViva(nome) || partita.isNosferatuVivo(nome);
-            }
-            if(vittoria) esito = VITTORIA;
-        }
+        if(esito == NON_FINITO && isNosferatuVincitore(partita)) esito = VITTORIA;
         return esito;
     }
 
     public static Ruolo getInstance() { return new Nosferatu(); }
+
+    private boolean isNosferatuVincitore(Partita partita)
+    {
+        boolean vittoria = true;
+        for(int i = 0; i < partita.getNumeroGiocatoriVivi() && vittoria; i++)
+            vittoria = partita.isFazioneNosferatu(partita.getNomeGiocatoreVivo(i));
+        return vittoria;
+    }
 
 }
