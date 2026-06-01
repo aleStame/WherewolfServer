@@ -954,6 +954,24 @@ public final class TestPartita
         verificaVero(partita.isFazioneNosferatu(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testNonFazioneNosferatu(String nomeRuolo)
+    {
+        String nome = "Gioele";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo } });
+        verificaFalso(partita.isFazioneNosferatu(nome));
+    }
+
     private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 
     private boolean isAmatoVivo() { return partita.isAmatoVivo(); }
