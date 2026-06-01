@@ -717,6 +717,13 @@ public final class TestGiocatoriVivi
         verificaVero(isAmatoPresente());
     }
 
+    @Test public void testFazioneNosferatu()
+    {
+        String nome = "Gigio";
+        aggiungiGiocatore(nome, "Nosferatu");
+        verificaVero(giocatori.isFazioneNosferatu(nome));
+    }
+
     private boolean isAmatoPresente() { return giocatori.isAmatoPresente(); }
 
     private boolean isLupoBrancoPresente() { return giocatori.isLupoBrancoPresente(); }

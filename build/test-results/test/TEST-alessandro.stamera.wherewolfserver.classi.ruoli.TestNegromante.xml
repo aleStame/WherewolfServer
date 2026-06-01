@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-06-01T13:53:56" hostname="ALESSANDRO" time="0.097">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-06-01T14:28:49" hostname="ALESSANDRO" time="0.082">
   <properties/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.002"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.015"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.006"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.006"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5416f8db, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.006"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@64e1377c, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
-  <testcase name="testFazioneNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
-  <testcase name="testNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.01"/>
-  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@6ed043d3
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
-alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@633cc6b5
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.023"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.009"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.001"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.001"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@b0fd744, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.002"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@92d1782, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
+  <testcase name="testFazioneNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.003"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.001"/>
+  <testcase name="testNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.002"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.005"/>
+  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante" time="0.001"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@213e3629
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
+alessandro.stamera.wherewolfserver.classi.ruoli.Negromante@238b521e
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
