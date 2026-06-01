@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbra">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo gestioneEliminazioniLupi" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +99,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/gestioneCategoria&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/nosferatuLupi&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -289,102 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03051" summary="REFACTORING: parametrizzazione del test che controlla l'esito della partita">
-      <option name="closed" value="true" />
-      <created>1779962042680</created>
-      <option name="number" value="03051" />
-      <option name="presentableId" value="LOCAL-03051" />
-      <option name="project" value="LOCAL" />
-      <updated>1779962042680</updated>
-    </task>
-    <task id="LOCAL-03052" summary="REFACTORING: definizione del metodo getPartitaGenerica">
-      <option name="closed" value="true" />
-      <created>1779962278442</created>
-      <option name="number" value="03052" />
-      <option name="presentableId" value="LOCAL-03052" />
-      <option name="project" value="LOCAL" />
-      <updated>1779962278442</updated>
-    </task>
-    <task id="LOCAL-03053" summary="REFACTORING: definizione del metodo inizializzaGiocatori">
-      <option name="closed" value="true" />
-      <created>1779971783874</created>
-      <option name="number" value="03053" />
-      <option name="presentableId" value="LOCAL-03053" />
-      <option name="project" value="LOCAL" />
-      <updated>1779971783874</updated>
-    </task>
-    <task id="LOCAL-03054" summary="VERDE DIRETTO: testLupoReiettoNonVivo riuscito">
-      <option name="closed" value="true" />
-      <created>1779972082589</created>
-      <option name="number" value="03054" />
-      <option name="presentableId" value="LOCAL-03054" />
-      <option name="project" value="LOCAL" />
-      <updated>1779972082589</updated>
-    </task>
-    <task id="LOCAL-03055" summary="VERDE DIRETTO: testLupoReiettoVivo riuscito">
-      <option name="closed" value="true" />
-      <created>1779972219142</created>
-      <option name="number" value="03055" />
-      <option name="presentableId" value="LOCAL-03055" />
-      <option name="project" value="LOCAL" />
-      <updated>1779972219142</updated>
-    </task>
-    <task id="LOCAL-03056" summary="VERDE DIRETTO: testLupoAttaccanteNonVivo riuscito">
-      <option name="closed" value="true" />
-      <created>1779972396896</created>
-      <option name="number" value="03056" />
-      <option name="presentableId" value="LOCAL-03056" />
-      <option name="project" value="LOCAL" />
-      <updated>1779972396896</updated>
-    </task>
-    <task id="LOCAL-03057" summary="REFACTORING: definizione del metodo isLupoReiettoVivo">
-      <option name="closed" value="true" />
-      <created>1779972568801</created>
-      <option name="number" value="03057" />
-      <option name="presentableId" value="LOCAL-03057" />
-      <option name="project" value="LOCAL" />
-      <updated>1779972568801</updated>
-    </task>
-    <task id="LOCAL-03058" summary="VERDE DIRETTO: testLupoAttaccanteVivo riuscito">
-      <option name="closed" value="true" />
-      <created>1779972786313</created>
-      <option name="number" value="03058" />
-      <option name="presentableId" value="LOCAL-03058" />
-      <option name="project" value="LOCAL" />
-      <updated>1779972786313</updated>
-    </task>
-    <task id="LOCAL-03059" summary="REFACTORING: definizione del metodo isLupoAttaccanteVivo">
-      <option name="closed" value="true" />
-      <created>1779972962945</created>
-      <option name="number" value="03059" />
-      <option name="presentableId" value="LOCAL-03059" />
-      <option name="project" value="LOCAL" />
-      <updated>1779972962945</updated>
-    </task>
-    <task id="LOCAL-03060" summary="VERDE DIRETTO: testLupoReiettoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1779973299237</created>
-      <option name="number" value="03060" />
-      <option name="presentableId" value="LOCAL-03060" />
-      <option name="project" value="LOCAL" />
-      <updated>1779973299237</updated>
-    </task>
-    <task id="LOCAL-03061" summary="VERDE DIRETTO: testLupoReiettoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1779973473021</created>
-      <option name="number" value="03061" />
-      <option name="presentableId" value="LOCAL-03061" />
-      <option name="project" value="LOCAL" />
-      <updated>1779973473021</updated>
-    </task>
-    <task id="LOCAL-03062" summary="REFACTORING: definizione del metodo isLupoReiettoPresente">
-      <option name="closed" value="true" />
-      <created>1779973724805</created>
-      <option name="number" value="03062" />
-      <option name="presentableId" value="LOCAL-03062" />
-      <option name="project" value="LOCAL" />
-      <updated>1779973724805</updated>
     </task>
     <task id="LOCAL-03063" summary="VERDE DIRETTO: testCapoBrancoPresente riuscito">
       <option name="closed" value="true" />
@@ -682,7 +584,103 @@
       <option name="project" value="LOCAL" />
       <updated>1780073112107</updated>
     </task>
-    <option name="localTasksCounter" value="3100" />
+    <task id="LOCAL-03100" summary="REFACTORING: rimozione codice inutile">
+      <option name="closed" value="true" />
+      <created>1780133299898</created>
+      <option name="number" value="03100" />
+      <option name="presentableId" value="LOCAL-03100" />
+      <option name="project" value="LOCAL" />
+      <updated>1780133299899</updated>
+    </task>
+    <task id="LOCAL-03101" summary="REFACTORING: definizione del metodo cambiaCategoria">
+      <option name="closed" value="true" />
+      <created>1780150328132</created>
+      <option name="number" value="03101" />
+      <option name="presentableId" value="LOCAL-03101" />
+      <option name="project" value="LOCAL" />
+      <updated>1780150328132</updated>
+    </task>
+    <task id="LOCAL-03102" summary="ROSSO: testDescrizione non riuscito">
+      <option name="closed" value="true" />
+      <created>1780153001365</created>
+      <option name="number" value="03102" />
+      <option name="presentableId" value="LOCAL-03102" />
+      <option name="project" value="LOCAL" />
+      <updated>1780153001365</updated>
+    </task>
+    <task id="LOCAL-03103" summary="VERDE: testDescrizione riuscito">
+      <option name="closed" value="true" />
+      <created>1780153171537</created>
+      <option name="number" value="03103" />
+      <option name="presentableId" value="LOCAL-03103" />
+      <option name="project" value="LOCAL" />
+      <updated>1780153171537</updated>
+    </task>
+    <task id="LOCAL-03104" summary="REFACTORING: definizione del metodo verificaStringa">
+      <option name="closed" value="true" />
+      <created>1780153346058</created>
+      <option name="number" value="03104" />
+      <option name="presentableId" value="LOCAL-03104" />
+      <option name="project" value="LOCAL" />
+      <updated>1780153346058</updated>
+    </task>
+    <task id="LOCAL-03105" summary="ROSSO: testMorteGhoulLupiNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1780155775129</created>
+      <option name="number" value="03105" />
+      <option name="presentableId" value="LOCAL-03105" />
+      <option name="project" value="LOCAL" />
+      <updated>1780155775130</updated>
+    </task>
+    <task id="LOCAL-03106" summary="VERDE: testMorteGhoulLupiNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1780156165176</created>
+      <option name="number" value="03106" />
+      <option name="presentableId" value="LOCAL-03106" />
+      <option name="project" value="LOCAL" />
+      <updated>1780156165176</updated>
+    </task>
+    <task id="LOCAL-03107" summary="ROSSO: testGhoulPresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1780156468905</created>
+      <option name="number" value="03107" />
+      <option name="presentableId" value="LOCAL-03107" />
+      <option name="project" value="LOCAL" />
+      <updated>1780156468905</updated>
+    </task>
+    <task id="LOCAL-03108" summary="VERDE: testGhoulPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1780156813917</created>
+      <option name="number" value="03108" />
+      <option name="presentableId" value="LOCAL-03108" />
+      <option name="project" value="LOCAL" />
+      <updated>1780156813917</updated>
+    </task>
+    <task id="LOCAL-03109" summary="REFACTORING: definizione del metodo getPosizioneGhoul">
+      <option name="closed" value="true" />
+      <created>1780157656101</created>
+      <option name="number" value="03109" />
+      <option name="presentableId" value="LOCAL-03109" />
+      <option name="project" value="LOCAL" />
+      <updated>1780157656101</updated>
+    </task>
+    <task id="LOCAL-03110" summary="REFACTORING: definizione del metodo isGhoul">
+      <option name="closed" value="true" />
+      <created>1780158099575</created>
+      <option name="number" value="03110" />
+      <option name="presentableId" value="LOCAL-03110" />
+      <option name="project" value="LOCAL" />
+      <updated>1780158099575</updated>
+    </task>
+    <task id="LOCAL-03111" summary="REFACTORING: definizione del metodo gestioneEliminazioniLupi">
+      <option name="closed" value="true" />
+      <created>1780308830760</created>
+      <option name="number" value="03111" />
+      <option name="presentableId" value="LOCAL-03111" />
+      <option name="project" value="LOCAL" />
+      <updated>1780308830761</updated>
+    </task>
+    <option name="localTasksCounter" value="3112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,18 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAmatoNonPresente riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAmatoMorto riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAmatoPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isAmatoVivo" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAmatoNonVivo" />
-    <MESSAGE value="ROSSO: testAmatoPresente non riuscito" />
-    <MESSAGE value="VERDE: testAmatoPresente riuscito" />
-    <MESSAGE value="ROSSO: testAmatoAssente non riuscito" />
-    <MESSAGE value="VERDE: testAmatoAssente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isSensitiva" />
-    <MESSAGE value="REFACTORING: definizione del metodo isAmato" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo isAmatoPresente" />
     <MESSAGE value="VERDE: testVittoriaAngeloCustodeVivo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaVintaConAmato" />
@@ -722,6 +708,18 @@
     <MESSAGE value="ROSSO: testEsitoPartitaPostGildata riuscito" />
     <MESSAGE value="VERDE: testEsitoPartitaPostGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbra" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbra" />
+    <MESSAGE value="REFACTORING: rimozione codice inutile" />
+    <MESSAGE value="REFACTORING: definizione del metodo cambiaCategoria" />
+    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
+    <MESSAGE value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
+    <MESSAGE value="ROSSO: testMorteGhoulLupiNosferatu non riuscito" />
+    <MESSAGE value="VERDE: testMorteGhoulLupiNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testGhoulPresente non riuscito" />
+    <MESSAGE value="VERDE: testGhoulPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGhoul" />
+    <MESSAGE value="REFACTORING: definizione del metodo isGhoul" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestioneEliminazioniLupi" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo gestioneEliminazioniLupi" />
   </component>
 </project>
