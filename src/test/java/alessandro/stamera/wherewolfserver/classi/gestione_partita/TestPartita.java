@@ -917,6 +917,18 @@ public final class TestPartita
         verificaEliminati(giocatori[2][0]);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testMorteGhoulCacciatoreNosferatu(String tipoLupo)
+    {
+        String[][] giocatori = new String[][] { { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { "Terzo", "Cacciatore di vampiri" } };
+        inizializzaPartita(giocatori);
+        String nomeVittima = giocatori[2][0];
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        verificaEliminati(giocatori[1][0], nomeVittima);
+    }
+
     private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 
     private boolean isAmatoVivo() { return partita.isAmatoVivo(); }
