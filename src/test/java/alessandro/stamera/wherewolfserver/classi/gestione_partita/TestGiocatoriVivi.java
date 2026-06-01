@@ -721,7 +721,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Gigio";
         aggiungiGiocatore(nome, "Nosferatu");
-        verificaVero(giocatori.isFazioneNosferatu(nome));
+        verificaVero(isFazioneNosferatu(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -739,8 +739,10 @@ public final class TestGiocatoriVivi
     {
         String nome = "Gioele";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isFazioneNosferatu(nome));
+        verificaFalso(isFazioneNosferatu(nome));
     }
+
+    private boolean isFazioneNosferatu(String nome) { return giocatori.isFazioneNosferatu(nome); }
 
     private boolean isAmatoPresente() { return giocatori.isAmatoPresente(); }
 
