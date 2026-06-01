@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-06-01T14:28:52" hostname="ALESSANDRO" time="0.039">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-06-01T14:41:10" hostname="ALESSANDRO" time="0.116">
   <properties/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.011"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.002"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.003"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.003"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.003"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.002"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.001"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.011"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.066"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.004"/>
   <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.003"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.003"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.003"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@213e3629
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@c8b96ec
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.004"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe" time="0.013"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@7a45d714
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe@1f67761b
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
