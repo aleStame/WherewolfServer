@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNosferatuVincitore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testVittoriaNosferatuConGhoul riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,22 +287,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03079" summary="ROSSO: testAmatoPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1780060417225</created>
-      <option name="number" value="03079" />
-      <option name="presentableId" value="LOCAL-03079" />
-      <option name="project" value="LOCAL" />
-      <updated>1780060417226</updated>
-    </task>
-    <task id="LOCAL-03080" summary="VERDE: testAmatoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1780060878768</created>
-      <option name="number" value="03080" />
-      <option name="presentableId" value="LOCAL-03080" />
-      <option name="project" value="LOCAL" />
-      <updated>1780060878768</updated>
     </task>
     <task id="LOCAL-03081" summary="ROSSO: testAmatoAssente non riuscito">
       <option name="closed" value="true" />
@@ -682,7 +664,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780329227705</updated>
     </task>
-    <option name="localTasksCounter" value="3128" />
+    <task id="LOCAL-03128" summary="ROSSO: testVittoriaNosferatuConGhoul non riuscito">
+      <option name="closed" value="true" />
+      <created>1780330826676</created>
+      <option name="number" value="03128" />
+      <option name="presentableId" value="LOCAL-03128" />
+      <option name="project" value="LOCAL" />
+      <updated>1780330826677</updated>
+    </task>
+    <task id="LOCAL-03129" summary="VERDE: testVittoriaNosferatuConGhoul riuscito">
+      <option name="closed" value="true" />
+      <created>1780331068695</created>
+      <option name="number" value="03129" />
+      <option name="presentableId" value="LOCAL-03129" />
+      <option name="project" value="LOCAL" />
+      <updated>1780331068695</updated>
+    </task>
+    <option name="localTasksCounter" value="3130" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -697,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbra" />
-    <MESSAGE value="REFACTORING: rimozione codice inutile" />
     <MESSAGE value="REFACTORING: definizione del metodo cambiaCategoria" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
@@ -722,6 +718,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isFazioneNosferatu" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFazioneNosferatu" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatuVincitore" />
+    <MESSAGE value="ROSSO: testVittoriaNosferatuConGhoul non riuscito" />
+    <MESSAGE value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
   </component>
 </project>

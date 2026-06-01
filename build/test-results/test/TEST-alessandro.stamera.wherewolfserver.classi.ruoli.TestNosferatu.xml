@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-06-01T16:22:47" hostname="ALESSANDRO" time="0.639">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-06-01T16:27:26" hostname="ALESSANDRO" time="0.085">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.341"/>
-  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.006"/>
-  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.006"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.014"/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.007"/>
-  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.005"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.007"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.007"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.01"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.003"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.011"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.008"/>
-  <testcase name="testVittoriaNosferatuConGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.029"/>
-  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.01"/>
-  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.008"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.01"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.007"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.005"/>
-  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.007"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
-  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.003"/>
-  <testcase name="testVittoriaNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.016"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.005"/>
-  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
-  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@1eef9aef
-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@11389053
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@5db99216
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@5db99216
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@5db99216
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@740abb5
-alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@560cbf1a
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@740abb5
-alessandro.stamera.wherewolfserver.classi.ruoli.Prete@740abb5
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
-alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@3c0fae6c
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.033"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testVittoriaNosferatuConGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
+  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testVittoriaNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <system-out><![CDATA[alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Ghoul@141d3d43
+alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale@59fbb34
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4b4ee511
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4b4ee511
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.lupi.CapoBranco@4b4ee511
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@4ee25d80
+alessandro.stamera.wherewolfserver.classi.ruoli.Peccatore@58fa5769
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@4ee25d80
+alessandro.stamera.wherewolfserver.classi.ruoli.Prete@4ee25d80
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
+alessandro.stamera.wherewolfserver.classi.ruoli.Nosferatu@6cbe7d4d
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
