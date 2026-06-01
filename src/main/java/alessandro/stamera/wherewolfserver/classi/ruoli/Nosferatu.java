@@ -1,9 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.CreatureOmbra;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 
@@ -24,6 +28,22 @@ public final class Nosferatu extends CreatureOmbra
     }
 
     @Override public boolean isNosferatu() { return true; }
+
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(esito == NON_FINITO)
+        {
+            boolean vittoria = true;
+            for(int i = 0; i < partita.getNumeroGiocatoriVivi() && vittoria; i++)
+            {
+                String nome = partita.getNomeGiocatoreVivo(i);
+                vittoria = partita.isProgenieNosferatuViva(nome) || partita.isNosferatuVivo(nome);
+            }
+            if(vittoria) esito = VITTORIA;
+        }
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new Nosferatu(); }
 

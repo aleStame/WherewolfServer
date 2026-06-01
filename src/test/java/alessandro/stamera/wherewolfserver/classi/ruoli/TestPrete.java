@@ -15,7 +15,11 @@ public final class TestPrete
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp()
+    {
+        FACTORY.annullaSegnalazioni();
+        ruolo = FACTORY.getRuolo(NOME);
+    }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
