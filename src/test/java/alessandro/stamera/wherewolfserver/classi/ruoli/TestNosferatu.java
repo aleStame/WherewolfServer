@@ -5,6 +5,12 @@ import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -83,39 +89,37 @@ public final class TestNosferatu
         verificaFalso(isSegnalatoBoia());
     }
 
-    @Test public void testVittoriaNosferatu()
+    @ParameterizedTest @MethodSource("getEsempiPartita")
+    public void testVittoriaNosferatu(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
+
+    private static Stream<Arguments> getEsempiPartita()
+    {
+        Partita[] partite = new Partita[]
+        {
+            new Partita
+            (
+                new String[][] { { "Tony", "Nosferatu" }, { "Steve", "Capo branco" }, { "Natasha", "Prete" }, { "Wanda", "Peccatore" } }
+            ),
+            new Partita
+            (
+                new String[][]
+                {
+                    { "Katia", "Nosferatu" }, { "Valeria", "Ghoul" }, { "Claudio", "Contadino normale" }, { "Vanessa", "Lupo del branco" }
+                }
+            )
+        };
+        setPartitaNosferatu(partite[0]);
+        setEsempioPartitaConGhoul(partite[1]);
+        return Stream.of(Arguments.of(partite[0]), Arguments.of(partite[1]));
+    }
+
+    private static void setPartitaNosferatu(Partita partita)
     {
         String[] nomiVittime = { "Natasha", "Wanda" };
         String nomeLupo = "Steve";
-        String[][] giocatori =
-            new String[][] { { "Tony", "Nosferatu" }, { nomeLupo, "Capo branco" }, { nomiVittime[0], "Prete" }, { nomiVittime[1], "Peccatore" } };
-        assertThat(ruolo.getEsitoPartita(getEsempioPartita(giocatori, nomiVittime, nomeLupo))).isEqualTo(VITTORIA);
-    }
-
-    @Test public void testVittoriaNosferatuConGhoul()
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
-        String[][] giocatori =
-            new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Ghoul" }, { nomeVittima, "Contadino normale" }, { nomeLupo, tipoLupo } };
-        Partita partita = new Partita(giocatori);
-        partita.attaccoLupi(tipoLupo, nomeVittima);
-        partita.progenizzazioneNosferatu(nomeVittima);
-        partita.terminaNotte();
-        int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
-        partita.incrementaVoti(nomeLupo, numeroVoti);
-        partita.terminaVotazioni();
-        partita.incrementaVoti(nomeLupo, numeroVoti);
-        partita.terminaBallottaggio();
-        partita.terminaNotte();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
-    }
-
-    private Partita getEsempioPartita(String[][] giocatori, String[] nomiVittime, String nomeLupo)
-    {
-        Partita partita = new Partita(giocatori);
         for(String nome : nomiVittime)
         {
-            partita.attaccoLupi(giocatori[2][1], nome);
+            partita.attaccoLupi("Capo branco", nome);
             partita.progenizzazioneNosferatu(nome);
             partita.terminaNotte();
         }
@@ -125,7 +129,20 @@ public final class TestNosferatu
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaBallottaggio();
         partita.terminaNotte();
-        return partita;
+    }
+
+    private static void setEsempioPartitaConGhoul(Partita partita)
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
+        partita.attaccoLupi(tipoLupo, nomeVittima);
+        partita.progenizzazioneNosferatu(nomeVittima);
+        partita.terminaNotte();
+        int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
     }
 
     private boolean isSegnalatoBoia() {

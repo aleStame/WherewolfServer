@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testVittoriaNosferatuConGhoul riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isAlleatoNosferatu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,14 +289,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03081" summary="ROSSO: testAmatoAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1780061763519</created>
-      <option name="number" value="03081" />
-      <option name="presentableId" value="LOCAL-03081" />
-      <option name="project" value="LOCAL" />
-      <updated>1780061763520</updated>
     </task>
     <task id="LOCAL-03082" summary="VERDE: testAmatoAssente riuscito">
       <option name="closed" value="true" />
@@ -680,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780331068695</updated>
     </task>
-    <option name="localTasksCounter" value="3130" />
+    <task id="LOCAL-03130" summary="REFACTORING: definizione del metodo isAlleatoNosferatu">
+      <option name="closed" value="true" />
+      <created>1780331355844</created>
+      <option name="number" value="03130" />
+      <option name="presentableId" value="LOCAL-03130" />
+      <option name="project" value="LOCAL" />
+      <updated>1780331355844</updated>
+    </task>
+    <option name="localTasksCounter" value="3131" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -695,7 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo cambiaCategoria" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
@@ -720,6 +721,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
     <MESSAGE value="ROSSO: testVittoriaNosferatuConGhoul non riuscito" />
     <MESSAGE value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAlleatoNosferatu" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAlleatoNosferatu" />
   </component>
 </project>
