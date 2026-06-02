@@ -94,6 +94,10 @@ public class Giocatori
 
     public boolean isContadinoMostro(String nome) { return getRuolo(nome).isContadinoMostro(); }
 
+    public void romeizzazione(String nome) { }
+
+    public boolean isRomeo(String nome) { return true; }
+
     private int getPosizioneContadinoMostro()
     {
         int posizione = NON_TROVATO;
@@ -126,4 +130,5 @@ public class Giocatori
     }
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
+
 }

@@ -96,6 +96,14 @@ public final class TestGiocatori
         verificaFalso(isContadinoMostro(giocatori[1][0]));
     }
 
+    @Test public void testNonRomeo()
+    {
+        String romeo = "Secondo", nome = "Terzo";
+        aggiungiGiocatori(new String[][] { { "Primo", "Giulietta" }, { romeo, "Oratore" }, { nome, "Azzeccagarbugli" } });
+        giocatori.romeizzazione(romeo);
+        verificaFalso(giocatori.isRomeo(nome));
+    }
+
     private void aggiungiGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
