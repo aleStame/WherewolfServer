@@ -261,7 +261,7 @@ public final class Partita
 
     private void gestioneEliminazioneLupi(String nome)
     {
-        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGiocatore(vivi.getNomeGhoul());
+        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGiocatore(getNomeGhoul());
         eliminaGiocatore(nome);
     }
 
@@ -289,10 +289,12 @@ public final class Partita
     private void morteNosferatu(String nome)
     {
         String nomeVittima = vivi.getNomeNosferatu();
-        if(isGhoulPresente()) nomeVittima = vivi.getNomeGhoul();
+        if(isGhoulPresente()) nomeVittima = getNomeGhoul();
         eliminaGiocatore(nomeVittima);
         if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.getRuolo(nome).isRomeo()) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
+
+    private String getNomeGhoul() { return vivi.getNomeGhoul(); }
 
     private boolean isGhoulPresente() { return vivi.isGhoulPresente(); }
 
