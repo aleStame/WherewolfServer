@@ -51,7 +51,7 @@ public final class Partita
 
     public void incrementaVoti(String nome, int numeroVoti)
     {
-        if(vivi.isPresente(nome)) vivi.incrementaVoti(nome, numeroVoti);
+        if(isVivo(nome)) vivi.incrementaVoti(nome, numeroVoti);
         else incrementaVotiBallottaggio(nome, numeroVoti);
     }
 
@@ -261,7 +261,7 @@ public final class Partita
 
     private void gestioneEliminazioneLupi(String nome)
     {
-        if(vivi.isNosferatu(nome) && vivi.isGhoulPresente()) eliminaGiocatore(vivi.getNomeGhoul());
+        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGiocatore(vivi.getNomeGhoul());
         eliminaGiocatore(nome);
     }
 
@@ -289,10 +289,12 @@ public final class Partita
     private void morteNosferatu(String nome)
     {
         String nomeVittima = vivi.getNomeNosferatu();
-        if(vivi.isGhoulPresente()) nomeVittima = vivi.getNomeGhoul();
+        if(isGhoulPresente()) nomeVittima = vivi.getNomeGhoul();
         eliminaGiocatore(nomeVittima);
         if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.getRuolo(nome).isRomeo()) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
+
+    private boolean isGhoulPresente() { return vivi.isGhoulPresente(); }
 
     private void perdiProtezioniCappuccettoRosso()
     {
