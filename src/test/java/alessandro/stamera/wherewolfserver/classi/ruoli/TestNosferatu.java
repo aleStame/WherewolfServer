@@ -118,18 +118,18 @@ public final class TestNosferatu
         String[] nomiVittime = { "Natasha", "Wanda" };
         String nomeLupo = "Steve";
         for(String nome : nomiVittime) nosferatizzazione(partita, "Capo branco", nome);
-        int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
-        partita.incrementaVoti(nomeLupo, numeroVoti);
-        partita.terminaVotazioni();
-        partita.incrementaVoti(nomeLupo, numeroVoti);
-        partita.terminaBallottaggio();
-        partita.terminaNotte();
+        rogo(partita, nomeLupo);
     }
 
     private static void setEsempioPartitaConGhoul(Partita partita)
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
         nosferatizzazione(partita, tipoLupo, nomeVittima);
+        rogo(partita, nomeLupo);
+    }
+
+    private static void rogo(Partita partita, String nomeLupo)
+    {
         int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaVotazioni();
