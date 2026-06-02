@@ -117,12 +117,7 @@ public final class TestNosferatu
     {
         String[] nomiVittime = { "Natasha", "Wanda" };
         String nomeLupo = "Steve";
-        for(String nome : nomiVittime)
-        {
-            partita.attaccoLupi("Capo branco", nome);
-            partita.progenizzazioneNosferatu(nome);
-            partita.terminaNotte();
-        }
+        for(String nome : nomiVittime) nosferatizzazione(partita, "Capo branco", nome);
         int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaVotazioni();
@@ -134,14 +129,19 @@ public final class TestNosferatu
     private static void setEsempioPartitaConGhoul(Partita partita)
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
-        partita.attaccoLupi(tipoLupo, nomeVittima);
-        partita.progenizzazioneNosferatu(nomeVittima);
-        partita.terminaNotte();
+        nosferatizzazione(partita, tipoLupo, nomeVittima);
         int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaVotazioni();
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaBallottaggio();
+        partita.terminaNotte();
+    }
+
+    private static void nosferatizzazione(Partita partita, String tipoLupo, String nome)
+    {
+        partita.attaccoLupi(tipoLupo, nome);
+        partita.progenizzazioneNosferatu(nome);
         partita.terminaNotte();
     }
 
