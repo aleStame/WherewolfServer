@@ -128,7 +128,7 @@ public final class TestGiocatori
     {
         String nome = "Elena";
         aggiungiGiocatore(nome, "Nosferatu");
-        verificaVero(giocatori.isNosferatuPresente());
+        verificaVero(isNosferatuPresente());
         verificaStringa(giocatori.getNomeNosferatu(), nome);
     }
 
@@ -147,8 +147,10 @@ public final class TestGiocatori
     {
         String nome = "Mario";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isNosferatuPresente());
+        verificaFalso(isNosferatuPresente());
     }
+
+    private boolean isNosferatuPresente() { return giocatori.isNosferatuPresente(); }
 
     private void aggiungiGiocatori(String[][] giocatori)
     {
