@@ -33,9 +33,4 @@ public class Ghoul extends Ruolo
 
     public static Ruolo getInstance() { return new Ghoul(); }
 
-    private boolean isGiocatoreAlleato(Partita partita, String nome)
-    {
-        return partita.isGhoulVivo(nome) || partita.isNosferatuVivo(nome) || partita.isProgenieNosferatuViva(nome);
-    }
-
 }

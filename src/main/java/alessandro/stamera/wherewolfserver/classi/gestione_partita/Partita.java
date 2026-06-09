@@ -265,10 +265,8 @@ public final class Partita
 
     public boolean isNosferatuVincitore()
     {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(isNosferatuVivo(getNomeGiocatoreVivo(i))) posizione = i;
         boolean esito = false;
-        if(posizione != -1) esito = (getRuoloVivo(getNomeGiocatoreVivo(posizione)).getEsitoPartita(this) == VITTORIA);
+        if(vivi.isNosferatuPresente()) esito = (getRuoloVivo(vivi.getNomeNosferatu()).getEsitoPartita(this) == VITTORIA);
         return esito;
      }
 

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getRuoli">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNosferatuPresente" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -295,22 +291,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03094" summary="ROSSO: testEsitoPartitaPostGildata non riuscito">
-      <option name="closed" value="true" />
-      <created>1780071896728</created>
-      <option name="number" value="03094" />
-      <option name="presentableId" value="LOCAL-03094" />
-      <option name="project" value="LOCAL" />
-      <updated>1780071896728</updated>
-    </task>
-    <task id="LOCAL-03095" summary="VERDE: testEsitoPartitaPostGildata riuscito">
-      <option name="closed" value="true" />
-      <created>1780072394990</created>
-      <option name="number" value="03095" />
-      <option name="presentableId" value="LOCAL-03095" />
-      <option name="project" value="LOCAL" />
-      <updated>1780072394990</updated>
     </task>
     <task id="LOCAL-03096" summary="REFACTORING: definizione del metodo getEsitoPartitaSenzaOmbre">
       <option name="closed" value="true" />
@@ -688,7 +668,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781014178061</updated>
     </task>
-    <option name="localTasksCounter" value="3143" />
+    <task id="LOCAL-03143" summary="VERDE DIRETTO: testNosferatuNonPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1781014781231</created>
+      <option name="number" value="03143" />
+      <option name="presentableId" value="LOCAL-03143" />
+      <option name="project" value="LOCAL" />
+      <updated>1781014781232</updated>
+    </task>
+    <task id="LOCAL-03144" summary="REFACTORING: definizione del metodo isNosferatuPresente">
+      <option name="closed" value="true" />
+      <created>1781015013325</created>
+      <option name="number" value="03144" />
+      <option name="presentableId" value="LOCAL-03144" />
+      <option name="project" value="LOCAL" />
+      <updated>1781015013325</updated>
+    </task>
+    <option name="localTasksCounter" value="3145" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,8 +699,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testMorteGhoulContadinoMostroNosferatu riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testMorteGhoulContadinoMostroNosferatu riuscito" />
     <MESSAGE value="ROSSO: testVittoriaNosferatu non riuscito" />
     <MESSAGE value="VERDE: testVittoriaNosferatu riuscito" />
     <MESSAGE value="ROSSO: testFazioneNosferatu non riuscito" />
@@ -728,6 +722,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatori" />
     <MESSAGE value="REFACTORING: definizione del metodo getStreamRuoli" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoli" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getRuoli" />
+    <MESSAGE value="VERDE DIRETTO: testNosferatuNonPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatuPresente" />
   </component>
 </project>
