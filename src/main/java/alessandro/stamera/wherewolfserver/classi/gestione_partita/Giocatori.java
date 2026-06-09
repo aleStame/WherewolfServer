@@ -50,9 +50,9 @@ public class Giocatori
 
     public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
 
-    public boolean isAngeloCustodePresente() { return getPosizioneAngeloCustode() != NON_TROVATO; }
+    public boolean isAngeloCustodePresente() { return cercaAngeloCustode().isPresent(); }
 
-    public String getNomeAngeloCustode() { return getNomeGiocatore(getPosizioneAngeloCustode()); }
+    public String getNomeAngeloCustode() { return cercaAngeloCustode().get().getKey(); }
 
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
 
@@ -119,14 +119,10 @@ public class Giocatori
 
     private Set<String> getChiavi() { return giocatori.keySet(); }
 
-    private int getPosizioneAngeloCustode()
+    private Optional<Entry<String, Ruolo>> cercaAngeloCustode()
     {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isAngeloCustode(i)) posizione = i;
-        return posizione;
+        return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isAngeloCustode()).findAny();
     }
-
-    private boolean isAngeloCustode(int posizione) { return isAngeloCustode(getNomeGiocatore(posizione)); }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
     {
