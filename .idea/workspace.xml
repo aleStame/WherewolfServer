@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo cercaContadinoMostro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo cercaRuolo">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +293,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03090" summary="VERDE DIRETTO: testSconfittaNienteAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1780065429784</created>
-      <option name="number" value="03090" />
-      <option name="presentableId" value="LOCAL-03090" />
-      <option name="project" value="LOCAL" />
-      <updated>1780065429784</updated>
     </task>
     <task id="LOCAL-03091" summary="ROSSO: testEsitoPartita non riuscito">
       <option name="closed" value="true" />
@@ -687,7 +678,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781009192652</updated>
     </task>
-    <option name="localTasksCounter" value="3139" />
+    <task id="LOCAL-03139" summary="REFACTORING: definizione del metodo cercaRuolo">
+      <option name="closed" value="true" />
+      <created>1781012432032</created>
+      <option name="number" value="03139" />
+      <option name="presentableId" value="LOCAL-03139" />
+      <option name="project" value="LOCAL" />
+      <updated>1781012432033</updated>
+    </task>
+    <option name="localTasksCounter" value="3140" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isGhoul" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneEliminazioniLupi" />
     <MESSAGE value="VERDE DIRETTO: testMorteGhoulCacciatoreNosferatu riuscito" />
     <MESSAGE value="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito" />
@@ -727,6 +725,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo cercaNosferatu" />
     <MESSAGE value="REFACTORING: definizione del metodo cercaAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo cercaContadinoMostro" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo cercaContadinoMostro" />
+    <MESSAGE value="REFACTORING: definizione del metodo cercaRuolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo cercaRuolo" />
   </component>
 </project>

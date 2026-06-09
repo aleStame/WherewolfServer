@@ -9,6 +9,7 @@ import java.util.*;
 import static java.util.stream.Collectors.toMap;
 import java.util.Map.Entry;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Giocatori
 {
@@ -112,17 +113,18 @@ public class Giocatori
 
     private Optional<Entry<String, Ruolo>> cercaRuolo(Predicate<Entry<String, Ruolo>> predicato)
     {
-        return giocatori.entrySet().stream().filter(predicato).findAny();
+        return getGiocatori().filter(predicato).findAny();
     }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
     {
         Map<String, Ruolo> copia =
-            giocatori.entrySet().stream().sorted(comparatore)
-                .collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+            getGiocatori().sorted(comparatore).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         giocatori.clear();
         for(String nome : copia.keySet()) giocatori.put(nome, copia.get(nome));
     }
+
+    private Stream<Entry<String, Ruolo>> getGiocatori() { return giocatori.entrySet().stream(); }
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
 
