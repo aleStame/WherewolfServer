@@ -98,9 +98,11 @@ public class Giocatori
 
     public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
 
-    public boolean isNosferatuPresente() { return false; }
+    public boolean isNosferatuPresente() { return giocatori.values().stream().anyMatch(Ruolo::isNosferatu); }
 
-    public String getNomeNosferatu() { return null; }
+    public String getNomeNosferatu() { return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isNosferatu()).findAny().get().getKey(); }
+
+
 
     private int getPosizioneContadinoMostro()
     {

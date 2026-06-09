@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testEsempioPartita non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ghoul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ghoul.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNosferatuPresente non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,22 +293,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03084" summary="REFACTORING: definizione del metodo isAmato">
-      <option name="closed" value="true" />
-      <created>1780062582643</created>
-      <option name="number" value="03084" />
-      <option name="presentableId" value="LOCAL-03084" />
-      <option name="project" value="LOCAL" />
-      <updated>1780062582644</updated>
-    </task>
-    <task id="LOCAL-03085" summary="REFACTORING: definizione del metodo getPosizioneAmato">
-      <option name="closed" value="true" />
-      <created>1780062829911</created>
-      <option name="number" value="03085" />
-      <option name="presentableId" value="LOCAL-03085" />
-      <option name="project" value="LOCAL" />
-      <updated>1780062829911</updated>
     </task>
     <task id="LOCAL-03086" summary="REFACTORING: definizione del metodo isAmatoPresente">
       <option name="closed" value="true" />
@@ -687,7 +670,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781006433220</updated>
     </task>
-    <option name="localTasksCounter" value="3133" />
+    <task id="LOCAL-03133" summary="VERDE: testEsempioPartita riuscito">
+      <option name="closed" value="true" />
+      <created>1781007440880</created>
+      <option name="number" value="03133" />
+      <option name="presentableId" value="LOCAL-03133" />
+      <option name="project" value="LOCAL" />
+      <updated>1781007440880</updated>
+    </task>
+    <task id="LOCAL-03134" summary="ROSSO: testNosferatuPresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1781007849534</created>
+      <option name="number" value="03134" />
+      <option name="presentableId" value="LOCAL-03134" />
+      <option name="project" value="LOCAL" />
+      <updated>1781007849535</updated>
+    </task>
+    <option name="localTasksCounter" value="3135" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
-    <MESSAGE value="ROSSO: testMorteGhoulLupiNosferatu non riuscito" />
     <MESSAGE value="VERDE: testMorteGhoulLupiNosferatu riuscito" />
     <MESSAGE value="ROSSO: testGhoulPresente non riuscito" />
     <MESSAGE value="VERDE: testGhoulPresente riuscito" />
@@ -727,6 +724,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isAlleatoNosferatu" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="ROSSO: testEsempioPartita non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsempioPartita non riuscito" />
+    <MESSAGE value="VERDE: testEsempioPartita riuscito" />
+    <MESSAGE value="ROSSO: testNosferatuPresente non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNosferatuPresente non riuscito" />
   </component>
 </project>
