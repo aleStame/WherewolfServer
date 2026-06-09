@@ -98,6 +98,10 @@ public class Giocatori
 
     public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
 
+    public boolean isNosferatuPresente() { return false; }
+
+    public String getNomeNosferatu() { return null; }
+
     private int getPosizioneContadinoMostro()
     {
         int posizione = NON_TROVATO;

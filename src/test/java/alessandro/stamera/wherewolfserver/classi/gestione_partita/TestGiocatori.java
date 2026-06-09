@@ -124,6 +124,14 @@ public final class TestGiocatori
         FACTORY.annullaSegnalazioni();
     }
 
+    @Test public void testNosferatuPresente()
+    {
+        String nome = "Elena";
+        aggiungiGiocatore(nome, "Nosferatu");
+        verificaVero(giocatori.isNosferatuPresente());
+        verificaStringa(giocatori.getNomeNosferatu(), nome);
+    }
+
     private void aggiungiGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
