@@ -3,12 +3,11 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreAlfabetico;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreVoti;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
+
+import java.util.*;
+
 import static java.util.stream.Collectors.toMap;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class Giocatori
 {
@@ -98,11 +97,14 @@ public class Giocatori
 
     public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
 
-    public boolean isNosferatuPresente() { return giocatori.values().stream().anyMatch(Ruolo::isNosferatu); }
+    public boolean isNosferatuPresente() { return cercaNosferatu().isPresent(); }
 
-    public String getNomeNosferatu() { return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isNosferatu()).findAny().get().getKey(); }
+    public String getNomeNosferatu() { return cercaNosferatu().get().getKey(); }
 
-
+    private Optional<Entry<String, Ruolo>> cercaNosferatu()
+    {
+        return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isNosferatu()).findAny();
+    }
 
     private int getPosizioneContadinoMostro()
     {

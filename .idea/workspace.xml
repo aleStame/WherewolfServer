@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNosferatuPresente non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNosferatuPresente riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,14 +293,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03086" summary="REFACTORING: definizione del metodo isAmatoPresente">
-      <option name="closed" value="true" />
-      <created>1780063102202</created>
-      <option name="number" value="03086" />
-      <option name="presentableId" value="LOCAL-03086" />
-      <option name="project" value="LOCAL" />
-      <updated>1780063102202</updated>
     </task>
     <task id="LOCAL-03087" summary="VERDE: testVittoriaAngeloCustodeVivo riuscito">
       <option name="closed" value="true" />
@@ -686,7 +678,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781007849535</updated>
     </task>
-    <option name="localTasksCounter" value="3135" />
+    <task id="LOCAL-03135" summary="VERDE: testNosferatuPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1781008344757</created>
+      <option name="number" value="03135" />
+      <option name="presentableId" value="LOCAL-03135" />
+      <option name="project" value="LOCAL" />
+      <updated>1781008344757</updated>
+    </task>
+    <option name="localTasksCounter" value="3136" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testMorteGhoulLupiNosferatu riuscito" />
     <MESSAGE value="ROSSO: testGhoulPresente non riuscito" />
     <MESSAGE value="VERDE: testGhoulPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGhoul" />
@@ -726,6 +725,7 @@
     <MESSAGE value="ROSSO: testEsempioPartita non riuscito" />
     <MESSAGE value="VERDE: testEsempioPartita riuscito" />
     <MESSAGE value="ROSSO: testNosferatuPresente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNosferatuPresente non riuscito" />
+    <MESSAGE value="VERDE: testNosferatuPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNosferatuPresente riuscito" />
   </component>
 </project>
