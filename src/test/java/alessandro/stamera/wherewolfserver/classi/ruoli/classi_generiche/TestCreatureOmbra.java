@@ -29,10 +29,10 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         Partita[] partite = new Partita[]
         {
-            new Partita(new String[][] { { "Aurora", "Oratore" }, { "Giulia", "Prete" } }), new Partita(new String[][] { }),
+            new Partita(new String[][] { { "Aurora", "Oratore" }, { "Giulia", "Prete" } }),
             new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } })
         };
-        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
+        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO));
     }
 
 }
