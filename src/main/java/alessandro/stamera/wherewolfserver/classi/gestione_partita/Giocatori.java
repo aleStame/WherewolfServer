@@ -12,8 +12,6 @@ import java.util.Map.Entry;
 public class Giocatori
 {
 
-    private static final int NON_TROVATO = -1;
-
     private final Map<String, Ruolo> giocatori;
 
     public Giocatori() { giocatori = new LinkedHashMap<>(); }
@@ -87,9 +85,9 @@ public class Giocatori
 
     public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 
-    public boolean isContadinoMostroPresente() { return giocatori.values().stream().anyMatch(Ruolo::isContadinoMostro); }
+    public boolean isContadinoMostroPresente() { return cercaContadinoMostro().isPresent(); }
 
-    public String getNomeContadinoMostro() { return getNomeGiocatore(getPosizioneContadinoMostro()); }
+    public String getNomeContadinoMostro() { return cercaContadinoMostro().get().getKey(); }
 
     public boolean isContadinoMostro(String nome) { return getRuolo(nome).isContadinoMostro(); }
 
@@ -106,14 +104,10 @@ public class Giocatori
         return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isNosferatu()).findAny();
     }
 
-    private int getPosizioneContadinoMostro()
+    private Optional<Entry<String, Ruolo>> cercaContadinoMostro()
     {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isContadinoMostro(i)) posizione = i;
-        return posizione;
+        return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isContadinoMostro()).findAny();
     }
-
-    private boolean isContadinoMostro(int posizione) { return isContadinoMostro(getNomeGiocatore(posizione)); }
 
     private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
 
