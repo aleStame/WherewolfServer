@@ -38,7 +38,7 @@ public class Giocatori
 
     public void annullaVoti()
     {
-        giocatori.values().forEach(Ruolo::annullaVoti);
+        getRuoli().forEach(Ruolo::annullaVoti);
         ordinaAlfabeticamente();
     }
 
@@ -56,7 +56,7 @@ public class Giocatori
 
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
 
-    public void resettaAmato() { giocatori.values().forEach(Ruolo::resettaAmato); }
+    public void resettaAmato() { getRuoli().forEach(Ruolo::resettaAmato); }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
@@ -128,6 +128,8 @@ public class Giocatori
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
 
-    private Stream<Ruolo> getStreamRuoli() { return giocatori.values().stream(); }
+    private Stream<Ruolo> getStreamRuoli() { return getRuoli().stream(); }
+
+    private Collection<Ruolo> getRuoli() { return giocatori.values(); }
 
 }
