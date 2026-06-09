@@ -76,9 +76,9 @@ public class Giocatori
 
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
-    public boolean isOratorePresente() { return giocatori.values().stream().anyMatch(Ruolo::isOratore); }
+    public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Ruolo::isOratore); }
 
-    public int getNumeroRuoliCitta() { return (int)giocatori.values().stream().filter(Ruolo::isCitta).count(); }
+    public int getNumeroRuoliCitta() { return (int)getStreamRuoli().filter(Ruolo::isCitta).count(); }
 
     public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 
@@ -127,5 +127,7 @@ public class Giocatori
     private Stream<Entry<String, Ruolo>> getGiocatori() { return giocatori.entrySet().stream(); }
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
+
+    private Stream<Ruolo> getStreamRuoli() { return giocatori.values().stream(); }
 
 }
