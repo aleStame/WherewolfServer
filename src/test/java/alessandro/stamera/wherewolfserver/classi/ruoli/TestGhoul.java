@@ -79,31 +79,60 @@ public final class TestGhoul
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @ParameterizedTest @MethodSource("getEsempioPartita") public void testVittoria(Partita partita, EsitoPartita esito)
+    @ParameterizedTest @MethodSource("getEsempiPartita") public void testEsempioPartita(Partita partita, EsitoPartita esito)
     {
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
         FACTORY.annullaSegnalazioni();
     }
 
-    private static Stream<Arguments> getEsempioPartita()
+    private static Stream<Arguments> getEsempiPartita()
     {
-        String[][] giocatori = new String[][] { { "Angelo", "Nosferatu" }, { "Raf", "Ghoul" }, { "Aurora", "Capo branco" }, { "Giulia", "Prete" } };
-        Partita[] partite =
-            new Partita[] { new Partita(giocatori), new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } }) };
-        setPartitaVinta(partite[0], giocatori[2][1], giocatori[3][0], giocatori[2][0]);
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], SCONFITTA));
+        Partita[] partite = new Partita[]
+        {
+            new Partita(new String[][] { { "Tony", "Nosferatu" }, { "Steve", "Capo branco" }, { "Natasha", "Prete" }, { "Wanda", "Peccatore" } }),
+            new Partita
+            (
+                new String[][]
+                {
+                    { "Katia", "Nosferatu" }, { "Valeria", "Ghoul" }, { "Claudio", "Contadino normale" }, { "Vanessa", "Lupo del branco" }
+                }
+            ),
+            new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } })
+        };
+        setPartitaNosferatu(partite[0]);
+        setEsempioPartitaConGhoul(partite[1]);
+        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
     }
 
-    private static void setPartitaVinta(Partita partita, String tipoLupo, String nomeVittima, String nomeLupo)
+    private static void setPartitaNosferatu(Partita partita)
     {
-        partita.attaccoLupi(tipoLupo, nomeVittima);
-        partita.progenizzazioneNosferatu(nomeVittima);
-        partita.terminaNotte();
-        int numeroVoti = 3;
+        String[] nomiVittime = { "Natasha", "Wanda" };
+        String nomeLupo = "Steve";
+        for(String nome : nomiVittime) nosferatizzazione(partita, "Capo branco", nome);
+        rogo(partita, nomeLupo);
+    }
+
+    private static void setEsempioPartitaConGhoul(Partita partita)
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
+        nosferatizzazione(partita, tipoLupo, nomeVittima);
+        rogo(partita, nomeLupo);
+    }
+
+    private static void rogo(Partita partita, String nomeLupo)
+    {
+        int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaVotazioni();
         partita.incrementaVoti(nomeLupo, numeroVoti);
         partita.terminaBallottaggio();
+        partita.terminaNotte();
+    }
+
+    private static void nosferatizzazione(Partita partita, String tipoLupo, String nome)
+    {
+        partita.attaccoLupi(tipoLupo, nome);
+        partita.progenizzazioneNosferatu(nome);
         partita.terminaNotte();
     }
 
