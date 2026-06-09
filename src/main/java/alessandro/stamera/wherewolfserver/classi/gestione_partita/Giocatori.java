@@ -8,6 +8,7 @@ import java.util.*;
 
 import static java.util.stream.Collectors.toMap;
 import java.util.Map.Entry;
+import java.util.function.Predicate;
 
 public class Giocatori
 {
@@ -36,7 +37,7 @@ public class Giocatori
 
     public void annullaVoti()
     {
-        for(String nome : getChiavi()) annullaVoti(nome);
+        giocatori.values().forEach(Ruolo::annullaVoti);
         ordinaAlfabeticamente();
     }
 
@@ -44,7 +45,7 @@ public class Giocatori
 
     public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
-    public String getNomeGiocatore(int posizione) { return getChiavi().stream().toList().get(posizione); }
+    public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
     public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
 
@@ -54,7 +55,7 @@ public class Giocatori
 
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
 
-    public void resettaAmato() { for(String chiave : getChiavi()) getRuolo(chiave).resettaAmato(); }
+    public void resettaAmato() { giocatori.values().forEach(Ruolo::resettaAmato); }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
@@ -74,14 +75,9 @@ public class Giocatori
 
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
-    public boolean isOratorePresente() { return getChiavi().stream().anyMatch(this::isOratore); }
+    public boolean isOratorePresente() { return giocatori.values().stream().anyMatch(Ruolo::isOratore); }
 
-    public int getNumeroRuoliCitta()
-    {
-        int numeroCitta = 0;
-        for(String chiave : getChiavi()) if(isCitta(chiave)) numeroCitta++;
-        return numeroCitta;
-    }
+    public int getNumeroRuoliCitta() { return (int)giocatori.values().stream().filter(Ruolo::isCitta).count(); }
 
     public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 
@@ -101,21 +97,22 @@ public class Giocatori
 
     private Optional<Entry<String, Ruolo>> cercaNosferatu()
     {
-        return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isNosferatu()).findAny();
+        return cercaRuolo(ruolo -> ruolo.getValue().isNosferatu());
     }
 
     private Optional<Entry<String, Ruolo>> cercaContadinoMostro()
     {
-        return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isContadinoMostro()).findAny();
+        return cercaRuolo(ruolo -> ruolo.getValue().isContadinoMostro());
     }
-
-    private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
-
-    private Set<String> getChiavi() { return giocatori.keySet(); }
 
     private Optional<Entry<String, Ruolo>> cercaAngeloCustode()
     {
-        return giocatori.entrySet().stream().filter(elemento -> elemento.getValue().isAngeloCustode()).findAny();
+        return cercaRuolo(ruolo -> ruolo.getValue().isAngeloCustode());
+    }
+
+    private Optional<Entry<String, Ruolo>> cercaRuolo(Predicate<Entry<String, Ruolo>> predicato)
+    {
+        return giocatori.entrySet().stream().filter(predicato).findAny();
     }
 
     private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
