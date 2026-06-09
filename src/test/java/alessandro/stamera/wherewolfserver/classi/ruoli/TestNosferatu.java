@@ -3,14 +3,13 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -91,6 +90,8 @@ public final class TestNosferatu
 
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testVittoriaNosferatu(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
+
+    @AfterAll public static void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
 
     private static Stream<Arguments> getEsempiPartita()
     {

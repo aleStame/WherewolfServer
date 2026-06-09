@@ -21,7 +21,9 @@ public final class TestGiocatoriMortiNotte
         String nome = "Marco";
         aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.progenizzazioneNosferatu(nome)).isEqualTo(esito);
+        FACTORY.annullaSegnalazioni();
     }
+
     @Test public void testLupo()
     {
         String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };

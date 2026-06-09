@@ -94,9 +94,9 @@ public class Giocatori
 
     public boolean isContadinoMostro(String nome) { return getRuolo(nome).isContadinoMostro(); }
 
-    public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
-
     public boolean isRomeo(String nome) { return getRuolo(nome).isRomeo(); }
+
+    public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
 
     private int getPosizioneContadinoMostro()
     {

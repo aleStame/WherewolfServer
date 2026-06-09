@@ -38,7 +38,6 @@ public final class Partita
     {
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
-        FACTORY.annullaSegnalazioni();
         inizializzaGiocatori(giocatori);
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
@@ -257,7 +256,11 @@ public final class Partita
 
     public boolean isAmatoVivo() { return vivi.isAmatoPresente(); }
 
-    public boolean isFazioneNosferatu(String nome) { return vivi.isFazioneNosferatu(nome); }
+    public boolean isFazioneNosferatu(String nome)
+    {
+        if(isVivo(nome)) return vivi.isFazioneNosferatu(nome);
+        else return false;
+    }
 
     private void gestioneEliminazioneLupi(String nome)
     {
@@ -291,7 +294,7 @@ public final class Partita
         String nomeVittima = vivi.getNomeNosferatu();
         if(isGhoulPresente()) nomeVittima = getNomeGhoul();
         eliminaGiocatore(nomeVittima);
-        if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.getRuolo(nome).isRomeo()) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
+        if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
 
     private String getNomeGhoul() { return vivi.getNomeGhoul(); }

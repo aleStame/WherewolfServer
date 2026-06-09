@@ -13,12 +13,14 @@ public final class LupoSolitario extends Lupo
     private LupoSolitario()
     {
         super("Lupo solitario", null, 3);
-        cambiaFazione(LUPO_SOLITARIO);
+        ripristinaFazioneOriginale();
     }
 
     @Override public boolean isLupoSolitario() { return true; }
 
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo) { return FALLITO; }
+
+    @Override public void ripristinaFazioneOriginale() { cambiaFazione(LUPO_SOLITARIO); }
 
     public static Ruolo getInstance() { return new LupoSolitario(); }
 

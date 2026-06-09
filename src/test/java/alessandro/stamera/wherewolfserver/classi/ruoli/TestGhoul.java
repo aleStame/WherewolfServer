@@ -79,8 +79,11 @@ public final class TestGhoul
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @ParameterizedTest @MethodSource("getEsempioPartita")
-    public void testVittoria(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+    @ParameterizedTest @MethodSource("getEsempioPartita") public void testVittoria(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+        FACTORY.annullaSegnalazioni();
+    }
 
     private static Stream<Arguments> getEsempioPartita()
     {

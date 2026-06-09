@@ -45,7 +45,7 @@ public final class TestGiocatori
         verificaStringa(giocatori.getNomeAngeloCustode(), nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Assassino, Capo gilda, Guardia corrotta, Ladra, Spia" })
+    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Ladra", "Spia" })
     public void testCriminale(String nomeCriminale)
     {
         String nome = "Sofia";
@@ -102,6 +102,26 @@ public final class TestGiocatori
         aggiungiGiocatori(new String[][] { { "Primo", "Giulietta" }, { romeo, "Oratore" }, { nome, "Azzeccagarbugli" } });
         giocatori.romeizzazione(romeo);
         verificaFalso(giocatori.isRomeo(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testRomeo(String nomeRuolo)
+    {
+        String nome = "Marco";
+        aggiungiGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
+        giocatori.romeizzazione(nome);
+        verificaVero(giocatori.isRomeo(nome));
+        FACTORY.annullaSegnalazioni();
     }
 
     private void aggiungiGiocatori(String[][] giocatori)

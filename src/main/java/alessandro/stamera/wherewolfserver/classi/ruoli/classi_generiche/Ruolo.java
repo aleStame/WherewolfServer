@@ -284,7 +284,11 @@ public class Ruolo
 
     public boolean isTemplare() { return false; }
 
-    public void resettaAmato() { setAmato(false); }
+    public void resettaAmato()
+    {
+        setAmato(false);
+        ripristinaFazioneOriginale();
+    }
 
     public EsitoAttacco attaccoAssassino()
     {

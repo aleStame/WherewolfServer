@@ -123,6 +123,7 @@ public final class TestPartita
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
         verificaAccusati(giocatori[0][0], giocatori[1][0], giocatori[2][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -137,6 +138,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(giocatori[0][0], giocatori[posizione2][0]);
         verificaNonAccusato(giocatori[posizione1][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -150,7 +152,7 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Fabrizio", "Bocca di rosa" }, { "Franca", "Peccatore" } };
@@ -160,6 +162,7 @@ public final class TestPartita
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
         terminaNotte();
         verificaNonEliminati(giocatori[posizione][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -484,6 +487,7 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nome);
         verificaFazioneNosferatu(nome);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testSuicidioCapoBranco()
@@ -555,6 +559,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         gildata(nomeVittima);
         verificaNumeroCriminali(numeroCriminali);
+        FACTORY.annullaSegnalazioni();
     }
 
     @ParameterizedTest
@@ -830,6 +835,7 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaProgenieNosferatuNonViva(nomeVittima);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testNessunGiocatoreVivo()

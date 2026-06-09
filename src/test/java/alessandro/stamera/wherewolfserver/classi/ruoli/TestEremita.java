@@ -27,7 +27,10 @@ public final class TestEremita
 
     @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
-    @Test public void testDescrizione() { verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra"); }
+    @Test public void testDescrizione()
+    {
+        verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra");
+    }
 
     @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
 
@@ -91,7 +94,7 @@ public final class TestEremita
     @Test public void testAttaccoNosferatu() { verificaAttaccoFallito(ruolo.attaccoNosferatu()); }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttaccoFallito(ruolo.attaccoLupi(getRuolo(nome))); }
 
     @Test public void testNegromanteEremita() { assertThat(ruolo.attaccoNegromante()).isEqualTo(FALLITO); }

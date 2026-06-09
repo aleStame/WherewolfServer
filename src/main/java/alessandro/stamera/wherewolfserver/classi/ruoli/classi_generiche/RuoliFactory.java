@@ -21,7 +21,7 @@ public final class RuoliFactory
 
     public Ruolo getRuolo(String nome)
     {
-        Ruolo ruolo = RuoloNullo.getInstance();
+        Ruolo ruolo;
         switch(nome)
         {
             case "Cacciatore" -> ruolo = getCacciatore();
@@ -33,8 +33,6 @@ public final class RuoliFactory
             case "Sidhe" -> ruolo = getSidhe();
             default -> ruolo = ruoli.get(nome);
         }
-        System.out.println(ruolo);
-        if(ruolo.isContadinoMostro()) ruolo.resettaRomeo();
         return ruolo;
     }
 
@@ -61,18 +59,17 @@ public final class RuoliFactory
         resettaMaledetto();
         eliminaTrattiContadinoLupo();
         ripristinaFazioniOriginali();
+        for(String nome : getChiavi())
+        {
+            Ruolo ruolo = ottieniRuolo(nome);
+            ruolo.perdiProtezioni();
+            ruolo.annullaSegnalazioneInquisitore();
+        }
     }
 
-    private void ripristinaFazioniOriginali()
-    {
-        for(String nome : getChiavi()) if(!isGuardiaCorrotta(nome) && !isLupoSolitario(nome)) ripristinaFazioneOriginale(nome);
-    }
+    private void ripristinaFazioniOriginali() { for(String nome : getChiavi()) ripristinaFazioneOriginale(nome); }
 
     private void ripristinaFazioneOriginale(String nome) { ottieniRuolo(nome).ripristinaFazioneOriginale(); }
-
-    private boolean isGuardiaCorrotta(String nome) { return ottieniRuolo(nome).isGuardiaCorrotta(); }
-
-    private boolean isLupoSolitario(String nome) { return ottieniRuolo(nome).isLupoSolitario(); }
 
     private void eliminaTrattiContadinoLupo()
     {
@@ -81,17 +78,13 @@ public final class RuoliFactory
         for(Tratto tratto : tratti) ruolo.eliminaTratto(tratto);
     }
 
-    private void resettaNonMorto() { for(String nome : getChiavi()) if(isNonMorto(nome)) resettaNonMorto(nome); }
-
-    private boolean isNonMorto(String nome) { return ottieniRuolo(nome).isTrattoPresente(NON_MORTO); }
+    private void resettaNonMorto() { for(String nome : getChiavi()) ottieniRuolo(nome).eliminaTratto(NON_MORTO); }
 
     private void resettaMaledetto() { for(String nome : getChiavi()) if(!isContadinoMostro(nome)) annullaMaledizione(nome); }
 
     private boolean isContadinoMostro(String nome) { return ottieniRuolo(nome).isContadinoMostro(); }
 
     private void annullaMaledizione(String nome) { ottieniRuolo(nome).eliminaTratto(MALEDETTO); }
-
-    private void resettaNonMorto(String nome) { ottieniRuolo(nome).eliminaTratto(NON_MORTO); }
 
     private void annullaVoti() { for(String chiave : getChiavi()) annullaVoti(chiave); }
 

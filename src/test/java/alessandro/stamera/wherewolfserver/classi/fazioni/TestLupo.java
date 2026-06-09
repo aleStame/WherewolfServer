@@ -72,14 +72,14 @@ public final class TestLupo
 
     @Test public void testAttaccoNosferatu() { verificaAttacco(ruolo.attaccoNosferatu(), MORTO); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoAmato(String nome)
     {
         ruolo.sceltaAngeloCustode();
         verificaAttaccoLupiFallito(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoRomeo(String nome)
     {
         ruolo.romeizzazione();

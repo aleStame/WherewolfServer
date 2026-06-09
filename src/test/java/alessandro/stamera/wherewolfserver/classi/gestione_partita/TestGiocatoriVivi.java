@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,10 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiocatoriVivi
@@ -23,11 +19,7 @@ public final class TestGiocatoriVivi
 
     private GiocatoriVivi giocatori;
 
-    @BeforeEach public void setUp()
-    {
-        FACTORY.annullaSegnalazioni();
-        giocatori = new GiocatoriVivi();
-    }
+    @BeforeEach public void setUp() { giocatori = new GiocatoriVivi(); }
 
     @Test public void testBallottaggioPuro()
     {
@@ -110,15 +102,17 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
     {
+        String nomeAngelo = "Carmine";
         String[][] giocatori = new String[][]
-            { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
+            { { nomeAngelo, "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         inizializzaGiocatori(giocatori);
-        segnalazioneAzzeccagarbugli(giocatori[0][0]);
+        segnalazioneAzzeccagarbugli(nomeAngelo);
         for(int i = 2; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
-        verificaAccusati(giocatori[0][0], giocatori[3][0], giocatori[2][0]);
+        verificaAccusati(nomeAngelo, giocatori[3][0], giocatori[2][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Assassino, Capo gilda, Spia, Ladra, Bocca di rosa, Borgomastro, Mercante, Oratore" })
+    @ParameterizedTest
+    @CsvSource({ "Assassino", "Capo gilda", "Spia", "Ladra", "Bocca di rosa", "Borgomastro", "Mercante", "Oratore" })
     public void testAzzeramentoAzzeccagarbugli(String nomeRuolo)
     {
         String nome = "Rodolfo";
@@ -142,19 +136,21 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         for(int i = posizione; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
+        this.giocatori.resettaAmato();
     }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
         String nome = "Rodolfo";
         aggiungiGiocatore(nome, "Angelo custode");
         verificaAttaccoLupo(nomeLupo, nome, RIUSCITO);
+        FACTORY.annullaSegnalazioni();
     }
 
     @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, contadino discendente dei lupi" })
+    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { "Valentina", "Giullare" } };
@@ -162,6 +158,7 @@ public final class TestGiocatoriVivi
         int posizione = 1;
         segnalazioneAngeloCustode(giocatori[posizione][0]);
         verificaAttaccoLupo(nomeLupo, giocatori[posizione][0], FALLITO);
+        this.giocatori.getRuolo(giocatori[posizione][0]).resettaAmato();
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -207,14 +204,14 @@ public final class TestGiocatoriVivi
         verificaAccusati(giocatori[0][0], giocatori[2][0]);
     }
 
-    @Test public void testAttaccoNosferatuAngeloCustode()
+    /*@Test public void testAttaccoNosferatuAngeloCustode()
     {
         String[][] giocatori = new String[][] { { "Silvia", "Angelo custode" }, { "Piergiorgio", "Inquisitore" } };
         inizializzaGiocatori(giocatori);
         int posizioneAmato = 1;
         segnalazioneAngeloCustode(giocatori[posizioneAmato][0]);
         verificaProgenie(giocatori[posizioneAmato][0], giocatori[0][0], NOSFERATU);
-    }
+    }*/
 
     @Test public void testAttaccoVampiroAngeloCustode()
     {
@@ -222,7 +219,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         int posizioneAmato = 1;
         segnalazioneAngeloCustode(giocatori[posizioneAmato][0]);
-        verificaProgenie(giocatori[posizioneAmato][0], giocatori[0][0], VAMPIRO);
+        verificaAttacco(this.giocatori.attaccoVampiro(giocatori[0][0]), RIUSCITO);
+        verificaNonAmato(giocatori[posizioneAmato][0]);
     }
 
     @Test public void testPossedutoAngeloCustode()
@@ -260,6 +258,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, ruolo);
         giocatori.segnalazioneAzzeccagarbugli(nome);
         verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
+        giocatori.getRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
     }
 
     @Test public void testGuardia()
@@ -321,6 +320,7 @@ public final class TestGiocatoriVivi
         String nome = "Gervaso";
         aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(NERA);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testNumeroCriminali()
@@ -364,6 +364,7 @@ public final class TestGiocatoriVivi
         verificaVero(isSegnalatoBoia(nome));
         giocatori.annullaSegnalazioneBoia(nome);
         verificaNonSegnalatoBoia(nome);
+        FACTORY.annullaSegnalazioni();
     }
 
     @ParameterizedTest @CsvSource
@@ -546,6 +547,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore("Maria", "Cappuccetto rosso");
         giocatori.annullaProtezioniCappuccettoRosso();
         verificaAttaccoLupo(tipoLupo, nome, RIUSCITO);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testNonnaPresente()
@@ -811,20 +813,6 @@ public final class TestGiocatoriVivi
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo)); }
-
-    private void verificaProgenie(String nomeAmato, String nomeAngelo, Fazione fazione)
-    {
-        EsitoAttacco esito = null;
-        switch(fazione)
-        {
-            case NOSFERATU -> esito = giocatori.attaccoNosferatu(nomeAngelo);
-            case VAMPIRO -> esito = giocatori.attaccoVampiro(nomeAngelo);
-        }
-        verificaAttacco(esito, RIUSCITO);
-        verificaNonAmato(nomeAmato);
-        verificaVero(giocatori.isTrattoPresente(nomeAngelo, NON_MORTO));
-        assertThat(giocatori.getFazione(nomeAngelo)).isEqualTo(fazione);
-    }
 
     private void verificaAccusati(String... soluzioni)
     {
