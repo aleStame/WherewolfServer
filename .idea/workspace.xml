@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestGhoul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestGhoul.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testEsempioPartita non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ghoul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ghoul.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03083" summary="REFACTORING: definizione del metodo isSensitiva">
-      <option name="closed" value="true" />
-      <created>1780062291864</created>
-      <option name="number" value="03083" />
-      <option name="presentableId" value="LOCAL-03083" />
-      <option name="project" value="LOCAL" />
-      <updated>1780062291864</updated>
     </task>
     <task id="LOCAL-03084" summary="REFACTORING: definizione del metodo isAmato">
       <option name="closed" value="true" />
@@ -686,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781005743398</updated>
     </task>
-    <option name="localTasksCounter" value="3132" />
+    <task id="LOCAL-03132" summary="ROSSO: testEsempioPartita non riuscito">
+      <option name="closed" value="true" />
+      <created>1781006433219</created>
+      <option name="number" value="03132" />
+      <option name="presentableId" value="LOCAL-03132" />
+      <option name="project" value="LOCAL" />
+      <updated>1781006433220</updated>
+    </task>
+    <option name="localTasksCounter" value="3133" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="ROSSO: testMorteGhoulLupiNosferatu non riuscito" />
     <MESSAGE value="VERDE: testMorteGhoulLupiNosferatu riuscito" />
@@ -726,6 +726,7 @@
     <MESSAGE value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAlleatoNosferatu" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="ROSSO: testEsempioPartita non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsempioPartita non riuscito" />
   </component>
 </project>

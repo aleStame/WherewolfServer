@@ -11,6 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -261,6 +262,15 @@ public final class Partita
         if(isVivo(nome)) return vivi.isFazioneNosferatu(nome);
         else return false;
     }
+
+    public boolean isNosferatuVincitore()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(isNosferatuVivo(getNomeGiocatoreVivo(i))) posizione = i;
+        boolean esito = false;
+        if(posizione != -1) esito = (getRuoloVivo(getNomeGiocatoreVivo(posizione)).getEsitoPartita(this) == VITTORIA);
+        return esito;
+     }
 
     private void gestioneEliminazioneLupi(String nome)
     {

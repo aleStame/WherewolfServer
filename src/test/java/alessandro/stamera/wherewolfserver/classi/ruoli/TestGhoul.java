@@ -6,6 +6,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -82,8 +83,9 @@ public final class TestGhoul
     @ParameterizedTest @MethodSource("getEsempiPartita") public void testEsempioPartita(Partita partita, EsitoPartita esito)
     {
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        FACTORY.annullaSegnalazioni();
     }
+
+    @AfterAll public static void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
 
     private static Stream<Arguments> getEsempiPartita()
     {
