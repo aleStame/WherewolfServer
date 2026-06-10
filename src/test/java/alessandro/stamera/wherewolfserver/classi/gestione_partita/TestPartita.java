@@ -123,6 +123,7 @@ public final class TestPartita
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
         verificaAccusati(giocatori[0][0], giocatori[1][0], giocatori[2][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -137,6 +138,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(giocatori[0][0], giocatori[posizione2][0]);
         verificaNonAccusato(giocatori[posizione1][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -150,7 +152,7 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Fabrizio", "Bocca di rosa" }, { "Franca", "Peccatore" } };
@@ -160,6 +162,7 @@ public final class TestPartita
         attaccoLupi(nomeLupo, giocatori[posizione][0]);
         terminaNotte();
         verificaNonEliminati(giocatori[posizione][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -483,6 +486,8 @@ public final class TestPartita
         progenizzazioneNosferatu(nome);
         terminaNotte();
         verificaNonEliminati(nome);
+        verificaFazioneNosferatu(nome);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testSuicidioCapoBranco()
@@ -554,6 +559,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         gildata(nomeVittima);
         verificaNumeroCriminali(numeroCriminali);
+        FACTORY.annullaSegnalazioni();
     }
 
     @ParameterizedTest
@@ -829,6 +835,7 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaProgenieNosferatuNonViva(nomeVittima);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testNessunGiocatoreVivo()
@@ -946,6 +953,35 @@ public final class TestPartita
         terminaNotte();
         verificaEliminati(giocatori[0][0], giocatori[3][0]);
     }
+
+    @Test public void testFazioneNosferatu()
+    {
+        String nome = "Gigio";
+        inizializzaPartita(new String[][] { { nome, "Nosferatu" } });
+        verificaFazioneNosferatu(nome);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testNonFazioneNosferatu(String nomeRuolo)
+    {
+        String nome = "Gioele";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo } });
+        verificaFalso(isFazioneNosferatu(nome));
+    }
+
+    private void verificaFazioneNosferatu(String nome) { verificaVero(isFazioneNosferatu(nome)); }
+
+    private boolean isFazioneNosferatu(String nome) { return partita.isFazioneNosferatu(nome); }
 
     private void verificaAmatoNonVivo() { verificaFalso(isAmatoVivo()); }
 

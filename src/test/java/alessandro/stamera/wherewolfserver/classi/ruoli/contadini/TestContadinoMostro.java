@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -79,6 +80,8 @@ public final class TestContadinoMostro
         ruolo.romeizzazione();
         verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
     }
+
+    @AfterEach public void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 

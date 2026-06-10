@@ -11,6 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -38,7 +39,6 @@ public final class Partita
     {
         vivi = new GiocatoriVivi();
         eliminati = new GiocatoriEliminati();
-        FACTORY.annullaSegnalazioni();
         inizializzaGiocatori(giocatori);
         ultimoControllo = NERA;
         ballottaggio = new Ballottaggio();
@@ -51,7 +51,7 @@ public final class Partita
 
     public void incrementaVoti(String nome, int numeroVoti)
     {
-        if(vivi.isPresente(nome)) vivi.incrementaVoti(nome, numeroVoti);
+        if(isVivo(nome)) vivi.incrementaVoti(nome, numeroVoti);
         else incrementaVotiBallottaggio(nome, numeroVoti);
     }
 
@@ -257,9 +257,25 @@ public final class Partita
 
     public boolean isAmatoVivo() { return vivi.isAmatoPresente(); }
 
+    public boolean isFazioneNosferatu(String nome)
+    {
+        if(isVivo(nome)) return vivi.isFazioneNosferatu(nome);
+        else return false;
+    }
+
+    public boolean isNosferatuVincitore()
+    {
+        boolean esito = false;
+        if(vivi.isNosferatuPresente()) esito = isPartitaVinta(getRuoloVivo(vivi.getNomeNosferatu()));
+        else if(eliminati.isNosferatuPresente()) esito = isPartitaVinta(eliminati.getRuolo(eliminati.getNomeNosferatu()));
+        return esito;
+    }
+
+    private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
+
     private void gestioneEliminazioneLupi(String nome)
     {
-        if(vivi.isNosferatu(nome) && vivi.isGhoulPresente()) eliminaGiocatore(vivi.getNomeGhoul());
+        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGiocatore(getNomeGhoul());
         eliminaGiocatore(nome);
     }
 
@@ -287,10 +303,14 @@ public final class Partita
     private void morteNosferatu(String nome)
     {
         String nomeVittima = vivi.getNomeNosferatu();
-        if(vivi.isGhoulPresente()) nomeVittima = vivi.getNomeGhoul();
+        if(isGhoulPresente()) nomeVittima = getNomeGhoul();
         eliminaGiocatore(nomeVittima);
-        if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.getRuolo(nome).isRomeo()) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
+        if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }
+
+    private String getNomeGhoul() { return vivi.getNomeGhoul(); }
+
+    private boolean isGhoulPresente() { return vivi.isGhoulPresente(); }
 
     private void perdiProtezioniCappuccettoRosso()
     {

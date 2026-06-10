@@ -177,8 +177,6 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoNegromante(String nome) { return getRuolo(nome).attaccoNegromante(); }
 
-    public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
-
     public EsitoControlloSensitiva controlloSensitiva(String nome) { return getRuolo(nome).controlloSensitiva(); }
 
     public boolean isSensitivaPresente() { return getPosizioneSensitiva() != NON_TROVATO; }
@@ -236,6 +234,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isGhoulPresente() { return getPosizioneGhoul() != NON_TROVATO; }
 
     public String getNomeGhoul() { return getNomeGiocatore(getPosizioneGhoul()); }
+
+    public boolean isFazioneNosferatu(String nome) { return getFazione(nome) == NOSFERATU; }
 
     private int getPosizioneGhoul()
     {

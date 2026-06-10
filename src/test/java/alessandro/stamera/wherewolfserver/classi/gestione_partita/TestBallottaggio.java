@@ -12,7 +12,7 @@ public final class TestBallottaggio
 {
 
     private static final String ERRORE_ROGO_SALTATO =
-            "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
+        "Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!";
 
     private Ballottaggio ballottaggio;
 
@@ -47,6 +47,7 @@ public final class TestBallottaggio
         ballottaggio.segnalazioneBoia(nome);
         verificaNumeroVoti(nome, numeroVoti);
         for(int i = 1; i < giocatori.length; i++) verificaNumeroVoti(giocatori[i][0], risultato);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testPerdenteBallottaggio()

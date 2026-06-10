@@ -32,7 +32,7 @@ public final class TestLeprecauno
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
+    @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Megera" }) public void testProtezioneMistici(String nome)
     {
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));

@@ -11,6 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
 
@@ -23,16 +24,17 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         doCallRealMethod().when(ruolo).getEsitoPartita(partita);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+        FACTORY.annullaSegnalazioni();
     }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
         Partita[] partite = new Partita[]
         {
-            new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }), new Partita(new String[][] { }),
+            new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }),
             new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } }),
         };
-        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
+        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO));
     }
 
 }

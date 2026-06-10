@@ -33,7 +33,7 @@ public final class TestSidhe
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, Mago, Megera" }) public void testProtezioneMistici(String nome)
+    @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Megera" }) public void testProtezioneMistici(String nome)
     {
         verificaVero(ruolo.isProtezionePresente(getRuolo(nome)));
         verificaVero(ruolo.isTrattoPresente(PROTETTO));

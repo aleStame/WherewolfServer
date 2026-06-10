@@ -26,11 +26,7 @@ public final class TestBecchino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp()
-    {
-        ruolo = FACTORY.getRuolo(NOME);
-        ruolo.ripristinaFazioneOriginale();
-    }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
@@ -61,6 +57,7 @@ public final class TestBecchino
         verificaFazioneNegromante();
         ruolo.romeizzazione();
         verificaFazioneNegromante();
+        ruolo.ripristinaFazioneOriginale();
     }
 
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
@@ -108,6 +105,7 @@ public final class TestBecchino
     {
         ruolo.riconosciNegromante();
         verificaEsitoPartita(partita, esito);
+        ruolo.ripristinaFazioneOriginale();
     }
 
     private void verificaEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }

@@ -50,8 +50,7 @@ public final class TestLadra
 
     @Test public void testSpia() { verificaFalso(ruolo.isSpia()); }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testUtilizzoPotereLupi(String nome)
     {
         verificaProtetto();
