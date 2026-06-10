@@ -107,11 +107,25 @@ public final class TestNosferatu
                 {
                     { "Katia", "Nosferatu" }, { "Valeria", "Ghoul" }, { "Claudio", "Contadino normale" }, { "Vanessa", "Lupo del branco" }
                 }
+            ),
+            new Partita
+            (
+                new String[][]
+                {
+                    { "Mario", "Nosferatu" }, { "Pino", "Ghoul" }, { "Emanuela", "Contadino normale" }, { "Alessandro", "Capo branco" }
+                }
             )
         };
         setPartitaNosferatu(partite[0]);
-        setEsempioPartitaConGhoul(partite[1]);
-        return Stream.of(Arguments.of(partite[0]), Arguments.of(partite[1]));
+        setEsempioPartitaConGhoul(partite[1], "Lupo del branco", "Claudio", "Vanessa");
+        setPartitaEliminazioneNosferatu(partite[2]);
+        return Stream.of(Arguments.of(partite[0]), Arguments.of(partite[1]), Arguments.of(partite[2]));
+    }
+
+    private static void setPartitaEliminazioneNosferatu(Partita partita)
+    {
+        setEsempioPartitaConGhoul(partita, "Capo branco", "Emanuela", "Alessandro");
+        rogo(partita, "Mario");
     }
 
     private static void setPartitaNosferatu(Partita partita)
@@ -122,19 +136,18 @@ public final class TestNosferatu
         rogo(partita, nomeLupo);
     }
 
-    private static void setEsempioPartitaConGhoul(Partita partita)
+    private static void setEsempioPartitaConGhoul(Partita partita, String tipoLupo, String nomeVittima, String nomeLupo)
     {
-        String tipoLupo = "Lupo del branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
         nosferatizzazione(partita, tipoLupo, nomeVittima);
         rogo(partita, nomeLupo);
     }
 
-    private static void rogo(Partita partita, String nomeLupo)
+    private static void rogo(Partita partita, String nome)
     {
         int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
-        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.incrementaVoti(nome, numeroVoti);
         partita.terminaVotazioni();
-        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.incrementaVoti(nome, numeroVoti);
         partita.terminaBallottaggio();
         partita.terminaNotte();
     }
