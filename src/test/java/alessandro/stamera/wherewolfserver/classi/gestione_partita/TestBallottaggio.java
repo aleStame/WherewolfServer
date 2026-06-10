@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.*;
 
@@ -47,6 +49,25 @@ public final class TestBallottaggio
         ballottaggio.segnalazioneBoia(nome);
         verificaNumeroVoti(nome, numeroVoti);
         for(int i = 1; i < giocatori.length; i++) verificaNumeroVoti(giocatori[i][0], risultato);
+        FACTORY.annullaSegnalazioni();
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testSegnalazioneBoiaContadinoLupoAttaccato(String tipoLupo)
+    {
+        String nome = "Tony";
+        String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
+        Ruolo ruolo = FACTORY.getRuolo("Contadino discendente dei lupi");
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(FALLITO);
+        ballottaggio.aggiungiGiocatore(nome, ruolo);
+        aggiungiGiocatori(giocatori);
+        int numeroVoti = 2;
+        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], numeroVoti);
+        incrementaVoti(nome, numeroVoti);
+        ballottaggio.segnalazioneBoia(nome);
+        verificaNumeroVoti(nome, numeroVoti);
+        for(String[] giocatore : giocatori) verificaNumeroVoti(giocatore[0], 0);
+        verificaNumeroVoti(nome, numeroVoti);
         FACTORY.annullaSegnalazioni();
     }
 

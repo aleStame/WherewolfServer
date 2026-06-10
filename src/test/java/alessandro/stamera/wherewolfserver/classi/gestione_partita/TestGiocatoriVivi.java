@@ -371,9 +371,9 @@ public final class TestGiocatoriVivi
     (
         {
             "Altra guardia", "Angelo custode", "Assassino", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
-            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
-            "Contadino mostro", "Contadino normale", "Eremita", "Guardia", "Ghoul", "Giulietta", "Giullare", "Guardia corrotta", "Inquisitore",
-            "Ladra", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale",
+            "Eremita", "Guardia", "Ghoul", "Giulietta", "Giullare", "Guardia corrotta", "Inquisitore", "Ladra", "Mercante", "Monaco", "Nonna",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
         }
     )
     public void testSegnalazioneBoiaNonRiuscita(String nomeRuolo)

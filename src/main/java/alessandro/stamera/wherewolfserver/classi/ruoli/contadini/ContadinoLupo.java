@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
@@ -48,6 +49,7 @@ public final class ContadinoLupo extends Contadino
     {
         aggiungiTrattiOscuri();
         cambiaFazione(LUPO_BRANCO);
+        cambiaCategoria(CREATURE_OMBRA);
         return FALLITO;
     }
 
