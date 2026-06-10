@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVittoriaNosferatu non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testVittoriaNosferatu riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ghoul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Ghoul.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,14 +293,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03100" summary="REFACTORING: rimozione codice inutile">
-      <option name="closed" value="true" />
-      <created>1780133299898</created>
-      <option name="number" value="03100" />
-      <option name="presentableId" value="LOCAL-03100" />
-      <option name="project" value="LOCAL" />
-      <updated>1780133299899</updated>
     </task>
     <task id="LOCAL-03101" summary="REFACTORING: definizione del metodo cambiaCategoria">
       <option name="closed" value="true" />
@@ -687,7 +678,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781094871114</updated>
     </task>
-    <option name="localTasksCounter" value="3149" />
+    <task id="LOCAL-03149" summary="VERDE: testVittoriaNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1781095140627</created>
+      <option name="number" value="03149" />
+      <option name="presentableId" value="LOCAL-03149" />
+      <option name="project" value="LOCAL" />
+      <updated>1781095140627</updated>
+    </task>
+    <option name="localTasksCounter" value="3150" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testFazioneNosferatu non riuscito" />
     <MESSAGE value="VERDE: testFazioneNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNonFazioneNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isFazioneNosferatu" />
@@ -727,6 +725,7 @@
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="ROSSO: testVittoriaNosferatu non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVittoriaNosferatu non riuscito" />
+    <MESSAGE value="VERDE: testVittoriaNosferatu riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVittoriaNosferatu riuscito" />
   </component>
 </project>

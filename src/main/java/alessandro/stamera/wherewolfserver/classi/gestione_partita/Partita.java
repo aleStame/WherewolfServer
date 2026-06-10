@@ -266,10 +266,12 @@ public final class Partita
     public boolean isNosferatuVincitore()
     {
         boolean esito = false;
-        if(vivi.isNosferatuPresente()) esito = (getRuoloVivo(vivi.getNomeNosferatu()).getEsitoPartita(this) == VITTORIA);
-        else if(eliminati.isNosferatuPresente()) esito = (eliminati.getRuolo(eliminati.getNomeNosferatu()).getEsitoPartita(this) == VITTORIA);
+        if(vivi.isNosferatuPresente()) esito = isPartitaVinta(getRuoloVivo(vivi.getNomeNosferatu()));
+        else if(eliminati.isNosferatuPresente()) esito = isPartitaVinta(eliminati.getRuolo(eliminati.getNomeNosferatu()));
         return esito;
-     }
+    }
+
+    private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
 
     private void gestioneEliminazioneLupi(String nome)
     {
