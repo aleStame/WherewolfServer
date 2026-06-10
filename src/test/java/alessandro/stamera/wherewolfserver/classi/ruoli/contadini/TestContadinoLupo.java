@@ -55,7 +55,17 @@ public final class TestContadinoLupo
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
-    private void verificaAttaccoFallito(String Capo_branco) { assertThat(ruolo.attaccoLupi(getRuolo(Capo_branco))).isEqualTo(FALLITO); }
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiAngeloCustode(String nome)
+    {
+        ruolo.romeizzazione();
+        verificaAttaccoFallito(nome);
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
+        assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO);
+    }
+
+    private void verificaAttaccoFallito(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO); }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
