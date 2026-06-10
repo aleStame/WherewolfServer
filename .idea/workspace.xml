@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getVittoriaNosferatu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoLupi riuscito">
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ContadinoLupo.class.uniqueId1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/IstanzaRuolo.class.uniqueId0" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/fazioneContadinoMostro",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -293,30 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03103" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1780153171537</created>
-      <option name="number" value="03103" />
-      <option name="presentableId" value="LOCAL-03103" />
-      <option name="project" value="LOCAL" />
-      <updated>1780153171537</updated>
-    </task>
-    <task id="LOCAL-03104" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1780153346058</created>
-      <option name="number" value="03104" />
-      <option name="presentableId" value="LOCAL-03104" />
-      <option name="project" value="LOCAL" />
-      <updated>1780153346058</updated>
-    </task>
-    <task id="LOCAL-03105" summary="ROSSO: testMorteGhoulLupiNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1780155775129</created>
-      <option name="number" value="03105" />
-      <option name="presentableId" value="LOCAL-03105" />
-      <option name="project" value="LOCAL" />
-      <updated>1780155775130</updated>
     </task>
     <task id="LOCAL-03106" summary="VERDE: testMorteGhoulLupiNosferatu riuscito">
       <option name="closed" value="true" />
@@ -686,7 +663,31 @@
       <option name="project" value="LOCAL" />
       <updated>1781095666791</updated>
     </task>
-    <option name="localTasksCounter" value="3152" />
+    <task id="LOCAL-03152" summary="VERDE DIRETTO: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1781099709437</created>
+      <option name="number" value="03152" />
+      <option name="presentableId" value="LOCAL-03152" />
+      <option name="project" value="LOCAL" />
+      <updated>1781099709437</updated>
+    </task>
+    <task id="LOCAL-03153" summary="ROSSO: testAttaccoLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1781099942789</created>
+      <option name="number" value="03153" />
+      <option name="presentableId" value="LOCAL-03153" />
+      <option name="project" value="LOCAL" />
+      <updated>1781099942790</updated>
+    </task>
+    <task id="LOCAL-03154" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1781100110195</created>
+      <option name="number" value="03154" />
+      <option name="presentableId" value="LOCAL-03154" />
+      <option name="project" value="LOCAL" />
+      <updated>1781100110195</updated>
+    </task>
+    <option name="localTasksCounter" value="3155" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,9 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isFazioneNosferatu" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFazioneNosferatu" />
-    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
     <MESSAGE value="ROSSO: testVittoriaNosferatuConGhoul non riuscito" />
     <MESSAGE value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAlleatoNosferatu" />
@@ -726,6 +724,9 @@
     <MESSAGE value="VERDE: testVittoriaNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
     <MESSAGE value="REFACTORING: definizione del metodo getVittoriaNosferatu" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getVittoriaNosferatu" />
+    <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupi riuscito" />
   </component>
 </project>
