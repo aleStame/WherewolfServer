@@ -1,13 +1,19 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
@@ -36,10 +42,30 @@ public final class TestContadinoLupo
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupi(String nome)
     {
-        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO);
+        verificaAttaccoFallito(nome);
         assertThat(ruolo.getAura()).isEqualTo(NERA);
         for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
         assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO);
+    }
+
+    @ParameterizedTest @MethodSource({ "getEsempiEsitiPartita" })
+    public void testEsitoPartitaDopoAttacco(Partita partita, EsitoPartita esito)
+    {
+        verificaAttaccoFallito("Capo branco");
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    private void verificaAttaccoFallito(String Capo_branco) { assertThat(ruolo.attaccoLupi(getRuolo(Capo_branco))).isEqualTo(FALLITO); }
+
+    private static Stream<Arguments> getEsempiEsitiPartita()
+    {
+        Partita[] partite = new Partita[]
+        {
+            new Partita(new String[][] { { "Aurora", "Oratore" }, { "Giulia", "Prete" } }),
+            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } }),
+            new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } })
+        };
+        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], VITTORIA));
     }
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
