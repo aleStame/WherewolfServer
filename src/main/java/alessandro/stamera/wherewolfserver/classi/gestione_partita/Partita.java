@@ -267,6 +267,7 @@ public final class Partita
     {
         boolean esito = false;
         if(vivi.isNosferatuPresente()) esito = (getRuoloVivo(vivi.getNomeNosferatu()).getEsitoPartita(this) == VITTORIA);
+        else if(eliminati.isNosferatuPresente()) esito = (eliminati.getRuolo(eliminati.getNomeNosferatu()).getEsitoPartita(this) == VITTORIA);
         return esito;
      }
 

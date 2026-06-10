@@ -4,8 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 
 public class Ghoul extends Ruolo
 {
@@ -26,8 +25,11 @@ public class Ghoul extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(partita.isNosferatuVincitore()) esito = VITTORIA;
-        else esito = SCONFITTA;
+        if(esito == NON_FINITO)
+        {
+            esito = SCONFITTA;
+            if(partita.isNosferatuVincitore()) esito = VITTORIA;
+        }
         return esito;
     }
 
