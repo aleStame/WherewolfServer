@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testVittoriaNosferatu riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoLupi riuscito">
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ContadinoLupo.class.uniqueId1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/IstanzaRuolo.class.uniqueId0" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,41 +78,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestCappuccettoRosso.testProtezioni.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.TestGiocatoriMortiNotte.testProgenieNosferatu.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLadra.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestLupo.testGildata.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestNosferatu.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestNosferatu.testVittoriaNosferatu.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestPartita.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestProtezioni.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestTratti.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestUtente.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/testVittoriaNosferatu&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testPerditaProtezioni.executor": "Run",
+    "Gradle.TestCappuccettoRosso.testProtezioni.executor": "Debug",
+    "Gradle.TestGiocatoriMortiNotte.testProgenieNosferatu.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testAngeloCustodeAccusatoNonPresente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneAzzeccagarbugli.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssente.executor": "Run",
+    "Gradle.TestGiocatoriVivi.testSegnalazioneInquisitoreMisticoAssenteAmato.executor": "Run",
+    "Gradle.TestLadra.executor": "Run",
+    "Gradle.TestLupo.testGildata.executor": "Run",
+    "Gradle.TestNosferatu.executor": "Run",
+    "Gradle.TestNosferatu.testVittoriaNosferatu.executor": "Run",
+    "Gradle.TestPartita.executor": "Run",
+    "Gradle.TestProtezioni.executor": "Run",
+    "Gradle.TestTratti.executor": "Run",
+    "Gradle.TestUtente.executor": "Run",
+    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
+    "Gradle.wherewolf.server.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature/fazioneContadinoMostro",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -293,46 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03101" summary="REFACTORING: definizione del metodo cambiaCategoria">
-      <option name="closed" value="true" />
-      <created>1780150328132</created>
-      <option name="number" value="03101" />
-      <option name="presentableId" value="LOCAL-03101" />
-      <option name="project" value="LOCAL" />
-      <updated>1780150328132</updated>
-    </task>
-    <task id="LOCAL-03102" summary="ROSSO: testDescrizione non riuscito">
-      <option name="closed" value="true" />
-      <created>1780153001365</created>
-      <option name="number" value="03102" />
-      <option name="presentableId" value="LOCAL-03102" />
-      <option name="project" value="LOCAL" />
-      <updated>1780153001365</updated>
-    </task>
-    <task id="LOCAL-03103" summary="VERDE: testDescrizione riuscito">
-      <option name="closed" value="true" />
-      <created>1780153171537</created>
-      <option name="number" value="03103" />
-      <option name="presentableId" value="LOCAL-03103" />
-      <option name="project" value="LOCAL" />
-      <updated>1780153171537</updated>
-    </task>
-    <task id="LOCAL-03104" summary="REFACTORING: definizione del metodo verificaStringa">
-      <option name="closed" value="true" />
-      <created>1780153346058</created>
-      <option name="number" value="03104" />
-      <option name="presentableId" value="LOCAL-03104" />
-      <option name="project" value="LOCAL" />
-      <updated>1780153346058</updated>
-    </task>
-    <task id="LOCAL-03105" summary="ROSSO: testMorteGhoulLupiNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1780155775129</created>
-      <option name="number" value="03105" />
-      <option name="presentableId" value="LOCAL-03105" />
-      <option name="project" value="LOCAL" />
-      <updated>1780155775130</updated>
     </task>
     <task id="LOCAL-03106" summary="VERDE: testMorteGhoulLupiNosferatu riuscito">
       <option name="closed" value="true" />
@@ -686,7 +647,47 @@
       <option name="project" value="LOCAL" />
       <updated>1781095140627</updated>
     </task>
-    <option name="localTasksCounter" value="3150" />
+    <task id="LOCAL-03150" summary="REFACTORING: definizione del metodo isPartitaVinta">
+      <option name="closed" value="true" />
+      <created>1781095452114</created>
+      <option name="number" value="03150" />
+      <option name="presentableId" value="LOCAL-03150" />
+      <option name="project" value="LOCAL" />
+      <updated>1781095452114</updated>
+    </task>
+    <task id="LOCAL-03151" summary="REFACTORING: definizione del metodo getVittoriaNosferatu">
+      <option name="closed" value="true" />
+      <created>1781095666791</created>
+      <option name="number" value="03151" />
+      <option name="presentableId" value="LOCAL-03151" />
+      <option name="project" value="LOCAL" />
+      <updated>1781095666791</updated>
+    </task>
+    <task id="LOCAL-03152" summary="VERDE DIRETTO: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1781099709437</created>
+      <option name="number" value="03152" />
+      <option name="presentableId" value="LOCAL-03152" />
+      <option name="project" value="LOCAL" />
+      <updated>1781099709437</updated>
+    </task>
+    <task id="LOCAL-03153" summary="ROSSO: testAttaccoLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1781099942789</created>
+      <option name="number" value="03153" />
+      <option name="presentableId" value="LOCAL-03153" />
+      <option name="project" value="LOCAL" />
+      <updated>1781099942790</updated>
+    </task>
+    <task id="LOCAL-03154" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1781100110195</created>
+      <option name="number" value="03154" />
+      <option name="presentableId" value="LOCAL-03154" />
+      <option name="project" value="LOCAL" />
+      <updated>1781100110195</updated>
+    </task>
+    <option name="localTasksCounter" value="3155" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,11 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testFazioneNosferatu riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testNonFazioneNosferatu riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isFazioneNosferatu" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFazioneNosferatu" />
-    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
     <MESSAGE value="ROSSO: testVittoriaNosferatuConGhoul non riuscito" />
     <MESSAGE value="VERDE: testVittoriaNosferatuConGhoul riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isAlleatoNosferatu" />
@@ -726,6 +722,11 @@
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="ROSSO: testVittoriaNosferatu non riuscito" />
     <MESSAGE value="VERDE: testVittoriaNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVittoriaNosferatu riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
+    <MESSAGE value="REFACTORING: definizione del metodo getVittoriaNosferatu" />
+    <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupi riuscito" />
   </component>
 </project>

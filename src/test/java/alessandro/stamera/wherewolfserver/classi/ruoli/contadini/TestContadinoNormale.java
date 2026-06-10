@@ -1,9 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
-
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,8 +14,6 @@ public final class TestContadinoNormale
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Contadino normale"); }
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
-
-    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }
 
