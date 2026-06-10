@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -14,7 +13,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -81,7 +79,7 @@ public final class TestGhoul
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @ParameterizedTest @MethodSource("getEsempiPartita")
-    public void testEsempioPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+    public void testEsempioPartita(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
 
     @AfterAll public static void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
 
@@ -97,11 +95,24 @@ public final class TestGhoul
                     { "Katia", "Nosferatu" }, { "Valeria", "Ghoul" }, { "Claudio", "Contadino normale" }, { "Vanessa", "Lupo del branco" }
                 }
             ),
-            new Partita(new String[][] { { "Luca", "Capo branco" }, { "Lucia", "Oste" } })
+            new Partita
+            (
+                new String[][]
+                {
+                    { "Mario", "Nosferatu" }, { "Pino", "Ghoul" }, { "Emanuela", "Contadino normale" }, { "Alessandro", "Capo branco" }
+                }
+            )
         };
         setPartitaNosferatu(partite[0]);
-        setEsempioPartitaConGhoul(partite[1]);
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
+        setEsempioPartitaConGhoul(partite[1], "Lupo del branco", "Claudio", "Vanessa");
+        setPartitaEliminazioneNosferatu(partite[2]);
+        return Stream.of(Arguments.of(partite[0]), Arguments.of(partite[1]), Arguments.of(partite[2]));
+    }
+
+    private static void setPartitaEliminazioneNosferatu(Partita partita)
+    {
+        setEsempioPartitaConGhoul(partita, "Capo branco", "Emanuela", "Alessandro");
+        rogo(partita, "Mario");
     }
 
     private static void setPartitaNosferatu(Partita partita)
@@ -112,19 +123,18 @@ public final class TestGhoul
         rogo(partita, nomeLupo);
     }
 
-    private static void setEsempioPartitaConGhoul(Partita partita)
+    private static void setEsempioPartitaConGhoul(Partita partita, String tipoLupo, String nomeVittima, String nomeLupo)
     {
-        String tipoLupo = "Lupo del branco", nomeVittima = "Claudio", nomeLupo = "Vanessa";
         nosferatizzazione(partita, tipoLupo, nomeVittima);
         rogo(partita, nomeLupo);
     }
 
-    private static void rogo(Partita partita, String nomeLupo)
+    private static void rogo(Partita partita, String nome)
     {
         int numeroVoti = partita.getNumeroGiocatoriVivi() - 1;
-        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.incrementaVoti(nome, numeroVoti);
         partita.terminaVotazioni();
-        partita.incrementaVoti(nomeLupo, numeroVoti);
+        partita.incrementaVoti(nome, numeroVoti);
         partita.terminaBallottaggio();
         partita.terminaNotte();
     }

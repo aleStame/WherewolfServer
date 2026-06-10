@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-06-10T12:17:50" hostname="ALESSANDRO" time="0.072">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-06-10T12:29:37" hostname="ALESSANDRO" time="0.208">
   <properties/>
   <testcase name="testAmatoAssente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.002"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
   <testcase name="testPerdenteBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
   <testcase name="testSegnalazioneBorgomastro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
-  <testcase name="testPareggioBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.003"/>
-  <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.006"/>
-  <testcase name="[1] nomeRuolo=Guaritore, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.008"/>
-  <testcase name="[2] nomeRuolo=Lupo del branco, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.002"/>
-  <testcase name="[3] nomeRuolo=Peccatore, risultato=2" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.004"/>
+  <testcase name="testPareggioBallottaggio()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.002"/>
+  <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.041"/>
+  <testcase name="[1] nomeRuolo=Guaritore, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.03"/>
+  <testcase name="[2] nomeRuolo=Lupo del branco, risultato=0" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.01"/>
+  <testcase name="[3] nomeRuolo=Peccatore, risultato=2" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.033"/>
   <testcase name="testNessunaSegnalazione()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
   <testcase name="testAmatoPresente()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
   <testcase name="testSegnalazioneOratoreNonRiuscita()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio" time="0.001"/>
