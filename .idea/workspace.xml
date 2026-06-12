@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoLupo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,14 +293,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03128" summary="ROSSO: testVittoriaNosferatuConGhoul non riuscito">
-      <option name="closed" value="true" />
-      <created>1780330826676</created>
-      <option name="number" value="03128" />
-      <option name="presentableId" value="LOCAL-03128" />
-      <option name="project" value="LOCAL" />
-      <updated>1780330826677</updated>
     </task>
     <task id="LOCAL-03129" summary="VERDE: testVittoriaNosferatuConGhoul riuscito">
       <option name="closed" value="true" />
@@ -684,7 +678,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781280234552</updated>
     </task>
-    <option name="localTasksCounter" value="3177" />
+    <task id="LOCAL-03177" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
+      <option name="closed" value="true" />
+      <created>1781280966083</created>
+      <option name="number" value="03177" />
+      <option name="presentableId" value="LOCAL-03177" />
+      <option name="project" value="LOCAL" />
+      <updated>1781280966084</updated>
+    </task>
+    <option name="localTasksCounter" value="3178" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -699,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testNosferatuNonPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuPresente" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
@@ -724,6 +725,7 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
   </component>
 </project>
