@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaContadinoLupo" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metndo estraiNomiGiocatoriSenzaContadino" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +103,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/angeloCustodeContadinoLupo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/boiataContadinoLupo&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/SandrettoFX/IdeaProjects/WherewolfClient&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -291,70 +291,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03115" summary="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1780318883006</created>
-      <option name="number" value="03115" />
-      <option name="presentableId" value="LOCAL-03115" />
-      <option name="project" value="LOCAL" />
-      <updated>1780318883006</updated>
-    </task>
-    <task id="LOCAL-03116" summary="ROSSO: testMorteGhoulContadinoMostroNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1780319169531</created>
-      <option name="number" value="03116" />
-      <option name="presentableId" value="LOCAL-03116" />
-      <option name="project" value="LOCAL" />
-      <updated>1780319169531</updated>
-    </task>
-    <task id="LOCAL-03117" summary="VERDE DIRETTO: testMorteGhoulContadinoMostroNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1780319756108</created>
-      <option name="number" value="03117" />
-      <option name="presentableId" value="LOCAL-03117" />
-      <option name="project" value="LOCAL" />
-      <updated>1780319756109</updated>
-    </task>
-    <task id="LOCAL-03118" summary="ROSSO: testVittoriaNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1780321317125</created>
-      <option name="number" value="03118" />
-      <option name="presentableId" value="LOCAL-03118" />
-      <option name="project" value="LOCAL" />
-      <updated>1780321317125</updated>
-    </task>
-    <task id="LOCAL-03119" summary="ROSSO: testVittoriaNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1780321399822</created>
-      <option name="number" value="03119" />
-      <option name="presentableId" value="LOCAL-03119" />
-      <option name="project" value="LOCAL" />
-      <updated>1780321399822</updated>
-    </task>
-    <task id="LOCAL-03120" summary="VERDE: testFazioneNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1780324168527</created>
-      <option name="number" value="03120" />
-      <option name="presentableId" value="LOCAL-03120" />
-      <option name="project" value="LOCAL" />
-      <updated>1780324168527</updated>
-    </task>
-    <task id="LOCAL-03121" summary="VERDE DIRETTO: testNonFazioneNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1780324917723</created>
-      <option name="number" value="03121" />
-      <option name="presentableId" value="LOCAL-03121" />
-      <option name="project" value="LOCAL" />
-      <updated>1780324917723</updated>
-    </task>
-    <task id="LOCAL-03122" summary="REFACTORING: definizione del metodo isFazioneNosferatu">
-      <option name="closed" value="true" />
-      <created>1780325098294</created>
-      <option name="number" value="03122" />
-      <option name="presentableId" value="LOCAL-03122" />
-      <option name="project" value="LOCAL" />
-      <updated>1780325098294</updated>
     </task>
     <task id="LOCAL-03123" summary="ROSSO: testFazioneNosferatu non riuscito">
       <option name="closed" value="true" />
@@ -684,7 +620,71 @@
       <option name="project" value="LOCAL" />
       <updated>1781109214181</updated>
     </task>
-    <option name="localTasksCounter" value="3164" />
+    <task id="LOCAL-03164" summary="REFACTORING: definizione del metodo verificaContadinoLupo">
+      <option name="closed" value="true" />
+      <created>1781109561056</created>
+      <option name="number" value="03164" />
+      <option name="presentableId" value="LOCAL-03164" />
+      <option name="project" value="LOCAL" />
+      <updated>1781109561057</updated>
+    </task>
+    <task id="LOCAL-03165" summary="ROSSO: testSegnalazioneBoiaContadinoLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1781111464790</created>
+      <option name="number" value="03165" />
+      <option name="presentableId" value="LOCAL-03165" />
+      <option name="project" value="LOCAL" />
+      <updated>1781111464790</updated>
+    </task>
+    <task id="LOCAL-03166" summary="ROSSO: testSegnalazioneBoiaContadinoLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1781256662002</created>
+      <option name="number" value="03166" />
+      <option name="presentableId" value="LOCAL-03166" />
+      <option name="project" value="LOCAL" />
+      <updated>1781256662004</updated>
+    </task>
+    <task id="LOCAL-03167" summary="REFACTORING: definizione del metodo verificaBoiata">
+      <option name="closed" value="true" />
+      <created>1781257868477</created>
+      <option name="number" value="03167" />
+      <option name="presentableId" value="LOCAL-03167" />
+      <option name="project" value="LOCAL" />
+      <updated>1781257868478</updated>
+    </task>
+    <task id="LOCAL-03168" summary="REFACTORING: definizione del metodo estraiNomiGiocatori">
+      <option name="closed" value="true" />
+      <created>1781259058332</created>
+      <option name="number" value="03168" />
+      <option name="presentableId" value="LOCAL-03168" />
+      <option name="project" value="LOCAL" />
+      <updated>1781259058332</updated>
+    </task>
+    <task id="LOCAL-03169" summary="REFACTORING: definizione del metodo toArray">
+      <option name="closed" value="true" />
+      <created>1781259707717</created>
+      <option name="number" value="03169" />
+      <option name="presentableId" value="LOCAL-03169" />
+      <option name="project" value="LOCAL" />
+      <updated>1781259707717</updated>
+    </task>
+    <task id="LOCAL-03170" summary="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoNonAttaccato riuscito">
+      <option name="closed" value="true" />
+      <created>1781260723939</created>
+      <option name="number" value="03170" />
+      <option name="presentableId" value="LOCAL-03170" />
+      <option name="project" value="LOCAL" />
+      <updated>1781260723939</updated>
+    </task>
+    <task id="LOCAL-03171" summary="REFACTORING: definizione del metndo estraiNomiGiocatoriSenzaContadino">
+      <option name="closed" value="true" />
+      <created>1781261298133</created>
+      <option name="number" value="03171" />
+      <option name="presentableId" value="LOCAL-03171" />
+      <option name="project" value="LOCAL" />
+      <updated>1781261298133</updated>
+    </task>
+    <option name="localTasksCounter" value="3172" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -699,13 +699,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testEsempioPartita riuscito" />
-    <MESSAGE value="ROSSO: testNosferatuPresente non riuscito" />
-    <MESSAGE value="VERDE: testNosferatuPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo cercaNosferatu" />
-    <MESSAGE value="REFACTORING: definizione del metodo cercaAngeloCustode" />
-    <MESSAGE value="REFACTORING: definizione del metodo cercaContadinoMostro" />
-    <MESSAGE value="REFACTORING: definizione del metodo cercaRuolo" />
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatori" />
     <MESSAGE value="REFACTORING: definizione del metodo getStreamRuoli" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoli" />
@@ -724,6 +717,13 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaContadinoLupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaContadinoLupo" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoAttaccato riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoAttaccato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaBoiata" />
+    <MESSAGE value="REFACTORING: definizione del metodo estraiNomiGiocatori" />
+    <MESSAGE value="REFACTORING: definizione del metodo toArray" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoNonAttaccato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metndo estraiNomiGiocatoriSenzaContadino" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metndo estraiNomiGiocatoriSenzaContadino" />
   </component>
 </project>

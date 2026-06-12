@@ -5,7 +5,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.util.stream.Stream;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
+import static java.util.Arrays.stream;
 import static org.assertj.core.api.Assertions.*;
 
 public final class TestBallottaggio
@@ -42,12 +47,27 @@ public final class TestBallottaggio
         String nome = "Miriam";
         String[][] giocatori = new String[][] { { nome, nomeRuolo }, { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        int numeroVoti = 2;
-        for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], numeroVoti);
-        ballottaggio.segnalazioneBoia(nome);
-        verificaNumeroVoti(nome, numeroVoti);
-        for(int i = 1; i < giocatori.length; i++) verificaNumeroVoti(giocatori[i][0], risultato);
-        FACTORY.annullaSegnalazioni();
+        verificaBoiata(nome, 2, risultato, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testSegnalazioneBoiaContadinoLupoAttaccato(String tipoLupo)
+    {
+        String nome = "Tony";
+        String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
+        Ruolo ruolo = FACTORY.getRuolo("Contadino discendente dei lupi");
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(FALLITO);
+        ballottaggio.aggiungiGiocatore(nome, ruolo);
+        aggiungiGiocatori(giocatori);
+        verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
+    }
+
+    @Test public void testSegnalazioneBoiaContadinoLupoNonAttaccato()
+    {
+        String nome = "Tony";
+        String[][] giocatori = new String[][] { { nome, "Contadino discendente dei lupi" },  { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
+        aggiungiGiocatori(giocatori);
+        verificaBoiata(nome, 1, 0, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
     }
 
     @Test public void testPerdenteBallottaggio()
@@ -102,6 +122,29 @@ public final class TestBallottaggio
         ballottaggio.segnalazioneBorgomastro();
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
     }
+
+    private String[] estraiNomiGiocatoriSenzaContadino(String[][] giocatori, String nome)
+    {
+        return toArray(stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome)));
+    }
+
+    private void verificaBoiata(String nome, int numeroVoti, int risultato, String... giocatori)
+    {
+        incrementaVoti(nome, numeroVoti);
+        for(String giocatore : giocatori) incrementaVoti(giocatore, numeroVoti);
+        ballottaggio.segnalazioneBoia(nome);
+        verificaNumeroVoti(nome, numeroVoti);
+        for(String giocatore : giocatori) verificaNumeroVoti(giocatore, risultato);
+        verificaNumeroVoti(nome, numeroVoti);
+        FACTORY.annullaSegnalazioni();
+    }
+
+    private String[] estraiNomiGiocatori(String[][] giocatori)
+    {
+        return toArray(stream(giocatori).map(giocatore -> giocatore[0]));
+    }
+
+    private String[] toArray(Stream<String> stream) { return stream.toList().toArray(new String[0]); }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
 

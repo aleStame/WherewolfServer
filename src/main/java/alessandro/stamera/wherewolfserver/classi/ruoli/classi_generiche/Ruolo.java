@@ -357,7 +357,7 @@ public class Ruolo
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
-    private void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
+    public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
