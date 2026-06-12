@@ -5,6 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.util.stream.Stream;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static java.util.Arrays.stream;
@@ -44,7 +47,7 @@ public final class TestBallottaggio
         String nome = "Miriam";
         String[][] giocatori = new String[][] { { nome, nomeRuolo }, { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 2, risultato, stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome)).toList().toArray(new String[0]));
+        verificaBoiata(nome, 2, risultato, toArray(stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome))));
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -125,8 +128,10 @@ public final class TestBallottaggio
 
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {
-        return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
+        return toArray(stream(giocatori).map(giocatore -> giocatore[0]));
     }
+
+    private String[] toArray(Stream<String> stream) { return stream.toList().toArray(new String[0]); }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
 
