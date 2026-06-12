@@ -62,6 +62,15 @@ public final class TestBallottaggio
         verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
     }
 
+    @Test public void testSegnalazioneBoiaContadinoLupoNonAttaccato()
+    {
+        String nome = "Tony";
+        String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
+        aggiungiGiocatori(new String[][]{ { nome, "Contadino discendente dei lupi" } });
+        aggiungiGiocatori(giocatori);
+        verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
+    }
+
     @Test public void testPerdenteBallottaggio()
     {
         String[][] giocatori = new String[][] { { "Davide", "Prete" }, { "Margherita", "Guardia" } };
