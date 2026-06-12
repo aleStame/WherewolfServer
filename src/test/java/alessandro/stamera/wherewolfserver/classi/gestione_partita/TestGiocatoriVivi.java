@@ -204,15 +204,6 @@ public final class TestGiocatoriVivi
         verificaAccusati(giocatori[0][0], giocatori[2][0]);
     }
 
-    /*@Test public void testAttaccoNosferatuAngeloCustode()
-    {
-        String[][] giocatori = new String[][] { { "Silvia", "Angelo custode" }, { "Piergiorgio", "Inquisitore" } };
-        inizializzaGiocatori(giocatori);
-        int posizioneAmato = 1;
-        segnalazioneAngeloCustode(giocatori[posizioneAmato][0]);
-        verificaProgenie(giocatori[posizioneAmato][0], giocatori[0][0], NOSFERATU);
-    }*/
-
     @Test public void testAttaccoVampiroAngeloCustode()
     {
         String[][] giocatori = new String[][] { { "Camilla", "Angelo custode" }, { "Edoardo", "Peccatore" } };
@@ -511,6 +502,18 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         verificaGildata(nomeVittima, esito);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testCriminalizzazioneContadinoMostroAttaccato(String tipoLupo)
+    {
+        String nomeContadino = "Giuseppe", nomeCapoGilda = "Elisa", nomeLupo = "Gaia";
+        String[][] giocatori =
+            new String[][] { { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" } };
+        inizializzaGiocatori(giocatori);
+        verificaAttacco(this.giocatori.attaccoLupi(this.giocatori.getRuolo(nomeLupo), nomeContadino), FALLITO);
+        verificaGildata(nomeContadino, MORTO);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testCriminalizzazioneBecchino()

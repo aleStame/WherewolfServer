@@ -37,6 +37,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
         if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
+        System.out.println(esito);
         return esito;
     }
 
