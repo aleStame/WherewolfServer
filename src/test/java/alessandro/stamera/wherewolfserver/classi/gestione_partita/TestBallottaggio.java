@@ -44,7 +44,7 @@ public final class TestBallottaggio
         String nome = "Miriam";
         String[][] giocatori = new String[][] { { nome, nomeRuolo }, { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 2, risultato, stream(giocatori).map(giocatore -> giocatore[0]).filter(stringa -> !stringa.equals(nome)).toList().toArray(new String[0]));
+        verificaBoiata(nome, 2, risultato, stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome)).toList().toArray(new String[0]));
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -56,7 +56,7 @@ public final class TestBallottaggio
         assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(FALLITO);
         ballottaggio.aggiungiGiocatore(nome, ruolo);
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 3, 0, stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]));
+        verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
     }
 
     @Test public void testPerdenteBallottaggio()
@@ -121,6 +121,11 @@ public final class TestBallottaggio
         for(String giocatore : giocatori) verificaNumeroVoti(giocatore, risultato);
         verificaNumeroVoti(nome, numeroVoti);
         FACTORY.annullaSegnalazioni();
+    }
+
+    private String[] estraiNomiGiocatori(String[][] giocatori)
+    {
+        return stream(giocatori).map(giocatore -> giocatore[0]).toList().toArray(new String[0]);
     }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
