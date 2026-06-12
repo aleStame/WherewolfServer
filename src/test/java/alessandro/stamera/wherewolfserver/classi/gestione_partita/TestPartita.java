@@ -654,6 +654,22 @@ public final class TestPartita
         verificaNonEliminati(nomeContadino);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testGuarigioneContadinoLupo(String tipoLupo)
+    {
+        String nomeContadino = "Graziano", nomeLupo = "Leonardo";
+        String[][] giocatori = new String[][]
+        {
+            { nomeContadino, "Contadino discendente dei lupi" }, { nomeLupo, tipoLupo }, { "Fabrizio", "Guaritore" }, { "Gea", "Assassino" }
+        };
+        inizializzaPartita(giocatori);
+        attaccoLupi(tipoLupo, nomeContadino);
+        attaccoAssassino(nomeContadino);
+        partita.guarisci(nomeContadino);
+        terminaNotte();
+        verificaNonEliminati(nomeContadino);
+    }
+
     @ParameterizedTest @CsvSource({ "1, 2" }) public void testContrattaccoContadinoMostro(int posizioneVittima)
     {
         String[][] giocatori = new String[][] { { "Carmine", "Contadino mostro" }, { "Carmela", "Peccatore" }, { "Giulia", "Posseduto" } };

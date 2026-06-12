@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCriminalizzazioneContadinoMostroAttaccato non riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +106,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/capoGildaContadinoLupo",
+    "git-widget-placeholder": "feature/guarigioneContadinoLupo",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -291,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03126" summary="REFACTORING: definizione del metodo verificaFazioneNosferatu">
-      <option name="closed" value="true" />
-      <created>1780329042778</created>
-      <option name="number" value="03126" />
-      <option name="presentableId" value="LOCAL-03126" />
-      <option name="project" value="LOCAL" />
-      <updated>1780329042778</updated>
     </task>
     <task id="LOCAL-03127" summary="REFACTORING: definizione del metodo isNosferatuVincitore">
       <option name="closed" value="true" />
@@ -684,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781278001703</updated>
     </task>
-    <option name="localTasksCounter" value="3175" />
+    <task id="LOCAL-03175" summary="ROSSO: testCriminalizzazioneContadinoMostroAttaccato non riuscito">
+      <option name="closed" value="true" />
+      <created>1781278172508</created>
+      <option name="number" value="03175" />
+      <option name="presentableId" value="LOCAL-03175" />
+      <option name="project" value="LOCAL" />
+      <updated>1781278172508</updated>
+    </task>
+    <option name="localTasksCounter" value="3176" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -699,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getStreamRuoli" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuoli" />
     <MESSAGE value="VERDE DIRETTO: testNosferatuNonPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuPresente" />
@@ -723,7 +725,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoNonAttaccato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metndo estraiNomiGiocatoriSenzaContadino" />
-    <MESSAGE value="ROSSO: testCriminalizzazioneContadinoMostroAttaccato non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCriminalizzazioneContadinoMostroAttaccato non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
   </component>
 </project>
