@@ -47,7 +47,7 @@ public final class TestBallottaggio
         String nome = "Miriam";
         String[][] giocatori = new String[][] { { nome, nomeRuolo }, { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 2, risultato, toArray(stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome))));
+        verificaBoiata(nome, 2, risultato, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -65,10 +65,9 @@ public final class TestBallottaggio
     @Test public void testSegnalazioneBoiaContadinoLupoNonAttaccato()
     {
         String nome = "Tony";
-        String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
-        aggiungiGiocatori(new String[][]{ { nome, "Contadino discendente dei lupi" } });
+        String[][] giocatori = new String[][] { { nome, "Contadino discendente dei lupi" },  { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
+        verificaBoiata(nome, 1, 0, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
     }
 
     @Test public void testPerdenteBallottaggio()
@@ -122,6 +121,11 @@ public final class TestBallottaggio
         verificaFalso(isSegnalazioneBorgomastroAvvenuta());
         ballottaggio.segnalazioneBorgomastro();
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
+    }
+
+    private String[] estraiNomiGiocatoriSenzaContadino(String[][] giocatori, String nome)
+    {
+        return toArray(stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome)));
     }
 
     private void verificaBoiata(String nome, int numeroVoti, int risultato, String... giocatori)
