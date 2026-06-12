@@ -52,6 +52,13 @@ public final class TestContadinoLupo
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustode(String nome)
     {
+        ruolo.sceltaAngeloCustode();
+        verificaContadinoLupo(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiGiulietta(String nome)
+    {
         ruolo.romeizzazione();
         verificaContadinoLupo(nome);
     }
