@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testDescrizione riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaStringa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,22 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03135" summary="VERDE: testNosferatuPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1781008344757</created>
-      <option name="number" value="03135" />
-      <option name="presentableId" value="LOCAL-03135" />
-      <option name="project" value="LOCAL" />
-      <updated>1781008344757</updated>
-    </task>
-    <task id="LOCAL-03136" summary="REFACTORING: definizione del metodo cercaNosferatu">
-      <option name="closed" value="true" />
-      <created>1781008567604</created>
-      <option name="number" value="03136" />
-      <option name="presentableId" value="LOCAL-03136" />
-      <option name="project" value="LOCAL" />
-      <updated>1781008567604</updated>
     </task>
     <task id="LOCAL-03137" summary="REFACTORING: definizione del metodo cercaAngeloCustode">
       <option name="closed" value="true" />
@@ -687,7 +669,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781342497848</updated>
     </task>
-    <option name="localTasksCounter" value="3184" />
+    <task id="LOCAL-03184" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1781342668666</created>
+      <option name="number" value="03184" />
+      <option name="presentableId" value="LOCAL-03184" />
+      <option name="project" value="LOCAL" />
+      <updated>1781342668666</updated>
+    </task>
+    <task id="LOCAL-03185" summary="REFACTORING: definizione del metodo verificaStringa">
+      <option name="closed" value="true" />
+      <created>1781342839700</created>
+      <option name="number" value="03185" />
+      <option name="presentableId" value="LOCAL-03185" />
+      <option name="project" value="LOCAL" />
+      <updated>1781342839700</updated>
+    </task>
+    <option name="localTasksCounter" value="3186" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getVittoriaNosferatu" />
-    <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartitaDopoAttacco non riuscito" />
@@ -727,6 +723,8 @@
     <MESSAGE value="REFACTORING: definizione della costante NOME" />
     <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaStringa" />
   </component>
 </project>
