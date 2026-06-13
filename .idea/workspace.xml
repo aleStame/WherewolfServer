@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCategoriaUomini riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVampiro non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -296,14 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03153" summary="ROSSO: testAttaccoLupi non riuscito">
-      <option name="closed" value="true" />
-      <created>1781099942789</created>
-      <option name="number" value="03153" />
-      <option name="presentableId" value="LOCAL-03153" />
-      <option name="project" value="LOCAL" />
-      <updated>1781099942790</updated>
     </task>
     <task id="LOCAL-03154" summary="VERDE: testAttaccoLupi riuscito">
       <option name="closed" value="true" />
@@ -689,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781367730189</updated>
     </task>
-    <option name="localTasksCounter" value="3202" />
+    <task id="LOCAL-03202" summary="ROSSO: testVampiro non riuscito">
+      <option name="closed" value="true" />
+      <created>1781368226477</created>
+      <option name="number" value="03202" />
+      <option name="presentableId" value="LOCAL-03202" />
+      <option name="project" value="LOCAL" />
+      <updated>1781368226477</updated>
+    </task>
+    <option name="localTasksCounter" value="3203" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -704,7 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
@@ -729,6 +724,7 @@
     <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
     <MESSAGE value="ROSSO: testCategoriaUomini non riuscito" />
     <MESSAGE value="VERDE: testCategoriaUomini riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCategoriaUomini riuscito" />
+    <MESSAGE value="ROSSO: testVampiro non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVampiro non riuscito" />
   </component>
 </project>
