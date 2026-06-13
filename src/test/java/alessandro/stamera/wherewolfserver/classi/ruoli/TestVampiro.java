@@ -29,12 +29,14 @@ public final class TestVampiro
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO); }
 
-    @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isFalse(); }
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
-    @Test public void testCitta() { assertThat(ruolo.isCriminale()).isFalse(); }
+    @Test public void testCitta() { verificaFalso(ruolo.isCriminale()); }
 
     //@Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
