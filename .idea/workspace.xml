@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCreaturaOmbra riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCategoriaUomini non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -296,14 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03151" summary="REFACTORING: definizione del metodo getVittoriaNosferatu">
-      <option name="closed" value="true" />
-      <created>1781095666791</created>
-      <option name="number" value="03151" />
-      <option name="presentableId" value="LOCAL-03151" />
-      <option name="project" value="LOCAL" />
-      <updated>1781095666791</updated>
     </task>
     <task id="LOCAL-03152" summary="VERDE DIRETTO: testFazione riuscito">
       <option name="closed" value="true" />
@@ -689,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781366629678</updated>
     </task>
-    <option name="localTasksCounter" value="3200" />
+    <task id="LOCAL-03200" summary="ROSSO: testCategoriaUomini non riuscito">
+      <option name="closed" value="true" />
+      <created>1781367138523</created>
+      <option name="number" value="03200" />
+      <option name="presentableId" value="LOCAL-03200" />
+      <option name="project" value="LOCAL" />
+      <updated>1781367138523</updated>
+    </task>
+    <option name="localTasksCounter" value="3201" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -704,7 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
@@ -729,6 +724,7 @@
     <MESSAGE value="VERDE: testLune riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCategoria riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCreaturaOmbra riuscito" />
+    <MESSAGE value="ROSSO: testCategoriaUomini non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCategoriaUomini non riuscito" />
   </component>
 </project>

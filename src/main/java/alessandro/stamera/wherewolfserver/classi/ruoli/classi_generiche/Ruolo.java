@@ -359,7 +359,7 @@ public class Ruolo
 
     public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
-    public boolean isCategoriaUomini() { return true; }
+    public boolean isCategoriaUomini() { return false; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
