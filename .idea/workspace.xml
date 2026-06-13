@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoLupo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNome non riuscito">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +116,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/nomeVampiro",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -120,6 +131,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="alessandro.stamera.wherewolfserver.classi.ruoli" />
       <recent name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche" />
       <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
       <recent name="alessandro.stamera.wherewolfserver.classi" />
@@ -293,22 +305,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03129" summary="VERDE: testVittoriaNosferatuConGhoul riuscito">
-      <option name="closed" value="true" />
-      <created>1780331068695</created>
-      <option name="number" value="03129" />
-      <option name="presentableId" value="LOCAL-03129" />
-      <option name="project" value="LOCAL" />
-      <updated>1780331068695</updated>
-    </task>
-    <task id="LOCAL-03130" summary="REFACTORING: definizione del metodo isAlleatoNosferatu">
-      <option name="closed" value="true" />
-      <created>1780331355844</created>
-      <option name="number" value="03130" />
-      <option name="presentableId" value="LOCAL-03130" />
-      <option name="project" value="LOCAL" />
-      <updated>1780331355844</updated>
     </task>
     <task id="LOCAL-03131" summary="REFACTORING: semplificazione del codice">
       <option name="closed" value="true" />
@@ -686,7 +682,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781280966084</updated>
     </task>
-    <option name="localTasksCounter" value="3178" />
+    <task id="LOCAL-03178" summary="VERDE: testAttaccoLupiAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1781281274020</created>
+      <option name="number" value="03178" />
+      <option name="presentableId" value="LOCAL-03178" />
+      <option name="project" value="LOCAL" />
+      <updated>1781281274020</updated>
+    </task>
+    <task id="LOCAL-03179" summary="ROSSO: testNome non riuscito">
+      <option name="closed" value="true" />
+      <created>1781341251766</created>
+      <option name="number" value="03179" />
+      <option name="presentableId" value="LOCAL-03179" />
+      <option name="project" value="LOCAL" />
+      <updated>1781341251767</updated>
+    </task>
+    <option name="localTasksCounter" value="3180" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,8 +713,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuPresente" />
-    <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="ROSSO: testVittoriaNosferatu non riuscito" />
     <MESSAGE value="VERDE: testVittoriaNosferatu riuscito" />
@@ -726,6 +736,8 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneContadinoMostroAttaccato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
+    <MESSAGE value="ROSSO: testNome non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNome non riuscito" />
   </component>
 </project>
