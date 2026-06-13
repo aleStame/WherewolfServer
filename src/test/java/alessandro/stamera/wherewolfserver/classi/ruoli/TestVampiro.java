@@ -41,7 +41,7 @@ public final class TestVampiro
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testVampiro() { assertThat(ruolo.isVampiro()).isTrue(); }
+    @Test public void testVampiro() { verificaVero(ruolo.isVampiro()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
@@ -51,11 +51,13 @@ public final class TestVampiro
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
-    @Test public void testCreaturaOmbra() { assertThat(ruolo.isCreaturaOmbra()).isTrue(); }
+    @Test public void testCreaturaOmbra() { verificaVero(ruolo.isCreaturaOmbra()); }
 
     @Test public void testUomini() { verificaFalso(ruolo.isCategoriaUomini()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
