@@ -48,6 +48,8 @@ public final class TestInquisizione
 
     @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
 
+    @Test public void testVampiro() { verificaFalso(ruolo.isVampiro()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
