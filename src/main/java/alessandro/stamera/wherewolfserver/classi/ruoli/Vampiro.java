@@ -6,7 +6,17 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 public final class Vampiro extends CreatureOmbra
 {
 
-    private Vampiro() { super("Vampiro", null, null, null, 0, true); }
+    private Vampiro()
+    {
+        super
+        (
+    "Vampiro", null, null,
+"La prima notte riconosce il Ghoul. Dalla seconda notte, può indicare un giocatore che viene avvisato. Se è il Cacciatore di vampiri o " +
+          "un lupo, il Vampiro viene ucciso. Se è un mistico, non accade nulla. Altrimenti, quel giocatore lo riconosce e diventa una progenie " +
+          "vampirica con aura oscura e fazione Vampiro. Inoltre, la prima notte individua la Megera.",
+     0, true
+        );
+    }
 
     public static Ruolo getInstance() { return new Vampiro(); }
 

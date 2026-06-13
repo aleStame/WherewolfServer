@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNome non riuscito">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaStringa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +103,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/nomeVampiro",
+    "git-widget-placeholder": "feature/descrizioneVampiro",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -305,54 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03131" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1781005743397</created>
-      <option name="number" value="03131" />
-      <option name="presentableId" value="LOCAL-03131" />
-      <option name="project" value="LOCAL" />
-      <updated>1781005743398</updated>
-    </task>
-    <task id="LOCAL-03132" summary="ROSSO: testEsempioPartita non riuscito">
-      <option name="closed" value="true" />
-      <created>1781006433219</created>
-      <option name="number" value="03132" />
-      <option name="presentableId" value="LOCAL-03132" />
-      <option name="project" value="LOCAL" />
-      <updated>1781006433220</updated>
-    </task>
-    <task id="LOCAL-03133" summary="VERDE: testEsempioPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1781007440880</created>
-      <option name="number" value="03133" />
-      <option name="presentableId" value="LOCAL-03133" />
-      <option name="project" value="LOCAL" />
-      <updated>1781007440880</updated>
-    </task>
-    <task id="LOCAL-03134" summary="ROSSO: testNosferatuPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1781007849534</created>
-      <option name="number" value="03134" />
-      <option name="presentableId" value="LOCAL-03134" />
-      <option name="project" value="LOCAL" />
-      <updated>1781007849535</updated>
-    </task>
-    <task id="LOCAL-03135" summary="VERDE: testNosferatuPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1781008344757</created>
-      <option name="number" value="03135" />
-      <option name="presentableId" value="LOCAL-03135" />
-      <option name="project" value="LOCAL" />
-      <updated>1781008344757</updated>
-    </task>
-    <task id="LOCAL-03136" summary="REFACTORING: definizione del metodo cercaNosferatu">
-      <option name="closed" value="true" />
-      <created>1781008567604</created>
-      <option name="number" value="03136" />
-      <option name="presentableId" value="LOCAL-03136" />
-      <option name="project" value="LOCAL" />
-      <updated>1781008567604</updated>
     </task>
     <task id="LOCAL-03137" summary="REFACTORING: definizione del metodo cercaAngeloCustode">
       <option name="closed" value="true" />
@@ -698,7 +637,55 @@
       <option name="project" value="LOCAL" />
       <updated>1781341251767</updated>
     </task>
-    <option name="localTasksCounter" value="3180" />
+    <task id="LOCAL-03180" summary="VERDE: testNome riuscito">
+      <option name="closed" value="true" />
+      <created>1781341547490</created>
+      <option name="number" value="03180" />
+      <option name="presentableId" value="LOCAL-03180" />
+      <option name="project" value="LOCAL" />
+      <updated>1781341547490</updated>
+    </task>
+    <task id="LOCAL-03181" summary="REFACTORING: definizione della costante NOME">
+      <option name="closed" value="true" />
+      <created>1781341743693</created>
+      <option name="number" value="03181" />
+      <option name="presentableId" value="LOCAL-03181" />
+      <option name="project" value="LOCAL" />
+      <updated>1781341743693</updated>
+    </task>
+    <task id="LOCAL-03182" summary="ROSSO: testDescrizione non riuscito">
+      <option name="closed" value="true" />
+      <created>1781342221719</created>
+      <option name="number" value="03182" />
+      <option name="presentableId" value="LOCAL-03182" />
+      <option name="project" value="LOCAL" />
+      <updated>1781342221719</updated>
+    </task>
+    <task id="LOCAL-03183" summary="VERDE: testDescrizione riuscito">
+      <option name="closed" value="true" />
+      <created>1781342497848</created>
+      <option name="number" value="03183" />
+      <option name="presentableId" value="LOCAL-03183" />
+      <option name="project" value="LOCAL" />
+      <updated>1781342497848</updated>
+    </task>
+    <task id="LOCAL-03184" summary="REFACTORING: definizione di un metodo di set up">
+      <option name="closed" value="true" />
+      <created>1781342668666</created>
+      <option name="number" value="03184" />
+      <option name="presentableId" value="LOCAL-03184" />
+      <option name="project" value="LOCAL" />
+      <updated>1781342668666</updated>
+    </task>
+    <task id="LOCAL-03185" summary="REFACTORING: definizione del metodo verificaStringa">
+      <option name="closed" value="true" />
+      <created>1781342839700</created>
+      <option name="number" value="03185" />
+      <option name="presentableId" value="LOCAL-03185" />
+      <option name="project" value="LOCAL" />
+      <updated>1781342839700</updated>
+    </task>
+    <option name="localTasksCounter" value="3186" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -713,12 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
-    <MESSAGE value="ROSSO: testVittoriaNosferatu non riuscito" />
-    <MESSAGE value="VERDE: testVittoriaNosferatu riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isPartitaVinta" />
-    <MESSAGE value="REFACTORING: definizione del metodo getVittoriaNosferatu" />
-    <MESSAGE value="VERDE DIRETTO: testFazione riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartitaDopoAttacco non riuscito" />
@@ -738,6 +719,12 @@
     <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
     <MESSAGE value="ROSSO: testNome non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNome non riuscito" />
+    <MESSAGE value="VERDE: testNome riuscito" />
+    <MESSAGE value="REFACTORING: definizione della costante NOME" />
+    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
+    <MESSAGE value="VERDE: testDescrizione riuscito" />
+    <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaStringa" />
   </component>
 </project>
