@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testFazione non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAmanti riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,22 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03138" summary="REFACTORING: definizione del metodo cercaContadinoMostro">
-      <option name="closed" value="true" />
-      <created>1781009192652</created>
-      <option name="number" value="03138" />
-      <option name="presentableId" value="LOCAL-03138" />
-      <option name="project" value="LOCAL" />
-      <updated>1781009192652</updated>
-    </task>
-    <task id="LOCAL-03139" summary="REFACTORING: definizione del metodo cercaRuolo">
-      <option name="closed" value="true" />
-      <created>1781012432032</created>
-      <option name="number" value="03139" />
-      <option name="presentableId" value="LOCAL-03139" />
-      <option name="project" value="LOCAL" />
-      <updated>1781012432033</updated>
     </task>
     <task id="LOCAL-03140" summary="REFACTORING: definizione del metodo getGiocatori">
       <option name="closed" value="true" />
@@ -687,7 +671,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781343756523</updated>
     </task>
-    <option name="localTasksCounter" value="3187" />
+    <task id="LOCAL-03187" summary="VERDE: testFazione riuscito">
+      <option name="closed" value="true" />
+      <created>1781344154420</created>
+      <option name="number" value="03187" />
+      <option name="presentableId" value="LOCAL-03187" />
+      <option name="project" value="LOCAL" />
+      <updated>1781344154420</updated>
+    </task>
+    <task id="LOCAL-03188" summary="VERDE DIRETTO: testAmanti riuscito">
+      <option name="closed" value="true" />
+      <created>1781344452091</created>
+      <option name="number" value="03188" />
+      <option name="presentableId" value="LOCAL-03188" />
+      <option name="project" value="LOCAL" />
+      <updated>1781344452091</updated>
+    </task>
+    <option name="localTasksCounter" value="3189" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
-    <MESSAGE value="ROSSO: testEsitoPartitaDopoAttacco non riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaContadinoLupo" />
@@ -727,6 +725,8 @@
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
     <MESSAGE value="ROSSO: testFazione non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testFazione non riuscito" />
+    <MESSAGE value="VERDE: testFazione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAmanti riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAmanti riuscito" />
   </component>
 </project>

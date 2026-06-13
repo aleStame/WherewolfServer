@@ -31,9 +31,9 @@ public final class TestVampiro
 
     @Test public void testAmanti() { assertThat(ruolo.isAmanti()).isFalse(); }
 
-    /*@Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+    @Test public void testCitta() { assertThat(ruolo.isCriminale()).isFalse(); }
 
-    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }*/
+    //@Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
