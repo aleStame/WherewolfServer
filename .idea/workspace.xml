@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testInquisizione riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testVillaggio riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,22 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03144" summary="REFACTORING: definizione del metodo isNosferatuPresente">
-      <option name="closed" value="true" />
-      <created>1781015013325</created>
-      <option name="number" value="03144" />
-      <option name="presentableId" value="LOCAL-03144" />
-      <option name="project" value="LOCAL" />
-      <updated>1781015013325</updated>
-    </task>
-    <task id="LOCAL-03145" summary="REFACTORING: semplificazione del codice">
-      <option name="closed" value="true" />
-      <created>1781015277235</created>
-      <option name="number" value="03145" />
-      <option name="presentableId" value="LOCAL-03145" />
-      <option name="project" value="LOCAL" />
-      <updated>1781015277235</updated>
     </task>
     <task id="LOCAL-03146" summary="REFACTORING: semplificazione del codice">
       <option name="closed" value="true" />
@@ -685,7 +669,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781364529133</updated>
     </task>
-    <option name="localTasksCounter" value="3193" />
+    <task id="LOCAL-03193" summary="VERDE DIRETTO: testLupo riuscito">
+      <option name="closed" value="true" />
+      <created>1781364694301</created>
+      <option name="number" value="03193" />
+      <option name="presentableId" value="LOCAL-03193" />
+      <option name="project" value="LOCAL" />
+      <updated>1781364694301</updated>
+    </task>
+    <task id="LOCAL-03194" summary="VERDE DIRETTO: testVillaggio riuscito">
+      <option name="closed" value="true" />
+      <created>1781364894916</created>
+      <option name="number" value="03194" />
+      <option name="presentableId" value="LOCAL-03194" />
+      <option name="project" value="LOCAL" />
+      <updated>1781364894916</updated>
+    </task>
+    <option name="localTasksCounter" value="3195" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoAttaccato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaBoiata" />
     <MESSAGE value="REFACTORING: definizione del metodo estraiNomiGiocatori" />
     <MESSAGE value="REFACTORING: definizione del metodo toArray" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaContadinoLupoNonAttaccato riuscito" />
@@ -725,6 +723,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="VERDE DIRETTO: testInquisizione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testInquisizione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVillaggio riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVillaggio riuscito" />
   </component>
 </project>
