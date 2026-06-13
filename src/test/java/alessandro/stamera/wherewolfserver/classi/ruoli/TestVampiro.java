@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -25,6 +26,8 @@ public final class TestVampiro
             "progenie vampirica con aura oscura e fazione Vampiro. Inoltre, la prima notte individua la Megera.";
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
+
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
