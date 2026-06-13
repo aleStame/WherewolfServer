@@ -43,6 +43,8 @@ public final class TestVampiro
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
