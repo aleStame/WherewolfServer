@@ -49,6 +49,8 @@ public final class TestVampiro
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
+    @Test public void testCreaturaOmbra() { assertThat(ruolo.isCreaturaOmbra()).isTrue(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
