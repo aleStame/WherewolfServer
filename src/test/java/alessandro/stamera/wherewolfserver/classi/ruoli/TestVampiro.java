@@ -39,7 +39,7 @@ public final class TestVampiro
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    //@Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
+    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
