@@ -35,6 +35,12 @@ public final class TestVampiro
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
+
+    /*@Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
+    @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }*/
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
