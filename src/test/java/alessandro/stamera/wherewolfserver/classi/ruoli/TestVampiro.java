@@ -51,6 +51,8 @@ public final class TestVampiro
 
     @Test public void testCreaturaOmbra() { assertThat(ruolo.isCreaturaOmbra()).isTrue(); }
 
+    @Test public void testUomini() { verificaFalso(ruolo.isCategoriaUomini()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
