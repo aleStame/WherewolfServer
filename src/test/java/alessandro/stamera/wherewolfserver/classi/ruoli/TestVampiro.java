@@ -41,6 +41,8 @@ public final class TestVampiro
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testVampiro() { assertThat(ruolo.isVampiro()).isTrue(); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
