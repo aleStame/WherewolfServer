@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testNosferatu riuscito">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestVampiro.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestVampiro.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAura riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,22 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03166" summary="ROSSO: testSegnalazioneBoiaContadinoLupo non riuscito">
-      <option name="closed" value="true" />
-      <created>1781256662002</created>
-      <option name="number" value="03166" />
-      <option name="presentableId" value="LOCAL-03166" />
-      <option name="project" value="LOCAL" />
-      <updated>1781256662004</updated>
-    </task>
-    <task id="LOCAL-03167" summary="REFACTORING: definizione del metodo verificaBoiata">
-      <option name="closed" value="true" />
-      <created>1781257868477</created>
-      <option name="number" value="03167" />
-      <option name="presentableId" value="LOCAL-03167" />
-      <option name="project" value="LOCAL" />
-      <updated>1781257868478</updated>
     </task>
     <task id="LOCAL-03168" summary="REFACTORING: definizione del metodo estraiNomiGiocatori">
       <option name="closed" value="true" />
@@ -694,7 +669,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781466353263</updated>
     </task>
-    <option name="localTasksCounter" value="3215" />
+    <task id="LOCAL-03215" summary="ROSSO: testAura non riuscito">
+      <option name="closed" value="true" />
+      <created>1781467593187</created>
+      <option name="number" value="03215" />
+      <option name="presentableId" value="LOCAL-03215" />
+      <option name="project" value="LOCAL" />
+      <updated>1781467593187</updated>
+    </task>
+    <task id="LOCAL-03216" summary="VERDE: testAura riuscito">
+      <option name="closed" value="true" />
+      <created>1781467779347</created>
+      <option name="number" value="03216" />
+      <option name="presentableId" value="LOCAL-03216" />
+      <option name="project" value="LOCAL" />
+      <updated>1781467779347</updated>
+    </task>
+    <option name="localTasksCounter" value="3217" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -709,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione della costante NOME" />
-    <MESSAGE value="ROSSO: testDescrizione non riuscito" />
     <MESSAGE value="VERDE: testDescrizione riuscito" />
     <MESSAGE value="REFACTORING: definizione di un metodo di set up" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaStringa" />
@@ -734,6 +723,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="VERDE DIRETTO: testVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testAura non riuscito" />
+    <MESSAGE value="VERDE: testAura riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAura riuscito" />
   </component>
 </project>
