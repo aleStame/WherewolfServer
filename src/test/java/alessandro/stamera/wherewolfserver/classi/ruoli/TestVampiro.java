@@ -3,7 +3,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -57,7 +57,9 @@ public final class TestVampiro
 
     @Test public void testUomini() { verificaFalso(ruolo.isCategoriaUomini()); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
+    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
+
+    @Test public void testControlloMedium() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
