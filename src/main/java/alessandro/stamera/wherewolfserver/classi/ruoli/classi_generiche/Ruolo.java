@@ -359,6 +359,10 @@ public class Ruolo
 
     public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
+    public boolean isCategoriaUomini() { return false; }
+
+    public boolean isVampiro() { return false; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }

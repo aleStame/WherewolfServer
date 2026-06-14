@@ -46,6 +46,8 @@ public final class TestAmanti
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
+    @Test public void testVampiro() { verificaFalso(ruolo.isVampiro()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }

@@ -70,6 +70,8 @@ public final class TestNosferatu
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
+    @Test public void testVampiro() { verificaFalso(ruolo.isVampiro()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }

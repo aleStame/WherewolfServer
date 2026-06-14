@@ -19,6 +19,8 @@ public final class Vampiro extends CreatureOmbra
         );
     }
 
+    public boolean isVampiro() { return true; }
+
     public static Ruolo getInstance() { return new Vampiro(); }
 
 }

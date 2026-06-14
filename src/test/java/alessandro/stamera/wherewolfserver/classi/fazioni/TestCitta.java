@@ -64,6 +64,8 @@ public final class TestCitta
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
+    @Test public void testVampiro() { verificaFalso(ruolo.isVampiro()); }
+
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }

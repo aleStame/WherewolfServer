@@ -48,6 +48,8 @@ public final class TestVillaggio
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
+    @Test public void testVampiro() { verificaFalso(ruolo.isVampiro()); }
+
     @Test public void testVillaggio() { assertThat(ruolo.isVillaggio()).isTrue(); }
 
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
