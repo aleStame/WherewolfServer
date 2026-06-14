@@ -271,6 +271,8 @@ public final class Partita
         return esito;
     }
 
+    public Aura controlloMedium(String nome) { return null; }
+
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
 
     private void gestioneEliminazioneLupi(String nome)
