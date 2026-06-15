@@ -209,6 +209,7 @@ public final class TestPartita
         incrementaVoti(giocatori[posizioneMistico][0], 2);
         terminaVotazioni();
         verificaAccusati(giocatori[0][0]);
+        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testAttaccoAssassinoContadinoMostroNottiSuccessive()
@@ -1005,7 +1006,7 @@ public final class TestPartita
             "Giovane lupo, NERA", "Giulietta, BIANCA", "Giullare, BIANCA", "Goblin, NERA", "Guardia, BIANCA", "Guardia corrotta, NERA",
             "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA", "Lupo reietto, NERA",
             "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
-            "Nonna, BIANCA", "Nosferatu, NERA", "Oratore, BIANCA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA",
+            "Nonna, BIANCA", "Nosferatu, NERA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA",
             "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Templare, BIANCA", "Vampiro, NERA"
         }
     )
