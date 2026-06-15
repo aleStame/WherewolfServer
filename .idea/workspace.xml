@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo ripristina">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoLupo">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03174" summary="ROSSO: testCriminalizzazioneContadinoMostroAttaccato non riuscito">
-      <option name="closed" value="true" />
-      <created>1781278001702</created>
-      <option name="number" value="03174" />
-      <option name="presentableId" value="LOCAL-03174" />
-      <option name="project" value="LOCAL" />
-      <updated>1781278001703</updated>
     </task>
     <task id="LOCAL-03175" summary="ROSSO: testCriminalizzazioneContadinoMostroAttaccato non riuscito">
       <option name="closed" value="true" />
@@ -687,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781530954082</updated>
     </task>
-    <option name="localTasksCounter" value="3223" />
+    <task id="LOCAL-03223" summary="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoLupo">
+      <option name="closed" value="true" />
+      <created>1781531205011</created>
+      <option name="number" value="03223" />
+      <option name="presentableId" value="LOCAL-03223" />
+      <option name="project" value="LOCAL" />
+      <updated>1781531205011</updated>
+    </task>
+    <option name="localTasksCounter" value="3224" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testFazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAmanti riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
@@ -727,6 +726,7 @@
     <MESSAGE value="ROSSO: testControlloMedium non riuscito" />
     <MESSAGE value="VERDE: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo ripristina" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo ripristina" />
+    <MESSAGE value="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoLupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoLupo" />
   </component>
 </project>

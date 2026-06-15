@@ -370,7 +370,7 @@ public class Ruolo
         resettaAmato();
         annullaSegnalazioneAzzeccagarbugli();
         eliminaTratto(NON_MORTO);
-        if(!isContadinoMostro()) eliminaTratto(MALEDETTO);
+        eliminaTratto(MALEDETTO);
         ripristinaFazioneOriginale();
         annullaSegnalazioneInquisitore();
         perdiProtezioni();
