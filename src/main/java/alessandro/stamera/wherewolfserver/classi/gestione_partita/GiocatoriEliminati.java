@@ -12,20 +12,7 @@ public final class GiocatoriEliminati extends Giocatori
 
     @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
     {
-        ruolo.annullaVoti();
-        ruolo.resettaRomeo();
-        ruolo.resettaAmato();
-        ruolo.annullaSegnalazioneAzzeccagarbugli();
-        ruolo.eliminaTratto(NON_MORTO);
-        if(!ruolo.isContadinoMostro()) ruolo.eliminaTratto(MALEDETTO);
-        if(ruolo.isContadinoLupo())
-        {
-            Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
-            for(Tratto tratto : tratti) ruolo.eliminaTratto(tratto);
-        }
-        ruolo.ripristinaFazioneOriginale();
-        ruolo.annullaSegnalazioneInquisitore();
-        ruolo.perdiProtezioni();
+        ruolo.ripristina();
         super.aggiungiGiocatore(nome, ruolo);
     }
 

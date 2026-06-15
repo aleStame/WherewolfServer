@@ -363,6 +363,24 @@ public class Ruolo
 
     public boolean isVampiro() { return false; }
 
+    public void ripristina()
+    {
+        annullaVoti();
+        resettaRomeo();
+        resettaAmato();
+        annullaSegnalazioneAzzeccagarbugli();
+        eliminaTratto(NON_MORTO);
+        if(!isContadinoMostro()) eliminaTratto(MALEDETTO);
+        if(isContadinoLupo())
+        {
+            Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
+            for(Tratto tratto : tratti) eliminaTratto(tratto);
+        }
+        ripristinaFazioneOriginale();
+        annullaSegnalazioneInquisitore();
+        perdiProtezioni();
+    }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }

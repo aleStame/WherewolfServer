@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import java.util.*;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
@@ -49,58 +48,7 @@ public final class RuoliFactory
         return filtraRuoli(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
     }
 
-    public void annullaSegnalazioni()
-    {
-        annullaVoti();
-        resettaRomeo();
-        resettaAmato();
-        resettaSegnalazioneAzzeccagarbugli();
-        resettaNonMorto();
-        resettaMaledetto();
-        eliminaTrattiContadinoLupo();
-        ripristinaFazioniOriginali();
-        for(String nome : getChiavi())
-        {
-            Ruolo ruolo = ottieniRuolo(nome);
-            ruolo.perdiProtezioni();
-            ruolo.annullaSegnalazioneInquisitore();
-        }
-    }
-
-    private void ripristinaFazioniOriginali() { for(String nome : getChiavi()) ripristinaFazioneOriginale(nome); }
-
-    private void ripristinaFazioneOriginale(String nome) { ottieniRuolo(nome).ripristinaFazioneOriginale(); }
-
-    private void eliminaTrattiContadinoLupo()
-    {
-        Ruolo ruolo = ottieniRuolo("Contadino discendente dei lupi");
-        Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
-        for(Tratto tratto : tratti) ruolo.eliminaTratto(tratto);
-    }
-
-    private void resettaNonMorto() { for(String nome : getChiavi()) ottieniRuolo(nome).eliminaTratto(NON_MORTO); }
-
-    private void resettaMaledetto() { for(String nome : getChiavi()) if(!isContadinoMostro(nome)) annullaMaledizione(nome); }
-
-    private boolean isContadinoMostro(String nome) { return ottieniRuolo(nome).isContadinoMostro(); }
-
-    private void annullaMaledizione(String nome) { ottieniRuolo(nome).eliminaTratto(MALEDETTO); }
-
-    private void annullaVoti() { for(String chiave : getChiavi()) annullaVoti(chiave); }
-
-    private void annullaVoti(String chiave) { ottieniRuolo(chiave).annullaVoti(); }
-
-    private void resettaRomeo() { for(String chiave : getChiavi()) resettaRomeo(chiave); }
-
-    private void resettaRomeo(String chiave) { ottieniRuolo(chiave).resettaRomeo(); }
-
-    private void resettaAmato() { for(String nome : getChiavi()) getResettaAmato(nome); }
-
-    private void getResettaAmato(String nome) { ottieniRuolo(nome).resettaAmato(); }
-
-    private void resettaSegnalazioneAzzeccagarbugli() { for(String nome : getChiavi()) annullaSegnalazioneAzzeccagarbugli(nome); }
-
-    private void annullaSegnalazioneAzzeccagarbugli(String nome) { ottieniRuolo(nome).annullaSegnalazioneAzzeccagarbugli(); }
+    public void annullaSegnalazioni() { for(String nome : getChiavi()) ottieniRuolo(nome).ripristina(); }
 
     private Set<String> getChiavi() { return ruoli.keySet(); }
 
