@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoMostro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/Tratti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/Tratti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoLupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoLupo.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo eliminaTratti">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03176" summary="VERDE DIRETTO: testGuarigioneContadinoLupo riuscito">
-      <option name="closed" value="true" />
-      <created>1781280234552</created>
-      <option name="number" value="03176" />
-      <option name="presentableId" value="LOCAL-03176" />
-      <option name="project" value="LOCAL" />
-      <updated>1781280234552</updated>
     </task>
     <task id="LOCAL-03177" summary="ROSSO: testAttaccoLupiAngeloCustode non riuscito">
       <option name="closed" value="true" />
@@ -690,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781531697624</updated>
     </task>
-    <option name="localTasksCounter" value="3225" />
+    <task id="LOCAL-03225" summary="REFACTORING: definizione del metodo eliminaTratti">
+      <option name="closed" value="true" />
+      <created>1781533057247</created>
+      <option name="number" value="03225" />
+      <option name="presentableId" value="LOCAL-03225" />
+      <option name="project" value="LOCAL" />
+      <updated>1781533057247</updated>
+    </task>
+    <option name="localTasksCounter" value="3226" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -705,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
     <MESSAGE value="VERDE DIRETTO: testInquisizione riuscito" />
@@ -730,6 +726,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo ripristina" />
     <MESSAGE value="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoLupo" />
     <MESSAGE value="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoMostro" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoMostro" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaTratti" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaTratti" />
   </component>
 </project>
