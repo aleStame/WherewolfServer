@@ -371,11 +371,6 @@ public class Ruolo
         annullaSegnalazioneAzzeccagarbugli();
         eliminaTratto(NON_MORTO);
         if(!isContadinoMostro()) eliminaTratto(MALEDETTO);
-        if(isContadinoLupo())
-        {
-            Tratto[] tratti = new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO };
-            for(Tratto tratto : tratti) eliminaTratto(tratto);
-        }
         ripristinaFazioneOriginale();
         annullaSegnalazioneInquisitore();
         perdiProtezioni();
