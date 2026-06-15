@@ -24,11 +24,7 @@ public final class TestContadinoMostro
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
-    @Test public void testMaledetto()
-    {
-        verificaVero(ruolo.isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
-    }
+    @Test public void testMaledetto() { verificaMaledetto(); }
 
     @Test public void testVoti()
     {
@@ -78,9 +74,19 @@ public final class TestContadinoMostro
         verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
     }
 
-    @Test public void testRipristino() { verificaVero(ruolo.isMaledetto()); }
+    @Test public void testRipristino()
+    {
+        ruolo.ripristina();
+        verificaMaledetto();
+    }
 
     @AfterEach public void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
+
+    private void verificaMaledetto()
+    {
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+    }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 
