@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
+import static java.util.Arrays.stream;
 
 public final class Tratti
 {
@@ -66,7 +67,7 @@ public final class Tratti
 
     public boolean isProtezionePossedutoPresente() { return protezioni.isPossedutoPresente(); }
 
-    public void eliminaTratti(Tratto... tratti) { for(Tratto tratto : tratti) this.tratti.remove(tratto); }
+    public void eliminaTratti(Tratto... tratti) { this.tratti.removeAll(stream(tratti).toList()); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
