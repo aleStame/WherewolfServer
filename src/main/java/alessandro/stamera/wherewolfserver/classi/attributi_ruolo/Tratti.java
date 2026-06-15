@@ -1,7 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
@@ -67,7 +66,7 @@ public final class Tratti
 
     public boolean isProtezionePossedutoPresente() { return protezioni.isPossedutoPresente(); }
 
-    public void eliminaTratto(Tratto tratto) { tratti.remove(tratto); }
+    public void eliminaTratti(Tratto... tratti) { for(Tratto tratto : tratti) this.tratti.remove(tratto); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 

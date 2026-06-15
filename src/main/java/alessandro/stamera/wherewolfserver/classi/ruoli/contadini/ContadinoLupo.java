@@ -4,7 +4,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -44,7 +43,7 @@ public final class ContadinoLupo extends Contadino
     @Override public void ripristina()
     {
         super.ripristina();
-        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) eliminaTratto(tratto);
+        eliminaTratti(CREATURA_OMBRA, LUPO_MANNARO);
     }
 
     public static Ruolo getInstance() { return new ContadinoLupo(); }

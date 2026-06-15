@@ -311,7 +311,7 @@ public class Ruolo
         return RIUSCITO;
     }
 
-    public void eliminaTratto(Tratto tratto) { tratti.eliminaTratto(tratto); }
+    public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
 
     public void resettaRomeo()
     {
@@ -369,8 +369,7 @@ public class Ruolo
         resettaRomeo();
         resettaAmato();
         annullaSegnalazioneAzzeccagarbugli();
-        eliminaTratto(NON_MORTO);
-        eliminaTratto(MALEDETTO);
+        eliminaTratti(MALEDETTO, NON_MORTO);
         ripristinaFazioneOriginale();
         annullaSegnalazioneInquisitore();
         perdiProtezioni();
