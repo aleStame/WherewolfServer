@@ -63,6 +63,13 @@ public final class TestContadinoLupo
         verificaContadinoLupo(nome);
     }
 
+    @Test public void testRipristino()
+    {
+        ruolo.ripristina();
+        verificaFalso(ruolo.isCreaturaOmbra());
+        verificaFalso(ruolo.isLupo());
+    }
+
     private void verificaContadinoLupo(String nome)
     {
         verificaAttaccoFallito(nome);
