@@ -78,6 +78,8 @@ public final class TestContadinoMostro
         verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
     }
 
+    @Test public void testRipristino() { verificaVero(ruolo.isMaledetto()); }
+
     @AfterEach public void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
