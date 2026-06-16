@@ -24,7 +24,7 @@ public final class TestGhoul
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
@@ -83,8 +83,10 @@ public final class TestGhoul
 
     @AfterAll public static void resettaPersonaggi()
     {
-        for(String nomeRuolo : new String[]{ "Peccatore", "Prete" }) FACTORY.getRuolo(nomeRuolo).ripristina();
+        for(String nomeRuolo : new String[]{ "Peccatore", "Prete" }) getRuolo(nomeRuolo).ripristina();
     }
+
+    private static Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private static Stream<Arguments> getEsempiPartita()
     {
