@@ -55,14 +55,14 @@ public final class TestContadinoMostro
     public void testAttaccoLupiRomeo(String nome)
     {
         romeizzazione();
-        verificaAttacco(attaccoLupi(nome), FALLITO);
+        verificaAttaccoFallito(attaccoLupi(nome));
     }
 
-    @Test public void testAttaccoAssassino() { verificaAttacco(ruolo.attaccoAssassino(), MORTO); }
+    @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
 
     @Test public void testGildata()
     {
-        verificaAttacco(ruolo.gildata(), MORTO);
+        verificaAttaccoMorto(ruolo.gildata());
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
     }
 
@@ -71,7 +71,7 @@ public final class TestContadinoMostro
     @Test public void testAttaccoNegromanteRomeizzato()
     {
         romeizzazione();
-        verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
+        verificaAttaccoFallito(ruolo.attaccoNegromante());
     }
 
     @Test public void testRipristino()
@@ -81,6 +81,8 @@ public final class TestContadinoMostro
     }
 
     @AfterEach public void annullaSegnalazioni() { ripristina(); }
+
+    private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 
