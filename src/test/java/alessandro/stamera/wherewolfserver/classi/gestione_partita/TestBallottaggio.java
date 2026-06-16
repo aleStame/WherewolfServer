@@ -48,7 +48,7 @@ public final class TestBallottaggio
         String[][] giocatori = new String[][] { { nome, nomeRuolo }, { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
         verificaBoiata(nome, 2, risultato, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
-        ballottaggio.ripristina(nome);
+        ripristina(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -137,8 +137,10 @@ public final class TestBallottaggio
         verificaNumeroVoti(nome, numeroVoti);
         for(String giocatore : giocatori) verificaNumeroVoti(giocatore, risultato);
         verificaNumeroVoti(nome, numeroVoti);
-        ballottaggio.ripristina(nome);
+        ripristina(nome);
     }
+
+    private void ripristina(String nome) { ballottaggio.ripristina(nome); }
 
     private String[] estraiNomiGiocatori(String[][] giocatori)
     {

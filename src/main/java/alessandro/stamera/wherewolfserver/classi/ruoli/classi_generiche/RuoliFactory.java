@@ -1,7 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo;
-import java.util.*;
+import java.util.Map;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Set;
 import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.IstanzaRuolo.values;
@@ -41,7 +44,10 @@ public final class RuoliFactory
 
     public Ruolo[] getLupi() { return filtraRuoli(ruolo -> ruolo.isLupo() || ruolo.isContadinoLupo()); }
 
-    public Ruolo[] getMistici() { return filtraRuoli(mistico -> mistico.isMistico() && !mistico.isMedium() && !mistico.isPiccoloPopolo()); }
+    public Ruolo[] getMistici()
+    {
+        return filtraRuoli(mistico -> mistico.isMistico() && !mistico.isMedium() && !mistico.isPiccoloPopolo());
+    }
 
     public Ruolo[] getCreatureOmbra()
     {
