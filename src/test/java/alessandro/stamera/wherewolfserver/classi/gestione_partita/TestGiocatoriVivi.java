@@ -63,7 +63,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeAmato);
         verificaVero(isAmato(nomeAmato));
-        this.giocatori.ripristina(nomeAmato);
+        ripristina(nomeAmato);
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
@@ -84,7 +84,7 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nome);
         for(int i = 0; i < giocatori.length - 1; i++) incrementaVoti(giocatori[i][0], 2);
         verificaAccusati(giocatori[0][0]);
-        this.giocatori.ripristina(nome);
+        ripristina(nome);
     }
 
     @Test public void testAttaccoAssassino()
@@ -149,19 +149,19 @@ public final class TestGiocatoriVivi
         String nome = "Rodolfo";
         aggiungiGiocatore(nome, "Angelo custode");
         verificaAttaccoLupo(nomeLupo, nome, RIUSCITO);
-        giocatori.ripristina(nome);
+        ripristina(nome);
     }
 
     @ParameterizedTest
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { "Valentina", "Giullare" } };
+        String nomeAmato = "Valentina";
+        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nomeAmato, "Giullare" } };
         inizializzaGiocatori(giocatori);
-        int posizione = 1;
-        segnalazioneAngeloCustode(giocatori[posizione][0]);
-        verificaAttaccoLupo(nomeLupo, giocatori[posizione][0], FALLITO);
-        this.giocatori.getRuolo(giocatori[posizione][0]).resettaAmato();
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAttaccoLupo(nomeLupo, nomeAmato, FALLITO);
+        ripristina(nomeAmato);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -252,7 +252,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, ruolo);
         giocatori.segnalazioneAzzeccagarbugli(nome);
         verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
-        giocatori.ripristina(nome);
+        ripristina(nome);
     }
 
     @Test public void testGuardia()
@@ -314,7 +314,7 @@ public final class TestGiocatoriVivi
         String nome = "Gervaso";
         aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(NERA);
-        giocatori.ripristina(nome);
+        ripristina(nome);
     }
 
     @Test public void testNumeroCriminali()
@@ -358,7 +358,7 @@ public final class TestGiocatoriVivi
         verificaVero(isSegnalatoBoia(nome));
         giocatori.annullaSegnalazioneBoia(nome);
         verificaNonSegnalatoBoia(nome);
-        giocatori.ripristina(nome);
+        ripristina(nome);
     }
 
     @ParameterizedTest @CsvSource
@@ -505,7 +505,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         verificaGildata(nomeVittima, esito);
-        giocatori.ripristina(nomeVittima);
+        ripristina(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -517,7 +517,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         verificaAttacco(this.giocatori.attaccoLupi(this.giocatori.getRuolo(nomeLupo), nomeContadino), FALLITO);
         verificaGildata(nomeContadino, MORTO);
-        this.giocatori.ripristina(nomeContadino);
+        ripristina(nomeContadino);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -526,7 +526,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
         verificaGildata(nomeVittima, FALLITO);
-        giocatori.ripristina(nomeVittima);
+        ripristina(nomeVittima);
     }
 
     @Test public void testCriminalizzazioneContadinoLupo()
@@ -555,7 +555,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore("Maria", "Cappuccetto rosso");
         giocatori.annullaProtezioniCappuccettoRosso();
         verificaAttaccoLupo(tipoLupo, nome, RIUSCITO);
-        giocatori.ripristina(nome);
+        ripristina(nome);
     }
 
     @Test public void testNonnaPresente()
@@ -751,6 +751,8 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, nomeRuolo);
         verificaFalso(isFazioneNosferatu(nome));
     }
+
+    private void ripristina(String nome) { giocatori.ripristina(nome); }
 
     private boolean isFazioneNosferatu(String nome) { return giocatori.isFazioneNosferatu(nome); }
 
