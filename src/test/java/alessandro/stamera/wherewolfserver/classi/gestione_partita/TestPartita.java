@@ -1025,7 +1025,7 @@ public final class TestPartita
         incrementaVoti(nome, 1);
         terminaBallottaggio();
         terminaNotte();
-        assertThat(partita.controlloMedium(nome)).isEqualTo(aura);
+        verificaControlloMedium(nome, aura);
     }
 
     @Test public void testControlloMediumOratore()
@@ -1034,7 +1034,12 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Gennaro", "Assassino" }, { nomeVittima, "Oratore" } });
         attaccoAssassino(nomeVittima);
         terminaNotte();
-        assertThat(partita.controlloMedium(nomeVittima)).isEqualTo(BIANCA);
+        verificaControlloMedium(nomeVittima, BIANCA);
+    }
+
+    private void verificaControlloMedium(String nomeVittima, Aura risultato)
+    {
+        assertThat(partita.controlloMedium(nomeVittima)).isEqualTo(risultato);
     }
 
     private void ripristinaGiocatoreVivo(String nome) { partita.ripristinaGiocatoreVivo(nome); }
