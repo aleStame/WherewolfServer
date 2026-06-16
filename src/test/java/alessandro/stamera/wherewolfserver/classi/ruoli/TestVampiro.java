@@ -61,6 +61,8 @@ public final class TestVampiro
 
     @Test public void testControlloMedium() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
