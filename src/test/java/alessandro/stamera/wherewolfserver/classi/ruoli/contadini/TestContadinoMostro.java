@@ -54,7 +54,7 @@ public final class TestContadinoMostro
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiRomeo(String nome)
     {
-        ruolo.romeizzazione();
+        romeizzazione();
         verificaAttacco(attaccoLupi(nome), FALLITO);
     }
 
@@ -70,7 +70,7 @@ public final class TestContadinoMostro
 
     @Test public void testAttaccoNegromanteRomeizzato()
     {
-        ruolo.romeizzazione();
+        romeizzazione();
         verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
     }
 
@@ -81,6 +81,8 @@ public final class TestContadinoMostro
     }
 
     @AfterEach public void annullaSegnalazioni() { ripristina(); }
+
+    private void romeizzazione() { ruolo.romeizzazione(); }
 
     private void ripristina() { ruolo.ripristina(); }
 
