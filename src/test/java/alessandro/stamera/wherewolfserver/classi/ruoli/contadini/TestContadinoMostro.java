@@ -24,11 +24,7 @@ public final class TestContadinoMostro
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo("Contadino"); }
 
-    @Test public void testMaledetto()
-    {
-        verificaVero(ruolo.isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
-    }
+    @Test public void testMaledetto() { verificaMaledetto(); }
 
     @Test public void testVoti()
     {
@@ -58,15 +54,15 @@ public final class TestContadinoMostro
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiRomeo(String nome)
     {
-        ruolo.romeizzazione();
-        verificaAttacco(attaccoLupi(nome), FALLITO);
+        romeizzazione();
+        verificaAttaccoFallito(attaccoLupi(nome));
     }
 
-    @Test public void testAttaccoAssassino() { verificaAttacco(ruolo.attaccoAssassino(), MORTO); }
+    @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
 
     @Test public void testGildata()
     {
-        verificaAttacco(ruolo.gildata(), MORTO);
+        verificaAttaccoMorto(ruolo.gildata());
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
     }
 
@@ -74,11 +70,29 @@ public final class TestContadinoMostro
 
     @Test public void testAttaccoNegromanteRomeizzato()
     {
-        ruolo.romeizzazione();
-        verificaAttacco(ruolo.attaccoNegromante(), FALLITO);
+        romeizzazione();
+        verificaAttaccoFallito(ruolo.attaccoNegromante());
     }
 
-    @AfterEach public void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
+    @Test public void testRipristino()
+    {
+        ripristina();
+        verificaMaledetto();
+    }
+
+    @AfterEach public void annullaSegnalazioni() { ripristina(); }
+
+    private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
+
+    private void romeizzazione() { ruolo.romeizzazione(); }
+
+    private void ripristina() { ruolo.ripristina(); }
+
+    private void verificaMaledetto()
+    {
+        verificaVero(ruolo.isMaledetto());
+        assertThat(ruolo.getAura()).isEqualTo(NERA);
+    }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
 

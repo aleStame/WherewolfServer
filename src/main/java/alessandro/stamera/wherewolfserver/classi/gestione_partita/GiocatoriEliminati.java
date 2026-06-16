@@ -6,6 +6,12 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 public final class GiocatoriEliminati extends Giocatori
 {
 
+    @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
+    {
+        ruolo.ripristina();
+        super.aggiungiGiocatore(nome, ruolo);
+    }
+
     public boolean isBardoPresente()
     {
         boolean esito = false;

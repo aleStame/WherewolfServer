@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,9 +16,8 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -171,6 +167,20 @@ public final class TestRuolo
 
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
+    @Test public void testRipristino()
+    {
+        ruolo.ripristina();
+        verificaNessunVoto();
+        verificaFalso(ruolo.isRomeo());
+        verificaFalso(ruolo.isAmato());
+        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
+        verificaFalso(ruolo.isMaledetto());
+        verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
+        verificaFazione(NESSUNA);
+        verificaNonInquisito();
+        for(IstanzaRuolo istanza : IstanzaRuolo.values()) ruolo.isProtezionePresente(istanza.getRuolo());
+    }
 
     private static Stream<Arguments> getEsempiPartita()
     {

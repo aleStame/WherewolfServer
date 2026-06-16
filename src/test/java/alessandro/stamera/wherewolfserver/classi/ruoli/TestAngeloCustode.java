@@ -47,7 +47,7 @@ public final class TestAngeloCustode
         Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, "Peccatore" } });
         partita.segnalazioneAngeloCustode(nome);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
-        FACTORY.annullaSegnalazioni();
+        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testSconfittaNienteAmato()

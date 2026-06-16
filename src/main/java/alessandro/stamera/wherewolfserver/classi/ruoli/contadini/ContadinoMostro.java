@@ -41,6 +41,12 @@ public final class ContadinoMostro extends Contadino
         return esito;
     }
 
+    @Override public void ripristina()
+    {
+        super.ripristina();
+        maledizione();
+    }
+
     public static Ruolo getInstance() { return new ContadinoMostro(); }
 
     private EsitoAttacco getEsitoAttaccoDefault() { return MORTO; }

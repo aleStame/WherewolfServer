@@ -11,7 +11,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
 
@@ -24,7 +23,6 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         doCallRealMethod().when(ruolo).getEsitoPartita(partita);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        FACTORY.annullaSegnalazioni();
     }
 
     private static Stream<Arguments> getEsempiEsitiPartita()

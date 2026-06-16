@@ -40,6 +40,12 @@ public final class ContadinoLupo extends Contadino
         return esito;
     }
 
+    @Override public void ripristina()
+    {
+        super.ripristina();
+        eliminaTratti(CREATURA_OMBRA, LUPO_MANNARO);
+    }
+
     public static Ruolo getInstance() { return new ContadinoLupo(); }
 
     private void aggiungiTrattiOscuri() { aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO); }

@@ -311,7 +311,7 @@ public class Ruolo
         return RIUSCITO;
     }
 
-    public void eliminaTratto(Tratto tratto) { tratti.eliminaTratto(tratto); }
+    public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
 
     public void resettaRomeo()
     {
@@ -362,6 +362,18 @@ public class Ruolo
     public boolean isCategoriaUomini() { return false; }
 
     public boolean isVampiro() { return false; }
+
+    public void ripristina()
+    {
+        annullaVoti();
+        resettaRomeo();
+        resettaAmato();
+        annullaSegnalazioneAzzeccagarbugli();
+        eliminaTratti(MALEDETTO, NON_MORTO);
+        ripristinaFazioneOriginale();
+        annullaSegnalazioneInquisitore();
+        perdiProtezioni();
+    }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
