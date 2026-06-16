@@ -101,7 +101,7 @@ public final class TestGiocatori
         String romeo = "Secondo", nome = "Terzo";
         aggiungiGiocatori(new String[][] { { "Primo", "Giulietta" }, { romeo, "Oratore" }, { nome, "Azzeccagarbugli" } });
         giocatori.romeizzazione(romeo);
-        verificaFalso(giocatori.isRomeo(nome));
+        verificaFalso(isRomeo(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -120,7 +120,7 @@ public final class TestGiocatori
         String nome = "Marco";
         aggiungiGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
         giocatori.romeizzazione(nome);
-        verificaVero(giocatori.isRomeo(nome));
+        verificaVero(isRomeo(nome));
         giocatori.ripristina(nome);
     }
 
@@ -149,6 +149,8 @@ public final class TestGiocatori
         aggiungiGiocatore(nome, nomeRuolo);
         verificaFalso(isNosferatuPresente());
     }
+
+    private boolean isRomeo(String nome) { return giocatori.isRomeo(nome); }
 
     private boolean isNosferatuPresente() { return giocatori.isNosferatuPresente(); }
 
