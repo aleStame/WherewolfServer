@@ -76,11 +76,13 @@ public final class TestContadinoMostro
 
     @Test public void testRipristino()
     {
-        ruolo.ripristina();
+        ripristina();
         verificaMaledetto();
     }
 
-    @AfterEach public void annullaSegnalazioni() { ruolo.ripristina(); }
+    @AfterEach public void annullaSegnalazioni() { ripristina(); }
+
+    private void ripristina() { ruolo.ripristina(); }
 
     private void verificaMaledetto()
     {
