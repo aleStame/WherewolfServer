@@ -69,7 +69,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(giocatori[0][0]);
         verificaNonAccusato(nome);
-        partita.ripristinaGiocatoreVivo(nome);
+        ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testAngeloCustodeAccusatoPresente()
@@ -82,7 +82,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(giocatori[2][0], giocatori[0][0]);
         verificaNonAccusato(nomeAmato);
-        partita.ripristinaGiocatoreVivo(nomeAmato);
+        ripristinaGiocatoreVivo(nomeAmato);
     }
 
     @Test public void testAttaccoAssassino()
@@ -141,7 +141,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(giocatori[0][0], giocatori[posizione2][0]);
         verificaNonAccusato(giocatori[posizione1][0]);
-        partita.ripristinaGiocatoreVivo(giocatori[posizione1][0]);
+        ripristinaGiocatoreVivo(giocatori[posizione1][0]);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -165,7 +165,7 @@ public final class TestPartita
         attaccoLupi(nomeLupo, nomeAmato);
         terminaNotte();
         verificaNonEliminati(nomeAmato);
-        partita.ripristinaGiocatoreVivo(nomeAmato);
+        ripristinaGiocatoreVivo(nomeAmato);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -201,7 +201,7 @@ public final class TestPartita
         incrementaVoti(giocatori[posizioneVoto][0], 2);
         terminaVotazioni();
         verificaAccusati(giocatori[posizioneVoto][0], giocatori[0][0]);
-        partita.ripristinaGiocatoreVivo(nome);
+        ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
@@ -214,7 +214,7 @@ public final class TestPartita
         incrementaVoti(nomeSegnalato, 2);
         terminaVotazioni();
         verificaAccusati(giocatori[0][0]);
-        partita.ripristinaGiocatoreVivo(nomeSegnalato);
+        ripristinaGiocatoreVivo(nomeSegnalato);
     }
 
     @Test public void testAttaccoAssassinoContadinoMostroNottiSuccessive()
@@ -494,7 +494,7 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nome);
         verificaFazioneNosferatu(nome);
-        partita.ripristinaGiocatoreVivo(nome);
+        ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testSuicidioCapoBranco()
@@ -566,7 +566,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         gildata(nomeVittima);
         verificaNumeroCriminali(numeroCriminali);
-        partita.ripristinaGiocatoreVivo(nomeVittima);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @ParameterizedTest
@@ -934,7 +934,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Francesco", "Angelo custode" }, { nome, "Peccatore" } });
         segnalazioneAngeloCustode(nome);
         verificaVero(isAmatoVivo());
-        partita.ripristinaGiocatoreVivo(nome);
+        ripristinaGiocatoreVivo(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1027,6 +1027,8 @@ public final class TestPartita
         terminaNotte();
         assertThat(partita.controlloMedium(nome)).isEqualTo(aura);
     }
+
+    private void ripristinaGiocatoreVivo(String nome) { partita.ripristinaGiocatoreVivo(nome); }
 
     private void verificaFazioneNosferatu(String nome) { verificaVero(isFazioneNosferatu(nome)); }
 
