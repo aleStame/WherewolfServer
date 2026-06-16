@@ -1028,6 +1028,15 @@ public final class TestPartita
         assertThat(partita.controlloMedium(nome)).isEqualTo(aura);
     }
 
+    @Test public void testControlloMediumOratore()
+    {
+        String nomeVittima = "Chiara";
+        inizializzaPartita(new String[][] { { "Gennaro", "Assassino" }, { nomeVittima, "Oratore" } });
+        attaccoAssassino(nomeVittima);
+        terminaNotte();
+        assertThat(partita.controlloMedium(nomeVittima)).isEqualTo(BIANCA);
+    }
+
     private void ripristinaGiocatoreVivo(String nome) { partita.ripristinaGiocatoreVivo(nome); }
 
     private void verificaFazioneNosferatu(String nome) { verificaVero(isFazioneNosferatu(nome)); }
