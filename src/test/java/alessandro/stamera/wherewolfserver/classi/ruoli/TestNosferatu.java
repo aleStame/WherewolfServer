@@ -93,7 +93,10 @@ public final class TestNosferatu
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testVittoriaNosferatu(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
 
-    @AfterAll public static void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
+    @AfterAll public static void resettaPersonaggi()
+    {
+        for(String nomeRuolo : new String[]{ "Peccatore", "Prete" }) FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
 
     private static Stream<Arguments> getEsempiPartita()
     {

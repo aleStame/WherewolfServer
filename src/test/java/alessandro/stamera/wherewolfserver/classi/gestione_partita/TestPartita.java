@@ -61,26 +61,28 @@ public final class TestPartita
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
     {
-        String[][] giocatori = new String[][] { { "Domenico", "Angelo custode" }, { "Franco", "Goblin" }, { "Pamela", "Sidhe" } };
+        String nome = "Pamela";
+        String[][] giocatori = new String[][] { { "Domenico", "Angelo custode" }, { "Franco", "Goblin" }, { nome, "Sidhe" } };
         inizializzaPartita(giocatori);
-        int posizione = 2;
-        segnalazioneAngeloCustode(giocatori[posizione][0]);
-        incrementaVoti(giocatori[posizione][0], 3);
+        segnalazioneAngeloCustode(nome);
+        incrementaVoti(nome, 3);
         terminaVotazioni();
         verificaAccusati(giocatori[0][0]);
-        verificaNonAccusato(giocatori[posizione][0]);
+        verificaNonAccusato(nome);
+        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testAngeloCustodeAccusatoPresente()
     {
-        String[][] giocatori = new String[][] { { "Michelle", "Angelo custode" }, { "Fiona", "Altra guardia" }, { "Biagio", "Ladra" } };
+        String nomeAmato = "Fiona";
+        String[][] giocatori = new String[][] { { "Michelle", "Angelo custode" }, { nomeAmato, "Altra guardia" }, { "Biagio", "Ladra" } };
         inizializzaPartita(giocatori);
-        int posizione = 1;
-        segnalazioneAngeloCustode(giocatori[posizione][0]);
+        segnalazioneAngeloCustode(nomeAmato);
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
         terminaVotazioni();
         verificaAccusati(giocatori[2][0], giocatori[0][0]);
-        verificaNonAccusato(giocatori[posizione][0]);
+        verificaNonAccusato(nomeAmato);
+        partita.ripristinaGiocatoreVivo(nomeAmato);
     }
 
     @Test public void testAttaccoAssassino()
@@ -117,13 +119,14 @@ public final class TestPartita
     )
     public void testSegnalazioneAzzeccagarbugli(String ruolo)
     {
-        String[][] giocatori = new String[][] { { "Matteo", ruolo }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
+        String nome = "Matteo";
+        String[][] giocatori = new String[][] { { nome, ruolo }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
         inizializzaPartita(giocatori);
-        segnalazioneAzzeccagarbugli(giocatori[0][0]);
+        segnalazioneAzzeccagarbugli(nome);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
-        verificaAccusati(giocatori[0][0], giocatori[1][0], giocatori[2][0]);
-        FACTORY.annullaSegnalazioni();
+        verificaAccusati(nome, giocatori[1][0], giocatori[2][0]);
+        partita.ripristinaGiocatoreBallottaggio(nome);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -138,7 +141,7 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(giocatori[0][0], giocatori[posizione2][0]);
         verificaNonAccusato(giocatori[posizione1][0]);
-        FACTORY.annullaSegnalazioni();
+        partita.ripristinaGiocatoreVivo(giocatori[posizione1][0]);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -157,12 +160,12 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Fabrizio", "Bocca di rosa" }, { "Franca", "Peccatore" } };
         inizializzaPartita(giocatori);
-        int posizione = 1;
-        segnalazioneAngeloCustode(giocatori[posizione][0]);
-        attaccoLupi(nomeLupo, giocatori[posizione][0]);
+        String nomeAmato = giocatori[1][0];
+        segnalazioneAngeloCustode(nomeAmato);
+        attaccoLupi(nomeLupo, nomeAmato);
         terminaNotte();
-        verificaNonEliminati(giocatori[posizione][0]);
-        FACTORY.annullaSegnalazioni();
+        verificaNonEliminati(nomeAmato);
+        partita.ripristinaGiocatoreVivo(nomeAmato);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -189,27 +192,29 @@ public final class TestPartita
 
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { "Irvano", "Medium" }, { "Luca", "Inquisitore" } };
+        String nome = "Irvano";
+        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nome, "Medium" }, { "Luca", "Inquisitore" } };
         inizializzaPartita(giocatori);
-        int posizioneMistico = 1, posizioneVoto = 2;
-        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
-        segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
+        int posizioneVoto = 2;
+        segnalazioneInquisitore(nome);
+        segnalazioneAngeloCustode(nome);
         incrementaVoti(giocatori[posizioneVoto][0], 2);
         terminaVotazioni();
         verificaAccusati(giocatori[posizioneVoto][0], giocatori[0][0]);
+        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
     {
-        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { "Davide", "Leprecauno" }, { "Matteo", "Inquisitore" } };
+        String nomeSegnalato = "Davide";
+        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { nomeSegnalato, "Leprecauno" }, { "Matteo", "Inquisitore" } };
         inizializzaPartita(giocatori);
-        int posizioneMistico = 1;
-        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
-        segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
-        incrementaVoti(giocatori[posizioneMistico][0], 2);
+        segnalazioneInquisitore(nomeSegnalato);
+        segnalazioneAngeloCustode(nomeSegnalato);
+        incrementaVoti(nomeSegnalato, 2);
         terminaVotazioni();
         verificaAccusati(giocatori[0][0]);
-        FACTORY.annullaSegnalazioni();
+        partita.ripristinaGiocatoreVivo(nomeSegnalato);
     }
 
     @Test public void testAttaccoAssassinoContadinoMostroNottiSuccessive()
@@ -321,6 +326,7 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(this::terminaBallottaggio).withMessage(ERRORE_ROGO_SALTATO);
         terminaNotte();
         verificaNonEliminati(estraiNomiGiocatori(giocatori));
+        partita.ripristinaGiocatori();
     }
 
     @Test public void testSegnalazioneOratoreNonRiuscita()
@@ -488,7 +494,7 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nome);
         verificaFazioneNosferatu(nome);
-        FACTORY.annullaSegnalazioni();
+        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @Test public void testSuicidioCapoBranco()
@@ -560,7 +566,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
         gildata(nomeVittima);
         verificaNumeroCriminali(numeroCriminali);
-        FACTORY.annullaSegnalazioni();
+        partita.ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @ParameterizedTest
@@ -852,7 +858,6 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaProgenieNosferatuNonViva(nomeVittima);
-        FACTORY.annullaSegnalazioni();
     }
 
     @Test public void testNessunGiocatoreVivo()
@@ -929,6 +934,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Francesco", "Angelo custode" }, { nome, "Peccatore" } });
         segnalazioneAngeloCustode(nome);
         verificaVero(isAmatoVivo());
+        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })

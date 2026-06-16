@@ -48,8 +48,6 @@ public final class RuoliFactory
         return filtraRuoli(ruolo -> ruolo.isTrattoPresente(CREATURA_OMBRA) || ruolo.getCategoria() == CREATURE_OMBRA);
     }
 
-    public void annullaSegnalazioni() { for(String nome : getChiavi()) ottieniRuolo(nome).ripristina(); }
-
     private Set<String> getChiavi() { return ruoli.keySet(); }
 
     private Ruolo getCappuccettoRosso()

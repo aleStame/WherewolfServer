@@ -121,7 +121,7 @@ public final class TestGiocatori
         aggiungiGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
         giocatori.romeizzazione(nome);
         verificaVero(giocatori.isRomeo(nome));
-        FACTORY.annullaSegnalazioni();
+        giocatori.ripristina(nome);
     }
 
     @Test public void testNosferatuPresente()

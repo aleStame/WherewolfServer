@@ -273,6 +273,15 @@ public final class Partita
 
     public Aura controlloMedium(String nome) { return eliminati.controlloMedium(nome); }
 
+    public void ripristinaGiocatori()
+    {
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) ripristinaGiocatoreVivo(getNomeGiocatoreVivo(i));
+    }
+
+    public void ripristinaGiocatoreBallottaggio(String nome) { ballottaggio.ripristina(nome); }
+
+    public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
+
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
 
     private void gestioneEliminazioneLupi(String nome)

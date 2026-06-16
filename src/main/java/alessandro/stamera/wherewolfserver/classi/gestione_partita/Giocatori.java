@@ -98,6 +98,8 @@ public class Giocatori
 
     public String getNomeNosferatu() { return cercaNosferatu().get().getKey(); }
 
+    public void ripristina(String nome) { getRuolo(nome).ripristina(); }
+
     private Optional<Entry<String, Ruolo>> cercaNosferatu()
     {
         return cercaRuolo(ruolo -> ruolo.getValue().isNosferatu());

@@ -80,7 +80,7 @@ public final class TestContadinoMostro
         verificaMaledetto();
     }
 
-    @AfterEach public void annullaSegnalazioni() { FACTORY.annullaSegnalazioni(); }
+    @AfterEach public void annullaSegnalazioni() { ruolo.ripristina(); }
 
     private void verificaMaledetto()
     {
