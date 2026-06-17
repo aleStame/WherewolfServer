@@ -65,7 +65,13 @@ public final class TestVampiro
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testTrattoCreaturaOmbra() { verificaFalso(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
+    @Test public void testTrattoCreaturaOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
+
+    @Test public void testRipristino()
+    {
+        ruolo.ripristina();
+        verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA));
+    }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
