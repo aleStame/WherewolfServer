@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testRipristino riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Vampiro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaTrattoCreaturaOmbra" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,38 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03203" summary="VERDE: testVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1781368547455</created>
-      <option name="number" value="03203" />
-      <option name="presentableId" value="LOCAL-03203" />
-      <option name="project" value="LOCAL" />
-      <updated>1781368547455</updated>
-    </task>
-    <task id="LOCAL-03204" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1781368714094</created>
-      <option name="number" value="03204" />
-      <option name="presentableId" value="LOCAL-03204" />
-      <option name="project" value="LOCAL" />
-      <updated>1781368714094</updated>
-    </task>
-    <task id="LOCAL-03205" summary="VERDE DIRETTO: testVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1781369030392</created>
-      <option name="number" value="03205" />
-      <option name="presentableId" value="LOCAL-03205" />
-      <option name="project" value="LOCAL" />
-      <updated>1781369030392</updated>
-    </task>
-    <task id="LOCAL-03206" summary="VERDE DIRETTO: testVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1781369362012</created>
-      <option name="number" value="03206" />
-      <option name="presentableId" value="LOCAL-03206" />
-      <option name="project" value="LOCAL" />
-      <updated>1781369362012</updated>
     </task>
     <task id="LOCAL-03207" summary="VERDE DIRETTO: testVampiro riuscito">
       <option name="closed" value="true" />
@@ -687,7 +653,39 @@
       <option name="project" value="LOCAL" />
       <updated>1781687390272</updated>
     </task>
-    <option name="localTasksCounter" value="3252" />
+    <task id="LOCAL-03252" summary="REFACTORING: definizione del metodo aggiungiTrattoCreaturaOmbra">
+      <option name="closed" value="true" />
+      <created>1781687729121</created>
+      <option name="number" value="03252" />
+      <option name="presentableId" value="LOCAL-03252" />
+      <option name="project" value="LOCAL" />
+      <updated>1781687729121</updated>
+    </task>
+    <task id="LOCAL-03253" summary="REFACTORING: definizione del metodo verificaTrattoCreaturaOmbra">
+      <option name="closed" value="true" />
+      <created>1781687909938</created>
+      <option name="number" value="03253" />
+      <option name="presentableId" value="LOCAL-03253" />
+      <option name="project" value="LOCAL" />
+      <updated>1781687909938</updated>
+    </task>
+    <task id="LOCAL-03254" summary="REFACTORING: definizione del metodo verificaTrattoCreaturaOmbra">
+      <option name="closed" value="true" />
+      <created>1781688404150</created>
+      <option name="number" value="03254" />
+      <option name="presentableId" value="LOCAL-03254" />
+      <option name="project" value="LOCAL" />
+      <updated>1781688404150</updated>
+    </task>
+    <task id="LOCAL-03255" summary="REFACTORING: definizione del metodo verificaTrattoCreaturaOmbra">
+      <option name="closed" value="true" />
+      <created>1781688496534</created>
+      <option name="number" value="03255" />
+      <option name="presentableId" value="LOCAL-03255" />
+      <option name="project" value="LOCAL" />
+      <updated>1781688496534</updated>
+    </task>
+    <option name="localTasksCounter" value="3256" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAura riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
     <MESSAGE value="ROSSO: testControlloMedium non riuscito" />
     <MESSAGE value="VERDE: testControlloMedium riuscito" />
     <MESSAGE value="REFACTORING: definizione di una variante del metodo ripristina nella classe ContadinoLupo" />
@@ -727,6 +723,8 @@
     <MESSAGE value="VERDE DIRETTO: testTrattoCreaturaOmbra riuscito" />
     <MESSAGE value="ROSSO: testRipristino non riuscito" />
     <MESSAGE value="VERDE: testRipristino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testRipristino riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiTrattoCreaturaOmbra" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaTrattoCreaturaOmbra" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaTrattoCreaturaOmbra" />
   </component>
 </project>
