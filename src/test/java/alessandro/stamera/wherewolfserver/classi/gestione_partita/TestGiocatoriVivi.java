@@ -774,6 +774,14 @@ public final class TestGiocatoriVivi
         ripristina(nomeAngelo);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore di vampiri, MORTO", "Contadino mostro, MORTO" })
+    public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
+    {
+        String nome = "Luca";
+        inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
+        verificaAttacco(attaccoVampiro(nome), esito);
+    }
+
     private EsitoAttacco attaccoVampiro(String nome) { return giocatori.attaccoVampiro(nome); }
 
     private void ripristina(String nome) { giocatori.ripristina(nome); }
