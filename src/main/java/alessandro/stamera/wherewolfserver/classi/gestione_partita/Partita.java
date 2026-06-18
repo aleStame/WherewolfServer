@@ -282,7 +282,7 @@ public final class Partita
 
     public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
 
-    public void attaccoVampiro(String nome) { }
+    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGiocatore(getNomeGhoul()); }
 
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
 

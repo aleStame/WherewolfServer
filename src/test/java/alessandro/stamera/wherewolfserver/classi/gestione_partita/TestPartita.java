@@ -1070,8 +1070,8 @@ public final class TestPartita
             { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        terminaNotte();
         partita.attaccoVampiro(nomeCacciatore);
+        terminaNotte();
         verificaEliminati(nomeGhoul);
     }
 
