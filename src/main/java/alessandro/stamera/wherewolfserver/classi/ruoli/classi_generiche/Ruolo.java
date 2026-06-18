@@ -288,6 +288,7 @@ public class Ruolo
     {
         setAmato(false);
         ripristinaFazioneOriginale();
+        perdiProtezioni();
     }
 
     public EsitoAttacco attaccoAssassino()
