@@ -1062,32 +1062,20 @@ public final class TestPartita
         assertThat(controlloMago(nome)).isEqualTo(misticismo);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testMorteGhoulLupiVampiro(String tipoLupo)
+    @Test public void testMorteGhoulCacciatoreVampiro()
     {
-        String[][] giocatori = new String[][] { { "Aldo", tipoLupo }, { "Giovanni", "Nosferatu" }, { "Giacomo", "Ghoul" } };
+        String nomeCacciatore = "Terzo", nomeGhoul = "Quarto";
+        String[][] giocatori = new String[][]
+        {
+            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
+        };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, giocatori[1][0]);
         terminaNotte();
-        verificaEliminati(giocatori[2][0]);
+        partita.attaccoVampiro(nomeCacciatore);
+        verificaEliminati(nomeGhoul);
     }
 
     /*@ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testMorteGhoulCacciatoreNosferatu(String tipoLupo)
-    {
-        String[][] giocatori = new String[][]
-                {
-                        { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { "Terzo", "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
-                };
-        inizializzaPartita(giocatori);
-        String nomeVittima = giocatori[2][0];
-        attaccoLupi(tipoLupo, nomeVittima);
-        progenizzazioneNosferatu(nomeVittima);
-        terminaNotte();
-        verificaEliminati(giocatori[3][0], nomeVittima);
-    }
-
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testMorteGhoulContadinoMostroNosferatu(String tipoLupo)
     {
         String[][] giocatori = new String[][]

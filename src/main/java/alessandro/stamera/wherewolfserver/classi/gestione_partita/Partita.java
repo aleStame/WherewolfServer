@@ -282,6 +282,8 @@ public final class Partita
 
     public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
 
+    public void attaccoVampiro(String nome) { }
+
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
 
     private void gestioneEliminazioneLupi(String nome)
