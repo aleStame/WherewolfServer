@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testMorteGhoulContadinoMostroVampiro non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoMostro.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione dei metodi attaccoVampiro e eliminaGhoul" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,22 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03214" summary="VERDE DIRETTO: testNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1781466353263</created>
-      <option name="number" value="03214" />
-      <option name="presentableId" value="LOCAL-03214" />
-      <option name="project" value="LOCAL" />
-      <updated>1781466353263</updated>
-    </task>
-    <task id="LOCAL-03215" summary="ROSSO: testAura non riuscito">
-      <option name="closed" value="true" />
-      <created>1781467593187</created>
-      <option name="number" value="03215" />
-      <option name="presentableId" value="LOCAL-03215" />
-      <option name="project" value="LOCAL" />
-      <updated>1781467593187</updated>
     </task>
     <task id="LOCAL-03216" summary="VERDE: testAura riuscito">
       <option name="closed" value="true" />
@@ -687,7 +669,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781790372300</updated>
     </task>
-    <option name="localTasksCounter" value="3263" />
+    <task id="LOCAL-03263" summary="VERDE: testMorteGhoulContadinoMostroVampiro riuscito">
+      <option name="closed" value="true" />
+      <created>1781791187511</created>
+      <option name="number" value="03263" />
+      <option name="presentableId" value="LOCAL-03263" />
+      <option name="project" value="LOCAL" />
+      <updated>1781791187511</updated>
+    </task>
+    <task id="LOCAL-03264" summary="REFACTORING: definizione dei metodi attaccoVampiro e eliminaGhoul">
+      <option name="closed" value="true" />
+      <created>1781791395064</created>
+      <option name="number" value="03264" />
+      <option name="presentableId" value="LOCAL-03264" />
+      <option name="project" value="LOCAL" />
+      <updated>1781791395064</updated>
+    </task>
+    <option name="localTasksCounter" value="3265" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testRipristino riuscito" />
-    <MESSAGE value="REFACTORING: semplificazione della gestione dei ripristini" />
     <MESSAGE value="REFACTORING: definizione del metodo romeizzazione" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoFallito" />
     <MESSAGE value="REFACTORING: definizione del metodo isRomeo" />
@@ -727,6 +723,8 @@
     <MESSAGE value="ROSSO: testMorteGhoulCacciatoreVampiro riuscito" />
     <MESSAGE value="VERDE: testMorteGhoulCacciatoreVampiro riuscito" />
     <MESSAGE value="ROSSO: testMorteGhoulContadinoMostroVampiro non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMorteGhoulContadinoMostroVampiro non riuscito" />
+    <MESSAGE value="VERDE: testMorteGhoulContadinoMostroVampiro riuscito" />
+    <MESSAGE value="REFACTORING: definizione dei metodi attaccoVampiro e eliminaGhoul" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione dei metodi attaccoVampiro e eliminaGhoul" />
   </component>
 </project>
