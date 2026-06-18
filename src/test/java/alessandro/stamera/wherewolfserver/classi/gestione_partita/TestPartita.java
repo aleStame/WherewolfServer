@@ -1075,20 +1075,15 @@ public final class TestPartita
         verificaEliminati(nomeGhoul);
     }
 
-    /*@ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testMorteGhoulContadinoMostroNosferatu(String tipoLupo)
+    @Test public void testMorteGhoulContadinoMostroVampiro()
     {
-        String[][] giocatori = new String[][]
-                {
-                        { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { "Terzo", "Contadino mostro" }, { "Quarto", "Ghoul" }
-                };
+        String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
+        String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
         inizializzaPartita(giocatori);
-        String nomeVittima = giocatori[2][0];
-        attaccoLupi(tipoLupo, nomeVittima);
-        progenizzazioneNosferatu(nomeVittima);
+        partita.attaccoVampiro(nomeContadinoMostro);
         terminaNotte();
-        verificaEliminati(giocatori[0][0], giocatori[3][0]);
-    }*/
+        verificaEliminati(nomeGhoul);
+    }
 
     private Misticismo controlloMago(String nome) { return partita.controlloMago(nome); }
 
