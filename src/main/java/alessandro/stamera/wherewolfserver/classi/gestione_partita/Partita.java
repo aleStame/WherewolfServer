@@ -94,7 +94,7 @@ public final class Partita
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
-            case RIUSCITO -> gestioneEliminazioneLupi(nome);
+            case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
         }
     }
@@ -286,12 +286,6 @@ public final class Partita
     }
 
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
-
-    private void gestioneEliminazioneLupi(String nome)
-    {
-        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGhoul();
-        eliminaGiocatore(nome);
-    }
 
     private void eliminaGhoul() { eliminaGiocatore(getNomeGhoul()); }
 
