@@ -508,6 +508,23 @@ public final class TestGiocatoriVivi
         ripristina(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare",
+            "Guardia", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Templare"
+        }
+    )
+    public void testCriminalizzazioneProgenieVampiro(String nomeRuolo)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" }, { "Gioele", "Vampiro" } });
+        verificaAttacco(attaccoVampiro(nomeVittima), RIUSCITO);
+        verificaGildata(nomeVittima, FALLITO);
+        ripristina(nomeVittima);
+    }
+
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testCriminalizzazioneContadinoMostroAttaccato(String tipoLupo)
     {
