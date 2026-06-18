@@ -80,6 +80,8 @@ public final class TestContadinoMostro
         verificaMaledetto();
     }
 
+    @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(MORTO); }
+
     @AfterEach public void annullaSegnalazioni() { ripristina(); }
 
     private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }

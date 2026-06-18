@@ -1062,6 +1062,31 @@ public final class TestPartita
         assertThat(controlloMago(nome)).isEqualTo(misticismo);
     }
 
+    @Test public void testMorteGhoulCacciatoreVampiro()
+    {
+        String nomeCacciatore = "Terzo", nomeGhoul = "Quarto";
+        String[][] giocatori = new String[][]
+        {
+            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
+        };
+        inizializzaPartita(giocatori);
+        attaccoVampiro(nomeCacciatore);
+        terminaNotte();
+        verificaEliminati(nomeGhoul);
+    }
+
+    @Test public void testMorteGhoulContadinoMostroVampiro()
+    {
+        String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
+        String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
+        inizializzaPartita(giocatori);
+        attaccoVampiro(nomeContadinoMostro);
+        terminaNotte();
+        verificaEliminati(nomeGhoul);
+    }
+
+    private void attaccoVampiro(String nome) { partita.attaccoVampiro(nome); }
+
     private Misticismo controlloMago(String nome) { return partita.controlloMago(nome); }
 
     private void verificaControlloMedium(String nomeVittima, Aura risultato)
