@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,6 +17,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestVillaggio
@@ -62,6 +64,11 @@ public final class TestVillaggio
     }
 
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO); }
+
+    @AfterAll public static void ripristinaRuoli()
+    {
+        for(String ruolo : new String[] { "Peccatore", "Prete" }) FACTORY.getRuolo(ruolo).ripristina();
+    }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {

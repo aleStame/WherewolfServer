@@ -49,6 +49,8 @@ public final class ContadinoMostro extends Contadino
 
     public static Ruolo getInstance() { return new ContadinoMostro(); }
 
+    @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoDefault(); }
+
     private EsitoAttacco getEsitoAttaccoDefault() { return MORTO; }
 
 }
