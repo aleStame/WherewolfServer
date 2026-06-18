@@ -282,15 +282,18 @@ public final class Partita
 
     public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
 
-    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGiocatore(getNomeGhoul()); }
+    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGhoul();
+    }
 
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
 
     private void gestioneEliminazioneLupi(String nome)
     {
-        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGiocatore(getNomeGhoul());
+        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGhoul();
         eliminaGiocatore(nome);
     }
+
+    private void eliminaGhoul() { eliminaGiocatore(getNomeGhoul()); }
 
     private void inizializzaGiocatori(String[][] giocatori)
     {

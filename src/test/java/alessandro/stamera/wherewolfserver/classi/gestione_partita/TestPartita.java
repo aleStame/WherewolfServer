@@ -1070,7 +1070,7 @@ public final class TestPartita
             { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        partita.attaccoVampiro(nomeCacciatore);
+        attaccoVampiro(nomeCacciatore);
         terminaNotte();
         verificaEliminati(nomeGhoul);
     }
@@ -1080,10 +1080,12 @@ public final class TestPartita
         String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
         String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
         inizializzaPartita(giocatori);
-        partita.attaccoVampiro(nomeContadinoMostro);
+        attaccoVampiro(nomeContadinoMostro);
         terminaNotte();
         verificaEliminati(nomeGhoul);
     }
+
+    private void attaccoVampiro(String nome) { partita.attaccoVampiro(nome); }
 
     private Misticismo controlloMago(String nome) { return partita.controlloMago(nome); }
 
