@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,6 +17,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPar
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestCitta
@@ -80,6 +82,11 @@ public final class TestCitta
         verificaFazione(CRIMINALI);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
         ruolo.ripristina();
+    }
+
+    @AfterAll public static void ripristinaRuoli()
+    {
+        for(String ruolo : new String[] { "Peccatore", "Prete" }) FACTORY.getRuolo(ruolo).ripristina();
     }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }

@@ -66,9 +66,7 @@ public final class TestVampiro
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testTrattoCreaturaOmbra() {
-        verificaTrattoCreaturaOmbra();
-    }
+    @Test public void testTrattoCreaturaOmbra() { verificaTrattoCreaturaOmbra(); }
 
     @Test public void testRipristino()
     {
