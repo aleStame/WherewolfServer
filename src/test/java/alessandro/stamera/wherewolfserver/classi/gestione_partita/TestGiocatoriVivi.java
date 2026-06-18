@@ -769,10 +769,12 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeAmato, nomeRuolo }, { nomeAngelo, "Angelo custode" }, { "Lucio", "Vampiro" } });
         segnalazioneAngeloCustode(nomeAmato);
         verificaVero(isAmato(nomeAmato));
-        verificaAttacco(giocatori.attaccoVampiro(nomeAngelo), RIUSCITO);
+        verificaAttacco(attaccoVampiro(nomeAngelo), RIUSCITO);
         verificaNonAmato(nomeAmato);
         ripristina(nomeAngelo);
     }
+
+    private EsitoAttacco attaccoVampiro(String nome) { return giocatori.attaccoVampiro(nome); }
 
     private void ripristina(String nome) { giocatori.ripristina(nome); }
 
