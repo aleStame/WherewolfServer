@@ -7,6 +7,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -1073,6 +1075,25 @@ public final class TestPartita
         attaccoVampiro(nomeContadinoMostro);
         terminaNotte();
         verificaEliminati(nomeGhoul);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta",
+            "Giullare", "Guardia", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Templare"
+        }
+    )
+    public void testCriminalizzazioneProgenieVampiro(String nomeRuolo)
+    {
+        String nomeVittima = "Antonio";
+        String[][] giocatori = new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" }, { "Gioele", "Vampiro" } };
+        inizializzaPartita(giocatori);
+        attaccoVampiro(nomeVittima);
+        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
+            .withMessage("La criminalizzazione di " + nomeVittima + " non è andata a buon fine.");
+        for(String nome : estraiNomiGiocatori(giocatori)) ripristinaGiocatoreVivo(nome);
     }
 
     private void attaccoVampiro(String nome) { partita.attaccoVampiro(nome); }
