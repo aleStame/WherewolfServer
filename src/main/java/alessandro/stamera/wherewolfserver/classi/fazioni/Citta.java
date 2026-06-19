@@ -10,6 +10,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPar
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 
 public class Citta extends Uomini
 {
@@ -20,8 +21,13 @@ public class Citta extends Uomini
 
     @Override public EsitoAttacco gildata()
     {
-        cambiaFazione(CRIMINALI);
-        return RIUSCITO;
+        EsitoAttacco esito = super.gildata();
+        if(!isTrattoPresente(NON_MORTO))
+        {
+            cambiaFazione(CRIMINALI);
+            esito = RIUSCITO;
+        }
+        return esito;
     }
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)
