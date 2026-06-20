@@ -1126,6 +1126,15 @@ public final class TestPartita
             .withMessage("Impossibile vampirizzare " + nomeVittima + ".");
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore di vampiri", "Contadino mostro" }) public void testMorteVampiro(String nomeRuolo)
+    {
+        String nomeVittima = "Luca", nomeVampiro = "Paolo";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima))
+            .withMessage("Impossibile vampirizzare " + nomeVittima + ".\n" + nomeVampiro + " muore.");
+        verificaEliminati(nomeVampiro);
+    }
+
     private void verificaFallimentoGildata(String nomeVittima, String messaggio)
     {
         assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima)).withMessage(messaggio);
