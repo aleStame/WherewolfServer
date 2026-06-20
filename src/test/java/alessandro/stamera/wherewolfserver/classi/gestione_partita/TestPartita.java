@@ -1117,6 +1117,14 @@ public final class TestPartita
         assertThatNoException().isThrownBy(() -> attaccoVampiro(nomeVittima));
     }
 
+    @ParameterizedTest @CsvSource({ "Eremita" }) public void testVampirizzazioneFallita(String nomeRuolo)
+    {
+        String nomeVittima = "Lino";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Gino", "Vampiro" } });
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima))
+                .withMessage("Impossibile vampirizzare " + nomeVittima + ".");
+    }
+
     private void verificaFallimentoGildata(String nomeVittima, String messaggio)
     {
         assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima)).withMessage(messaggio);
