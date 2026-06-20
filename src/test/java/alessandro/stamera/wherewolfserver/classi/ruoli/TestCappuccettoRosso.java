@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -59,7 +60,7 @@ public final class TestCappuccettoRosso
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
-        verificaFalso(isProtezioneLupiPresente());
+        verificaProtezioneLupiAssente();
     }
 
     @Test public void testMago() { verificaFalso(ruolo.isMago()); }
@@ -77,6 +78,14 @@ public final class TestCappuccettoRosso
     @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testPerditaProtezioniVampirizzazione()
+    {
+        assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
+        verificaProtezioneLupiAssente();
+    }
+
+    private void verificaProtezioneLupiAssente() { verificaFalso(isProtezioneLupiPresente()); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 

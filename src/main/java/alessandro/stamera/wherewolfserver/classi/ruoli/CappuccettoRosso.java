@@ -1,9 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 
 public final class CappuccettoRosso extends Villaggio
 {
@@ -21,6 +23,13 @@ public final class CappuccettoRosso extends Villaggio
     }
 
     @Override public boolean isCappuccettoRosso() { return true; }
+
+    @Override public EsitoAttacco vampirizzazione()
+    {
+        EsitoAttacco esito = super.vampirizzazione();
+        if(esito == RIUSCITO) perdiProtezioni();
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new CappuccettoRosso(); }
 
