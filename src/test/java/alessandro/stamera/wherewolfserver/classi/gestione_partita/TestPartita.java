@@ -578,8 +578,7 @@ public final class TestPartita
     {
         String nomeVittima = "Antonio";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
-        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
-            .withMessage("Impossibile criminalizzare " + nomeVittima + ".");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".");
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
@@ -594,8 +593,7 @@ public final class TestPartita
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
-        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
-            .withMessage("Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
@@ -605,8 +603,7 @@ public final class TestPartita
         String nomeVittima = "Giulia";
         inizializzaPartita(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         partita.riconosciNegromante();
-        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
-            .withMessage("Impossibile criminalizzare " + nomeVittima + ".");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".");
     }
 
     @Test public void testCriminalizzazioneContadinoLupo()
@@ -617,8 +614,7 @@ public final class TestPartita
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
         );
         attaccoLupi(tipoLupo, nomeVittima);
-        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
-            .withMessage("Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
@@ -627,8 +623,7 @@ public final class TestPartita
     {
         String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
-        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
-            .withMessage("Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
@@ -1111,9 +1106,13 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" }, { "Gioele", "Vampiro" } };
         inizializzaPartita(giocatori);
         attaccoVampiro(nomeVittima);
-        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima))
-            .withMessage("Impossibile criminalizzare " + nomeVittima + ".");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".");
         for(String nome : estraiNomiGiocatori(giocatori)) ripristinaGiocatoreVivo(nome);
+    }
+
+    private void verificaFallimentoGildata(String nomeVittima, String messaggio)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> gildata(nomeVittima)).withMessage(messaggio);
     }
 
     private void attaccoVampiro(String nome) { partita.attaccoVampiro(nome); }
