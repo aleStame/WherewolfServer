@@ -78,6 +78,12 @@ public final class TestCappuccettoRosso
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testPerditaProtezioniVampirizzazione()
+    {
+        ruolo.vampirizzazione();
+        verificaFalso(isProtezioneLupiPresente());
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
