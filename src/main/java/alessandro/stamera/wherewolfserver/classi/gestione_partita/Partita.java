@@ -175,17 +175,19 @@ public final class Partita
     public void gildata(String nome)
     {
         EsitoAttacco esito = vivi.gildata(nome);
-        if(esito != RIUSCITO)
+        if(esito != RIUSCITO) gestioneAttaccoNonRiuscito(nome, esito);
+    }
+
+    private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
+    {
+        String messaggio = "Impossibile criminalizzare " + nome + ".";
+        if(esito == MORTO)
         {
-            String messaggio = "Impossibile criminalizzare " + nome + ".";
-            if(esito == MORTO)
-            {
-                String nomeCapoGilda = vivi.getNomeCapoGilda();
-                messaggio += "\n" + nomeCapoGilda + " muore.";
-                eliminaGiocatore(nomeCapoGilda);
-            }
-            throw new IllegalArgumentException(messaggio);
+            String nomeCapoGilda = vivi.getNomeCapoGilda();
+            messaggio += "\n" + nomeCapoGilda + " muore.";
+            eliminaGiocatore(nomeCapoGilda);
         }
+        throw new IllegalArgumentException(messaggio);
     }
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
