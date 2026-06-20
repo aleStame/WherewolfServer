@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaFallimentoGildata" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testPerditaProtezioniVampirizzazione non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/CappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/CappuccettoRosso.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +105,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/perditaProtezioniCappuccettoRosso",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -292,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03227" summary="VERDE DIRETTO: testRipristino riuscito">
-      <option name="closed" value="true" />
-      <created>1781533900537</created>
-      <option name="number" value="03227" />
-      <option name="presentableId" value="LOCAL-03227" />
-      <option name="project" value="LOCAL" />
-      <updated>1781533900537</updated>
     </task>
     <task id="LOCAL-03228" summary="VERDE DIRETTO: testRipristino riuscito">
       <option name="closed" value="true" />
@@ -685,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781948834276</updated>
     </task>
-    <option name="localTasksCounter" value="3276" />
+    <task id="LOCAL-03276" summary="ROSSO: testPerditaProtezioniVampirizzazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1781949288568</created>
+      <option name="number" value="03276" />
+      <option name="presentableId" value="LOCAL-03276" />
+      <option name="project" value="LOCAL" />
+      <updated>1781949288569</updated>
+    </task>
+    <option name="localTasksCounter" value="3277" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
     <MESSAGE value="VERDE DIRETTO: testMisticismo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo controlloMago" />
     <MESSAGE value="VERDE DIRETTO: testTrattoCreaturaOmbra riuscito" />
@@ -725,6 +726,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo gestioneAttaccoNonRiuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteCaopGilda" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFallimentoGildata" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaFallimentoGildata" />
+    <MESSAGE value="ROSSO: testPerditaProtezioniVampirizzazione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testPerditaProtezioniVampirizzazione non riuscito" />
   </component>
 </project>
