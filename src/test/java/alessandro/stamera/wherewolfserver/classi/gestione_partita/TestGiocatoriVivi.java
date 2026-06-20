@@ -512,7 +512,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore",
-            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare",
+            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino normale", "Ghoul", "Giulietta", "Giullare",
             "Guardia", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Templare"
         }
     )
@@ -791,7 +791,10 @@ public final class TestGiocatoriVivi
         ripristina(nomeAngelo);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore di vampiri, MORTO", "Contadino mostro, MORTO" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Cacciatore di vampiri, MORTO", "Contadino mostro, MORTO", "Cappuccetto rosso, RIUSCITO", "Eremita, FALLITO" }
+    )
     public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Luca";

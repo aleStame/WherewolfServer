@@ -21,6 +21,8 @@ public final class Eremita extends Villaggio
 
     @Override public EsitoAttacco attaccoNegromante() { return getEsitoAttaccoFallito(); }
 
+    @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoFallito(); }
+
     private EsitoAttacco getEsitoAttaccoFallito() { return FALLITO; }
 
     public static Ruolo getInstance() { return new Eremita(); }
