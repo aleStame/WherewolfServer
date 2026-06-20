@@ -287,7 +287,19 @@ public final class Partita
         switch(vivi.attaccoVampiro(nome))
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
-            case MORTO -> eliminaGhoul();
+            case MORTO ->
+            {
+                if(isGhoulPresente()) eliminaGhoul();
+                else
+                {
+                    int posizione = -1;
+                    for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(getNomeGiocatoreVivo(i)).isVampiro())
+                        posizione = i;
+                    String nomeVampiro = getNomeGiocatoreVivo(posizione);
+                    eliminaGiocatore(nomeVampiro);
+                    throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeVampiro + " muore.");
+                }
+            }
         }
     }
 

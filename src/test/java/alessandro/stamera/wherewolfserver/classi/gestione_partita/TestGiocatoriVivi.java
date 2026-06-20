@@ -800,6 +800,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
         verificaAttacco(attaccoVampiro(nome), esito);
+        ripristina(nome);
     }
 
     private EsitoAttacco attaccoVampiro(String nome) { return giocatori.attaccoVampiro(nome); }

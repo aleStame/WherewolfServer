@@ -1132,6 +1132,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima))
             .withMessage("Impossibile vampirizzare " + nomeVittima + ".\n" + nomeVampiro + " muore.");
+        terminaNotte();
         verificaEliminati(nomeVampiro);
     }
 
