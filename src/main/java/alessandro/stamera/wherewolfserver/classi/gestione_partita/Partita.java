@@ -94,7 +94,7 @@ public final class Partita
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
-            case RIUSCITO -> gestioneEliminazioneLupi(nome);
+            case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
         }
     }
@@ -175,7 +175,7 @@ public final class Partita
     public void gildata(String nome)
     {
         EsitoAttacco esito = vivi.gildata(nome);
-        if(esito == MORTO) eliminaGiocatore(vivi.getNomeCapoGilda());
+        if(esito != RIUSCITO) gestioneAttaccoNonRiuscito(nome, esito);
     }
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
@@ -282,16 +282,25 @@ public final class Partita
 
     public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
 
-    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGhoul();
+    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGhoul(); }
+
+    private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
+    {
+        switch(esito)
+        {
+            case FALLITO -> throw new IllegalArgumentException("Impossibile criminalizzare " + nome + ".");
+            case MORTO -> gestioneMorteCapoGilda(nome);
+        }
+    }
+
+    private void gestioneMorteCapoGilda(String nome)
+    {
+        String nomeCapoGilda = vivi.getNomeCapoGilda();
+        eliminaGiocatore(nomeCapoGilda);
+        throw new IllegalArgumentException("Impossibile criminalizzare " + nome + ".\n" + nomeCapoGilda + " muore.");
     }
 
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
-
-    private void gestioneEliminazioneLupi(String nome)
-    {
-        if(vivi.isNosferatu(nome) && isGhoulPresente()) eliminaGhoul();
-        eliminaGiocatore(nome);
-    }
 
     private void eliminaGhoul() { eliminaGiocatore(getNomeGhoul()); }
 

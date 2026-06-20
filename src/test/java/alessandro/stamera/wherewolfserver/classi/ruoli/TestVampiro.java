@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -65,15 +66,15 @@ public final class TestVampiro
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testTrattoCreaturaOmbra() {
-        verificaTrattoCreaturaOmbra();
-    }
+    @Test public void testTrattoCreaturaOmbra() { verificaTrattoCreaturaOmbra(); }
 
     @Test public void testRipristino()
     {
         ruolo.ripristina();
         verificaTrattoCreaturaOmbra();
     }
+
+    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(FALLITO); }
 
     private void verificaTrattoCreaturaOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
 
