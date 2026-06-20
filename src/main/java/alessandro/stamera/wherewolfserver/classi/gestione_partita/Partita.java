@@ -178,18 +178,6 @@ public final class Partita
         if(esito != RIUSCITO) gestioneAttaccoNonRiuscito(nome, esito);
     }
 
-    private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
-    {
-        String messaggio = "Impossibile criminalizzare " + nome + ".";
-        if(esito == MORTO)
-        {
-            String nomeCapoGilda = vivi.getNomeCapoGilda();
-            messaggio += "\n" + nomeCapoGilda + " muore.";
-            eliminaGiocatore(nomeCapoGilda);
-        }
-        throw new IllegalArgumentException(messaggio);
-    }
-
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }
 
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
@@ -294,7 +282,22 @@ public final class Partita
 
     public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
 
-    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGhoul();
+    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGhoul(); }
+
+    private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
+    {
+        switch(esito)
+        {
+            case FALLITO -> throw new IllegalArgumentException("Impossibile criminalizzare " + nome + ".");
+            case MORTO -> gestioneMorteCapoGilda(nome);
+        }
+    }
+
+    private void gestioneMorteCapoGilda(String nome)
+    {
+        String nomeCapoGilda = vivi.getNomeCapoGilda();
+        eliminaGiocatore(nomeCapoGilda);
+        throw new IllegalArgumentException("Impossibile criminalizzare " + nome + ".\n" + nomeCapoGilda + " muore.");
     }
 
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }
