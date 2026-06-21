@@ -111,6 +111,7 @@ public final class TestRuolo
         verificaProtetto();
         verificaFazione(AMANTI);
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nomeCreaturaOmbra)));
+        verificaVero(ruolo.isRomeo());
     }
 
     @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }

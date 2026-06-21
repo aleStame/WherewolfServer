@@ -76,6 +76,8 @@ public final class TestVampiro
 
     @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(FALLITO); }
 
+    @Test
+
     private void verificaTrattoCreaturaOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
