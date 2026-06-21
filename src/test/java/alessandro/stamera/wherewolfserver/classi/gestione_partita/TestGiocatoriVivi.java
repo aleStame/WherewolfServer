@@ -807,8 +807,10 @@ public final class TestGiocatoriVivi
 
     @Test public void testVampiroPresente()
     {
-        aggiungiGiocatore("Andrea", "Vampiro");
+        String nome = "Andrea";
+        aggiungiGiocatore(nome, "Vampiro");
         verificaVero(isVampiroPresente());
+        verificaStringa(giocatori.getNomeVampiro(), nome);
     }
 
     private boolean isVampiroPresente() { return giocatori.isVampiroPresente(); }

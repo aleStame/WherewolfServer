@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVampiroPresente non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isVampiroPresente">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,22 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03241" summary="REFACTORING: definizione del metodo ripristinaGiocatoreVivo">
-      <option name="closed" value="true" />
-      <created>1781624478889</created>
-      <option name="number" value="03241" />
-      <option name="presentableId" value="LOCAL-03241" />
-      <option name="project" value="LOCAL" />
-      <updated>1781624478889</updated>
-    </task>
-    <task id="LOCAL-03242" summary="VERDE DIRETTO: testControlloMediumOratore riuscito">
-      <option name="closed" value="true" />
-      <created>1781625122942</created>
-      <option name="number" value="03242" />
-      <option name="presentableId" value="LOCAL-03242" />
-      <option name="project" value="LOCAL" />
-      <updated>1781625122942</updated>
     </task>
     <task id="LOCAL-03243" summary="REFACTORING: definizione del metodo verificaControlloMedium">
       <option name="closed" value="true" />
@@ -687,7 +673,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782055621897</updated>
     </task>
-    <option name="localTasksCounter" value="3290" />
+    <task id="LOCAL-03290" summary="VERDE DIRETTO: testVampiroPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1782055948398</created>
+      <option name="number" value="03290" />
+      <option name="presentableId" value="LOCAL-03290" />
+      <option name="project" value="LOCAL" />
+      <updated>1782055948398</updated>
+    </task>
+    <task id="LOCAL-03291" summary="REFACTORING: definizione del metodo isVampiroPresente">
+      <option name="closed" value="true" />
+      <created>1782056159307</created>
+      <option name="number" value="03291" />
+      <option name="presentableId" value="LOCAL-03291" />
+      <option name="project" value="LOCAL" />
+      <updated>1782056159307</updated>
+    </task>
+    <option name="localTasksCounter" value="3292" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testMorteGhoulContadinoMostroVampiro riuscito" />
-    <MESSAGE value="REFACTORING: definizione dei metodi attaccoVampiro e eliminaGhoul" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo attaccoVampiro" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoVampiro riuscito" />
@@ -727,6 +727,8 @@
     <MESSAGE value="ROSSO: testVampiroAssente non riuscito" />
     <MESSAGE value="VERDE: testVampiroAssente riuscito" />
     <MESSAGE value="ROSSO: testVampiroPresente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVampiroPresente non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVampiroPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isVampiroPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isVampiroPresente" />
   </component>
 </project>
