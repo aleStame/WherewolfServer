@@ -238,7 +238,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isFazioneNosferatu(String nome) { return getFazione(nome) == NOSFERATU; }
 
-    public boolean isVampiroPresente() { return true; }
+    public boolean isVampiroPresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isVampiro()) posizione = i;
+        return posizione != NON_TROVATO;
+    }
 
     private int getPosizioneGhoul()
     {
