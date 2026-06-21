@@ -1075,9 +1075,7 @@ public final class TestPartita
             { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        verificaFallimentoVampirizzazione(nomeCacciatore, "Impossibile vampirizzare Terzo.\nQuarto muore.");
-        terminaNotte();
-        verificaEliminati(nomeGhoul);
+        verificaMortePostAttacco(nomeCacciatore, "Impossibile vampirizzare Terzo.\nQuarto muore.", nomeGhoul);
     }
 
     @Test public void testMorteGhoulContadinoMostroVampiro()
@@ -1085,9 +1083,7 @@ public final class TestPartita
         String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
         String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
         inizializzaPartita(giocatori);
-        verificaFallimentoVampirizzazione(nomeContadinoMostro, "Impossibile vampirizzare Edd.\nEddy muore.");
-        terminaNotte();
-        verificaEliminati(nomeGhoul);
+        verificaMortePostAttacco(nomeContadinoMostro, "Impossibile vampirizzare Edd.\nEddy muore.", nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource
@@ -1129,9 +1125,14 @@ public final class TestPartita
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
-        verificaFallimentoVampirizzazione(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.");
+        verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
+    }
+
+    private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
+    {
+        verificaFallimentoVampirizzazione(nomeVittima, messaggio);
         terminaNotte();
-        verificaEliminati(nomeVampiro);
+        verificaEliminati(nomeMorto);
     }
 
     private void verificaAttaccoVampiroRiuscito(String nome) { assertThatNoException().isThrownBy(() -> attaccoVampiro(nome)); }
