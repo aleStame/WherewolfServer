@@ -191,6 +191,13 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
+    public boolean isVampiro(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getRuolo(nome).isVampiro();
+        return trovato;
+    }
+
     public boolean isNosferatu(String nome)
     {
         boolean trovato = false;
@@ -245,7 +252,7 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isVampiro()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isVampiro(i)) posizione = i;
         return posizione;
     }
 
@@ -257,6 +264,8 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private boolean isGhoul(int posizione) { return isGhoul(getNomeGiocatore(posizione)); }
+
+    private boolean isVampiro(int posizione) { return isVampiro(getNomeGiocatore(posizione)); }
 
     private int getPosizioneAmato()
     {

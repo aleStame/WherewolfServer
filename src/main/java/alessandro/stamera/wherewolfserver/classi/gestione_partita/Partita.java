@@ -289,20 +289,13 @@ public final class Partita
             case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
             case MORTO ->
             {
-                String nomeMorto;
+                String nomeMorto = vivi.getNomeVampiro();
                 if(isGhoulPresente())
                 {
                     nomeMorto = getNomeGhoul();
                     eliminaGhoul();
                 }
-                else
-                {
-                    int posizione = -1;
-                    for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(getNomeGiocatoreVivo(i)).isVampiro())
-                        posizione = i;
-                    nomeMorto = getNomeGiocatoreVivo(posizione);
-                    eliminaGiocatore(nomeMorto);
-                }
+                else eliminaGiocatore(nomeMorto);
                 throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
             }
         }
