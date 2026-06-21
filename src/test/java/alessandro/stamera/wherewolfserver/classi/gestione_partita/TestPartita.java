@@ -1075,7 +1075,7 @@ public final class TestPartita
             { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        attaccoVampiro(nomeCacciatore);
+        verificaFallimentoVampirizzazione(nomeCacciatore, "Impossibile vampirizzare Terzo.\nQuarto muore.");
         terminaNotte();
         verificaEliminati(nomeGhoul);
     }
@@ -1085,7 +1085,7 @@ public final class TestPartita
         String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
         String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
         inizializzaPartita(giocatori);
-        attaccoVampiro(nomeContadinoMostro);
+        verificaFallimentoVampirizzazione(nomeContadinoMostro, "Impossibile vampirizzare Edd.\nEddy muore.");
         terminaNotte();
         verificaEliminati(nomeGhoul);
     }
@@ -1105,8 +1105,8 @@ public final class TestPartita
         String nomeVittima = "Antonio";
         String[][] giocatori = new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" }, { "Gioele", "Vampiro" } };
         inizializzaPartita(giocatori);
-        attaccoVampiro(nomeVittima);
-        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".");
+        verificaAttaccoVampiroRiuscito(nomeVittima);
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Antonio.");
         for(String nome : estraiNomiGiocatori(giocatori)) ripristinaGiocatoreVivo(nome);
     }
 
@@ -1114,7 +1114,7 @@ public final class TestPartita
     {
         String nomeVittima = "Rino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Pino", "Vampiro" } });
-        assertThatNoException().isThrownBy(() -> attaccoVampiro(nomeVittima));
+        verificaAttaccoVampiroRiuscito(nomeVittima);
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
@@ -1122,18 +1122,23 @@ public final class TestPartita
     {
         String nomeVittima = "Lino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Gino", "Vampiro" } });
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima))
-            .withMessage("Impossibile vampirizzare " + nomeVittima + ".");
+        verificaFallimentoVampirizzazione(nomeVittima, "Impossibile vampirizzare Lino.");
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore di vampiri", "Contadino mostro" }) public void testMorteVampiro(String nomeRuolo)
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima))
-            .withMessage("Impossibile vampirizzare " + nomeVittima + ".\n" + nomeVampiro + " muore.");
+        verificaFallimentoVampirizzazione(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.");
         terminaNotte();
         verificaEliminati(nomeVampiro);
+    }
+
+    private void verificaAttaccoVampiroRiuscito(String nome) { assertThatNoException().isThrownBy(() -> attaccoVampiro(nome)); }
+
+    private void verificaFallimentoVampirizzazione(String nomeVittima, String messaggio)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
     }
 
     private void verificaFallimentoGildata(String nomeVittima, String messaggio)

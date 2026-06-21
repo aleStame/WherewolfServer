@@ -803,6 +803,8 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
+    @Test public void testVampiroAssente() { verificaFalso(giocatori.isVampiroPresente()); }
+
     private EsitoAttacco attaccoVampiro(String nome) { return giocatori.attaccoVampiro(nome); }
 
     private void ripristina(String nome) { giocatori.ripristina(nome); }
