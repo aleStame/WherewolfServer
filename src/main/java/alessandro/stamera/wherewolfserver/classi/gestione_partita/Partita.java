@@ -282,7 +282,26 @@ public final class Partita
 
     public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
 
-    public void attaccoVampiro(String nome) { if(vivi.attaccoVampiro(nome) == MORTO) eliminaGhoul(); }
+    public void attaccoVampiro(String nome)
+    {
+        switch(vivi.attaccoVampiro(nome))
+        {
+            case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
+            case MORTO -> gestioneMorteVampiroPostAttacco(nome);
+        }
+    }
+
+    private void gestioneMorteVampiroPostAttacco(String nome)
+    {
+        String nomeMorto = vivi.getNomeVampiro();
+        if(isGhoulPresente())
+        {
+            nomeMorto = getNomeGhoul();
+            eliminaGhoul();
+        }
+        else eliminaGiocatore(nomeMorto);
+        throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
+    }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
     {

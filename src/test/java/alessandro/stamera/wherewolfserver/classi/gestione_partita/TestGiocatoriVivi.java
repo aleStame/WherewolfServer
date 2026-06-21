@@ -512,7 +512,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore",
-            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare",
+            "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino normale", "Ghoul", "Giulietta", "Giullare",
             "Guardia", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Templare"
         }
     )
@@ -791,13 +791,29 @@ public final class TestGiocatoriVivi
         ripristina(nomeAngelo);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore di vampiri, MORTO", "Contadino mostro, MORTO" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Cacciatore di vampiri, MORTO", "Contadino mostro, MORTO", "Cappuccetto rosso, RIUSCITO", "Eremita, FALLITO" }
+    )
     public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
         verificaAttacco(attaccoVampiro(nome), esito);
+        ripristina(nome);
     }
+
+    @Test public void testVampiroAssente() { verificaFalso(isVampiroPresente()); }
+
+    @Test public void testVampiroPresente()
+    {
+        String nome = "Andrea";
+        aggiungiGiocatore(nome, "Vampiro");
+        verificaVero(isVampiroPresente());
+        verificaStringa(giocatori.getNomeVampiro(), nome);
+    }
+
+    private boolean isVampiroPresente() { return giocatori.isVampiroPresente(); }
 
     private EsitoAttacco attaccoVampiro(String nome) { return giocatori.attaccoVampiro(nome); }
 

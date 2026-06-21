@@ -99,6 +99,8 @@ public final class TestEremita
 
     @Test public void testNegromanteEremita() { assertThat(ruolo.attaccoNegromante()).isEqualTo(FALLITO); }
 
+    @Test public void testVampirizzazione() { verificaAttaccoFallito(ruolo.vampirizzazione()); }
+
     private void verificaAttaccoFallito(EsitoAttacco esito) { assertThat(esito).isEqualTo(FALLITO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
