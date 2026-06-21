@@ -805,6 +805,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testVampiroAssente() { verificaFalso(giocatori.isVampiroPresente()); }
 
+    @Test public void testVampiroPresente()
+    {
+        aggiungiGiocatore("Andrea", "Vampiro");
+        verificaVero(giocatori.isVampiroPresente());
+    }
+
     private EsitoAttacco attaccoVampiro(String nome) { return giocatori.attaccoVampiro(nome); }
 
     private void ripristina(String nome) { giocatori.ripristina(nome); }
