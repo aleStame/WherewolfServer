@@ -81,7 +81,6 @@ public final class TestCitta
         assertThat(ruolo.gildata()).isEqualTo(RIUSCITO);
         verificaFazione(CRIMINALI);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        ruolo.ripristina();
     }
 
     @AfterAll public static void ripristinaRuoli()

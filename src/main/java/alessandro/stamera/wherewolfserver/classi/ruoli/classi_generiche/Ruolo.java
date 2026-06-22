@@ -307,9 +307,14 @@ public class Ruolo
 
     public EsitoAttacco vampirizzazione()
     {
-        cambiaFazione(VAMPIRO);
-        aggiungiTratti(NON_MORTO);
-        return RIUSCITO;
+        EsitoAttacco esito = FALLITO;
+        if(!isMistico())
+        {
+            cambiaFazione(VAMPIRO);
+            aggiungiTratti(NON_MORTO);
+            esito = RIUSCITO;
+        }
+        return esito;
     }
 
     public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
