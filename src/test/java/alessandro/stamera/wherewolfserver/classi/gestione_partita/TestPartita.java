@@ -1162,6 +1162,22 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeRomeo);
     }
 
+    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Spia" })
+    public void testVampirizzazioneGiuliettaCriminali(String nomeRuolo)
+    {
+        String nomeRomeo = "Brian", nomeGiulietta = "Elliott", nomeVampiro = "John", nomeLupo = "Carla";
+        String[][] giocatori =
+            new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { nomeLupo, "Capo branco" }, { nomeRomeo, nomeRuolo } };
+        inizializzaPartita(giocatori);
+        partita.romeizzazione(nomeRomeo);
+        verificaAttaccoVampiroRiuscito(nomeGiulietta);
+        attaccoLupi("Carla", nomeGiulietta);
+        terminaNotte();
+        verificaEliminazione(nomeGiulietta);
+        verificaNonEliminati(nomeRomeo);
+        ripristinaGiocatoreVivo(nomeRomeo);
+    }
+
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
     {
         verificaFallimentoVampirizzazione(nomeVittima, messaggio);
