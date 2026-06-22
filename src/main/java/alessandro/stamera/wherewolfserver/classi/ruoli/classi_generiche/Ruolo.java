@@ -310,8 +310,7 @@ public class Ruolo
         EsitoAttacco esito = FALLITO;
         if(!isMistico())
         {
-            cambiaFazione(VAMPIRO);
-            aggiungiTratti(NON_MORTO);
+            trasformazioneVampiro();
             esito = RIUSCITO;
         }
         return esito;
@@ -379,6 +378,12 @@ public class Ruolo
         ripristinaFazioneOriginale();
         annullaSegnalazioneInquisitore();
         perdiProtezioni();
+    }
+
+    private void trasformazioneVampiro()
+    {
+        cambiaFazione(VAMPIRO);
+        aggiungiTratti(NON_MORTO);
     }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
