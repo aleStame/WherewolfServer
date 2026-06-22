@@ -795,7 +795,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Cappuccetto rosso, RIUSCITO",
-            "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO"
+            "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO", "Goblin, FALLITO"
         }
     )
     public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
