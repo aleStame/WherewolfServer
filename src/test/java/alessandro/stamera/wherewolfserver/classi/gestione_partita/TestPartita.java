@@ -1122,7 +1122,7 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Eremita", "Goblin" }) public void testVampirizzazioneFallita(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Eremita", "Goblin", "Guaritore" }) public void testVampirizzazioneFallita(String nomeRuolo)
     {
         String nomeVittima = "Lino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Gino", "Vampiro" } });

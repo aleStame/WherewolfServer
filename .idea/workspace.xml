@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testVampirizzazioneFallita riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo trasformazioneVampiro" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +103,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/vampirizzazioneGuaritore",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -292,22 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03262" summary="ROSSO: testMorteGhoulContadinoMostroVampiro non riuscito">
-      <option name="closed" value="true" />
-      <created>1781790372300</created>
-      <option name="number" value="03262" />
-      <option name="presentableId" value="LOCAL-03262" />
-      <option name="project" value="LOCAL" />
-      <updated>1781790372300</updated>
-    </task>
-    <task id="LOCAL-03263" summary="VERDE: testMorteGhoulContadinoMostroVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1781791187511</created>
-      <option name="number" value="03263" />
-      <option name="presentableId" value="LOCAL-03263" />
-      <option name="project" value="LOCAL" />
-      <updated>1781791187511</updated>
     </task>
     <task id="LOCAL-03264" summary="REFACTORING: definizione dei metodi attaccoVampiro e eliminaGhoul">
       <option name="closed" value="true" />
@@ -685,7 +669,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782132645748</updated>
     </task>
-    <option name="localTasksCounter" value="3311" />
+    <task id="LOCAL-03311" summary="VERDE DIRETTO: testAttaccoVampiro riuscito">
+      <option name="closed" value="true" />
+      <created>1782132937772</created>
+      <option name="number" value="03311" />
+      <option name="presentableId" value="LOCAL-03311" />
+      <option name="project" value="LOCAL" />
+      <updated>1782132937772</updated>
+    </task>
+    <task id="LOCAL-03312" summary="REFACTORING: definizione del metodo trasformazioneVampiro">
+      <option name="closed" value="true" />
+      <created>1782133143419</created>
+      <option name="number" value="03312" />
+      <option name="presentableId" value="LOCAL-03312" />
+      <option name="project" value="LOCAL" />
+      <updated>1782133143419</updated>
+    </task>
+    <option name="localTasksCounter" value="3313" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,7 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazioneFallita non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazioneFallita riuscito" />
     <MESSAGE value="ROSSO: testMorteVampiro non riuscito" />
@@ -719,12 +718,13 @@
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneGiulietta riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaMortoContadinoLupizzato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneGiuliettaCriminali riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="ROSSO: testAttaccoVampiro non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiro non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneFallita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVampirizzazioneFallita riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoVampiro riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo trasformazioneVampiro" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo trasformazioneVampiro" />
   </component>
 </project>
