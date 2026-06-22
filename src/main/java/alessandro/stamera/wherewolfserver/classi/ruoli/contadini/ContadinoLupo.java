@@ -46,6 +46,13 @@ public final class ContadinoLupo extends Contadino
         eliminaTratti(CREATURA_OMBRA, LUPO_MANNARO);
     }
 
+    @Override public EsitoAttacco vampirizzazione()
+    {
+        EsitoAttacco esito = super.vampirizzazione();
+        if(isLupo()) esito = MORTO;
+        return esito;
+    }
+
     public static Ruolo getInstance() { return new ContadinoLupo(); }
 
     private void aggiungiTrattiOscuri() { aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO); }

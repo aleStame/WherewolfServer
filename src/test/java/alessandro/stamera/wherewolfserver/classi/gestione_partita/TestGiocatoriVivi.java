@@ -813,8 +813,9 @@ public final class TestGiocatoriVivi
     {
         String nome = "Carlo";
         inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
-        verificaAttaccoLupoRiuscito(tipoLupo, nome);
+        verificaAttaccoLupo(tipoLupo, nome, FALLITO);
         verificaAttacco(attaccoVampiro(nome), MORTO);
+        ripristina(nome);
     }
 
     @Test public void testVampiroAssente() { verificaFalso(isVampiroPresente()); }
