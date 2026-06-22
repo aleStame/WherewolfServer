@@ -1130,7 +1130,12 @@ public final class TestPartita
         verificaFallimentoVampirizzazione(nomeVittima, "Impossibile vampirizzare Lino.");
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore di vampiri", "Contadino mostro" }) public void testMorteVampiro(String nomeRuolo)
+    @ParameterizedTest
+    @CsvSource
+    (
+        { "Cacciatore di vampiri", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
+    )
+    public void testMorteVampiro(String nomeRuolo)
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
