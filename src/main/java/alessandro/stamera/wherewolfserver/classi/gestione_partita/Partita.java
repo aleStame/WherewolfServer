@@ -78,7 +78,10 @@ public final class Partita
     {
         switch(vivi.attaccoAssassino(nome))
         {
-            case RIUSCITO -> eliminaGiocatore(nome);
+            case RIUSCITO -> {
+                System.out.println(nome);
+                eliminaGiocatore(nome);
+            }
             case FALLITO -> eliminazioneAngeloCustode();
             case MORTO -> assassinioContadinoMostro(nome);
         }

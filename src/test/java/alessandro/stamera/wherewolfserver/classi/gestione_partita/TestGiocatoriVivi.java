@@ -793,7 +793,10 @@ public final class TestGiocatoriVivi
 
     @ParameterizedTest @CsvSource
     (
-        { "Cacciatore di vampiri, MORTO", "Contadino mostro, MORTO", "Cappuccetto rosso, RIUSCITO", "Eremita, FALLITO" }
+        {
+            "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Cappuccetto rosso, RIUSCITO",
+            "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO"
+        }
     )
     public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
     {

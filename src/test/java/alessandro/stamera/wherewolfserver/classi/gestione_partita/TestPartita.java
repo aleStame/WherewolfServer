@@ -448,7 +448,7 @@ public final class TestPartita
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", nomeLupo = "Renato";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" } });
         partita.romeizzazione(nomeVittima);
-        partita.attaccoAssassino(nomeVittima);
+        attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
         verificaEliminati(nomeVittima, nomeNosferatu);
@@ -582,18 +582,26 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Capo branco", "Contadino discendente dei lupi", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto",
-            "Lupo solitario"
-        }
-    )
+    @ParameterizedTest
+    @CsvSource( { "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testCriminalizzazioneCapoGildaMorto(String nomeRuolo)
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
-        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.");
+        terminaNotte();
+        verificaEliminazione(nomeCapoGilda);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testCriminalizzazioneCapoGildaMortoContadinoLupizzato(String tipoLupo)
+    {
+        String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele", nomeLupo = "Ale";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo } };
+        inizializzaPartita(giocatori);
+        attaccoLupi(nomeLupo, nomeVittima);
+        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
     }
@@ -1106,7 +1114,8 @@ public final class TestPartita
         for(String nome : estraiNomiGiocatori(giocatori)) ripristinaGiocatoreVivo(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Cappuccetto rosso" }) public void testVampirizzazioneRiuscita(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Assassino", "Azzeccagarbugli", "Cappuccetto rosso", "Ghoul", "Giulietta" })
+    public void testVampirizzazioneRiuscita(String nomeRuolo)
     {
         String nomeVittima = "Rino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Pino", "Vampiro" } });
@@ -1128,6 +1137,48 @@ public final class TestPartita
         verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guaritore",
+            "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Sensitiva", "Templare",
+            "Vampiro"
+        }
+    )
+    public void testVampirizzazioneGiulietta(String nomeRuolo)
+    {
+        String nomeRomeo = "Brian", nomeGiulietta = "Elliott", nomeVampiro = "John";
+        String[][] giocatori =
+            new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
+        inizializzaPartita(giocatori);
+        partita.romeizzazione(nomeRomeo);
+        verificaAttaccoVampiroRiuscito(nomeGiulietta);
+        attaccoAssassino(nomeGiulietta);
+        terminaNotte();
+        verificaEliminazione(nomeGiulietta);
+        verificaNonEliminati(nomeRomeo);
+        ripristinaGiocatoreVivo(nomeRomeo);
+    }
+
+    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Spia" })
+    public void testVampirizzazioneGiuliettaCriminali(String nomeRuolo)
+    {
+        String nomeRomeo = "Brian", nomeGiulietta = "Elliott", nomeVampiro = "John", nomeLupo = "Carla";
+        String[][] giocatori =
+            new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { nomeLupo, "Capo branco" }, { nomeRomeo, nomeRuolo } };
+        inizializzaPartita(giocatori);
+        partita.romeizzazione(nomeRomeo);
+        verificaAttaccoVampiroRiuscito(nomeGiulietta);
+        attaccoLupi("Carla", nomeGiulietta);
+        terminaNotte();
+        verificaEliminazione(nomeGiulietta);
+        verificaNonEliminati(nomeRomeo);
+        ripristinaGiocatoreVivo(nomeRomeo);
+    }
+
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
     {
         verificaFallimentoVampirizzazione(nomeVittima, messaggio);
@@ -1135,7 +1186,10 @@ public final class TestPartita
         verificaEliminati(nomeMorto);
     }
 
-    private void verificaAttaccoVampiroRiuscito(String nome) { assertThatNoException().isThrownBy(() -> attaccoVampiro(nome)); }
+    private void verificaAttaccoVampiroRiuscito(String nome)
+    {
+        assertThatNoException().isThrownBy(() -> attaccoVampiro(nome));
+    }
 
     private void verificaFallimentoVampirizzazione(String nomeVittima, String messaggio)
     {
