@@ -1113,7 +1113,7 @@ public final class TestPartita
         for(String nome : estraiNomiGiocatori(giocatori)) ripristinaGiocatoreVivo(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Assassino", "Azzeccagarbugli", "Cappuccetto rosso", "Ghoul", "Giulietta" })
+    @ParameterizedTest @CsvSource({ "Assassino", "Azzeccagarbugli", "Cappuccetto rosso", "Ghoul", "Giulietta", "Inquisitore" })
     public void testVampirizzazioneRiuscita(String nomeRuolo)
     {
         String nomeVittima = "Rino";
