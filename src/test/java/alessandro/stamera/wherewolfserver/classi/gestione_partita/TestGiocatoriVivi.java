@@ -808,6 +808,15 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoVampiroContadinoLupizzato(String tipoLupo)
+    {
+        String nome = "Carlo";
+        inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
+        verificaAttaccoLupoRiuscito(tipoLupo, nome);
+        verificaAttacco(attaccoVampiro(nome), MORTO);
+    }
+
     @Test public void testVampiroAssente() { verificaFalso(isVampiroPresente()); }
 
     @Test public void testVampiroPresente()
