@@ -1130,8 +1130,7 @@ public final class TestPartita
         verificaFallimentoVampirizzazione(nomeVittima, "Impossibile vampirizzare Lino.");
     }
 
-    @ParameterizedTest
-    @CsvSource
+    @ParameterizedTest @CsvSource
     (
         { "Cacciatore di vampiri", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
     )
@@ -1139,6 +1138,17 @@ public final class TestPartita
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
+        verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testMorteVampiroContadinoLupizzato(String tipoLupo)
+    {
+        String nomeVittima = "Luca", nomeVampiro = "Paolo", nomeLupo = "Lino";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo } };
+        inizializzaPartita(giocatori);
+        attaccoLupi(nomeLupo, nomeVittima);
         verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
     }
 
