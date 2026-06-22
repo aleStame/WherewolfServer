@@ -43,6 +43,8 @@ public class Lupo extends CreatureOmbra
         return esito;
     }
 
+    @Override public EsitoAttacco vampirizzazione() { return MORTO; }
+
     private boolean isPresentiSoloLupiConSenzaFazione(Partita partita)
     {
         return partita.getNumeroGiocatoriVivi() == getNumeroLupiConSenzaFazione(partita);

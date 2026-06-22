@@ -213,7 +213,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         int posizioneAmato = 1;
         segnalazioneAngeloCustode(giocatori[posizioneAmato][0]);
-        verificaAttacco(this.giocatori.attaccoVampiro(giocatori[0][0]), RIUSCITO);
+        verificaAttaccoVampiro(this.giocatori.attaccoVampiro(giocatori[0][0]), RIUSCITO);
         verificaNonAmato(giocatori[posizioneAmato][0]);
     }
 
@@ -460,7 +460,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Giuseppe";
         aggiungiGiocatore(nome, "Capo branco");
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        verificaAttaccoVampiro(giocatori.gildata(nome), MORTO);
     }
 
     @Test public void testNomeCapoGilda()
@@ -520,7 +520,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" }, { "Gioele", "Vampiro" } });
-        verificaAttacco(attaccoVampiro(nomeVittima), RIUSCITO);
+        verificaAttaccoVampiro(attaccoVampiro(nomeVittima), RIUSCITO);
         verificaGildata(nomeVittima, FALLITO);
         ripristina(nomeVittima);
     }
@@ -532,7 +532,7 @@ public final class TestGiocatoriVivi
         String[][] giocatori =
             new String[][] { { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" } };
         inizializzaGiocatori(giocatori);
-        verificaAttacco(this.giocatori.attaccoLupi(this.giocatori.getRuolo(nomeLupo), nomeContadino), FALLITO);
+        verificaAttaccoVampiro(this.giocatori.attaccoLupi(this.giocatori.getRuolo(nomeLupo), nomeContadino), FALLITO);
         verificaGildata(nomeContadino, MORTO);
         ripristina(nomeContadino);
     }
@@ -639,7 +639,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Mike";
         aggiungiGiocatore(nome, "Contadino mostro");
-        verificaAttacco(giocatori.attaccoNegromante(nome), MORTO);
+        verificaAttaccoVampiro(giocatori.attaccoNegromante(nome), MORTO);
     }
 
     @ParameterizedTest @CsvSource
@@ -786,7 +786,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeAmato, nomeRuolo }, { nomeAngelo, "Angelo custode" }, { "Lucio", "Vampiro" } });
         segnalazioneAngeloCustode(nomeAmato);
         verificaVero(isAmato(nomeAmato));
-        verificaAttacco(attaccoVampiro(nomeAngelo), RIUSCITO);
+        verificaAttaccoVampiro(attaccoVampiro(nomeAngelo), RIUSCITO);
         verificaNonAmato(nomeAmato);
         ripristina(nomeAngelo);
     }
@@ -794,16 +794,27 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Cappuccetto rosso, RIUSCITO",
-            "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO", "Goblin, FALLITO", "Guaritore, FALLITO",
-            "Inquisitore, RIUSCITO", "Leprecauno, FALLITO", "Mago, FALLITO", "Medium, FALLITO", "Negromante, FALLITO"
+            "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Cappuccetto rosso, RIUSCITO",
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO",
+            "Giovane lupo, MORTO", "Goblin, FALLITO", "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO",
+            "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Negromante, FALLITO"
         }
     )
     public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
-        verificaAttacco(attaccoVampiro(nome), esito);
+        verificaAttaccoVampiro(attaccoVampiro(nome), esito);
+        ripristina(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoVampiroContadinoLupizzato(String tipoLupo)
+    {
+        String nome = "Carlo";
+        inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
+        verificaAttaccoLupo(tipoLupo, nome, FALLITO);
+        verificaAttaccoVampiro(attaccoVampiro(nome), MORTO);
         ripristina(nome);
     }
 
@@ -816,6 +827,8 @@ public final class TestGiocatoriVivi
         verificaVero(isVampiroPresente());
         verificaStringa(giocatori.getNomeVampiro(), nome);
     }
+
+    private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
 
     private boolean isVampiroPresente() { return giocatori.isVampiroPresente(); }
 
@@ -847,7 +860,9 @@ public final class TestGiocatoriVivi
 
     private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
 
-    private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
+    private void verificaGildata(String nome, EsitoAttacco esito) {
+        verificaAttaccoVampiro(giocatori.gildata(nome), esito);
+    }
 
     private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
     {
@@ -903,7 +918,7 @@ public final class TestGiocatoriVivi
 
     private void verificaAttaccoAssassino(String nome, EsitoAttacco esito)
     {
-        verificaAttacco(giocatori.attaccoAssassino(nome), esito);
+        verificaAttaccoVampiro(giocatori.attaccoAssassino(nome), esito);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
