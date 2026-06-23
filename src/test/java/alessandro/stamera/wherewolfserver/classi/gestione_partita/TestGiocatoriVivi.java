@@ -198,15 +198,19 @@ public final class TestGiocatoriVivi
         verificaAccusati(giocatori[0][0], giocatori[posizioneVoto][0]);
     }
 
-    @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    public void testSegnalazioneInquisitoreMisticoPresenteAmato(String nomeRuolo)
     {
-        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { "Davide", "Leprecauno" }, { "Matteo", "Inquisitore" } };
+        String nomeMistico = "Davide";
+        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { nomeMistico, nomeRuolo }, { "Matteo", "Inquisitore" } };
         inizializzaGiocatori(giocatori);
-        int posizioneMistico = 1;
-        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
-        segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
+        ripristina(nomeMistico);
+        segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 2);
         verificaAccusati(giocatori[0][0], giocatori[2][0]);
+        ripristina(nomeMistico);
     }
 
     @Test public void testAttaccoVampiroAngeloCustode()
