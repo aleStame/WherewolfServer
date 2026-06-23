@@ -126,7 +126,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeAmato);
         attaccoAssassino(nomeAmato);
         terminaNotte();
-        verificaEliminati(nomeAngelo, nomeAssassino);
+        verificaEliminati(nomeAngelo);
         verificaNonEliminati(nomeAmato);
         ripristinaGiocatoreVivo(nomeAmato);
     }
