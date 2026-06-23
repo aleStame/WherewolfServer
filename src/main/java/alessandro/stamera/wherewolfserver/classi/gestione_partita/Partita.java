@@ -188,6 +188,7 @@ public final class Partita
     {
         aggiungiGiocatoreVivo(nome, getRuoloMortoNotte(nome));
         mortiNotte.eliminaGiocatore(nome);
+        if(getRuoloVivo(nome).isMegera()) getRuoloVivo(vivi.getNomeGuaritore()).maledizione();
         if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
     }
 
@@ -291,7 +292,7 @@ public final class Partita
         }
     }
 
-    public boolean isMaledetto(String nome) { return false; }
+    public boolean isMaledetto(String nome) { return vivi.isMaledetto(nome); }
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {

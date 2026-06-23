@@ -1214,6 +1214,7 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
         verificaVero(partita.isMaledetto(nomeGuaritore));
+        ripristinaGiocatoreVivo(nomeGuaritore);
     }
 
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
