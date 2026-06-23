@@ -67,6 +67,8 @@ public final class Tratti
 
     public boolean isProtezionePossedutoPresente() { return protezioni.isPossedutoPresente(); }
 
+    public boolean isProtezioneVampiroPresente() { return protezioni.isVampiroPresente(); }
+
     public void eliminaTratti(Tratto... tratti) { this.tratti.removeAll(stream(tratti).toList()); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }

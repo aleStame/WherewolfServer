@@ -18,11 +18,13 @@ public final class TestProtezioni
         verificaFalso(isNegromantePresente());
         verificaFalso(isNosferatuPresente());
         verificaFalso(isPossedutoPresente());
+        verificaFalso(isVampiroPresente());
         protezioni.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isNegromantePresente());
         verificaVero(isNosferatuPresente());
         verificaVero(isPossedutoPresente());
+        verificaVero(isVampiroPresente());
     }
 
     @Test public void testCappuccettoRosso()
@@ -55,5 +57,7 @@ public final class TestProtezioni
     private boolean isNegromantePresente() { return protezioni.isNegromantePresente(); }
 
     private boolean isNosferatuPresente() { return protezioni.isNosferatuPresente(); }
+
+    private boolean isVampiroPresente() { return protezioni.isVampiroPresente(); }
 
 }

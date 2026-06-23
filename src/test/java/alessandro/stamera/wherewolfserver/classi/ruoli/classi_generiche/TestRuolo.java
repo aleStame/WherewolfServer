@@ -231,6 +231,7 @@ public final class TestRuolo
     {
         verificaFalso(isProtezioneLupiPresente());
         verificaFalso(ruolo.isProtezioneNegromantePresente());
+        verificaFalso(ruolo.isProtezioneVampiroPresente());
     }
 
     private void verificaProtetto() { verificaTrattoPresente(PROTETTO); }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +103,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/morteVampiro",
+    "git-widget-placeholder": "feature/vampirizzazioneLadra",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -292,126 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03276" summary="ROSSO: testPerditaProtezioniVampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1781949288568</created>
-      <option name="number" value="03276" />
-      <option name="presentableId" value="LOCAL-03276" />
-      <option name="project" value="LOCAL" />
-      <updated>1781949288569</updated>
-    </task>
-    <task id="LOCAL-03277" summary="VERDE: testPerditaProtezioniVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1781949532291</created>
-      <option name="number" value="03277" />
-      <option name="presentableId" value="LOCAL-03277" />
-      <option name="project" value="LOCAL" />
-      <updated>1781949532291</updated>
-    </task>
-    <task id="LOCAL-03278" summary="VERDE: testPerditaProtezioniVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1781949693084</created>
-      <option name="number" value="03278" />
-      <option name="presentableId" value="LOCAL-03278" />
-      <option name="project" value="LOCAL" />
-      <updated>1781949693085</updated>
-    </task>
-    <task id="LOCAL-03279" summary="ROSSO: testVampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1781949993620</created>
-      <option name="number" value="03279" />
-      <option name="presentableId" value="LOCAL-03279" />
-      <option name="project" value="LOCAL" />
-      <updated>1781949993621</updated>
-    </task>
-    <task id="LOCAL-03280" summary="VERDE: testVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1781950482561</created>
-      <option name="number" value="03280" />
-      <option name="presentableId" value="LOCAL-03280" />
-      <option name="project" value="LOCAL" />
-      <updated>1781950482561</updated>
-    </task>
-    <task id="LOCAL-03281" summary="VERDE DIRETTO">
-      <option name="closed" value="true" />
-      <created>1781951021511</created>
-      <option name="number" value="03281" />
-      <option name="presentableId" value="LOCAL-03281" />
-      <option name="project" value="LOCAL" />
-      <updated>1781951021511</updated>
-    </task>
-    <task id="LOCAL-03282" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1781969714303</created>
-      <option name="number" value="03282" />
-      <option name="presentableId" value="LOCAL-03282" />
-      <option name="project" value="LOCAL" />
-      <updated>1781969714304</updated>
-    </task>
-    <task id="LOCAL-03283" summary="ROSSO: testVampirizzazioneFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1781970098652</created>
-      <option name="number" value="03283" />
-      <option name="presentableId" value="LOCAL-03283" />
-      <option name="project" value="LOCAL" />
-      <updated>1781970098652</updated>
-    </task>
-    <task id="LOCAL-03284" summary="VERDE: testVampirizzazioneFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1781970416538</created>
-      <option name="number" value="03284" />
-      <option name="presentableId" value="LOCAL-03284" />
-      <option name="project" value="LOCAL" />
-      <updated>1781970416538</updated>
-    </task>
-    <task id="LOCAL-03285" summary="ROSSO: testMorteVampiro non riuscito">
-      <option name="closed" value="true" />
-      <created>1781970883709</created>
-      <option name="number" value="03285" />
-      <option name="presentableId" value="LOCAL-03285" />
-      <option name="project" value="LOCAL" />
-      <updated>1781970883709</updated>
-    </task>
-    <task id="LOCAL-03286" summary="VERDE: testMorteVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1781973986717</created>
-      <option name="number" value="03286" />
-      <option name="presentableId" value="LOCAL-03286" />
-      <option name="project" value="LOCAL" />
-      <updated>1781973986717</updated>
-    </task>
-    <task id="LOCAL-03287" summary="ROSSO: testVampiroAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1782054907540</created>
-      <option name="number" value="03287" />
-      <option name="presentableId" value="LOCAL-03287" />
-      <option name="project" value="LOCAL" />
-      <updated>1782054907541</updated>
-    </task>
-    <task id="LOCAL-03288" summary="VERDE: testVampiroAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1782055338517</created>
-      <option name="number" value="03288" />
-      <option name="presentableId" value="LOCAL-03288" />
-      <option name="project" value="LOCAL" />
-      <updated>1782055338517</updated>
-    </task>
-    <task id="LOCAL-03289" summary="ROSSO: testVampiroPresente non riuscito">
-      <option name="closed" value="true" />
-      <created>1782055621897</created>
-      <option name="number" value="03289" />
-      <option name="presentableId" value="LOCAL-03289" />
-      <option name="project" value="LOCAL" />
-      <updated>1782055621897</updated>
-    </task>
-    <task id="LOCAL-03290" summary="VERDE DIRETTO: testVampiroPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1782055948398</created>
-      <option name="number" value="03290" />
-      <option name="presentableId" value="LOCAL-03290" />
-      <option name="project" value="LOCAL" />
-      <updated>1782055948398</updated>
     </task>
     <task id="LOCAL-03291" summary="REFACTORING: definizione del metodo isVampiroPresente">
       <option name="closed" value="true" />
@@ -685,7 +565,127 @@
       <option name="project" value="LOCAL" />
       <updated>1782145402362</updated>
     </task>
-    <option name="localTasksCounter" value="3325" />
+    <task id="LOCAL-03325" summary="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito">
+      <option name="closed" value="true" />
+      <created>1782145671651</created>
+      <option name="number" value="03325" />
+      <option name="presentableId" value="LOCAL-03325" />
+      <option name="project" value="LOCAL" />
+      <updated>1782145671651</updated>
+    </task>
+    <task id="LOCAL-03326" summary="ROSSO: testVampirizzazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1782207114598</created>
+      <option name="number" value="03326" />
+      <option name="presentableId" value="LOCAL-03326" />
+      <option name="project" value="LOCAL" />
+      <updated>1782207114598</updated>
+    </task>
+    <task id="LOCAL-03327" summary="VERDE: testVampirizzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1782212653177</created>
+      <option name="number" value="03327" />
+      <option name="presentableId" value="LOCAL-03327" />
+      <option name="project" value="LOCAL" />
+      <updated>1782212653177</updated>
+    </task>
+    <task id="LOCAL-03328" summary="REFACTORING: definizione del metodo isProtezionePresente">
+      <option name="closed" value="true" />
+      <created>1782213100322</created>
+      <option name="number" value="03328" />
+      <option name="presentableId" value="LOCAL-03328" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213100322</updated>
+    </task>
+    <task id="LOCAL-03329" summary="REFACTORING: definizione del metodo verificaAttaccoVampiro">
+      <option name="closed" value="true" />
+      <created>1782213363016</created>
+      <option name="number" value="03329" />
+      <option name="presentableId" value="LOCAL-03329" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213363016</updated>
+    </task>
+    <task id="LOCAL-03330" summary="REFACTORING: definizione del metodo isNonMorto">
+      <option name="closed" value="true" />
+      <created>1782213558471</created>
+      <option name="number" value="03330" />
+      <option name="presentableId" value="LOCAL-03330" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213558471</updated>
+    </task>
+    <task id="LOCAL-03331" summary="REFACTORING: definizione del metodo verificaAuraNera">
+      <option name="closed" value="true" />
+      <created>1782213788041</created>
+      <option name="number" value="03331" />
+      <option name="presentableId" value="LOCAL-03331" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213788041</updated>
+    </task>
+    <task id="LOCAL-03332" summary="REFACTORING: definizione del metodo verificaFazione">
+      <option name="closed" value="true" />
+      <created>1782214104781</created>
+      <option name="number" value="03332" />
+      <option name="presentableId" value="LOCAL-03332" />
+      <option name="project" value="LOCAL" />
+      <updated>1782214104781</updated>
+    </task>
+    <task id="LOCAL-03333" summary="ROSSO: testCreatureOmbra non riuscito">
+      <option name="closed" value="true" />
+      <created>1782214379763</created>
+      <option name="number" value="03333" />
+      <option name="presentableId" value="LOCAL-03333" />
+      <option name="project" value="LOCAL" />
+      <updated>1782214379763</updated>
+    </task>
+    <task id="LOCAL-03334" summary="VERDE: testCreatureOmbra riuscito">
+      <option name="closed" value="true" />
+      <created>1782214512131</created>
+      <option name="number" value="03334" />
+      <option name="presentableId" value="LOCAL-03334" />
+      <option name="project" value="LOCAL" />
+      <updated>1782214512131</updated>
+    </task>
+    <task id="LOCAL-03335" summary="ROSSO: testCreatureOmbra non riuscito">
+      <option name="closed" value="true" />
+      <created>1782214831639</created>
+      <option name="number" value="03335" />
+      <option name="presentableId" value="LOCAL-03335" />
+      <option name="project" value="LOCAL" />
+      <updated>1782214831639</updated>
+    </task>
+    <task id="LOCAL-03336" summary="VERDE: testCreatureOmbra riuscito">
+      <option name="closed" value="true" />
+      <created>1782215049585</created>
+      <option name="number" value="03336" />
+      <option name="presentableId" value="LOCAL-03336" />
+      <option name="project" value="LOCAL" />
+      <updated>1782215049585</updated>
+    </task>
+    <task id="LOCAL-03337" summary="ROSSO: testInizializzazione non riuscito">
+      <option name="closed" value="true" />
+      <created>1782215297913</created>
+      <option name="number" value="03337" />
+      <option name="presentableId" value="LOCAL-03337" />
+      <option name="project" value="LOCAL" />
+      <updated>1782215297913</updated>
+    </task>
+    <task id="LOCAL-03338" summary="VERDE: testInizializzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1782215496411</created>
+      <option name="number" value="03338" />
+      <option name="presentableId" value="LOCAL-03338" />
+      <option name="project" value="LOCAL" />
+      <updated>1782215496411</updated>
+    </task>
+    <task id="LOCAL-03339" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1782215641913</created>
+      <option name="number" value="03339" />
+      <option name="presentableId" value="LOCAL-03339" />
+      <option name="project" value="LOCAL" />
+      <updated>1782215641913</updated>
+    </task>
+    <option name="localTasksCounter" value="3340" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,17 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testVampiroPresente non riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testVampiroPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiroPresente" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneVampiro" />
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiro" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteVampiroPostAttacco" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMortePostAttacco" />
-    <MESSAGE value="VERDE DIRETTO: testRomeizzazione riuscito" />
-    <MESSAGE value="Commit emergenziale" />
-    <MESSAGE value="VERDE DIRETTO: testVampirizzazioneGiulietta riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaMortoContadinoLupizzato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneGiuliettaCriminali riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiro non riuscito" />
@@ -723,8 +712,19 @@
     <MESSAGE value="VERDE DIRETTO: testMorteVampiro riuscito" />
     <MESSAGE value="ROSSO: testAttaccoVampiroContadinoLupizzato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiroContadinoLupizzato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiro" />
     <MESSAGE value="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito" />
+    <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
+    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiro" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
+    <MESSAGE value="ROSSO: testCreatureOmbra non riuscito" />
+    <MESSAGE value="VERDE: testCreatureOmbra riuscito" />
+    <MESSAGE value="ROSSO: testInizializzazione non riuscito" />
+    <MESSAGE value="VERDE: testInizializzazione riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
   </component>
 </project>
