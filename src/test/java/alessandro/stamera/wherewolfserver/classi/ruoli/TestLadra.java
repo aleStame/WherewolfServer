@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -96,12 +97,14 @@ public final class TestLadra
         verificaAuraBianca(getAura());
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
         verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
-        assertThat(ruolo.vampirizzazione()).isEqualTo(FALLITO);
+        assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
         verificaAura(getAura(), NERA);
         assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO);
         verificaFalso(ruolo.isProtezionePresente(vampiro));
         verificaVero(ruolo.isTrattoPresente(NON_MORTO));
     }
+
+    @AfterEach public void ripristinaRuolo() { ruolo.ripristina(); }
 
     private Aura getAura() { return ruolo.getAura(); }
 
