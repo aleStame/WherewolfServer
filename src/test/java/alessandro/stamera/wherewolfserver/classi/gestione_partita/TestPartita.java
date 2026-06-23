@@ -119,6 +119,18 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeAmato);
     }
 
+    @Test public void testAttaccoContadinoMostroAmatoAssassino()
+    {
+        String nomeAssassino = "Barbara", nomeAngelo = "Enzo", nomeAmato = "Maddalena";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeAmato, "Contadino mostro" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        attaccoAssassino(nomeAmato);
+        terminaNotte();
+        verificaEliminati(nomeAngelo, nomeAssassino);
+        verificaNonEliminati(nomeAmato);
+        ripristinaGiocatoreVivo(nomeAmato);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
