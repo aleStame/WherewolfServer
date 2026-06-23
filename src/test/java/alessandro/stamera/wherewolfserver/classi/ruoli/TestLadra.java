@@ -96,13 +96,15 @@ public final class TestLadra
         verificaNonProtetto();
         verificaAuraBianca(getAura());
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
-        verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
+        verificaFalso(isNonMorto());
         verificaAttaccoVampiro(RIUSCITO);
         verificaAura(getAura(), NERA);
         assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO);
         verificaFalso(isProtezionePresente(vampiro));
-        verificaVero(ruolo.isTrattoPresente(NON_MORTO));
+        verificaVero(isNonMorto());
     }
+
+    private boolean isNonMorto() { return ruolo.isTrattoPresente(NON_MORTO); }
 
     private void verificaAttaccoVampiro(EsitoAttacco esito) { assertThat(ruolo.vampirizzazione()).isEqualTo(esito); }
 
