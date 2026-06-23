@@ -60,7 +60,6 @@ public final class TestVillaggio
         assertThat(ruolo.gildata()).isEqualTo(RIUSCITO);
         verificaFazione(CRIMINALI);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        ruolo.ripristina();
     }
 
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO); }

@@ -96,16 +96,27 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @Test public void testAttaccoAmatoAssassino()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAttaccoAmatoAssassino(String nomeRuolo)
     {
-        String[][] giocatori = new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Bardo" }, { "Maddalena", "Oste" } };
-        int posizione = 1;
-        inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(giocatori[posizione][0]);
-        attaccoAssassino(giocatori[posizione][0]);
+        String nomeAngelo = "Enzo", nomeAmato = "Maddalena";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeAmato, nomeRuolo } });
+        segnalazioneAngeloCustode(nomeAmato);
+        attaccoAssassino(nomeAmato);
         terminaNotte();
-        verificaEliminazione(giocatori[0][0]);
-        verificaVero(isVivo(giocatori[posizione][0]));
+        verificaEliminazione(nomeAngelo);
+        verificaNonEliminati(nomeAmato);
+        ripristinaGiocatoreVivo(nomeAmato);
     }
 
     @ParameterizedTest @CsvSource
