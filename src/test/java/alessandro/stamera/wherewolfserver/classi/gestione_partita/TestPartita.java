@@ -218,10 +218,12 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nome);
     }
 
-    @Test public void testSegnalazioneInquisitoreMisticoPresenteAmato()
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    public void testSegnalazioneInquisitoreMisticoPresenteAmato(String nomeRuolo)
     {
         String nomeSegnalato = "Davide";
-        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { nomeSegnalato, "Leprecauno" }, { "Matteo", "Inquisitore" } };
+        String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { nomeSegnalato, nomeRuolo }, { "Matteo", "Inquisitore" } };
         inizializzaPartita(giocatori);
         segnalazioneInquisitore(nomeSegnalato);
         segnalazioneAngeloCustode(nomeSegnalato);
