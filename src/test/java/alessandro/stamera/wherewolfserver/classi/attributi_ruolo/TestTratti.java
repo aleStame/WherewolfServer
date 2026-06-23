@@ -43,11 +43,13 @@ public final class TestTratti
         verificaFalso(isProtezioneNegromantePresente());
         verificaFalso(isProtezioneNosferatuPresente());
         verificaFalso(isProtezionePossedutoPresente());
+        verificaFalso(isProtezioneVampiroPresente());
         tratti.aggiungiProtezioneCreatureOmbra();
         verificaLupiPresenti();
         verificaVero(isProtezioneNegromantePresente());
         verificaVero(isProtezioneNosferatuPresente());
         verificaVero(isProtezionePossedutoPresente());
+        verificaVero(isProtezioneVampiroPresente());
         verificaProtetto();
     }
 
@@ -74,5 +76,7 @@ public final class TestTratti
     private boolean isProtezioneLupiPresente() { return tratti.isProtezioneLupiPresente(); }
 
     private boolean isProtezioneNegromantePresente() { return tratti.isProtezioneNegromantePresente(); }
+
+    private boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 
 }
