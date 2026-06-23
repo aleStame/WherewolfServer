@@ -1205,6 +1205,11 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeRomeo);
     }
 
+    /*@Test public void testMaledizioneGuaritore()
+    {
+
+    }*/
+
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
     {
         verificaFallimentoVampirizzazione(nomeVittima, messaggio);

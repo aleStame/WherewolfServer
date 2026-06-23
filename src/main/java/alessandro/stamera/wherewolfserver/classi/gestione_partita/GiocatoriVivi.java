@@ -249,6 +249,10 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeVampiro() { return getNomeGiocatore(getPosizioneVampiro()); }
 
+    public void maledizione(String nome) { }
+
+    public boolean isMaledetto() { return false; }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;
