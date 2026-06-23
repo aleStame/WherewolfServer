@@ -13,7 +13,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
@@ -85,6 +85,23 @@ public final class TestLadra
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testVampirizzazione()
+    {
+        verificaProtetto();
+        Ruolo vampiro = FACTORY.getRuolo("Vampiro");
+        verificaVero(ruolo.isProtezionePresente(vampiro));
+        assertThat(ruolo.vampirizzazione()).isEqualTo(FALLITO);
+        verificaNonProtetto();
+        verificaAuraBianca(getAura());
+        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+        verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
+        assertThat(ruolo.vampirizzazione()).isEqualTo(FALLITO);
+        verificaAura(getAura(), NERA);
+        assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO);
+        verificaFalso(ruolo.isProtezionePresente(vampiro));
+        verificaVero(ruolo.isTrattoPresente(NON_MORTO));
+    }
 
     private Aura getAura() { return ruolo.getAura(); }
 
