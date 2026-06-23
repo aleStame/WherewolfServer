@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.AfterEach;
@@ -95,14 +96,16 @@ public final class TestLadra
         verificaAttaccoVampiro(FALLITO);
         verificaNonProtetto();
         verificaAuraBianca(getAura());
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
+        verificaFazione(CRIMINALI);
         verificaFalso(isNonMorto());
         verificaAttaccoVampiro(RIUSCITO);
         verificaAuraNera();
-        assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO);
+        verificaFazione(VAMPIRO);
         verificaFalso(isProtezionePresente(vampiro));
         verificaVero(isNonMorto());
     }
+
+    private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
 
     private void verificaAuraNera() { verificaAura(getAura(), NERA); }
 

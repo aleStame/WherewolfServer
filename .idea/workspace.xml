@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNonMorto">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAuraNera">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestLadra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestLadra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03282" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1781969714303</created>
-      <option name="number" value="03282" />
-      <option name="presentableId" value="LOCAL-03282" />
-      <option name="project" value="LOCAL" />
-      <updated>1781969714304</updated>
     </task>
     <task id="LOCAL-03283" summary="ROSSO: testVampirizzazioneFallita non riuscito">
       <option name="closed" value="true" />
@@ -687,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782213558471</updated>
     </task>
-    <option name="localTasksCounter" value="3331" />
+    <task id="LOCAL-03331" summary="REFACTORING: definizione del metodo verificaAuraNera">
+      <option name="closed" value="true" />
+      <created>1782213788041</created>
+      <option name="number" value="03331" />
+      <option name="presentableId" value="LOCAL-03331" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213788041</updated>
+    </task>
+    <option name="localTasksCounter" value="3332" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteVampiroPostAttacco" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMortePostAttacco" />
     <MESSAGE value="VERDE DIRETTO: testRomeizzazione riuscito" />
@@ -727,6 +726,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNonMorto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNera" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAuraNera" />
   </component>
 </project>
