@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtezionePresente">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNonMorto">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestLadra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestLadra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,22 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03280" summary="VERDE: testVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1781950482561</created>
-      <option name="number" value="03280" />
-      <option name="presentableId" value="LOCAL-03280" />
-      <option name="project" value="LOCAL" />
-      <updated>1781950482561</updated>
-    </task>
-    <task id="LOCAL-03281" summary="VERDE DIRETTO">
-      <option name="closed" value="true" />
-      <created>1781951021511</created>
-      <option name="number" value="03281" />
-      <option name="presentableId" value="LOCAL-03281" />
-      <option name="project" value="LOCAL" />
-      <updated>1781951021511</updated>
     </task>
     <task id="LOCAL-03282" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
       <option name="closed" value="true" />
@@ -687,7 +671,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782213100322</updated>
     </task>
-    <option name="localTasksCounter" value="3329" />
+    <task id="LOCAL-03329" summary="REFACTORING: definizione del metodo verificaAttaccoVampiro">
+      <option name="closed" value="true" />
+      <created>1782213363016</created>
+      <option name="number" value="03329" />
+      <option name="presentableId" value="LOCAL-03329" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213363016</updated>
+    </task>
+    <task id="LOCAL-03330" summary="REFACTORING: definizione del metodo isNonMorto">
+      <option name="closed" value="true" />
+      <created>1782213558471</created>
+      <option name="number" value="03330" />
+      <option name="presentableId" value="LOCAL-03330" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213558471</updated>
+    </task>
+    <option name="localTasksCounter" value="3331" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteVampiroPostAttacco" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMortePostAttacco" />
@@ -722,11 +721,12 @@
     <MESSAGE value="VERDE DIRETTO: testMorteVampiro riuscito" />
     <MESSAGE value="ROSSO: testAttaccoVampiroContadinoLupizzato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiroContadinoLupizzato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiro" />
     <MESSAGE value="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtezionePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiro" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNonMorto" />
   </component>
 </project>

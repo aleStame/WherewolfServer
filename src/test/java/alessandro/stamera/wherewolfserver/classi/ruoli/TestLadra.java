@@ -82,7 +82,7 @@ public final class TestLadra
         verificaNonProtetto();
         verificaVero(maledizione());
         verificaVero(isMaledetto());
-        verificaAura(getAura(), NERA);
+        verificaAuraNera();
     }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
@@ -98,11 +98,13 @@ public final class TestLadra
         assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
         verificaFalso(isNonMorto());
         verificaAttaccoVampiro(RIUSCITO);
-        verificaAura(getAura(), NERA);
+        verificaAuraNera();
         assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO);
         verificaFalso(isProtezionePresente(vampiro));
         verificaVero(isNonMorto());
     }
+
+    private void verificaAuraNera() { verificaAura(getAura(), NERA); }
 
     private boolean isNonMorto() { return ruolo.isTrattoPresente(NON_MORTO); }
 
