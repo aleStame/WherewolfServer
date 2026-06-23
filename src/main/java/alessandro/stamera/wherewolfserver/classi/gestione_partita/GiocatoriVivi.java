@@ -249,9 +249,9 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeVampiro() { return getNomeGiocatore(getPosizioneVampiro()); }
 
-    public void maledizione(String nome) { }
+    public void maledizione(String nome) { getRuolo(nome).maledizione(); }
 
-    public boolean isMaledetto() { return false; }
+    public boolean isMaledetto(String nome) { return getRuolo(nome).isMaledetto(); }
 
     private int getPosizioneVampiro()
     {
