@@ -863,15 +863,17 @@ public final class TestGiocatoriVivi
     {
         String nome = "Alessia";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isMegera(nome));
+        verificaFalso(isMegera(nome));
     }
 
     @Test public void testMegera()
     {
         String nome = "Orietta";
         aggiungiGiocatore(nome, "Megera");
-        verificaVero(giocatori.isMegera(nome));
+        verificaVero(isMegera(nome));
     }
+
+    private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
     private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
 

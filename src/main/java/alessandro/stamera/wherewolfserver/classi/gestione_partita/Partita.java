@@ -188,8 +188,8 @@ public final class Partita
     {
         aggiungiGiocatoreVivo(nome, getRuoloMortoNotte(nome));
         mortiNotte.eliminaGiocatore(nome);
-        if(getRuoloVivo(nome).isMegera()) getRuoloVivo(vivi.getNomeGuaritore()).maledizione();
-        if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
+        if(vivi.isMegera(nome)) vivi.maledizione(vivi.getNomeGuaritore());
+        else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
     }
 
     public void incrementaVotiContadinoMostro(String nome)

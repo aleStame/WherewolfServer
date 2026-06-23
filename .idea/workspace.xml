@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNonMegera riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMegera riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03302" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaMortoContadinoLupizzato riuscito">
-      <option name="closed" value="true" />
-      <created>1782127212849</created>
-      <option name="number" value="03302" />
-      <option name="presentableId" value="LOCAL-03302" />
-      <option name="project" value="LOCAL" />
-      <updated>1782127212849</updated>
     </task>
     <task id="LOCAL-03303" summary="VERDE DIRETTO: testVampirizzazioneGiuliettaCriminali riuscito">
       <option name="closed" value="true" />
@@ -687,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782227575408</updated>
     </task>
-    <option name="localTasksCounter" value="3351" />
+    <task id="LOCAL-03351" summary="VERDE DIRETTO: testMegera riuscito">
+      <option name="closed" value="true" />
+      <created>1782228171575</created>
+      <option name="number" value="03351" />
+      <option name="presentableId" value="LOCAL-03351" />
+      <option name="project" value="LOCAL" />
+      <updated>1782228171576</updated>
+    </task>
+    <option name="localTasksCounter" value="3352" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoVampiroContadinoLupizzato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiroContadinoLupizzato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
@@ -727,6 +727,7 @@
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
     <MESSAGE value="ROSSO: testNonMegera non riuscito" />
     <MESSAGE value="VERDE: testNonMegera riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNonMegera riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMegera riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMegera riuscito" />
   </component>
 </project>
