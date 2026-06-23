@@ -363,7 +363,7 @@ public class Ruolo
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
-    public boolean isProtezioneVampiroPresente() { return true; }
+    public boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 
     public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
