@@ -311,7 +311,6 @@ public class Ruolo
         EsitoAttacco esito = FALLITO;
         if(!isMistico() && !isProtezionePresente(FACTORY.getRuolo("Vampiro")))
         {
-            System.out.println("eccoci qua");
             trasformazioneVampiro();
             esito = RIUSCITO;
         }
@@ -363,6 +362,8 @@ public class Ruolo
     public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
     public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
+
+    public boolean isProtezioneVampiroPresente() { return true; }
 
     public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
 
