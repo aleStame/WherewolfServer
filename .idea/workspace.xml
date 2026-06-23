@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testVampirizzazione riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isProtezionePresente">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestLadra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestLadra.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03279" summary="ROSSO: testVampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1781949993620</created>
-      <option name="number" value="03279" />
-      <option name="presentableId" value="LOCAL-03279" />
-      <option name="project" value="LOCAL" />
-      <updated>1781949993621</updated>
     </task>
     <task id="LOCAL-03280" summary="VERDE: testVampirizzazione riuscito">
       <option name="closed" value="true" />
@@ -685,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782212653177</updated>
     </task>
-    <option name="localTasksCounter" value="3328" />
+    <task id="LOCAL-03328" summary="REFACTORING: definizione del metodo isProtezionePresente">
+      <option name="closed" value="true" />
+      <created>1782213100322</created>
+      <option name="number" value="03328" />
+      <option name="presentableId" value="LOCAL-03328" />
+      <option name="project" value="LOCAL" />
+      <updated>1782213100322</updated>
+    </task>
+    <option name="localTasksCounter" value="3329" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiroPresente" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteVampiroPostAttacco" />
@@ -725,6 +726,7 @@
     <MESSAGE value="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVampirizzazione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtezionePresente" />
   </component>
 </project>
