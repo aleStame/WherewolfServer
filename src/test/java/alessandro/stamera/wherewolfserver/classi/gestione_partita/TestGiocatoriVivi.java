@@ -828,6 +828,53 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeVampiro(), nome);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testMaledizione(String nomeRuolo)
+    {
+        String nome = "Mario";
+        aggiungiGiocatore(nome, nomeRuolo);
+        giocatori.maledizione(nome);
+        verificaVero(giocatori.isMaledetto(nome));
+        ripristina(nome);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testNonMegera(String nomeRuolo)
+    {
+        String nome = "Alessia";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(isMegera(nome));
+    }
+
+    @Test public void testMegera()
+    {
+        String nome = "Orietta";
+        aggiungiGiocatore(nome, "Megera");
+        verificaVero(isMegera(nome));
+    }
+
+    private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
+
     private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
 
     private boolean isVampiroPresente() { return giocatori.isVampiroPresente(); }
@@ -860,7 +907,8 @@ public final class TestGiocatoriVivi
 
     private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
 
-    private void verificaGildata(String nome, EsitoAttacco esito) {
+    private void verificaGildata(String nome, EsitoAttacco esito)
+    {
         verificaAttaccoVampiro(giocatori.gildata(nome), esito);
     }
 
