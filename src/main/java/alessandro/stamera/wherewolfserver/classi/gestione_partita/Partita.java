@@ -291,6 +291,8 @@ public final class Partita
         }
     }
 
+    public boolean isMaledetto(String nome) { return false; }
+
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
         String nomeMorto = vivi.getNomeVampiro();

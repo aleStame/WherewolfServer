@@ -1205,10 +1205,16 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeRomeo);
     }
 
-    /*@Test public void testMaledizioneGuaritore()
+    @Test public void testMaledizioneGuaritore()
     {
-
-    }*/
+        String nomeGuaritore = "Jack", nomeMegera = "Megera";
+        inizializzaPartita(new String[][] { { nomeGuaritore, "Guaritore" }, { nomeMegera, "Megera" }, { "Hal", "Assassino" } });
+        attaccoAssassino(nomeMegera);
+        partita.guarisci(nomeMegera);
+        terminaNotte();
+        verificaNonEliminati(nomeGuaritore, nomeMegera);
+        verificaVero(partita.isMaledetto(nomeGuaritore));
+    }
 
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
     {
