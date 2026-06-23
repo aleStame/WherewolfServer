@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: semplificazione del codice" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTRORING: compattazione dei test sull'attacco dell'assassino all'amato" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +103,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/vampirizzazioneLadra",
+    "git-widget-placeholder": "feature/attaccoAmatoAssassino",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -292,46 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03291" summary="REFACTORING: definizione del metodo isVampiroPresente">
-      <option name="closed" value="true" />
-      <created>1782056159307</created>
-      <option name="number" value="03291" />
-      <option name="presentableId" value="LOCAL-03291" />
-      <option name="project" value="LOCAL" />
-      <updated>1782056159307</updated>
-    </task>
-    <task id="LOCAL-03292" summary="REFACTORING: definizione del metodo getPosizioneVampiro">
-      <option name="closed" value="true" />
-      <created>1782056549204</created>
-      <option name="number" value="03292" />
-      <option name="presentableId" value="LOCAL-03292" />
-      <option name="project" value="LOCAL" />
-      <updated>1782056549204</updated>
-    </task>
-    <task id="LOCAL-03293" summary="REFACTORING: definizione del metodo isVampiro">
-      <option name="closed" value="true" />
-      <created>1782056881651</created>
-      <option name="number" value="03293" />
-      <option name="presentableId" value="LOCAL-03293" />
-      <option name="project" value="LOCAL" />
-      <updated>1782056881652</updated>
-    </task>
-    <task id="LOCAL-03294" summary="REFACTORING: definizione del metodo gestioneMorteVampiroPostAttacco">
-      <option name="closed" value="true" />
-      <created>1782057086262</created>
-      <option name="number" value="03294" />
-      <option name="presentableId" value="LOCAL-03294" />
-      <option name="project" value="LOCAL" />
-      <updated>1782057086262</updated>
-    </task>
-    <task id="LOCAL-03295" summary="REFACTORING: definizione del metodo verificaMortePostAttacco">
-      <option name="closed" value="true" />
-      <created>1782057296728</created>
-      <option name="number" value="03295" />
-      <option name="presentableId" value="LOCAL-03295" />
-      <option name="project" value="LOCAL" />
-      <updated>1782057296728</updated>
     </task>
     <task id="LOCAL-03296" summary="REFACTORING: definizione del metodo verificaMortePostAttacco">
       <option name="closed" value="true" />
@@ -685,7 +645,47 @@
       <option name="project" value="LOCAL" />
       <updated>1782215641913</updated>
     </task>
-    <option name="localTasksCounter" value="3340" />
+    <task id="LOCAL-03340" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1782216166374</created>
+      <option name="number" value="03340" />
+      <option name="presentableId" value="LOCAL-03340" />
+      <option name="project" value="LOCAL" />
+      <updated>1782216166374</updated>
+    </task>
+    <task id="LOCAL-03341" summary="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1782219943380</created>
+      <option name="number" value="03341" />
+      <option name="presentableId" value="LOCAL-03341" />
+      <option name="project" value="LOCAL" />
+      <updated>1782219943380</updated>
+    </task>
+    <task id="LOCAL-03342" summary="ROSSO: testAttaccoContadinoMostroAmatoAssassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1782220732867</created>
+      <option name="number" value="03342" />
+      <option name="presentableId" value="LOCAL-03342" />
+      <option name="project" value="LOCAL" />
+      <updated>1782220732867</updated>
+    </task>
+    <task id="LOCAL-03343" summary="VERDE: testAttaccoContadinoMostroAmatoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1782221317819</created>
+      <option name="number" value="03343" />
+      <option name="presentableId" value="LOCAL-03343" />
+      <option name="project" value="LOCAL" />
+      <updated>1782221317819</updated>
+    </task>
+    <task id="LOCAL-03344" summary="REFACTRORING: compattazione dei test sull'attacco dell'assassino all'amato">
+      <option name="closed" value="true" />
+      <created>1782221535690</created>
+      <option name="number" value="03344" />
+      <option name="presentableId" value="LOCAL-03344" />
+      <option name="project" value="LOCAL" />
+      <updated>1782221535691</updated>
+    </task>
+    <option name="localTasksCounter" value="3345" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,10 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVampirizzazioneGiuliettaCriminali riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
-    <MESSAGE value="VERDE: testAttaccoVampiro non riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo trasformazioneVampiro" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneFallita riuscito" />
@@ -725,6 +721,10 @@
     <MESSAGE value="ROSSO: testInizializzazione non riuscito" />
     <MESSAGE value="VERDE: testInizializzazione riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoContadinoMostroAmatoAssassino non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoContadinoMostroAmatoAssassino riuscito" />
+    <MESSAGE value="REFACTRORING: compattazione dei test sull'attacco dell'assassino all'amato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTRORING: compattazione dei test sull'attacco dell'assassino all'amato" />
   </component>
 </project>
