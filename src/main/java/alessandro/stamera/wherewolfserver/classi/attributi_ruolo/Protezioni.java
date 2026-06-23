@@ -40,6 +40,8 @@ public final class Protezioni
 
     public boolean isPossedutoPresente() { return cercaRuolo(Ruolo::isPosseduto); }
 
+    public boolean isVampiroPresente() { return false; }
+
     private boolean cercaRuolo(Predicate<Ruolo> condizione) { return ruoli.stream().anyMatch(condizione); }
 
 }
