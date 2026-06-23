@@ -848,6 +848,24 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testNonMegera(String nomeRuolo)
+    {
+        String nome = "Alessia";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isMegera(nome));
+    }
+
     private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
 
     private boolean isVampiroPresente() { return giocatori.isVampiroPresente(); }
@@ -880,7 +898,8 @@ public final class TestGiocatoriVivi
 
     private boolean isNonnaPresente() { return giocatori.isNonnaPresente(); }
 
-    private void verificaGildata(String nome, EsitoAttacco esito) {
+    private void verificaGildata(String nome, EsitoAttacco esito)
+    {
         verificaAttaccoVampiro(giocatori.gildata(nome), esito);
     }
 

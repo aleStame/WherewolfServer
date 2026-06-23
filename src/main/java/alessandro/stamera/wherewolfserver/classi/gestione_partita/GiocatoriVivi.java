@@ -253,6 +253,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isMaledetto(String nome) { return getRuolo(nome).isMaledetto(); }
 
+    public boolean isMegera(String nome) { return true; }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;
