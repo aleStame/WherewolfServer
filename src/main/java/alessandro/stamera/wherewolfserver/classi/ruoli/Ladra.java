@@ -6,7 +6,6 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class Ladra extends Criminale
 {
@@ -58,7 +57,7 @@ public final class Ladra extends Criminale
     @Override public EsitoAttacco vampirizzazione()
     {
         EsitoAttacco esito = super.vampirizzazione();
-        if(esito == FALLITO && isProtezionePresente(FACTORY.getRuolo("Vampiro"))) perdiProtezioni();
+        if(esito == FALLITO && isProtezioneVampiroPresente()) perdiProtezioni();
         return esito;
     }
 
