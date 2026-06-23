@@ -91,7 +91,7 @@ public final class TestLadra
     {
         verificaProtetto();
         Ruolo vampiro = FACTORY.getRuolo("Vampiro");
-        verificaVero(ruolo.isProtezionePresente(vampiro));
+        verificaVero(isProtezionePresente(vampiro));
         assertThat(ruolo.vampirizzazione()).isEqualTo(FALLITO);
         verificaNonProtetto();
         verificaAuraBianca(getAura());
@@ -100,9 +100,11 @@ public final class TestLadra
         assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
         verificaAura(getAura(), NERA);
         assertThat(ruolo.getFazione()).isEqualTo(VAMPIRO);
-        verificaFalso(ruolo.isProtezionePresente(vampiro));
+        verificaFalso(isProtezionePresente(vampiro));
         verificaVero(ruolo.isTrattoPresente(NON_MORTO));
     }
+
+    private boolean isProtezionePresente(Ruolo vampiro) { return ruolo.isProtezionePresente(vampiro); }
 
     @AfterEach public void ripristinaRuolo() { ruolo.ripristina(); }
 
