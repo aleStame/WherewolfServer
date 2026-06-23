@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMaledizioneGuaritore riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testNonMegera non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03300" summary="VERDE DIRETTO: testVampirizzazioneGiulietta riuscito">
-      <option name="closed" value="true" />
-      <created>1782121366698</created>
-      <option name="number" value="03300" />
-      <option name="presentableId" value="LOCAL-03300" />
-      <option name="project" value="LOCAL" />
-      <updated>1782121366698</updated>
     </task>
     <task id="LOCAL-03301" summary="VERDE DIRETTO: testVampirizzazioneGiulietta riuscito">
       <option name="closed" value="true" />
@@ -688,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782226421156</updated>
     </task>
-    <option name="localTasksCounter" value="3349" />
+    <task id="LOCAL-03349" summary="ROSSO: testNonMegera non riuscito">
+      <option name="closed" value="true" />
+      <created>1782226937583</created>
+      <option name="number" value="03349" />
+      <option name="presentableId" value="LOCAL-03349" />
+      <option name="project" value="LOCAL" />
+      <updated>1782226937584</updated>
+    </task>
+    <option name="localTasksCounter" value="3350" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteVampiro riuscito" />
     <MESSAGE value="ROSSO: testAttaccoVampiroContadinoLupizzato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiroContadinoLupizzato riuscito" />
@@ -728,6 +726,7 @@
     <MESSAGE value="VERDE: testMaledizione riuscito" />
     <MESSAGE value="ROSSO: testMaledizioneGuaritore non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMaledizioneGuaritore riuscito" />
+    <MESSAGE value="ROSSO: testNonMegera non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNonMegera non riuscito" />
   </component>
 </project>
