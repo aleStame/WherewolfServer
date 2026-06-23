@@ -866,6 +866,13 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isMegera(nome));
     }
 
+    @Test public void testMegera()
+    {
+        String nome = "Orietta";
+        aggiungiGiocatore(nome, "Megera");
+        verificaVero(giocatori.isMegera(nome));
+    }
+
     private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
 
     private boolean isVampiroPresente() { return giocatori.isVampiroPresente(); }
