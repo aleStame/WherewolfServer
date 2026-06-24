@@ -100,7 +100,7 @@ public class Giocatori
 
     public void ripristina(String nome) { getRuolo(nome).ripristina(); }
 
-    public boolean isMegera(String nome) { return true; }
+    public boolean isMegera(String nome) { return getRuolo(nome).isMegera(); }
 
     private Optional<Entry<String, Ruolo>> cercaNosferatu()
     {
