@@ -1078,16 +1078,16 @@ public final class TestPartita
             "Eremita, NON_MISTICO", "Ghoul, NON_MISTICO", "Giovane lupo, NON_MISTICO", "Giulietta, NON_MISTICO", "Giullare, NON_MISTICO",
             "Goblin, MISTICO", "Guardia, NON_MISTICO", "Guardia corrotta, NON_MISTICO", "Guaritore, MISTICO", "Inquisitore, NON_MISTICO",
             "Ladra, NON_MISTICO", "Leprecauno, MISTICO", "Lupo del branco, NON_MISTICO", "Lupo reietto, NON_MISTICO", "Lupo solitario, NON_MISTICO",
-            "Mago, MISTICO", "Medium, MISTICO", "Megera, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO", "Negromante, MISTICO",
-            "Nonna, NON_MISTICO", "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO", "Pazzo, NON_MISTICO",
-            "Peccatore, NON_MISTICO", "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO", "Spia, NON_MISTICO", "Sensitiva, MISTICO",
-            "Sensitiva, MISTICO", "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
+            "Mago, MISTICO", "Medium, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO", "Negromante, MISTICO", "Nonna, NON_MISTICO",
+            "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO", "Pazzo, NON_MISTICO", "Peccatore, NON_MISTICO",
+            "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO", "Spia, NON_MISTICO", "Sensitiva, MISTICO", "Sensitiva, MISTICO",
+            "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
         }
     )
     public void testMisticismo(String nomeRuolo, Misticismo misticismo)
     {
         String nome = "Mario";
-        inizializzaPartita(new String[][] { { nome, nomeRuolo } });
+        inizializzaPartita(new String[][] { { "Wario", "Mago" }, { nome, nomeRuolo } });
         assertThat(controlloMago(nome)).isEqualTo(misticismo);
     }
 
@@ -1231,8 +1231,9 @@ public final class TestPartita
         verificaVero(partita.isMaledetto(nomeMago));
         assertThat(partita.controlloMago(nomeMegera)).isEqualTo(NON_MISTICO);
         attaccoAssassino(nomeMegera);
+        terminaNotte();
         verificaFalso(partita.isMaledetto(nomeMago));
-        assertThat(partita.controlloMago(nomeMegera)).isEqualTo(MISTICO);
+        assertThat(partita.controlloMago(nomeMistico)).isEqualTo(MISTICO);
     }
 
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)

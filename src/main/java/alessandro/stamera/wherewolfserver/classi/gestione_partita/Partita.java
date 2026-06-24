@@ -12,6 +12,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -220,7 +221,10 @@ public final class Partita
     public Misticismo controlloMago(String nome)
     {
         Misticismo misticismo = vivi.controlloMago(nome);
-        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(vivi.getNomeMago());
+        String nomeMago = vivi.getNomeMago();
+        if(isMaledetto(nomeMago)) misticismo = NON_MISTICO;
+        if(vivi.isMegera(nome)) vivi.maledizione(nomeMago);
+        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(nomeMago);
         return misticismo;
     }
 
@@ -343,7 +347,13 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        eliminati.aggiungiGiocatore(nome, getRuoloMortoNotte(nome));
+        Ruolo ruolo = getRuoloMortoNotte(nome);
+        eliminati.aggiungiGiocatore(nome, ruolo);
+        if(ruolo.isMegera()) for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
+        {
+            String nomeGiocatore = getNomeGiocatoreVivo(i);
+            if(vivi.isMistico(nomeGiocatore)) vivi.ripristina(nomeGiocatore);
+        }
         eliminaGiocatoreMortoNotte(nome);
     }
 
