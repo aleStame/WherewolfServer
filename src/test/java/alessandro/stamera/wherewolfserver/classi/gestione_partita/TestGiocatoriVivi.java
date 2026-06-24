@@ -896,6 +896,15 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isMistico(nome));
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    public void testMistico(String nomeRuolo)
+    {
+        String nome = "Salvatore";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaVero(giocatori.isMistico(nome));
+    }
+
     private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
     private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
