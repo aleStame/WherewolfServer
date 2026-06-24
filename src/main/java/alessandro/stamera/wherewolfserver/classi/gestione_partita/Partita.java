@@ -220,9 +220,8 @@ public final class Partita
 
     public Misticismo controlloMago(String nome)
     {
-        Misticismo misticismo = vivi.controlloMago(nome);
         String nomeMago = vivi.getNomeMago();
-        if(isMaledetto(nomeMago)) misticismo = NON_MISTICO;
+        Misticismo misticismo = eseguiControlloMago(nome);
         if(vivi.isMegera(nome)) vivi.maledizione(nomeMago);
         if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(nomeMago);
         return misticismo;
@@ -297,6 +296,14 @@ public final class Partita
     }
 
     public boolean isMaledetto(String nome) { return vivi.isMaledetto(nome); }
+
+    private Misticismo eseguiControlloMago(String nome)
+    {
+        Misticismo misticismo = vivi.controlloMago(nome);
+        String nomeMago = vivi.getNomeMago();
+        if(isMaledetto(nomeMago)) misticismo = NON_MISTICO;
+        return misticismo;
+    }
 
     private void maledizioneGuaritore() { vivi.maledizione(vivi.getNomeGuaritore()); }
 
