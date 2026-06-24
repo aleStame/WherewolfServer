@@ -850,7 +850,7 @@ public final class TestGiocatoriVivi
         String nome = "Mario";
         aggiungiGiocatore(nome, nomeRuolo);
         giocatori.maledizione(nome);
-        verificaVero(giocatori.isMaledetto(nome));
+        verificaVero(isMaledetto(nome));
         ripristina(nome);
     }
 
@@ -911,10 +911,12 @@ public final class TestGiocatoriVivi
         String nome = "Gianluigi";
         aggiungiGiocatore(nome, nomeRuolo);
         giocatori.maledizione(nome);
-        verificaVero(giocatori.isMaledetto(nome));
+        verificaVero(isMaledetto(nome));
         giocatori.ripristinaMistici();
-        verificaFalso(giocatori.isMaledetto(nome));
+        verificaFalso(isMaledetto(nome));
     }
+
+    private boolean isMaledetto(String nome) { return giocatori.isMaledetto(nome); }
 
     private boolean isMistico(String nome) { return giocatori.isMistico(nome); }
 
