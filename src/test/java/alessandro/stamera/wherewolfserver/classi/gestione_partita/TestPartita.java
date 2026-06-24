@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static java.util.Arrays.stream;
@@ -1219,6 +1220,19 @@ public final class TestPartita
         verificaNonEliminati(nomeGuaritore, nomeMegera);
         verificaVero(partita.isMaledetto(nomeGuaritore));
         ripristinaGiocatoreVivo(nomeGuaritore);
+    }
+
+    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Medium", "Negromante", "Sensitiva", "Sidhe" })
+    public void testMaledizioneMago(String nomeRuolo)
+    {
+        String nomeMegera = "Marco", nomeMistico = "Emma", nomeMago = "Annalisa";
+        inizializzaPartita(new String[][] { { nomeMegera, "Megera" }, { nomeMistico, nomeRuolo }, { nomeMago, "Mago" }, { "Ivan", "Assassino" } });
+        assertThat(partita.controlloMago(nomeMegera)).isEqualTo(MISTICO);
+        verificaVero(partita.isMaledetto(nomeMago));
+        assertThat(partita.controlloMago(nomeMegera)).isEqualTo(NON_MISTICO);
+        attaccoAssassino(nomeMegera);
+        verificaFalso(partita.isMaledetto(nomeMago));
+        assertThat(partita.controlloMago(nomeMegera)).isEqualTo(MISTICO);
     }
 
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)

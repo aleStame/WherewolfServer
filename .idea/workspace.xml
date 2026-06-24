@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMistico riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isMistico">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,14 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03306" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1782129241623</created>
-      <option name="number" value="03306" />
-      <option name="presentableId" value="LOCAL-03306" />
-      <option name="project" value="LOCAL" />
-      <updated>1782129241623</updated>
     </task>
     <task id="LOCAL-03307" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
       <option name="closed" value="true" />
@@ -685,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782305492063</updated>
     </task>
-    <option name="localTasksCounter" value="3355" />
+    <task id="LOCAL-03355" summary="REFACTORING: definizione del metodo isMistico">
+      <option name="closed" value="true" />
+      <created>1782305642138</created>
+      <option name="number" value="03355" />
+      <option name="presentableId" value="LOCAL-03355" />
+      <option name="project" value="LOCAL" />
+      <updated>1782305642138</updated>
+    </task>
+    <option name="localTasksCounter" value="3356" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
@@ -725,6 +727,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isMegera" />
     <MESSAGE value="VERDE DIRETTO: testNonMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMistico riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isMistico" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isMistico" />
   </component>
 </project>
