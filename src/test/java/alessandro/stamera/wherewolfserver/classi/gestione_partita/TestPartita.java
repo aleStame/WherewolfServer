@@ -1227,13 +1227,18 @@ public final class TestPartita
     {
         String nomeMegera = "Marco", nomeMistico = "Emma", nomeMago = "Annalisa";
         inizializzaPartita(new String[][] { { nomeMegera, "Megera" }, { nomeMistico, nomeRuolo }, { nomeMago, "Mago" }, { "Ivan", "Assassino" } });
-        assertThat(partita.controlloMago(nomeMegera)).isEqualTo(MISTICO);
+        verificaControlloMago(nomeMegera, MISTICO);
         verificaMaledetto(nomeMago);
-        assertThat(partita.controlloMago(nomeMegera)).isEqualTo(NON_MISTICO);
+        verificaControlloMago(nomeMegera, NON_MISTICO);
         attaccoAssassino(nomeMegera);
         terminaNotte();
         verificaFalso(isMaledetto(nomeMago));
-        assertThat(partita.controlloMago(nomeMistico)).isEqualTo(MISTICO);
+        verificaControlloMago(nomeMistico, MISTICO);
+    }
+
+    private void verificaControlloMago(String nomeMistico, Misticismo misticismo)
+    {
+        assertThat(partita.controlloMago(nomeMistico)).isEqualTo(misticismo);
     }
 
     private void verificaMaledetto(String nome) { verificaVero(isMaledetto(nome)); }
