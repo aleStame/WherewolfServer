@@ -220,11 +220,15 @@ public final class Partita
 
     public Misticismo controlloMago(String nome)
     {
-        String nomeMago = vivi.getNomeMago();
         Misticismo misticismo = eseguiControlloMago(nome);
-        if(vivi.isMegera(nome)) malediciMago();
-        else if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(nomeMago);
+        gestisciInterazioniMago(nome);
         return misticismo;
+    }
+
+    private void gestisciInterazioniMago(String nome)
+    {
+        if(vivi.isMegera(nome)) malediciMago();
+        else if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(vivi.getNomeMago());
     }
 
     public void attaccoNegromante(String nome)
