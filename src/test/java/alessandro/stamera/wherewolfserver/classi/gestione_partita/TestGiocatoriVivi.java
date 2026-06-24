@@ -905,6 +905,17 @@ public final class TestGiocatoriVivi
         verificaVero(isMistico(nome));
     }
 
+    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe" })
+    public void testMisticiMaledetti(String nomeRuolo)
+    {
+        String nome = "Gianluigi";
+        aggiungiGiocatore(nome, nomeRuolo);
+        giocatori.maledizione(nome);
+        verificaVero(giocatori.isMaledetto(nome));
+        giocatori.ripristinaMistici();
+        verificaFalso(giocatori.isMaledetto(nome));
+    }
+
     private boolean isMistico(String nome) { return giocatori.isMistico(nome); }
 
     private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
