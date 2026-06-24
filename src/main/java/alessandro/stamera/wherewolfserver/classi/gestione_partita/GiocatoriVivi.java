@@ -255,6 +255,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isMegera(String nome) { return getRuolo(nome).isMegera(); }
 
+    public boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;
@@ -407,8 +409,6 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isBracconiere(int posizione) { return getRuolo(posizione).isBracconiere(); }
 
     private boolean isMistico(int posizione) { return isMistico(getNomeGiocatore(posizione)); }
-
-    private boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
 
     private boolean isLupo(int posizione) { return getRuolo(posizione).isLupo(); }
 

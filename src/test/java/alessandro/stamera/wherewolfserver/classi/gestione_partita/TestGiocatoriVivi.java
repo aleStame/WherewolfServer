@@ -624,7 +624,7 @@ public final class TestGiocatoriVivi
             "Sensitiva, MISTICO", "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
         }
     )
-    public void testMisticismo(String nomeRuolo, Misticismo misticismo)
+    public void testControlloMago(String nomeRuolo, Misticismo misticismo)
     {
         String nome = "Mario";
         aggiungiGiocatore(nome, nomeRuolo);
@@ -877,6 +877,23 @@ public final class TestGiocatoriVivi
         String nome = "Orietta";
         aggiungiGiocatore(nome, "Megera");
         verificaVero(isMegera(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco",
+            "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+        }
+    )
+    public void testNonMistico(String nomeRuolo)
+    {
+        String nome = "Luigi";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isMistico(nome));
     }
 
     private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
