@@ -100,6 +100,8 @@ public class Giocatori
 
     public void ripristina(String nome) { getRuolo(nome).ripristina(); }
 
+    public boolean isMegera(String nome) { return true; }
+
     private Optional<Entry<String, Ruolo>> cercaNosferatu()
     {
         return cercaRuolo(ruolo -> ruolo.getValue().isNosferatu());

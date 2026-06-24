@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isMaledetto">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaMaledetto">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03319" summary="VERDE: testAttaccoVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1782139430463</created>
-      <option name="number" value="03319" />
-      <option name="presentableId" value="LOCAL-03319" />
-      <option name="project" value="LOCAL" />
-      <updated>1782139430463</updated>
     </task>
     <task id="LOCAL-03320" summary="VERDE DIRETTO: testMorteVampiro riuscito">
       <option name="closed" value="true" />
@@ -687,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782338036733</updated>
     </task>
-    <option name="localTasksCounter" value="3368" />
+    <task id="LOCAL-03368" summary="REFACTORING: definizione del metodo verificaMaledetto">
+      <option name="closed" value="true" />
+      <created>1782338359792</created>
+      <option name="number" value="03368" />
+      <option name="presentableId" value="LOCAL-03368" />
+      <option name="project" value="LOCAL" />
+      <updated>1782338359792</updated>
+    </task>
+    <option name="localTasksCounter" value="3369" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -719,7 +721,6 @@
     <MESSAGE value="ROSSO: testMaledizioneMago non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneMago riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo ripristinaMistici" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaControlloMago" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMistico" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciInterazioniMago" />
@@ -727,6 +728,7 @@
     <MESSAGE value="ROSSO: testMisticiMaledetti non riuscito" />
     <MESSAGE value="VERDE: testMisticiMaledetti riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isMaledetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMaledetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMaledetto" />
   </component>
 </project>
