@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaMaledetto">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaControlloMago">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
@@ -295,14 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03312" summary="REFACTORING: definizione del metodo trasformazioneVampiro">
-      <option name="closed" value="true" />
-      <created>1782133143419</created>
-      <option name="number" value="03312" />
-      <option name="presentableId" value="LOCAL-03312" />
-      <option name="project" value="LOCAL" />
-      <updated>1782133143419</updated>
     </task>
     <task id="LOCAL-03313" summary="VERDE DIRETTO: testVampirizzazioneFallita riuscito">
       <option name="closed" value="true" />
@@ -688,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782314800509</updated>
     </task>
-    <option name="localTasksCounter" value="3361" />
+    <task id="LOCAL-03361" summary="REFACTORING: definizione del metodo verificaControlloMago">
+      <option name="closed" value="true" />
+      <created>1782315823445</created>
+      <option name="number" value="03361" />
+      <option name="presentableId" value="LOCAL-03361" />
+      <option name="project" value="LOCAL" />
+      <updated>1782315823445</updated>
+    </task>
+    <option name="localTasksCounter" value="3362" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testCreatureOmbra non riuscito" />
     <MESSAGE value="VERDE: testCreatureOmbra riuscito" />
     <MESSAGE value="ROSSO: testInizializzazione non riuscito" />
     <MESSAGE value="VERDE: testInizializzazione riuscito" />
@@ -728,6 +727,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo ripristinaMistici" />
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMaledetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMaledetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaControlloMago" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaControlloMago" />
   </component>
 </project>

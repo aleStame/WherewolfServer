@@ -1088,7 +1088,7 @@ public final class TestPartita
     {
         String nome = "Mario";
         inizializzaPartita(new String[][] { { "Wario", "Mago" }, { nome, nomeRuolo } });
-        assertThat(controlloMago(nome)).isEqualTo(misticismo);
+        verificaControlloMago(nome, misticismo);
     }
 
     @Test public void testMorteGhoulCacciatoreVampiro()
@@ -1227,14 +1227,16 @@ public final class TestPartita
     {
         String nomeMegera = "Marco", nomeMistico = "Emma", nomeMago = "Annalisa";
         inizializzaPartita(new String[][] { { nomeMegera, "Megera" }, { nomeMistico, nomeRuolo }, { nomeMago, "Mago" }, { "Ivan", "Assassino" } });
-        verificaControlloMago(nomeMegera, MISTICO);
+        verificaMistico(nomeMegera);
         verificaMaledetto(nomeMago);
         verificaControlloMago(nomeMegera, NON_MISTICO);
         attaccoAssassino(nomeMegera);
         terminaNotte();
         verificaFalso(isMaledetto(nomeMago));
-        verificaControlloMago(nomeMistico, MISTICO);
+        verificaMistico(nomeMistico);
     }
+
+    private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }
 
     private void verificaControlloMago(String nomeMistico, Misticismo misticismo)
     {
