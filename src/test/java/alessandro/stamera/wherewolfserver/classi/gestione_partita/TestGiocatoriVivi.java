@@ -854,13 +854,6 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
-    @Test public void testMegera()
-    {
-        String nome = "Orietta";
-        aggiungiGiocatore(nome, "Megera");
-        verificaVero(isMegera(nome));
-    }
-
     @ParameterizedTest @CsvSource
     (
         {

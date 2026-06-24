@@ -253,8 +253,6 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isMaledetto(String nome) { return getRuolo(nome).isMaledetto(); }
 
-    public boolean isMegera(String nome) { return getRuolo(nome).isMegera(); }
-
     public boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
 
     public void ripristinaMistici()

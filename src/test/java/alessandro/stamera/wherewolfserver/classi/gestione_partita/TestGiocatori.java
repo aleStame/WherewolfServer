@@ -168,6 +168,13 @@ public final class TestGiocatori
         verificaFalso(giocatori.isMegera(nome));
     }
 
+    @Test public void testMegera()
+    {
+        String nome = "Orietta";
+        aggiungiGiocatore(nome, "Megera");
+        verificaVero(giocatori.isMegera(nome));
+    }
+
     private boolean isRomeo(String nome) { return giocatori.isRomeo(nome); }
 
     private boolean isNosferatuPresente() { return giocatori.isNosferatuPresente(); }
