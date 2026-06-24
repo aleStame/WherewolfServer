@@ -893,7 +893,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Luigi";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isMistico(nome));
+        verificaFalso(isMistico(nome));
     }
 
     @ParameterizedTest
@@ -902,8 +902,10 @@ public final class TestGiocatoriVivi
     {
         String nome = "Salvatore";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaVero(giocatori.isMistico(nome));
+        verificaVero(isMistico(nome));
     }
+
+    private boolean isMistico(String nome) { return giocatori.isMistico(nome); }
 
     private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
