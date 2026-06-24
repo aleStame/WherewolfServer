@@ -12,6 +12,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -219,10 +220,18 @@ public final class Partita
 
     public Misticismo controlloMago(String nome)
     {
-        Misticismo misticismo = vivi.controlloMago(nome);
-        if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(vivi.getNomeMago());
+        Misticismo misticismo = eseguiControlloMago(nome);
+        gestisciInterazioniMago(nome);
         return misticismo;
     }
+
+    private void gestisciInterazioniMago(String nome)
+    {
+        if(vivi.isMegera(nome)) malediciMago();
+        else if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(getNomeMagoVivo());
+    }
+
+    private String getNomeMagoVivo() { return vivi.getNomeMago(); }
 
     public void attaccoNegromante(String nome)
     {
@@ -294,6 +303,16 @@ public final class Partita
 
     public boolean isMaledetto(String nome) { return vivi.isMaledetto(nome); }
 
+    private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
+
+    private Misticismo eseguiControlloMago(String nome)
+    {
+        Misticismo misticismo = vivi.controlloMago(nome);
+        String nomeMago = getNomeMagoVivo();
+        if(isMaledetto(nomeMago)) misticismo = NON_MISTICO;
+        return misticismo;
+    }
+
     private void maledizioneGuaritore() { vivi.maledizione(vivi.getNomeGuaritore()); }
 
     private void gestioneMorteVampiroPostAttacco(String nome)
@@ -343,7 +362,9 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        eliminati.aggiungiGiocatore(nome, getRuoloMortoNotte(nome));
+        Ruolo ruolo = getRuoloMortoNotte(nome);
+        eliminati.aggiungiGiocatore(nome, ruolo);
+        if(ruolo.isMegera()) vivi.ripristinaMistici();
         eliminaGiocatoreMortoNotte(nome);
     }
 

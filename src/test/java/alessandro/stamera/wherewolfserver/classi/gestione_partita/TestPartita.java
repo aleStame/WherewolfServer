@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static java.util.Arrays.stream;
@@ -1077,17 +1078,17 @@ public final class TestPartita
             "Eremita, NON_MISTICO", "Ghoul, NON_MISTICO", "Giovane lupo, NON_MISTICO", "Giulietta, NON_MISTICO", "Giullare, NON_MISTICO",
             "Goblin, MISTICO", "Guardia, NON_MISTICO", "Guardia corrotta, NON_MISTICO", "Guaritore, MISTICO", "Inquisitore, NON_MISTICO",
             "Ladra, NON_MISTICO", "Leprecauno, MISTICO", "Lupo del branco, NON_MISTICO", "Lupo reietto, NON_MISTICO", "Lupo solitario, NON_MISTICO",
-            "Mago, MISTICO", "Medium, MISTICO", "Megera, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO", "Negromante, MISTICO",
-            "Nonna, NON_MISTICO", "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO", "Pazzo, NON_MISTICO",
-            "Peccatore, NON_MISTICO", "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO", "Spia, NON_MISTICO", "Sensitiva, MISTICO",
-            "Sensitiva, MISTICO", "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
+            "Mago, MISTICO", "Medium, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO", "Negromante, MISTICO", "Nonna, NON_MISTICO",
+            "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO", "Pazzo, NON_MISTICO", "Peccatore, NON_MISTICO",
+            "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO", "Spia, NON_MISTICO", "Sensitiva, MISTICO", "Sensitiva, MISTICO",
+            "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
         }
     )
     public void testMisticismo(String nomeRuolo, Misticismo misticismo)
     {
         String nome = "Mario";
-        inizializzaPartita(new String[][] { { nome, nomeRuolo } });
-        assertThat(controlloMago(nome)).isEqualTo(misticismo);
+        inizializzaPartita(new String[][] { { "Wario", "Mago" }, { nome, nomeRuolo } });
+        verificaControlloMago(nome, misticismo);
     }
 
     @Test public void testMorteGhoulCacciatoreVampiro()
@@ -1217,9 +1218,34 @@ public final class TestPartita
         partita.guarisci(nomeMegera);
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
-        verificaVero(partita.isMaledetto(nomeGuaritore));
+        verificaMaledetto(nomeGuaritore);
         ripristinaGiocatoreVivo(nomeGuaritore);
     }
+
+    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Medium", "Negromante", "Sensitiva", "Sidhe" })
+    public void testMaledizioneMago(String nomeRuolo)
+    {
+        String nomeMegera = "Marco", nomeMistico = "Emma", nomeMago = "Annalisa";
+        inizializzaPartita(new String[][] { { nomeMegera, "Megera" }, { nomeMistico, nomeRuolo }, { nomeMago, "Mago" }, { "Ivan", "Assassino" } });
+        verificaMistico(nomeMegera);
+        verificaMaledetto(nomeMago);
+        verificaControlloMago(nomeMegera, NON_MISTICO);
+        attaccoAssassino(nomeMegera);
+        terminaNotte();
+        verificaFalso(isMaledetto(nomeMago));
+        verificaMistico(nomeMistico);
+    }
+
+    private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }
+
+    private void verificaControlloMago(String nomeMistico, Misticismo misticismo)
+    {
+        assertThat(partita.controlloMago(nomeMistico)).isEqualTo(misticismo);
+    }
+
+    private void verificaMaledetto(String nome) { verificaVero(isMaledetto(nome)); }
+
+    private boolean isMaledetto(String nomeMago) { return partita.isMaledetto(nomeMago); }
 
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
     {

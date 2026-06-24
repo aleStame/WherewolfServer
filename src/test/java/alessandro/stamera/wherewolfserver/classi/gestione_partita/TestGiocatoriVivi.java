@@ -624,7 +624,7 @@ public final class TestGiocatoriVivi
             "Sensitiva, MISTICO", "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
         }
     )
-    public void testMisticismo(String nomeRuolo, Misticismo misticismo)
+    public void testControlloMago(String nomeRuolo, Misticismo misticismo)
     {
         String nome = "Mario";
         aggiungiGiocatore(nome, nomeRuolo);
@@ -850,7 +850,7 @@ public final class TestGiocatoriVivi
         String nome = "Mario";
         aggiungiGiocatore(nome, nomeRuolo);
         giocatori.maledizione(nome);
-        verificaVero(giocatori.isMaledetto(nome));
+        verificaMaledetto(nome);
         ripristina(nome);
     }
 
@@ -859,25 +859,43 @@ public final class TestGiocatoriVivi
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
-            "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Mercante",
-            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva",
-            "Templare", "Vampiro"
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco",
+            "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
         }
     )
-    public void testNonMegera(String nomeRuolo)
+    public void testNonMistico(String nomeRuolo)
     {
-        String nome = "Alessia";
+        String nome = "Luigi";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(isMegera(nome));
+        verificaFalso(isMistico(nome));
     }
 
-    @Test public void testMegera()
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    public void testMistico(String nomeRuolo)
     {
-        String nome = "Orietta";
-        aggiungiGiocatore(nome, "Megera");
-        verificaVero(isMegera(nome));
+        String nome = "Salvatore";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaVero(isMistico(nome));
     }
+
+    @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Medium", "Megera", "Sensitiva" })
+    public void testMisticiMaledetti(String nomeRuolo)
+    {
+        String nome = "Gianluigi";
+        aggiungiGiocatore(nome, nomeRuolo);
+        giocatori.maledizione(nome);
+        verificaMaledetto(nome);
+        giocatori.ripristinaMistici();
+        verificaFalso(isMaledetto(nome));
+    }
+
+    private void verificaMaledetto(String nome) { verificaVero(isMaledetto(nome)); }
+
+    private boolean isMaledetto(String nome) { return giocatori.isMaledetto(nome); }
+
+    private boolean isMistico(String nome) { return giocatori.isMistico(nome); }
 
     private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
