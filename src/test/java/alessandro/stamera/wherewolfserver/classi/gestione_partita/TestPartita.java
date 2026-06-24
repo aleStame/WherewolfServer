@@ -1218,7 +1218,7 @@ public final class TestPartita
         partita.guarisci(nomeMegera);
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
-        verificaVero(partita.isMaledetto(nomeGuaritore));
+        verificaVero(isMaledetto(nomeGuaritore));
         ripristinaGiocatoreVivo(nomeGuaritore);
     }
 
@@ -1228,13 +1228,15 @@ public final class TestPartita
         String nomeMegera = "Marco", nomeMistico = "Emma", nomeMago = "Annalisa";
         inizializzaPartita(new String[][] { { nomeMegera, "Megera" }, { nomeMistico, nomeRuolo }, { nomeMago, "Mago" }, { "Ivan", "Assassino" } });
         assertThat(partita.controlloMago(nomeMegera)).isEqualTo(MISTICO);
-        verificaVero(partita.isMaledetto(nomeMago));
+        verificaVero(isMaledetto(nomeMago));
         assertThat(partita.controlloMago(nomeMegera)).isEqualTo(NON_MISTICO);
         attaccoAssassino(nomeMegera);
         terminaNotte();
-        verificaFalso(partita.isMaledetto(nomeMago));
+        verificaFalso(isMaledetto(nomeMago));
         assertThat(partita.controlloMago(nomeMistico)).isEqualTo(MISTICO);
     }
+
+    private boolean isMaledetto(String nomeMago) { return partita.isMaledetto(nomeMago); }
 
     private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
     {
