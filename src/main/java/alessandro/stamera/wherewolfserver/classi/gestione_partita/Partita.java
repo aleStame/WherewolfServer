@@ -364,17 +364,8 @@ public final class Partita
     {
         Ruolo ruolo = getRuoloMortoNotte(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
-        if(ruolo.isMegera()) ripristinaMistici();
+        if(ruolo.isMegera()) vivi.ripristinaMistici();
         eliminaGiocatoreMortoNotte(nome);
-    }
-
-    private void ripristinaMistici()
-    {
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
-        {
-            String nomeGiocatore = getNomeGiocatoreVivo(i);
-            if(vivi.isMistico(nomeGiocatore)) vivi.ripristina(nomeGiocatore);
-        }
     }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
