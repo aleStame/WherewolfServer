@@ -905,15 +905,18 @@ public final class TestGiocatoriVivi
     {
         String nome = "Claudia";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isNegromante(nome));
+        verificaFalso(isNegromante(nome));
     }
 
     @Test public void testNegromante()
     {
         String nome = "Massimiliano";
         aggiungiGiocatore(nome, "Negromante");
-        verificaVero(giocatori.isNegromante(nome));
+        verificaVero(isNegromante(nome));
+        verificaStringa(giocatori.getNomeNegromante(), nome);
     }
+
+    private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
 
     private void verificaMaledetto(String nome) { verificaVero(isMaledetto(nome)); }
 

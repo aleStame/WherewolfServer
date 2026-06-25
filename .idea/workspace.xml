@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testNoNegromante riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo isNegromante" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,22 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03325" summary="VERDE DIRETTO: testMorteVampiroContadinoLupizzato riuscito">
-      <option name="closed" value="true" />
-      <created>1782145671651</created>
-      <option name="number" value="03325" />
-      <option name="presentableId" value="LOCAL-03325" />
-      <option name="project" value="LOCAL" />
-      <updated>1782145671651</updated>
-    </task>
-    <task id="LOCAL-03326" summary="ROSSO: testVampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1782207114598</created>
-      <option name="number" value="03326" />
-      <option name="presentableId" value="LOCAL-03326" />
-      <option name="project" value="LOCAL" />
-      <updated>1782207114598</updated>
     </task>
     <task id="LOCAL-03327" summary="VERDE: testVampirizzazione riuscito">
       <option name="closed" value="true" />
@@ -685,7 +669,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782379374427</updated>
     </task>
-    <option name="localTasksCounter" value="3374" />
+    <task id="LOCAL-03374" summary="VERDE DIRETTO: testNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1782379684549</created>
+      <option name="number" value="03374" />
+      <option name="presentableId" value="LOCAL-03374" />
+      <option name="project" value="LOCAL" />
+      <updated>1782379684550</updated>
+    </task>
+    <task id="LOCAL-03375" summary="REFACTORING: definizione del metodo isNegromante">
+      <option name="closed" value="true" />
+      <created>1782380086490</created>
+      <option name="number" value="03375" />
+      <option name="presentableId" value="LOCAL-03375" />
+      <option name="project" value="LOCAL" />
+      <updated>1782380086490</updated>
+    </task>
+    <option name="localTasksCounter" value="3376" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTRORING: compattazione dei test sull'attacco dell'assassino all'amato" />
-    <MESSAGE value="ROSSO: testMaledizione non riuscito" />
     <MESSAGE value="VERDE: testMaledizione riuscito" />
     <MESSAGE value="ROSSO: testMaledizioneGuaritore non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
@@ -725,6 +723,8 @@
     <MESSAGE value="VERDE DIRETTO: testMegera riuscito" />
     <MESSAGE value="ROSSO: testNoNegromante non riuscito" />
     <MESSAGE value="VERDE: testNoNegromante riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNoNegromante riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testNegromante riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNegromante" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNegromante" />
   </component>
 </project>
