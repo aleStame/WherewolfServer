@@ -1219,7 +1219,9 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
         verificaMaledetto(nomeGuaritore);
-        ripristinaGiocatoreVivo(nomeGuaritore);
+        attaccoAssassino(nomeMegera);
+        terminaNotte();
+        verificaFalso(isMaledetto(nomeGuaritore));
     }
 
     @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Medium", "Negromante", "Sensitiva", "Sidhe" })
