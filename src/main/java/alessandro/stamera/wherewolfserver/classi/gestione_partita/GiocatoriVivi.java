@@ -255,6 +255,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
 
+    public boolean isNegromante(String nome) { return true; }
+
     public void ripristinaMistici()
     {
         for(int i = 0; i < getNumeroGiocatori(); i++)

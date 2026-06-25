@@ -891,13 +891,28 @@ public final class TestGiocatoriVivi
         verificaFalso(isMaledetto(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Megera", "Mercante",
+            "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+        }
+    )
+    public void testNoNegromante(String nomeRuolo)
+    {
+        String nome = "Claudia";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isNegromante(nome));
+    }
+
     private void verificaMaledetto(String nome) { verificaVero(isMaledetto(nome)); }
 
     private boolean isMaledetto(String nome) { return giocatori.isMaledetto(nome); }
 
     private boolean isMistico(String nome) { return giocatori.isMistico(nome); }
-
-    private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
     private void verificaAttaccoVampiro(EsitoAttacco nome, EsitoAttacco esito) { verificaAttacco(nome, esito); }
 
