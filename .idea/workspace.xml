@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testMaledizioneGuaritore riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaNonMaledetto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,14 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03331" summary="REFACTORING: definizione del metodo verificaAuraNera">
-      <option name="closed" value="true" />
-      <created>1782213788041</created>
-      <option name="number" value="03331" />
-      <option name="presentableId" value="LOCAL-03331" />
-      <option name="project" value="LOCAL" />
-      <updated>1782213788041</updated>
     </task>
     <task id="LOCAL-03332" summary="REFACTORING: definizione del metodo verificaFazione">
       <option name="closed" value="true" />
@@ -688,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782402917504</updated>
     </task>
-    <option name="localTasksCounter" value="3380" />
+    <task id="LOCAL-03380" summary="REFACTORING: definizione del metodo verificaNonMaledetto">
+      <option name="closed" value="true" />
+      <created>1782403868855</created>
+      <option name="number" value="03380" />
+      <option name="presentableId" value="LOCAL-03380" />
+      <option name="project" value="LOCAL" />
+      <updated>1782403868855</updated>
+    </task>
+    <option name="localTasksCounter" value="3381" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,7 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isMegera" />
     <MESSAGE value="VERDE DIRETTO: testNonMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isMistico" />
@@ -728,6 +728,7 @@
     <MESSAGE value="ROSSO: testMaledizioneMegeraRomeizzata non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneMegeraRomeizzata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMaledizioneGuaritore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMaledizioneGuaritore riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonMaledetto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNonMaledetto" />
   </component>
 </project>

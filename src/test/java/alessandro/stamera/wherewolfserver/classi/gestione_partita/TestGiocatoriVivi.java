@@ -916,7 +916,7 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeNegromante(), nome);
     }
 
-    @Test public void testMaledizioneMegeraRomeizzata()
+    @Test public void testMaledizioneMegeraNonRomeizzata()
     {
         String nome = "Elisa";
         String[][] giocatori = new String[][] { { nome, "Megera" }, { "Alemanno", "Negromante" } };

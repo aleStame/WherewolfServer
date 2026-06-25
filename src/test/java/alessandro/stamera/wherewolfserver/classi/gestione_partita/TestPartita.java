@@ -1238,6 +1238,15 @@ public final class TestPartita
         verificaMistico(nomeMistico);
     }
 
+    @Test public void testMaledizioneMegeraNonRomeizzata()
+    {
+        String nome = "Elisa";
+        String[][] giocatori = new String[][] { { nome, "Megera" }, { "Alemanno", "Negromante" } };
+        inizializzaPartita(giocatori);
+        partita.attaccoNegromante(nome);
+        for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
+    }
+
     private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 
     private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }
