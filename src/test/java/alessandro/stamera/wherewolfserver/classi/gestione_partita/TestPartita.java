@@ -1221,7 +1221,7 @@ public final class TestPartita
         verificaMaledetto(nomeGuaritore);
         attaccoAssassino(nomeMegera);
         terminaNotte();
-        verificaFalso(isMaledetto(nomeGuaritore));
+        verificaNonMaledetto(nomeGuaritore);
     }
 
     @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Medium", "Negromante", "Sensitiva", "Sidhe" })
@@ -1234,9 +1234,11 @@ public final class TestPartita
         verificaControlloMago(nomeMegera, NON_MISTICO);
         attaccoAssassino(nomeMegera);
         terminaNotte();
-        verificaFalso(isMaledetto(nomeMago));
+        verificaNonMaledetto(nomeMago);
         verificaMistico(nomeMistico);
     }
+
+    private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 
     private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }
 
