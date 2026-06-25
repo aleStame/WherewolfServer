@@ -908,6 +908,13 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isNegromante(nome));
     }
 
+    @Test public void testNegromante()
+    {
+        String nome = "Massimiliano";
+        aggiungiGiocatore(nome, "Negromante");
+        verificaVero(giocatori.isNegromante(nome));
+    }
+
     private void verificaMaledetto(String nome) { verificaVero(isMaledetto(nome)); }
 
     private boolean isMaledetto(String nome) { return giocatori.isMaledetto(nome); }
