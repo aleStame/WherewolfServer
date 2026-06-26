@@ -176,7 +176,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeMago() { return getNomeGiocatore(getPosizioneMago()); }
 
-    public EsitoAttacco attaccoNegromante(String nome) { return getRuolo(nome).attaccoNegromante(); }
+    public EsitoAttacco attaccoNegromante(String nome)
+    {
+        Ruolo ruolo = getRuolo(nome);
+        EsitoAttacco esito = ruolo.attaccoNegromante();
+        if(esito == RIUSCITO && ruolo.isMegera() && isNegromantePresente()) getRuolo(getNomeNegromante()).maledizione();
+        return esito;
+    }
 
     public EsitoControlloSensitiva controlloSensitiva(String nome) { return getRuolo(nome).controlloSensitiva(); }
 
@@ -254,6 +260,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isMaledetto(String nome) { return getRuolo(nome).isMaledetto(); }
 
     public boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
+
+    public boolean isNegromante(String nome) { return getRuolo(nome).isNegromante(); }
 
     public void ripristinaMistici()
     {

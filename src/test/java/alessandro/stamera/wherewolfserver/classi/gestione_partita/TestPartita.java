@@ -1219,7 +1219,9 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
         verificaMaledetto(nomeGuaritore);
-        ripristinaGiocatoreVivo(nomeGuaritore);
+        attaccoAssassino(nomeMegera);
+        terminaNotte();
+        verificaNonMaledetto(nomeGuaritore);
     }
 
     @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Medium", "Negromante", "Sensitiva", "Sidhe" })
@@ -1232,9 +1234,20 @@ public final class TestPartita
         verificaControlloMago(nomeMegera, NON_MISTICO);
         attaccoAssassino(nomeMegera);
         terminaNotte();
-        verificaFalso(isMaledetto(nomeMago));
+        verificaNonMaledetto(nomeMago);
         verificaMistico(nomeMistico);
     }
+
+    @Test public void testMaledizioneMegeraNonRomeizzata()
+    {
+        String nome = "Elisa";
+        String[][] giocatori = new String[][] { { nome, "Megera" }, { "Alemanno", "Negromante" } };
+        inizializzaPartita(giocatori);
+        partita.attaccoNegromante(nome);
+        for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
+    }
+
+    private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 
     private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }
 
