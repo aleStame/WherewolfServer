@@ -921,7 +921,7 @@ public final class TestGiocatoriVivi
         String nome = "Elisa";
         String[][] giocatori = new String[][] { { nome, "Megera" }, { "Alemanno", "Negromante" } };
         inizializzaGiocatori(giocatori);
-        this.giocatori.maledizione(nome);
+        this.giocatori.attaccoNegromante(nome);
         for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
     }
 
