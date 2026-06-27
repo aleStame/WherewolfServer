@@ -1308,6 +1308,14 @@ public final class TestPartita
         verificaVero(partita.isPosseduto(nomeVampiro));
     }
 
+    @Test public void testPossessioneLadraNonRiuscita()
+    {
+        String nomeLadra = "Piera", nomePosseduto = "Assunta";
+        inizializzaPartita(new String[][] { { nomeLadra, "Ladra" }, { "Giuseppe", "Assassino" }, { nomePosseduto, "Posseduto" } });
+        attaccoAssassino(nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomeLadra)).withMessage("Impossibile possedere Piera.");
+    }
+
     private void verificaCorrettezzaPossessione(String nome)
     {
         passaPosseduto(nome);
