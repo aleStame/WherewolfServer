@@ -1299,11 +1299,14 @@ public final class TestPartita
         verificaCorrettezzaPossessione(nomePrete);
     }
 
-    /*@Test public void testVampirizzazionePosseduto()
+    @Test public void testVampirizzazionePosseduto()
     {
-        inizializzaPartita(new String[][] { { "Ale", "Vampiro" }, { "Franz", "Posseduto" } });
-
-    }*/
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" } });
+        attaccoVampiro(nomePosseduto);
+        verificaEliminazione(nomePosseduto);
+        verificaVero(partita.isPosseduto(nomeVampiro));
+    }
 
     private void verificaCorrettezzaPossessione(String nome)
     {
