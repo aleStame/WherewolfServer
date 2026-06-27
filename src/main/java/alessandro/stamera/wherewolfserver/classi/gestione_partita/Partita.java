@@ -297,7 +297,18 @@ public final class Partita
     {
         switch(vivi.attaccoVampiro(nome))
         {
-            case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
+            case FALLITO ->
+            {
+                if(vivi.isPosseduto(nome))
+                {
+                    String nomeVampiro = vivi.getNomeVampiro();
+                    Ruolo posseduto = getRuoloVivo(nome);
+                    eliminaGiocatori(nome, nomeVampiro);
+                    confermaEliminazioneMortiNotte();
+                    aggiungiGiocatoreVivo(nomeVampiro, posseduto);
+                }
+                else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
+            }
             case MORTO -> gestioneMorteVampiroPostAttacco(nome);
         }
     }
