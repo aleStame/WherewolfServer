@@ -324,6 +324,11 @@ public final class Partita
             if(mortiNotte.getRuolo(mortiNotte.getNomeGiocatore(i)).isPosseduto()) posizione = i;
         String nomePosseduto = mortiNotte.getNomeGiocatore(posizione);
         Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto), ruolo = getRuoloVivo(nome);
+        if(ruolo.isProtezionePresente(posseduto))
+        {
+            ruolo.perdiProtezioni();
+            throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+        }
         ruolo.ripristina();
         vivi.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, posseduto);
