@@ -1267,6 +1267,15 @@ public final class TestPartita
         verificaVero(partita.isPosseduto(nomeNuovoPosseduto));
     }
 
+    @Test public void testPoterePossedutoPrete()
+    {
+        String nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
+        inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" } });
+        attaccoAssassino(nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> partita.passaPosseduto(nomePrete))
+            .withMessage("Impossibile possedere il Prete.");
+    }
+
     private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 
     private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }
