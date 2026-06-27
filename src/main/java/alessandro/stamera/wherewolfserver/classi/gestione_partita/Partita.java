@@ -13,6 +13,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -305,12 +306,14 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
-        if(getRuoloVivo(nome).isPrete()) throw new IllegalArgumentException("Impossibile possedere il Prete.");
+        if(getRuoloVivo(nome).isPrete() && !vivi.isTrattoPresente(nome, NON_MORTO))
+            throw new IllegalArgumentException("Impossibile possedere il Prete.");
         int posizione = -1;
         for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
             if(mortiNotte.getRuolo(mortiNotte.getNomeGiocatore(i)).isPosseduto()) posizione = i;
         String nomePosseduto = mortiNotte.getNomeGiocatore(posizione);
-        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto);
+        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto), ruolo = getRuoloVivo(nome);
+        ruolo.ripristina();
         vivi.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, posseduto);
         confermaEliminazioneMortiNotte();

@@ -1278,7 +1278,9 @@ public final class TestPartita
     @Test public void testPoterePossedutoPreteVampirizzato()
     {
         String nomePosseduto = "Ringo", nomePrete = "John";
-        inizializzaPartita(new String[][] { { "Yoko", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Paul" }, { "Mick", "Vampiro" } });
+        String[][] giocatori =
+            new String[][] { { "Yoko", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { "Mick", "Vampiro" } };
+        inizializzaPartita(giocatori);
         attaccoAssassino(nomePosseduto);
         verificaAttaccoVampiroRiuscito(nomePrete);
         passaPosseduto(nomePrete);
