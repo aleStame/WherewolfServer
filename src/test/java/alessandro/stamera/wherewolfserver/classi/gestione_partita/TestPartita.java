@@ -1263,8 +1263,7 @@ public final class TestPartita
         String nomePosseduto = "Tommaso", nomeNuovoPosseduto = "Tania";
         inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo } });
         attaccoAssassino(nomePosseduto);
-        passaPosseduto(nomeNuovoPosseduto);
-        verificaVero(partita.isPosseduto(nomeNuovoPosseduto));
+        verificaCorrettezzaPossessione(nomeNuovoPosseduto);
     }
 
     @Test public void testPoterePossedutoPrete()
@@ -1283,8 +1282,13 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         attaccoAssassino(nomePosseduto);
         verificaAttaccoVampiroRiuscito(nomePrete);
-        passaPosseduto(nomePrete);
-        verificaVero(partita.isPosseduto(nomePrete));
+        verificaCorrettezzaPossessione(nomePrete);
+    }
+
+    private void verificaCorrettezzaPossessione(String nome)
+    {
+        passaPosseduto(nome);
+        verificaVero(partita.isPosseduto(nome));
     }
 
     private void passaPosseduto(String nome) { partita.passaPosseduto(nome); }
