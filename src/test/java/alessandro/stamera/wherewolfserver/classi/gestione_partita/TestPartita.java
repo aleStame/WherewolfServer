@@ -1299,6 +1299,12 @@ public final class TestPartita
         verificaCorrettezzaPossessione(nomePrete);
     }
 
+    /*@Test public void testVampirizzazionePosseduto()
+    {
+        inizializzaPartita(new String[][] { { "Ale", "Vampiro" }, { "Franz", "Posseduto" } });
+
+    }*/
+
     private void verificaCorrettezzaPossessione(String nome)
     {
         passaPosseduto(nome);
