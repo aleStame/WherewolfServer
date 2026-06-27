@@ -1275,6 +1275,16 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
     }
 
+    @Test public void testPoterePossedutoPreteVampirizzato()
+    {
+        String nomePosseduto = "Ringo", nomePrete = "John";
+        inizializzaPartita(new String[][] { { "Yoko", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Paul" }, { "Mick", "Vampiro" } });
+        attaccoAssassino(nomePosseduto);
+        verificaAttaccoVampiroRiuscito(nomePrete);
+        passaPosseduto(nomePrete);
+        verificaVero(partita.isPosseduto(nomePrete));
+    }
+
     private void passaPosseduto(String nome) { partita.passaPosseduto(nome); }
 
     private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
