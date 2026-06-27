@@ -1285,6 +1285,20 @@ public final class TestPartita
         verificaCorrettezzaPossessione(nomePrete);
     }
 
+    @Test public void testPoterePossedutoPreteNosferatizzato()
+    {
+        String nomePosseduto = "Ringo", nomePrete = "John", nomeLupo = "Gennaro";
+        String[][] giocatori = new String[][]
+        {
+            { "Yoko", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { "Mick", "Nosferatu" }, { nomeLupo, "Capo branco" }
+        };
+        inizializzaPartita(giocatori);
+        attaccoAssassino(nomePosseduto);
+        attaccoLupi(nomeLupo, nomePrete);
+        progenizzazioneNosferatu(nomePrete);
+        verificaCorrettezzaPossessione(nomePrete);
+    }
+
     private void verificaCorrettezzaPossessione(String nome)
     {
         passaPosseduto(nome);
