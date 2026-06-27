@@ -305,6 +305,7 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
+        if(getRuoloVivo(nome).isPrete()) throw new IllegalArgumentException("Impossibile possedere il Prete.");
         int posizione = -1;
         for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
             if(mortiNotte.getRuolo(mortiNotte.getNomeGiocatore(i)).isPosseduto()) posizione = i;
