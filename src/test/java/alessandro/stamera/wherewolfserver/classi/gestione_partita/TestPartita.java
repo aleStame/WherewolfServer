@@ -1263,7 +1263,7 @@ public final class TestPartita
         String nomePosseduto = "Tommaso", nomeNuovoPosseduto = "Tania";
         inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo } });
         attaccoAssassino(nomePosseduto);
-        partita.passaPosseduto(nomeNuovoPosseduto);
+        passaPosseduto(nomeNuovoPosseduto);
         verificaVero(partita.isPosseduto(nomeNuovoPosseduto));
     }
 
@@ -1272,9 +1272,10 @@ public final class TestPartita
         String nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
         inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" } });
         attaccoAssassino(nomePosseduto);
-        assertThatIllegalArgumentException().isThrownBy(() -> partita.passaPosseduto(nomePrete))
-            .withMessage("Impossibile possedere il Prete.");
+        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
     }
+
+    private void passaPosseduto(String nome) { partita.passaPosseduto(nome); }
 
     private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 
