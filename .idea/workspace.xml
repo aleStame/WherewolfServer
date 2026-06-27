@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMaledizioneMegeraNonRomeizzata riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="Merge branch 'feature/malediciNegromante' into develop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,11 +103,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/poterePosseduto",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -292,14 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03333" summary="ROSSO: testCreatureOmbra non riuscito">
-      <option name="closed" value="true" />
-      <created>1782214379763</created>
-      <option name="number" value="03333" />
-      <option name="presentableId" value="LOCAL-03333" />
-      <option name="project" value="LOCAL" />
-      <updated>1782214379763</updated>
     </task>
     <task id="LOCAL-03334" summary="VERDE: testCreatureOmbra riuscito">
       <option name="closed" value="true" />
@@ -685,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782479662588</updated>
     </task>
-    <option name="localTasksCounter" value="3382" />
+    <task id="LOCAL-03382" summary="Merge branch 'feature/malediciNegromante' into develop">
+      <option name="closed" value="true" />
+      <created>1782479930068</created>
+      <option name="number" value="03382" />
+      <option name="presentableId" value="LOCAL-03382" />
+      <option name="project" value="LOCAL" />
+      <updated>1782479930068</updated>
+    </task>
+    <option name="localTasksCounter" value="3383" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,7 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isMistico" />
     <MESSAGE value="ROSSO: testMaledizioneMago non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneMago riuscito" />
@@ -725,6 +724,7 @@
     <MESSAGE value="VERDE DIRETTO: testMaledizioneGuaritore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaNonMaledetto" />
     <MESSAGE value="VERDE: testMaledizioneMegeraNonRomeizzata riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMaledizioneMegeraNonRomeizzata riuscito" />
+    <MESSAGE value="Merge branch 'feature/malediciNegromante' into develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'feature/malediciNegromante' into develop" />
   </component>
 </project>

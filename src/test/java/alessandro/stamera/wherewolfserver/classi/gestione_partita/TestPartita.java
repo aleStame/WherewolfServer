@@ -1247,6 +1247,26 @@ public final class TestPartita
         for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testPoterePosseduto(String nomeRuolo)
+    {
+        String nomePosseduto = "Tommaso", nomeNuovoPosseduto = "Tania";
+        inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo } });
+        attaccoAssassino(nomePosseduto);
+        partita.passaPosseduto(nomeNuovoPosseduto);
+        verificaVero(partita.isPosseduto(nomeNuovoPosseduto));
+    }
+
     private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 
     private void verificaMistico(String nomeMegera) { verificaControlloMago(nomeMegera, MISTICO); }

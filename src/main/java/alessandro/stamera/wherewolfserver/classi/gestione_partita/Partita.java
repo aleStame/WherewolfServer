@@ -303,6 +303,10 @@ public final class Partita
 
     public boolean isMaledetto(String nome) { return vivi.isMaledetto(nome); }
 
+    public void passaPosseduto(String nome) { }
+
+    public boolean isPosseduto(String nome) { return false; }
+
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
