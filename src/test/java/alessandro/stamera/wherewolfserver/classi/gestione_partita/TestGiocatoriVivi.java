@@ -983,15 +983,20 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Claudio", "Angelo custode" }, { nomeVampiro, "Vampiro" } });
         segnalazioneAngeloCustode(nomeVampiro);
         verificaVero(isVampiroAmato());
+        ripristina(nomeVampiro);
     }
 
-    @Test public void testCacciatoreDiVampiriAssente() { verificaFalso(giocatori.isCacciatoreDiVampiriPresente()); }
+    @Test public void testCacciatoreDiVampiriAssente() { verificaFalso(isCacciatoreDiVampiriPresente()); }
 
     @Test public void testCacciatoreDiVampiriPresente()
     {
-        aggiungiGiocatore("Rubio", "Cacciatore di vampiri");
-        verificaVero(giocatori.isCacciatoreDiVampiriPresente());
+        String nome = "Rubio";
+        aggiungiGiocatore(nome, "Cacciatore di vampiri");
+        verificaVero(isCacciatoreDiVampiriPresente());
+        verificaStringa(giocatori.getNomeCacciatoreDiVampiri(), nome);
     }
+
+    private boolean isCacciatoreDiVampiriPresente() { return giocatori.isCacciatoreDiVampiriPresente(); }
 
     private void verificaVampiroNonAmato() { verificaFalso(isVampiroAmato()); }
 

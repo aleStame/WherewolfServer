@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testCacciatoreDiVampiriPresente riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03384" summary="ROSSO: testPoterePosseduto non riuscito">
-      <option name="closed" value="true" />
-      <created>1782554056701</created>
-      <option name="number" value="03384" />
-      <option name="presentableId" value="LOCAL-03384" />
-      <option name="project" value="LOCAL" />
-      <updated>1782554056701</updated>
     </task>
     <task id="LOCAL-03385" summary="VERDE: testPoterePosseduto riuscito">
       <option name="closed" value="true" />
@@ -687,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782765878079</updated>
     </task>
-    <option name="localTasksCounter" value="3433" />
+    <task id="LOCAL-03433" summary="VERDE DIRETTO: testCacciatoreDiVampiriPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1782766176382</created>
+      <option name="number" value="03433" />
+      <option name="presentableId" value="LOCAL-03433" />
+      <option name="project" value="LOCAL" />
+      <updated>1782766176382</updated>
+    </task>
+    <option name="localTasksCounter" value="3434" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoAssassinoAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAmato" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoStregato riuscito" />
@@ -727,6 +727,7 @@
     <MESSAGE value="VERDE: testCacciatoreDiVampiriAssente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCacciatoreDiVampiri" />
     <MESSAGE value="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri" />
+    <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiriPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCacciatoreDiVampiriPresente riuscito" />
   </component>
 </project>

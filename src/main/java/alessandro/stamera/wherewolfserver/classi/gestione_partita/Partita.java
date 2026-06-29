@@ -356,15 +356,12 @@ public final class Partita
         String nomeMorto = vivi.getNomeVampiro();
         if(vivi.isVampiroAmato())
         {
-            int posizioneCacciatore = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCacciatore == -1; i++)
-                if(getRuoloVivo(getNomeGiocatoreVivo(i)).isCacciatoreDiVampiri()) posizioneCacciatore = i;
-            String nomeCacciatore = getNomeGiocatoreVivo(posizioneCacciatore), nomeAngelo = getNomeAngeloCustodeVivo();
+            String nomeAngelo = getNomeAngeloCustodeVivo();
             eliminazioneAngeloCustode();
             throw new IllegalStateException
             (
-                "Il tentativo di vampirizzazione del Cacciatore di vampiri (" + nomeCacciatore + ") causa la morte dell'Angelo custode (" +
-                nomeAngelo + ") del Vampiro amato (" + nomeMorto + ").\nAvvisa Francesco della sua morte."
+                "Il tentativo di vampirizzazione del Cacciatore di vampiri (" + vivi.getNomeCacciatoreDiVampiri() + ") causa la morte dell'Angelo " +
+                "custode (" + nomeAngelo + ") del Vampiro amato (" + nomeMorto + ").\nAvvisa Francesco della sua morte."
             );
         }
         else if(isGhoulPresente())
