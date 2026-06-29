@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoVampiroAmatoCacciatoreDiVampiri riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testVampiroNonAmato riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,30 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03374" summary="VERDE DIRETTO: testNegromante riuscito">
-      <option name="closed" value="true" />
-      <created>1782379684549</created>
-      <option name="number" value="03374" />
-      <option name="presentableId" value="LOCAL-03374" />
-      <option name="project" value="LOCAL" />
-      <updated>1782379684550</updated>
-    </task>
-    <task id="LOCAL-03375" summary="REFACTORING: definizione del metodo isNegromante">
-      <option name="closed" value="true" />
-      <created>1782380086490</created>
-      <option name="number" value="03375" />
-      <option name="presentableId" value="LOCAL-03375" />
-      <option name="project" value="LOCAL" />
-      <updated>1782380086490</updated>
-    </task>
-    <task id="LOCAL-03376" summary="REFACTORING: definizione del metodo isNegromante">
-      <option name="closed" value="true" />
-      <created>1782380386397</created>
-      <option name="number" value="03376" />
-      <option name="presentableId" value="LOCAL-03376" />
-      <option name="project" value="LOCAL" />
-      <updated>1782380386397</updated>
     </task>
     <task id="LOCAL-03377" summary="ROSSO: testMaledizioneMegeraRomeizzata non riuscito">
       <option name="closed" value="true" />
@@ -688,7 +664,31 @@
       <option name="project" value="LOCAL" />
       <updated>1782762090523</updated>
     </task>
-    <option name="localTasksCounter" value="3423" />
+    <task id="LOCAL-03423" summary="ROSSO: testVampiroAmato non riuscito">
+      <option name="closed" value="true" />
+      <created>1782762383053</created>
+      <option name="number" value="03423" />
+      <option name="presentableId" value="LOCAL-03423" />
+      <option name="project" value="LOCAL" />
+      <updated>1782762383053</updated>
+    </task>
+    <task id="LOCAL-03424" summary="VERDE: testVampiroAmato riuscito">
+      <option name="closed" value="true" />
+      <created>1782762684509</created>
+      <option name="number" value="03424" />
+      <option name="presentableId" value="LOCAL-03424" />
+      <option name="project" value="LOCAL" />
+      <updated>1782762684509</updated>
+    </task>
+    <task id="LOCAL-03425" summary="VERDE DIRETTO: testVampiroNonAmato riuscito">
+      <option name="closed" value="true" />
+      <created>1782762909457</created>
+      <option name="number" value="03425" />
+      <option name="presentableId" value="LOCAL-03425" />
+      <option name="project" value="LOCAL" />
+      <updated>1782762909458</updated>
+    </task>
+    <option name="localTasksCounter" value="3426" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,9 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVampirizzazione riuscito" />
-    <MESSAGE value="ROSSO: testVampirizzazionePosseduto non riuscito" />
-    <MESSAGE value="VERDE: testVampirizzazionePosseduto riuscito" />
     <MESSAGE value="ROSSO: testPossessioneLadraNonRiuscita non riuscito" />
     <MESSAGE value="ROSSO: testPossessioneLadraRiuscita non riuscito" />
     <MESSAGE value="VERDE: testPossessioneLadraNonRiuscita riuscito" />
@@ -728,6 +725,9 @@
     <MESSAGE value="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
     <MESSAGE value="ROSSO: testAttaccoVampiroAmatoCacciatoreDiVampiri non riuscito" />
     <MESSAGE value="VERDE: testAttaccoVampiroAmatoCacciatoreDiVampiri riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoVampiroAmatoCacciatoreDiVampiri riuscito" />
+    <MESSAGE value="ROSSO: testVampiroAmato non riuscito" />
+    <MESSAGE value="VERDE: testVampiroAmato riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVampiroNonAmato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVampiroNonAmato riuscito" />
   </component>
 </project>

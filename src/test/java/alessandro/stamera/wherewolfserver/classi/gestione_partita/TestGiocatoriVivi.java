@@ -969,13 +969,15 @@ public final class TestGiocatoriVivi
         for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
     }
 
-    @Test public void testVampiroAmatoNonPresente() { verificaFalso(giocatori.isVampiroAmato()); }
+    @Test public void testVampiroAmatoNonPresente() { verificaVampiroNonAmato(); }
 
     @Test public void testVampiroNonAmato()
     {
         aggiungiGiocatore("Andrea", "Vampiro");
-        verificaFalso(giocatori.isVampiroAmato());
+        verificaVampiroNonAmato();
     }
+
+    private void verificaVampiroNonAmato() { verificaFalso(giocatori.isVampiroAmato()); }
 
     private void verificaAssassinioAmato(String nome)
     {
