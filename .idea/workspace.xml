@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testCacciatoreDiVampiriAssente non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCacciatoreDiVampiriAssente riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03381" summary="VERDE: testMaledizioneMegeraNonRomeizzata riuscito">
-      <option name="closed" value="true" />
-      <created>1782479662587</created>
-      <option name="number" value="03381" />
-      <option name="presentableId" value="LOCAL-03381" />
-      <option name="project" value="LOCAL" />
-      <updated>1782479662588</updated>
     </task>
     <task id="LOCAL-03382" summary="Merge branch 'feature/malediciNegromante' into develop">
       <option name="closed" value="true" />
@@ -687,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782764941845</updated>
     </task>
-    <option name="localTasksCounter" value="3430" />
+    <task id="LOCAL-03430" summary="VERDE: testCacciatoreDiVampiriAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1782765304151</created>
+      <option name="number" value="03430" />
+      <option name="presentableId" value="LOCAL-03430" />
+      <option name="project" value="LOCAL" />
+      <updated>1782765304151</updated>
+    </task>
+    <option name="localTasksCounter" value="3431" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVittoria riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
     <MESSAGE value="ROSSO: testAttaccoAssassinoAmato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassinoAmato riuscito" />
@@ -727,6 +726,7 @@
     <MESSAGE value="VERDE DIRETTO: testVampiroAmatoRiuscito riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroAmato" />
     <MESSAGE value="ROSSO: testCacciatoreDiVampiriAssente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCacciatoreDiVampiriAssente non riuscito" />
+    <MESSAGE value="VERDE: testCacciatoreDiVampiriAssente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCacciatoreDiVampiriAssente riuscito" />
   </component>
 </project>
