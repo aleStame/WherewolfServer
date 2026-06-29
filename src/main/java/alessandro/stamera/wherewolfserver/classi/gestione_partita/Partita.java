@@ -354,13 +354,30 @@ public final class Partita
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
         String nomeMorto = vivi.getNomeVampiro();
-        if(isGhoulPresente())
+        if(getRuoloVivo(nomeMorto).isAmato())
+        {
+            int posizioneCacciatore = -1;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCacciatore == -1; i++)
+                if(getRuoloVivo(getNomeGiocatoreVivo(i)).isCacciatoreDiVampiri()) posizioneCacciatore = i;
+            String nomeCacciatore = getNomeGiocatoreVivo(posizioneCacciatore), nomeAngelo = getNomeAngeloCustodeVivo();
+            eliminazioneAngeloCustode();
+            throw new IllegalStateException
+            (
+                "Il tentativo di vampirizzazione del Cacciatore di vampiri (" + nomeCacciatore + ") causa la morte dell'Angelo custode (" +
+                nomeAngelo + ") del Vampiro amato (" + nomeMorto + ").\nAvvisa Francesco della sua morte."
+            );
+        }
+        else if(isGhoulPresente())
         {
             nomeMorto = getNomeGhoul();
             eliminaGhoul();
+            throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
         }
-        else eliminaGiocatore(nomeMorto);
-        throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
+        else
+        {
+            eliminaGiocatore(nomeMorto);
+            throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
+        }
     }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
@@ -511,7 +528,7 @@ public final class Partita
         else eliminaGiocatore(nome);
     }
 
-    private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
+    private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustodeVivo()); }
 
     private void eliminaGiocatori(String... nomi) { for(String nome : nomi) eliminaGiocatore(nome); }
 
@@ -524,13 +541,7 @@ public final class Partita
 
     private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }
 
-    private String getNomeAngeloCustode()
-    {
-        String nome;
-        if(vivi.isAngeloCustodePresente()) nome = vivi.getNomeAngeloCustode();
-        else nome = eliminati.getNomeAngeloCustode();
-        return nome;
-    }
+    private String getNomeAngeloCustodeVivo() { return vivi.getNomeAngeloCustode(); }
 
     private Ruolo getRuoloVivo(String nome) { return vivi.getRuolo(nome); }
 

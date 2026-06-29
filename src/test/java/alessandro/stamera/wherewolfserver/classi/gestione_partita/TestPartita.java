@@ -1374,8 +1374,9 @@ public final class TestPartita
             "Il tentativo di vampirizzazione del Cacciatore di vampiri (Herbert) causa la morte dell'Angelo custode (Francesco) del Vampiro " +
             "amato (Stefano).\nAvvisa Francesco della sua morte.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeCacciatore)).withMessage(messaggio);
+        terminaNotte();
         verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
-        verificaEliminati();
+        verificaEliminati(nomeAngelo);
         ripristinaGiocatoreVivo(nomeVampiro);
     }
 
