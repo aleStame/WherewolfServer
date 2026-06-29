@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
@@ -45,10 +46,21 @@ public final class TestAngeloCustode
 
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
 
-    @Test public void testVittoriaAmatoVivo()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testVittoria(String nomeRuolo)
     {
         String nome = "Ezio";
-        Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, "Peccatore" } });
+        Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, nomeRuolo } });
         partita.segnalazioneAngeloCustode(nome);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
         partita.ripristinaGiocatoreVivo(nome);
