@@ -1116,7 +1116,7 @@ public final class TestPartita
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Ghoul",
             "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste",
-            "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+            "Pazzo", "Peccatore", "Prete", "Spia", "Templare", "Vampiro"
         }
     )
     public void testCriminalizzazioneProgenieVampiro(String nomeRuolo)
@@ -1246,6 +1246,83 @@ public final class TestPartita
         partita.attaccoNegromante(nome);
         for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
     }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testPoterePosseduto(String nomeRuolo)
+    {
+        String nomePosseduto = "Tommaso", nomeNuovoPosseduto = "Tania";
+        inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo } });
+        attaccoAssassino(nomePosseduto);
+        verificaCorrettezzaPossessione(nomeNuovoPosseduto);
+    }
+
+    @Test public void testPoterePossedutoPrete()
+    {
+        String nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
+        inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" } });
+        attaccoAssassino(nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
+    }
+
+    @Test public void testPoterePossedutoPreteVampirizzato()
+    {
+        String nomePosseduto = "Ringo", nomePrete = "John";
+        String[][] giocatori =
+            new String[][] { { "Yoko", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { "Mick", "Vampiro" } };
+        inizializzaPartita(giocatori);
+        attaccoAssassino(nomePosseduto);
+        verificaAttaccoVampiroRiuscito(nomePrete);
+        verificaCorrettezzaPossessione(nomePrete);
+    }
+
+    @Test public void testPoterePossedutoPreteNosferatizzato()
+    {
+        String nomePosseduto = "Ringo", nomePrete = "John", nomeLupo = "Gennaro";
+        String[][] giocatori = new String[][]
+        {
+            { "Yoko", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { "Mick", "Nosferatu" }, { nomeLupo, "Capo branco" }
+        };
+        inizializzaPartita(giocatori);
+        attaccoAssassino(nomePosseduto);
+        attaccoLupi(nomeLupo, nomePrete);
+        progenizzazioneNosferatu(nomePrete);
+        verificaCorrettezzaPossessione(nomePrete);
+    }
+
+    @Test public void testVampirizzazionePosseduto()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" } });
+        attaccoVampiro(nomePosseduto);
+        verificaEliminazione(nomePosseduto);
+        verificaVero(partita.isPosseduto(nomeVampiro));
+    }
+
+    @Test public void testPossessioneLadraNonRiuscita()
+    {
+        String nomeLadra = "Piera", nomePosseduto = "Assunta";
+        inizializzaPartita(new String[][] { { nomeLadra, "Ladra" }, { "Giuseppe", "Assassino" }, { nomePosseduto, "Posseduto" } });
+        attaccoAssassino(nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomeLadra)).withMessage("Impossibile possedere Piera.");
+    }
+
+    private void verificaCorrettezzaPossessione(String nome)
+    {
+        passaPosseduto(nome);
+        verificaVero(partita.isPosseduto(nome));
+    }
+
+    private void passaPosseduto(String nome) { partita.passaPosseduto(nome); }
 
     private void verificaNonMaledetto(String nome) { verificaFalso(isMaledetto(nome)); }
 

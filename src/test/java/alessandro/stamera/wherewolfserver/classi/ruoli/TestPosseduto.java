@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
@@ -78,6 +79,8 @@ public final class TestPosseduto
         ruolo.annullaSegnalazioneBoia();
         verificaFalso(isSegnalatoBoia());
     }
+
+    @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(FALLITO); }
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
