@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
@@ -354,16 +355,7 @@ public final class Partita
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
         String nomeMorto = vivi.getNomeVampiro();
-        if(vivi.isVampiroAmato())
-        {
-            String nomeAngelo = getNomeAngeloCustodeVivo();
-            eliminazioneAngeloCustode();
-            throw new IllegalStateException
-            (
-                "Il tentativo di vampirizzazione del Cacciatore di vampiri (" + vivi.getNomeCacciatoreDiVampiri() + ") causa la morte dell'Angelo " +
-                "custode (" + nomeAngelo + ") del Vampiro amato (" + nomeMorto + ").\nAvvisa Francesco della sua morte."
-            );
-        }
+        if(vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode();
         else if(isGhoulPresente())
         {
             nomeMorto = getNomeGhoul();
@@ -375,6 +367,13 @@ public final class Partita
             eliminaGiocatore(nomeMorto);
             throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
         }
+    }
+
+    private void gestioneEccezioneMorteAngeloCustode()
+    {
+        String nomeAngelo = getNomeAngeloCustodeVivo();
+        eliminazioneAngeloCustode();
+        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeCacciatoreDiVampiri(), nomeAngelo, vivi.getNomeVampiro());
     }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
