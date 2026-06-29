@@ -15,4 +15,6 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalStateExcep
         );
     }
 
+    public EccezioneProgenizzazioneNonRiuscita(String nomeCacciatoreDiVampiri, String nomeGhoul) {}
+
 }

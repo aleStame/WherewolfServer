@@ -16,4 +16,13 @@ public final class TestEccezioneProgenizzazioneNonRiuscita
         assertThat(eccezione.getMessage()).isEqualTo(messaggio);
     }
 
+    @Test public void testAvvisoMorteGhoul()
+    {
+        String messaggio =
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).\nAvvisa Valeria della sua morte";
+        EccezioneProgenizzazioneNonRiuscita eccezione =
+                new EccezioneProgenizzazioneNonRiuscita("Katia", "Valeria");
+        assertThat(eccezione.getMessage()).isEqualTo(messaggio);
+    }
+
 }
