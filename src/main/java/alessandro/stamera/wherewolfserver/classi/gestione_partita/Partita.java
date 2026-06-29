@@ -354,7 +354,7 @@ public final class Partita
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
         String nomeMorto = vivi.getNomeVampiro();
-        if(getRuoloVivo(nomeMorto).isAmato())
+        if(vivi.isVampiroAmato())
         {
             int posizioneCacciatore = -1;
             for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneCacciatore == -1; i++)

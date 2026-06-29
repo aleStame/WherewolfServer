@@ -982,10 +982,12 @@ public final class TestGiocatoriVivi
         String nomeVampiro = "Antonello";
         inizializzaGiocatori(new String[][] { { "Claudio", "Angelo custode" }, { nomeVampiro, "Vampiro" } });
         segnalazioneAngeloCustode(nomeVampiro);
-        verificaVero(giocatori.isVampiroAmato());
+        verificaVero(isVampiroAmato());
     }
 
-    private void verificaVampiroNonAmato() { verificaFalso(giocatori.isVampiroAmato()); }
+    private void verificaVampiroNonAmato() { verificaFalso(isVampiroAmato()); }
+
+    private boolean isVampiroAmato() { return giocatori.isVampiroAmato(); }
 
     private void verificaAssassinioAmato(String nome)
     {
