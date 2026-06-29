@@ -115,19 +115,12 @@ public final class TestRuolo
 
     @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }
 
-    @Test public void testAttaccoAssassinoAmato()
-    {
-        sceltaAngeloCustode();
-        verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
-        ruolo.ripristina();
-    }
+    @Test public void testAttaccoAssassinoAmato() { verificaAttaccoAmato(); }
 
     @Test public void testAttaccoAssassinoAmatoRomeo()
     {
         romeizzazione();
-        sceltaAngeloCustode();
-        verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
-        ruolo.ripristina();
+        verificaAttaccoAmato();
     }
 
     @Test public void vampirizzazione()
@@ -189,6 +182,13 @@ public final class TestRuolo
         verificaFazione(NESSUNA);
         verificaNonInquisito();
         for(IstanzaRuolo istanza : IstanzaRuolo.values()) ruolo.isProtezionePresente(istanza.getRuolo());
+    }
+
+    private void verificaAttaccoAmato()
+    {
+        sceltaAngeloCustode();
+        verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
+        ruolo.ripristina();
     }
 
     private static Stream<Arguments> getEsempiPartita()
