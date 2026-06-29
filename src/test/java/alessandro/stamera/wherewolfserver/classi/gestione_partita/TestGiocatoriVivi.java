@@ -987,6 +987,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testCacciatoreDiVampiriAssente() { verificaFalso(giocatori.isCacciatoreDiVampiriPresente()); }
 
+    @Test public void testCacciatoreDiVampiriPresente()
+    {
+        aggiungiGiocatore("Rubio", "Cacciatore di vampiri");
+        verificaVero(giocatori.isCacciatoreDiVampiriPresente());
+    }
+
     private void verificaVampiroNonAmato() { verificaFalso(isVampiroAmato()); }
 
     private boolean isVampiroAmato() { return giocatori.isVampiroAmato(); }

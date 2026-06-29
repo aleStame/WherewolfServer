@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testCacciatoreDiVampiriAssente riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,22 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03382" summary="Merge branch 'feature/malediciNegromante' into develop">
-      <option name="closed" value="true" />
-      <created>1782479930068</created>
-      <option name="number" value="03382" />
-      <option name="presentableId" value="LOCAL-03382" />
-      <option name="project" value="LOCAL" />
-      <updated>1782479930068</updated>
-    </task>
-    <task id="LOCAL-03383" summary="ROSSO: testPoterePosseduto non riuscito">
-      <option name="closed" value="true" />
-      <created>1782553982353</created>
-      <option name="number" value="03383" />
-      <option name="presentableId" value="LOCAL-03383" />
-      <option name="project" value="LOCAL" />
-      <updated>1782553982354</updated>
     </task>
     <task id="LOCAL-03384" summary="ROSSO: testPoterePosseduto non riuscito">
       <option name="closed" value="true" />
@@ -687,7 +671,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782765304151</updated>
     </task>
-    <option name="localTasksCounter" value="3431" />
+    <task id="LOCAL-03431" summary="REFACTORING: definizione del metodo getPosizioneCacciatoreDiVampiri">
+      <option name="closed" value="true" />
+      <created>1782765588690</created>
+      <option name="number" value="03431" />
+      <option name="presentableId" value="LOCAL-03431" />
+      <option name="project" value="LOCAL" />
+      <updated>1782765588690</updated>
+    </task>
+    <task id="LOCAL-03432" summary="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri">
+      <option name="closed" value="true" />
+      <created>1782765878078</created>
+      <option name="number" value="03432" />
+      <option name="presentableId" value="LOCAL-03432" />
+      <option name="project" value="LOCAL" />
+      <updated>1782765878079</updated>
+    </task>
+    <option name="localTasksCounter" value="3433" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
-    <MESSAGE value="ROSSO: testAttaccoAssassinoAmato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassinoAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAmato" />
@@ -727,6 +725,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroAmato" />
     <MESSAGE value="ROSSO: testCacciatoreDiVampiriAssente non riuscito" />
     <MESSAGE value="VERDE: testCacciatoreDiVampiriAssente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCacciatoreDiVampiriAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneCacciatoreDiVampiri" />
+    <MESSAGE value="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione delle due varianti del metodo isCacciatoreDiVampiri" />
   </component>
 </project>
