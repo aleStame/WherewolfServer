@@ -100,7 +100,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         int posizione = 2;
         segnalazioneAngeloCustode(giocatori[posizione][0]);
-        verificaAttaccoAssassino(giocatori[posizione][0], FALLITO);
+        verificaAttaccoAssassino(giocatori[posizione][0], ANGELO_CUSTODE_MORTO);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()

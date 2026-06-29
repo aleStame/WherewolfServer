@@ -119,6 +119,7 @@ public final class TestRuolo
     {
         sceltaAngeloCustode();
         verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
+        ruolo.ripristina();
     }
 
     @Test public void vampirizzazione()
