@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
@@ -62,12 +63,17 @@ public final class TestAngeloCustode
         String nome = "Ezio";
         Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, nomeRuolo } });
         partita.segnalazioneAngeloCustode(nome);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        verificaEsitoPartita(partita, VITTORIA);
         partita.ripristinaGiocatoreVivo(nome);
     }
 
     @ParameterizedTest @MethodSource("getEsempiPartitaPersa")
-    public void testSconfittaNienteAmato(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA); }
+    public void testSconfittaNienteAmato(Partita partita) { verificaEsitoPartita(partita, SCONFITTA); }
+
+    private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
+    {
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
 
     private static Stream<Arguments> getEsempiPartitaPersa()
     {
