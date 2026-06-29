@@ -281,7 +281,13 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public boolean isCacciatoreDiVampiriPresente() { return true; }
+    public boolean isCacciatoreDiVampiriPresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getRuolo(getNomeGiocatore(i)).isCacciatoreDiVampiri())
+            posizione = i;
+        return posizione != NON_TROVATO;
+    }
 
     private int getPosizioneVampiro()
     {
