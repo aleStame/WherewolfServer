@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoAssassinoAmato">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,8 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -294,30 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03368" summary="REFACTORING: definizione del metodo verificaMaledetto">
-      <option name="closed" value="true" />
-      <created>1782338359792</created>
-      <option name="number" value="03368" />
-      <option name="presentableId" value="LOCAL-03368" />
-      <option name="project" value="LOCAL" />
-      <updated>1782338359792</updated>
-    </task>
-    <task id="LOCAL-03369" summary="ROSSO: testNonMegera non riuscito">
-      <option name="closed" value="true" />
-      <created>1782338678217</created>
-      <option name="number" value="03369" />
-      <option name="presentableId" value="LOCAL-03369" />
-      <option name="project" value="LOCAL" />
-      <updated>1782338678217</updated>
-    </task>
-    <task id="LOCAL-03370" summary="VERDE: testNonMegera riuscito">
-      <option name="closed" value="true" />
-      <created>1782339558723</created>
-      <option name="number" value="03370" />
-      <option name="presentableId" value="LOCAL-03370" />
-      <option name="project" value="LOCAL" />
-      <updated>1782339558723</updated>
     </task>
     <task id="LOCAL-03371" summary="VERDE DIRETTO: testMegera riuscito">
       <option name="closed" value="true" />
@@ -687,7 +661,31 @@
       <option name="project" value="LOCAL" />
       <updated>1782747227384</updated>
     </task>
-    <option name="localTasksCounter" value="3417" />
+    <task id="LOCAL-03417" summary="ROSSO: testAttaccoAmatoStregatoAssassino non riuscito">
+      <option name="closed" value="true" />
+      <created>1782747913076</created>
+      <option name="number" value="03417" />
+      <option name="presentableId" value="LOCAL-03417" />
+      <option name="project" value="LOCAL" />
+      <updated>1782747913076</updated>
+    </task>
+    <task id="LOCAL-03418" summary="VERDE: testAttaccoAmatoStregatoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1782748528567</created>
+      <option name="number" value="03418" />
+      <option name="presentableId" value="LOCAL-03418" />
+      <option name="project" value="LOCAL" />
+      <updated>1782748528567</updated>
+    </task>
+    <task id="LOCAL-03419" summary="VERDE: testAttaccoAmatoStregatoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1782749362390</created>
+      <option name="number" value="03419" />
+      <option name="presentableId" value="LOCAL-03419" />
+      <option name="project" value="LOCAL" />
+      <updated>1782749362390</updated>
+    </task>
+    <option name="localTasksCounter" value="3420" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testPoterePossedutoPreteVampirizzato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaCorrettezzaPossessione" />
     <MESSAGE value="VERDE DIRETTO: testPoterePossedutoPreteNosferatizzato riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazione riuscito" />
@@ -727,6 +723,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAssassinoAmato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoAssassinoAmato" />
+    <MESSAGE value="ROSSO: testAttaccoAmatoStregatoAssassino non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
   </component>
 </project>
