@@ -4,6 +4,10 @@ import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -50,18 +54,25 @@ public final class TestAngeloCustode
         partita.ripristinaGiocatoreVivo(nome);
     }
 
-    @Test public void testSconfittaNienteAmato()
+    @ParameterizedTest @MethodSource("getEsempiPartitaPersa")
+    public void testSconfittaNienteAmato(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA); }
+
+    private static Stream<Arguments> getEsempiPartitaPersa()
     {
-        Partita partita = new Partita(new String[][] { { "Antonio", "Boia" }, { "Sebastiano", "Templare" } });
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        return Stream.of(Arguments.of(getEsempioPartitaSenzaAmato()), Arguments.of(getEsempioPartitaViaggio()));
     }
 
-    @Test public void testSconfittaViaggio()
+    private static Partita getEsempioPartitaSenzaAmato()
+    {
+        return new Partita(new String[][] { { "Antonio", "Boia" }, { "Sebastiano", "Templare" } });
+    }
+
+    private static Partita getEsempioPartitaViaggio()
     {
         Partita partita = mock(Partita.class);
         when(partita.isViaggioPartito()).thenReturn(true);
         when(partita.isViaggiatoreAmato()).thenReturn(true);
-        assertThat(ruolo.getEsitoPartita(partita));
+        return partita;
     }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
