@@ -281,6 +281,8 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
+    public boolean isCacciatoreDiVampiriPresente() { return true; }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;
