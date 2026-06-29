@@ -134,6 +134,27 @@ public final class TestPartita
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAttaccoAmatoStregatoAssassino(String nomeRuolo)
+    {
+        String nomeAngelo = "Enzo", nomeVittima = "Maddalena";
+        String[][] giocatori =
+            new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } };
+        inizializzaPartita(giocatori);
+        partita.protezioneStrega(nomeVittima);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
+    }
+
     private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAngelo)
     {
         segnalazioneAngeloCustode(nomeVittima);

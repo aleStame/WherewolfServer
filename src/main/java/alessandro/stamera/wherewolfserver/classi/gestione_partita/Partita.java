@@ -337,6 +337,8 @@ public final class Partita
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
 
+    public void protezioneStrega(String nome) { }
+
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
