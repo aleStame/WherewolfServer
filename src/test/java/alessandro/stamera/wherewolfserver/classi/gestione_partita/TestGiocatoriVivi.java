@@ -977,6 +977,14 @@ public final class TestGiocatoriVivi
         verificaVampiroNonAmato();
     }
 
+    @Test public void testVampiroAmatoRiuscito()
+    {
+        String nomeVampiro = "Antonello";
+        inizializzaGiocatori(new String[][] { { "Claudio", "Angelo custode" }, { nomeVampiro, "Vampiro" } });
+        segnalazioneAngeloCustode(nomeVampiro);
+        verificaVero(giocatori.isVampiroAmato());
+    }
+
     private void verificaVampiroNonAmato() { verificaFalso(giocatori.isVampiroAmato()); }
 
     private void verificaAssassinioAmato(String nome)
