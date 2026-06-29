@@ -108,9 +108,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        segnalazioneAngeloCustode(nomeVittima);
-        verificaAttaccoAssassino(nomeVittima, ANGELO_CUSTODE_MORTO);
-        ripristina(nomeVittima);
+        verificaAssassinioAmato(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -128,9 +126,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
         giocatori.romeizzazione(nomeVittima);
-        segnalazioneAngeloCustode(nomeVittima);
-        verificaAttaccoAssassino(nomeVittima, ANGELO_CUSTODE_MORTO);
-        ripristina(nomeVittima);
+        verificaAssassinioAmato(nomeVittima);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
@@ -953,6 +949,13 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         this.giocatori.attaccoNegromante(nome);
         for(String[] giocatore : giocatori) verificaMaledetto(giocatore[0]);
+    }
+
+    private void verificaAssassinioAmato(String nome)
+    {
+        segnalazioneAngeloCustode(nome);
+        verificaAttaccoAssassino(nome, ANGELO_CUSTODE_MORTO);
+        ripristina(nome);
     }
 
     private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
