@@ -112,12 +112,7 @@ public final class TestPartita
     {
         String nomeAngelo = "Enzo", nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        segnalazioneAngeloCustode(nomeVittima);
-        attaccoAssassino(nomeVittima);
-        terminaNotte();
-        verificaEliminazione(nomeAngelo);
-        verificaNonEliminati(nomeVittima);
-        ripristinaGiocatoreVivo(nomeVittima);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
@@ -136,6 +131,11 @@ public final class TestPartita
         String nomeAngelo = "Enzo", nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
         partita.romeizzazione(nomeVittima);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
+    }
+
+    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAngelo)
+    {
         segnalazioneAngeloCustode(nomeVittima);
         attaccoAssassino(nomeVittima);
         terminaNotte();

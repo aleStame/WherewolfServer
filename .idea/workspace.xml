@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoAmatoAssassino non riuscito">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03366" summary="VERDE: testMisticiMaledetti riuscito">
-      <option name="closed" value="true" />
-      <created>1782337899102</created>
-      <option name="number" value="03366" />
-      <option name="presentableId" value="LOCAL-03366" />
-      <option name="project" value="LOCAL" />
-      <updated>1782337899102</updated>
     </task>
     <task id="LOCAL-03367" summary="REFACTORING: definizione del metodo isMaledetto">
       <option name="closed" value="true" />
@@ -687,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782746491404</updated>
     </task>
-    <option name="localTasksCounter" value="3415" />
+    <task id="LOCAL-03415" summary="VERDE: testAttaccoAmatoRomeoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1782746855471</created>
+      <option name="number" value="03415" />
+      <option name="presentableId" value="LOCAL-03415" />
+      <option name="project" value="LOCAL" />
+      <updated>1782746855471</updated>
+    </task>
+    <option name="localTasksCounter" value="3416" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -702,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo passaPosseduto" />
     <MESSAGE value="ROSSO: testPoterePossedutoPreteVampirizzato non riuscito" />
     <MESSAGE value="VERDE: testPoterePossedutoPreteVampirizzato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaCorrettezzaPossessione" />
@@ -722,11 +721,12 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAmato" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoStregato riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAssassinioAmato" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoStregatoAssassino non riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoAmatoAssassino non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoAmatoAssassino non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito" />
   </component>
 </project>
