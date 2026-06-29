@@ -5,8 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
@@ -294,7 +293,7 @@ public class Ruolo
     public EsitoAttacco attaccoAssassino()
     {
         EsitoAttacco esito = RIUSCITO;
-        if(isAmato()) esito = FALLITO;
+        if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
         return esito;
     }
 
@@ -385,6 +384,8 @@ public class Ruolo
         annullaSegnalazioneInquisitore();
         perdiProtezioni();
     }
+
+    public void protezioneStrega() { }
 
     private void trasformazioneVampiro()
     {

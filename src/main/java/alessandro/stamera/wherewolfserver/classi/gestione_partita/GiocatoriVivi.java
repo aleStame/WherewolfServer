@@ -272,6 +272,8 @@ public final class GiocatoriVivi extends Giocatori
         }
     }
 
+    public void protezioneStrega(String nome) { }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;

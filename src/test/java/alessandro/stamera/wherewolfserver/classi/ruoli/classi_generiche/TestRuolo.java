@@ -10,8 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
@@ -116,10 +115,18 @@ public final class TestRuolo
 
     @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }
 
-    @Test public void attaccoAssassinoAmato()
+    @Test public void testAttaccoAssassinoAmato() { verificaAttaccoAmato(); }
+
+    @Test public void testAttaccoAssassinoAmatoStregato()
     {
-        sceltaAngeloCustode();
-        verificaAttaccoFallito(assassinio());
+        ruolo.protezioneStrega();
+        verificaAttaccoAmato();
+    }
+
+    @Test public void testAttaccoAssassinoAmatoRomeo()
+    {
+        romeizzazione();
+        verificaAttaccoAmato();
     }
 
     @Test public void vampirizzazione()
@@ -181,6 +188,13 @@ public final class TestRuolo
         verificaFazione(NESSUNA);
         verificaNonInquisito();
         for(IstanzaRuolo istanza : IstanzaRuolo.values()) ruolo.isProtezionePresente(istanza.getRuolo());
+    }
+
+    private void verificaAttaccoAmato()
+    {
+        sceltaAngeloCustode();
+        verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
+        ruolo.ripristina();
     }
 
     private static Stream<Arguments> getEsempiPartita()

@@ -81,7 +81,7 @@ public final class Partita
         switch(vivi.attaccoAssassino(nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case FALLITO -> eliminazioneAngeloCustode();
+            case ANGELO_CUSTODE_MORTO -> eliminazioneAngeloCustode();
             case MORTO -> assassinioContadinoMostro(nome);
         }
     }
@@ -336,6 +336,8 @@ public final class Partita
     }
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
+
+    public void protezioneStrega(String nome) { }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
