@@ -122,6 +122,14 @@ public final class TestRuolo
         ruolo.ripristina();
     }
 
+    @Test public void testAttaccoAssassinoAmatoRomeo()
+    {
+        romeizzazione();
+        sceltaAngeloCustode();
+        verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
+        ruolo.ripristina();
+    }
+
     @Test public void vampirizzazione()
     {
         verificaAttaccoRiuscito(ruolo.vampirizzazione());
