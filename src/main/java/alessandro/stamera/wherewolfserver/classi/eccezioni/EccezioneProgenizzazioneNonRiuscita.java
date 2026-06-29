@@ -15,6 +15,13 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalStateExcep
         );
     }
 
-    public EccezioneProgenizzazioneNonRiuscita(String nomeCacciatoreDiVampiri, String nomeGhoul) {}
+    public EccezioneProgenizzazioneNonRiuscita(String nomeCacciatoreDiVampiri, String nomeGhoul)
+    {
+        super
+        (
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (" + nomeCacciatoreDiVampiri + ") causa la morte del Ghoul (" + nomeGhoul +
+            ").\nAvvisa " + nomeGhoul + " della sua morte"
+        );
+    }
 
 }
