@@ -1361,6 +1361,24 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomeLadra)).withMessage("Impossibile possedere Piera.");
     }
 
+    @Test public void testAttaccoVampiroAmatoCacciatoreDiVampiri()
+    {
+        String nomeVampiro = "Stefano", nomeGhoul = "Biagio", nomeCacciatore = "Herbert", nomeAngelo = "Francesco";
+        String[][] giocatori = new String[][]
+        {
+            { nomeVampiro, "Vampiro" }, { nomeGhoul, "Ghoul" }, { nomeCacciatore, "Cacciatore di vampiri" }, { nomeAngelo, "Angelo custode" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeVampiro);
+        String messaggio =
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Herbert) causa la morte dell'Angelo custode (Francesco) del Vampiro " +
+            "amato (Stefano).\nAvvisa Francesco della sua morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeCacciatore)).withMessage(messaggio);
+        verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
+        verificaEliminati();
+        ripristinaGiocatoreVivo(nomeVampiro);
+    }
+
     private void verificaCorrettezzaPossessione(String nome)
     {
         passaPosseduto(nome);

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testAttaccoVampiroAmatoCacciatoreDiVampiri non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +105,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/assassinioAmato",
+    "git-widget-placeholder": "feature/vampirizzazioneCacciatoreDiVampiri",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -292,14 +294,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03371" summary="VERDE DIRETTO: testMegera riuscito">
-      <option name="closed" value="true" />
-      <created>1782339908357</created>
-      <option name="number" value="03371" />
-      <option name="presentableId" value="LOCAL-03371" />
-      <option name="project" value="LOCAL" />
-      <updated>1782339908358</updated>
     </task>
     <task id="LOCAL-03372" summary="ROSSO: testNoNegromante non riuscito">
       <option name="closed" value="true" />
@@ -685,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782749362390</updated>
     </task>
-    <option name="localTasksCounter" value="3420" />
+    <task id="LOCAL-03420" summary="ROSSO: testAttaccoVampiroAmatoCacciatoreDiVampiri non riuscito">
+      <option name="closed" value="true" />
+      <created>1782752463815</created>
+      <option name="number" value="03420" />
+      <option name="presentableId" value="LOCAL-03420" />
+      <option name="project" value="LOCAL" />
+      <updated>1782752463815</updated>
+    </task>
+    <option name="localTasksCounter" value="3421" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -700,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testPoterePossedutoPreteNosferatizzato riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazione non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazione riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazionePosseduto non riuscito" />
@@ -725,6 +726,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoAssassinoAmato" />
     <MESSAGE value="ROSSO: testAttaccoAmatoStregatoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoAmatoStregatoAssassino riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoVampiroAmatoCacciatoreDiVampiri non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoVampiroAmatoCacciatoreDiVampiri non riuscito" />
   </component>
 </project>
