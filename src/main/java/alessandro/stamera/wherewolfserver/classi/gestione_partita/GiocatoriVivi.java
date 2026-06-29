@@ -274,6 +274,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public void protezioneStrega(String nome) { }
 
+    public boolean isVampiroAmato() { return true; }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;
