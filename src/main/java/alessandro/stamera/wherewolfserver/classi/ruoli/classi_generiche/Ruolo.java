@@ -385,6 +385,8 @@ public class Ruolo
         perdiProtezioni();
     }
 
+    public void protezioneStrega() { }
+
     private void trasformazioneVampiro()
     {
         cambiaFazione(VAMPIRO);

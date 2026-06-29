@@ -117,6 +117,12 @@ public final class TestRuolo
 
     @Test public void testAttaccoAssassinoAmato() { verificaAttaccoAmato(); }
 
+    @Test public void testAttaccoAssassinoAmatoStregato()
+    {
+        ruolo.protezioneStrega();
+        verificaAttaccoAmato();
+    }
+
     @Test public void testAttaccoAssassinoAmatoRomeo()
     {
         romeizzazione();
