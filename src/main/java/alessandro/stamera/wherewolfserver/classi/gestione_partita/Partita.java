@@ -83,19 +83,16 @@ public final class Partita
         switch(vivi.attaccoAssassino(nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case ANGELO_CUSTODE_MORTO ->
-            {
-                String nomeAngeloCustode = getNomeAngeloCustodeVivo();
-                eliminazioneAngeloCustode();
-                int posizioneAmato = -1, posizioneAssassino = -1;
-                for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneAmato == -1; i++) if(vivi.isAmato(getNomeGiocatoreVivo(i)))
-                    posizioneAmato = i;
-                for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneAssassino == -1; i++) if(getRuoloVivo(getNomeGiocatoreVivo(i)).isAssassino())
-                    posizioneAssassino = i;
-                throw new EccezioneAssassinoAmato(getNomeGiocatoreVivo(posizioneAmato), getNomeGiocatoreVivo(posizioneAssassino), nomeAngeloCustode);
-            }
+            case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
             case MORTO -> assassinioContadinoMostro(nome);
         }
+    }
+
+    private void gestisciAssassinioAmato()
+    {
+        String nomeAngeloCustode = getNomeAngeloCustodeVivo();
+        eliminazioneAngeloCustode();
+        throw new EccezioneAssassinoAmato(vivi.getNomeAmato(), vivi.getNomeAssassino(), nomeAngeloCustode);
     }
 
     public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
