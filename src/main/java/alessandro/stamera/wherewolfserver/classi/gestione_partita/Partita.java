@@ -356,17 +356,19 @@ public final class Partita
     {
         String nomeMorto = vivi.getNomeVampiro();
         if(vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode();
-        else if(isGhoulPresente())
-        {
-            nomeMorto = getNomeGhoul();
-            eliminaGhoul();
-            throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
-        }
+        else if(isGhoulPresente()) gestioneEccezioneMorteGhoul(nome);
         else
         {
             eliminaGiocatore(nomeMorto);
             throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
         }
+    }
+
+    private void gestioneEccezioneMorteGhoul(String nome)
+    {
+        String nomeGhoul = getNomeGhoul();
+        eliminaGhoul();
+        throw new EccezioneProgenizzazioneNonRiuscita(nome, nomeGhoul);
     }
 
     private void gestioneEccezioneMorteAngeloCustode()

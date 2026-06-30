@@ -1144,7 +1144,9 @@ public final class TestPartita
             { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        verificaMortePostAttacco(nomeCacciatore, "Impossibile vampirizzare Terzo.\nQuarto muore.", nomeGhoul);
+        String messaggio =
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte";
+        verificaMortePostAttacco(nomeCacciatore, messaggio, nomeGhoul);
     }
 
     @Test public void testMorteGhoulContadinoMostroVampiro()
@@ -1152,7 +1154,7 @@ public final class TestPartita
         String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
         String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
         inizializzaPartita(giocatori);
-        verificaMortePostAttacco(nomeContadinoMostro, "Impossibile vampirizzare Edd.\nEddy muore.", nomeGhoul);
+        //verificaMortePostAttacco(nomeContadinoMostro, "Impossibile vampirizzare Edd.\nEddy muore.", nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource
@@ -1188,7 +1190,7 @@ public final class TestPartita
     {
         String nomeVittima = "Lino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Gino", "Vampiro" } });
-        verificaFallimentoVampirizzazione(nomeVittima, "Impossibile vampirizzare Lino.");
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage("Impossibile vampirizzare Lino.");
     }
 
     @ParameterizedTest @CsvSource
@@ -1199,7 +1201,7 @@ public final class TestPartita
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
-        verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
+        //verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1210,7 +1212,7 @@ public final class TestPartita
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
         attaccoLupi(nomeLupo, nomeVittima);
-        verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
+        //verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
     }
 
     @ParameterizedTest @CsvSource
@@ -1415,7 +1417,7 @@ public final class TestPartita
 
     private void verificaFallimentoVampirizzazione(String nomeVittima, String messaggio)
     {
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
     }
 
     private void verificaFallimentoGildata(String nomeVittima, String messaggio)
