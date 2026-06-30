@@ -996,6 +996,27 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeCacciatoreDiVampiri(), nome);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAmatoAssente(String nomeRuolo)
+    {
+        String nome = "Piero";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaNonAmato(nome);
+        verificaFalso(isAmatoPresente());
+    }
+
+    //@Test public void testAmatoNonPresente()
+
     private boolean isCacciatoreDiVampiriPresente() { return giocatori.isCacciatoreDiVampiriPresente(); }
 
     private void verificaVampiroNonAmato() { verificaFalso(isVampiroAmato()); }
