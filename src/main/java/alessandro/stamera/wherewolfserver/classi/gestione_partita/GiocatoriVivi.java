@@ -285,6 +285,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeCacciatoreDiVampiri() { return getNomeGiocatore(getPosizioneCacciatoreDiVampiri()); }
 
+    public String getNomeAmato() { return null; }
+
     private int getPosizioneCacciatoreDiVampiri()
     {
         int posizione = NON_TROVATO;
