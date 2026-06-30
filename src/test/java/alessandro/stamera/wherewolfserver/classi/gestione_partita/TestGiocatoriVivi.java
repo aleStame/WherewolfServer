@@ -1015,7 +1015,11 @@ public final class TestGiocatoriVivi
         verificaFalso(isAmatoPresente());
     }
 
-    //@Test public void testAmatoNonPresente()
+    @Test public void testAmatoNonPresente()
+    {
+        verificaFalso(isAmatoPresente());
+        verificaNonAmato("Andrea");
+    }
 
     private boolean isCacciatoreDiVampiriPresente() { return giocatori.isCacciatoreDiVampiriPresente(); }
 
