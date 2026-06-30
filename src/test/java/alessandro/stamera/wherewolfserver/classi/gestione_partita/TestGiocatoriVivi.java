@@ -1012,14 +1012,16 @@ public final class TestGiocatoriVivi
         String nome = "Piero";
         aggiungiGiocatore(nome, nomeRuolo);
         verificaNonAmato(nome);
-        verificaFalso(isAmatoPresente());
+        verificaAmatoAssente();
     }
 
     @Test public void testAmatoNonPresente()
     {
-        verificaFalso(isAmatoPresente());
+        verificaAmatoAssente();
         verificaNonAmato("Andrea");
     }
+
+    private void verificaAmatoAssente() { verificaFalso(isAmatoPresente()); }
 
     private boolean isCacciatoreDiVampiriPresente() { return giocatori.isCacciatoreDiVampiriPresente(); }
 
