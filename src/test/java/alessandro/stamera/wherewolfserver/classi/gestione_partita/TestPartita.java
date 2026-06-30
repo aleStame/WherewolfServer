@@ -110,9 +110,9 @@ public final class TestPartita
     )
     public void testAttaccoAmatoAssassino(String nomeRuolo)
     {
-        String nomeAngelo = "Enzo", nomeVittima = "Maddalena";
-        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
@@ -128,10 +128,10 @@ public final class TestPartita
     )
     public void testAttaccoAmatoRomeoAssassino(String nomeRuolo)
     {
-        String nomeAngelo = "Enzo", nomeVittima = "Maddalena";
-        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
         partita.romeizzazione(nomeVittima);
-        verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
@@ -147,18 +147,21 @@ public final class TestPartita
     )
     public void testAttaccoAmatoStregatoAssassino(String nomeRuolo)
     {
-        String nomeAngelo = "Enzo", nomeVittima = "Maddalena";
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
         String[][] giocatori =
-            new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } };
+            new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } };
         inizializzaPartita(giocatori);
         partita.protezioneStrega(nomeVittima);
-        verificaAttaccoAssassinoAmato(nomeVittima, nomeAngelo);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
-    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAngelo)
+    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAssassino, String nomeAngelo)
     {
         segnalazioneAngeloCustode(nomeVittima);
-        attaccoAssassino(nomeVittima);
+        String messaggio =
+            "L'attacco dell'amato (" + nomeVittima + ") da parte dell'Assassino (" + nomeAssassino + ") causa la morte del suo Angelo custode (" +
+            nomeAngelo + ").\nAvvisa " + nomeAngelo + " dell'attacco subito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminazione(nomeAngelo);
         verificaNonEliminati(nomeVittima);

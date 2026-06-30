@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -82,7 +83,17 @@ public final class Partita
         switch(vivi.attaccoAssassino(nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case ANGELO_CUSTODE_MORTO -> eliminazioneAngeloCustode();
+            case ANGELO_CUSTODE_MORTO ->
+            {
+                String nomeAngeloCustode = getNomeAngeloCustodeVivo();
+                eliminazioneAngeloCustode();
+                int posizioneAmato = -1, posizioneAssassino = -1;
+                for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneAmato == -1; i++) if(vivi.isAmato(getNomeGiocatoreVivo(i)))
+                    posizioneAmato = i;
+                for(int i = 0; i < getNumeroGiocatoriVivi() && posizioneAssassino == -1; i++) if(getRuoloVivo(getNomeGiocatoreVivo(i)).isAssassino())
+                    posizioneAssassino = i;
+                throw new EccezioneAssassinoAmato(getNomeGiocatoreVivo(posizioneAmato), getNomeGiocatoreVivo(posizioneAssassino), nomeAngeloCustode);
+            }
             case MORTO -> assassinioContadinoMostro(nome);
         }
     }
