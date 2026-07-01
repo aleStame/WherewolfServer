@@ -50,7 +50,12 @@ public class Giocatori
 
     public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
-    public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
+    public boolean isAmato(String nome)
+    {
+        boolean esito = false;
+        if(isPresente(nome)) esito = getRuolo(nome).isAmato();
+        return esito;
+    }
 
     public boolean isAngeloCustodePresente() { return cercaAngeloCustode().isPresent(); }
 

@@ -274,6 +274,30 @@ public final class GiocatoriVivi extends Giocatori
 
     public void protezioneStrega(String nome) { }
 
+    public boolean isVampiroAmato()
+    {
+        boolean esito = false;
+        if(isVampiroPresente()) esito = isAmato(getNomeVampiro());
+        return esito;
+    }
+
+    public boolean isCacciatoreDiVampiriPresente() { return getPosizioneCacciatoreDiVampiri() != NON_TROVATO; }
+
+    public String getNomeCacciatoreDiVampiri() { return getNomeGiocatore(getPosizioneCacciatoreDiVampiri()); }
+
+    public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
+
+    private int getPosizioneCacciatoreDiVampiri()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isCacciatoreDiVampiri(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isCacciatoreDiVampiri(int posizione) { return isCacciatoreDiVampiri(getNomeGiocatore(posizione)); }
+
+    private boolean isCacciatoreDiVampiri(String nome) { return getRuolo(nome).isCacciatoreDiVampiri(); }
+
     private int getPosizioneVampiro()
     {
         int posizione = NON_TROVATO;

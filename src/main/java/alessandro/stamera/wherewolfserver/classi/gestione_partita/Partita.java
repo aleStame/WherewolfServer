@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
@@ -81,9 +83,16 @@ public final class Partita
         switch(vivi.attaccoAssassino(nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case ANGELO_CUSTODE_MORTO -> eliminazioneAngeloCustode();
+            case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
             case MORTO -> assassinioContadinoMostro(nome);
         }
+    }
+
+    private void gestisciAssassinioAmato()
+    {
+        String nomeAngeloCustode = getNomeAngeloCustodeVivo();
+        eliminazioneAngeloCustode();
+        throw new EccezioneAssassinoAmato(vivi.getNomeAmato(), vivi.getNomeAssassino(), nomeAngeloCustode);
     }
 
     public boolean isEliminato(String nome) { return eliminati.isPresente(nome); }
@@ -354,13 +363,27 @@ public final class Partita
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
         String nomeMorto = vivi.getNomeVampiro();
-        if(isGhoulPresente())
+        if(vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode();
+        else if(isGhoulPresente()) gestioneEccezioneMorteGhoul(nome);
+        else
         {
-            nomeMorto = getNomeGhoul();
-            eliminaGhoul();
+            eliminaGiocatore(nomeMorto);
+            throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
         }
-        else eliminaGiocatore(nomeMorto);
-        throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
+    }
+
+    private void gestioneEccezioneMorteGhoul(String nome)
+    {
+        String nomeGhoul = getNomeGhoul();
+        eliminaGhoul();
+        throw new EccezioneProgenizzazioneNonRiuscita(nome, nomeGhoul);
+    }
+
+    private void gestioneEccezioneMorteAngeloCustode()
+    {
+        String nomeAngelo = getNomeAngeloCustodeVivo();
+        eliminazioneAngeloCustode();
+        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeCacciatoreDiVampiri(), nomeAngelo, vivi.getNomeVampiro());
     }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
@@ -511,7 +534,7 @@ public final class Partita
         else eliminaGiocatore(nome);
     }
 
-    private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustode()); }
+    private void eliminazioneAngeloCustode() { eliminaGiocatore(getNomeAngeloCustodeVivo()); }
 
     private void eliminaGiocatori(String... nomi) { for(String nome : nomi) eliminaGiocatore(nome); }
 
@@ -524,13 +547,7 @@ public final class Partita
 
     private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }
 
-    private String getNomeAngeloCustode()
-    {
-        String nome;
-        if(vivi.isAngeloCustodePresente()) nome = vivi.getNomeAngeloCustode();
-        else nome = eliminati.getNomeAngeloCustode();
-        return nome;
-    }
+    private String getNomeAngeloCustodeVivo() { return vivi.getNomeAngeloCustode(); }
 
     private Ruolo getRuoloVivo(String nome) { return vivi.getRuolo(nome); }
 
