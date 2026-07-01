@@ -125,7 +125,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        giocatori.romeizzazione(nomeVittima);
+        romeizzazione(nomeVittima);
         verificaAssassinioAmato(nomeVittima);
     }
 
@@ -200,7 +200,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Luca";
         aggiungiGiocatore(nome, "Angelo custode");
-        giocatori.romeizzazione(nome);
+        romeizzazione(nome);
         verificaAttaccoLupo(nomeLupo, nome, FALLITO);
         ripristina(nome);
     }
@@ -1050,6 +1050,8 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeAmato(), nome);
         ripristina(nome);
     }
+
+    private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
 
     private void verificaAmatoAssente() { verificaFalso(isAmatoPresente()); }
 
