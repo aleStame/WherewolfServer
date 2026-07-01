@@ -15,9 +15,14 @@ public class EccezioneAttaccoGiocatoreProtetto extends IllegalStateException
 
     @Override public String getMessage()
     {
+        return nomeVittima + " non muore perché " + getCausa() + ".\nAvvisa i lupi della sua mancata morte.";
+    }
+
+    private String getCausa()
+    {
         String causa = "protetto dalla Strega";
         if(isRomeo) causa = "Romeo";
-        return nomeVittima + " non muore perché " + causa + ".\nAvvisa i lupi della sua mancata morte.";
+        return causa;
     }
 
 }
