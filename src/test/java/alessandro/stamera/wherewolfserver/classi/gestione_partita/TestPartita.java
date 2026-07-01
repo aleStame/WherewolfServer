@@ -217,6 +217,17 @@ public final class TestPartita
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiAngeloCustodeRomeizzato(String tipoLupo)
+    {
+        String nome = "Luca", nomeLupo = "Mario";
+        inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo } });
+        partita.romeizzazione(nome);
+        String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(nomeLupo, nome)).withMessage(messaggio);
+        ripristinaGiocatoreVivo(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAmato(String nomeLupo)
     {
         String[][] giocatori = new String[][] { { "Fabrizio", "Bocca di rosa" }, { "Franca", "Peccatore" } };
