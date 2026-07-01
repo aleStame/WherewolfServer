@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" tests="34" skipped="0" failures="0" errors="0" timestamp="2026-07-01T14:05:58" hostname="ALESSANDRO" time="0.221">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" tests="34" skipped="0" failures="0" errors="0" timestamp="2026-07-01T14:15:11" hostname="ALESSANDRO" time="0.144">
   <properties/>
   <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.0"/>
+  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.0"/>
+  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
   <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
+  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
   <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.0"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="testEsitoPartita()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testAttaccoNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.023"/>
-  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.006"/>
+  <testcase name="testAttaccoNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.004"/>
+  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.003"/>
+  <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
+  <testcase name="[4] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
+  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
   <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
   <testcase name="[4] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="[4] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
-  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
+  <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.018"/>
   <testcase name="testVampiro()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
-  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.021"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.012"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.004"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
-  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
+  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.001"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.003"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.003"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.003"/>
+  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.006"/>
   <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.003"/>
-  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.002"/>
+  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
