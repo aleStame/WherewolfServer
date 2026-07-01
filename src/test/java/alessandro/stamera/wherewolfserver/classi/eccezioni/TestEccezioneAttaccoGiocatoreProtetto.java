@@ -11,17 +11,20 @@ public final class TestEccezioneAttaccoGiocatoreProtetto
     @Test public void testErroreAttaccoProtetto()
     {
         generaEccezione(false, "Gianluigi");
-        String messaggio = "Gianluigi non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
-        assertThat(eccezione.getMessage()).isEqualTo(messaggio);
+        verificaMessaggio("Gianluigi non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.");
     }
 
     @Test public void testErroreAttaccoRomeo()
     {
         generaEccezione(true, "Antongiulio");
-        String messaggio = "Antongiulio non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
-        assertThat(eccezione.getMessage()).isEqualTo(messaggio);
+        verificaMessaggio("Antongiulio non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.");
     }
 
-    private void generaEccezione(boolean isRomeo, String nomeVittima) { eccezione = new EccezioneAttaccoGiocatoreProtetto(isRomeo, nomeVittima); }
+    private void generaEccezione(boolean isRomeo, String nomeVittima)
+    {
+        eccezione = new EccezioneAttaccoGiocatoreProtetto(isRomeo, nomeVittima);
+    }
+
+    private void verificaMessaggio(String messaggio) { assertThat(eccezione.getMessage()).isEqualTo(messaggio); }
 
 }
