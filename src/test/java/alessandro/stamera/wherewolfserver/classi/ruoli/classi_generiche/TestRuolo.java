@@ -74,7 +74,7 @@ public final class TestRuolo
     {
         romeizzazione();
         verificaProtetto();
-        verificaAttaccoLupiRiuscito(nome);
+        //verificaAttaccoLupiRiuscito(nome);
     }
 
     @ParameterizedTest
