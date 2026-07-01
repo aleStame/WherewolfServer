@@ -223,7 +223,8 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo } });
         partita.romeizzazione(nome);
         String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(nomeLupo, nome)).withMessage(messaggio);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
+        verificaNonEliminati(nome);
         ripristinaGiocatoreVivo(nome);
     }
 

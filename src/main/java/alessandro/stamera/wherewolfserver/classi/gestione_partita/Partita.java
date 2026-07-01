@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGiocatoreProtetto;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -16,6 +17,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPar
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -107,6 +109,7 @@ public final class Partita
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
+            case FALLITO -> { if(vivi.getRuolo(nome).isRomeo()) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome); }
         }
     }
 
