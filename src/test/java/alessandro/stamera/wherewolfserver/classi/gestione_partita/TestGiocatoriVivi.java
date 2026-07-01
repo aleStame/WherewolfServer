@@ -201,7 +201,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         aggiungiGiocatore(nome, "Angelo custode");
         romeizzazione(nome);
-        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
+        verificaAttaccoLupoFallito(nomeLupo, nome);
         ripristina(nome);
     }
 
@@ -211,7 +211,7 @@ public final class TestGiocatoriVivi
         String nome = "Gregorio";
         aggiungiGiocatore(nome, "Angelo custode");
         giocatori.protezioneStrega(nome);
-        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
+        verificaAttaccoLupoFallito(nomeLupo, nome);
         ripristina(nome);
     }
 
@@ -223,7 +223,7 @@ public final class TestGiocatoriVivi
         String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nomeAmato, "Giullare" } };
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeAmato);
-        verificaAttaccoLupo(nomeLupo, nomeAmato, FALLITO);
+        verificaAttaccoLupoFallito(nomeLupo, nomeAmato);
         ripristina(nomeAmato);
     }
 
@@ -622,7 +622,7 @@ public final class TestGiocatoriVivi
         (
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { "Andrea", "Capo gilda" } }
         );
-        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+        verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
         verificaGildata(nomeVittima, MORTO);
     }
 
@@ -882,7 +882,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Carlo";
         inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
-        verificaAttaccoLupo(tipoLupo, nome, FALLITO);
+        verificaAttaccoLupoFallito(tipoLupo, nome);
         verificaAttaccoVampiro(attaccoVampiro(nome), MORTO);
         ripristina(nome);
     }
@@ -1060,6 +1060,8 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeAmato(), nome);
         ripristina(nome);
     }
+
+    private void verificaAttaccoLupoFallito(String nomeLupo, String nome) { verificaAttaccoLupo(nomeLupo, nome, FALLITO); }
 
     private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
 
