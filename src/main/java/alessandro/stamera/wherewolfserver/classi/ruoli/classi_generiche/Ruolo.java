@@ -389,7 +389,7 @@ public class Ruolo
         perdiProtezioni();
     }
 
-    public void protezioneStrega() { }
+    public void protezioneStrega() { aggiungiProtezioneCreatureOmbra(); }
 
     private void trasformazioneVampiro()
     {
