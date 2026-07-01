@@ -205,6 +205,16 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiAngeloCustodeStregato(String nomeLupo)
+    {
+        String nome = "Gregorio";
+        aggiungiGiocatore(nome, "Angelo custode");
+        giocatori.protezioneStrega(nome);
+        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
+        ripristina(nome);
+    }
+
     @ParameterizedTest
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupiAmato(String nomeLupo)
