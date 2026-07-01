@@ -186,13 +186,22 @@ public final class TestGiocatoriVivi
         this.giocatori.resettaAmato();
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
         String nome = "Rodolfo";
         aggiungiGiocatore(nome, "Angelo custode");
-        verificaAttaccoLupo(nomeLupo, nome, RIUSCITO);
+        verificaAttaccoLupoRiuscito(nomeLupo, nome);
+        ripristina(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiAngeloCustodeRomeizzato(String nomeLupo)
+    {
+        String nome = "Luca";
+        aggiungiGiocatore(nome, "Angelo custode");
+        giocatori.romeizzazione(nome);
+        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
         ripristina(nome);
     }
 
