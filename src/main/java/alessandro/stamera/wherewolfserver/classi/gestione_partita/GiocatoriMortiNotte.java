@@ -12,8 +12,8 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public boolean isPazzo(String nome) { return getRuolo(nome).isPazzo(); }
 
-    public boolean isContadino(String nome) { return false; }
+    public boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
 
-    public TipoContadino getTipoContadino(String nome) { return null; }
+    public TipoContadino getTipoContadino(String nome) { return getRuolo(nome).getTipoContadino(); }
 
 }

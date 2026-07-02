@@ -2,21 +2,11 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe;
-import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.stream.Stream;
-
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.EROE;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.NORMALE;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -52,15 +42,13 @@ public final class TestGiocatoriMortiNotte
         verificaVero(isPazzo(giocatori[1][0]));
     }
 
-    @ParameterizedTest @EnumSource(TipoContadino.class)
-    public void testContadinoPresente(TipoContadino tipoContadino)
+    @ParameterizedTest @EnumSource(TipoContadino.class) public void testContadinoPresente(TipoContadino tipoContadino)
     {
         String nome = "Gianfranco";
         aggiungiGiocatore(nome, tipoContadino.toString());
         verificaVero(giocatori.isContadino(nome));
         assertThat(giocatori.getTipoContadino(nome)).isEqualTo(tipoContadino);
     }
-
 
     private void aggiungiGiocatori(String[][] giocatori)
     {
