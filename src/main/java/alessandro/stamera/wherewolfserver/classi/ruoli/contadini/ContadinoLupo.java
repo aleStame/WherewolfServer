@@ -8,13 +8,14 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.LUPO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
 
 public final class ContadinoLupo extends Contadino
 {
 
-    private ContadinoLupo() { super(); }
+    private ContadinoLupo() { super(LUPO); }
 
     @Override public boolean isContadinoLupo() { return true; }
 

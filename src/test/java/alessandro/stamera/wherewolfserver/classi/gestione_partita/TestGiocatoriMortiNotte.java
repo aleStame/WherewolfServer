@@ -1,10 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,6 +40,34 @@ public final class TestGiocatoriMortiNotte
         aggiungiGiocatori(giocatori);
         verificaFalso(isPazzo(giocatori[0][0]));
         verificaVero(isPazzo(giocatori[1][0]));
+    }
+
+    @ParameterizedTest @EnumSource(TipoContadino.class) public void testContadinoPresente(TipoContadino tipoContadino)
+    {
+        String nome = "Gianfranco";
+        aggiungiGiocatore(nome, tipoContadino.toString());
+        verificaVero(giocatori.isContadino(nome));
+        assertThat(giocatori.getTipoContadino(nome)).isEqualTo(tipoContadino);
+    }
+
+    @Test public void testContadinoAssente() { verificaFalso(giocatori.isContadino("Giampiero")); }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Eremita", "Ghoul",
+            "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
+            "Vampiro"
+        }
+    )
+    public void testRuoloNonContadino(String nomeRuolo)
+    {
+        String nome = "Giuseppina";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isContadino(nome));
     }
 
     private void aggiungiGiocatori(String[][] giocatori)

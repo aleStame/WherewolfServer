@@ -4,7 +4,10 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
@@ -520,7 +523,10 @@ public final class TestPartita
     {
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco", nomeLupo = "Renato";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, tipoLupo } });
-        attaccoLupi(tipoLupo, nomeVittima);
+        String messaggio =
+            "L'attacco al Contadino mostro (Gianmaria) causa la morte anche del lupo attaccante (Renato).\nAvvisa entrambi i giocatori della " +
+            "loro morte.";
+        assertThatIllegalArgumentException().isThrownBy(() ->attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
         verificaEliminati(nomeNosferatu, nomeLupo);
@@ -558,16 +564,6 @@ public final class TestPartita
     {
         inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo reietto" }, { "Mohamed", "Capo branco" } });
         verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
-    }
-
-    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
-    public void testAttaccoContadino(String tipoContadino)
-    {
-        String nomeVittima = "Caio", nomeLupo = "Tizio", tipoLupo = "Capo branco";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Sempronio", "Peccatore" } });
-        attaccoLupi(tipoLupo, nomeVittima);
-        terminaNotte();
-        verificaEliminati(nomeVittima, nomeLupo);
     }
 
     @Test public void testAttaccoNosferatuRiuscito()
@@ -762,7 +758,10 @@ public final class TestPartita
     {
         String nomeContadino = "Graziano", nomeGuaritore = "Perla", nomeLupo = "Leonardo";
         inizializzaPartita(new String[][] { { nomeContadino, "Contadino mostro" }, { nomeLupo, tipoLupo }, { nomeGuaritore, "Guaritore" } });
-        attaccoLupi(tipoLupo, nomeContadino);
+        String messaggio =
+            "L'attacco al Contadino mostro (Graziano) causa la morte anche del lupo attaccante (Leonardo).\nAvvisa entrambi i giocatori della " +
+            "loro morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
         partita.guarisci(nomeContadino);
         terminaNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
@@ -1068,8 +1067,10 @@ public final class TestPartita
             { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { "Terzo", "Contadino mostro" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        String nomeVittima = giocatori[2][0];
-        attaccoLupi(tipoLupo, nomeVittima);
+        String nomeVittima = giocatori[2][0], messaggio =
+            "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro " +
+            "morte.";
+        assertThatIllegalArgumentException().isThrownBy(() ->attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
         verificaEliminati(giocatori[0][0], giocatori[3][0]);
@@ -1403,6 +1404,49 @@ public final class TestPartita
         verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
         verificaEliminati(nomeAngelo);
         ripristinaGiocatoreVivo(nomeVampiro);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
+    public void testAttaccoCapoBrancoContadino(String tipoContadino, String messaggio)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
+        verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
+    public void testAttaccoCapoBrancoContadinoAmato(String tipoContadino, String messaggio)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
+    }
+
+    private void verificaEccezioneAttaccoContadino(String messaggio, String tipoLupo, String nomeVittima, String nomeLupo)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeLupo, nomeVittima);
+    }
+
+    private static Stream<Arguments> getEsempiAttacchiContadini()
+    {
+        return Stream.of
+        (
+            Arguments.of
+            (
+    "Contadino eroe",
+               "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
+               "morte."
+            ),
+            Arguments.of
+            (
+    "Contadino mostro",
+               "L'attacco al Contadino mostro (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della " +
+               "loro morte."
+            )
+        );
     }
 
     private void verificaAttaccoLupiAngeloCustodeFallito(String tipoLupo, String nome, String messaggio)

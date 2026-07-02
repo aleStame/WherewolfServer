@@ -15,6 +15,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.LUPO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
@@ -69,6 +70,8 @@ public final class TestContadinoLupo
         verificaFalso(ruolo.isCreaturaOmbra());
         verificaFalso(ruolo.isLupo());
     }
+
+    @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(LUPO); }
 
     private void verificaContadinoLupo(String nome)
     {

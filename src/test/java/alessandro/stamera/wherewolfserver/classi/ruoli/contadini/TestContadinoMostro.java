@@ -11,6 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -81,6 +82,8 @@ public final class TestContadinoMostro
     }
 
     @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(MORTO); }
+
+    @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(MOSTRO); }
 
     @AfterEach public void annullaSegnalazioni() { ripristina(); }
 

@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoContadino;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGiocatoreProtetto;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
@@ -474,19 +475,21 @@ public final class Partita
 
     private boolean isProtezineUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto(); }
 
-    private void doppiaEliminazione(String nomeLupo, String nome)
+    private void doppiaEliminazione(String tipoLupo, String nome)
     {
-        eliminaGiocatore(nome);
-        boolean fatto = false;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && !fatto; i++)
-        {
-            String x = vivi.getNomeGiocatore(i);
-            if(getRuoloVivo(x).getNome().equals(nomeLupo))
-            {
-                eliminaGiocatore(x);
-                fatto = true;
-            }
-        }
+        String nomeGiocatoreLupo = getNomeGiocatoreLupo(tipoLupo);
+        eliminaGiocatori(nomeGiocatoreLupo, nome);
+        if(mortiNotte.isContadino(nome)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nome), nome, nomeGiocatoreLupo);
+    }
+
+    private String getNomeGiocatoreLupo(String tipoLupo) { return getNomeGiocatoreVivo(getPosizioneLupo(tipoLupo)); }
+
+    private int getPosizioneLupo(String tipoLupo)
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
+            if(getRuoloVivo(getNomeGiocatoreVivo(i)).getNome().equals(tipoLupo)) posizione = i;
+        return posizione;
     }
 
     private void gestisciPotereBracconiere()
