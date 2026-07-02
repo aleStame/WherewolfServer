@@ -50,6 +50,8 @@ public final class TestGiocatoriMortiNotte
         assertThat(giocatori.getTipoContadino(nome)).isEqualTo(tipoContadino);
     }
 
+    @Test public void testContadinoAssente() { verificaFalso(giocatori.isContadino("Giampiero")); }
+
     private void aggiungiGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
