@@ -362,6 +362,8 @@ public final class Partita
         potereStregaUsato = true;
     }
 
+    public boolean isCapoBranco(String nome) { return false; }
+
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
