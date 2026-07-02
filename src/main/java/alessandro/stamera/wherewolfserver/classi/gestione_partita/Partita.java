@@ -17,8 +17,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.EROE;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static java.util.Arrays.stream;
 
@@ -113,18 +111,10 @@ public final class Partita
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO ->
             {
-                int posizione = -1;
-                for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
-                    if(getRuoloVivo(getNomeGiocatoreVivo(i)).getNome().equals(nomeLupo)) posizione = i;
+                int posizione = getPosizioneLupo(nomeLupo);
                 String nomeGiocatoreLupo = getNomeGiocatoreVivo(posizione);
                 doppiaEliminazione(nomeLupo, nome);
-                Ruolo ruolo = mortiNotte.getRuolo(nome);
-                if(ruolo.isContadino())
-                {
-                    TipoContadino tipo = MOSTRO;
-                    if(ruolo.isContadinoEroe()) tipo = EROE;
-                    throw new EccezioneAttaccoContadino(tipo, nome, nomeGiocatoreLupo);
-                }
+                if(mortiNotte.isContadino(nome)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nome), nome, nomeGiocatoreLupo);
             }
             case FALLITO -> nessunaEliminazione(nome);
         }
@@ -493,17 +483,15 @@ public final class Partita
 
     private void doppiaEliminazione(String nomeLupo, String nome)
     {
-        eliminaGiocatore(nome);
-        boolean fatto = false;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && !fatto; i++)
-        {
-            String x = vivi.getNomeGiocatore(i);
-            if(getRuoloVivo(x).getNome().equals(nomeLupo))
-            {
-                eliminaGiocatore(x);
-                fatto = true;
-            }
-        }
+        eliminaGiocatori(nome, getNomeGiocatoreVivo(getPosizioneLupo(nomeLupo)));
+    }
+
+    private int getPosizioneLupo(String tipoLupo)
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
+            if(getRuoloVivo(getNomeGiocatoreVivo(i)).getNome().equals(tipoLupo)) posizione = i;
+        return posizione;
     }
 
     private void gestisciPotereBracconiere()
