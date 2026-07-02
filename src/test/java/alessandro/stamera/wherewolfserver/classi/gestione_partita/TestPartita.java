@@ -4,10 +4,12 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -1406,13 +1408,32 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeVampiro);
     }
 
-    /*@ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
-    public void testAttaccoCapoBrancoContadino(String tipoContadino)
+    @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
+    public void testAttaccoCapoBrancoContadino(String tipoContadino, String messaggio)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { "Iris", tipoLupo }, { nomeVittima, tipoContadino } });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
-    }*/
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+    }
+
+    private static Stream<Arguments> getEsempiAttacchiContadini()
+    {
+        return Stream.of
+        (
+            Arguments.of
+            (
+    "Contadino eroe",
+               "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
+               "morte."
+            ),
+            Arguments.of
+            (
+    "Contadino mostro",
+               "L'attacco al Contadino mostro (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della " +
+               "loro morte."
+            )
+        );
+    }
 
     private void verificaAttaccoLupiAngeloCustodeFallito(String tipoLupo, String nome, String messaggio)
     {
