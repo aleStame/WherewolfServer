@@ -1061,10 +1061,20 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" }) public void testAttaccoCapoBrancoContadino(String tipoContadino)
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoCapoBrancoContadino(String tipoContadino)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Filippo";
         inizializzaGiocatori(new String[][]{ { "Iris", tipoLupo }, { nomeVittima, tipoContadino } });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoCapoBrancoAmatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
     }
 
