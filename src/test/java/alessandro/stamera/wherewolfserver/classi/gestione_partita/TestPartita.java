@@ -130,7 +130,7 @@ public final class TestPartita
     {
         String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
-        partita.romeizzazione(nomeVittima);
+        romeizzazione(nomeVittima);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -221,7 +221,7 @@ public final class TestPartita
     {
         String nome = "Luca", nomeLupo = "Mario";
         inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo }, { "Lucio", "Giulietta" } });
-        partita.romeizzazione(nome);
+        romeizzazione(nome);
         String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
         verificaNonEliminati(nome);
@@ -535,7 +535,7 @@ public final class TestPartita
     {
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", nomeLupo = "Renato";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" } });
-        partita.romeizzazione(nomeVittima);
+        romeizzazione(nomeVittima);
         attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
@@ -859,7 +859,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Lino", "Contadino mostro" }, { "Dino", "Negromante" }, { "Pino", "Giulietta" } };
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
-        partita.romeizzazione(giocatori[posizioneVittima][0]);
+        romeizzazione(giocatori[posizioneVittima][0]);
         assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
@@ -1259,7 +1259,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        partita.romeizzazione(nomeRomeo);
+        romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
         attaccoAssassino(nomeGiulietta);
         terminaNotte();
@@ -1275,7 +1275,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { nomeLupo, "Capo branco" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        partita.romeizzazione(nomeRomeo);
+        romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
         attaccoLupi("Carla", nomeGiulietta);
         terminaNotte();
@@ -1408,6 +1408,8 @@ public final class TestPartita
         verificaEliminati(nomeAngelo);
         ripristinaGiocatoreVivo(nomeVampiro);
     }
+
+    private void romeizzazione(String nome) { partita.romeizzazione(nome); }
 
     private void verificaCorrettezzaPossessione(String nome)
     {
