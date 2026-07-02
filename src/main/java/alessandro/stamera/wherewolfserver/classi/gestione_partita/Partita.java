@@ -7,6 +7,8 @@ import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGioca
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
+
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -111,6 +113,20 @@ public final class Partita
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nome);
+            case NONNA_BECCATA ->
+            {
+                String nomeGiocatoreLupo = getNomeGiocatoreLupo(nomeLupo);
+                Ruolo lupo = getRuoloVivo(nomeGiocatoreLupo);
+                vivi.eliminaGiocatore(nomeGiocatoreLupo);
+                eliminati.aggiungiGiocatore(nomeGiocatoreLupo, RuoloNullo.getInstance());
+                vivi.eliminaGiocatore(nome);
+                vivi.aggiungiGiocatore(nome, lupo);
+                throw new IllegalArgumentException
+                (
+                    "Il " + nomeLupo + " (" + nomeGiocatoreLupo + ") ha beccato la Nonna (" + nome + ").\nSveglia " + nome + " e avvisa i due " +
+                    "giocatori che " +nomeGiocatoreLupo+ " è eliminato e che " + nome + " è il " + nomeLupo + "."
+                );
+            }
         }
     }
 
@@ -362,7 +378,7 @@ public final class Partita
         potereStregaUsato = true;
     }
 
-    public boolean isCapoBranco(String nome) { return false; }
+    public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
