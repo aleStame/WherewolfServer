@@ -1411,9 +1411,7 @@ public final class TestPartita
     {
         String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaEliminati(nomeLupo, nomeVittima);
+        verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
@@ -1422,6 +1420,11 @@ public final class TestPartita
         String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
         segnalazioneAngeloCustode(nomeLupo);
+        verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
+    }
+
+    private void verificaEccezioneAttaccoContadino(String messaggio, String tipoLupo, String nomeVittima, String nomeLupo)
+    {
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeLupo, nomeVittima);
