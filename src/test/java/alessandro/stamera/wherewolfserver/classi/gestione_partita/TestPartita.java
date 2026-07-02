@@ -223,9 +223,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo }, { "Lucio", "Giulietta" } });
         romeizzazione(nome);
         String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
-        verificaNonEliminati(nome);
-        ripristinaGiocatoreVivo(nome);
+        verificaAttaccoLupiAngeloCustodeFallito(tipoLupo, nome, messaggio);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -235,9 +233,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nome, "Angelo custode"}, { "Vinicio", "Strega" }, { "Francesca", tipoLupo } });
         protezioneStrega(nome);
         String messaggio = "Gregorio non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
-        verificaNonEliminati(nome);
-        ripristinaGiocatoreVivo(nome);
+        verificaAttaccoLupiAngeloCustodeFallito(tipoLupo, nome, messaggio);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1407,6 +1403,13 @@ public final class TestPartita
         verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
         verificaEliminati(nomeAngelo);
         ripristinaGiocatoreVivo(nomeVampiro);
+    }
+
+    private void verificaAttaccoLupiAngeloCustodeFallito(String tipoLupo, String nome, String messaggio)
+    {
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
+        verificaNonEliminati(nome);
+        ripristinaGiocatoreVivo(nome);
     }
 
     private void protezioneStrega(String nome) { partita.protezioneStrega(nome); }
