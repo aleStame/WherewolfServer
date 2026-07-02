@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoContadino;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGiocatoreProtetto;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
@@ -16,6 +17,8 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.EROE;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static java.util.Arrays.stream;
 
@@ -108,7 +111,21 @@ public final class Partita
         switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
-            case MORTO -> doppiaEliminazione(nomeLupo, nome);
+            case MORTO ->
+            {
+                int posizione = -1;
+                for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
+                    if(getRuoloVivo(getNomeGiocatoreVivo(i)).getNome().equals(nomeLupo)) posizione = i;
+                String nomeGiocatoreLupo = getNomeGiocatoreVivo(posizione);
+                doppiaEliminazione(nomeLupo, nome);
+                Ruolo ruolo = mortiNotte.getRuolo(nome);
+                if(ruolo.isContadino())
+                {
+                    TipoContadino tipo = MOSTRO;
+                    if(ruolo.isContadinoEroe()) tipo = EROE;
+                    throw new EccezioneAttaccoContadino(tipo, nome, nomeGiocatoreLupo);
+                }
+            }
             case FALLITO -> nessunaEliminazione(nome);
         }
     }
