@@ -220,7 +220,7 @@ public final class TestPartita
     public void testAttaccoLupiAngeloCustodeRomeizzato(String tipoLupo)
     {
         String nome = "Luca", nomeLupo = "Mario";
-        inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo }, { "Lucio", "Romeo" } });
+        inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo }, { "Lucio", "Giulietta" } });
         partita.romeizzazione(nome);
         String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);

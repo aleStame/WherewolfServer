@@ -37,7 +37,7 @@ public final class Partita
 
     private final List<String> votantiContadinoMostro;
 
-    private boolean pazzoUcciso;
+    private boolean pazzoUcciso, potereStregaUsato;
 
     private int numeroNotte;
 
@@ -53,6 +53,7 @@ public final class Partita
         perdiProtezioniCappuccettoRosso();
         votantiContadinoMostro = new ArrayList<>();
         numeroNotte = 1;
+        potereStregaUsato = false;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -109,7 +110,11 @@ public final class Partita
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
-            case FALLITO -> { if(vivi.getRuolo(nome).isRomeo()) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome); }
+            case FALLITO ->
+            {
+                Ruolo ruolo = vivi.getRuolo(nome);
+                if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+            }
         }
     }
 
@@ -349,7 +354,11 @@ public final class Partita
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
 
-    public void protezioneStrega(String nome) { }
+    public void protezioneStrega(String nome)
+    {
+        vivi.protezioneStrega(nome);
+        potereStregaUsato = true;
+    }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
