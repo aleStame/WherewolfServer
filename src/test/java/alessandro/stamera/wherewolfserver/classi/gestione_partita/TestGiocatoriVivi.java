@@ -1078,6 +1078,13 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
     }
 
+    @Test public void testAttaccoCapoBrancoNonna()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Federica";
+        inizializzaGiocatori(new String[][] { { "Ciro", tipoLupo }, { nomeVittima, "Nonna" } });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, NONNA_BECCATA);
+    }
+
     private void verificaAttaccoLupoFallito(String nomeLupo, String nome) { verificaAttaccoLupo(nomeLupo, nome, FALLITO); }
 
     private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
