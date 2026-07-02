@@ -111,9 +111,8 @@ public final class Partita
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO ->
             {
-                int posizione = getPosizioneLupo(nomeLupo);
-                String nomeGiocatoreLupo = getNomeGiocatoreVivo(posizione);
-                doppiaEliminazione(nomeLupo, nome);
+                String nomeGiocatoreLupo = getNomeGiocatoreLupo(nomeLupo);
+                doppiaEliminazione(nomeGiocatoreLupo, nome);
                 if(mortiNotte.isContadino(nome)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nome), nome, nomeGiocatoreLupo);
             }
             case FALLITO -> nessunaEliminazione(nome);
@@ -481,10 +480,9 @@ public final class Partita
 
     private boolean isProtezineUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto(); }
 
-    private void doppiaEliminazione(String nomeLupo, String nome)
-    {
-        eliminaGiocatori(nome, getNomeGiocatoreVivo(getPosizioneLupo(nomeLupo)));
-    }
+    private void doppiaEliminazione(String nomeGiocatoreLupo, String nome) { eliminaGiocatori(nome, nomeGiocatoreLupo); }
+
+    private String getNomeGiocatoreLupo(String tipoLupo) { return getNomeGiocatoreVivo(getPosizioneLupo(tipoLupo)); }
 
     private int getPosizioneLupo(String tipoLupo)
     {
