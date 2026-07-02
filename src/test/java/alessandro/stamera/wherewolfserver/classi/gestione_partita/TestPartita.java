@@ -151,7 +151,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } };
         inizializzaPartita(giocatori);
-        partita.protezioneStrega(nomeVittima);
+        protezioneStrega(nomeVittima);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -233,7 +233,7 @@ public final class TestPartita
     {
         String nome = "Gregorio";
         inizializzaPartita(new String[][] { { nome, "Angelo custode"}, { "Vinicio", "Strega" }, { "Francesca", tipoLupo } });
-        partita.protezioneStrega(nome);
+        protezioneStrega(nome);
         String messaggio = "Gregorio non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
         verificaNonEliminati(nome);
@@ -1408,6 +1408,8 @@ public final class TestPartita
         verificaEliminati(nomeAngelo);
         ripristinaGiocatoreVivo(nomeVampiro);
     }
+
+    private void protezioneStrega(String nome) { partita.protezioneStrega(nome); }
 
     private void romeizzazione(String nome) { partita.romeizzazione(nome); }
 
