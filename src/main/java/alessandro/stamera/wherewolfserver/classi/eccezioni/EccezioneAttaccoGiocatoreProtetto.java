@@ -1,6 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-public class EccezioneAttaccoGiocatoreProtetto extends IllegalStateException
+public final class EccezioneAttaccoGiocatoreProtetto extends IllegalStateException
 {
 
     private final boolean isRomeo;
