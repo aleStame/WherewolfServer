@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -7,7 +8,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIA
 public class Contadino extends Villaggio
 {
 
-    public Contadino()
+    public Contadino(TipoContadino tipoContadino)
     {
         super
         (

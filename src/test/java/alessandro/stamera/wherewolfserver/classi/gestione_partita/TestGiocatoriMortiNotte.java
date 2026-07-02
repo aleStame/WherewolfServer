@@ -40,6 +40,11 @@ public final class TestGiocatoriMortiNotte
         verificaVero(isPazzo(giocatori[1][0]));
     }
 
+    /*@ParameterizedTest @Enum public void testContadinoPresente()
+    {
+
+    }*/
+
     private void aggiungiGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);

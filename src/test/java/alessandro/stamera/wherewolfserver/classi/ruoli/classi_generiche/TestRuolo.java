@@ -18,6 +18,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -188,6 +189,12 @@ public final class TestRuolo
         verificaFazione(NESSUNA);
         verificaNonInquisito();
         for(IstanzaRuolo istanza : IstanzaRuolo.values()) ruolo.isProtezionePresente(istanza.getRuolo());
+    }
+
+    @Test public void testNonContadino()
+    {
+        verificaFalso(ruolo.isContadino());
+        assertThatIllegalStateException().isThrownBy(() -> ruolo.getTipoContadino()).withMessage("ERRORE!!! Questo ruolo non è un contadino.");
     }
 
     private void verificaAttaccoAmato()

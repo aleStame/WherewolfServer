@@ -391,6 +391,8 @@ public class Ruolo
 
     public void protezioneStrega() { aggiungiProtezioneCreatureOmbra(); }
 
+    public TipoContadino getTipoContadino() { throw new IllegalStateException("ERRORE!!! Questo ruolo non è un contadino."); }
+
     private void trasformazioneVampiro()
     {
         cambiaFazione(VAMPIRO);

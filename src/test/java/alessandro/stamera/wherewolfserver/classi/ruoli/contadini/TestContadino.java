@@ -14,7 +14,7 @@ public final class TestContadino
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Contadino(); }
+    @BeforeEach public void setUp() { ruolo = new Contadino(null); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), "Contadino"); }
 

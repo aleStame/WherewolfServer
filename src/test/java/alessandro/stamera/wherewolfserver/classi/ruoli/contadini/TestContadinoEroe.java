@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.EROE;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,9 +29,10 @@ public final class TestContadinoEroe
 
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, Lupo del branco, Giovane lupo, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(MORTO); }
+
+    @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(EROE); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

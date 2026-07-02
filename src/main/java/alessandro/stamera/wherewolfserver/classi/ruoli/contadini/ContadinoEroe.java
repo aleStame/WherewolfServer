@@ -2,15 +2,15 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.EROE;
 
 public final class ContadinoEroe extends Contadino
 {
 
-    private ContadinoEroe() { super(); }
+    private ContadinoEroe() { super(EROE); }
 
     @Override public boolean isContadinoEroe() { return true; }
 
