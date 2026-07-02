@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGiocatoreProtetto;
 import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -35,7 +36,7 @@ public final class Partita
 
     private final List<String> votantiContadinoMostro;
 
-    private boolean pazzoUcciso;
+    private boolean pazzoUcciso, potereStregaUsato;
 
     private int numeroNotte;
 
@@ -51,6 +52,7 @@ public final class Partita
         perdiProtezioniCappuccettoRosso();
         votantiContadinoMostro = new ArrayList<>();
         numeroNotte = 1;
+        potereStregaUsato = false;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -107,6 +109,7 @@ public final class Partita
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
+            case FALLITO -> nessunaEliminazione(nome);
         }
     }
 
@@ -235,6 +238,12 @@ public final class Partita
         return misticismo;
     }
 
+    private void nessunaEliminazione(String nome)
+    {
+        Ruolo ruolo = vivi.getRuolo(nome);
+        if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+    }
+
     private void gestisciInterazioniMago(String nome)
     {
         if(vivi.isMegera(nome)) malediciMago();
@@ -346,7 +355,11 @@ public final class Partita
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
 
-    public void protezioneStrega(String nome) { }
+    public void protezioneStrega(String nome)
+    {
+        vivi.protezioneStrega(nome);
+        potereStregaUsato = true;
+    }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 

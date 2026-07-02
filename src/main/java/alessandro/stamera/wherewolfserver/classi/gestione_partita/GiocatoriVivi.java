@@ -272,7 +272,7 @@ public final class GiocatoriVivi extends Giocatori
         }
     }
 
-    public void protezioneStrega(String nome) { }
+    public void protezioneStrega(String nome) { getRuolo(nome).protezioneStrega(); }
 
     public boolean isVampiroAmato()
     {

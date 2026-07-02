@@ -207,7 +207,11 @@ public class Ruolo
     public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco risultato = RIUSCITO;
-        if(isProtezionePresente(ruolo)) risultato = getEsitoAttaccoRuoloProtetto(risultato);
+        if(isProtezionePresente(ruolo))
+        {
+            attaccoRuoloProtetto();
+            risultato = FALLITO;
+        }
         return risultato;
     }
 
@@ -385,7 +389,7 @@ public class Ruolo
         perdiProtezioni();
     }
 
-    public void protezioneStrega() { }
+    public void protezioneStrega() { aggiungiProtezioneCreatureOmbra(); }
 
     private void trasformazioneVampiro()
     {
@@ -432,11 +436,6 @@ public class Ruolo
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
-    private EsitoAttacco getEsitoAttaccoRuoloProtetto(EsitoAttacco risultato)
-    {
-        if(isAmato()) perdiProtezioni();
-        if(!isRomeo()) risultato = FALLITO;
-        return risultato;
-    }
+    private void attaccoRuoloProtetto() { if(isAmato()) perdiProtezioni(); }
 
 }
