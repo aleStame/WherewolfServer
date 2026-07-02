@@ -17,7 +17,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPar
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -110,11 +109,7 @@ public final class Partita
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
-            case FALLITO ->
-            {
-                Ruolo ruolo = vivi.getRuolo(nome);
-                if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
-            }
+            case FALLITO -> nessunaEliminazione(nome);
         }
     }
 
@@ -241,6 +236,12 @@ public final class Partita
         Misticismo misticismo = eseguiControlloMago(nome);
         gestisciInterazioniMago(nome);
         return misticismo;
+    }
+
+    private void nessunaEliminazione(String nome)
+    {
+        Ruolo ruolo = vivi.getRuolo(nome);
+        if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
     }
 
     private void gestisciInterazioniMago(String nome)
