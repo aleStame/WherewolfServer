@@ -1,6 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-public final class EccezioneProgenizzazioneNonRiuscita extends IllegalStateException
+public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentException
 {
 
     public EccezioneProgenizzazioneNonRiuscita
