@@ -1,10 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoContadino;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGiocatoreProtetto;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
@@ -113,20 +110,7 @@ public final class Partita
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nome);
-            case NONNA_BECCATA ->
-            {
-                String nomeGiocatoreLupo = getNomeGiocatoreLupo(nomeLupo);
-                Ruolo lupo = getRuoloVivo(nomeGiocatoreLupo);
-                vivi.eliminaGiocatore(nomeGiocatoreLupo);
-                eliminati.aggiungiGiocatore(nomeGiocatoreLupo, RuoloNullo.getInstance());
-                vivi.eliminaGiocatore(nome);
-                vivi.aggiungiGiocatore(nome, lupo);
-                throw new IllegalArgumentException
-                (
-                    "Il " + nomeLupo + " (" + nomeGiocatoreLupo + ") ha beccato la Nonna (" + nome + ").\nSveglia " + nome + " e avvisa i due " +
-                    "giocatori che " +nomeGiocatoreLupo+ " è eliminato e che " + nome + " è il " + nomeLupo + "."
-                );
-            }
+            case NONNA_BECCATA -> lupizzazioneNonna(nomeLupo, nome);
         }
     }
 
@@ -253,6 +237,17 @@ public final class Partita
         Misticismo misticismo = eseguiControlloMago(nome);
         gestisciInterazioniMago(nome);
         return misticismo;
+    }
+
+    private void lupizzazioneNonna(String nomeLupo, String nome)
+    {
+        String nomeGiocatoreLupo = getNomeGiocatoreLupo(nomeLupo);
+        Ruolo lupo = getRuoloVivo(nomeGiocatoreLupo);
+        vivi.eliminaGiocatore(nomeGiocatoreLupo);
+        eliminati.aggiungiGiocatore(nomeGiocatoreLupo, RuoloNullo.getInstance());
+        vivi.eliminaGiocatore(nome);
+        vivi.aggiungiGiocatore(nome, lupo);
+        throw new EccezioneNonnaBeccata(nomeGiocatoreLupo, nomeLupo, nome);
     }
 
     private void nessunaEliminazione(String nome)
