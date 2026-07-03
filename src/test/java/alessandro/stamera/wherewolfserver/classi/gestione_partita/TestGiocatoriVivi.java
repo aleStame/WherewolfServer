@@ -1087,9 +1087,19 @@ public final class TestGiocatoriVivi
 
     @Test public void testLupizzazioneNonna()
     {
-        inizializzaGiocatori(new String[][] { { "Raffaele", "Nonna" }, { "Gabriele", "Capo branco" } });
-        giocatori.assorbiRuolo("Raffaele", "Gabriele");
-        verificaVero(giocatori.isCapoBranco("Raffaele"));
+        String nomeNonna = "Raffaele", nomeLupo = "Gabriele";
+        inizializzaGiocatori(new String[][] { { nomeNonna, "Nonna" }, { nomeLupo, "Capo branco" } });
+        giocatori.assorbiRuolo(nomeNonna, "Gabriele");
+        verificaVero(giocatori.isCapoBranco(nomeNonna));
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testTipoLupo(String tipoLupo)
+    {
+        String nome = "Elena";
+        aggiungiGiocatore(nome, tipoLupo);
+        verificaVero(giocatori.isLupo(nome));
+        verificaStringa(giocatori.getTipoLupo(nome), tipoLupo);
     }
 
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima) { verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO); }
