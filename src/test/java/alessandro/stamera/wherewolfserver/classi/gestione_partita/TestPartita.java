@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.NONNA_BECCATA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -1436,6 +1435,20 @@ public final class TestPartita
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
         verificaVero(partita.isCapoBranco(nomeVittima));
         verificaEliminati(nomeLupo);
+    }
+
+    @Test public void testAttaccoCapoBrancoAmatoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        String messaggio =
+            "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Capo branco.";
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
+        verificaVero(partita.isCapoBranco(nomeVittima));
+        verificaEliminati(nomeLupo);
+        FACTORY.getRuolo("Capo branco").resettaAmato();
     }
 
     private void verificaVittimaSbagliata(String tipoLupo, String nomeVittima, String messaggio)
