@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoNonna" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoNonna">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneVampirizzazioneLupi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneVampirizzazioneLupi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +45,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Exception" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -103,7 +109,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/capoBrancoBeccaNonna",
+    "git-widget-placeholder": "feature/vampirizzazioneLupo",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SandrettoFX/IdeaProjects/WherewolfClient",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -292,14 +298,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03408" summary="REFACTORING: definizione del metodo verificaAttaccoAmato">
-      <option name="closed" value="true" />
-      <created>1782741925945</created>
-      <option name="number" value="03408" />
-      <option name="presentableId" value="LOCAL-03408" />
-      <option name="project" value="LOCAL" />
-      <updated>1782741925945</updated>
     </task>
     <task id="LOCAL-03409" summary="VERDE DIRETTO: testAttaccoAssassinoAmatoStregato riuscito">
       <option name="closed" value="true" />
@@ -685,7 +683,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783073353988</updated>
     </task>
-    <option name="localTasksCounter" value="3457" />
+    <task id="LOCAL-03457" summary="REFACTORING: definizione del metodo verificaAttaccoNonna">
+      <option name="closed" value="true" />
+      <created>1783073535841</created>
+      <option name="number" value="03457" />
+      <option name="presentableId" value="LOCAL-03457" />
+      <option name="project" value="LOCAL" />
+      <updated>1783073535841</updated>
+    </task>
+    <option name="localTasksCounter" value="3458" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

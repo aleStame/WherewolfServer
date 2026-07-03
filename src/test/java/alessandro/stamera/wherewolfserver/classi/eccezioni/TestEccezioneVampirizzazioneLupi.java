@@ -1,0 +1,24 @@
+package alessandro.stamera.wherewolfserver.classi.eccezioni;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.assertj.core.api.Assertions.assertThat;
+
+public final class TestEccezioneVampirizzazioneLupi
+{
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "'Capo branco', 'Impossibile vampirizzare il Capo branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo del branco', 'Impossibile vampirizzare il Lupo del branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo reietto', 'Impossibile vampirizzare il Lupo reietto (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
+        }
+    )
+    public void testVampirizzazioneLupo(String tipoLupo, String messaggio)
+    {
+        assertThat(new EccezioneVampirizzazioneLupi(tipoLupo, "Giuliano", "Michele").getMessage()).isEqualTo(messaggio);
+    }
+
+}

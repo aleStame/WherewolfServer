@@ -1219,10 +1219,7 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage("Impossibile vampirizzare Lino.");
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        { "Cacciatore di vampiri", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
-    )
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testMorteVampiro(String nomeRuolo)
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo";
