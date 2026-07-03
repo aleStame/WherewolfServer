@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.NONNA_BECCATA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -70,6 +71,8 @@ public final class TestNonna
     @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
+
+    @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(NONNA_BECCATA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

@@ -287,6 +287,16 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
 
+    public void assorbiRuolo(String nomeAssorbitore, String nomeAssorbito)
+    {
+        Ruolo ruolo = getRuolo(nomeAssorbito);
+        eliminaGiocatore(nomeAssorbitore);
+        aggiungiGiocatore(nomeAssorbitore, ruolo);
+        eliminaGiocatore(nomeAssorbito);
+    }
+
+    public boolean isCapoBranco(String nome) { return getRuolo(nome).isCapoBranco(); }
+
     private int getPosizioneCacciatoreDiVampiri()
     {
         int posizione = NON_TROVATO;

@@ -1066,7 +1066,7 @@ public final class TestGiocatoriVivi
     {
         String tipoLupo = "Capo branco", nomeVittima = "Filippo";
         inizializzaGiocatori(new String[][]{ { "Iris", tipoLupo }, { nomeVittima, tipoContadino } });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
     }
 
     @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
@@ -1075,8 +1075,24 @@ public final class TestGiocatoriVivi
         String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
         inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
         segnalazioneAngeloCustode(nomeLupo);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
     }
+
+    @Test public void testAttaccoCapoBrancoNonna()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Federica";
+        inizializzaGiocatori(new String[][] { { "Ciro", tipoLupo }, { nomeVittima, "Nonna" } });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, NONNA_BECCATA);
+    }
+
+    @Test public void testLupizzazioneNonna()
+    {
+        inizializzaGiocatori(new String[][] { { "Raffaele", "Nonna" }, { "Gabriele", "Capo branco" } });
+        giocatori.assorbiRuolo("Raffaele", "Gabriele");
+        verificaVero(giocatori.isCapoBranco("Raffaele"));
+    }
+
+    private void verificaMortePostAttacco(String tipoLupo, String nomeVittima) { verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO); }
 
     private void verificaAttaccoLupoFallito(String nomeLupo, String nome) { verificaAttaccoLupo(nomeLupo, nome, FALLITO); }
 

@@ -1,12 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAssassinoAmato;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoContadino;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneAttaccoGiocatoreProtetto;
-import alessandro.stamera.wherewolfserver.classi.eccezioni.EccezioneProgenizzazioneNonRiuscita;
+import alessandro.stamera.wherewolfserver.classi.eccezioni.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
+
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -102,15 +101,17 @@ public final class Partita
 
     public boolean isVivo(String nome) { return vivi.isPresente(nome); }
 
-    public void attaccoLupi(String nomeLupo, String nome)
+    public void attaccoLupi(String tipoLupo, String nome)
     {
         if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
-        switch(attaccoLupi(FACTORY.getRuolo(nomeLupo), nome))
+        String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
+        switch(attaccoLupi(getRuoloVivo(nomeLupo), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nome);
+            case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
         }
     }
 
@@ -239,6 +240,13 @@ public final class Partita
         return misticismo;
     }
 
+    private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
+    {
+        vivi.assorbiRuolo(nomeNonna, nomeLupo);
+        eliminati.aggiungiGiocatore(nomeLupo, RuoloNullo.getInstance());
+        throw new EccezioneNonnaBeccata(nomeLupo, tipoLupo, nomeNonna);
+    }
+
     private void nessunaEliminazione(String nome)
     {
         Ruolo ruolo = vivi.getRuolo(nome);
@@ -362,6 +370,8 @@ public final class Partita
         potereStregaUsato = true;
     }
 
+    public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
+
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
@@ -475,11 +485,10 @@ public final class Partita
 
     private boolean isProtezineUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto(); }
 
-    private void doppiaEliminazione(String tipoLupo, String nome)
+    private void doppiaEliminazione(String nomeLupo, String nomeVittima)
     {
-        String nomeGiocatoreLupo = getNomeGiocatoreLupo(tipoLupo);
-        eliminaGiocatori(nomeGiocatoreLupo, nome);
-        if(mortiNotte.isContadino(nome)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nome), nome, nomeGiocatoreLupo);
+        eliminaGiocatori(nomeLupo, nomeVittima);
+        if(mortiNotte.isContadino(nomeVittima)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nomeVittima), nomeVittima, nomeLupo);
     }
 
     private String getNomeGiocatoreLupo(String tipoLupo) { return getNomeGiocatoreVivo(getPosizioneLupo(tipoLupo)); }
