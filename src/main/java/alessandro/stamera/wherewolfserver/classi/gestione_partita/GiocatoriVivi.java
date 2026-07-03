@@ -292,6 +292,7 @@ public final class GiocatoriVivi extends Giocatori
         Ruolo ruolo = getRuolo(nomeAssorbito);
         eliminaGiocatore(nomeAssorbitore);
         aggiungiGiocatore(nomeAssorbitore, ruolo);
+        eliminaGiocatore(nomeAssorbito);
     }
 
     public boolean isCapoBranco(String nome) { return getRuolo(nome).isCapoBranco(); }
