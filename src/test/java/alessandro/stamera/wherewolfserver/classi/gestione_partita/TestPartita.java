@@ -1219,12 +1219,20 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage("Impossibile vampirizzare Lino.");
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testMorteVampiro(String nomeRuolo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "'Capo branco', 'Impossibile vampirizzare il Capo branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo del branco', 'Impossibile vampirizzare il Lupo del branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo reietto', 'Impossibile vampirizzare il Lupo reietto (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
+        }
+    )
+    public void testMorteVampiro(String tipoLupo, String messaggio)
     {
-        String nomeVittima = "Luca", nomeVampiro = "Paolo";
-        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
-        //verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
+        String nomeVittima = "Giuliano", nomeVampiro = "Michele";
+        inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeVampiro, "Vampiro" } });
+        verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1528,7 +1536,7 @@ public final class TestPartita
 
     private void verificaFallimentoVampirizzazione(String nomeVittima, String messaggio)
     {
-        assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
     }
 
     private void verificaFallimentoGildata(String nomeVittima, String messaggio)
