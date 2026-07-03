@@ -388,12 +388,14 @@ public final class Partita
     {
         Ruolo ruolo = getRuoloVivo(nome);
         if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
-        else if(ruolo.isCacciatoreDiVampiri())
-        {
-            String nomeGhoul = vivi.getNomeGhoul();
-            eliminaGhoul();
-            throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeCacciatoreDiVampiri(), nomeGhoul);
-        }
+        else if(ruolo.isCacciatoreDiVampiri()) gestioneMorteGhoul();
+    }
+
+    private void gestioneMorteGhoul()
+    {
+        String nomeGhoul = vivi.getNomeGhoul();
+        eliminaGhoul();
+        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeCacciatoreDiVampiri(), nomeGhoul);
     }
 
     private void gestioneMorteVampiro(String nomeLupo)
