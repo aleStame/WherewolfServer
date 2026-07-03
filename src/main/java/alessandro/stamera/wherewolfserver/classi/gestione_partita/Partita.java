@@ -386,13 +386,12 @@ public final class Partita
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
-        String nomeMorto = vivi.getNomeVampiro();
-        if(vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode();
-        else if(isGhoulPresente()) gestioneEccezioneMorteGhoul(nome);
-        else
+        Ruolo lupo = getRuoloVivo(nome);
+        if(lupo.isLupo())
         {
-            eliminaGiocatore(nomeMorto);
-            throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
+            String nomeVampiro = vivi.getNomeVampiro();
+            eliminaGiocatori(nomeVampiro);
+            throw new EccezioneVampirizzazioneLupi(lupo.getNome(), nome, nomeVampiro);
         }
     }
 
