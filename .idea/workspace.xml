@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoNonna">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneVampirizzazioneLupi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneVampirizzazioneLupi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="ROSSO: testVampirizzazioneLupo non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneVampirizzazioneLupi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneVampirizzazioneLupi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,14 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03409" summary="VERDE DIRETTO: testAttaccoAssassinoAmatoStregato riuscito">
-      <option name="closed" value="true" />
-      <created>1782742488776</created>
-      <option name="number" value="03409" />
-      <option name="presentableId" value="LOCAL-03409" />
-      <option name="project" value="LOCAL" />
-      <updated>1782742488776</updated>
     </task>
     <task id="LOCAL-03410" summary="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito">
       <option name="closed" value="true" />
@@ -691,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783073535841</updated>
     </task>
-    <option name="localTasksCounter" value="3458" />
+    <task id="LOCAL-03458" summary="ROSSO: testVampirizzazioneLupo non riuscito">
+      <option name="closed" value="true" />
+      <created>1783074731675</created>
+      <option name="number" value="03458" />
+      <option name="presentableId" value="LOCAL-03458" />
+      <option name="project" value="LOCAL" />
+      <updated>1783074731675</updated>
+    </task>
+    <option name="localTasksCounter" value="3459" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -706,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCacciatoreDiVampiriPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreDiVampiriPresente" />
     <MESSAGE value="ROSSO: testAvvisoMorteAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAvvisoMorteAngeloCustode riuscito" />
@@ -731,6 +727,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaVittimaSbagliata" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoAmatoNonna riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoNonna" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoNonna" />
+    <MESSAGE value="ROSSO: testVampirizzazioneLupo non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVampirizzazioneLupo non riuscito" />
   </component>
 </project>
