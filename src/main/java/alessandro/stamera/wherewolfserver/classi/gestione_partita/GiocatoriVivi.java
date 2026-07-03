@@ -297,9 +297,9 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCapoBranco(String nome) { return getRuolo(nome).isCapoBranco(); }
 
-    public boolean isLupo(String nome) { return false; }
+    public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 
-    public String getTipoLupo(String nome) { return null; }
+    public String getTipoLupo(String nome) { return getRuolo(nome).getNome(); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
