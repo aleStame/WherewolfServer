@@ -1432,9 +1432,7 @@ public final class TestPartita
         String messaggio =
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
-        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        verificaVero(partita.isCapoBranco(nomeVittima));
-        verificaEliminati(nomeLupo);
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
     }
 
     @Test public void testAttaccoCapoBrancoAmatoNonna()
@@ -1445,10 +1443,15 @@ public final class TestPartita
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        FACTORY.getRuolo("Capo branco").resettaAmato();
+    }
+
+    private void verificaAttaccoNonna(String tipoLupo, String nomeVittima, String messaggio, String nomeLupo)
+    {
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
         verificaVero(partita.isCapoBranco(nomeVittima));
         verificaEliminati(nomeLupo);
-        FACTORY.getRuolo("Capo branco").resettaAmato();
     }
 
     private void verificaVittimaSbagliata(String tipoLupo, String nomeVittima, String messaggio)
