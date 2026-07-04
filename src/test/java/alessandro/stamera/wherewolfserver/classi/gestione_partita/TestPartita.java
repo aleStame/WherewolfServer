@@ -1237,6 +1237,23 @@ public final class TestPartita
         verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "'Capo branco', 'Impossibile vampirizzare il Capo branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo del branco', 'Impossibile vampirizzare il Lupo del branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo reietto', 'Impossibile vampirizzare il Lupo reietto (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
+        }
+    )
+    public void testMorteVampiroAmato(String tipoLupo, String messaggio)
+    {
+        String nomeVittima = "Giuliano", nomeVampiro = "Michele";
+        inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeVampiro, "Vampiro" }, { "John", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeVampiro);
+        verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
+    }
+
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testMorteVampiroContadinoLupizzato(String tipoLupo)
     {
