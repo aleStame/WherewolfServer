@@ -1245,7 +1245,8 @@ public final class TestPartita
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomeVittima);
-        //verificaMortePostAttacco(nomeVittima, "Impossibile vampirizzare Luca.\nPaolo muore.", nomeVampiro);
+        String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.";
+        verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
     }
 
     @ParameterizedTest @CsvSource
