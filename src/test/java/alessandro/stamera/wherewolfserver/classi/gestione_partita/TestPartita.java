@@ -1171,7 +1171,7 @@ public final class TestPartita
         };
         inizializzaPartita(giocatori);
         String messaggio =
-            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte";
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
         verificaMortePostAttacco(nomeCacciatore, messaggio, nomeGhoul);
     }
 

@@ -13,15 +13,18 @@ public final class TestEccezioneProgenizzazioneNonRiuscita
         String messaggio =
             "Il tentativo di vampirizzazione del Cacciatore di vampiri (Aldo) causa la morte dell'Angelo custode (Giovanni) del Vampiro amato (" +
             "Giacomo).\nAvvisa Giovanni della sua morte.";
-        eccezione = new EccezioneProgenizzazioneNonRiuscita("Aldo", "Giovanni", "Giacomo");
+        eccezione = new EccezioneProgenizzazioneNonRiuscita
+        (
+"Cacciatore di vampiri", "Aldo", "Giovanni", "Giacomo"
+        );
         verificaMessaggio(messaggio);
     }
 
     @Test public void testAvvisoMorteGhoul()
     {
         String messaggio =
-            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).\nAvvisa Valeria della sua morte";
-        eccezione = new EccezioneProgenizzazioneNonRiuscita("Katia", "Valeria");
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).\nAvvisa Valeria della sua morte.";
+        eccezione = new EccezioneProgenizzazioneNonRiuscita("Cacciatore di vampiri", "Katia", "Valeria");
         verificaMessaggio(messaggio);
     }
 
