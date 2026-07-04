@@ -385,7 +385,8 @@ public final class Partita
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
-        if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
+        if(vivi.isAngeloCustodePresente()) gestioneEccezioneMorteAngeloCustode(nome);
+        else if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
         else gestioneMorteGhoul(nome);
     }
 
@@ -406,11 +407,13 @@ public final class Partita
         throw new EccezioneVampirizzazioneLupi(tipoLupo, nomeLupo, nomeVampiro);
     }
 
-    private void gestioneEccezioneMorteAngeloCustode()
+    private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
     {
         String nomeAngelo = getNomeAngeloCustodeVivo();
         eliminazioneAngeloCustode();
-        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeCacciatoreDiVampiri(), nomeAngelo, vivi.getNomeVampiro());
+        String ruoloVittima = vivi.getRuolo(nomeVittima).getNome();
+        if(ruoloVittima.equals("Contadino")) ruoloVittima = "Contadino mostro";
+        throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, nomeAngelo, vivi.getNomeVampiro());
     }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
