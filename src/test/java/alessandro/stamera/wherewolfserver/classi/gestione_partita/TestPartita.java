@@ -1237,21 +1237,14 @@ public final class TestPartita
         verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "'Capo branco', 'Impossibile vampirizzare il Capo branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
-            "'Lupo del branco', 'Impossibile vampirizzare il Lupo del branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
-            "'Lupo reietto', 'Impossibile vampirizzare il Lupo reietto (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
-            "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
-        }
-    )
+    @ParameterizedTest @MethodSource("getEsempiPartitaVampiroAmato")
     public void testMorteVampiroAmato(String tipoLupo, String messaggio)
     {
-        String nomeVittima = "Giuliano", nomeVampiro = "Michele";
-        inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeVampiro, "Vampiro" }, { "John", "Angelo custode" } });
+        String nomeVittima = "Giuliano", nomeVampiro = "Michele", nomeAngelo = "John";
+        inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeVampiro, "Vampiro" }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVampiro);
-        verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
+        verificaMortePostAttacco(nomeVittima, messaggio, nomeAngelo);
+        FACTORY.getRuolo("Vampiro").ripristina();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1468,6 +1461,44 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         FACTORY.getRuolo("Capo branco").resettaAmato();
+    }
+
+    private static Stream<Arguments> getEsempiPartitaVampiroAmato()
+    {
+        String[][] stringhe =
+        {
+            {
+                "Capo branco",
+                "Il tentativo di vampirizzazione del Capo branco (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato " +
+                "(Michele).\nAvvisa John della sua morte."
+            },
+            {
+                "Lupo del branco",
+                "Il tentativo di vampirizzazione del Lupo del branco (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato " +
+                "(Michele).\nAvvisa John della sua morte."
+            },
+            {
+                "Lupo reietto",
+                "Il tentativo di vampirizzazione del Lupo reietto (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato " +
+                "(Michele).\nAvvisa John della sua morte."
+            },
+            {
+                "Lupo solitario",
+                "Il tentativo di vampirizzazione del Lupo solitario (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato " +
+                "(Michele).\nAvvisa John della sua morte."
+            },
+            {
+                "Giovane lupo",
+                "Il tentativo di vampirizzazione del Giovane lupo (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato " +
+                "(Michele).\nAvvisa John della sua morte."
+            }
+        };
+        return Stream.of
+        (
+            Arguments.of(stringhe[0][0], stringhe[0][1]), Arguments.of(stringhe[1][0], stringhe[1][1]),
+            Arguments.of(stringhe[2][0], stringhe[2][1]), Arguments.of(stringhe[3][0], stringhe[3][1]),
+            Arguments.of(stringhe[4][0], stringhe[4][1])
+        );
     }
 
     private void verificaAttaccoNonna(String tipoLupo, String nomeVittima, String messaggio, String nomeLupo)

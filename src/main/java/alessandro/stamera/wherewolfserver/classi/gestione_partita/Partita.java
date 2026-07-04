@@ -385,7 +385,7 @@ public final class Partita
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
-        if(vivi.isAngeloCustodePresente()) gestioneEccezioneMorteAngeloCustode(nome);
+        if(vivi.isAngeloCustodePresente() && vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode(nome);
         else if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
         else gestioneMorteGhoul(nome);
     }
