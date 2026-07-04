@@ -34,13 +34,7 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
     {
         String messaggio;
         if(isEliminatoAngeloCustode()) messaggio = getMessaggioErroreAngeloCustode();
-        else
-        {
-            String nomeGhoul = this.nomeGhoul.get();
-            messaggio =
-                "Il tentativo di vampirizzazione del " + ruoloVittima + " (" + nomeVittima + ") causa la morte del Ghoul (" + nomeGhoul +
-                ").\nAvvisa " + nomeGhoul + " della sua morte.";
-        }
+        else messaggio = getMessaggioErroreGhoul();
         return messaggio;
     }
 
@@ -56,6 +50,14 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
         return
             "Il tentativo di vampirizzazione del " + ruoloVittima + " (" + nomeVittima + ") causa la morte dell'Angelo custode (" +
             nomeAngeloCustode + ") del Vampiro amato (" + nomeVampiroAmato.get() + ").\nAvvisa " + nomeAngeloCustode + " della sua morte.";
+    }
+
+    private String getMessaggioErroreGhoul()
+    {
+        String nomeGhoul = this.nomeGhoul.get();
+        return
+            "Il tentativo di vampirizzazione del " + ruoloVittima + " (" + nomeVittima + ") causa la morte del Ghoul (" + nomeGhoul + ").\n" +
+            "Avvisa " + nomeGhoul + " della sua morte.";
     }
 
 }
