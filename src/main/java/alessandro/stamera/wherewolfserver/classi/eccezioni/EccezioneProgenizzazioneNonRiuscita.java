@@ -33,7 +33,7 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
     @Override public String getMessage()
     {
         String messaggio;
-        if(nomeAngeloCustode.isPresent() && nomeVampiroAmato.isPresent())
+        if(isEliminatoAngeloCustode())
         {
             String nomeAngeloCustode = this.nomeAngeloCustode.get();
             messaggio =
@@ -53,5 +53,7 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
     private Optional<String> inizializzaStringa(String stringa) { return Optional.of(stringa); }
 
     private Optional<String> inizializzaStringaVuota() { return Optional.empty(); }
+
+    private boolean isEliminatoAngeloCustode() { return nomeAngeloCustode.isPresent() && nomeVampiroAmato.isPresent(); }
 
 }
