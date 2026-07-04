@@ -1180,7 +1180,9 @@ public final class TestPartita
         String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
         String[][] giocatori = new String[][] { { "Ed", "Vampiro" }, { nomeContadinoMostro, "Contadino mostro" }, { nomeGhoul, "Ghoul" } };
         inizializzaPartita(giocatori);
-        //verificaMortePostAttacco(nomeContadinoMostro, "Impossibile vampirizzare Edd.\nEddy muore.", nomeGhoul);
+        String messaggio =
+            "Il tentativo di vampirizzazione del Contadino mostro (Edd) causa la morte del Ghoul (Eddy).\nAvvisa Eddy della sua morte.";
+        verificaMortePostAttacco(nomeContadinoMostro, messaggio, nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource

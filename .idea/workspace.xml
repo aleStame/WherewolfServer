@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testTipoLupo riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo gestioneMorteGhoul">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,22 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03417" summary="ROSSO: testAttaccoAmatoStregatoAssassino non riuscito">
-      <option name="closed" value="true" />
-      <created>1782747913076</created>
-      <option name="number" value="03417" />
-      <option name="presentableId" value="LOCAL-03417" />
-      <option name="project" value="LOCAL" />
-      <updated>1782747913076</updated>
-    </task>
-    <task id="LOCAL-03418" summary="VERDE: testAttaccoAmatoStregatoAssassino riuscito">
-      <option name="closed" value="true" />
-      <created>1782748528567</created>
-      <option name="number" value="03418" />
-      <option name="presentableId" value="LOCAL-03418" />
-      <option name="project" value="LOCAL" />
-      <updated>1782748528567</updated>
     </task>
     <task id="LOCAL-03419" summary="VERDE: testAttaccoAmatoStregatoAssassino riuscito">
       <option name="closed" value="true" />
@@ -688,7 +673,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783096774669</updated>
     </task>
-    <option name="localTasksCounter" value="3466" />
+    <task id="LOCAL-03466" summary="REFACTORING: definizione del metodo gestioneMorteVampiro">
+      <option name="closed" value="true" />
+      <created>1783097090106</created>
+      <option name="number" value="03466" />
+      <option name="presentableId" value="LOCAL-03466" />
+      <option name="project" value="LOCAL" />
+      <updated>1783097090106</updated>
+    </task>
+    <task id="LOCAL-03467" summary="REFACTORING: definizione del metodo gestioneMorteGhoul">
+      <option name="closed" value="true" />
+      <created>1783097257759</created>
+      <option name="number" value="03467" />
+      <option name="presentableId" value="LOCAL-03467" />
+      <option name="project" value="LOCAL" />
+      <updated>1783097257759</updated>
+    </task>
+    <option name="localTasksCounter" value="3468" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,8 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneEccezioneMorteGhoul" />
-    <MESSAGE value="ROSSO: testMessaggio non riuscito" />
     <MESSAGE value="VERDE: testMessaggio riuscito" />
     <MESSAGE value="REFACTORING: definizione dei messaggi di errore per l'eccezione dell'assassino che attacca l'Amato" />
     <MESSAGE value="VERDE DIRETTO: testAmatoAssente riuscito" />
@@ -728,6 +727,8 @@
     <MESSAGE value="VERDE: testMorteGhoulCacciatoreVampiro riuscito" />
     <MESSAGE value="ROSSO: testTipoLupo non riuscito" />
     <MESSAGE value="VERDE: testTipoLupo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testTipoLupo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteVampiro" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteGhoul" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo gestioneMorteGhoul" />
   </component>
 </project>
