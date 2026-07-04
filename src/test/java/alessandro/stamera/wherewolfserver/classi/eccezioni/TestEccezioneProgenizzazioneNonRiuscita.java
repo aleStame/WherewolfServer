@@ -1,6 +1,9 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestEccezioneProgenizzazioneNonRiuscita
@@ -20,11 +23,19 @@ public final class TestEccezioneProgenizzazioneNonRiuscita
         verificaMessaggio(messaggio);
     }
 
-    @Test public void testAvvisoMorteGhoul()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Cacciatore di vampiri, " +
+            "'Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).\nAvvisa Valeria della sua " +
+            "morte.'",
+            "Contadino mostro, " +
+            "'Il tentativo di vampirizzazione del Contadino mostro (Katia) causa la morte del Ghoul (Valeria).\nAvvisa Valeria della sua morte.'"
+        }
+    )
+    public void testAvvisoMorteGhoul(String nomeRuolo, String messaggio)
     {
-        String messaggio =
-            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).\nAvvisa Valeria della sua morte.";
-        eccezione = new EccezioneProgenizzazioneNonRiuscita("Cacciatore di vampiri", "Katia", "Valeria");
+        eccezione = new EccezioneProgenizzazioneNonRiuscita(nomeRuolo, "Katia", "Valeria");
         verificaMessaggio(messaggio);
     }
 
