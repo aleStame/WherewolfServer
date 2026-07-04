@@ -1409,10 +1409,8 @@ public final class TestPartita
         String messaggio =
             "Il tentativo di vampirizzazione del Cacciatore di vampiri (Herbert) causa la morte dell'Angelo custode (Francesco) del Vampiro " +
             "amato (Stefano).\nAvvisa Francesco della sua morte.";
-        //assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeCacciatore)).withMessage(messaggio);
-        terminaNotte();
+        verificaMortePostAttacco(nomeCacciatore, messaggio, nomeAngelo);
         verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
-        //verificaEliminati(nomeAngelo);
         ripristinaGiocatoreVivo(nomeVampiro);
     }
 
