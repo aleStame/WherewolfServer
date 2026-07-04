@@ -16,8 +16,8 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
     {
         this.ruoloVittima = ruoloVittima;
         this.nomeVittima = nomeVittima;
-        this.nomeAngeloCustode = Optional.of(nomeAngeloCustode);
-        this.nomeVampiroAmato = Optional.of(nomeVampiroAmato);
+        this.nomeAngeloCustode = inizializzaStringa(nomeAngeloCustode);
+        this.nomeVampiroAmato = inizializzaStringa(nomeVampiroAmato);
         this.nomeGhoul = Optional.empty();
     }
 
@@ -27,7 +27,7 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
         this.nomeVittima = nomeVittima;
         this.nomeAngeloCustode = Optional.empty();
         this.nomeVampiroAmato = Optional.empty();
-        this.nomeGhoul = Optional.of(nomeGhoul);
+        this.nomeGhoul = inizializzaStringa(nomeGhoul);
     }
 
     @Override public String getMessage()
@@ -49,5 +49,7 @@ public final class EccezioneProgenizzazioneNonRiuscita extends IllegalArgumentEx
         }
         return messaggio;
     }
+
+    private Optional<String> inizializzaStringa(String stringa) { return Optional.of(stringa); }
 
 }
