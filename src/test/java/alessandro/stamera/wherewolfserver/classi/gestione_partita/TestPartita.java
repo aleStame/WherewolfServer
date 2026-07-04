@@ -1245,7 +1245,7 @@ public final class TestPartita
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomeVittima);
-        String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.";
+        String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Luca).\nAvvisa il Vampiro (Paolo) della sua morte.";
         verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
     }
 
