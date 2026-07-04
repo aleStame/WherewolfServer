@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.eccezioni.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
-
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -386,22 +385,16 @@ public final class Partita
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
-        Ruolo ruolo = getRuoloVivo(nome);
         if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
-        else if(ruolo.isCacciatoreDiVampiri()) gestioneMorteGhoul();
-        else if(vivi.isContadinoMostro(nome))
-        {
-            String nomeGhoul = vivi.getNomeGhoul();
-            eliminaGhoul();
-            throw new EccezioneProgenizzazioneNonRiuscita("Contadino mostro", nome, nomeGhoul);
-        }
+        else gestioneMorteGhoul(nome);
     }
 
-    private void gestioneMorteGhoul()
+    private void gestioneMorteGhoul(String nomeVittima)
     {
-        String nomeGhoul = vivi.getNomeGhoul();
+        String nomeGhoul = vivi.getNomeGhoul(), ruoloVittima = "Cacciatore di vampiri";
+        if(vivi.isContadinoMostro(nomeVittima)) ruoloVittima = "Contadino mostro";
         eliminaGhoul();
-        throw new EccezioneProgenizzazioneNonRiuscita("Cacciatore di vampiri", vivi.getNomeCacciatoreDiVampiri(), nomeGhoul);
+        throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, nomeGhoul);
     }
 
     private void gestioneMorteVampiro(String nomeLupo)
