@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-07-04T15:28:38" hostname="ALESSANDRO" time="0.183">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-07-04T15:48:02" hostname="ALESSANDRO" time="0.266">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
   <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
-  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.009"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@33c2bd, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.006"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1dfd5f51, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3c321bdb, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
-  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.008"/>
-  <testcase name="testVampiro()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@24855019, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.006"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3abd581e, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.007"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4d4d8fcf, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4d4d8fcf, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.035"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3fabf088, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.014"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1e392345, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
+  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.012"/>
+  <testcase name="testVampiro()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.014"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.014"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.006"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.006"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@12f3afb5, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.009"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4ced35ed, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2c22a348, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.007"/>
   <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
