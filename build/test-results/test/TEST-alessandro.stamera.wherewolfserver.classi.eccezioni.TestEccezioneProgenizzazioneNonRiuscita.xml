@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-07-04T10:31:02" hostname="ALESSANDRO" time="0.034">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-07-04T12:42:14" hostname="ALESSANDRO" time="0.031">
   <properties/>
-  <testcase name="testAvvisoMorteAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.013"/>
-  <testcase name="[1] nomeRuolo=Cacciatore di vampiri, messaggio=Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).&#10;Avvisa Valeria della sua morte." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.008"/>
-  <testcase name="[2] nomeRuolo=Contadino mostro, messaggio=Il tentativo di vampirizzazione del Contadino mostro (Katia) causa la morte del Ghoul (Valeria).&#10;Avvisa Valeria della sua morte." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.003"/>
+  <testcase name="[1] nomeRuolo=Cacciatore di vampiri, messaggio=Il tentativo di vampirizzazione del Cacciatore di vampiri (Aldo) causa la morte dell'Angelo custode (Giovanni) del Vampiro amato (Giacomo).&#10;Avvisa Giovanni della sua morte." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.012"/>
+  <testcase name="[2] nomeRuolo=Contadino mostro, messaggio=Il tentativo di vampirizzazione del Contadino mostro (Aldo) causa la morte dell'Angelo custode (Giovanni) del Vampiro amato (Giacomo).&#10;Avvisa Giovanni della sua morte." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.002"/>
+  <testcase name="[1] nomeRuolo=Cacciatore di vampiri, messaggio=Il tentativo di vampirizzazione del Cacciatore di vampiri (Katia) causa la morte del Ghoul (Valeria).&#10;Avvisa Valeria della sua morte." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.005"/>
+  <testcase name="[2] nomeRuolo=Contadino mostro, messaggio=Il tentativo di vampirizzazione del Contadino mostro (Katia) causa la morte del Ghoul (Valeria).&#10;Avvisa Valeria della sua morte." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscita" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
