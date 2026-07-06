@@ -402,15 +402,17 @@ public final class Partita
     {
         String nomeVampiro = vivi.getNomeVampiro();
         eliminaGiocatori(nomeVampiro);
-        throw new EccezioneVampirizzazioneLupi(vivi.getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+        throw new EccezioneVampirizzazioneLupi(getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
     private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
     {
         String nomeAngelo = getNomeAngeloCustodeVivo();
         eliminazioneAngeloCustode();
-        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeRuolo(nomeVittima), nomeVittima, nomeAngelo, vivi.getNomeVampiro());
+        throw new EccezioneProgenizzazioneNonRiuscita(getNomeRuolo(nomeVittima), nomeVittima, nomeAngelo, vivi.getNomeVampiro());
     }
+
+    private String getNomeRuolo(String nomeVittima) { return vivi.getNomeRuolo(nomeVittima); }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
     {
