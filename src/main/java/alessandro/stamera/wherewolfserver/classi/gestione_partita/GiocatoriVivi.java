@@ -303,13 +303,16 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ruolo ruolo = getRuolo(nomeGiocatore);
         String risultato = ruolo.getNome();
-        if(risultato.equals("Contadino"))
-        {
-            if(ruolo.isContadinoEroe()) risultato = "Contadino eroe";
-            else if(ruolo.isContadinoLupo()) risultato = "Contadino discendente dei lupi";
-            else if(ruolo.isContadinoMostro()) risultato = "Contadino mostro";
-            else risultato = "Contadino normale";
-        }
+        if(risultato.equals("Contadino")) risultato = getNomeTipoContadino(ruolo);
+        return risultato;
+    }
+
+    private String getNomeTipoContadino(Ruolo ruolo)
+    {
+        String risultato = "Contadino normale";
+        if(ruolo.isContadinoEroe()) risultato = "Contadino eroe";
+        else if(ruolo.isContadinoLupo()) risultato = "Contadino discendente dei lupi";
+        else if(ruolo.isContadinoMostro()) risultato = "Contadino mostro";
         return risultato;
     }
 
