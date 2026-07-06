@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.eccezioni.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
-
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -386,29 +385,33 @@ public final class Partita
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
-        String nomeMorto = vivi.getNomeVampiro();
-        if(vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode();
-        else if(isGhoulPresente()) gestioneEccezioneMorteGhoul(nome);
-        else
-        {
-            eliminaGiocatore(nomeMorto);
-            throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".\n" + nomeMorto + " muore.");
-        }
+        if(vivi.isAngeloCustodePresente() && vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode(nome);
+        else if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
+        else gestioneMorteGhoul(nome);
     }
 
-    private void gestioneEccezioneMorteGhoul(String nome)
+    private void gestioneMorteGhoul(String nomeVittima)
     {
-        String nomeGhoul = getNomeGhoul();
+        String nomeGhoul = vivi.getNomeGhoul();
         eliminaGhoul();
-        throw new EccezioneProgenizzazioneNonRiuscita(nome, nomeGhoul);
+        throw new EccezioneProgenizzazioneNonRiuscita(getNomeRuolo(nomeVittima), nomeVittima, nomeGhoul);
     }
 
-    private void gestioneEccezioneMorteAngeloCustode()
+    private void gestioneMorteVampiro(String nomeLupo)
+    {
+        String nomeVampiro = vivi.getNomeVampiro();
+        eliminaGiocatori(nomeVampiro);
+        throw new EccezioneVampirizzazioneLupi(getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+    }
+
+    private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
     {
         String nomeAngelo = getNomeAngeloCustodeVivo();
         eliminazioneAngeloCustode();
-        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeCacciatoreDiVampiri(), nomeAngelo, vivi.getNomeVampiro());
+        throw new EccezioneProgenizzazioneNonRiuscita(getNomeRuolo(nomeVittima), nomeVittima, nomeAngelo, vivi.getNomeVampiro());
     }
+
+    private String getNomeRuolo(String nomeVittima) { return vivi.getNomeRuolo(nomeVittima); }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
     {
