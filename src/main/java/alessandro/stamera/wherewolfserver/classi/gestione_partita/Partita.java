@@ -403,7 +403,7 @@ public final class Partita
     {
         String nomeVampiro = vivi.getNomeVampiro();
         eliminaGiocatori(nomeVampiro);
-        throw new EccezioneVampirizzazioneLupi(mortiNotte.getNomeRuolo(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+        throw new EccezioneMorteProgenizzatore(mortiNotte.getNomeRuolo(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
     private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
@@ -466,7 +466,7 @@ public final class Partita
             String nomeNosferatu = vivi.getNomeNosferatu(), ruoloProgenizzatore = getNomeRuolo(nomeNosferatu);
             String ruoloMorto = mortiNotte.getNomeRuolo(nome);
             controlliMorteNosferatu(nome, nomeNosferatu);
-            throw new EccezioneVampirizzazioneLupi(ruoloProgenizzatore, ruoloMorto, nome, nomeNosferatu);
+            throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nome, nomeNosferatu);
         }
     }
 

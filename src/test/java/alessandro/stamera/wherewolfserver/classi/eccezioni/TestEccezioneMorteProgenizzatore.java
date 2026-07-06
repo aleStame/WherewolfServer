@@ -4,7 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class TestEccezioneVampirizzazioneLupi
+public final class TestEccezioneMorteProgenizzatore
 {
 
     @ParameterizedTest @CsvSource
@@ -20,7 +20,7 @@ public final class TestEccezioneVampirizzazioneLupi
     )
     public void testVampirizzazioneLupo(String tipoLupo, String messaggio)
     {
-        assertThat(new EccezioneVampirizzazioneLupi("Vampiro", tipoLupo, "Giuliano", "Michele").getMessage()).isEqualTo(messaggio);
+        assertThat(new EccezioneMorteProgenizzatore("Vampiro", tipoLupo, "Giuliano", "Michele").getMessage()).isEqualTo(messaggio);
     }
 
 }

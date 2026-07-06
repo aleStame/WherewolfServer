@@ -1,11 +1,11 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-public class EccezioneVampirizzazioneLupi extends IllegalArgumentException
+public class EccezioneMorteProgenizzatore extends IllegalArgumentException
 {
 
     private final String ruoloProgenizzatore, tipoLupo, nomeLupo, nomeProgenizzatore;
 
-    public EccezioneVampirizzazioneLupi
+    public EccezioneMorteProgenizzatore
     (
         String ruoloProgenizzatore, String tipoLupo, String nomeLupo, String nomeProgenizzatore
     )
@@ -18,11 +18,16 @@ public class EccezioneVampirizzazioneLupi extends IllegalArgumentException
 
     @Override public String getMessage()
     {
+        return
+            "Impossibile " + getVerboCorretto() + " il " + tipoLupo + " (" + nomeLupo + ").\nAvvisa il " + ruoloProgenizzatore + " (" +
+            nomeProgenizzatore + ") della sua morte.";
+    }
+
+    private String getVerboCorretto()
+    {
         String verbo = "vampirizzare";
         if(ruoloProgenizzatore.equals("Nosferatu")) verbo = "progenizzare";
-        return
-            "Impossibile " + verbo + " il " + tipoLupo + " (" + nomeLupo + ").\nAvvisa il " + ruoloProgenizzatore + " (" + nomeProgenizzatore +
-            ") della sua morte.";
+        return verbo;
     }
 
 }
