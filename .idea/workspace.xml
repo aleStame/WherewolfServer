@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="VERDE: testMorteNosferatu riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneVampirizzazioneLupi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneVampirizzazioneLupi.java" afterDir="false" />
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getVerboCorretto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneMorteProgenizzatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneMorteProgenizzatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,14 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03447" summary="REFACTORING: definizione del metodo verificaAmatoPresente">
-      <option name="closed" value="true" />
-      <created>1782831798161</created>
-      <option name="number" value="03447" />
-      <option name="presentableId" value="LOCAL-03447" />
-      <option name="project" value="LOCAL" />
-      <updated>1782831798161</updated>
     </task>
     <task id="LOCAL-03448" summary="ROSSO: testAmatoPresente non riuscito">
       <option name="closed" value="true" />
@@ -688,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783350222179</updated>
     </task>
-    <option name="localTasksCounter" value="3496" />
+    <task id="LOCAL-03496" summary="REFACTORING: definizione del metodo getVerboCorretto">
+      <option name="closed" value="true" />
+      <created>1783350708900</created>
+      <option name="number" value="03496" />
+      <option name="presentableId" value="LOCAL-03496" />
+      <option name="project" value="LOCAL" />
+      <updated>1783350708900</updated>
+    </task>
+    <option name="localTasksCounter" value="3497" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,7 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: parametrizzazione del metodo testAvvisoMorteAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: ridefinizione del metodo gestioneMorteGhoul per semplificare il codice" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneLupo riuscito" />
     <MESSAGE value="ROSSO: testMorteVampiroContadinoLupizzato non riuscito" />
@@ -728,6 +728,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroProtetto" />
     <MESSAGE value="ROSSO: testMorteNosferatu non riuscito" />
     <MESSAGE value="VERDE: testMorteNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMorteNosferatu riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getVerboCorretto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getVerboCorretto" />
   </component>
 </project>
