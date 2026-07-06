@@ -403,7 +403,7 @@ public final class Partita
     {
         String nomeVampiro = vivi.getNomeVampiro();
         eliminaGiocatori(nomeVampiro);
-        throw new EccezioneVampirizzazioneLupi(getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+        throw new EccezioneVampirizzazioneLupi(mortiNotte.getNomeRuolo(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
     private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
@@ -460,8 +460,18 @@ public final class Partita
 
     private void morteNosferatu(String nome)
     {
-        String nomeVittima = vivi.getNomeNosferatu();
-        if(isGhoulPresente()) nomeVittima = getNomeGhoul();
+        if(isGhoulPresente()) controlliMorteNosferatu(nome, getNomeGhoul());
+        else
+        {
+            String nomeNosferatu = vivi.getNomeNosferatu(), ruoloProgenizzatore = getNomeRuolo(nomeNosferatu);
+            String ruoloMorto = mortiNotte.getNomeRuolo(nome);
+            controlliMorteNosferatu(nome, nomeNosferatu);
+            throw new EccezioneVampirizzazioneLupi(ruoloProgenizzatore, ruoloMorto, nome, nomeNosferatu);
+        }
+    }
+
+    private void controlliMorteNosferatu(String nome, String nomeVittima)
+    {
         eliminaGiocatore(nomeVittima);
         if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }

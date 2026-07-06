@@ -3,9 +3,26 @@ package alessandro.stamera.wherewolfserver.classi.eccezioni;
 public class EccezioneVampirizzazioneLupi extends IllegalArgumentException
 {
 
-    public EccezioneVampirizzazioneLupi(String tipoLupo, String nomeLupo, String nomeVampiro)
+    private final String ruoloProgenizzatore, tipoLupo, nomeLupo, nomeProgenizzatore;
+
+    public EccezioneVampirizzazioneLupi
+    (
+        String ruoloProgenizzatore, String tipoLupo, String nomeLupo, String nomeProgenizzatore
+    )
     {
-      super("Impossibile vampirizzare il " + tipoLupo + " (" + nomeLupo + ").\nAvvisa il Vampiro (" + nomeVampiro + ") della sua morte.");
+        this.ruoloProgenizzatore = ruoloProgenizzatore;
+        this.tipoLupo = tipoLupo;
+        this.nomeLupo = nomeLupo;
+        this.nomeProgenizzatore = nomeProgenizzatore;
+    }
+
+    @Override public String getMessage()
+    {
+        String verbo = "vampirizzare";
+        if(ruoloProgenizzatore.equals("Nosferatu")) verbo = "progenizzare";
+        return
+            "Impossibile " + verbo + " il " + tipoLupo + " (" + nomeLupo + ").\nAvvisa il " + ruoloProgenizzatore + " (" + nomeProgenizzatore +
+            ") della sua morte.";
     }
 
 }

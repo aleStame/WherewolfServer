@@ -107,6 +107,28 @@ public class Giocatori
 
     public boolean isMegera(String nome) { return getRuolo(nome).isMegera(); }
 
+    public String getNomeRuolo(String nomeGiocatore)
+    {
+        String risultato = getRuolo(nomeGiocatore).getNome();
+        if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
+        return risultato;
+    }
+
+    private boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
+
+    private String getNomeTipoContadino(String nomeGiocatore)
+    {
+        String risultato = "Contadino normale";
+        if(isContadinoEroe(nomeGiocatore)) risultato = "Contadino eroe";
+        else if(isContadinoLupo(nomeGiocatore)) risultato = "Contadino discendente dei lupi";
+        else if(isContadinoMostro(nomeGiocatore)) risultato = "Contadino mostro";
+        return risultato;
+    }
+
+    private boolean isContadinoEroe(String nome) { return getRuolo(nome).isContadinoEroe(); }
+
+    private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
+
     private Optional<Entry<String, Ruolo>> cercaNosferatu()
     {
         return cercaRuolo(ruolo -> ruolo.getValue().isNosferatu());

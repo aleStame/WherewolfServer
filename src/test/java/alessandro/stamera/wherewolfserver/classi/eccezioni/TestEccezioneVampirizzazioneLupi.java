@@ -20,7 +20,7 @@ public final class TestEccezioneVampirizzazioneLupi
     )
     public void testVampirizzazioneLupo(String tipoLupo, String messaggio)
     {
-        assertThat(new EccezioneVampirizzazioneLupi(tipoLupo, "Giuliano", "Michele").getMessage()).isEqualTo(messaggio);
+        assertThat(new EccezioneVampirizzazioneLupi("Vampiro", tipoLupo, "Giuliano", "Michele").getMessage()).isEqualTo(messaggio);
     }
 
 }
