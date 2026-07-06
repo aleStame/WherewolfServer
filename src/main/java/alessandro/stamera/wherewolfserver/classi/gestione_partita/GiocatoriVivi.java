@@ -301,20 +301,25 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeRuolo(String nomeGiocatore)
     {
-        Ruolo ruolo = getRuolo(nomeGiocatore);
-        String risultato = ruolo.getNome();
-        if(risultato.equals("Contadino")) risultato = getNomeTipoContadino(ruolo);
+        String risultato = getRuolo(nomeGiocatore).getNome();
+        if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
         return risultato;
     }
 
-    private String getNomeTipoContadino(Ruolo ruolo)
+    private boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
+
+    private String getNomeTipoContadino(String nomeGiocatore)
     {
         String risultato = "Contadino normale";
-        if(ruolo.isContadinoEroe()) risultato = "Contadino eroe";
-        else if(ruolo.isContadinoLupo()) risultato = "Contadino discendente dei lupi";
-        else if(ruolo.isContadinoMostro()) risultato = "Contadino mostro";
+        if(isContadinoEroe(nomeGiocatore)) risultato = "Contadino eroe";
+        else if(isContadinoLupo(nomeGiocatore)) risultato = "Contadino discendente dei lupi";
+        else if(isContadinoMostro(nomeGiocatore)) risultato = "Contadino mostro";
         return risultato;
     }
+
+    private boolean isContadinoEroe(String nome) { return getRuolo(nome).isContadinoEroe(); }
+
+    private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {

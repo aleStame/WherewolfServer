@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomeTipoContadino">
+    <list default="true" id="3b11ba82-943d-4d92-8f68-c33e3fc4d1b2" name="Changes" comment="REFACTORING: definizione del metodo getNomeRuolo">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GiocatoriVivi.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita$1.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,14 +303,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762188555486</updated>
-    </task>
-    <task id="LOCAL-03440" summary="REFACTORING: definizione del metodo verificaMessaggio">
-      <option name="closed" value="true" />
-      <created>1782770276606</created>
-      <option name="number" value="03440" />
-      <option name="presentableId" value="LOCAL-03440" />
-      <option name="project" value="LOCAL" />
-      <updated>1782770276606</updated>
     </task>
     <task id="LOCAL-03441" summary="ROSSO: testMessaggio non riuscito">
       <option name="closed" value="true" />
@@ -688,7 +688,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783330904051</updated>
     </task>
-    <option name="localTasksCounter" value="3489" />
+    <task id="LOCAL-03489" summary="REFACTORING: definizione del metodo getNomeRuolo">
+      <option name="closed" value="true" />
+      <created>1783331038145</created>
+      <option name="number" value="03489" />
+      <option name="presentableId" value="LOCAL-03489" />
+      <option name="project" value="LOCAL" />
+      <updated>1783331038145</updated>
+    </task>
+    <option name="localTasksCounter" value="3490" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -703,7 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testTipoLupo non riuscito" />
     <MESSAGE value="VERDE: testTipoLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneMorteGhoul" />
@@ -728,6 +735,7 @@
     <MESSAGE value="ROSSO: testNomeRuolo non riuscito" />
     <MESSAGE value="VERDE: testNomeRuolo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeTipoContadino" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeTipoContadino" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeRuolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeRuolo" />
   </component>
 </project>
