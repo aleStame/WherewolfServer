@@ -402,18 +402,14 @@ public final class Partita
     {
         String nomeVampiro = vivi.getNomeVampiro();
         eliminaGiocatori(nomeVampiro);
-        String tipoLupo = vivi.getNomeRuolo(nomeLupo);
-        if(tipoLupo.equals("Contadino")) tipoLupo = "Contadino discendente dei lupi";
-        throw new EccezioneVampirizzazioneLupi(tipoLupo, nomeLupo, nomeVampiro);
+        throw new EccezioneVampirizzazioneLupi(vivi.getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
     private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
     {
         String nomeAngelo = getNomeAngeloCustodeVivo();
         eliminazioneAngeloCustode();
-        String ruoloVittima = vivi.getRuolo(nomeVittima).getNome();
-        if(ruoloVittima.equals("Contadino")) ruoloVittima = "Contadino mostro";
-        throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, nomeAngelo, vivi.getNomeVampiro());
+        throw new EccezioneProgenizzazioneNonRiuscita(vivi.getNomeRuolo(nomeVittima), nomeVittima, nomeAngelo, vivi.getNomeVampiro());
     }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)

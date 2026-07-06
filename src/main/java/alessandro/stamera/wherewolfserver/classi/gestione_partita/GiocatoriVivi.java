@@ -299,7 +299,19 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 
-    public String getNomeRuolo(String nomeGiocatore) { return null; }
+    public String getNomeRuolo(String nomeGiocatore)
+    {
+        Ruolo ruolo = getRuolo(nomeGiocatore);
+        String risultato = ruolo.getNome();
+        if(risultato.equals("Contadino"))
+        {
+            if(ruolo.isContadinoEroe()) risultato = "Contadino eroe";
+            else if(ruolo.isContadinoLupo()) risultato = "Contadino discendente dei lupi";
+            else if(ruolo.isContadinoMostro()) risultato = "Contadino mostro";
+            else risultato = "Contadino normale";
+        }
+        return risultato;
+    }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
