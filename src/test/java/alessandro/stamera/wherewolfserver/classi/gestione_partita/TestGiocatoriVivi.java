@@ -1093,13 +1093,23 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isCapoBranco(nomeNonna));
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testTipoLupo(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Ghoul",
+            "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
+            "Vampiro"
+        }
+    )
+    public void testNomeRuolo(String nomeRuolo)
     {
         String nome = "Elena";
-        aggiungiGiocatore(nome, tipoLupo);
-        verificaVero(giocatori.isLupo(nome));
-        verificaStringa(giocatori.getTipoLupo(nome), tipoLupo);
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaStringa(giocatori.getNomeRuolo(nome), nomeRuolo);
     }
 
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima) { verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO); }

@@ -402,7 +402,7 @@ public final class Partita
     {
         String nomeVampiro = vivi.getNomeVampiro();
         eliminaGiocatori(nomeVampiro);
-        String tipoLupo = vivi.getTipoLupo(nomeLupo);
+        String tipoLupo = vivi.getNomeRuolo(nomeLupo);
         if(tipoLupo.equals("Contadino")) tipoLupo = "Contadino discendente dei lupi";
         throw new EccezioneVampirizzazioneLupi(tipoLupo, nomeLupo, nomeVampiro);
     }
