@@ -462,21 +462,28 @@ public final class Partita
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
-    private void morteNosferatu(String nome)
+    private void morteNosferatu(String nomeVittima)
     {
-        String nomeNosferatu = vivi.getNomeNosferatu(), ruoloNosferatu = getNomeRuolo(nomeNosferatu);
+        String ruoloVittima = mortiNotte.getNomeRuolo(nomeVittima), nomeNosferatu = vivi.getNomeNosferatu();
+        String ruoloNosferatu = getNomeRuolo(nomeNosferatu);
         if(isGhoulPresente())
         {
-            String ruolo = mortiNotte.getNomeRuolo(nome), nomeGhoul = getNomeGhoul(), ruoloGhoul = getNomeRuolo(nomeGhoul);
-            controlliMorteNosferatu(nome, nomeGhoul);
-            throw new EccezioneProgenizzazioneNonRiuscita(ruolo, nome, ruoloNosferatu, nomeNosferatu, ruoloGhoul, nomeGhoul);
+            String nomeGhoul = getNomeGhoul(), ruoloGhoul = getNomeRuolo(nomeGhoul);
+            controlliMorteNosferatu(nomeVittima, nomeGhoul);
+            throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, ruoloNosferatu, nomeNosferatu, ruoloGhoul, nomeGhoul);
+        }
+        else if(vivi.isAmato(nomeNosferatu) && vivi.isAngeloCustodePresente())
+        {
+            String nomeAngelo = getNomeAngeloCustodeVivo(), ruoloAngelo = getNomeRuolo(nomeAngelo);
+            controlliMorteNosferatu(nomeVittima, nomeAngelo);
+            throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, ruoloNosferatu, nomeNosferatu, ruoloAngelo, nomeAngelo);
         }
         else
         {
             String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu);
-            String ruoloMorto = mortiNotte.getNomeRuolo(nome);
-            controlliMorteNosferatu(nome, nomeNosferatu);
-            throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nome, nomeNosferatu);
+            String ruoloMorto = mortiNotte.getNomeRuolo(nomeVittima);
+            controlliMorteNosferatu(nomeVittima, nomeNosferatu);
+            throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nomeVittima, nomeNosferatu);
         }
     }
 
