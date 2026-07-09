@@ -403,7 +403,7 @@ public final class Partita
     {
         String nomeVampiro = getNomeVampiroVivo();
         eliminaGiocatori(nomeVampiro);
-        throw new EccezioneMorteProgenizzatore(mortiNotte.getNomeRuolo(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+        throw new EccezioneMorteProgenizzatore(getNomeRuoloMorto(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
     private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
@@ -463,7 +463,7 @@ public final class Partita
 
     private void morteNosferatu(String nomeVittima)
     {
-        String ruoloVittima = mortiNotte.getNomeRuolo(nomeVittima), nomeNosferatu = vivi.getNomeNosferatu();
+        String ruoloVittima = getNomeRuoloMorto(nomeVittima), nomeNosferatu = vivi.getNomeNosferatu();
         String ruoloNosferatu = getNomeRuolo(nomeNosferatu);
         if(isGhoulPresente())
         {
@@ -479,12 +479,13 @@ public final class Partita
         }
         else
         {
-            String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu);
-            String ruoloMorto = mortiNotte.getNomeRuolo(nomeVittima);
+            String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuoloMorto(nomeVittima);
             controlliMorteNosferatu(nomeVittima, nomeNosferatu);
             throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nomeVittima, nomeNosferatu);
         }
     }
+
+    private String getNomeRuoloMorto(String nomeVittima) { return mortiNotte.getNomeRuolo(nomeVittima); }
 
     private void controlliMorteNosferatu(String nome, String nomeVittima)
     {
