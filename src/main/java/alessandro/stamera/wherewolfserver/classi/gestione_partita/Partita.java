@@ -179,12 +179,7 @@ public final class Partita
         {
             case RIUSCITO -> risorgiGiocatore(nome);
             case MORTO -> morteNosferatu(nome);
-            case ANGELO_CUSTODE_MORTO ->
-            {
-                int posizione = -1;
-                for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isNosferatu(getNomeGiocatoreVivo(i))) posizione = i;
-                gestioneEccezioneMorteAngeloCustode(getNomeGiocatoreVivo(posizione), nome);
-            }
+            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(vivi.getNomeNosferatu(), nome);
         }
     }
 
@@ -247,11 +242,11 @@ public final class Partita
     private EsitoAttacco attaccoNosferatu(String nomeVittima)
     {
         EsitoAttacco esito = mortiNotte.progenizzazioneNosferatu(nomeVittima);
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(getNomeGiocatoreVivo(i)).isNosferatu()) posizione = i;
-        if(esito == MORTO && vivi.isAmato(getNomeGiocatoreVivo(posizione)) && vivi.isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
+        if(esito == MORTO && isNosferatuAmato()) esito = ANGELO_CUSTODE_MORTO;
         return esito;
     }
+
+    private boolean isNosferatuAmato() { return vivi.isAmato(vivi.getNomeNosferatu()) && vivi.isAngeloCustodePresente(); }
 
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
     {
