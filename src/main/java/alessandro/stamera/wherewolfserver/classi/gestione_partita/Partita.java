@@ -326,14 +326,7 @@ public final class Partita
             case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
             case MORTO -> gestioneMorteVampiroPostAttacco(nome);
             case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(nome);
-            case TROVATO_POSSEDUTO ->
-            {
-                String nomeVampiro = vivi.getNomeVampiro();
-                Ruolo posseduto = getRuoloVivo(nome);
-                eliminaGiocatori(nome, nomeVampiro);
-                confermaEliminazioneMortiNotte();
-                aggiungiGiocatoreVivo(nomeVampiro, posseduto);
-            }
+            case TROVATO_POSSEDUTO -> gestionePosseduto(nome);
         }
     }
 
@@ -368,6 +361,15 @@ public final class Partita
     }
 
     public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
+
+    private void gestionePosseduto(String nome)
+    {
+        String nomeVampiro = vivi.getNomeVampiro();
+        Ruolo posseduto = getRuoloVivo(nome);
+        eliminaGiocatori(nome, nomeVampiro);
+        confermaEliminazioneMortiNotte();
+        aggiungiGiocatoreVivo(nomeVampiro, posseduto);
+    }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
