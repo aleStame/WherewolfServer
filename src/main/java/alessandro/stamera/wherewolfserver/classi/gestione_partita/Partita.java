@@ -336,6 +336,7 @@ public final class Partita
                 else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
             }
             case MORTO -> gestioneMorteVampiroPostAttacco(nome);
+            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(nome);
         }
     }
 
@@ -385,12 +386,9 @@ public final class Partita
 
     private void gestioneMorteVampiroPostAttacco(String nome)
     {
-        if(isVampiroProtetto()) gestioneEccezioneMorteAngeloCustode(nome);
-        else if(isGhoulPresente()) gestioneMorteGhoul(nome, vivi.getNomeVampiro());
+        if(isGhoulPresente()) gestioneMorteGhoul(nome, vivi.getNomeVampiro());
         else gestioneMorteVampiro(nome);
     }
-
-    private boolean isVampiroProtetto() { return vivi.isAngeloCustodePresente() && vivi.isVampiroAmato(); }
 
     private void gestioneMorteGhoul(String nomeVittima, String nomeProgenizzatore)
     {

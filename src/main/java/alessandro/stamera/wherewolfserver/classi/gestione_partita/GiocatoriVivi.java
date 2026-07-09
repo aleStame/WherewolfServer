@@ -4,7 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
@@ -55,6 +55,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoVampiro(String nome)
     {
         EsitoAttacco esito = vampirizzazioneRuolo(nome);
+        if(esito == MORTO && isAmato(getNomeVampiro()) && isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
         gestisciResetAmato(nome, esito);
         return esito;
     }

@@ -688,6 +688,7 @@ public final class TestPartita
         verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -709,6 +710,7 @@ public final class TestPartita
         verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @Test public void testCriminalizzazioneContadinoMostro()
@@ -783,6 +785,7 @@ public final class TestPartita
         partita.guarisci(nomeContadino);
         terminaNotte();
         verificaNonEliminati(nomeContadino);
+        ripristinaGiocatoreVivo(nomeContadino);
     }
 
     @ParameterizedTest @CsvSource({ "1, 2" }) public void testContrattaccoContadinoMostro(int posizioneVittima)
@@ -1294,6 +1297,7 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Luca).\nAvvisa il Vampiro (Paolo) della sua morte.";
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -1392,6 +1396,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo } });
         attaccoAssassino(nomePosseduto);
         verificaCorrettezzaPossessione(nomeNuovoPosseduto);
+        ripristinaGiocatoreVivo(nomeNuovoPosseduto);
     }
 
     @Test public void testPoterePossedutoPrete()
