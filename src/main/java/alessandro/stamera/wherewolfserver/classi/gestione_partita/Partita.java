@@ -482,13 +482,8 @@ public final class Partita
 
     private void morteNosferatu(String nomeVittima)
     {
-        String ruoloVittima = getNomeRuolo(nomeVittima), nomeNosferatu = vivi.getNomeNosferatu(), ruoloNosferatu = getNomeRuolo(nomeNosferatu);
-        if(isGhoulPresente())
-        {
-            String nomeGhoul = getNomeGhoul(), ruoloGhoul = getNomeRuolo(nomeGhoul);
-            controlliMorteNosferatu(nomeVittima, nomeGhoul);
-            throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, ruoloNosferatu, nomeNosferatu, ruoloGhoul, nomeGhoul);
-        }
+        String nomeNosferatu = vivi.getNomeNosferatu();
+        if(isGhoulPresente()) gestioneMorteGhoul(nomeVittima, nomeNosferatu);
         else
         {
             String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuolo(nomeVittima);
