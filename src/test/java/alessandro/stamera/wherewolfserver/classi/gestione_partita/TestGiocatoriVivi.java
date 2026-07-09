@@ -771,13 +771,6 @@ public final class TestGiocatoriVivi
         verificaVero(isNosferatu(nome));
     }
 
-    @Test public void testNosferatuAssente()
-    {
-        String nome = "Pamela";
-        aggiungiGiocatore(nome, "Cacciatore di vampiri");
-        verificaFalso(isNosferatu(nome));
-    }
-
     @Test public void testLupoReiettoPresente()
     {
         aggiungiGiocatore("Giulia", "Lupo reietto");
@@ -1105,6 +1098,24 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeVampiro);
         verificaAttaccoVampiro(nomeVittima, ANGELO_CUSTODE_MORTO);
         ripristina(nomeVampiro);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNosferatuAssente(String nomeRuolo)
+    {
+        String nome = "Antonio";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isNosferatu(nome));
     }
 
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima)
