@@ -9,8 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -176,10 +175,16 @@ public final class Partita
 
     public void progenizzazioneNosferatu(String nome)
     {
-        switch(mortiNotte.progenizzazioneNosferatu(nome))
+        switch(attaccoNosferatu(nome))
         {
             case RIUSCITO -> risorgiGiocatore(nome);
             case MORTO -> morteNosferatu(nome);
+            case ANGELO_CUSTODE_MORTO ->
+            {
+                int posizione = -1;
+                for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isNosferatu(getNomeGiocatoreVivo(i))) posizione = i;
+                gestioneEccezioneMorteAngeloCustode(getNomeGiocatoreVivo(posizione), nome);
+            }
         }
     }
 
@@ -237,6 +242,15 @@ public final class Partita
         Misticismo misticismo = eseguiControlloMago(nome);
         gestisciInterazioniMago(nome);
         return misticismo;
+    }
+
+    private EsitoAttacco attaccoNosferatu(String nomeVittima)
+    {
+        EsitoAttacco esito = mortiNotte.progenizzazioneNosferatu(nomeVittima);
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getRuoloVivo(getNomeGiocatoreVivo(i)).isNosferatu()) posizione = i;
+        if(esito == MORTO && vivi.isAmato(getNomeGiocatoreVivo(posizione)) && vivi.isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
+        return esito;
     }
 
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
@@ -325,7 +339,7 @@ public final class Partita
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
             case MORTO -> gestioneMorteVampiroPostAttacco(nome);
-            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(nome);
+            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(getNomeVampiroVivo(), nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome);
         }
     }
@@ -403,20 +417,30 @@ public final class Partita
     {
         String nomeVampiro = getNomeVampiroVivo();
         eliminaGiocatori(nomeVampiro);
-        throw new EccezioneMorteProgenizzatore(getNomeRuoloMorto(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+        throw new EccezioneMorteProgenizzatore(getNomeRuolo(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
-    private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
+    private void gestioneEccezioneMorteAngeloCustode(String nomeProgenizzatore, String nomeVittima)
     {
-        String nomeAngelo = getNomeAngeloCustodeVivo(), ruoloAngelo = getNomeRuolo(nomeAngelo), nomeVampiro = getNomeVampiroVivo();
-        String ruoloVampiro = getNomeRuolo(nomeVampiro);
+        String nomeAngelo = getNomeAngeloCustodeVivo(), ruoloAngelo = getNomeRuolo(nomeAngelo);
         eliminazioneAngeloCustode();
-        throw new EccezioneProgenizzazioneNonRiuscita(getNomeRuolo(nomeVittima), nomeVittima, ruoloVampiro, nomeVampiro, ruoloAngelo, nomeAngelo);
+        throw new EccezioneProgenizzazioneNonRiuscita
+        (
+            getNomeRuolo(nomeVittima), nomeVittima, getNomeRuolo(nomeProgenizzatore), nomeProgenizzatore, ruoloAngelo, nomeAngelo
+        );
+    }
+
+    private String getNomeRuolo(String nome)
+    {
+        String risultato;
+        if(isVivo(nome)) risultato = getNomeRuoloVivo(nome);
+        else risultato = getNomeRuoloMorto(nome);
+        return risultato;
     }
 
     private String getNomeVampiroVivo() { return vivi.getNomeVampiro(); }
 
-    private String getNomeRuolo(String nomeVittima) { return vivi.getNomeRuolo(nomeVittima); }
+    private String getNomeRuoloVivo(String nomeVittima) { return vivi.getNomeRuolo(nomeVittima); }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
     {
@@ -463,23 +487,16 @@ public final class Partita
 
     private void morteNosferatu(String nomeVittima)
     {
-        String ruoloVittima = getNomeRuoloMorto(nomeVittima), nomeNosferatu = vivi.getNomeNosferatu();
-        String ruoloNosferatu = getNomeRuolo(nomeNosferatu);
+        String ruoloVittima = getNomeRuolo(nomeVittima), nomeNosferatu = vivi.getNomeNosferatu(), ruoloNosferatu = getNomeRuolo(nomeNosferatu);
         if(isGhoulPresente())
         {
             String nomeGhoul = getNomeGhoul(), ruoloGhoul = getNomeRuolo(nomeGhoul);
             controlliMorteNosferatu(nomeVittima, nomeGhoul);
             throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, ruoloNosferatu, nomeNosferatu, ruoloGhoul, nomeGhoul);
         }
-        else if(vivi.isAmato(nomeNosferatu) && vivi.isAngeloCustodePresente())
-        {
-            String nomeAngelo = getNomeAngeloCustodeVivo(), ruoloAngelo = getNomeRuolo(nomeAngelo);
-            controlliMorteNosferatu(nomeVittima, nomeAngelo);
-            throw new EccezioneProgenizzazioneNonRiuscita(ruoloVittima, nomeVittima, ruoloNosferatu, nomeNosferatu, ruoloAngelo, nomeAngelo);
-        }
         else
         {
-            String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuoloMorto(nomeVittima);
+            String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuolo(nomeVittima);
             controlliMorteNosferatu(nomeVittima, nomeNosferatu);
             throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nomeVittima, nomeNosferatu);
         }
