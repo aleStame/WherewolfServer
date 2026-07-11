@@ -343,9 +343,10 @@ public final class Partita
         switch(vivi.attaccoVampiro(nome))
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
-            case MORTO -> gestioneMorteVampiroPostAttacco(nome);
+            case MORTO -> gestioneMorteVampiro(nome);
             case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(getNomeVampiroVivo(), nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome);
+            case GHOUL_MORTO -> gestioneMorteGhoul(nome, getNomeVampiroVivo());
         }
     }
 
@@ -401,12 +402,6 @@ public final class Partita
     }
 
     private void maledizioneGuaritore() { vivi.maledizione(vivi.getNomeGuaritore()); }
-
-    private void gestioneMorteVampiroPostAttacco(String nome)
-    {
-        if(isGhoulPresente()) gestioneMorteGhoul(nome, getNomeVampiroVivo());
-        else gestioneMorteVampiro(nome);
-    }
 
     private void gestioneMorteGhoul(String nomeVittima, String nomeProgenizzatore)
     {
@@ -492,14 +487,9 @@ public final class Partita
 
     private void morteNosferatu(String nomeVittima)
     {
-        String nomeNosferatu = vivi.getNomeNosferatu();
-        if(isGhoulPresente()) gestioneMorteGhoul(nomeVittima, nomeNosferatu);
-        else
-        {
-            String ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuolo(nomeVittima);
-            controlliMorteNosferatu(nomeVittima, nomeNosferatu);
-            throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nomeVittima, nomeNosferatu);
-        }
+        String nomeNosferatu = vivi.getNomeNosferatu(), ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuolo(nomeVittima);
+        controlliMorteNosferatu(nomeVittima, nomeNosferatu);
+        throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nomeVittima, nomeNosferatu);
     }
 
     private String getNomeRuoloMorto(String nomeVittima) { return mortiNotte.getNomeRuolo(nomeVittima); }

@@ -1186,7 +1186,7 @@ public final class TestPartita
         String nomeCacciatore = "Terzo", nomeGhoul = "Quarto";
         String[][] giocatori = new String[][]
         {
-            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
+            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
         };
         inizializzaPartita(giocatori);
         String messaggio =

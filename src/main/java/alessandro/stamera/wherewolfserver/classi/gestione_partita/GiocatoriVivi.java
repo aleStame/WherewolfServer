@@ -55,7 +55,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoVampiro(String nome)
     {
         EsitoAttacco esito = vampirizzazioneRuolo(nome);
-        if(esito == MORTO && isAmato(getNomeVampiro()) && isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
+        if(esito == MORTO) esito = getEsitoAttaccoConProtettore();
         gestisciResetAmato(nome, esito);
         return esito;
     }
@@ -299,6 +299,14 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isCapoBranco(String nome) { return getRuolo(nome).isCapoBranco(); }
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
+
+    private EsitoAttacco getEsitoAttaccoConProtettore()
+    {
+        EsitoAttacco esito = MORTO;
+        if(isAmato(getNomeVampiro()) && isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
+        else if(isGhoulPresente()) esito = GHOUL_MORTO;
+        return esito;
+    }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
