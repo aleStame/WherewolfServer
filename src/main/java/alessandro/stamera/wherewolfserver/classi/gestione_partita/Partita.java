@@ -175,11 +175,13 @@ public final class Partita
 
     public void progenizzazioneNosferatu(String nome)
     {
+        String nomeNosferatu = vivi.getNomeNosferatu();
         switch(attaccoNosferatu(nome))
         {
             case RIUSCITO -> risorgiGiocatore(nome);
             case MORTO -> morteNosferatu(nome);
-            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(vivi.getNomeNosferatu(), nome);
+            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(nomeNosferatu, nome);
+            case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
         }
     }
 
@@ -242,7 +244,15 @@ public final class Partita
     private EsitoAttacco attaccoNosferatu(String nomeVittima)
     {
         EsitoAttacco esito = mortiNotte.progenizzazioneNosferatu(nomeVittima);
-        if(esito == MORTO && isNosferatuAmato()) esito = ANGELO_CUSTODE_MORTO;
+        if(esito == MORTO) esito = esitoAttaccoConProtettore();
+        return esito;
+    }
+
+    private EsitoAttacco esitoAttaccoConProtettore()
+    {
+        EsitoAttacco esito = MORTO;
+        if(isGhoulPresente()) esito = GHOUL_MORTO;
+        if(isNosferatuAmato()) esito = ANGELO_CUSTODE_MORTO;
         return esito;
     }
 

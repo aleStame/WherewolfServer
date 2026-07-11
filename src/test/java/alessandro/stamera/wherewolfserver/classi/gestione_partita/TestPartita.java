@@ -962,7 +962,7 @@ public final class TestPartita
     @Test public void testProgenieNosferatuMorta()
     {
         String nomeVittima = "Clark", tipoLupo = "Lupo reietto";
-        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo } });
+        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo }, { "Luthor", "Nosferatu" } });
         attaccoLupi(tipoLupo, nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
