@@ -1112,6 +1112,18 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isNosferatu(nome));
     }
 
+    @ParameterizedTest
+    @CsvSource
+    (
+        { "Cacciatore di vampiri", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
+    )
+    public void testAttaccoVampiroConGhoul(String nomeRuolo)
+    {
+        String nomeVittima = "Baggio";
+        inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { "Ferrara", "Ghoul" }, { nomeVittima, nomeRuolo } });
+        verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
+    }
+
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
