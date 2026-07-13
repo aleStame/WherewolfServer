@@ -521,11 +521,23 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroSenzaFazione(), 2);
     }
 
-    @Test public void testGildataCapoBranco()
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia", "Capo branco", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testGildataLupi(String nomeRuolo)
     {
         String nome = "Giuseppe";
-        aggiungiGiocatore(nome, "Capo branco");
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaMortePostGildata(nome);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia", "Capo branco", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testGildataLupiCapoGildaAmato(String nomeRuolo)
+    {
+        String nome = "Raf", nomeAngelo = "Umberto";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeAngelo);
+        verificaMortePostGildata(nome);
     }
 
     @Test public void testNomeCapoGilda()
@@ -1123,6 +1135,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { "Ferrara", "Ghoul" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
     }
+
+    private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
 
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima)
     {
