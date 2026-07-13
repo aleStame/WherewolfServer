@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
@@ -14,7 +15,6 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.LUPO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
@@ -40,8 +40,9 @@ public final class TestContadinoLupo
 
     @Test public void testContadinoLupo() { verificaVero(ruolo.isContadinoLupo()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupi(String nome) { verificaContadinoLupo(nome); }
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
+    public void testAttaccoLupi(String nome, Fazione fazione) { verificaContadinoLupo(nome, fazione); }
 
     @ParameterizedTest @MethodSource({ "getEsempiEsitiPartita" })
     public void testEsitoPartitaDopoAttacco(Partita partita, EsitoPartita esito)
@@ -50,18 +51,20 @@ public final class TestContadinoLupo
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupiAngeloCustode(String nome)
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
+    public void testAttaccoLupiAngeloCustode(String nome, Fazione fazione)
     {
         ruolo.sceltaAngeloCustode();
-        verificaContadinoLupo(nome);
+        verificaContadinoLupo(nome, fazione);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupiGiulietta(String nome)
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
+    public void testAttaccoLupiGiulietta(String nome, Fazione fazione)
     {
         ruolo.romeizzazione();
-        verificaContadinoLupo(nome);
+        verificaContadinoLupo(nome, fazione);
     }
 
     @Test public void testRipristino()
@@ -73,12 +76,12 @@ public final class TestContadinoLupo
 
     @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(LUPO); }
 
-    private void verificaContadinoLupo(String nome)
+    private void verificaContadinoLupo(String nome, Fazione fazione)
     {
         verificaAttaccoFallito(nome);
         assertThat(ruolo.getAura()).isEqualTo(NERA);
         for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
-        assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO);
+        assertThat(ruolo.getFazione()).isEqualTo(fazione);
     }
 
     private void verificaAttaccoFallito(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO); }
