@@ -672,9 +672,17 @@ public final class TestPartita
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
-        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.");
-        terminaNotte();
-        verificaEliminazione(nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+    }
+
+    @ParameterizedTest
+    @CsvSource( { "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testCriminalizzazioneCapoGildaAmatoMorto(String nomeRuolo)
+    {
+        String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
+        segnalazioneAngeloCustode(nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -685,9 +693,7 @@ public final class TestPartita
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomeVittima);
-        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.");
-        terminaNotte();
-        verificaEliminazione(nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
@@ -707,9 +713,7 @@ public final class TestPartita
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
         );
         attaccoLupi(tipoLupo, nomeVittima);
-        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
-        terminaNotte();
-        verificaEliminazione(nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.", nomeCapoGilda);
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
@@ -717,9 +721,7 @@ public final class TestPartita
     {
         String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
-        verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
-        terminaNotte();
-        verificaEliminazione(nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.", nomeCapoGilda);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1499,6 +1501,13 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         FACTORY.getRuolo("Capo branco").resettaAmato();
+    }
+
+    private void verificaMorteCapoGilda(String nomeVittima, String messaggio, String nomeCapoGilda)
+    {
+        verificaFallimentoGildata(nomeVittima, messaggio);
+        terminaNotte();
+        verificaEliminazione(nomeCapoGilda);
     }
 
     private void ripristinaRuoloSpecifico(String nomeRuolo) { FACTORY.getRuolo(nomeRuolo).ripristina(); }
