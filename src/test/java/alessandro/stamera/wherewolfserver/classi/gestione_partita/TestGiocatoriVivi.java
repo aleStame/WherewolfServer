@@ -527,7 +527,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Giuseppe";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        verificaMortePostGildata(nome);
     }
 
     @ParameterizedTest
@@ -537,7 +537,7 @@ public final class TestGiocatoriVivi
         String nome = "Raf", nomeAngelo = "Umberto";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeAngelo);
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        verificaMortePostGildata(nome);
     }
 
     @Test public void testNomeCapoGilda()
@@ -1135,6 +1135,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { "Ferrara", "Ghoul" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
     }
+
+    private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
 
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima)
     {
