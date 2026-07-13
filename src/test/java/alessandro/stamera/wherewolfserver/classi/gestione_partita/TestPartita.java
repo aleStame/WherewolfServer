@@ -1257,7 +1257,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" }, { "Gabriele", "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVampiro);
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
-        FACTORY.getRuolo("Vampiro").ripristina();
+        ripristinaRuoloSpecifico("Vampiro");
     }
 
     @ParameterizedTest @CsvSource
@@ -1294,8 +1294,10 @@ public final class TestPartita
     {
         String nomeVittima = "Giuliano", nomeNosferatu = "Michele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeNosferatu, "Nosferatu" }, { "Giampiero", "Assassino" } });
+        segnalazioneAngeloCustode(nomeNosferatu);
         attaccoAssassino(nomeVittima);
         verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
+        ripristinaRuoloSpecifico("Nosferatu");
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1498,6 +1500,8 @@ public final class TestPartita
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         FACTORY.getRuolo("Capo branco").resettaAmato();
     }
+
+    private void ripristinaRuoloSpecifico(String nomeRuolo) { FACTORY.getRuolo(nomeRuolo).ripristina(); }
 
     private void verificaAttaccoNonna(String tipoLupo, String nomeVittima, String messaggio, String nomeLupo)
     {
