@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -1502,6 +1503,21 @@ public final class TestPartita
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         FACTORY.getRuolo("Capo branco").resettaAmato();
     }
+
+    /*@ParameterizedTest
+    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
+    public void testAttaccoLupiAngeloCustode(String tipoLupo, Fazione fazione)
+    {
+        String nomeContadino = "Mariangela";
+        String[][] giocatori =
+                new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeContadino);
+        verificaAttaccoLupoFallito(tipoLupo, nomeContadino);
+        assertThat(partita.getAura(nomeContadino)).isEqualTo(fazione);
+        assertThat(partita.getFazione(nomeContadino)).isEqualTo(fazione);
+        ripristinaGiocatoreVivo(nomeContadino);
+    }*/
 
     private void verificaMorteCapoGilda(String nomeVittima, String messaggio, String nomeCapoGilda)
     {

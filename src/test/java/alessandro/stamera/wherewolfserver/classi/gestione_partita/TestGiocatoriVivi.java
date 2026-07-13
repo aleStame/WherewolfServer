@@ -1147,6 +1147,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupoFallito(tipoLupo, nomeContadino);
+        assertThat(this.giocatori.getAura(nomeContadino)).isEqualTo(NERA);
         assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristina(nomeContadino);
     }
