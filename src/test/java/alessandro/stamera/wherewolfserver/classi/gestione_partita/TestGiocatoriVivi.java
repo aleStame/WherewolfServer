@@ -521,10 +521,12 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroSenzaFazione(), 2);
     }
 
-    @Test public void testGildataCapoBranco()
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia", "Capo branco", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testGildataLupi(String nomeRuolo)
     {
         String nome = "Giuseppe";
-        aggiungiGiocatore(nome, "Capo branco");
+        aggiungiGiocatore(nome, nomeRuolo);
         verificaAttacco(giocatori.gildata(nome), MORTO);
     }
 
