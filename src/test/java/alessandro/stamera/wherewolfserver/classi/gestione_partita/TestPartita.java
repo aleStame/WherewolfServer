@@ -1064,23 +1064,6 @@ public final class TestPartita
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testMorteAngeloCustodeCacciatoreNosferatu(String tipoLupo)
-    {
-        String nomeVittima = "Terzo", nomeNosferatu = "Secondo", nomeAngelo = "Quarto";
-        String[][] giocatori = new String[][]
-        {
-            { "Primo", tipoLupo }, { nomeNosferatu, "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { nomeAngelo, "Angelo custode" }
-        };
-        inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(nomeNosferatu);
-        attaccoLupi(tipoLupo, nomeVittima);
-        String messaggio =
-            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte dell'Angelo custode (Quarto) del Nosferatu amato "
-            + "(Secondo).\nAvvisa Quarto della sua morte.";
-        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeAngelo);
-    }
-
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testMorteGhoulContadinoMostroNosferatu(String tipoLupo)
     {
         String[][] giocatori = new String[][]
@@ -1475,23 +1458,6 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeLadra, "Ladra" }, { "Giuseppe", "Assassino" }, { nomePosseduto, "Posseduto" } });
         attaccoAssassino(nomePosseduto);
         assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomeLadra)).withMessage("Impossibile possedere Piera.");
-    }
-
-    @Test public void testAttaccoVampiroAmatoCacciatoreDiVampiri()
-    {
-        String nomeVampiro = "Stefano", nomeGhoul = "Biagio", nomeCacciatore = "Herbert", nomeAngelo = "Francesco";
-        String[][] giocatori = new String[][]
-        {
-            { nomeVampiro, "Vampiro" }, { nomeGhoul, "Ghoul" }, { nomeCacciatore, "Cacciatore di vampiri" }, { nomeAngelo, "Angelo custode" }
-        };
-        inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(nomeVampiro);
-        String messaggio =
-            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Herbert) causa la morte dell'Angelo custode (Francesco) del Vampiro " +
-            "amato (Stefano).\nAvvisa Francesco della sua morte.";
-        verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeAngelo);
-        verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
-        ripristinaGiocatoreVivo(nomeVampiro);
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")

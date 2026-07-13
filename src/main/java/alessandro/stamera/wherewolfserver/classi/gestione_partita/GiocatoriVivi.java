@@ -37,7 +37,6 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
         if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
-        System.out.println(esito);
         return esito;
     }
 
@@ -55,7 +54,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoVampiro(String nome)
     {
         EsitoAttacco esito = vampirizzazioneRuolo(nome);
-        if(esito == MORTO) esito = getEsitoAttaccoConProtettore();
+        if(esito == MORTO && isGhoulPresente()) esito = GHOUL_MORTO;
         gestisciResetAmato(nome, esito);
         return esito;
     }
@@ -299,14 +298,6 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isCapoBranco(String nome) { return getRuolo(nome).isCapoBranco(); }
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
-
-    private EsitoAttacco getEsitoAttaccoConProtettore()
-    {
-        EsitoAttacco esito = MORTO;
-        if(isAmato(getNomeVampiro()) && isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
-        else if(isGhoulPresente()) esito = GHOUL_MORTO;
-        return esito;
-    }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
