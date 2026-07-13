@@ -1090,7 +1090,7 @@ public final class TestGiocatoriVivi
             new String[][] { { nomeVampiro, "Vampiro" }, { "Nicolò", "Angelo custode" }, { nomeVittima, "Cacciatore di vampiri" } };
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeVampiro);
-        verificaAttaccoVampiro(nomeVittima, ANGELO_CUSTODE_MORTO);
+        verificaAttaccoVampiro(nomeVittima, MORTO);
         ripristina(nomeVampiro);
     }
 
