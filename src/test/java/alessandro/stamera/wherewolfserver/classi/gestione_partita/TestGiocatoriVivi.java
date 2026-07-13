@@ -609,7 +609,7 @@ public final class TestGiocatoriVivi
         String[][] giocatori =
             new String[][] { { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" } };
         inizializzaGiocatori(giocatori);
-        verificaAttaccoLupoFallito(nomeLupo, nomeContadino);
+        verificaAttaccoLupoFallito(tipoLupo, nomeContadino);
         verificaGildata(nomeContadino, MORTO);
         ripristina(nomeContadino);
     }
