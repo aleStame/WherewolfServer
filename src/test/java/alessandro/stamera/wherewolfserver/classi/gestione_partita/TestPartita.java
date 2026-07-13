@@ -1271,7 +1271,8 @@ public final class TestPartita
     public void testMorteVampiroAmato(String nomeRuolo, String messaggio)
     {
         String nomeVittima = "Giuliano", nomeVampiro = "Michele";
-        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" }, { "Gabriele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeVampiro);
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
         FACTORY.getRuolo("Vampiro").ripristina();
     }
@@ -1288,6 +1289,25 @@ public final class TestPartita
         }
     )
     public void testMorteNosferatu(String nomeRuolo, String messaggio)
+    {
+        String nomeVittima = "Giuliano", nomeNosferatu = "Michele";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeNosferatu, "Nosferatu" }, { "Giampiero", "Assassino" } });
+        attaccoAssassino(nomeVittima);
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "'Capo branco', 'Impossibile progenizzare il Capo branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Lupo del branco', 'Impossibile progenizzare il Lupo del branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Lupo reietto', 'Impossibile progenizzare il Lupo reietto (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Lupo solitario', 'Impossibile progenizzare il Lupo solitario (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Cacciatore di vampiri', 'Impossibile progenizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Nosferatu (Michele) della sua " +
+            "morte.'"
+        }
+    )
+    public void testMorteNosferatuAmato(String nomeRuolo, String messaggio)
     {
         String nomeVittima = "Giuliano", nomeNosferatu = "Michele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeNosferatu, "Nosferatu" }, { "Giampiero", "Assassino" } });
