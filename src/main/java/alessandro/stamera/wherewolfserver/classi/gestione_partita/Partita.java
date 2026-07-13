@@ -370,6 +370,10 @@ public final class Partita
 
     public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
 
+    public Aura getAura(String nome) { return null; }
+
+    public Fazione getFazione(String nome) { return null; }
+
     private void gestionePosseduto(String nome)
     {
         String nomeVampiro = getNomeVampiroVivo();

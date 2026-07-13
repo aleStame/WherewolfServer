@@ -1504,20 +1504,31 @@ public final class TestPartita
         FACTORY.getRuolo("Capo branco").resettaAmato();
     }
 
-    /*@ParameterizedTest
-    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
-    public void testAttaccoLupiAngeloCustode(String tipoLupo, Fazione fazione)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, LUPO_BRANCO, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa " +
+            "parte della loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo del branco, LUPO_BRANCO, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso " +
+            "fa parte della loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo reietto, LUPO_BRANCO, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa " +
+            "parte della loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo solitario, LUPO_SOLITARIO, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dal Lupo solitario, pertanto anche " +
+            "lui diventa tale.\nSveglia Mario e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
+        }
+    )
+    public void testAttaccoLupiAngeloCustode(String tipoLupo, Fazione fazione, String messaggio)
     {
-        String nomeContadino = "Mariangela";
+        String nomeContadino = "Mario";
         String[][] giocatori =
-                new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
+            new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
-        verificaAttaccoLupoFallito(tipoLupo, nomeContadino);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
         assertThat(partita.getAura(nomeContadino)).isEqualTo(fazione);
         assertThat(partita.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristinaGiocatoreVivo(nomeContadino);
-    }*/
+    }
 
     private void verificaMorteCapoGilda(String nomeVittima, String messaggio, String nomeCapoGilda)
     {
