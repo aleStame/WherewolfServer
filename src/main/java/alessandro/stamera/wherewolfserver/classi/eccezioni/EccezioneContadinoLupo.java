@@ -15,9 +15,7 @@ public class EccezioneContadinoLupo extends IllegalArgumentException
     {
         String messaggio;
         if(fazione.equals("Lupi del branco")) messaggio = getMessaggioLupiBranco();
-        else messaggio =
-            "Il Contadino discendente dei lupi (" + nomeContadino + ") è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\n" +
-            "Sveglia " + nomeContadino + " e fagli riconoscere il Lupo solitario che lo ha attaccato.";
+        else messaggio = getMessaggioLupoSolitario();
         return messaggio;
     }
 
@@ -26,6 +24,13 @@ public class EccezioneContadinoLupo extends IllegalArgumentException
         return
             "Il Contadino discendente dei lupi (" + nomeContadino + ") è stato attaccato dai Lupi del branco, pertanto adesso fa parte della loro " +
             "fazione.\nSveglia " + nomeContadino + " e fagli riconoscere gli altri lupi.";
+    }
+
+    private String getMessaggioLupoSolitario()
+    {
+        return
+            "Il Contadino discendente dei lupi (" + nomeContadino + ") è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\n"
+            + "Sveglia " + nomeContadino + " e fagli riconoscere il Lupo solitario che lo ha attaccato.";
     }
 
 }
