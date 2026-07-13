@@ -9,8 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -176,10 +175,13 @@ public final class Partita
 
     public void progenizzazioneNosferatu(String nome)
     {
-        switch(mortiNotte.progenizzazioneNosferatu(nome))
+        String nomeNosferatu = vivi.getNomeNosferatu();
+        switch(attaccoNosferatu(nome))
         {
             case RIUSCITO -> risorgiGiocatore(nome);
             case MORTO -> morteNosferatu(nome);
+            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(nomeNosferatu, nome);
+            case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
         }
     }
 
@@ -238,6 +240,23 @@ public final class Partita
         gestisciInterazioniMago(nome);
         return misticismo;
     }
+
+    private EsitoAttacco attaccoNosferatu(String nomeVittima)
+    {
+        EsitoAttacco esito = mortiNotte.progenizzazioneNosferatu(nomeVittima);
+        if(esito == MORTO) esito = esitoAttaccoConProtettore();
+        return esito;
+    }
+
+    private EsitoAttacco esitoAttaccoConProtettore()
+    {
+        EsitoAttacco esito = MORTO;
+        if(isGhoulPresente()) esito = GHOUL_MORTO;
+        if(isNosferatuAmato()) esito = ANGELO_CUSTODE_MORTO;
+        return esito;
+    }
+
+    private boolean isNosferatuAmato() { return vivi.isAmato(vivi.getNomeNosferatu()) && vivi.isAngeloCustodePresente(); }
 
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
     {
@@ -323,19 +342,11 @@ public final class Partita
     {
         switch(vivi.attaccoVampiro(nome))
         {
-            case FALLITO ->
-            {
-                if(vivi.isPosseduto(nome))
-                {
-                    String nomeVampiro = vivi.getNomeVampiro();
-                    Ruolo posseduto = getRuoloVivo(nome);
-                    eliminaGiocatori(nome, nomeVampiro);
-                    confermaEliminazioneMortiNotte();
-                    aggiungiGiocatoreVivo(nomeVampiro, posseduto);
-                }
-                else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
-            }
-            case MORTO -> gestioneMorteVampiroPostAttacco(nome);
+            case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
+            case MORTO -> gestioneMorteVampiro(nome);
+            case ANGELO_CUSTODE_MORTO -> gestioneEccezioneMorteAngeloCustode(getNomeVampiroVivo(), nome);
+            case TROVATO_POSSEDUTO -> gestionePosseduto(nome);
+            case GHOUL_MORTO -> gestioneMorteGhoul(nome, getNomeVampiroVivo());
         }
     }
 
@@ -371,6 +382,15 @@ public final class Partita
 
     public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
 
+    private void gestionePosseduto(String nome)
+    {
+        String nomeVampiro = getNomeVampiroVivo();
+        Ruolo posseduto = getRuoloVivo(nome);
+        eliminaGiocatori(nome, nomeVampiro);
+        confermaEliminazioneMortiNotte();
+        aggiungiGiocatoreVivo(nomeVampiro, posseduto);
+    }
+
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
@@ -383,35 +403,44 @@ public final class Partita
 
     private void maledizioneGuaritore() { vivi.maledizione(vivi.getNomeGuaritore()); }
 
-    private void gestioneMorteVampiroPostAttacco(String nome)
+    private void gestioneMorteGhoul(String nomeVittima, String nomeProgenizzatore)
     {
-        if(vivi.isAngeloCustodePresente() && vivi.isVampiroAmato()) gestioneEccezioneMorteAngeloCustode(nome);
-        else if(vivi.isLupo(nome)) gestioneMorteVampiro(nome);
-        else gestioneMorteGhoul(nome);
-    }
-
-    private void gestioneMorteGhoul(String nomeVittima)
-    {
-        String nomeGhoul = vivi.getNomeGhoul();
+        String nomeGhoul = vivi.getNomeGhoul(), ruoloGhoul = getNomeRuolo(nomeGhoul), ruoloProgenizzatore = getNomeRuolo(nomeProgenizzatore);
         eliminaGhoul();
-        throw new EccezioneProgenizzazioneNonRiuscita(getNomeRuolo(nomeVittima), nomeVittima, nomeGhoul);
+        throw new EccezioneProgenizzazioneNonRiuscita
+        (
+            getNomeRuolo(nomeVittima), nomeVittima, ruoloProgenizzatore, nomeProgenizzatore, ruoloGhoul, nomeGhoul
+        );
     }
 
     private void gestioneMorteVampiro(String nomeLupo)
     {
-        String nomeVampiro = vivi.getNomeVampiro();
+        String nomeVampiro = getNomeVampiroVivo();
         eliminaGiocatori(nomeVampiro);
-        throw new EccezioneVampirizzazioneLupi(getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
+        throw new EccezioneMorteProgenizzatore(getNomeRuolo(nomeVampiro), getNomeRuolo(nomeLupo), nomeLupo, nomeVampiro);
     }
 
-    private void gestioneEccezioneMorteAngeloCustode(String nomeVittima)
+    private void gestioneEccezioneMorteAngeloCustode(String nomeProgenizzatore, String nomeVittima)
     {
-        String nomeAngelo = getNomeAngeloCustodeVivo();
+        String nomeAngelo = getNomeAngeloCustodeVivo(), ruoloAngelo = getNomeRuolo(nomeAngelo);
         eliminazioneAngeloCustode();
-        throw new EccezioneProgenizzazioneNonRiuscita(getNomeRuolo(nomeVittima), nomeVittima, nomeAngelo, vivi.getNomeVampiro());
+        throw new EccezioneProgenizzazioneNonRiuscita
+        (
+            getNomeRuolo(nomeVittima), nomeVittima, getNomeRuolo(nomeProgenizzatore), nomeProgenizzatore, ruoloAngelo, nomeAngelo
+        );
     }
 
-    private String getNomeRuolo(String nomeVittima) { return vivi.getNomeRuolo(nomeVittima); }
+    private String getNomeRuolo(String nome)
+    {
+        String risultato;
+        if(isVivo(nome)) risultato = getNomeRuoloVivo(nome);
+        else risultato = getNomeRuoloMorto(nome);
+        return risultato;
+    }
+
+    private String getNomeVampiroVivo() { return vivi.getNomeVampiro(); }
+
+    private String getNomeRuoloVivo(String nomeVittima) { return vivi.getNomeRuolo(nomeVittima); }
 
     private void gestioneAttaccoNonRiuscito(String nome, EsitoAttacco esito)
     {
@@ -456,10 +485,17 @@ public final class Partita
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
 
-    private void morteNosferatu(String nome)
+    private void morteNosferatu(String nomeVittima)
     {
-        String nomeVittima = vivi.getNomeNosferatu();
-        if(isGhoulPresente()) nomeVittima = getNomeGhoul();
+        String nomeNosferatu = vivi.getNomeNosferatu(), ruoloProgenizzatore = getNomeRuolo(nomeNosferatu), ruoloMorto = getNomeRuolo(nomeVittima);
+        controlliMorteNosferatu(nomeVittima, nomeNosferatu);
+        throw new EccezioneMorteProgenizzatore(ruoloProgenizzatore, ruoloMorto, nomeVittima, nomeNosferatu);
+    }
+
+    private String getNomeRuoloMorto(String nomeVittima) { return mortiNotte.getNomeRuolo(nomeVittima); }
+
+    private void controlliMorteNosferatu(String nome, String nomeVittima)
+    {
         eliminaGiocatore(nomeVittima);
         if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
     }

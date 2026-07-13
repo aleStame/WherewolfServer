@@ -4,7 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
@@ -55,6 +55,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoVampiro(String nome)
     {
         EsitoAttacco esito = vampirizzazioneRuolo(nome);
+        if(esito == MORTO) esito = getEsitoAttaccoConProtettore();
         gestisciResetAmato(nome, esito);
         return esito;
     }
@@ -299,27 +300,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 
-    public String getNomeRuolo(String nomeGiocatore)
+    private EsitoAttacco getEsitoAttaccoConProtettore()
     {
-        String risultato = getRuolo(nomeGiocatore).getNome();
-        if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
-        return risultato;
+        EsitoAttacco esito = MORTO;
+        if(isAmato(getNomeVampiro()) && isAngeloCustodePresente()) esito = ANGELO_CUSTODE_MORTO;
+        else if(isGhoulPresente()) esito = GHOUL_MORTO;
+        return esito;
     }
-
-    private boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
-
-    private String getNomeTipoContadino(String nomeGiocatore)
-    {
-        String risultato = "Contadino normale";
-        if(isContadinoEroe(nomeGiocatore)) risultato = "Contadino eroe";
-        else if(isContadinoLupo(nomeGiocatore)) risultato = "Contadino discendente dei lupi";
-        else if(isContadinoMostro(nomeGiocatore)) risultato = "Contadino mostro";
-        return risultato;
-    }
-
-    private boolean isContadinoEroe(String nome) { return getRuolo(nome).isContadinoEroe(); }
-
-    private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {

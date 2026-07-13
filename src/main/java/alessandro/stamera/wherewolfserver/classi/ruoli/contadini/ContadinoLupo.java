@@ -27,8 +27,8 @@ public final class ContadinoLupo extends Contadino
 
     @Override public EsitoAttacco gildata()
     {
-        EsitoAttacco esito = super.gildata();
-        if(isLupo()) esito = MORTO;
+        EsitoAttacco esito = MORTO;
+        if(!isLupo()) esito = super.gildata();
         return esito;
     }
 
@@ -49,8 +49,8 @@ public final class ContadinoLupo extends Contadino
 
     @Override public EsitoAttacco vampirizzazione()
     {
-        EsitoAttacco esito = super.vampirizzazione();
-        if(isLupo()) esito = MORTO;
+        EsitoAttacco esito = MORTO;
+        if(!isLupo()) esito = super.vampirizzazione();
         return esito;
     }
 

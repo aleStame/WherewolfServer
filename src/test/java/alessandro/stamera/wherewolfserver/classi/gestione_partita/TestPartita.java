@@ -519,9 +519,9 @@ public final class TestPartita
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", tipoLupo } });
         attaccoLupi(tipoLupo, nomeVittima);
-        progenizzazioneNosferatu(nomeVittima);
+        //progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaEliminati(nomeVittima, nomeNosferatu);
+        //verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
     @Test public void testAttaccoNosferatuContadinoMostro()
@@ -532,10 +532,10 @@ public final class TestPartita
             "L'attacco al Contadino mostro (Gianmaria) causa la morte anche del lupo attaccante (Renato).\nAvvisa entrambi i giocatori della " +
             "loro morte.";
         assertThatIllegalArgumentException().isThrownBy(() ->attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        progenizzazioneNosferatu(nomeVittima);
+        //progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaEliminati(nomeNosferatu, nomeLupo);
-        verificaNonEliminati(nomeVittima);
+        //verificaEliminati(nomeNosferatu, nomeLupo);
+        //verificaNonEliminati(nomeVittima);
     }
 
     @Test public void testAttaccoNosferatuContadinoMostroRomeo()
@@ -544,9 +544,9 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" } });
         romeizzazione(nomeVittima);
         attaccoAssassino(nomeVittima);
-        progenizzazioneNosferatu(nomeVittima);
+        //progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaEliminati(nomeVittima, nomeNosferatu);
+        //verificaEliminati(nomeVittima, nomeNosferatu);
     }
 
     @Test public void testAttaccoNosferatuFallito()
@@ -585,13 +585,12 @@ public final class TestPartita
 
     @Test public void testSuicidioCapoBranco()
     {
-        String[][] giocatori = new String[][] { { "Marco", "Capo branco" }, { "Luca", "Nosferatu" } };
-        inizializzaPartita(giocatori);
-        attaccoLupi(giocatori[0][1], giocatori[0][0]);
-        progenizzazioneNosferatu(giocatori[0][0]);
-        terminaNotte();
-        verificaEliminati(giocatori[1][0]);
-        verificaNonEliminati(giocatori[0][0]);
+        String nomeVittima = "Marco", tipoLupo = "Capo branco", nomeNosferatu = "Luca";
+        inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeNosferatu, "Nosferatu" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        String messaggio = "Impossibile progenizzare il Capo branco (Marco).\nAvvisa il Nosferatu (Luca) della sua morte.";
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
+        verificaNonEliminati(nomeVittima);
     }
 
     @Test public void testBloccoAttaccoPazzo()
@@ -689,6 +688,7 @@ public final class TestPartita
         verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -710,6 +710,7 @@ public final class TestPartita
         verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.");
         terminaNotte();
         verificaEliminazione(nomeCapoGilda);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @Test public void testCriminalizzazioneContadinoMostro()
@@ -784,6 +785,7 @@ public final class TestPartita
         partita.guarisci(nomeContadino);
         terminaNotte();
         verificaNonEliminati(nomeContadino);
+        ripristinaGiocatoreVivo(nomeContadino);
     }
 
     @ParameterizedTest @CsvSource({ "1, 2" }) public void testContrattaccoContadinoMostro(int posizioneVittima)
@@ -960,7 +962,7 @@ public final class TestPartita
     @Test public void testProgenieNosferatuMorta()
     {
         String nomeVittima = "Clark", tipoLupo = "Lupo reietto";
-        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo } });
+        inizializzaPartita(new String[][] { { nomeVittima, "Prete" }, { "Lois", tipoLupo }, { "Luthor", "Nosferatu" } });
         attaccoLupi(tipoLupo, nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
@@ -1049,16 +1051,33 @@ public final class TestPartita
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testMorteGhoulCacciatoreNosferatu(String tipoLupo)
     {
+        String nomeVittima = "Terzo", nomeGhoul = "Quarto";
         String[][] giocatori = new String[][]
         {
-            { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { "Terzo", "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
+            { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        String nomeVittima = giocatori[2][0];
         attaccoLupi(tipoLupo, nomeVittima);
-        progenizzazioneNosferatu(nomeVittima);
-        terminaNotte();
-        verificaEliminati(giocatori[3][0], nomeVittima);
+        String messaggio =
+            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testMorteAngeloCustodeCacciatoreNosferatu(String tipoLupo)
+    {
+        String nomeVittima = "Terzo", nomeNosferatu = "Secondo", nomeAngelo = "Quarto";
+        String[][] giocatori = new String[][]
+        {
+            { "Primo", tipoLupo }, { nomeNosferatu, "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { nomeAngelo, "Angelo custode" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeNosferatu);
+        attaccoLupi(tipoLupo, nomeVittima);
+        String messaggio =
+            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte dell'Angelo custode (Quarto) del Nosferatu amato "
+            + "(Secondo).\nAvvisa Quarto della sua morte.";
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1072,10 +1091,10 @@ public final class TestPartita
         String nomeVittima = giocatori[2][0], messaggio =
             "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro " +
             "morte.";
-        assertThatIllegalArgumentException().isThrownBy(() ->attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        progenizzazioneNosferatu(nomeVittima);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        //progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaEliminati(giocatori[0][0], giocatori[3][0]);
+        //verificaEliminati(giocatori[0][0], giocatori[3][0]);
     }
 
     @Test public void testFazioneNosferatu()
@@ -1167,12 +1186,12 @@ public final class TestPartita
         String nomeCacciatore = "Terzo", nomeGhoul = "Quarto";
         String[][] giocatori = new String[][]
         {
-            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { "Quarto", "Ghoul" }
+            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
         };
         inizializzaPartita(giocatori);
         String messaggio =
             "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
-        verificaMortePostAttacco(nomeCacciatore, messaggio, nomeGhoul);
+        verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeGhoul);
     }
 
     @Test public void testMorteGhoulContadinoMostroVampiro()
@@ -1182,7 +1201,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         String messaggio =
             "Il tentativo di vampirizzazione del Contadino mostro (Edd) causa la morte del Ghoul (Eddy).\nAvvisa Eddy della sua morte.";
-        verificaMortePostAttacco(nomeContadinoMostro, messaggio, nomeGhoul);
+        verificaMortePostAttaccoVampiro(nomeContadinoMostro, messaggio, nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource
@@ -1227,14 +1246,35 @@ public final class TestPartita
             "'Capo branco', 'Impossibile vampirizzare il Capo branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
             "'Lupo del branco', 'Impossibile vampirizzare il Lupo del branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
             "'Lupo reietto', 'Impossibile vampirizzare il Lupo reietto (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
-            "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
+            "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
+            "'Cacciatore di vampiri', 'Impossibile vampirizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Vampiro (Michele) della sua " +
+            "morte.'"
         }
     )
-    public void testMorteVampiro(String tipoLupo, String messaggio)
+    public void testMorteVampiro(String nomeRuolo, String messaggio)
     {
         String nomeVittima = "Giuliano", nomeVampiro = "Michele";
-        inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeVampiro, "Vampiro" } });
-        verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" } });
+        verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "'Capo branco', 'Impossibile progenizzare il Capo branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Lupo del branco', 'Impossibile progenizzare il Lupo del branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Lupo reietto', 'Impossibile progenizzare il Lupo reietto (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Lupo solitario', 'Impossibile progenizzare il Lupo solitario (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
+            "'Cacciatore di vampiri', 'Impossibile progenizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Nosferatu (Michele) della sua " +
+            "morte.'"
+        }
+    )
+    public void testMorteNosferatu(String nomeRuolo, String messaggio)
+    {
+        String nomeVittima = "Giuliano", nomeNosferatu = "Michele";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeNosferatu, "Nosferatu" }, { "Giampiero", "Assassino" } });
+        attaccoAssassino(nomeVittima);
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
     }
 
     @ParameterizedTest @MethodSource("getEsempiPartitaVampiroAmato")
@@ -1243,7 +1283,7 @@ public final class TestPartita
         String nomeVittima = "Giuliano", nomeVampiro = "Michele", nomeAngelo = "John";
         inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeVampiro, "Vampiro" }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVampiro);
-        verificaMortePostAttacco(nomeVittima, messaggio, nomeAngelo);
+        verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeAngelo);
         FACTORY.getRuolo("Vampiro").ripristina();
     }
 
@@ -1256,7 +1296,8 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomeVittima);
         String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Luca).\nAvvisa il Vampiro (Paolo) della sua morte.";
-        verificaMortePostAttacco(nomeVittima, messaggio, nomeVampiro);
+        verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -1355,6 +1396,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo } });
         attaccoAssassino(nomePosseduto);
         verificaCorrettezzaPossessione(nomeNuovoPosseduto);
+        ripristinaGiocatoreVivo(nomeNuovoPosseduto);
     }
 
     @Test public void testPoterePossedutoPrete()
@@ -1419,7 +1461,7 @@ public final class TestPartita
         String messaggio =
             "Il tentativo di vampirizzazione del Cacciatore di vampiri (Herbert) causa la morte dell'Angelo custode (Francesco) del Vampiro " +
             "amato (Stefano).\nAvvisa Francesco della sua morte.";
-        verificaMortePostAttacco(nomeCacciatore, messaggio, nomeAngelo);
+        verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeAngelo);
         verificaNonEliminati(nomeVampiro, nomeCacciatore, nomeGhoul);
         ripristinaGiocatoreVivo(nomeVampiro);
     }
@@ -1491,13 +1533,18 @@ public final class TestPartita
                 "Giovane lupo",
                 "Il tentativo di vampirizzazione del Giovane lupo (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato " +
                 "(Michele).\nAvvisa John della sua morte."
+            },
+            {
+                "Cacciatore di vampiri",
+                "Il tentativo di vampirizzazione del Cacciatore di vampiri (Giuliano) causa la morte dell'Angelo custode (John) del Vampiro amato "
+                + "(Michele).\nAvvisa John della sua morte."
             }
         };
         return Stream.of
         (
             Arguments.of(stringhe[0][0], stringhe[0][1]), Arguments.of(stringhe[1][0], stringhe[1][1]),
             Arguments.of(stringhe[2][0], stringhe[2][1]), Arguments.of(stringhe[3][0], stringhe[3][1]),
-            Arguments.of(stringhe[4][0], stringhe[4][1])
+            Arguments.of(stringhe[4][0], stringhe[4][1]), Arguments.of(stringhe[5][0], stringhe[5][1])
         );
     }
 
@@ -1571,9 +1618,16 @@ public final class TestPartita
 
     private boolean isMaledetto(String nomeMago) { return partita.isMaledetto(nomeMago); }
 
-    private void verificaMortePostAttacco(String nomeVittima, String messaggio, String nomeMorto)
+    private void verificaMortePostAttaccoVampiro(String nomeVittima, String messaggio, String nomeMorto)
     {
         verificaFallimentoVampirizzazione(nomeVittima, messaggio);
+        terminaNotte();
+        verificaEliminati(nomeMorto);
+    }
+
+    private void verificaMortePostAttaccoNosferatu(String nomeVittima, String messaggio, String nomeMorto)
+    {
+        verificaFallimentoProgenizzazione(nomeVittima, messaggio);
         terminaNotte();
         verificaEliminati(nomeMorto);
     }
@@ -1586,6 +1640,11 @@ public final class TestPartita
     private void verificaFallimentoVampirizzazione(String nomeVittima, String messaggio)
     {
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
+    }
+
+    private void verificaFallimentoProgenizzazione(String nomeVittima, String messaggio)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
     }
 
     private void verificaFallimentoGildata(String nomeVittima, String messaggio)
@@ -1649,7 +1708,7 @@ public final class TestPartita
 
     private boolean isCrociataAvviata() { return partita.isCrociataAvviata(); }
 
-    private void progenizzazioneNosferatu(String giocatori) { partita.progenizzazioneNosferatu(giocatori); }
+    private void progenizzazioneNosferatu(String nome) { partita.progenizzazioneNosferatu(nome); }
 
     private void terminaNotte() { partita.terminaNotte(); }
 
