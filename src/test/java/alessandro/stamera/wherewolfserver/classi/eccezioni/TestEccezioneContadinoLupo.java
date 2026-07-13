@@ -13,7 +13,7 @@ public final class TestEccezioneContadinoLupo
             "'Lupi del branco', 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
             "loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
             "'Lupo solitario', 'Il Contadino discendente dei lupi (Mario) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\n" +
-            "Sveglia Mario e fagli riconoscere l'altro Lupo solitario.'"
+            "Sveglia Mario e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
         }
     )
     public void testMessaggioErrore(String fazione, String messaggio)
