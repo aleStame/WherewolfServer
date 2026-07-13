@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
@@ -1134,6 +1135,20 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Baggio";
         inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { "Ferrara", "Ghoul" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
+    }
+
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
+    public void testAttaccoLupiAngeloCustode(String tipoLupo, Fazione fazione)
+    {
+        String nomeContadino = "Mariangela";
+        String[][] giocatori =
+            new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
+        inizializzaGiocatori(giocatori);
+        segnalazioneAngeloCustode(nomeContadino);
+        verificaAttaccoLupoFallito(tipoLupo, nomeContadino);
+        assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
+        ripristina(nomeContadino);
     }
 
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
