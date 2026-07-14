@@ -686,14 +686,26 @@ public final class TestPartita
         verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testCriminalizzazioneCapoGildaMortoContadinoLupizzato(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Il Contadino discendente dei lupi (Arturo) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Arturo e fagli riconoscere gli altri lupi.'",
+            "Lupo del branco, 'Il Contadino discendente dei lupi (Arturo) è stato attaccato dai Lupi del branco, pertanto adesso fa parte " +
+            "della loro fazione.\nSveglia Arturo e fagli riconoscere gli altri lupi.'",
+            "Lupo reietto, 'Il Contadino discendente dei lupi (Arturo) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Arturo e fagli riconoscere gli altri lupi.'",
+            "Lupo solitario, 'Il Contadino discendente dei lupi (Arturo) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale" +
+            ".\nSveglia Arturo e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
+        }
+    )
+    public void testCriminalizzazioneCapoGildaMortoContadinoLupizzato(String tipoLupo, String messaggio)
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele", nomeLupo = "Ale";
         String[][] giocatori =
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, nomeVittima);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
         ripristinaGiocatoreVivo(nomeVittima);
     }
@@ -706,15 +718,28 @@ public final class TestPartita
         verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".");
     }
 
-    @Test public void testCriminalizzazioneContadinoLupo()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo del branco, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo reietto, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo solitario, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale" +
+            ".\nSveglia Mario e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
+        }
+    )
+    public void testCriminalizzazioneContadinoLupo(String tipoLupo, String messaggio)
     {
-        String tipoLupo = "Lupo del branco", nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
+        String nomeVittima = "Mario", nomeCapoGilda = "Andrea";
         inizializzaPartita
         (
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
         );
-        attaccoLupi(tipoLupo, nomeVittima);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.", nomeCapoGilda);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Mario.\nAndrea muore.", nomeCapoGilda);
         ripristinaGiocatoreVivo(nomeVittima);
     }
 
@@ -774,8 +799,20 @@ public final class TestPartita
         verificaNonEliminati(nomeContadino);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testGuarigioneContadinoLupo(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Il Contadino discendente dei lupi (Graziano) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Graziano e fagli riconoscere gli altri lupi.'",
+            "Lupo del branco, 'Il Contadino discendente dei lupi (Graziano) è stato attaccato dai Lupi del branco, pertanto adesso fa parte " +
+            "della loro fazione.\nSveglia Graziano e fagli riconoscere gli altri lupi.'",
+            "Lupo reietto, 'Il Contadino discendente dei lupi (Graziano) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Graziano e fagli riconoscere gli altri lupi.'",
+            "Lupo solitario, 'Il Contadino discendente dei lupi (Graziano) è stato attaccato dal Lupo solitario, pertanto anche lui diventa " +
+            "tale.\nSveglia Graziano e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
+        }
+    )
+    public void testGuarigioneContadinoLupo(String tipoLupo, String messaggio)
     {
         String nomeContadino = "Graziano", nomeLupo = "Leonardo";
         String[][] giocatori = new String[][]
@@ -783,7 +820,7 @@ public final class TestPartita
             { nomeContadino, "Contadino discendente dei lupi" }, { nomeLupo, tipoLupo }, { "Fabrizio", "Guaritore" }, { "Gea", "Assassino" }
         };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, nomeContadino);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
         attaccoAssassino(nomeContadino);
         partita.guarisci(nomeContadino);
         terminaNotte();
@@ -1303,14 +1340,26 @@ public final class TestPartita
         ripristinaRuoloSpecifico("Nosferatu");
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testMorteVampiroContadinoLupizzato(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Il Contadino discendente dei lupi (Luca) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Luca e fagli riconoscere gli altri lupi.'",
+            "Lupo del branco, 'Il Contadino discendente dei lupi (Luca) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Luca e fagli riconoscere gli altri lupi.'",
+            "Lupo reietto, 'Il Contadino discendente dei lupi (Luca) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Luca e fagli riconoscere gli altri lupi.'",
+            "Lupo solitario, 'Il Contadino discendente dei lupi (Luca) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale" +
+            ".\nSveglia Luca e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
+        }
+    )
+    public void testMorteVampiroContadinoLupizzato(String tipoLupo, String messaggioErrore)
     {
         String nomeVittima = "Luca", nomeVampiro = "Paolo", nomeLupo = "Lino";
         String[][] giocatori =
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, nomeVittima);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggioErrore);
         String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Luca).\nAvvisa il Vampiro (Paolo) della sua morte.";
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
         ripristinaGiocatoreVivo(nomeVittima);
@@ -1525,7 +1574,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
-        assertThat(partita.getAura(nomeContadino)).isEqualTo(fazione);
+        assertThat(partita.getAura(nomeContadino)).isEqualTo(NERA);
         assertThat(partita.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristinaGiocatoreVivo(nomeContadino);
     }

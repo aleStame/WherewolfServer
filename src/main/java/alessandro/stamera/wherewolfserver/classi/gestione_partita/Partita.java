@@ -257,7 +257,8 @@ public final class Partita
     private void nessunaEliminazione(String nome)
     {
         Ruolo ruolo = vivi.getRuolo(nome);
-        if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+        if(ruolo.isContadinoLupo()) throw new EccezioneContadinoLupo(nome, ruolo.getFazione().toString());
+        else if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
     }
 
     private void gestisciInterazioniMago(String nome)
@@ -370,9 +371,9 @@ public final class Partita
 
     public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
 
-    public Aura getAura(String nome) { return null; }
+    public Aura getAura(String nome) { return getRuoloVivo(nome).getAura(); }
 
-    public Fazione getFazione(String nome) { return null; }
+    public Fazione getFazione(String nome) { return getRuoloVivo(nome).getFazione(); }
 
     private void gestionePosseduto(String nome)
     {
