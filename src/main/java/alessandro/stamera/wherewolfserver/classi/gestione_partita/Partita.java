@@ -110,6 +110,7 @@ public final class Partita
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
+            case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nome).toString());
         }
     }
 
@@ -369,6 +370,10 @@ public final class Partita
     }
 
     public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
+
+    public Aura getAura(String nome) { return getRuoloVivo(nome).getAura(); }
+
+    public Fazione getFazione(String nome) { return getRuoloVivo(nome).getFazione(); }
 
     private void gestionePosseduto(String nome)
     {
