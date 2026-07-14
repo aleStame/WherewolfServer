@@ -22,7 +22,7 @@ public final class ContadinoLupo extends Contadino
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         attivazioneLupo(ruolo.getFazione());
-        return FALLITO;
+        return CONTADINO_LUPO_BECCATO;
     }
 
     @Override public EsitoAttacco gildata()

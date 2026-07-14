@@ -705,7 +705,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
         verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
         ripristinaGiocatoreVivo(nomeVittima);
     }
@@ -738,7 +738,7 @@ public final class TestPartita
         (
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
         );
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
         verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Mario.\nAndrea muore.", nomeCapoGilda);
         ripristinaGiocatoreVivo(nomeVittima);
     }
@@ -792,7 +792,7 @@ public final class TestPartita
         String messaggio =
             "L'attacco al Contadino mostro (Graziano) causa la morte anche del lupo attaccante (Leonardo).\nAvvisa entrambi i giocatori della " +
             "loro morte.";
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
+        verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
         partita.guarisci(nomeContadino);
         terminaNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
@@ -820,7 +820,7 @@ public final class TestPartita
             { nomeContadino, "Contadino discendente dei lupi" }, { nomeLupo, tipoLupo }, { "Fabrizio", "Guaritore" }, { "Gea", "Assassino" }
         };
         inizializzaPartita(giocatori);
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
+        verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
         attaccoAssassino(nomeContadino);
         partita.guarisci(nomeContadino);
         terminaNotte();
@@ -1114,7 +1114,7 @@ public final class TestPartita
         String nomeVittima = giocatori[2][0], messaggio =
             "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro " +
             "morte.";
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
         //progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
         //verificaEliminati(giocatori[0][0], giocatori[3][0]);
@@ -1359,7 +1359,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggioErrore);
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggioErrore);
         String messaggio = "Impossibile vampirizzare il Contadino discendente dei lupi (Luca).\nAvvisa il Vampiro (Paolo) della sua morte.";
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
         ripristinaGiocatoreVivo(nomeVittima);
@@ -1573,7 +1573,7 @@ public final class TestPartita
             new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
+        verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
         assertThat(partita.getAura(nomeContadino)).isEqualTo(NERA);
         assertThat(partita.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristinaGiocatoreVivo(nomeContadino);
@@ -1595,16 +1595,16 @@ public final class TestPartita
         verificaEliminati(nomeLupo);
     }
 
+    private void verificaEccezioneAttaccoContadino(String messaggio, String tipoLupo, String nomeVittima, String nomeLupo)
+    {
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
+        terminaNotte();
+        verificaEliminati(nomeLupo, nomeVittima);
+    }
+
     private void verificaVittimaSbagliata(String tipoLupo, String nomeVittima, String messaggio)
     {
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-    }
-
-    private void verificaEccezioneAttaccoContadino(String messaggio, String tipoLupo, String nomeVittima, String nomeLupo)
-    {
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaEliminati(nomeLupo, nomeVittima);
     }
 
     private static Stream<Arguments> getEsempiAttacchiContadini()

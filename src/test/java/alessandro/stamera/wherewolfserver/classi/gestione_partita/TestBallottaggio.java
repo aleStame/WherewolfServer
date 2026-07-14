@@ -5,10 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import java.util.stream.Stream;
-
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.CONTADINO_LUPO_BECCATO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static java.util.Arrays.stream;
 import static org.assertj.core.api.Assertions.*;
@@ -57,7 +55,7 @@ public final class TestBallottaggio
         String nome = "Tony";
         String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         Ruolo ruolo = FACTORY.getRuolo("Contadino discendente dei lupi");
-        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(FALLITO);
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
         ballottaggio.aggiungiGiocatore(nome, ruolo);
         aggiungiGiocatori(giocatori);
         verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));

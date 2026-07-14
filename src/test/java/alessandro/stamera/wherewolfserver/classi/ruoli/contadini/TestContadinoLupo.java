@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.CONTADINO_LUPO_BECCATO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.LUPO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -47,7 +47,7 @@ public final class TestContadinoLupo
     @ParameterizedTest @MethodSource({ "getEsempiEsitiPartita" })
     public void testEsitoPartitaDopoAttacco(Partita partita, EsitoPartita esito)
     {
-        verificaAttaccoFallito("Capo branco");
+        assertThat(ruolo.attaccoLupi(getRuolo("Capo branco"))).isEqualTo(CONTADINO_LUPO_BECCATO);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
@@ -78,13 +78,11 @@ public final class TestContadinoLupo
 
     private void verificaContadinoLupo(String nome, Fazione fazione)
     {
-        verificaAttaccoFallito(nome);
+        assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(CONTADINO_LUPO_BECCATO);
         assertThat(ruolo.getAura()).isEqualTo(NERA);
         for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, LUPO_MANNARO }) verificaVero(ruolo.isTrattoPresente(tratto));
         assertThat(ruolo.getFazione()).isEqualTo(fazione);
     }
-
-    private void verificaAttaccoFallito(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO); }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {

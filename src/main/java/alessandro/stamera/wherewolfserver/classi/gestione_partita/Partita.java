@@ -110,6 +110,7 @@ public final class Partita
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
+            case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nome).toString());
         }
     }
 
@@ -257,8 +258,7 @@ public final class Partita
     private void nessunaEliminazione(String nome)
     {
         Ruolo ruolo = vivi.getRuolo(nome);
-        if(ruolo.isContadinoLupo()) throw new EccezioneContadinoLupo(nome, ruolo.getFazione().toString());
-        else if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+        if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
     }
 
     private void gestisciInterazioniMago(String nome)
