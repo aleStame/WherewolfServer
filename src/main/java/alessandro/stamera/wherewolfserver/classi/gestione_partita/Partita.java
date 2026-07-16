@@ -375,6 +375,8 @@ public final class Partita
 
     public Fazione getFazione(String nome) { return getRuoloVivo(nome).getFazione(); }
 
+    public boolean isAmato(String nome) { return false; }
+
     private void gestionePosseduto(String nome)
     {
         String nomeVampiro = getNomeVampiroVivo();

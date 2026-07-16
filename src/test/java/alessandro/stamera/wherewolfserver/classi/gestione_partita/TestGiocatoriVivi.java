@@ -1096,9 +1096,7 @@ public final class TestGiocatoriVivi
     public void testAttaccoLupiAmato(String tipoLupo, String nomeRuolo)
     {
         String nomeAmato = "Lino";
-        String[][] giocatori =
-            new String[][] { { "Elia", "Angelo custode" }, { "Gabriele", tipoLupo }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo } };
-        inizializzaGiocatori(giocatori);
+        inizializzaGiocatori(new String[][] { { "Elia", "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo } });
         verificaAmato(nomeAmato);
         verificaAttaccoLupo(tipoLupo, nomeAmato, ANGELO_CUSTODE_MORTO);
         ripristina(nomeAmato);
