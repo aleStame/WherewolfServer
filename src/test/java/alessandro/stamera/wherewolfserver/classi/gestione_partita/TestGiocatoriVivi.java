@@ -1139,6 +1139,18 @@ public final class TestGiocatoriVivi
         ripristina(nomeContadino);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoContadinoMostroAmato(String tipoLupo)
+    {
+        String nomeContadino = "Lino";
+        String[][] giocatori =
+            new String[][] { { "Elia", "Angelo custode" }, { "Gabriele", tipoLupo }, { "Alice", tipoLupo }, { nomeContadino, "Contadino mostro" } };
+        inizializzaGiocatori(giocatori);
+        segnalazioneAngeloCustode(nomeContadino);
+        verificaAttaccoLupo(tipoLupo, nomeContadino, ANGELO_CUSTODE_MORTO);
+        ripristina(nomeContadino);
+    }
+
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
 
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima)
