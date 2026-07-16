@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ANGELO_CUSTODE_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 
 public final class Cacciatore extends Villaggio
@@ -26,7 +27,7 @@ public final class Cacciatore extends Villaggio
     @Override public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = super.attaccoLupi(lupo);
-        if(lupo.isLupoSolitario()) esito = MORTO;
+        if(esito != ANGELO_CUSTODE_MORTO && lupo.isLupoSolitario()) esito = MORTO;
         return esito;
     }
 
