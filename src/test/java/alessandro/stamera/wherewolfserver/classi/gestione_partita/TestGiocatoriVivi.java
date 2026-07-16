@@ -1133,10 +1133,21 @@ public final class TestGiocatoriVivi
             new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
-        assertThat(this.giocatori.attaccoLupi(getRuolo(tipoLupo), nomeContadino)).isEqualTo(CONTADINO_LUPO_BECCATO);
+        verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(this.giocatori.getAura(nomeContadino)).isEqualTo(NERA);
         assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristina(nomeContadino);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoContadinoEroeAmato(String tipoLupo)
+    {
+        String nomeContadino = "Gianmaria";
+        String[][] giocatori =
+            new String[][] { { "Elia", "Angelo custode" }, { "Gabriele", tipoLupo }, { "Alice", tipoLupo }, { nomeContadino, "Contadino eroe" } };
+        inizializzaGiocatori(giocatori);
+        segnalazioneAngeloCustode(nomeContadino);
+        verificaAttaccoLupo(tipoLupo, nomeContadino, ANGELO_CUSTODE_MORTO);
     }
 
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
