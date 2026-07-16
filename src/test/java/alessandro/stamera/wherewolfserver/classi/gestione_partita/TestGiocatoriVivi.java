@@ -1105,6 +1105,15 @@ public final class TestGiocatoriVivi
         ripristina(nomeAmato);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testLupoAmato(String tipoLupo)
+    {
+        String nomeAmato = "Giancarlo";
+        aggiungiGiocatore(nomeAmato, tipoLupo);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaVero(this.giocatori.isAmato(nomeAmato));
+    }
+
     private static Stream<Arguments> getEsempioAttaccoAmato()
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
