@@ -1099,8 +1099,7 @@ public final class TestGiocatoriVivi
         String[][] giocatori =
             new String[][] { { "Elia", "Angelo custode" }, { "Gabriele", tipoLupo }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo } };
         inizializzaGiocatori(giocatori);
-        segnalazioneAngeloCustode(nomeAmato);
-        verificaVero(this.giocatori.isAmato(nomeAmato));
+        verificaAmato(nomeAmato);
         verificaAttaccoLupo(tipoLupo, nomeAmato, ANGELO_CUSTODE_MORTO);
         ripristina(nomeAmato);
     }
@@ -1110,8 +1109,13 @@ public final class TestGiocatoriVivi
     {
         String nomeAmato = "Giancarlo";
         aggiungiGiocatore(nomeAmato, tipoLupo);
+        verificaAmato(nomeAmato);
+    }
+
+    private void verificaAmato(String nomeAmato)
+    {
         segnalazioneAngeloCustode(nomeAmato);
-        verificaVero(this.giocatori.isAmato(nomeAmato));
+        verificaVero(giocatori.isAmato(nomeAmato));
     }
 
     private static Stream<Arguments> getEsempioAttaccoAmato()
