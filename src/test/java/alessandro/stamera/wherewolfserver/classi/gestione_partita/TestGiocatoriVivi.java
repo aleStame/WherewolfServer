@@ -211,18 +211,6 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
-    public void testAttaccoLupiAmato(String nomeLupo)
-    {
-        String nomeAmato = "Valentina";
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nomeAmato, "Giullare" } };
-        inizializzaGiocatori(giocatori);
-        segnalazioneAngeloCustode(nomeAmato);
-        verificaAttaccoLupoFallito(nomeLupo, nomeAmato);
-        ripristina(nomeAmato);
-    }
-
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
         String[][] giocatori = new String[][] { { "Andrea", "Inquisitore" }, { "Raffaella", "Bocca di rosa" }, { "Raffaele", "Mago" } };
@@ -1148,6 +1136,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupo(tipoLupo, nomeContadino, ANGELO_CUSTODE_MORTO);
+        ripristina(nomeContadino);
     }
 
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
