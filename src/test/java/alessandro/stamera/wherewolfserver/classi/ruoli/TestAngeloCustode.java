@@ -10,6 +10,8 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -69,6 +71,12 @@ public final class TestAngeloCustode
 
     @ParameterizedTest @MethodSource("getEsempiPartitaPersa")
     public void testSconfittaNienteAmato(Partita partita) { verificaEsitoPartita(partita, SCONFITTA); }
+
+    @Test public void testRomeizzazione()
+    {
+        ruolo.romeizzazione();
+        assertThat(ruolo.getAura()).isEqualTo(BIANCA);
+    }
 
     private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
     {
