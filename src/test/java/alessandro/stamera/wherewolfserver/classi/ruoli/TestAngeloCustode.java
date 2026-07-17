@@ -38,7 +38,7 @@ public final class TestAngeloCustode
         verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
-    @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isTrue(); }
+    @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
 
     @Test public void testAmato()
     {
@@ -75,9 +75,11 @@ public final class TestAngeloCustode
     {
         ruolo.romeizzazione();
         assertThat(ruolo.getAura()).isEqualTo(BIANCA);
-        assertThat(ruolo.isRomeo()).isTrue();
+        verificaVero(ruolo.isRomeo());
         ruolo.ripristina();
     }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
     {
