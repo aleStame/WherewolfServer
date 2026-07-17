@@ -1065,8 +1065,7 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isNosferatu(nome));
     }
 
-    @ParameterizedTest
-    @CsvSource
+    @ParameterizedTest @CsvSource
     (
         { "Cacciatore di vampiri", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
     )
@@ -1074,7 +1073,19 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Baggio";
         inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { "Ferrara", "Ghoul" }, { nomeVittima, nomeRuolo } });
-        verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
+        verificaMorteGhoul(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        { "Cacciatore di vampiri", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
+    )
+    public void testAttaccoVampiroConGhoulAmato(String nomeRuolo)
+    {
+        String nomeGhoul = "Ferrara", nomeVittima = "Baggio";
+        inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { nomeGhoul, "Ghoul" }, { nomeVittima, nomeRuolo } });
+        segnalazioneAngeloCustode(nomeGhoul);
+        verificaMorteGhoul(nomeVittima);
     }
 
     @ParameterizedTest
@@ -1131,6 +1142,8 @@ public final class TestGiocatoriVivi
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
         return argomenti.stream();
     }
+
+    private void verificaMorteGhoul(String nomeVittima) { verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO); }
 
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
 
