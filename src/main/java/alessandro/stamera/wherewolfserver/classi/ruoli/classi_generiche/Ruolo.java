@@ -207,11 +207,7 @@ public class Ruolo
     public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco risultato = RIUSCITO;
-        if(isProtezionePresente(ruolo))
-        {
-            attaccoRuoloProtetto();
-            risultato = FALLITO;
-        }
+        if(isProtezionePresente(ruolo)) risultato = attaccoRuoloProtetto();
         return risultato;
     }
 
@@ -438,6 +434,15 @@ public class Ruolo
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
-    private void attaccoRuoloProtetto() { if(isAmato()) perdiProtezioni(); }
+    private EsitoAttacco attaccoRuoloProtetto()
+    {
+        EsitoAttacco esito = FALLITO;
+        if(isAmato())
+        {
+            perdiProtezioni();
+            esito = ANGELO_CUSTODE_MORTO;
+        }
+        return esito;
+    }
 
 }

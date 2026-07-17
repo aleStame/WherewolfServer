@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ANGELO_CUSTODE_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.NONNA_BECCATA;
 
 public final class Nonna extends Villaggio
@@ -23,7 +24,12 @@ public final class Nonna extends Villaggio
 
     @Override public boolean isNonna() { return true; }
 
-    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo) { return NONNA_BECCATA; }
+    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
+    {
+        EsitoAttacco esito = super.attaccoLupi(ruolo);
+        if(esito != ANGELO_CUSTODE_MORTO) esito = NONNA_BECCATA;
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new Nonna(); }
 

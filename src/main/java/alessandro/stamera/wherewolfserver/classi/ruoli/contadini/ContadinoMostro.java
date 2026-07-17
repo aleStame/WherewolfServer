@@ -2,8 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
 
@@ -22,7 +22,8 @@ public final class ContadinoMostro extends Contadino
 
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
-        EsitoAttacco esito = getEsitoAttaccoDefault();
+        EsitoAttacco esito = super.attaccoLupi(ruolo);
+        if(esito != ANGELO_CUSTODE_MORTO) esito = getEsitoAttaccoDefault();
         if(isRomeo()) esito = FALLITO;
         return esito;
     }

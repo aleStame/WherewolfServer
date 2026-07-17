@@ -8,7 +8,12 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -55,16 +60,6 @@ public final class TestGiocatoriVivi
         int[] numeroVoti = new int[]{ 2, 1, 1 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(soluzioni[i][0], numeroVoti[i]);
         verificaAccusati(soluzioni[0][0], soluzioni[2][0], soluzioni[1][0]);
-    }
-
-    @Test public void testSegnalazioneAngeloCustode()
-    {
-        String nomeAmato = "Giulia";
-        String[][] giocatori = new String[][] { { "Francesca", "Angelo custode" }, { nomeAmato, "Assassino" }};
-        inizializzaGiocatori(giocatori);
-        segnalazioneAngeloCustode(nomeAmato);
-        verificaVero(isAmato(nomeAmato));
-        ripristina(nomeAmato);
     }
 
     @Test public void testAngeloCustodeAccusatoNonPresente()
@@ -209,18 +204,6 @@ public final class TestGiocatoriVivi
         giocatori.protezioneStrega(nome);
         verificaAttaccoLupoFallito(nomeLupo, nome);
         ripristina(nome);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
-    public void testAttaccoLupiAmato(String nomeLupo)
-    {
-        String nomeAmato = "Valentina";
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nomeAmato, "Giullare" } };
-        inizializzaGiocatori(giocatori);
-        segnalazioneAngeloCustode(nomeAmato);
-        verificaAttaccoLupoFallito(nomeLupo, nomeAmato);
-        ripristina(nomeAmato);
     }
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
@@ -794,15 +777,6 @@ public final class TestGiocatoriVivi
 
     @Test public void testLupoBrancoAssente() { verificaFalso(isLupoBrancoPresente()); }
 
-    @Test public void testAmatoPresente()
-    {
-        String nome = "Enrica";
-        inizializzaGiocatori(new String[][] { { "Libero", "Angelo custode" }, { nome, "Bocca di rosa" } });
-        giocatori.segnalazioneAngeloCustode(nome);
-        verificaVero(isAmatoPresente());
-        ripristina(nome);
-    }
-
     @Test public void testFazioneNosferatu()
     {
         String nome = "Gigio";
@@ -1030,27 +1004,6 @@ public final class TestGiocatoriVivi
         verificaNonAmato("Andrea");
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
-            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
-            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
-            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
-        }
-    )
-    public void testAmatoPresente(String nomeRuolo)
-    {
-        String nome = "Piero";
-        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Pino", "Angelo custode" } });
-        segnalazioneAngeloCustode(nome);
-        verificaVero(isAmatoPresente());
-        verificaStringa(giocatori.getNomeAmato(), nome);
-        ripristina(nome);
-    }
-
     @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
     public void testAttaccoCapoBrancoContadino(String tipoContadino)
     {
@@ -1126,17 +1079,57 @@ public final class TestGiocatoriVivi
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
-    public void testAttaccoLupiAngeloCustode(String tipoLupo, Fazione fazione)
+    public void testAttaccoLupiContadinoDiscendente(String tipoLupo, Fazione fazione)
     {
         String nomeContadino = "Mariangela";
         String[][] giocatori =
             new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
-        assertThat(this.giocatori.attaccoLupi(getRuolo(tipoLupo), nomeContadino)).isEqualTo(CONTADINO_LUPO_BECCATO);
+        verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(this.giocatori.getAura(nomeContadino)).isEqualTo(NERA);
         assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristina(nomeContadino);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    public void testAttaccoLupiAmato(String tipoLupo, String nomeRuolo)
+    {
+        String nomeAmato = "Lino";
+        inizializzaGiocatori(new String[][] { { "Elia", "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo } });
+        verificaAmato(nomeAmato);
+        verificaAttaccoLupo(tipoLupo, nomeAmato, ANGELO_CUSTODE_MORTO);
+        ripristina(nomeAmato);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testLupoAmato(String tipoLupo)
+    {
+        String nomeAmato = "Giancarlo";
+        aggiungiGiocatore(nomeAmato, tipoLupo);
+        verificaAmato(nomeAmato);
+    }
+
+    private void verificaAmato(String nomeAmato)
+    {
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaVero(giocatori.isAmato(nomeAmato));
+    }
+
+    private static Stream<Arguments> getEsempioAttaccoAmato()
+    {
+        String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
+        String[] nomiRuoli =
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale",
+            "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        };
+        List<Arguments> argomenti = new ArrayList<>();
+        for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
+        return argomenti.stream();
     }
 
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }

@@ -58,8 +58,9 @@ public final class TestRuolo
         verificaVero(isAmato());
         verificaProtetto();
         verificaVero(isProtezioneLupiPresente());
-        verificaAttaccoFallito(attaccoLupi(nome));
+        verificaAttacco(attaccoLupi(nome), ANGELO_CUSTODE_MORTO);
         verificaAssenzaProtezioni();
+        ruolo.ripristina();
     }
 
     @Test public void testGildata()
