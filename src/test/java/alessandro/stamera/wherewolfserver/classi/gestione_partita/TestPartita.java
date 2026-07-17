@@ -1231,6 +1231,20 @@ public final class TestPartita
         verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeGhoul);
     }
 
+    @Test public void testMorteGhoulAmatoCacciatoreVampiro()
+    {
+        String nomeCacciatore = "Terzo", nomeGhoul = "Quarto";
+        String[][] giocatori = new String[][]
+        {
+            { "Primo", "Oste" }, { "Secondo", "Vampiro" }, { nomeCacciatore, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeGhoul);
+        String messaggio =
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
+        verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeGhoul);
+    }
+
     @Test public void testMorteGhoulContadinoMostroVampiro()
     {
         String nomeContadinoMostro = "Edd", nomeGhoul = "Eddy";
