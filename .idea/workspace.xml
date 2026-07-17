@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoVampiroConGhoulAmato riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testRomeizzazioneAngeloCustode riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/morteGhoulAmato",
+    "git-widget-placeholder": "feature/romeizzazioneAngelo",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "Errors"
   }
@@ -300,7 +300,79 @@
       <option name="project" value="LOCAL" />
       <updated>1784294816401</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="REFACTORING: definizione del metodo verificaMorteGhoul">
+      <option name="closed" value="true" />
+      <created>1784295149412</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1784295149412</updated>
+    </task>
+    <task id="LOCAL-00018" summary="VERDE DIRETTO: testRomeizzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1784297945244</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1784297945244</updated>
+    </task>
+    <task id="LOCAL-00019" summary="VERDE DIRETTO: testRomeizzazioneAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1784298526059</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1784298526059</updated>
+    </task>
+    <task id="LOCAL-00020" summary="REFACTORING: definizione del metodo verificaVero">
+      <option name="closed" value="true" />
+      <created>1784298907815</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1784298907815</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ROSSO: testRomeizzazioneAngeloCustode non riuscito">
+      <option name="closed" value="true" />
+      <created>1784300015285</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1784300015285</updated>
+    </task>
+    <task id="LOCAL-00022" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1784300464713</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1784300464713</updated>
+    </task>
+    <task id="LOCAL-00023" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1784300868523</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1784300868527</updated>
+    </task>
+    <task id="LOCAL-00024" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1784301048080</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1784301048080</updated>
+    </task>
+    <task id="LOCAL-00025" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
+      <option name="closed" value="true" />
+      <created>1784301388812</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1784301388817</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,9 +402,14 @@
     <MESSAGE value="ROSSO: testAttaccoLupiAmato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteGhoulAmatoCacciatoreNosferatu riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMorteGhoul" />
     <MESSAGE value="VERDE DIRETTO: testMorteGhoulAmatoCacciatoreVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoVampiroConGhoulAmato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoVampiroConGhoulAmato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMorteGhoul" />
+    <MESSAGE value="VERDE DIRETTO: testRomeizzazione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testRomeizzazioneAngeloCustode riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
+    <MESSAGE value="ROSSO: testRomeizzazioneAngeloCustode non riuscito" />
+    <MESSAGE value="VERDE: testRomeizzazioneAngeloCustode riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testRomeizzazioneAngeloCustode riuscito" />
   </component>
 </project>
