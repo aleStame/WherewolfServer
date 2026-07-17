@@ -1073,7 +1073,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Baggio";
         inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { "Ferrara", "Ghoul" }, { nomeVittima, nomeRuolo } });
-        verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
+        verificaMorteGhoul(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -1085,7 +1085,7 @@ public final class TestGiocatoriVivi
         String nomeGhoul = "Ferrara", nomeVittima = "Baggio";
         inizializzaGiocatori(new String[][] { { "Schillaci", "Vampiro" }, { nomeGhoul, "Ghoul" }, { nomeVittima, nomeRuolo } });
         segnalazioneAngeloCustode(nomeGhoul);
-        verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO);
+        verificaMorteGhoul(nomeVittima);
     }
 
     @ParameterizedTest
@@ -1142,6 +1142,8 @@ public final class TestGiocatoriVivi
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
         return argomenti.stream();
     }
+
+    private void verificaMorteGhoul(String nomeVittima) { verificaAttaccoVampiro(nomeVittima, GHOUL_MORTO); }
 
     private void verificaMortePostGildata(String nome) { verificaAttacco(giocatori.gildata(nome), MORTO); }
 
