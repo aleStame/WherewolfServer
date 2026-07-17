@@ -1110,6 +1110,22 @@ public final class TestPartita
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testMorteGhoulAmatoCacciatoreNosferatu(String tipoLupo)
+    {
+        String nomeVittima = "Terzo", nomeGhoul = "Quarto";
+        String[][] giocatori = new String[][]
+        {
+            { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeGhoul);
+        attaccoLupi(tipoLupo, nomeVittima);
+        String messaggio =
+            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testMorteGhoulContadinoMostroNosferatu(String tipoLupo)
     {
         String[][] giocatori = new String[][]
