@@ -350,7 +350,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { "Stefano", "Bardo" }, { "Francesco", "Guaritore" }, { "Adriano", "Mago" }, { "Cristian", tipoLupo } };
         inizializzaPartita(giocatori);
-        assertThat(partita.getControlloVeggente(giocatori[2][0])).isEqualTo(BIANCA);
+        verificaControlloVeggente(giocatori[2][0], BIANCA);
         attaccoLupi(tipoLupo, giocatori[0][0]);
         terminaNotte();
         verificaNienteCantoBardo();
@@ -1612,7 +1612,7 @@ public final class TestPartita
         String nomeRomeo = "Piero";
         inizializzaPartita(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
         romeizzazione(nomeRomeo);
-        assertThat(partita.getAura(nomeRomeo)).isEqualTo(BIANCA);
+        verificaControlloVeggente(nomeRomeo, BIANCA);
         verificaVero(partita.isRomeo(nomeRomeo));
         ripristinaGiocatoreVivo(nomeRomeo);
     }
