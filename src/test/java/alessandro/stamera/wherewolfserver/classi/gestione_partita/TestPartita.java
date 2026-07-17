@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ANGELO_CUSTODE_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -593,9 +592,8 @@ public final class TestPartita
     {
         String nomeVittima = "Marco", tipoLupo = "Capo branco", nomeNosferatu = "Luca";
         inizializzaPartita(new String[][] { { nomeVittima, tipoLupo }, { nomeNosferatu, "Nosferatu" } });
-        attaccoLupi(tipoLupo, nomeVittima);
         String messaggio = "Impossibile progenizzare il Capo branco (Marco).\nAvvisa il Nosferatu (Luca) della sua morte.";
-        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
+        verificaMorteGhoul(tipoLupo, nomeVittima, messaggio, nomeNosferatu);
         verificaNonEliminati(nomeVittima);
     }
 
@@ -1103,10 +1101,7 @@ public final class TestPartita
             { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, nomeVittima);
-        String messaggio =
-            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
-        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
+        verificaMorteGhoul(tipoLupo, nomeVittima, "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.", nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1119,10 +1114,7 @@ public final class TestPartita
         };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeGhoul);
-        attaccoLupi(tipoLupo, nomeVittima);
-        String messaggio =
-            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
-        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
+        verificaMorteGhoul(tipoLupo, nomeVittima, "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.", nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1599,6 +1591,12 @@ public final class TestPartita
         assertThat(partita.getAura(nomeContadino)).isEqualTo(NERA);
         assertThat(partita.getFazione(nomeContadino)).isEqualTo(fazione);
         ripristinaGiocatoreVivo(nomeContadino);
+    }
+
+    private void verificaMorteGhoul(String tipoLupo, String nomeVittima, String messaggio, String nomeGhoul)
+    {
+        attaccoLupi(tipoLupo, nomeVittima);
+        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
     }
 
     private static Stream<Arguments> getEsempioAttaccoAmato()
