@@ -247,11 +247,12 @@ public final class TestPartita
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
     public void testAttaccoLupiAmato(String tipoLupo, String nomeRuolo, String messaggio)
     {
-        String nomeAngeloCustode = "Elia", nomeAmato = "Lino";
-        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo } });
+        String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
+        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
         verificaVero(partita.isAmato(nomeAmato));
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
+        terminaNotte();
         verificaNonEliminati(nomeAmato);
         verificaEliminazione(nomeAngeloCustode);
         ripristinaGiocatoreVivo(nomeAmato);
@@ -1075,11 +1076,12 @@ public final class TestPartita
         String nome = "Maria", tipoLupo = "Capo branco";
         inizializzaPartita(new String[][] { { "Carlo", "Angelo custode" }, { nome, "Prete" }, { "Virginio", tipoLupo } });
         segnalazioneAngeloCustode(nome);
-        for(int i = 0; i < 2; i++)
-        {
-            attaccoLupi(tipoLupo, nome);
-            terminaNotte();
-        }
+        String messaggio =
+            "Il Capo branco (Virginio) non può attaccare il Prete amato (Maria).\nAvvisa l'Angelo custode (Carlo) della sua morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
+        terminaNotte();
+        attaccoLupi(tipoLupo, nome);
+        terminaNotte();
         verificaAmatoNonVivo();
     }
 
@@ -1598,7 +1600,7 @@ public final class TestPartita
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli)
         {
             String messaggio =
-                "Il " + tipoLupo + " (Maria) non può attaccare il " + nomeRuolo + " amato (Giuseppe).\n Avvisa l'Angelo custode (Erode) della " +
+                "Il " + tipoLupo + " (Maria) non può attaccare il " + nomeRuolo + " amato (Giuseppe).\nAvvisa l'Angelo custode (Erode) della " +
                 "sua morte.";
             argomenti.add(Arguments.of(tipoLupo, nomeRuolo, messaggio));
         }

@@ -34,7 +34,7 @@ public final class TestEccezioneAttaccoAmato
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli)
         {
             String messaggio =
-                "Il " + tipoLupo + " (Maria) non può attaccare il " + nomeRuolo + " amato (Giuseppe).\n Avvisa l'Angelo custode (Erode) della " +
+                "Il " + tipoLupo + " (Maria) non può attaccare il " + nomeRuolo + " amato (Giuseppe).\nAvvisa l'Angelo custode (Erode) della " +
                 "sua morte.";
             argomenti.add(Arguments.of(tipoLupo, nomeRuolo, messaggio));
         }

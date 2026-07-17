@@ -111,6 +111,11 @@ public final class Partita
             case FALLITO -> nessunaEliminazione(nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nome).toString());
+            case ANGELO_CUSTODE_MORTO ->
+            {
+                eliminazioneAngeloCustode();
+                throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, getNomeRuolo(nome), nome, mortiNotte.getNomeAngeloCustode());
+            }
         }
     }
 
@@ -231,6 +236,7 @@ public final class Partita
     public void terminaNotte()
     {
         confermaEliminazioneMortiNotte();
+        if(eliminati.isAngeloCustodePresente() && isAmatoVivo()) getRuoloVivo(vivi.getNomeAmato()).perdiProtezioni();
         numeroNotte++;
     }
 
@@ -375,7 +381,7 @@ public final class Partita
 
     public Fazione getFazione(String nome) { return getRuoloVivo(nome).getFazione(); }
 
-    public boolean isAmato(String nome) { return false; }
+    public boolean isAmato(String nome) { return getRuoloVivo(nome).isAmato(); }
 
     private void gestionePosseduto(String nome)
     {

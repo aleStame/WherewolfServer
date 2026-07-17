@@ -17,7 +17,7 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
     @Override public String getMessage()
     {
         return
-            "Il " + tipoLupo + " (" + nomeLupo + ") non può attaccare il " + ruoloAmato + " amato (" + nomeAmato + ").\n Avvisa l'Angelo custode "
+            "Il " + tipoLupo + " (" + nomeLupo + ") non può attaccare il " + ruoloAmato + " amato (" + nomeAmato + ").\nAvvisa l'Angelo custode "
             + "(" + nomeAngeloCustode + ") della sua morte.";
     }
 
