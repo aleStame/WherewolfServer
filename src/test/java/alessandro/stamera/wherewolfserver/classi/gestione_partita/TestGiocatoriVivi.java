@@ -1121,6 +1121,15 @@ public final class TestGiocatoriVivi
         verificaAmato(nomeAmato);
     }
 
+    @Test public void testRomeizzazioneAngeloCustode()
+    {
+        String nomeRomeo = "Piero";
+        inizializzaGiocatori(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
+        romeizzazione(nomeRomeo);
+        verificaVero(giocatori.isRomeo(nomeRomeo));
+        ripristina(nomeRomeo);
+    }
+
     private void verificaAmato(String nomeAmato)
     {
         segnalazioneAngeloCustode(nomeAmato);

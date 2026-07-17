@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -76,6 +75,8 @@ public final class TestAngeloCustode
     {
         ruolo.romeizzazione();
         assertThat(ruolo.getAura()).isEqualTo(BIANCA);
+        assertThat(ruolo.isRomeo()).isTrue();
+        ruolo.ripristina();
     }
 
     private void verificaEsitoPartita(Partita partita, EsitoPartita esito)
