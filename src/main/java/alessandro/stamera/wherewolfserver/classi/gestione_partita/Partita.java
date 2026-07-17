@@ -88,6 +88,8 @@ public final class Partita
         }
     }
 
+    public boolean isRomeo(String nome) { return false; }
+
     private void gestisciAssassinioAmato()
     {
         String nomeAngeloCustode = getNomeAngeloCustodeVivo();

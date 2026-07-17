@@ -1607,6 +1607,16 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeContadino);
     }
 
+    @Test public void testRomeizzazioneAngeloCustode()
+    {
+        String nomeRomeo = "Piero";
+        inizializzaPartita(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
+        romeizzazione(nomeRomeo);
+        assertThat(partita.getAura(nomeRomeo)).isEqualTo(BIANCA);
+        verificaVero(partita.isRomeo(nomeRomeo));
+        ripristinaGiocatoreVivo(nomeRomeo);
+    }
+
     private void verificaMorteGhoul(String tipoLupo, String nomeVittima, String messaggio, String nomeGhoul)
     {
         attaccoLupi(tipoLupo, nomeVittima);
