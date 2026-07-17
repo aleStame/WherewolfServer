@@ -133,6 +133,32 @@ public final class TestPartita
             "Sensitiva", "Templare", "Vampiro"
         }
     )
+    public void testGuarigioneAngeloPostAttaccoAmato(String nomeRuolo)
+    {
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
+        segnalazioneAngeloCustode(nomeVittima);
+        String messaggio =
+            "L'attacco dell'amato (Maddalena) da parte dell'Assassino (Barbara) causa la morte del suo Angelo custode (Enzo).\nAvvisa Enzo " +
+            "dell'attacco subito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
+        partita.guarisci(nomeAngelo);
+        terminaNotte();
+        verificaNonEliminati(nomeAngelo, nomeVittima);
+        ripristinaGiocatoreVivo(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
     public void testAttaccoAmatoRomeoAssassino(String nomeRuolo)
     {
         String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
