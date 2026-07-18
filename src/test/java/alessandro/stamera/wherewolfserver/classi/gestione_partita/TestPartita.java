@@ -8,7 +8,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
@@ -1107,6 +1106,21 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nome);
         terminaNotte();
         verificaAmatoNonVivo();
+    }
+
+    @Test public void testGuarigioneAmatoMorto()
+    {
+        String nome = "Maria", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { "Carlo", "Angelo custode" }, { nome, "Prete" }, { "Virginio", tipoLupo } });
+        segnalazioneAngeloCustode(nome);
+        String messaggio =
+            "Il Capo branco (Virginio) non può attaccare il Prete amato (Maria).\nAvvisa l'Angelo custode (Carlo) della sua morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
+        terminaNotte();
+        attaccoLupi(tipoLupo, nome);
+        partita.guarisci(nome);
+        terminaNotte();
+        verificaNonEliminati(nome);
     }
 
     @Test public void testAmatoPresente()
