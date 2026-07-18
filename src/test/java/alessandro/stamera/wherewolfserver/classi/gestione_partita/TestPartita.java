@@ -141,7 +141,7 @@ public final class TestPartita
             "L'attacco dell'amato (Maddalena) da parte dell'Assassino (Barbara) causa la morte del suo Angelo custode (Enzo).\nAvvisa Enzo " +
             "dell'attacco subito.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
-        partita.guarisci(nomeAngelo);
+        guarisci(nomeAngelo);
         terminaNotte();
         verificaNonEliminati(nomeAngelo, nomeVittima);
         ripristinaGiocatoreVivo(nomeVittima);
@@ -821,7 +821,7 @@ public final class TestPartita
             "L'attacco al Contadino mostro (Graziano) causa la morte anche del lupo attaccante (Leonardo).\nAvvisa entrambi i giocatori della " +
             "loro morte.";
         verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
-        partita.guarisci(nomeContadino);
+        guarisci(nomeContadino);
         terminaNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
         verificaNonEliminati(nomeContadino);
@@ -850,7 +850,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
         attaccoAssassino(nomeContadino);
-        partita.guarisci(nomeContadino);
+        guarisci(nomeContadino);
         terminaNotte();
         verificaNonEliminati(nomeContadino);
         ripristinaGiocatoreVivo(nomeContadino);
@@ -1118,7 +1118,7 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
         terminaNotte();
         attaccoLupi(tipoLupo, nome);
-        partita.guarisci(nome);
+        guarisci(nome);
         terminaNotte();
         verificaNonEliminati(nome);
     }
@@ -1480,7 +1480,7 @@ public final class TestPartita
         String nomeGuaritore = "Jack", nomeMegera = "Megera";
         inizializzaPartita(new String[][] { { nomeGuaritore, "Guaritore" }, { nomeMegera, "Megera" }, { "Hal", "Assassino" } });
         attaccoAssassino(nomeMegera);
-        partita.guarisci(nomeMegera);
+        guarisci(nomeMegera);
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
         verificaMaledetto(nomeGuaritore);
@@ -1684,6 +1684,8 @@ public final class TestPartita
         }
         return argomenti.stream();
     }
+
+    private void guarisci(String nome) { partita.guarisci(nome); }
 
     private void verificaMorteCapoGilda(String nomeVittima, String messaggio, String nomeCapoGilda)
     {
