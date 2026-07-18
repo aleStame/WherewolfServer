@@ -1151,6 +1151,27 @@ public final class TestGiocatoriVivi
         incrementaVoti(nome, 1);
         incrementaVoti(nomeInquisitore, 1);
         verificaAccusati(nomeInquisitore, nome);
+        giocatori.annullaVoti();
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco", "Nonna", "Nosferatu",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+        }
+    )
+    public void testSegnalazioneInquisitoreNonRiuscitaNonBallottaggio(String nomeRuolo)
+    {
+        String nome = "Romina", nomeVittima = "Stefano", nomeInquisitore = "Immanuel";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomeInquisitore, "Inquisitore" }, { nomeVittima, "Guaritore" } });
+        segnalazioneInquisitore(nome);
+        incrementaVoti(nomeInquisitore, 1);
+        incrementaVoti(nomeVittima, 1);
+        verificaAccusati(nomeInquisitore, nomeVittima);
     }
 
     private void verificaAmato(String nomeAmato)
