@@ -8,7 +8,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
@@ -120,6 +119,32 @@ public final class TestPartita
         String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testGuarigioneAngeloPostAttaccoAmato(String nomeRuolo)
+    {
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
+        segnalazioneAngeloCustode(nomeVittima);
+        String messaggio =
+            "L'attacco dell'amato (Maddalena) da parte dell'Assassino (Barbara) causa la morte del suo Angelo custode (Enzo).\nAvvisa Enzo " +
+            "dell'attacco subito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
+        guarisci(nomeAngelo);
+        terminaNotte();
+        verificaNonEliminati(nomeAngelo, nomeVittima);
+        ripristinaGiocatoreVivo(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -796,7 +821,7 @@ public final class TestPartita
             "L'attacco al Contadino mostro (Graziano) causa la morte anche del lupo attaccante (Leonardo).\nAvvisa entrambi i giocatori della " +
             "loro morte.";
         verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
-        partita.guarisci(nomeContadino);
+        guarisci(nomeContadino);
         terminaNotte();
         verificaEliminati(nomeGuaritore, nomeLupo);
         verificaNonEliminati(nomeContadino);
@@ -825,7 +850,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
         attaccoAssassino(nomeContadino);
-        partita.guarisci(nomeContadino);
+        guarisci(nomeContadino);
         terminaNotte();
         verificaNonEliminati(nomeContadino);
         ripristinaGiocatoreVivo(nomeContadino);
@@ -1081,6 +1106,21 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nome);
         terminaNotte();
         verificaAmatoNonVivo();
+    }
+
+    @Test public void testGuarigioneAmatoMorto()
+    {
+        String nome = "Maria", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { "Carlo", "Angelo custode" }, { nome, "Prete" }, { "Virginio", tipoLupo } });
+        segnalazioneAngeloCustode(nome);
+        String messaggio =
+            "Il Capo branco (Virginio) non può attaccare il Prete amato (Maria).\nAvvisa l'Angelo custode (Carlo) della sua morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nome)).withMessage(messaggio);
+        terminaNotte();
+        attaccoLupi(tipoLupo, nome);
+        guarisci(nome);
+        terminaNotte();
+        verificaNonEliminati(nome);
     }
 
     @Test public void testAmatoPresente()
@@ -1440,7 +1480,7 @@ public final class TestPartita
         String nomeGuaritore = "Jack", nomeMegera = "Megera";
         inizializzaPartita(new String[][] { { nomeGuaritore, "Guaritore" }, { nomeMegera, "Megera" }, { "Hal", "Assassino" } });
         attaccoAssassino(nomeMegera);
-        partita.guarisci(nomeMegera);
+        guarisci(nomeMegera);
         terminaNotte();
         verificaNonEliminati(nomeGuaritore, nomeMegera);
         verificaMaledetto(nomeGuaritore);
@@ -1644,6 +1684,8 @@ public final class TestPartita
         }
         return argomenti.stream();
     }
+
+    private void guarisci(String nome) { partita.guarisci(nome); }
 
     private void verificaMorteCapoGilda(String nomeVittima, String messaggio, String nomeCapoGilda)
     {
