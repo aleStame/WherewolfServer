@@ -84,7 +84,7 @@ public final class TestGiocatoriMortiNotte
     {
         String nome = "Gianangelo";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isPosseduto());
+        verificaFalso(giocatori.isPossedutoPresente());
     }
 
     private void aggiungiGiocatori(String[][] giocatori)
