@@ -355,8 +355,7 @@ public final class Partita
         int posizione = -1;
         for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
             if(mortiNotte.getRuolo(mortiNotte.getNomeGiocatore(i)).isPosseduto()) posizione = i;
-        String nomePosseduto = mortiNotte.getNomeGiocatore(posizione);
-        passaggioPosseduto(nome, nomePosseduto);
+        passaggioPosseduto(nome, mortiNotte.getNomeGiocatore(posizione));
     }
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
@@ -377,17 +376,23 @@ public final class Partita
 
     private void passaggioPosseduto(String nome, String nomePosseduto)
     {
-        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto), ruolo = getRuoloVivo(nome);
+        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto);
+        gestionePossessoImpossibile(nome, posseduto);
+        ripristinaGiocatoreVivo(nome);
+        if(vivi.isAngeloCustode(nome)) annullaAmato();
+        vivi.eliminaGiocatore(nome);
+        aggiungiGiocatoreVivo(nome, posseduto);
+        confermaEliminazioneMortiNotte();
+    }
+
+    private void gestionePossessoImpossibile(String nome, Ruolo posseduto)
+    {
+        Ruolo ruolo = getRuoloVivo(nome);
         if(ruolo.isProtezionePresente(posseduto))
         {
             ruolo.perdiProtezioni();
             throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
         }
-        ruolo.ripristina();
-        if(vivi.isAngeloCustode(nome)) annullaAmato();
-        vivi.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, posseduto);
-        confermaEliminazioneMortiNotte();
     }
 
     private void annullaAmato() { getRuoloVivo(vivi.getNomeAmato()).resettaAmato(); }
