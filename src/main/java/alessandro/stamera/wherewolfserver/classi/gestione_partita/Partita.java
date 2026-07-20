@@ -351,7 +351,7 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
-        if(isPrete(nome) && !isNonMorto(nome))
+        if(isPreteVivo(nome))
             throw new IllegalArgumentException("Impossibile possedere il Prete.");
         int posizione = -1;
         for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
@@ -385,6 +385,8 @@ public final class Partita
     public Fazione getFazione(String nome) { return getRuoloVivo(nome).getFazione(); }
 
     public boolean isAmato(String nome) { return getRuoloVivo(nome).isAmato(); }
+
+    private boolean isPreteVivo(String nome) { return isPrete(nome) && !isNonMorto(nome); }
 
     private boolean isPrete(String nome) { return getRuoloVivo(nome).isPrete(); }
 
