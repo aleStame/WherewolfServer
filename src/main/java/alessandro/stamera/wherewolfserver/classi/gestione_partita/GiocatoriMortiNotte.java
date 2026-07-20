@@ -21,4 +21,6 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public TipoContadino getTipoContadino(String nome) { return getRuolo(nome).getTipoContadino(); }
 
+    public boolean isPosseduto() { return true; }
+
 }
