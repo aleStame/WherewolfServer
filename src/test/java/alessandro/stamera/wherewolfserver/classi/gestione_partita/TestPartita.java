@@ -1583,17 +1583,17 @@ public final class TestPartita
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
-    public void testAttaccoCapoBrancoContadino(String tipoContadino, String messaggio)
+    public void testAttaccoLupiContadino(String tipoContadino, String tipoLupo, String messaggio)
     {
-        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        String nomeLupo = "Iris", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
         verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
-    public void testAttaccoCapoBrancoContadinoAmato(String tipoContadino, String messaggio)
+    public void testAttaccoLupiContadinoAmato(String tipoContadino, String tipoLupo, String messaggio)
     {
-        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        String nomeLupo = "Iris", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
         segnalazioneAngeloCustode(nomeLupo);
         verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
@@ -1761,21 +1761,23 @@ public final class TestPartita
 
     private static Stream<Arguments> getEsempiAttacchiContadini()
     {
-        return Stream.of
-        (
-            Arguments.of
-            (
-    "Contadino eroe",
-               "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
-               "morte."
-            ),
-            Arguments.of
-            (
-    "Contadino mostro",
-               "L'attacco al Contadino mostro (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della " +
-               "loro morte."
-            )
-        );
+        String[][] contadini =
+        {
+            {
+                "Contadino eroe",
+                "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
+                "morte."
+            },
+            {
+                "Contadino mostro",
+                "L'attacco al Contadino mostro (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della " +
+                "loro morte."
+            }
+        };
+        String[] lupi = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
+        List<Arguments> argomenti = new ArrayList<>();
+        for(String[] contadino : contadini) for(String lupo : lupi) argomenti.add(Arguments.of(contadino[0], lupo, contadino[1]));
+        return argomenti.stream();
     }
 
     private void verificaAttaccoLupiAngeloCustodeFallito(String tipoLupo, String nome, String messaggio)
