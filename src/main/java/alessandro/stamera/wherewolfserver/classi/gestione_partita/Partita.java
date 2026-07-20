@@ -364,6 +364,7 @@ public final class Partita
             throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
         }
         ruolo.ripristina();
+        if(vivi.isAngeloCustode(nome)) getRuoloVivo(vivi.getNomeAmato()).resettaAmato();
         vivi.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, posseduto);
         confermaEliminazioneMortiNotte();
