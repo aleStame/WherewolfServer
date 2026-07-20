@@ -351,7 +351,7 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
-        if(getRuoloVivo(nome).isPrete() && !vivi.isTrattoPresente(nome, NON_MORTO))
+        if(isPrete(nome) && !isNonMorto(nome))
             throw new IllegalArgumentException("Impossibile possedere il Prete.");
         int posizione = -1;
         for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
@@ -386,6 +386,8 @@ public final class Partita
 
     public boolean isAmato(String nome) { return getRuoloVivo(nome).isAmato(); }
 
+    private boolean isPrete(String nome) { return getRuoloVivo(nome).isPrete(); }
+
     private void gestionePosseduto(String nome)
     {
         String nomeVampiro = getNomeVampiroVivo();
@@ -394,6 +396,8 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         aggiungiGiocatoreVivo(nomeVampiro, posseduto);
     }
+
+    private boolean isNonMorto(String nome) { return vivi.isTrattoPresente(nome, NON_MORTO); }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 
