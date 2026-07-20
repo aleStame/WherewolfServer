@@ -28,6 +28,11 @@ public final class GiocatoriMortiNotte extends Giocatori
         return posizione != -1;
     }
 
-    public String getNomePosseduto() { return null; }
+    public String getNomePosseduto()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isPosseduto()) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
 
 }
