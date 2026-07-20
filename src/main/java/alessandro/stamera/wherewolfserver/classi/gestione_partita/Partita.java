@@ -351,23 +351,12 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
-        if(isPreteVivo(nome))
-            throw new IllegalArgumentException("Impossibile possedere il Prete.");
+        if(isPreteVivo(nome)) throw new IllegalArgumentException("Impossibile possedere il Prete.");
         int posizione = -1;
         for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
             if(mortiNotte.getRuolo(mortiNotte.getNomeGiocatore(i)).isPosseduto()) posizione = i;
         String nomePosseduto = mortiNotte.getNomeGiocatore(posizione);
-        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto), ruolo = getRuoloVivo(nome);
-        if(ruolo.isProtezionePresente(posseduto))
-        {
-            ruolo.perdiProtezioni();
-            throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
-        }
-        ruolo.ripristina();
-        if(vivi.isAngeloCustode(nome)) getRuoloVivo(vivi.getNomeAmato()).resettaAmato();
-        vivi.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, posseduto);
-        confermaEliminazioneMortiNotte();
+        passaggioPosseduto(nome, nomePosseduto);
     }
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
@@ -385,6 +374,21 @@ public final class Partita
     public Fazione getFazione(String nome) { return getRuoloVivo(nome).getFazione(); }
 
     public boolean isAmato(String nome) { return getRuoloVivo(nome).isAmato(); }
+
+    private void passaggioPosseduto(String nome, String nomePosseduto)
+    {
+        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto), ruolo = getRuoloVivo(nome);
+        if(ruolo.isProtezionePresente(posseduto))
+        {
+            ruolo.perdiProtezioni();
+            throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+        }
+        ruolo.ripristina();
+        if(vivi.isAngeloCustode(nome)) getRuoloVivo(vivi.getNomeAmato()).resettaAmato();
+        vivi.eliminaGiocatore(nome);
+        aggiungiGiocatoreVivo(nome, posseduto);
+        confermaEliminazioneMortiNotte();
+    }
 
     private boolean isPreteVivo(String nome) { return isPrete(nome) && !isNonMorto(nome); }
 
