@@ -1676,6 +1676,29 @@ public final class TestPartita
         incrementaVoti(nomeInquisitore, 1);
         terminaVotazioni();
         verificaAccusati(nomeInquisitore, nome);
+        FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco", "Nonna", "Nosferatu",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+        }
+    )
+    public void testSegnalazioneInquisitoreNonRiuscitaNonBallottaggio(String nomeRuolo)
+    {
+        String nome = "Romina", nomeVittima = "Stefano", nomeInquisitore = "Immanuel";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { nomeInquisitore, "Inquisitore" }, { nomeVittima, "Guaritore" } });
+        segnalazioneInquisitore(nome);
+        incrementaVoti(nomeInquisitore, 2);
+        incrementaVoti(nomeVittima, 2);
+        terminaVotazioni();
+        verificaAccusati(nomeInquisitore, nomeVittima);
+        FACTORY.getRuolo(nomeRuolo).ripristina();
     }
 
     private void verificaMorteGhoul(String tipoLupo, String nomeVittima, String messaggio, String nomeGhoul)
