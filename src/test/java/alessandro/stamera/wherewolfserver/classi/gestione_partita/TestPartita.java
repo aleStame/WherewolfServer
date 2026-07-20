@@ -1583,17 +1583,17 @@ public final class TestPartita
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
-    public void testAttaccoCapoBrancoContadino(String tipoContadino, String messaggio)
+    public void testAttaccoLupiContadino(String tipoContadino, String tipoLupo, String messaggio)
     {
-        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        String nomeLupo = "Iris", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
         verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
-    public void testAttaccoCapoBrancoContadinoAmato(String tipoContadino, String messaggio)
+    public void testAttaccoLupiContadinoAmato(String tipoContadino, String tipoLupo, String messaggio)
     {
-        String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        String nomeLupo = "Iris", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
         segnalazioneAngeloCustode(nomeLupo);
         verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
@@ -1765,13 +1765,25 @@ public final class TestPartita
         (
             Arguments.of
             (
-    "Contadino eroe",
+    "Contadino eroe", "Capo branco",
                "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
                "morte."
             ),
             Arguments.of
             (
-    "Contadino mostro",
+    "Contadino mostro", "Capo branco",
+               "L'attacco al Contadino mostro (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della " +
+               "loro morte."
+            ),
+            Arguments.of
+            (
+    "Contadino eroe", "Lupo del branco",
+               "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
+               "morte."
+            ),
+            Arguments.of
+            (
+    "Contadino mostro", "Lupo del branco",
                "L'attacco al Contadino mostro (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della " +
                "loro morte."
             )
