@@ -87,6 +87,14 @@ public final class TestGiocatoriMortiNotte
         verificaFalso(giocatori.isPossedutoPresente());
     }
 
+    @Test public void testPossedutoPresente()
+    {
+        String nome = "Giampiero";
+        aggiungiGiocatore(nome, "Posseduto");
+        verificaVero(giocatori.isPossedutoPresente());
+        assertThat(giocatori.getNomePosseduto()).isEqualTo(nome);
+    }
+
     private void aggiungiGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
