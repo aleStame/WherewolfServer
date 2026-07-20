@@ -331,7 +331,7 @@ public class Ruolo
 
     public boolean isInquisito() { return inquisito; }
 
-    public void segnalazioneInquisitore() { setInquisito(true); }
+    public void segnalazioneInquisitore() { if(isMistico()) setInquisito(true); }
 
     public void annullaSegnalazioneInquisitore() { setInquisito(false); }
 

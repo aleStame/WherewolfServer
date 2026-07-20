@@ -95,9 +95,10 @@ public final class TestGiocatoriVivi
         {
             "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
-            "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoAmatoAssassino(String nomeRuolo)
@@ -133,9 +134,10 @@ public final class TestGiocatoriVivi
         {
             "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
-            "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoAmatoStregatoAssassino(String nomeRuolo)
@@ -156,6 +158,7 @@ public final class TestGiocatoriVivi
         segnalazioneAzzeccagarbugli(nomeAngelo);
         for(int i = 2; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(nomeAngelo, giocatori[3][0], giocatori[2][0]);
+        FACTORY.getRuolo("Angelo custode").ripristina();
     }
 
     @ParameterizedTest
@@ -171,19 +174,21 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome2, "Guaritore");
         incrementaVoti(nome2, 3);
         verificaAccusati(nome2);
+        ripristina(nome);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
+        String nomeInquisitore = "Virginio";
         String[][] giocatori = new String[][]
-            { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
+            { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { nomeInquisitore, "Inquisitore" }, { "Giorgia", "Giullare" } };
         int posizione = 2;
         inizializzaGiocatori(giocatori);
-        segnalazioneAzzeccagarbugli(giocatori[posizione][0]);
-        segnalazioneAngeloCustode(giocatori[posizione][0]);
+        segnalazioneAzzeccagarbugli(nomeInquisitore);
+        segnalazioneAngeloCustode(nomeInquisitore);
         for(int i = posizione; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
-        this.giocatori.resettaAmato();
+        ripristina(nomeInquisitore);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -208,12 +213,13 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
-        String[][] giocatori = new String[][] { { "Andrea", "Inquisitore" }, { "Raffaella", "Bocca di rosa" }, { "Raffaele", "Mago" } };
+        String nomeMistico = "Raffaele";
+        String[][] giocatori = new String[][] { { "Andrea", "Inquisitore" }, { "Raffaella", "Bocca di rosa" }, { nomeMistico, "Mago" } };
         inizializzaGiocatori(giocatori);
-        int posizioneVoto = 1, posizioneMistico = 2;
-        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
+        int posizioneVoto = 1;
+        segnalazioneInquisitore(nomeMistico);
         incrementaVoti(giocatori[posizioneVoto][0], 2);
-        verificaAccusati(giocatori[posizioneMistico][0], giocatori[posizioneVoto][0]);
+        verificaAccusati(nomeMistico, giocatori[posizioneVoto][0]);
     }
 
     @ParameterizedTest
@@ -230,14 +236,15 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { "Irvano", "Medium" }, { "Luca", "Inquisitore" } };
+        String nomeMistico = "Irvano";
+        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nomeMistico, "Medium" }, { "Luca", "Inquisitore" } };
         inizializzaGiocatori(giocatori);
-        int posizioneMistico = 1;
-        segnalazioneInquisitore(giocatori[posizioneMistico][0]);
-        segnalazioneAngeloCustode(giocatori[posizioneMistico][0]);
+        segnalazioneInquisitore(nomeMistico);
+        segnalazioneAngeloCustode(nomeMistico);
         int posizioneVoto = 2;
         incrementaVoti(giocatori[posizioneVoto][0], 2);
         verificaAccusati(giocatori[0][0], giocatori[posizioneVoto][0]);
+        ripristina(nomeMistico);
     }
 
     @ParameterizedTest
@@ -827,10 +834,11 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Cappuccetto rosso, RIUSCITO",
-            "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO", "Giovane lupo, MORTO", "Goblin, FALLITO",
-            "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
-            "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Negromante, FALLITO", "Posseduto, TROVATO_POSSEDUTO"
+            "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO",
+            "Cappuccetto rosso, RIUSCITO", "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO",
+            "Giovane lupo, MORTO", "Goblin, FALLITO", "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO",
+            "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Negromante, FALLITO",
+            "Posseduto, TROVATO_POSSEDUTO"
         }
     )
     public void testAttaccoVampiro(String nomeRuolo, EsitoAttacco esito)
@@ -1130,6 +1138,47 @@ public final class TestGiocatoriVivi
         ripristina(nomeRomeo);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco", "Nonna", "Nosferatu",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+        }
+    )
+    public void testSegnalazioneInquisitoreNonRiuscitaBallottaggio(String nomeRuolo)
+    {
+        String nome = "Romina", nomeInquisitore = "Immanuel";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomeInquisitore, "Inquisitore" }, { "Stefano", "Guaritore" } });
+        segnalazioneInquisitore(nome);
+        incrementaVoti(nome, 1);
+        incrementaVoti(nomeInquisitore, 1);
+        verificaAccusati(nomeInquisitore, nome);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco", "Nonna", "Nosferatu",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+        }
+    )
+    public void testSegnalazioneInquisitoreNonRiuscitaNonBallottaggio(String nomeRuolo)
+    {
+        String nome = "Romina", nomeVittima = "Stefano", nomeInquisitore = "Immanuel";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomeInquisitore, "Inquisitore" }, { nomeVittima, "Guaritore" } });
+        segnalazioneInquisitore(nome);
+        incrementaVoti(nomeInquisitore, 2);
+        incrementaVoti(nomeVittima, 2);
+        verificaAccusati(nomeInquisitore, nomeVittima);
+        ripristina(nome);
+    }
+
     private void verificaAmato(String nomeAmato)
     {
         segnalazioneAngeloCustode(nomeAmato);
@@ -1143,9 +1192,9 @@ public final class TestGiocatoriVivi
         {
             "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale",
-            "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
+            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
@@ -1161,7 +1210,10 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
     }
 
-    private void verificaAttaccoLupoFallito(String nomeLupo, String nome) { verificaAttaccoLupo(nomeLupo, nome, FALLITO); }
+    private void verificaAttaccoLupoFallito(String nomeLupo, String nome)
+    {
+        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
+    }
 
     private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
 
@@ -1267,7 +1319,10 @@ public final class TestGiocatoriVivi
 
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
-    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo) { giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo)); }
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
+    {
+        giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo));
+    }
 
     private void verificaAccusati(String... soluzioni)
     {
@@ -1293,6 +1348,7 @@ public final class TestGiocatoriVivi
     private void verificaGiocatoreAccusato(Giocatori ballottaggio, int posizione, String nome)
     {
         verificaNomeGiocatore(ballottaggio.getNomeGiocatore(posizione), nome);
+        ballottaggio.ripristina(nome);
     }
 
     private void verificaNomeGiocatore(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

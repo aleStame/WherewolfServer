@@ -152,7 +152,7 @@ public final class TestRuolo
     {
         verificaNonInquisito();
         ruolo.segnalazioneInquisitore();
-        verificaVero(isInquisito());
+        verificaNonInquisito();
         ruolo.annullaSegnalazioneInquisitore();
         verificaNonInquisito();
     }
