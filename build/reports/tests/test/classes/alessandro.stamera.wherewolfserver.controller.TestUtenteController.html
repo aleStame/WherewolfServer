@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.219s</div>
+<div class="counter">0.863s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,85 +81,85 @@
 <tr>
 <td class="success">[1] username=marco, vecchiaPassword=passwordsecret, nuovaPassword=newpwd, risultato=Password cambiata correttamente</td>
 <td class="success">cambioPassword(String, String, String, String)[1]</td>
-<td class="success">0.560s</td>
+<td class="success">0.574s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente</td>
 <td class="success">cambioPassword(String, String, String, String)[2]</td>
-<td class="success">0.060s</td>
+<td class="success">0.025s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta</td>
 <td class="success">cambioPassword(String, String, String, String)[3]</td>
-<td class="success">0.032s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=andrea, password=andrea1998, risultato=Disiscrizione avvenuta correttamente</td>
 <td class="success">disiscrizione(String, String, String)[1]</td>
-<td class="success">0.025s</td>
+<td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta</td>
 <td class="success">disiscrizione(String, String, String)[2]</td>
-<td class="success">0.029s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente</td>
 <td class="success">disiscrizione(String, String, String)[3]</td>
-<td class="success">0.057s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente</td>
 <td class="success">disiscrizione(String, String, String)[4]</td>
-<td class="success">0.222s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=andrea, password=andrea1998, risultato=Login eseguito correttamente</td>
 <td class="success">login(String, String, String)[1]</td>
-<td class="success">0.023s</td>
+<td class="success">0.033s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] username=marco, password=passwordsecret, risultato=Login eseguito correttamente</td>
 <td class="success">login(String, String, String)[2]</td>
-<td class="success">0.028s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] username=bruce, password=batmanbeyond, risultato=Login eseguito correttamente</td>
 <td class="success">login(String, String, String)[3]</td>
-<td class="success">0.027s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] username=andrea, password=pwdsbagliata, risultato=ERRORE!!! Username o password errate</td>
 <td class="success">login(String, String, String)[4]</td>
-<td class="success">0.036s</td>
+<td class="success">0.023s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] username=gino, password=batmanbeyond, risultato=ERRORE!!! Username o password errate</td>
 <td class="success">login(String, String, String)[5]</td>
-<td class="success">0.037s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] username=utentefinto, password=pwdfinta, risultato=ERRORE!!! Username o password errate</td>
 <td class="success">login(String, String, String)[6]</td>
-<td class="success">0.028s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] username=marco, password=passworddimarco, risultato=ERRORE!!! Nome utente già inserito</td>
 <td class="success">registrazione(String, String, String)[1]</td>
-<td class="success">0.033s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -173,8 +173,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>16:33:45.591 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:33:46.825 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
+<pre>16:39:04.608 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:39:05.562 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -185,12 +185,12 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2026-07-20T16:33:49.670+02:00  INFO 48724 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 48724 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
-2026-07-20T16:33:49.674+02:00  INFO 48724 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-07-20T16:33:57.881+02:00  INFO 48724 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-07-20T16:33:57.882+02:00  INFO 48724 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-07-20T16:33:57.890+02:00  INFO 48724 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
-2026-07-20T16:33:58.058+02:00  INFO 48724 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 10.65 seconds (process running for 54.15)
+2026-07-20T16:39:07.890+02:00  INFO 21872 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 21872 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
+2026-07-20T16:39:07.895+02:00  INFO 21872 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-07-20T16:39:13.960+02:00  INFO 21872 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-20T16:39:13.961+02:00  INFO 21872 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-20T16:39:13.973+02:00  INFO 21872 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
+2026-07-20T16:39:14.119+02:00  INFO 21872 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 8.08 seconds (process running for 35.931)
 </pre>
 </span>
 </div>
@@ -202,7 +202,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 20 lug 2026, 16:34:00</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 20 lug 2026, 16:39:16</p>
 </div>
 </div>
 </body>

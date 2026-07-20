@@ -384,11 +384,13 @@ public final class Partita
             throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
         }
         ruolo.ripristina();
-        if(vivi.isAngeloCustode(nome)) getRuoloVivo(vivi.getNomeAmato()).resettaAmato();
+        if(vivi.isAngeloCustode(nome)) annullaAmato();
         vivi.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, posseduto);
         confermaEliminazioneMortiNotte();
     }
+
+    private void annullaAmato() { getRuoloVivo(vivi.getNomeAmato()).resettaAmato(); }
 
     private boolean isPreteVivo(String nome) { return isPrete(nome) && !isNonMorto(nome); }
 
