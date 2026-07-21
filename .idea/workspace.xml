@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo passaggioPosseduto">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testPossedutoPresente riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriMortiNotte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriMortiNotte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,22 +75,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Tests in 'wherewolfserver.test'.executor": "Run",
-    "Gradle.wherewolf.server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/possedutoControAngeloCustode",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/possedutoControAngeloCustode&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -530,7 +530,39 @@
       <option name="project" value="LOCAL" />
       <updated>1784559070990</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ROSSO: testPossedutoAssente non riuscito">
+      <option name="closed" value="true" />
+      <created>1784562527014</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1784562527014</updated>
+    </task>
+    <task id="LOCAL-00046" summary="VERDE DIRETTO: testPossedutoAssente riuscito">
+      <option name="closed" value="true" />
+      <created>1784562793162</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1784562793162</updated>
+    </task>
+    <task id="LOCAL-00047" summary="ROSSO: testPossedutoPresente non riuscito">
+      <option name="closed" value="true" />
+      <created>1784563166379</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1784563166379</updated>
+    </task>
+    <task id="LOCAL-00048" summary="VERDE: testPossedutoPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1784563621591</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1784563621591</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,10 +580,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testMorteGhoulAmatoCacciatoreNosferatu riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testMorteGhoulAmatoCacciatoreVampiro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoVampiroConGhoulAmato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMorteGhoul" />
     <MESSAGE value="VERDE DIRETTO: testRomeizzazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testRomeizzazioneAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
@@ -573,6 +601,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo isPreteVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo passaggioPosseduto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo passaggioPosseduto" />
+    <MESSAGE value="ROSSO: testPossedutoAssente non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testPossedutoAssente riuscito" />
+    <MESSAGE value="ROSSO: testPossedutoPresente non riuscito" />
+    <MESSAGE value="VERDE: testPossedutoPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPossedutoPresente riuscito" />
   </component>
 </project>
