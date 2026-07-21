@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioErrore riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneProgenizzazionePosseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneProgenizzazionePosseduto.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +85,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/eliminazionePossedutoAmato&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -176,46 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00019" summary="VERDE DIRETTO: testRomeizzazioneAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1784298526059</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1784298526059</updated>
-    </task>
-    <task id="LOCAL-00020" summary="REFACTORING: definizione del metodo verificaVero">
-      <option name="closed" value="true" />
-      <created>1784298907815</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1784298907815</updated>
-    </task>
-    <task id="LOCAL-00021" summary="ROSSO: testRomeizzazioneAngeloCustode non riuscito">
-      <option name="closed" value="true" />
-      <created>1784300015285</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1784300015285</updated>
-    </task>
-    <task id="LOCAL-00022" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1784300464713</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1784300464713</updated>
-    </task>
-    <task id="LOCAL-00023" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
-      <option name="closed" value="true" />
-      <created>1784300868523</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1784300868527</updated>
     </task>
     <task id="LOCAL-00024" summary="VERDE: testRomeizzazioneAngeloCustode riuscito">
       <option name="closed" value="true" />
@@ -569,11 +527,59 @@
       <option name="project" value="LOCAL" />
       <updated>1784648754704</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="REFACTORING: definizione del metodo getVerbo">
+      <option name="closed" value="true" />
+      <created>1784649077139</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1784649077140</updated>
+    </task>
+    <task id="LOCAL-00069" summary="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione">
+      <option name="closed" value="true" />
+      <created>1784650597287</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1784650597290</updated>
+    </task>
+    <task id="LOCAL-00070" summary="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione">
+      <option name="closed" value="true" />
+      <created>1784796222473</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1784796222474</updated>
+    </task>
+    <task id="LOCAL-00071" summary="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione">
+      <option name="closed" value="true" />
+      <created>1784796445419</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1784796445419</updated>
+    </task>
+    <task id="LOCAL-00072" summary="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione">
+      <option name="closed" value="true" />
+      <created>1784796596985</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1784796596985</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:az" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -587,8 +593,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isNonMorto" />
-    <MESSAGE value="REFACTORING: definizione del metodo isPreteVivo" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo passaggioPosseduto" />
     <MESSAGE value="ROSSO: testPossedutoAssente non riuscito" />
@@ -612,6 +616,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFallimentoVampirizzazionePossedutoAmato" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioErrore riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getVerbo" />
+    <MESSAGE value="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: gestione dell'eccezione dell'eliminazione del Posseduto dopo la vampirizzazione" />
   </component>
 </project>
