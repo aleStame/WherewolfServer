@@ -1658,6 +1658,16 @@ public final class TestPartita
         verificaVero(partita.isPosseduto(nomeVampiro));
     }
 
+    @Test public void testVampirizzazionePossedutoAmato()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomePosseduto);
+        attaccoVampiro(nomePosseduto);
+        verificaEliminazione(nomePosseduto);
+        verificaVero(partita.isPosseduto(nomeVampiro));
+    }
+
     @Test public void testPossessioneLadraNonRiuscita()
     {
         String nomeLadra = "Piera", nomePosseduto = "Assunta";
