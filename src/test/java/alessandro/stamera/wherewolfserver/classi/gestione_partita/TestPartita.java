@@ -1653,9 +1653,7 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" } });
-        attaccoVampiro(nomePosseduto);
-        verificaEliminazione(nomePosseduto);
-        verificaVero(partita.isPosseduto(nomeVampiro));
+        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
     }
 
     @Test public void testVampirizzazionePossedutoAmato()
@@ -1663,9 +1661,7 @@ public final class TestPartita
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
         segnalazioneAngeloCustode(nomePosseduto);
-        attaccoVampiro(nomePosseduto);
-        verificaEliminazione(nomePosseduto);
-        verificaVero(partita.isPosseduto(nomeVampiro));
+        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
     }
 
     @Test public void testPossessioneLadraNonRiuscita()
@@ -1793,6 +1789,13 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(nomeInquisitore, nomeVittima);
         FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
+
+    private void verificaFallimentoVampirizzazionePosseduto(String nomePosseduto, String nomeVampiro)
+    {
+        attaccoVampiro(nomePosseduto);
+        verificaEliminazione(nomePosseduto);
+        verificaVero(partita.isPosseduto(nomeVampiro));
     }
 
     private void attaccoPossedutoPreteAmato(String tipoLupo, String nomePosseduto, String nomeAngelo, String nomePrete)
