@@ -21,4 +21,15 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public TipoContadino getTipoContadino(String nome) { return getRuolo(nome).getTipoContadino(); }
 
+    public boolean isPossedutoPresente() { return getPosizionePosseduto() != -1; }
+
+    public String getNomePosseduto() { return getNomeGiocatore(getPosizionePosseduto()); }
+
+    private int getPosizionePosseduto()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(getRuolo(getNomeGiocatore(i)).isPosseduto()) posizione = i;
+        return posizione;
+    }
+
 }

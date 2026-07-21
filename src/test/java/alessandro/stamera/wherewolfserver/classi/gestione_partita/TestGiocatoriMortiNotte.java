@@ -70,6 +70,33 @@ public final class TestGiocatoriMortiNotte
         verificaFalso(giocatori.isContadino(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Eremita", "Ghoul",
+            "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testPossedutoAssente(String nomeRuolo)
+    {
+        String nome = "Gianangelo";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(isPossedutoPresente());
+    }
+
+    @Test public void testPossedutoPresente()
+    {
+        String nome = "Giampiero";
+        aggiungiGiocatore(nome, "Posseduto");
+        verificaVero(isPossedutoPresente());
+        assertThat(giocatori.getNomePosseduto()).isEqualTo(nome);
+    }
+
+    private boolean isPossedutoPresente() { return giocatori.isPossedutoPresente(); }
+
     private void aggiungiGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
