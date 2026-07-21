@@ -1660,8 +1660,7 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        segnalazioneAngeloCustode(nomePosseduto);
-        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
     @Test public void testVampirizzazionePossedutoAmatoVampiroRomeo()
@@ -1669,8 +1668,7 @@ public final class TestPartita
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
         romeizzazione(nomeVampiro);
-        segnalazioneAngeloCustode(nomePosseduto);
-        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
     @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
@@ -1678,8 +1676,7 @@ public final class TestPartita
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
         protezioneStrega(nomeVampiro);
-        segnalazioneAngeloCustode(nomePosseduto);
-        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
     @Test public void testPossessioneLadraNonRiuscita()
@@ -1807,6 +1804,12 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(nomeInquisitore, nomeVittima);
         FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
+
+    private void verificaFallimentoVampirizzazionePossedutoAmato(String nomePosseduto, String nomeVampiro)
+    {
+        segnalazioneAngeloCustode(nomePosseduto);
+        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
     }
 
     private void verificaFallimentoVampirizzazionePosseduto(String nomePosseduto, String nomeVampiro)
