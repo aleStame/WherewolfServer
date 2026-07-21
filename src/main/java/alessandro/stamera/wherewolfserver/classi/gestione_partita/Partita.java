@@ -377,19 +377,21 @@ public final class Partita
         ripristinaGiocatoreVivo(nome);
         if(vivi.isAngeloCustode(nome)) annullaAmato();
         vivi.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, mortiNotte.getRuolo(mortiNotte.getNomePosseduto()));
+        aggiungiGiocatoreVivo(nome, getPossedutoMorto());
         confermaEliminazioneMortiNotte();
     }
 
     private void gestionePossessoImpossibile(String nome)
     {
-        Ruolo ruolo = getRuoloVivo(nome), posseduto = mortiNotte.getRuolo(mortiNotte.getNomePosseduto());
+        Ruolo ruolo = getRuoloVivo(nome), posseduto = getPossedutoMorto();
         if(ruolo.isProtezionePresente(posseduto))
         {
             ruolo.perdiProtezioni();
             throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
         }
     }
+
+    private Ruolo getPossedutoMorto() { return mortiNotte.getRuolo(mortiNotte.getNomePosseduto()); }
 
     private void annullaAmato() { getRuoloVivo(vivi.getNomeAmato()).resettaAmato(); }
 

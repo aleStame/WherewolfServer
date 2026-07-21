@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isPossedutoPresente" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getPossedutoMorto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,30 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00002" summary="VERDE: testAttaccoContadinoEroeAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1784204648364</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1784204648364</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ROSSO: testAttaccoContadinoMostroAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1784205343995</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1784205343995</updated>
-    </task>
-    <task id="LOCAL-00004" summary="VERDE: testAttaccoContadinoMostroAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1784205579212</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1784205579212</updated>
     </task>
     <task id="LOCAL-00005" summary="REFACTORING: compattazione dei test di attacco all'Amato in un unico test parametrico">
       <option name="closed" value="true" />
@@ -567,7 +543,31 @@
       <option name="project" value="LOCAL" />
       <updated>1784624384339</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="REFACTORING: semplificazione del codice">
+      <option name="closed" value="true" />
+      <created>1784624704755</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1784624704755</updated>
+    </task>
+    <task id="LOCAL-00052" summary="REFACTORING: definizione del metodo getPossedutoMorto">
+      <option name="closed" value="true" />
+      <created>1784625360128</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1784625360129</updated>
+    </task>
+    <task id="LOCAL-00053" summary="REFACTORING: definizione del metodo getPossedutoMorto">
+      <option name="closed" value="true" />
+      <created>1784625613823</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1784625613823</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,8 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
-    <MESSAGE value="ROSSO: testRomeizzazioneAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testRomeizzazioneAngeloCustode riuscito" />
     <MESSAGE value="Commit finale" />
     <MESSAGE value="VERDE DIRETTO: testGuarigioneAngeloPostAttaccoAmato riuscito" />
@@ -610,6 +608,8 @@
     <MESSAGE value="VERDE: testPossedutoPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione dle metodo getPosizionePosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo isPossedutoPresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPossedutoPresente" />
+    <MESSAGE value="REFACTORING: semplificazione del codice" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPossedutoMorto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPossedutoMorto" />
   </component>
 </project>
