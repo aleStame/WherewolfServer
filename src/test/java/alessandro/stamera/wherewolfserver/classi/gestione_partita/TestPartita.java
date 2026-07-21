@@ -1554,11 +1554,28 @@ public final class TestPartita
         ripristinaGiocatoreVivo(nomeAngelo);
     }
 
-    @Test public void testPoterePossedutoPrete()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testPoterePossedutoPrete(String tipoLupo)
     {
         String nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
-        inizializzaPartita(new String[][] { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" } });
-        attaccoAssassino(nomePosseduto);
+        inizializzaPartita(new String[][] { { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" } });
+        attaccoLupi(tipoLupo, nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testPoterePossedutoAmatoPrete(String tipoLupo)
+    {
+        String nomeAngelo = "Sigismondo", nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
+        String[][] giocatori = new String[][]
+        {
+            { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { nomeAngelo, "Angelo custode" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomePosseduto);
+        attaccoLupi(tipoLupo, nomeAngelo);
+        terminaNotte();
+        attaccoLupi(tipoLupo, nomePosseduto);
         assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
     }
 
