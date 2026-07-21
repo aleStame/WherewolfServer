@@ -1664,6 +1664,15 @@ public final class TestPartita
         verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
     }
 
+    @Test public void testVampirizzazionePossedutoAmatoVampiroRomeo()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        romeizzazione(nomeVampiro);
+        segnalazioneAngeloCustode(nomePosseduto);
+        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
+    }
+
     @Test public void testPossessioneLadraNonRiuscita()
     {
         String nomeLadra = "Piera", nomePosseduto = "Assunta";
