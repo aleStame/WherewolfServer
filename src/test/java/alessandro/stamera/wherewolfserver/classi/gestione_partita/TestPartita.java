@@ -1575,6 +1575,25 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeAngelo);
         terminaNotte();
         attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
+        ripristinaRuoloSpecifico("Posseduto");
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testPoterePossedutoAmatoPreteStregato(String tipoLupo)
+    {
+        String nomeAngelo = "Sigismondo", nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
+        String[][] giocatori = new String[][]
+        {
+            { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { nomeAngelo, "Angelo custode" },
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomePosseduto);
+        protezioneStrega(nomePrete);
+        attaccoLupi(tipoLupo, nomeAngelo);
+        terminaNotte();
+        attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
+        ripristinaGiocatoreVivo(nomePrete);
+        ripristinaRuoloSpecifico("Posseduto");
     }
 
     @Test public void testPoterePossedutoPreteVampirizzato()
