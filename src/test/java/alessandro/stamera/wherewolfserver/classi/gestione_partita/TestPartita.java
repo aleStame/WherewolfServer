@@ -1546,12 +1546,32 @@ public final class TestPartita
     public void testPoterePossedutoAngeloCustode(String nomeRuolo)
     {
         String nomeAngelo = "Noe", nome = "Banner", nomePosseduto = "Damiano";
-        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { "Ely", "Assassino" }, { nome, nomeRuolo }, { nomePosseduto, "Posseduto" } });
+        String[][] giocatori =
+            new String[][] { { nomeAngelo, "Angelo custode" }, { "Ely", "Assassino" }, { nome, nomeRuolo }, { nomePosseduto, "Posseduto" } };
+        inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nome);
         attaccoAssassino(nomePosseduto);
         partita.passaPosseduto(nomeAngelo);
         verificaFalso(partita.isAmato(nome));
         ripristinaGiocatoreVivo(nomeAngelo);
+        ripristinaGiocatoreVivo(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testPoterePossedutoAngeloCustodeAssassino(String tipoLupo)
+    {
+        String nomeAngelo = "Noe", nomeAssassino = "Ely", nomePosseduto = "Damiano";
+        String[][] giocatori = new String[][]
+        {
+            { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { "Banner", tipoLupo }, { nomePosseduto, "Posseduto" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeAssassino);
+        attaccoLupi(tipoLupo, nomePosseduto);
+        partita.passaPosseduto(nomeAngelo);
+        verificaFalso(partita.isAmato(nomeAssassino));
+        ripristinaGiocatoreVivo(nomeAngelo);
+        ripristinaGiocatoreVivo(nomeAssassino);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
