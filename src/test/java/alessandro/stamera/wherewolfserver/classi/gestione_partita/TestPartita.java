@@ -1559,8 +1559,7 @@ public final class TestPartita
     {
         String nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
         inizializzaPartita(new String[][] { { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" } });
-        attaccoLupi(tipoLupo, nomePosseduto);
-        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
+        attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1575,8 +1574,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomePosseduto);
         attaccoLupi(tipoLupo, nomeAngelo);
         terminaNotte();
-        attaccoLupi(tipoLupo, nomePosseduto);
-        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
+        attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
     }
 
     @Test public void testPoterePossedutoPreteVampirizzato()
@@ -1738,6 +1736,12 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(nomeInquisitore, nomeVittima);
         FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
+
+    private void attaccoPossedutoPrete(String tipoLupo, String nomePosseduto, String nomePrete)
+    {
+        attaccoLupi(tipoLupo, nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomePrete)).withMessage("Impossibile possedere il Prete.");
     }
 
     private void verificaMorteGhoul(String tipoLupo, String nomeVittima, String messaggio, String nomeGhoul)
