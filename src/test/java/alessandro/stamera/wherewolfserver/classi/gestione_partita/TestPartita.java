@@ -1581,9 +1581,25 @@ public final class TestPartita
         String[][] giocatori = new String[][]
         {
             { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { nomeAngelo, "Angelo custode" },
+            { "Gianmario", "Strega" }
         };
         inizializzaPartita(giocatori);
         protezioneStrega(nomePrete);
+        attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
+        ripristinaGiocatoreVivo(nomePrete);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testPoterePossedutoAmatoPreteRomeizzato(String tipoLupo)
+    {
+        String nomeAngelo = "Sigismondo", nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
+        String[][] giocatori = new String[][]
+        {
+            { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { nomeAngelo, "Angelo custode" },
+            { "Rosalba", "Giulietta" }
+        };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomePrete);
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
         ripristinaGiocatoreVivo(nomePrete);
     }
