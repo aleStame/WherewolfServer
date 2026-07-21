@@ -1814,7 +1814,10 @@ public final class TestPartita
 
     private void verificaFallimentoVampirizzazionePosseduto(String nomePosseduto, String nomeVampiro)
     {
-        attaccoVampiro(nomePosseduto);
+        String messaggio =
+            "Il Vampiro (" + nomeVampiro + ") non può vampirizzare il Posseduto (" + nomePosseduto + ").\n" + nomeVampiro +
+            " diventerà il Posseduto e " + nomePosseduto + " che morirà.";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomePosseduto)).withMessage(messaggio);
         verificaEliminazione(nomePosseduto);
         verificaVero(partita.isPosseduto(nomeVampiro));
     }
