@@ -1571,11 +1571,7 @@ public final class TestPartita
             { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { nomeAngelo, "Angelo custode" }
         };
         inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(nomePosseduto);
-        attaccoLupi(tipoLupo, nomeAngelo);
-        terminaNotte();
-        attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
-        ripristinaRuoloSpecifico("Posseduto");
+        attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1587,13 +1583,9 @@ public final class TestPartita
             { "Elena", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomePrete, "Prete" }, { nomeAngelo, "Angelo custode" },
         };
         inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(nomePosseduto);
         protezioneStrega(nomePrete);
-        attaccoLupi(tipoLupo, nomeAngelo);
-        terminaNotte();
-        attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
+        attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
         ripristinaGiocatoreVivo(nomePrete);
-        ripristinaRuoloSpecifico("Posseduto");
     }
 
     @Test public void testPoterePossedutoPreteVampirizzato()
@@ -1755,6 +1747,15 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(nomeInquisitore, nomeVittima);
         FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
+
+    private void attaccoPossedutoPreteAmato(String tipoLupo, String nomePosseduto, String nomeAngelo, String nomePrete)
+    {
+        segnalazioneAngeloCustode(nomePosseduto);
+        attaccoLupi(tipoLupo, nomeAngelo);
+        terminaNotte();
+        attaccoPossedutoPrete(tipoLupo, nomePosseduto, nomePrete);
+        ripristinaRuoloSpecifico("Posseduto");
     }
 
     private void attaccoPossedutoPrete(String tipoLupo, String nomePosseduto, String nomePrete)
