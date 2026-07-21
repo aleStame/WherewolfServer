@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testPossedutoPresente riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isPossedutoPresente" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,14 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00001" summary="ROSSO: testAttaccoContadinoEroeAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1784203887459</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1784203887459</updated>
     </task>
     <task id="LOCAL-00002" summary="VERDE: testAttaccoContadinoEroeAmato riuscito">
       <option name="closed" value="true" />
@@ -562,7 +551,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784563621591</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="REFACTORING: definizione dle metodo getPosizionePosseduto">
+      <option name="closed" value="true" />
+      <created>1784624160681</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1784624160682</updated>
+    </task>
+    <task id="LOCAL-00050" summary="REFACTORING: definizione del metodo isPossedutoPresente">
+      <option name="closed" value="true" />
+      <created>1784624384330</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1784624384339</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,8 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testRomeizzazione riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testRomeizzazioneAngeloCustode riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaVero" />
     <MESSAGE value="ROSSO: testRomeizzazioneAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testRomeizzazioneAngeloCustode riuscito" />
@@ -605,6 +608,8 @@
     <MESSAGE value="VERDE DIRETTO: testPossedutoAssente riuscito" />
     <MESSAGE value="ROSSO: testPossedutoPresente non riuscito" />
     <MESSAGE value="VERDE: testPossedutoPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPossedutoPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione dle metodo getPosizionePosseduto" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPossedutoPresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPossedutoPresente" />
   </component>
 </project>

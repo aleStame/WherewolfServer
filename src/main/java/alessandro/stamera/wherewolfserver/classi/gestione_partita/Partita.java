@@ -352,10 +352,7 @@ public final class Partita
     public void passaPosseduto(String nome)
     {
         if(isPreteVivo(nome)) throw new IllegalArgumentException("Impossibile possedere il Prete.");
-        int posizione = -1;
-        for(int i = 0; i < mortiNotte.getNumeroGiocatori() && posizione == -1; i++)
-            if(mortiNotte.getRuolo(mortiNotte.getNomeGiocatore(i)).isPosseduto()) posizione = i;
-        passaggioPosseduto(nome, mortiNotte.getNomeGiocatore(posizione));
+        passaggioPosseduto(nome);
     }
 
     public boolean isPosseduto(String nome) { return getRuoloVivo(nome).isPosseduto(); }
@@ -374,20 +371,19 @@ public final class Partita
 
     public boolean isAmato(String nome) { return getRuoloVivo(nome).isAmato(); }
 
-    private void passaggioPosseduto(String nome, String nomePosseduto)
+    private void passaggioPosseduto(String nome)
     {
-        Ruolo posseduto = mortiNotte.getRuolo(nomePosseduto);
-        gestionePossessoImpossibile(nome, posseduto);
+        gestionePossessoImpossibile(nome);
         ripristinaGiocatoreVivo(nome);
         if(vivi.isAngeloCustode(nome)) annullaAmato();
         vivi.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, posseduto);
+        aggiungiGiocatoreVivo(nome, mortiNotte.getRuolo(mortiNotte.getNomePosseduto()));
         confermaEliminazioneMortiNotte();
     }
 
-    private void gestionePossessoImpossibile(String nome, Ruolo posseduto)
+    private void gestionePossessoImpossibile(String nome)
     {
-        Ruolo ruolo = getRuoloVivo(nome);
+        Ruolo ruolo = getRuoloVivo(nome), posseduto = mortiNotte.getRuolo(mortiNotte.getNomePosseduto());
         if(ruolo.isProtezionePresente(posseduto))
         {
             ruolo.perdiProtezioni();
