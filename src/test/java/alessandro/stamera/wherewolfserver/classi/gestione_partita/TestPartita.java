@@ -1682,11 +1682,11 @@ public final class TestPartita
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testNosferatizzazionePossedutoAmato(String tipoLupo)
     {
-        String nomeNosferatu = "Ale", nomePosseduto = "Franz";
+        String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
         String[][] giocatori =
-            new String[][] { { nomeNosferatu, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" }, { "Mario", tipoLupo } };
+            new String[][] { { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Mario", tipoLupo } };
         inizializzaPartita(giocatori);
-        verificaFallimentoNosferatizzazionePossedutoAmato(nomePosseduto, nomeNosferatu, tipoLupo);
+        verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
     /*
@@ -1840,9 +1840,11 @@ public final class TestPartita
         verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
     }
 
-    private void verificaFallimentoNosferatizzazionePossedutoAmato(String nomePosseduto, String nomeNosferatu, String tipoLupo)
+    private void verificaFallimentoNosferatizzazionePossedutoAmato(String nomeAngelo, String nomePosseduto, String nomeNosferatu, String tipoLupo)
     {
         segnalazioneAngeloCustode(nomePosseduto);
+        attaccoLupi(tipoLupo, nomeAngelo);
+        terminaNotte();
         verificaFallimentoNosferatizzazionePosseduto(nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
