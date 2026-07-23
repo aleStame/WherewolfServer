@@ -1703,16 +1703,16 @@ public final class TestPartita
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
-
-    /*
-    @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testNosferatizzazionePossedutoAmatoVampiroStregato(String tipoLupo)
     {
-        String nomeVampiro = "Ale", nomePosseduto = "Franz";
-        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        protezioneStrega(nomeVampiro);
-        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+        String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
+        String[][] giocatori =
+            new String[][] { { nomeNosferatu, "Vampiro" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo } };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeNosferatu);
+        verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
-    * */
 
     @Test public void testPossessioneLadraNonRiuscita()
     {
