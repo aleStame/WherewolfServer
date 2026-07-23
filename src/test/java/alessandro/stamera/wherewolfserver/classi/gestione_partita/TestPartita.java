@@ -1679,6 +1679,34 @@ public final class TestPartita
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testNosferatizzazionePossedutoAmato(String tipoLupo)
+    {
+        String nomeNosferatu = "Ale", nomePosseduto = "Franz";
+        String[][] giocatori =
+            new String[][] { { nomeNosferatu, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" }, { "Mario", tipoLupo } };
+        inizializzaPartita(giocatori);
+        verificaFallimentoNosferatizzazionePossedutoAmato(nomePosseduto, nomeNosferatu, tipoLupo);
+    }
+
+    /*
+    @Test public void testVampirizzazionePossedutoAmatoVampiroRomeo()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        romeizzazione(nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+    }
+
+    @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        protezioneStrega(nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+    }
+    * */
+
     @Test public void testPossessioneLadraNonRiuscita()
     {
         String nomeLadra = "Piera", nomePosseduto = "Assunta";
@@ -1812,6 +1840,12 @@ public final class TestPartita
         verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
     }
 
+    private void verificaFallimentoNosferatizzazionePossedutoAmato(String nomePosseduto, String nomeNosferatu, String tipoLupo)
+    {
+        segnalazioneAngeloCustode(nomePosseduto);
+        verificaFallimentoNosferatizzazionePosseduto(nomePosseduto, nomeNosferatu, tipoLupo);
+    }
+
     private void verificaFallimentoVampirizzazionePosseduto(String nomePosseduto, String nomeVampiro)
     {
         String messaggio =
@@ -1820,6 +1854,17 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomePosseduto)).withMessage(messaggio);
         verificaEliminazione(nomePosseduto);
         verificaVero(partita.isPosseduto(nomeVampiro));
+    }
+
+    private void verificaFallimentoNosferatizzazionePosseduto(String nomePosseduto, String nomeNosferatu, String tipoLupo)
+    {
+        String messaggio =
+            "Il Nosferatu (" + nomeNosferatu + ") non può progenizzare il Posseduto (" + nomePosseduto + ").\n" + nomeNosferatu +
+            " diventerà il Posseduto e " + nomePosseduto + " che morirà.";
+        attaccoLupi(tipoLupo, nomePosseduto);
+        assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomePosseduto)).withMessage(messaggio);
+        verificaEliminazione(nomePosseduto);
+        verificaVero(partita.isPosseduto(nomeNosferatu));
     }
 
     private void attaccoPossedutoPreteAmato(String tipoLupo, String nomePosseduto, String nomeAngelo, String nomePrete)
