@@ -1653,9 +1653,30 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" } });
-        attaccoVampiro(nomePosseduto);
-        verificaEliminazione(nomePosseduto);
-        verificaVero(partita.isPosseduto(nomeVampiro));
+        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
+    }
+
+    @Test public void testVampirizzazionePossedutoAmato()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+    }
+
+    @Test public void testVampirizzazionePossedutoAmatoVampiroRomeo()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        romeizzazione(nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+    }
+
+    @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
+    {
+        String nomeVampiro = "Ale", nomePosseduto = "Franz";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        protezioneStrega(nomeVampiro);
+        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
     @Test public void testPossessioneLadraNonRiuscita()
@@ -1783,6 +1804,22 @@ public final class TestPartita
         terminaVotazioni();
         verificaAccusati(nomeInquisitore, nomeVittima);
         FACTORY.getRuolo(nomeRuolo).ripristina();
+    }
+
+    private void verificaFallimentoVampirizzazionePossedutoAmato(String nomePosseduto, String nomeVampiro)
+    {
+        segnalazioneAngeloCustode(nomePosseduto);
+        verificaFallimentoVampirizzazionePosseduto(nomePosseduto, nomeVampiro);
+    }
+
+    private void verificaFallimentoVampirizzazionePosseduto(String nomePosseduto, String nomeVampiro)
+    {
+        String messaggio =
+            "Il Vampiro (" + nomeVampiro + ") non può vampirizzare il Posseduto (" + nomePosseduto + ").\n" + nomeVampiro +
+            " diventerà il Posseduto e " + nomePosseduto + " che morirà.";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomePosseduto)).withMessage(messaggio);
+        verificaEliminazione(nomePosseduto);
+        verificaVero(partita.isPosseduto(nomeVampiro));
     }
 
     private void attaccoPossedutoPreteAmato(String tipoLupo, String nomePosseduto, String nomeAngelo, String nomePrete)

@@ -406,6 +406,7 @@ public final class Partita
         eliminaGiocatori(nome, nomeVampiro);
         confermaEliminazioneMortiNotte();
         aggiungiGiocatoreVivo(nomeVampiro, posseduto);
+        throw new EccezioneProgenizzazionePosseduto("Vampiro", nomeVampiro, nome);
     }
 
     private boolean isNonMorto(String nome) { return vivi.isTrattoPresente(nome, NON_MORTO); }
