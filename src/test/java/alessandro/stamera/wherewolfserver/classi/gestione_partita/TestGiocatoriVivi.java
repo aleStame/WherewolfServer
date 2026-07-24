@@ -1180,6 +1180,27 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso",
+            "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia",
+            "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAnnullamentoMaledizione(String nomeRuolo)
+    {
+        String nome = "Ermenegildo";
+        aggiungiGiocatore(nome, nomeRuolo);
+        giocatori.maledizione(nome);
+        verificaMaledetto(nome);
+        giocatori.annullaMaledizione(nome);
+        verificaFalso(isMaledetto(nome));
+    }
+
     private void verificaAmato(String nomeAmato)
     {
         segnalazioneAngeloCustode(nomeAmato);

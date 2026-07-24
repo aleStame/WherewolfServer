@@ -302,6 +302,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public Aura getAura(String nome) { return getRuolo(nome).getAura(); }
 
+    public void annullaMaledizione(String nome) { }
+
     private int getPosizioneCacciatoreDiVampiri()
     {
         int posizione = NON_TROVATO;

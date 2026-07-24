@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-07-24T13:22:39" hostname="ALESSANDRO" time="0.116">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-07-24T13:49:14" hostname="ALESSANDRO" time="0.054">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
-  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
-  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
+  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
   <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2da16263, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@f5ce0bb, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@47e51549, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@47e51549, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@101a461c, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@360e9c06, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
   <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testVampiro()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.005"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@101a461c, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.004"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@360e9c06, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.008"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5ebffb44, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.008"/>
-  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testVampiro()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5ebffb44, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.002"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@311ff287, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.001"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7377781e, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.0"/>
+  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
