@@ -9,6 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NOSFERATU;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
@@ -302,7 +303,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public Aura getAura(String nome) { return getRuolo(nome).getAura(); }
 
-    public void annullaMaledizione(String nome) { }
+    public void annullaMaledizione(String nome) { getRuolo(nome).eliminaTratti(MALEDETTO); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
