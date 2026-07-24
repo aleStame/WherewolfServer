@@ -274,7 +274,7 @@ public final class TestPartita
         String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
-        verificaVero(partita.isAmato(nomeAmato));
+        verificaVero(isAmato(nomeAmato));
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeAmato);
@@ -1552,7 +1552,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         attaccoAssassino(nomePosseduto);
         partita.passaPosseduto(nomeAngelo);
-        verificaFalso(partita.isAmato(nome));
+        verificaFalso(isAmato(nome));
         ripristinaGiocatoreVivo(nomeAngelo);
         ripristinaGiocatoreVivo(nome);
     }
@@ -1569,7 +1569,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeAssassino);
         attaccoLupi(tipoLupo, nomePosseduto);
         partita.passaPosseduto(nomeAngelo);
-        verificaFalso(partita.isAmato(nomeAssassino));
+        verificaFalso(isAmato(nomeAssassino));
         ripristinaGiocatoreVivo(nomeAngelo);
         ripristinaGiocatoreVivo(nomeAssassino);
     }
@@ -1865,7 +1865,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         attaccoLupi(tipoLupo, nomeAngelo);
         progenizzazioneNosferatu(nomeAngelo);
-        verificaFalso(partita.isAmato(nome));
+        verificaFalso(isAmato(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -1892,9 +1892,11 @@ public final class TestPartita
         romeizzazione(nomeAngelo);
         attaccoAssassino(nomeAngelo);
         progenizzazioneNosferatu(nomeAngelo);
-        verificaVero(partita.isAmato(nome));
+        verificaVero(isAmato(nome));
         ripristinaRuoloSpecifico(nomeRuolo);
     }
+
+    private boolean isAmato(String nome) { return partita.isAmato(nome); }
 
     private static Stream<Arguments> getEsempioCombinazioni()
     {
