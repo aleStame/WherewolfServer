@@ -1841,6 +1841,19 @@ public final class TestPartita
         FACTORY.getRuolo(nomeRuolo).ripristina();
     }
 
+    @ParameterizedTest @CsvSource({ "Angelo custode" }) public void testFunzionamentoNegromante(String nomeRuolo)
+    {
+        String nomeNegromante = "Circe", nomeAssassino = "Agamennone", nome = "Christopher";
+        inizializzaPartita(new String[][] { { "Circe", "Negromante" }, { nomeAssassino, "Assassino" }, { nome, nomeRuolo } });
+        attaccoNegromante(nomeAssassino);
+        attaccoNegromante(nome);
+        verificaMaledetto(nomeAssassino);
+        verificaMaledetto(nome);
+        attaccoAssassino(nomeNegromante);
+        verificaNonMaledetto(nomeAssassino);
+        verificaNonMaledetto(nome);
+    }
+
     private void verificaFallimentoVampirizzazionePossedutoAmato(String nomePosseduto, String nomeVampiro)
     {
         segnalazioneAngeloCustode(nomePosseduto);
