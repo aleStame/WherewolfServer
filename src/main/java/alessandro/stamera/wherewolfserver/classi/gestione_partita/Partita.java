@@ -34,6 +34,8 @@ public final class Partita
 
     private final List<String> votantiContadinoMostro;
 
+    private final String[] maledettiNegromante;
+
     private boolean pazzoUcciso, potereStregaUsato;
 
     private int numeroNotte;
@@ -51,6 +53,7 @@ public final class Partita
         votantiContadinoMostro = new ArrayList<>();
         numeroNotte = 1;
         potereStregaUsato = false;
+        maledettiNegromante = new String[2];
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -251,6 +254,16 @@ public final class Partita
         return misticismo;
     }
 
+    public void attaccoNegromante(String nome)
+    {
+        switch(vivi.attaccoNegromante(nome))
+        {
+            case MORTO -> eliminaGiocatore(getNomeNegromante());
+            case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
+            case RIUSCITO -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
+        }
+    }
+
     private EsitoAttacco attaccoNosferatu(String nomeVittima)
     {
         EsitoAttacco esito = mortiNotte.progenizzazioneNosferatu(nomeVittima);
@@ -279,13 +292,11 @@ public final class Partita
 
     private String getNomeMagoVivo() { return vivi.getNomeMago(); }
 
-    public void attaccoNegromante(String nome)
+    private int getPosizioneLiberaMaledettiNegromante()
     {
-        switch(vivi.attaccoNegromante(nome))
-        {
-            case MORTO -> eliminaGiocatore(getNomeNegromante());
-            case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
-        }
+        int posizione = 0;
+        if(maledettiNegromante[posizione]!= null) posizione = 1;
+        return posizione;
     }
 
     public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
@@ -490,7 +501,13 @@ public final class Partita
         Ruolo ruolo = getRuolo(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
         if(ruolo.isMegera()) vivi.ripristinaMistici();
+        if(ruolo.isNegromante()) annullaMaledizioniNegromante();
         eliminaGiocatoreMortoNotte(nome);
+    }
+
+    private void annullaMaledizioniNegromante()
+    {
+        for(String nomeMaledetto : maledettiNegromante) if(nomeMaledetto != null) vivi.annullaMaledizione(nomeMaledetto);
     }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
