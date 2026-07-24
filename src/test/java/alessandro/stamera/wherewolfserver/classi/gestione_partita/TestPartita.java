@@ -1896,6 +1896,33 @@ public final class TestPartita
         ripristinaRuoloSpecifico(nomeRuolo);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
+            "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNosferatizzazioneAngeloCustodeStregato(String nomeRuolo)
+    {
+        String nomeAngelo = "Miriam", nome = "Sara";
+        String[][] giocatori = new String[][]
+        {
+            { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" }, { "Pino", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nome);
+        protezioneStrega(nomeAngelo);
+        attaccoAssassino(nomeAngelo);
+        progenizzazioneNosferatu(nomeAngelo);
+        verificaAmato(nome);
+        ripristinaRuoloSpecifico(nomeRuolo);
+    }
+
     private void verificaAmato(String nome) { verificaVero(isAmato(nome)); }
 
     private boolean isAmato(String nome) { return partita.isAmato(nome); }
