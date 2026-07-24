@@ -274,7 +274,7 @@ public final class TestPartita
         String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
-        verificaVero(isAmato(nomeAmato));
+        verificaAmato(nomeAmato);
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeAmato);
@@ -1892,9 +1892,11 @@ public final class TestPartita
         romeizzazione(nomeAngelo);
         attaccoAssassino(nomeAngelo);
         progenizzazioneNosferatu(nomeAngelo);
-        verificaVero(isAmato(nome));
+        verificaAmato(nome);
         ripristinaRuoloSpecifico(nomeRuolo);
     }
+
+    private void verificaAmato(String nome) { verificaVero(isAmato(nome)); }
 
     private boolean isAmato(String nome) { return partita.isAmato(nome); }
 
