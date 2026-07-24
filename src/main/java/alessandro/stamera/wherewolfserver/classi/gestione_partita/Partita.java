@@ -187,10 +187,9 @@ public final class Partita
     public void progenizzazioneNosferatu(String nome)
     {
         String nomeNosferatu = vivi.getNomeNosferatu();
-        System.out.println(nomeNosferatu);
         switch(attaccoNosferatu(nome))
         {
-            case RIUSCITO -> risorgiGiocatore(nome);
+            case RIUSCITO -> nosferatizzazione(nome);
             case MORTO -> morteNosferatu(nome);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeNosferatu);
@@ -262,6 +261,13 @@ public final class Partita
             case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
             case RIUSCITO -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
         }
+    }
+
+    private void nosferatizzazione(String nome)
+    {
+        boolean esito = mortiNotte.isAngeloCustode(nome);
+        risorgiGiocatore(nome);
+        if(esito) vivi.resettaAmato();
     }
 
     private EsitoAttacco attaccoNosferatu(String nomeVittima)

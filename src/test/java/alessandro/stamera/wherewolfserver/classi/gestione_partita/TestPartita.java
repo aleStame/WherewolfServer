@@ -274,7 +274,7 @@ public final class TestPartita
         String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
-        verificaVero(partita.isAmato(nomeAmato));
+        verificaAmato(nomeAmato);
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeAmato);
@@ -1552,7 +1552,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nome);
         attaccoAssassino(nomePosseduto);
         partita.passaPosseduto(nomeAngelo);
-        verificaFalso(partita.isAmato(nome));
+        verificaFalso(isAmato(nome));
         ripristinaGiocatoreVivo(nomeAngelo);
         ripristinaGiocatoreVivo(nome);
     }
@@ -1569,7 +1569,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeAssassino);
         attaccoLupi(tipoLupo, nomePosseduto);
         partita.passaPosseduto(nomeAngelo);
-        verificaFalso(partita.isAmato(nomeAssassino));
+        verificaFalso(isAmato(nomeAssassino));
         ripristinaGiocatoreVivo(nomeAngelo);
         ripristinaGiocatoreVivo(nomeAssassino);
     }
@@ -1853,6 +1853,94 @@ public final class TestPartita
         terminaNotte();
         verificaNonMaledetto(nomeAssassino);
         verificaNonMaledetto(nome);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testNosferatizzazioneAngeloCustode(String nomeRuolo, String tipoLupo)
+    {
+        String nomeAngelo = "Miriam", nome = "Sara";
+        String[][] giocatori =
+            new String[][] { { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Gianella", tipoLupo }, { "Giuliano", "Nosferatu" } };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nome);
+        attaccoLupi(tipoLupo, nomeAngelo);
+        progenizzazioneNosferatu(nomeAngelo);
+        verificaFalso(isAmato(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNosferatizzazioneAngeloCustodeRomeizzato(String nomeRuolo)
+    {
+        String nomeAngelo = "Miriam", nome = "Sara";
+        String[][] giocatori = new String[][]
+        {
+            { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" },
+            { "Pino", "Giulietta" }
+        };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeAngelo);
+        nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
+            "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNosferatizzazioneAngeloCustodeStregato(String nomeRuolo)
+    {
+        String nomeAngelo = "Miriam", nome = "Sara";
+        String[][] giocatori = new String[][]
+        {
+            { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" }, { "Pino", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeAngelo);
+        nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
+    }
+
+    private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nomeRuolo, String nome, String nomeAngelo)
+    {
+        segnalazioneAngeloCustode(nome);
+        attaccoAssassino(nomeAngelo);
+        progenizzazioneNosferatu(nomeAngelo);
+        verificaAmato(nome);
+        ripristinaRuoloSpecifico(nomeRuolo);
+    }
+
+    private void verificaAmato(String nome) { verificaVero(isAmato(nome)); }
+
+    private boolean isAmato(String nome) { return partita.isAmato(nome); }
+
+    private static Stream<Arguments> getEsempioCombinazioni()
+    {
+        String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" }, altriRuoli =
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro",
+            "Contadino normale", "Eremita", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
+            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        };
+        List<Arguments> argomenti = new ArrayList<>();
+        for(String nomeRuolo : altriRuoli) for(String tipoLupo : tipiLupo) argomenti.add(Arguments.of(nomeRuolo, tipoLupo));
+        return argomenti.stream();
     }
 
     private void verificaFallimentoVampirizzazionePossedutoAmato(String nomePosseduto, String nomeVampiro)
