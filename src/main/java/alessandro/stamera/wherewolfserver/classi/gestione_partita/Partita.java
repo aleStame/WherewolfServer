@@ -184,6 +184,7 @@ public final class Partita
     public void progenizzazioneNosferatu(String nome)
     {
         String nomeNosferatu = vivi.getNomeNosferatu();
+        System.out.println(nomeNosferatu);
         switch(attaccoNosferatu(nome))
         {
             case RIUSCITO -> risorgiGiocatore(nome);
