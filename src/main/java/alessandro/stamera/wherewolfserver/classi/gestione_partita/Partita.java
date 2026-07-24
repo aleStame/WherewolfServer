@@ -14,6 +14,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static java.util.Arrays.stream;
 
@@ -34,6 +35,8 @@ public final class Partita
 
     private final List<String> votantiContadinoMostro;
 
+    private final String[] maledettiNegromante;
+
     private boolean pazzoUcciso, potereStregaUsato;
 
     private int numeroNotte;
@@ -51,6 +54,7 @@ public final class Partita
         votantiContadinoMostro = new ArrayList<>();
         numeroNotte = 1;
         potereStregaUsato = false;
+        maledettiNegromante = new String[2];
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -285,6 +289,12 @@ public final class Partita
         {
             case MORTO -> eliminaGiocatore(getNomeNegromante());
             case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
+            case RIUSCITO ->
+            {
+                int posizione = 0;
+                if(maledettiNegromante[posizione]!= null) posizione = 1;
+                maledettiNegromante[posizione] = nome;
+            }
         }
     }
 
@@ -490,6 +500,7 @@ public final class Partita
         Ruolo ruolo = getRuolo(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
         if(ruolo.isMegera()) vivi.ripristinaMistici();
+        if(ruolo.isNegromante()) for(String nomeMaledetto : maledettiNegromante) if(nomeMaledetto != null) getRuolo(nomeMaledetto).eliminaTratti(MALEDETTO);
         eliminaGiocatoreMortoNotte(nome);
     }
 

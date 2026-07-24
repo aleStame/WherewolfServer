@@ -1850,6 +1850,7 @@ public final class TestPartita
         verificaMaledetto(nomeAssassino);
         verificaMaledetto(nome);
         attaccoAssassino(nomeNegromante);
+        terminaNotte();
         verificaNonMaledetto(nomeAssassino);
         verificaNonMaledetto(nome);
     }
