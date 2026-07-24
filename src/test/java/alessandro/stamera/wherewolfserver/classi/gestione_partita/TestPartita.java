@@ -1868,14 +1868,42 @@ public final class TestPartita
         verificaFalso(partita.isAmato(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNosferatizzazioneAngeloCustodeRomeizzato(String nomeRuolo)
+    {
+        String nomeAngelo = "Miriam", nome = "Sara";
+        String[][] giocatori = new String[][]
+        {
+            { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" },
+            { "Pino", "Giulietta" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nome);
+        romeizzazione(nomeAngelo);
+        attaccoAssassino(nomeAngelo);
+        progenizzazioneNosferatu(nomeAngelo);
+        verificaVero(partita.isAmato(nome));
+        ripristinaRuoloSpecifico(nomeRuolo);
+    }
+
     private static Stream<Arguments> getEsempioCombinazioni()
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" }, altriRuoli =
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro",
-            "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
-            "Ladra", "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Contadino normale", "Eremita", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
+            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
             "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         };
         List<Arguments> argomenti = new ArrayList<>();
