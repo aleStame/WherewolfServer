@@ -14,7 +14,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static java.util.Arrays.stream;
 
@@ -500,8 +499,13 @@ public final class Partita
         Ruolo ruolo = getRuolo(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
         if(ruolo.isMegera()) vivi.ripristinaMistici();
-        if(ruolo.isNegromante()) for(String nomeMaledetto : maledettiNegromante) if(nomeMaledetto != null) getRuolo(nomeMaledetto).eliminaTratti(MALEDETTO);
+        if(ruolo.isNegromante()) annullaMaledizioniNegromante();
         eliminaGiocatoreMortoNotte(nome);
+    }
+
+    private void annullaMaledizioniNegromante()
+    {
+        for(String nomeMaledetto : maledettiNegromante) if(nomeMaledetto != null) vivi.annullaMaledizione(nomeMaledetto);
     }
 
     private void eliminaGuaritore() { eliminaGiocatore(vivi.getNomeGuaritore()); }
