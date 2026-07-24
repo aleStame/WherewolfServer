@@ -695,11 +695,12 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeMago(), nome);
     }
 
-    @Test public void testAttaccoNegromante()
+    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Contadino mostro, MORTO" })
+    public void testAttaccoNegromante(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Mike";
-        aggiungiGiocatore(nome, "Contadino mostro");
-        verificaAttacco(giocatori.attaccoNegromante(nome), MORTO);
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaAttacco(giocatori.attaccoNegromante(nome), esito);
     }
 
     @ParameterizedTest @CsvSource
