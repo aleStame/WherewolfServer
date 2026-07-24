@@ -254,6 +254,16 @@ public final class Partita
         return misticismo;
     }
 
+    public void attaccoNegromante(String nome)
+    {
+        switch(vivi.attaccoNegromante(nome))
+        {
+            case MORTO -> eliminaGiocatore(getNomeNegromante());
+            case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
+            case RIUSCITO -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
+        }
+    }
+
     private EsitoAttacco attaccoNosferatu(String nomeVittima)
     {
         EsitoAttacco esito = mortiNotte.progenizzazioneNosferatu(nomeVittima);
@@ -282,19 +292,11 @@ public final class Partita
 
     private String getNomeMagoVivo() { return vivi.getNomeMago(); }
 
-    public void attaccoNegromante(String nome)
+    private int getPosizioneLiberaMaledettiNegromante()
     {
-        switch(vivi.attaccoNegromante(nome))
-        {
-            case MORTO -> eliminaGiocatore(getNomeNegromante());
-            case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
-            case RIUSCITO ->
-            {
-                int posizione = 0;
-                if(maledettiNegromante[posizione]!= null) posizione = 1;
-                maledettiNegromante[posizione] = nome;
-            }
-        }
+        int posizione = 0;
+        if(maledettiNegromante[posizione]!= null) posizione = 1;
+        return posizione;
     }
 
     public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
