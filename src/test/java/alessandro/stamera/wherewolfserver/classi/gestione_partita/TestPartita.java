@@ -1888,12 +1888,8 @@ public final class TestPartita
             { "Pino", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(nome);
         romeizzazione(nomeAngelo);
-        attaccoAssassino(nomeAngelo);
-        progenizzazioneNosferatu(nomeAngelo);
-        verificaAmato(nome);
-        ripristinaRuoloSpecifico(nomeRuolo);
+        nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
@@ -1915,8 +1911,13 @@ public final class TestPartita
             { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" }, { "Pino", "Strega" }
         };
         inizializzaPartita(giocatori);
-        segnalazioneAngeloCustode(nome);
         protezioneStrega(nomeAngelo);
+        nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
+    }
+
+    private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nomeRuolo, String nome, String nomeAngelo)
+    {
+        segnalazioneAngeloCustode(nome);
         attaccoAssassino(nomeAngelo);
         progenizzazioneNosferatu(nomeAngelo);
         verificaAmato(nome);
