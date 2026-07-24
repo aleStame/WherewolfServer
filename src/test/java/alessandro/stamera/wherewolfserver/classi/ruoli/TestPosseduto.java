@@ -82,6 +82,8 @@ public final class TestPosseduto
 
     @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(TROVATO_POSSEDUTO); }
 
+    @Test public void testProgenizzazioneNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(TROVATO_POSSEDUTO); }
+
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
