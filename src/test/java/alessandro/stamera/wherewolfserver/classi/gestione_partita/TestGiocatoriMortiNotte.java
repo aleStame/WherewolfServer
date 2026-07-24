@@ -17,7 +17,22 @@ public final class TestGiocatoriMortiNotte
 
     @BeforeEach public void setUp() { giocatori = new GiocatoriMortiNotte(); }
 
-    @ParameterizedTest @CsvSource({ "Prete, RIUSCITO", "Eremita, FALLITO" })
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
+            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO",
+            "Bracconiere, RIUSCITO", "Cacciatore, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Capo gilda, RIUSCITO",
+            "Cappuccetto rosso, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO",
+            "Contadino normale, RIUSCITO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giovane lupo, MORTO", "Giulietta, RIUSCITO",
+            "Giullare, RIUSCITO", "Goblin, FALLITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, FALLITO",
+            "Inquisitore, RIUSCITO", "Ladra, FALLITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
+            "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
+            "Negromante, FALLITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
+            "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO", "Spia, RIUSCITO", "Strega, RIUSCITO", "Sensitiva, FALLITO",
+            "Templare, RIUSCITO", "Vampiro, RIUSCITO"
+        }
+    )
     public void testProgenieNosferatu(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Marco";

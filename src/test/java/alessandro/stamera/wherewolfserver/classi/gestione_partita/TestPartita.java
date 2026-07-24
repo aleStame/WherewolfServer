@@ -1689,23 +1689,30 @@ public final class TestPartita
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
-    /*
-    @Test public void testVampirizzazionePossedutoAmatoVampiroRomeo()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testNosferatizzazionePossedutoAmatoNosferatuRomeo(String tipoLupo)
     {
-        String nomeVampiro = "Ale", nomePosseduto = "Franz";
-        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        romeizzazione(nomeVampiro);
-        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+        String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
+        String[][] giocatori = new String[][]
+        {
+            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Andrea", tipoLupo },
+            { "Luca", "Giulietta" }
+        };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeNosferatu);
+        verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
-    @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testNosferatizzazionePossedutoAmatoNosferatuStregato(String tipoLupo)
     {
-        String nomeVampiro = "Ale", nomePosseduto = "Franz";
-        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        protezioneStrega(nomeVampiro);
-        verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
+        String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
+        String[][] giocatori =
+            new String[][] { { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo } };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeNosferatu);
+        verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
-    * */
 
     @Test public void testPossessioneLadraNonRiuscita()
     {
