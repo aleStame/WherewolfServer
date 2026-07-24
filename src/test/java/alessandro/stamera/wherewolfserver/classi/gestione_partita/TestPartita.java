@@ -775,15 +775,25 @@ public final class TestPartita
     {
         String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.", nomeCapoGilda);
+        String messaggio = "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.";
+        verificaMorteCapoGilda(nomeVittima, messaggio, nomeCapoGilda);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testNessunaProtezioneCappuccettoRosso(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Capo branco (Andrea).'",
+            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo del branco " +
+            "(Andrea).'",
+            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo reietto (Andrea).'",
+            "Lupo solitario, 'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce'"
+        }
+    )
+    public void testNessunaProtezioneCappuccettoRosso(String tipoLupo, String messaggio)
     {
         String nomeVittima = "Elena";
         inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeVittima);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminazione(nomeVittima);
     }
