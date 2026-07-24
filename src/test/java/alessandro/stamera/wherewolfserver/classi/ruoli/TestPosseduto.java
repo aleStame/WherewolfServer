@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -80,9 +81,11 @@ public final class TestPosseduto
         verificaFalso(isSegnalatoBoia());
     }
 
-    @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(TROVATO_POSSEDUTO); }
+    @Test public void testVampirizzazione() { verificaAttaccoPosseduto(ruolo.vampirizzazione()); }
 
-    @Test public void testProgenizzazioneNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(TROVATO_POSSEDUTO); }
+    @Test public void testProgenizzazioneNosferatu() { verificaAttaccoPosseduto(ruolo.attaccoNosferatu()); }
+
+    private void verificaAttaccoPosseduto(EsitoAttacco esito) { assertThat(esito).isEqualTo(TROVATO_POSSEDUTO); }
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 

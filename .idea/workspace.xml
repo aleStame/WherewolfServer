@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoAttaccoDefault" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoPosseduto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,22 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00031" summary="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscitaBallottaggio riuscito">
-      <option name="closed" value="true" />
-      <created>1784367253353</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1784367253353</updated>
-    </task>
-    <task id="LOCAL-00032" summary="ROSSO: testSegnalazioneInquisitoreNonRiuscitaNonBallottaggio non riuscito">
-      <option name="closed" value="true" />
-      <created>1784368396975</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1784368396977</updated>
     </task>
     <task id="LOCAL-00033" summary="VERDE: testSegnalazioneInquisitoreNonRiuscitaNonBallottaggio riuscito">
       <option name="closed" value="true" />
@@ -567,7 +551,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784893851403</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="REFACTORING: definizione del metodo getEsitoAttaccoDefault">
+      <option name="closed" value="true" />
+      <created>1784894155408</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1784894155408</updated>
+    </task>
+    <task id="LOCAL-00081" summary="REFACTORING: definizione del metodo verificaAttaccoPosseduto">
+      <option name="closed" value="true" />
+      <created>1784894432061</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1784894432062</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione dle metodo getPosizionePosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo isPossedutoPresente" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="REFACTORING: definizione del metodo getPossedutoMorto" />
@@ -610,6 +609,7 @@
     <MESSAGE value="VERDE DIRETTO: testNosferatizzazionePossedutoAmatoVampiroStregato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testProgenieNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoAttaccoDefault" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoAttaccoDefault" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoPosseduto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoPosseduto" />
   </component>
 </project>
