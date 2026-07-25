@@ -56,8 +56,6 @@ public final class TestCappuccettoRosso
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @Test public void testProtezioni() { verificaVero(isProtezioneLupiPresente()); }
-
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();

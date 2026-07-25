@@ -6,6 +6,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
 
 public final class CappuccettoRosso extends Villaggio
 {
@@ -28,6 +29,13 @@ public final class CappuccettoRosso extends Villaggio
     {
         EsitoAttacco esito = super.vampirizzazione();
         if(esito == RIUSCITO) perdiProtezioni();
+        return esito;
+    }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo)
+    {
+        EsitoAttacco esito = super.attaccoLupi(lupo);
+        if(esito == RIUSCITO && lupo.isLupoSolitario()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
         return esito;
     }
 
