@@ -13,13 +13,13 @@ public final class TestEccezioneCappuccettoRosso
             "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Capo branco (Andrea).'",
             "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo del branco " +
             "(Andrea).'",
-            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo solitario (Andrea).'",
+            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo reietto (Andrea).'",
             "Lupo solitario, 'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce'"
         }
     )
     public void testMessaggio(String tipoLupo, String messaggio)
     {
-        assertThat(new EccezioneCappuccettoRosso(tipoLupo).getMessage()).isEqualTo(messaggio);
+        assertThat(new EccezioneCappuccettoRosso(tipoLupo, "Andrea", "Elena").getMessage()).isEqualTo(messaggio);
     }
 
 }

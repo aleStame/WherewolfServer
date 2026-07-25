@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testNessunaProtezioneCappuccettoRosso riuscito">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCappuccettoRosso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCappuccettoRosso.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testMessaggio non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCappuccettoRosso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCappuccettoRosso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,14 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00052" summary="REFACTORING: definizione del metodo getPossedutoMorto">
-      <option name="closed" value="true" />
-      <created>1784625360128</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1784625360129</updated>
     </task>
     <task id="LOCAL-00053" summary="REFACTORING: definizione del metodo getPossedutoMorto">
       <option name="closed" value="true" />
@@ -570,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784984576330</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="ROSSO: testMessaggio non riuscito">
+      <option name="closed" value="true" />
+      <created>1784985205118</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1784985205119</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'feature/eliminazionePossedutoAmato' into develop" />
     <MESSAGE value="ROSSO: testNosferatizzazionePossedutoAmato non riuscito" />
     <MESSAGE value="VERDE: testNosferatizzazionePossedutoAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNosferatizzazionePossedutoAmatoVampiroRomeo riuscito" />
@@ -613,6 +612,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo nosferatizzazioneAngeloCustodeAmatoProtetto" />
     <MESSAGE value="ROSSO: testNessunaProtezioneCappuccettoRosso non riuscito" />
     <MESSAGE value="VERDE: testNessunaProtezioneCappuccettoRosso riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNessunaProtezioneCappuccettoRosso riuscito" />
+    <MESSAGE value="ROSSO: testMessaggio non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMessaggio non riuscito" />
   </component>
 </project>
