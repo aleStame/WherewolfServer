@@ -123,15 +123,7 @@ public final class Partita
             }
         }
         if(getRuolo(nome).isCappuccettoRosso() &&  (getNumeroLupiVivi() == 1 || tipoLupo.equals("Lupo solitario")))
-        {
-            String messaggio = "";
-            if(tipoLupo.equals("Lupo solitario"))
-                messaggio = "Andrea è il Lupo solitario. Cappuccetto rosso (" + nome + ") si sveglia e lo riconosce";
-            else messaggio =
-                "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (" + nome + ") riconosce il " + tipoLupo + " (" + nomeLupo +
-                ").";
-            throw new IllegalStateException(messaggio);
-        }
+            throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }

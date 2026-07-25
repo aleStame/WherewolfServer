@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -83,6 +84,11 @@ public final class TestCappuccettoRosso
     {
         assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
         verificaProtezioneLupiAssente();
+    }
+
+    @Test public void testAttaccoLupoSolitario()
+    {
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
     private void verificaProtezioneLupiAssente() { verificaFalso(isProtezioneLupiPresente()); }
