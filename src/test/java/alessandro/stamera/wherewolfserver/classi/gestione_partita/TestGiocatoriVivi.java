@@ -1201,7 +1201,7 @@ public final class TestGiocatoriVivi
         verificaFalso(isMaledetto(nome));
     }
 
-    @Test public void testAttaccoLupoSolitario()
+    @Test public void testAttaccoLupoSolitarioCappuccettoRosso()
     {
         String tipoLupo = "Lupo solitario", nomeVittima = "Beatrice";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo } });
@@ -1213,6 +1213,13 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo } });
         segnalazioneAngeloCustode(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+    }
+
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoNonna()
+    {
+        String tipoLupo = "Lupo solitario", nomeVittima = "Beatrice";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
     }
 
