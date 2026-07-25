@@ -86,10 +86,11 @@ public final class TestCappuccettoRosso
 
     @Test public void testAttaccoLupoSolitario() { verificaAttaccoLupoSolitario(ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO); }
 
-    @Test public void testAttaccoLupoSolitarioAngeloCustodeAmato()
+    @Test public void testAttaccoLupoSolitarioAmato()
     {
         ruolo.sceltaAngeloCustode();
         verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+        ruolo.ripristina();
     }
 
     private void verificaAttaccoLupoSolitario(EsitoAttacco esito)
