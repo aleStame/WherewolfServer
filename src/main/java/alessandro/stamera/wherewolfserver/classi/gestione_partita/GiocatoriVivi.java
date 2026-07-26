@@ -308,14 +308,19 @@ public final class GiocatoriVivi extends Giocatori
     @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
     {
         super.aggiungiGiocatore(nome, ruolo);
-        if(isCappuccettoRossoPresente() && isNonnaPresente())
-            getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
+        eliminaProtezioneNonna();
     }
 
     @Override public void eliminaGiocatore(String nome)
     {
         super.eliminaGiocatore(nome);
         if(isAmatoPresente() && !isAngeloCustodePresente()) getRuolo(getNomeAmato()).perdiProtezioni();
+    }
+
+    private void eliminaProtezioneNonna()
+    {
+        if(isCappuccettoRossoPresente() && isNonnaPresente())
+            getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
     }
 
     private int getPosizioneCacciatoreDiVampiri()
