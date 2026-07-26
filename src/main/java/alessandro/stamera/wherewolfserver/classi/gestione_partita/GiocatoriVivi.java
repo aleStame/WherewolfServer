@@ -305,6 +305,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public void annullaMaledizione(String nome) { getRuolo(nome).eliminaTratti(MALEDETTO); }
 
+    @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
+    {
+        super.aggiungiGiocatore(nome, ruolo);
+        if(isCappuccettoRossoPresente() && isNonnaPresente())
+            getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
+    }
+
     private int getPosizioneCacciatoreDiVampiri()
     {
         int posizione = NON_TROVATO;
