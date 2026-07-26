@@ -314,6 +314,11 @@ public final class GiocatoriVivi extends Giocatori
     @Override public void eliminaGiocatore(String nome)
     {
         super.eliminaGiocatore(nome);
+        perditaProtezioniAmato();
+    }
+
+    private void perditaProtezioniAmato()
+    {
         if(isAmatoPresente() && !isAngeloCustodePresente()) getRuolo(getNomeAmato()).perdiProtezioni();
     }
 
