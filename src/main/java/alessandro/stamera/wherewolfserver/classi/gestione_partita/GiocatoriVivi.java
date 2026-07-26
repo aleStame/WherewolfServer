@@ -312,6 +312,12 @@ public final class GiocatoriVivi extends Giocatori
             getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
     }
 
+    @Override public void eliminaGiocatore(String nome)
+    {
+        super.eliminaGiocatore(nome);
+        if(isAmatoPresente() && !isAngeloCustodePresente()) getRuolo(getNomeAmato()).perdiProtezioni();
+    }
+
     private int getPosizioneCacciatoreDiVampiri()
     {
         int posizione = NON_TROVATO;
