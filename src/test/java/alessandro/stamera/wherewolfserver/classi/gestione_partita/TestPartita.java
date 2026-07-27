@@ -598,7 +598,7 @@ public final class TestPartita
     @Test public void testNumeroLupi()
     {
         inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo reietto" }, { "Mohamed", "Capo branco" } });
-        verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
+        verificaNumeroIntero(partita.getNumeroLupiBrancoVivi(), 3);
     }
 
     @Test public void testAttaccoNosferatuRiuscito()

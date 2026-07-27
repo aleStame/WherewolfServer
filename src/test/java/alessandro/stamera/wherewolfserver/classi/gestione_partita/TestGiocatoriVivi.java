@@ -436,7 +436,7 @@ public final class TestGiocatoriVivi
     @Test public void testNumeroLupi()
     {
         inizializzaGiocatori(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo del branco" }, { "Mohamed", "Bracconiere" } });
-        verificaNumeroIntero(giocatori.getNumeroLupi(), 2);
+        verificaNumeroIntero(giocatori.getNumeroLupiBranco(), 2);
     }
 
     @Test public void testBracconierePresente()
@@ -1248,6 +1248,10 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
+    private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
+
+    private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
+
     private void verificaAmato(String nomeAmato)
     {
         segnalazioneAngeloCustode(nomeAmato);
@@ -1354,10 +1358,6 @@ public final class TestGiocatoriVivi
     private boolean isCrociataAvviata() { return giocatori.isCrociataAvviata(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
-
-    private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 

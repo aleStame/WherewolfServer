@@ -52,7 +52,7 @@ public class Lupo extends CreatureOmbra
 
     private int getNumeroLupiConSenzaFazione(Partita partita)
     {
-        return partita.getNumeroLupiVivi() + partita.getNumeroSenzaFazioneVivi();
+        return partita.getNumeroLupiBrancoVivi() + partita.getNumeroSenzaFazioneVivi();
     }
 
     private boolean isProtetto() { return isRomeo() || isAmato(); }

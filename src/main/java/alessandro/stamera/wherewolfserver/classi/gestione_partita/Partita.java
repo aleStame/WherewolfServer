@@ -122,7 +122,7 @@ public final class Partita
                 throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, getNomeRuolo(nome), nome, mortiNotte.getNomeAngeloCustode());
             }
         }
-        if(getRuolo(nome).isCappuccettoRosso() &&  (getNumeroLupiVivi() == 1 || tipoLupo.equals("Lupo solitario")))
+        if(getRuolo(nome).isCappuccettoRosso() &&  (getNumeroLupiBrancoVivi() == 1 || tipoLupo.equals("Lupo solitario")))
             throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
     }
 
@@ -200,7 +200,7 @@ public final class Partita
 
     public int getNumeroSenzaFazioneVivi() { return vivi.getNumeroSenzaFazione(); }
 
-    public int getNumeroLupiVivi() { return vivi.getNumeroLupi(); }
+    public int getNumeroLupiBrancoVivi() { return vivi.getNumeroLupiBranco(); }
 
     public void gildata(String nome)
     {
@@ -553,11 +553,11 @@ public final class Partita
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
-        if(esito == RIUSCITO && isProtezineUltimoLupoAttiva()) esito = MORTO;
+        if(esito == RIUSCITO && isProtezioneUltimoLupoAttiva()) esito = MORTO;
         return esito;
     }
 
-    private boolean isProtezineUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto(); }
+    private boolean isProtezioneUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.getNumeroLupiBranco() == 1; }
 
     private void doppiaEliminazione(String nomeLupo, String nomeVittima)
     {
