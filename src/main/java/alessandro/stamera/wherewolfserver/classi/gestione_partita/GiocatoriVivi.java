@@ -130,7 +130,7 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public void utilizzaPotereBracconiere() { if(getNumeroLupi() == 1) getBracconiere().utilizzaPotere(); }
+    public void utilizzaPotereBracconiere() { if(isRimastoUltimoLupo()) getBracconiere().utilizzaPotere(); }
 
     public void riabilitaPotereBracconiere() { getBracconiere().riabilitaPotere(); }
 
@@ -335,8 +335,10 @@ public final class GiocatoriVivi extends Giocatori
     private void aggiornaProtezioneNonna()
     {
         if(isLupoSolitarioPresente()) getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
-        else if(getNumeroLupi() == 1) gestioneProtezioneUltimoLupo();
+        else if(isRimastoUltimoLupo()) gestioneProtezioneUltimoLupo();
     }
+
+    private boolean isRimastoUltimoLupo() { return getNumeroLupi() == 1; }
 
     private void gestioneProtezioneUltimoLupo()
     {
