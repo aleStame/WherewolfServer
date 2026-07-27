@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isRimastoUnSoloLupo">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" afterDir="false" />
@@ -398,14 +397,6 @@
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
     </task>
-    <task id="LOCAL-00086" summary="ROSSO: testAnnullamentoMaledizione non riuscito">
-      <option name="closed" value="true" />
-      <created>1784901089175</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1784901089176</updated>
-    </task>
     <task id="LOCAL-00087" summary="VERDE: testAnnullamentoMaledizione riuscito">
       <option name="closed" value="true" />
       <created>1784901739600</created>
@@ -790,7 +781,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785170487799</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="REFACTORING: definizione del metodo isRimastoUnSoloLupo">
+      <option name="closed" value="true" />
+      <created>1785185580603</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1785185580604</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -808,7 +807,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitario riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoAmato riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoNonna non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupoSolitarioCappuccettoRossoNonna riuscito" />
@@ -833,6 +831,7 @@
     <MESSAGE value="VERDE: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneAttaccoAngeloCustode" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isRimastoUnSoloLupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isRimastoUnSoloLupo" />
   </component>
 </project>

@@ -531,8 +531,8 @@ public final class TestGiocatoriVivi
 
     @Test public void testInizioCrociata()
     {
-        String tipoLupo = "Capo branco", nomeVittima = "Chloe";
-        inizializzaGiocatori(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
+        String tipoLupo = "Capo branco", nomeVittima = "James";
+        inizializzaGiocatori(new String[][] { { "Yorgos", tipoLupo }, { nomeVittima, "Inquisitore" }, { "Chloe", "Templare" } });
         verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
         verificaVero(isCrociataAvviata());
     }
