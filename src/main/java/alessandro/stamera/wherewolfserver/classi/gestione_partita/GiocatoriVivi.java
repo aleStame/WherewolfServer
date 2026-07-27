@@ -37,8 +37,12 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
-        if(esito == ANGELO_CUSTODE_MORTO && !isAngeloCustodePresente()) esito = RIUSCITO;
-        if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
+        if(esito == FALLITO) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        else
+        {
+            if(esito == ANGELO_CUSTODE_MORTO && !isAngeloCustodePresente()) esito = RIUSCITO;
+            if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
+        }
         return esito;
     }
 
@@ -308,7 +312,7 @@ public final class GiocatoriVivi extends Giocatori
     @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
     {
         super.aggiungiGiocatore(nome, ruolo);
-        eliminaProtezioneNonna();
+        aggiungiProtezioneNonna();
     }
 
     @Override public void eliminaGiocatore(String nome)
@@ -322,10 +326,18 @@ public final class GiocatoriVivi extends Giocatori
         if(isAmatoPresente() && !isAngeloCustodePresente()) getRuolo(getNomeAmato()).perdiProtezioni();
     }
 
-    private void eliminaProtezioneNonna()
+    private void aggiungiProtezioneNonna()
     {
         if(isCappuccettoRossoPresente() && isNonnaPresente())
-            getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
+        {
+            if(isLupoSolitarioPresente()) getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
+            if(getNumeroLupi() == 1)
+            {
+                int posizione = NON_TROVATO;
+                for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(isLupo(i)) posizione = i;
+                getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(posizione));
+            }
+        }
     }
 
     private int getPosizioneCacciatoreDiVampiri()

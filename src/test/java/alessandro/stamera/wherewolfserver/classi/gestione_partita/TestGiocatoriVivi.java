@@ -1420,6 +1420,7 @@ public final class TestGiocatoriVivi
 
     private void verificaAttaccoLupo(String nomeLupo, String nome, EsitoAttacco esito)
     {
+        System.out.println(nomeLupo);
         assertThat(giocatori.attaccoLupi(getRuolo(nomeLupo), nome)).isEqualTo(esito);
     }
 
