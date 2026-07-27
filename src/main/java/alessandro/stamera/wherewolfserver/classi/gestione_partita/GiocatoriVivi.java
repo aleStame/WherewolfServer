@@ -38,11 +38,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
         if(esito == FALLITO) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-        else
-        {
-            if(esito == ANGELO_CUSTODE_MORTO && !isAngeloCustodePresente()) esito = RIUSCITO;
-            if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
-        }
+        else esito = gestioneAttaccoRiuscito(nome, esito);
         return esito;
     }
 
@@ -319,6 +315,13 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
+    }
+
+    private EsitoAttacco gestioneAttaccoRiuscito(String nome, EsitoAttacco esito)
+    {
+        if(esito == ANGELO_CUSTODE_MORTO && !isAngeloCustodePresente()) esito = RIUSCITO;
+        if(esito == RIUSCITO && isTemplare(nome) && isInquisitorePresente()) setCrociataAvviata(true);
+        return esito;
     }
 
     private void perditaProtezioniAmato()
