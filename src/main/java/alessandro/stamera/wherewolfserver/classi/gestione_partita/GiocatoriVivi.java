@@ -341,11 +341,13 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    private boolean isTemplarePresente()
+    private boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
+
+    private int getPosizioneTemplare()
     {
         int posizione = NON_TROVATO;
         for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isTemplare(getNomeGiocatore(i))) posizione = i;
-        return posizione != NON_TROVATO;
+        return posizione;
     }
 
     private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getRuolo(getNomeAmato()).perdiProtezioni(); }
