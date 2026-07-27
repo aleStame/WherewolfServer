@@ -324,10 +324,9 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    private void perditaProtezioniAmato()
-    {
-        if(isAmatoPresente() && !isAngeloCustodePresente()) getRuolo(getNomeAmato()).perdiProtezioni();
-    }
+    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getRuolo(getNomeAmato()).perdiProtezioni(); }
+
+    private boolean isAngeloCustodeMorto() { return isAmatoPresente() && !isAngeloCustodePresente(); }
 
     private void aggiungiProtezioneNonna()
     {

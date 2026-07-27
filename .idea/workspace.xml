@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo gestioneProtezioneUltimoLupo">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo aggiornaProtezioneNonna" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,14 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00073" summary="ROSSO: testNosferatizzazionePossedutoAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1784812210858</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1784812210858</updated>
     </task>
     <task id="LOCAL-00074" summary="VERDE: testNosferatizzazionePossedutoAmato riuscito">
       <option name="closed" value="true" />
@@ -569,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785161144566</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="REFACTORING: definizione del metodo aggiornaProtezioneNonna">
+      <option name="closed" value="true" />
+      <created>1785161456536</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1785161456536</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testNosferatizzazioneAngeloCustodeStregato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo nosferatizzazioneAngeloCustodeAmatoProtetto" />
     <MESSAGE value="ROSSO: testNessunaProtezioneCappuccettoRosso non riuscito" />
     <MESSAGE value="VERDE: testNessunaProtezioneCappuccettoRosso riuscito" />
@@ -612,6 +609,7 @@
     <MESSAGE value="VERDE: testAttaccoUltimoLupoCappuccettoRosso riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneAttaccoRiuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneProtezioneUltimoLupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo gestioneProtezioneUltimoLupo" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioneNonna" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiornaProtezioneNonna" />
   </component>
 </project>
