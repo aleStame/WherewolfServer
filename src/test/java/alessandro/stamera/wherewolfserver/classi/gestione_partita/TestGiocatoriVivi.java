@@ -485,10 +485,9 @@ public final class TestGiocatoriVivi
 
     @Test public void testCacciatoreUltimoLupoBranco()
     {
-        inizializzaGiocatori
-        (
-            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Lupo solitario" }, { "Carmine", "Bracconiere" }, { "Luisa", "Prete" } }
-        );
+        String[][] giocatori =
+            new String[][] { { "Giulia", "Capo branco" }, { "Federico", "Lupo solitario" }, { "Carmine", "Cacciatore" }, { "Luisa", "Prete" } };
+        inizializzaGiocatori(giocatori);
         verificaCacciatoreProtetto();
     }
 

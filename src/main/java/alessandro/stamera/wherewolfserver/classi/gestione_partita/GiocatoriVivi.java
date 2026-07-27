@@ -302,7 +302,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void annullaMaledizione(String nome) { getRuolo(nome).eliminaTratti(MALEDETTO); }
 
-    public boolean isCacciatoreProtetto() { return isRimastoUltimoLupo() && isCacciatorePresente(); }
+    public boolean isCacciatoreProtetto() { return isCacciatorePresente() && isRimastoUnSoloLupo(); }
 
     @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
     {
@@ -315,6 +315,8 @@ public final class GiocatoriVivi extends Giocatori
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
     }
+
+    private boolean isRimastoUnSoloLupo() { return isRimastoUltimoLupo() || isLupoSolitarioPresente(); }
 
     private EsitoAttacco gestioneAttaccoNonFallito(String nome, EsitoAttacco esito)
     {
