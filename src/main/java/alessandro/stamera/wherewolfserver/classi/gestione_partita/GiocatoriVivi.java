@@ -318,12 +318,16 @@ public final class GiocatoriVivi extends Giocatori
 
     private EsitoAttacco gestioneAttaccoNonFallito(String nome, EsitoAttacco esito)
     {
-        if(esito == ANGELO_CUSTODE_MORTO)
-        {
-            if(getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-            else if(!isAngeloCustodePresente()) esito = RIUSCITO;
-        }
+        if(esito == ANGELO_CUSTODE_MORTO) esito = gestioneAttaccoAngeloCustode(nome);
         if(esito == RIUSCITO) esito = gestioneAttaccoRiuscito(nome);
+        return esito;
+    }
+
+    private EsitoAttacco gestioneAttaccoAngeloCustode(String nome)
+    {
+        EsitoAttacco esito = ANGELO_CUSTODE_MORTO;
+        if(getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        else if(!isAngeloCustodePresente()) esito = RIUSCITO;
         return esito;
     }
 
