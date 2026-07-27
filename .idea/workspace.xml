@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isCappuccettoNonnaPresenti">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isRimastoUltimoLupo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,14 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00076" summary="VERDE DIRETTO: testNosferatizzazionePossedutoAmatoVampiroStregato riuscito">
-      <option name="closed" value="true" />
-      <created>1784822073654</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1784822073654</updated>
     </task>
     <task id="LOCAL-00077" summary="VERDE DIRETTO: testProgenieNosferatu riuscito">
       <option name="closed" value="true" />
@@ -569,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785162267108</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="REFACTORING: definizione del metodo isRimastoUltimoLupo">
+      <option name="closed" value="true" />
+      <created>1785162461073</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1785162461073</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testNessunaProtezioneCappuccettoRosso riuscito" />
     <MESSAGE value="ROSSO: testMessaggio non riuscito" />
     <MESSAGE value="VERDE: testMessaggio riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupoSolitario non riuscito" />
@@ -612,6 +612,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioneNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo isAngeloCustodeMorto" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoNonnaPresenti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCappuccettoNonnaPresenti" />
+    <MESSAGE value="REFACTORING: definizione del metodo isRimastoUltimoLupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isRimastoUltimoLupo" />
   </component>
 </project>

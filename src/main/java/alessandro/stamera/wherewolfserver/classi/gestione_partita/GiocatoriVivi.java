@@ -334,7 +334,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void aggiornaProtezioneNonna()
     {
-        if(isLupoSolitarioPresente()) getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(getPosizioneLupoSolitario()));
+        if(isLupoSolitarioPresente()) aggiungiProtezioneNonna(getPosizioneLupoSolitario());
         else if(isRimastoUltimoLupo()) gestioneProtezioneUltimoLupo();
     }
 
@@ -343,7 +343,12 @@ public final class GiocatoriVivi extends Giocatori
     private void gestioneProtezioneUltimoLupo()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == -1; i++) if(isLupo(i)) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+        aggiungiProtezioneNonna(posizione);
+    }
+
+    private void aggiungiProtezioneNonna(int posizione)
+    {
         getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(posizione));
     }
 
