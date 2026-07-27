@@ -328,10 +328,9 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isAngeloCustodeMorto() { return isAmatoPresente() && !isAngeloCustodePresente(); }
 
-    private void aggiungiProtezioneNonna()
-    {
-        if(isCappuccettoRossoPresente() && isNonnaPresente()) aggiornaProtezioneNonna();
-    }
+    private void aggiungiProtezioneNonna() { if(isCappuccettoNonnaPresenti()) aggiornaProtezioneNonna(); }
+
+    private boolean isCappuccettoNonnaPresenti() { return isCappuccettoRossoPresente() && isNonnaPresente(); }
 
     private void aggiornaProtezioneNonna()
     {
