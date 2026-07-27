@@ -1248,6 +1248,30 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoUltimoLupoCappuccettoRossoAmato(String tipoLupo)
+    {
+        String nomeVittima = "Beatrice";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Virgilio", "Nonna" }, { "Adele", "Angelo custode" } };
+        inizializzaGiocatori(giocatori);
+        segnalazioneAngeloCustode(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+    }
+
+    /*
+    *
+    *
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoUltimoLupoCappuccettoRossoSenzaNonna(String tipoLupo)
+    {
+        String nomeVittima = "Beatrice";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo } });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
+    }
+    * */
+
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
     private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
