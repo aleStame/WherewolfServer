@@ -1353,11 +1353,6 @@ public final class TestGiocatoriVivi
 
     private void verificaGildata(String nome, EsitoAttacco esito) { verificaAttacco(giocatori.gildata(nome), esito); }
 
-    private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
-    {
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
-    }
-
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }

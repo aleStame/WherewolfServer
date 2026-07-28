@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -1947,6 +1946,44 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nomeVittima);
     }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).'",
+            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco " +
+            "(Dante).'",
+            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto " +
+            "(Dante).'",
+            "Lupo solitario, 'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce'"
+        }
+    )
+    public void testAttaccoUltimoLupoCappuccettoRossoAmato(String tipoLupo, String messaggio)
+    {
+        String nomeVittima = "Beatrice";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Virgilio", "Nonna" }, { "Adele", "Angelo custode" } };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeVittima);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
+    /*
+    *
+    *
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna(String tipoLupo)
+    {
+        String nomeVittima = "Beatrice";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Adele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+    }
+    *
+    * */
 
     private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nomeRuolo, String nome, String nomeAngelo)
     {
