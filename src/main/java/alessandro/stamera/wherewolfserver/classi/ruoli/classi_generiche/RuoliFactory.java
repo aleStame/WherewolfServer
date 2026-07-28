@@ -56,12 +56,7 @@ public final class RuoliFactory
 
     private Set<String> getChiavi() { return ruoli.keySet(); }
 
-    private Ruolo getCappuccettoRosso()
-    {
-        Ruolo ruolo = ottieniRuolo("Cappuccetto rosso");
-        ruolo.aggiungiProtezione(getLupi());
-        return ruolo;
-    }
+    private Ruolo getCappuccettoRosso() { return ottieniRuolo("Cappuccetto rosso"); }
 
     private Ruolo getGoblin() { return getPiccoloPopolo("Goblin"); }
 

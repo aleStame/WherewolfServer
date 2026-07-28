@@ -36,7 +36,7 @@ public final class Partita
 
     private final String[] maledettiNegromante;
 
-    private boolean pazzoUcciso, potereStregaUsato;
+    private boolean pazzoUcciso, potereStregaUsato, crociataAvviata;
 
     private int numeroNotte;
 
@@ -54,6 +54,7 @@ public final class Partita
         numeroNotte = 1;
         potereStregaUsato = false;
         maledettiNegromante = new String[2];
+        crociataAvviata = false;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -75,6 +76,7 @@ public final class Partita
     public void terminaBallottaggio()
     {
         try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
+        perdiProtezioniCappuccettoRosso();
     }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
@@ -120,6 +122,12 @@ public final class Partita
             {
                 eliminazioneAngeloCustode();
                 throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, getNomeRuolo(nome), nome, mortiNotte.getNomeAngeloCustode());
+            }
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO ->
+            {
+                eliminaGiocatore(nome);
+                throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             }
         }
     }
@@ -198,7 +206,7 @@ public final class Partita
 
     public int getNumeroSenzaFazioneVivi() { return vivi.getNumeroSenzaFazione(); }
 
-    public int getNumeroLupiVivi() { return vivi.getNumeroLupi(); }
+    public int getNumeroLupiBrancoVivi() { return vivi.getNumeroLupiBranco(); }
 
     public void gildata(String nome)
     {
@@ -210,7 +218,7 @@ public final class Partita
 
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
 
-    public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
+    public boolean isCrociataAvviata() { return crociataAvviata; }
 
     public void guarisci(String nome)
     {
@@ -507,7 +515,8 @@ public final class Partita
         Ruolo ruolo = getRuolo(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
         if(ruolo.isMegera()) vivi.ripristinaMistici();
-        if(ruolo.isNegromante()) annullaMaledizioniNegromante();
+        else if(ruolo.isNegromante()) annullaMaledizioniNegromante();
+        else if(ruolo.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
     }
 
@@ -551,11 +560,11 @@ public final class Partita
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
-        if(esito == RIUSCITO && isProtezineUltimoLupoAttiva()) esito = MORTO;
+        if(esito == RIUSCITO && isProtezioneUltimoLupoAttiva()) esito = MORTO;
         return esito;
     }
 
-    private boolean isProtezineUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.isCacciatoreProtetto(); }
+    private boolean isProtezioneUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.getNumeroLupiBranco() == 1; }
 
     private void doppiaEliminazione(String nomeLupo, String nomeVittima)
     {

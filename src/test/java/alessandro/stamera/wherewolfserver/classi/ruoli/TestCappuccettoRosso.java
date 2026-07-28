@@ -1,11 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -55,8 +56,6 @@ public final class TestCappuccettoRosso
 
     @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
 
-    @Test public void testProtezioni() { verificaVero(isProtezioneLupiPresente()); }
-
     @Test public void testPerditaProtezioni()
     {
         ruolo.perdiProtezioni();
@@ -83,6 +82,20 @@ public final class TestCappuccettoRosso
     {
         assertThat(ruolo.vampirizzazione()).isEqualTo(RIUSCITO);
         verificaProtezioneLupiAssente();
+    }
+
+    @Test public void testAttaccoLupoSolitario() { verificaAttaccoLupoSolitario(ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO); }
+
+    @Test public void testAttaccoLupoSolitarioAmato()
+    {
+        ruolo.sceltaAngeloCustode();
+        verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+        ruolo.ripristina();
+    }
+
+    private void verificaAttaccoLupoSolitario(EsitoAttacco esito)
+    {
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(esito);
     }
 
     private void verificaProtezioneLupiAssente() { verificaFalso(isProtezioneLupiPresente()); }

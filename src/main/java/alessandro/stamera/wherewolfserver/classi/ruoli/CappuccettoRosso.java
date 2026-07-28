@@ -3,9 +3,8 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 
 public final class CappuccettoRosso extends Villaggio
 {
@@ -31,6 +30,23 @@ public final class CappuccettoRosso extends Villaggio
         return esito;
     }
 
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo)
+    {
+        EsitoAttacco esito = super.attaccoLupi(lupo);
+        if(lupo.isLupoSolitario()) esito = getEsitoAttaccoLupoSolitario(esito);
+        return esito;
+    }
+
     public static Ruolo getInstance() { return new CappuccettoRosso(); }
+
+    private EsitoAttacco getEsitoAttaccoLupoSolitario(EsitoAttacco esito)
+    {
+        switch(esito)
+        {
+            case ANGELO_CUSTODE_MORTO, FALLITO -> esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+            case RIUSCITO -> esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
+        }
+        return esito;
+    }
 
 }

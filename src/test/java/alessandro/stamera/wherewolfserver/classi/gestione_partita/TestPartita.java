@@ -598,7 +598,7 @@ public final class TestPartita
     @Test public void testNumeroLupi()
     {
         inizializzaPartita(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo reietto" }, { "Mohamed", "Capo branco" } });
-        verificaNumeroIntero(partita.getNumeroLupiVivi(), 3);
+        verificaNumeroIntero(partita.getNumeroLupiBrancoVivi(), 3);
     }
 
     @Test public void testAttaccoNosferatuRiuscito()
@@ -647,7 +647,7 @@ public final class TestPartita
     @Test public void testInizioCrociata()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Chloe";
-        inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
+        inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Templare" }, { nomeVittima, "Inquisitore" } });
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaEliminati(nomeVittima);
@@ -775,41 +775,47 @@ public final class TestPartita
     {
         String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.", nomeCapoGilda);
+        String messaggio = "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.";
+        verificaMorteCapoGilda(nomeVittima, messaggio, nomeCapoGilda);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testNessunaProtezioneCappuccettoRosso(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Capo branco (Andrea).'",
+            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo del branco " +
+            "(Andrea).'",
+            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo reietto (Andrea).'",
+            "Lupo solitario, 'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce'"
+        }
+    )
+    public void testNessunaProtezioneCappuccettoRosso(String tipoLupo, String messaggio)
     {
         String nomeVittima = "Elena";
         inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeVittima);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminazione(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testNessunaProtezioneCappuccettoRossoMorteNonna(String tipoLupo)
     {
         String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Pina";
-        inizializzaPartita(new String[][] { { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
+        String[][] giocatori = new String[][]
+        {
+            { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" }, { "Tony", "Lupo solitario" }
+        };
+        inizializzaPartita(giocatori);
         incrementaVoti(nomeNonna, 3);
         terminaVotazioni();
         incrementaVoti(nomeNonna, 2);
         terminaBallottaggio();
-        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
+        String messaggio =
+            "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Pina) riconosce il " + tipoLupo + " (Damiano).";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCappuccettoRosso)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeNonna, nomeCappuccettoRosso);
-    }
-
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testProtezioneCappuccettoRosso(String tipoLupo)
-    {
-        String nomeCappuccettoRosso = "Claudia";
-        inizializzaPartita(new String[][] { { "Salvatore", "Nonna" }, { "Noemi", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
-        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
-        terminaNotte();
-        verificaNonEliminati(nomeCappuccettoRosso);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1915,6 +1921,79 @@ public final class TestPartita
         nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
     }
 
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoAmatoSenzaAngeloCustode()
+    {
+        String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeVittima);
+        incrementaVoti(nomeAngelo, 3);
+        terminaVotazioni();
+        incrementaVoti(nomeAngelo, 4);
+        terminaBallottaggio();
+        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
+    }
+
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode()
+    {
+        String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeVittima);
+        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).'",
+            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco " +
+            "(Dante).'",
+            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto " +
+            "(Dante).'",
+            "Lupo solitario, 'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce'"
+        }
+    )
+    public void testAttaccoUltimoLupoCappuccettoRossoAmato(String tipoLupo, String messaggio)
+    {
+        String nomeVittima = "Beatrice";
+        String[][] giocatori = new String[][]
+        {
+            { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Virgilio", "Nonna" }, { "Adele", "Angelo custode" }
+        };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeVittima);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).'",
+            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco " +
+            "(Dante).'",
+            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto " +
+            "(Dante).'",
+            "Lupo solitario, 'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce'"
+        }
+    )
+    public void testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna(String tipoLupo, String messaggio)
+    {
+        String nomeVittima = "Beatrice";
+        String[][] giocatori = new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Adele", "Angelo custode" } };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeVittima);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nomeRuolo, String nome, String nomeAngelo)
     {
         segnalazioneAngeloCustode(nome);
@@ -1933,10 +2012,10 @@ public final class TestPartita
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" }, altriRuoli =
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro",
-            "Contadino normale", "Eremita", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
-            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Contadino eroe", "Contadino mostro", "Contadino normale",
+            "Eremita", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String nomeRuolo : altriRuoli) for(String tipoLupo : tipiLupo) argomenti.add(Arguments.of(nomeRuolo, tipoLupo));
@@ -2005,10 +2084,10 @@ public final class TestPartita
         String[] nomiRuoli =
         {
             "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
-            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale",
-            "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul",
+            "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium",
+            "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli)
