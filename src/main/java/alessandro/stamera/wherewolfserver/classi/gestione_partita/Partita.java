@@ -76,6 +76,7 @@ public final class Partita
     public void terminaBallottaggio()
     {
         try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
+        perdiProtezioniCappuccettoRosso();
     }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
@@ -122,9 +123,13 @@ public final class Partita
                 eliminazioneAngeloCustode();
                 throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, getNomeRuolo(nome), nome, mortiNotte.getNomeAngeloCustode());
             }
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO ->
+            {
+                eliminaGiocatore(nome);
+                throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+            }
         }
-        if(getRuolo(nome).isCappuccettoRosso() &&  (getNumeroLupiBrancoVivi() == 1 || tipoLupo.equals("Lupo solitario")))
-            throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }

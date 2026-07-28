@@ -798,16 +798,22 @@ public final class TestPartita
         verificaEliminazione(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testNessunaProtezioneCappuccettoRossoMorteNonna(String tipoLupo)
     {
         String nomeNonna = "Manfredi", nomeCappuccettoRosso = "Pina";
-        inizializzaPartita(new String[][] { { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
+        String[][] giocatori = new String[][]
+        {
+            { nomeNonna, "Nonna" }, { "Damiano", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" }, { "Tony", "Lupo solitario" }
+        };
+        inizializzaPartita(giocatori);
         incrementaVoti(nomeNonna, 3);
         terminaVotazioni();
         incrementaVoti(nomeNonna, 2);
         terminaBallottaggio();
-        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
+        String messaggio =
+            "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Pina) riconosce il " + tipoLupo + " (Damiano).";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCappuccettoRosso)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeNonna, nomeCappuccettoRosso);
     }
