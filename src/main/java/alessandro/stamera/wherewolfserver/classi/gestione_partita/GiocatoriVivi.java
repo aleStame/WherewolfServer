@@ -275,9 +275,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ruolo stregato = getRuolo(nome);
         stregato.protezioneStrega();
-        List<Ruolo> ruoli = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getRuolo(i));
-        stregato.aggiungiProtezione(ruoli.stream().filter(Ruolo::isCreaturaOmbra).toList().toArray(new Ruolo[0]));
+        stregato.aggiungiProtezione(getCreatureOmbra());
     }
 
     public boolean isStregato(String nome) { return getRuolo(nome).isStregato(); }
@@ -323,6 +321,13 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
+    }
+
+    private Ruolo[] getCreatureOmbra()
+    {
+        List<Ruolo> ruoli = new ArrayList<>();
+        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getRuolo(i));
+        return ruoli.stream().filter(Ruolo::isCreaturaOmbra).toList().toArray(new Ruolo[0]);
     }
 
     private boolean isRimastoUnSoloLupo() { return isRimastoUltimoLupo() || isLupoSolitarioPresente(); }
