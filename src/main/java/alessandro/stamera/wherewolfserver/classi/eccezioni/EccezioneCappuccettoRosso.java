@@ -14,9 +14,9 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
 
     @Override public String getMessage()
     {
-        String messaggio = "";
+        String messaggio;
         if(tipoLupo.equals("Lupo solitario"))
-            messaggio = "Andrea è il Lupo solitario. Cappuccetto rosso (" + nomeCappuccettoRosso + ") si sveglia e lo riconosce";
+            messaggio = nomeLupo + " è il Lupo solitario. Cappuccetto rosso (" + nomeCappuccettoRosso + ") si sveglia e lo riconosce";
         else messaggio =
             "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (" + nomeCappuccettoRosso + ") riconosce il " + tipoLupo +
             " (" + nomeLupo + ").";
