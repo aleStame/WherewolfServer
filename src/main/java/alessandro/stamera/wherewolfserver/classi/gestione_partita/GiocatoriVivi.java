@@ -271,7 +271,16 @@ public final class GiocatoriVivi extends Giocatori
         }
     }
 
-    public void protezioneStrega(String nome) { getRuolo(nome).protezioneStrega(); }
+    public void protezioneStrega(String nome)
+    {
+        Ruolo stregato = getRuolo(nome);
+        stregato.protezioneStrega();
+        List<Ruolo> ruoli = new ArrayList<>();
+        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getRuolo(i));
+        stregato.aggiungiProtezione(ruoli.stream().filter(Ruolo::isCreaturaOmbra).toList().toArray(new Ruolo[0]));
+    }
+
+    public boolean isStregato(String nome) { return false; }
 
     public boolean isVampiroAmato()
     {
@@ -472,18 +481,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isBecchino(int posizione) { return getRuolo(posizione).isBecchino(); }
 
-    private boolean isInquisitorePresente() { return getPosizioneInquisitore() != NON_TROVATO; }
-
     private void setCrociataAvviata(boolean crociataAvviata) { this.crociataAvviata = crociataAvviata; }
-
-    private int getPosizioneInquisitore()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisitore(i)) posizione = i;
-        return posizione;
-    }
-
-    private boolean isInquisitore(int posizione) { return isInquisitore(getNomeGiocatore(posizione)); }
 
     private boolean isInquisitore(String nome) { return getRuolo(nome).isInquisitore(); }
 

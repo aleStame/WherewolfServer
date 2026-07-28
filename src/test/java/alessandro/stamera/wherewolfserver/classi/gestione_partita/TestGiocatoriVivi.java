@@ -207,6 +207,7 @@ public final class TestGiocatoriVivi
         String nome = "Gregorio";
         aggiungiGiocatore(nome, "Angelo custode");
         giocatori.protezioneStrega(nome);
+        verificaVero(giocatori.isStregato(nome));
         verificaAttaccoLupoFallito(nomeLupo, nome);
         ripristina(nome);
     }

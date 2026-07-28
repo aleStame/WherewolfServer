@@ -29,7 +29,7 @@ public class Ruolo
 
     private int voti;
 
-    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore;
+    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore, stregato;
 
     private final boolean mistico;
 
@@ -63,6 +63,7 @@ public class Ruolo
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
         this.categoriaOriginale = categoria;
+        stregato = false;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -383,11 +384,15 @@ public class Ruolo
         ripristinaFazioneOriginale();
         annullaSegnalazioneInquisitore();
         perdiProtezioni();
+        stregato = false;
     }
 
-    public void protezioneStrega() { aggiungiProtezioneCreatureOmbra(); }
+    public void protezioneStrega() { stregato = true; }
 
-    public TipoContadino getTipoContadino() { throw new IllegalStateException("ERRORE!!! Questo ruolo non è un contadino."); }
+    public TipoContadino getTipoContadino()
+    {
+        throw new IllegalStateException("ERRORE!!! Questo ruolo non è un contadino.");
+    }
 
     private void trasformazioneVampiro()
     {
