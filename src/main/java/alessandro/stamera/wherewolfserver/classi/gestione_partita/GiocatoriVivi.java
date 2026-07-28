@@ -342,7 +342,9 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    private boolean isCappuccettoRossoProtetto(String nome) { return getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo(); }
+    private boolean isCappuccettoRossoProtetto(String nome) { return isCappuccettoRosso(nome) && isRimastoUltimoLupo(); }
+
+    private boolean isCappuccettoRosso(String nome) { return getRuolo(nome).isCappuccettoRosso(); }
 
     private EsitoAttacco gestioneAttaccoRiuscito(String nome)
     {
