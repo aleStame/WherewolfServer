@@ -36,7 +36,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
-        if(esito == FALLITO && getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        if(esito == FALLITO && isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         else esito = gestioneAttaccoNonFallito(nome, esito);
         return esito;
     }
@@ -337,10 +337,12 @@ public final class GiocatoriVivi extends Giocatori
     private EsitoAttacco gestioneAttaccoAngeloCustode(String nome)
     {
         EsitoAttacco esito = ANGELO_CUSTODE_MORTO;
-        if(getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        if(isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         else if(!isAngeloCustodePresente()) esito = RIUSCITO;
         return esito;
     }
+
+    private boolean isCappuccettoRossoProtetto(String nome) { return getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo(); }
 
     private EsitoAttacco gestioneAttaccoRiuscito(String nome)
     {
