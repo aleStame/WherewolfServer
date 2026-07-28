@@ -36,7 +36,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
-        if(esito == FALLITO) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        if(esito == FALLITO && getRuolo(nome).isCappuccettoRosso() && isRimastoUltimoLupo()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         else esito = gestioneAttaccoNonFallito(nome, esito);
         return esito;
     }
@@ -280,7 +280,7 @@ public final class GiocatoriVivi extends Giocatori
         stregato.aggiungiProtezione(ruoli.stream().filter(Ruolo::isCreaturaOmbra).toList().toArray(new Ruolo[0]));
     }
 
-    public boolean isStregato(String nome) { return false; }
+    public boolean isStregato(String nome) { return getRuolo(nome).isStregato(); }
 
     public boolean isVampiroAmato()
     {

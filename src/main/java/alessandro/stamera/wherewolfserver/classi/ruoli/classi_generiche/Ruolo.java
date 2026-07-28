@@ -394,6 +394,8 @@ public class Ruolo
         throw new IllegalStateException("ERRORE!!! Questo ruolo non è un contadino.");
     }
 
+    public boolean isStregato() { return stregato; }
+
     private void trasformazioneVampiro()
     {
         cambiaFazione(VAMPIRO);

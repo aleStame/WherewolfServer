@@ -192,23 +192,23 @@ public final class TestGiocatoriVivi
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupiAngeloCustodeRomeizzato(String nomeLupo)
+    public void testAttaccoLupiAngeloCustodeRomeizzato(String tipoLupo)
     {
         String nome = "Luca";
-        aggiungiGiocatore(nome, "Angelo custode");
+        inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Paola", tipoLupo } });
         romeizzazione(nome);
-        verificaAttaccoLupoFallito(nomeLupo, nome);
+        verificaAttaccoLupoFallito(tipoLupo, nome);
         ripristina(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupiAngeloCustodeStregato(String nomeLupo)
+    public void testAttaccoLupiAngeloCustodeStregato(String tipoLupo)
     {
         String nome = "Gregorio";
-        aggiungiGiocatore(nome, "Angelo custode");
+        inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Giuliano", tipoLupo } });
         giocatori.protezioneStrega(nome);
         verificaVero(giocatori.isStregato(nome));
-        verificaAttaccoLupoFallito(nomeLupo, nome);
+        verificaAttaccoLupoFallito(tipoLupo, nome);
         ripristina(nome);
     }
 
