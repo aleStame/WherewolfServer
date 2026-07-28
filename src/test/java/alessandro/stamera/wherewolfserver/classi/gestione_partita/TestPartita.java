@@ -1937,6 +1937,17 @@ public final class TestPartita
         verificaEliminati(nomeVittima);
     }
 
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode()
+    {
+        String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeVittima);
+        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nomeRuolo, String nome, String nomeAngelo)
     {
         segnalazioneAngeloCustode(nome);
