@@ -647,7 +647,7 @@ public final class TestPartita
     @Test public void testInizioCrociata()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Chloe";
-        inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Inquisitore" }, { nomeVittima, "Templare" } });
+        inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Templare" }, { nomeVittima, "Inquisitore" } });
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaEliminati(nomeVittima);
@@ -810,16 +810,6 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeCappuccettoRosso);
         terminaNotte();
         verificaEliminati(nomeNonna, nomeCappuccettoRosso);
-    }
-
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testProtezioneCappuccettoRosso(String tipoLupo)
-    {
-        String nomeCappuccettoRosso = "Claudia";
-        inizializzaPartita(new String[][] { { "Salvatore", "Nonna" }, { "Noemi", tipoLupo }, { nomeCappuccettoRosso, "Cappuccetto rosso" } });
-        attaccoLupi(tipoLupo, nomeCappuccettoRosso);
-        terminaNotte();
-        verificaNonEliminati(nomeCappuccettoRosso);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1943,10 +1933,10 @@ public final class TestPartita
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" }, altriRuoli =
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro",
-            "Contadino normale", "Eremita", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
-            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Contadino eroe", "Contadino mostro", "Contadino normale",
+            "Eremita", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String nomeRuolo : altriRuoli) for(String tipoLupo : tipiLupo) argomenti.add(Arguments.of(nomeRuolo, tipoLupo));

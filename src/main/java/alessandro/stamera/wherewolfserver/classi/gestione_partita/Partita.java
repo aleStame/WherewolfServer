@@ -36,7 +36,7 @@ public final class Partita
 
     private final String[] maledettiNegromante;
 
-    private boolean pazzoUcciso, potereStregaUsato;
+    private boolean pazzoUcciso, potereStregaUsato, crociataAvviata;
 
     private int numeroNotte;
 
@@ -54,6 +54,7 @@ public final class Partita
         numeroNotte = 1;
         potereStregaUsato = false;
         maledettiNegromante = new String[2];
+        crociataAvviata = false;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -212,7 +213,7 @@ public final class Partita
 
     public void riconosciNegromante() { vivi.riconosciNegromante(); }
 
-    public boolean isCrociataAvviata() { return vivi.isCrociataAvviata(); }
+    public boolean isCrociataAvviata() { return crociataAvviata; }
 
     public void guarisci(String nome)
     {
@@ -509,7 +510,8 @@ public final class Partita
         Ruolo ruolo = getRuolo(nome);
         eliminati.aggiungiGiocatore(nome, ruolo);
         if(ruolo.isMegera()) vivi.ripristinaMistici();
-        if(ruolo.isNegromante()) annullaMaledizioniNegromante();
+        else if(ruolo.isNegromante()) annullaMaledizioniNegromante();
+        else if(ruolo.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
     }
 

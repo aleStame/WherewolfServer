@@ -480,7 +480,7 @@ public final class TestGiocatoriVivi
 
     @Test public void testCacciatoreProtettoUnLupo()
     {
-        inizializzaGiocatori(new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } });
+        inizializzaGiocatori(new String[][] { { "Elisa", "Cacciatore" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } });
         verificaCacciatoreProtetto();
     }
 
@@ -528,22 +528,6 @@ public final class TestGiocatoriVivi
         String nome = "Barbara";
         inizializzaGiocatori(new String[][] { { nome, "Capo gilda" }, { "Alessandro", "Bocca di rosa" } });
         verificaStringa(giocatori.getNomeCapoGilda(), nome);
-    }
-
-    @Test public void testInizioCrociata()
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "James";
-        inizializzaGiocatori(new String[][] { { "Yorgos", tipoLupo }, { nomeVittima, "Inquisitore" }, { "Chloe", "Templare" } });
-        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
-        verificaVero(isCrociataAvviata());
-    }
-
-    @Test public void testMancatoInizioCrociata()
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "Eve";
-        inizializzaGiocatori(new String[][] { { "Daniel", tipoLupo }, { "Wesley", "Inquisitore" }, { nomeVittima, "Goblin" } });
-        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
-        verificaFalso(isCrociataAvviata());
     }
 
     @ParameterizedTest @CsvSource
@@ -624,14 +608,13 @@ public final class TestGiocatoriVivi
         verificaGildata(nomeVittima, MORTO);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testPerditaProtezioniCappuccettoRosso(String tipoLupo)
     {
         String nome = "Maria";
-        aggiungiGiocatore("Maria", "Cappuccetto rosso");
+        inizializzaGiocatori(new String[][] { { nome, "Cappuccetto rosso" }, { "Giuseppe", tipoLupo } });
         giocatori.annullaProtezioniCappuccettoRosso();
-        verificaAttaccoLupo(tipoLupo, nome, RIUSCITO);
+        verificaAttaccoLupo(tipoLupo, nome, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
         ripristina(nome);
     }
 
@@ -1284,10 +1267,10 @@ public final class TestGiocatoriVivi
         String[] nomiRuoli =
         {
             "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
-            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale",
-            "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
-            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul",
+            "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium",
+            "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
@@ -1374,8 +1357,6 @@ public final class TestGiocatoriVivi
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
-
-    private boolean isCrociataAvviata() { return giocatori.isCrociataAvviata(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

@@ -17,9 +17,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private static final int NON_TROVATO = -1;
 
-    private boolean crociataAvviata;
-
-    public GiocatoriVivi() { setCrociataAvviata(false); }
+    public GiocatoriVivi() { }
 
     public Ballottaggio getBallottaggio()
     {
@@ -149,8 +147,6 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
-
-    public boolean isCrociataAvviata() { return crociataAvviata; }
 
     public void riconosciNegromante() { getRuolo(getPosizioneBecchino()).riconosciNegromante(); }
 
@@ -355,11 +351,10 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = RIUSCITO;
         if(isRimastoUltimoLupo() && isCappuccettoRossoPresente()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-        else if(isInquisitore(nome) && isTemplarePresente()) setCrociataAvviata(true);
         return esito;
     }
 
-    private boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
+    public boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
 
     private int getPosizioneTemplare()
     {
@@ -489,10 +484,6 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private boolean isBecchino(int posizione) { return getRuolo(posizione).isBecchino(); }
-
-    private void setCrociataAvviata(boolean crociataAvviata) { this.crociataAvviata = crociataAvviata; }
-
-    private boolean isInquisitore(String nome) { return getRuolo(nome).isInquisitore(); }
 
     private boolean isTemplare(String nome) { return getRuolo(nome).isTemplare(); }
 
