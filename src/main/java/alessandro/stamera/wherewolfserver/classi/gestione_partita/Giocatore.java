@@ -58,7 +58,7 @@ public final class Giocatore
 
     public boolean isOratore() { return ruolo.isOratore(); }
 
-    public boolean isCitta() { return false; }
+    public boolean isCitta() { return ruolo.isCitta(); }
 
     public boolean isContadinoMostro() { return false; }
 
