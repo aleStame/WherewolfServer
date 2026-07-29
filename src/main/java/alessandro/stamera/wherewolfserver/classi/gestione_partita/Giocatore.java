@@ -23,7 +23,7 @@ public final class Giocatore
         annullaVoti();
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
-        this.ruolo = ruolo;
+        cambiaRuolo(ruolo);
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -56,7 +56,7 @@ public final class Giocatore
 
     public Ruolo getRuolo() { return ruolo; }
 
-    public boolean isOratore() { return false; }
+    public boolean isOratore() { return ruolo.isOratore(); }
 
     public boolean isCitta() { return false; }
 
@@ -66,7 +66,7 @@ public final class Giocatore
 
     public boolean isNosferatu() { return false; }
 
-    public void cambiaRuolo(Ruolo ruolo) { }
+    public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
