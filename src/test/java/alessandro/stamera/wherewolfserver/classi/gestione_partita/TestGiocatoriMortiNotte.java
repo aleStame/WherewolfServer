@@ -125,7 +125,7 @@ public final class TestGiocatoriMortiNotte
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
-        giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
     }
 
     private boolean isLupo(String nome) { return giocatori.isLupo(nome); }

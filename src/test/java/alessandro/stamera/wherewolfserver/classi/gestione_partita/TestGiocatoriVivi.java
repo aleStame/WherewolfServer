@@ -1386,7 +1386,7 @@ public final class TestGiocatoriVivi
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
-        giocatori.aggiungiGiocatore(nomeGiocatore, getRuolo(nomeRuolo));
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(getRuolo(nomeRuolo)));
     }
 
     private void verificaAccusati(String... soluzioni)

@@ -21,10 +21,23 @@ public final class TestBallottaggio
 
     @BeforeEach public void setUp() { ballottaggio = new Ballottaggio(); }
 
-    @Test public void testAmatoPresente()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAmatoPresente(String nomeRuolo)
     {
         String nome = "Gabriella";
-        ballottaggio.aggiungiGiocatore(nome, getMercanteAmato());
+        Giocatore giocatore = new Giocatore(FACTORY.getRuolo(nomeRuolo));
+        giocatore.protezioneAngeloCustode();
+        ballottaggio.aggiungiGiocatore(nome, giocatore);
         verificaVero(isAmatoPresente());
         assertThat(ballottaggio.getNomeAmato()).isEqualTo(nome);
     }
@@ -56,7 +69,7 @@ public final class TestBallottaggio
         String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         Ruolo ruolo = FACTORY.getRuolo("Contadino discendente dei lupi");
         assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
-        ballottaggio.aggiungiGiocatore(nome, ruolo);
+        ballottaggio.aggiungiGiocatore(nome, new Giocatore(ruolo));
         aggiungiGiocatori(giocatori);
         verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
     }
@@ -180,12 +193,8 @@ public final class TestBallottaggio
 
     private void aggiungiGiocatore(String nome, String nomeRuolo)
     {
-        ballottaggio.aggiungiGiocatore(nome, FACTORY.getRuolo(nomeRuolo));
+        ballottaggio.aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
     }
-
-    private Ruolo getMercanteAmato() { return getMercante(); }
-
-    private Ruolo getMercante() { return FACTORY.getRuolo("Mercante"); }
     
     
 

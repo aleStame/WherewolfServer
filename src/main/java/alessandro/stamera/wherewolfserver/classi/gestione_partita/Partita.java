@@ -69,7 +69,7 @@ public final class Partita
         for(int i = 0; i < temp.getNumeroGiocatori(); i++)
         {
             String nome = temp.getNomeGiocatore(i);
-            ballottaggio.aggiungiGiocatore(nome, temp.getRuolo(nome));
+            ballottaggio.aggiungiGiocatore(nome, temp.getGiocatore(nome));
         }
     }
 
@@ -288,7 +288,7 @@ public final class Partita
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
     {
         vivi.assorbiRuolo(nomeNonna, nomeLupo);
-        eliminati.aggiungiGiocatore(nomeLupo, RuoloNullo.getInstance());
+        eliminati.aggiungiGiocatore(nomeLupo, new Giocatore(RuoloNullo.getInstance()));
         throw new EccezioneNonnaBeccata(nomeLupo, tipoLupo, nomeNonna);
     }
 
@@ -514,11 +514,11 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
-        eliminati.aggiungiGiocatore(nome, ruolo);
-        if(ruolo.isMegera()) vivi.ripristinaMistici();
-        else if(ruolo.isNegromante()) annullaMaledizioniNegromante();
-        else if(ruolo.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
+        Giocatore giocatore = new Giocatore(getRuolo(nome));
+        eliminati.aggiungiGiocatore(nome, giocatore);
+        /*if(giocatore.isMegera()) vivi.ripristinaMistici();
+        else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
+        else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;*/
         eliminaGiocatoreMortoNotte(nome);
     }
 
@@ -620,7 +620,7 @@ public final class Partita
         perdiProtezioniCappuccettoRosso();
     }
 
-    private void aggiungiGiocatoreVivo(String nome, Ruolo ruolo) { vivi.aggiungiGiocatore(nome, ruolo); }
+    private void aggiungiGiocatoreVivo(String nome, Ruolo ruolo) { vivi.aggiungiGiocatore(nome, new Giocatore(ruolo)); }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
@@ -648,7 +648,7 @@ public final class Partita
 
     private void eliminaGiocatore(String nome)
     {
-        mortiNotte.aggiungiGiocatore(nome, getRuolo(nome));
+        mortiNotte.aggiungiGiocatore(nome, new Giocatore(getRuolo(nome)));
         vivi.eliminaGiocatore(nome);
         setPazzoUcciso(mortiNotte.isPazzo(nome));
     }

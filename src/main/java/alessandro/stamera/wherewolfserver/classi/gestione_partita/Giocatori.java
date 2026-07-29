@@ -20,9 +20,9 @@ public class Giocatori
 
     public Giocatori() { giocatori = new LinkedHashMap<>(); }
 
-    public void aggiungiGiocatore(String nome, Ruolo ruolo)
+    public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
-        giocatori.put(nome, new Giocatore(ruolo));
+        giocatori.put(nome, giocatore);
         ordinaAlfabeticamente();
     }
 
@@ -53,7 +53,7 @@ public class Giocatori
     public boolean isAmato(String nome)
     {
         boolean esito = false;
-        //if(isPresente(nome)) esito = getRuolo(nome).isAmato();
+        if(isPresente(nome)) esito = getGiocatore(nome).isAmato();
         return esito;
     }
 
@@ -63,8 +63,7 @@ public class Giocatori
 
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
 
-    public void resettaAmato() { //getRuoli().forEach(Ruolo::resettaAmato);
-        }
+    public void resettaAmato() { getRuoli().forEach(Giocatore::annullaProtezioneAngeloCustode); }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
@@ -114,6 +113,8 @@ public class Giocatori
         if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
         return risultato;
     }
+
+    public Giocatore getGiocatore(String nome) { return giocatori.get(nome); }
 
     private boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
 
@@ -165,7 +166,5 @@ public class Giocatori
     private Stream<Giocatore> getStreamRuoli() { return getRuoli().stream(); }
 
     private Collection<Giocatore> getRuoli() { return giocatori.values(); }
-
-    private Giocatore getGiocatore(String nome) { return giocatori.get(nome); }
 
 }

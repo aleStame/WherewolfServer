@@ -219,7 +219,7 @@ public final class TestGiocatori
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
-        giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
     }
 
     private void verificaNumeroGiocatori(int numeroGiocatori)

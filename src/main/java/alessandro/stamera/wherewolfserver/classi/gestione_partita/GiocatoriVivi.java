@@ -63,7 +63,7 @@ public final class GiocatoriVivi extends Giocatori
     public void attaccoPosseduto(String nome)
     {
         eliminaGiocatore(nome);
-        aggiungiGiocatore(nome, FACTORY.getRuolo("Posseduto"));
+        aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo("Posseduto")));
         resettaAmato();
     }
 
@@ -295,7 +295,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ruolo ruolo = getRuolo(nomeAssorbito);
         eliminaGiocatore(nomeAssorbitore);
-        aggiungiGiocatore(nomeAssorbitore, ruolo);
+        aggiungiGiocatore(nomeAssorbitore, new Giocatore(ruolo));
         eliminaGiocatore(nomeAssorbito);
     }
 
@@ -308,12 +308,6 @@ public final class GiocatoriVivi extends Giocatori
     public void annullaMaledizione(String nome) { getRuolo(nome).eliminaTratti(MALEDETTO); }
 
     public boolean isCacciatoreProtetto() { return isCacciatorePresente() && isRimastoUnSoloLupo(); }
-
-    @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
-    {
-        super.aggiungiGiocatore(nome, ruolo);
-        aggiungiProtezioneNonna();
-    }
 
     @Override public void eliminaGiocatore(String nome)
     {
@@ -653,7 +647,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ruolo ruolo = getRuolo(nome);
         eliminaGiocatore(nome);
-        ballottaggio.aggiungiGiocatore(nome, ruolo);
+        ballottaggio.aggiungiGiocatore(nome, new Giocatore(ruolo));
     }
 
     private void spostamentoAmato(Ballottaggio ballottaggio)
@@ -661,7 +655,7 @@ public final class GiocatoriVivi extends Giocatori
         String nome = ballottaggio.getNomeAmato();
         Ruolo ruolo = ballottaggio.getRuolo(nome);
         ballottaggio.eliminaGiocatore(nome);
-        aggiungiGiocatore(nome, ruolo);
+        aggiungiGiocatore(nome, new Giocatore(ruolo));
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
