@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -7,11 +8,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestGiocatore
 {
 
+    private Giocatore giocatore;
+
+   @BeforeEach public void setUp() { giocatore = new Giocatore(); }
+
     private static final int ESEMPIO_VOTI = 3;
 
     @Test public void testVoti()
     {
-        Giocatore giocatore = new Giocatore();
         giocatore.incrementaVoti(ESEMPIO_VOTI);
         assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
         giocatore.annullaVoti();
@@ -24,7 +28,6 @@ public final class TestGiocatore
 
     @Test public void testAmato()
     {
-        Giocatore giocatore = new Giocatore();
         assertThat(giocatore.isAmato()).isFalse();
         giocatore.protezioneAngeloCustode();
         assertThat(giocatore.isAmato()).isTrue();
