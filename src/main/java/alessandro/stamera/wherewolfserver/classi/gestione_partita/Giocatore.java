@@ -62,7 +62,7 @@ public final class Giocatore
 
     public boolean isContadinoMostro() { return false; }
 
-    public boolean isAngeloCustode() { return false; }
+    public boolean isAngeloCustode() { return ruolo.isAngeloCustode(); }
 
     public boolean isNosferatu() { return false; }
 
