@@ -19,7 +19,7 @@ public final class Giocatore
         tratti = new Tratti();
     }
 
-    public void incrementaVoti(int numeroVoti) { this.numeroVoti += numeroVoti; }
+    public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
 
     public int getNumeroVoti()
     {
@@ -28,7 +28,7 @@ public final class Giocatore
         return risultato;
     }
 
-    public void annullaVoti() { numeroVoti = 0; }
+    public void annullaVoti() { setNumeroVoti(0); }
 
     public void maledizione() { tratti.aggiungi(MALEDETTO); }
 
@@ -40,5 +40,7 @@ public final class Giocatore
     }
 
     public boolean isMaledetto() { return tratti.isMaledetto(); }
+
+    private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
 }
