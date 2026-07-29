@@ -24,7 +24,7 @@ public final class TestGiocatore
         verificaNumeroVoti(0);
         giocatore.maledizione();
         verificaNumeroVoti(1);
-        assertThat(giocatore.isMaledetto()).isTrue();
+        verificaVero(giocatore.isMaledetto());
         assertThat(giocatore.getAura()).isEqualTo(NERA);
     }
 
@@ -32,7 +32,7 @@ public final class TestGiocatore
     {
         verificaNonAmato();
         giocatore.protezioneAngeloCustode();
-        assertThat(isAmato()).isTrue();
+        verificaVero(isAmato());
         giocatore.annullaProtezioneAngeloCustode();
         verificaNonAmato();
     }
@@ -40,12 +40,14 @@ public final class TestGiocatore
     @Test public void testOratore()
     {
         giocatore.cambiaRuolo(FACTORY.getRuolo("Oratore"));
-        assertThat(giocatore.isOratore()).isTrue();
+        verificaVero(giocatore.isOratore());
     }
 
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
 
     private void verificaNonAmato() { assertThat(isAmato()).isFalse(); }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private boolean isAmato() { return giocatore.isAmato(); }
 

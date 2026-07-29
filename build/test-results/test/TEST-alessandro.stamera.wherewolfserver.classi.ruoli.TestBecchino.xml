@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" tests="29" skipped="0" failures="1" errors="0" timestamp="2026-07-29T13:43:43" hostname="ALESSANDRO" time="0.172">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" tests="29" skipped="0" failures="1" errors="0" timestamp="2026-07-29T14:12:09" hostname="ALESSANDRO" time="0.276">
   <properties/>
-  <testcase name="testEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
   <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
   <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testNonna()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testPrete()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.005"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testMago()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testNonna()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="testPrete()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.005"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.01"/>
+  <testcase name="testMago()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.008"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testOste()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.006"/>
+  <testcase name="testOste()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
   <testcase name="testRiconoscimentoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Villaggio&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Villaggio
@@ -101,22 +101,22 @@ expected: Villaggio
 </failure>
   </testcase>
   <testcase name="testCacciatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2a8b33ba, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4e8b357d, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2e1eb85f, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.004"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@ea7a4c3, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.005"/>
   <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
   <testcase name="testCacciatoreDiVampiri()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.008"/>
-  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.015"/>
   <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
-  <testcase name="testSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.006"/>
+  <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.006"/>
+  <testcase name="testSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
   <testcase name="testMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
   <testcase name="testMonaco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.002"/>
+  <testcase name="testNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.003"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
   <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
