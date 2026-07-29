@@ -26,7 +26,7 @@ public class Giocatori
         ordinaAlfabeticamente();
     }
 
-    public int getNumeroVoti(String nome) { return giocatori.get(nome).getNumeroVoti(); }
+    public int getNumeroVoti(String nome) { return getGiocatore(nome).getNumeroVoti(); }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
@@ -34,7 +34,7 @@ public class Giocatori
 
     public void incrementaVoti(String nome, int voti)
     {
-        giocatori.get(nome).incrementaVoti(voti);
+        getGiocatore(nome).incrementaVoti(voti);
         ordinaGiocatori(new ComparatoreVoti());
     }
 
@@ -49,7 +49,7 @@ public class Giocatori
         //getRuolo(nome).annullaVoti();
     }
 
-    public Ruolo getRuolo(String nome) { return giocatori.get(nome).getRuolo(); }
+    public Ruolo getRuolo(String nome) { return getGiocatore(nome).getRuolo(); }
 
     public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
@@ -172,5 +172,7 @@ public class Giocatori
     private Stream<Giocatore> getStreamRuoli() { return getRuoli().stream(); }
 
     private Collection<Giocatore> getRuoli() { return giocatori.values(); }
+
+    private Giocatore getGiocatore(String nome) { return giocatori.get(nome); }
 
 }
