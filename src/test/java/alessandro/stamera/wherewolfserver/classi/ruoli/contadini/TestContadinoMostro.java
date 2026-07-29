@@ -27,12 +27,6 @@ public final class TestContadinoMostro
 
     @Test public void testMaledetto() { verificaMaledetto(); }
 
-    @Test public void testVoti()
-    {
-        ruolo.incrementaVoti(2);
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(3);
-    }
-
     @Test public void testNonMorto() { verificaFalso(ruolo.isTrattoPresente(NON_MORTO)); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }

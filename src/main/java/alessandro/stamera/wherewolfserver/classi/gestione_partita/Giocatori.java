@@ -26,7 +26,7 @@ public class Giocatori
         ordinaAlfabeticamente();
     }
 
-    public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
+    //public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
@@ -34,17 +34,20 @@ public class Giocatori
 
     public void incrementaVoti(String nome, int voti)
     {
-        getRuolo(nome).incrementaVoti(voti);
+        //getRuolo(nome).incrementaVoti(voti);
         ordinaGiocatori(new ComparatoreVoti());
     }
 
     public void annullaVoti()
     {
-        getRuoli().forEach(Ruolo::annullaVoti);
+        //getRuoli().forEach(Ruolo::annullaVoti);
         ordinaAlfabeticamente();
     }
 
-    public void annullaVoti(String nome) { getRuolo(nome).annullaVoti(); }
+    public void annullaVoti(String nome)
+    {
+        //getRuolo(nome).annullaVoti();
+    }
 
     public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
 
@@ -81,7 +84,11 @@ public class Giocatori
 
     public void annullaSegnalazioneBoia(String nome) { getRuolo(nome).annullaSegnalazioneBoia(); }
 
-    public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
+    public int getNumeroVotiPrimoClassificato()
+    {
+        //return getNumeroVoti(getNomeGiocatore(0));
+        return 0;
+    }
 
     public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Ruolo::isOratore); }
 

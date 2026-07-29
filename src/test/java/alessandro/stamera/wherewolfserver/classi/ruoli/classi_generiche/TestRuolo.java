@@ -33,21 +33,8 @@ public final class TestRuolo
 
     @Test public void testInizializzazione()
     {
-        verificaNessunVoto();
         verificaFalso(isAmato());
         verificaAssenzaProtezioni();
-    }
-
-    @Test public void testVoti()
-    {
-        ruolo.incrementaVoti(ESEMPIO_VOTI);
-        verificaVoti(ESEMPIO_VOTI);
-        ruolo.annullaVoti();
-        verificaNessunVoto();
-        verificaVero(maledizione());
-        verificaVoti(1);
-        verificaVero(isMaledetto());
-        verificaAuraNera();
     }
 
     @ParameterizedTest
@@ -181,7 +168,6 @@ public final class TestRuolo
     @Test public void testRipristino()
     {
         ruolo.ripristina();
-        verificaNessunVoto();
         verificaFalso(ruolo.isRomeo());
         verificaFalso(ruolo.isAmato());
         verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
@@ -259,12 +245,6 @@ public final class TestRuolo
     private void verificaProtetto() { verificaTrattoPresente(PROTETTO); }
 
     private boolean isAmato() { return ruolo.isAmato(); }
-
-    private void verificaNessunVoto() { assertThat(getNumeroVoti()).isZero(); }
-
-    private void verificaVoti(int voti) { assertThat(getNumeroVoti()).isEqualTo(voti); }
-
-    private int getNumeroVoti() { return ruolo.getNumeroVoti(); }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isTrattoPresente(tratto)); }
 

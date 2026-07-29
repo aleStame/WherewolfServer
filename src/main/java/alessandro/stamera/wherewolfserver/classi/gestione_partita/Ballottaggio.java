@@ -82,7 +82,7 @@ public final class Ballottaggio extends Giocatori
         for(int i = 0; i < getNumeroGiocatori(); i++)
         {
             String nome = getNomeGiocatore(i);
-            if(getNumeroVoti(nome) == numeroVoti) soluzioni.add(nome);
+            //if(getNumeroVoti(nome) == numeroVoti) soluzioni.add(nome);
         }
         return soluzioni;
     }

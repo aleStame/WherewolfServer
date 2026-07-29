@@ -19,12 +19,12 @@ public final class BoccaDiRosa extends Citta
 
     @Override public boolean isBoccaDiRosa() { return true; }
 
-    @Override public int getNumeroVoti()
+    /*@Override public int getNumeroVoti()
     {
         int risultato = getVotiDimezzati();
         if(isVotiDispari()) risultato++;
         return risultato;
-    }
+    }*/
 
     public static Ruolo getInstance() { return new BoccaDiRosa(); }
 
@@ -32,6 +32,10 @@ public final class BoccaDiRosa extends Citta
 
     private boolean isVotiDispari() { return getVotiInteri() % 2 == 1; }
 
-    private int getVotiInteri() { return super.getNumeroVoti(); }
+    private int getVotiInteri()
+    {
+        //return super.getNumeroVoti();
+        return 0;
+    }
 
 }

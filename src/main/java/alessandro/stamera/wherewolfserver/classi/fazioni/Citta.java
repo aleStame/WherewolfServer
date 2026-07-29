@@ -37,12 +37,12 @@ public class Citta extends Uomini
         return esito;
     }
 
-    @Override public void incrementaVoti(int numeroVoti)
+    /*@Override public void incrementaVoti(int numeroVoti)
     {
         int voti = numeroVoti;
         if(isSegnalatoAzzeccagarbugli()) voti = 0;
         super.incrementaVoti(voti);
-    }
+    }*/
 
     private EsitoPartita getEsitoPartitaSenzaOmbra(Partita partita)
     {

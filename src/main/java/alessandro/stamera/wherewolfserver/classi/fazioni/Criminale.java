@@ -25,11 +25,11 @@ public class Criminale extends Uomini
 
     @Override public void utilizzaPotere() { potere.utilizzaPotere(); }
 
-    @Override public int getNumeroVoti()
+    /*@Override public int getNumeroVoti()
     {
         if(isSegnalatoAzzeccagarbugli()) annullaVoti();
         return super.getNumeroVoti();
-    }
+    }*/
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {

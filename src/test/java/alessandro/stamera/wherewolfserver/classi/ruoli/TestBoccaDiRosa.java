@@ -31,12 +31,6 @@ public final class TestBoccaDiRosa
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testVoti()
-    {
-        ruolo.incrementaVoti(7);
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(4);
-    }
-
     @Test public void testAzzeccagarbugli() { verificaFalso(ruolo.isAzzeccagarbugli()); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }

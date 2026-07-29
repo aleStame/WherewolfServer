@@ -27,8 +27,6 @@ public class Ruolo
 
     private final int lune;
 
-    private int voti;
-
     private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore, stregato;
 
     private final boolean mistico;
@@ -51,7 +49,6 @@ public class Ruolo
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
-        annullaVoti();
         setAmato(false);
         this.mistico = mistico;
         tratti = new Tratti();
@@ -86,17 +83,6 @@ public class Ruolo
     public boolean isFazioneNegromante() { return false; }
 
     public Fazione getFazione() { return fazione; }
-
-    public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
-
-    public int getNumeroVoti()
-    {
-        int risultato = voti;
-        if(isMaledetto()) risultato++;
-        return risultato;
-    }
-
-    public void annullaVoti() { voti = 0; }
 
     public boolean isAmato() { return amato; }
 
@@ -376,7 +362,6 @@ public class Ruolo
 
     public void ripristina()
     {
-        annullaVoti();
         resettaRomeo();
         resettaAmato();
         annullaSegnalazioneAzzeccagarbugli();

@@ -674,7 +674,7 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori(); i++)
         {
             String nome = getNomeGiocatore(i);
-            if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
+            //if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
         }
         return nomi;
     }
