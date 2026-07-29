@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
@@ -10,7 +11,7 @@ public final class TestGiocatore
 
     private Giocatore giocatore;
 
-   @BeforeEach public void setUp() { giocatore = new Giocatore(); }
+   @BeforeEach public void setUp() { giocatore = new Giocatore(RuoloNullo.getInstance()); }
 
     private static final int ESEMPIO_VOTI = 3;
 

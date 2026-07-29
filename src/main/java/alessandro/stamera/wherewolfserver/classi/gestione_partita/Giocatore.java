@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratti;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
@@ -15,11 +16,14 @@ public final class Giocatore
 
     private boolean amato;
 
-    public Giocatore()
+    private Ruolo ruolo;
+
+    public Giocatore(Ruolo ruolo)
     {
         annullaVoti();
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
+        this.ruolo = ruolo;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -49,6 +53,18 @@ public final class Giocatore
     public void protezioneAngeloCustode() { setAmato(true); }
 
     public void annullaProtezioneAngeloCustode() { setAmato(false); }
+
+    public Ruolo getRuolo() { return ruolo; }
+
+    public boolean isOratore() { return false; }
+
+    public boolean isCitta() { return false; }
+
+    public boolean isContadinoMostro() { return false; }
+
+    public boolean isAngeloCustode() { return false; }
+
+    public boolean isNosferatu() { return false; }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 

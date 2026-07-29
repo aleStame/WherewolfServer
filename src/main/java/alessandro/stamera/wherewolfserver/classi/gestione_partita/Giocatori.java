@@ -16,13 +16,13 @@ import java.util.stream.Stream;
 public class Giocatori
 {
 
-    private final Map<String, Ruolo> giocatori;
+    private final Map<String, Giocatore> giocatori;
 
     public Giocatori() { giocatori = new LinkedHashMap<>(); }
 
     public void aggiungiGiocatore(String nome, Ruolo ruolo)
     {
-        giocatori.put(nome, ruolo);
+        giocatori.put(nome, new Giocatore(ruolo));
         ordinaAlfabeticamente();
     }
 
@@ -35,7 +35,7 @@ public class Giocatori
     public void incrementaVoti(String nome, int voti)
     {
         //getRuolo(nome).incrementaVoti(voti);
-        ordinaGiocatori(new ComparatoreVoti());
+        //ordinaGiocatori(new ComparatoreVoti());
     }
 
     public void annullaVoti()
@@ -49,7 +49,7 @@ public class Giocatori
         //getRuolo(nome).annullaVoti();
     }
 
-    public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
+    public Ruolo getRuolo(String nome) { return giocatori.get(nome).getRuolo(); }
 
     public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
@@ -91,9 +91,9 @@ public class Giocatori
         return 0;
     }
 
-    public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Ruolo::isOratore); }
+    public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Giocatore::isOratore); }
 
-    public int getNumeroRuoliCitta() { return (int)getStreamRuoli().filter(Ruolo::isCitta).count(); }
+    public int getNumeroRuoliCitta() { return (int)getStreamRuoli().filter(Giocatore::isCitta).count(); }
 
     public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
 
@@ -137,40 +137,40 @@ public class Giocatori
 
     private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
 
-    private Optional<Entry<String, Ruolo>> cercaNosferatu()
+    private Optional<Entry<String, Giocatore>> cercaNosferatu()
     {
-        return cercaRuolo(ruolo -> ruolo.getValue().isNosferatu());
+        return cercaGiocatore(ruolo -> ruolo.getValue().isNosferatu());
     }
 
-    private Optional<Entry<String, Ruolo>> cercaContadinoMostro()
+    private Optional<Entry<String, Giocatore>> cercaContadinoMostro()
     {
-        return cercaRuolo(ruolo -> ruolo.getValue().isContadinoMostro());
+        return cercaGiocatore(ruolo -> ruolo.getValue().isContadinoMostro());
     }
 
-    private Optional<Entry<String, Ruolo>> cercaAngeloCustode()
+    private Optional<Entry<String, Giocatore>> cercaAngeloCustode()
     {
-        return cercaRuolo(ruolo -> ruolo.getValue().isAngeloCustode());
+        return cercaGiocatore(ruolo -> ruolo.getValue().isAngeloCustode());
     }
 
-    private Optional<Entry<String, Ruolo>> cercaRuolo(Predicate<Entry<String, Ruolo>> predicato)
+    private Optional<Entry<String, Giocatore>> cercaGiocatore(Predicate<Entry<String, Giocatore>> predicato)
     {
         return getGiocatori().filter(predicato).findAny();
     }
 
-    private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
+    private void ordinaGiocatori(Comparator<Entry<String, Giocatore>> comparatore)
     {
-        Map<String, Ruolo> copia =
+        Map<String, Giocatore> copia =
             getGiocatori().sorted(comparatore).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         giocatori.clear();
         for(String nome : copia.keySet()) giocatori.put(nome, copia.get(nome));
     }
 
-    private Stream<Entry<String, Ruolo>> getGiocatori() { return giocatori.entrySet().stream(); }
+    private Stream<Entry<String, Giocatore>> getGiocatori() { return giocatori.entrySet().stream(); }
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
 
-    private Stream<Ruolo> getStreamRuoli() { return getRuoli().stream(); }
+    private Stream<Giocatore> getStreamRuoli() { return getRuoli().stream(); }
 
-    private Collection<Ruolo> getRuoli() { return giocatori.values(); }
+    private Collection<Giocatore> getRuoli() { return giocatori.values(); }
 
 }
