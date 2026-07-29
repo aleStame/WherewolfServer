@@ -13,10 +13,13 @@ public final class Giocatore
 
     private final Tratti tratti;
 
+    private boolean amato;
+
     public Giocatore()
     {
         annullaVoti();
         tratti = new Tratti();
+        annullaProtezioneAngeloCustode();
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -41,11 +44,11 @@ public final class Giocatore
 
     public boolean isMaledetto() { return tratti.isMaledetto(); }
 
-    public boolean isAmato() { return false; }
+    public boolean isAmato() { return amato; }
 
-    public void protezioneAngeloCustode() { }
+    public void protezioneAngeloCustode() { amato = true; }
 
-    public void annullaProtezioneAngeloCustode() { }
+    public void annullaProtezioneAngeloCustode() { amato = false; }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
