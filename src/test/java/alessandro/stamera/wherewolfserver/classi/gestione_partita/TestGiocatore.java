@@ -17,11 +17,11 @@ public final class TestGiocatore
     @Test public void testVoti()
     {
         giocatore.incrementaVoti(ESEMPIO_VOTI);
-        assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
+        verificaNumeroVoti(ESEMPIO_VOTI);
         giocatore.annullaVoti();
-        assertThat(giocatore.getNumeroVoti()).isEqualTo(0);
+        verificaNumeroVoti(0);
         giocatore.maledizione();
-        assertThat(giocatore.getNumeroVoti()).isEqualTo(1);
+        verificaNumeroVoti(1);
         assertThat(giocatore.isMaledetto()).isTrue();
         assertThat(giocatore.getAura()).isEqualTo(NERA);
     }
@@ -34,5 +34,7 @@ public final class TestGiocatore
         giocatore.annullaProtezioneAngeloCustode();
         assertThat(giocatore.isAmato()).isFalse();
     }
+
+    private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
 
 }

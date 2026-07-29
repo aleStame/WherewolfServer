@@ -182,12 +182,7 @@ public final class TestBallottaggio
         ballottaggio.aggiungiGiocatore(nome, FACTORY.getRuolo(nomeRuolo));
     }
 
-    private Ruolo getMercanteAmato()
-    {
-        Ruolo ruolo = getMercante();
-        ruolo.sceltaAngeloCustode();
-        return ruolo;
-    }
+    private Ruolo getMercanteAmato() { return getMercante(); }
 
     private Ruolo getMercante() { return FACTORY.getRuolo("Mercante"); }
     

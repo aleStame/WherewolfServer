@@ -1764,7 +1764,6 @@ public final class TestPartita
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        FACTORY.getRuolo("Capo branco").resettaAmato();
     }
 
     @ParameterizedTest @CsvSource

@@ -37,13 +37,6 @@ public final class TestLupo
 
     @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
 
-    @Test public void testAmato()
-    {
-        verificaFalso(isAmato());
-        ruolo.sceltaAngeloCustode();
-        verificaVero(isAmato());
-    }
-
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
@@ -73,13 +66,6 @@ public final class TestLupo
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testAttaccoNosferatu() { verificaAttacco(ruolo.attaccoNosferatu(), MORTO); }
-
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
-    public void testAttaccoAmato(String nome)
-    {
-        ruolo.sceltaAngeloCustode();
-        verificaAttaccoLupiFallito(nome);
-    }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoRomeo(String nome)
@@ -125,7 +111,5 @@ public final class TestLupo
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
 }

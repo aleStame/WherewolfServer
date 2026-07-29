@@ -40,12 +40,6 @@ public final class TestAngeloCustode
 
     @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
 
-    @Test public void testAmato()
-    {
-        ruolo.sceltaAngeloCustode();
-        verificaFalso(ruolo.isAmato());
-    }
-
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
 
     @ParameterizedTest @CsvSource

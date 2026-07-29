@@ -30,7 +30,7 @@ public class Lupo extends CreatureOmbra
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco esito = FALLITO;
-        if(ruolo == this && !isProtetto()) esito = RIUSCITO;
+        if(ruolo == this) esito = RIUSCITO;
         return esito;
     }
 
@@ -54,8 +54,6 @@ public class Lupo extends CreatureOmbra
     {
         return partita.getNumeroLupiBrancoVivi() + partita.getNumeroSenzaFazioneVivi();
     }
-
-    private boolean isProtetto() { return isRomeo() || isAmato(); }
 
     private EsitoAttacco getMorto() { return MORTO; }
 

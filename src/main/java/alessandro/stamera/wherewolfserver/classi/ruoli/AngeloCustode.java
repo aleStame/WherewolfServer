@@ -21,11 +21,7 @@ public final class AngeloCustode extends Amanti
         );
     }
 
-    @Override public boolean isAmato() { return false; }
-
     @Override public boolean isAngeloCustode() { return true; }
-
-    @Override public void sceltaAngeloCustode() { }
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {

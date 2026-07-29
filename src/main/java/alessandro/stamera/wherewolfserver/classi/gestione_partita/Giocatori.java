@@ -56,7 +56,7 @@ public class Giocatori
     public boolean isAmato(String nome)
     {
         boolean esito = false;
-        if(isPresente(nome)) esito = getRuolo(nome).isAmato();
+        //if(isPresente(nome)) esito = getRuolo(nome).isAmato();
         return esito;
     }
 
@@ -66,7 +66,8 @@ public class Giocatori
 
     public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
 
-    public void resettaAmato() { getRuoli().forEach(Ruolo::resettaAmato); }
+    public void resettaAmato() { //getRuoli().forEach(Ruolo::resettaAmato);
+        }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 

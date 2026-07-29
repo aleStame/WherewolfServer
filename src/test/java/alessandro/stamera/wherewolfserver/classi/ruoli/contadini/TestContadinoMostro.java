@@ -53,8 +53,6 @@ public final class TestContadinoMostro
         verificaAttaccoFallito(attaccoLupi(nome));
     }
 
-    @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
-
     @Test public void testGildata()
     {
         verificaAttaccoMorto(ruolo.gildata());

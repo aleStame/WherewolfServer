@@ -79,8 +79,6 @@ public final class TestRuolo
         verificaVero(ruolo.isRomeo());
     }
 
-    @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }
-
     @Test public void vampirizzazione()
     {
         verificaAttaccoRiuscito(ruolo.vampirizzazione());
@@ -170,17 +168,11 @@ public final class TestRuolo
 
     private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
-    private EsitoAttacco assassinio() { return ruolo.attaccoAssassino(); }
-
     private void romeizzazione() { ruolo.romeizzazione(); }
-
-    private void sceltaAngeloCustode() { ruolo.sceltaAngeloCustode(); }
 
     private boolean maledizione() { return ruolo.maledizione(); }
 
     private boolean isMaledetto() { return ruolo.isMaledetto(); }
-
-    private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 

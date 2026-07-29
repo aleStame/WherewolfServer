@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">34</div>
+<div class="counter">29</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.745s</div>
+<div class="counter">0.044s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">97%</div>
+<div class="percent">96%</div>
 <p>successful</p>
 </div>
 </td>
@@ -70,15 +70,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="testAmato()"></a>
-<h3 class="failures">testAmato()</h3>
+<a name="testEsitoPartita()"></a>
+<h3 class="failures">testEsitoPartita()</h3>
 <span class="code">
 <pre>org.opentest4j.AssertionFailedError: 
-Expecting value to be true but was false
+expected: VITTORIA
+ but was: NON_FINITO
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.verificaVero(TestLupo.java:125)
-	at app//alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.testAmato(TestLupo.java:44)
+	at app//alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.testEsitoPartita(TestLupo.java:95)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -177,73 +177,43 @@ Expecting value to be true but was false
 <tr>
 <td class="success">testAmanti()</td>
 <td class="success">testAmanti()</td>
-<td class="success">0.008s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">testAmato()</td>
-<td class="failures">testAmato()</td>
-<td class="failures">0.240s</td>
-<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">testAngeloCustode()</td>
 <td class="success">testAngeloCustode()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[1] nome=Capo branco</td>
-<td class="success">testAttaccoAmato(String)[1]</td>
-<td class="success">0.074s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[2] nome=Lupo del branco</td>
-<td class="success">testAttaccoAmato(String)[2]</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[3] nome=Lupo reietto</td>
-<td class="success">testAttaccoAmato(String)[3]</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">[4] nome=Contadino discendente dei lupi</td>
-<td class="success">testAttaccoAmato(String)[4]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testAttaccoNosferatu()</td>
 <td class="success">testAttaccoNosferatu()</td>
-<td class="success">0.005s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] nome=Capo branco</td>
 <td class="success">testAttaccoRomeo(String)[1]</td>
-<td class="success">0.009s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[2] nome=Lupo del branco</td>
 <td class="success">testAttaccoRomeo(String)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[3] nome=Lupo reietto</td>
 <td class="success">testAttaccoRomeo(String)[3]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] nome=Contadino discendente dei lupi</td>
 <td class="success">testAttaccoRomeo(String)[4]</td>
-<td class="success">0.007s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -255,19 +225,19 @@ Expecting value to be true but was false
 <tr>
 <td class="success">testCategoria()</td>
 <td class="success">testCategoria()</td>
-<td class="success">0.193s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testCitta()</td>
 <td class="success">testCitta()</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testControlloMedium()</td>
 <td class="success">testControlloMedium()</td>
-<td class="success">0.006s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -277,10 +247,10 @@ Expecting value to be true but was false
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testEsitoPartita()</td>
-<td class="success">testEsitoPartita()</td>
-<td class="success">0.091s</td>
-<td class="success">passed</td>
+<td class="failures">testEsitoPartita()</td>
+<td class="failures">testEsitoPartita()</td>
+<td class="failures">0.007s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">testFazione()</td>
@@ -291,91 +261,91 @@ Expecting value to be true but was false
 <tr>
 <td class="success">testGhoul()</td>
 <td class="success">testGhoul()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGildata()</td>
+<td class="success">testGildata()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGiullare()</td>
+<td class="success">testGiullare()</td>
 <td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testGildata()</td>
-<td class="success">testGildata()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGiullare()</td>
-<td class="success">testGiullare()</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">testGoblin()</td>
 <td class="success">testGoblin()</td>
-<td class="success">0.006s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInquisizione()</td>
 <td class="success">testInquisizione()</td>
-<td class="success">0.008s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testLupo()</td>
 <td class="success">testLupo()</td>
-<td class="success">0.006s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testMegera()</td>
 <td class="success">testMegera()</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testMistico()</td>
 <td class="success">testMistico()</td>
-<td class="success">0.005s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testNosferatu()</td>
 <td class="success">testNosferatu()</td>
-<td class="success">0.008s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPazzo()</td>
 <td class="success">testPazzo()</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPiccoloPopolo()</td>
 <td class="success">testPiccoloPopolo()</td>
-<td class="success">0.006s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPosseduto()</td>
 <td class="success">testPosseduto()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSegnalazioneBoia()</td>
 <td class="success">testSegnalazioneBoia()</td>
-<td class="success">0.007s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testVampiro()</td>
 <td class="success">testVampiro()</td>
-<td class="success">0.008s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testVillaggio()</td>
 <td class="success">testVillaggio()</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -388,7 +358,7 @@ Expecting value to be true but was false
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 29 lug 2026, 11:57:21</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 29 lug 2026, 13:27:53</p>
 </div>
 </div>
 </body>

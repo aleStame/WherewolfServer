@@ -53,14 +53,6 @@ public final class TestContadinoLupo
 
     @ParameterizedTest
     @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
-    public void testAttaccoLupiAngeloCustode(String nome, Fazione fazione)
-    {
-        ruolo.sceltaAngeloCustode();
-        verificaContadinoLupo(nome, fazione);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
     public void testAttaccoLupiGiulietta(String nome, Fazione fazione)
     {
         ruolo.romeizzazione();

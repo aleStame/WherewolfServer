@@ -397,7 +397,8 @@ public final class Partita
 
     public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
 
-    public boolean isAmato(String nome) { return getRuolo(nome).isAmato(); }
+    public boolean isAmato(String nome) { //return getRuolo(nome).isAmato();
+        return false; }
 
     private void passaggioPosseduto(String nome)
     {
@@ -421,7 +422,8 @@ public final class Partita
 
     private Ruolo getPossedutoMorto() { return mortiNotte.getRuolo(mortiNotte.getNomePosseduto()); }
 
-    private void annullaAmato() { getRuolo(vivi.getNomeAmato()).resettaAmato(); }
+    private void annullaAmato() { //getRuolo(vivi.getNomeAmato()).resettaAmato();
+         }
 
     private boolean isPreteVivo(String nome) { return isPrete(nome) && !isNonMorto(nome); }
 

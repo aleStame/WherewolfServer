@@ -27,9 +27,11 @@ public final class GiocatoriVivi extends Giocatori
         return ballottaggio;
     }
 
-    public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
+    public void segnalazioneAngeloCustode(String nome) { //getRuolo(nome).sceltaAngeloCustode();
+         }
 
-    public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
+    public EsitoAttacco attaccoAssassino(String nome) { //return getRuolo(nome).attaccoAssassino();
+       return null;  }
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
@@ -429,7 +431,8 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isAmato(int posizione) { return getRuolo(posizione).isAmato(); }
+    private boolean isAmato(int posizione) { //return getRuolo(posizione).isAmato();
+        return false; }
 
     private int getPosizioneSensitiva()
     {

@@ -49,7 +49,6 @@ public class Ruolo
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
-        setAmato(false);
         this.mistico = mistico;
         tratti = new Tratti();
         setRomeo(false);
@@ -83,15 +82,6 @@ public class Ruolo
     public boolean isFazioneNegromante() { return false; }
 
     public Fazione getFazione() { return fazione; }
-
-    public boolean isAmato() { //return amato;
-        return false; }
-
-    public void sceltaAngeloCustode()
-    {
-        setAmato(true);
-        aggiungiProtezioneCreatureOmbra();
-    }
 
     public void riconosciNegromante() { }
 
@@ -271,20 +261,6 @@ public class Ruolo
 
     public boolean isTemplare() { return false; }
 
-    public void resettaAmato()
-    {
-        setAmato(false);
-        ripristinaFazioneOriginale();
-        perdiProtezioni();
-    }
-
-    public EsitoAttacco attaccoAssassino()
-    {
-        EsitoAttacco esito = RIUSCITO;
-        if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
-        return esito;
-    }
-
     public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito =  NON_FINITO;
@@ -364,7 +340,6 @@ public class Ruolo
     public void ripristina()
     {
         resettaRomeo();
-        resettaAmato();
         annullaSegnalazioneAzzeccagarbugli();
         eliminaTratti(MALEDETTO, NON_MORTO);
         ripristinaFazioneOriginale();
@@ -423,19 +398,12 @@ public class Ruolo
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
 
-    private void setAmato(boolean amato) {  }
-
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
     private EsitoAttacco attaccoRuoloProtetto()
     {
-        EsitoAttacco esito = FALLITO;
-        if(isAmato())
-        {
-            perdiProtezioni();
-            esito = ANGELO_CUSTODE_MORTO;
-        }
-        return esito;
+        perdiProtezioni();
+        return ANGELO_CUSTODE_MORTO;
     }
 
 }
