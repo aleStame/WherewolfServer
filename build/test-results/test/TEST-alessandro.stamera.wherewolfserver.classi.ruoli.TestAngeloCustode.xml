@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" tests="59" skipped="0" failures="52" errors="0" timestamp="2026-07-29T15:04:11" hostname="ALESSANDRO" time="29.169">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" tests="59" skipped="0" failures="52" errors="0" timestamp="2026-07-29T15:12:14" hostname="ALESSANDRO" time="23.474">
   <properties/>
-  <testcase name="[1] nomeRuolo=Altra guardia" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[1] nomeRuolo=Altra guardia" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -269,7 +269,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] nomeRuolo=Azzeccagarbugli" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[3] nomeRuolo=Azzeccagarbugli" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -805,7 +805,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[7] nomeRuolo=Boia" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[7] nomeRuolo=Boia" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -939,7 +939,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[8] nomeRuolo=Borgomastro" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.025">
+  <testcase name="[8] nomeRuolo=Borgomastro" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -1073,7 +1073,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[9] nomeRuolo=Bracconiere" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[9] nomeRuolo=Bracconiere" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -1207,7 +1207,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[10] nomeRuolo=Cacciatore" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
+  <testcase name="[10] nomeRuolo=Cacciatore" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -1877,7 +1877,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[15] nomeRuolo=Contadino eroe" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
+  <testcase name="[15] nomeRuolo=Contadino eroe" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -2413,7 +2413,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[19] nomeRuolo=Eremita" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[19] nomeRuolo=Eremita" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -2949,7 +2949,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[23] nomeRuolo=Giullare" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003">
+  <testcase name="[23] nomeRuolo=Giullare" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -3083,7 +3083,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[24] nomeRuolo=Goblin" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[24] nomeRuolo=Goblin" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -3351,7 +3351,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[26] nomeRuolo=Guardia corrotta" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
+  <testcase name="[26] nomeRuolo=Guardia corrotta" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.0">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -3485,7 +3485,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[27] nomeRuolo=Guaritore" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
+  <testcase name="[27] nomeRuolo=Guaritore" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.0">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -3887,7 +3887,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[30] nomeRuolo=Leprecauno" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[30] nomeRuolo=Leprecauno" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -4021,7 +4021,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[31] nomeRuolo=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
+  <testcase name="[31] nomeRuolo=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.0">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -4289,7 +4289,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[33] nomeRuolo=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[33] nomeRuolo=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -5227,7 +5227,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[40] nomeRuolo=Nonna" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[40] nomeRuolo=Nonna" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -6567,7 +6567,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[50] nomeRuolo=Sensitiva" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.002">
+  <testcase name="[50] nomeRuolo=Sensitiva" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -6701,7 +6701,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[51] nomeRuolo=Templare" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.001">
+  <testcase name="[51] nomeRuolo=Templare" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -6969,13 +6969,13 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@16f0ec18" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.048"/>
-  <testcase name="[2] partita=Mock for Partita, hashCode: 1256918571" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.145"/>
-  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.012"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.003"/>
-  <testcase name="testRomeizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.005"/>
-  <testcase name="testGiulietta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.004"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.006"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@12417468" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.097"/>
+  <testcase name="[2] partita=Mock for Partita, hashCode: 1651318806" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.049"/>
+  <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.008"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.008"/>
+  <testcase name="testRomeizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.037"/>
+  <testcase name="testGiulietta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.015"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
