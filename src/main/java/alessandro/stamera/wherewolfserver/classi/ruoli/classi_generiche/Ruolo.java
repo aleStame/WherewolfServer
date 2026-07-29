@@ -27,7 +27,7 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore, stregato;
+    private boolean romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore, stregato;
 
     private final boolean mistico;
 
@@ -84,7 +84,8 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public boolean isAmato() { return amato; }
+    public boolean isAmato() { //return amato;
+        return false; }
 
     public void sceltaAngeloCustode()
     {
@@ -422,7 +423,7 @@ public class Ruolo
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
 
-    private void setAmato(boolean amato) { this.amato = amato; }
+    private void setAmato(boolean amato) {  }
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
 

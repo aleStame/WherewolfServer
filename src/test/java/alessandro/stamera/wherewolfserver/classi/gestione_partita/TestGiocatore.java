@@ -22,4 +22,14 @@ public final class TestGiocatore
         assertThat(giocatore.getAura()).isEqualTo(NERA);
     }
 
+    @Test public void testAmato()
+    {
+        Giocatore giocatore = new Giocatore();
+        assertThat(giocatore.isAmato()).isFalse();
+        giocatore.protezioneAngeloCustode();
+        assertThat(giocatore.isAmato()).isTrue();
+        giocatore.annullaProtezioneAngeloCustode();
+        assertThat(giocatore.isAmato()).isFalse();
+    }
+
 }

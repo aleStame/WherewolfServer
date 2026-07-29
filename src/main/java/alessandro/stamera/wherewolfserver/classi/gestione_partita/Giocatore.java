@@ -41,6 +41,12 @@ public final class Giocatore
 
     public boolean isMaledetto() { return tratti.isMaledetto(); }
 
+    public boolean isAmato() { return false; }
+
+    public void protezioneAngeloCustode() { }
+
+    public void annullaProtezioneAngeloCustode() { }
+
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
 }

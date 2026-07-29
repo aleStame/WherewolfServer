@@ -25,32 +25,16 @@ import static org.mockito.Mockito.when;
 public final class TestRuolo
 {
 
-    private static final int ESEMPIO_VOTI = 3;
-
     private Ruolo ruolo;
 
     @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, -1, false); }
 
     @Test public void testInizializzazione()
     {
-        verificaFalso(isAmato());
         verificaAssenzaProtezioni();
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" })
-    public void testAttaccoLupiAmato(String nome)
-    {
-        sceltaAngeloCustode();
-        verificaVero(isAmato());
-        verificaProtetto();
-        verificaVero(isProtezioneLupiPresente());
-        verificaAttacco(attaccoLupi(nome), ANGELO_CUSTODE_MORTO);
-        verificaAssenzaProtezioni();
-        ruolo.ripristina();
-    }
-
-    @Test public void testGildata()
+     @Test public void testGildata()
     {
         Fazione fazione = getFazione();
         assertThat(ruolo.gildata()).isEqualTo(FALLITO);
@@ -77,13 +61,6 @@ public final class TestRuolo
         verificaFazione(NOSFERATU);
     }
 
-    @Test public void testAttaccoNosferatuAmato()
-    {
-        sceltaAngeloCustode();
-        verificaAttaccoFallito(ruolo.attaccoNosferatu());
-        verificaAssenzaProtezioni();
-    }
-
     @Test public void testAttaccoNegromanteRomeo()
     {
         romeizzazione();
@@ -103,20 +80,6 @@ public final class TestRuolo
     }
 
     @Test public void attaccoAssassino() { verificaAttaccoRiuscito(assassinio()); }
-
-    @Test public void testAttaccoAssassinoAmato() { verificaAttaccoAmato(); }
-
-    @Test public void testAttaccoAssassinoAmatoStregato()
-    {
-        ruolo.protezioneStrega();
-        verificaAttaccoAmato();
-    }
-
-    @Test public void testAttaccoAssassinoAmatoRomeo()
-    {
-        romeizzazione();
-        verificaAttaccoAmato();
-    }
 
     @Test public void vampirizzazione()
     {
@@ -169,7 +132,6 @@ public final class TestRuolo
     {
         ruolo.ripristina();
         verificaFalso(ruolo.isRomeo());
-        verificaFalso(ruolo.isAmato());
         verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
         verificaFalso(ruolo.isMaledetto());
         verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
@@ -182,13 +144,6 @@ public final class TestRuolo
     {
         verificaFalso(ruolo.isContadino());
         assertThatIllegalStateException().isThrownBy(() -> ruolo.getTipoContadino()).withMessage("ERRORE!!! Questo ruolo non è un contadino.");
-    }
-
-    private void verificaAttaccoAmato()
-    {
-        sceltaAngeloCustode();
-        verificaAttacco(assassinio(), ANGELO_CUSTODE_MORTO);
-        ruolo.ripristina();
     }
 
     private static Stream<Arguments> getEsempiPartita()
@@ -243,8 +198,6 @@ public final class TestRuolo
     }
 
     private void verificaProtetto() { verificaTrattoPresente(PROTETTO); }
-
-    private boolean isAmato() { return ruolo.isAmato(); }
 
     private void verificaTrattoPresente(Tratto tratto) { verificaVero(isTrattoPresente(tratto)); }
 
