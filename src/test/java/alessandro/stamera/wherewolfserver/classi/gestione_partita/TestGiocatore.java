@@ -28,14 +28,16 @@ public final class TestGiocatore
 
     @Test public void testAmato()
     {
-        assertThat(isAmato()).isFalse();
+        verificaNonAmato();
         giocatore.protezioneAngeloCustode();
         assertThat(isAmato()).isTrue();
         giocatore.annullaProtezioneAngeloCustode();
-        assertThat(isAmato()).isFalse();
+        verificaNonAmato();
     }
 
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
+
+    private void verificaNonAmato() { assertThat(isAmato()).isFalse(); }
 
     private boolean isAmato() { return giocatore.isAmato(); }
 
