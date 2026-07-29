@@ -65,6 +65,12 @@ public final class TestGiocatore
         verificaVero(giocatore.isContadinoMostro());
     }
 
+    @Test public void testNosferatu()
+    {
+        cambiaRuolo("Contadino mostro");
+        verificaVero(giocatore.isNosferatu());
+    }
+
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
 
     private void verificaNonAmato() { assertThat(isAmato()).isFalse(); }
