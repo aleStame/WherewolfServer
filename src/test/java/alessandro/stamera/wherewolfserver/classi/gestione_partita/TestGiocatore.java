@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNul
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestGiocatore
@@ -34,6 +35,12 @@ public final class TestGiocatore
         assertThat(isAmato()).isTrue();
         giocatore.annullaProtezioneAngeloCustode();
         verificaNonAmato();
+    }
+
+    @Test public void testOratore()
+    {
+        giocatore.cambiaRuolo(FACTORY.getRuolo("Oratore"));
+        assertThat(giocatore.isOratore()).isTrue();
     }
 
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }

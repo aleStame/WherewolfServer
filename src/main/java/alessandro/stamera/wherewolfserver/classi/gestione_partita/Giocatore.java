@@ -66,6 +66,8 @@ public final class Giocatore
 
     public boolean isNosferatu() { return false; }
 
+    public void cambiaRuolo(Ruolo ruolo) { }
+
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
