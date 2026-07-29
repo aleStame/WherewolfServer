@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" tests="19" skipped="0" failures="9" errors="0" timestamp="2026-07-29T15:32:13" hostname="ALESSANDRO" time="1.106">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" tests="19" skipped="0" failures="9" errors="0" timestamp="2026-07-29T15:51:20" hostname="ALESSANDRO" time="0.419">
   <properties/>
-  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005">
+  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.08">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -135,7 +135,7 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002">
+  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.016">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -269,7 +269,7 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.015">
+  <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.017">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -403,7 +403,7 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.004">
+  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupo solitario&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupo solitario
  but was: Amanti
@@ -537,17 +537,17 @@ expected: Lupo solitario
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="testRipristino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@562919fe, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@794f11cd, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@715f45c6, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.415">
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.003"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.01"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
+  <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.003"/>
+  <testcase name="testRipristino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.004"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@794f11cd, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@715f45c6, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.004"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5d5c41e5, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.063">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: NON_FINITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: NON_FINITO
@@ -693,7 +693,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.006">
+  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.019">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -827,7 +827,7 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002">
+  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -961,7 +961,7 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002">
+  <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.008">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -1095,7 +1095,7 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.092">
+  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.041">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupo solitario&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupo solitario
  but was: Amanti

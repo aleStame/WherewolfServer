@@ -60,7 +60,7 @@ public final class Giocatore
 
     public boolean isCitta() { return ruolo.isCitta(); }
 
-    public boolean isContadinoMostro() { return false; }
+    public boolean isContadinoMostro() { return ruolo.isContadinoMostro(); }
 
     public boolean isAngeloCustode() { return ruolo.isAngeloCustode(); }
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" tests="14" skipped="0" failures="1" errors="0" timestamp="2026-07-29T15:32:15" hostname="ALESSANDRO" time="0.106">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" tests="14" skipped="0" failures="1" errors="0" timestamp="2026-07-29T15:51:21" hostname="ALESSANDRO" time="0.092">
   <properties/>
   <testcase name="testLupoBranco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <testcase name="[1] nomeLupo=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
-  <testcase name="[2] nomeLupo=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
+  <testcase name="[2] nomeLupo=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.002"/>
   <testcase name="[3] nomeLupo=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.002"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.005">
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Lupi del branco&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Lupi del branco
  but was: Amanti
@@ -95,13 +95,13 @@ expected: Lupi del branco
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.01"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.012"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <testcase name="testLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <testcase name="testGiovaneLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <testcase name="testCapoBranco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
-  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.007"/>
+  <testcase name="[1] tratto=CREATURA_OMBRA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.003"/>
   <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
