@@ -46,10 +46,12 @@ public final class Giocatore
 
     public boolean isAmato() { return amato; }
 
-    public void protezioneAngeloCustode() { amato = true; }
+    public void protezioneAngeloCustode() { setAmato(true); }
 
-    public void annullaProtezioneAngeloCustode() { amato = false; }
+    public void annullaProtezioneAngeloCustode() { setAmato(false); }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
+
+    private void setAmato(boolean amato) { this.amato = amato; }
 
 }
