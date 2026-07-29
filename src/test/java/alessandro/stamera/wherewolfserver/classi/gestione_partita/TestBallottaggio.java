@@ -71,11 +71,12 @@ public final class TestBallottaggio
 
     @Test public void testPerdenteBallottaggio()
     {
-        String[][] giocatori = new String[][] { { "Davide", "Prete" }, { "Margherita", "Guardia" } };
+        String soluzione = "Davide";
+        String[][] giocatori = new String[][] { { soluzione, "Prete" }, { "Margherita", "Guardia" } };
         aggiungiGiocatori(giocatori);
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
-        verificaNomeEliminato(giocatori[1][0]);
+        verificaNomeEliminato(soluzione);
     }
 
     @Test public void testPareggioBallottaggio()

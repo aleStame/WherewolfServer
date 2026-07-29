@@ -26,7 +26,7 @@ public class Giocatori
         ordinaAlfabeticamente();
     }
 
-    //public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
+    public int getNumeroVoti(String nome) { return giocatori.get(nome).getNumeroVoti(); }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
@@ -34,8 +34,8 @@ public class Giocatori
 
     public void incrementaVoti(String nome, int voti)
     {
-        //getRuolo(nome).incrementaVoti(voti);
-        //ordinaGiocatori(new ComparatoreVoti());
+        giocatori.get(nome).incrementaVoti(voti);
+        ordinaGiocatori(new ComparatoreVoti());
     }
 
     public void annullaVoti()
