@@ -43,6 +43,12 @@ public final class TestGiocatore
         verificaVero(giocatore.isOratore());
     }
 
+    @Test public void testAngeloCustode()
+    {
+        giocatore.cambiaRuolo(FACTORY.getRuolo("Angelo custode"));
+        verificaVero(giocatore.isAngeloCustode());
+    }
+
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
 
     private void verificaNonAmato() { assertThat(isAmato()).isFalse(); }
