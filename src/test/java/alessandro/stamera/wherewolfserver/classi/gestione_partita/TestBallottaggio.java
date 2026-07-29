@@ -71,8 +71,8 @@ public final class TestBallottaggio
 
     @Test public void testPerdenteBallottaggio()
     {
-        String soluzione = "Davide";
-        String[][] giocatori = new String[][] { { soluzione, "Prete" }, { "Margherita", "Guardia" } };
+        String soluzione = "Margherita";
+        String[][] giocatori = new String[][] { { "Davide", "Prete" }, { soluzione, "Guardia" } };
         aggiungiGiocatori(giocatori);
         int[] numeroVoti = new int[] { 1, 2 };
         for(int i = 0; i < numeroVoti.length; i++) incrementaVoti(giocatori[i][0], numeroVoti[i]);
