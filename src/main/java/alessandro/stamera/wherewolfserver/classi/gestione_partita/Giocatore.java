@@ -64,7 +64,7 @@ public final class Giocatore
 
     public boolean isAngeloCustode() { return ruolo.isAngeloCustode(); }
 
-    public boolean isNosferatu() { return false; }
+    public boolean isNosferatu() { return ruolo.isNosferatu(); }
 
     public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
 

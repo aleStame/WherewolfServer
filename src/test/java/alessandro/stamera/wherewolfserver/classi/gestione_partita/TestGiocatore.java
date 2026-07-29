@@ -67,7 +67,7 @@ public final class TestGiocatore
 
     @Test public void testNosferatu()
     {
-        cambiaRuolo("Contadino mostro");
+        cambiaRuolo("Nosferatu");
         verificaVero(giocatore.isNosferatu());
     }
 
