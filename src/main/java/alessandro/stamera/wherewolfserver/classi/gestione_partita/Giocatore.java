@@ -73,11 +73,13 @@ public final class Giocatore
     public EsitoAttacco progenizzazioneNosferatu()
     {
         EsitoAttacco esito = RIUSCITO;
-        if(ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro()) esito = MORTO;
+        if(isNosferatuMorto()) esito = MORTO;
         else if(ruolo.isPosseduto()) esito = TROVATO_POSSEDUTO;
         else if(ruolo.isProtezioneNosferatuPresente()) esito = FALLITO;
         return esito;
     }
+
+    private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
