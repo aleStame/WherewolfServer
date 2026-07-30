@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" tests="65" skipped="0" failures="10" errors="0" timestamp="2026-07-30T16:03:47" hostname="ALESSANDRO" time="0.251">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" tests="65" skipped="0" failures="10" errors="0" timestamp="2026-07-30T23:41:21" hostname="ALESSANDRO" time="0.255">
   <properties/>
-  <testcase name="[1] nomeRuolo=Altra guardia, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002"/>
-  <testcase name="[2] nomeRuolo=Angelo custode, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[3] nomeRuolo=Assassino, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[4] nomeRuolo=Azzeccagarbugli, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.06">
+  <testcase name="[1] nomeRuolo=Altra guardia, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[2] nomeRuolo=Angelo custode, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[3] nomeRuolo=Assassino, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[4] nomeRuolo=Azzeccagarbugli, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -138,7 +138,7 @@ expected: RIUSCITO
 </failure>
   </testcase>
   <testcase name="[5] nomeRuolo=Bardo, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[6] nomeRuolo=Becchino, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.006">
+  <testcase name="[6] nomeRuolo=Becchino, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -407,7 +407,7 @@ expected: RIUSCITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[11] nomeRuolo=Bracconiere, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.016">
+  <testcase name="[11] nomeRuolo=Bracconiere, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -540,11 +540,11 @@ expected: RIUSCITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[12] nomeRuolo=Cacciatore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002"/>
-  <testcase name="[13] nomeRuolo=Cacciatore di vampiri, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[14] nomeRuolo=Capo branco, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[15] nomeRuolo=Capo gilda, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[16] nomeRuolo=Cappuccetto rosso, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[12] nomeRuolo=Cacciatore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[13] nomeRuolo=Cacciatore di vampiri, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002"/>
+  <testcase name="[14] nomeRuolo=Capo branco, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[15] nomeRuolo=Capo gilda, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.005"/>
+  <testcase name="[16] nomeRuolo=Cappuccetto rosso, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[17] nomeRuolo=Contadino eroe, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
@@ -679,8 +679,8 @@ expected: RIUSCITO
 </failure>
   </testcase>
   <testcase name="[18] nomeRuolo=Contadino discendente dei lupi, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[19] nomeRuolo=Contadino mostro, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[20] nomeRuolo=Contadino normale, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.005">
+  <testcase name="[19] nomeRuolo=Contadino mostro, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002"/>
+  <testcase name="[20] nomeRuolo=Contadino normale, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -813,25 +813,25 @@ expected: RIUSCITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[21] nomeRuolo=Eremita, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002"/>
-  <testcase name="[22] nomeRuolo=Ghoul, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.003"/>
-  <testcase name="[23] nomeRuolo=Giovane lupo, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002"/>
-  <testcase name="[24] nomeRuolo=Giulietta, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[25] nomeRuolo=Giullare, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.005"/>
+  <testcase name="[21] nomeRuolo=Eremita, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[22] nomeRuolo=Ghoul, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[23] nomeRuolo=Giovane lupo, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[24] nomeRuolo=Giulietta, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[25] nomeRuolo=Giullare, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="[26] nomeRuolo=Goblin, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="[27] nomeRuolo=Guardia, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[28] nomeRuolo=Guardia corrotta, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.017"/>
-  <testcase name="[29] nomeRuolo=Guaritore, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[30] nomeRuolo=Inquisitore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[28] nomeRuolo=Guardia corrotta, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[29] nomeRuolo=Guaritore, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[30] nomeRuolo=Inquisitore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[31] nomeRuolo=Ladra, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="[32] nomeRuolo=Leprecauno, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[33] nomeRuolo=Lupo del branco, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[34] nomeRuolo=Lupo reietto, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[33] nomeRuolo=Lupo del branco, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[34] nomeRuolo=Lupo reietto, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[35] nomeRuolo=Lupo solitario, esito=MORTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[36] nomeRuolo=Mago, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[36] nomeRuolo=Mago, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[37] nomeRuolo=Medium, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[38] nomeRuolo=Megera, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[39] nomeRuolo=Mercante, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001">
+  <testcase name="[39] nomeRuolo=Mercante, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -964,7 +964,7 @@ expected: RIUSCITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[40] nomeRuolo=Monaco, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002">
+  <testcase name="[40] nomeRuolo=Monaco, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -1097,9 +1097,9 @@ expected: RIUSCITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[41] nomeRuolo=Negromante, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[41] nomeRuolo=Negromante, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="[42] nomeRuolo=Nonna, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[43] nomeRuolo=Oratore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.003">
+  <testcase name="[43] nomeRuolo=Oratore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: RIUSCITO&#13;&#10; but was: FALLITO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: RIUSCITO
  but was: FALLITO
@@ -1365,27 +1365,27 @@ expected: RIUSCITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[45] nomeRuolo=Pazzo, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[46] nomeRuolo=Peccatore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[45] nomeRuolo=Pazzo, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[46] nomeRuolo=Peccatore, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[47] nomeRuolo=Posseduto, esito=TROVATO_POSSEDUTO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[48] nomeRuolo=Prete, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[49] nomeRuolo=Sidhe, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[50] nomeRuolo=Spia, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[48] nomeRuolo=Prete, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[49] nomeRuolo=Sidhe, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[50] nomeRuolo=Spia, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="[51] nomeRuolo=Strega, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[52] nomeRuolo=Sensitiva, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="[53] nomeRuolo=Templare, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[54] nomeRuolo=Vampiro, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="testOratore()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.006"/>
+  <testcase name="[52] nomeRuolo=Sensitiva, esito=FALLITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="[53] nomeRuolo=Templare, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[54] nomeRuolo=Vampiro, esito=RIUSCITO" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="testOratore()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="testAngeloCustode()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[1] nomeRuolo=Azzeccagarbugli" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
-  <testcase name="[2] nomeRuolo=Bocca di rosa" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="testAmato()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[1] nomeRuolo=Azzeccagarbugli" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
+  <testcase name="[2] nomeRuolo=Bocca di rosa" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="[3] nomeRuolo=Borgomastro" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[4] nomeRuolo=Mercante" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="[5] nomeRuolo=Oratore" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
   <testcase name="testVoti()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.0"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" tests="32" skipped="0" failures="5" errors="0" timestamp="2026-07-30T16:03:38" hostname="ALESSANDRO" time="1.113">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" tests="32" skipped="0" failures="5" errors="0" timestamp="2026-07-30T23:40:49" hostname="ALESSANDRO" time="0.618">
   <properties/>
-  <testcase name="testEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.016"/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.103">
+  <testcase name="testEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.002"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.068">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: FALLITO&#13;&#10; but was: ANGELO_CUSTODE_MORTO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: FALLITO
  but was: ANGELO_CUSTODE_MORTO
@@ -136,7 +136,7 @@ expected: FALLITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.049">
+  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.008">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: FALLITO&#13;&#10; but was: ANGELO_CUSTODE_MORTO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: FALLITO
  but was: ANGELO_CUSTODE_MORTO
@@ -270,7 +270,7 @@ expected: FALLITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.019">
+  <testcase name="[3] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: FALLITO&#13;&#10; but was: ANGELO_CUSTODE_MORTO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: FALLITO
  but was: ANGELO_CUSTODE_MORTO
@@ -404,7 +404,7 @@ expected: FALLITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[4] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.017">
+  <testcase name="[4] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: FALLITO&#13;&#10; but was: ANGELO_CUSTODE_MORTO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: FALLITO
  but was: ANGELO_CUSTODE_MORTO
@@ -538,7 +538,7 @@ expected: FALLITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.011">
+  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.025">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: FALLITO&#13;&#10; but was: ANGELO_CUSTODE_MORTO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: FALLITO
  but was: ANGELO_CUSTODE_MORTO
@@ -672,32 +672,32 @@ expected: FALLITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.003"/>
-  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.026"/>
-  <testcase name="testNonna()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.004"/>
-  <testcase name="testPrete()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.02"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.005"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.002"/>
-  <testcase name="testMago()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.009"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.018"/>
-  <testcase name="testOste()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.026"/>
-  <testcase name="testVoti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.042"/>
-  <testcase name="testCacciatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.019"/>
-  <testcase name="testVampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.039"/>
-  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.003"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.066"/>
+  <testcase name="testBardo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testNonna()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testPrete()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.025"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.011"/>
+  <testcase name="testMago()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.004"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.006"/>
+  <testcase name="testOste()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testVoti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.004"/>
+  <testcase name="testCacciatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testVampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.013"/>
+  <testcase name="testGuardia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.002"/>
   <testcase name="testCacciatoreDiVampiri()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.002"/>
-  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.013"/>
-  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.004"/>
+  <testcase name="testCappuccettoRosso()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testGuaritore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.028"/>
   <testcase name="testNegromanteEremita()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.006"/>
-  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.012"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.009"/>
+  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.006"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.008"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
   <testcase name="testBracconiere()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.002"/>
   <testcase name="testSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
-  <testcase name="testMonaco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.004"/>
-  <testcase name="testProtezioni()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.095"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.003"/>
-  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.01"/>
+  <testcase name="testMonaco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.002"/>
+  <testcase name="testProtezioni()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.014"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
+  <testcase name="testBecchino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

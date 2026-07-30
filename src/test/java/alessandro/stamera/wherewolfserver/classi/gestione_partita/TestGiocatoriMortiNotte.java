@@ -38,7 +38,6 @@ public final class TestGiocatoriMortiNotte
         String nome = "Marco";
         aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.progenizzazioneNosferatu(nome)).isEqualTo(esito);
-        giocatori.ripristina(nome);
     }
 
     @Test public void testLupo()
