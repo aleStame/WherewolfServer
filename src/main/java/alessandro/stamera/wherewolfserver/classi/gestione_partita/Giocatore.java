@@ -6,6 +6,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratti;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 
 public final class Giocatore
@@ -69,7 +70,14 @@ public final class Giocatore
 
     public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
 
-    public EsitoAttacco progenizzazioneNosferatu() { return null; }
+    public EsitoAttacco progenizzazioneNosferatu()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro()) esito = MORTO;
+        else if(ruolo.isPosseduto()) esito = TROVATO_POSSEDUTO;
+        else if(ruolo.isProtezioneNosferatuPresente()) esito = FALLITO;
+        return esito;
+    }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 

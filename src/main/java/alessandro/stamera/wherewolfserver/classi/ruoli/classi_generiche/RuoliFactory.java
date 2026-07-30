@@ -27,7 +27,6 @@ public final class RuoliFactory
         switch(nome)
         {
             case "Cacciatore" -> ruolo = getCacciatore();
-            case "Cappuccetto rosso" -> ruolo = getCappuccettoRosso();
             case "Goblin" -> ruolo = getGoblin();
             case "Eremita" -> ruolo = getEremita();
             case "Ladra" -> ruolo = getLadra();
@@ -35,6 +34,7 @@ public final class RuoliFactory
             case "Sidhe" -> ruolo = getSidhe();
             default -> ruolo = ruoli.get(nome);
         }
+        if(ruolo.isMistico() || ruolo.isPosseduto()) ruolo.aggiungiProtezione(getRuolo("Nosferatu"));
         return ruolo;
     }
 
@@ -55,8 +55,6 @@ public final class RuoliFactory
     }
 
     private Set<String> getChiavi() { return ruoli.keySet(); }
-
-    private Ruolo getCappuccettoRosso() { return ottieniRuolo("Cappuccetto rosso"); }
 
     private Ruolo getGoblin() { return getPiccoloPopolo("Goblin"); }
 

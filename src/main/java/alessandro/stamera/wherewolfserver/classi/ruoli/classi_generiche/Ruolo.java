@@ -13,6 +13,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.C
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public class Ruolo
 {
