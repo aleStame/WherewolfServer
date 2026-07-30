@@ -17,8 +17,6 @@ public final class Eremita extends Villaggio
 
     @Override public boolean isEremita() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoFallito(); }
-
     @Override public EsitoAttacco attaccoNegromante() { return getEsitoAttaccoFallito(); }
 
     @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoFallito(); }

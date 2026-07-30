@@ -18,8 +18,6 @@ public final class ContadinoMostro extends Contadino
 
     @Override public boolean isContadinoMostro() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
-
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco esito = super.attaccoLupi(ruolo);

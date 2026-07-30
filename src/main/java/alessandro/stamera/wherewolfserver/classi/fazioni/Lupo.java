@@ -25,8 +25,6 @@ public class Lupo extends CreatureOmbra
 
     @Override public boolean isLupo() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return getMorto(); }
-
     @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco esito = FALLITO;

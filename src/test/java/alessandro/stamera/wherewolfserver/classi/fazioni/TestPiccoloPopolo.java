@@ -23,8 +23,6 @@ public final class TestPiccoloPopolo
 
     @Test public void testMistico() { verificaVero(ruolo.isMistico()); }
 
-    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
-
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }

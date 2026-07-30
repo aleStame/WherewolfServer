@@ -54,13 +54,6 @@ public final class TestRuolo
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoLupiRiuscito(nome); }
 
-    @Test public void testAttaccoNosferatu()
-    {
-        verificaAttaccoRiuscito(attaccoNosferatu());
-        verificaTrattoPresente(NON_MORTO);
-        verificaFazione(NOSFERATU);
-    }
-
     @Test public void testAttaccoNegromanteRomeo()
     {
         romeizzazione();
@@ -165,8 +158,6 @@ public final class TestRuolo
     private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
 
     private boolean isInquisito() { return ruolo.isInquisito(); }
-
-    private EsitoAttacco attaccoNosferatu() { return ruolo.attaccoNosferatu(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 

@@ -227,14 +227,6 @@ public class Ruolo
 
     public boolean isNosferatu() { return false; }
 
-    public EsitoAttacco attaccoNosferatu()
-    {
-        EsitoAttacco risultato = RIUSCITO;
-        if(isAttaccoNosferatuFallito()) risultato = FALLITO;
-        gestioneConseguenzeNosferatu(risultato);
-        return risultato;
-    }
-
     public boolean isNonna() { return false; }
 
     public boolean isOratore() { return false; }
@@ -370,27 +362,6 @@ public class Ruolo
     private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
     {
         this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli;
-    }
-
-    private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
-    {
-        switch(risultato)
-        {
-            case RIUSCITO -> trasformazioneNosferatu();
-            case FALLITO -> perdiProtezioni();
-        }
-    }
-
-    private boolean isAttaccoNosferatuFallito()
-    {
-        return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo();
-    }
-
-    private void trasformazioneNosferatu()
-    {
-        aggiungiTratti(NON_MORTO);
-        cambiaFazione(NOSFERATU);
-        this.categoria = CREATURE_OMBRA;
     }
 
     private boolean controlloTrattiOscuri()

@@ -90,8 +90,6 @@ public final class TestEremita
         verificaAuraBianca(ruolo.getAura());
     }
 
-    @Test public void testAttaccoNosferatu() { verificaAttaccoFallito(ruolo.attaccoNosferatu()); }
-
     @ParameterizedTest
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttaccoFallito(ruolo.attaccoLupi(getRuolo(nome))); }

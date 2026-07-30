@@ -62,18 +62,6 @@ public final class TestLadra
         verificaAttaccoLupi(nome, RIUSCITO);
     }
 
-    @Test public void testAttaccoNosferatu()
-    {
-        verificaProtetto();
-        verificaAttaccoNosferatu(FALLITO);
-        verificaPotereUtilizzato();
-        verificaNonProtetto();
-        verificaAttaccoNosferatu(RIUSCITO);
-        verificaVero(isTrattoPresente(NON_MORTO));
-        assertThat(ruolo.getFazione()).isEqualTo(NOSFERATU);
-        assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA);
-    }
-
     @Test public void testAttaccoNegromante()
     {
         verificaProtetto();
@@ -137,8 +125,6 @@ public final class TestLadra
     {
         assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(esito);
     }
-
-    private void verificaAttaccoNosferatu(EsitoAttacco esito) { assertThat(ruolo.attaccoNosferatu()).isEqualTo(esito); }
 
     private void verificaAuraBianca(Aura aura) { verificaAura(aura, BIANCA); }
 

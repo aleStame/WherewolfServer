@@ -683,7 +683,8 @@ public final class GiocatoriVivi extends Giocatori
         return risultato;
     }
 
-    private EsitoAttacco attaccoNosferatuRuolo(String nome) { return getRuolo(nome).attaccoNosferatu(); }
+    private EsitoAttacco attaccoNosferatuRuolo(String nome) { //return getRuolo(nome).attaccoNosferatu();
+        return null; }
 
     private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }
 

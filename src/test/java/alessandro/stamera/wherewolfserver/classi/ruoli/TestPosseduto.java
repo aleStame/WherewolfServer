@@ -83,8 +83,6 @@ public final class TestPosseduto
 
     @Test public void testVampirizzazione() { verificaAttaccoPosseduto(ruolo.vampirizzazione()); }
 
-    @Test public void testProgenizzazioneNosferatu() { verificaAttaccoPosseduto(ruolo.attaccoNosferatu()); }
-
     private void verificaAttaccoPosseduto(EsitoAttacco esito) { assertThat(esito).isEqualTo(TROVATO_POSSEDUTO); }
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }

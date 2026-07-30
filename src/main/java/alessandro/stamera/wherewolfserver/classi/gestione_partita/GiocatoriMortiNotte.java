@@ -6,7 +6,8 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
 public final class GiocatoriMortiNotte extends Giocatori
 {
 
-    public EsitoAttacco progenizzazioneNosferatu(String nome) { return getRuolo(nome).attaccoNosferatu(); }
+    public EsitoAttacco progenizzazioneNosferatu(String nome) { //return getRuolo(nome).attaccoNosferatu();
+        return null; }
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 

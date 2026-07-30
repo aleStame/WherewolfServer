@@ -39,8 +39,6 @@ public final class TestContadinoMostro
 
     @Test public void testContadinoLupo() { verificaFalso(ruolo.isContadinoLupo()); }
 
-    @Test public void testAttaccoNosferatu() { verificaAttaccoMorto(ruolo.attaccoNosferatu()); }
-
     @ParameterizedTest
     @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Lupo solitario, Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttaccoMorto(attaccoLupi(nome)); }
