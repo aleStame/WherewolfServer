@@ -29,8 +29,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getGiocatore(nome).protezioneAngeloCustode(); }
 
-    public EsitoAttacco attaccoAssassino(String nome) { //return getRuolo(nome).attaccoAssassino();
-       return null;  }
+    public EsitoAttacco attaccoAssassino(String nome) { return getGiocatore(nome).attaccoAssassino(); }
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
