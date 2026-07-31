@@ -145,8 +145,8 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
         giocatori.protezioneStrega(nomeVittima);
+        segnalazioneAngeloCustode(nomeVittima);
         verificaAssassinioAmato(nomeVittima);
-        ripristina(nomeVittima);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()

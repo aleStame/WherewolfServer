@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ANGELO_CUSTODE_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -99,6 +100,13 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         assertThat(giocatore.attaccoAssassino()).isEqualTo(esito);
+    }
+
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Giullare" })
+    public void testAttaccoAssassinoVittimaAmata(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.attaccoAssassino()).isEqualTo(ANGELO_CUSTODE_MORTO);
     }
 
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
