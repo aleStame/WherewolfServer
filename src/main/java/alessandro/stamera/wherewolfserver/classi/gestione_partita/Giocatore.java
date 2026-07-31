@@ -81,7 +81,7 @@ public final class Giocatore
 
     public EsitoAttacco attaccoAssassino()
     {
-        return null;
+        return RIUSCITO;
     }
 
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
