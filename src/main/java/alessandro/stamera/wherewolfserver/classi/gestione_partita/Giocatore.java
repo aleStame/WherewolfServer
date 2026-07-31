@@ -79,6 +79,11 @@ public final class Giocatore
         return esito;
     }
 
+    public EsitoAttacco attaccoAssassino()
+    {
+        return null;
+    }
+
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }

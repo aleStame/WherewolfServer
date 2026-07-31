@@ -94,6 +94,13 @@ public final class TestGiocatore
         assertThat(giocatore.progenizzazioneNosferatu()).isEqualTo(esito);
     }
 
+    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Giullare, RIUSCITO" })
+    public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.attaccoAssassino()).isEqualTo(esito);
+    }
+
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
 
     private void verificaNonAmato() { assertThat(isAmato()).isFalse(); }
