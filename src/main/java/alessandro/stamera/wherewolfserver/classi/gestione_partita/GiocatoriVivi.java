@@ -313,6 +313,16 @@ public final class GiocatoriVivi extends Giocatori
         perditaProtezioniAmato();
     }
 
+    @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
+    {
+        super.aggiungiGiocatore(nome, giocatore);
+        if(isCappuccettoRossoPresente() && isNonnaPresente())
+        {
+            if(isRimastoUnSoloLupo()) aggiungiProtezioneNonna();
+            else getGiocatore(getNomeGiocatore(getPosizioneNonna())).perdiProtezioni();
+        }
+    }
+
     private Ruolo[] getCreatureOmbra()
     {
         List<Ruolo> ruoli = new ArrayList<>();

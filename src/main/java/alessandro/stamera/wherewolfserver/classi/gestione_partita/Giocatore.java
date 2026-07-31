@@ -79,10 +79,9 @@ public final class Giocatore
         return esito;
     }
 
-    public EsitoAttacco attaccoAssassino()
-    {
-        return RIUSCITO;
-    }
+    public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
+
+    public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 
