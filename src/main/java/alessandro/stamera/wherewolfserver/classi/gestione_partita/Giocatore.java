@@ -16,7 +16,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato;
+    private boolean amato, segnalatoInquisitore;
 
     private Ruolo ruolo;
 
@@ -26,6 +26,7 @@ public final class Giocatore
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
         cambiaRuolo(ruolo);
+        segnalatoInquisitore = false;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -88,9 +89,9 @@ public final class Giocatore
 
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
-    public boolean isInquisito() { return false; }
+    public boolean isInquisito() { return segnalatoInquisitore; }
 
-    public void segnalazioneInquisitore() {  }
+    public void segnalazioneInquisitore() { segnalatoInquisitore = true; }
 
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 

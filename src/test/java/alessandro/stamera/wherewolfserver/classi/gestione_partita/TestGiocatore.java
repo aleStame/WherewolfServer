@@ -110,7 +110,8 @@ public final class TestGiocatore
         verificaAttaccoAssassino(ANGELO_CUSTODE_MORTO);
     }
 
-    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega" })
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega" })
     public void testSegnalazioneInquisitore(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
