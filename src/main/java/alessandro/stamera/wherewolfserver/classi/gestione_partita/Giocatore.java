@@ -88,6 +88,10 @@ public final class Giocatore
 
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
+    public boolean isInquisito() { return false; }
+
+    public void segnalazioneInquisitore() {  }
+
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }

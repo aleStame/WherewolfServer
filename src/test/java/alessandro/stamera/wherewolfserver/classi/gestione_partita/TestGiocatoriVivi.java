@@ -899,7 +899,7 @@ public final class TestGiocatoriVivi
         verificaVero(isMistico(nome));
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Medium", "Megera", "Sensitiva" })
+    @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Medium", "Megera", "Sensitiva", "Strega" })
     public void testMisticiMaledetti(String nomeRuolo)
     {
         String nome = "Gianluigi";

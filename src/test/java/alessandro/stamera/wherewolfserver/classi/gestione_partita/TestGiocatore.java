@@ -110,6 +110,15 @@ public final class TestGiocatore
         verificaAttaccoAssassino(ANGELO_CUSTODE_MORTO);
     }
 
+    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega" })
+    public void testSegnalazioneInquisitore(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.isInquisito()).isFalse();
+        giocatore.segnalazioneInquisitore();
+        verificaVero(giocatore.isInquisito());
+    }
+
     private void verificaAttaccoAssassino(EsitoAttacco esito) { assertThat(giocatore.attaccoAssassino()).isEqualTo(esito); }
 
     private void protezioneAngeloCustode() { giocatore.protezioneAngeloCustode(); }
