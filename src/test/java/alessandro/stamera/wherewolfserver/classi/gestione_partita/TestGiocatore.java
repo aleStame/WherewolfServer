@@ -36,7 +36,7 @@ public final class TestGiocatore
     @Test public void testAmato()
     {
         verificaNonAmato();
-        giocatore.protezioneAngeloCustode();
+        protezioneAngeloCustode();
         verificaVero(isAmato());
         giocatore.annullaProtezioneAngeloCustode();
         verificaNonAmato();
@@ -106,9 +106,11 @@ public final class TestGiocatore
     public void testAttaccoAssassinoVittimaAmata(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.protezioneAngeloCustode();
+        protezioneAngeloCustode();
         assertThat(giocatore.attaccoAssassino()).isEqualTo(ANGELO_CUSTODE_MORTO);
     }
+
+    private void protezioneAngeloCustode() { giocatore.protezioneAngeloCustode(); }
 
     private void verificaNumeroVoti(int numeroVoti) { assertThat(giocatore.getNumeroVoti()).isEqualTo(numeroVoti); }
 
