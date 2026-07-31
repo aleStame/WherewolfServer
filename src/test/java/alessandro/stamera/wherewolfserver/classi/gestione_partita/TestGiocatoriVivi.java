@@ -74,13 +74,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testAngeloCustodeAccusatoPresente()
     {
-        String[][] giocatori = new String[][] { { "Michelle", "Angelo custode" }, { "Fiona", "Altra guardia" }, { "Biagio", "Ladra" } };
+        String nomeAngeloCustode = "Michelle", nomeAmato = "Fiona";
+        String[][] giocatori = new String[][] { { nomeAngeloCustode, "Angelo custode" }, { nomeAmato, "Altra guardia" }, { "Biagio", "Ladra" } };
         inizializzaGiocatori(giocatori);
-        String nome = giocatori[1][0];
-        segnalazioneAngeloCustode(nome);
+        segnalazioneAngeloCustode(nomeAmato);
         for(int i = 0; i < giocatori.length - 1; i++) incrementaVoti(giocatori[i][0], 2);
-        verificaAccusati(giocatori[0][0]);
-        ripristina(nome);
+        verificaAccusati(nomeAngeloCustode);
     }
 
     @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Giullare, RIUSCITO" })
