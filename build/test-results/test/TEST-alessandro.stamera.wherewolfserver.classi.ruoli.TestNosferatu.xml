@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" tests="26" skipped="0" failures="2" errors="0" timestamp="2026-07-31T11:42:28" hostname="ALESSANDRO" time="0.07">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" tests="26" skipped="0" failures="2" errors="0" timestamp="2026-07-31T12:55:47" hostname="ALESSANDRO" time="0.114">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.005"/>
   <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004">
+  <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Nosferatu&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Nosferatu
  but was: Amanti
@@ -93,26 +93,26 @@ expected: Nosferatu
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.009"/>
   <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
   <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.003"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.003"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
   <testcase name="testVampiro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
   <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
-  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
+  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.005"/>
   <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.005"/>
   <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
+  <testcase name="testAmanti()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
+  <testcase name="testCreatureOmbra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
   <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
-  <testcase name="initializationError" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001">
+  <testcase name="initializationError" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.002">
     <failure message="java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at java.base/java.util.ImmutableCollections$ListN.get(ImmutableCollections.java:687)
 	at alessandro.stamera.wherewolfserver.classi.gestione_partita.Giocatori.getNomeGiocatore(Giocatori.java:51)
@@ -225,7 +225,7 @@ expected: Nosferatu
 		... 68 more
 </failure>
   </testcase>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.0"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.004"/>
   <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -83,11 +83,12 @@ public final class TestGiocatoriVivi
         ripristina(nome);
     }
 
-    @Test public void testAttaccoAssassino()
+    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Giullare, RIUSCITO" })
+    public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
     {
-        String[][] giocatori = new String[][] { { "Cristian", "Giullare" }, { "Carmine", "Assassino" } };
+        String[][] giocatori = new String[][] { { "Cristian", nomeRuolo }, { "Carmine", "Assassino" } };
         inizializzaGiocatori(giocatori);
-        verificaAttaccoAssassino(giocatori[0][0], RIUSCITO);
+        verificaAttaccoAssassino(giocatori[0][0], esito);
     }
 
     @ParameterizedTest @CsvSource
