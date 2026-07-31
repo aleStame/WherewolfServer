@@ -99,7 +99,7 @@ public final class TestGiocatore
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
     {
         cambiaRuolo(nomeRuolo);
-        assertThat(giocatore.attaccoAssassino()).isEqualTo(esito);
+        verificaAttaccoAssassino(esito);
     }
 
     @ParameterizedTest @CsvSource({ "Angelo custode", "Giullare" })
@@ -107,8 +107,10 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         protezioneAngeloCustode();
-        assertThat(giocatore.attaccoAssassino()).isEqualTo(ANGELO_CUSTODE_MORTO);
+        verificaAttaccoAssassino(ANGELO_CUSTODE_MORTO);
     }
+
+    private void verificaAttaccoAssassino(EsitoAttacco esito) { assertThat(giocatore.attaccoAssassino()).isEqualTo(esito); }
 
     private void protezioneAngeloCustode() { giocatore.protezioneAngeloCustode(); }
 
