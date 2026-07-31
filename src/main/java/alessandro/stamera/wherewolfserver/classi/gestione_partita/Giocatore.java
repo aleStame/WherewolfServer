@@ -79,7 +79,12 @@ public final class Giocatore
         return esito;
     }
 
-    public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
+    public EsitoAttacco attaccoAssassino()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
+        return esito;
+    }
 
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 

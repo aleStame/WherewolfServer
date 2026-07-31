@@ -106,6 +106,7 @@ public final class TestGiocatore
     public void testAttaccoAssassinoVittimaAmata(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
+        giocatore.protezioneAngeloCustode();
         assertThat(giocatore.attaccoAssassino()).isEqualTo(ANGELO_CUSTODE_MORTO);
     }
 
