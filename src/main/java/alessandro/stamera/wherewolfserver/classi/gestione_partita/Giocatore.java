@@ -91,9 +91,12 @@ public final class Giocatore
 
     public boolean isInquisito() { return segnalatoInquisitore; }
 
-    public void segnalazioneInquisitore() { setSegnalazioneInquisitore(true); }
+    public void segnalazioneInquisitore() { if(ruolo.isMistico()) setSegnalazioneInquisitore(true); }
 
-    private void setSegnalazioneInquisitore(boolean segnalatoInquisitore) { this.segnalatoInquisitore = segnalatoInquisitore; }
+    private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
+    {
+        this.segnalatoInquisitore = segnalatoInquisitore;
+    }
 
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 
