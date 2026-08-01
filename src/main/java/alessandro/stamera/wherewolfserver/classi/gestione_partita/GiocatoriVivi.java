@@ -319,6 +319,8 @@ public final class GiocatoriVivi extends Giocatori
         if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonnna();
     }
 
+    public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
+
     private void gestisciProtezioneNonnna()
     {
         if(isRimastoUnSoloLupo()) aggiungiProtezioneNonna();

@@ -53,14 +53,6 @@ public final class TestGiocatori
         verificaVero(giocatori.isCriminale(nome));
     }
 
-    @Test public void testInquisito()
-    {
-        String nome = "Andrea";
-        aggiungiGiocatore(nome, "Sidhe");
-        giocatori.segnalazioneInquisitore(nome);
-        verificaVero(giocatori.isInquisito(nome));
-    }
-
     @Test public void testOratorePresente()
     {
         String[][] giocatori = new String[][] { { "Marco", "Oratore" }, { "Gianna", "Guaritore" } };

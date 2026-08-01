@@ -260,7 +260,6 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeMistico);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 2);
         verificaAccusati(giocatori[0][0], giocatori[2][0]);
-        ripristina(nomeMistico);
     }
 
     @Test public void testAttaccoVampiroAngeloCustode()
