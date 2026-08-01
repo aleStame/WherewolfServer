@@ -8,6 +8,8 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 
 public final class Giocatore
@@ -21,6 +23,8 @@ public final class Giocatore
 
     private Ruolo ruolo;
 
+    private Fazione fazione;
+
     public Giocatore(Ruolo ruolo)
     {
         annullaVoti();
@@ -28,6 +32,7 @@ public final class Giocatore
         annullaProtezioneAngeloCustode();
         cambiaRuolo(ruolo);
         setSegnalazioneInquisitore(false);
+        fazione = NESSUNA;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -94,11 +99,20 @@ public final class Giocatore
 
     public void segnalazioneInquisitore() { if(ruolo.isMistico()) setSegnalazioneInquisitore(true); }
 
-    public EsitoAttacco criminalizzazione() { return null; }
+    public EsitoAttacco criminalizzazione()
+    {
+        fazione = CRIMINALI;
+        return RIUSCITO;
+    }
 
-    public Fazione getFazione() { return null; }
+    public Fazione getFazione()
+    {
+        Fazione risultato = fazione;
+        if(risultato == NESSUNA) risultato = ruolo.getFazione();
+        return risultato;
+    }
 
-    public boolean isCriminale() { return false; }
+    public boolean isCriminale() { return getFazione() == CRIMINALI; }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
