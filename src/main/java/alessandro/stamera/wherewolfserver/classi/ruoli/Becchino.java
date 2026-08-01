@@ -37,13 +37,6 @@ public class Becchino extends Villaggio
 
     @Override public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
 
-    @Override public EsitoAttacco gildata()
-    {
-        EsitoAttacco esito = FALLITO;
-        if(isVillaggio()) esito = super.gildata();
-        return esito;
-    }
-
     @Override public boolean isVillaggio() { return villaggio; }
 
     @Override public void ripristinaFazioneOriginale()

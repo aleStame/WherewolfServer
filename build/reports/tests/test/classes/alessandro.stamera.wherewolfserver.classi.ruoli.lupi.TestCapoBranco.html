@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">21</div>
+<div class="counter">20</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.042s</div>
+<div class="counter">0.253s</div>
 <p>duration</p>
 </div>
 </td>
@@ -71,14 +71,14 @@
 <h2>Failed tests</h2>
 <div class="test">
 <a name="testEsitoPartita(Partita, EsitoPartita)[1]"></a>
-<h3 class="failures">[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7b208b45, esito=VITTORIA</h3>
+<h3 class="failures">[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7e46d648, esito=VITTORIA</h3>
 <span class="code">
 <pre>org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: NON_FINITO
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.testEsitoPartita(TestCapoBranco.java:68)
+	at app//alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.testEsitoPartita(TestCapoBranco.java:66)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -221,14 +221,14 @@ expected: VITTORIA
 </div>
 <div class="test">
 <a name="testEsitoPartita(Partita, EsitoPartita)[2]"></a>
-<h3 class="failures">[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@34523d46, esito=VITTORIA</h3>
+<h3 class="failures">[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2b0b4d53, esito=VITTORIA</h3>
 <span class="code">
 <pre>org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: NON_FINITO
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.testEsitoPartita(TestCapoBranco.java:68)
+	at app//alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.testEsitoPartita(TestCapoBranco.java:66)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -371,14 +371,14 @@ expected: VITTORIA
 </div>
 <div class="test">
 <a name="testEsitoPartita(Partita, EsitoPartita)[5]"></a>
-<h3 class="failures">[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5d235104, esito=VITTORIA</h3>
+<h3 class="failures">[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@303a5119, esito=VITTORIA</h3>
 <span class="code">
 <pre>org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: NON_FINITO
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at app//alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.testEsitoPartita(TestCapoBranco.java:68)
+	at app//alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.testEsitoPartita(TestCapoBranco.java:66)
 	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
@@ -540,7 +540,7 @@ expected: VITTORIA
 <tr>
 <td class="success">[2] nome=Giovane lupo</td>
 <td class="success">testAttaccoAltriLupi(String)[2]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -552,13 +552,13 @@ expected: VITTORIA
 <tr>
 <td class="success">[4] nome=Lupo solitario</td>
 <td class="success">testAttaccoAltriLupi(String)[4]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] nome=Contadino discendente dei lupi</td>
 <td class="success">testAttaccoAltriLupi(String)[5]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -570,46 +570,40 @@ expected: VITTORIA
 <tr>
 <td class="success">testDescrizione()</td>
 <td class="success">testDescrizione()</td>
-<td class="success">0.004s</td>
+<td class="success">0.218s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7b208b45, esito=VITTORIA</td>
+<td class="failures">[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@7e46d648, esito=VITTORIA</td>
 <td class="failures">testEsitoPartita(Partita, EsitoPartita)[1]</td>
-<td class="failures">0.003s</td>
+<td class="failures">0.006s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@34523d46, esito=VITTORIA</td>
+<td class="failures">[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2b0b4d53, esito=VITTORIA</td>
 <td class="failures">testEsitoPartita(Partita, EsitoPartita)[2]</td>
-<td class="failures">0.001s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3e83c18, esito=SCONFITTA</td>
+<td class="success">[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@38548b19, esito=SCONFITTA</td>
 <td class="success">testEsitoPartita(Partita, EsitoPartita)[3]</td>
-<td class="success">0.001s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@783efb48, esito=SCONFITTA</td>
+<td class="success">[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@41aaedaa, esito=SCONFITTA</td>
 <td class="success">testEsitoPartita(Partita, EsitoPartita)[4]</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5d235104, esito=VITTORIA</td>
+<td class="failures">[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@303a5119, esito=VITTORIA</td>
 <td class="failures">testEsitoPartita(Partita, EsitoPartita)[5]</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.003s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">testGildata()</td>
-<td class="success">testGildata()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">testGiovaneLupo()</td>
 <td class="success">testGiovaneLupo()</td>
 <td class="success">0.001s</td>
@@ -624,7 +618,7 @@ expected: VITTORIA
 <tr>
 <td class="success">testLupo()</td>
 <td class="success">testLupo()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -642,13 +636,13 @@ expected: VITTORIA
 <tr>
 <td class="success">testNome()</td>
 <td class="success">testNome()</td>
-<td class="success">0.017s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSuicidio()</td>
 <td class="success">testSuicidio()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -667,7 +661,7 @@ expected: VITTORIA
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 2 ago 2026, 00:35:15</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 2 ago 2026, 01:20:12</p>
 </div>
 </div>
 </body>

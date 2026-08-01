@@ -54,15 +54,6 @@ public final class TestVillaggio
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
-    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaPostGildata")
-    public void testEsitoPartitaPostGildata(Partita partita, EsitoPartita esito)
-    {
-        assertThat(ruolo.gildata()).isEqualTo(RIUSCITO);
-        verificaFazione(CRIMINALI);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        partita.ripristinaGiocatori();
-    }
-
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO); }
 
     @AfterAll public static void ripristinaRuoli()

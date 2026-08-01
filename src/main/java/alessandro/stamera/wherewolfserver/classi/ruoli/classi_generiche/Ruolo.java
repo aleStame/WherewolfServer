@@ -13,7 +13,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.C
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.LUPO_MANNARO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
-import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public class Ruolo
 {
@@ -28,7 +27,7 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore, stregato;
+    private boolean romeo, segnalazioneAzzeccagarbugli, segnalatoBoia, segnalatoOratore, stregato;
 
     private final boolean mistico;
 
@@ -54,7 +53,6 @@ public class Ruolo
         tratti = new Tratti();
         setRomeo(false);
         annullaSegnalazioneAzzeccagarbugli();
-        annullaSegnalazioneInquisitore();
         fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
@@ -87,8 +85,6 @@ public class Ruolo
     public void riconosciNegromante() { }
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
-
-    public EsitoAttacco gildata() { return FALLITO; }
 
     public boolean isMistico() { return mistico; }
 
@@ -286,12 +282,6 @@ public class Ruolo
 
     public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
 
-    public boolean isInquisito() { return inquisito; }
-
-    public void segnalazioneInquisitore() { if(isMistico()) setInquisito(true); }
-
-    public void annullaSegnalazioneInquisitore() { setInquisito(false); }
-
     public void ripristinaFazioneOriginale()
     {
         cambiaFazione(fazioneOriginale);
@@ -336,7 +326,6 @@ public class Ruolo
         annullaSegnalazioneAzzeccagarbugli();
         eliminaTratti(MALEDETTO, NON_MORTO);
         ripristinaFazioneOriginale();
-        annullaSegnalazioneInquisitore();
         perdiProtezioni();
         stregato = false;
     }
@@ -357,8 +346,6 @@ public class Ruolo
     }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
-
-    private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
 
     private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
     {

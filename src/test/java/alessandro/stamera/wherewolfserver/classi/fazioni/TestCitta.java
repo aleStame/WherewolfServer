@@ -75,15 +75,6 @@ public final class TestCitta
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
-    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaPostGildata")
-    public void testEsitoPartitaPostGildata(Partita partita, EsitoPartita esito)
-    {
-        assertThat(ruolo.gildata()).isEqualTo(RIUSCITO);
-        verificaFazione(CRIMINALI);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        partita.ripristinaGiocatori();
-    }
-
     @AfterAll public static void ripristinaRuoli()
     {
         for(String ruolo : new String[] { "Peccatore", "Prete" }) FACTORY.getRuolo(ruolo).ripristina();

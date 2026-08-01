@@ -32,8 +32,6 @@ public class Lupo extends CreatureOmbra
         return esito;
     }
 
-    @Override public EsitoAttacco gildata() { return getMorto(); }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);

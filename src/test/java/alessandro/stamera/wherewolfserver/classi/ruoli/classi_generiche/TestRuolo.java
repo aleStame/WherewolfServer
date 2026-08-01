@@ -34,13 +34,6 @@ public final class TestRuolo
         verificaAssenzaProtezioni();
     }
 
-     @Test public void testGildata()
-    {
-        Fazione fazione = getFazione();
-        assertThat(ruolo.gildata()).isEqualTo(FALLITO);
-        verificaFazione(fazione);
-    }
-
     @ParameterizedTest
     @CsvSource( { "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" } )
     public void testAttaccoLupoRomeo(String nome)
@@ -89,15 +82,6 @@ public final class TestRuolo
         verificaNonSegnalato();
     }
 
-    @Test public void testSegnalazioneInquisitore()
-    {
-        verificaNonInquisito();
-        ruolo.segnalazioneInquisitore();
-        verificaNonInquisito();
-        ruolo.annullaSegnalazioneInquisitore();
-        verificaNonInquisito();
-    }
-
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
@@ -119,18 +103,6 @@ public final class TestRuolo
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
-    @Test public void testRipristino()
-    {
-        ruolo.ripristina();
-        verificaFalso(ruolo.isRomeo());
-        verificaFalso(ruolo.isSegnalatoAzzeccagarbugli());
-        verificaFalso(ruolo.isMaledetto());
-        verificaFalso(ruolo.isTrattoPresente(NON_MORTO));
-        verificaFazione(NESSUNA);
-        verificaNonInquisito();
-        for(IstanzaRuolo istanza : IstanzaRuolo.values()) ruolo.isProtezionePresente(istanza.getRuolo());
-    }
-
     @Test public void testNonContadino()
     {
         verificaFalso(ruolo.isContadino());
@@ -151,13 +123,9 @@ public final class TestRuolo
 
     private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
 
-    private void verificaNonInquisito() { verificaFalso(isInquisito()); }
-
     private boolean isSegnalatoOratore() { return ruolo.isSegnalatoOratore(); }
 
     private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
-
-    private boolean isInquisito() { return ruolo.isInquisito(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 

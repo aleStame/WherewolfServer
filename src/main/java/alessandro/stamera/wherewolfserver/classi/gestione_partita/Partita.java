@@ -210,8 +210,8 @@ public final class Partita
 
     public void gildata(String nome)
     {
-        EsitoAttacco esito = vivi.gildata(nome);
-        if(esito != RIUSCITO) gestioneAttaccoNonRiuscito(nome, esito);
+        /*EsitoAttacco esito = vivi.gildata(nome);
+        if(esito != RIUSCITO) gestioneAttaccoNonRiuscito(nome, esito);*/
     }
 
     public int getNumeroGiocatoriVivi() { return vivi.getNumeroGiocatori(); }

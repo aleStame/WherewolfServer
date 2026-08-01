@@ -144,8 +144,6 @@ public final class GiocatoriVivi extends Giocatori
         return numeroSenzaFazione;
     }
 
-    public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
-
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
     public void riconosciNegromante() { //getGiocatore(getNomeGiocatore(getPosizioneBecchino())).riconosciNegromante();

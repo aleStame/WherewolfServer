@@ -51,12 +51,6 @@ public final class TestContadinoMostro
         verificaAttaccoFallito(attaccoLupi(nome));
     }
 
-    @Test public void testGildata()
-    {
-        verificaAttaccoMorto(ruolo.gildata());
-        assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI);
-    }
-
     @Test public void testAttaccoNegromante() { verificaAttaccoMorto(ruolo.attaccoNegromante()); }
 
     @Test public void testAttaccoNegromanteRomeizzato()

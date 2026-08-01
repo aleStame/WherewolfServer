@@ -25,13 +25,6 @@ public final class ContadinoLupo extends Contadino
         return CONTADINO_LUPO_BECCATO;
     }
 
-    @Override public EsitoAttacco gildata()
-    {
-        EsitoAttacco esito = MORTO;
-        if(!isLupo()) esito = super.gildata();
-        return esito;
-    }
-
     @Override public boolean isLupo() { return isTrattoPresente(LUPO_MANNARO); }
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)

@@ -24,8 +24,6 @@ public final class CapoBranco extends Lupo
 
     @Override public boolean isCapoBranco() { return true; }
 
-    @Override public EsitoAttacco gildata() { return MORTO; }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);

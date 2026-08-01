@@ -62,8 +62,6 @@ public final class TestCapoBranco
     @CsvSource({ "Lupo del branco", "Giovane lupo", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoAltriLupi(String nome) { verificaAttaccoLupi(FACTORY.getRuolo(nome), FALLITO); }
 
-    @Test public void testGildata() { verificaAttacco(ruolo.gildata(), MORTO); }
-
     @ParameterizedTest @MethodSource("getEsempiEsitoPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 

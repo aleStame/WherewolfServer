@@ -47,19 +47,6 @@ public final class TestBecchino
 
     @Test public void testContadino() { verificaFalso(ruolo.isContadino()); }
 
-    @Test public void testRiconoscimentoNegromante()
-    {
-        assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO);
-        verificaFalso(isFazioneNegromante());
-        ruolo.riconosciNegromante();
-        verificaFazioneNegromante();
-        ruolo.gildata();
-        verificaFazioneNegromante();
-        ruolo.romeizzazione();
-        verificaFazioneNegromante();
-        ruolo.ripristinaFazioneOriginale();
-    }
-
     @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
 
     @Test public void testBecchino() { verificaVero(ruolo.isBecchino()); }

@@ -19,17 +19,6 @@ public class Citta extends Uomini
 
     @Override public boolean isCitta() { return true; }
 
-    @Override public EsitoAttacco gildata()
-    {
-        EsitoAttacco esito = super.gildata();
-        if(!isTrattoPresente(NON_MORTO))
-        {
-            cambiaFazione(CRIMINALI);
-            esito = RIUSCITO;
-        }
-        return esito;
-    }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);

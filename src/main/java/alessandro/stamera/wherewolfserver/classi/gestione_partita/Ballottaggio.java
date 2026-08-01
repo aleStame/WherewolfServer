@@ -123,7 +123,7 @@ public final class Ballottaggio extends Giocatori
 
     private void annullaSegnalazioneInquisitore(int posizione)
     {
-        annullaSegnalazioneInquisitore(getNomeGiocatore(posizione));
+        //annullaSegnalazioneInquisitore(getNomeGiocatore(posizione));
     }
 
     private void annullaSegnalazioneAzzeccagarbugli()
@@ -135,8 +135,6 @@ public final class Ballottaggio extends Giocatori
     {
         annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione));
     }
-
-    private void annullaSegnalazioneInquisitore(String nome) { getRuolo(nome).annullaSegnalazioneInquisitore(); }
 
     private void annullaSegnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).annullaSegnalazioneAzzeccagarbugli(); }
 

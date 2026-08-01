@@ -80,13 +80,6 @@ public final class TestLupo
         verificaFalso(isSegnalatoBoia());
     }
 
-    @Test public void testGildata()
-    {
-        Fazione fazione = getFazione();
-        verificaAttacco(ruolo.gildata(), MORTO);
-        assertThat(getFazione()).isEqualTo(fazione);
-    }
-
     @Test public void testEsitoPartita()
     {
         Partita partita = new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } });
