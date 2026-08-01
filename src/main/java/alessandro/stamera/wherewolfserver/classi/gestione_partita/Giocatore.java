@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratti;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -92,6 +93,12 @@ public final class Giocatore
     public boolean isInquisito() { return segnalatoInquisitore; }
 
     public void segnalazioneInquisitore() { if(ruolo.isMistico()) setSegnalazioneInquisitore(true); }
+
+    public EsitoAttacco criminalizzazione() { return null; }
+
+    public Fazione getFazione() { return null; }
+
+    public boolean isCriminale() { return false; }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {

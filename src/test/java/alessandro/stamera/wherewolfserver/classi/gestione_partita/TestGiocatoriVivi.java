@@ -586,7 +586,6 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
         verificaGildata(nomeVittima, FALLITO);
-        ripristina(nomeVittima);
     }
 
     @Test public void testCriminalizzazioneContadinoLupo()
