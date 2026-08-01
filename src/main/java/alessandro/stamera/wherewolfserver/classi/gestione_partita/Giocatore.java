@@ -26,7 +26,7 @@ public final class Giocatore
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
         cambiaRuolo(ruolo);
-        segnalatoInquisitore = false;
+        setSegnalazioneInquisitore(false);
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -91,7 +91,9 @@ public final class Giocatore
 
     public boolean isInquisito() { return segnalatoInquisitore; }
 
-    public void segnalazioneInquisitore() { segnalatoInquisitore = true; }
+    public void segnalazioneInquisitore() { setSegnalazioneInquisitore(true); }
+
+    private void setSegnalazioneInquisitore(boolean segnalatoInquisitore) { this.segnalatoInquisitore = segnalatoInquisitore; }
 
     private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 

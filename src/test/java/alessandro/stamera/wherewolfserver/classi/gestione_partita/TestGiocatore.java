@@ -115,10 +115,12 @@ public final class TestGiocatore
     public void testSegnalazioneInquisitore(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        assertThat(giocatore.isInquisito()).isFalse();
+        assertThat(isInquisito()).isFalse();
         giocatore.segnalazioneInquisitore();
-        verificaVero(giocatore.isInquisito());
+        verificaVero(isInquisito());
     }
+
+    private boolean isInquisito() { return giocatore.isInquisito(); }
 
     private void verificaAttaccoAssassino(EsitoAttacco esito) { assertThat(giocatore.attaccoAssassino()).isEqualTo(esito); }
 
