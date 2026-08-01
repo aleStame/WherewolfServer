@@ -644,7 +644,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isInquisito(int posizione) { return isInquisito(getNomeGiocatore(posizione)); }
+    private boolean isInquisito(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).isInquisito(); }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
     {
@@ -685,7 +685,7 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori(); i++)
         {
             String nome = getNomeGiocatore(i);
-            //if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
+            if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
         }
         return nomi;
     }

@@ -69,8 +69,6 @@ public class Giocatori
 
     public boolean isCriminale(String nome) { return getRuolo(nome).isCriminale(); }
 
-    public boolean isInquisito(String nome) { return getRuolo(nome).isInquisito(); }
-
     public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
 
     public void segnalazioneBoia(String nome) { getRuolo(nome).segnalazioneBoia(); }

@@ -18,7 +18,7 @@ public final class Ballottaggio extends Giocatori
 
     public boolean isSegnalazioneAssente()
     {
-        return controlloNessunInquisito() && controlloNienteAzzeccagarbugli() && controlloNessunaSegnalazioneOratore();
+        return controlloNienteAzzeccagarbugli() && controlloNessunaSegnalazioneOratore();
     }
 
     public void segnalazioneBorgomastro() { segnalazioneBorgomastro = true; }
@@ -103,15 +103,6 @@ public final class Ballottaggio extends Giocatori
     }
 
     private boolean isAmato(int posizione) { return isAmato(getNomeGiocatore(posizione)); }
-
-    private boolean controlloNessunInquisito()
-    {
-        boolean esito = true;
-        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isInquisito(i);
-        return esito;
-    }
-
-    private boolean isInquisito(int posizione) { return isInquisito(getNomeGiocatore(posizione)); }
 
     private boolean controlloNienteAzzeccagarbugli()
     {

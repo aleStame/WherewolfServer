@@ -1393,7 +1393,7 @@ public final class TestGiocatoriVivi
         int numeroSoluzioni = soluzioni.length;
         Giocatori ballottaggio = getBallottaggio();
         verificaNumeroIntero(ballottaggio.getNumeroGiocatori(), numeroSoluzioni);
-        for (int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
+        for(int i = 0; i < numeroSoluzioni; i++) verificaGiocatoreAccusato(ballottaggio, i, soluzioni[i]);
     }
 
     private void verificaAttaccoAssassino(String nome, EsitoAttacco esito)
