@@ -141,7 +141,7 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Becchino" }) public void testCriminalizzazioneBecchino(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        assertThat(giocatore.criminalizzazione()).isEqualTo(RIUSCITO);
+        verificaAttacco(giocatore.criminalizzazione(), RIUSCITO);
         assertThat(giocatore.getFazione()).isEqualTo(CRIMINALI);
         verificaVero(giocatore.isCriminale());
     }
@@ -150,7 +150,9 @@ public final class TestGiocatore
 
     private boolean isInquisito() { return giocatore.isInquisito(); }
 
-    private void verificaAttaccoAssassino(EsitoAttacco esito) { assertThat(giocatore.attaccoAssassino()).isEqualTo(esito); }
+    private void verificaAttaccoAssassino(EsitoAttacco esito) { verificaAttacco(giocatore.attaccoAssassino(), esito); }
+
+    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void protezioneAngeloCustode() { giocatore.protezioneAngeloCustode(); }
 
