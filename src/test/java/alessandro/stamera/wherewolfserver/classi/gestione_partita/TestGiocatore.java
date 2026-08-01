@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ANGELO_CUSTODE_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -118,6 +117,25 @@ public final class TestGiocatore
         assertThat(isInquisito()).isFalse();
         giocatore.segnalazioneInquisitore();
         verificaVero(isInquisito());
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "ASSASSINO(Assassino.getInstance())", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa",
+            "Boia", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso",
+            "Contadino eroe", "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo",
+            "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare",
+            "Vampiro"
+        }
+    )
+    public void testSegnalazioneInquisitoreNonRiuscita(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(isInquisito()).isFalse();
+        giocatore.segnalazioneInquisitore();
+        assertThat(isInquisito()).isFalse();
     }
 
     private boolean isInquisito() { return giocatore.isInquisito(); }
