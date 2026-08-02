@@ -116,7 +116,7 @@ public final class Giocatore
 
     public boolean isGuardia() { return ruolo.isGuardia(); }
 
-    public boolean isLupo() { return false; }
+    public boolean isLupo() { return ruolo.isLupo(); }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
