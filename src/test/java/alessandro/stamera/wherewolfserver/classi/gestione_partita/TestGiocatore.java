@@ -146,6 +146,13 @@ public final class TestGiocatore
         verificaVero(giocatore.isCriminale());
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testLupo(String tipoLupo)
+    {
+        cambiaRuolo(tipoLupo);
+        verificaVero(giocatore.isLupo());
+    }
+
     private void verificaNonInquisito() { assertThat(isInquisito()).isFalse(); }
 
     private boolean isInquisito() { return giocatore.isInquisito(); }
