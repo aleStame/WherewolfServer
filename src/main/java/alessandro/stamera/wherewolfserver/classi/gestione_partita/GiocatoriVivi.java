@@ -78,7 +78,7 @@ public final class GiocatoriVivi extends Giocatori
         return numeroGuardie;
     }
 
-    public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
+    public boolean isGuardia(String nome) { return getGiocatore(nome).isGuardia(); }
 
     public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
 
@@ -561,8 +561,7 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isLupo(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isLupo();
         return false; }
 
-    private boolean isCriminale(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isCriminale();
-        return false; }
+    private boolean isCriminale(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).isCriminale(); }
 
     private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }
 

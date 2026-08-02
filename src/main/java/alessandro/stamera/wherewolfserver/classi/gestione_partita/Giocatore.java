@@ -114,6 +114,8 @@ public final class Giocatore
 
     public boolean isCriminale() { return getFazione() == CRIMINALI; }
 
+    public boolean isGuardia() { return ruolo.isGuardia(); }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;
