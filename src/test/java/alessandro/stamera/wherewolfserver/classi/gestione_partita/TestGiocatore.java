@@ -153,11 +153,11 @@ public final class TestGiocatore
         verificaVero(giocatore.isLupo());
     }
 
-    /*@Test public void testBracconiere()
+    @Test public void testBracconiere()
     {
         cambiaRuolo("Bracconiere");
         verificaVero(giocatore.isBracconiere());
-    }*/
+    }
 
     private void verificaNonInquisito() { assertThat(isInquisito()).isFalse(); }
 
