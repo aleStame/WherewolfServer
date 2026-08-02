@@ -219,21 +219,21 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isLupoReiettoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(getNomeGiocatore(i)).getRuolo().isLupoReietto();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(i).getRuolo().isLupoReietto();
         return trovato;
     }
 
     public boolean isCapoBrancoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(getNomeGiocatore(i)).getRuolo().isCapoBranco();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(i).getRuolo().isCapoBranco();
         return trovato;
     }
 
     public boolean isLupoBrancoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(getNomeGiocatore(i)).getRuolo().isLupoBranco();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(i).getRuolo().isLupoBranco();
         return trovato;
     }
 
@@ -326,12 +326,12 @@ public final class GiocatoriVivi extends Giocatori
         else getNonna().perdiProtezioni();
     }
 
-    private Giocatore getNonna() { return getGiocatore(getNomeGiocatore(getPosizioneNonna())); }
+    private Giocatore getNonna() { return getGiocatore(getPosizioneNonna()); }
 
     private Ruolo[] getCreatureOmbra()
     {
         List<Ruolo> ruoli = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getGiocatore(getNomeGiocatore(i)).getRuolo());
+        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getGiocatore(i).getRuolo());
         return ruoli.stream().filter(Ruolo::isCreaturaOmbra).toList().toArray(new Ruolo[0]);
     }
 
@@ -438,7 +438,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isAmato(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).isAmato(); }
+    private boolean isAmato(int posizione) { return getGiocatore(posizione).isAmato(); }
 
     private int getPosizioneSensitiva()
     {
@@ -532,7 +532,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isNosferatu(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).isNosferatu(); }
+    private boolean isNosferatu(int posizione) { return getGiocatore(posizione).isNosferatu(); }
 
     private int getPosizioneLupoSolitario()
     {
@@ -561,7 +561,7 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isLupo(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isLupo();
         return false; }
 
-    private boolean isCriminale(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).isCriminale(); }
+    private boolean isCriminale(int posizione) { return getGiocatore(posizione).isCriminale(); }
 
     private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }
 
@@ -651,7 +651,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isInquisito(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).isInquisito(); }
+    private boolean isInquisito(int posizione) { return getGiocatore(posizione).isInquisito(); }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
     {
@@ -712,5 +712,7 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isAssassino(String nome) { return getRuolo(nome).isAssassino(); }
 
     private boolean isGuardia(int posizione) { return isGuardia(getNomeGiocatore(posizione)); }
+
+    private Giocatore getGiocatore(int posizione) { return getGiocatore(getNomeGiocatore(posizione)); }
 
 }
