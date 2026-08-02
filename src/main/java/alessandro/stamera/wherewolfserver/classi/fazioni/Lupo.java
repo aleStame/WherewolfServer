@@ -51,6 +51,4 @@ public class Lupo extends CreatureOmbra
         return partita.getNumeroLupiBrancoVivi() + partita.getNumeroSenzaFazioneVivi();
     }
 
-    private EsitoAttacco getMorto() { return MORTO; }
-
 }

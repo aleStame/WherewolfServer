@@ -39,16 +39,9 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public EsitoAttacco attaccoNosferatu(String nome)
-    {
-        EsitoAttacco esito = attaccoNosferatuRuolo(nome);
-        gestisciResetAmato(nome, esito);
-        return esito;
-    }
-
     public boolean isTrattoPresente(String nome, Tratto tratto) { return getRuolo(nome).isTrattoPresente(tratto); }
 
-    public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
+    public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 
     public EsitoAttacco attaccoVampiro(String nome)
     {
@@ -522,8 +515,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
 
-    private Fazione getFazione(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).getFazione();
-        return null; }
+    private Fazione getFazione(int posizione) { return getGiocatore(posizione).getFazione(); }
 
     private int getPosizioneNosferatu()
     {
