@@ -558,8 +558,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isMistico(int posizione) { return isMistico(getNomeGiocatore(posizione)); }
 
-    private boolean isLupo(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isLupo();
-        return false; }
+    private boolean isLupo(int posizione) { return getGiocatore(posizione).isLupo(); }
 
     private boolean isCriminale(int posizione) { return getGiocatore(posizione).isCriminale(); }
 
