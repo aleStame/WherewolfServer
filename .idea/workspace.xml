@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo segnalazioneInquisitore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00184" summary="VERDE: testProgenieNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1785456596701</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1785456596704</updated>
     </task>
     <task id="LOCAL-00185" summary="ROSSO: testAttaccoAssassino non riuscito">
       <option name="closed" value="true" />
@@ -596,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785792536388</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="REFACTORING: definizione del metodo segnalazioneInquisitore">
+      <option name="closed" value="true" />
+      <created>1785792967187</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1785792967187</updated>
+    </task>
+    <option name="localTasksCounter" value="234" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,8 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testCriminalizzazioneBecchino riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaNonInquisito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttacco" />
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatore" />
     <MESSAGE value="ROSSO: testLupo non riuscito" />
@@ -638,7 +636,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo isAccusabile" />
     <MESSAGE value="ROSSO: testSegnalazioneInquisitore non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneInquisitore riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita non riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneInquisitore" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita riuscito" />
   </component>
 </project>

@@ -116,7 +116,7 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         segnalazioneInquisitore();
-        verificaVero(isAccusabile());
+        verificaAccusabile();
     }
 
     @ParameterizedTest @CsvSource
@@ -220,8 +220,10 @@ public final class TestGiocatore
         verificaNumeroVoti(ESEMPIO_VOTI);
         segnalazioneAzzeccagarbugli();
         verificaNumeroVoti(ESEMPIO_VOTI);
-        verificaVero(isAccusabile());
+        verificaAccusabile();
     }
+
+    private void verificaAccusabile() { verificaVero(isAccusabile()); }
 
     private void segnalazioneInquisitore() { giocatore.segnalazioneInquisitore(); }
 
