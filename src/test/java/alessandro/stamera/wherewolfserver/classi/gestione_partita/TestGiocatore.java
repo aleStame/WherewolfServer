@@ -153,6 +153,23 @@ public final class TestGiocatore
         verificaVero(giocatore.isLupo());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Bracconiere",
+            "Borgomastro", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega",
+            "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNonLupo(String nomeLupo)
+    {
+        cambiaRuolo(nomeLupo);
+        verificaFalso(giocatore.isLupo());
+    }
+
     @Test public void testBracconiere()
     {
         cambiaRuolo("Bracconiere");
