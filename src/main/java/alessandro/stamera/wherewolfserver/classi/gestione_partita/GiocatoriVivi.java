@@ -601,32 +601,12 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestisciSegnalazioni(Ballottaggio ballottaggio)
     {
-        int posizioneSegnalatoAzzeccagarbugli = getPosizioneSegnalatoAzzeccagarbugli();
-        if(posizioneSegnalatoAzzeccagarbugli != NON_TROVATO) gestisciSegnalazioneAzzeccagarbugli(ballottaggio, posizioneSegnalatoAzzeccagarbugli);
+        List<String> nomiGiocatori = new ArrayList<>();
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(getGiocatore(i).isAccusabile()) nomiGiocatori.add(getNomeGiocatore(i));
+        for(String nome : nomiGiocatori) mandaBallottaggio(ballottaggio, nome);
     }
-
-    private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
-    {
-        String nome = getNomeGiocatore(posizione);
-        if(controlloBallottaggioAzzeccagarbugli(nome)) mandaBallottaggio(ballottaggio, nome);
-    }
-
-    private boolean controlloBallottaggioAzzeccagarbugli(String nome) { return !isCriminale(nome) && !isCitta(nome); }
 
     private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
-
-    private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio, int posizione)
-    {
-        String nome = getNomeGiocatore(posizione);
-        mandaBallottaggio(ballottaggio, nome);
-    }
-
-    private int getPosizioneSegnalatoAzzeccagarbugli()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) /*if(isSegnalatoAzzeccagarbugli(i))*/ posizione = i;
-        return posizione;
-    }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
     {

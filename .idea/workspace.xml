@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaAccusabile">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaNonAccusabile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,22 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00186" summary="VERDE: testAttaccoAssassino riuscito">
-      <option name="closed" value="true" />
-      <created>1785498233938</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1785498233938</updated>
-    </task>
-    <task id="LOCAL-00187" summary="ROSSO: testAttaccoAssassino non riuscito">
-      <option name="closed" value="true" />
-      <created>1785502640912</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1785502640912</updated>
     </task>
     <task id="LOCAL-00188" summary="VERDE: testAttaccoAssassino riuscito">
       <option name="closed" value="true" />
@@ -596,7 +581,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785793633431</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="REFACTORING: definizione del metodo verificaNonAccusabile">
+      <option name="closed" value="true" />
+      <created>1785793947846</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1785793947846</updated>
+    </task>
+    <task id="LOCAL-00236" summary="REFACTORING: definizione del metodo verificaNonAccusabile">
+      <option name="closed" value="true" />
+      <created>1785794045506</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1785794045506</updated>
+    </task>
+    <option name="localTasksCounter" value="237" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getGiocatore" />
     <MESSAGE value="ROSSO: testLupo non riuscito" />
     <MESSAGE value="VERDE: testLupo riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
@@ -639,6 +639,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo segnalazioneInquisitore" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreNonRiuscita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAccusabile" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAccusabile" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonAccusabile" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaNonAccusabile" />
   </component>
 </project>

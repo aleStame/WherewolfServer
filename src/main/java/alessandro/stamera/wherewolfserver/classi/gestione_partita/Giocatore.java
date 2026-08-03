@@ -121,10 +121,12 @@ public final class Giocatore
 
     public void segnalazioneAzzeccagarbugli() { segnalatoAzzeccagarbugli = true; }
 
-    public boolean isAccusabile()
+    public boolean isAccusabile() { return isAccusabileAzzeccagarbugli() || (isInquisito() && ruolo.isMistico()); }
+
+    private boolean isAccusabileAzzeccagarbugli()
     {
         Fazione fazione = getFazione();
-        return (fazione != CITTA && fazione != CRIMINALI && segnalatoAzzeccagarbugli) || (isInquisito() && ruolo.isMistico());
+        return fazione != CITTA && fazione != CRIMINALI && segnalatoAzzeccagarbugli;
     }
 
     private boolean isInquisito() { return segnalatoInquisitore; }
