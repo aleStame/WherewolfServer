@@ -121,7 +121,9 @@ public final class Giocatore
 
     public void segnalazioneAzzeccagarbugli() { segnalatoAzzeccagarbugli = true; }
 
-    public boolean isAccusabile() { return isAccusabileAzzeccagarbugli() || (isInquisito() && ruolo.isMistico()); }
+    public boolean isAccusabile() { return isAccusabileAzzeccagarbugli() || isAccusabileInquisizione(); }
+
+    private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
     private boolean isAccusabileAzzeccagarbugli()
     {
