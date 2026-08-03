@@ -202,7 +202,7 @@ public final class TestGiocatore
         verificaNumeroVoti(ESEMPIO_VOTI);
         segnalazioneAzzeccagarbugli();
         assertThat(giocatore.getNumeroVoti()).isZero();
-        verificaFalso(giocatore.isAccusabile());
+        verificaFalso(isAccusabile());
     }
 
     @ParameterizedTest @CsvSource
@@ -222,8 +222,10 @@ public final class TestGiocatore
         verificaNumeroVoti(ESEMPIO_VOTI);
         segnalazioneAzzeccagarbugli();
         verificaNumeroVoti(ESEMPIO_VOTI);
-        verificaVero(giocatore.isAccusabile());
+        verificaVero(isAccusabile());
     }
+
+    private boolean isAccusabile() { return giocatore.isAccusabile(); }
 
     private void segnalazioneAzzeccagarbugli() { giocatore.segnalazioneAzzeccagarbugli(); }
 
