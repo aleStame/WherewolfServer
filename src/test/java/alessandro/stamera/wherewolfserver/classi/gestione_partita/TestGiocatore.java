@@ -173,10 +173,12 @@ public final class TestGiocatore
     public void testNonBracconiere(String nomeLupo)
     {
         cambiaRuolo(nomeLupo);
-        assertThat(giocatore.isBracconiere()).isFalse();
+        verificaFalso(giocatore.isBracconiere());
     }
 
-    private void verificaNonInquisito() { assertThat(isInquisito()).isFalse(); }
+    private void verificaNonInquisito() { verificaFalso(isInquisito()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private boolean isInquisito() { return giocatore.isInquisito(); }
 

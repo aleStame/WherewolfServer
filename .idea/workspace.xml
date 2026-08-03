@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testBracconiere riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testNonBracconiere riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
@@ -204,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00168" summary="ROSSO: testOratore non riuscito">
-      <option name="closed" value="true" />
-      <created>1785332789311</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1785332789312</updated>
     </task>
     <task id="LOCAL-00169" summary="VERDE: testOratore riuscito">
       <option name="closed" value="true" />
@@ -597,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785707246313</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="VERDE DIRETTO: testNonBracconiere riuscito">
+      <option name="closed" value="true" />
+      <created>1785708335267</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1785708335271</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoUltimoLupoCappuccettoRosso riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciProtezioneNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo getNonna" />
     <MESSAGE value="ROSSO: testAttaccoAssassinoVittimaAmata non riuscito" />
@@ -640,6 +639,7 @@
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="ROSSO: testBracconiere non riuscito" />
     <MESSAGE value="VERDE: testBracconiere riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testBracconiere riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testNonBracconiere riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNonBracconiere riuscito" />
   </component>
 </project>
