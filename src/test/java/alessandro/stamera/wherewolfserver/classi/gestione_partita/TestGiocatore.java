@@ -23,7 +23,7 @@ public final class TestGiocatore
 
     @Test public void testVoti()
     {
-        giocatore.incrementaVoti(ESEMPIO_VOTI);
+        incrementaVoti();
         verificaNumeroVoti(ESEMPIO_VOTI);
         giocatore.annullaVoti();
         verificaNumeroVoti(0);
@@ -198,7 +198,7 @@ public final class TestGiocatore
     public void testAnnullamentoVotiDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.incrementaVoti(ESEMPIO_VOTI);
+        incrementaVoti();
         assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
         giocatore.segnalazioneAzzeccagarbugli();
         assertThat(giocatore.getNumeroVoti()).isZero();
@@ -218,12 +218,14 @@ public final class TestGiocatore
     public void testAccusaDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.incrementaVoti(ESEMPIO_VOTI);
+        incrementaVoti();
         assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
         giocatore.segnalazioneAzzeccagarbugli();
         assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
         verificaVero(giocatore.isAccusabile());
     }
+
+    private void incrementaVoti() { giocatore.incrementaVoti(ESEMPIO_VOTI); }
 
     private boolean isLupo() { return giocatore.isLupo(); }
 
