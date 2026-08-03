@@ -115,7 +115,7 @@ public final class TestGiocatore
     public void testSegnalazioneInquisitore(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.segnalazioneInquisitore();
+        segnalazioneInquisitore();
         verificaVero(isAccusabile());
     }
 
@@ -132,7 +132,7 @@ public final class TestGiocatore
     public void testSegnalazioneInquisitoreNonRiuscita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.segnalazioneInquisitore();
+        segnalazioneInquisitore();
         verificaFalso(isAccusabile());
     }
 
@@ -222,6 +222,8 @@ public final class TestGiocatore
         verificaNumeroVoti(ESEMPIO_VOTI);
         verificaVero(isAccusabile());
     }
+
+    private void segnalazioneInquisitore() { giocatore.segnalazioneInquisitore(); }
 
     private boolean isAccusabile() { return giocatore.isAccusabile(); }
 
