@@ -8,8 +8,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NESSUNA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 
 public final class Giocatore
@@ -19,7 +18,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoInquisitore;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore;
 
     private Ruolo ruolo;
 
@@ -31,6 +30,7 @@ public final class Giocatore
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
         cambiaRuolo(ruolo);
+        segnalatoAzzeccagarbugli = false;
         setSegnalazioneInquisitore(false);
         fazione = NESSUNA;
     }
@@ -41,6 +41,7 @@ public final class Giocatore
     {
         int risultato = numeroVoti;
         if(isMaledetto()) risultato++;
+        if(segnalatoAzzeccagarbugli) risultato = 0;
         return risultato;
     }
 
@@ -120,9 +121,13 @@ public final class Giocatore
 
     public boolean isBracconiere() { return ruolo.isBracconiere(); }
 
-    public void segnalazioneAzzeccagarbugli() { }
+    public void segnalazioneAzzeccagarbugli() { segnalatoAzzeccagarbugli = true; }
 
-    public boolean isAccusabile() { return false; }
+    public boolean isAccusabile()
+    {
+        Fazione fazione = getFazione();
+        return fazione != CITTA && fazione != CRIMINALI && segnalatoAzzeccagarbugli;
+    }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
