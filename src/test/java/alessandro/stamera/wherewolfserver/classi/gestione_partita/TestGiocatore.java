@@ -117,7 +117,7 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         verificaNonInquisito();
         giocatore.segnalazioneInquisitore();
-        verificaVero(isInquisito());
+        verificaVero(isAccusabile());
     }
 
     @ParameterizedTest @CsvSource

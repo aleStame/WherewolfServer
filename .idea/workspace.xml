@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo incrementaVoti">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isAccusabile">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,22 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00179" summary="VERDE: testNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1785342350028</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1785342350030</updated>
-    </task>
-    <task id="LOCAL-00180" summary="ROSSO: testProgenieNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1785416953521</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1785416953526</updated>
     </task>
     <task id="LOCAL-00181" summary="VERDE: testProgenieNosferatu riuscito">
       <option name="closed" value="true" />
@@ -596,7 +580,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785788685265</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli">
+      <option name="closed" value="true" />
+      <created>1785789110744</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789110750</updated>
+    </task>
+    <task id="LOCAL-00229" summary="REFACTORING: definizione del metodo isAccusabile">
+      <option name="closed" value="true" />
+      <created>1785789250380</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789250380</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,8 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSegnalazioneInquisitoreNonRiuscita non riuscito" />
-    <MESSAGE value="VERDE: testSegnalazioneInquisitoreNonRiuscita riuscito" />
     <MESSAGE value="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneInquisitoreMisticoAssente riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneBecchino non riuscito" />
@@ -639,6 +637,8 @@
     <MESSAGE value="ROSSO: testAccusaDopoSegnalazioneAzzeccagarbugli non riuscito" />
     <MESSAGE value="VERDE: testAccusaDopoSegnalazioneAzzeccagarbugli riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo incrementaVoti" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo incrementaVoti" />
+    <MESSAGE value="REFACTORING: definizione del metodo segnalazioneAzzeccagarbugli" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAccusabile" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAccusabile" />
   </component>
 </project>
