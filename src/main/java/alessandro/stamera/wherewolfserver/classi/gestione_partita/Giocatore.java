@@ -30,7 +30,7 @@ public final class Giocatore
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
         cambiaRuolo(ruolo);
-        segnalatoAzzeccagarbugli = false;
+        setSegnalatoAzzeccagarbugli(false);
         setSegnalazioneInquisitore(false);
         fazione = NESSUNA;
     }
@@ -119,7 +119,7 @@ public final class Giocatore
 
     public boolean isBracconiere() { return ruolo.isBracconiere(); }
 
-    public void segnalazioneAzzeccagarbugli() { segnalatoAzzeccagarbugli = true; }
+    public void segnalazioneAzzeccagarbugli() { setSegnalatoAzzeccagarbugli(true); }
 
     public boolean isAccusabile() { return isAccusabileAzzeccagarbugli() || isAccusabileInquisizione(); }
 
@@ -145,5 +145,10 @@ public final class Giocatore
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 
     private void setAmato(boolean amato) { this.amato = amato; }
+
+    private void setSegnalatoAzzeccagarbugli(boolean segnalatoAzzeccagarbugli)
+    {
+        this.segnalatoAzzeccagarbugli = segnalatoAzzeccagarbugli;
+    }
 
 }
