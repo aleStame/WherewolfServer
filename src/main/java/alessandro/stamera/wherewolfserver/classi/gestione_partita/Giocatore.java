@@ -96,8 +96,6 @@ public final class Giocatore
 
     public void perdiProtezioni() { tratti.perdiProtezioni(); }
 
-    public boolean isInquisito() { return segnalatoInquisitore; }
-
     public void segnalazioneInquisitore() { if(ruolo.isMistico()) setSegnalazioneInquisitore(true); }
 
     public EsitoAttacco criminalizzazione()
@@ -126,8 +124,10 @@ public final class Giocatore
     public boolean isAccusabile()
     {
         Fazione fazione = getFazione();
-        return fazione != CITTA && fazione != CRIMINALI && segnalatoAzzeccagarbugli;
+        return (fazione != CITTA && fazione != CRIMINALI && segnalatoAzzeccagarbugli) || (isInquisito() && ruolo.isMistico());
     }
+
+    private boolean isInquisito() { return segnalatoInquisitore; }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {

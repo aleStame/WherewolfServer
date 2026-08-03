@@ -601,10 +601,8 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestisciSegnalazioni(Ballottaggio ballottaggio)
     {
-        int posizioneSegnalatoAzzeccagarbugli = getPosizioneSegnalatoAzzeccagarbugli(), posizioneInquisito = getPosizioneInquisito();
+        int posizioneSegnalatoAzzeccagarbugli = getPosizioneSegnalatoAzzeccagarbugli();
         if(posizioneSegnalatoAzzeccagarbugli != NON_TROVATO) gestisciSegnalazioneAzzeccagarbugli(ballottaggio, posizioneSegnalatoAzzeccagarbugli);
-        if(posizioneInquisito != NON_TROVATO) gestisciSegnalazioneInquisitore(ballottaggio, posizioneInquisito);
-        ballottaggio.annullaSegnalazioni();
     }
 
     private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
@@ -629,15 +627,6 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) /*if(isSegnalatoAzzeccagarbugli(i))*/ posizione = i;
         return posizione;
     }
-
-    private int getPosizioneInquisito()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisito(i)) posizione = i;
-        return posizione;
-    }
-
-    private boolean isInquisito(int posizione) { return getGiocatore(posizione).isInquisito(); }
 
     private void gestioneAmato(Ballottaggio ballottaggio)
     {

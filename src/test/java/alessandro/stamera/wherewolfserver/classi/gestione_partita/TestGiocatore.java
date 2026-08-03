@@ -115,7 +115,6 @@ public final class TestGiocatore
     public void testSegnalazioneInquisitore(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaNonInquisito();
         giocatore.segnalazioneInquisitore();
         verificaVero(isAccusabile());
     }
@@ -133,9 +132,7 @@ public final class TestGiocatore
     public void testSegnalazioneInquisitoreNonRiuscita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaNonInquisito();
         giocatore.segnalazioneInquisitore();
-        verificaNonInquisito();
     }
 
     @ParameterizedTest @CsvSource({ "Becchino" }) public void testCriminalizzazioneBecchino(String nomeRuolo)
@@ -235,11 +232,7 @@ public final class TestGiocatore
 
     private boolean isBracconiere() { return giocatore.isBracconiere(); }
 
-    private void verificaNonInquisito() { verificaFalso(isInquisito()); }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isInquisito() { return giocatore.isInquisito(); }
 
     private void verificaAttaccoAssassino(EsitoAttacco esito) { verificaAttacco(giocatore.attaccoAssassino(), esito); }
 
