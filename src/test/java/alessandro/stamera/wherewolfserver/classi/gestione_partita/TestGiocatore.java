@@ -194,13 +194,13 @@ public final class TestGiocatore
     }
 
     @ParameterizedTest
-    @CsvSource ( { "Assassino", "Bocca di rosa", "Borgomastro", "Capo gilda", "Ladra", "Oratore", "Spia" } )
+    @CsvSource ( { "Assassino", "Bocca di rosa", "Borgomastro", "Capo gilda", "Guardia corrotta", "Ladra", "Oratore", "Spia" } )
     public void testAnnullamentoVotiDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
         incrementaVoti();
-        assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
-        giocatore.segnalazioneAzzeccagarbugli();
+        verificaNumeroVoti(ESEMPIO_VOTI);
+        segnalazioneAzzeccagarbugli();
         assertThat(giocatore.getNumeroVoti()).isZero();
         verificaFalso(giocatore.isAccusabile());
     }
@@ -210,20 +210,22 @@ public final class TestGiocatore
         {
             "Altra guardia", "Angelo custode", "Bardo", "Becchino", "Boia", "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco",
             "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul",
-            "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno",
-            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oste",
-            "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco",
+            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Strega", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAccusaDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
         incrementaVoti();
-        assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
-        giocatore.segnalazioneAzzeccagarbugli();
-        assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
+        verificaNumeroVoti(ESEMPIO_VOTI);
+        segnalazioneAzzeccagarbugli();
+        verificaNumeroVoti(ESEMPIO_VOTI);
         verificaVero(giocatore.isAccusabile());
     }
+
+    private void segnalazioneAzzeccagarbugli() { giocatore.segnalazioneAzzeccagarbugli(); }
 
     private void incrementaVoti() { giocatore.incrementaVoti(ESEMPIO_VOTI); }
 
