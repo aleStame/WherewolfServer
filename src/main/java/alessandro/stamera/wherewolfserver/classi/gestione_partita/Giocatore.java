@@ -41,7 +41,7 @@ public final class Giocatore
     {
         int risultato = numeroVoti;
         if(isMaledetto()) risultato++;
-        if(segnalatoAzzeccagarbugli && !isAccusabile()) risultato = 0;
+        if(isSegnalatoAzzeccagarbugli() && !isAccusabile()) risultato = 0;
         return risultato;
     }
 
@@ -126,8 +126,10 @@ public final class Giocatore
     private boolean isAccusabileAzzeccagarbugli()
     {
         Fazione fazione = getFazione();
-        return fazione != CITTA && fazione != CRIMINALI && segnalatoAzzeccagarbugli;
+        return fazione != CITTA && fazione != CRIMINALI && isSegnalatoAzzeccagarbugli();
     }
+
+    private boolean isSegnalatoAzzeccagarbugli() { return segnalatoAzzeccagarbugli; }
 
     private boolean isInquisito() { return segnalatoInquisitore; }
 
