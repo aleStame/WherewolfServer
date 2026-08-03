@@ -193,6 +193,35 @@ public final class TestGiocatore
         verificaFalso(isBracconiere());
     }
 
+    @ParameterizedTest
+    @CsvSource ( { "Assassino", "Bocca di rosa", "Borgomastro", "Capo gilda", "Ladra", "Oratore", "Spia" } )
+    public void testAnnullamentoVotiDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        giocatore.incrementaVoti(ESEMPIO_VOTI);
+        assertThat(giocatore.getNumeroVoti()).isEqualTo(ESEMPIO_VOTI);
+        giocatore.segnalazioneAzzeccagarbugli();
+        assertThat(giocatore.getNumeroVoti()).isZero();
+        verificaFalso(giocatore.isAccusabile());
+    }
+
+    /*@ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, 3", "Angelo custode, 3", "Bardo, 3", "Becchino, 3", "Bocca di rosa, 0", "Boia, 3",
+            "Bracconiere, 3", "Cacciatore, 3", "Cacciatore di vampiri, 3", "Capo branco, 3", "Cappuccetto rosso, 3",
+            "Contadino eroe, 3", "Contadino discendente dei lupi, 3", "Contadino mostro, 3", "Contadino normale, 3", "Eremita, 3", "Ghoul, 3",
+            "Giovane lupo, 3", "Giulietta, 3", "Giullare, 3", "Goblin, 3", "Guardia, 3", "Guardia corrotta, 3", "Guaritore, 3", "Inquisitore, 3",
+            "Leprecauno, 3", "Lupo del branco, 3", "Lupo reietto, 3", "Lupo solitario, 3", "Mago, 3", "Medium, 3", "Megera, 3",
+            "Monaco, 3", "Negromante, 3", "Nonna, 3", "Nosferatu, 3", "Oste, 3", "Pazzo, 3", "Peccatore, 3", "Posseduto, 3",
+            "Prete, 3", "Sidhe, 3", "Strega, 3", "Sensitiva, 3", "Templare, 3", "Vampiro, 3"
+        }
+    )
+    public void testSegnalazioneAzzeccagarbugli()
+    {
+
+    }*/
+
     private boolean isLupo() { return giocatore.isLupo(); }
 
     private boolean isBracconiere() { return giocatore.isBracconiere(); }

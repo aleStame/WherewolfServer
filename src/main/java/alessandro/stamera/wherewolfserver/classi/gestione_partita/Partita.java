@@ -132,7 +132,7 @@ public final class Partita
         }
     }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
+    //public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
 
     public void segnalazioneInquisitore(String nome) { vivi.segnalazioneInquisitore(nome); }
 

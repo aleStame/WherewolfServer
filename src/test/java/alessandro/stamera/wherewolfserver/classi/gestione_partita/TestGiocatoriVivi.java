@@ -155,7 +155,7 @@ public final class TestGiocatoriVivi
         String[][] giocatori = new String[][]
             { { nomeAngelo, "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         inizializzaGiocatori(giocatori);
-        segnalazioneAzzeccagarbugli(nomeAngelo);
+        //segnalazioneAzzeccagarbugli(nomeAngelo);
         for(int i = 2; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(nomeAngelo, giocatori[3][0], giocatori[2][0]);
         FACTORY.getRuolo("Angelo custode").ripristina();
@@ -167,7 +167,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Rodolfo";
         aggiungiGiocatore(nome, nomeRuolo);
-        segnalazioneAzzeccagarbugli(nome);
+        //segnalazioneAzzeccagarbugli(nome);
         incrementaVoti(nome, 4);
         //assertThat(giocatori.getNumeroVoti(nome)).isZero();
         String nome2 = "Domenica";
@@ -184,11 +184,10 @@ public final class TestGiocatoriVivi
             { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { nomeInquisitore, "Inquisitore" }, { "Giorgia", "Giullare" } };
         int posizione = 2;
         inizializzaGiocatori(giocatori);
-        segnalazioneAzzeccagarbugli(nomeInquisitore);
+        //segnalazioneAzzeccagarbugli(nomeInquisitore);
         segnalazioneAngeloCustode(nomeInquisitore);
         for(int i = posizione; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
-        ripristina(nomeInquisitore);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -305,8 +304,8 @@ public final class TestGiocatoriVivi
     {
         String nome = "Anna";
         aggiungiGiocatore(nome, ruolo);
-        giocatori.segnalazioneAzzeccagarbugli(nome);
-        verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));
+        /*giocatori.segnalazioneAzzeccagarbugli(nome);
+        verificaVero(giocatori.isSegnalatoAzzeccagarbugli(nome));*/
         ripristina(nome);
     }
 
@@ -1279,8 +1278,6 @@ public final class TestGiocatoriVivi
     private boolean isCreaturaOmbra(String nome) { return giocatori.isCreaturaOmbra(nome); }
 
     private boolean isGuardia(String nome) { return giocatori.isGuardia(nome); }
-
-    private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {

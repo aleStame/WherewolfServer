@@ -27,7 +27,7 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean romeo, segnalazioneAzzeccagarbugli, segnalatoBoia, segnalatoOratore, stregato;
+    private boolean romeo, segnalatoBoia, segnalatoOratore, stregato;
 
     private final boolean mistico;
 
@@ -52,7 +52,6 @@ public class Ruolo
         this.mistico = mistico;
         tratti = new Tratti();
         setRomeo(false);
-        annullaSegnalazioneAzzeccagarbugli();
         fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
@@ -182,7 +181,7 @@ public class Ruolo
     public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco risultato = RIUSCITO;
-        if(isProtezionePresente(ruolo)) risultato = attaccoRuoloProtetto();
+        if(isProtezionePresente(ruolo)) risultato = FALLITO;
         return risultato;
     }
 
@@ -276,12 +275,6 @@ public class Ruolo
         perdiProtezioni();
     }
 
-    public boolean isSegnalatoAzzeccagarbugli() { return segnalazioneAzzeccagarbugli; }
-
-    public void segnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(true); }
-
-    public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
-
     public void ripristinaFazioneOriginale()
     {
         cambiaFazione(fazioneOriginale);
@@ -323,7 +316,6 @@ public class Ruolo
     public void ripristina()
     {
         resettaRomeo();
-        annullaSegnalazioneAzzeccagarbugli();
         eliminaTratti(MALEDETTO, NON_MORTO);
         ripristinaFazioneOriginale();
         perdiProtezioni();
@@ -347,22 +339,11 @@ public class Ruolo
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
-    private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
-    {
-        this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli;
-    }
-
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
-
-    private EsitoAttacco attaccoRuoloProtetto()
-    {
-        perdiProtezioni();
-        return ANGELO_CUSTODE_MORTO;
-    }
 
 }

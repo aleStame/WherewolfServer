@@ -73,15 +73,6 @@ public final class TestRuolo
         verificaTrattoPresente(NON_MORTO);
     }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
-    {
-        verificaNonSegnalato();
-        ruolo.segnalazioneAzzeccagarbugli();
-        verificaVero(isSegnalatoAzzeccagarbugli());
-        ruolo.annullaSegnalazioneAzzeccagarbugli();
-        verificaNonSegnalato();
-    }
-
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
@@ -121,11 +112,7 @@ public final class TestRuolo
         return partita;
     }
 
-    private void verificaNonSegnalato() { verificaFalso(isSegnalatoAzzeccagarbugli()); }
-
     private boolean isSegnalatoOratore() { return ruolo.isSegnalatoOratore(); }
-
-    private boolean isSegnalatoAzzeccagarbugli() { return ruolo.isSegnalatoAzzeccagarbugli(); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
 

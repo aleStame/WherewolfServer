@@ -215,7 +215,7 @@ public final class TestPartita
         String nome = "Matteo";
         String[][] giocatori = new String[][] { { nome, ruolo }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
         inizializzaPartita(giocatori);
-        segnalazioneAzzeccagarbugli(nome);
+        //segnalazioneAzzeccagarbugli(nome);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
         verificaAccusati(nome, giocatori[1][0], giocatori[2][0]);
@@ -228,7 +228,7 @@ public final class TestPartita
             { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         int posizione1 = 3, posizione2 = 1;
         inizializzaPartita(giocatori);
-        segnalazioneAzzeccagarbugli(giocatori[posizione1][0]);
+        //segnalazioneAzzeccagarbugli(giocatori[posizione1][0]);
         segnalazioneAngeloCustode(giocatori[posizione1][0]);
         incrementaVoti(giocatori[posizione2][0], 2);
         terminaVotazioni();
@@ -2326,8 +2326,6 @@ public final class TestPartita
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private void segnalazioneAzzeccagarbugli(String nome) { partita.segnalazioneAzzeccagarbugli(nome); }
 
     private void attaccoLupi(String nomeLupo, String nome) { partita.attaccoLupi(nomeLupo, nome); }
 

@@ -113,7 +113,8 @@ public final class Ballottaggio extends Giocatori
 
     private boolean isSegnalatoAzzeccagarbugli(int posizione)
     {
-        return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione));
+        //return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione));
+        return false;
     }
 
     private void annullaSegnalazioneInquisitore()
@@ -136,6 +137,7 @@ public final class Ballottaggio extends Giocatori
         annullaSegnalazioneAzzeccagarbugli(getNomeGiocatore(posizione));
     }
 
-    private void annullaSegnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).annullaSegnalazioneAzzeccagarbugli(); }
+    private void annullaSegnalazioneAzzeccagarbugli(String nome) { //getRuolo(nome).annullaSegnalazioneAzzeccagarbugli();
+         }
 
 }

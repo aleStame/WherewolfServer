@@ -62,8 +62,6 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeAssassino() { return getNomeGiocatore(getPosizioneAssassino()); }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
-
     public int getNumeroGuardie()
     {
         int numeroGuardie = 0;
@@ -545,8 +543,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isBracconiere(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isBracconiere();
-         return false; }
+    private boolean isBracconiere(int posizione) { return getGiocatore(posizione).isBracconiere(); }
 
     private boolean isMistico(int posizione) { return isMistico(getNomeGiocatore(posizione)); }
 
@@ -629,11 +626,9 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneSegnalatoAzzeccagarbugli()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isSegnalatoAzzeccagarbugli(i)) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) /*if(isSegnalatoAzzeccagarbugli(i))*/ posizione = i;
         return posizione;
     }
-
-    private boolean isSegnalatoAzzeccagarbugli(int posizione) { return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione)); }
 
     private int getPosizioneInquisito()
     {

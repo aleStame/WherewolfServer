@@ -120,6 +120,10 @@ public final class Giocatore
 
     public boolean isBracconiere() { return ruolo.isBracconiere(); }
 
+    public void segnalazioneAzzeccagarbugli() { }
+
+    public boolean isAccusabile() { return false; }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;
