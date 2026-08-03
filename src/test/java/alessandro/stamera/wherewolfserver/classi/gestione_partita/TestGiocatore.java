@@ -133,6 +133,7 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         giocatore.segnalazioneInquisitore();
+        verificaFalso(isAccusabile());
     }
 
     @ParameterizedTest @CsvSource({ "Becchino" }) public void testCriminalizzazioneBecchino(String nomeRuolo)
