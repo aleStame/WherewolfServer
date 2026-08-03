@@ -133,7 +133,7 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         segnalazioneInquisitore();
-        verificaFalso(isAccusabile());
+        verificaNonAccusabile();
     }
 
     @ParameterizedTest @CsvSource({ "Becchino" }) public void testCriminalizzazioneBecchino(String nomeRuolo)
@@ -200,7 +200,7 @@ public final class TestGiocatore
         verificaNumeroVoti(ESEMPIO_VOTI);
         segnalazioneAzzeccagarbugli();
         assertThat(giocatore.getNumeroVoti()).isZero();
-        verificaFalso(isAccusabile());
+        verificaNonAccusabile();
     }
 
     @ParameterizedTest @CsvSource
@@ -224,6 +224,8 @@ public final class TestGiocatore
     }
 
     private void verificaAccusabile() { verificaVero(isAccusabile()); }
+
+    private void verificaNonAccusabile() { verificaFalso(isAccusabile()); }
 
     private void segnalazioneInquisitore() { giocatore.segnalazioneInquisitore(); }
 
