@@ -156,7 +156,7 @@ public final class TestGiocatore
     @Test public void testBracconiere()
     {
         cambiaRuolo("Bracconiere");
-        verificaVero(giocatore.isBracconiere());
+        verificaVero(isBracconiere());
     }
 
     @ParameterizedTest @CsvSource
@@ -173,8 +173,10 @@ public final class TestGiocatore
     public void testNonBracconiere(String nomeLupo)
     {
         cambiaRuolo(nomeLupo);
-        verificaFalso(giocatore.isBracconiere());
+        verificaFalso(isBracconiere());
     }
+
+    private boolean isBracconiere() { return giocatore.isBracconiere(); }
 
     private void verificaNonInquisito() { verificaFalso(isInquisito()); }
 
