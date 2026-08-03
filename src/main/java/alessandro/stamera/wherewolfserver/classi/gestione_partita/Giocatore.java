@@ -41,7 +41,7 @@ public final class Giocatore
     {
         int risultato = numeroVoti;
         if(isMaledetto()) risultato++;
-        if(segnalatoAzzeccagarbugli) risultato = 0;
+        if(segnalatoAzzeccagarbugli && !isAccusabile()) risultato = 0;
         return risultato;
     }
 
