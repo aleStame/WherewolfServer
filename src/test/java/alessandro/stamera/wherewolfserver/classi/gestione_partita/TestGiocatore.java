@@ -286,6 +286,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isNegromante());
     }
 
+    @Test public void testNegromante()
+    {
+        cambiaRuolo("Negromante");
+        verificaVero(giocatore.isNegromante());
+    }
+
     private void verificaAccusabile() { verificaVero(isAccusabile()); }
 
     private boolean isCacciatore() { return giocatore.isCacciatore(); }
