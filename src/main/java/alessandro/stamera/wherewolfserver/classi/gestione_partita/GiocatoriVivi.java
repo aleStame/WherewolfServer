@@ -311,7 +311,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { }
+    public void segnalazioneAzzeccagarbugli(String nome) { getGiocatore(nome).segnalazioneAzzeccagarbugli(); }
 
     private void gestisciProtezioneNonnna()
     {
