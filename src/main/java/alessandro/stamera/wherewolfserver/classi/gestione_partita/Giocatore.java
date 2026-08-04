@@ -127,7 +127,7 @@ public final class Giocatore
 
     public void annullaSegnalazioneAzzeccagarbugli() { setSegnalatoAzzeccagarbugli(false); }
 
-    public boolean isCacciatore() { return true; }
+    public boolean isCacciatore() { return ruolo.isCacciatore(); }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
