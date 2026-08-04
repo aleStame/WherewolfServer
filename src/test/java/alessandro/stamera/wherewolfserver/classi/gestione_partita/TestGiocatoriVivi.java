@@ -155,7 +155,7 @@ public final class TestGiocatoriVivi
         String[][] giocatori = new String[][]
             { { nomeAngelo, "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         inizializzaGiocatori(giocatori);
-        //segnalazioneAzzeccagarbugli(nomeAngelo);
+        this.giocatori.segnalazioneAzzeccagarbugli(nomeAngelo);
         for(int i = 2; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(nomeAngelo, giocatori[3][0], giocatori[2][0]);
         FACTORY.getRuolo("Angelo custode").ripristina();

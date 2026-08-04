@@ -311,6 +311,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
 
+    public void segnalazioneAzzeccagarbugli(String nome) { }
+
     private void gestisciProtezioneNonnna()
     {
         if(isRimastoUnSoloLupo()) aggiungiProtezioneNonna();
@@ -530,8 +532,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isLupoSolitario(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isLupoSolitario();
-        return false; }
+    private boolean isLupoSolitario(int posizione) { return getGiocatore(posizione).isLupoSolitario(); }
 
     private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
 
