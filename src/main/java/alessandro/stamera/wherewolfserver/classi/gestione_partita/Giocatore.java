@@ -129,6 +129,8 @@ public final class Giocatore
 
     public boolean isCacciatore() { return ruolo.isCacciatore(); }
 
+    public boolean isLupoSolitario() { return true; }
+
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
     private boolean isAccusabileAzzeccagarbugli()
