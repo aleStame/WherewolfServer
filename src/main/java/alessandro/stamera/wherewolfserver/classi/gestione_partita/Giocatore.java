@@ -30,8 +30,8 @@ public final class Giocatore
         tratti = new Tratti();
         annullaProtezioneAngeloCustode();
         cambiaRuolo(ruolo);
-        setSegnalatoAzzeccagarbugli(false);
-        setSegnalazioneInquisitore(false);
+        annullaSegnalazioneAzzeccagarbugli();
+        annullaSegnalazioneInquisitore();
         fazione = NESSUNA;
     }
 
@@ -122,6 +122,12 @@ public final class Giocatore
     public void segnalazioneAzzeccagarbugli() { setSegnalatoAzzeccagarbugli(true); }
 
     public boolean isAccusabile() { return isAccusabileAzzeccagarbugli() || isAccusabileInquisizione(); }
+
+    public void annullaSegnalazioneInquisitore() { setSegnalazioneInquisitore(false); }
+
+    public void annullaSegnalazioneAzzeccagarbugli() { setSegnalatoAzzeccagarbugli(false); }
+
+    public boolean isCacciatore() { return true; }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 

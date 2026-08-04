@@ -48,10 +48,6 @@ public final class TestBallottaggio
         verificaFalso(isAmatoPresente());
     }
 
-    @Test public void testNessunaSegnalazione() {
-        verificaSegnalazioneAssente();
-    }
-
     @ParameterizedTest @CsvSource({ "Guaritore, 0", "Lupo del branco, 0", "Peccatore, 2" })
     public void testSegnalazioneBoia(String nomeRuolo, int risultato)
     {
@@ -115,7 +111,6 @@ public final class TestBallottaggio
         for(int i = 0; i < giocatori.length - 1; i++) segnalazioneOratore(giocatori[i][0]);
         incrementaVoti(giocatori[1][0], 3);
         assertThatIllegalStateException().isThrownBy(this::getNomeGiocatorePerdente).withMessage(ERRORE_ROGO_SALTATO);
-        verificaSegnalazioneAssente();
     }
 
     @Test public void testSegnalazioneOratoreNonRiuscita()
@@ -126,7 +121,6 @@ public final class TestBallottaggio
         int posizione = 2;
         incrementaVoti(giocatori[posizione][0], 3);
         verificaNomeEliminato(giocatori[posizione][0]);
-        verificaSegnalazioneAssente();
     }
 
     @Test public void testSegnalazioneBorgomastro()
@@ -162,8 +156,6 @@ public final class TestBallottaggio
     private String[] toArray(Stream<String> stream) { return stream.toList().toArray(new String[0]); }
 
     private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
-
-    private void verificaSegnalazioneAssente() { verificaVero(ballottaggio.isSegnalazioneAssente()); }
 
     private void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 

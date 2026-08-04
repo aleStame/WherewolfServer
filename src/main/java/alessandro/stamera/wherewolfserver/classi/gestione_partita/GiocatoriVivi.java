@@ -582,15 +582,32 @@ public final class GiocatoriVivi extends Giocatori
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         if(getNumeroGiocatori() > 0) estraiSecondoPosto(ballottaggio);
-        gestisciSegnalazioni(ballottaggio);
+        caricaAccusabili(ballottaggio);
         sistemazioneBallottaggio(ballottaggio);
         return ballottaggio;
     }
 
     private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
     {
-        if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
-        if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
+        if(ballottaggio.isAmatoPresente())
+        {
+            if(ballottaggio.isAngeloCustodePresente())
+            {
+                String nomeAmato = ballottaggio.getNomeAngeloCustode();
+                aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
+                ballottaggio.eliminaGiocatore(nomeAmato);
+            }
+            else if(isAngeloCustodePresente())
+            {
+                String nomeAmato = ballottaggio.getNomeAngeloCustode();
+                aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
+                ballottaggio.eliminaGiocatore(nomeAmato);
+                String nomeAngeloCustode = getNomeAngeloCustode();
+                Giocatore angeloCustode = getGiocatore(nomeAngeloCustode);
+                ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
+                eliminaGiocatore(nomeAngeloCustode);
+            }
+        }
     }
 
     private void estraiSecondoPosto(Ballottaggio ballottaggio)
@@ -599,39 +616,22 @@ public final class GiocatoriVivi extends Giocatori
         if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
     }
 
-    private void gestisciSegnalazioni(Ballottaggio ballottaggio)
+    private void caricaAccusabili(Ballottaggio ballottaggio)
     {
         List<String> nomiGiocatori = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(getGiocatore(i).isAccusabile()) nomiGiocatori.add(getNomeGiocatore(i));
+        for(int i = 0; i < getNumeroGiocatori(); i++)
+        {
+            String nome = getNomeGiocatore(i);
+            if (getGiocatore(nome).isAccusabile()) nomiGiocatori.add(nome);
+        }
         for(String nome : nomiGiocatori) mandaBallottaggio(ballottaggio, nome);
-    }
-
-    private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
-
-    private void gestioneAmato(Ballottaggio ballottaggio)
-    {
-        spostamentoAmato(ballottaggio);
-        if(isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
-    }
-
-    private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
-    {
-        mandaBallottaggio(ballottaggio, getNomeAngeloCustode());
     }
 
     private void mandaBallottaggio(Giocatori ballottaggio, String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
+        Giocatore giocatore = getGiocatore(nome);
         eliminaGiocatore(nome);
-        ballottaggio.aggiungiGiocatore(nome, new Giocatore(ruolo));
-    }
-
-    private void spostamentoAmato(Ballottaggio ballottaggio)
-    {
-        String nome = ballottaggio.getNomeAmato();
-        Ruolo ruolo = ballottaggio.getRuolo(nome);
-        ballottaggio.eliminaGiocatore(nome);
-        aggiungiGiocatore(nome, new Giocatore(ruolo));
+        ballottaggio.aggiungiGiocatore(nome, giocatore);
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
@@ -658,9 +658,6 @@ public final class GiocatoriVivi extends Giocatori
         nomi.toArray(risultato);
         return risultato;
     }
-
-    private EsitoAttacco attaccoNosferatuRuolo(String nome) { //return getRuolo(nome).attaccoNosferatu();
-        return null; }
 
     private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }
 
