@@ -237,13 +237,13 @@ public final class TestGiocatore
     public void testNonCacciatore(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isCacciatore());
+        verificaFalso(isCacciatore());
     }
 
     @Test public void testCacciatore()
     {
         cambiaRuolo("Cacciatore");
-        verificaVero(giocatore.isCacciatore());
+        verificaVero(isCacciatore());
     }
 
     @ParameterizedTest @CsvSource
@@ -270,6 +270,8 @@ public final class TestGiocatore
     }*/
 
     private void verificaAccusabile() { verificaVero(isAccusabile()); }
+
+    private boolean isCacciatore() { return giocatore.isCacciatore(); }
 
     private void verificaNonAccusabile() { verificaFalso(isAccusabile()); }
 
