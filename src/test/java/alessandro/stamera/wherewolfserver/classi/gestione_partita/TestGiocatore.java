@@ -263,11 +263,11 @@ public final class TestGiocatore
         verificaFalso(giocatore.isLupoSolitario());
     }
 
-    /*@Test public void testCacciatore()
+    @Test public void testLupoSolitario()
     {
-        cambiaRuolo("Cacciatore");
-        verificaVero(giocatore.isCacciatore());
-    }*/
+        cambiaRuolo("Lupo solitario");
+        verificaVero(giocatore.isLupoSolitario());
+    }
 
     private void verificaAccusabile() { verificaVero(isAccusabile()); }
 
