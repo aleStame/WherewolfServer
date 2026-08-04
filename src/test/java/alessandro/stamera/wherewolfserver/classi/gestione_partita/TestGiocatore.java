@@ -240,6 +240,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isCacciatore());
     }
 
+    @Test public void testCacciatore()
+    {
+        cambiaRuolo("Cacciatore");
+        verificaVero(giocatore.isCacciatore());
+    }
+
     private void verificaAccusabile() { verificaVero(isAccusabile()); }
 
     private void verificaNonAccusabile() { verificaFalso(isAccusabile()); }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGiocatore non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGiocatore riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,14 +201,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00193" summary="ROSSO: testAttaccoAssassinoVittimaAmata non riuscito">
-      <option name="closed" value="true" />
-      <created>1785509257218</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1785509257218</updated>
     </task>
     <task id="LOCAL-00194" summary="VERDE: testAttaccoAssassinoVittimaAmata riuscito">
       <option name="closed" value="true" />
@@ -596,7 +586,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785844730759</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="VERDE: testGiocatore riuscito">
+      <option name="closed" value="true" />
+      <created>1785845121745</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1785845121746</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testBracconiere riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNonBracconiere riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="REFACTORING: definizione del metodo isBracconiere" />
@@ -639,6 +636,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isAccusabileInquisizione" />
     <MESSAGE value="REFACTORING: definizione del metodo setSegnalatoAzzeccagarbugli" />
     <MESSAGE value="ROSSO: testGiocatore non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGiocatore non riuscito" />
+    <MESSAGE value="VERDE: testGiocatore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGiocatore riuscito" />
   </component>
 </project>
