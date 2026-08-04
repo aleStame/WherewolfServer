@@ -131,6 +131,8 @@ public final class Giocatore
 
     public boolean isLupoSolitario() { return ruolo.isLupoSolitario(); }
 
+    public boolean isNegromante() { return true; }
+
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
     private boolean isAccusabileAzzeccagarbugli()

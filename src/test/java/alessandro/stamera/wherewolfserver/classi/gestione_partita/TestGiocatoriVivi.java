@@ -184,7 +184,7 @@ public final class TestGiocatoriVivi
             { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { nomeInquisitore, "Inquisitore" }, { "Giorgia", "Giullare" } };
         int posizione = 2;
         inizializzaGiocatori(giocatori);
-        //segnalazioneAzzeccagarbugli(nomeInquisitore);
+        this.giocatori.segnalazioneAzzeccagarbugli(nomeInquisitore);
         segnalazioneAngeloCustode(nomeInquisitore);
         for(int i = posizione; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
