@@ -332,6 +332,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isNonna());
     }
 
+    @Test public void testNonna()
+    {
+        cambiaRuolo("Nonna");
+        verificaVero(giocatore.isNonna());
+    }
+
     private boolean isCapoGilda() { return giocatore.isCapoGilda(); }
 
     private boolean isNegromante() { return giocatore.isNegromante(); }
