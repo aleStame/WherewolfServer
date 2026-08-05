@@ -361,10 +361,17 @@ public final class TestGiocatore
         verificaVero(isCappuccettoRosso());
     }
 
-    @Test public void testAttaccoLupoSolitario()
+    @Test public void testAttaccoLupoSolitarioCappuccettoRosso()
     {
         cambiaRuolo("Cappuccetto rosso");
         assertThat(giocatore.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
+    }
+
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoProtetto()
+    {
+        cambiaRuolo("Cappuccetto rosso");
+        giocatore.aggiungiProtezione(FACTORY.getRuolo("Lupo solitario"));
+        assertThat(giocatore.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
     }
 
     private boolean isCappuccettoRosso() { return giocatore.isCappuccettoRosso(); }
