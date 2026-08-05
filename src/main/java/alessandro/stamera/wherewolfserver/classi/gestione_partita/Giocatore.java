@@ -143,16 +143,18 @@ public final class Giocatore
 
     public boolean isProtezionePresente(Ruolo attaccante)
     {
-        return tratti.isProtezionePresente(attaccante) || ruolo.isProtezionePresente(attaccante);
+        return isGiocatoreProtetto(attaccante) || ruolo.isProtezionePresente(attaccante);
     }
 
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = FALLITO;
-        if(!tratti.isProtezionePresente(lupo)) esito = ruolo.attaccoLupi(lupo);
+        if(!isGiocatoreProtetto(lupo)) esito = ruolo.attaccoLupi(lupo);
         if(esito == FALLITO && lupo.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         return esito;
     }
+
+    private boolean isGiocatoreProtetto(Ruolo lupo) { return tratti.isProtezionePresente(lupo); }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
