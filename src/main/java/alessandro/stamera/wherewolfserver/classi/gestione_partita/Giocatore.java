@@ -148,9 +148,9 @@ public final class Giocatore
 
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
-        EsitoAttacco esito = RIUSCITO;
-        if(tratti.isProtezionePresente(lupo)) esito = FALLITO;
-        else esito = ruolo.attaccoLupi(lupo);
+        EsitoAttacco esito = FALLITO;
+        if(!tratti.isProtezionePresente(lupo)) esito = ruolo.attaccoLupi(lupo);
+        if(esito == FALLITO && lupo.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         return esito;
     }
 
