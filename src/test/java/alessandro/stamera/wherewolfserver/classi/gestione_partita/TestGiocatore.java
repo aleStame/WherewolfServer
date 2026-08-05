@@ -329,14 +329,16 @@ public final class TestGiocatore
     public void testNoNonna(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isNonna());
+        verificaFalso(isNonna());
     }
 
     @Test public void testNonna()
     {
         cambiaRuolo("Nonna");
-        verificaVero(giocatore.isNonna());
+        verificaVero(isNonna());
     }
+
+    private boolean isNonna() { return giocatore.isNonna(); }
 
     private boolean isCapoGilda() { return giocatore.isCapoGilda(); }
 

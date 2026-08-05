@@ -478,8 +478,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isNonna(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isNonna();
-        return false; }
+    private boolean isNonna(int posizione) { return getGiocatore(posizione).isNonna(); }
 
     private int getPosizioneBecchino()
     {
