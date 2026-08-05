@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.controller.TestUtenteController" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-05T13:07:10" hostname="ALESSANDRO" time="0.935">
+<testsuite name="alessandro.stamera.wherewolfserver.controller.TestUtenteController" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-08-05T13:19:06" hostname="ALESSANDRO" time="1.017">
   <properties/>
-  <testcase name="[1] username=marco, vecchiaPassword=passwordsecret, nuovaPassword=newpwd, risultato=Password cambiata correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.505"/>
-  <testcase name="[2] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.039"/>
-  <testcase name="[3] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.045"/>
-  <testcase name="[1] username=andrea, password=andrea1998, risultato=Login eseguito correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.015"/>
-  <testcase name="[2] username=marco, password=passwordsecret, risultato=Login eseguito correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.013"/>
-  <testcase name="[3] username=bruce, password=batmanbeyond, risultato=Login eseguito correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.019"/>
-  <testcase name="[4] username=andrea, password=pwdsbagliata, risultato=ERRORE!!! Username o password errate" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.019"/>
-  <testcase name="[5] username=gino, password=batmanbeyond, risultato=ERRORE!!! Username o password errate" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.035"/>
-  <testcase name="[6] username=utentefinto, password=pwdfinta, risultato=ERRORE!!! Username o password errate" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.021"/>
-  <testcase name="[1] username=marco, password=passworddimarco, risultato=ERRORE!!! Nome utente già inserito" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.029"/>
-  <testcase name="[2] username=pinuccio, password=pwdpinuccio, risultato=Registrazione avvenuta correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.017"/>
-  <testcase name="[1] username=andrea, password=andrea1998, risultato=Disiscrizione avvenuta correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.04"/>
-  <testcase name="[2] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.015"/>
-  <testcase name="[3] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.016"/>
-  <testcase name="[4] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.019"/>
-  <system-out><![CDATA[15:06:58.451 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:06:59.899 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
+  <testcase name="[1] username=marco, vecchiaPassword=passwordsecret, nuovaPassword=newpwd, risultato=Password cambiata correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.672"/>
+  <testcase name="[2] username=bruce, vecchiaPassword=batmanbeyond, nuovaPassword=batmanbeyond, risultato=ERRORE!!! Password uguale alla precedente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.035"/>
+  <testcase name="[3] username=andrea, vecchiaPassword=skibidiboppi, nuovaPassword=ped32312231, risultato=ERRORE!!! Inserire la password attuale corretta" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.018"/>
+  <testcase name="[1] username=andrea, password=andrea1998, risultato=Login eseguito correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.024"/>
+  <testcase name="[2] username=marco, password=passwordsecret, risultato=Login eseguito correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.021"/>
+  <testcase name="[3] username=bruce, password=batmanbeyond, risultato=Login eseguito correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.021"/>
+  <testcase name="[4] username=andrea, password=pwdsbagliata, risultato=ERRORE!!! Username o password errate" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.02"/>
+  <testcase name="[5] username=gino, password=batmanbeyond, risultato=ERRORE!!! Username o password errate" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.02"/>
+  <testcase name="[6] username=utentefinto, password=pwdfinta, risultato=ERRORE!!! Username o password errate" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.009"/>
+  <testcase name="[1] username=marco, password=passworddimarco, risultato=ERRORE!!! Nome utente già inserito" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.012"/>
+  <testcase name="[2] username=pinuccio, password=pwdpinuccio, risultato=Registrazione avvenuta correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.012"/>
+  <testcase name="[1] username=andrea, password=andrea1998, risultato=Disiscrizione avvenuta correttamente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.016"/>
+  <testcase name="[2] username=marco, password=passwordcasual, risultato=ERRORE!!! Inserire la password corretta" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.017"/>
+  <testcase name="[3] username=sulpicio, password=batmanbeyond, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.015"/>
+  <testcase name="[4] username=sigismondo, password=pwdfantasiosa, risultato=ERRORE!!! Utente non esistente" classname="alessandro.stamera.wherewolfserver.controller.TestUtenteController" time="0.022"/>
+  <system-out><![CDATA[15:18:53.886 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:18:56.022 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -28,12 +28,12 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2026-08-05T15:07:03.299+02:00  INFO 180336 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 180336 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
-2026-08-05T15:07:03.304+02:00  INFO 180336 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
-2026-08-05T15:07:09.885+02:00  INFO 180336 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-08-05T15:07:09.886+02:00  INFO 180336 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-08-05T15:07:09.899+02:00  INFO 180336 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
-2026-08-05T15:07:10.025+02:00  INFO 180336 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 9.344 seconds (process running for 78.508)
+2026-08-05T15:18:58.526+02:00  INFO 191988 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 191988 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
+2026-08-05T15:18:58.532+02:00  INFO 191988 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T15:19:06.332+02:00  INFO 191988 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-08-05T15:19:06.335+02:00  INFO 191988 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-08-05T15:19:06.347+02:00  INFO 191988 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2026-08-05T15:19:06.506+02:00  INFO 191988 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 9.996 seconds (process running for 58.488)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
