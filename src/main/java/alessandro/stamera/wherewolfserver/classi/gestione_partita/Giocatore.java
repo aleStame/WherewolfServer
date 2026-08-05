@@ -135,6 +135,8 @@ public final class Giocatore
 
     public boolean isCapoGilda() { return ruolo.isCapoGilda(); }
 
+    public boolean isNonna() { return true; }
+
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
     private boolean isAccusabileAzzeccagarbugli()
