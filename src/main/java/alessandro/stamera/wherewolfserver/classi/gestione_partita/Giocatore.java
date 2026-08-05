@@ -139,6 +139,10 @@ public final class Giocatore
 
     public boolean isCappuccettoRosso() { return ruolo.isCappuccettoRosso(); }
 
+    public void aggiungiProtezione(Ruolo ruolo) { tratti.aggiungiProtezione(ruolo); }
+
+    public boolean isProtezionePresente(Ruolo attaccante) { return tratti.isProtezionePresente(attaccante) || ruolo.isProtezionePresente(attaccante); }
+
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
     private boolean isAccusabileAzzeccagarbugli()

@@ -33,8 +33,9 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
-        EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
-        if(esito == FALLITO && isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        EsitoAttacco esito = getGiocatore(nome).getRuolo().attaccoLupi(attaccante);
+        System.out.println(esito);
+        if((esito == RIUSCITO && isCappuccettoRossoProtetto(nome, attaccante)) || attaccante.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         else esito = gestioneAttaccoNonFallito(nome, esito);
         return esito;
     }
@@ -301,6 +302,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
+        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
     }
 
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
@@ -340,12 +342,16 @@ public final class GiocatoriVivi extends Giocatori
     private EsitoAttacco gestioneAttaccoAngeloCustode(String nome)
     {
         EsitoAttacco esito = ANGELO_CUSTODE_MORTO;
-        if(isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-        else if(!isAngeloCustodePresente()) esito = RIUSCITO;
+        //if(isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        //else
+        if(!isAngeloCustodePresente()) esito = RIUSCITO;
         return esito;
     }
 
-    private boolean isCappuccettoRossoProtetto(String nome) { return isCappuccettoRosso(nome) && isRimastoUltimoLupo(); }
+    private boolean isCappuccettoRossoProtetto(String nome, Ruolo attaccante)
+    {
+        return isCappuccettoRosso(nome) && getGiocatore(nome).isProtezionePresente(attaccante);
+    }
 
     private boolean isCappuccettoRosso(String nome) { return getRuolo(nome).isCappuccettoRosso(); }
 
@@ -392,7 +398,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void aggiungiProtezioneNonna(int posizione)
     {
-        //getGiocatore(getNomeGiocatore(getPosizioneCappuccettoRosso())).aggiungiProtezione(getGiocatore(getNomeGiocatore(posizione)).getRuolo());
+        getGiocatore(getPosizioneCappuccettoRosso()).aggiungiProtezione(getGiocatore(posizione).getRuolo());
     }
 
     private int getPosizioneCacciatoreDiVampiri()
