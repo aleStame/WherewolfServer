@@ -146,7 +146,13 @@ public final class Giocatore
         return tratti.isProtezionePresente(attaccante) || ruolo.isProtezionePresente(attaccante);
     }
 
-    public EsitoAttacco attaccoLupi(Ruolo lupo) { return null; }
+    public EsitoAttacco attaccoLupi(Ruolo lupo)
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(tratti.isProtezionePresente(lupo)) esito = FALLITO;
+        else esito = ruolo.attaccoLupi(lupo);
+        return esito;
+    }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
