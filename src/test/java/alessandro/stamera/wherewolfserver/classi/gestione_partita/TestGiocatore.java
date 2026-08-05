@@ -283,13 +283,13 @@ public final class TestGiocatore
     public void testNonNegromante(String nome)
     {
         cambiaRuolo(nome);
-        verificaFalso(giocatore.isNegromante());
+        verificaFalso(isNegromante());
     }
 
     @Test public void testNegromante()
     {
         cambiaRuolo("Negromante");
-        verificaVero(giocatore.isNegromante());
+        verificaVero(isNegromante());
     }
 
     @ParameterizedTest @CsvSource
@@ -306,14 +306,16 @@ public final class TestGiocatore
     public void testNoCapoGilda(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaVero(giocatore.isCapoGilda());
+        verificaFalso(giocatore.isCapoGilda());
     }
 
     @Test public void testCapoGilda()
     {
         cambiaRuolo("Capo gilda");
-        verificaFalso(giocatore.isCapoGilda());
+        verificaVero(giocatore.isCapoGilda());
     }
+
+    private boolean isNegromante() { return giocatore.isNegromante(); }
 
     private void verificaAccusabile() { verificaVero(isAccusabile()); }
 

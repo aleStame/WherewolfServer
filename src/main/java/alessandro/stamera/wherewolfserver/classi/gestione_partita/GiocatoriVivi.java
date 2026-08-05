@@ -509,8 +509,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isCapoGilda(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isCapoGilda();
-        return false; }
+    private boolean isCapoGilda(int posizione) { return getGiocatore(posizione).isCapoGilda(); }
 
     private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
 
