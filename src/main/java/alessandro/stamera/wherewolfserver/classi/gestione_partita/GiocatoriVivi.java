@@ -306,14 +306,14 @@ public final class GiocatoriVivi extends Giocatori
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
         super.aggiungiGiocatore(nome, giocatore);
-        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonnna();
+        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
 
     public void segnalazioneAzzeccagarbugli(String nome) { getGiocatore(nome).segnalazioneAzzeccagarbugli(); }
 
-    private void gestisciProtezioneNonnna()
+    private void gestisciProtezioneNonna()
     {
         if(isRimastoUnSoloLupo()) aggiungiProtezioneNonna();
         else getNonna().perdiProtezioni();
@@ -468,8 +468,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isCappuccettoRosso(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isCappuccettoRosso();
-        return false; }
+    private boolean isCappuccettoRosso(int posizione) { return getGiocatore(posizione).isCappuccettoRosso(); }
 
     private int getPosizioneNonna()
     {
