@@ -355,6 +355,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isCappuccettoRosso());
     }
 
+    @Test public void testCappuccettoRosso()
+    {
+        cambiaRuolo("Cappuccetto rosso");
+        verificaVero(giocatore.isCappuccettoRosso());
+    }
+
     private boolean isNonna() { return giocatore.isNonna(); }
 
     private boolean isCapoGilda() { return giocatore.isCapoGilda(); }
