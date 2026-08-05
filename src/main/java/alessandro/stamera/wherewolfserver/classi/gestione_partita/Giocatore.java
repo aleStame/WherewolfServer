@@ -141,7 +141,12 @@ public final class Giocatore
 
     public void aggiungiProtezione(Ruolo ruolo) { tratti.aggiungiProtezione(ruolo); }
 
-    public boolean isProtezionePresente(Ruolo attaccante) { return tratti.isProtezionePresente(attaccante) || ruolo.isProtezionePresente(attaccante); }
+    public boolean isProtezionePresente(Ruolo attaccante)
+    {
+        return tratti.isProtezionePresente(attaccante) || ruolo.isProtezionePresente(attaccante);
+    }
+
+    public EsitoAttacco attaccoLupi(Ruolo lupo) { return null; }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
