@@ -306,6 +306,12 @@ public final class TestGiocatore
     public void testNoCapoGilda(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
+        verificaVero(giocatore.isCapoGilda());
+    }
+
+    @Test public void testCapoGilda()
+    {
+        cambiaRuolo("Capo gilda");
         verificaFalso(giocatore.isCapoGilda());
     }
 
