@@ -133,7 +133,7 @@ public final class Giocatore
 
     public boolean isNegromante() { return ruolo.isNegromante(); }
 
-    public boolean isCapoGilda() { return true; }
+    public boolean isCapoGilda() { return ruolo.isCapoGilda(); }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
 
