@@ -100,6 +100,8 @@ public final class TestRuolo
         assertThatIllegalStateException().isThrownBy(() -> ruolo.getTipoContadino()).withMessage("ERRORE!!! Questo ruolo non è un contadino.");
     }
 
+    @Test public void testAttaccoAssassino() { verificaAttacco(ruolo.attaccoAssassino(), RIUSCITO); }
+
     private static Stream<Arguments> getEsempiPartita()
     {
         return Stream.of(Arguments.of(getPartitaGenerica(), NON_FINITO), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
