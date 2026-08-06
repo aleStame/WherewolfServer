@@ -358,22 +358,24 @@ public final class TestGiocatore
 
     @Test public void testCappuccettoRosso()
     {
-        cambiaRuolo("Cappuccetto rosso");
+        utilizzaCappuccettoRosso();
         verificaVero(isCappuccettoRosso());
     }
 
     @Test public void testAttaccoLupoSolitarioCappuccettoRosso()
     {
-        cambiaRuolo("Cappuccetto rosso");
+        utilizzaCappuccettoRosso();
         verificaAttaccoLupoSolitario(ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoProtetto()
     {
-        cambiaRuolo("Cappuccetto rosso");
+        utilizzaCappuccettoRosso();
         giocatore.aggiungiProtezione(getLupoSolitario());
         verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
     }
+
+    private void utilizzaCappuccettoRosso() { cambiaRuolo("Cappuccetto rosso"); }
 
     private void verificaAttaccoLupoSolitario(EsitoAttacco esito)
     {
