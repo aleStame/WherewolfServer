@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-08-06T23:13:00" hostname="ALESSANDRO" time="0.177">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-08-06T23:22:43" hostname="ALESSANDRO" time="0.085">
   <properties/>
-  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
-  <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.013"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.007"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
-  <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.004"/>
+  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.004"/>
+  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
+  <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
+  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.0"/>
+  <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
   <testcase name="testRipristino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
   <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@22f02996, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.003"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@42c0a16e, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.008"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@543fe698, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.011"/>
-  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.003"/>
-  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.005"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2a0b901c, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@6544899b, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1bd8afc8, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
+  <testcase name="[1] nome=Capo branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
+  <testcase name="[2] nome=Lupo del branco, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.002"/>
   <testcase name="[3] nome=Lupo reietto, fazione=LUPO_BRANCO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.01"/>
-  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.006"/>
+  <testcase name="[4] nome=Lupo solitario, fazione=LUPO_SOLITARIO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
