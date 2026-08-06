@@ -150,6 +150,11 @@ public final class Giocatore
     {
         EsitoAttacco esito = FALLITO;
         if(!isGiocatoreProtetto(lupo)) esito = ruolo.attaccoLupi(lupo);
+        return verificaEsitoAttaccoLupi(lupo, esito);
+    }
+
+    private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
+    {
         switch(esito)
         {
             case FALLITO -> { if(lupo.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
