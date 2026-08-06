@@ -331,7 +331,7 @@ public class Ruolo
 
     public boolean isStregato() { return stregato; }
 
-    public EsitoAttacco attaccoAssassino() { return null; }
+    public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
 
     private void trasformazioneVampiro()
     {
