@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -370,14 +371,16 @@ public final class TestGiocatore
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoProtetto()
     {
         cambiaRuolo("Cappuccetto rosso");
-        giocatore.aggiungiProtezione(FACTORY.getRuolo("Lupo solitario"));
+        giocatore.aggiungiProtezione(getLupoSolitario());
         verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
     }
 
     private void verificaAttaccoLupoSolitario(EsitoAttacco esito)
     {
-        assertThat(giocatore.attaccoLupi(FACTORY.getRuolo("Lupo solitario"))).isEqualTo(esito);
+        assertThat(giocatore.attaccoLupi(getLupoSolitario())).isEqualTo(esito);
     }
+
+    private Ruolo getLupoSolitario() { return FACTORY.getRuolo("Lupo solitario"); }
 
     private boolean isCappuccettoRosso() { return giocatore.isCappuccettoRosso(); }
 
