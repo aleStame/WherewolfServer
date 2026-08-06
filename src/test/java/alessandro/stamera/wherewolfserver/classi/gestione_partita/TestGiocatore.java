@@ -368,6 +368,13 @@ public final class TestGiocatore
         verificaAttaccoLupoSolitario(ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoAmato()
+    {
+        utilizzaCappuccettoRosso();
+        protezioneAngeloCustode();
+        verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+    }
+
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoProtetto()
     {
         utilizzaCappuccettoRosso();
