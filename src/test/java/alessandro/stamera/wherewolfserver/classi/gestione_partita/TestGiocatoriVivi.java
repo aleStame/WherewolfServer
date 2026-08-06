@@ -167,14 +167,13 @@ public final class TestGiocatoriVivi
     {
         String nome = "Rodolfo";
         aggiungiGiocatore(nome, nomeRuolo);
-        //segnalazioneAzzeccagarbugli(nome);
+        giocatori.segnalazioneAzzeccagarbugli(nome);
         incrementaVoti(nome, 4);
-        //assertThat(giocatori.getNumeroVoti(nome)).isZero();
+        assertThat(giocatori.getNumeroVoti(nome)).isZero();
         String nome2 = "Domenica";
         aggiungiGiocatore(nome2, "Guaritore");
         incrementaVoti(nome2, 3);
         verificaAccusati(nome2);
-        ripristina(nome);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
@@ -254,7 +253,6 @@ public final class TestGiocatoriVivi
         String nomeMistico = "Davide";
         String[][] giocatori = new String[][] { { "Antonio", "Angelo custode" }, { nomeMistico, nomeRuolo }, { "Matteo", "Inquisitore" } };
         inizializzaGiocatori(giocatori);
-        ripristina(nomeMistico);
         segnalazioneInquisitore(nomeMistico);
         segnalazioneAngeloCustode(nomeMistico);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 2);
