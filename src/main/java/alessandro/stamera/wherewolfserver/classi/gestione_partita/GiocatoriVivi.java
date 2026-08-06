@@ -36,11 +36,7 @@ public final class GiocatoriVivi extends Giocatori
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
         switch(esito)
         {
-            case RIUSCITO ->
-            {
-                if(isCappuccettoRossoProtetto(nome, attaccante)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-                else if(isCappuccettoRosso(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-            }
+            case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome);
             case FALLITO ->
             {
@@ -325,6 +321,14 @@ public final class GiocatoriVivi extends Giocatori
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
 
     public void segnalazioneAzzeccagarbugli(String nome) { getGiocatore(nome).segnalazioneAzzeccagarbugli(); }
+
+    private EsitoAttacco gestioneAttaccoRiuscito(Ruolo attaccante, String nome)
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isCappuccettoRossoProtetto(nome, attaccante)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        else if(isCappuccettoRosso(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
+        return esito;
+    }
 
     private void gestisciProtezioneNonna()
     {
