@@ -39,6 +39,7 @@ public final class GiocatoriVivi extends Giocatori
             case RIUSCITO ->
             {
                 if(isCappuccettoRossoProtetto(nome, attaccante)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+                else if(isCappuccettoRosso(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
             }
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome);
             case FALLITO ->
