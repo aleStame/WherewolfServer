@@ -69,7 +69,7 @@ public final class TestContadinoMostro
 
     @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(MOSTRO); }
 
-    @AfterEach public void annullaSegnalazioni() { ripristina(); }
+    @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
 
     private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 

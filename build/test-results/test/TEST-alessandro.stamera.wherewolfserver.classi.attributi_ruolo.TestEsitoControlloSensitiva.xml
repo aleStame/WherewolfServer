@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-06T23:06:52" hostname="ALESSANDRO" time="0.047">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-06T23:12:39" hostname="ALESSANDRO" time="0.389">
   <properties/>
-  <testcase name="[1] esito=VILLAGGIO, messaggio=Villaggio" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.003"/>
-  <testcase name="[2] esito=NON_VILLAGGIO, messaggio=Non villaggio" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.001"/>
-  <testcase name="[1] messaggio=Villaggio, esito=VILLAGGIO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.004"/>
-  <testcase name="[2] messaggio=Non villaggio, esito=NON_VILLAGGIO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.001"/>
+  <testcase name="[1] esito=VILLAGGIO, messaggio=Villaggio" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.007"/>
+  <testcase name="[2] esito=NON_VILLAGGIO, messaggio=Non villaggio" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.005"/>
+  <testcase name="[1] messaggio=Villaggio, esito=VILLAGGIO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.022"/>
+  <testcase name="[2] messaggio=Non villaggio, esito=NON_VILLAGGIO" classname="alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
