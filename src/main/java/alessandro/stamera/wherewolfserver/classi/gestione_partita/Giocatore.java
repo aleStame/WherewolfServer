@@ -89,7 +89,7 @@ public final class Giocatore
 
     public EsitoAttacco attaccoAssassino()
     {
-        EsitoAttacco esito = RIUSCITO;
+        EsitoAttacco esito = ruolo.attaccoAssassino();
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
         return esito;
     }
