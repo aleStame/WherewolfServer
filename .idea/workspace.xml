@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoAssassino riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmato non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00239" summary="REFACTORING: definizione del metodo isAccusabileInquisizione">
-      <option name="closed" value="true" />
-      <created>1785795745826</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1785795745826</updated>
     </task>
     <task id="LOCAL-00240" summary="REFACTORING: definizione del metodo setSegnalatoAzzeccagarbugli">
       <option name="closed" value="true" />
@@ -596,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786059089709</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmato non riuscito">
+      <option name="closed" value="true" />
+      <created>1786059504650</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1786059504650</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isNegromante" />
     <MESSAGE value="ROSSO: testNoNonna non riuscito" />
     <MESSAGE value="VERDE: testNoNonna riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCapoGilda" />
@@ -639,6 +638,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoDaSvegliare" />
     <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoAssassino riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmato non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmato non riuscito" />
   </component>
 </project>
