@@ -34,8 +34,19 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
-        if((esito == RIUSCITO && isCappuccettoRossoProtetto(nome, attaccante))) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-        else esito = gestioneAttaccoNonFallito(nome, esito);
+        switch(esito)
+        {
+            case RIUSCITO ->
+            {
+                if(isCappuccettoRossoProtetto(nome, attaccante)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+            }
+            case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome);
+            case FALLITO ->
+            {
+                if(isCappuccettoRossoProtetto(nome, attaccante) && isNonnaPresente() && isRimastoUltimoLupo())
+                    esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+            }
+        }
         return esito;
     }
 
@@ -331,13 +342,6 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isRimastoUnSoloLupo() { return isRimastoUltimoLupo() || isLupoSolitarioPresente(); }
 
-    private EsitoAttacco gestioneAttaccoNonFallito(String nome, EsitoAttacco esito)
-    {
-        if(esito == ANGELO_CUSTODE_MORTO) esito = gestioneAttaccoAngeloCustode(nome);
-        if(esito == RIUSCITO) esito = gestioneAttaccoRiuscito(nome);
-        return esito;
-    }
-
     private EsitoAttacco gestioneAttaccoAngeloCustode(String nome)
     {
         EsitoAttacco esito = ANGELO_CUSTODE_MORTO;
@@ -353,13 +357,6 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private boolean isCappuccettoRosso(String nome) { return getRuolo(nome).isCappuccettoRosso(); }
-
-    private EsitoAttacco gestioneAttaccoRiuscito(String nome)
-    {
-        EsitoAttacco esito = RIUSCITO;
-        if(isRimastoUltimoLupo() && isCappuccettoRossoPresente()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-        return esito;
-    }
 
     public boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
 
