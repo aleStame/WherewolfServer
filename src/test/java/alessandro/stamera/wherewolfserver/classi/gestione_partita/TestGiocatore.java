@@ -372,14 +372,14 @@ public final class TestGiocatore
     {
         utilizzaCappuccettoRosso();
         protezioneAngeloCustode();
-        verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+        verificaLupoSolitarioSvegliaCappuccettoRosso();
     }
 
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoProtetto()
     {
         utilizzaCappuccettoRosso();
         giocatore.aggiungiProtezione(getLupoSolitario());
-        verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+        verificaLupoSolitarioSvegliaCappuccettoRosso();
     }
 
     @ParameterizedTest @CsvSource
@@ -403,6 +403,11 @@ public final class TestGiocatore
     {
         cambiaRuolo("Guaritore");
         verificaVero(isGuaritore());
+    }
+
+    private void verificaLupoSolitarioSvegliaCappuccettoRosso()
+    {
+        verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
     }
 
     private boolean isGuaritore() { return giocatore.isGuaritore(); }
