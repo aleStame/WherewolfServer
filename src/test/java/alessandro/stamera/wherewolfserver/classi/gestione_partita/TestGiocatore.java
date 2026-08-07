@@ -50,6 +50,7 @@ public final class TestGiocatore
         assertThat(giocatore.getAura()).isEqualTo(NERA);
         giocatore.annullaMaledizione();
         assertThat(giocatore.getAura()).isEqualTo(aura);
+        verificaFalso(giocatore.isMaledetto());
 
     }
 

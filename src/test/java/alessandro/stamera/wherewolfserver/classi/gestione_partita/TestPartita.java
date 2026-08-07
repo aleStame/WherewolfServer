@@ -1846,7 +1846,18 @@ public final class TestPartita
         FACTORY.getRuolo(nomeRuolo).ripristina();
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode" }) public void testFunzionamentoNegromante(String nomeRuolo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testFunzionamentoNegromante(String nomeRuolo)
     {
         String nomeNegromante = "Circe", nomeAssassino = "Agamennone", nome = "Christopher";
         inizializzaPartita(new String[][] { { "Circe", "Negromante" }, { nomeAssassino, "Assassino" }, { nome, nomeRuolo } });
