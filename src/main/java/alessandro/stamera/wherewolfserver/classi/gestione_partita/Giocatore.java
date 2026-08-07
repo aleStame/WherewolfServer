@@ -153,6 +153,8 @@ public final class Giocatore
         return verificaEsitoAttaccoLupi(lupo, esito);
     }
 
+    public boolean isGuaritore() { return true; }
+
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
         switch(esito)
