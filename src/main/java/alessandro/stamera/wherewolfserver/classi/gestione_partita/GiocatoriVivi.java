@@ -320,7 +320,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAzzeccagarbugli(String nome) { getGiocatore(nome).segnalazioneAzzeccagarbugli(); }
 
-    public EsitoAttacco gildata(String nome) { return null; }
+    public EsitoAttacco gildata(String nome) { return getGiocatore(nome).gildata(); }
 
     private boolean isCappuccettoRossoDaSvegliare(Ruolo attaccante, String nome)
     {

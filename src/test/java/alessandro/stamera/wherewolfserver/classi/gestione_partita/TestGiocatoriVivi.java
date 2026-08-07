@@ -1153,7 +1153,7 @@ public final class TestGiocatoriVivi
     public void testGildataContadinoLupizzato(String tipoLupo)
     {
         String nome = "Carlo";
-        inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
+        inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Capo gilda" } });
         verificaAttaccoLupo(tipoLupo, nome, CONTADINO_LUPO_BECCATO);
         verificaAttacco(giocatori.gildata(nome), MORTO);
     }
