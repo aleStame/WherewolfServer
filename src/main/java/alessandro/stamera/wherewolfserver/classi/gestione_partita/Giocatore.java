@@ -159,11 +159,15 @@ public final class Giocatore
     public EsitoAttacco gildata()
     {
         EsitoAttacco esito = ruolo.gildata();
-        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) esito = MORTO;
+        switch(fazione)
+        {
+            case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
+            case NEGROMANTE -> esito = FALLITO;
+        }
         return esito;
     }
 
-    public void riconosciNegromante() { }
+    public void riconosciNegromante() { fazione = NEGROMANTE; }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
