@@ -153,7 +153,7 @@ public final class Giocatore
         return verificaEsitoAttaccoLupi(lupo, esito);
     }
 
-    public boolean isGuaritore() { return true; }
+    public boolean isGuaritore() { return ruolo.isGuaritore(); }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
