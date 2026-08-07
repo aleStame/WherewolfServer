@@ -428,6 +428,7 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testGildataContadinoDopoLupizzazione(String tipoLupo)
     {
+        cambiaRuolo("Contadino discendente dei lupi");
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
         verificaAttacco(giocatore.gildata(), MORTO);
     }

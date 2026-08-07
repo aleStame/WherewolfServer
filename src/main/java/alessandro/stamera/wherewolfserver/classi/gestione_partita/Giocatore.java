@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratti;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
@@ -157,12 +156,18 @@ public final class Giocatore
 
     public void annullaMaledizione() { tratti.eliminaTratti(MALEDETTO); }
 
-    public EsitoAttacco gildata() { return null; }
+    public EsitoAttacco gildata()
+    {
+        EsitoAttacco esito = ruolo.gildata();
+        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) esito = MORTO;
+        return esito;
+    }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
         switch(esito)
         {
+            case CONTADINO_LUPO_BECCATO -> fazione = lupo.getFazione();
             case FALLITO -> { if(lupo.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isAmato()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
