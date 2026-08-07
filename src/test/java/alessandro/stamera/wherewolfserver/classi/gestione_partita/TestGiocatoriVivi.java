@@ -1163,7 +1163,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Giulia";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
-        verificaAttacco(giocatori.gildata(nomeVittima), MORTO);
+        verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
     }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }

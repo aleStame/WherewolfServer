@@ -143,8 +143,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
-    public void riconosciNegromante() { //getGiocatore(getNomeGiocatore(getPosizioneBecchino())).riconosciNegromante();
-         }
+    public void riconosciNegromante() { getGiocatore(getPosizioneBecchino()).riconosciNegromante(); }
 
     public void annullaProtezioniCappuccettoRosso() { getRuolo(getNomeGiocatore(getPosizioneCappuccettoRosso())).perdiProtezioni(); }
 
@@ -497,8 +496,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isBecchino(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isBecchino();
-        return false; }
+    private boolean isBecchino(int posizione) { return getGiocatore(posizione).getRuolo().isBecchino(); }
 
     private boolean isTemplare(String nome) { return getRuolo(nome).isTemplare(); }
 
