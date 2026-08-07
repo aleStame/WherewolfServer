@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante non riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00261" summary="VERDE DIRETTO: testNonna riuscito">
-      <option name="closed" value="true" />
-      <created>1785934563992</created>
-      <option name="number" value="00261" />
-      <option name="presentableId" value="LOCAL-00261" />
-      <option name="project" value="LOCAL" />
-      <updated>1785934563993</updated>
     </task>
     <task id="LOCAL-00262" summary="REFACTORING: definizione del metodo isNonna">
       <option name="closed" value="true" />
@@ -597,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786114692197</updated>
     </task>
-    <option name="localTasksCounter" value="310" />
+    <task id="LOCAL-00310" summary="VERDE: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante riuscito">
+      <option name="closed" value="true" />
+      <created>1786118299669</created>
+      <option name="number" value="00310" />
+      <option name="presentableId" value="LOCAL-00310" />
+      <option name="project" value="LOCAL" />
+      <updated>1786118299671</updated>
+    </task>
+    <option name="localTasksCounter" value="311" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoDaSvegliare" />
     <MESSAGE value="ROSSO: testAttaccoAssassino non riuscito" />
     <MESSAGE value="VERDE: testAttaccoAssassino riuscito" />
     <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmato non riuscito" />
@@ -640,6 +638,7 @@
     <MESSAGE value="ROSSO: testCriminalizzazioneContadinoLupo non riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneContadinoLupo riuscito" />
     <MESSAGE value="ROSSO: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante non riuscito" />
+    <MESSAGE value="VERDE: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante riuscito" />
   </component>
 </project>

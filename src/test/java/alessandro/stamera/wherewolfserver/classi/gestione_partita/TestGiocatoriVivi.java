@@ -1158,6 +1158,14 @@ public final class TestGiocatoriVivi
         verificaAttacco(giocatori.gildata(nome), MORTO);
     }
 
+    @Test public void testCriminalizzazioneBecchino()
+    {
+        String nomeVittima = "Giulia";
+        inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
+        giocatori.riconosciNegromante();
+        verificaAttacco(giocatori.gildata(nomeVittima), MORTO);
+    }
+
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
     private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
