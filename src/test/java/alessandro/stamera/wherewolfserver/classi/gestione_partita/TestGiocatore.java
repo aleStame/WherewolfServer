@@ -399,6 +399,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isGuaritore());
     }
 
+    @Test public void testGuaritore()
+    {
+        cambiaRuolo("Guaritore");
+        verificaVero(giocatore.isGuaritore());
+    }
+
     private void utilizzaCappuccettoRosso() { cambiaRuolo("Cappuccetto rosso"); }
 
     private void verificaAttaccoLupoSolitario(EsitoAttacco esito)
