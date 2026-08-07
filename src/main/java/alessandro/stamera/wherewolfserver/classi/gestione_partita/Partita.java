@@ -271,7 +271,7 @@ public final class Partita
         }
     }
 
-    public void segnalazioneAzzeccagarbugli(String nome) { }
+    public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
 
     private void nosferatizzazione(String nome)
     {
