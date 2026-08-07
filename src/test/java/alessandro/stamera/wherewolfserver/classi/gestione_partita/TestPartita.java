@@ -224,17 +224,16 @@ public final class TestPartita
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()
     {
+        String nomeAmato = "Carmela", nomeVittima = "Virginio";
         String[][] giocatori = new String[][]
-            { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
-        int posizione1 = 3, posizione2 = 1;
+            { { "Carmine", "Angelo custode" }, { nomeAmato, "Contadino eroe" }, { nomeVittima, "Inquisitore" }, { "Giorgia", "Giullare" } };
         inizializzaPartita(giocatori);
-        //segnalazioneAzzeccagarbugli(giocatori[posizione1][0]);
-        segnalazioneAngeloCustode(giocatori[posizione1][0]);
-        incrementaVoti(giocatori[posizione2][0], 2);
+        partita.segnalazioneAzzeccagarbugli(nomeAmato);
+        segnalazioneAngeloCustode(nomeAmato);
+        incrementaVoti(nomeVittima, 2);
         terminaVotazioni();
-        verificaAccusati(giocatori[0][0], giocatori[posizione2][0]);
-        verificaNonAccusato(giocatori[posizione1][0]);
-        ripristinaGiocatoreVivo(giocatori[posizione1][0]);
+        verificaAccusati(giocatori[0][0], nomeVittima);
+        verificaNonAccusato(nomeAmato);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })

@@ -271,6 +271,8 @@ public final class Partita
         }
     }
 
+    public void segnalazioneAzzeccagarbugli(String nome) { }
+
     private void nosferatizzazione(String nome)
     {
         boolean esito = mortiNotte.isAngeloCustode(nome);
