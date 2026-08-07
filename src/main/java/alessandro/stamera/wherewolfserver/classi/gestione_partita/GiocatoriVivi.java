@@ -468,8 +468,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isGuaritore(int posizione) { //return getGiocatore(getNomeGiocatore(posizione)).isGuaritore();
-        return false; }
+    private boolean isGuaritore(int posizione) { return getGiocatore(posizione).isGuaritore(); }
 
     private int getPosizioneCappuccettoRosso()
     {

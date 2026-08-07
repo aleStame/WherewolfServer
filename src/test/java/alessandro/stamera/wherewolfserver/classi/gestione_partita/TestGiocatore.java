@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
@@ -22,8 +23,23 @@ public final class TestGiocatore
 
     private static final int ESEMPIO_VOTI = 3;
 
-    @Test public void testVoti()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, BIANCA", "Angelo custode, BIANCA", "Assassino, NERA", "Azzeccagarbugli, BIANCA", "Bardo, BIANCA", "Becchino, BIANCA",
+            "Bocca di rosa, NERA", "Boia, BIANCA", "Borgomastro, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA",
+            "Cacciatore di vampiri, BIANCA", "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
+            "Contadino discendente dei lupi, BIANCA", "Contadino mostro, NERA", "Contadino normale, BIANCA", "Eremita, BIANCA", "Ghoul, BIANCA",
+            "Giovane lupo, NERA", "Giulietta, BIANCA", "Giullare, BIANCA", "Goblin, BIANCA", "Guardia, BIANCA", "Guardia corrotta, NERA",
+            "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA", "Lupo reietto, NERA",
+            "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
+            "Nonna, BIANCA", "Nosferatu, NERA", "Oratore, BIANCA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA",
+            "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Strega, BIANCA", "Sensitiva, BIANCA", "Templare, BIANCA", "Vampiro, NERA"
+        }
+    )
+    public void testVoti(String nomeRuolo, Aura aura)
     {
+        cambiaRuolo(nomeRuolo);
         incrementaVoti();
         verificaNumeroVoti(ESEMPIO_VOTI);
         giocatore.annullaVoti();
@@ -31,7 +47,8 @@ public final class TestGiocatore
         giocatore.maledizione();
         verificaNumeroVoti(1);
         verificaVero(giocatore.isMaledetto());
-        assertThat(giocatore.getAura()).isEqualTo(NERA);
+        assertThat(giocatore.getAura()).isEqualTo(aura);
+        giocatore.annullaMaledizione();
     }
 
     @Test public void testAmato()

@@ -155,6 +155,8 @@ public final class Giocatore
 
     public boolean isGuaritore() { return ruolo.isGuaritore(); }
 
+    public void annullaMaledizione() { }
+
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
         switch(esito)
