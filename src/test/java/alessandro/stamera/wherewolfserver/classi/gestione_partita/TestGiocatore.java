@@ -396,14 +396,16 @@ public final class TestGiocatore
     public void testNoGuaritore(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isGuaritore());
+        verificaFalso(isGuaritore());
     }
 
     @Test public void testGuaritore()
     {
         cambiaRuolo("Guaritore");
-        verificaVero(giocatore.isGuaritore());
+        verificaVero(isGuaritore());
     }
+
+    private boolean isGuaritore() { return giocatore.isGuaritore(); }
 
     private void utilizzaCappuccettoRosso() { cambiaRuolo("Cappuccetto rosso"); }
 
