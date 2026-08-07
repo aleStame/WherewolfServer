@@ -51,7 +51,7 @@ public final class Giocatore
 
     public Aura getAura()
     {
-        Aura aura = BIANCA;
+        Aura aura = ruolo.getAura();
         if(isMaledetto()) aura = NERA;
         return aura;
     }
@@ -155,7 +155,7 @@ public final class Giocatore
 
     public boolean isGuaritore() { return ruolo.isGuaritore(); }
 
-    public void annullaMaledizione() { }
+    public void annullaMaledizione() { tratti.eliminaTratti(MALEDETTO); }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
