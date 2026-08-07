@@ -157,6 +157,8 @@ public final class Giocatore
 
     public void annullaMaledizione() { tratti.eliminaTratti(MALEDETTO); }
 
+    public EsitoAttacco gildata() { return null; }
+
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
         switch(esito)
