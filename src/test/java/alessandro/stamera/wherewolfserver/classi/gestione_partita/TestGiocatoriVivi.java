@@ -739,7 +739,6 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
         verificaAttaccoLupo(tipoLupo, nome, CONTADINO_LUPO_BECCATO);
         verificaAttaccoVampiro(nome, MORTO);
-        ripristina(nome);
     }
 
     @Test public void testVampiroAssente() { verificaFalso(isVampiroPresente()); }
@@ -1148,6 +1147,15 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Adele", "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
         verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testGildataContadinoLupizzato(String tipoLupo)
+    {
+        String nome = "Carlo";
+        inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Vampiro" } });
+        verificaAttaccoLupo(tipoLupo, nome, CONTADINO_LUPO_BECCATO);
+        verificaAttacco(giocatori.gildata(nome), MORTO);
     }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
