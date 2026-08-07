@@ -516,9 +516,9 @@ public final class Partita
     {
         Giocatore giocatore = new Giocatore(getRuolo(nome));
         eliminati.aggiungiGiocatore(nome, giocatore);
-        /*if(giocatore.isMegera()) vivi.ripristinaMistici();
-        else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
-        else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;*/
+        //if(giocatore.isMegera()) vivi.ripristinaMistici();
+        if(giocatore.isNegromante()) annullaMaledizioniNegromante();
+        /*else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;*/
         eliminaGiocatoreMortoNotte(nome);
     }
 
