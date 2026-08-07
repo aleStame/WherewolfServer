@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testFunzionamentoNegromante riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGildata non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00251" summary="ROSSO: testNonNegromante non riuscito">
-      <option name="closed" value="true" />
-      <created>1785856607932</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1785856607934</updated>
     </task>
     <task id="LOCAL-00252" summary="VERDE: testNonNegromante riuscito">
       <option name="closed" value="true" />
@@ -598,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786107209390</updated>
     </task>
-    <option name="localTasksCounter" value="300" />
+    <task id="LOCAL-00300" summary="ROSSO: testGildata non riuscito">
+      <option name="closed" value="true" />
+      <created>1786107956429</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1786107956429</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoProtetto non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupoSolitarioCappuccettoRossoProtetto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGiocatoreProtetto" />
     <MESSAGE value="REFACTORING: definizione del metodo getLupoSolitario" />
@@ -641,6 +638,7 @@
     <MESSAGE value="VERDE: testVoti riuscito" />
     <MESSAGE value="ROSSO: testFunzionamentoNegromante non riuscito" />
     <MESSAGE value="VERDE: testFunzionamentoNegromante riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testFunzionamentoNegromante riuscito" />
+    <MESSAGE value="ROSSO: testGildata non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGildata non riuscito" />
   </component>
 </project>

@@ -333,7 +333,7 @@ public class Ruolo
 
     public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
 
-    public EsitoAttacco gildata() { return null; }
+    public EsitoAttacco gildata() { return RIUSCITO; }
 
     private void trasformazioneVampiro()
     {
