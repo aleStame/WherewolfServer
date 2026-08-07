@@ -1,21 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
-import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -87,28 +76,6 @@ public final class TestBecchino
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaNegromante")
-    public void testEsitoPartitaNegromante(Partita partita, EsitoPartita esito)
-    {
-        ruolo.riconosciNegromante();
-        verificaEsitoPartita(partita, esito);
-        ruolo.ripristinaFazioneOriginale();
-    }
-
-    private void verificaEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
-
-    private static Stream<Arguments> getEsempiEsitiPartitaNegromante()
-    {
-        String nome = "Antonella", ruolo = "Negromante";
-        return Stream.of
-        (
-            Arguments.of(new Partita(new String[][] { { nome, ruolo } }), VITTORIA),
-            Arguments.of(new Partita(new String[][] { { nome, ruolo }, { "Valerio", "Capo branco" } }), SCONFITTA)
-        );
-    }
-
-    private void verificaFazioneNegromante() { verificaVero(isFazioneNegromante()); }
-
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
@@ -116,7 +83,5 @@ public final class TestBecchino
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
-
-    private boolean isFazioneNegromante() { return ruolo.isFazioneNegromante(); }
 
 }

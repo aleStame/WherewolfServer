@@ -433,6 +433,13 @@ public final class TestGiocatore
         verificaAttacco(giocatore.gildata(), MORTO);
     }
 
+    @Test public void testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante()
+    {
+        cambiaRuolo("Becchino");
+        giocatore.riconosciNegromante();
+        verificaAttacco(giocatore.gildata(), FALLITO);
+    }
+
     private void verificaLupoSolitarioSvegliaCappuccettoRosso()
     {
         verificaAttaccoLupoSolitario(ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO);

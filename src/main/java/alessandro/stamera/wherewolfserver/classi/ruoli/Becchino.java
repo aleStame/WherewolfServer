@@ -1,18 +1,14 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
 
 public class Becchino extends Villaggio
 {
-
-    private boolean villaggio;
 
     private Becchino()
     {
@@ -24,26 +20,11 @@ public class Becchino extends Villaggio
           "annuncia pubblicamente",
      3, false
         );
-        stabilisciVillaggio();
     }
 
     @Override public boolean isBecchino() { return true; }
 
-    @Override public void riconosciNegromante()
-    {
-        trasformaNegromante();
-        setVillaggio(false);
-    }
-
     @Override public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
-
-    @Override public boolean isVillaggio() { return villaggio; }
-
-    @Override public void ripristinaFazioneOriginale()
-    {
-        super.ripristinaFazioneOriginale();
-        stabilisciVillaggio();
-    }
 
     @Override public void romeizzazione() { if(isVillaggio()) super.romeizzazione(); }
 
@@ -56,9 +37,4 @@ public class Becchino extends Villaggio
 
     public static Ruolo getInstance() { return new Becchino(); }
 
-    private void trasformaNegromante() { cambiaFazione(NEGROMANTE); }
-
-    private void setVillaggio(boolean villaggio) { this.villaggio = villaggio; }
-
-    private void stabilisciVillaggio() { setVillaggio(true); }
 }

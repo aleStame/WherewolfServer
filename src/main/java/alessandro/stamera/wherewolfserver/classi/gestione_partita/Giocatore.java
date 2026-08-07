@@ -163,6 +163,8 @@ public final class Giocatore
         return esito;
     }
 
+    public void riconosciNegromante() { }
+
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
         switch(esito)

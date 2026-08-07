@@ -81,8 +81,6 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public void riconosciNegromante() { }
-
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     public boolean isMistico() { return mistico; }
