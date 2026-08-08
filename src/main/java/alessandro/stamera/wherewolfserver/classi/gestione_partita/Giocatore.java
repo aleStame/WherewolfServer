@@ -169,7 +169,12 @@ public final class Giocatore
 
     public void riconosciNegromante() { fazione = NEGROMANTE; }
 
-    public EsitoAttacco vampirizzazione() { return null; }
+    public EsitoAttacco vampirizzazione()
+    {
+        EsitoAttacco esito = ruolo.vampirizzazione();
+        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) esito = MORTO;
+        return esito;
+    }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
