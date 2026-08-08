@@ -429,14 +429,14 @@ public final class TestGiocatore
     public void testGildataContadinoDopoLupizzazione(String tipoLupo)
     {
         lupizzazioneContadino(tipoLupo);
-        verificaAttacco(giocatore.gildata(), MORTO);
+        verificaEsitoGildata(MORTO);
     }
 
     @Test public void testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante()
     {
         cambiaRuolo("Becchino");
         giocatore.riconosciNegromante();
-        verificaAttacco(giocatore.gildata(), FALLITO);
+        verificaEsitoGildata(FALLITO);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -445,6 +445,8 @@ public final class TestGiocatore
         lupizzazioneContadino(tipoLupo);
         verificaAttacco(giocatore.vampirizzazione(), MORTO);
     }
+
+    private void verificaEsitoGildata(EsitoAttacco esito) { verificaAttacco(giocatore.gildata(), esito); }
 
     private void lupizzazioneContadino(String tipoLupo)
     {
