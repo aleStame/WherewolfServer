@@ -254,7 +254,12 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoAttacco vampirizzazione() { return RIUSCITO; }
+    public EsitoAttacco vampirizzazione()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isProtezioneVampiroPresente() || isMistico()) esito = FALLITO;
+        return esito;
+    }
 
     public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
 

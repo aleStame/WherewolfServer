@@ -718,7 +718,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO",
-            "Cappuccetto rosso, RIUSCITO", "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, RIUSCITO",
+            "Cappuccetto rosso, RIUSCITO", "Contadino mostro, MORTO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giulietta, FALLITO",
             "Giovane lupo, MORTO", "Goblin, FALLITO", "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO",
             "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Negromante, FALLITO",
             "Posseduto, TROVATO_POSSEDUTO"

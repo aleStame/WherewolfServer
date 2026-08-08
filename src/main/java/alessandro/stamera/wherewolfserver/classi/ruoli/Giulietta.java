@@ -3,6 +3,8 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Amanti;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
+
 public final class Giulietta extends Amanti
 {
 
