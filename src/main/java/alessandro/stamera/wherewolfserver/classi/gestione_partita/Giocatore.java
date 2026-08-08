@@ -191,7 +191,7 @@ public final class Giocatore
     private boolean isAccusabileAzzeccagarbugli()
     {
         Fazione fazione = getFazione();
-        return fazione != CITTA && fazione != CRIMINALI;
+        return fazione != CITTA && fazione != CRIMINALI && isSegnalatoAzzeccagarbugli();
     }
 
     public boolean isSegnalatoAzzeccagarbugli() { return segnalatoAzzeccagarbugli; }

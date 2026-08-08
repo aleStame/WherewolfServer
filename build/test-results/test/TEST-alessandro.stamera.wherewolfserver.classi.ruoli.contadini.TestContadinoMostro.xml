@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" tests="15" skipped="0" failures="2" errors="0" timestamp="2026-08-08T14:19:26" hostname="ALESSANDRO" time="0.021">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" tests="15" skipped="0" failures="2" errors="0" timestamp="2026-08-08T14:42:32" hostname="ALESSANDRO" time="0.027">
   <properties/>
   <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
-  <testcase name="testMaledetto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.005">
+  <testcase name="testMaledetto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -92,16 +92,16 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
   <testcase name="testAttaccoNegromanteRomeizzato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
   <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
-  <testcase name="testVampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
+  <testcase name="testVampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
   <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
   <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
-  <testcase name="testRipristino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001">
+  <testcase name="testRipristino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -191,8 +191,8 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.0"/>
+  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.002"/>
   <testcase name="testNonMorto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

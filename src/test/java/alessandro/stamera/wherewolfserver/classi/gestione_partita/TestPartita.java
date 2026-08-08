@@ -215,11 +215,10 @@ public final class TestPartita
         String nome = "Matteo";
         String[][] giocatori = new String[][] { { nome, ruolo }, { "Ivan", "Oratore" }, { "Miriam", "Assassino" } };
         inizializzaPartita(giocatori);
-        //segnalazioneAzzeccagarbugli(nome);
+        partita.segnalazioneAzzeccagarbugli(nome);
         for(int i = 1; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         terminaVotazioni();
         verificaAccusati(nome, giocatori[1][0], giocatori[2][0]);
-        partita.ripristinaGiocatoreBallottaggio(nome);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAmato()

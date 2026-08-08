@@ -622,7 +622,7 @@ public final class GiocatoriVivi extends Giocatori
         {
             String nome = getNomeGiocatore(i);
             Giocatore giocatore = getGiocatore(nome);
-            if(giocatore.isAccusabile() && (giocatore.isSegnalatoAzzeccagarbugli() || giocatore.isInquisito())) nomiGiocatori.add(nome);
+            if(giocatore.isAccusabile()) nomiGiocatori.add(nome);
         }
         for(String nome : nomiGiocatori) mandaBallottaggio(ballottaggio, nome);
     }
