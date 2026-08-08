@@ -194,9 +194,9 @@ public final class Giocatore
         return fazione != CITTA && fazione != CRIMINALI;
     }
 
-    private boolean isSegnalatoAzzeccagarbugli() { return segnalatoAzzeccagarbugli; }
+    public boolean isSegnalatoAzzeccagarbugli() { return segnalatoAzzeccagarbugli; }
 
-    private boolean isInquisito() { return segnalatoInquisitore; }
+    public boolean isInquisito() { return segnalatoInquisitore; }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {

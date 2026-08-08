@@ -594,19 +594,13 @@ public final class GiocatoriVivi extends Giocatori
 
     private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
     {
-        if(ballottaggio.isAmatoPresente())
+        if(ballottaggio.isAmatoPresente() && (isAngeloCustodePresente() || ballottaggio.isAngeloCustodePresente()))
         {
-            if(ballottaggio.isAmatoPresente())
+            String nomeAmato = ballottaggio.getNomeAmato();
+            aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
+            ballottaggio.eliminaGiocatore(nomeAmato);
+            if(isAngeloCustodePresente())
             {
-                String nomeAmato = ballottaggio.getNomeAmato();
-                aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
-                ballottaggio.eliminaGiocatore(nomeAmato);
-            }
-            else if(isAngeloCustodePresente())
-            {
-                String nomeAmato = ballottaggio.getNomeAmato();
-                aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
-                ballottaggio.eliminaGiocatore(nomeAmato);
                 String nomeAngeloCustode = getNomeAngeloCustode();
                 Giocatore angeloCustode = getGiocatore(nomeAngeloCustode);
                 ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
@@ -627,7 +621,8 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori(); i++)
         {
             String nome = getNomeGiocatore(i);
-            if (getGiocatore(nome).isAccusabile()) nomiGiocatori.add(nome);
+            Giocatore giocatore = getGiocatore(nome);
+            if(giocatore.isAccusabile() && (giocatore.isSegnalatoAzzeccagarbugli() || giocatore.isInquisito())) nomiGiocatori.add(nome);
         }
         for(String nome : nomiGiocatori) mandaBallottaggio(ballottaggio, nome);
     }
