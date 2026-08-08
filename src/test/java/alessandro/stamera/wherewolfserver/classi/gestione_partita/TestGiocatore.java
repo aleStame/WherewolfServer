@@ -428,8 +428,7 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testGildataContadinoDopoLupizzazione(String tipoLupo)
     {
-        cambiaRuolo("Contadino discendente dei lupi");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
+        lupizzazioneContadino(tipoLupo);
         verificaAttacco(giocatore.gildata(), MORTO);
     }
 
@@ -443,9 +442,14 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testVampirizzazioneContadinoDopoLupizzazione(String tipoLupo)
     {
+        lupizzazioneContadino(tipoLupo);
+        verificaAttacco(giocatore.vampirizzazione(), MORTO);
+    }
+
+    private void lupizzazioneContadino(String tipoLupo)
+    {
         cambiaRuolo("Contadino discendente dei lupi");
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
-        verificaAttacco(giocatore.vampirizzazione(), MORTO);
     }
 
     private void verificaLupoSolitarioSvegliaCappuccettoRosso()
