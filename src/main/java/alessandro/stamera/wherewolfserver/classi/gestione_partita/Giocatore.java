@@ -31,7 +31,7 @@ public final class Giocatore
         cambiaRuolo(ruolo);
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
-        fazione = NESSUNA;
+        cambiaFazione(NESSUNA);
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -167,7 +167,7 @@ public final class Giocatore
         return esito;
     }
 
-    public void riconosciNegromante() { fazione = NEGROMANTE; }
+    public void riconosciNegromante() { cambiaFazione(NEGROMANTE); }
 
     public EsitoAttacco vampirizzazione()
     {
@@ -182,12 +182,14 @@ public final class Giocatore
     {
         switch(esito)
         {
-            case CONTADINO_LUPO_BECCATO -> fazione = lupo.getFazione();
+            case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
             case FALLITO -> { if(lupo.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isAmato()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;
     }
+
+    private void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     private boolean isGiocatoreProtetto(Ruolo lupo) { return tratti.isProtezionePresente(lupo); }
 
