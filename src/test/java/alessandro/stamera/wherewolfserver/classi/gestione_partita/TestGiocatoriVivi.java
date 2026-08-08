@@ -151,14 +151,14 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
     {
-        String nomeAngelo = "Carmine";
+        String nomeAngelo = "Carmine", nomeAmato = "Carmela";
         String[][] giocatori = new String[][]
-            { { nomeAngelo, "Angelo custode" }, { "Carmela", "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
+            { { nomeAngelo, "Angelo custode" }, { nomeAmato, "Contadino eroe" }, { "Virginio", "Inquisitore" }, { "Giorgia", "Giullare" } };
         inizializzaGiocatori(giocatori);
         this.giocatori.segnalazioneAzzeccagarbugli(nomeAngelo);
+        this.segnalazioneAngeloCustode(nomeAmato);
         for(int i = 2; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
         verificaAccusati(nomeAngelo, giocatori[3][0], giocatori[2][0]);
-        FACTORY.getRuolo("Angelo custode").ripristina();
     }
 
     @ParameterizedTest
@@ -181,11 +181,10 @@ public final class TestGiocatoriVivi
         String nomeInquisitore = "Virginio";
         String[][] giocatori = new String[][]
             { { "Carmine", "Angelo custode" }, { "Carmela", "Contadino eroe" }, { nomeInquisitore, "Inquisitore" }, { "Giorgia", "Giullare" } };
-        int posizione = 2;
         inizializzaGiocatori(giocatori);
         this.giocatori.segnalazioneAzzeccagarbugli(nomeInquisitore);
         segnalazioneAngeloCustode(nomeInquisitore);
-        for(int i = posizione; i < giocatori.length; i++) incrementaVoti(giocatori[i][0], 1);
+        incrementaVoti(giocatori[3][0], 4);
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
     }
 

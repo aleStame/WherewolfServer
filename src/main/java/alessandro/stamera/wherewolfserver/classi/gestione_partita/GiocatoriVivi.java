@@ -596,9 +596,9 @@ public final class GiocatoriVivi extends Giocatori
     {
         if(ballottaggio.isAmatoPresente())
         {
-            if(ballottaggio.isAngeloCustodePresente())
+            if(ballottaggio.isAmatoPresente())
             {
-                String nomeAmato = ballottaggio.getNomeAngeloCustode();
+                String nomeAmato = ballottaggio.getNomeAmato();
                 aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
                 ballottaggio.eliminaGiocatore(nomeAmato);
             }
