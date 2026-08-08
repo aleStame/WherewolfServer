@@ -172,9 +172,11 @@ public final class Giocatore
     public EsitoAttacco vampirizzazione()
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
-        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) esito = MORTO;
+        if(isGiocatoreLupizzato()) esito = MORTO;
         return esito;
     }
+
+    private boolean isGiocatoreLupizzato() { return fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO; }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
