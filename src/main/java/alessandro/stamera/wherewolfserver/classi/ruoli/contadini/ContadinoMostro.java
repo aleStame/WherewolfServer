@@ -25,11 +25,7 @@ public final class ContadinoMostro extends Contadino
         return esito;
     }
 
-    @Override public void ripristina()
-    {
-        super.ripristina();
-        maledizione();
-    }
+    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
 
     public static Ruolo getInstance() { return new ContadinoMostro(); }
 

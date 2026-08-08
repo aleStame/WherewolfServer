@@ -24,6 +24,8 @@ public final class CacciatoreDiVampiri extends Villaggio
 
     @Override public EsitoAttacco vampirizzazione() { return getMorto(); }
 
+    @Override public EsitoAttacco attaccoNosferatu() { return getMorto(); }
+
     private EsitoAttacco getMorto() { return MORTO; }
 
     public static Ruolo getInstance() { return new CacciatoreDiVampiri(); }

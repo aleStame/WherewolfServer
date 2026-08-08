@@ -77,14 +77,7 @@ public final class Giocatore
 
     public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
 
-    public EsitoAttacco progenizzazioneNosferatu()
-    {
-        EsitoAttacco esito = RIUSCITO;
-        if(isNosferatuMorto()) esito = MORTO;
-        else if(ruolo.isPosseduto()) esito = TROVATO_POSSEDUTO;
-        else if(ruolo.isProtezioneNosferatuPresente()) esito = FALLITO;
-        return esito;
-    }
+    public EsitoAttacco progenizzazioneNosferatu() { return ruolo.attaccoNosferatu(); }
 
     public EsitoAttacco attaccoAssassino()
     {
@@ -209,8 +202,6 @@ public final class Giocatore
     {
         this.segnalatoInquisitore = segnalatoInquisitore;
     }
-
-    private boolean isNosferatuMorto() { return ruolo.isCacciatoreDiVampiri() || ruolo.isLupo() || isContadinoMostro(); }
 
     private void setNumeroVoti(int numeroVoti) { this.numeroVoti = numeroVoti; }
 

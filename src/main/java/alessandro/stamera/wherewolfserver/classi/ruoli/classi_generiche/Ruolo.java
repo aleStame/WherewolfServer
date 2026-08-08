@@ -311,7 +311,6 @@ public class Ruolo
     {
         resettaRomeo();
         eliminaTratti(MALEDETTO, NON_MORTO);
-        ripristinaFazioneOriginale();
         perdiProtezioni();
         stregato = false;
     }
@@ -328,6 +327,13 @@ public class Ruolo
     public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
 
     public EsitoAttacco gildata() { return RIUSCITO; }
+
+    public EsitoAttacco attaccoNosferatu()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isProtezioneNosferatuPresente()) esito = FALLITO;
+        return esito;
+    }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
