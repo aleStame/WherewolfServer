@@ -446,6 +446,27 @@ public final class TestGiocatore
         verificaAttacco(giocatore.vampirizzazione(), MORTO);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
+            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO",
+            "Cacciatore, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Capo gilda, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
+            "Contadino eroe, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO", "Contadino normale, RIUSCITO",
+            "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giovane lupo, MORTO", "Giulietta, FALLITO", "Giullare, RIUSCITO", "Goblin, FALLITO",
+            "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, FALLITO", "Inquisitore, FALLITO", "Leprecauno, FALLITO",
+            "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO",
+            "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, FALLITO", "Nonna, RIUSCITO", "Nosferatu, FALLITO", "Oratore, RIUSCITO",
+            "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO", "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO",
+            "Spia, RIUSCITO", "Strega, FALLITO", "Sensitiva, FALLITO", "Templare, RIUSCITO"
+        }
+    )
+    public void testVampirizzazione(String nomeRuolo, EsitoAttacco esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaAttacco(giocatore.vampirizzazione(), esito);
+    }
+
     private void verificaEsitoGildata(EsitoAttacco esito) { verificaAttacco(giocatore.gildata(), esito); }
 
     private void lupizzazioneContadino(String tipoLupo)

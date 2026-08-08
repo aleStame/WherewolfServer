@@ -664,7 +664,7 @@ public final class GiocatoriVivi extends Giocatori
         return risultato;
     }
 
-    private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }
+    private EsitoAttacco vampirizzazioneRuolo(String nome) { return getGiocatore(nome).vampirizzazione(); }
 
     private boolean isAssassino(String nome) { return getRuolo(nome).isAssassino(); }
 
