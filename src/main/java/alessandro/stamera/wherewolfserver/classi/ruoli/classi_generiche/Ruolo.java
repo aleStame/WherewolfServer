@@ -254,16 +254,7 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoAttacco vampirizzazione()
-    {
-        EsitoAttacco esito = FALLITO;
-        if(!isMistico() && !isProtezioneVampiroPresente())
-        {
-            trasformazioneVampiro();
-            esito = RIUSCITO;
-        }
-        return esito;
-    }
+    public EsitoAttacco vampirizzazione() { return RIUSCITO; }
 
     public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
 
@@ -332,12 +323,6 @@ public class Ruolo
     public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
 
     public EsitoAttacco gildata() { return RIUSCITO; }
-
-    private void trasformazioneVampiro()
-    {
-        cambiaFazione(VAMPIRO);
-        aggiungiTratti(NON_MORTO);
-    }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 

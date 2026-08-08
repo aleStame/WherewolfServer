@@ -169,6 +169,8 @@ public final class Giocatore
 
     public void riconosciNegromante() { fazione = NEGROMANTE; }
 
+    public EsitoAttacco vampirizzazione() { return null; }
+
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
         switch(esito)
