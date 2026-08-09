@@ -27,13 +27,6 @@ public final class ContadinoLupo extends Contadino
         return esito;
     }
 
-    @Override public EsitoAttacco vampirizzazione()
-    {
-        EsitoAttacco esito = MORTO;
-        if(!isLupo()) esito = super.vampirizzazione();
-        return esito;
-    }
-
     public static Ruolo getInstance() { return new ContadinoLupo(); }
 
 }

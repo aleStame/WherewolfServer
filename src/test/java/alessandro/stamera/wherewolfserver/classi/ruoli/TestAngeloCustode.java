@@ -59,7 +59,6 @@ public final class TestAngeloCustode
         Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, nomeRuolo } });
         partita.segnalazioneAngeloCustode(nome);
         verificaEsitoPartita(partita, VITTORIA);
-        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @ParameterizedTest @MethodSource("getEsempiPartitaPersa")
@@ -70,7 +69,6 @@ public final class TestAngeloCustode
         ruolo.romeizzazione();
         assertThat(ruolo.getAura()).isEqualTo(BIANCA);
         verificaVero(ruolo.isRomeo());
-        ruolo.ripristina();
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

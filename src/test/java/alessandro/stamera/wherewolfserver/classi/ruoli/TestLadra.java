@@ -103,8 +103,6 @@ public final class TestLadra
 
     private boolean isProtezionePresente(Ruolo vampiro) { return ruolo.isProtezionePresente(vampiro); }
 
-    @AfterEach public void ripristinaRuolo() { ruolo.ripristina(); }
-
     private Aura getAura() { return ruolo.getAura(); }
 
     private boolean maledizione() { return ruolo.maledizione(); }

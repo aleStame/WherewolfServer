@@ -81,11 +81,6 @@ public final class TestGhoul
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testEsempioPartita(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
 
-    @AfterAll public static void resettaPersonaggi()
-    {
-        for(String nomeRuolo : new String[]{ "Peccatore", "Prete" }) getRuolo(nomeRuolo).ripristina();
-    }
-
     private static Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private static Stream<Arguments> getEsempiPartita()

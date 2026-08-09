@@ -253,15 +253,6 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isNegromante(String nome) { return getRuolo(nome).isNegromante(); }
 
-    public void ripristinaMistici()
-    {
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String nomeGiocatore = getNomeGiocatore(i);
-            if(isMistico(nomeGiocatore)) ripristina(nomeGiocatore);
-        }
-    }
-
     public void protezioneStrega(String nome)
     {
         Ruolo stregato = getRuolo(nome);

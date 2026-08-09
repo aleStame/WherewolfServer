@@ -33,13 +33,6 @@ public final class TestContadinoLupo
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupi(String tipoLupo) { assertThat(ruolo.attaccoLupi(getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO); }
 
-    @Test public void testRipristino()
-    {
-        ruolo.ripristina();
-        verificaFalso(ruolo.isCreaturaOmbra());
-        verificaFalso(ruolo.isLupo());
-    }
-
     @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(LUPO); }
 
     @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(RIUSCITO); }

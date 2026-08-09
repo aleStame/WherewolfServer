@@ -19,19 +19,11 @@ public final class Vampiro extends CreatureOmbra
           "vampirica con aura oscura e fazione Vampiro. Inoltre, la prima notte individua la Megera.",
      2, false
         );
-        aggiungiTrattoCreaturaOmbra();
+        aggiungiTratti(CREATURA_OMBRA);
     }
 
     public boolean isVampiro() { return true; }
 
-    @Override public void ripristina()
-    {
-        super.ripristina();
-        aggiungiTrattoCreaturaOmbra();
-    }
-
     public static Ruolo getInstance() { return new Vampiro(); }
-
-    private void aggiungiTrattoCreaturaOmbra() { aggiungiTratti(CREATURA_OMBRA); }
 
 }

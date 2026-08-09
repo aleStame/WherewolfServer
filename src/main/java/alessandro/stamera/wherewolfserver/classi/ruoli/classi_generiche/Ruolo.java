@@ -21,8 +21,6 @@ public class Ruolo
 
     private Fazione fazione;
 
-    private final Fazione fazioneOriginale;
-
     private final Aura aura;
 
     private final int lune;
@@ -34,8 +32,6 @@ public class Ruolo
     private final Tratti tratti;
 
     private Categoria categoria;
-
-    private final Categoria categoriaOriginale;
 
     public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
     {
@@ -52,11 +48,9 @@ public class Ruolo
         this.mistico = mistico;
         tratti = new Tratti();
         setRomeo(false);
-        fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
-        this.categoriaOriginale = categoria;
         stregato = false;
     }
 
@@ -263,18 +257,6 @@ public class Ruolo
 
     public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
 
-    public void resettaRomeo()
-    {
-        setRomeo(false);
-        perdiProtezioni();
-    }
-
-    public void ripristinaFazioneOriginale()
-    {
-        cambiaFazione(fazioneOriginale);
-        cambiaCategoria(categoriaOriginale);
-    }
-
     public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
 
     public void annullaSegnalazioneBoia() { segnalatoBoia = false; }
@@ -306,14 +288,6 @@ public class Ruolo
     public boolean isCategoriaUomini() { return false; }
 
     public boolean isVampiro() { return false; }
-
-    public void ripristina()
-    {
-        resettaRomeo();
-        eliminaTratti(MALEDETTO, NON_MORTO);
-        perdiProtezioni();
-        stregato = false;
-    }
 
     public void protezioneStrega() { stregato = true; }
 

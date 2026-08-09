@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" tests="6" skipped="0" failures="1" errors="0" timestamp="2026-08-08T14:42:32" hostname="ALESSANDRO" time="0.01">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" tests="6" skipped="0" failures="1" errors="0" timestamp="2026-08-09T21:21:50" hostname="ALESSANDRO" time="0.008">
   <properties/>
   <testcase name="testGuardiaCorrotta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.001"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.004">
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Criminali&#13;&#10; but was: Amanti" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Criminali
  but was: Amanti
@@ -92,9 +92,9 @@ expected: Criminali
 </failure>
   </testcase>
   <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.0"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.001"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.002"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.0"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.0"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.001"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

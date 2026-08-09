@@ -56,11 +56,6 @@ public final class TestVillaggio
 
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO); }
 
-    @AfterAll public static void ripristinaRuoli()
-    {
-        for(String ruolo : new String[] { "Peccatore", "Prete" }) FACTORY.getRuolo(ruolo).ripristina();
-    }
-
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
         Partita[] partite = new Partita[]
@@ -70,19 +65,6 @@ public final class TestVillaggio
             new Partita(new String[][] { { "Federico", "Capo gilda" }, { "Otello", "Giullare" } })
         };
         return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
-    }
-
-    private static Stream<Arguments> getEsempiEsitiPartitaPostGildata()
-    {
-        return Stream.of
-        (
-            Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
-            Arguments.of
-            (
-                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
-            ),
-            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
-        );
     }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }

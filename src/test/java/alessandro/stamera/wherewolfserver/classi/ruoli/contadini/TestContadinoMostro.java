@@ -49,12 +49,6 @@ public final class TestContadinoMostro
         verificaAttaccoFallito(ruolo.attaccoNegromante());
     }
 
-    @Test public void testRipristino()
-    {
-        ripristina();
-        verificaMaledetto();
-    }
-
     @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(MORTO); }
 
     @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(MOSTRO); }
@@ -64,8 +58,6 @@ public final class TestContadinoMostro
     private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
     private void romeizzazione() { ruolo.romeizzazione(); }
-
-    private void ripristina() { ruolo.ripristina(); }
 
     private void verificaMaledetto()
     {

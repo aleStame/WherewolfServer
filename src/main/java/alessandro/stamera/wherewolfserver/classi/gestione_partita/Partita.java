@@ -356,15 +356,6 @@ public final class Partita
 
     public Aura controlloMedium(String nome) { return eliminati.controlloMedium(nome); }
 
-    public void ripristinaGiocatori()
-    {
-        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) ripristinaGiocatoreVivo(getNomeGiocatoreVivo(i));
-    }
-
-    public void ripristinaGiocatoreBallottaggio(String nome) { ballottaggio.ripristina(nome); }
-
-    public void ripristinaGiocatoreVivo(String nome) { vivi.ripristina(nome); }
-
     public void attaccoVampiro(String nome)
     {
         String nomeVampiro = getNomeVampiroVivo();
@@ -405,7 +396,6 @@ public final class Partita
     private void passaggioPosseduto(String nome)
     {
         gestionePossessoImpossibile(nome);
-        ripristinaGiocatoreVivo(nome);
         if(vivi.isAngeloCustode(nome)) annullaAmato();
         vivi.eliminaGiocatore(nome);
         aggiungiGiocatoreVivo(nome, getPossedutoMorto());
