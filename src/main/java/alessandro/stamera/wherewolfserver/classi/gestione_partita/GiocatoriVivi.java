@@ -92,7 +92,7 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCreatureOmbra;
     }
 
-    public Aura getControlloVeggente(String nome) { return getRuolo(nome).getAura(); }
+    public Aura getControlloVeggente(String nome) { return getGiocatore(nome).getAura(); }
 
     public int getNumeroCriminali()
     {
@@ -251,9 +251,9 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeVampiro() { return getNomeGiocatore(getPosizioneVampiro()); }
 
-    public void maledizione(String nome) { getRuolo(nome).maledizione(); }
+    public void maledizione(String nome) { getGiocatore(nome).maledizione(); }
 
-    public boolean isMaledetto(String nome) { return getRuolo(nome).isMaledetto(); }
+    public boolean isMaledetto(String nome) { return getGiocatore(nome).isMaledetto(); }
 
     public boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
 

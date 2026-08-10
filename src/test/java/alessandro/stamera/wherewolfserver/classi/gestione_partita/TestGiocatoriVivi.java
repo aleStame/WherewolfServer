@@ -771,6 +771,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, nomeRuolo);
         giocatori.maledizione(nome);
         verificaMaledetto(nome);
+        giocatori.annullaMaledizione(nome);
         verificaFalso(isMaledetto(nome));
     }
 
