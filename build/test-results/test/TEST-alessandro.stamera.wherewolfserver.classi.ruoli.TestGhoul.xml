@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" tests="26" skipped="0" failures="3" errors="0" timestamp="2026-08-10T12:03:54" hostname="ALESSANDRO" time="0.291">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" tests="26" skipped="0" failures="3" errors="0" timestamp="2026-08-10T12:31:48" hostname="ALESSANDRO" time="0.436">
   <properties/>
-  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testCategoria()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.025"/>
+  <testcase name="testPiccoloPopolo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
   <testcase name="testPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.017"/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.004"/>
+  <testcase name="testFazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
   <testcase name="testCitta()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.011"/>
-  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.035"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.012"/>
-  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.0"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testGhoul()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testPazzo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.005"/>
+  <testcase name="testLune()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.076"/>
+  <testcase name="testLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.016"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.007"/>
   <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testLeprecauno()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.015"/>
-  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
-  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@68809cc7" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.008">
+  <testcase name="testLeprecauno()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testPeccatore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testMistico()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testVillaggio()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.004"/>
+  <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
+  <testcase name="testGoblin()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.025"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@27b22f74" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.053">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -166,7 +166,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5ecba515" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001">
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1917d90f" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.065">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -312,7 +312,7 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2abc224d" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001">
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4aac85fa" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: VITTORIA&#13;&#10; but was: SCONFITTA" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: VITTORIA
  but was: SCONFITTA
@@ -458,20 +458,16 @@ expected: VITTORIA
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.012"/>
-  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.008"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.003"/>
-  <system-out><![CDATA[RIUSCITO
-RIUSCITO
-Villaggio
+  <testcase name="testMegera()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testNosferatu()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.002"/>
+  <testcase name="testGiullare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul" time="0.001"/>
+  <system-out><![CDATA[Villaggio
 Nosferatu
 Villaggio
-RIUSCITO
 Villaggio
 Nosferatu
 -
-RIUSCITO
 Villaggio
 Nosferatu
 -

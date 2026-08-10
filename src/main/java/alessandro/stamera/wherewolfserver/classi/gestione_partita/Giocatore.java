@@ -141,9 +141,12 @@ public final class Giocatore
 
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
-        EsitoAttacco esito = FALLITO;
-        if(isAmato() && !ruolo.isContadinoLupo()) esito = ANGELO_CUSTODE_MORTO;
-        else if(!isGiocatoreProtetto(lupo)) esito = ruolo.attaccoLupi(lupo);
+        EsitoAttacco esito = ruolo.attaccoLupi(lupo);
+        if(isProtezioneAngeloCustodeNonBucata())
+        {
+            if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
+            else if(isGiocatoreProtetto(lupo)) esito = FALLITO;
+        }
         esito = verificaEsitoAttaccoLupi(lupo, esito);
         return esito;
     }
@@ -171,6 +174,8 @@ public final class Giocatore
         if(isGiocatoreLupizzato()) esito = MORTO;
         return esito;
     }
+
+    private boolean isProtezioneAngeloCustodeNonBucata() { return !ruolo.isContadinoLupo() && !isCappuccettoRosso(); }
 
     private boolean isGiocatoreLupizzato() { return fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO; }
 
