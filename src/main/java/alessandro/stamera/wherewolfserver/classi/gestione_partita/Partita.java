@@ -506,8 +506,13 @@ public final class Partita
     {
         Giocatore giocatore = new Giocatore(getRuolo(nome));
         eliminati.aggiungiGiocatore(nome, giocatore);
-        //if(giocatore.isMegera()) vivi.ripristinaMistici();
-        if(giocatore.isNegromante()) annullaMaledizioniNegromante();
+        if(giocatore.getRuolo().isMegera()) for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
+        {
+            String nomeGiocatore = getNomeGiocatoreVivo(i);
+            if(isMaledetto(nomeGiocatore) && !stream(maledettiNegromante).toList().contains(nomeGiocatore))
+                vivi.annullaMaledizione(nomeGiocatore);
+        }
+        else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
         /*else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;*/
         eliminaGiocatoreMortoNotte(nome);
     }
