@@ -2068,8 +2068,8 @@ RIUSCITO
 û+ß+Lupi del branco
 û+ß+Lupi del branco
 û+ß+Lupi del branco
-‚+ Ï22:45:22.002 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-‚+ õ22:45:23.026 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
+‚+ Ï23:29:28.968 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+‚+ õ23:29:30.009 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
 ‚+ 
 ‚+ (  .   ____          _            __ _ _
 ‚+ ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -2080,9 +2080,9 @@ RIUSCITO
 ‚+ 
 ‚+ , :: Spring Boot ::                (v3.3.1)
 ‚+ 
-‚+ ˙2026-08-10T22:45:25.424+02:00  INFO 19720 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 19720 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
-‚+ ∞2026-08-10T22:45:25.436+02:00  INFO 19720 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
-‚+ ô2026-08-10T22:45:31.629+02:00  INFO 19720 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-‚+ Ñ2026-08-10T22:45:31.636+02:00  INFO 19720 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-‚+ ç2026-08-10T22:45:31.644+02:00  INFO 19720 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-‚+ ∑2026-08-10T22:45:31.764+02:00  INFO 19720 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 8.299 seconds (process running for 49.915)
+‚+ ˙2026-08-10T23:29:32.073+02:00  INFO 24840 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 24840 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
+‚+ ∞2026-08-10T23:29:32.077+02:00  INFO 24840 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
+‚+ ô2026-08-10T23:29:40.398+02:00  INFO 24840 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+‚+ Ñ2026-08-10T23:29:40.399+02:00  INFO 24840 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+‚+ ç2026-08-10T23:29:40.412+02:00  INFO 24840 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+‚+ ∑2026-08-10T23:29:40.593+02:00  INFO 24840 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 10.18 seconds (process running for 65.167)

@@ -31,6 +31,8 @@ public final class ContadinoMostro extends Contadino
 
     @Override public EsitoAttacco attaccoAssassino() { return getEsitoAttaccoDefault(); }
 
+    @Override public EsitoAttacco gildata() { return getEsitoAttaccoDefault(); }
+
     private EsitoAttacco getEsitoAttaccoDefault() { return MORTO; }
 
 }
