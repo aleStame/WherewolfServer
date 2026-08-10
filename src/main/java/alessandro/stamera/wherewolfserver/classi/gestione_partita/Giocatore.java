@@ -142,8 +142,8 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = FALLITO;
-        //if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
-        if(!isGiocatoreProtetto(lupo)) esito = ruolo.attaccoLupi(lupo);
+        if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
+        else if(!isGiocatoreProtetto(lupo)) esito = ruolo.attaccoLupi(lupo);
         return verificaEsitoAttaccoLupi(lupo, esito);
     }
 
