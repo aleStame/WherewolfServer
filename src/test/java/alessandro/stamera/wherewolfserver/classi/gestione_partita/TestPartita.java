@@ -233,12 +233,11 @@ public final class TestPartita
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustode(String nomeLupo)
     {
-        String[][] giocatori = new String[][] { { "Walter", "Mago" }, { "Amelia", "Spia" }, { "Tony", nomeLupo } };
-        inizializzaPartita(giocatori);
-        int posizione = 0;
-        attaccoLupi(nomeLupo, giocatori[posizione][0]);
+        String nomeAngeloCustode = "Walter";
+        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Amelia", "Spia" }, { "Tony", nomeLupo } });
+        attaccoLupi(nomeLupo, nomeAngeloCustode);
         terminaNotte();
-        verificaEliminazione(giocatori[posizione][0]);
+        verificaEliminazione(nomeAngeloCustode);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1747,7 +1746,7 @@ public final class TestPartita
             "lui diventa tale.\nSveglia Mario e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
         }
     )
-    public void testAttaccoLupiAngeloCustode(String tipoLupo, Fazione fazione, String messaggio)
+    public void testLupizzazioneContadino(String tipoLupo, Fazione fazione, String messaggio)
     {
         String nomeContadino = "Mario";
         String[][] giocatori =
