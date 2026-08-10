@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import jakarta.annotation.Nonnull;
+
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -34,13 +36,17 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
+        System.out.println(esito);
         switch(esito)
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
             case FALLITO ->
                 { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
-            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isAmato(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO ->
+                { if(isAmato(nome) && isAngeloCustodePresente()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
+                { if(isAmato(nome) && !isAngeloCustodePresente()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
         }
         return esito;
     }
@@ -321,7 +327,14 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = RIUSCITO;
         if(isCappuccettoRossoProtetto(nome, attaccante)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-        else if(isCappuccettoRosso(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
+        else if(isCappuccettoRosso(nome)) esito = getEsitoAttaccoCappuccettoRosso();
+        return esito;
+    }
+
+    private EsitoAttacco getEsitoAttaccoCappuccettoRosso()
+    {
+        EsitoAttacco esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
+        if(isAmato(getNomeGiocatore(getPosizioneCappuccettoRosso())) && isAngeloCustodePresente()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         return esito;
     }
 
