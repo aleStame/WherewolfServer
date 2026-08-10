@@ -171,9 +171,9 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoNegromante(String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
-        EsitoAttacco esito = ruolo.attaccoNegromante();
-        if(esito == RIUSCITO && ruolo.isMegera() && isNegromantePresente()) getRuolo(getNomeNegromante()).maledizione();
+        Giocatore giocatore = getGiocatore(nome);
+        EsitoAttacco esito = giocatore.attaccoNegromante();
+        if(esito == RIUSCITO && giocatore.getRuolo().isMegera()) getGiocatore(getNomeNegromante()).maledizione();
         return esito;
     }
 

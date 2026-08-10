@@ -209,7 +209,12 @@ public final class Giocatore
 
     public boolean isInquisito() { return segnalatoInquisitore; }
 
-    public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
+    public EsitoAttacco attaccoNegromante()
+    {
+        EsitoAttacco esito = ruolo.attaccoNegromante();
+        if(esito == RIUSCITO) maledizione();
+        return esito;
+    }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {

@@ -259,11 +259,7 @@ public class Ruolo
 
     public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
 
-    public EsitoAttacco attaccoNegromante()
-    {
-        maledizione();
-        return RIUSCITO;
-    }
+    public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 

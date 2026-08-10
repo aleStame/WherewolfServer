@@ -481,7 +481,9 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         verificaAttacco(giocatore.attaccoNegromante(), RIUSCITO);
+        verificaVero(giocatore.isMaledetto());
         giocatore.annullaMaledizione();
+        verificaFalso(giocatore.isMaledetto());
     }
 
     private void verificaEsitoGildata(EsitoAttacco esito) { verificaAttacco(giocatore.gildata(), esito); }
