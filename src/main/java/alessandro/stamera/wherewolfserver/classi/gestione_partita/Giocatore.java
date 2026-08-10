@@ -209,6 +209,8 @@ public final class Giocatore
 
     public boolean isInquisito() { return segnalatoInquisitore; }
 
+    public EsitoAttacco attaccoNegromante() { return null; }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;
