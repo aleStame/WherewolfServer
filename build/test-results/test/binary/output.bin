@@ -541,10 +541,14 @@ RIUSCITO
 Ï‰Lupi del branco
 ÏÂMORTO
 ÏÊMORTO
-ÏËANGELO_CUSTODE_MORTO
-ÏÈANGELO_CUSTODE_MORTO
-ÏÍANGELO_CUSTODE_MORTO
-ÏÎANGELO_CUSTODE_MORTO
+ÏËCONTADINO_LUPO_BECCATO
+ÏËLupi del branco
+ÏÈCONTADINO_LUPO_BECCATO
+ÏÈLupi del branco
+ÏÍCONTADINO_LUPO_BECCATO
+ÏÍLupi del branco
+ÏÎCONTADINO_LUPO_BECCATO
+ÏÎLupo solitario
 ÏÓANGELO_CUSTODE_MORTO
 ÏÔANGELO_CUSTODE_MORTO
 ÏANGELO_CUSTODE_MORTO
@@ -743,10 +747,10 @@ RIUSCITO
 RIUSCITO
 ®‡
 RIUSCITO
-®·ANGELO_CUSTODE_MORTO
-®‚ANGELO_CUSTODE_MORTO
-®„ANGELO_CUSTODE_MORTO
-®‰ANGELO_CUSTODE_MORTO
+®·CONTADINO_LUPO_BECCATO
+®‚CONTADINO_LUPO_BECCATO
+®„CONTADINO_LUPO_BECCATO
+®‰CONTADINO_LUPO_BECCATO
 ®Ê
 RIUSCITO
 ®Ì
@@ -2034,8 +2038,8 @@ RIUSCITO
 Ô*¯*Lupi del branco
 Ô*¯*Lupi del branco
 Ô*¯*Lupi del branco
-≥+ Ï13:37:32.264 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-≥+ õ13:37:37.043 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
+≥+ Ï14:04:41.636 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+≥+ õ14:04:44.121 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
 ≥+ 
 ≥+ (  .   ____          _            __ _ _
 ≥+ ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -2046,9 +2050,9 @@ RIUSCITO
 ≥+ 
 ≥+ , :: Spring Boot ::                (v3.3.1)
 ≥+ 
-≥+ ¯2026-08-10T13:38:08.186+02:00  INFO 3980 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 3980 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
-≥+ Ø2026-08-10T13:38:08.298+02:00  INFO 3980 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
-≥+ ò2026-08-10T13:38:37.507+02:00  INFO 3980 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-≥+ É2026-08-10T13:38:37.529+02:00  INFO 3980 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-≥+ ç2026-08-10T13:38:37.559+02:00  INFO 3980 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 12 ms
-≥+ ∑2026-08-10T13:38:37.910+02:00  INFO 3980 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 57.96 seconds (process running for 195.469)
+≥+ ¯2026-08-10T14:04:47.460+02:00  INFO 5500 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 5500 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\wherewolf.server)
+≥+ Ø2026-08-10T14:04:47.470+02:00  INFO 5500 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
+≥+ ò2026-08-10T14:04:59.330+02:00  INFO 5500 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+≥+ É2026-08-10T14:04:59.332+02:00  INFO 5500 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+≥+ å2026-08-10T14:04:59.348+02:00  INFO 5500 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+≥+ ∏2026-08-10T14:05:00.423+02:00  INFO 5500 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 15.485 seconds (process running for 149.354)
