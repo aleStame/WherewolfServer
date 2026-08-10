@@ -245,8 +245,6 @@ public class Ruolo
         return esito;
     }
 
-    public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
-
     public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
 
     public void annullaSegnalazioneBoia() { segnalatoBoia = false; }

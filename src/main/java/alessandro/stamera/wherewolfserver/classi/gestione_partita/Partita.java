@@ -109,7 +109,7 @@ public final class Partita
         if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
-        switch(attaccoLupi(getRuolo(nomeLupo), nome))
+        switch(attaccoLupi(vivi.getGiocatore(nomeLupo).getRuolo(), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
