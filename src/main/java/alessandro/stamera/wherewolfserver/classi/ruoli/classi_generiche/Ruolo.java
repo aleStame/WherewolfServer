@@ -25,7 +25,7 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean romeo, segnalatoBoia, segnalatoOratore, stregato;
+    private boolean segnalatoBoia, segnalatoOratore, stregato;
 
     private final boolean mistico;
 
@@ -47,7 +47,6 @@ public class Ruolo
         this.lune = lune;
         this.mistico = mistico;
         tratti = new Tratti();
-        setRomeo(false);
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
@@ -143,13 +142,6 @@ public class Ruolo
 
     public boolean isGhoul() { return false; }
 
-    public void romeizzazione()
-    {
-        aggiungiProtezioneCreatureOmbra();
-        setRomeo(true);
-        cambiaFazione(AMANTI);
-    }
-
     public boolean isAmanti() { return false; }
 
     public boolean isGiulietta() { return false; }
@@ -222,8 +214,6 @@ public class Ruolo
     public boolean isOste() { return false; }
 
     public boolean isPazzo() { return false; }
-
-    public boolean isRomeo() { return romeo; }
 
     public boolean isPeccatore() { return false; }
 
@@ -315,7 +305,5 @@ public class Ruolo
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
-
-    private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
 }

@@ -65,12 +65,12 @@ public final class TestLupo
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
+    /*@ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoRomeo(String nome)
     {
         ruolo.romeizzazione();
         verificaAttaccoLupiFallito(nome);
-    }
+    }*/
 
     @Test public void testSegnalazioneBoia()
     {

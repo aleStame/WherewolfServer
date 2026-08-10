@@ -89,9 +89,9 @@ public class Giocatori
 
     public boolean isContadinoMostro(String nome) { return getRuolo(nome).isContadinoMostro(); }
 
-    public boolean isRomeo(String nome) { return getRuolo(nome).isRomeo(); }
+    public boolean isRomeo(String nome) { return false; }
 
-    public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
+    public void romeizzazione(String nome) { }
 
     public boolean isNosferatuPresente() { return cercaNosferatu().isPresent(); }
 

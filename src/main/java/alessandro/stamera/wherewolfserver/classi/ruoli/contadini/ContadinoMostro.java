@@ -20,9 +20,7 @@ public final class ContadinoMostro extends Contadino
 
     @Override public EsitoAttacco attaccoNegromante()
     {
-        EsitoAttacco esito = MORTO;
-        if(isRomeo()) esito = FALLITO;
-        return esito;
+        return MORTO;
     }
 
     @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }

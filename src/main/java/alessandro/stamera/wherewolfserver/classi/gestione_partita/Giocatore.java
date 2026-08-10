@@ -100,6 +100,7 @@ public final class Giocatore
     {
         Fazione risultato = fazione;
         if(risultato == NESSUNA) risultato = ruolo.getFazione();
+        System.out.println(risultato);
         return risultato;
     }
 
@@ -141,6 +142,7 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = FALLITO;
+        //if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
         if(!isGiocatoreProtetto(lupo)) esito = ruolo.attaccoLupi(lupo);
         return verificaEsitoAttaccoLupi(lupo, esito);
     }

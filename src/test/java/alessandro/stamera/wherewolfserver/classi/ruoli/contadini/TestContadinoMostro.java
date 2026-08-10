@@ -57,7 +57,8 @@ public final class TestContadinoMostro
 
     private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
 
-    private void romeizzazione() { ruolo.romeizzazione(); }
+    private void romeizzazione() { //ruolo.romeizzazione();
+    }
 
     private void verificaMaledetto()
     {

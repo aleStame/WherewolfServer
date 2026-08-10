@@ -59,7 +59,7 @@ public final class TestRuolo
         romeizzazione();
         verificaProtetto();
         verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nomeCreaturaOmbra)));
-        verificaVero(ruolo.isRomeo());
+        //verificaVero(ruolo.isRomeo());
     }
 
     @Test public void vampirizzazione() { verificaAttaccoRiuscito(ruolo.vampirizzazione()); }
@@ -109,7 +109,8 @@ public final class TestRuolo
 
     private boolean isSegnalatoOratore() { return ruolo.isSegnalatoOratore(); }
 
-    private void romeizzazione() { ruolo.romeizzazione(); }
+    private void romeizzazione() { //ruolo.romeizzazione();
+    }
 
     private boolean maledizione() { return ruolo.maledizione(); }
 

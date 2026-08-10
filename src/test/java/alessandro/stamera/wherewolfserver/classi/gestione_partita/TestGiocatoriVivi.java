@@ -975,10 +975,10 @@ public final class TestGiocatoriVivi
 
     @Test public void testRomeizzazioneAngeloCustode()
     {
-        String nomeRomeo = "Piero";
+        /*String nomeRomeo = "Piero";
         inizializzaGiocatori(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
         romeizzazione(nomeRomeo);
-        verificaVero(giocatori.isRomeo(nomeRomeo));
+        verificaVero(giocatori.isRomeo(nomeRomeo));*/
     }
 
     @ParameterizedTest @CsvSource

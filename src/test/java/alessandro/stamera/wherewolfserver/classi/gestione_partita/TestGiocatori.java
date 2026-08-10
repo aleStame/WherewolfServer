@@ -88,14 +88,6 @@ public final class TestGiocatori
         verificaFalso(isContadinoMostro(giocatori[1][0]));
     }
 
-    @Test public void testNonRomeo()
-    {
-        String romeo = "Secondo", nome = "Terzo";
-        aggiungiGiocatori(new String[][] { { "Primo", "Giulietta" }, { romeo, "Oratore" }, { nome, "Azzeccagarbugli" } });
-        giocatori.romeizzazione(romeo);
-        verificaFalso(isRomeo(nome));
-    }
-
     @ParameterizedTest @CsvSource
     (
         {

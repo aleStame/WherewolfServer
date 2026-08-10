@@ -93,8 +93,6 @@ public final class Partita
         }
     }
 
-    public boolean isRomeo(String nome) { return getRuolo(nome).isRomeo(); }
-
     private void gestisciAssassinioAmato()
     {
         String nomeAngeloCustode = getNomeAngeloCustodeVivo();
@@ -297,7 +295,7 @@ public final class Partita
     private void nessunaEliminazione(String nome)
     {
         Ruolo ruolo = vivi.getRuolo(nome);
-        if(ruolo.isRomeo() || potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+        if(potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(false, nome);
     }
 
     private void gestisciInterazioniMago(String nome)

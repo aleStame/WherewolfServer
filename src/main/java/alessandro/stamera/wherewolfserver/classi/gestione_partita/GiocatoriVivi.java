@@ -37,7 +37,7 @@ public final class GiocatoriVivi extends Giocatori
         switch(esito)
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
-            case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome);
+            case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
             case FALLITO ->
                 { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isAmato(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
@@ -342,12 +342,11 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isRimastoUnSoloLupo() { return isRimastoUltimoLupo() || isLupoSolitarioPresente(); }
 
-    private EsitoAttacco gestioneAttaccoAngeloCustode(String nome)
+    private EsitoAttacco gestioneAttaccoAngeloCustode(String nome, Ruolo lupo)
     {
         EsitoAttacco esito = ANGELO_CUSTODE_MORTO;
-        //if(isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-        //else
-        if(!isAngeloCustodePresente()) esito = RIUSCITO;
+        if(isCappuccettoRossoProtetto(nome, lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        else if(!isAngeloCustodePresente()) esito = RIUSCITO;
         return esito;
     }
 

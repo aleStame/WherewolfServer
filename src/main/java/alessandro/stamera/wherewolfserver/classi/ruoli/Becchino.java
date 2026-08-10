@@ -26,8 +26,6 @@ public class Becchino extends Villaggio
 
     @Override public boolean isFazioneNegromante() { return getFazione() == NEGROMANTE; }
 
-    @Override public void romeizzazione() { if(isVillaggio()) super.romeizzazione(); }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
