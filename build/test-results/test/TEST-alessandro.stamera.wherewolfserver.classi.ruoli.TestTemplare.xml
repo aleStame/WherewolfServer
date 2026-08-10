@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" tests="7" skipped="0" failures="1" errors="0" timestamp="2026-08-10T15:51:07" hostname="ALESSANDRO" time="0.019">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" tests="7" skipped="0" failures="1" errors="0" timestamp="2026-08-10T15:55:09" hostname="ALESSANDRO" time="0.011">
   <properties/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.001"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.004">
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.0"/>
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.001">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Bianca&#13;&#10; but was: Nera" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Bianca
  but was: Nera
@@ -93,9 +93,9 @@ expected: Bianca
 </failure>
   </testcase>
   <testcase name="testBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.0"/>
-  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.002"/>
+  <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.001"/>
   <testcase name="testTemplare()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.001"/>
-  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.001"/>
+  <testcase name="testInquisizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.002"/>
   <testcase name="testInquisitore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

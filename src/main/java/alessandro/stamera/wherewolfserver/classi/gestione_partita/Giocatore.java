@@ -209,7 +209,7 @@ public final class Giocatore
 
     public boolean isInquisito() { return segnalatoInquisitore; }
 
-    public EsitoAttacco attaccoNegromante() { return null; }
+    public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {

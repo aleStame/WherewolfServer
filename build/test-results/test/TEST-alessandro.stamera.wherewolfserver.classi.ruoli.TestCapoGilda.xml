@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" tests="9" skipped="0" failures="1" errors="0" timestamp="2026-08-10T15:51:06" hostname="ALESSANDRO" time="0.032">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" tests="9" skipped="0" failures="1" errors="0" timestamp="2026-08-10T15:55:08" hostname="ALESSANDRO" time="0.033">
   <properties/>
-  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.001"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.003"/>
   <testcase name="testLadra()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.001"/>
-  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.005">
+  <testcase name="testAura()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: Bianca&#13;&#10; but was: Nera" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: Bianca
  but was: Nera
@@ -95,10 +95,10 @@ expected: Bianca
   </testcase>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.001"/>
   <testcase name="testSpia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.001"/>
-  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.001"/>
+  <testcase name="testCapoGilda()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.009"/>
   <testcase name="testCriminale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.0"/>
-  <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.012"/>
-  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.002"/>
+  <testcase name="testAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.0"/>
+  <testcase name="testDescrizione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
