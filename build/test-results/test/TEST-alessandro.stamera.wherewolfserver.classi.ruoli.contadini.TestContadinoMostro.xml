@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" tests="14" skipped="0" failures="1" errors="0" timestamp="2026-08-10T20:23:07" hostname="ALESSANDRO" time="0.515">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" tests="14" skipped="0" failures="1" errors="0" timestamp="2026-08-10T20:45:12" hostname="ALESSANDRO" time="0.066">
   <properties/>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.015"/>
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.007"/>
   <testcase name="testMaledetto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.002"/>
   <testcase name="testNome()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
-  <testcase name="testAttaccoNegromanteRomeizzato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.081">
+  <testcase name="testAttaccoNegromanteRomeizzato()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;expected: FALLITO&#13;&#10; but was: MORTO" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: FALLITO
  but was: MORTO
@@ -95,16 +95,16 @@ expected: FALLITO
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.055"/>
-  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.066"/>
-  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.007"/>
-  <testcase name="testVampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.003"/>
-  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.025"/>
-  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.002"/>
-  <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.022"/>
-  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.011"/>
-  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.019"/>
-  <testcase name="testNonMorto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.012"/>
+  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadinoEroe()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.002"/>
+  <testcase name="testContadinoLupo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testVampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.002"/>
+  <testcase name="testContadinoNormale()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testTipoContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.001"/>
+  <testcase name="testContadinoMostro()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.011"/>
+  <testcase name="testNonMorto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

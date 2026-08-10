@@ -178,7 +178,10 @@ public final class Giocatore
         return esito;
     }
 
-    private boolean isProtezioneAngeloCustodeNonBucata() { return !ruolo.isContadinoLupo() && !isCappuccettoRosso(); }
+    private boolean isProtezioneAngeloCustodeNonBucata()
+    {
+        return !ruolo.isContadinoLupo() && !isCappuccettoRosso() && !ruolo.isPosseduto();
+    }
 
     private boolean isGiocatoreLupizzato() { return fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO; }
 
