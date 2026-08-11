@@ -490,6 +490,8 @@ public final class TestGiocatore
     {
         cambiaRuolo("Prete");
         verificaAttacco(giocatore.passaPosseduto(), MORTO);
+        verificaAttacco(giocatore.vampirizzazione(), RIUSCITO);
+        verificaAttacco(giocatore.passaPosseduto(), RIUSCITO);
     }
 
     private void verificaEsitoGildata(EsitoAttacco esito) { verificaAttacco(giocatore.gildata(), esito); }
