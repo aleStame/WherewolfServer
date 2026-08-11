@@ -184,7 +184,7 @@ public final class Giocatore
         return esito;
     }
 
-    public EsitoAttacco passaPosseduto() { return null; }
+    public EsitoAttacco passaPosseduto() { return ruolo.passaPosseduto(); }
 
     private boolean isProtezioneAngeloCustodeNonBucata()
     {
