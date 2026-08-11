@@ -184,6 +184,8 @@ public final class Giocatore
         return esito;
     }
 
+    public EsitoAttacco passaPosseduto() { return null; }
+
     private boolean isProtezioneAngeloCustodeNonBucata()
     {
         return !ruolo.isContadinoLupo() && !isCappuccettoRosso() && !ruolo.isPosseduto();

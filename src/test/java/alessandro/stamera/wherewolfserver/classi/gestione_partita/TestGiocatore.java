@@ -486,6 +486,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isMaledetto());
     }
 
+    @Test public void testPassaPossedutoPrete()
+    {
+        cambiaRuolo("Prete");
+        verificaAttacco(giocatore.passaPosseduto(), MORTO);
+    }
+
     private void verificaEsitoGildata(EsitoAttacco esito) { verificaAttacco(giocatore.gildata(), esito); }
 
     private void lupizzazioneContadino(String tipoLupo)
