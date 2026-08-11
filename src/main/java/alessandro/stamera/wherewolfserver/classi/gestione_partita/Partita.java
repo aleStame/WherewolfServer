@@ -370,8 +370,7 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
-        if(isPreteVivo(nome)) throw new IllegalArgumentException("Impossibile possedere il Prete.");
-        passaggioPosseduto(nome);
+        if(vivi.passaPosseduto(nome) == MORTO) throw new IllegalArgumentException("Impossibile possedere il Prete.");
     }
 
     public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
