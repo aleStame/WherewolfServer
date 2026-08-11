@@ -74,7 +74,7 @@ public final class TestPrete
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    //@Test public void testPassaPosseduto() { assertThat(ruolo.passaPosseduto()).isEqualTo(MORTO); }
+    @Test public void testPassaPosseduto() { assertThat(ruolo.passaPosseduto()).isEqualTo(MORTO); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
