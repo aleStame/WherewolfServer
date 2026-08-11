@@ -6,6 +6,7 @@ import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 
 public final class Ladra extends Criminale
 {
@@ -36,6 +37,17 @@ public final class Ladra extends Criminale
     {
         boolean esito = super.maledizione();
         if(!esito) utilizzaPotere();
+        return esito;
+    }
+
+    @Override public EsitoAttacco passaPosseduto()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isProtezionePossedutoPresente())
+        {
+            utilizzaPotere();
+            esito = FALLITO;
+        }
         return esito;
     }
 
