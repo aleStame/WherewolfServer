@@ -315,6 +315,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco gildata(String nome) { return getGiocatore(nome).gildata(); }
 
+    public EsitoAttacco passaPosseduto(String nome) { return null; }
+
     private boolean isCappuccettoRossoDaSvegliare(Ruolo attaccante, String nome)
     {
         return isCappuccettoRossoProtetto(nome, attaccante) && isNonnaPresente() && isRimastoUltimoLupo();

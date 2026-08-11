@@ -1127,6 +1127,13 @@ public final class TestGiocatoriVivi
         verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
     }
 
+    @Test public void testPassaPossedutoPrete()
+    {
+        String nome = "Lorella";
+        aggiungiGiocatore(nome, "Posseduto");
+        verificaAttacco(giocatori.passaPosseduto(nome), MORTO);
+    }
+
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
     private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
