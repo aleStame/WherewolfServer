@@ -184,7 +184,12 @@ public final class Giocatore
         return esito;
     }
 
-    public EsitoAttacco passaPosseduto() { return ruolo.passaPosseduto(); }
+    public EsitoAttacco passaPosseduto()
+    {
+        EsitoAttacco esito = ruolo.passaPosseduto();
+        if(fazione == VAMPIRO) esito = RIUSCITO;
+        return esito;
+    }
 
     private boolean isProtezioneAngeloCustodeNonBucata()
     {
