@@ -1287,8 +1287,8 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Ghoul",
-            "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste",
-            "Pazzo", "Peccatore", "Prete", "Spia", "Templare", "Vampiro"
+            "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Prete", "Spia", "Templare", "Vampiro"
         }
     )
     public void testCriminalizzazioneProgenieVampiro(String nomeRuolo)

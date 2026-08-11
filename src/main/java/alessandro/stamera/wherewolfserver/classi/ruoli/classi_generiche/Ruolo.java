@@ -293,6 +293,8 @@ public class Ruolo
         return esito;
     }
 
+    public EsitoAttacco passaPosseduto() { return null; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean controlloTrattiOscuri()

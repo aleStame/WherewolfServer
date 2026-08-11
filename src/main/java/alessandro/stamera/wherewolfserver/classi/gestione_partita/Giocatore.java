@@ -9,6 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 
 public final class Giocatore
 {
@@ -164,7 +165,7 @@ public final class Giocatore
         switch(fazione)
         {
             case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
-            case NEGROMANTE -> esito = FALLITO;
+            case VAMPIRO, NEGROMANTE -> esito = FALLITO;
         }
         return esito;
     }
@@ -175,6 +176,11 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
         if(isGiocatoreLupizzato()) esito = MORTO;
+        if(esito == RIUSCITO)
+        {
+            tratti.aggiungi(NON_MORTO);
+            fazione = VAMPIRO;
+        }
         return esito;
     }
 

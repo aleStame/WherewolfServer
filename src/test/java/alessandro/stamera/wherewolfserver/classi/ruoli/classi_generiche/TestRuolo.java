@@ -95,6 +95,8 @@ public final class TestRuolo
 
     @Test public void testGildata() { verificaAttaccoRiuscito(ruolo.gildata()); }
 
+    @Test public void testPassaPosseduto() { verificaAttaccoRiuscito(ruolo.passaPosseduto()); }
+
     private static Stream<Arguments> getEsempiPartita()
     {
         return Stream.of(Arguments.of(getPartitaGenerica(), NON_FINITO), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));

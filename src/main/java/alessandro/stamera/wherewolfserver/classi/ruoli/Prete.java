@@ -21,6 +21,8 @@ public final class Prete extends Villaggio
 
     @Override public boolean isPrete() { return true; }
 
+
+
     public static Ruolo getInstance() { return new Prete(); }
 
 }
