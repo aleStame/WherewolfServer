@@ -30,6 +30,8 @@ public final class Posseduto extends CreatureOmbra
 
     @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
 
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return getEsitoAttaccoDefault(); }
+
     public static Ruolo getInstance() { return new Posseduto(); }
 
     private EsitoAttacco getEsitoAttaccoDefault() { return TROVATO_POSSEDUTO; }

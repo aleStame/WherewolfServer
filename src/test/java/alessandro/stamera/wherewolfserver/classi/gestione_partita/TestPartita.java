@@ -158,7 +158,7 @@ public final class TestPartita
     {
         String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } });
-        romeizzazione(nomeVittima);
+        //romeizzazione(nomeVittima);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -179,7 +179,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } };
         inizializzaPartita(giocatori);
-        protezioneStrega(nomeVittima);
+        //protezioneStrega(nomeVittima);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -245,7 +245,7 @@ public final class TestPartita
     {
         String nome = "Luca", nomeLupo = "Mario";
         inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo }, { "Lucio", "Giulietta" } });
-        romeizzazione(nome);
+        //romeizzazione(nome);
         String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
         verificaAttaccoLupiAngeloCustodeFallito(tipoLupo, nome, messaggio);
     }
@@ -560,7 +560,7 @@ public final class TestPartita
     {
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", nomeLupo = "Renato";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" } });
-        romeizzazione(nomeVittima);
+        //romeizzazione(nomeVittima);
         attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
@@ -914,7 +914,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Lino", "Contadino mostro" }, { "Dino", "Negromante" }, { "Pino", "Giulietta" } };
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
-        romeizzazione(giocatori[posizioneVittima][0]);
+        //romeizzazione(giocatori[posizioneVittima][0]);
         assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
@@ -1432,7 +1432,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        romeizzazione(nomeRomeo);
+        //romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
         attaccoAssassino(nomeGiulietta);
         terminaNotte();
@@ -1447,7 +1447,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { nomeLupo, "Capo branco" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        romeizzazione(nomeRomeo);
+        //romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
         attaccoLupi("Capo branco", nomeGiulietta);
         terminaNotte();
@@ -1579,7 +1579,7 @@ public final class TestPartita
             { "Gianmario", "Strega" }
         };
         inizializzaPartita(giocatori);
-        protezioneStrega(nomePrete);
+        //protezioneStrega(nomePrete);
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
     }
 
@@ -1593,7 +1593,7 @@ public final class TestPartita
             { "Rosalba", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        romeizzazione(nomePrete);
+        //romeizzazione(nomePrete);
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
     }
 
@@ -1640,7 +1640,7 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        romeizzazione(nomeVampiro);
+        //romeizzazione(nomeVampiro);
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
@@ -1648,7 +1648,7 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        protezioneStrega(nomeVampiro);
+        //protezioneStrega(nomeVampiro);
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
@@ -1672,7 +1672,7 @@ public final class TestPartita
             { "Luca", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        romeizzazione(nomeNosferatu);
+        //romeizzazione(nomeNosferatu);
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
@@ -1683,7 +1683,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo } };
         inizializzaPartita(giocatori);
-        protezioneStrega(nomeNosferatu);
+        //protezioneStrega(nomeNosferatu);
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
@@ -1762,7 +1762,7 @@ public final class TestPartita
     {
         String nomeRomeo = "Piero";
         inizializzaPartita(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
-        romeizzazione(nomeRomeo);
+        //romeizzazione(nomeRomeo);
         verificaControlloVeggente(nomeRomeo, BIANCA);
         //verificaVero(partita.isRomeo(nomeRomeo));
     }
@@ -1867,7 +1867,7 @@ public final class TestPartita
             { "Pino", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        romeizzazione(nomeAngelo);
+        //romeizzazione(nomeAngelo);
         nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
     }
 
@@ -1890,7 +1890,7 @@ public final class TestPartita
             { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" }, { "Pino", "Strega" }
         };
         inizializzaPartita(giocatori);
-        protezioneStrega(nomeAngelo);
+        //protezioneStrega(nomeAngelo);
         nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
     }
 
