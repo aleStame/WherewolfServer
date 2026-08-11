@@ -1130,7 +1130,7 @@ public final class TestGiocatoriVivi
     @Test public void testPassaPossedutoPrete()
     {
         String nome = "Lorella";
-        aggiungiGiocatore(nome, "Posseduto");
+        aggiungiGiocatore(nome, "Prete");
         verificaAttacco(giocatori.passaPosseduto(nome), MORTO);
     }
 
