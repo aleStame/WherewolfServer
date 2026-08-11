@@ -293,7 +293,7 @@ public class Ruolo
         return esito;
     }
 
-    public EsitoAttacco passaPosseduto() { return null; }
+    public EsitoAttacco passaPosseduto() { return RIUSCITO; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
