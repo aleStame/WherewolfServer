@@ -290,7 +290,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
 
-    public Aura getAura(String nome) { return getRuolo(nome).getAura(); }
+    public Aura getAura(String nome) { return getGiocatore(nome).getAura(); }
 
     public void annullaMaledizione(String nome) { getGiocatore(nome).annullaMaledizione(); }
 

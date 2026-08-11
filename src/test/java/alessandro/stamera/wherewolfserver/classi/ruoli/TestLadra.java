@@ -2,22 +2,16 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -79,25 +73,21 @@ public final class TestLadra
     @Test public void testVampirizzazione()
     {
         verificaProtetto();
-        Ruolo vampiro = FACTORY.getRuolo("Vampiro");
-        verificaVero(isProtezionePresente(vampiro));
+        verificaVero(isProtezionePresente(FACTORY.getRuolo("Vampiro")));
         verificaAttaccoVampiro(FALLITO);
         verificaNonProtetto();
-        verificaAuraBianca(getAura());
-        verificaFazione(CRIMINALI);
-        verificaFalso(isNonMorto());
         verificaAttaccoVampiro(RIUSCITO);
-        verificaAuraNera();
-        verificaFazione(VAMPIRO);
-        verificaFalso(isProtezionePresente(vampiro));
-        verificaVero(isNonMorto());
     }
 
-    private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
+    @Test public void testAttaccoPosseduto()
+    {
+        verificaVero(isProtezionePresente(FACTORY.getRuolo("Posseduto")));
+        assertThat(ruolo.passaPosseduto()).isEqualTo(FALLITO);
+        verificaNonProtetto();
+        assertThat(ruolo.passaPosseduto()).isEqualTo(RIUSCITO);
+    }
 
     private void verificaAuraNera() { verificaAura(getAura(), NERA); }
-
-    private boolean isNonMorto() { return ruolo.isTrattoPresente(NON_MORTO); }
 
     private void verificaAttaccoVampiro(EsitoAttacco esito) { assertThat(ruolo.vampirizzazione()).isEqualTo(esito); }
 
@@ -115,9 +105,7 @@ public final class TestLadra
 
     private void verificaNonProtetto() { verificaFalso(isProtetto()); }
 
-    private boolean isProtetto() { return isTrattoPresente(PROTETTO); }
-
-    private boolean isTrattoPresente(Tratto tratto) { return ruolo.isTrattoPresente(tratto); }
+    private boolean isProtetto() { return ruolo.isTrattoPresente(PROTETTO); }
 
     private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
     {

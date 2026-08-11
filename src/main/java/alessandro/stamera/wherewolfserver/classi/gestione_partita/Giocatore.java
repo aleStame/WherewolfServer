@@ -52,7 +52,7 @@ public final class Giocatore
     public Aura getAura()
     {
         Aura aura = ruolo.getAura();
-        if(isMaledetto()) aura = NERA;
+        if(isMaledetto() || isGiocatoreLupizzato()) aura = NERA;
         return aura;
     }
 
