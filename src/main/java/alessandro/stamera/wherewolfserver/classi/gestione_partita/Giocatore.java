@@ -200,7 +200,9 @@ public final class Giocatore
 
     public boolean isContadino() { return ruolo.isContadino(); }
 
-    public boolean isContadinoEroe() { return true; }
+    public boolean isContadinoEroe() { return ruolo.isContadinoEroe(); }
+
+    public boolean isContadinoLupo() { return true; }
 
     private void trasformaVampiro()
     {

@@ -559,6 +559,29 @@ public final class TestGiocatore
         verificaVero(isContadinoEroe());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNoContadinoLupo(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaFalso(giocatore.isContadinoLupo());
+    }
+
+    /*@Test public void testContadinoEroe()
+    {
+        cambiaRuolo("Contadino eroe");
+        verificaVero(isContadinoEroe());
+    }*/
+
     private boolean isContadinoEroe() { return giocatore.isContadinoEroe(); }
 
     private boolean isContadino() { return giocatore.isContadino(); }
