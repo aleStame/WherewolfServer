@@ -489,9 +489,9 @@ public final class TestGiocatore
     @Test public void testPassaPossedutoPrete()
     {
         cambiaRuolo("Prete");
-        verificaEsitoPassaggioPosseduto();
+        verificaEsitoPassaggioPosseduto(MORTO);
         verificaEsitoVampirizzazione(RIUSCITO);
-        verificaAttacco(giocatore.passaPosseduto(), RIUSCITO);
+        verificaEsitoPassaggioPosseduto(RIUSCITO);
     }
 
     @ParameterizedTest @CsvSource
@@ -512,7 +512,7 @@ public final class TestGiocatore
         verificaVero(giocatore.isRomeo());
     }
 
-    private void verificaEsitoPassaggioPosseduto() { verificaAttacco(giocatore.passaPosseduto(), MORTO); }
+    private void verificaEsitoPassaggioPosseduto(EsitoAttacco esito) { verificaAttacco(giocatore.passaPosseduto(), esito); }
 
     private void verificaEsitoVampirizzazione(EsitoAttacco esito) { verificaAttacco(giocatore.vampirizzazione(), esito); }
 
