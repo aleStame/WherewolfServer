@@ -221,7 +221,9 @@ public final class Giocatore
         return !ruolo.isContadinoLupo() && !isCappuccettoRosso() && isAmato();
     }
 
-    private boolean isGiocatoreLupizzato() { return fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO; }
+    private boolean isGiocatoreLupizzato() { return isFazione(LUPO_BRANCO) || isFazione(LUPO_SOLITARIO); }
+
+    private boolean isFazione(Fazione fazione) { return this.fazione == fazione; }
 
     private EsitoAttacco verificaEsitoAttaccoLupi(Ruolo lupo, EsitoAttacco esito)
     {
