@@ -53,7 +53,7 @@ public final class Giocatore
     public Aura getAura()
     {
         Aura aura = ruolo.getAura();
-        if(isMaledetto() || isGiocatoreLupizzato()) aura = NERA;
+        if(isGiocatoreAuraNera()) aura = NERA;
         return aura;
     }
 
@@ -205,6 +205,8 @@ public final class Giocatore
     public void romeizzazione() { setRomeo(true); }
 
     public boolean isRomeo() { return romeo; }
+
+    private boolean isGiocatoreAuraNera() { return isMaledetto() || isGiocatoreLupizzato(); }
 
     private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
