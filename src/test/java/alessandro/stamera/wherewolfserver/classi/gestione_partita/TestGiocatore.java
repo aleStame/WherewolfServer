@@ -442,7 +442,7 @@ public final class TestGiocatore
     public void testVampirizzazioneContadinoDopoLupizzazione(String tipoLupo)
     {
         lupizzazioneContadino(tipoLupo);
-        verificaAttacco(giocatore.vampirizzazione(), MORTO);
+        verificaEsitoVampirizzazione(MORTO);
     }
 
     @ParameterizedTest @CsvSource
@@ -463,7 +463,7 @@ public final class TestGiocatore
     public void testVampirizzazione(String nomeRuolo, EsitoAttacco esito)
     {
         cambiaRuolo(nomeRuolo);
-        verificaAttacco(giocatore.vampirizzazione(), esito);
+        verificaEsitoVampirizzazione(esito);
     }
 
     @ParameterizedTest @CsvSource
@@ -490,7 +490,7 @@ public final class TestGiocatore
     {
         cambiaRuolo("Prete");
         verificaAttacco(giocatore.passaPosseduto(), MORTO);
-        verificaAttacco(giocatore.vampirizzazione(), RIUSCITO);
+        verificaEsitoVampirizzazione(RIUSCITO);
         verificaAttacco(giocatore.passaPosseduto(), RIUSCITO);
     }
 
@@ -511,6 +511,8 @@ public final class TestGiocatore
         giocatore.romeizzazione();
         verificaVero(giocatore.isRomeo());
     }
+
+    private void verificaEsitoVampirizzazione(EsitoAttacco esito) { verificaAttacco(giocatore.vampirizzazione(), esito); }
 
     private boolean isLupoSolitario() { return giocatore.isLupoSolitario(); }
 

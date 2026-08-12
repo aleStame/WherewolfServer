@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaMaledetto" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isLupoSolitario">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -230,38 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00321" summary="ROSSO: testVampirizzazione non riuscito">
-      <option name="closed" value="true" />
-      <created>1786189698565</created>
-      <option name="number" value="00321" />
-      <option name="presentableId" value="LOCAL-00321" />
-      <option name="project" value="LOCAL" />
-      <updated>1786189698566</updated>
-    </task>
-    <task id="LOCAL-00322" summary="VERDE: testVampirizzazione riuscito">
-      <option name="closed" value="true" />
-      <created>1786193741296</created>
-      <option name="number" value="00322" />
-      <option name="presentableId" value="LOCAL-00322" />
-      <option name="project" value="LOCAL" />
-      <updated>1786193741311</updated>
-    </task>
-    <task id="LOCAL-00323" summary="ROSSO: testProgenieNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1786194791674</created>
-      <option name="number" value="00323" />
-      <option name="presentableId" value="LOCAL-00323" />
-      <option name="project" value="LOCAL" />
-      <updated>1786194791676</updated>
-    </task>
-    <task id="LOCAL-00324" summary="VERDE: testProgenieNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1786196096609</created>
-      <option name="number" value="00324" />
-      <option name="presentableId" value="LOCAL-00324" />
-      <option name="project" value="LOCAL" />
-      <updated>1786196096609</updated>
     </task>
     <task id="LOCAL-00325" summary="ROSSO: testSegnalazioneAzzeccagarbugliAmato non riuscito">
       <option name="closed" value="true" />
@@ -623,7 +593,39 @@
       <option name="project" value="LOCAL" />
       <updated>1786545423630</updated>
     </task>
-    <option name="localTasksCounter" value="370" />
+    <task id="LOCAL-00370" summary="REFACTORING: definizione del metodo verificaNonMaledetto">
+      <option name="closed" value="true" />
+      <created>1786545624255</created>
+      <option name="number" value="00370" />
+      <option name="presentableId" value="LOCAL-00370" />
+      <option name="project" value="LOCAL" />
+      <updated>1786545624255</updated>
+    </task>
+    <task id="LOCAL-00371" summary="REFACTORING: definizione del metodo isMaledetto">
+      <option name="closed" value="true" />
+      <created>1786545739120</created>
+      <option name="number" value="00371" />
+      <option name="presentableId" value="LOCAL-00371" />
+      <option name="project" value="LOCAL" />
+      <updated>1786545739120</updated>
+    </task>
+    <task id="LOCAL-00372" summary="REFACTORING: definizione del metodo verificaAura">
+      <option name="closed" value="true" />
+      <created>1786545860190</created>
+      <option name="number" value="00372" />
+      <option name="presentableId" value="LOCAL-00372" />
+      <option name="project" value="LOCAL" />
+      <updated>1786545860190</updated>
+    </task>
+    <task id="LOCAL-00373" summary="REFACTORING: definizione del metodo isLupoSolitario">
+      <option name="closed" value="true" />
+      <created>1786545997817</created>
+      <option name="number" value="00373" />
+      <option name="presentableId" value="LOCAL-00373" />
+      <option name="project" value="LOCAL" />
+      <updated>1786545997817</updated>
+    </task>
+    <option name="localTasksCounter" value="374" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,10 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustode non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoLupiAngeloCustode riuscito" />
-    <MESSAGE value="ROSSO: testCriminalizzazioneCapoGildaAmatoMorto non riuscito" />
-    <MESSAGE value="VERDE: testCriminalizzazioneCapoGildaAmatoMorto riuscito" />
     <MESSAGE value="ROSSO: testPassaPosseduto non riuscito" />
     <MESSAGE value="VERDE: testPassaPosseduto riuscito" />
     <MESSAGE value="ROSSO: testPassaPossedutoPrete non riuscito" />
@@ -666,6 +664,10 @@
     <MESSAGE value="REFACTORING: definizione del metodo setFazione" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaMaledizione" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMaledetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMaledetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaNonMaledetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAura" />
+    <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isLupoSolitario" />
   </component>
 </project>
