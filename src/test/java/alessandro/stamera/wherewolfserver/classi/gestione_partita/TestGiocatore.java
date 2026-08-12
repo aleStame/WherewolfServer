@@ -50,7 +50,7 @@ public final class TestGiocatore
         assertThat(giocatore.getAura()).isEqualTo(NERA);
         annullaMaledizione();
         assertThat(giocatore.getAura()).isEqualTo(aura);
-        verificaFalso(giocatore.isMaledetto());
+        verificaNonMaledetto();
 
     }
 
@@ -483,7 +483,7 @@ public final class TestGiocatore
         verificaAttacco(giocatore.attaccoNegromante(), RIUSCITO);
         verificaMaledetto();
         annullaMaledizione();
-        verificaFalso(giocatore.isMaledetto());
+        verificaNonMaledetto();
     }
 
     @Test public void testPassaPossedutoPrete()
@@ -511,6 +511,8 @@ public final class TestGiocatore
         giocatore.romeizzazione();
         verificaVero(giocatore.isRomeo());
     }
+
+    private void verificaNonMaledetto() { verificaFalso(giocatore.isMaledetto()); }
 
     private void verificaMaledetto() { verificaVero(giocatore.isMaledetto()); }
 
