@@ -528,6 +528,14 @@ public final class TestGiocatore
         verificaFalso(giocatore.isContadino());
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Contadino mostro" })
+    public void testContadino(String tipoContadino)
+    {
+        cambiaRuolo(tipoContadino);
+        verificaVero(giocatore.isContadino());
+    }
+
     private void verificaEsitoPassaggioPosseduto(EsitoAttacco esito) { verificaAttacco(giocatore.passaPosseduto(), esito); }
 
     private void verificaEsitoVampirizzazione(EsitoAttacco esito) { verificaAttacco(giocatore.vampirizzazione(), esito); }
