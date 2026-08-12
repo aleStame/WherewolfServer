@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testNonContadino non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,14 +230,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00328" summary="VERDE: testAttaccoVampiroContadinoLupizzato riuscito">
-      <option name="closed" value="true" />
-      <created>1786310785579</created>
-      <option name="number" value="00328" />
-      <option name="presentableId" value="LOCAL-00328" />
-      <option name="project" value="LOCAL" />
-      <updated>1786310785591</updated>
     </task>
     <task id="LOCAL-00329" summary="ROSSO: testAttaccoLupiAmato non riuscito">
       <option name="closed" value="true" />
@@ -625,7 +615,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786546277585</updated>
     </task>
-    <option name="localTasksCounter" value="377" />
+    <task id="LOCAL-00377" summary="ROSSO: testNonContadino non riuscito">
+      <option name="closed" value="true" />
+      <created>1786546836112</created>
+      <option name="number" value="00377" />
+      <option name="presentableId" value="LOCAL-00377" />
+      <option name="project" value="LOCAL" />
+      <updated>1786546836113</updated>
+    </task>
+    <option name="localTasksCounter" value="378" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPassaPossedutoPrete non riuscito" />
     <MESSAGE value="ROSSO: testPassaPossedutoPrete no riuscito" />
     <MESSAGE value="VERDE: testPassaPossedutoPrete riuscito" />
     <MESSAGE value="ROSSO: testPoterePossedutoAmatoPrete non riuscito" />
@@ -668,6 +665,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoVampirizzazione" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto" />
+    <MESSAGE value="ROSSO: testNonContadino non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNonContadino non riuscito" />
   </component>
 </project>

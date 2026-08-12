@@ -198,7 +198,7 @@ public final class Giocatore
 
     public boolean isRomeo() { return romeo; }
 
-    public boolean isContadino() { return true; }
+    public boolean isContadino() { return ruolo.isContadino(); }
 
     private void trasformaVampiro()
     {
