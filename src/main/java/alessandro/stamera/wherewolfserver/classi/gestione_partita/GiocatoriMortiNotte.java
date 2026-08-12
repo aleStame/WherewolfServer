@@ -8,18 +8,18 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public EsitoAttacco progenizzazioneNosferatu(String nome) { return getGiocatore(nome).progenizzazioneNosferatu(); }
 
-    public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
+    public boolean isLupo(String nome) { return getGiocatore(nome).isLupo(); }
 
-    public boolean isPazzo(String nome) { return getRuolo(nome).isPazzo(); }
+    public boolean isPazzo(String nome) { return getGiocatore(nome).getRuolo().isPazzo(); }
 
     public boolean isContadino(String nome)
     {
         boolean esito = false;
-        if(isPresente(nome))  esito = getRuolo(nome).isContadino();
+        if(isPresente(nome))  esito = getGiocatore(nome).isContadino();
         return esito;
     }
 
-    public TipoContadino getTipoContadino(String nome) { return getRuolo(nome).getTipoContadino(); }
+    public TipoContadino getTipoContadino(String nome) { return getGiocatore(nome).getRuolo().getTipoContadino(); }
 
     public boolean isPossedutoPresente() { return getPosizionePosseduto() != -1; }
 

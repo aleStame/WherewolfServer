@@ -14,7 +14,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoCon
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static java.util.Arrays.stream;
 
 public final class Partita
@@ -294,8 +293,7 @@ public final class Partita
 
     private void nessunaEliminazione(String nome)
     {
-        Ruolo ruolo = vivi.getRuolo(nome);
-        if(potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(false, nome);
+        if(potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
     }
 
     private void gestisciInterazioniMago(String nome)
@@ -348,7 +346,7 @@ public final class Partita
     {
         boolean esito = false;
         if(vivi.isNosferatuPresente()) esito = isPartitaVinta(getGiocatore(vivi.getNomeNosferatu()).getRuolo());
-        else if(eliminati.isNosferatuPresente()) esito = isPartitaVinta(eliminati.getRuolo(eliminati.getNomeNosferatu()));
+        else if(eliminati.isNosferatuPresente()) esito = isPartitaVinta(eliminati.getGiocatore(eliminati.getNomeNosferatu()).getRuolo());
         return esito;
     }
 
@@ -390,20 +388,13 @@ public final class Partita
         potereStregaUsato = true;
     }
 
-    public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
+    public boolean isCapoBranco(String nome) { return vivi.getGiocatore(nome).getRuolo().isCapoBranco(); }
 
     public Aura getAura(String nome) { return getGiocatore(nome).getAura(); }
 
     public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 
     public boolean isAmato(String nome) { return getGiocatore(nome).isAmato(); }
-
-    private void annullaAmato() { //getRuolo(vivi.getNomeAmato()).resettaAmato();
-         }
-
-    private boolean isPreteVivo(String nome) { return isPrete(nome) && !isNonMorto(nome); }
-
-    private boolean isPrete(String nome) { return getGiocatore(nome).getRuolo().isPrete(); }
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
@@ -414,8 +405,6 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         throw new EccezioneProgenizzazionePosseduto(ruoloProgenizzatore, nomeProgenizzatore, nomePosseduto);
     }
-
-    private boolean isNonMorto(String nome) { return vivi.isTrattoPresente(nome, NON_MORTO); }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
 

@@ -26,13 +26,6 @@ public final class Ballottaggio extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
     }
 
-    private boolean controlloNessunaSegnalazioneOratore()
-    {
-        boolean esito = true;
-        for(int i = 0; i < getNumeroGiocatori() && esito; i++) esito = !isSegnalatoOratore(getNomeGiocatore(i));
-        return esito;
-    }
-
     @Override public void segnalazioneBoia(String nome)
     {
         super.segnalazioneBoia(nome);
@@ -52,13 +45,13 @@ public final class Ballottaggio extends Giocatori
         return soluzione;
     }
 
-    public boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
+    public boolean isCitta(String nome) { return getGiocatore(nome).isCitta(); }
 
-    public void segnalazioneOratore(String nome) { getRuolo(nome).segnalazioneOratore(); }
+    public void segnalazioneOratore(String nome) { getGiocatore(nome).getRuolo().segnalazioneOratore(); }
 
     public boolean isSegnalazioneBorgomastroAvvenuta() { return segnalazioneBorgomastro; }
 
-    private boolean isSegnalatoOratore(String nome) { return getRuolo(nome).isSegnalatoOratore(); }
+    private boolean isSegnalatoOratore(String nome) { return getGiocatore(nome).getRuolo().isSegnalatoOratore(); }
 
     private void annullaSegnalazioneOratore()
     {
@@ -67,7 +60,7 @@ public final class Ballottaggio extends Giocatori
 
     private void annullaSegnalazioneOratore(int posizione) { annullaSegnalazioneOratore(getNomeGiocatore(posizione)); }
 
-    private void annullaSegnalazioneOratore(String nome) { getRuolo(nome).annullaSegnalazioneOratore(); }
+    private void annullaSegnalazioneOratore(String nome) { getGiocatore(nome).getRuolo().annullaSegnalazioneOratore(); }
 
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 

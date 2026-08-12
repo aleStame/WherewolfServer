@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreAlfabetico;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreVoti;
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.Map;
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -46,8 +45,6 @@ public class Giocatori
 
     public void annullaVoti(String nome) { getGiocatore(nome).annullaVoti(); }
 
-    public Ruolo getRuolo(String nome) { return getGiocatore(nome).getRuolo(); }
-
     public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
     public boolean isAmato(String nome)
@@ -67,13 +64,13 @@ public class Giocatori
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
-    public boolean isCriminale(String nome) { return getRuolo(nome).isCriminale(); }
+    public boolean isCriminale(String nome) { return getGiocatore(nome).isCriminale(); }
 
-    public void segnalazioneBoia(String nome) { getRuolo(nome).segnalazioneBoia(); }
+    public void segnalazioneBoia(String nome) { getGiocatore(nome).getRuolo().segnalazioneBoia(); }
 
-    public boolean isSegnalatoBoia(String nome) { return getRuolo(nome).isSegnalatoBoia(); }
+    public boolean isSegnalatoBoia(String nome) { return getGiocatore(nome).getRuolo().isSegnalatoBoia(); }
 
-    public void annullaSegnalazioneBoia(String nome) { getRuolo(nome).annullaSegnalazioneBoia(); }
+    public void annullaSegnalazioneBoia(String nome) { getGiocatore(nome).getRuolo().annullaSegnalazioneBoia(); }
 
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
@@ -81,27 +78,27 @@ public class Giocatori
 
     public int getNumeroRuoliCitta() { return (int)getStreamRuoli().filter(Giocatore::isCitta).count(); }
 
-    public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
+    public boolean isOratore(String nome) { return getGiocatore(nome).isOratore(); }
 
     public boolean isContadinoMostroPresente() { return cercaContadinoMostro().isPresent(); }
 
     public String getNomeContadinoMostro() { return cercaContadinoMostro().get().getKey(); }
 
-    public boolean isContadinoMostro(String nome) { return getRuolo(nome).isContadinoMostro(); }
+    public boolean isContadinoMostro(String nome) { return getGiocatore(nome).isContadinoMostro(); }
 
-    public boolean isRomeo(String nome) { return false; }
+    public boolean isRomeo(String nome) { return getGiocatore(nome).isRomeo(); }
 
-    public void romeizzazione(String nome) { }
+    public void romeizzazione(String nome) { getGiocatore(nome).romeizzazione(); }
 
     public boolean isNosferatuPresente() { return cercaNosferatu().isPresent(); }
 
     public String getNomeNosferatu() { return cercaNosferatu().get().getKey(); }
 
-    public boolean isMegera(String nome) { return getRuolo(nome).isMegera(); }
+    public boolean isMegera(String nome) { return getGiocatore(nome).getRuolo().isMegera(); }
 
     public String getNomeRuolo(String nomeGiocatore)
     {
-        String risultato = getRuolo(nomeGiocatore).getNome();
+        String risultato = getGiocatore(nomeGiocatore).getRuolo().getNome();
         if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
         return risultato;
     }
@@ -121,7 +118,7 @@ public class Giocatori
 
     private boolean isContadinoEroe(String nome) { return getGiocatore(nome).isContadinoEroe(); }
 
-    private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
+    private boolean isContadinoLupo(String nome) { return getGiocatore(nome).isContadinoLupo(); }
 
     private Optional<Entry<String, Giocatore>> cercaNosferatu()
     {
