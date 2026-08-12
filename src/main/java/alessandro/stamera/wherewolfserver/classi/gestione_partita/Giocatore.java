@@ -204,7 +204,7 @@ public final class Giocatore
 
     public boolean isContadinoLupo() { return ruolo.isContadinoLupo(); }
 
-    public boolean isMegera() { return true; }
+    public boolean isMegera() { return ruolo.isMegera(); }
 
     private void trasformaVampiro()
     {
