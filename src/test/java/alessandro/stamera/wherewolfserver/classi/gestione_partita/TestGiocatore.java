@@ -553,6 +553,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isContadinoEroe());
     }
 
+    @Test public void testContadinoEroe()
+    {
+        cambiaRuolo("Contadino eroe");
+        verificaVero(giocatore.isContadinoEroe());
+    }
+
     private boolean isContadino() { return giocatore.isContadino(); }
 
     private void verificaEsitoPassaggioPosseduto(EsitoAttacco esito) { verificaAttacco(giocatore.passaPosseduto(), esito); }

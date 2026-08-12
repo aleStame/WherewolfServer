@@ -119,7 +119,7 @@ public class Giocatori
         return risultato;
     }
 
-    private boolean isContadinoEroe(String nome) { return getRuolo(nome).isContadinoEroe(); }
+    private boolean isContadinoEroe(String nome) { return getGiocatore(nome).isContadinoEroe(); }
 
     private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
 
