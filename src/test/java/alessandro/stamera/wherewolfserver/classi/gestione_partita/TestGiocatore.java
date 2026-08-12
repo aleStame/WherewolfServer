@@ -576,11 +576,11 @@ public final class TestGiocatore
         verificaFalso(giocatore.isContadinoLupo());
     }
 
-    /*@Test public void testContadinoEroe()
+    @Test public void testContadinoLupo()
     {
-        cambiaRuolo("Contadino eroe");
-        verificaVero(isContadinoEroe());
-    }*/
+        cambiaRuolo("Contadino discendente dei lupi");
+        verificaVero(giocatore.isContadinoLupo());
+    }
 
     private boolean isContadinoEroe() { return giocatore.isContadinoEroe(); }
 
