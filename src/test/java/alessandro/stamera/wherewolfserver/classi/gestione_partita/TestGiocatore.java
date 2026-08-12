@@ -46,7 +46,7 @@ public final class TestGiocatore
         verificaNumeroVoti(0);
         giocatore.maledizione();
         verificaNumeroVoti(1);
-        verificaVero(giocatore.isMaledetto());
+        verificaMaledetto();
         assertThat(giocatore.getAura()).isEqualTo(NERA);
         annullaMaledizione();
         assertThat(giocatore.getAura()).isEqualTo(aura);
@@ -481,7 +481,7 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         verificaAttacco(giocatore.attaccoNegromante(), RIUSCITO);
-        verificaVero(giocatore.isMaledetto());
+        verificaMaledetto();
         annullaMaledizione();
         verificaFalso(giocatore.isMaledetto());
     }
@@ -511,6 +511,8 @@ public final class TestGiocatore
         giocatore.romeizzazione();
         verificaVero(giocatore.isRomeo());
     }
+
+    private void verificaMaledetto() { verificaVero(giocatore.isMaledetto()); }
 
     private void annullaMaledizione() { giocatore.annullaMaledizione(); }
 
