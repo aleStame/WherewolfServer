@@ -489,7 +489,7 @@ public final class TestGiocatore
     @Test public void testPassaPossedutoPrete()
     {
         cambiaRuolo("Prete");
-        verificaAttacco(giocatore.passaPosseduto(), MORTO);
+        verificaEsitoPassaggioPosseduto();
         verificaEsitoVampirizzazione(RIUSCITO);
         verificaAttacco(giocatore.passaPosseduto(), RIUSCITO);
     }
@@ -511,6 +511,8 @@ public final class TestGiocatore
         giocatore.romeizzazione();
         verificaVero(giocatore.isRomeo());
     }
+
+    private void verificaEsitoPassaggioPosseduto() { verificaAttacco(giocatore.passaPosseduto(), MORTO); }
 
     private void verificaEsitoVampirizzazione(EsitoAttacco esito) { verificaAttacco(giocatore.vampirizzazione(), esito); }
 
