@@ -188,7 +188,7 @@ public final class Giocatore
     public EsitoAttacco passaPosseduto()
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
-        if(tratti.isPresente(NON_MORTO)) esito = RIUSCITO;
+        if(isNonMorto()) esito = RIUSCITO;
         return esito;
     }
 
@@ -200,15 +200,17 @@ public final class Giocatore
 
     private void trasformaVampiro()
     {
-        tratti.aggiungi(NON_MORTO);
+        trasformaNonMorto();
         fazione = VAMPIRO;
     }
 
     private void nosferatizzazione()
     {
         fazione = NOSFERATU;
-        tratti.aggiungi(NON_MORTO);
+        trasformaNonMorto();
     }
+
+    private void trasformaNonMorto() { tratti.aggiungi(NON_MORTO); }
 
     private boolean isGiocatoreAuraNera() { return isMaledetto() || isGiocatoreLupizzato(); }
 
