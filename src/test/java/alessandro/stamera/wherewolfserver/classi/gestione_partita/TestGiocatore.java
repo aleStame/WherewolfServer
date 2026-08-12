@@ -599,6 +599,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isMegera());
     }
 
+    @Test public void testMegera()
+    {
+        cambiaRuolo("Megera");
+        verificaVero(giocatore.isMegera());
+    }
+
     private boolean isContadinoLupo() { return giocatore.isContadinoLupo(); }
 
     private boolean isContadinoEroe() { return giocatore.isContadinoEroe(); }

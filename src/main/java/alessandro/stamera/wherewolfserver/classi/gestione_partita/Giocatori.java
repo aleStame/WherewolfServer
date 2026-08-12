@@ -94,7 +94,7 @@ public class Giocatori
 
     public String getNomeNosferatu() { return cercaNosferatu().get().getKey(); }
 
-    public boolean isMegera(String nome) { return getGiocatore(nome).getRuolo().isMegera(); }
+    public boolean isMegera(String nome) { return getGiocatore(nome).isMegera(); }
 
     public String getNomeRuolo(String nomeGiocatore)
     {
