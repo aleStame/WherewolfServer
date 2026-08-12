@@ -33,7 +33,7 @@ public final class Giocatore
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
         cambiaFazione(NESSUNA);
-        romeo = false;
+        setRomeo(false);
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -202,9 +202,11 @@ public final class Giocatore
 
     public boolean isNonMorto() { return tratti.isPresente(NON_MORTO); }
 
-    public void romeizzazione() { romeo = true; }
+    public void romeizzazione() { setRomeo(true); }
 
     public boolean isRomeo() { return romeo; }
+
+    private void setRomeo(boolean romeo) { this.romeo = romeo; }
 
     private boolean isProtezioneAngeloCustodeNonBucata()
     {
