@@ -108,7 +108,7 @@ public class Giocatori
 
     public Giocatore getGiocatore(String nome) { return giocatori.get(nome); }
 
-    private boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
+    private boolean isContadino(String nome) { return getGiocatore(nome).isContadino(); }
 
     private String getNomeTipoContadino(String nomeGiocatore)
     {

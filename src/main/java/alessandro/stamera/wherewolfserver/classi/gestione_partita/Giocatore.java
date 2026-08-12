@@ -200,6 +200,8 @@ public final class Giocatore
 
     public boolean isContadino() { return ruolo.isContadino(); }
 
+    public boolean isContadinoEroe() { return true; }
+
     private void trasformaVampiro()
     {
         trasformaNonMorto();
