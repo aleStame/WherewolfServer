@@ -18,7 +18,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo;
 
     private Ruolo ruolo;
 
@@ -33,6 +33,7 @@ public final class Giocatore
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
         cambiaFazione(NESSUNA);
+        romeo = false;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -201,9 +202,9 @@ public final class Giocatore
 
     public boolean isNonMorto() { return tratti.isPresente(NON_MORTO); }
 
-    public void romeizzazione() { }
+    public void romeizzazione() { romeo = true; }
 
-    public boolean isRomeo() { return false; }
+    public boolean isRomeo() { return romeo; }
 
     private boolean isProtezioneAngeloCustodeNonBucata()
     {
