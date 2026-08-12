@@ -525,7 +525,7 @@ public final class TestGiocatore
     public void testNonContadino(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isContadino());
+        verificaFalso(isContadino());
     }
 
     @ParameterizedTest
@@ -533,8 +533,10 @@ public final class TestGiocatore
     public void testContadino(String tipoContadino)
     {
         cambiaRuolo(tipoContadino);
-        verificaVero(giocatore.isContadino());
+        verificaVero(isContadino());
     }
+
+    private boolean isContadino() { return giocatore.isContadino(); }
 
     private void verificaEsitoPassaggioPosseduto(EsitoAttacco esito) { verificaAttacco(giocatore.passaPosseduto(), esito); }
 
