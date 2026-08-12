@@ -198,6 +198,8 @@ public final class Giocatore
 
     public boolean isRomeo() { return romeo; }
 
+    public boolean isContadino() { return true; }
+
     private void trasformaVampiro()
     {
         trasformaNonMorto();

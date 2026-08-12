@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isLupoSolitario">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,30 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00325" summary="ROSSO: testSegnalazioneAzzeccagarbugliAmato non riuscito">
-      <option name="closed" value="true" />
-      <created>1786198183914</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1786198183915</updated>
-    </task>
-    <task id="LOCAL-00326" summary="VERDE: testSegnalazioneAzzeccagarbugliAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1786199121689</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1786199121691</updated>
-    </task>
-    <task id="LOCAL-00327" summary="ROSSO: testAttaccoVampiroContadinoLupizzato non riuscito">
-      <option name="closed" value="true" />
-      <created>1786200580309</created>
-      <option name="number" value="00327" />
-      <option name="presentableId" value="LOCAL-00327" />
-      <option name="project" value="LOCAL" />
-      <updated>1786200580311</updated>
     </task>
     <task id="LOCAL-00328" summary="VERDE: testAttaccoVampiroContadinoLupizzato riuscito">
       <option name="closed" value="true" />
@@ -625,7 +601,31 @@
       <option name="project" value="LOCAL" />
       <updated>1786545997817</updated>
     </task>
-    <option name="localTasksCounter" value="374" />
+    <task id="LOCAL-00374" summary="REFACTORING: definizione del metodo verificaEsitoVampirizzazione">
+      <option name="closed" value="true" />
+      <created>1786546103413</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1786546103413</updated>
+    </task>
+    <task id="LOCAL-00375" summary="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto">
+      <option name="closed" value="true" />
+      <created>1786546200688</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1786546200688</updated>
+    </task>
+    <task id="LOCAL-00376" summary="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto">
+      <option name="closed" value="true" />
+      <created>1786546277584</created>
+      <option name="number" value="00376" />
+      <option name="presentableId" value="LOCAL-00376" />
+      <option name="project" value="LOCAL" />
+      <updated>1786546277585</updated>
+    </task>
+    <option name="localTasksCounter" value="377" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,8 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPassaPosseduto non riuscito" />
-    <MESSAGE value="VERDE: testPassaPosseduto riuscito" />
     <MESSAGE value="ROSSO: testPassaPossedutoPrete non riuscito" />
     <MESSAGE value="ROSSO: testPassaPossedutoPrete no riuscito" />
     <MESSAGE value="VERDE: testPassaPossedutoPrete riuscito" />
@@ -668,6 +666,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isMaledetto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAura" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isLupoSolitario" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoVampirizzazione" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto" />
   </component>
 </project>
