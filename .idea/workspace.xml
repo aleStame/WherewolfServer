@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo setRomeo">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isGiocatoreAuraNera">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,14 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00312" summary="VERDE: testCriminalizzazioneBecchino riuscito">
-      <option name="closed" value="true" />
-      <created>1786119442440</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1786119442441</updated>
     </task>
     <task id="LOCAL-00313" summary="ROSSO: testSegnalazioneAzzeccagarbugliAmato non riuscito">
       <option name="closed" value="true" />
@@ -625,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786524796455</updated>
     </task>
-    <option name="localTasksCounter" value="361" />
+    <task id="LOCAL-00361" summary="REFACTORING: definizione del metodo isGiocatoreAuraNera">
+      <option name="closed" value="true" />
+      <created>1786525102908</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1786525102908</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezioneAngeloCustodeNonBucata" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneAttaccoVittimaProtetta" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoAttaccoCappuccettoRosso" />
     <MESSAGE value="ROSSO: testMisticiMaledetti non riuscito" />
@@ -668,6 +667,7 @@
     <MESSAGE value="ROSSO: testRomeizzazione non riuscito" />
     <MESSAGE value="VERDE: testRomeizzazione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo setRomeo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo setRomeo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isGiocatoreAuraNera" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGiocatoreAuraNera" />
   </component>
 </project>

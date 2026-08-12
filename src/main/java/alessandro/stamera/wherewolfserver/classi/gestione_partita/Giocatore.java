@@ -82,11 +82,7 @@ public final class Giocatore
     public EsitoAttacco progenizzazioneNosferatu()
     {
         EsitoAttacco esito = ruolo.attaccoNosferatu();
-        if(esito == RIUSCITO)
-        {
-            fazione = NOSFERATU;
-            tratti.aggiungi(NON_MORTO);
-        }
+        if(esito == RIUSCITO) nosferatizzazione();
         return esito;
     }
 
@@ -205,6 +201,12 @@ public final class Giocatore
     public void romeizzazione() { setRomeo(true); }
 
     public boolean isRomeo() { return romeo; }
+
+    private void nosferatizzazione()
+    {
+        fazione = NOSFERATU;
+        tratti.aggiungi(NON_MORTO);
+    }
 
     private boolean isGiocatoreAuraNera() { return isMaledetto() || isGiocatoreLupizzato(); }
 
