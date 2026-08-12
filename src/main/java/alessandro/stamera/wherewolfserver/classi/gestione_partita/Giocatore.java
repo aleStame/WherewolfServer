@@ -99,7 +99,7 @@ public final class Giocatore
 
     public EsitoAttacco criminalizzazione()
     {
-        fazione = CRIMINALI;
+        setFazione(CRIMINALI);
         return RIUSCITO;
     }
 
@@ -201,14 +201,16 @@ public final class Giocatore
     private void trasformaVampiro()
     {
         trasformaNonMorto();
-        fazione = VAMPIRO;
+        setFazione(VAMPIRO);
     }
 
     private void nosferatizzazione()
     {
-        fazione = NOSFERATU;
+        setFazione(NOSFERATU);
         trasformaNonMorto();
     }
+
+    private void setFazione(Fazione fazione) { this.fazione = fazione; }
 
     private void trasformaNonMorto() { tratti.aggiungi(NON_MORTO); }
 
