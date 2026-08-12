@@ -596,14 +596,16 @@ public final class TestGiocatore
     public void testNoMegera(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isMegera());
+        verificaFalso(isMegera());
     }
 
     @Test public void testMegera()
     {
         cambiaRuolo("Megera");
-        verificaVero(giocatore.isMegera());
+        verificaVero(isMegera());
     }
+
+    private boolean isMegera() { return giocatore.isMegera(); }
 
     private boolean isContadinoLupo() { return giocatore.isContadinoLupo(); }
 
