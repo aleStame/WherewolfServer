@@ -61,7 +61,7 @@ public class Giocatori
 
     public String getNomeAngeloCustode() { return cercaAngeloCustode().get().getKey(); }
 
-    public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
+    public boolean isAngeloCustode(String nome) { return getGiocatore(nome).isAngeloCustode(); }
 
     public void resettaAmato() { getRuoli().forEach(Giocatore::annullaProtezioneAngeloCustode); }
 

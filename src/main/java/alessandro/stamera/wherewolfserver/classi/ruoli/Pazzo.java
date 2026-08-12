@@ -1,7 +1,9 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 
 public final class Pazzo extends Ruolo
 {
@@ -18,6 +20,8 @@ public final class Pazzo extends Ruolo
     }
 
     @Override public boolean isPazzo() { return true; }
+    
+    @Override public EsitoAttacco gildata() { return FALLITO; }
 
     public static Ruolo getInstance() { return new Pazzo(); }
 

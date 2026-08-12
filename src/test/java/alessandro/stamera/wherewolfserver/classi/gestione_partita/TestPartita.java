@@ -537,7 +537,8 @@ public final class TestPartita
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", tipoLupo } });
         attaccoLupi(tipoLupo, nomeVittima);
-        partita.progenizzazioneNosferatu(nomeVittima);
+        String messaggio = "Impossibile progenizzare il Cacciatore di vampiri (Gianmaria).\nAvvisa il Nosferatu (Augusta) della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeVittima, nomeNosferatu);
     }
@@ -546,11 +547,12 @@ public final class TestPartita
     {
         String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco", nomeLupo = "Renato";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, tipoLupo } });
-        String messaggio =
+        String messaggioLupo =
             "L'attacco al Contadino mostro (Gianmaria) causa la morte anche del lupo attaccante (Renato).\nAvvisa entrambi i giocatori della " +
             "loro morte.";
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        progenizzazioneNosferatu(nomeVittima);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggioLupo);
+        String messaggioNosferatu = "Impossibile progenizzare il Contadino mostro (Gianmaria).\nAvvisa il Nosferatu (Augusta) della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggioNosferatu);
         terminaNotte();
         verificaEliminati(nomeNosferatu, nomeLupo);
         verificaNonEliminati(nomeVittima);

@@ -1,10 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Potere;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Uomini;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 
@@ -25,18 +28,14 @@ public class Criminale extends Uomini
 
     @Override public void utilizzaPotere() { potere.utilizzaPotere(); }
 
-    /*@Override public int getNumeroVoti()
-    {
-        if(isSegnalatoAzzeccagarbugli()) annullaVoti();
-        return super.getNumeroVoti();
-    }*/
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if(esito == NON_FINITO) esito = getEsitoPartitaCriminali(partita);
         return esito;
     }
+
+    @Override public EsitoAttacco gildata() { return FALLITO; }
 
     private EsitoPartita getEsitoPartitaCriminali(Partita partita)
     {

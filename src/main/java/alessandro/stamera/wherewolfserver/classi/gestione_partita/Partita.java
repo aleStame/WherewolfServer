@@ -109,7 +109,7 @@ public final class Partita
         if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
         if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
         String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
-        switch(attaccoLupi(vivi.getGiocatore(nomeLupo).getRuolo(), nome))
+        switch(attaccoLupi(getGiocatore(nomeLupo).getRuolo(), nome))
         {
             case RIUSCITO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
@@ -220,7 +220,7 @@ public final class Partita
 
     public void guarisci(String nome)
     {
-        aggiungiGiocatoreVivo(nome, getRuolo(nome));
+        aggiungiGiocatoreVivo(nome, getGiocatore(nome));
         mortiNotte.eliminaGiocatore(nome);
         if(vivi.isMegera(nome)) maledizioneGuaritore();
         else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
@@ -248,7 +248,7 @@ public final class Partita
     public void terminaNotte()
     {
         confermaEliminazioneMortiNotte();
-        if(eliminati.isAngeloCustodePresente() && isAmatoVivo()) getRuolo(vivi.getNomeAmato()).perdiProtezioni();
+        if(eliminati.isAngeloCustodePresente() && isAmatoVivo()) getGiocatore(vivi.getNomeAmato()).perdiProtezioni();
         numeroNotte++;
     }
 
@@ -347,7 +347,7 @@ public final class Partita
     public boolean isNosferatuVincitore()
     {
         boolean esito = false;
-        if(vivi.isNosferatuPresente()) esito = isPartitaVinta(getRuolo(vivi.getNomeNosferatu()));
+        if(vivi.isNosferatuPresente()) esito = isPartitaVinta(getGiocatore(vivi.getNomeNosferatu()).getRuolo());
         else if(eliminati.isNosferatuPresente()) esito = isPartitaVinta(eliminati.getRuolo(eliminati.getNomeNosferatu()));
         return esito;
     }
@@ -374,10 +374,15 @@ public final class Partita
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
             case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
+            case RIUSCITO ->
+            {
+                if(vivi.isAngeloCustode(nome)) getGiocatore(vivi.getNomeAmato()).annullaProtezioneAngeloCustode();
+                getGiocatore(nome).cambiaRuolo(getGiocatore(mortiNotte.getNomePosseduto()).getRuolo());
+            }
         }
     }
 
-    public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
+    public boolean isPosseduto(String nome) { return getGiocatore(nome).getRuolo().isPosseduto(); }
 
     public void protezioneStrega(String nome)
     {
@@ -387,49 +392,27 @@ public final class Partita
 
     public boolean isCapoBranco(String nome) { return vivi.getRuolo(nome).isCapoBranco(); }
 
-    public Aura getAura(String nome) { return getRuolo(nome).getAura(); }
+    public Aura getAura(String nome) { return getGiocatore(nome).getAura(); }
 
-    public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
+    public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 
-    public boolean isAmato(String nome) { //return getRuolo(nome).isAmato();
-        return false; }
-
-    private void passaggioPosseduto(String nome)
-    {
-        gestionePossessoImpossibile(nome);
-        if(vivi.isAngeloCustode(nome)) annullaAmato();
-        vivi.eliminaGiocatore(nome);
-        aggiungiGiocatoreVivo(nome, getPossedutoMorto());
-        confermaEliminazioneMortiNotte();
-    }
-
-    private void gestionePossessoImpossibile(String nome)
-    {
-        Ruolo ruolo = getRuolo(nome), posseduto = getPossedutoMorto();
-        if(ruolo.isProtezionePresente(posseduto))
-        {
-            ruolo.perdiProtezioni();
-            throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
-        }
-    }
-
-    private Ruolo getPossedutoMorto() { return mortiNotte.getRuolo(mortiNotte.getNomePosseduto()); }
+    public boolean isAmato(String nome) { return getGiocatore(nome).isAmato(); }
 
     private void annullaAmato() { //getRuolo(vivi.getNomeAmato()).resettaAmato();
          }
 
     private boolean isPreteVivo(String nome) { return isPrete(nome) && !isNonMorto(nome); }
 
-    private boolean isPrete(String nome) { return getRuolo(nome).isPrete(); }
+    private boolean isPrete(String nome) { return getGiocatore(nome).getRuolo().isPrete(); }
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
-        Ruolo posseduto = getRuolo(nomePosseduto), progenizzatore = getRuolo(nomeProgenizzatore);
-        eliminaGiocatori(nomeProgenizzatore);
-        if(progenizzatore.isVampiro()) eliminaGiocatori(nomePosseduto);
+        Giocatore posseduto = getGiocatore(nomePosseduto), progenizzatore = getGiocatore(nomeProgenizzatore);
+        String ruoloProgenizzatore = progenizzatore.getRuolo().getNome();
+        if(progenizzatore.getRuolo().isVampiro()) eliminaGiocatori(nomePosseduto);
+        progenizzatore.cambiaRuolo(posseduto.getRuolo());
         confermaEliminazioneMortiNotte();
-        aggiungiGiocatoreVivo(nomeProgenizzatore, posseduto);
-        throw new EccezioneProgenizzazionePosseduto(progenizzatore.getNome(), nomeProgenizzatore, nomePosseduto);
+        throw new EccezioneProgenizzazionePosseduto(ruoloProgenizzatore, nomeProgenizzatore, nomePosseduto);
     }
 
     private boolean isNonMorto(String nome) { return vivi.isTrattoPresente(nome, NON_MORTO); }
@@ -494,7 +477,7 @@ public final class Partita
 
     private void inizializzaGiocatori(String[][] giocatori)
     {
-        stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], FACTORY.getRuolo(giocatore[1])));
+        stream(giocatori).forEach(giocatore -> aggiungiGiocatoreVivo(giocatore[0], new Giocatore(FACTORY.getRuolo(giocatore[1]))));
     }
 
     private void confermaEliminazioneMortiNotte()
@@ -507,7 +490,7 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        Giocatore giocatore = new Giocatore(getRuolo(nome));
+        Giocatore giocatore = getGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, giocatore);
         if(giocatore.getRuolo().isMegera()) for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
         {
@@ -553,7 +536,7 @@ public final class Partita
 
     private void risorgiGiocatore(String nome)
     {
-        aggiungiGiocatoreVivo(nome, getRuolo(nome));
+        aggiungiGiocatoreVivo(nome, getGiocatore(nome));
         eliminaGiocatoreMortoNotte(nome);
     }
 
@@ -578,7 +561,7 @@ public final class Partita
     {
         int posizione = -1;
         for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
-            if(getRuolo(getNomeGiocatoreVivo(i)).getNome().equals(tipoLupo)) posizione = i;
+            if(getGiocatore(getNomeGiocatoreVivo(i)).getRuolo().getNome().equals(tipoLupo)) posizione = i;
         return posizione;
     }
 
@@ -613,16 +596,16 @@ public final class Partita
 
     private void terminaBallottaggio(String nome)
     {
-        aggiungiGiocatoreVivo(nome, ballottaggio.getRuolo(nome));
+        aggiungiGiocatoreVivo(nome, ballottaggio.getGiocatore(nome));
         ballottaggio.eliminaGiocatore(nome);
         perdiProtezioniCappuccettoRosso();
     }
 
-    private void aggiungiGiocatoreVivo(String nome, Ruolo ruolo) { vivi.aggiungiGiocatore(nome, new Giocatore(ruolo)); }
+    private void aggiungiGiocatoreVivo(String nome, Giocatore giocatore) { vivi.aggiungiGiocatore(nome, giocatore); }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 
-    private Ruolo getNegromante() { return getRuolo(getNomeNegromante()); }
+    private Ruolo getNegromante() { return getGiocatore(getNomeNegromante()).getRuolo(); }
 
     private String getNomeNegromante() { return vivi.getNomeNegromante(); }
 
@@ -646,7 +629,7 @@ public final class Partita
 
     private void eliminaGiocatore(String nome)
     {
-        mortiNotte.aggiungiGiocatore(nome, new Giocatore(getRuolo(nome)));
+        mortiNotte.aggiungiGiocatore(nome, getGiocatore(nome));
         vivi.eliminaGiocatore(nome);
         setPazzoUcciso(mortiNotte.isPazzo(nome));
     }
@@ -655,12 +638,12 @@ public final class Partita
 
     private String getNomeAngeloCustodeVivo() { return vivi.getNomeAngeloCustode(); }
 
-    private Ruolo getRuolo(String nome)
+    private Giocatore getGiocatore(String nome)
     {
-        Ruolo ruolo;
-        if(isVivo(nome)) ruolo = vivi.getRuolo(nome);
-        else ruolo = mortiNotte.getRuolo(nome);
-        return ruolo;
+        Giocatore giocatore;
+        if(isVivo(nome)) giocatore = vivi.getGiocatore(nome);
+        else giocatore = mortiNotte.getGiocatore(nome);
+        return giocatore;
     }
 
 }

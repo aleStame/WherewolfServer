@@ -33,7 +33,6 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
-        System.out.println(nome + " " + esito);
         switch(esito)
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
@@ -148,7 +147,10 @@ public final class GiocatoriVivi extends Giocatori
 
     public void riconosciNegromante() { getGiocatore(getPosizioneBecchino()).riconosciNegromante(); }
 
-    public void annullaProtezioniCappuccettoRosso() { getRuolo(getNomeGiocatore(getPosizioneCappuccettoRosso())).perdiProtezioni(); }
+    public void annullaProtezioniCappuccettoRosso()
+    {
+        getGiocatore(getNomeGiocatore(getPosizioneCappuccettoRosso())).perdiProtezioni();
+    }
 
     public boolean isNonnaPresente() { return getPosizioneNonna() != NON_TROVATO; }
 
@@ -209,8 +211,8 @@ public final class GiocatoriVivi extends Giocatori
         boolean trovato = false;
         if(isPresente(nome))
         {
-            Ruolo ruolo = getRuolo(nome);
-            return ruolo.isTrattoPresente(NON_MORTO) && ruolo.getFazione() == NOSFERATU;
+            Giocatore giocatore = getGiocatore(nome);
+            trovato = giocatore.isNonMorto() && giocatore.getFazione() == NOSFERATU;
         }
         return trovato;
     }

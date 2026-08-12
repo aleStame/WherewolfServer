@@ -78,7 +78,16 @@ public final class Giocatore
 
     public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
 
-    public EsitoAttacco progenizzazioneNosferatu() { return ruolo.attaccoNosferatu(); }
+    public EsitoAttacco progenizzazioneNosferatu()
+    {
+        EsitoAttacco esito = ruolo.attaccoNosferatu();
+        if(esito == RIUSCITO)
+        {
+            fazione = NOSFERATU;
+            tratti.aggiungi(NON_MORTO);
+        }
+        return esito;
+    }
 
     public EsitoAttacco attaccoAssassino()
     {
@@ -101,7 +110,6 @@ public final class Giocatore
     {
         Fazione risultato = fazione;
         if(risultato == NESSUNA) risultato = ruolo.getFazione();
-        System.out.println(risultato);
         return risultato;
     }
 
@@ -187,13 +195,19 @@ public final class Giocatore
     public EsitoAttacco passaPosseduto()
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
-        if(fazione == VAMPIRO) esito = RIUSCITO;
+        if(tratti.isPresente(NON_MORTO)) esito = RIUSCITO;
         return esito;
     }
 
+    public boolean isNonMorto() { return tratti.isPresente(NON_MORTO); }
+
+    public void romeizzazione() { }
+
+    public boolean isRomeo() { return false; }
+
     private boolean isProtezioneAngeloCustodeNonBucata()
     {
-        return !ruolo.isContadinoLupo() && !isCappuccettoRosso() && !ruolo.isPosseduto() && isAmato();
+        return !ruolo.isContadinoLupo() && !isCappuccettoRosso() && isAmato();
     }
 
     private boolean isGiocatoreLupizzato() { return fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO; }
