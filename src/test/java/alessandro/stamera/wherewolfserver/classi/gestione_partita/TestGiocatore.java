@@ -512,9 +512,11 @@ public final class TestGiocatore
         verificaVero(giocatore.isRomeo());
     }
 
-    private void verificaNonMaledetto() { verificaFalso(giocatore.isMaledetto()); }
+    private void verificaNonMaledetto() { verificaFalso(isMaledetto()); }
 
-    private void verificaMaledetto() { verificaVero(giocatore.isMaledetto()); }
+    private void verificaMaledetto() { verificaVero(isMaledetto()); }
+
+    private boolean isMaledetto() { return giocatore.isMaledetto(); }
 
     private void annullaMaledizione() { giocatore.annullaMaledizione(); }
 
