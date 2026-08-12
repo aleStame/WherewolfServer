@@ -550,14 +550,16 @@ public final class TestGiocatore
     public void testNoContadinoEroe(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isContadinoEroe());
+        verificaFalso(isContadinoEroe());
     }
 
     @Test public void testContadinoEroe()
     {
         cambiaRuolo("Contadino eroe");
-        verificaVero(giocatore.isContadinoEroe());
+        verificaVero(isContadinoEroe());
     }
+
+    private boolean isContadinoEroe() { return giocatore.isContadinoEroe(); }
 
     private boolean isContadino() { return giocatore.isContadino(); }
 
