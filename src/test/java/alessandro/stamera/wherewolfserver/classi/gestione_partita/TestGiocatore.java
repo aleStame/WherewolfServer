@@ -280,13 +280,13 @@ public final class TestGiocatore
     public void testNonLupoSolitario(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isLupoSolitario());
+        verificaFalso(isLupoSolitario());
     }
 
     @Test public void testLupoSolitario()
     {
         cambiaRuolo("Lupo solitario");
-        verificaVero(giocatore.isLupoSolitario());
+        verificaVero(isLupoSolitario());
     }
 
     @ParameterizedTest @CsvSource
@@ -511,6 +511,8 @@ public final class TestGiocatore
         giocatore.romeizzazione();
         verificaVero(giocatore.isRomeo());
     }
+
+    private boolean isLupoSolitario() { return giocatore.isLupoSolitario(); }
 
     private void verificaAura(Aura aura) { assertThat(giocatore.getAura()).isEqualTo(aura); }
 
