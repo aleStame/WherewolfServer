@@ -148,14 +148,14 @@ public final class TestGiocatori
     {
         String nome = "Alessia";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isMegera(nome));
+        verificaFalso(isMegera(nome));
     }
 
     @Test public void testMegera()
     {
         String nome = "Orietta";
         aggiungiGiocatore(nome, "Megera");
-        verificaVero(giocatori.isMegera(nome));
+        verificaVero(isMegera(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -176,6 +176,7 @@ public final class TestGiocatori
         aggiungiGiocatore(nome, nomeRuolo);
         verificaStringa(giocatori.getNomeRuolo(nome), nomeRuolo);
     }
+    private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
     private boolean isRomeo(String nome) { return giocatori.isRomeo(nome); }
 
