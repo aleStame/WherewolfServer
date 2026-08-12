@@ -181,11 +181,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
         if(isGiocatoreLupizzato()) esito = MORTO;
-        if(esito == RIUSCITO)
-        {
-            tratti.aggiungi(NON_MORTO);
-            fazione = VAMPIRO;
-        }
+        if(esito == RIUSCITO) trasformaVampiro();
         return esito;
     }
 
@@ -201,6 +197,12 @@ public final class Giocatore
     public void romeizzazione() { setRomeo(true); }
 
     public boolean isRomeo() { return romeo; }
+
+    private void trasformaVampiro()
+    {
+        tratti.aggiungi(NON_MORTO);
+        fazione = VAMPIRO;
+    }
 
     private void nosferatizzazione()
     {
