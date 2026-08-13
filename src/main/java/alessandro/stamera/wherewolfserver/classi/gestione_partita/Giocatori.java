@@ -98,7 +98,7 @@ public class Giocatori
 
     public String getNomeRuolo(String nomeGiocatore)
     {
-        String risultato = getGiocatore(nomeGiocatore).getRuolo().getNome();
+        String risultato = getGiocatore(nomeGiocatore).getNomeRuolo();
         if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
         return risultato;
     }
