@@ -206,7 +206,7 @@ public final class Giocatore
 
     public boolean isMegera() { return ruolo.isMegera(); }
 
-    public String getNomeRuolo() { return null; }
+    public String getNomeRuolo() { return ruolo.getNome(); }
 
     private void trasformaVampiro()
     {

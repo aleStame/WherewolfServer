@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" tests="30" skipped="0" failures="13" errors="0" timestamp="2026-08-12T19:37:40" hostname="ALESSANDRO" time="8.828">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" tests="30" skipped="0" failures="13" errors="0" timestamp="2026-08-13T09:26:07" hostname="ALESSANDRO" time="29.239">
   <properties/>
-  <testcase name="testAttaccoNegromanteRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.013">
+  <testcase name="testAttaccoNegromanteRomeo()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be false but was true" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be false but was true
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -90,7 +90,7 @@ Expecting value to be false but was true
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002">
+  <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -358,7 +358,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004">
+  <testcase name="[3] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -492,7 +492,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[4] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.1">
+  <testcase name="[4] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -626,7 +626,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.005">
+  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -761,12 +761,12 @@ Expecting value to be true but was false
 </failure>
   </testcase>
   <testcase name="testPassaPosseduto()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="[1] partita=Mock for Partita, hashCode: 752148842, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.078"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5416f8db, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.022"/>
-  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.01"/>
-  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003"/>
+  <testcase name="[1] partita=Mock for Partita, hashCode: 313881452, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.936"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@322ba549, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.009"/>
+  <testcase name="testControlloSensitiva()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.064"/>
+  <testcase name="testAttaccoAssassino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.092"/>
   <testcase name="testGildata()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
-  <testcase name="[1] nomeCreaturaOmbra=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.021">
+  <testcase name="[1] nomeCreaturaOmbra=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.202">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -900,7 +900,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[2] nomeCreaturaOmbra=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.019">
+  <testcase name="[2] nomeCreaturaOmbra=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -1034,7 +1034,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[3] nomeCreaturaOmbra=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.01">
+  <testcase name="[3] nomeCreaturaOmbra=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.015">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -1168,7 +1168,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[4] nomeCreaturaOmbra=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.006">
+  <testcase name="[4] nomeCreaturaOmbra=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -1436,7 +1436,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[6] nomeCreaturaOmbra=Nosferatu" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.011">
+  <testcase name="[6] nomeCreaturaOmbra=Nosferatu" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -1570,7 +1570,7 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="[7] nomeCreaturaOmbra=Posseduto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.018">
+  <testcase name="[7] nomeCreaturaOmbra=Posseduto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.16">
     <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting value to be true but was false" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting value to be true but was false
 	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
@@ -1704,17 +1704,17 @@ Expecting value to be true but was false
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="vampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004"/>
-  <testcase name="testInizializzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.032"/>
+  <testcase name="vampirizzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
+  <testcase name="testInizializzazione()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.006"/>
   <testcase name="[1] nome=Capo branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
-  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
-  <testcase name="[3] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004"/>
-  <testcase name="[4] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.005"/>
-  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003"/>
-  <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.03"/>
-  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.006"/>
-  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.014"/>
-  <testcase name="testNonContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.034"/>
+  <testcase name="[2] nome=Lupo del branco" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="[3] nome=Lupo solitario" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="[4] nome=Lupo reietto" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.002"/>
+  <testcase name="[5] nome=Contadino discendente dei lupi" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="testSegnalazioneOratore()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="testSegnalazioneBoia()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.001"/>
+  <testcase name="testAttaccoNegromante()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.003"/>
+  <testcase name="testNonContadino()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
