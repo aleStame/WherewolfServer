@@ -205,7 +205,9 @@ public final class Giocatore
 
     public String getNomeRuolo() { return ruolo.getNome(); }
 
-    public boolean isTrattoPresente(Tratto tratto) { return false; }
+    public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
+
+    public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
     private void trasformaVampiro()
     {

@@ -624,8 +624,11 @@ public final class TestGiocatore
     @CsvSource({ "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale" })
     public void testNomeContadino(String tipoContadino) { verificaNomeRuolo(tipoContadino, "Contadino"); }
 
-    @ParameterizedTest @EnumSource(Tratto.class)
-    public void testTrattoPresente(Tratto tratto) { verificaVero(giocatore.isTrattoPresente(tratto)); }
+    @ParameterizedTest @EnumSource(Tratto.class) public void testTrattoPresente(Tratto tratto)
+    {
+        giocatore.aggiungiTratto(tratto);
+        verificaVero(giocatore.isTrattoPresente(tratto));
+    }
 
     private void verificaNomeRuolo(String nomeRuolo, String soluzione)
     {
