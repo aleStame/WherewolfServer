@@ -8,7 +8,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class GiocatoriVivi extends Giocatori
@@ -39,8 +38,7 @@ public final class GiocatoriVivi extends Giocatori
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
             case FALLITO ->
                 { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
-            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO ->
-                { if(isAmato(nome) && isAngeloCustodePresente()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
                 { if(isAmato(nome) && !isAngeloCustodePresente()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
         }
@@ -346,9 +344,11 @@ public final class GiocatoriVivi extends Giocatori
     private EsitoAttacco getEsitoAttaccoCappuccettoRosso()
     {
         EsitoAttacco esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-        if(isAmato(getNomeGiocatore(getPosizioneCappuccettoRosso())) && isAngeloCustodePresente()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        if(isProtezioneAngeloCustodeAttiva(getNomeGiocatore(getPosizioneCappuccettoRosso()))) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         return esito;
     }
+
+    private boolean isProtezioneAngeloCustodeAttiva(String nome) { return isAmato(nome) && isAngeloCustodePresente(); }
 
     private void gestisciProtezioneNonna()
     {
