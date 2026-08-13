@@ -189,7 +189,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
         if(isNonMorto()) esito = RIUSCITO;
-        if(esito == RIUSCITO) cambiaRuolo(getPosseduto());
+        if(esito == RIUSCITO) trasformaPosseduto();
         return esito;
     }
 
@@ -212,6 +212,8 @@ public final class Giocatore
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
+
+    private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
 
