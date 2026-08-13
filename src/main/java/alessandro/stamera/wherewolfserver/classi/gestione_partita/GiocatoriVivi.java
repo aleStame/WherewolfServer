@@ -45,7 +45,7 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public boolean isTrattoPresente(String nome, Tratto tratto) { return getGiocatore(nome).getRuolo().isTrattoPresente(tratto); }
+    public boolean isTrattoPresente(String nome, Tratto tratto) { return getGiocatore(nome).isTrattoPresente(tratto); }
 
     public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 
@@ -55,13 +55,6 @@ public final class GiocatoriVivi extends Giocatori
         if(esito == MORTO && isGhoulPresente()) esito = GHOUL_MORTO;
         gestisciResetAmato(nome, esito);
         return esito;
-    }
-
-    public void attaccoPosseduto(String nome)
-    {
-        eliminaGiocatore(nome);
-        aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo("Posseduto")));
-        resettaAmato();
     }
 
     public boolean isPosseduto(String nome) { return getGiocatore(nome).getRuolo().isPosseduto(); }
@@ -315,7 +308,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco gildata(String nome) { return getGiocatore(nome).gildata(); }
 
-    public EsitoAttacco passaPosseduto(String nome) { return getGiocatore(nome).passaPosseduto(); }
+    public EsitoAttacco passaPosseduto(String nome)
+    {
+        boolean isAngeloCustode = isAngeloCustode(nome);
+        EsitoAttacco esito = getGiocatore(nome).passaPosseduto();
+        if(isAngeloCustode && esito == RIUSCITO) getGiocatoreAmato().annullaProtezioneAngeloCustode();
+        return esito;
+    }
 
     public void romeizzazione(String nome)
     {
@@ -327,6 +326,8 @@ public final class GiocatoriVivi extends Giocatori
             if(ruolo.isCreaturaOmbra()) giocatore.aggiungiProtezione(ruolo);
         }
     }
+
+    private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
     private boolean isProtezioneAngeloCustodeNonAttiva(String nome) { return isAmato(nome) && !isAngeloCustodePresente(); }
 
@@ -395,7 +396,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isTemplare(int posizione) { return isTemplare(getNomeGiocatore(posizione)); }
 
-    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getGiocatore(getNomeAmato()).perdiProtezioni(); }
+    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getGiocatoreAmato().perdiProtezioni(); }
 
     private boolean isAngeloCustodeMorto() { return isAmatoPresente() && !isAngeloCustodePresente(); }
 

@@ -7,6 +7,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class Giocatore
 {
@@ -145,7 +146,7 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = ruolo.attaccoLupi(lupo);
-        if(isProtezioneAngeloCustodeNonBucata()) esito = gestioneAttaccoVittimaProtetta(lupo, esito);
+        if(isProtezioneAngeloCustodeNonBucata() || !isAmato()) esito = gestioneAttaccoVittimaProtetta(lupo, esito);
         esito = verificaEsitoAttaccoLupi(lupo, esito);
         return esito;
     }
@@ -186,6 +187,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
         if(isNonMorto()) esito = RIUSCITO;
+        if(esito == RIUSCITO) cambiaRuolo(FACTORY.getRuolo("Posseduto"));
         return esito;
     }
 
@@ -243,7 +245,7 @@ public final class Giocatore
         switch(esito)
         {
             case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
-            case FALLITO -> { if(lupo.isLupoSolitario()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;

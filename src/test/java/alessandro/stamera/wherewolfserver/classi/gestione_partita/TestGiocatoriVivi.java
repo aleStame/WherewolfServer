@@ -283,13 +283,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testPossedutoAngeloCustode()
     {
-        String[][] giocatori = new String[][] { { "Marco", "Angelo custode" }, { "Giorgia", "Posseduto" } };
-        inizializzaGiocatori(giocatori);
-        int posizioneAngeloCustode = 0, posizioneAmato = 1;
-        segnalazioneAngeloCustode(giocatori[posizioneAmato][0]);
-        this.giocatori.attaccoPosseduto(giocatori[posizioneAngeloCustode][0]);
-        verificaVero(this.giocatori.isPosseduto(giocatori[posizioneAngeloCustode][0]));
-        verificaNonAmato(giocatori[posizioneAmato][0]);
+        String nomeAngeloCustode = "Marco", nomeAmato = "Giorgia";
+        inizializzaGiocatori(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { nomeAmato, "Templare" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAttacco(giocatori.passaPosseduto(nomeAngeloCustode), RIUSCITO);
+        verificaVero(giocatori.isPosseduto(nomeAngeloCustode));
+        verificaNonAmato(nomeAmato);
     }
 
     @Test public void testAttaccoAssassinoContadinoMostro()
