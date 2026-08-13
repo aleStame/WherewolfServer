@@ -615,18 +615,16 @@ public final class TestGiocatore
             "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         }
     )
-    public void testNomeRuolo(String nomeRuolo)
-    {
-        cambiaRuolo(nomeRuolo);
-        assertThat(giocatore.getNomeRuolo()).isEqualTo(nomeRuolo);
-    }
+    public void testNomeRuolo(String nomeRuolo) { verificaNomeRuolo(nomeRuolo, nomeRuolo); }
 
     @ParameterizedTest
     @CsvSource({ "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale" })
-    public void testNomeContadino(String tipoContadino)
+    public void testNomeContadino(String tipoContadino) { verificaNomeRuolo(tipoContadino, "Contadino"); }
+
+    private void verificaNomeRuolo(String nomeRuolo, String soluzione)
     {
-        cambiaRuolo(tipoContadino);
-        assertThat(giocatore.getNomeRuolo()).isEqualTo("Contadino");
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.getNomeRuolo()).isEqualTo(soluzione);
     }
 
     private boolean isMegera() { return giocatore.isMegera(); }
