@@ -3,6 +3,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
@@ -253,8 +254,10 @@ public final class GiocatoriVivi extends Giocatori
     {
         Ruolo stregato = getGiocatore(nome).getRuolo();
         stregato.protezioneStrega();
-        stregato.aggiungiProtezione(getCreatureOmbra());
+        aggiungiProtezioneCreatureOmbra(nome);
     }
+
+    private void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
 
     public boolean isStregato(String nome) { return getGiocatore(nome).getRuolo().isStregato(); }
 
@@ -318,13 +321,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public void romeizzazione(String nome)
     {
-        Giocatore giocatore = getGiocatore(nome);
-        giocatore.romeizzazione();
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            Ruolo ruolo = getGiocatore(i).getRuolo();
-            if(ruolo.isCreaturaOmbra()) giocatore.aggiungiProtezione(ruolo);
-        }
+        getGiocatore(nome).romeizzazione();
+        aggiungiProtezioneCreatureOmbra(nome);
     }
 
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }

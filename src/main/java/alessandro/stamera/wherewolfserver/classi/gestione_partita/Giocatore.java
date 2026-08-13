@@ -2,8 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import jakarta.annotation.Nonnull;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
@@ -138,7 +136,7 @@ public final class Giocatore
 
     public boolean isCappuccettoRosso() { return ruolo.isCappuccettoRosso(); }
 
-    public void aggiungiProtezione(Ruolo ruolo) { tratti.aggiungiProtezione(ruolo); }
+    public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
 
     public boolean isProtezionePresente(Ruolo attaccante)
     {
