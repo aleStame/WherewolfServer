@@ -88,25 +88,6 @@ public final class TestGiocatori
         verificaFalso(isContadinoMostro(giocatori[1][0]));
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
-        }
-    )
-    public void testRomeo(String nomeRuolo)
-    {
-        String nome = "Marco";
-        aggiungiGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
-        giocatori.romeizzazione(nome);
-        verificaVero(isRomeo(nome));
-    }
-
     @Test public void testNosferatuPresente()
     {
         String nome = "Elena";

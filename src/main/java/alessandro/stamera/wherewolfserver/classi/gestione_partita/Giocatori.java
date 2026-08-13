@@ -88,8 +88,6 @@ public class Giocatori
 
     public boolean isRomeo(String nome) { return getGiocatore(nome).isRomeo(); }
 
-    public void romeizzazione(String nome) { getGiocatore(nome).romeizzazione(); }
-
     public boolean isNosferatuPresente() { return cercaNosferatu().isPresent(); }
 
     public String getNomeNosferatu() { return cercaNosferatu().get().getKey(); }

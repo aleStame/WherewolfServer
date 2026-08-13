@@ -319,6 +319,17 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco passaPosseduto(String nome) { return getGiocatore(nome).passaPosseduto(); }
 
+    public void romeizzazione(String nome)
+    {
+        Giocatore giocatore = getGiocatore(nome);
+        giocatore.romeizzazione();
+        for(int i = 0; i < getNumeroGiocatori(); i++)
+        {
+            Ruolo ruolo = getGiocatore(i).getRuolo();
+            if(ruolo.isCreaturaOmbra()) giocatore.aggiungiProtezione(ruolo);
+        }
+    }
+
     private boolean isCappuccettoRossoDaSvegliare(Ruolo attaccante, String nome)
     {
         return isCappuccettoRossoProtetto(nome, attaccante) && isNonnaPresente() && isRimastoUltimoLupo();
