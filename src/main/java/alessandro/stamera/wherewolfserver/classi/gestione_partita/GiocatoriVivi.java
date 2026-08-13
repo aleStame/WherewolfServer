@@ -40,7 +40,7 @@ public final class GiocatoriVivi extends Giocatori
                 { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
-                { if(isAmato(nome) && !isAngeloCustodePresente()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
+                { if(isProtezioneAngeloCustodeNonAttiva(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
         }
         return esito;
     }
@@ -327,6 +327,8 @@ public final class GiocatoriVivi extends Giocatori
             if(ruolo.isCreaturaOmbra()) giocatore.aggiungiProtezione(ruolo);
         }
     }
+
+    private boolean isProtezioneAngeloCustodeNonAttiva(String nome) { return isAmato(nome) && !isAngeloCustodePresente(); }
 
     private boolean isCappuccettoRossoDaSvegliare(Ruolo attaccante, String nome)
     {
