@@ -189,10 +189,10 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustodeRomeizzato(String tipoLupo)
     {
-        /*String nome = "Luca";
+        String nome = "Luca";
         inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Paola", tipoLupo } });
         romeizzazione(nome);
-        verificaAttaccoLupoFallito(tipoLupo, nome);*/
+        verificaAttaccoLupoFallito(tipoLupo, nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1167,10 +1167,7 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
     }
 
-    private void verificaAttaccoLupoFallito(String nomeLupo, String nome)
-    {
-        verificaAttaccoLupo(nomeLupo, nome, FALLITO);
-    }
+    private void verificaAttaccoLupoFallito(String nomeLupo, String nome) { verificaAttaccoLupo(nomeLupo, nome, FALLITO); }
 
     private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
 
