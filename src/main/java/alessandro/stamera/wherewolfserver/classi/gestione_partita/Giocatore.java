@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import jakarta.annotation.Nonnull;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
@@ -187,7 +189,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
         if(isNonMorto()) esito = RIUSCITO;
-        if(esito == RIUSCITO) cambiaRuolo(FACTORY.getRuolo("Posseduto"));
+        if(esito == RIUSCITO) cambiaRuolo(getPosseduto());
         return esito;
     }
 
@@ -210,6 +212,8 @@ public final class Giocatore
     public void aggiungiTratto(Tratto tratto) { tratti.aggiungi(tratto); }
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
+
+    private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
 
     private void trasformaVampiro()
     {
