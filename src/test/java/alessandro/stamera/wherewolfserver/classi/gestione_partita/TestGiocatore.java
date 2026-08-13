@@ -2,12 +2,15 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EnumSource;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
@@ -620,6 +623,9 @@ public final class TestGiocatore
     @ParameterizedTest
     @CsvSource({ "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale" })
     public void testNomeContadino(String tipoContadino) { verificaNomeRuolo(tipoContadino, "Contadino"); }
+
+    @ParameterizedTest @EnumSource(Tratto.class)
+    public void testTrattoPresente(Tratto tratto) { verificaVero(giocatore.isTrattoPresente(tratto)); }
 
     private void verificaNomeRuolo(String nomeRuolo, String soluzione)
     {

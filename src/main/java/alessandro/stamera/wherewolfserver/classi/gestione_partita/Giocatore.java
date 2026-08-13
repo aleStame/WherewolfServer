@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratti;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -207,6 +204,8 @@ public final class Giocatore
     public boolean isMegera() { return ruolo.isMegera(); }
 
     public String getNomeRuolo() { return ruolo.getNome(); }
+
+    public boolean isTrattoPresente(Tratto tratto) { return false; }
 
     private void trasformaVampiro()
     {
