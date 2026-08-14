@@ -618,14 +618,16 @@ public final class GiocatoriVivi extends Giocatori
         if(ballottaggio.isAmatoPresente() && (isAngeloCustodePresente() || ballottaggio.isAngeloCustodePresente()))
         {
             salvataggioAmatoDaBallottaggio(ballottaggio);
-            if(isAngeloCustodePresente())
-            {
-                String nomeAngeloCustode = getNomeAngeloCustode();
-                Giocatore angeloCustode = getGiocatore(nomeAngeloCustode);
-                ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
-                eliminaGiocatore(nomeAngeloCustode);
-            }
+            if(isAngeloCustodePresente()) accusaAngeloCustode(ballottaggio);
         }
+    }
+
+    private void accusaAngeloCustode(Ballottaggio ballottaggio)
+    {
+        String nomeAngeloCustode = getNomeAngeloCustode();
+        Giocatore angeloCustode = getGiocatore(nomeAngeloCustode);
+        ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
+        eliminaGiocatore(nomeAngeloCustode);
     }
 
     private void salvataggioAmatoDaBallottaggio(Ballottaggio ballottaggio)
