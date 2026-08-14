@@ -141,7 +141,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void annullaProtezioniCappuccettoRosso()
     {
-        getGiocatore(getNomeGiocatore(getPosizioneCappuccettoRosso())).perdiProtezioni();
+        getGiocatore(getNomeCappuccettoRosso()).perdiProtezioni();
     }
 
     public boolean isNonnaPresente() { return getPosizioneNonna() != NON_TROVATO; }
@@ -349,7 +349,9 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    private boolean isCappuccettoRossoAmato() { return isProtezioneAngeloCustodeAttiva(getNomeGiocatore(getPosizioneCappuccettoRosso())); }
+    private boolean isCappuccettoRossoAmato() { return isProtezioneAngeloCustodeAttiva(getNomeCappuccettoRosso()); }
+
+    private String getNomeCappuccettoRosso() { return getNomeGiocatore(getPosizioneCappuccettoRosso()); }
 
     private boolean isProtezioneAngeloCustodeAttiva(String nome) { return isAmato(nome) && isAngeloCustodePresente(); }
 
