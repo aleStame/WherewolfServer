@@ -653,6 +653,33 @@ public final class TestGiocatore
         verificaVero(isCacciatoreDiVampiri());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoSensitiva(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaFalso(giocatore.isSensitiva());
+    }
+
+    /*
+
+
+    @Test public void testCacciatoreDiVampiri()
+    {
+        cambiaRuolo("Cacciatore di vampiri");
+        verificaVero(isCacciatoreDiVampiri());
+    }
+    * */
+
     private boolean isCacciatoreDiVampiri() { return giocatore.isCacciatoreDiVampiri(); }
 
     private void verificaNomeRuolo(String nomeRuolo, String soluzione)
