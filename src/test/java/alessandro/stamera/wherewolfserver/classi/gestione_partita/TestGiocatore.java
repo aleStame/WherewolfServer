@@ -644,14 +644,16 @@ public final class TestGiocatore
     public void testNoCacciatoreDiVampiri(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isCacciatoreDiVampiri());
+        verificaFalso(isCacciatoreDiVampiri());
     }
 
     @Test public void testCacciatoreDiVampiri()
     {
         cambiaRuolo("Cacciatore di vampiri");
-        verificaVero(giocatore.isCacciatoreDiVampiri());
+        verificaVero(isCacciatoreDiVampiri());
     }
+
+    private boolean isCacciatoreDiVampiri() { return giocatore.isCacciatoreDiVampiri(); }
 
     private void verificaNomeRuolo(String nomeRuolo, String soluzione)
     {
