@@ -670,15 +670,11 @@ public final class TestGiocatore
         verificaFalso(giocatore.isSensitiva());
     }
 
-    /*
-
-
-    @Test public void testCacciatoreDiVampiri()
+    @Test public void testSensitiva()
     {
-        cambiaRuolo("Cacciatore di vampiri");
-        verificaVero(isCacciatoreDiVampiri());
+        cambiaRuolo("Sensitiva");
+        verificaVero(giocatore.isSensitiva());
     }
-    * */
 
     private boolean isCacciatoreDiVampiri() { return giocatore.isCacciatoreDiVampiri(); }
 
