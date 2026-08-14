@@ -280,6 +280,8 @@ public final class Giocatore
         return esito;
     }
 
+    public boolean isCacciatoreDiVampiri() { return true; }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;
