@@ -358,8 +358,10 @@ public final class GiocatoriVivi extends Giocatori
     private void gestisciProtezioneNonna()
     {
         if(isRimastoUnSoloLupo()) aggiungiProtezioneNonna();
-        else getNonna().perdiProtezioni();
+        else perditaProtezioniNonna();
     }
+
+    private void perditaProtezioniNonna() { getNonna().perdiProtezioni(); }
 
     private Giocatore getNonna() { return getGiocatore(getPosizioneNonna()); }
 
