@@ -4,10 +4,12 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static java.util.Arrays.stream;
 
 public final class GiocatoriVivi extends Giocatori
 {
@@ -661,14 +663,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void caricaAccusabili(Ballottaggio ballottaggio)
     {
-        List<String> nomiGiocatori = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String nome = getNomeGiocatore(i);
-            Giocatore giocatore = getGiocatore(nome);
-            if(giocatore.isAccusabile()) nomiGiocatori.add(nome);
-        }
-        for(String nome : nomiGiocatori) mandaBallottaggio(ballottaggio, nome);
+        for(String nome : getNomiGiocatoriAccusabili()) mandaBallottaggio(ballottaggio, nome);
     }
 
     private void mandaBallottaggio(Giocatori ballottaggio, String nome)
@@ -680,27 +675,29 @@ public final class GiocatoriVivi extends Giocatori
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
     {
-        for(String nome : estraiGiocatori(numeroVoti)) mandaBallottaggio(ballottaggio, nome);
+        for(String nome : getNomiGiocatoriVoti(numeroVoti)) mandaBallottaggio(ballottaggio, nome);
     }
 
-    private String[] estraiGiocatori(int numeroVoti) { return toArray(getListaNomi(numeroVoti)); }
-
-    private List<String> getListaNomi(int numeroVoti)
+    private String[] getNomiGiocatoriAccusabili()
     {
-        List<String> nomi = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String nome = getNomeGiocatore(i);
-            if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
-        }
+        return getNomiGiocatoriCondizione(nome -> getGiocatore(nome).isAccusabile());
+    }
+
+    private String[] getNomiGiocatoriVoti(int numeroVoti)
+    {
+        return getNomiGiocatoriCondizione(nome -> getNumeroVoti(nome) == numeroVoti);
+    }
+
+    private String[] getNomiGiocatoriCondizione(Predicate<String> predicato)
+    {
+        return stream(getNomiGiocatoriVivi()).filter(predicato).toList().toArray(new String[0]);
+    }
+
+    private String[] getNomiGiocatoriVivi()
+    {
+        String[] nomi = new String[getNumeroGiocatori()];
+        for(int i = 0; i < nomi.length; i++) nomi[i] = getNomeGiocatore(i);
         return nomi;
-    }
-
-    private String[] toArray(List<String> nomi)
-    {
-        String[] risultato = new String[nomi.size()];
-        nomi.toArray(risultato);
-        return risultato;
     }
 
     private EsitoAttacco vampirizzazioneRuolo(String nome) { return getGiocatore(nome).vampirizzazione(); }
