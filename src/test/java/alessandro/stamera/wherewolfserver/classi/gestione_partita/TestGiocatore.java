@@ -647,6 +647,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isCacciatoreDiVampiri());
     }
 
+    @Test public void testCacciatoreDiVampiri()
+    {
+        cambiaRuolo("Cacciatore di vampiri");
+        verificaVero(giocatore.isCacciatoreDiVampiri());
+    }
+
     private void verificaNomeRuolo(String nomeRuolo, String soluzione)
     {
         cambiaRuolo(nomeRuolo);
