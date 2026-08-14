@@ -345,9 +345,11 @@ public final class GiocatoriVivi extends Giocatori
     private EsitoAttacco getEsitoAttaccoCappuccettoRosso()
     {
         EsitoAttacco esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-        if(isProtezioneAngeloCustodeAttiva(getNomeGiocatore(getPosizioneCappuccettoRosso()))) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        if(isCappuccettoRossoAmato()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         return esito;
     }
+
+    private boolean isCappuccettoRossoAmato() { return isProtezioneAngeloCustodeAttiva(getNomeGiocatore(getPosizioneCappuccettoRosso())); }
 
     private boolean isProtezioneAngeloCustodeAttiva(String nome) { return isAmato(nome) && isAngeloCustodePresente(); }
 
