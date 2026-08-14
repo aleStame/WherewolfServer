@@ -615,11 +615,13 @@ public final class GiocatoriVivi extends Giocatori
 
     private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
     {
-        if(isAmatoSalvabile(ballottaggio))
-        {
-            salvataggioAmatoDaBallottaggio(ballottaggio);
-            if(isAngeloCustodePresente()) accusaAngeloCustode(ballottaggio);
-        }
+        if(isAmatoSalvabile(ballottaggio)) scambioAngeloAmato(ballottaggio);
+    }
+
+    private void scambioAngeloAmato(Ballottaggio ballottaggio)
+    {
+        salvataggioAmatoDaBallottaggio(ballottaggio);
+        if(isAngeloCustodePresente()) accusaAngeloCustode(ballottaggio);
     }
 
     private boolean isAmatoSalvabile(Ballottaggio ballottaggio)
