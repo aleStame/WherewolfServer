@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isCappuccettoRossoAmato">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo perditaProtezioniNonna">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,14 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00361" summary="REFACTORING: definizione del metodo isGiocatoreAuraNera">
-      <option name="closed" value="true" />
-      <created>1786525102908</created>
-      <option name="number" value="00361" />
-      <option name="presentableId" value="LOCAL-00361" />
-      <option name="project" value="LOCAL" />
-      <updated>1786525102908</updated>
     </task>
     <task id="LOCAL-00362" summary="REFACTORING: definizione del metodo nosferatizzazione">
       <option name="closed" value="true" />
@@ -625,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786699436114</updated>
     </task>
-    <option name="localTasksCounter" value="410" />
+    <task id="LOCAL-00410" summary="REFACTORING: definizione del metodo getNomeCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1786699566657</created>
+      <option name="number" value="00410" />
+      <option name="presentableId" value="LOCAL-00410" />
+      <option name="project" value="LOCAL" />
+      <updated>1786699566658</updated>
+    </task>
+    <option name="localTasksCounter" value="411" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,8 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testNoContadinoLupo riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testContadinoLupo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isContadinoLupo" />
     <MESSAGE value="ROSSO: testRomeo non riuscito" />
     <MESSAGE value="VERDE: testRomeo riuscito" />
@@ -668,6 +666,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo trasformaPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoAmato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCappuccettoRossoAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo perditaProtezioniNonna" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo perditaProtezioniNonna" />
   </component>
 </project>

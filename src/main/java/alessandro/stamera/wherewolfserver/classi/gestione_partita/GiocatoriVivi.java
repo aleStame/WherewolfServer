@@ -425,8 +425,10 @@ public final class GiocatoriVivi extends Giocatori
 
     private void aggiungiProtezioneNonna(int posizione)
     {
-        getGiocatore(getPosizioneCappuccettoRosso()).aggiungiProtezione(getGiocatore(posizione).getRuolo());
+        getCappuccettoRosso().aggiungiProtezione(getGiocatore(posizione).getRuolo());
     }
+
+    private Giocatore getCappuccettoRosso() { return getGiocatore(getPosizioneCappuccettoRosso()); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
