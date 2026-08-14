@@ -282,7 +282,7 @@ public final class Giocatore
 
     public boolean isCacciatoreDiVampiri() { return ruolo.isCacciatoreDiVampiri(); }
 
-    public boolean isSensitiva() { return true; }
+    public boolean isSensitiva() { return ruolo.isSensitiva(); }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
