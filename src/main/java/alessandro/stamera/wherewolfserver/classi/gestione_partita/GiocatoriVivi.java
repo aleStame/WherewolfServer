@@ -617,9 +617,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         if(ballottaggio.isAmatoPresente() && (isAngeloCustodePresente() || ballottaggio.isAngeloCustodePresente()))
         {
-            String nomeAmato = ballottaggio.getNomeAmato();
-            aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
-            ballottaggio.eliminaGiocatore(nomeAmato);
+            salvataggioAmatoDaBallottaggio(ballottaggio);
             if(isAngeloCustodePresente())
             {
                 String nomeAngeloCustode = getNomeAngeloCustode();
@@ -628,6 +626,13 @@ public final class GiocatoriVivi extends Giocatori
                 eliminaGiocatore(nomeAngeloCustode);
             }
         }
+    }
+
+    private void salvataggioAmatoDaBallottaggio(Ballottaggio ballottaggio)
+    {
+        String nomeAmato = ballottaggio.getNomeAmato();
+        aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
+        ballottaggio.eliminaGiocatore(nomeAmato);
     }
 
     private void estraiSecondoPosto(Ballottaggio ballottaggio)
