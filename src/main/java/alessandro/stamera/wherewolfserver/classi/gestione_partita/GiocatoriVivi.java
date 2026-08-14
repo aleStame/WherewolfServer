@@ -212,21 +212,21 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isLupoReiettoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(i).getRuolo().isLupoReietto();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(i).isLupoReietto();
         return trovato;
     }
 
     public boolean isCapoBrancoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(i).getRuolo().isCapoBranco();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(i).isCapoBranco();
         return trovato;
     }
 
     public boolean isLupoBrancoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getGiocatore(i).getRuolo().isLupoBranco();
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) trovato = getRuolo(i).isLupoBranco();
         return trovato;
     }
 
@@ -368,7 +368,7 @@ public final class GiocatoriVivi extends Giocatori
     private Ruolo[] getCreatureOmbra()
     {
         List<Ruolo> ruoli = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getGiocatore(i).getRuolo());
+        for(int i = 0; i < getNumeroGiocatori(); i++) ruoli.add(getRuolo(i));
         return ruoli.stream().filter(Ruolo::isCreaturaOmbra).toList().toArray(new Ruolo[0]);
     }
 
@@ -423,10 +423,9 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneNonna(posizione);
     }
 
-    private void aggiungiProtezioneNonna(int posizione)
-    {
-        getCappuccettoRosso().aggiungiProtezione(getGiocatore(posizione).getRuolo());
-    }
+    private void aggiungiProtezioneNonna(int posizione) { getCappuccettoRosso().aggiungiProtezione(getRuolo(posizione)); }
+
+    private Ruolo getRuolo(int posizione) { return getGiocatore(posizione).getRuolo(); }
 
     private Giocatore getCappuccettoRosso() { return getGiocatore(getPosizioneCappuccettoRosso()); }
 
@@ -520,7 +519,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isBecchino(int posizione) { return getGiocatore(posizione).getRuolo().isBecchino(); }
+    private boolean isBecchino(int posizione) { return getRuolo(posizione).isBecchino(); }
 
     private boolean isTemplare(String nome) { return getGiocatore(nome).getRuolo().isTemplare(); }
 
