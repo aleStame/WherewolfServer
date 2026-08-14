@@ -651,8 +651,12 @@ public final class GiocatoriVivi extends Giocatori
 
     private void estraiSecondoPosto(Ballottaggio ballottaggio)
     {
-        int numeroVoti = getNumeroVotiPrimoClassificato();
-        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
+        if(isBallottaggioIncompleto(ballottaggio)) aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
+    }
+
+    private boolean isBallottaggioIncompleto(Ballottaggio ballottaggio)
+    {
+        return ballottaggio.getNumeroGiocatori() < 2 && getNumeroVotiPrimoClassificato() > 0;
     }
 
     private void caricaAccusabili(Ballottaggio ballottaggio)

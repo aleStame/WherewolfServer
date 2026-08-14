@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isAngeloCustodePresente">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo scambioAngeloAmato" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,22 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00375" summary="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto">
-      <option name="closed" value="true" />
-      <created>1786546200688</created>
-      <option name="number" value="00375" />
-      <option name="presentableId" value="LOCAL-00375" />
-      <option name="project" value="LOCAL" />
-      <updated>1786546200688</updated>
-    </task>
-    <task id="LOCAL-00376" summary="REFACTORING: definizione del metodo verificaEsitoPassaggioPosseduto">
-      <option name="closed" value="true" />
-      <created>1786546277584</created>
-      <option name="number" value="00376" />
-      <option name="presentableId" value="LOCAL-00376" />
-      <option name="project" value="LOCAL" />
-      <updated>1786546277585</updated>
     </task>
     <task id="LOCAL-00377" summary="ROSSO: testNonContadino non riuscito">
       <option name="closed" value="true" />
@@ -598,7 +579,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786737272794</updated>
     </task>
-    <option name="localTasksCounter" value="424" />
+    <task id="LOCAL-00424" summary="REFACTORING: definizione del metodo isAmatoSalvabile">
+      <option name="closed" value="true" />
+      <created>1786737683418</created>
+      <option name="number" value="00424" />
+      <option name="presentableId" value="LOCAL-00424" />
+      <option name="project" value="LOCAL" />
+      <updated>1786737683418</updated>
+    </task>
+    <task id="LOCAL-00425" summary="REFACTORING: definizione del metodo scambioAngeloAmato">
+      <option name="closed" value="true" />
+      <created>1786737905907</created>
+      <option name="number" value="00425" />
+      <option name="presentableId" value="LOCAL-00425" />
+      <option name="project" value="LOCAL" />
+      <updated>1786737905907</updated>
+    </task>
+    <option name="localTasksCounter" value="426" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,8 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoLupiAngeloCustodeRomeizzato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezioneAngeloCustodeAttiva" />
     <MESSAGE value="REFACTORING: definizione del metodo isProtezioneAngeloCustodeNonAttiva" />
     <MESSAGE value="ROSSO: testTrattoPresente non riuscito" />
     <MESSAGE value="VERDE: testTrattoPresente riuscito" />
@@ -641,6 +636,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo salvataggioAmatoDaBallottaggio" />
     <MESSAGE value="REFACTORING: definizione del metodo accusaAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo isAngeloCustodePresente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAngeloCustodePresente" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAmatoSalvabile" />
+    <MESSAGE value="REFACTORING: definizione del metodo scambioAngeloAmato" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo scambioAngeloAmato" />
   </component>
 </project>
