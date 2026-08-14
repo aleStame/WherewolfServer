@@ -667,14 +667,16 @@ public final class TestGiocatore
     public void testNoSensitiva(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isSensitiva());
+        verificaFalso(isSensitiva());
     }
 
     @Test public void testSensitiva()
     {
         cambiaRuolo("Sensitiva");
-        verificaVero(giocatore.isSensitiva());
+        verificaVero(isSensitiva());
     }
+
+    private boolean isSensitiva() { return giocatore.isSensitiva(); }
 
     private boolean isCacciatoreDiVampiri() { return giocatore.isCacciatoreDiVampiri(); }
 

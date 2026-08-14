@@ -472,7 +472,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isSensitiva(int posizione) { return getGiocatore(posizione).getRuolo().isSensitiva(); }
+    private boolean isSensitiva(int posizione) { return getGiocatore(posizione).isSensitiva(); }
 
     private int getPosizioneMago()
     {
@@ -481,7 +481,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isMago(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).getRuolo().isMago(); }
+    private boolean isMago(int posizione) { return getGiocatore(posizione).getRuolo().isMago(); }
 
     private int getPosizioneGuaritore()
     {
