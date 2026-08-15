@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo perditaProtezioniAmato">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isPrimaNotte">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -615,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo perditaProtezioniNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo getCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo getRuolo" />
     <MESSAGE value="ROSSO: testNoCacciatoreDiVampiri non riuscito" />
@@ -640,6 +640,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo isAmatoSenzaAngelo" />
     <MESSAGE value="REFACTORING: definizione del metodo perditaProtezioniAmato" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo perditaProtezioniAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPrimaNotte" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPrimaNotte" />
   </component>
 </project>

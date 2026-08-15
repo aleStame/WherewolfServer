@@ -315,8 +315,10 @@ public final class Partita
     private void gestisciInterazioniMago(String nome)
     {
         if(vivi.isMegera(nome)) malediciMago();
-        else if(vivi.isContadinoMostro(nome) && !isPrimaNotte()) eliminaGiocatore(getNomeMagoVivo());
+        else if(morteMagoConContadinoMostro(nome)) eliminaGiocatore(getNomeMagoVivo());
     }
+
+    private boolean morteMagoConContadinoMostro(String nome) { return vivi.isContadinoMostro(nome) && !isPrimaNotte(); }
 
     private boolean isPrimaNotte() { return getNumeroNotte() == 1; }
 
