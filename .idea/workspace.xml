@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eccezioneEliminazioneCappuccettoRosso">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isAmatoSenzaAngelo">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,22 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00384" summary="REFACTORING: definizione del metodo isContadinoEroe">
-      <option name="closed" value="true" />
-      <created>1786551686074</created>
-      <option name="number" value="00384" />
-      <option name="presentableId" value="LOCAL-00384" />
-      <option name="project" value="LOCAL" />
-      <updated>1786551686074</updated>
-    </task>
-    <task id="LOCAL-00385" summary="ROSSO: testNoContadinoLupo non riuscito">
-      <option name="closed" value="true" />
-      <created>1786552531213</created>
-      <option name="number" value="00385" />
-      <option name="presentableId" value="LOCAL-00385" />
-      <option name="project" value="LOCAL" />
-      <updated>1786552531214</updated>
     </task>
     <task id="LOCAL-00386" summary="VERDE: testNoContadinoLupo riuscito">
       <option name="closed" value="true" />
@@ -597,7 +581,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786804513929</updated>
     </task>
-    <option name="localTasksCounter" value="433" />
+    <task id="LOCAL-00433" summary="REFACTORING: definizione del metodo getGiocatoreAmato">
+      <option name="closed" value="true" />
+      <created>1786804912606</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1786804912607</updated>
+    </task>
+    <task id="LOCAL-00434" summary="REFACTORING: definizione del metodo isAmatoSenzaAngelo">
+      <option name="closed" value="true" />
+      <created>1786805064626</created>
+      <option name="number" value="00434" />
+      <option name="presentableId" value="LOCAL-00434" />
+      <option name="project" value="LOCAL" />
+      <updated>1786805064626</updated>
+    </task>
+    <option name="localTasksCounter" value="435" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,8 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra" />
-    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo perditaProtezioniNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo getCappuccettoRosso" />
@@ -640,6 +638,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo gestisciEccezioniAttaccoLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo eccezioneMorteAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo eccezioneEliminazioneCappuccettoRosso" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eccezioneEliminazioneCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreAmato" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAmatoSenzaAngelo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAmatoSenzaAngelo" />
   </component>
 </project>

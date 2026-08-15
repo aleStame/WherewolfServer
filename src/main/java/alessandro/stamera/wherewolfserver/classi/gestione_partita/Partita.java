@@ -238,9 +238,11 @@ public final class Partita
     public void terminaNotte()
     {
         confermaEliminazioneMortiNotte();
-        if(isAmatoSenzaAngelo()) getGiocatoreAmato().perdiProtezioni();
+        if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
     }
+
+    private void perditaProtezioniAmato() { getGiocatoreAmato().perdiProtezioni(); }
 
     private boolean isAmatoSenzaAngelo() { return eliminati.isAngeloCustodePresente() && isAmatoVivo(); }
 
