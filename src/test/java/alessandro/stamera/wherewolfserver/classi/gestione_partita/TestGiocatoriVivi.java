@@ -201,7 +201,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Marco";
         inizializzaGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
-        giocatori.romeizzazione(nome);
+        romeizzazione(nome);
         verificaVero(giocatori.isRomeo(nome));
     }
 
@@ -226,13 +226,11 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneInquisitoreMisticoAssente()
     {
-        String nomeMistico = "Raffaele";
-        String[][] giocatori = new String[][] { { "Andrea", "Inquisitore" }, { "Raffaella", "Bocca di rosa" }, { nomeMistico, "Mago" } };
-        inizializzaGiocatori(giocatori);
-        int posizioneVoto = 1;
-        segnalazioneInquisitore(nomeMistico);
-        incrementaVoti(giocatori[posizioneVoto][0], 2);
-        verificaAccusati(nomeMistico, giocatori[posizioneVoto][0]);
+        String nomeVittima = "Raffaele", nomeInquisitore = "Andrea";
+        inizializzaGiocatori(new String[][] { { nomeInquisitore, "Inquisitore" }, { nomeVittima, "Bocca di rosa" } });
+        segnalazioneInquisitore(nomeVittima);
+        incrementaVoti(nomeInquisitore, 2);
+        verificaAccusati(nomeInquisitore);
     }
 
     @ParameterizedTest
@@ -249,14 +247,12 @@ public final class TestGiocatoriVivi
 
     @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
     {
-        String nomeMistico = "Irvano";
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nomeMistico, "Medium" }, { "Luca", "Inquisitore" } };
-        inizializzaGiocatori(giocatori);
+        String nomeMistico = "Irvano", nomeVittima = "Luca", nomeAngeloCustode = "Elena";
+        inizializzaGiocatori(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { nomeMistico, "Medium" }, { nomeVittima, "Inquisitore" } });
         segnalazioneInquisitore(nomeMistico);
         segnalazioneAngeloCustode(nomeMistico);
-        int posizioneVoto = 2;
-        incrementaVoti(giocatori[posizioneVoto][0], 2);
-        verificaAccusati(giocatori[0][0], giocatori[posizioneVoto][0]);
+        incrementaVoti(nomeVittima, 2);
+        verificaAccusati(nomeAngeloCustode, nomeVittima);
     }
 
     @ParameterizedTest
@@ -994,10 +990,10 @@ public final class TestGiocatoriVivi
 
     @Test public void testRomeizzazioneAngeloCustode()
     {
-        /*String nomeRomeo = "Piero";
+        String nomeRomeo = "Piero";
         inizializzaGiocatori(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
         romeizzazione(nomeRomeo);
-        verificaVero(giocatori.isRomeo(nomeRomeo));*/
+        verificaVero(giocatori.isRomeo(nomeRomeo));
     }
 
     @ParameterizedTest @CsvSource
