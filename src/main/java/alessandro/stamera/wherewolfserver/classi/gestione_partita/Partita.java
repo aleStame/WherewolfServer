@@ -315,8 +315,10 @@ public final class Partita
     private void gestisciInterazioniMago(String nome)
     {
         if(vivi.isMegera(nome)) malediciMago();
-        else if(morteMagoConContadinoMostro(nome)) eliminaGiocatore(getNomeMagoVivo());
+        else if(morteMagoConContadinoMostro(nome)) eliminaMago();
     }
+
+    private void eliminaMago() { eliminaGiocatore(getNomeMagoVivo()); }
 
     private boolean morteMagoConContadinoMostro(String nome) { return vivi.isContadinoMostro(nome) && !isPrimaNotte(); }
 
@@ -327,7 +329,7 @@ public final class Partita
     private int getPosizioneLiberaMaledettiNegromante()
     {
         int posizione = 0;
-        if(maledettiNegromante[posizione]!= null) posizione = 1;
+        if(maledettiNegromante[posizione] != null) posizione = 1;
         return posizione;
     }
 
