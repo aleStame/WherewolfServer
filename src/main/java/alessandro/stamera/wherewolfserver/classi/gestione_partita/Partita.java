@@ -338,9 +338,11 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO) if(isPrimaNotte()) eliminaGiocatore(vivi.getNomeSensitiva());
+        if(esito == VILLAGGIO) if(isPrimaNotte()) eliminaSensitiva();
         return esito;
     }
+
+    private void eliminaSensitiva() { eliminaGiocatore(vivi.getNomeSensitiva()); }
 
     public String getNomeGiocatoreVivo(int posizione) { return vivi.getNomeGiocatore(posizione); }
 
