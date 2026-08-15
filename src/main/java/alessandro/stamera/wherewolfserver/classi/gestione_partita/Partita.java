@@ -116,11 +116,7 @@ public final class Partita
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
-            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO ->
-            {
-                eliminaGiocatore(nome);
-                throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
-            }
+            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
         }
     }
 
@@ -264,6 +260,12 @@ public final class Partita
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
+
+    private void eccezioneEliminazioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
+    {
+        eliminaGiocatore(nome);
+        throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+    }
 
     private void eccezioneMorteAngeloCustode(String tipoLupo, String nome, String nomeLupo)
     {
