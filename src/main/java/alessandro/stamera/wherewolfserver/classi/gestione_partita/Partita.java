@@ -301,6 +301,7 @@ public final class Partita
 
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
     {
+        //fare il metodo "cambiaruolo" in GiocatoriVivi
         vivi.assorbiRuolo(nomeNonna, nomeLupo);
         eliminati.aggiungiGiocatore(nomeLupo, new Giocatore(RuoloNullo.getInstance()));
         throw new EccezioneNonnaBeccata(nomeLupo, tipoLupo, nomeNonna);
@@ -314,8 +315,10 @@ public final class Partita
     private void gestisciInterazioniMago(String nome)
     {
         if(vivi.isMegera(nome)) malediciMago();
-        else if(vivi.isContadinoMostro(nome) && getNumeroNotte() > 1) eliminaGiocatore(getNomeMagoVivo());
+        else if(vivi.isContadinoMostro(nome) && !isPrimaNotte()) eliminaGiocatore(getNomeMagoVivo());
     }
+
+    private boolean isPrimaNotte() { return getNumeroNotte() == 1; }
 
     private String getNomeMagoVivo() { return vivi.getNomeMago(); }
 
@@ -331,7 +334,7 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO) if(getNumeroNotte() > 1 ) eliminaGiocatore(vivi.getNomeSensitiva());
+        if(esito == VILLAGGIO) if(isPrimaNotte()) eliminaGiocatore(vivi.getNomeSensitiva());
         return esito;
     }
 
@@ -623,7 +626,7 @@ public final class Partita
 
     private void assassinioContadinoMostro(String nome)
     {
-        if(getNumeroNotte() > 1) eliminaGiocatori(nome, vivi.getNomeAssassino());
+        if(isPrimaNotte()) eliminaGiocatori(nome, vivi.getNomeAssassino());
         else eliminaGiocatore(nome);
     }
 
