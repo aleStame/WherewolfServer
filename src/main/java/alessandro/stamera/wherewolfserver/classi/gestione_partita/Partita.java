@@ -362,17 +362,19 @@ public final class Partita
 
     public boolean isFazioneNosferatu(String nome)
     {
-        if(isVivo(nome)) return vivi.isFazioneNosferatu(nome);
-        else return false;
+        boolean esito = false;
+        if(isVivo(nome)) esito = vivi.isFazioneNosferatu(nome);
+        return esito;
     }
 
     public boolean isNosferatuVincitore()
     {
         boolean esito = false;
-        if(vivi.isNosferatuPresente()) esito = isPartitaVinta(getGiocatore(vivi.getNomeNosferatu()).getRuolo());
-        else if(eliminati.isNosferatuPresente()) esito = isPartitaVinta(eliminati.getGiocatore(eliminati.getNomeNosferatu()).getRuolo());
+        if(isNosferatuPresente()) esito = verificaVittoriaNosferatu();
         return esito;
     }
+
+    private boolean isNosferatuPresente() { return vivi.isNosferatuPresente() || eliminati.isNosferatuPresente(); }
 
     public Aura controlloMedium(String nome) { return eliminati.controlloMedium(nome); }
 
@@ -428,6 +430,14 @@ public final class Partita
         progenizzatore.cambiaRuolo(posseduto.getRuolo());
         confermaEliminazioneMortiNotte();
         throw new EccezioneProgenizzazionePosseduto(ruoloProgenizzatore, nomeProgenizzatore, nomePosseduto);
+    }
+
+    private boolean verificaVittoriaNosferatu()
+    {
+        Giocatore giocatore;
+        if(vivi.isNosferatuPresente()) giocatore = getGiocatore(vivi.getNomeNosferatu());
+        else giocatore = getGiocatore(eliminati.getNomeNosferatu());
+        return isPartitaVinta(giocatore.getRuolo());
     }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
@@ -655,7 +665,8 @@ public final class Partita
     {
         Giocatore giocatore;
         if(isVivo(nome)) giocatore = vivi.getGiocatore(nome);
-        else giocatore = mortiNotte.getGiocatore(nome);
+        else if(mortiNotte.isPresente(nome)) giocatore = mortiNotte.getGiocatore(nome);
+        else giocatore = eliminati.getGiocatore(nome);
         return giocatore;
     }
 
