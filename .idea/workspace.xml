@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo gestisciEccezioniAttaccoLupi" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,14 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00381" summary="ROSSO: testNoContadinoEroe non riuscito">
-      <option name="closed" value="true" />
-      <created>1786548410956</created>
-      <option name="number" value="00381" />
-      <option name="presentableId" value="LOCAL-00381" />
-      <option name="project" value="LOCAL" />
-      <updated>1786548410956</updated>
     </task>
     <task id="LOCAL-00382" summary="VERDE: testNoContadinoEroe riuscito">
       <option name="closed" value="true" />
@@ -597,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786802779825</updated>
     </task>
-    <option name="localTasksCounter" value="430" />
+    <task id="LOCAL-00430" summary="REFACTORING: definizione del metodo gestisciEccezioniAttaccoLupi">
+      <option name="closed" value="true" />
+      <created>1786804002336</created>
+      <option name="number" value="00430" />
+      <option name="presentableId" value="LOCAL-00430" />
+      <option name="project" value="LOCAL" />
+      <updated>1786804002336</updated>
+    </task>
+    <option name="localTasksCounter" value="431" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreAmato" />
     <MESSAGE value="REFACTORING: definizione del metodo getPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo trasformaPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCreatureOmbra" />
@@ -640,6 +637,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getNomiGiocatoriCondizione" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestisciEccezioniAttaccoLupi" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo gestisciEccezioniAttaccoLupi" />
   </component>
 </project>
