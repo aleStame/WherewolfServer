@@ -105,8 +105,7 @@ public final class Partita
 
     public void attaccoLupi(String tipoLupo, String nome)
     {
-        if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
-        if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
+        gestisciEccezioniAttaccoLupi();
         String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
         switch(attaccoLupi(getGiocatore(nomeLupo).getRuolo(), nome))
         {
@@ -269,6 +268,12 @@ public final class Partita
     }
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
+
+    private void gestisciEccezioniAttaccoLupi()
+    {
+        if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
+        if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
+    }
 
     private void nosferatizzazione(String nome)
     {
