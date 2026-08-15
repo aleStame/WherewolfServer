@@ -238,9 +238,11 @@ public final class Partita
     public void terminaNotte()
     {
         confermaEliminazioneMortiNotte();
-        if(eliminati.isAngeloCustodePresente() && isAmatoVivo()) getGiocatore(vivi.getNomeAmato()).perdiProtezioni();
+        if(eliminati.isAngeloCustodePresente() && isAmatoVivo()) getGiocatoreAmato().perdiProtezioni();
         numeroNotte++;
     }
+
+    private Giocatore getGiocatoreAmato() { return getGiocatore(vivi.getNomeAmato()); }
 
     public Misticismo controlloMago(String nome)
     {
@@ -383,7 +385,7 @@ public final class Partita
             case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO ->
             {
-                if(vivi.isAngeloCustode(nome)) getGiocatore(vivi.getNomeAmato()).annullaProtezioneAngeloCustode();
+                if(vivi.isAngeloCustode(nome)) getGiocatoreAmato().annullaProtezioneAngeloCustode();
                 getGiocatore(nome).cambiaRuolo(getGiocatore(mortiNotte.getNomePosseduto()).getRuolo());
             }
         }
