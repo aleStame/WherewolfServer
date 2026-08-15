@@ -398,11 +398,7 @@ public final class Partita
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
             case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
-            case RIUSCITO ->
-            {
-                if(vivi.isAngeloCustode(nome)) getGiocatoreAmato().annullaProtezioneAngeloCustode();
-                getGiocatore(nome).cambiaRuolo(getGiocatore(mortiNotte.getNomePosseduto()).getRuolo());
-            }
+            case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
         }
     }
 
@@ -421,6 +417,12 @@ public final class Partita
     public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 
     public boolean isAmato(String nome) { return getGiocatore(nome).isAmato(); }
+
+    private void gestionePassaggioPossedutoRiuscito(String nome)
+    {
+        if(vivi.isAngeloCustode(nome)) getGiocatoreAmato().annullaProtezioneAngeloCustode();
+        getGiocatore(nome).cambiaRuolo(getGiocatore(mortiNotte.getNomePosseduto()).getRuolo());
+    }
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
