@@ -934,14 +934,14 @@ public final class TestPartita
 
     @Test public void testControlloSensitivaContadinoMostro()
     {
-        String[][] giocatori = new String[][] { { "Antonio", "Contadino mostro" }, { "Carlo", "Sensitiva" } };
+        String nomeContadinoMostro = "Antonio", nomeSensitiva = "Carlo";
+        String[][] giocatori = new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { "Carlo", "Sensitiva" } };
         inizializzaPartita(giocatori);
         terminaNotte();
-        int posizioneContadino = 0;
-        verificaVillaggio(giocatori[posizioneContadino][0]);
+        verificaVillaggio(nomeContadinoMostro);
         terminaNotte();
-        verificaEliminazione(giocatori[1][0]);
-        verificaNonEliminati(giocatori[posizioneContadino][0]);
+        verificaEliminazione(nomeSensitiva);
+        verificaNonEliminati(nomeContadinoMostro);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
