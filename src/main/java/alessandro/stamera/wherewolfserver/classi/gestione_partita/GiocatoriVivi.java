@@ -252,14 +252,14 @@ public final class GiocatoriVivi extends Giocatori
 
     public void protezioneStrega(String nome)
     {
-        Ruolo stregato = getGiocatore(nome).getRuolo();
-        stregato.protezioneStrega();
+        Giocatore giocatore = getGiocatore(nome);
+        giocatore.protezioneStrega();
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
     public void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
 
-    public boolean isStregato(String nome) { return getGiocatore(nome).getRuolo().isStregato(); }
+    public boolean isStregato(String nome) { return getGiocatore(nome).isStregato(); }
 
     public boolean isVampiroAmato()
     {

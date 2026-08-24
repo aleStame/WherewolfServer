@@ -560,13 +560,13 @@ public final class TestPartita
 
     @Test public void testAttaccoNosferatuContadinoMostroRomeo()
     {
-        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", nomeLupo = "Renato";
+        String nomeVittima = "Gianmaria", nomeLupo = "Renato";
         inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" } });
-        //romeizzazione(nomeVittima);
+        romeizzazione(nomeVittima);
         attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
-        verificaEliminati(nomeVittima, nomeNosferatu);
+        verificaEliminati(nomeVittima);
     }
 
     @Test public void testAttaccoNosferatuFallito()
@@ -949,7 +949,8 @@ public final class TestPartita
     {
         String[][] giocatori = new String[][] { { "Margerita", "Eremita" }, { "Tony", tipoLupo } };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, giocatori[0][0]);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, giocatori[0][0]))
+            .withMessage("Margerita è l'Eremita, i lupi non possono ucciderlo.");
         terminaNotte();
         verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
@@ -1154,11 +1155,13 @@ public final class TestPartita
             { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { "Terzo", "Contadino mostro" }, { "Quarto", "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        String nomeVittima = giocatori[2][0], messaggio =
-            "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro " +
-            "morte.";
-        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        progenizzazioneNosferatu(nomeVittima);
+        String nomeVittima = giocatori[2][0];
+        String messaggioLupi =
+            "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro morte.";
+        String messaggioNosferatu =
+            "Il tentativo di progenizzazione del Contadino mostro (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
+        verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggioLupi);
+        verificaFallimentoProgenizzazione(nomeVittima, messaggioNosferatu);
         terminaNotte();
         verificaEliminati(giocatori[0][0], giocatori[3][0]);
     }

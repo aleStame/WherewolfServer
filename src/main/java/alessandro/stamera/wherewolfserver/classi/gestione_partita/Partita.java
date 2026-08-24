@@ -309,8 +309,13 @@ public final class Partita
 
     private void nessunaEliminazione(String nome)
     {
-        //if(potereStregaUsato)
-            throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+        if(getGiocatore(nome).getRuolo().isEremita()) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
+        else
+        {
+            boolean valore = vivi.isRomeo(nome);
+            if(potereStregaUsato) valore = true;
+            throw new EccezioneAttaccoGiocatoreProtetto(valore, nome);
+        }
     }
 
     private void gestisciInterazioniMago(String nome)

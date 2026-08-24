@@ -25,7 +25,7 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean segnalatoBoia, segnalatoOratore, stregato;
+    private boolean segnalatoBoia, segnalatoOratore;
 
     private final boolean mistico;
 
@@ -50,7 +50,6 @@ public class Ruolo
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
-        stregato = false;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -185,8 +184,6 @@ public class Ruolo
 
     public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
 
-    public void aggiungiProtezioneCreatureOmbra() { tratti.aggiungiProtezioneCreatureOmbra(); }
-
     public boolean isMago() { return false; }
 
     public boolean isMedium() { return false; }
@@ -273,14 +270,10 @@ public class Ruolo
 
     public boolean isVampiro() { return false; }
 
-    public void protezioneStrega() { stregato = true; }
-
     public TipoContadino getTipoContadino()
     {
         throw new IllegalStateException("ERRORE!!! Questo ruolo non è un contadino.");
     }
-
-    public boolean isStregato() { return stregato; }
 
     public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
 

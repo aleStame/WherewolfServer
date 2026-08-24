@@ -212,6 +212,10 @@ public final class Giocatore
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
+    public boolean isStregato() { return false; }
+
+    public void protezioneStrega() { }
+
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
@@ -277,6 +281,7 @@ public final class Giocatore
     public EsitoAttacco attaccoNegromante()
     {
         EsitoAttacco esito = ruolo.attaccoNegromante();
+        if(tratti.isProtezioneNegromantePresente()) esito = FALLITO;
         if(esito == RIUSCITO) maledizione();
         return esito;
     }

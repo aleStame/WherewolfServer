@@ -677,6 +677,13 @@ public final class TestGiocatore
         verificaVero(isSensitiva());
     }
 
+    @Test public void testGiocatoreStregato()
+    {
+        verificaFalso(giocatore.isStregato());
+        giocatore.protezioneStrega();
+        verificaVero(giocatore.isStregato());
+    }
+
     private boolean isSensitiva() { return giocatore.isSensitiva(); }
 
     private boolean isCacciatoreDiVampiri() { return giocatore.isCacciatoreDiVampiri(); }
