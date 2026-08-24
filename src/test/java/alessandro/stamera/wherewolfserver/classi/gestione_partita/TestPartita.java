@@ -245,7 +245,7 @@ public final class TestPartita
     {
         String nome = "Luca", nomeLupo = "Mario";
         inizializzaPartita(new String[][] { { nome, "Angelo custode" }, { nomeLupo, tipoLupo }, { "Lucio", "Giulietta" } });
-        //romeizzazione(nome);
+        romeizzazione(nome);
         String messaggio = "Luca non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
         verificaAttaccoLupiAngeloCustodeFallito(tipoLupo, nome, messaggio);
     }
