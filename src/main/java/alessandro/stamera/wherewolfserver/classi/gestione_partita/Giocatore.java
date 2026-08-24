@@ -16,7 +16,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato;
 
     private Ruolo ruolo;
 
@@ -32,6 +32,7 @@ public final class Giocatore
         annullaSegnalazioneInquisitore();
         cambiaFazione(NESSUNA);
         setRomeo(false);
+        stregato = false;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -212,9 +213,9 @@ public final class Giocatore
 
     public boolean isTrattoPresente(Tratto tratto) { return tratti.isPresente(tratto); }
 
-    public boolean isStregato() { return false; }
+    public boolean isStregato() { return stregato; }
 
-    public void protezioneStrega() { }
+    public void protezioneStrega() { stregato = true; }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
