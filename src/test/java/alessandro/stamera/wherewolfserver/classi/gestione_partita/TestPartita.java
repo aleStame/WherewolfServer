@@ -1449,7 +1449,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { nomeLupo, "Capo branco" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        //romeizzazione(nomeRomeo);
+        romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
         attaccoLupi("Capo branco", nomeGiulietta);
         terminaNotte();
@@ -1869,8 +1869,8 @@ public final class TestPartita
             { "Pino", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        //romeizzazione(nomeAngelo);
-        nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
+        romeizzazione(nomeAngelo);
+        nosferatizzazioneAngeloCustodeAmatoProtetto(nome, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
@@ -1893,7 +1893,7 @@ public final class TestPartita
         };
         inizializzaPartita(giocatori);
         //protezioneStrega(nomeAngelo);
-        nosferatizzazioneAngeloCustodeAmatoProtetto(nomeRuolo, nome, nomeAngelo);
+        nosferatizzazioneAngeloCustodeAmatoProtetto(nome, nomeAngelo);
     }
 
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoAmatoSenzaAngeloCustode()
@@ -1969,7 +1969,7 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
-    private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nomeRuolo, String nome, String nomeAngelo)
+    private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nome, String nomeAngelo)
     {
         segnalazioneAngeloCustode(nome);
         attaccoAssassino(nomeAngelo);
