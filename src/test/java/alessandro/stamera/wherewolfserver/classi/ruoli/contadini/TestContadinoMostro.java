@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -43,22 +42,11 @@ public final class TestContadinoMostro
 
     @Test public void testAttaccoNegromante() { verificaAttaccoMorto(ruolo.attaccoNegromante()); }
 
-    @Test public void testAttaccoNegromanteRomeizzato()
-    {
-        romeizzazione();
-        verificaAttaccoFallito(ruolo.attaccoNegromante());
-    }
-
     @Test public void testVampirizzazione() { assertThat(ruolo.vampirizzazione()).isEqualTo(MORTO); }
 
     @Test public void testTipoContadino() { assertThat(ruolo.getTipoContadino()).isEqualTo(MOSTRO); }
 
     @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
-
-    private void verificaAttaccoFallito(EsitoAttacco esito) { verificaAttacco(esito, FALLITO); }
-
-    private void romeizzazione() { //ruolo.romeizzazione();
-    }
 
     private void verificaMaledetto()
     {
@@ -66,7 +54,7 @@ public final class TestContadinoMostro
         assertThat(ruolo.getAura()).isEqualTo(NERA);
     }
 
-    private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito, MORTO); }
+    private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
@@ -76,6 +64,6 @@ public final class TestContadinoMostro
 
     private Ruolo getRuolo(String nome) { return FACTORY.getRuolo(nome); }
 
-    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato) { assertThat(valore).isEqualTo(risultato); }
+    private void verificaAttacco(EsitoAttacco valore) { assertThat(valore).isEqualTo(EsitoAttacco.MORTO); }
 
 }

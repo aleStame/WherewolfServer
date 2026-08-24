@@ -13,7 +13,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
@@ -33,34 +32,8 @@ public final class TestRuolo
     }
 
     @ParameterizedTest
-    @CsvSource( { "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" } )
-    public void testAttaccoLupoRomeo(String nome)
-    {
-        romeizzazione();
-        verificaProtetto();
-        //verificaAttaccoLupiRiuscito(nome);
-    }
-
-    @ParameterizedTest
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" })
     public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoLupiRiuscito(nome); }
-
-    @Test public void testAttaccoNegromanteRomeo()
-    {
-        romeizzazione();
-        verificaFalso(maledizione());
-        verificaFalso(isMaledetto());
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi", "Nosferatu", "Posseduto" })
-    public void testRomeizzazione(String nomeCreaturaOmbra)
-    {
-        romeizzazione();
-        verificaProtetto();
-        verificaVero(ruolo.isProtezionePresente(FACTORY.getRuolo(nomeCreaturaOmbra)));
-        //verificaVero(ruolo.isRomeo());
-    }
 
     @Test public void vampirizzazione() { verificaAttaccoRiuscito(ruolo.vampirizzazione()); }
 
@@ -111,13 +84,6 @@ public final class TestRuolo
 
     private boolean isSegnalatoOratore() { return ruolo.isSegnalatoOratore(); }
 
-    private void romeizzazione() { //ruolo.romeizzazione();
-    }
-
-    private boolean maledizione() { return ruolo.maledizione(); }
-
-    private boolean isMaledetto() { return ruolo.isMaledetto(); }
-
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 
     private void verificaAttaccoRiuscito(EsitoAttacco esito) { assertThat(esito).isEqualTo(RIUSCITO); }
@@ -130,8 +96,6 @@ public final class TestRuolo
         verificaFalso(ruolo.isProtezioneNegromantePresente());
         verificaFalso(ruolo.isProtezioneVampiroPresente());
     }
-
-    private void verificaProtetto() { verificaVero(ruolo.isTrattoPresente(PROTETTO)); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

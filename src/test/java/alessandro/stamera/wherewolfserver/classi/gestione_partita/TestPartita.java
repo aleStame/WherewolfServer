@@ -916,7 +916,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Lino", "Contadino mostro" }, { "Dino", "Negromante" }, { "Pino", "Giulietta" } };
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
-        //romeizzazione(giocatori[posizioneVittima][0]);
+        romeizzazione(giocatori[posizioneVittima][0]);
         assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
             .withMessage("Scegli un'altra persona da attaccare.");
         terminaNotte();
