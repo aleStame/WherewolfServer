@@ -1892,7 +1892,7 @@ public final class TestPartita
             { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" }, { "Pino", "Strega" }
         };
         inizializzaPartita(giocatori);
-        //protezioneStrega(nomeAngelo);
+        protezioneStrega(nomeAngelo);
         nosferatizzazioneAngeloCustodeAmatoProtetto(nome, nomeAngelo);
     }
 

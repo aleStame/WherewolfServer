@@ -109,7 +109,7 @@ public final class Partita
         String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
         switch(attaccoLupi(getGiocatore(nomeLupo).getRuolo(), nome))
         {
-            case RIUSCITO -> eliminaGiocatore(nome);
+            case RIUSCITO, TROVATO_POSSEDUTO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
@@ -529,7 +529,7 @@ public final class Partita
                 vivi.annullaMaledizione(nomeGiocatore);
         }
         else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
-        /*else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;*/
+        //else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
     }
 
