@@ -343,7 +343,7 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO) if(isPrimaNotte()) eliminaSensitiva();
+        if(esito == VILLAGGIO) if(isPrimaNotte() || vivi.isContadinoMostro(nome)) eliminaSensitiva();
         return esito;
     }
 
