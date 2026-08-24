@@ -28,7 +28,6 @@ public final class RuoliFactory
         {
             case "Cacciatore" -> ruolo = getCacciatore();
             case "Goblin" -> ruolo = getGoblin();
-            case "Giulietta" -> ruolo = getPersonaggioProtetto(nome);
             case "Eremita" -> ruolo = getEremita();
             case "Ladra" -> ruolo = getLadra();
             case "Leprecauno" -> ruolo = getLeprecauno();
