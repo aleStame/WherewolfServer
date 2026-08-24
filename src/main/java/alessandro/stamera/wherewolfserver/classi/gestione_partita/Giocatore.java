@@ -285,6 +285,8 @@ public final class Giocatore
 
     public boolean isSensitiva() { return ruolo.isSensitiva(); }
 
+    public boolean isInquisitore() { return ruolo.isInquisitore(); }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;

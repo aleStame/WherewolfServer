@@ -529,7 +529,7 @@ public final class Partita
                 vivi.annullaMaledizione(nomeGiocatore);
         }
         else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
-        //else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
+        else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
     }
 
