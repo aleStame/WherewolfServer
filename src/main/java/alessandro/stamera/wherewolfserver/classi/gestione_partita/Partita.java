@@ -334,7 +334,11 @@ public final class Partita
         return posizione;
     }
 
-    public void romeizzazione(String nome) { vivi.romeizzazione(nome); }
+    public void romeizzazione(String nome)
+    {
+        vivi.romeizzazione(nome);
+        if(vivi.isRomeo(nome)) vivi.aggiungiProtezioneCreatureOmbra(nome);
+    }
 
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {

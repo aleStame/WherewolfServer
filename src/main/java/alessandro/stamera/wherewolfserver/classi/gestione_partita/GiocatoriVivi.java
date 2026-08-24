@@ -257,7 +257,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
-    private void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
+    public void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
 
     public boolean isStregato(String nome) { return getGiocatore(nome).getRuolo().isStregato(); }
 
