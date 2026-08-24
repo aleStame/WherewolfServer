@@ -309,7 +309,8 @@ public final class Partita
 
     private void nessunaEliminazione(String nome)
     {
-        if(potereStregaUsato) throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
+        //if(potereStregaUsato)
+            throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
     }
 
     private void gestisciInterazioniMago(String nome)
