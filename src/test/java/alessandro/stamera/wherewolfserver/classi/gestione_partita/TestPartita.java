@@ -1735,14 +1735,20 @@ public final class TestPartita
 
     @Test public void testAttaccoCapoBrancoAmatoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica", nomeCacciatore = "Alfredo";
+        String[][] giocatori =
+            new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Angelo custode" } };
+        inizializzaPartita(giocatori);
         String messaggio =
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         verificaVero(partita.isCapoBranco(nomeVittima));
+        terminaNotte();
+        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
+        verificaNonEliminati(nomeCacciatore);
     }
 
     @Test public void testAttaccoLupoBrancoNonna()
