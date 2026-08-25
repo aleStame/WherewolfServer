@@ -1156,6 +1156,8 @@ public final class TestGiocatoriVivi
         verificaAttacco(giocatori.passaPosseduto(nome), MORTO);
     }
 
+    @Test public void testCacciatoreAssente() { verificaFalso(giocatori.isCacciatorePresente()); }
+
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
     private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }
