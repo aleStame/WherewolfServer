@@ -1745,7 +1745,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
         String messaggio =
             "Il Lupo del branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
-            "Federica è il Capo branco.";
+            "Federica è il Lupo del branco.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         verificaVero(partita.isLupoBranco(nomeVittima));
     }

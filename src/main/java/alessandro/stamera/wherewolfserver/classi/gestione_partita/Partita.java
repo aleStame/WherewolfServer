@@ -267,7 +267,7 @@ public final class Partita
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
 
-    public boolean isLupoBranco(String nome) { return false; }
+    public boolean isLupoBranco(String nome) { return vivi.isLupoBranco(nome); }
 
     private void eccezioneEliminazioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
     {
