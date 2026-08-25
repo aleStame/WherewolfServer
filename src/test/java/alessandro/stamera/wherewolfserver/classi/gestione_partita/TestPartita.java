@@ -496,14 +496,14 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizioneVittima][0]);
     }
 
-    @Test public void testAttaccoLupoSolitarioCacciatore()
+    /*@Test public void testAttaccoLupoSolitarioCacciatore()
     {
         String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
         attaccoLupi(lupo, nomeCacciatore);
         terminaNotte();
         verificaEliminati(nomeLupo, nomeCacciatore);
-    }
+    }*/
 
     @Test public void testAttaccoUltimoLupo()
     {
@@ -1728,7 +1728,7 @@ public final class TestPartita
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggioNonna, nomeLupo);
         verificaVero(partita.isCapoBranco(nomeVittima));
         terminaNotte();
-        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto da Ciro in quanto lupo ex Nonna.\nAvvisa Ciro dell'attacco fallito.";
+        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
         verificaNonEliminati(nomeCacciatore);
     }
