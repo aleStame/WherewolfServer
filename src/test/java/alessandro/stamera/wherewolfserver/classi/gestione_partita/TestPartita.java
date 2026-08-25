@@ -179,7 +179,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } };
         inizializzaPartita(giocatori);
-        //protezioneStrega(nomeVittima);
+        protezioneStrega(nomeVittima);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -1584,7 +1584,7 @@ public final class TestPartita
             { "Gianmario", "Strega" }
         };
         inizializzaPartita(giocatori);
-        //protezioneStrega(nomePrete);
+        protezioneStrega(nomePrete);
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
     }
 
@@ -1653,7 +1653,7 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        //protezioneStrega(nomeVampiro);
+        protezioneStrega(nomeVampiro);
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
@@ -1688,7 +1688,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo } };
         inizializzaPartita(giocatori);
-        //protezioneStrega(nomeNosferatu);
+        protezioneStrega(nomeNosferatu);
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 

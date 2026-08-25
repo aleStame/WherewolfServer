@@ -313,7 +313,7 @@ public final class Partita
         else
         {
             boolean valore = vivi.isRomeo(nome);
-            if(potereStregaUsato) valore = true;
+            if(potereStregaUsato) valore = false;
             throw new EccezioneAttaccoGiocatoreProtetto(valore, nome);
         }
     }
@@ -654,7 +654,7 @@ public final class Partita
 
     private void assassinioContadinoMostro(String nome)
     {
-        if(isPrimaNotte()) eliminaGiocatori(nome, vivi.getNomeAssassino());
+        if(!isPrimaNotte()) eliminaGiocatori(nome, vivi.getNomeAssassino());
         else eliminaGiocatore(nome);
     }
 

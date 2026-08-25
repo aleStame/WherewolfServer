@@ -1,13 +1,10 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -65,13 +62,6 @@ public final class TestLupo
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
-    /*@ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Contadino discendente dei lupi" })
-    public void testAttaccoRomeo(String nome)
-    {
-        ruolo.romeizzazione();
-        verificaAttaccoLupiFallito(nome);
-    }*/
-
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();
@@ -86,16 +76,11 @@ public final class TestLupo
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
+    @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(RIUSCITO); }
+
     private Fazione getFazione() { return ruolo.getFazione(); }
 
     private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
-
-    private void verificaAttaccoLupiFallito(String nome) { verificaAttacco(ruolo.attaccoLupi(FACTORY.getRuolo(nome)), FALLITO); }
-
-    private void verificaAttacco(EsitoAttacco valore, EsitoAttacco risultato)
-    {
-        assertThat(valore).isEqualTo(risultato);
-    }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
