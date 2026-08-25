@@ -76,7 +76,7 @@ public final class TestLupo
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
-    @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(RIUSCITO); }
+    @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(FALLITO); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
 
