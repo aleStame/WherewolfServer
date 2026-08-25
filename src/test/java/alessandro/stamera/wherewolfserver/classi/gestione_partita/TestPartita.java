@@ -1726,7 +1726,7 @@ public final class TestPartita
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggioNonna, nomeLupo);
-        verificaVero(partita.isCapoBranco(nomeVittima));
+        verificaCapoBranco(nomeVittima);
         verifricaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
@@ -1741,7 +1741,7 @@ public final class TestPartita
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isCapoBranco(nomeVittima));
+        verificaCapoBranco(nomeVittima);
         verifricaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
@@ -2001,6 +2001,8 @@ public final class TestPartita
         terminaNotte();
         verificaNonEliminati(nomeVittima);
     }
+
+    private void verificaCapoBranco(String nome) { verificaVero(partita.isCapoBranco(nome)); }
 
     private void verifricaProtezioneCacciatore(String tipoLupo, String nomeCacciatore)
     {
