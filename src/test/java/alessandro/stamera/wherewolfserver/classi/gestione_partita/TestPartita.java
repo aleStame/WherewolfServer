@@ -1727,10 +1727,7 @@ public final class TestPartita
             "Federica è il Capo branco.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggioNonna, nomeLupo);
         verificaVero(partita.isCapoBranco(nomeVittima));
-        terminaNotte();
-        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
-        verificaNonEliminati(nomeCacciatore);
+        verifricaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoCapoBrancoAmatoNonna()
@@ -1745,10 +1742,7 @@ public final class TestPartita
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
         verificaVero(partita.isCapoBranco(nomeVittima));
-        terminaNotte();
-        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
-        verificaNonEliminati(nomeCacciatore);
+        verifricaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoLupoBrancoNonna()
@@ -2006,6 +2000,14 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
+    }
+
+    private void verifricaProtezioneCacciatore(String tipoLupo, String nomeCacciatore)
+    {
+        terminaNotte();
+        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
+        verificaNonEliminati(nomeCacciatore);
     }
 
     private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nome, String nomeAngelo)
