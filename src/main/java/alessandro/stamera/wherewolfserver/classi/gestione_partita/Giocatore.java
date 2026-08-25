@@ -152,7 +152,7 @@ public final class Giocatore
         return esito;
     }
 
-    public boolean isEremita() { return true; }
+    public boolean isEremita() { return ruolo.isEremita(); }
 
     private EsitoAttacco gestioneAttaccoVittimaProtetta(Ruolo lupo, EsitoAttacco esito)
     {
