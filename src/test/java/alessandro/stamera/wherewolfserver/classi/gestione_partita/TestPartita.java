@@ -1804,7 +1804,7 @@ public final class TestPartita
             "Il Lupo solitario (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo solitario.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoSolitario(nomeLupo));
+        verificaVero(partita.isLupoSolitario(nomeVittima));
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
