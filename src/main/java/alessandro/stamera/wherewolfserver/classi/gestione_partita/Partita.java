@@ -269,7 +269,7 @@ public final class Partita
 
     public boolean isLupoBranco(String nome) { return vivi.isLupoBranco(nome); }
 
-    public boolean isLupoReietto(String nome) { return false; }
+    public boolean isLupoReietto(String nome) { return getGiocatore(nome).getRuolo().isLupoReietto(); }
 
     private void eccezioneEliminazioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
     {

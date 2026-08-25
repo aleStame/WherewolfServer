@@ -1772,7 +1772,7 @@ public final class TestPartita
 
     @Test public void testAttaccoLupoReiettoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        String nomeLupo = "Ciro", tipoLupo = "Lupo reietto", nomeVittima = "Federica", nomeCacciatore = "Lucia";
         inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
         String messaggio =
             "Il Lupo reietto (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
