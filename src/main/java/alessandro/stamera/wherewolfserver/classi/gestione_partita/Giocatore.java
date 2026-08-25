@@ -152,6 +152,8 @@ public final class Giocatore
         return esito;
     }
 
+    public boolean isEremita() { return true; }
+
     private EsitoAttacco gestioneAttaccoVittimaProtetta(Ruolo lupo, EsitoAttacco esito)
     {
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
