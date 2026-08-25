@@ -701,6 +701,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isEremita());
     }
 
+    @Test public void testEremita()
+    {
+        cambiaRuolo("Eremita");
+        verificaVero(giocatore.isEremita());
+    }
+
     private boolean isSensitiva() { return giocatore.isSensitiva(); }
 
     private boolean isCacciatoreDiVampiri() { return giocatore.isCacciatoreDiVampiri(); }
