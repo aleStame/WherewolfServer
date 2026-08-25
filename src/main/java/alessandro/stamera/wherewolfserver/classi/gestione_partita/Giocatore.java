@@ -5,8 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 
 public final class Giocatore
@@ -217,6 +216,8 @@ public final class Giocatore
 
     public void protezioneStrega() { stregato = true; }
 
+    public boolean isCreaturaOmbra() { return ruolo.isCreaturaOmbra() || isTrattoPresente(CREATURA_OMBRA); }
+
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
@@ -235,7 +236,11 @@ public final class Giocatore
 
     private void setFazione(Fazione fazione) { this.fazione = fazione; }
 
-    private void trasformaNonMorto() { tratti.aggiungi(NON_MORTO); }
+    private void trasformaNonMorto()
+    {
+        tratti.aggiungi(CREATURA_OMBRA);
+        tratti.aggiungi(NON_MORTO);
+    }
 
     private boolean isGiocatoreAuraNera() { return isMaledetto() || isGiocatoreLupizzato(); }
 

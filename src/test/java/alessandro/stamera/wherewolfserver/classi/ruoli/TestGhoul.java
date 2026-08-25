@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -24,7 +23,7 @@ public final class TestGhoul
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
@@ -80,8 +79,6 @@ public final class TestGhoul
 
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testEsempioPartita(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
-
-    private static Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private static Stream<Arguments> getEsempiPartita()
     {

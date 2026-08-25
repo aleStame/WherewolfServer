@@ -310,7 +310,7 @@ public final class Partita
     private void nessunaEliminazione(String nome)
     {
         if(getGiocatore(nome).getRuolo().isEremita()) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
-        else
+        else if(!vivi.isLupo(nome))
         {
             boolean valore = vivi.isRomeo(nome);
             if(potereStregaUsato) valore = false;
