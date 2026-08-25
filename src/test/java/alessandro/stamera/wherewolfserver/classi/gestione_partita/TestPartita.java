@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -1803,7 +1802,7 @@ public final class TestPartita
             "Il Lupo solitario (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo solitario.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoSolitario(nomeVittima));
+        verificaLupoSolitario(nomeVittima);
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
@@ -1818,7 +1817,7 @@ public final class TestPartita
             "Il Lupo solitario (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo solitario.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoSolitario(nomeVittima));
+        verificaLupoSolitario(nomeVittima);
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
@@ -2061,6 +2060,8 @@ public final class TestPartita
     private void verificaCapoBranco(String nome) { verificaVero(partita.isCapoBranco(nome)); }
 
     private void verificaLupoReietto(String nome) { verificaVero(partita.isLupoReietto(nome)); }
+
+    private void verificaLupoSolitario(String nome) { verificaVero(partita.isLupoSolitario(nome)); }
 
     private void verificaProtezioneCacciatore(String tipoLupo, String nomeCacciatore)
     {
