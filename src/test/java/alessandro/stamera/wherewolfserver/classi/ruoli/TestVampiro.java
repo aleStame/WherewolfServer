@@ -66,20 +66,6 @@ public final class TestVampiro
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testTrattoCreaturaOmbra() { verificaTrattoCreaturaOmbra(); }
-
-    @Test public void testRipristino()
-    {
-        ruolo.ripristina();
-        verificaTrattoCreaturaOmbra();
-    }
-
-    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(FALLITO); }
-
-    @Test
-
-    private void verificaTrattoCreaturaOmbra() { verificaVero(ruolo.isTrattoPresente(CREATURA_OMBRA)); }
-
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

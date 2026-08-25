@@ -47,7 +47,7 @@ public final class Tratti
 
     public void aggiungi(Tratto tratto) { tratti.add(tratto); }
 
-    public void aggiungiProtezione(Ruolo[] ruoli)
+    public void aggiungiProtezione(Ruolo... ruoli)
     {
         proteggi();
         protezioni.aggiungiProtezione(ruoli);

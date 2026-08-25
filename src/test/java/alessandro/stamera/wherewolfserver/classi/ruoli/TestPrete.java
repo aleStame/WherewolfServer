@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -72,6 +73,8 @@ public final class TestPrete
     @Test public void testPrete() { verificaVero(ruolo.isPrete()); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
+    @Test public void testPassaPosseduto() { assertThat(ruolo.passaPosseduto()).isEqualTo(MORTO); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

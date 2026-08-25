@@ -58,13 +58,6 @@ public final class TestGuardia
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @Test public void testGildata()
-    {
-        Fazione fazione = getFazione();
-        assertThat(ruolo.gildata()).isEqualTo(MORTO);
-        assertThat(fazione).isEqualTo(getFazione());
-    }
-
     private Fazione getFazione() { return ruolo.getFazione(); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

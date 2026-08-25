@@ -32,21 +32,11 @@ public final class CappuccettoRosso extends Villaggio
 
     @Override public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
-        EsitoAttacco esito = super.attaccoLupi(lupo);
-        if(lupo.isLupoSolitario()) esito = getEsitoAttaccoLupoSolitario(esito);
+        EsitoAttacco esito = RIUSCITO;
+        if(lupo.isLupoSolitario()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
         return esito;
     }
 
     public static Ruolo getInstance() { return new CappuccettoRosso(); }
-
-    private EsitoAttacco getEsitoAttaccoLupoSolitario(EsitoAttacco esito)
-    {
-        switch(esito)
-        {
-            case ANGELO_CUSTODE_MORTO, FALLITO -> esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-            case RIUSCITO -> esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-        }
-        return esito;
-    }
 
 }

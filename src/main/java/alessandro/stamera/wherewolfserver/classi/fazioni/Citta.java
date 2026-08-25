@@ -19,17 +19,6 @@ public class Citta extends Uomini
 
     @Override public boolean isCitta() { return true; }
 
-    @Override public EsitoAttacco gildata()
-    {
-        EsitoAttacco esito = super.gildata();
-        if(!isTrattoPresente(NON_MORTO))
-        {
-            cambiaFazione(CRIMINALI);
-            esito = RIUSCITO;
-        }
-        return esito;
-    }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
@@ -37,12 +26,12 @@ public class Citta extends Uomini
         return esito;
     }
 
-    @Override public void incrementaVoti(int numeroVoti)
+    /*@Override public void incrementaVoti(int numeroVoti)
     {
         int voti = numeroVoti;
         if(isSegnalatoAzzeccagarbugli()) voti = 0;
         super.incrementaVoti(voti);
-    }
+    }*/
 
     private EsitoPartita getEsitoPartitaSenzaOmbra(Partita partita)
     {

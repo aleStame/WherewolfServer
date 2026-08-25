@@ -75,35 +75,8 @@ public final class TestCitta
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
-    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaPostGildata")
-    public void testEsitoPartitaPostGildata(Partita partita, EsitoPartita esito)
-    {
-        assertThat(ruolo.gildata()).isEqualTo(RIUSCITO);
-        verificaFazione(CRIMINALI);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-        partita.ripristinaGiocatori();
-    }
-
-    @AfterAll public static void ripristinaRuoli()
-    {
-        for(String ruolo : new String[] { "Peccatore", "Prete" }) FACTORY.getRuolo(ruolo).ripristina();
-    }
-
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
-
-    private static Stream<Arguments> getEsempiEsitiPartitaPostGildata()
-    {
-        return Stream.of
-        (
-            Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
-            Arguments.of
-            (
-                new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
-            ),
-            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
-        );
-    }
 
 }

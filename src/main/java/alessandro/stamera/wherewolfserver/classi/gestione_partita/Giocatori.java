@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreAlfabetico;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreVoti;
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.Map;
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -16,17 +15,17 @@ import java.util.stream.Stream;
 public class Giocatori
 {
 
-    private final Map<String, Ruolo> giocatori;
+    private final Map<String, Giocatore> giocatori;
 
     public Giocatori() { giocatori = new LinkedHashMap<>(); }
 
-    public void aggiungiGiocatore(String nome, Ruolo ruolo)
+    public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
-        giocatori.put(nome, ruolo);
+        giocatori.put(nome, giocatore);
         ordinaAlfabeticamente();
     }
 
-    public int getNumeroVoti(String nome) { return getRuolo(nome).getNumeroVoti(); }
+    public int getNumeroVoti(String nome) { return getGiocatore(nome).getNumeroVoti(); }
 
     public int getNumeroGiocatori() { return giocatori.size(); }
 
@@ -34,26 +33,24 @@ public class Giocatori
 
     public void incrementaVoti(String nome, int voti)
     {
-        getRuolo(nome).incrementaVoti(voti);
+        getGiocatore(nome).incrementaVoti(voti);
         ordinaGiocatori(new ComparatoreVoti());
     }
 
     public void annullaVoti()
     {
-        getRuoli().forEach(Ruolo::annullaVoti);
+        getRuoli().forEach(Giocatore::annullaVoti);
         ordinaAlfabeticamente();
     }
 
-    public void annullaVoti(String nome) { getRuolo(nome).annullaVoti(); }
-
-    public Ruolo getRuolo(String nome) { return giocatori.get(nome); }
+    public void annullaVoti(String nome) { getGiocatore(nome).annullaVoti(); }
 
     public String getNomeGiocatore(int posizione) { return giocatori.keySet().stream().toList().get(posizione); }
 
     public boolean isAmato(String nome)
     {
         boolean esito = false;
-        if(isPresente(nome)) esito = getRuolo(nome).isAmato();
+        if(isPresente(nome)) esito = getGiocatore(nome).isAmato();
         return esito;
     }
 
@@ -61,60 +58,52 @@ public class Giocatori
 
     public String getNomeAngeloCustode() { return cercaAngeloCustode().get().getKey(); }
 
-    public boolean isAngeloCustode(String nome) { return getRuolo(nome).isAngeloCustode(); }
+    public boolean isAngeloCustode(String nome) { return getGiocatore(nome).isAngeloCustode(); }
 
-    public void resettaAmato() { getRuoli().forEach(Ruolo::resettaAmato); }
+    public void resettaAmato() { getRuoli().forEach(Giocatore::annullaProtezioneAngeloCustode); }
 
     public boolean isPresente(String nome) { return giocatori.containsKey(nome); }
 
-    public boolean isCriminale(String nome) { return getRuolo(nome).isCriminale(); }
+    public boolean isCriminale(String nome) { return getGiocatore(nome).isCriminale(); }
 
-    public void segnalazioneInquisitore(String nome) { getRuolo(nome).segnalazioneInquisitore(); }
+    public void segnalazioneBoia(String nome) { getGiocatore(nome).getRuolo().segnalazioneBoia(); }
 
-    public boolean isInquisito(String nome) { return getRuolo(nome).isInquisito(); }
+    public boolean isSegnalatoBoia(String nome) { return getGiocatore(nome).getRuolo().isSegnalatoBoia(); }
 
-    public boolean isSegnalatoAzzeccagarbugli(String nome) { return getRuolo(nome).isSegnalatoAzzeccagarbugli(); }
-
-    public void segnalazioneBoia(String nome) { getRuolo(nome).segnalazioneBoia(); }
-
-    public boolean isSegnalatoBoia(String nome) { return getRuolo(nome).isSegnalatoBoia(); }
-
-    public void annullaSegnalazioneBoia(String nome) { getRuolo(nome).annullaSegnalazioneBoia(); }
+    public void annullaSegnalazioneBoia(String nome) { getGiocatore(nome).getRuolo().annullaSegnalazioneBoia(); }
 
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
-    public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Ruolo::isOratore); }
+    public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Giocatore::isOratore); }
 
-    public int getNumeroRuoliCitta() { return (int)getStreamRuoli().filter(Ruolo::isCitta).count(); }
+    public int getNumeroRuoliCitta() { return (int)getStreamRuoli().filter(Giocatore::isCitta).count(); }
 
-    public boolean isOratore(String nome) { return getRuolo(nome).isOratore(); }
+    public boolean isOratore(String nome) { return getGiocatore(nome).isOratore(); }
 
     public boolean isContadinoMostroPresente() { return cercaContadinoMostro().isPresent(); }
 
     public String getNomeContadinoMostro() { return cercaContadinoMostro().get().getKey(); }
 
-    public boolean isContadinoMostro(String nome) { return getRuolo(nome).isContadinoMostro(); }
+    public boolean isContadinoMostro(String nome) { return getGiocatore(nome).isContadinoMostro(); }
 
-    public boolean isRomeo(String nome) { return getRuolo(nome).isRomeo(); }
-
-    public void romeizzazione(String nome) { getRuolo(nome).romeizzazione(); }
+    public boolean isRomeo(String nome) { return getGiocatore(nome).isRomeo(); }
 
     public boolean isNosferatuPresente() { return cercaNosferatu().isPresent(); }
 
     public String getNomeNosferatu() { return cercaNosferatu().get().getKey(); }
 
-    public void ripristina(String nome) { getRuolo(nome).ripristina(); }
-
-    public boolean isMegera(String nome) { return getRuolo(nome).isMegera(); }
+    public boolean isMegera(String nome) { return getGiocatore(nome).isMegera(); }
 
     public String getNomeRuolo(String nomeGiocatore)
     {
-        String risultato = getRuolo(nomeGiocatore).getNome();
+        String risultato = getGiocatore(nomeGiocatore).getNomeRuolo();
         if(isContadino(nomeGiocatore)) risultato = getNomeTipoContadino(nomeGiocatore);
         return risultato;
     }
 
-    private boolean isContadino(String nome) { return getRuolo(nome).isContadino(); }
+    public Giocatore getGiocatore(String nome) { return giocatori.get(nome); }
+
+    private boolean isContadino(String nome) { return getGiocatore(nome).isContadino(); }
 
     private String getNomeTipoContadino(String nomeGiocatore)
     {
@@ -125,44 +114,44 @@ public class Giocatori
         return risultato;
     }
 
-    private boolean isContadinoEroe(String nome) { return getRuolo(nome).isContadinoEroe(); }
+    private boolean isContadinoEroe(String nome) { return getGiocatore(nome).isContadinoEroe(); }
 
-    private boolean isContadinoLupo(String nome) { return getRuolo(nome).isContadinoLupo(); }
+    private boolean isContadinoLupo(String nome) { return getGiocatore(nome).isContadinoLupo(); }
 
-    private Optional<Entry<String, Ruolo>> cercaNosferatu()
+    private Optional<Entry<String, Giocatore>> cercaNosferatu()
     {
-        return cercaRuolo(ruolo -> ruolo.getValue().isNosferatu());
+        return cercaGiocatore(ruolo -> ruolo.getValue().isNosferatu());
     }
 
-    private Optional<Entry<String, Ruolo>> cercaContadinoMostro()
+    private Optional<Entry<String, Giocatore>> cercaContadinoMostro()
     {
-        return cercaRuolo(ruolo -> ruolo.getValue().isContadinoMostro());
+        return cercaGiocatore(ruolo -> ruolo.getValue().isContadinoMostro());
     }
 
-    private Optional<Entry<String, Ruolo>> cercaAngeloCustode()
+    private Optional<Entry<String, Giocatore>> cercaAngeloCustode()
     {
-        return cercaRuolo(ruolo -> ruolo.getValue().isAngeloCustode());
+        return cercaGiocatore(ruolo -> ruolo.getValue().isAngeloCustode());
     }
 
-    private Optional<Entry<String, Ruolo>> cercaRuolo(Predicate<Entry<String, Ruolo>> predicato)
+    private Optional<Entry<String, Giocatore>> cercaGiocatore(Predicate<Entry<String, Giocatore>> predicato)
     {
         return getGiocatori().filter(predicato).findAny();
     }
 
-    private void ordinaGiocatori(Comparator<Entry<String, Ruolo>> comparatore)
+    private void ordinaGiocatori(Comparator<Entry<String, Giocatore>> comparatore)
     {
-        Map<String, Ruolo> copia =
+        Map<String, Giocatore> copia =
             getGiocatori().sorted(comparatore).collect(toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         giocatori.clear();
         for(String nome : copia.keySet()) giocatori.put(nome, copia.get(nome));
     }
 
-    private Stream<Entry<String, Ruolo>> getGiocatori() { return giocatori.entrySet().stream(); }
+    private Stream<Entry<String, Giocatore>> getGiocatori() { return giocatori.entrySet().stream(); }
 
     private void ordinaAlfabeticamente() { ordinaGiocatori(new ComparatoreAlfabetico()); }
 
-    private Stream<Ruolo> getStreamRuoli() { return getRuoli().stream(); }
+    private Stream<Giocatore> getStreamRuoli() { return getRuoli().stream(); }
 
-    private Collection<Ruolo> getRuoli() { return giocatori.values(); }
+    private Collection<Giocatore> getRuoli() { return giocatori.values(); }
 
 }

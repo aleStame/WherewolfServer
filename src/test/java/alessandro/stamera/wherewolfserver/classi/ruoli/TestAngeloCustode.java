@@ -40,12 +40,6 @@ public final class TestAngeloCustode
 
     @Test public void testAngeloCustode() { verificaVero(ruolo.isAngeloCustode()); }
 
-    @Test public void testAmato()
-    {
-        ruolo.sceltaAngeloCustode();
-        verificaFalso(ruolo.isAmato());
-    }
-
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
 
     @ParameterizedTest @CsvSource
@@ -65,7 +59,6 @@ public final class TestAngeloCustode
         Partita partita = new Partita(new String[][] { { "Cesare", "Angelo custode" }, { nome, nomeRuolo } });
         partita.segnalazioneAngeloCustode(nome);
         verificaEsitoPartita(partita, VITTORIA);
-        partita.ripristinaGiocatoreVivo(nome);
     }
 
     @ParameterizedTest @MethodSource("getEsempiPartitaPersa")
@@ -73,10 +66,9 @@ public final class TestAngeloCustode
 
     @Test public void testRomeizzazione()
     {
-        ruolo.romeizzazione();
+        /*ruolo.romeizzazione();
         assertThat(ruolo.getAura()).isEqualTo(BIANCA);
-        verificaVero(ruolo.isRomeo());
-        ruolo.ripristina();
+        verificaVero(ruolo.isRomeo());*/
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

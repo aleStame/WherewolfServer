@@ -4,13 +4,12 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.MALEDETTO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
-import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
+import static java.util.Arrays.stream;
 
 public final class GiocatoriVivi extends Giocatori
 {
@@ -27,28 +26,29 @@ public final class GiocatoriVivi extends Giocatori
         return ballottaggio;
     }
 
-    public void segnalazioneAngeloCustode(String nome) { getRuolo(nome).sceltaAngeloCustode(); }
+    public void segnalazioneAngeloCustode(String nome) { getGiocatore(nome).protezioneAngeloCustode(); }
 
-    public EsitoAttacco attaccoAssassino(String nome) { return getRuolo(nome).attaccoAssassino(); }
+    public EsitoAttacco attaccoAssassino(String nome) { return getGiocatore(nome).attaccoAssassino(); }
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
-        EsitoAttacco esito = getRuolo(nome).attaccoLupi(attaccante);
-        if(esito == FALLITO && isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-        else esito = gestioneAttaccoNonFallito(nome, esito);
+        EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
+        switch(esito)
+        {
+            case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
+            case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
+            case FALLITO ->
+                { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
+                { if(isProtezioneAngeloCustodeNonAttiva(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
+        }
         return esito;
     }
 
-    public EsitoAttacco attaccoNosferatu(String nome)
-    {
-        EsitoAttacco esito = attaccoNosferatuRuolo(nome);
-        gestisciResetAmato(nome, esito);
-        return esito;
-    }
+    public boolean isTrattoPresente(String nome, Tratto tratto) { return getGiocatore(nome).isTrattoPresente(tratto); }
 
-    public boolean isTrattoPresente(String nome, Tratto tratto) { return getRuolo(nome).isTrattoPresente(tratto); }
-
-    public Fazione getFazione(String nome) { return getRuolo(nome).getFazione(); }
+    public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 
     public EsitoAttacco attaccoVampiro(String nome)
     {
@@ -58,18 +58,9 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public void attaccoPosseduto(String nome)
-    {
-        eliminaGiocatore(nome);
-        aggiungiGiocatore(nome, FACTORY.getRuolo("Posseduto"));
-        resettaAmato();
-    }
-
-    public boolean isPosseduto(String nome) { return getRuolo(nome).isPosseduto(); }
+    public boolean isPosseduto(String nome) { return getGiocatore(nome).getRuolo().isPosseduto(); }
 
     public String getNomeAssassino() { return getNomeGiocatore(getPosizioneAssassino()); }
-
-    public void segnalazioneAzzeccagarbugli(String nome) { getRuolo(nome).segnalazioneAzzeccagarbugli(); }
 
     public int getNumeroGuardie()
     {
@@ -78,9 +69,9 @@ public final class GiocatoriVivi extends Giocatori
         return numeroGuardie;
     }
 
-    public boolean isGuardia(String nome) { return getRuolo(nome).isGuardia(); }
+    public boolean isGuardia(String nome) { return getGiocatore(nome).isGuardia(); }
 
-    public boolean isCreaturaOmbra(String nome) { return getRuolo(nome).isCreaturaOmbra(); }
+    public boolean isCreaturaOmbra(String nome) { return getGiocatore(nome).isCreaturaOmbra(); }
 
     public int getNumeroCreatureOmbra()
     {
@@ -89,7 +80,7 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCreatureOmbra;
     }
 
-    public Aura getControlloVeggente(String nome) { return getRuolo(nome).getAura(); }
+    public Aura getControlloVeggente(String nome) { return getGiocatore(nome).getAura(); }
 
     public int getNumeroCriminali()
     {
@@ -144,13 +135,14 @@ public final class GiocatoriVivi extends Giocatori
         return numeroSenzaFazione;
     }
 
-    public EsitoAttacco gildata(String nome) { return getRuolo(nome).gildata(); }
-
     public String getNomeCapoGilda() { return getNomeGiocatore(getPosizioneCapoGilda()); }
 
-    public void riconosciNegromante() { getRuolo(getPosizioneBecchino()).riconosciNegromante(); }
+    public void riconosciNegromante() { getGiocatore(getPosizioneBecchino()).riconosciNegromante(); }
 
-    public void annullaProtezioniCappuccettoRosso() { getRuolo(getPosizioneCappuccettoRosso()).perdiProtezioni(); }
+    public void annullaProtezioniCappuccettoRosso()
+    {
+        getGiocatore(getNomeCappuccettoRosso()).perdiProtezioni();
+    }
 
     public boolean isNonnaPresente() { return getPosizioneNonna() != NON_TROVATO; }
 
@@ -173,13 +165,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoNegromante(String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
-        EsitoAttacco esito = ruolo.attaccoNegromante();
-        if(esito == RIUSCITO && ruolo.isMegera() && isNegromantePresente()) getRuolo(getNomeNegromante()).maledizione();
+        Giocatore giocatore = getGiocatore(nome);
+        EsitoAttacco esito = giocatore.attaccoNegromante();
+        if(esito == RIUSCITO && giocatore.getRuolo().isMegera()) getGiocatore(getNomeNegromante()).maledizione();
         return esito;
     }
 
-    public EsitoControlloSensitiva controlloSensitiva(String nome) { return getRuolo(nome).controlloSensitiva(); }
+    public EsitoControlloSensitiva controlloSensitiva(String nome) { return getGiocatore(nome).getRuolo().controlloSensitiva(); }
 
     public boolean isSensitivaPresente() { return getPosizioneSensitiva() != NON_TROVATO; }
 
@@ -188,21 +180,21 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isGhoul(String nome)
     {
         boolean trovato = false;
-        if(isPresente(nome)) trovato = getRuolo(nome).isGhoul();
+        if(isPresente(nome)) trovato = getGiocatore(nome).getRuolo().isGhoul();
         return trovato;
     }
 
     public boolean isVampiro(String nome)
     {
         boolean trovato = false;
-        if(isPresente(nome)) trovato = getRuolo(nome).isVampiro();
+        if(isPresente(nome)) trovato = getGiocatore(nome).getRuolo().isVampiro();
         return trovato;
     }
 
     public boolean isNosferatu(String nome)
     {
         boolean trovato = false;
-        if(isPresente(nome)) trovato = getRuolo(nome).isNosferatu();
+        if(isPresente(nome)) trovato = getGiocatore(nome).isNosferatu();
         return trovato;
     }
 
@@ -211,8 +203,8 @@ public final class GiocatoriVivi extends Giocatori
         boolean trovato = false;
         if(isPresente(nome))
         {
-            Ruolo ruolo = getRuolo(nome);
-            return ruolo.isTrattoPresente(NON_MORTO) && ruolo.getFazione() == NOSFERATU;
+            Giocatore giocatore = getGiocatore(nome);
+            trovato = giocatore.isNonMorto() && giocatore.getFazione() == NOSFERATU;
         }
         return trovato;
     }
@@ -250,31 +242,24 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeVampiro() { return getNomeGiocatore(getPosizioneVampiro()); }
 
-    public void maledizione(String nome) { getRuolo(nome).maledizione(); }
+    public void maledizione(String nome) { getGiocatore(nome).maledizione(); }
 
-    public boolean isMaledetto(String nome) { return getRuolo(nome).isMaledetto(); }
+    public boolean isMaledetto(String nome) { return getGiocatore(nome).isMaledetto(); }
 
-    public boolean isMistico(String nome) { return getRuolo(nome).isMistico(); }
+    public boolean isMistico(String nome) { return getGiocatore(nome).getRuolo().isMistico(); }
 
-    public boolean isNegromante(String nome) { return getRuolo(nome).isNegromante(); }
-
-    public void ripristinaMistici()
-    {
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String nomeGiocatore = getNomeGiocatore(i);
-            if(isMistico(nomeGiocatore)) ripristina(nomeGiocatore);
-        }
-    }
+    public boolean isNegromante(String nome) { return getGiocatore(nome).isNegromante(); }
 
     public void protezioneStrega(String nome)
     {
-        Ruolo stregato = getRuolo(nome);
-        stregato.protezioneStrega();
-        stregato.aggiungiProtezione(getCreatureOmbra());
+        Giocatore giocatore = getGiocatore(nome);
+        giocatore.protezioneStrega();
+        aggiungiProtezioneCreatureOmbra(nome);
     }
 
-    public boolean isStregato(String nome) { return getRuolo(nome).isStregato(); }
+    public void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
+
+    public boolean isStregato(String nome) { return getGiocatore(nome).isStregato(); }
 
     public boolean isVampiroAmato()
     {
@@ -291,33 +276,92 @@ public final class GiocatoriVivi extends Giocatori
 
     public void assorbiRuolo(String nomeAssorbitore, String nomeAssorbito)
     {
-        Ruolo ruolo = getRuolo(nomeAssorbito);
-        eliminaGiocatore(nomeAssorbitore);
-        aggiungiGiocatore(nomeAssorbitore, ruolo);
+        getGiocatore(nomeAssorbitore).cambiaRuolo(getGiocatore(nomeAssorbito).getRuolo());
         eliminaGiocatore(nomeAssorbito);
     }
 
-    public boolean isCapoBranco(String nome) { return getRuolo(nome).isCapoBranco(); }
+    public boolean isCapoBranco(String nome) { return getGiocatore(nome).getRuolo().isCapoBranco(); }
 
-    public boolean isLupo(String nome) { return getRuolo(nome).isLupo(); }
+    public boolean isLupo(String nome) { return getGiocatore(nome).isLupo(); }
 
-    public Aura getAura(String nome) { return getRuolo(nome).getAura(); }
+    public Aura getAura(String nome) { return getGiocatore(nome).getAura(); }
 
-    public void annullaMaledizione(String nome) { getRuolo(nome).eliminaTratti(MALEDETTO); }
+    public void annullaMaledizione(String nome) { getGiocatore(nome).annullaMaledizione(); }
 
     public boolean isCacciatoreProtetto() { return isCacciatorePresente() && isRimastoUnSoloLupo(); }
-
-    @Override public void aggiungiGiocatore(String nome, Ruolo ruolo)
-    {
-        super.aggiungiGiocatore(nome, ruolo);
-        aggiungiProtezioneNonna();
-    }
 
     @Override public void eliminaGiocatore(String nome)
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
+        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
     }
+
+    @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
+    {
+        super.aggiungiGiocatore(nome, giocatore);
+        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
+    }
+
+    public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
+
+    public void segnalazioneAzzeccagarbugli(String nome) { getGiocatore(nome).segnalazioneAzzeccagarbugli(); }
+
+    public EsitoAttacco gildata(String nome) { return getGiocatore(nome).gildata(); }
+
+    public EsitoAttacco passaPosseduto(String nome)
+    {
+        boolean isAngeloCustode = isAngeloCustode(nome);
+        EsitoAttacco esito = getGiocatore(nome).passaPosseduto();
+        if(isAngeloCustode && esito == RIUSCITO) getGiocatoreAmato().annullaProtezioneAngeloCustode();
+        return esito;
+    }
+
+    public void romeizzazione(String nome)
+    {
+        getGiocatore(nome).romeizzazione();
+        aggiungiProtezioneCreatureOmbra(nome);
+    }
+
+    private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
+
+    private boolean isProtezioneAngeloCustodeNonAttiva(String nome) { return isAmato(nome) && !isAngeloCustodePresente(); }
+
+    private boolean isCappuccettoRossoDaSvegliare(Ruolo attaccante, String nome)
+    {
+        return isCappuccettoRossoProtetto(nome, attaccante) && isNonnaPresente() && isRimastoUltimoLupo();
+    }
+
+    private EsitoAttacco gestioneAttaccoRiuscito(Ruolo attaccante, String nome)
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(isCappuccettoRossoProtetto(nome, attaccante)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        else if(isCappuccettoRosso(nome)) esito = getEsitoAttaccoCappuccettoRosso();
+        return esito;
+    }
+
+    private EsitoAttacco getEsitoAttaccoCappuccettoRosso()
+    {
+        EsitoAttacco esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
+        if(isCappuccettoRossoAmato()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        return esito;
+    }
+
+    private boolean isCappuccettoRossoAmato() { return isProtezioneAngeloCustodeAttiva(getNomeCappuccettoRosso()); }
+
+    private String getNomeCappuccettoRosso() { return getNomeGiocatore(getPosizioneCappuccettoRosso()); }
+
+    private boolean isProtezioneAngeloCustodeAttiva(String nome) { return isAmato(nome) && isAngeloCustodePresente(); }
+
+    private void gestisciProtezioneNonna()
+    {
+        if(isRimastoUnSoloLupo()) aggiungiProtezioneNonna();
+        else perditaProtezioniNonna();
+    }
+
+    private void perditaProtezioniNonna() { getNonna().perdiProtezioni(); }
+
+    private Giocatore getNonna() { return getGiocatore(getPosizioneNonna()); }
 
     private Ruolo[] getCreatureOmbra()
     {
@@ -328,33 +372,24 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isRimastoUnSoloLupo() { return isRimastoUltimoLupo() || isLupoSolitarioPresente(); }
 
-    private EsitoAttacco gestioneAttaccoNonFallito(String nome, EsitoAttacco esito)
-    {
-        if(esito == ANGELO_CUSTODE_MORTO) esito = gestioneAttaccoAngeloCustode(nome);
-        if(esito == RIUSCITO) esito = gestioneAttaccoRiuscito(nome);
-        return esito;
-    }
-
-    private EsitoAttacco gestioneAttaccoAngeloCustode(String nome)
+    private EsitoAttacco gestioneAttaccoAngeloCustode(String nome, Ruolo lupo)
     {
         EsitoAttacco esito = ANGELO_CUSTODE_MORTO;
-        if(isCappuccettoRossoProtetto(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        if(isCappuccettoRossoProtetto(nome, lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
         else if(!isAngeloCustodePresente()) esito = RIUSCITO;
         return esito;
     }
 
-    private boolean isCappuccettoRossoProtetto(String nome) { return isCappuccettoRosso(nome) && isRimastoUltimoLupo(); }
-
-    private boolean isCappuccettoRosso(String nome) { return getRuolo(nome).isCappuccettoRosso(); }
-
-    private EsitoAttacco gestioneAttaccoRiuscito(String nome)
+    private boolean isCappuccettoRossoProtetto(String nome, Ruolo attaccante)
     {
-        EsitoAttacco esito = RIUSCITO;
-        if(isRimastoUltimoLupo() && isCappuccettoRossoPresente()) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO;
-        return esito;
+        return isCappuccettoRosso(nome) && getGiocatore(nome).isProtezionePresente(attaccante);
     }
 
+    private boolean isCappuccettoRosso(String nome) { return getGiocatore(nome).isCappuccettoRosso(); }
+
     public boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
+
+    public boolean isLupoBranco(String nome) { return getGiocatore(nome).getRuolo().isLupoBranco(); }
 
     private int getPosizioneTemplare()
     {
@@ -365,7 +400,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isTemplare(int posizione) { return isTemplare(getNomeGiocatore(posizione)); }
 
-    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getRuolo(getNomeAmato()).perdiProtezioni(); }
+    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getGiocatoreAmato().perdiProtezioni(); }
 
     private boolean isAngeloCustodeMorto() { return isAmatoPresente() && !isAngeloCustodePresente(); }
 
@@ -388,10 +423,11 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneNonna(posizione);
     }
 
-    private void aggiungiProtezioneNonna(int posizione)
-    {
-        getRuolo(getPosizioneCappuccettoRosso()).aggiungiProtezione(getRuolo(posizione));
-    }
+    private void aggiungiProtezioneNonna(int posizione) { getCappuccettoRosso().aggiungiProtezione(getRuolo(posizione)); }
+
+    private Ruolo getRuolo(int posizione) { return getGiocatore(posizione).getRuolo(); }
+
+    private Giocatore getCappuccettoRosso() { return getGiocatore(getPosizioneCappuccettoRosso()); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
@@ -402,7 +438,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isCacciatoreDiVampiri(int posizione) { return isCacciatoreDiVampiri(getNomeGiocatore(posizione)); }
 
-    private boolean isCacciatoreDiVampiri(String nome) { return getRuolo(nome).isCacciatoreDiVampiri(); }
+    private boolean isCacciatoreDiVampiri(String nome) { return getGiocatore(nome).isCacciatoreDiVampiri(); }
 
     private int getPosizioneVampiro()
     {
@@ -429,7 +465,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isAmato(int posizione) { return getRuolo(posizione).isAmato(); }
+    private boolean isAmato(int posizione) { return getGiocatore(posizione).isAmato(); }
 
     private int getPosizioneSensitiva()
     {
@@ -438,7 +474,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isSensitiva(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isSensitiva(); }
+    private boolean isSensitiva(int posizione) { return getGiocatore(posizione).isSensitiva(); }
 
     private int getPosizioneMago()
     {
@@ -447,7 +483,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isMago(int posizione) { return getRuolo(getNomeGiocatore(posizione)).isMago(); }
+    private boolean isMago(int posizione) { return getGiocatore(posizione).getRuolo().isMago(); }
 
     private int getPosizioneGuaritore()
     {
@@ -456,7 +492,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isGuaritore(int posizione) { return getRuolo(posizione).isGuaritore(); }
+    private boolean isGuaritore(int posizione) { return getGiocatore(posizione).isGuaritore(); }
 
     private int getPosizioneCappuccettoRosso()
     {
@@ -465,7 +501,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isCappuccettoRosso(int posizione) { return getRuolo(posizione).isCappuccettoRosso(); }
+    private boolean isCappuccettoRosso(int posizione) { return getGiocatore(posizione).isCappuccettoRosso(); }
 
     private int getPosizioneNonna()
     {
@@ -474,7 +510,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isNonna(int posizione) { return getRuolo(posizione).isNonna(); }
+    private boolean isNonna(int posizione) { return getGiocatore(posizione).isNonna(); }
 
     private int getPosizioneBecchino()
     {
@@ -485,7 +521,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isBecchino(int posizione) { return getRuolo(posizione).isBecchino(); }
 
-    private boolean isTemplare(String nome) { return getRuolo(nome).isTemplare(); }
+    private boolean isTemplare(String nome) { return getGiocatore(nome).getRuolo().isTemplare(); }
 
     private int getPosizioneCacciatore()
     {
@@ -494,7 +530,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isCacciatore(int posizione) { return getRuolo(posizione).isCacciatore(); }
+    private boolean isCacciatore(int posizione) { return getGiocatore(posizione).isCacciatore(); }
 
     private int getPosizioneCapoGilda()
     {
@@ -503,11 +539,11 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isCapoGilda(int posizione) { return getRuolo(posizione).isCapoGilda(); }
+    private boolean isCapoGilda(int posizione) { return getGiocatore(posizione).isCapoGilda(); }
 
     private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
 
-    private Fazione getFazione(int posizione) { return getRuolo(posizione).getFazione(); }
+    private Fazione getFazione(int posizione) { return getGiocatore(posizione).getFazione(); }
 
     private int getPosizioneNosferatu()
     {
@@ -516,7 +552,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isNosferatu(int posizione) { return getRuolo(posizione).isNosferatu(); }
+    private boolean isNosferatu(int posizione) { return getGiocatore(posizione).isNosferatu(); }
 
     private int getPosizioneLupoSolitario()
     {
@@ -525,9 +561,9 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isLupoSolitario(int posizione) { return getRuolo(posizione).isLupoSolitario(); }
+    private boolean isLupoSolitario(int posizione) { return getGiocatore(posizione).isLupoSolitario(); }
 
-    private Ruolo getBracconiere() { return getRuolo(getNomeBracconiere()); }
+    private Ruolo getBracconiere() { return getGiocatore(getNomeBracconiere()).getRuolo(); }
 
     private int getPosizioneBracconiere()
     {
@@ -536,15 +572,13 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isBracconiere(int posizione) { return getRuolo(posizione).isBracconiere(); }
+    private boolean isBracconiere(int posizione) { return getGiocatore(posizione).isBracconiere(); }
 
     private boolean isMistico(int posizione) { return isMistico(getNomeGiocatore(posizione)); }
 
-    private boolean isLupo(int posizione) { return getRuolo(posizione).isLupo(); }
+    private boolean isLupo(int posizione) { return getGiocatore(posizione).isLupo(); }
 
-    private boolean isCriminale(int posizione) { return getRuolo(posizione).isCriminale(); }
-
-    private Ruolo getRuolo(int posizione) { return getRuolo(getNomeGiocatore(posizione)); }
+    private boolean isCriminale(int posizione) { return getGiocatore(posizione).isCriminale(); }
 
     private boolean isCreaturaOmbra(int posizione) { return isCreaturaOmbra(getNomeGiocatore(posizione)); }
 
@@ -562,7 +596,7 @@ public final class GiocatoriVivi extends Giocatori
         return posizione;
     }
 
-    private boolean isNegromante(int posizione) { return getRuolo(posizione).isNegromante(); }
+    private boolean isNegromante(int posizione) { return getGiocatore(posizione).isNegromante(); }
 
     private boolean isAssassino(int posizione) { return isAssassino(getNomeGiocatore(posizione)); }
 
@@ -576,122 +610,102 @@ public final class GiocatoriVivi extends Giocatori
         Ballottaggio ballottaggio = new Ballottaggio();
         aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
         if(getNumeroGiocatori() > 0) estraiSecondoPosto(ballottaggio);
-        gestisciSegnalazioni(ballottaggio);
+        caricaAccusabili(ballottaggio);
         sistemazioneBallottaggio(ballottaggio);
         return ballottaggio;
     }
 
     private void sistemazioneBallottaggio(Ballottaggio ballottaggio)
     {
-        if(ballottaggio.isAmatoPresente()) gestioneAmato(ballottaggio);
-        if(!ballottaggio.isSegnalazioneAssente()) ballottaggio.annullaSegnalazioni();
+        if(isAmatoSalvabile(ballottaggio)) scambioAngeloAmato(ballottaggio);
+    }
+
+    private void scambioAngeloAmato(Ballottaggio ballottaggio)
+    {
+        salvataggioAmatoDaBallottaggio(ballottaggio);
+        if(isAngeloCustodePresente()) accusaAngeloCustode(ballottaggio);
+    }
+
+    private boolean isAmatoSalvabile(Ballottaggio ballottaggio)
+    {
+        return ballottaggio.isAmatoPresente() && isAngeloCustodePresente(ballottaggio);
+    }
+
+    private boolean isAngeloCustodePresente(Ballottaggio ballottaggio)
+    {
+        return isAngeloCustodePresente() || ballottaggio.isAngeloCustodePresente();
+    }
+
+    private void accusaAngeloCustode(Ballottaggio ballottaggio)
+    {
+        String nomeAngeloCustode = getNomeAngeloCustode();
+        Giocatore angeloCustode = getGiocatore(nomeAngeloCustode);
+        ballottaggio.aggiungiGiocatore(nomeAngeloCustode, angeloCustode);
+        eliminaGiocatore(nomeAngeloCustode);
+    }
+
+    private void salvataggioAmatoDaBallottaggio(Ballottaggio ballottaggio)
+    {
+        String nomeAmato = ballottaggio.getNomeAmato();
+        aggiungiGiocatore(nomeAmato, ballottaggio.getGiocatore(nomeAmato));
+        ballottaggio.eliminaGiocatore(nomeAmato);
     }
 
     private void estraiSecondoPosto(Ballottaggio ballottaggio)
     {
-        int numeroVoti = getNumeroVotiPrimoClassificato();
-        if(ballottaggio.getNumeroGiocatori() < 2 && numeroVoti > 0) aggiungiGiocatoriBallottaggio(ballottaggio, numeroVoti);
+        if(isBallottaggioIncompleto(ballottaggio)) aggiungiGiocatoriBallottaggio(ballottaggio, getNumeroVotiPrimoClassificato());
     }
 
-    private void gestisciSegnalazioni(Ballottaggio ballottaggio)
+    private boolean isBallottaggioIncompleto(Ballottaggio ballottaggio)
     {
-        int posizioneSegnalatoAzzeccagarbugli = getPosizioneSegnalatoAzzeccagarbugli(), posizioneInquisito = getPosizioneInquisito();
-        if(posizioneSegnalatoAzzeccagarbugli != NON_TROVATO) gestisciSegnalazioneAzzeccagarbugli(ballottaggio, posizioneSegnalatoAzzeccagarbugli);
-        if(posizioneInquisito != NON_TROVATO) gestisciSegnalazioneInquisitore(ballottaggio, posizioneInquisito);
-        ballottaggio.annullaSegnalazioni();
+        return ballottaggio.getNumeroGiocatori() < 2 && getNumeroVotiPrimoClassificato() > 0;
     }
 
-    private void gestisciSegnalazioneAzzeccagarbugli(Giocatori ballottaggio, int posizione)
+    private void caricaAccusabili(Ballottaggio ballottaggio)
     {
-        String nome = getNomeGiocatore(posizione);
-        if(controlloBallottaggioAzzeccagarbugli(nome)) mandaBallottaggio(ballottaggio, nome);
-    }
-
-    private boolean controlloBallottaggioAzzeccagarbugli(String nome) { return !isCriminale(nome) && !isCitta(nome); }
-
-    private boolean isCitta(String nome) { return getRuolo(nome).isCitta(); }
-
-    private void gestisciSegnalazioneInquisitore(Ballottaggio ballottaggio, int posizione)
-    {
-        String nome = getNomeGiocatore(posizione);
-        mandaBallottaggio(ballottaggio, nome);
-    }
-
-    private int getPosizioneSegnalatoAzzeccagarbugli()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isSegnalatoAzzeccagarbugli(i)) posizione = i;
-        return posizione;
-    }
-
-    private boolean isSegnalatoAzzeccagarbugli(int posizione) { return isSegnalatoAzzeccagarbugli(getNomeGiocatore(posizione)); }
-
-    private int getPosizioneInquisito()
-    {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isInquisito(i)) posizione = i;
-        return posizione;
-    }
-
-    private boolean isInquisito(int posizione) { return isInquisito(getNomeGiocatore(posizione)); }
-
-    private void gestioneAmato(Ballottaggio ballottaggio)
-    {
-        spostamentoAmato(ballottaggio);
-        if(isAngeloCustodePresente()) spostamentoAngeloCustode(ballottaggio);
-    }
-
-    private void spostamentoAngeloCustode(Ballottaggio ballottaggio)
-    {
-        mandaBallottaggio(ballottaggio, getNomeAngeloCustode());
+        for(String nome : getNomiGiocatoriAccusabili()) mandaBallottaggio(ballottaggio, nome);
     }
 
     private void mandaBallottaggio(Giocatori ballottaggio, String nome)
     {
-        Ruolo ruolo = getRuolo(nome);
+        Giocatore giocatore = getGiocatore(nome);
         eliminaGiocatore(nome);
-        ballottaggio.aggiungiGiocatore(nome, ruolo);
-    }
-
-    private void spostamentoAmato(Ballottaggio ballottaggio)
-    {
-        String nome = ballottaggio.getNomeAmato();
-        Ruolo ruolo = ballottaggio.getRuolo(nome);
-        ballottaggio.eliminaGiocatore(nome);
-        aggiungiGiocatore(nome, ruolo);
+        ballottaggio.aggiungiGiocatore(nome, giocatore);
     }
 
     private void aggiungiGiocatoriBallottaggio(Giocatori ballottaggio, int numeroVoti)
     {
-        for(String nome : estraiGiocatori(numeroVoti)) mandaBallottaggio(ballottaggio, nome);
+        for(String nome : getNomiGiocatoriVoti(numeroVoti)) mandaBallottaggio(ballottaggio, nome);
     }
 
-    private String[] estraiGiocatori(int numeroVoti) { return toArray(getListaNomi(numeroVoti)); }
-
-    private List<String> getListaNomi(int numeroVoti)
+    private String[] getNomiGiocatoriAccusabili()
     {
-        List<String> nomi = new ArrayList<>();
-        for(int i = 0; i < getNumeroGiocatori(); i++)
-        {
-            String nome = getNomeGiocatore(i);
-            if(numeroVoti == getNumeroVoti(nome)) nomi.add(nome);
-        }
+        return getNomiGiocatoriCondizione(nome -> getGiocatore(nome).isAccusabile());
+    }
+
+    private String[] getNomiGiocatoriVoti(int numeroVoti)
+    {
+        return getNomiGiocatoriCondizione(nome -> getNumeroVoti(nome) == numeroVoti);
+    }
+
+    private String[] getNomiGiocatoriCondizione(Predicate<String> predicato)
+    {
+        return stream(getNomiGiocatoriVivi()).filter(predicato).toList().toArray(new String[0]);
+    }
+
+    private String[] getNomiGiocatoriVivi()
+    {
+        String[] nomi = new String[getNumeroGiocatori()];
+        for(int i = 0; i < nomi.length; i++) nomi[i] = getNomeGiocatore(i);
         return nomi;
     }
 
-    private String[] toArray(List<String> nomi)
-    {
-        String[] risultato = new String[nomi.size()];
-        nomi.toArray(risultato);
-        return risultato;
-    }
+    private EsitoAttacco vampirizzazioneRuolo(String nome) { return getGiocatore(nome).vampirizzazione(); }
 
-    private EsitoAttacco attaccoNosferatuRuolo(String nome) { return getRuolo(nome).attaccoNosferatu(); }
-
-    private EsitoAttacco vampirizzazioneRuolo(String nome) { return getRuolo(nome).vampirizzazione(); }
-
-    private boolean isAssassino(String nome) { return getRuolo(nome).isAssassino(); }
+    private boolean isAssassino(String nome) { return getGiocatore(nome).getRuolo().isAssassino(); }
 
     private boolean isGuardia(int posizione) { return isGuardia(getNomeGiocatore(posizione)); }
+
+    private Giocatore getGiocatore(int posizione) { return getGiocatore(getNomeGiocatore(posizione)); }
 
 }

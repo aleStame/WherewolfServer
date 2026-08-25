@@ -21,23 +21,17 @@ public class Ruolo
 
     private Fazione fazione;
 
-    private final Fazione fazioneOriginale;
-
     private final Aura aura;
 
     private final int lune;
 
-    private int voti;
-
-    private boolean amato, romeo, segnalazioneAzzeccagarbugli, inquisito, segnalatoBoia, segnalatoOratore, stregato;
+    private boolean segnalatoBoia, segnalatoOratore;
 
     private final boolean mistico;
 
     private final Tratti tratti;
 
     private Categoria categoria;
-
-    private final Categoria categoriaOriginale;
 
     public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
     {
@@ -51,19 +45,11 @@ public class Ruolo
         this.aura = aura;
         this.descrizione = descrizione;
         this.lune = lune;
-        annullaVoti();
-        setAmato(false);
         this.mistico = mistico;
         tratti = new Tratti();
-        setRomeo(false);
-        annullaSegnalazioneAzzeccagarbugli();
-        annullaSegnalazioneInquisitore();
-        fazioneOriginale = fazione;
         annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
-        this.categoriaOriginale = categoria;
-        stregato = false;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -87,30 +73,7 @@ public class Ruolo
 
     public Fazione getFazione() { return fazione; }
 
-    public void incrementaVoti(int voti) { for(int i = 0; i < voti; i++) this.voti++; }
-
-    public int getNumeroVoti()
-    {
-        int risultato = voti;
-        if(isMaledetto()) risultato++;
-        return risultato;
-    }
-
-    public void annullaVoti() { voti = 0; }
-
-    public boolean isAmato() { return amato; }
-
-    public void sceltaAngeloCustode()
-    {
-        setAmato(true);
-        aggiungiProtezioneCreatureOmbra();
-    }
-
-    public void riconosciNegromante() { }
-
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
-
-    public EsitoAttacco gildata() { return FALLITO; }
 
     public boolean isMistico() { return mistico; }
 
@@ -178,13 +141,6 @@ public class Ruolo
 
     public boolean isGhoul() { return false; }
 
-    public void romeizzazione()
-    {
-        aggiungiProtezioneCreatureOmbra();
-        setRomeo(true);
-        cambiaFazione(AMANTI);
-    }
-
     public boolean isAmanti() { return false; }
 
     public boolean isGiulietta() { return false; }
@@ -208,7 +164,7 @@ public class Ruolo
     public EsitoAttacco attaccoLupi(Ruolo ruolo)
     {
         EsitoAttacco risultato = RIUSCITO;
-        if(isProtezionePresente(ruolo)) risultato = attaccoRuoloProtetto();
+        if(isProtezionePresente(ruolo)) risultato = FALLITO;
         return risultato;
     }
 
@@ -227,8 +183,6 @@ public class Ruolo
     public boolean maledizione() { return tratti.maledizione(); }
 
     public void aggiungiProtezione(Ruolo... ruoli) { tratti.aggiungiProtezione(ruoli); }
-
-    public void aggiungiProtezioneCreatureOmbra() { tratti.aggiungiProtezioneCreatureOmbra(); }
 
     public boolean isMago() { return false; }
 
@@ -250,14 +204,6 @@ public class Ruolo
 
     public boolean isNosferatu() { return false; }
 
-    public EsitoAttacco attaccoNosferatu()
-    {
-        EsitoAttacco risultato = RIUSCITO;
-        if(isAttaccoNosferatuFallito()) risultato = FALLITO;
-        gestioneConseguenzeNosferatu(risultato);
-        return risultato;
-    }
-
     public boolean isNonna() { return false; }
 
     public boolean isOratore() { return false; }
@@ -265,8 +211,6 @@ public class Ruolo
     public boolean isOste() { return false; }
 
     public boolean isPazzo() { return false; }
-
-    public boolean isRomeo() { return romeo; }
 
     public boolean isPeccatore() { return false; }
 
@@ -284,20 +228,6 @@ public class Ruolo
 
     public boolean isTemplare() { return false; }
 
-    public void resettaAmato()
-    {
-        setAmato(false);
-        ripristinaFazioneOriginale();
-        perdiProtezioni();
-    }
-
-    public EsitoAttacco attaccoAssassino()
-    {
-        EsitoAttacco esito = RIUSCITO;
-        if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
-        return esito;
-    }
-
     public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito =  NON_FINITO;
@@ -307,39 +237,9 @@ public class Ruolo
 
     public EsitoAttacco vampirizzazione()
     {
-        EsitoAttacco esito = FALLITO;
-        if(!isMistico() && !isProtezioneVampiroPresente())
-        {
-            trasformazioneVampiro();
-            esito = RIUSCITO;
-        }
+        EsitoAttacco esito = RIUSCITO;
+        if(isProtezioneVampiroPresente() || isMistico()) esito = FALLITO;
         return esito;
-    }
-
-    public void eliminaTratti(Tratto... tratti) { this.tratti.eliminaTratti(tratti); }
-
-    public void resettaRomeo()
-    {
-        setRomeo(false);
-        perdiProtezioni();
-    }
-
-    public boolean isSegnalatoAzzeccagarbugli() { return segnalazioneAzzeccagarbugli; }
-
-    public void segnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(true); }
-
-    public void annullaSegnalazioneAzzeccagarbugli() { setSegnalazioneAzzeccagarbugli(false); }
-
-    public boolean isInquisito() { return inquisito; }
-
-    public void segnalazioneInquisitore() { if(isMistico()) setInquisito(true); }
-
-    public void annullaSegnalazioneInquisitore() { setInquisito(false); }
-
-    public void ripristinaFazioneOriginale()
-    {
-        cambiaFazione(fazioneOriginale);
-        cambiaCategoria(categoriaOriginale);
     }
 
     public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
@@ -354,11 +254,7 @@ public class Ruolo
 
     public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
 
-    public EsitoAttacco attaccoNegromante()
-    {
-        maledizione();
-        return RIUSCITO;
-    }
+    public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 
@@ -374,82 +270,29 @@ public class Ruolo
 
     public boolean isVampiro() { return false; }
 
-    public void ripristina()
-    {
-        annullaVoti();
-        resettaRomeo();
-        resettaAmato();
-        annullaSegnalazioneAzzeccagarbugli();
-        eliminaTratti(MALEDETTO, NON_MORTO);
-        ripristinaFazioneOriginale();
-        annullaSegnalazioneInquisitore();
-        perdiProtezioni();
-        stregato = false;
-    }
-
-    public void protezioneStrega() { stregato = true; }
-
     public TipoContadino getTipoContadino()
     {
         throw new IllegalStateException("ERRORE!!! Questo ruolo non è un contadino.");
     }
 
-    public boolean isStregato() { return stregato; }
+    public EsitoAttacco attaccoAssassino() { return RIUSCITO; }
 
-    private void trasformazioneVampiro()
+    public EsitoAttacco gildata() { return RIUSCITO; }
+
+    public EsitoAttacco attaccoNosferatu()
     {
-        cambiaFazione(VAMPIRO);
-        aggiungiTratti(NON_MORTO);
+        EsitoAttacco esito = RIUSCITO;
+        if(isProtezioneNosferatuPresente()) esito = FALLITO;
+        return esito;
     }
+
+    public EsitoAttacco passaPosseduto() { return RIUSCITO; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
-
-    private void setInquisito(boolean inquisito) { this.inquisito = inquisito; }
-
-    private void setSegnalazioneAzzeccagarbugli(boolean segnalazioneAzzeccagarbugli)
-    {
-        this.segnalazioneAzzeccagarbugli = segnalazioneAzzeccagarbugli;
-    }
-
-    private void gestioneConseguenzeNosferatu(EsitoAttacco risultato)
-    {
-        switch(risultato)
-        {
-            case RIUSCITO -> trasformazioneNosferatu();
-            case FALLITO -> perdiProtezioni();
-        }
-    }
-
-    private boolean isAttaccoNosferatuFallito()
-    {
-        return isMistico() || tratti.isProtezioneNosferatuPresente() || isRomeo();
-    }
-
-    private void trasformazioneNosferatu()
-    {
-        aggiungiTratti(NON_MORTO);
-        cambiaFazione(NOSFERATU);
-        this.categoria = CREATURE_OMBRA;
-    }
 
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
-    }
-
-    private void setAmato(boolean amato) { this.amato = amato; }
-
-    private void setRomeo(boolean romeo) { this.romeo = romeo; }
-
-    private EsitoAttacco attaccoRuoloProtetto()
-    {
-        EsitoAttacco esito = FALLITO;
-        if(isAmato())
-        {
-            perdiProtezioni();
-            esito = ANGELO_CUSTODE_MORTO;
-        }
-        return esito;
     }
 
 }

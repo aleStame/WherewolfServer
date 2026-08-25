@@ -5,7 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 
 public final class CapoBranco extends Lupo
@@ -24,14 +24,14 @@ public final class CapoBranco extends Lupo
 
     @Override public boolean isCapoBranco() { return true; }
 
-    @Override public EsitoAttacco gildata() { return MORTO; }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
         if((esito == VITTORIA || esito == NON_FINITO) && (partita.isLupoReiettoVivo() && !partita.isLupoAttaccanteVivo())) esito = SCONFITTA;
         return esito;
     }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo attaccante) { return RIUSCITO; }
 
     public static Ruolo getInstance() { return new CapoBranco(); }
 

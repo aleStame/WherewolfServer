@@ -53,14 +53,6 @@ public final class TestGiocatori
         verificaVero(giocatori.isCriminale(nome));
     }
 
-    @Test public void testInquisito()
-    {
-        String nome = "Andrea";
-        aggiungiGiocatore(nome, "Sidhe");
-        giocatori.segnalazioneInquisitore(nome);
-        verificaVero(giocatori.isInquisito(nome));
-    }
-
     @Test public void testOratorePresente()
     {
         String[][] giocatori = new String[][] { { "Marco", "Oratore" }, { "Gianna", "Guaritore" } };
@@ -94,34 +86,6 @@ public final class TestGiocatori
         aggiungiGiocatori(giocatori);
         verificaVero(isContadinoMostro(giocatori[0][0]));
         verificaFalso(isContadinoMostro(giocatori[1][0]));
-    }
-
-    @Test public void testNonRomeo()
-    {
-        String romeo = "Secondo", nome = "Terzo";
-        aggiungiGiocatori(new String[][] { { "Primo", "Giulietta" }, { romeo, "Oratore" }, { nome, "Azzeccagarbugli" } });
-        giocatori.romeizzazione(romeo);
-        verificaFalso(isRomeo(nome));
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
-        }
-    )
-    public void testRomeo(String nomeRuolo)
-    {
-        String nome = "Marco";
-        aggiungiGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
-        giocatori.romeizzazione(nome);
-        verificaVero(isRomeo(nome));
-        giocatori.ripristina(nome);
     }
 
     @Test public void testNosferatuPresente()
@@ -165,14 +129,14 @@ public final class TestGiocatori
     {
         String nome = "Alessia";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isMegera(nome));
+        verificaFalso(isMegera(nome));
     }
 
     @Test public void testMegera()
     {
         String nome = "Orietta";
         aggiungiGiocatore(nome, "Megera");
-        verificaVero(giocatori.isMegera(nome));
+        verificaVero(isMegera(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -193,6 +157,7 @@ public final class TestGiocatori
         aggiungiGiocatore(nome, nomeRuolo);
         verificaStringa(giocatori.getNomeRuolo(nome), nomeRuolo);
     }
+    private boolean isMegera(String nome) { return giocatori.isMegera(nome); }
 
     private boolean isRomeo(String nome) { return giocatori.isRomeo(nome); }
 
@@ -219,7 +184,7 @@ public final class TestGiocatori
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
-        giocatori.aggiungiGiocatore(nomeGiocatore, FACTORY.getRuolo(nomeRuolo));
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
     }
 
     private void verificaNumeroGiocatori(int numeroGiocatori)

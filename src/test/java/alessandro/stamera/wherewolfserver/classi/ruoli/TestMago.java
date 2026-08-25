@@ -71,8 +71,6 @@ public final class TestMago
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(FALLITO); }
-
     @Test public void testSegnalazioneBoia()
     {
         ruolo.segnalazioneBoia();

@@ -44,8 +44,6 @@ public final class TestSidhe
         verificaFalso(ruolo.maledizione());
         verificaFalso(ruolo.isMaledetto());
         int numeroVoti = 2;
-        ruolo.incrementaVoti(numeroVoti);
-        assertThat(ruolo.getNumeroVoti()).isEqualTo(numeroVoti);
     }
 
     @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }

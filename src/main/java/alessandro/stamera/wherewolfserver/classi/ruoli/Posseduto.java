@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.CreatureOmbra;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import jakarta.annotation.Nonnull;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.TROVATO_POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
@@ -31,6 +29,8 @@ public final class Posseduto extends CreatureOmbra
     @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoDefault(); }
 
     @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return getEsitoAttaccoDefault(); }
 
     public static Ruolo getInstance() { return new Posseduto(); }
 

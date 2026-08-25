@@ -17,7 +17,7 @@ public final class TestGiocatoriEliminati
 
     @Test public void testBardoPresente()
     {
-        giocatori.aggiungiGiocatore("Pino", FACTORY.getRuolo("Bardo"));
+        giocatori.aggiungiGiocatore("Pino", new Giocatore(FACTORY.getRuolo("Bardo")));
         assertThat(isBardoPresente()).isTrue();
     }
 
@@ -40,7 +40,7 @@ public final class TestGiocatoriEliminati
     public void testControlloMedium(String nomeRuolo, Aura aura)
     {
         String nome = "Paolo";
-        giocatori.aggiungiGiocatore(nome, FACTORY.getRuolo(nomeRuolo));
+        giocatori.aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
         assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura);
     }
 

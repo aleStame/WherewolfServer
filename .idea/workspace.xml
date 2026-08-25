@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoLupoBrancoNonna riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -40,6 +40,7 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.html" afterDir="false" />
@@ -148,6 +149,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.xml" afterDir="false" />
@@ -218,7 +220,81 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestAltraGuardia.class.uniqueId21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestAmanti.class.uniqueId9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestAngeloCustode.class.uniqueId66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestAssassino.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestAzzeccagarbugli.class.uniqueId55" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBallottaggio.class.uniqueId35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBardo.class.uniqueId52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBecchino.class.uniqueId12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBoccaDiRosa.class.uniqueId34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBoia.class.uniqueId25" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBorgomastro.class.uniqueId44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBracconiere.class.uniqueId22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCacciatore.class.uniqueId32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCacciatoreDiVampiri.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCapoBranco.class.uniqueId61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCapoGilda.class.uniqueId59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCappuccettoRosso.class.uniqueId17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCitta.class.uniqueId57" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadino.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadinoEroe.class.uniqueId58" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadinoLupo.class.uniqueId14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadinoMostro.class.uniqueId46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestContadinoNormale.class.uniqueId65" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCreatureOmbra.class.uniqueId69" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCriminale.class.uniqueId31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestEremita.class.uniqueId38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGhoul.class.uniqueId18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatori.class.uniqueId60" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriEliminati.class.uniqueId64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriMortiNotte.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiovaneLupo.class.uniqueId54" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiulietta.class.uniqueId67" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiullare.class.uniqueId68" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGoblin.class.uniqueId15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGuardia.class.uniqueId56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGuardiaCorrotta.class.uniqueId11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGuardiaPrincipale.class.uniqueId24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGuaritore.class.uniqueId26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestInquisitore.class.uniqueId19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestInquisizione.class.uniqueId43" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestLadra.class.uniqueId63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestLeprecauno.class.uniqueId36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestLupo.class.uniqueId48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestLupoBranco.class.uniqueId29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestLupoReietto.class.uniqueId71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestLupoSolitario.class.uniqueId30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestMago.class.uniqueId72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestMedium.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestMegera.class.uniqueId33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestMercante.class.uniqueId62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestMonaco.class.uniqueId27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestNegromante.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestNonna.class.uniqueId28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestNosferatu.class.uniqueId47" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestOratore.class.uniqueId53" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestOste.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId39" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPazzo.class.uniqueId20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPeccatore.class.uniqueId13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPiccoloPopolo.class.uniqueId16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPosseduto.class.uniqueId37" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPrete.class.uniqueId73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestProtezioni.class.uniqueId49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestRuoliFactory.class.uniqueId40" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestRuolo.class.uniqueId45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestSensitiva.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestSidhe.class.uniqueId74" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestSpia.class.uniqueId50" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestTemplare.class.uniqueId51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestTratti.class.uniqueId23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestUomini.class.uniqueId42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestVampiro.class.uniqueId70" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestVillaggio.class.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
@@ -256,6 +332,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -291,6 +368,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.TestPartita.testPoterePossedutoAmatoPrete.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.Tests in 'wherewolfserver.test'.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wherewolf.server.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -300,9 +378,9 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/ultimoLupoControCappuccettoRosso&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/lupoDelBrancoAmatoControNonna&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -310,6 +388,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
       <recent name="alessandro.stamera.wherewolfserver.classi.eccezioni" />
     </key>
   </component>
@@ -417,399 +496,399 @@
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
     </task>
-    <task id="LOCAL-00102" summary="VERDE: testMessaggio riuscito">
+    <task id="LOCAL-00414" summary="ROSSO: testNoCacciatoreDiVampiri non riuscito">
       <option name="closed" value="true" />
-      <created>1784985743034</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
+      <created>1786701506497</created>
+      <option name="number" value="00414" />
+      <option name="presentableId" value="LOCAL-00414" />
       <option name="project" value="LOCAL" />
-      <updated>1784985743034</updated>
+      <updated>1786701506498</updated>
     </task>
-    <task id="LOCAL-00103" summary="ROSSO: testAttaccoLupoSolitario non riuscito">
+    <task id="LOCAL-00415" summary="VERDE: testNoCacciatoreDiVampiri riuscito">
       <option name="closed" value="true" />
-      <created>1784988436299</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
+      <created>1786702177553</created>
+      <option name="number" value="00415" />
+      <option name="presentableId" value="LOCAL-00415" />
       <option name="project" value="LOCAL" />
-      <updated>1784988436299</updated>
+      <updated>1786702177554</updated>
     </task>
-    <task id="LOCAL-00104" summary="VERDE: testAttaccoLupoSolitario riuscito">
+    <task id="LOCAL-00416" summary="REFACTORING: definizione del metodo0 isCacciatoreDiVampiri">
       <option name="closed" value="true" />
-      <created>1784989129725</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
+      <created>1786702812592</created>
+      <option name="number" value="00416" />
+      <option name="presentableId" value="LOCAL-00416" />
       <option name="project" value="LOCAL" />
-      <updated>1784989129746</updated>
+      <updated>1786702812593</updated>
     </task>
-    <task id="LOCAL-00105" summary="ROSSO: testAttaccoLupoSolitarioAngeloCustodeAmato non riuscito">
+    <task id="LOCAL-00417" summary="ROSSO: testNoSensitiva non riuscito">
       <option name="closed" value="true" />
-      <created>1784991701290</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
+      <created>1786704012813</created>
+      <option name="number" value="00417" />
+      <option name="presentableId" value="LOCAL-00417" />
       <option name="project" value="LOCAL" />
-      <updated>1784991701291</updated>
+      <updated>1786704012813</updated>
     </task>
-    <task id="LOCAL-00106" summary="VERDE: testAttaccoLupoSolitarioAngeloCustodeAmato riuscito">
+    <task id="LOCAL-00418" summary="VERDE: testNoSensitiva riuscito">
       <option name="closed" value="true" />
-      <created>1784992110398</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
+      <created>1786704276045</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
       <option name="project" value="LOCAL" />
-      <updated>1784992110398</updated>
+      <updated>1786704276045</updated>
     </task>
-    <task id="LOCAL-00107" summary="REFACTORING: definizione del metodo getEsitoAttaccoLupoSolitario">
+    <task id="LOCAL-00419" summary="VERDE DIRETTO: testSensitiva riuscito">
       <option name="closed" value="true" />
-      <created>1784992473056</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
+      <created>1786735970796</created>
+      <option name="number" value="00419" />
+      <option name="presentableId" value="LOCAL-00419" />
       <option name="project" value="LOCAL" />
-      <updated>1784992473057</updated>
+      <updated>1786735970797</updated>
     </task>
-    <task id="LOCAL-00108" summary="REFACTORING: definizione del metodo verificaAttaccoLupoSolitario">
+    <task id="LOCAL-00420" summary="REFACTORING: definizione del metodo isSensitiva">
       <option name="closed" value="true" />
-      <created>1784992689309</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
+      <created>1786736703643</created>
+      <option name="number" value="00420" />
+      <option name="presentableId" value="LOCAL-00420" />
       <option name="project" value="LOCAL" />
-      <updated>1784992689309</updated>
+      <updated>1786736703643</updated>
     </task>
-    <task id="LOCAL-00109" summary="VERDE DIRETTO: testAttaccoLupoSolitario riuscito">
+    <task id="LOCAL-00421" summary="REFACTORING: definizione del metodo salvataggioAmatoDaBallottaggio">
       <option name="closed" value="true" />
-      <created>1784993062261</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
+      <created>1786736960027</created>
+      <option name="number" value="00421" />
+      <option name="presentableId" value="LOCAL-00421" />
       <option name="project" value="LOCAL" />
-      <updated>1784993062262</updated>
+      <updated>1786736960028</updated>
     </task>
-    <task id="LOCAL-00110" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoAmato riuscito">
+    <task id="LOCAL-00422" summary="REFACTORING: definizione del metodo accusaAngeloCustode">
       <option name="closed" value="true" />
-      <created>1784993529157</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
+      <created>1786737113484</created>
+      <option name="number" value="00422" />
+      <option name="presentableId" value="LOCAL-00422" />
       <option name="project" value="LOCAL" />
-      <updated>1784993529157</updated>
+      <updated>1786737113484</updated>
     </task>
-    <task id="LOCAL-00111" summary="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoNonna non riuscito">
+    <task id="LOCAL-00423" summary="REFACTORING: definizione del metodo isAngeloCustodePresente">
       <option name="closed" value="true" />
-      <created>1784994190548</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
+      <created>1786737272792</created>
+      <option name="number" value="00423" />
+      <option name="presentableId" value="LOCAL-00423" />
       <option name="project" value="LOCAL" />
-      <updated>1784994190548</updated>
+      <updated>1786737272794</updated>
     </task>
-    <task id="LOCAL-00112" summary="VERDE: testAttaccoLupoSolitarioCappuccettoRossoNonna riuscito">
+    <task id="LOCAL-00424" summary="REFACTORING: definizione del metodo isAmatoSalvabile">
       <option name="closed" value="true" />
-      <created>1785078534172</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
+      <created>1786737683418</created>
+      <option name="number" value="00424" />
+      <option name="presentableId" value="LOCAL-00424" />
       <option name="project" value="LOCAL" />
-      <updated>1785078534174</updated>
+      <updated>1786737683418</updated>
     </task>
-    <task id="LOCAL-00113" summary="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmatoSenzaAngeloCustode non riuscito">
+    <task id="LOCAL-00425" summary="REFACTORING: definizione del metodo scambioAngeloAmato">
       <option name="closed" value="true" />
-      <created>1785079928423</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
+      <created>1786737905907</created>
+      <option name="number" value="00425" />
+      <option name="presentableId" value="LOCAL-00425" />
       <option name="project" value="LOCAL" />
-      <updated>1785079928423</updated>
+      <updated>1786737905907</updated>
     </task>
-    <task id="LOCAL-00114" summary="VERDE: testAttaccoLupoSolitarioCappuccettoRossoAmatoSenzaAngeloCustode riuscito">
+    <task id="LOCAL-00426" summary="REFACTORING: definizione del metodo isBallottaggioIncompleto">
       <option name="closed" value="true" />
-      <created>1785080612027</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
+      <created>1786738220845</created>
+      <option name="number" value="00426" />
+      <option name="presentableId" value="LOCAL-00426" />
       <option name="project" value="LOCAL" />
-      <updated>1785080612027</updated>
+      <updated>1786738220845</updated>
     </task>
-    <task id="LOCAL-00115" summary="REFACTORING: definizione del metodo eliminaProtezioneNonna">
+    <task id="LOCAL-00427" summary="REFACTORING: definizione del metodo getNomiGiocatoriCondizione">
       <option name="closed" value="true" />
-      <created>1785080928993</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
+      <created>1786740732523</created>
+      <option name="number" value="00427" />
+      <option name="presentableId" value="LOCAL-00427" />
       <option name="project" value="LOCAL" />
-      <updated>1785080928993</updated>
+      <updated>1786740732524</updated>
     </task>
-    <task id="LOCAL-00116" summary="REFACTORING: definizione del metodo perditaProtezioniAmato">
+    <task id="LOCAL-00428" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito">
       <option name="closed" value="true" />
-      <created>1785082375275</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
+      <created>1786802190986</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
       <option name="project" value="LOCAL" />
-      <updated>1785082375275</updated>
+      <updated>1786802190987</updated>
     </task>
-    <task id="LOCAL-00117" summary="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode non riuscito">
+    <task id="LOCAL-00429" summary="ROSSO: testSegnalazioneInquisitoreMisticoAssente non riuscito">
       <option name="closed" value="true" />
-      <created>1785082732257</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
+      <created>1786802779825</created>
+      <option name="number" value="00429" />
+      <option name="presentableId" value="LOCAL-00429" />
       <option name="project" value="LOCAL" />
-      <updated>1785082732258</updated>
+      <updated>1786802779825</updated>
     </task>
-    <task id="LOCAL-00118" summary="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode non riuscito">
+    <task id="LOCAL-00430" summary="REFACTORING: definizione del metodo gestisciEccezioniAttaccoLupi">
       <option name="closed" value="true" />
-      <created>1785092933550</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
+      <created>1786804002336</created>
+      <option name="number" value="00430" />
+      <option name="presentableId" value="LOCAL-00430" />
       <option name="project" value="LOCAL" />
-      <updated>1785092933551</updated>
+      <updated>1786804002336</updated>
     </task>
-    <task id="LOCAL-00119" summary="VERDE: testAttaccoUltimoLupoCappuccettoRosso riuscito">
+    <task id="LOCAL-00431" summary="REFACTORING: definizione del metodo eccezioneMorteAngeloCustode">
       <option name="closed" value="true" />
-      <created>1785160073740</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
+      <created>1786804379162</created>
+      <option name="number" value="00431" />
+      <option name="presentableId" value="LOCAL-00431" />
       <option name="project" value="LOCAL" />
-      <updated>1785160073740</updated>
+      <updated>1786804379162</updated>
     </task>
-    <task id="LOCAL-00120" summary="REFACTORING: definizione del metodo gestioneAttaccoRiuscito">
+    <task id="LOCAL-00432" summary="REFACTORING: definizione del metodo eccezioneEliminazioneCappuccettoRosso">
       <option name="closed" value="true" />
-      <created>1785160409959</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
+      <created>1786804513929</created>
+      <option name="number" value="00432" />
+      <option name="presentableId" value="LOCAL-00432" />
       <option name="project" value="LOCAL" />
-      <updated>1785160409959</updated>
+      <updated>1786804513929</updated>
     </task>
-    <task id="LOCAL-00121" summary="REFACTORING: definizione del metodo gestioneProtezioneUltimoLupo">
+    <task id="LOCAL-00433" summary="REFACTORING: definizione del metodo getGiocatoreAmato">
       <option name="closed" value="true" />
-      <created>1785161144566</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
+      <created>1786804912606</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
       <option name="project" value="LOCAL" />
-      <updated>1785161144566</updated>
+      <updated>1786804912607</updated>
     </task>
-    <task id="LOCAL-00122" summary="REFACTORING: definizione del metodo aggiornaProtezioneNonna">
+    <task id="LOCAL-00434" summary="REFACTORING: definizione del metodo isAmatoSenzaAngelo">
       <option name="closed" value="true" />
-      <created>1785161456536</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
+      <created>1786805064626</created>
+      <option name="number" value="00434" />
+      <option name="presentableId" value="LOCAL-00434" />
       <option name="project" value="LOCAL" />
-      <updated>1785161456536</updated>
+      <updated>1786805064626</updated>
     </task>
-    <task id="LOCAL-00123" summary="REFACTORING: definizione del metodo isAngeloCustodeMorto">
+    <task id="LOCAL-00435" summary="REFACTORING: definizione del metodo perditaProtezioniAmato">
       <option name="closed" value="true" />
-      <created>1785161824465</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
+      <created>1786805318011</created>
+      <option name="number" value="00435" />
+      <option name="presentableId" value="LOCAL-00435" />
       <option name="project" value="LOCAL" />
-      <updated>1785161824467</updated>
+      <updated>1786805318011</updated>
     </task>
-    <task id="LOCAL-00124" summary="REFACTORING: definizione del metodo isCappuccettoNonnaPresenti">
+    <task id="LOCAL-00436" summary="REFACTORING: definizione del metodo isPrimaNotte">
       <option name="closed" value="true" />
-      <created>1785162267108</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
+      <created>1786805852666</created>
+      <option name="number" value="00436" />
+      <option name="presentableId" value="LOCAL-00436" />
       <option name="project" value="LOCAL" />
-      <updated>1785162267108</updated>
+      <updated>1786805852666</updated>
     </task>
-    <task id="LOCAL-00125" summary="REFACTORING: definizione del metodo isRimastoUltimoLupo">
+    <task id="LOCAL-00437" summary="REFACTORING: definizione del metodo morteMagoConContadinoMostro">
       <option name="closed" value="true" />
-      <created>1785162461073</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
+      <created>1786805960041</created>
+      <option name="number" value="00437" />
+      <option name="presentableId" value="LOCAL-00437" />
       <option name="project" value="LOCAL" />
-      <updated>1785162461073</updated>
+      <updated>1786805960041</updated>
     </task>
-    <task id="LOCAL-00126" summary="REFACTORING: definizione di una variante del metodo aggiungiProtezioneNonna con la posizione della protezione come argomento">
+    <task id="LOCAL-00438" summary="REFACTORING: definizione del metodo eliminaMago">
       <option name="closed" value="true" />
-      <created>1785163302242</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
+      <created>1786806053152</created>
+      <option name="number" value="00438" />
+      <option name="presentableId" value="LOCAL-00438" />
       <option name="project" value="LOCAL" />
-      <updated>1785163302242</updated>
+      <updated>1786806053152</updated>
     </task>
-    <task id="LOCAL-00127" summary="ROSSO: testAttaccoUltimoLupoCappuccettoRossoSenzaNonna non riuscito">
+    <task id="LOCAL-00439" summary="REFACTORING: definizione del metodo eliminaSensitiva">
       <option name="closed" value="true" />
-      <created>1785163908290</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
+      <created>1786806244026</created>
+      <option name="number" value="00439" />
+      <option name="presentableId" value="LOCAL-00439" />
       <option name="project" value="LOCAL" />
-      <updated>1785163908290</updated>
+      <updated>1786806244026</updated>
     </task>
-    <task id="LOCAL-00128" summary="VERDE: testAttaccoUltimoLupoCappuccettoRossoSenzaNonna riuscito">
+    <task id="LOCAL-00440" summary="REFACTORING: definizione del metodo verificaVittoriaNosferatu">
       <option name="closed" value="true" />
-      <created>1785167081838</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
+      <created>1786808190634</created>
+      <option name="number" value="00440" />
+      <option name="presentableId" value="LOCAL-00440" />
       <option name="project" value="LOCAL" />
-      <updated>1785167081839</updated>
+      <updated>1786808190635</updated>
     </task>
-    <task id="LOCAL-00129" summary="VERDE: testAttaccoUltimoLupoCappuccettoRossoSenzaNonna riuscito">
+    <task id="LOCAL-00441" summary="REFACTORING: definizione del metodo gestionePassaggioPossedutoRiuscito">
       <option name="closed" value="true" />
-      <created>1785168197987</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
+      <created>1786808365792</created>
+      <option name="number" value="00441" />
+      <option name="presentableId" value="LOCAL-00441" />
       <option name="project" value="LOCAL" />
-      <updated>1785168197987</updated>
+      <updated>1786808365792</updated>
     </task>
-    <task id="LOCAL-00130" summary="REFACTORING: definizione del metodo gestioneAttaccoNonFallito">
+    <task id="LOCAL-00442" summary="ROSSO: testVampirizzazioneGiuliettaCriminali non riuscito">
       <option name="closed" value="true" />
-      <created>1785168572657</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
+      <created>1787561342240</created>
+      <option name="number" value="00442" />
+      <option name="presentableId" value="LOCAL-00442" />
       <option name="project" value="LOCAL" />
-      <updated>1785168572657</updated>
+      <updated>1787561342241</updated>
     </task>
-    <task id="LOCAL-00131" summary="ROSSO: testAttaccoUltimoLupoCappuccettoRossoAmato non riuscito">
+    <task id="LOCAL-00443" summary="VERDE: testVampirizzazioneGiuliettaCriminali riuscito">
       <option name="closed" value="true" />
-      <created>1785169108447</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
+      <created>1787561589396</created>
+      <option name="number" value="00443" />
+      <option name="presentableId" value="LOCAL-00443" />
       <option name="project" value="LOCAL" />
-      <updated>1785169108447</updated>
+      <updated>1787561589396</updated>
     </task>
-    <task id="LOCAL-00132" summary="VERDE: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito">
+    <task id="LOCAL-00444" summary="ROSSO: testAttaccoLupiAngeloCustodeRomeizzato non riuscito">
       <option name="closed" value="true" />
-      <created>1785169748272</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
+      <created>1787561978836</created>
+      <option name="number" value="00444" />
+      <option name="presentableId" value="LOCAL-00444" />
       <option name="project" value="LOCAL" />
-      <updated>1785169748272</updated>
+      <updated>1787561978836</updated>
     </task>
-    <task id="LOCAL-00133" summary="REFACTORING: definizione del metodo gestioneAttaccoAngeloCustode">
+    <task id="LOCAL-00445" summary="VERDE: testAttaccoLupiAngeloCustodeRomeizzato riuscito">
       <option name="closed" value="true" />
-      <created>1785170060553</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
+      <created>1787562801252</created>
+      <option name="number" value="00445" />
+      <option name="presentableId" value="LOCAL-00445" />
       <option name="project" value="LOCAL" />
-      <updated>1785170060553</updated>
+      <updated>1787562801252</updated>
     </task>
-    <task id="LOCAL-00134" summary="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna riuscito">
+    <task id="LOCAL-00446" summary="ROSSO: testNosferatizzazioneAngeloCustodeRomeizzato non riuscito">
       <option name="closed" value="true" />
-      <created>1785170487799</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
+      <created>1787578347315</created>
+      <option name="number" value="00446" />
+      <option name="presentableId" value="LOCAL-00446" />
       <option name="project" value="LOCAL" />
-      <updated>1785170487799</updated>
+      <updated>1787578347315</updated>
     </task>
-    <task id="LOCAL-00135" summary="REFACTORING: definizione del metodo isRimastoUnSoloLupo">
+    <task id="LOCAL-00447" summary="VERDE: testNosferatizzazioneAngeloCustodeRomeizzato riuscito">
       <option name="closed" value="true" />
-      <created>1785185580603</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
+      <created>1787581017626</created>
+      <option name="number" value="00447" />
+      <option name="presentableId" value="LOCAL-00447" />
       <option name="project" value="LOCAL" />
-      <updated>1785185580604</updated>
+      <updated>1787581017626</updated>
     </task>
-    <task id="LOCAL-00136" summary="REFACTORING: definizione del metodo isTemplarePresente">
+    <task id="LOCAL-00448" summary="ROSSO: testInizioCrociata non riuscito">
       <option name="closed" value="true" />
-      <created>1785186384399</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
+      <created>1787585928346</created>
+      <option name="number" value="00448" />
+      <option name="presentableId" value="LOCAL-00448" />
       <option name="project" value="LOCAL" />
-      <updated>1785186384400</updated>
+      <updated>1787585928346</updated>
     </task>
-    <task id="LOCAL-00137" summary="REFACTORING: definizione del metodo getPosizioneTemplare">
+    <task id="LOCAL-00449" summary="VERDE: testInizioCrociata riuscito">
       <option name="closed" value="true" />
-      <created>1785186504294</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
+      <created>1787587299876</created>
+      <option name="number" value="00449" />
+      <option name="presentableId" value="LOCAL-00449" />
       <option name="project" value="LOCAL" />
-      <updated>1785186504294</updated>
+      <updated>1787587299876</updated>
     </task>
-    <task id="LOCAL-00138" summary="REFACTORING: definizione del metodo isTemplare">
+    <task id="LOCAL-00450" summary="ROSSO: testControlloSensitivaContadinoMostro non riuscito">
       <option name="closed" value="true" />
-      <created>1785186790798</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
+      <created>1787587674874</created>
+      <option name="number" value="00450" />
+      <option name="presentableId" value="LOCAL-00450" />
       <option name="project" value="LOCAL" />
-      <updated>1785186790798</updated>
+      <updated>1787587674874</updated>
     </task>
-    <task id="LOCAL-00139" summary="ROSSO: testAttaccoLupiAngeloCustodeStregato non riuscito">
+    <task id="LOCAL-00451" summary="VERDE: testControlloSensitivaContadinoMostro riuscito">
       <option name="closed" value="true" />
-      <created>1785241803153</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
+      <created>1787588147553</created>
+      <option name="number" value="00451" />
+      <option name="presentableId" value="LOCAL-00451" />
       <option name="project" value="LOCAL" />
-      <updated>1785241803154</updated>
+      <updated>1787588147553</updated>
     </task>
-    <task id="LOCAL-00140" summary="VERDE: testAttaccoLupiAngeloCustodeStregato riuscito">
+    <task id="LOCAL-00452" summary="ROSSO: testGiocatoreStregato non riuscito">
       <option name="closed" value="true" />
-      <created>1785243118898</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
+      <created>1787603724292</created>
+      <option name="number" value="00452" />
+      <option name="presentableId" value="LOCAL-00452" />
       <option name="project" value="LOCAL" />
-      <updated>1785243118899</updated>
+      <updated>1787603724293</updated>
     </task>
-    <task id="LOCAL-00141" summary="REFACTORING: definizione del metodo isCappuccettoRossoProtetto">
+    <task id="LOCAL-00453" summary="VERDE: testGiocatoreStregato riuscito">
       <option name="closed" value="true" />
-      <created>1785243258530</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
+      <created>1787604150109</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
       <option name="project" value="LOCAL" />
-      <updated>1785243258530</updated>
+      <updated>1787604150109</updated>
     </task>
-    <task id="LOCAL-00142" summary="REFACTORING: definizione del metodo isCappuccettoRosso">
+    <task id="LOCAL-00454" summary="ROSSO: testAttaccoLupi non riuscito">
       <option name="closed" value="true" />
-      <created>1785243364299</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
+      <created>1787648266122</created>
+      <option name="number" value="00454" />
+      <option name="presentableId" value="LOCAL-00454" />
       <option name="project" value="LOCAL" />
-      <updated>1785243364299</updated>
+      <updated>1787648266123</updated>
     </task>
-    <task id="LOCAL-00143" summary="REFACTORING: definizione del metodo getCreatureOmbra">
+    <task id="LOCAL-00455" summary="VERDE: testAttaccoLupi riuscito">
       <option name="closed" value="true" />
-      <created>1785243576692</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
+      <created>1787648541037</created>
+      <option name="number" value="00455" />
+      <option name="presentableId" value="LOCAL-00455" />
       <option name="project" value="LOCAL" />
-      <updated>1785243576692</updated>
+      <updated>1787648541037</updated>
     </task>
-    <task id="LOCAL-00144" summary="ROSSO: testNessunaProtezioneCappuccettoRossoMorteNonna non riuscito">
+    <task id="LOCAL-00456" summary="ROSSO: testSuicidio non riuscito">
       <option name="closed" value="true" />
-      <created>1785246141740</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
+      <created>1787648816236</created>
+      <option name="number" value="00456" />
+      <option name="presentableId" value="LOCAL-00456" />
       <option name="project" value="LOCAL" />
-      <updated>1785246141741</updated>
+      <updated>1787648816236</updated>
     </task>
-    <task id="LOCAL-00145" summary="VERDE: testNessunaProtezioneCappuccettoRossoMorteNonna riuscito">
+    <task id="LOCAL-00457" summary="VERDE: testSuicidio riuscito">
       <option name="closed" value="true" />
-      <created>1785247764520</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
+      <created>1787650817361</created>
+      <option name="number" value="00457" />
+      <option name="presentableId" value="LOCAL-00457" />
       <option name="project" value="LOCAL" />
-      <updated>1785247764524</updated>
+      <updated>1787650817361</updated>
     </task>
-    <task id="LOCAL-00146" summary="ROSSO: testEsitoPartita non riuscito">
+    <task id="LOCAL-00458" summary="ROSSO: testNonnaLupoBranco non riuscito">
       <option name="closed" value="true" />
-      <created>1785248482600</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
+      <created>1787651749481</created>
+      <option name="number" value="00458" />
+      <option name="presentableId" value="LOCAL-00458" />
       <option name="project" value="LOCAL" />
-      <updated>1785248482601</updated>
+      <updated>1787651749481</updated>
     </task>
-    <task id="LOCAL-00147" summary="VERDE: testEsitoPartita riuscito">
+    <task id="LOCAL-00459" summary="VERDE: testNonnaLupoBranco riuscito">
       <option name="closed" value="true" />
-      <created>1785249500092</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
+      <created>1787651950390</created>
+      <option name="number" value="00459" />
+      <option name="presentableId" value="LOCAL-00459" />
       <option name="project" value="LOCAL" />
-      <updated>1785249500092</updated>
+      <updated>1787651950391</updated>
     </task>
-    <task id="LOCAL-00148" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoAmatoSenzaAngeloCustode riuscito">
+    <task id="LOCAL-00460" summary="ROSSO: testAttaccoLupoNonna non riuscito">
       <option name="closed" value="true" />
-      <created>1785250614010</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
+      <created>1787652447492</created>
+      <option name="number" value="00460" />
+      <option name="presentableId" value="LOCAL-00460" />
       <option name="project" value="LOCAL" />
-      <updated>1785250614010</updated>
+      <updated>1787652447492</updated>
     </task>
-    <task id="LOCAL-00149" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode riuscito">
+    <task id="LOCAL-00461" summary="ROSSO: testAttaccoLupoBrancoNonna non riuscito">
       <option name="closed" value="true" />
-      <created>1785251079279</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
+      <created>1787661858343</created>
+      <option name="number" value="00461" />
+      <option name="presentableId" value="LOCAL-00461" />
       <option name="project" value="LOCAL" />
-      <updated>1785251079280</updated>
+      <updated>1787661858343</updated>
     </task>
-    <task id="LOCAL-00150" summary="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito">
+    <task id="LOCAL-00462" summary="VERDE: testAttaccoLupoBrancoNonna riuscito">
       <option name="closed" value="true" />
-      <created>1785255217706</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
+      <created>1787662261079</created>
+      <option name="number" value="00462" />
+      <option name="presentableId" value="LOCAL-00462" />
       <option name="project" value="LOCAL" />
-      <updated>1785255217706</updated>
+      <updated>1787662261079</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <option name="localTasksCounter" value="463" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -827,31 +906,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isRimastoUltimoLupo" />
-    <MESSAGE value="REFACTORING: definizione di una variante del metodo aggiungiProtezioneNonna con la posizione della protezione come argomento" />
-    <MESSAGE value="ROSSO: testAttaccoUltimoLupoCappuccettoRossoSenzaNonna non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoUltimoLupoCappuccettoRossoSenzaNonna riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneAttaccoNonFallito" />
-    <MESSAGE value="ROSSO: testAttaccoUltimoLupoCappuccettoRossoAmato non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneAttaccoAngeloCustode" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isRimastoUnSoloLupo" />
-    <MESSAGE value="REFACTORING: definizione del metodo isTemplarePresente" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneTemplare" />
-    <MESSAGE value="REFACTORING: definizione del metodo isTemplare" />
-    <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustodeStregato non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoLupiAngeloCustodeStregato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoProtetto" />
-    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRosso" />
-    <MESSAGE value="REFACTORING: definizione del metodo getCreatureOmbra" />
-    <MESSAGE value="ROSSO: testNessunaProtezioneCappuccettoRossoMorteNonna non riuscito" />
-    <MESSAGE value="VERDE: testNessunaProtezioneCappuccettoRossoMorteNonna riuscito" />
-    <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
-    <MESSAGE value="VERDE: testEsitoPartita riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoAmatoSenzaAngeloCustode riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoUltimoLupoCappuccettoRossoAmato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaSensitiva" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaVittoriaNosferatu" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestionePassaggioPossedutoRiuscito" />
+    <MESSAGE value="ROSSO: testVampirizzazioneGiuliettaCriminali non riuscito" />
+    <MESSAGE value="VERDE: testVampirizzazioneGiuliettaCriminali riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupiAngeloCustodeRomeizzato non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupiAngeloCustodeRomeizzato riuscito" />
+    <MESSAGE value="ROSSO: testNosferatizzazioneAngeloCustodeRomeizzato non riuscito" />
+    <MESSAGE value="VERDE: testNosferatizzazioneAngeloCustodeRomeizzato riuscito" />
+    <MESSAGE value="ROSSO: testInizioCrociata non riuscito" />
+    <MESSAGE value="VERDE: testInizioCrociata riuscito" />
+    <MESSAGE value="ROSSO: testControlloSensitivaContadinoMostro non riuscito" />
+    <MESSAGE value="VERDE: testControlloSensitivaContadinoMostro riuscito" />
+    <MESSAGE value="ROSSO: testGiocatoreStregato non riuscito" />
+    <MESSAGE value="VERDE: testGiocatoreStregato riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <MESSAGE value="ROSSO: testSuicidio non riuscito" />
+    <MESSAGE value="VERDE: testSuicidio riuscito" />
+    <MESSAGE value="ROSSO: testNonnaLupoBranco non riuscito" />
+    <MESSAGE value="VERDE: testNonnaLupoBranco riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupoNonna non riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupoBrancoNonna non riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupoBrancoNonna non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupoBrancoNonna riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupoBrancoNonna riuscito" />
   </component>
 </project>

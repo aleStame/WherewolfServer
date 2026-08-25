@@ -72,8 +72,6 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
-    @Test public void testAttaccoNosferatu() { verificaMorto(ruolo.attaccoNosferatu()); }
-
     @Test public void testVampirizzazione() { verificaMorto(ruolo.vampirizzazione()); }
 
     private void verificaMorto(EsitoAttacco esito) { assertThat(esito).isEqualTo(MORTO); }

@@ -1,9 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Uomini;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.INQUISIZIONE;
 
@@ -23,6 +26,8 @@ public class Inquisizione extends Uomini
         if(esito == NON_FINITO && partita.isNoCreatureOmbra()) esito = getEsitoPartitaMistici(partita);
         return esito;
     }
+
+    @Override public EsitoAttacco gildata() { return FALLITO; }
 
     private EsitoPartita getEsitoPartitaMistici(Partita partita)
     {

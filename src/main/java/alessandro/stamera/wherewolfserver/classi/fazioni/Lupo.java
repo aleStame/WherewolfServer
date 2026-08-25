@@ -6,9 +6,7 @@ import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.CreatureOmbra;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
@@ -25,17 +23,6 @@ public class Lupo extends CreatureOmbra
 
     @Override public boolean isLupo() { return true; }
 
-    @Override public EsitoAttacco attaccoNosferatu() { return getMorto(); }
-
-    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
-    {
-        EsitoAttacco esito = FALLITO;
-        if(ruolo == this && !isProtetto()) esito = RIUSCITO;
-        return esito;
-    }
-
-    @Override public EsitoAttacco gildata() { return getMorto(); }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
@@ -44,6 +31,17 @@ public class Lupo extends CreatureOmbra
     }
 
     @Override public EsitoAttacco vampirizzazione() { return MORTO; }
+
+    @Override public EsitoAttacco attaccoNosferatu() { return MORTO; }
+
+    @Override public EsitoAttacco gildata() { return MORTO; }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo attaccante)
+    {
+        EsitoAttacco esito = super.attaccoLupi(attaccante);
+        if(attaccante.isCapoBranco()) esito = FALLITO;
+        return esito;
+    }
 
     private boolean isPresentiSoloLupiConSenzaFazione(Partita partita)
     {
@@ -54,9 +52,5 @@ public class Lupo extends CreatureOmbra
     {
         return partita.getNumeroLupiBrancoVivi() + partita.getNumeroSenzaFazioneVivi();
     }
-
-    private boolean isProtetto() { return isRomeo() || isAmato(); }
-
-    private EsitoAttacco getMorto() { return MORTO; }
 
 }

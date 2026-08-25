@@ -17,17 +17,6 @@ public class Villaggio extends Uomini
         super(nome, VILLAGGIO, aura, descrizione, lune, mistico);
     }
 
-    @Override public EsitoAttacco gildata()
-    {
-        EsitoAttacco esito = super.gildata();
-        if(!isTrattoPresente(NON_MORTO))
-        {
-            cambiaFazione(CRIMINALI);
-            esito = RIUSCITO;
-        }
-        return esito;
-    }
-
     @Override public boolean isVillaggio() { return true; }
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)

@@ -14,11 +14,6 @@ public class Guardia extends Villaggio
 
     @Override public boolean isGuardia() { return true; }
 
-    @Override public EsitoAttacco gildata()
-    {
-        EsitoAttacco esito = MORTO;
-        if(isTrattoPresente(NON_MORTO)) esito = FALLITO;
-        return esito;
-    }
+    @Override public EsitoAttacco gildata() { return MORTO; }
 
 }
