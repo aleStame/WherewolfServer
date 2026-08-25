@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -1719,13 +1720,17 @@ public final class TestPartita
 
     @Test public void testAttaccoCapoBrancoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
-        String messaggio =
+        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica", nomeCacciatore = "Alfredo";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        String messaggioNonna =
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
-        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggioNonna, nomeLupo);
         verificaVero(partita.isCapoBranco(nomeVittima));
+        terminaNotte();
+        String messaggioCacciatore = "Alfredo è il Cacciatore ed è protetto da Ciro in quanto lupo ex Nonna.\nAvvisa Ciro dell'attacco fallito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
+        verificaNonEliminati(nomeCacciatore);
     }
 
     @Test public void testAttaccoCapoBrancoAmatoNonna()
@@ -1737,6 +1742,7 @@ public final class TestPartita
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaVero(partita.isCapoBranco(nomeVittima));
     }
 
     @Test public void testAttaccoLupoBrancoNonna()
