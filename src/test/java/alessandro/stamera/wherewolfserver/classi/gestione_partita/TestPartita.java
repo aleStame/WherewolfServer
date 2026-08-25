@@ -1770,6 +1770,37 @@ public final class TestPartita
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
+    @Test public void testAttaccoLupoReiettoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        String messaggio =
+            "Il Lupo reietto (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo reietto.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaVero(partita.isLupoReietto(nomeVittima));
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+
+    /*
+    *
+    *
+
+    @Test public void testAttaccoLupoBrancoAmatoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica", nomeCacciatore = "Giorgia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        String messaggio =
+            "Il Lupo del branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo del branco.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaLupoBranco(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+    *
+    * */
+
     @ParameterizedTest @CsvSource
     (
         {
