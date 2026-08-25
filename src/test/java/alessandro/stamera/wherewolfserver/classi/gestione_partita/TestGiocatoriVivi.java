@@ -503,11 +503,11 @@ public final class TestGiocatoriVivi
 
     @Test public void testNonnaPresente()
     {
-        aggiungiGiocatore("Francesca", "Nonna");
+        String nome = "Francesca";
+        aggiungiGiocatore(nome, "Nonna");
         verificaVero(isNonnaPresente());
+        verificaStringa(giocatori.getNomeNonna(), nome);
     }
-
-    @Test public void testNonnaAssente() { verificaFalso(isNonnaPresente()); }
 
     @Test public void testCappuccettoRossoPresente()
     {
@@ -1165,6 +1165,8 @@ public final class TestGiocatoriVivi
         verificaVero(isCacciatorePresente());
         verificaStringa(giocatori.getNomeCacciatore(), nome);
     }
+
+    @Test public void testNonnaAssente() { verificaFalso(isNonnaPresente()); }
 
     private boolean isCacciatorePresente() { return giocatori.isCacciatorePresente(); }
 
