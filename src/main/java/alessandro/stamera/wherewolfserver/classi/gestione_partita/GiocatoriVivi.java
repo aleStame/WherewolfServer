@@ -323,7 +323,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
-    public String getNomeCacciatore() { return null; }
+    public String getNomeCacciatore() { return getNomeGiocatore(getPosizioneCacciatore()); }
 
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
