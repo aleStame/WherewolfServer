@@ -309,9 +309,11 @@ public final class Partita
     {
         vivi.assorbiRuolo(nomeNonna, nomeLupo);
         eliminati.aggiungiGiocatore(nomeLupo, new Giocatore(RuoloNullo.getInstance()));
-        if(vivi.isCacciatorePresente()) getGiocatore(vivi.getNomeCacciatore()).aggiungiProtezione(getGiocatore(nomeNonna).getRuolo());
+        if(vivi.isCacciatorePresente()) getGiocatoreCacciatore().aggiungiProtezione(getGiocatore(nomeNonna).getRuolo());
         throw new EccezioneNonnaBeccata(nomeLupo, tipoLupo, nomeNonna);
     }
+
+    private Giocatore getGiocatoreCacciatore() { return getGiocatore(vivi.getNomeCacciatore()); }
 
     private void nessunaEliminazione(String nome)
     {
