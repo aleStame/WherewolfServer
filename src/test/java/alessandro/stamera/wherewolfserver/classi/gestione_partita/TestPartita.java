@@ -1750,6 +1750,18 @@ public final class TestPartita
         verificaVero(partita.isLupoBranco(nomeVittima));
     }
 
+    @Test public void testAttaccoLupoBrancoAmatoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        String messaggio =
+            "Il Lupo del branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo del branco.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaVero(partita.isLupoBranco(nomeVittima));
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
