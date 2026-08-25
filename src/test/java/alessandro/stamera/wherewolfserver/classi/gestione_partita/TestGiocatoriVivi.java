@@ -1158,6 +1158,14 @@ public final class TestGiocatoriVivi
 
     @Test public void testCacciatoreAssente() { verificaFalso(giocatori.isCacciatorePresente()); }
 
+    @Test public void testCacciatorePresente()
+    {
+        String nome = "Giancarlo";
+        aggiungiGiocatore(nome, "Cacciatore");
+        verificaVero(giocatori.isCacciatorePresente());
+        verificaStringa(giocatori.getNomeCacciatore(), nome);
+    }
+
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
 
     private boolean isCacciatoreProtetto() { return giocatori.isCacciatoreProtetto(); }

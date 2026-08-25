@@ -323,6 +323,8 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
+    public String getNomeCacciatore() { return null; }
+
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
     private boolean isProtezioneAngeloCustodeNonAttiva(String nome) { return isAmato(nome) && !isAngeloCustodePresente(); }
