@@ -1795,6 +1795,19 @@ public final class TestPartita
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
+    @Test public void testAttaccoLupoSolitarioAmatoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo solitario", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        String messaggio =
+            "Il Lupo solitario (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo solitario.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaVero(partita.isLupoSolitario(nomeLupo));
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
