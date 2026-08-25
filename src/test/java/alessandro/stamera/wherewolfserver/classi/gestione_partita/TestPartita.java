@@ -1778,7 +1778,7 @@ public final class TestPartita
             "Il Lupo reietto (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo reietto.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoReietto(nomeVittima));
+        verificaLupoReietto(nomeVittima);
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
@@ -1791,7 +1791,7 @@ public final class TestPartita
             "Il Lupo reietto (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo reietto.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoReietto(nomeVittima));
+        verificaLupoReietto(nomeVittima);
         verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
@@ -2032,6 +2032,8 @@ public final class TestPartita
     private void verificaLupoBranco(String nome) { verificaVero(partita.isLupoBranco(nome)); }
 
     private void verificaCapoBranco(String nome) { verificaVero(partita.isCapoBranco(nome)); }
+
+    private void verificaLupoReietto(String nome) { verificaVero(partita.isLupoReietto(nome)); }
 
     private void verificaProtezioneCacciatore(String tipoLupo, String nomeCacciatore)
     {
