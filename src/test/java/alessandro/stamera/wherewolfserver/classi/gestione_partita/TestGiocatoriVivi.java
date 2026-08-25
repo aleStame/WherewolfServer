@@ -898,12 +898,20 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, NONNA_BECCATA);
     }
 
-    @Test public void testLupizzazioneNonna()
+    @Test public void testNonnaCapoBranco()
     {
         String nomeNonna = "Raffaele", nomeLupo = "Gabriele";
         inizializzaGiocatori(new String[][] { { nomeNonna, "Nonna" }, { nomeLupo, "Capo branco" } });
         giocatori.assorbiRuolo(nomeNonna, "Gabriele");
         verificaVero(giocatori.isCapoBranco(nomeNonna));
+    }
+
+    @Test public void testNonnaLupoBranco()
+    {
+        String nomeNonna = "Raffaele", nomeLupo = "Gabriele";
+        inizializzaGiocatori(new String[][] { { nomeNonna, "Nonna" }, { nomeLupo, "Lupo del branco" } });
+        giocatori.assorbiRuolo(nomeNonna, "Gabriele");
+        verificaVero(giocatori.isLupoBranco(nomeNonna));
     }
 
     @Test public void testMorteVampiroAmato()
