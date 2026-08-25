@@ -391,7 +391,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
 
-    public boolean isLupoBranco(String nome) { return false; }
+    public boolean isLupoBranco(String nome) { return getGiocatore(nome).getRuolo().isLupoBranco(); }
 
     private int getPosizioneTemplare()
     {
