@@ -276,9 +276,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void assorbiRuolo(String nomeAssorbitore, String nomeAssorbito)
     {
-        Giocatore giocatore = getGiocatore(nomeAssorbito);
-        eliminaGiocatore(nomeAssorbitore);
-        aggiungiGiocatore(nomeAssorbitore, giocatore);
+        getGiocatore(nomeAssorbitore).cambiaRuolo(getGiocatore(nomeAssorbito).getRuolo());
         eliminaGiocatore(nomeAssorbito);
     }
 

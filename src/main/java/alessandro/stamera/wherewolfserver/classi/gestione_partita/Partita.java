@@ -267,6 +267,8 @@ public final class Partita
 
     public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
 
+    public boolean isLupoBranco(String nome) { return false; }
+
     private void eccezioneEliminazioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
     {
         eliminaGiocatore(nome);
@@ -301,7 +303,6 @@ public final class Partita
 
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
     {
-        //fare il metodo "cambiaruolo" in GiocatoriVivi
         vivi.assorbiRuolo(nomeNonna, nomeLupo);
         eliminati.aggiungiGiocatore(nomeLupo, new Giocatore(RuoloNullo.getInstance()));
         throw new EccezioneNonnaBeccata(nomeLupo, tipoLupo, nomeNonna);

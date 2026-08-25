@@ -1725,6 +1725,7 @@ public final class TestPartita
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaVero(partita.isCapoBranco(nomeVittima));
     }
 
     @Test public void testAttaccoCapoBrancoAmatoNonna()
@@ -1736,6 +1737,17 @@ public final class TestPartita
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+    }
+
+    @Test public void testAttaccoLupoBrancoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        String messaggio =
+            "Il Lupo del branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Capo branco.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaVero(partita.isLupoBranco(nomeVittima));
     }
 
     @ParameterizedTest @CsvSource
@@ -2088,7 +2100,6 @@ public final class TestPartita
     private void verificaAttaccoNonna(String tipoLupo, String nomeVittima, String messaggio, String nomeLupo)
     {
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        verificaVero(partita.isCapoBranco(nomeVittima));
         verificaEliminati(nomeLupo);
     }
 
