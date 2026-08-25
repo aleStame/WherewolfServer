@@ -6,7 +6,6 @@ import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.CreatureOmbra;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
@@ -25,13 +24,6 @@ public class Lupo extends CreatureOmbra
 
     @Override public boolean isLupo() { return true; }
 
-    @Override public EsitoAttacco attaccoLupi(Ruolo ruolo)
-    {
-        EsitoAttacco esito = FALLITO;
-        if(ruolo == this) esito = RIUSCITO;
-        return esito;
-    }
-
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
@@ -44,6 +36,13 @@ public class Lupo extends CreatureOmbra
     @Override public EsitoAttacco attaccoNosferatu() { return MORTO; }
 
     @Override public EsitoAttacco gildata() { return MORTO; }
+
+    @Override public EsitoAttacco attaccoLupi(Ruolo attaccante)
+    {
+        EsitoAttacco esito = super.attaccoLupi(attaccante);
+        if(attaccante.isCapoBranco()) esito = RIUSCITO;
+        return esito;
+    }
 
     private boolean isPresentiSoloLupiConSenzaFazione(Partita partita)
     {
