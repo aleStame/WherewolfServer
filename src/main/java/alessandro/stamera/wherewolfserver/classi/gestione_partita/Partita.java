@@ -450,7 +450,9 @@ public final class Partita
 
     private void annullaProtezioneAngeloCustode() { getGiocatoreAmato().annullaProtezioneAngeloCustode(); }
 
-    private Ruolo getPossedutoMortoNotte() { return getGiocatore(mortiNotte.getNomePosseduto()).getRuolo(); }
+    private Ruolo getPossedutoMortoNotte() { return getGiocatorePossedutoMorto().getRuolo(); }
+
+    private Giocatore getGiocatorePossedutoMorto() { return getGiocatore(mortiNotte.getNomePosseduto()); }
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
