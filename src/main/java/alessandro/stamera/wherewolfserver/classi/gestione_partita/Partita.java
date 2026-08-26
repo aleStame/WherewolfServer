@@ -317,7 +317,7 @@ public final class Partita
 
     private void nessunaEliminazione(String nome)
     {
-        if(getGiocatore(nome).getRuolo().isEremita()) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
+        if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(getGiocatore(nome).isCacciatore())
             throw new IllegalStateException(nome + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.");
         else if(!vivi.isLupo(nome))

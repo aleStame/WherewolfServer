@@ -334,6 +334,8 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
+    public boolean isCacciatore(String nome) { return false; }
+
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
     private boolean isProtezioneAngeloCustodeNonAttiva(String nome) { return isAmato(nome) && !isAngeloCustodePresente(); }

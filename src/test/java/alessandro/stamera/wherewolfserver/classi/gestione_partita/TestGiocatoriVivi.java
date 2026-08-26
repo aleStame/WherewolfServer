@@ -1195,6 +1195,37 @@ public final class TestGiocatoriVivi
 
     @Test public void testEremitaAssente() { verificaNonEremita("Elia"); }
 
+    @Test public void testIsCacciatore()
+    {
+        String nome = "Massimo";
+        aggiungiGiocatore(nome, "Cacciatore");
+        verificaVero(giocatori.isCacciatore(nome));
+    }
+
+    /*
+    *
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe",
+            "Spia", "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoEremita(String nomeRuolo)
+    {
+        String nome = "Giancarlo";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaNonEremita(nome);
+    }
+
+    @Test public void testEremitaAssente() { verificaNonEremita("Elia"); }
+    * */
+
     private void verificaNonEremita(String nome) { verificaFalso(isEremita(nome)); }
 
     private boolean isEremita(String nome) { return giocatori.isEremita(nome); }
