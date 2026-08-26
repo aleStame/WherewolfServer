@@ -358,7 +358,7 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO) if(isSensitivaEliminabile(nome)) eliminaSensitiva();
+        if(esito == VILLAGGIO && isSensitivaEliminabile(nome)) eliminaSensitiva();
         return esito;
     }
 
@@ -443,8 +443,10 @@ public final class Partita
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
         if(vivi.isAngeloCustode(nome)) getGiocatoreAmato().annullaProtezioneAngeloCustode();
-        getGiocatore(nome).cambiaRuolo(getGiocatore(mortiNotte.getNomePosseduto()).getRuolo());
+        getGiocatore(nome).cambiaRuolo(getPossedutoMortoNotte());
     }
+
+    private Ruolo getPossedutoMortoNotte() { return getGiocatore(mortiNotte.getNomePosseduto()).getRuolo(); }
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
