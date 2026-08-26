@@ -318,7 +318,7 @@ public final class Partita
     private void nessunaEliminazione(String nome)
     {
         if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
-        else if(getGiocatore(nome).isCacciatore())
+        else if(vivi.isCacciatore(nome))
             throw new IllegalStateException(nome + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.");
         else if(!vivi.isLupo(nome))
         {
@@ -358,9 +358,11 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO) if(isPrimaNotte() || vivi.isContadinoMostro(nome)) eliminaSensitiva();
+        if(esito == VILLAGGIO) if(isSensitivaEliminabile(nome)) eliminaSensitiva();
         return esito;
     }
+
+    private boolean isSensitivaEliminabile(String nome) { return isPrimaNotte() || vivi.isContadinoMostro(nome); }
 
     private void eliminaSensitiva() { eliminaGiocatore(vivi.getNomeSensitiva()); }
 
