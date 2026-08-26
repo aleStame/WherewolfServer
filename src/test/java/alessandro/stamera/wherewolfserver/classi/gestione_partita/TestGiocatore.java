@@ -698,14 +698,16 @@ public final class TestGiocatore
     public void testNoEremita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isEremita());
+        verificaFalso(isEremita());
     }
 
     @Test public void testEremita()
     {
         cambiaRuolo("Eremita");
-        verificaVero(giocatore.isEremita());
+        verificaVero(isEremita());
     }
+
+    private boolean isEremita() { return giocatore.isEremita(); }
 
     private boolean isSensitiva() { return giocatore.isSensitiva(); }
 

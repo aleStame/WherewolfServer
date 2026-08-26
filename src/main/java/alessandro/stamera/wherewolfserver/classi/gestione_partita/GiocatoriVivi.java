@@ -327,6 +327,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeNonna() { return getNomeGiocatore(getPosizioneNonna()); }
 
+    public boolean isEremita() { return false; }
+
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
     private boolean isProtezioneAngeloCustodeNonAttiva(String nome) { return isAmato(nome) && !isAngeloCustodePresente(); }

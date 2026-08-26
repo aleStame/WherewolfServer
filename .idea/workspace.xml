@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testNoEremita riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEremita riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
@@ -221,9 +222,15 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId2" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBallottaggio.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatori.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriEliminati.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriMortiNotte.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,14 +429,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00438" summary="REFACTORING: definizione del metodo eliminaMago">
-      <option name="closed" value="true" />
-      <created>1786806053152</created>
-      <option name="number" value="00438" />
-      <option name="presentableId" value="LOCAL-00438" />
-      <option name="project" value="LOCAL" />
-      <updated>1786806053152</updated>
     </task>
     <task id="LOCAL-00439" summary="REFACTORING: definizione del metodo eliminaSensitiva">
       <option name="closed" value="true" />
@@ -815,7 +814,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787688302090</updated>
     </task>
-    <option name="localTasksCounter" value="487" />
+    <task id="LOCAL-00487" summary="VERDE DIRETTO: testEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1787689764452</created>
+      <option name="number" value="00487" />
+      <option name="presentableId" value="LOCAL-00487" />
+      <option name="project" value="LOCAL" />
+      <updated>1787689764464</updated>
+    </task>
+    <option name="localTasksCounter" value="488" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -833,7 +840,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoLupoBrancoNonna riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBrancoAmatoNonna riuscito" />
     <MESSAGE value="ROSSO: testAttaccoCapoBrancoNonna non riuscito" />
     <MESSAGE value="VERDE: testAttaccoCapoBrancoNonna riuscito" />
@@ -858,6 +864,7 @@
     <MESSAGE value="VERDE: testNonnaPresente riuscito" />
     <MESSAGE value="ROSSO: testNoEremita non riuscito" />
     <MESSAGE value="VERDE: testNoEremita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNoEremita riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testEremita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEremita riuscito" />
   </component>
 </project>

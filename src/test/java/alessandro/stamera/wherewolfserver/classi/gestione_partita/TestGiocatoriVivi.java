@@ -1168,6 +1168,13 @@ public final class TestGiocatoriVivi
 
     @Test public void testNonnaAssente() { verificaFalso(isNonnaPresente()); }
 
+    @Test public void testIsEremita()
+    {
+        String nome = "Massimo";
+        aggiungiGiocatore(nome, "Eremita");
+        verificaVero(giocatori.isEremita());
+    }
+
     private boolean isCacciatorePresente() { return giocatori.isCacciatorePresente(); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
