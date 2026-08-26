@@ -1175,6 +1175,8 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isEremita(nome));
     }
 
+    @Test public void testEremitaAssente() { verificaFalso(giocatori.isEremita("Elia")); }
+
     private boolean isCacciatorePresente() { return giocatori.isCacciatorePresente(); }
 
     private void verificaCacciatoreProtetto() { verificaVero(isCacciatoreProtetto()); }
