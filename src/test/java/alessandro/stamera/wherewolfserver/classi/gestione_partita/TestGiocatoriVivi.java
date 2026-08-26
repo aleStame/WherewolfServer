@@ -1199,7 +1199,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Massimo";
         aggiungiGiocatore(nome, "Cacciatore");
-        verificaVero(giocatori.isCacciatore(nome));
+        verificaVero(isCacciatore(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -1217,16 +1217,10 @@ public final class TestGiocatoriVivi
     {
         String nome = "Giancarlo";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isCacciatore(nome));
+        verificaFalso(isCacciatore(nome));
     }
 
-    /*
-    *
-
-
-
-    @Test public void testEremitaAssente() { verificaNonEremita("Elia"); }
-    * */
+    private boolean isCacciatore(String nome) { return giocatori.isCacciatore(nome); }
 
     private void verificaNonEremita(String nome) { verificaFalso(isEremita(nome)); }
 
