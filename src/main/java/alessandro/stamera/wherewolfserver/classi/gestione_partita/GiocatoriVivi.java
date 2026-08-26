@@ -327,7 +327,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeNonna() { return getNomeGiocatore(getPosizioneNonna()); }
 
-    public boolean isEremita(String nome) { return getGiocatore(nome).isEremita(); }
+    public boolean isEremita(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getGiocatore(nome).isEremita();
+        return trovato;
+    }
 
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
