@@ -442,9 +442,11 @@ public final class Partita
 
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
-        if(vivi.isAngeloCustode(nome)) getGiocatoreAmato().annullaProtezioneAngeloCustode();
+        if(vivi.isAngeloCustode(nome)) annullaProtezioneAngeloCustode();
         getGiocatore(nome).cambiaRuolo(getPossedutoMortoNotte());
     }
+
+    private void annullaProtezioneAngeloCustode() { getGiocatoreAmato().annullaProtezioneAngeloCustode(); }
 
     private Ruolo getPossedutoMortoNotte() { return getGiocatore(mortiNotte.getNomePosseduto()).getRuolo(); }
 
