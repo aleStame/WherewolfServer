@@ -1172,7 +1172,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Massimo";
         aggiungiGiocatore(nome, "Eremita");
-        verificaVero(giocatori.isEremita());
+        verificaVero(giocatori.isEremita(nome));
     }
 
     private boolean isCacciatorePresente() { return giocatori.isCacciatorePresente(); }
