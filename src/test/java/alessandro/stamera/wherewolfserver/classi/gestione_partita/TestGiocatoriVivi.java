@@ -1190,10 +1190,12 @@ public final class TestGiocatoriVivi
     {
         String nome = "Giancarlo";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(isEremita(nome));
+        verificaNonEremita(nome);
     }
 
-    @Test public void testEremitaAssente() { verificaFalso(isEremita("Elia")); }
+    @Test public void testEremitaAssente() { verificaNonEremita("Elia"); }
+
+    private void verificaNonEremita(String nome) { verificaFalso(isEremita(nome)); }
 
     private boolean isEremita(String nome) { return giocatori.isEremita(nome); }
 
