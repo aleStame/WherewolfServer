@@ -12,4 +12,10 @@ public final class TestEccezioneGildata
         assertThat(new EccezioneGildata("Salvo").getMessage()).isEqualTo("Impossibile criminalizzare Salvo.");
     }
 
+    @Test public void testMortePostGildata()
+    {
+        String messaggio = "Impossibile criminalizzare Salvo.\nIl Capo gilda (Agato) muore.";
+        assertThat(new EccezioneGildata("Salvo", "Agato").getMessage()).isEqualTo(messaggio);
+    }
+
 }
