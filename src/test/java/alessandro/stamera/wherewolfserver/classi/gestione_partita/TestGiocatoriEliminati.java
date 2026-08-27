@@ -84,15 +84,17 @@ public final class TestGiocatoriEliminati
     {
         String nome = "Salvo";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isInquisitore(nome));
+        verificaFalso(isInquisitore(nome));
     }
 
     @Test public void testInquisitore()
     {
         String nome = "Salvo";
         aggiungiGiocatore(nome, "Inquisitore");
-        verificaVero(giocatori.isInquisitore(nome));
+        verificaVero(isInquisitore(nome));
     }
+
+    private boolean isInquisitore(String nome) { return giocatori.isInquisitore(nome); }
 
     private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
 
