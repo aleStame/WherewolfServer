@@ -456,10 +456,10 @@ public final class Partita
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
-        Giocatore posseduto = getGiocatore(nomePosseduto), progenizzatore = getGiocatore(nomeProgenizzatore);
-        String ruoloProgenizzatore = progenizzatore.getRuolo().getNome();
+        Giocatore progenizzatore = getGiocatore(nomeProgenizzatore);
+        String ruoloProgenizzatore = getNomeRuolo(nomeProgenizzatore);
         if(progenizzatore.getRuolo().isVampiro()) eliminaGiocatori(nomePosseduto);
-        progenizzatore.cambiaRuolo(posseduto.getRuolo());
+        possessione(nomeProgenizzatore);
         confermaEliminazioneMortiNotte();
         throw new EccezioneProgenizzazionePosseduto(ruoloProgenizzatore, nomeProgenizzatore, nomePosseduto);
     }

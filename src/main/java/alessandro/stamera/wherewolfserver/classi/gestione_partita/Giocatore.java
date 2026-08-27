@@ -221,6 +221,8 @@ public final class Giocatore
 
     public boolean isCreaturaOmbra() { return ruolo.isCreaturaOmbra() || isTrattoPresente(CREATURA_OMBRA); }
 
+    public boolean isVampiro() { return false; }
+
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
