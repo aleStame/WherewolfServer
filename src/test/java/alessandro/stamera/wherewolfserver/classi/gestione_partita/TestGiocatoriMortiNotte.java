@@ -128,6 +128,13 @@ public final class TestGiocatoriMortiNotte
         verificaFalso(giocatori.isNegromante(nome));
     }
 
+    @Test public void testNegromante()
+    {
+        String nome = "Salvo";
+        aggiungiGiocatore(nome, "Negromante");
+        verificaVero(giocatori.isNegromante(nome));
+    }
+
     private boolean isPossedutoPresente() { return giocatori.isPossedutoPresente(); }
 
     private void aggiungiGiocatori(String[][] giocatori)
