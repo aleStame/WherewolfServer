@@ -5,6 +5,8 @@ import alessandro.stamera.wherewolfserver.classi.eccezioni.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
+import jakarta.annotation.Nonnull;
+
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -547,10 +549,15 @@ public final class Partita
 
     private void confermaEliminazioneMortiNotte()
     {
+        for(String nome : getNomiMortiNotte()) confermaEliminazioneMortoNotte(nome);
+        perdiProtezioniCappuccettoRosso();
+    }
+
+    private String[] getNomiMortiNotte()
+    {
         String[] nomi = new String[mortiNotte.getNumeroGiocatori()];
         for(int i = 0; i < nomi.length; i++) nomi[i] = mortiNotte.getNomeGiocatore(i);
-        for(String nome : nomi) confermaEliminazioneMortoNotte(nome);
-        perdiProtezioniCappuccettoRosso();
+        return nomi;
     }
 
     private void confermaEliminazioneMortoNotte(String nome)
