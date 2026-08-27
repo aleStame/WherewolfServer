@@ -16,7 +16,7 @@ public final class GiocatoriEliminati extends Giocatori
 
     public boolean isNegromante(String nome) { return getGiocatore(nome).isNegromante(); }
 
-    public boolean isInquisitore(String nome) { return true; }
+    public boolean isInquisitore(String nome) { return getGiocatore(nome).isInquisitore(); }
 
     private boolean isBardo(int posizione) { return getGiocatore(getNomeGiocatore(posizione)).getRuolo().isBardo(); }
 
