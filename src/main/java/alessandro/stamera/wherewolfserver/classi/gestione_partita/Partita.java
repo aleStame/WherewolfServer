@@ -564,10 +564,15 @@ public final class Partita
     {
         Giocatore giocatore = getGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, giocatore);
-        if(eliminati.isMegera(nome)) for(int i = 0; i < getNumeroGiocatoriVivi(); i++) annullaMaledizioneMegera(getNomeGiocatoreVivo(i));
+        if(eliminati.isMegera(nome)) annullaMaledizioniMegera();
         else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
         else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
+    }
+
+    private void annullaMaledizioniMegera()
+    {
+        for(int i = 0; i < getNumeroGiocatoriVivi(); i++) annullaMaledizioneMegera(getNomeGiocatoreVivo(i));
     }
 
     private void annullaMaledizioneMegera(String nome) { if(isMaledettoNonNegromante(nome)) vivi.annullaMaledizione(nome); }
