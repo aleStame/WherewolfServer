@@ -25,8 +25,6 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public String getNomePosseduto() { return getNomeGiocatore(getPosizionePosseduto()); }
 
-    public boolean isNegromante(String nome) { return getGiocatore(nome).isNegromante(); }
-
     private int getPosizionePosseduto()
     {
         int posizione = -1;

@@ -565,7 +565,7 @@ public final class Partita
         Giocatore giocatore = getGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, giocatore);
         if(eliminati.isMegera(nome)) annullaMaledizioniMegera();
-        else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
+        else if(eliminati.isNegromante(nome)) annullaMaledizioniNegromante();
         else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
     }
