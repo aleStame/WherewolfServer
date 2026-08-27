@@ -606,7 +606,12 @@ public final class Partita
     private void controlliMorteNosferatu(String nome, String nomeVittima)
     {
         eliminaGiocatore(nomeVittima);
-        if((mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome)) risorgiGiocatore(nome);
+        if(isResurrezionePossibile(nome)) risorgiGiocatore(nome);
+    }
+
+    private boolean isResurrezionePossibile(String nome)
+    {
+        return (mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome);
     }
 
     private String getNomeGhoul() { return vivi.getNomeGhoul(); }
