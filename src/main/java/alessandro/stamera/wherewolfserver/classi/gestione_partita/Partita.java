@@ -643,7 +643,9 @@ public final class Partita
         return esito;
     }
 
-    private boolean isProtezioneUltimoLupoAttiva() { return vivi.isCacciatorePresente() && vivi.getNumeroLupiBranco() == 1; }
+    private boolean isProtezioneUltimoLupoAttiva() { return vivi.isCacciatorePresente() && isRimastoUltimoLupoBranco(); }
+
+    private boolean isRimastoUltimoLupoBranco() { return vivi.getNumeroLupiBranco() == 1; }
 
     private void doppiaEliminazione(String nomeLupo, String nomeVittima)
     {

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo conseguenzeEliminazioni">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isCappuccettoRossoSenzaNonna">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,30 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00485" summary="ROSSO: testNoEremita non riuscito">
-      <option name="closed" value="true" />
-      <created>1787687410462</created>
-      <option name="number" value="00485" />
-      <option name="presentableId" value="LOCAL-00485" />
-      <option name="project" value="LOCAL" />
-      <updated>1787687410465</updated>
-    </task>
-    <task id="LOCAL-00486" summary="VERDE: testNoEremita riuscito">
-      <option name="closed" value="true" />
-      <created>1787688302087</created>
-      <option name="number" value="00486" />
-      <option name="presentableId" value="LOCAL-00486" />
-      <option name="project" value="LOCAL" />
-      <updated>1787688302090</updated>
-    </task>
-    <task id="LOCAL-00487" summary="VERDE DIRETTO: testEremita riuscito">
-      <option name="closed" value="true" />
-      <created>1787689764452</created>
-      <option name="number" value="00487" />
-      <option name="presentableId" value="LOCAL-00487" />
-      <option name="project" value="LOCAL" />
-      <updated>1787689764464</updated>
     </task>
     <task id="LOCAL-00488" summary="ROSSO: testIsEremita non riuscito">
       <option name="closed" value="true" />
@@ -597,7 +573,31 @@
       <option name="project" value="LOCAL" />
       <updated>1787871953040</updated>
     </task>
-    <option name="localTasksCounter" value="534" />
+    <task id="LOCAL-00534" summary="REFACTORING: definizione del metodo isResurrezionePossibile">
+      <option name="closed" value="true" />
+      <created>1787872078332</created>
+      <option name="number" value="00534" />
+      <option name="presentableId" value="LOCAL-00534" />
+      <option name="project" value="LOCAL" />
+      <updated>1787872078333</updated>
+    </task>
+    <task id="LOCAL-00535" summary="REFACTORING: definizione del metodo isMortoContadinoMostroNonRomeo">
+      <option name="closed" value="true" />
+      <created>1787872165314</created>
+      <option name="number" value="00535" />
+      <option name="presentableId" value="LOCAL-00535" />
+      <option name="project" value="LOCAL" />
+      <updated>1787872165318</updated>
+    </task>
+    <task id="LOCAL-00536" summary="REFACTORING: definizione del metodo isCappuccettoRossoSenzaNonna">
+      <option name="closed" value="true" />
+      <created>1787872272409</created>
+      <option name="number" value="00536" />
+      <option name="presentableId" value="LOCAL-00536" />
+      <option name="project" value="LOCAL" />
+      <updated>1787872272409</updated>
+    </task>
+    <option name="localTasksCounter" value="537" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,9 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiro" />
-    <MESSAGE value="REFACTORING: definizione del metodo eccezioneProgenizzazionePosseduto" />
-    <MESSAGE value="REFACTORING: definizione del metodo getNosferatu" />
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreNosferatu" />
     <MESSAGE value="ROSSO: testGildataFallita non riuscito" />
     <MESSAGE value="VERDE: testGildataFallita riuscito" />
@@ -640,6 +637,9 @@
     <MESSAGE value="VERDE DIRETTO: testInquisitore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isCrociataPronta" />
     <MESSAGE value="REFACTORING: definizione del metodo conseguenzeEliminazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo conseguenzeEliminazioni" />
+    <MESSAGE value="REFACTORING: definizione del metodo isResurrezionePossibile" />
+    <MESSAGE value="REFACTORING: definizione del metodo isMortoContadinoMostroNonRomeo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoSenzaNonna" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isCappuccettoRossoSenzaNonna" />
   </component>
 </project>
