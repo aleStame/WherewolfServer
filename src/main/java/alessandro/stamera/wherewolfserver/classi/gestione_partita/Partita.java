@@ -456,9 +456,13 @@ public final class Partita
 
     private void gestionePosseduto(String nomePosseduto, String nomeProgenizzatore)
     {
-        Giocatore progenizzatore = getGiocatore(nomeProgenizzatore);
+        if(vivi.isVampiro(nomeProgenizzatore)) eliminaGiocatori(nomePosseduto);
+        eccezioneProgenizzazionePosseduto(nomePosseduto, nomeProgenizzatore);
+    }
+
+    private void eccezioneProgenizzazionePosseduto(String nomePosseduto, String nomeProgenizzatore)
+    {
         String ruoloProgenizzatore = getNomeRuolo(nomeProgenizzatore);
-        if(progenizzatore.getRuolo().isVampiro()) eliminaGiocatori(nomePosseduto);
         possessione(nomeProgenizzatore);
         confermaEliminazioneMortiNotte();
         throw new EccezioneProgenizzazionePosseduto(ruoloProgenizzatore, nomeProgenizzatore, nomePosseduto);
