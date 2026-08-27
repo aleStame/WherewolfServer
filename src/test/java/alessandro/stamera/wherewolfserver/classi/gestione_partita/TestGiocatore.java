@@ -710,7 +710,7 @@ public final class TestGiocatore
     @Test public void testIsVampiro()
     {
         cambiaRuolo("Vampiro");
-        verificaVero(giocatore.isVampiro());
+        verificaVero(isVampiro());
     }
 
     @ParameterizedTest @CsvSource
@@ -727,8 +727,10 @@ public final class TestGiocatore
     public void testNoVampiro(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isVampiro());
+        verificaFalso(isVampiro());
     }
+
+    private boolean isVampiro() { return giocatore.isVampiro(); }
 
     private boolean isEremita() { return giocatore.isEremita(); }
 
