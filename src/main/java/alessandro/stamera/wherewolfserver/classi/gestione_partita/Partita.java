@@ -564,16 +564,17 @@ public final class Partita
     {
         Giocatore giocatore = getGiocatore(nome);
         eliminati.aggiungiGiocatore(nome, giocatore);
-        if(giocatore.getRuolo().isMegera()) for(int i = 0; i < getNumeroGiocatoriVivi(); i++)
-        {
-            String nomeGiocatore = getNomeGiocatoreVivo(i);
-            if(isMaledetto(nomeGiocatore) && !stream(maledettiNegromante).toList().contains(nomeGiocatore))
-                vivi.annullaMaledizione(nomeGiocatore);
-        }
+        if(eliminati.isMegera(nome)) for(int i = 0; i < getNumeroGiocatoriVivi(); i++) annullaMaledizioneMegera(getNomeGiocatoreVivo(i));
         else if(giocatore.isNegromante()) annullaMaledizioniNegromante();
         else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
         eliminaGiocatoreMortoNotte(nome);
     }
+
+    private void annullaMaledizioneMegera(String nome) { if(isMaledettoNonNegromante(nome)) vivi.annullaMaledizione(nome); }
+
+    private boolean isMaledettoNonNegromante(String nome) { return isMaledetto(nome) && !isMaledettoNegromante(nome); }
+
+    private boolean isMaledettoNegromante(String nome) { return stream(maledettiNegromante).toList().contains(nome); }
 
     private void annullaMaledizioniNegromante()
     {
