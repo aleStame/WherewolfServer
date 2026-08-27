@@ -1235,8 +1235,17 @@ public final class TestGiocatoriVivi
     {
         String nome = "Marilina";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isVampiro(nome));
+        verificaFalso(isVampiro(nome));
     }
+
+    @Test public void testVampiro()
+    {
+        String nome = "Simona";
+        aggiungiGiocatore(nome, "Vampiro");
+        verificaVero(isVampiro(nome));
+    }
+
+    private boolean isVampiro(String nome) { return giocatori.isVampiro(nome); }
 
     private boolean isCacciatore(String nome) { return giocatori.isCacciatore(nome); }
 
