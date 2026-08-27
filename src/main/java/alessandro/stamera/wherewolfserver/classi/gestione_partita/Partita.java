@@ -611,7 +611,12 @@ public final class Partita
 
     private boolean isResurrezionePossibile(String nome)
     {
-        return (mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome)) || mortiNotte.isLupo(nome);
+        return isMortoContadinoMostroNonRomeo(nome) || mortiNotte.isLupo(nome);
+    }
+
+    private boolean isMortoContadinoMostroNonRomeo(String nome)
+    {
+        return mortiNotte.isContadinoMostro(nome) && !mortiNotte.isRomeo(nome);
     }
 
     private String getNomeGhoul() { return vivi.getNomeGhoul(); }
