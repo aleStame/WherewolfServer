@@ -18,7 +18,7 @@ public final class TestGiocatoriEliminati
     @Test public void testBardoPresente()
     {
         aggiungiGiocatore("Pino", "Bardo");
-        assertThat(isBardoPresente()).isTrue();
+        verificaVero(isBardoPresente());
     }
 
     @Test public void testBardoAssente() { assertThat(isBardoPresente()).isFalse(); }
@@ -66,7 +66,7 @@ public final class TestGiocatoriEliminati
     {
         String nome = "Salvo";
         aggiungiGiocatore(nome, "Negromante");
-        assertThat(isNegromante(nome)).isTrue();
+        verificaVero(isNegromante(nome));
     }
 
     private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
@@ -77,5 +77,7 @@ public final class TestGiocatoriEliminati
     {
         giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
     }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
 }
