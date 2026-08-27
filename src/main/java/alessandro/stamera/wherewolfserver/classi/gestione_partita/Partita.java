@@ -470,7 +470,9 @@ public final class Partita
 
     private boolean verificaVittoriaNosferatu() { return isPartitaVinta(getNosferatu()); }
 
-    private Ruolo getNosferatu() { return getGiocatore(getNomeNosferatu()).getRuolo(); }
+    private Ruolo getNosferatu() { return getGiocatoreNosferatu().getRuolo(); }
+
+    private Giocatore getGiocatoreNosferatu() { return getGiocatore(getNomeNosferatu()); }
 
     private String getNomeNosferatu()
     {
