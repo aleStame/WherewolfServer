@@ -496,9 +496,9 @@ public final class Partita
 
     private void gestioneMorteGhoul(String nomeVittima, String nomeProgenizzatore)
     {
-        String nomeGhoul = vivi.getNomeGhoul(), ruoloProgenizzatore = getNomeRuolo(nomeProgenizzatore);
+        String nomeGhoul = vivi.getNomeGhoul();
         eliminaGhoul();
-        throw new EccezioneProgenizzazioneNonRiuscitaConGhoul(getNomeRuolo(nomeVittima), nomeVittima, ruoloProgenizzatore, nomeGhoul);
+        throw new EccezioneProgenizzazioneNonRiuscitaConGhoul(getNomeRuolo(nomeVittima), nomeVittima, getNomeRuolo(nomeProgenizzatore), nomeGhoul);
     }
 
     private void gestioneMorteVampiro(String nomeLupo)

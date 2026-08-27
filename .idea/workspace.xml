@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eccezioneProgenizzazionePosseduto">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getGiocatoreNosferatu">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneGildata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneGildata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -258,8 +260,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
         <option value="Class" />
+        <option value="Exception" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -422,22 +424,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00461" summary="ROSSO: testAttaccoLupoBrancoNonna non riuscito">
-      <option name="closed" value="true" />
-      <created>1787661858343</created>
-      <option name="number" value="00461" />
-      <option name="presentableId" value="LOCAL-00461" />
-      <option name="project" value="LOCAL" />
-      <updated>1787661858343</updated>
-    </task>
-    <task id="LOCAL-00462" summary="VERDE: testAttaccoLupoBrancoNonna riuscito">
-      <option name="closed" value="true" />
-      <created>1787662261079</created>
-      <option name="number" value="00462" />
-      <option name="presentableId" value="LOCAL-00462" />
-      <option name="project" value="LOCAL" />
-      <updated>1787662261079</updated>
     </task>
     <task id="LOCAL-00463" summary="VERDE DIRETTO: testAttaccoLupoBrancoAmatoNonna riuscito">
       <option name="closed" value="true" />
@@ -815,7 +801,23 @@
       <option name="project" value="LOCAL" />
       <updated>1787825350452</updated>
     </task>
-    <option name="localTasksCounter" value="510" />
+    <task id="LOCAL-00510" summary="REFACTORING: definizione del metodo getNosferatu">
+      <option name="closed" value="true" />
+      <created>1787835926311</created>
+      <option name="number" value="00510" />
+      <option name="presentableId" value="LOCAL-00510" />
+      <option name="project" value="LOCAL" />
+      <updated>1787835926313</updated>
+    </task>
+    <task id="LOCAL-00511" summary="REFACTORING: definizione del metodo getGiocatoreNosferatu">
+      <option name="closed" value="true" />
+      <created>1787836010544</created>
+      <option name="number" value="00511" />
+      <option name="presentableId" value="LOCAL-00511" />
+      <option name="project" value="LOCAL" />
+      <updated>1787836010544</updated>
+    </task>
+    <option name="localTasksCounter" value="512" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -833,8 +835,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreCacciatore" />
-    <MESSAGE value="ROSSO: testNonnaPresente non riuscito" />
     <MESSAGE value="VERDE: testNonnaPresente riuscito" />
     <MESSAGE value="ROSSO: testNoEremita non riuscito" />
     <MESSAGE value="VERDE: testNoEremita riuscito" />
@@ -858,6 +858,8 @@
     <MESSAGE value="VERDE DIRETTO: testNoVampiro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo eccezioneProgenizzazionePosseduto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eccezioneProgenizzazionePosseduto" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNosferatu" />
+    <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreNosferatu" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getGiocatoreNosferatu" />
   </component>
 </project>
