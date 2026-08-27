@@ -17,7 +17,7 @@ public final class TestGiocatoriEliminati
 
     @Test public void testBardoPresente()
     {
-        giocatori.aggiungiGiocatore("Pino", new Giocatore(FACTORY.getRuolo("Bardo")));
+        aggiungiGiocatore("Pino", "Bardo");
         assertThat(isBardoPresente()).isTrue();
     }
 
@@ -40,7 +40,7 @@ public final class TestGiocatoriEliminati
     public void testControlloMedium(String nomeRuolo, Aura aura)
     {
         String nome = "Paolo";
-        giocatori.aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
+        aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura);
     }
 
@@ -58,19 +58,24 @@ public final class TestGiocatoriEliminati
     public void testNoNegromante(String nomeRuolo)
     {
         String nome = "Salvo";
-        giocatori.aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
+        aggiungiGiocatore(nome, nomeRuolo);
         assertThat(isNegromante(nome)).isFalse();
     }
 
     @Test public void testNegromante()
     {
         String nome = "Salvo";
-        giocatori.aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo("Negromante")));
+        aggiungiGiocatore(nome, "Negromante");
         assertThat(isNegromante(nome)).isTrue();
     }
 
     private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
 
     private boolean isBardoPresente() { return giocatori.isBardoPresente(); }
+
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
+    {
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
+    }
 
 }
