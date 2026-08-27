@@ -21,7 +21,7 @@ public final class TestGiocatoriEliminati
         verificaVero(isBardoPresente());
     }
 
-    @Test public void testBardoAssente() { assertThat(isBardoPresente()).isFalse(); }
+    @Test public void testBardoAssente() { verificaFalso(isBardoPresente()); }
 
     @ParameterizedTest @CsvSource
     (
@@ -59,7 +59,7 @@ public final class TestGiocatoriEliminati
     {
         String nome = "Salvo";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(isNegromante(nome)).isFalse();
+        verificaFalso(isNegromante(nome));
     }
 
     @Test public void testNegromante()
@@ -79,5 +79,7 @@ public final class TestGiocatoriEliminati
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }
