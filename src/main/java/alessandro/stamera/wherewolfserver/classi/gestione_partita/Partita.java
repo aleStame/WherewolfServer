@@ -468,12 +468,16 @@ public final class Partita
         throw new EccezioneProgenizzazionePosseduto(ruoloProgenizzatore, nomeProgenizzatore, nomePosseduto);
     }
 
-    private boolean verificaVittoriaNosferatu()
+    private boolean verificaVittoriaNosferatu() { return isPartitaVinta(getNosferatu()); }
+
+    private Ruolo getNosferatu() { return getGiocatore(getNomeNosferatu()).getRuolo(); }
+
+    private String getNomeNosferatu()
     {
-        Giocatore giocatore;
-        if(vivi.isNosferatuPresente()) giocatore = getGiocatore(vivi.getNomeNosferatu());
-        else giocatore = getGiocatore(eliminati.getNomeNosferatu());
-        return isPartitaVinta(giocatore.getRuolo());
+        String risultato;
+        if(vivi.isNosferatuPresente()) risultato = vivi.getNomeNosferatu();
+        else risultato = eliminati.getNomeNosferatu();
+        return risultato;
     }
 
     private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
