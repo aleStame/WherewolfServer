@@ -625,8 +625,10 @@ public final class Partita
 
     private void perdiProtezioniCappuccettoRosso()
     {
-        if(vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente()) vivi.annullaProtezioniCappuccettoRosso();
+        if(isCappuccettoRossoSenzaNonna()) vivi.annullaProtezioniCappuccettoRosso();
     }
+
+    private boolean isCappuccettoRossoSenzaNonna() { return vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente(); }
 
     private void risorgiGiocatore(String nome)
     {
