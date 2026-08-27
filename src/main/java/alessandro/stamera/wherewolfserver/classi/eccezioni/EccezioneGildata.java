@@ -7,6 +7,9 @@ public final class EccezioneGildata extends RuntimeException
         super("Impossibile criminalizzare " + nomeVittima + ".");
     }
 
-    public EccezioneGildata(String nomeVittima, String nomeCapoGilda) { }
+    public EccezioneGildata(String nomeVittima, String nomeCapoGilda)
+    {
+        super("Impossibile criminalizzare " + nomeVittima + ".\nIl Capo gilda (" + nomeCapoGilda + ") muore.");
+    }
 
 }
