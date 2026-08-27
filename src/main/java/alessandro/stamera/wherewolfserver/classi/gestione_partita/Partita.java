@@ -5,8 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.eccezioni.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoliFactory;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
-import jakarta.annotation.Nonnull;
-
 import java.util.ArrayList;
 import java.util.List;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
@@ -683,6 +681,11 @@ public final class Partita
         String nome = ballottaggio.getNomeGiocatorePerdente();
         if(isEccezioneOratore(nome))
             throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        eliminaPerdente(nome);
+    }
+
+    private void eliminaPerdente(String nome)
+    {
         terminaBallottaggio(nome);
         eliminaGiocatore(nome);
         perdiProtezioniCappuccettoRosso();
