@@ -562,13 +562,19 @@ public final class Partita
 
     private void confermaEliminazioneMortoNotte(String nome)
     {
-        Giocatore giocatore = getGiocatore(nome);
-        eliminati.aggiungiGiocatore(nome, giocatore);
-        if(eliminati.isMegera(nome)) annullaMaledizioniMegera();
-        else if(eliminati.isNegromante(nome)) annullaMaledizioniNegromante();
-        else if(giocatore.isInquisitore() && vivi.isTemplarePresente()) crociataAvviata = true;
+        eliminati.aggiungiGiocatore(nome, getGiocatore(nome));
+        conseguenzeEliminazioni(nome);
         eliminaGiocatoreMortoNotte(nome);
     }
+
+    private void conseguenzeEliminazioni(String nome)
+    {
+        if(eliminati.isMegera(nome)) annullaMaledizioniMegera();
+        else if(eliminati.isNegromante(nome)) annullaMaledizioniNegromante();
+        else if(isCrociataPronta(nome)) crociataAvviata = true;
+    }
+
+    private boolean isCrociataPronta(String nome) { return eliminati.isInquisitore(nome) && vivi.isTemplarePresente(); }
 
     private void annullaMaledizioniMegera()
     {
