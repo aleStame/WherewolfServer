@@ -524,7 +524,7 @@ public final class Partita
     {
         switch(esito)
         {
-            case FALLITO -> throw new IllegalArgumentException("Impossibile criminalizzare " + nome + ".");
+            case FALLITO -> throw new EccezioneGildata(nome);
             case MORTO -> gestioneMorteCapoGilda(nome);
         }
     }
@@ -533,7 +533,7 @@ public final class Partita
     {
         String nomeCapoGilda = vivi.getNomeCapoGilda();
         eliminaGiocatore(nomeCapoGilda);
-        throw new IllegalArgumentException("Impossibile criminalizzare " + nome + ".\n" + nomeCapoGilda + " muore.");
+        throw new EccezioneGildata(nome, nomeCapoGilda);
     }
 
     private boolean isPartitaVinta(Ruolo ruolo) { return ruolo.getEsitoPartita(this) == VITTORIA; }

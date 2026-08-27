@@ -1,15 +1,31 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-public final class EccezioneGildata extends RuntimeException
+import java.util.Optional;
+
+public final class EccezioneGildata extends IllegalArgumentException
 {
 
-    public EccezioneGildata(String nomeVittima) {
-        super("Impossibile criminalizzare " + nomeVittima + ".");
+    private final String nomeVittima;
+
+    private final Optional<String> nomeCapoGilda;
+
+    public EccezioneGildata(String nomeVittima)
+    {
+        this.nomeVittima = nomeVittima;
+        nomeCapoGilda = Optional.empty();
     }
 
     public EccezioneGildata(String nomeVittima, String nomeCapoGilda)
     {
-        super("Impossibile criminalizzare " + nomeVittima + ".\nIl Capo gilda (" + nomeCapoGilda + ") muore.");
+        this.nomeVittima = nomeVittima;
+        this.nomeCapoGilda = Optional.of(nomeCapoGilda);
+    }
+
+    @Override public String getMessage()
+    {
+        String risultato = "Impossibile criminalizzare " + nomeVittima + ".";
+        if(nomeCapoGilda.isPresent()) risultato += "\nIl Capo gilda (" + nomeCapoGilda.get() + ") muore.";
+        return risultato;
     }
 
 }

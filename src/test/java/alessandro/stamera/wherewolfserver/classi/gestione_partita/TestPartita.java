@@ -688,7 +688,7 @@ public final class TestPartita
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
     @ParameterizedTest
@@ -698,7 +698,7 @@ public final class TestPartita
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
         segnalazioneAngeloCustode(nomeCapoGilda);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
     @ParameterizedTest @CsvSource
@@ -721,7 +721,7 @@ public final class TestPartita
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -753,14 +753,14 @@ public final class TestPartita
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
         );
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Mario.\nAndrea muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Mario.\nIl Capo gilda (Andrea) muore.", nomeCapoGilda);
     }
 
     @Test public void testCriminalizzazioneContadinoMostro()
     {
         String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
-        String messaggio = "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.";
+        String messaggio = "Impossibile criminalizzare " + nomeVittima + ".\nIl Capo gilda (" + nomeCapoGilda + ") muore.";
         verificaMorteCapoGilda(nomeVittima, messaggio, nomeCapoGilda);
     }
 
