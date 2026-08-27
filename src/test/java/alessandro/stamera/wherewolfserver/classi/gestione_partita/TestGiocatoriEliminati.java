@@ -69,6 +69,24 @@ public final class TestGiocatoriEliminati
         verificaVero(isNegromante(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testNoInquisitore(String nomeRuolo)
+    {
+        String nome = "Salvo";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isInquisitore(nome));
+    }
+
     private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
 
     private boolean isBardoPresente() { return giocatori.isBardoPresente(); }
