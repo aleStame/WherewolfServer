@@ -354,11 +354,14 @@ public final class GiocatoriVivi extends Giocatori
 
     private Giocatore[] getLupiBranco()
     {
+        return stream(getGiocatori()).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
+    }
+
+    private Giocatore[] getGiocatori()
+    {
         Giocatore[] giocatori = new Giocatore[getNumeroGiocatori()];
         for(int i = 0; i < giocatori.length; i++) giocatori[i] = getGiocatore(i);
-        Giocatore[] lupi =
-            stream(giocatori).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
-        return lupi;
+        return giocatori;
     }
 
     private Ruolo getUltimoLupoRimasto() { return GetGiocatoreUltimoLupoRimasto().getRuolo(); }
