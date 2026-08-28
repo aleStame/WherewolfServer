@@ -504,11 +504,13 @@ public final class TestPartita
         verificaEliminati(nomeLupo, nomeCacciatore);
     }*/
 
-    @Test public void testAttaccoUltimoLupoBranco()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testAttaccoUltimoLupoBranco(String tipoLupo)
     {
-        String lupo = "Lupo del branco", nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
-        inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
-        attaccoLupi(lupo, nomeCacciatore);
+        String nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
+        String messaggio = "Pasquale è l'ultimo lupo rimasto in gioco.\nAvvisalo dell'attacco fallito al Cacciatore (Gregorio).";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeLupo, nomeCacciatore);
     }

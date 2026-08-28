@@ -2,8 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import jakarta.annotation.Nonnull;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
