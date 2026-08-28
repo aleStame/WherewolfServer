@@ -15,7 +15,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna;
 
     private Ruolo ruolo;
 
@@ -32,6 +32,7 @@ public final class Giocatore
         cambiaFazione(NESSUNA);
         setRomeo(false);
         stregato = false;
+        lupoExNonna = false;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -225,7 +226,7 @@ public final class Giocatore
 
     public void perdiProtezione(Ruolo ruolo) { tratti.perdiProtezione(ruolo); }
 
-    public boolean isLupoExNonna() { return false; }
+    public boolean isLupoExNonna() { return lupoExNonna; }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
@@ -270,6 +271,7 @@ public final class Giocatore
         {
             case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case NONNA_BECCATA -> lupoExNonna = true;
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;
