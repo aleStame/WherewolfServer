@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testNoLupoExNonna non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testNoLupoExNonna riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00506" summary="REFACTORING: definizione del metodo isVampiro">
-      <option name="closed" value="true" />
-      <created>1787821961140</created>
-      <option name="number" value="00506" />
-      <option name="presentableId" value="LOCAL-00506" />
-      <option name="project" value="LOCAL" />
-      <updated>1787821961145</updated>
     </task>
     <task id="LOCAL-00507" summary="VERDE DIRETTO: testNoVampiro riuscito">
       <option name="closed" value="true" />
@@ -597,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787928714190</updated>
     </task>
-    <option name="localTasksCounter" value="555" />
+    <task id="LOCAL-00555" summary="VERDE: testNoLupoExNonna riuscito">
+      <option name="closed" value="true" />
+      <created>1787928952580</created>
+      <option name="number" value="00555" />
+      <option name="presentableId" value="LOCAL-00555" />
+      <option name="project" value="LOCAL" />
+      <updated>1787928952580</updated>
+    </task>
+    <option name="localTasksCounter" value="556" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="ROSSO: testNoInquisitore non riuscito" />
     <MESSAGE value="VERDE: testNoInquisitore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testInquisitore riuscito" />
@@ -640,6 +639,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isLupoExNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo lupizzazioneNonna" />
     <MESSAGE value="ROSSO: testNoLupoExNonna non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNoLupoExNonna non riuscito" />
+    <MESSAGE value="VERDE: testNoLupoExNonna riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testNoLupoExNonna riuscito" />
   </component>
 </project>

@@ -1279,17 +1279,14 @@ public final class TestGiocatoriVivi
          verificaFalso(giocatori.isLupoExNonna(nome));
      }
 
-    /**
-     * @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-     *     public void testLupoExNonna(String tipoLupo)
-     *     {
-     *         cambiaRuolo("Nonna");
-     *         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), NONNA_BECCATA);
-     *         verificaVero(isLupoExNonna());
-     *     }
-     *
-     *
-     * */
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testLupoExNonna(String tipoLupo)
+    {
+        String nomeNonna = "Francesca", nomeLupo = "Pino";
+        inizializzaGiocatori(new String[][] { { nomeNonna, "Nonna" }, { nomeLupo, tipoLupo } });
+        verificaAttaccoLupo(tipoLupo, nomeNonna, NONNA_BECCATA);
+        verificaVero(giocatori.isLupoExNonna(nomeNonna));
+    }
 
     private boolean isVampiro(String nome) { return giocatori.isVampiro(nome); }
 
