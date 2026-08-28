@@ -32,7 +32,7 @@ public final class Giocatore
         cambiaFazione(NESSUNA);
         setRomeo(false);
         stregato = false;
-        lupoExNonna = false;
+        setLupoExNonna(false);
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -271,11 +271,13 @@ public final class Giocatore
         {
             case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
-            case NONNA_BECCATA -> lupoExNonna = true;
+            case NONNA_BECCATA -> setLupoExNonna(true);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;
     }
+
+    private void setLupoExNonna(boolean lupoExNonna) { this.lupoExNonna = lupoExNonna; }
 
     private boolean isProtetto(Ruolo lupo) { return isAmato() || isProtezionePresente(lupo); }
 
