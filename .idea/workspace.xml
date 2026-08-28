@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eliminaPerdente">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: attaccoLupiCacciatoreRiuscito riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00490" summary="ROSSO: testEremitaAssente non riuscito">
-      <option name="closed" value="true" />
-      <created>1787736745197</created>
-      <option name="number" value="00490" />
-      <option name="presentableId" value="LOCAL-00490" />
-      <option name="project" value="LOCAL" />
-      <updated>1787736745197</updated>
     </task>
     <task id="LOCAL-00491" summary="VERDE: testEremitaAssente riuscito">
       <option name="closed" value="true" />
@@ -599,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787872551992</updated>
     </task>
-    <option name="localTasksCounter" value="539" />
+    <task id="LOCAL-00539" summary="VERDE DIRETTO: attaccoLupiCacciatoreRiuscito riuscito">
+      <option name="closed" value="true" />
+      <created>1787906998773</created>
+      <option name="number" value="00539" />
+      <option name="presentableId" value="LOCAL-00539" />
+      <option name="project" value="LOCAL" />
+      <updated>1787906998774</updated>
+    </task>
+    <option name="localTasksCounter" value="540" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testGildataFallita riuscito" />
     <MESSAGE value="ROSSO: testMortePostGildata non riuscito" />
     <MESSAGE value="VERDE: testMortePostGildata riuscito" />
     <MESSAGE value="REFACTORING: ridefinizione del metodo getMessage" />
@@ -642,6 +639,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoSenzaNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo isRimastoUltimoLupoBranco" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaPerdente" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaPerdente" />
+    <MESSAGE value="VERDE DIRETTO: attaccoLupiCacciatoreRiuscito riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: attaccoLupiCacciatoreRiuscito riuscito" />
   </component>
 </project>

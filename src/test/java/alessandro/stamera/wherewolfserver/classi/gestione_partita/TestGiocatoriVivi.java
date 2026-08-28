@@ -1253,6 +1253,14 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void attaccoLupiCacciatoreFallito(String tipoLupo)
+    {
+        String nomeVittima = "Tom";
+        inizializzaGiocatori(new String[][] { { "Andrew", tipoLupo }, { nomeVittima, "Cacciatore" } });
+        verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
+    }
+
     private boolean isVampiro(String nome) { return giocatori.isVampiro(nome); }
 
     private boolean isCacciatore(String nome) { return giocatori.isCacciatore(nome); }
