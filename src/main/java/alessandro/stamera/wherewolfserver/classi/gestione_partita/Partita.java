@@ -307,7 +307,6 @@ public final class Partita
 
     private void lupizzazioneNonna(String nomeNonna, String nomeLupo, String tipoLupo)
     {
-        vivi.assorbiRuolo(nomeNonna, nomeLupo);
         eliminati.aggiungiGiocatore(nomeLupo, new Giocatore(RuoloNullo.getInstance()));
         if(vivi.isCacciatorePresente()) getGiocatoreCacciatore().aggiungiProtezione(getGiocatore(nomeNonna).getRuolo());
         throw new EccezioneNonnaBeccata(nomeLupo, tipoLupo, nomeNonna);

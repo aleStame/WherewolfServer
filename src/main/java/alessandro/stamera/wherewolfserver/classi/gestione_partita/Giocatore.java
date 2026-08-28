@@ -271,10 +271,16 @@ public final class Giocatore
         {
             case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
-            case NONNA_BECCATA -> setLupoExNonna(true);
+            case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;
+    }
+
+    private void lupizzazioneNonna(Ruolo lupo)
+    {
+        cambiaRuolo(lupo);
+        setLupoExNonna(true);
     }
 
     private void setLupoExNonna(boolean lupoExNonna) { this.lupoExNonna = lupoExNonna; }
