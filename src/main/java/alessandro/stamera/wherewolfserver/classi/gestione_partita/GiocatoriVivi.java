@@ -344,7 +344,7 @@ public final class GiocatoriVivi extends Giocatori
         if(isCacciatoreDaProteggere())
         {
             Giocatore cacciatore = getGiocatore(getNomeCacciatore());
-            if(isRimastoUltimoLupo()) cacciatore.aggiungiProtezione(getGiocatore(getPosizioneUltimoLupoRimasto()).getRuolo());
+            if(isRimastoUltimoLupo()) cacciatore.aggiungiProtezione(getUltimoLupoRimasto());
             else
             {
                 Giocatore[] giocatori = new Giocatore[getNumeroGiocatori()];
@@ -356,6 +356,8 @@ public final class GiocatoriVivi extends Giocatori
             }
         }
     }
+
+    private Ruolo getUltimoLupoRimasto() { return getGiocatore(getPosizioneUltimoLupoRimasto()).getRuolo(); }
 
     private boolean isCacciatoreDaProteggere() { return isCacciatorePresente() && isPresenteAlmenoUnLupo(); }
 
