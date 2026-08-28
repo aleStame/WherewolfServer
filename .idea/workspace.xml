@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getGiocatoreCacciatore" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isProtezioneEliminabile">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00519" summary="REFACTORING: deginizione del metodo annullaMaledizioneMegera">
-      <option name="closed" value="true" />
-      <created>1787842144025</created>
-      <option name="number" value="00519" />
-      <option name="presentableId" value="LOCAL-00519" />
-      <option name="project" value="LOCAL" />
-      <updated>1787842144027</updated>
     </task>
     <task id="LOCAL-00520" summary="REFACTORING: deginizione del metodo annullaMaledizioniMegera">
       <option name="closed" value="true" />
@@ -595,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787932749984</updated>
     </task>
-    <option name="localTasksCounter" value="568" />
+    <task id="LOCAL-00568" summary="REFACTORING: definizione del metodo isProtezioneEliminabile">
+      <option name="closed" value="true" />
+      <created>1787933063972</created>
+      <option name="number" value="00568" />
+      <option name="presentableId" value="LOCAL-00568" />
+      <option name="project" value="LOCAL" />
+      <updated>1787933063972</updated>
+    </task>
+    <option name="localTasksCounter" value="569" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: attaccoLupiCacciatoreFallito riuscito" />
     <MESSAGE value="ROSSO: testEliminaProtezione non riuscito" />
     <MESSAGE value="VERDE: testEliminaProtezione riuscito" />
     <MESSAGE value="ROSSO: testPerditaProtezioniCacciatore non riuscito" />
@@ -638,6 +639,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo proteggiCacciatoreDaUltimoLupoBranco" />
     <MESSAGE value="REFACTORING: definizione del metodo togliProtezioniCacciatore" />
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreCacciatore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getGiocatoreCacciatore" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtezioneEliminabile" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtezioneEliminabile" />
   </component>
 </project>

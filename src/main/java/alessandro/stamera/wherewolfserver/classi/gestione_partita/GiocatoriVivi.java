@@ -343,11 +343,13 @@ public final class GiocatoriVivi extends Giocatori
     private void aggiornaProtezioni()
     {
         if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
-        if(isCacciatoreDaProteggere())
-        {
-            if(isRimastoUltimoLupo()) proteggiCacciatoreDaUltimoLupoBranco();
-            else togliProtezioniCacciatore();
-        }
+        if(isCacciatoreDaProteggere()) gestisciProtezioniCacciatore();
+    }
+
+    private void gestisciProtezioniCacciatore()
+    {
+        if(isRimastoUltimoLupo()) proteggiCacciatoreDaUltimoLupoBranco();
+        else togliProtezioniCacciatore();
     }
 
     private void togliProtezioniCacciatore()
