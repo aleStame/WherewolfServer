@@ -346,9 +346,14 @@ public final class GiocatoriVivi extends Giocatori
         if(isCacciatoreDaProteggere())
         {
             if(isRimastoUltimoLupo()) proteggiCacciatoreDaUltimoLupoBranco();
-            else for(Giocatore lupo : getLupiBranco()) if(getGiocatore(getNomeCacciatore()).isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna())
-                getGiocatore(getNomeCacciatore()).perdiProtezione(lupo.getRuolo());
+            else togliProtezioniCacciatore();
         }
+    }
+
+    private void togliProtezioniCacciatore()
+    {
+        for(Giocatore lupo : getLupiBranco()) if(getGiocatore(getNomeCacciatore()).isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna())
+            getGiocatore(getNomeCacciatore()).perdiProtezione(lupo.getRuolo());
     }
 
     private void proteggiCacciatoreDaUltimoLupoBranco()
