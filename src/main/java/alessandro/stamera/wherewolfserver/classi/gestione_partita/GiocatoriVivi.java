@@ -341,7 +341,7 @@ public final class GiocatoriVivi extends Giocatori
     private void aggiornaProtezioni()
     {
         if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
-        if(isCacciatorePresente() && getNumeroLupiBranco() >= 1)
+        if(isCacciatorePresente() && isPresenteAlmenoUnLupo())
         {
             Giocatore cacciatore = getGiocatore(getNomeCacciatore());
             if(isRimastoUltimoLupo())
@@ -360,6 +360,8 @@ public final class GiocatoriVivi extends Giocatori
             }
         }
     }
+
+    private boolean isPresenteAlmenoUnLupo() { return getNumeroLupiBranco() >= 1; }
 
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
