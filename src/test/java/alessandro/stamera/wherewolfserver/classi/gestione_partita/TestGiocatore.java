@@ -740,6 +740,14 @@ public final class TestGiocatore
         verificaFalso(giocatore.isProtezionePresente(lupo));
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testLupoExNonna(String tipoLupo)
+    {
+        cambiaRuolo("Nonna");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), NONNA_BECCATA);
+        verificaVero(giocatore.isLupoExNonna());
+    }
+
     private boolean isVampiro() { return giocatore.isVampiro(); }
 
     private boolean isEremita() { return giocatore.isEremita(); }

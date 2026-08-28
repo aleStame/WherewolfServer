@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testEliminaProtezione riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testAttaccoUltimoLupoBranco non riuscito">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
@@ -206,30 +211,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00497" summary="REFACTORING: definizione del metodo isSensitivaEliminabile">
-      <option name="closed" value="true" />
-      <created>1787760125953</created>
-      <option name="number" value="00497" />
-      <option name="presentableId" value="LOCAL-00497" />
-      <option name="project" value="LOCAL" />
-      <updated>1787760125953</updated>
-    </task>
-    <task id="LOCAL-00498" summary="REFACTORING: definizione del metodo getPossedutoMortoNotte">
-      <option name="closed" value="true" />
-      <created>1787761525260</created>
-      <option name="number" value="00498" />
-      <option name="presentableId" value="LOCAL-00498" />
-      <option name="project" value="LOCAL" />
-      <updated>1787761525260</updated>
-    </task>
-    <task id="LOCAL-00499" summary="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode">
-      <option name="closed" value="true" />
-      <created>1787762123430</created>
-      <option name="number" value="00499" />
-      <option name="presentableId" value="LOCAL-00499" />
-      <option name="project" value="LOCAL" />
-      <updated>1787762123430</updated>
     </task>
     <task id="LOCAL-00500" summary="REFACTORING: definizione del metodo possessione">
       <option name="closed" value="true" />
@@ -599,7 +580,31 @@
       <option name="project" value="LOCAL" />
       <updated>1787913983575</updated>
     </task>
-    <option name="localTasksCounter" value="546" />
+    <task id="LOCAL-00546" summary="ROSSO: testPerditaProtezioniCacciatore non riuscito">
+      <option name="closed" value="true" />
+      <created>1787925874543</created>
+      <option name="number" value="00546" />
+      <option name="presentableId" value="LOCAL-00546" />
+      <option name="project" value="LOCAL" />
+      <updated>1787925874543</updated>
+    </task>
+    <task id="LOCAL-00547" summary="VERDE: testPerditaProtezioniCacciatore riuscito">
+      <option name="closed" value="true" />
+      <created>1787926071374</created>
+      <option name="number" value="00547" />
+      <option name="presentableId" value="LOCAL-00547" />
+      <option name="project" value="LOCAL" />
+      <updated>1787926071375</updated>
+    </task>
+    <task id="LOCAL-00548" summary="ROSSO: testAttaccoUltimoLupoBranco non riuscito">
+      <option name="closed" value="true" />
+      <created>1787926297737</created>
+      <option name="number" value="00548" />
+      <option name="presentableId" value="LOCAL-00548" />
+      <option name="project" value="LOCAL" />
+      <updated>1787926297737</updated>
+    </task>
+    <option name="localTasksCounter" value="549" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,9 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: deginizione del metodo getNomiMortiNotte" />
-    <MESSAGE value="REFACTORING: deginizione del metodo annullaMaledizioneMegera" />
-    <MESSAGE value="REFACTORING: deginizione del metodo annullaMaledizioniMegera" />
     <MESSAGE value="ROSSO: testNoNegromante non riuscito" />
     <MESSAGE value="VERDE: testNoNegromante riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNegromante riuscito" />
@@ -642,6 +644,9 @@
     <MESSAGE value="VERDE: attaccoLupiCacciatoreFallito riuscito" />
     <MESSAGE value="ROSSO: testEliminaProtezione non riuscito" />
     <MESSAGE value="VERDE: testEliminaProtezione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEliminaProtezione riuscito" />
+    <MESSAGE value="ROSSO: testPerditaProtezioniCacciatore non riuscito" />
+    <MESSAGE value="VERDE: testPerditaProtezioniCacciatore riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoUltimoLupoBranco non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoUltimoLupoBranco non riuscito" />
   </component>
 </project>

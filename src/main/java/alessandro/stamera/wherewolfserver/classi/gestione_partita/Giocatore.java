@@ -225,6 +225,8 @@ public final class Giocatore
 
     public void perdiProtezione(Ruolo ruolo) { tratti.perdiProtezione(ruolo); }
 
+    public boolean isLupoExNonna() { return false; }
+
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
