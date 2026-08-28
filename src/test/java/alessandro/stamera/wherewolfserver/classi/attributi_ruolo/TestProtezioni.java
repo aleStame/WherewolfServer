@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -38,6 +39,14 @@ public final class TestProtezioni
     {
         protezioni.perdiProtezioni();
         for(int i = 0; i < FACTORY.getNumeroRuoli(); i++) verificaFalso(isProtezionePresente(FACTORY.getNome(i)));
+    }
+
+    @Test public void testEliminaProtezione()
+    {
+        Ruolo capoBranco = FACTORY.getRuolo("Capo branco");
+        protezioni.aggiungiProtezione(capoBranco);
+        protezioni.perdiProtezione(capoBranco);
+        verificaFalso(protezioni.isPresente(capoBranco));
     }
 
     private boolean isPossedutoPresente() { return protezioni.isPossedutoPresente(); }
