@@ -357,7 +357,9 @@ public final class GiocatoriVivi extends Giocatori
         }
     }
 
-    private Ruolo getUltimoLupoRimasto() { return getGiocatore(getPosizioneUltimoLupoRimasto()).getRuolo(); }
+    private Ruolo getUltimoLupoRimasto() { return GetGiocatoreUltimoLupoRimasto().getRuolo(); }
+
+    private Giocatore GetGiocatoreUltimoLupoRimasto() { return getGiocatore(getPosizioneUltimoLupoRimasto()); }
 
     private boolean isCacciatoreDaProteggere() { return isCacciatorePresente() && isPresenteAlmenoUnLupo(); }
 
