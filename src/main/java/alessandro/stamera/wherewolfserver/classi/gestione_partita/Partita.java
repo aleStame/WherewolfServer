@@ -111,7 +111,7 @@ public final class Partita
         {
             case RIUSCITO, TROVATO_POSSEDUTO -> eliminaGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
-            case FALLITO -> nessunaEliminazione(nome);
+            case FALLITO -> nessunaEliminazione(nomeLupo, nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
@@ -314,11 +314,15 @@ public final class Partita
 
     private Giocatore getGiocatoreCacciatore() { return getGiocatore(vivi.getNomeCacciatore()); }
 
-    private void nessunaEliminazione(String nome)
+    private void nessunaEliminazione(String nomeLupo, String nome)
     {
         if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome))
-            throw new IllegalStateException(nome + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.");
+        {
+            if(vivi.isLupoExNonna(nomeLupo))
+                throw new IllegalStateException(nome + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.");
+            else throw new IllegalStateException(nomeLupo + " è l'ultimo lupo rimasto in gioco.\nAvvisalo dell'attacco fallito al Cacciatore (" + nome + ").");
+        }
         else if(!vivi.isLupo(nome))
         {
             boolean valore = vivi.isRomeo(nome);

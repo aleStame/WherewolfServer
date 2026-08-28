@@ -510,7 +510,7 @@ public final class TestPartita
         String nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
         inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         String messaggio = "Pasquale è l'ultimo lupo rimasto in gioco.\nAvvisalo dell'attacco fallito al Cacciatore (Gregorio).";
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggio);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeLupo, nomeCacciatore);
     }
