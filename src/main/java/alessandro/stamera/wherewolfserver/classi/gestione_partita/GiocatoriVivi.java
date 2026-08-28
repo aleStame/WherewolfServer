@@ -350,7 +350,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isCacciatore(String nome) { return getGiocatore(nome).isCacciatore(); }
 
-    public boolean isLupoExNonna(String nome) { return true; }
+    public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
 
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
