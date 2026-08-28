@@ -1,10 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.attributi_ruolo;
 
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestTratti
@@ -51,6 +53,14 @@ public final class TestTratti
         verificaVero(isProtezionePossedutoPresente());
         verificaVero(isProtezioneVampiroPresente());
         verificaProtetto();
+    }
+
+    @Test public void testEliminaProtezione()
+    {
+        Ruolo capoBranco = FACTORY.getRuolo("Capo branco");
+        tratti.aggiungiProtezione(capoBranco);
+        tratti.perdiProtezione(capoBranco);
+        verificaFalso(tratti.isProtezionePresente(capoBranco));
     }
 
     private boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
