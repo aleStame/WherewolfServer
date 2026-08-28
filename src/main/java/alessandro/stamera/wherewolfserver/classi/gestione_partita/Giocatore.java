@@ -223,6 +223,8 @@ public final class Giocatore
 
     public boolean isVampiro() { return ruolo.isVampiro(); }
 
+    public void perdiProtezione(Ruolo ruolo) {  }
+
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }

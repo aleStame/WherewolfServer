@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testEliminaProtezione non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/Tratti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/Tratti.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testEliminaProtezione riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00496" summary="VERDE: testIsCacciatore riuscito">
-      <option name="closed" value="true" />
-      <created>1787759526200</created>
-      <option name="number" value="00496" />
-      <option name="presentableId" value="LOCAL-00496" />
-      <option name="project" value="LOCAL" />
-      <updated>1787759526253</updated>
     </task>
     <task id="LOCAL-00497" summary="REFACTORING: definizione del metodo isSensitivaEliminabile">
       <option name="closed" value="true" />
@@ -597,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787913629525</updated>
     </task>
-    <option name="localTasksCounter" value="545" />
+    <task id="LOCAL-00545" summary="VERDE: testEliminaProtezione riuscito">
+      <option name="closed" value="true" />
+      <created>1787913983575</created>
+      <option name="number" value="00545" />
+      <option name="presentableId" value="LOCAL-00545" />
+      <option name="project" value="LOCAL" />
+      <updated>1787913983575</updated>
+    </task>
+    <option name="localTasksCounter" value="546" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,8 +640,8 @@
     <MESSAGE value="VERDE DIRETTO: attaccoLupiCacciatoreRiuscito riuscito" />
     <MESSAGE value="ROSSO: attaccoLupiCacciatoreFallito non riuscito" />
     <MESSAGE value="VERDE: attaccoLupiCacciatoreFallito riuscito" />
-    <MESSAGE value="VERDE: testEliminaProtezione riuscito" />
     <MESSAGE value="ROSSO: testEliminaProtezione non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEliminaProtezione non riuscito" />
+    <MESSAGE value="VERDE: testEliminaProtezione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEliminaProtezione riuscito" />
   </component>
 </project>

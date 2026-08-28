@@ -730,6 +730,16 @@ public final class TestGiocatore
         verificaFalso(isVampiro());
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testPerditaProtezioniCacciatore(String tipoLupo)
+    {
+        cambiaRuolo("Cacciatore");
+        Ruolo lupo = FACTORY.getRuolo(tipoLupo);
+        giocatore.aggiungiProtezione(lupo);
+        giocatore.perdiProtezione(lupo);
+        verificaFalso(giocatore.isProtezionePresente(lupo));
+    }
+
     private boolean isVampiro() { return giocatore.isVampiro(); }
 
     private boolean isEremita() { return giocatore.isEremita(); }
