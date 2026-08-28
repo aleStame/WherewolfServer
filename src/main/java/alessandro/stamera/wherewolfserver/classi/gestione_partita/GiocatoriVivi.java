@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import jakarta.annotation.Nonnull;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -345,16 +347,18 @@ public final class GiocatoriVivi extends Giocatori
         {
             Giocatore cacciatore = getGiocatore(getNomeCacciatore());
             if(isRimastoUltimoLupo()) cacciatore.aggiungiProtezione(getUltimoLupoRimasto());
-            else
-            {
-                Giocatore[] giocatori = new Giocatore[getNumeroGiocatori()];
-                for(int i = 0; i < giocatori.length; i++) giocatori[i] = getGiocatore(i);
-                Giocatore[] lupi =
-                    stream(giocatori).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
-                for(Giocatore lupo : lupi) if(cacciatore.isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna())
-                    cacciatore.perdiProtezione(lupo.getRuolo());
-            }
+            else for(Giocatore lupo : getLupiBranco()) if(cacciatore.isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna())
+                cacciatore.perdiProtezione(lupo.getRuolo());
         }
+    }
+
+    private Giocatore[] getLupiBranco()
+    {
+        Giocatore[] giocatori = new Giocatore[getNumeroGiocatori()];
+        for(int i = 0; i < giocatori.length; i++) giocatori[i] = getGiocatore(i);
+        Giocatore[] lupi =
+            stream(giocatori).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
+        return lupi;
     }
 
     private Ruolo getUltimoLupoRimasto() { return GetGiocatoreUltimoLupoRimasto().getRuolo(); }

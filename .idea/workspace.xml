@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isPresenteAlmenoUnLupo">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getGiocatoreUltimoLupoRimasto">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,38 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00510" summary="REFACTORING: definizione del metodo getNosferatu">
-      <option name="closed" value="true" />
-      <created>1787835926311</created>
-      <option name="number" value="00510" />
-      <option name="presentableId" value="LOCAL-00510" />
-      <option name="project" value="LOCAL" />
-      <updated>1787835926313</updated>
-    </task>
-    <task id="LOCAL-00511" summary="REFACTORING: definizione del metodo getGiocatoreNosferatu">
-      <option name="closed" value="true" />
-      <created>1787836010544</created>
-      <option name="number" value="00511" />
-      <option name="presentableId" value="LOCAL-00511" />
-      <option name="project" value="LOCAL" />
-      <updated>1787836010544</updated>
-    </task>
-    <task id="LOCAL-00512" summary="ROSSO: testGildataFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1787836694724</created>
-      <option name="number" value="00512" />
-      <option name="presentableId" value="LOCAL-00512" />
-      <option name="project" value="LOCAL" />
-      <updated>1787836694724</updated>
-    </task>
-    <task id="LOCAL-00513" summary="VERDE: testGildataFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1787836913414</created>
-      <option name="number" value="00513" />
-      <option name="presentableId" value="LOCAL-00513" />
-      <option name="project" value="LOCAL" />
-      <updated>1787836913414</updated>
     </task>
     <task id="LOCAL-00514" summary="ROSSO: testMortePostGildata non riuscito">
       <option name="closed" value="true" />
@@ -597,7 +565,39 @@
       <option name="project" value="LOCAL" />
       <updated>1787931245427</updated>
     </task>
-    <option name="localTasksCounter" value="559" />
+    <task id="LOCAL-00559" summary="REFACTORING: definizione del metodo getPosizioneUltimoLupoRimasto">
+      <option name="closed" value="true" />
+      <created>1787931358134</created>
+      <option name="number" value="00559" />
+      <option name="presentableId" value="LOCAL-00559" />
+      <option name="project" value="LOCAL" />
+      <updated>1787931358134</updated>
+    </task>
+    <task id="LOCAL-00560" summary="REFACTORING: definizione del metodo isCacciatoreDaProteggere">
+      <option name="closed" value="true" />
+      <created>1787931462684</created>
+      <option name="number" value="00560" />
+      <option name="presentableId" value="LOCAL-00560" />
+      <option name="project" value="LOCAL" />
+      <updated>1787931462684</updated>
+    </task>
+    <task id="LOCAL-00561" summary="REFACTORING: definizione del metodo igetUltimoLupoRimasto">
+      <option name="closed" value="true" />
+      <created>1787931543109</created>
+      <option name="number" value="00561" />
+      <option name="presentableId" value="LOCAL-00561" />
+      <option name="project" value="LOCAL" />
+      <updated>1787931543109</updated>
+    </task>
+    <task id="LOCAL-00562" summary="REFACTORING: definizione del metodo getGiocatoreUltimoLupoRimasto">
+      <option name="closed" value="true" />
+      <created>1787931627311</created>
+      <option name="number" value="00562" />
+      <option name="presentableId" value="LOCAL-00562" />
+      <option name="project" value="LOCAL" />
+      <updated>1787931627311</updated>
+    </task>
+    <option name="localTasksCounter" value="563" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,10 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isCrociataPronta" />
-    <MESSAGE value="REFACTORING: definizione del metodo conseguenzeEliminazioni" />
-    <MESSAGE value="REFACTORING: definizione del metodo isResurrezionePossibile" />
-    <MESSAGE value="REFACTORING: definizione del metodo isMortoContadinoMostroNonRomeo" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoSenzaNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo isRimastoUltimoLupoBranco" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaPerdente" />
@@ -640,6 +636,10 @@
     <MESSAGE value="VERDE DIRETTO: testLupoExNonna riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioni" />
     <MESSAGE value="REFACTORING: definizione del metodo isPresenteAlmenoUnLupo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPresenteAlmenoUnLupo" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneUltimoLupoRimasto" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCacciatoreDaProteggere" />
+    <MESSAGE value="REFACTORING: definizione del metodo igetUltimoLupoRimasto" />
+    <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreUltimoLupoRimasto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getGiocatoreUltimoLupoRimasto" />
   </component>
 </project>
