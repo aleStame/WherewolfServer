@@ -71,7 +71,7 @@ public final class Tratti
 
     public void eliminaTratti(Tratto... tratti) { this.tratti.removeAll(stream(tratti).toList()); }
 
-    public void perdiProtezione(Ruolo ruolo) { }
+    public void perdiProtezione(Ruolo ruolo) { protezioni.perdiProtezione(ruolo); }
 
     private void proteggi() { if(!tratti.contains(PROTETTO)) aggiungi(PROTETTO); }
 
