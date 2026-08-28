@@ -1261,6 +1261,36 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva",
+            "Sidhe", "Spia", "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoLupoExNonna(String nomeRuolo)
+     {
+         String nome = "Federico";
+         aggiungiGiocatore(nome, nomeRuolo);
+         verificaFalso(giocatori.isLupoExNonna(nome));
+     }
+
+    /**
+     * @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+     *     public void testLupoExNonna(String tipoLupo)
+     *     {
+     *         cambiaRuolo("Nonna");
+     *         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), NONNA_BECCATA);
+     *         verificaVero(isLupoExNonna());
+     *     }
+     *
+     *
+     * */
+
     private boolean isVampiro(String nome) { return giocatori.isVampiro(nome); }
 
     private boolean isCacciatore(String nome) { return giocatori.isCacciatore(nome); }
