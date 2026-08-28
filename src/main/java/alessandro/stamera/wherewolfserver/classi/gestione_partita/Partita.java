@@ -318,18 +318,19 @@ public final class Partita
     private void nessunaEliminazione(String nomeLupo, String nome)
     {
         if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
-        else if(vivi.isCacciatore(nome))
-        {
-            if(vivi.isLupoExNonna(nomeLupo))
-                throw new IllegalStateException(nome + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.");
-            else throw new IllegalStateException(nomeLupo + " è l'ultimo lupo rimasto in gioco.\nAvvisalo dell'attacco fallito al Cacciatore (" + nome + ").");
-        }
+        else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
         else if(!vivi.isLupo(nome))
         {
             boolean valore = vivi.isRomeo(nome);
             if(potereStregaUsato) valore = false;
             throw new EccezioneAttaccoGiocatoreProtetto(valore, nome);
         }
+    }
+
+    private void gestisciEccezioneCacciatore(String nomeLupo, String nome)
+    {
+        if(vivi.isLupoExNonna(nomeLupo)) throw new IllegalStateException(nome);
+        else throw new EccezioneCacciatore(nomeLupo, nome);
     }
 
     private void gestisciInterazioniMago(String nome)
