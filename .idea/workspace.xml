@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testMessaggioCacciatore non riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioCacciatore riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCacciatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCacciatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCacciatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCacciatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00524" summary="VERDE DIRETTO: testNegromante riuscito">
-      <option name="closed" value="true" />
-      <created>1787844910471</created>
-      <option name="number" value="00524" />
-      <option name="presentableId" value="LOCAL-00524" />
-      <option name="project" value="LOCAL" />
-      <updated>1787844910473</updated>
     </task>
     <task id="LOCAL-00525" summary="REFACTORING: definizione del metodo isNegromante">
       <option name="closed" value="true" />
@@ -597,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787949126383</updated>
     </task>
-    <option name="localTasksCounter" value="573" />
+    <task id="LOCAL-00573" summary="VERDE: testMessaggioCacciatore riuscito">
+      <option name="closed" value="true" />
+      <created>1787949695842</created>
+      <option name="number" value="00573" />
+      <option name="presentableId" value="LOCAL-00573" />
+      <option name="project" value="LOCAL" />
+      <updated>1787949695844</updated>
+    </task>
+    <option name="localTasksCounter" value="574" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPerditaProtezioniCacciatore non riuscito" />
     <MESSAGE value="VERDE: testPerditaProtezioniCacciatore riuscito" />
     <MESSAGE value="ROSSO: testLupoExNonna non riuscito" />
     <MESSAGE value="VERDE: testLupoExNonna riuscito" />
@@ -640,6 +641,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo gestisciProtezioniCacciatore" />
     <MESSAGE value="ROSSO: testAttaccoUltimoLupoBranco non riuscito" />
     <MESSAGE value="ROSSO: testMessaggioCacciatore non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMessaggioCacciatore non riuscito" />
+    <MESSAGE value="VERDE: testMessaggioCacciatore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioCacciatore riuscito" />
   </component>
 </project>

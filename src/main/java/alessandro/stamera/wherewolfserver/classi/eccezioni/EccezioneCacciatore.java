@@ -8,4 +8,6 @@ public final class EccezioneCacciatore extends IllegalStateException
         super(nomeCacciatore + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.");
     }
 
+    public EccezioneCacciatore(String nomeLupo, String nomeCacciatore) { }
+
 }

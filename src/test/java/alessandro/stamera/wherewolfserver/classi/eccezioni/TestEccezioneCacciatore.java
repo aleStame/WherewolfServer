@@ -12,4 +12,10 @@ public final class TestEccezioneCacciatore
         assertThat(new EccezioneCacciatore("Milo").getMessage()).isEqualTo(messaggio);
     }
 
+    @Test public void testMessaggioCacciatoreLupoNonna()
+    {
+        String messaggio = "Milo è l'ultimo lupo rimasto in gioco.\nAvvisalo dell'attacco fallito al Cacciatore (Lucio).";
+        assertThat(new EccezioneCacciatore("Milo", "Lucio").getMessage()).isEqualTo(messaggio);
+    }
+
 }
