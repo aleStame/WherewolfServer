@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testMessaggioCacciatoreLupoNonna non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCacciatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCacciatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioCacciatoreLupoNonna riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCacciatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCacciatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00526" summary="REFACTORING: definizione del metodo aggiungiGiocatore">
-      <option name="closed" value="true" />
-      <created>1787846939367</created>
-      <option name="number" value="00526" />
-      <option name="presentableId" value="LOCAL-00526" />
-      <option name="project" value="LOCAL" />
-      <updated>1787846939368</updated>
     </task>
     <task id="LOCAL-00527" summary="REFACTORING: definizione del metodo verificaVero">
       <option name="closed" value="true" />
@@ -597,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787951776669</updated>
     </task>
-    <option name="localTasksCounter" value="575" />
+    <task id="LOCAL-00575" summary="VERDE: testMessaggioCacciatoreLupoNonna riuscito">
+      <option name="closed" value="true" />
+      <created>1787952187642</created>
+      <option name="number" value="00575" />
+      <option name="presentableId" value="LOCAL-00575" />
+      <option name="project" value="LOCAL" />
+      <updated>1787952187642</updated>
+    </task>
+    <option name="localTasksCounter" value="576" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testLupoExNonna non riuscito" />
     <MESSAGE value="VERDE: testLupoExNonna riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo setLupoExNonna" />
     <MESSAGE value="REFACTORING: definizione del metodo isLupoExNonna" />
@@ -640,6 +640,7 @@
     <MESSAGE value="ROSSO: testMessaggioCacciatore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioCacciatore riuscito" />
     <MESSAGE value="ROSSO: testMessaggioCacciatoreLupoNonna non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMessaggioCacciatoreLupoNonna non riuscito" />
+    <MESSAGE value="VERDE: testMessaggioCacciatoreLupoNonna riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioCacciatoreLupoNonna riuscito" />
   </component>
 </project>
