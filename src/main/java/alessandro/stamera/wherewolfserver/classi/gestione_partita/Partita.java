@@ -656,8 +656,7 @@ public final class Partita
     private int getPosizioneLupo(String tipoLupo)
     {
         int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
-            if(getGiocatore(getNomeGiocatoreVivo(i)).getRuolo().getNome().equals(tipoLupo)) posizione = i;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getNomeRuolo(getNomeGiocatoreVivo(i)).equals(tipoLupo)) posizione = i;
         return posizione;
     }
 
