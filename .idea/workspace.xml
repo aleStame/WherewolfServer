@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getGiocatori">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo togliProtezioniCacciatore">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,22 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00516" summary="REFACTORING: ridefinizione del metodo getMessage">
-      <option name="closed" value="true" />
-      <created>1787839415199</created>
-      <option name="number" value="00516" />
-      <option name="presentableId" value="LOCAL-00516" />
-      <option name="project" value="LOCAL" />
-      <updated>1787839415200</updated>
-    </task>
-    <task id="LOCAL-00517" summary="REFACTORING: definizione di un costruttore privato">
-      <option name="closed" value="true" />
-      <created>1787839793637</created>
-      <option name="number" value="00517" />
-      <option name="presentableId" value="LOCAL-00517" />
-      <option name="project" value="LOCAL" />
-      <updated>1787839793638</updated>
     </task>
     <task id="LOCAL-00518" summary="REFACTORING: deginizione del metodo getNomiMortiNotte">
       <option name="closed" value="true" />
@@ -597,7 +581,23 @@
       <option name="project" value="LOCAL" />
       <updated>1787931915498</updated>
     </task>
-    <option name="localTasksCounter" value="565" />
+    <task id="LOCAL-00565" summary="REFACTORING: definizione del metodo proteggiCacciatoreDaUltimoLupoBranco">
+      <option name="closed" value="true" />
+      <created>1787932228014</created>
+      <option name="number" value="00565" />
+      <option name="presentableId" value="LOCAL-00565" />
+      <option name="project" value="LOCAL" />
+      <updated>1787932228014</updated>
+    </task>
+    <task id="LOCAL-00566" summary="REFACTORING: definizione del metodo togliProtezioniCacciatore">
+      <option name="closed" value="true" />
+      <created>1787932356407</created>
+      <option name="number" value="00566" />
+      <option name="presentableId" value="LOCAL-00566" />
+      <option name="project" value="LOCAL" />
+      <updated>1787932356407</updated>
+    </task>
+    <option name="localTasksCounter" value="567" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,8 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo eliminaPerdente" />
-    <MESSAGE value="VERDE DIRETTO: attaccoLupiCacciatoreRiuscito riuscito" />
     <MESSAGE value="ROSSO: attaccoLupiCacciatoreFallito non riuscito" />
     <MESSAGE value="VERDE: attaccoLupiCacciatoreFallito riuscito" />
     <MESSAGE value="ROSSO: testEliminaProtezione non riuscito" />
@@ -640,6 +638,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreUltimoLupoRimasto" />
     <MESSAGE value="REFACTORING: definizione del metodo getLupoiBranco" />
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatori" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getGiocatori" />
+    <MESSAGE value="REFACTORING: definizione del metodo proteggiCacciatoreDaUltimoLupoBranco" />
+    <MESSAGE value="REFACTORING: definizione del metodo togliProtezioniCacciatore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo togliProtezioniCacciatore" />
   </component>
 </project>
