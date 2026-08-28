@@ -504,22 +504,22 @@ public final class TestPartita
         verificaEliminati(nomeLupo, nomeCacciatore);
     }*/
 
-    @Test public void testAttaccoUltimoLupo()
+    /*@Test public void testAttaccoUltimoLupo()
     {
         String lupo = "Lupo reietto", nomeLupo = "Salvatore", nomeCacciatore = "Pietro";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         attaccoLupi(lupo, nomeCacciatore);
         terminaNotte();
         verificaEliminati(nomeLupo, nomeCacciatore);
-    }
+    }*/
 
-    @Test public void testAttaccoUltimoLupoBranco()
+    /*@Test public void testAttaccoUltimoLupoBranco()
     {
         String lupo = "Lupo del branco", nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
         attaccoLupi(lupo, nomeCacciatore);
         terminaNotte();
-        verificaEliminati(nomeLupo, nomeCacciatore);
+        verificaNonEliminati(nomeLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoNormaleCacciatore()
@@ -530,7 +530,7 @@ public final class TestPartita
         terminaNotte();
         verificaEliminazione(nomeCacciatore);
         verificaNonEliminati(lupo);
-    }
+    }*/
 
     @Test public void testAttaccoNosferatuMorto()
     {

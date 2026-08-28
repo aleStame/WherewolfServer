@@ -295,12 +295,26 @@ public final class GiocatoriVivi extends Giocatori
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
         if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
+        if(isCacciatorePresente())
+        {
+            int posizione = NON_TROVATO;
+            for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+            if(isRimastoUltimoLupo()) getGiocatore(getNomeCacciatore()).aggiungiProtezione(getGiocatore(posizione).getRuolo());
+            else getGiocatore(getNomeCacciatore()).perdiProtezioni();
+        }
     }
 
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
         super.aggiungiGiocatore(nome, giocatore);
         if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
+        if(isCacciatorePresente())
+        {
+            int posizione = NON_TROVATO;
+            for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+            if(isRimastoUltimoLupo()) getGiocatore(getNomeCacciatore()).aggiungiProtezione(getGiocatore(posizione).getRuolo());
+            else getGiocatore(getNomeCacciatore()).perdiProtezioni();
+        }
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
