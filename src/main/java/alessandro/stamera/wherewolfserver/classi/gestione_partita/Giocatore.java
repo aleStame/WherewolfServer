@@ -223,7 +223,7 @@ public final class Giocatore
 
     public boolean isVampiro() { return ruolo.isVampiro(); }
 
-    public void perdiProtezione(Ruolo ruolo) {  }
+    public void perdiProtezione(Ruolo ruolo) { tratti.perdiProtezione(ruolo); }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
