@@ -344,21 +344,24 @@ public final class GiocatoriVivi extends Giocatori
         if(isCacciatorePresente() && isPresenteAlmenoUnLupo())
         {
             Giocatore cacciatore = getGiocatore(getNomeCacciatore());
-            if(isRimastoUltimoLupo())
-            {
-                int posizione = NON_TROVATO;
-                for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
-                cacciatore.aggiungiProtezione(getGiocatore(posizione).getRuolo());
-            }
+            if(isRimastoUltimoLupo()) cacciatore.aggiungiProtezione(getGiocatore(getPosizioneUltimoLupoRimasto()).getRuolo());
             else
             {
                 Giocatore[] giocatori = new Giocatore[getNumeroGiocatori()];
                 for(int i = 0; i < giocatori.length; i++) giocatori[i] = getGiocatore(i);
                 Giocatore[] lupi =
-                        stream(giocatori).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
-                for(Giocatore lupo : lupi) if(cacciatore.isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna()) cacciatore.perdiProtezione(lupo.getRuolo());
+                    stream(giocatori).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
+                for(Giocatore lupo : lupi) if(cacciatore.isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna())
+                    cacciatore.perdiProtezione(lupo.getRuolo());
             }
         }
+    }
+
+    private int getPosizioneUltimoLupoRimasto()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+        return posizione;
     }
 
     private boolean isPresenteAlmenoUnLupo() { return getNumeroLupiBranco() >= 1; }
@@ -458,8 +461,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestioneProtezioneUltimoLupo()
     {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+        int posizione = getPosizioneUltimoLupoRimasto();
         aggiungiProtezioneNonna(posizione);
     }
 
