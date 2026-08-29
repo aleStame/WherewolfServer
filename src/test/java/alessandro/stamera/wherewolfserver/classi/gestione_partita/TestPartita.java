@@ -96,9 +96,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { "Giovanni", "Assassino" }, { "Federico", "Lupo reietto" } };
         inizializzaPartita(giocatori);
         int posizione = 1;
-        attaccoAssassino(giocatori[posizione][0]);
-        terminaNotte();
-        verificaEliminazione(giocatori[posizione][0]);
+        verificaAttaccoAssassino(giocatori[posizione][0]);
     }
 
     @ParameterizedTest @CsvSource
@@ -200,21 +198,7 @@ public final class TestPartita
         String nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
         protezioneStrega(nomeVittima);
-        attaccoAssassino(nomeVittima);
-        terminaNotte();
-        verificaEliminazione(nomeVittima);
-    }
-
-    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAssassino, String nomeAngelo)
-    {
-        segnalazioneAngeloCustode(nomeVittima);
-        String messaggio =
-            "L'attacco dell'amato (" + nomeVittima + ") da parte dell'Assassino (" + nomeAssassino + ") causa la morte del suo Angelo custode (" +
-            nomeAngelo + ").\nAvvisa " + nomeAngelo + " dell'attacco subito.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaEliminazione(nomeAngelo);
-        verificaNonEliminati(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -1454,9 +1438,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         //romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
-        attaccoAssassino(nomeGiulietta);
-        terminaNotte();
-        verificaEliminazione(nomeGiulietta);
+        verificaAttaccoAssassino(nomeGiulietta);
         verificaNonEliminati(nomeRomeo);
     }
 
@@ -2078,6 +2060,25 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaEliminati(nomeVittima);
+    }
+
+    private void verificaAttaccoAssassino(String nomeVittima)
+    {
+        attaccoAssassino(nomeVittima);
+        terminaNotte();
+        verificaEliminazione(nomeVittima);
+    }
+
+    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAssassino, String nomeAngelo)
+    {
+        segnalazioneAngeloCustode(nomeVittima);
+        String messaggio =
+            "L'attacco dell'amato (" + nomeVittima + ") da parte dell'Assassino (" + nomeAssassino + ") causa la morte del suo Angelo custode (" +
+            nomeAngelo + ").\nAvvisa " + nomeAngelo + " dell'attacco subito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminazione(nomeAngelo);
+        verificaNonEliminati(nomeVittima);
     }
 
     private void verificaLupoBranco(String nome) { verificaVero(partita.isLupoBranco(nome)); }
