@@ -294,13 +294,13 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
-        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
+        aggiornaProtezioni();
     }
 
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
         super.aggiungiGiocatore(nome, giocatore);
-        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
+        aggiornaProtezioni();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -322,6 +322,77 @@ public final class GiocatoriVivi extends Giocatori
         getGiocatore(nome).romeizzazione();
         aggiungiProtezioneCreatureOmbra(nome);
     }
+
+    public String getNomeCacciatore() { return getNomeGiocatore(getPosizioneCacciatore()); }
+
+    public String getNomeNonna() { return getNomeGiocatore(getPosizioneNonna()); }
+
+    public boolean isEremita(String nome)
+    {
+        boolean trovato = false;
+        if(isPresente(nome)) trovato = getGiocatore(nome).isEremita();
+        return trovato;
+    }
+
+    public boolean isCacciatore(String nome) { return getGiocatore(nome).isCacciatore(); }
+
+    public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
+
+    private void aggiornaProtezioni()
+    {
+        if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
+        if(isCacciatoreDaProteggere()) gestisciProtezioniCacciatore();
+    }
+
+    private void gestisciProtezioniCacciatore()
+    {
+        if(isRimastoUltimoLupo()) proteggiCacciatoreDaUltimoLupoBranco();
+        else togliProtezioniCacciatore();
+    }
+
+    private void togliProtezioniCacciatore()
+    {
+        for(Giocatore lupo : getLupiBranco()) if(isProtezioneEliminabile(lupo)) getGiocatoreCacciatore().perdiProtezione(lupo.getRuolo());
+    }
+
+    private boolean isProtezioneEliminabile(Giocatore lupo)
+    {
+        return getGiocatoreCacciatore().isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna();
+    }
+
+    private void proteggiCacciatoreDaUltimoLupoBranco()
+    {
+        getGiocatoreCacciatore().aggiungiProtezione(getUltimoLupoRimasto());
+    }
+
+    private Giocatore getGiocatoreCacciatore() { return getGiocatore(getNomeCacciatore()); }
+
+    private Giocatore[] getLupiBranco()
+    {
+        return stream(getGiocatori()).filter(player -> player.isLupo() && !player.isLupoSolitario()).toList().toArray(new Giocatore[0]);
+    }
+
+    private Giocatore[] getGiocatori()
+    {
+        Giocatore[] giocatori = new Giocatore[getNumeroGiocatori()];
+        for(int i = 0; i < giocatori.length; i++) giocatori[i] = getGiocatore(i);
+        return giocatori;
+    }
+
+    private Ruolo getUltimoLupoRimasto() { return GetGiocatoreUltimoLupoRimasto().getRuolo(); }
+
+    private Giocatore GetGiocatoreUltimoLupoRimasto() { return getGiocatore(getPosizioneUltimoLupoRimasto()); }
+
+    private boolean isCacciatoreDaProteggere() { return isCacciatorePresente() && isPresenteAlmenoUnLupo(); }
+
+    private int getPosizioneUltimoLupoRimasto()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isPresenteAlmenoUnLupo() { return getNumeroLupiBranco() >= 1; }
 
     private Giocatore getGiocatoreAmato() { return getGiocatore(getNomeAmato()); }
 
@@ -418,8 +489,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private void gestioneProtezioneUltimoLupo()
     {
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLupo(i)) posizione = i;
+        int posizione = getPosizioneUltimoLupoRimasto();
         aggiungiProtezioneNonna(posizione);
     }
 

@@ -15,7 +15,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna;
 
     private Ruolo ruolo;
 
@@ -32,6 +32,7 @@ public final class Giocatore
         cambiaFazione(NESSUNA);
         setRomeo(false);
         stregato = false;
+        setLupoExNonna(false);
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -147,15 +148,18 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = ruolo.attaccoLupi(lupo);
-        if(isProtezioneAngeloCustodeNonBucata() || !isAmato()) esito = gestioneAttaccoVittimaProtetta(lupo, esito);
+        if(isProtezioneAngeloCustodeNonBucata() || isGiocatoreProtetto(lupo)) esito = gestioneAttaccoVittimaProtetta(lupo, esito);
         esito = verificaEsitoAttaccoLupi(lupo, esito);
         return esito;
     }
+
+    public boolean isEremita() { return ruolo.isEremita(); }
 
     private EsitoAttacco gestioneAttaccoVittimaProtetta(Ruolo lupo, EsitoAttacco esito)
     {
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
         else if(isGiocatoreProtetto(lupo)) esito = FALLITO;
+        System.out.println(esito);
         return esito;
     }
 
@@ -218,6 +222,12 @@ public final class Giocatore
 
     public boolean isCreaturaOmbra() { return ruolo.isCreaturaOmbra() || isTrattoPresente(CREATURA_OMBRA); }
 
+    public boolean isVampiro() { return ruolo.isVampiro(); }
+
+    public void perdiProtezione(Ruolo ruolo) { tratti.perdiProtezione(ruolo); }
+
+    public boolean isLupoExNonna() { return lupoExNonna; }
+
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
@@ -261,10 +271,19 @@ public final class Giocatore
         {
             case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;
     }
+
+    private void lupizzazioneNonna(Ruolo lupo)
+    {
+        cambiaRuolo(lupo);
+        setLupoExNonna(true);
+    }
+
+    private void setLupoExNonna(boolean lupoExNonna) { this.lupoExNonna = lupoExNonna; }
 
     private boolean isProtetto(Ruolo lupo) { return isAmato() || isProtezionePresente(lupo); }
 

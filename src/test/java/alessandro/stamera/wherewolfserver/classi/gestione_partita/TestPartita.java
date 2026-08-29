@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -495,31 +496,24 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizioneVittima][0]);
     }
 
-    @Test public void testAttaccoLupoSolitarioCacciatore()
+    /*@Test public void testAttaccoLupoSolitarioCacciatore()
     {
         String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
         inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
         attaccoLupi(lupo, nomeCacciatore);
         terminaNotte();
         verificaEliminati(nomeLupo, nomeCacciatore);
-    }
+    }*/
 
-    @Test public void testAttaccoUltimoLupo()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testAttaccoUltimoLupoBranco(String tipoLupo)
     {
-        String lupo = "Lupo reietto", nomeLupo = "Salvatore", nomeCacciatore = "Pietro";
-        inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
-        attaccoLupi(lupo, nomeCacciatore);
+        String nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
+        String messaggio = "Pasquale è l'ultimo lupo rimasto in gioco.\nAvvisalo dell'attacco fallito al Cacciatore (Gregorio).";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggio);
         terminaNotte();
-        verificaEliminati(nomeLupo, nomeCacciatore);
-    }
-
-    @Test public void testAttaccoUltimoLupoBranco()
-    {
-        String lupo = "Lupo del branco", nomeLupo = "Pasquale", nomeCacciatore = "Gregorio";
-        inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Cristina", "Leprecauno" } });
-        attaccoLupi(lupo, nomeCacciatore);
-        terminaNotte();
-        verificaEliminati(nomeLupo, nomeCacciatore);
+        verificaNonEliminati(nomeLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoNormaleCacciatore()
@@ -688,7 +682,7 @@ public final class TestPartita
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
     @ParameterizedTest
@@ -698,7 +692,7 @@ public final class TestPartita
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" } });
         segnalazioneAngeloCustode(nomeCapoGilda);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
     @ParameterizedTest @CsvSource
@@ -721,7 +715,7 @@ public final class TestPartita
             new String[][] { { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" }, { nomeLupo, tipoLupo } };
         inizializzaPartita(giocatori);
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nRaffaele muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -753,14 +747,14 @@ public final class TestPartita
             new String[][] { { "Sara", tipoLupo }, { nomeVittima, "Contadino discendente dei lupi" }, { nomeCapoGilda, "Capo gilda" } }
         );
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggio);
-        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Mario.\nAndrea muore.", nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Mario.\nIl Capo gilda (Andrea) muore.", nomeCapoGilda);
     }
 
     @Test public void testCriminalizzazioneContadinoMostro()
     {
         String nomeVittima = "Alberto", nomeCapoGilda = "Andrea";
         inizializzaPartita(new String[][] { { nomeVittima, "Contadino mostro" }, { nomeCapoGilda, "Capo gilda" } });
-        String messaggio = "Impossibile criminalizzare " + nomeVittima + ".\n" + nomeCapoGilda + " muore.";
+        String messaggio = "Impossibile criminalizzare " + nomeVittima + ".\nIl Capo gilda (" + nomeCapoGilda + ") muore.";
         verificaMorteCapoGilda(nomeVittima, messaggio, nomeCapoGilda);
     }
 
@@ -1719,47 +1713,106 @@ public final class TestPartita
 
     @Test public void testAttaccoCapoBrancoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
-        String messaggio =
+        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica", nomeCacciatore = "Alfredo";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        String messaggioNonna =
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
-        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isCapoBranco(nomeVittima));
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggioNonna, nomeLupo);
+        verificaCapoBranco(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoCapoBrancoAmatoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        String nomeLupo = "Ciro", tipoLupo = "Capo branco", nomeVittima = "Federica", nomeCacciatore = "Alfredo";
+        String[][] giocatori =
+            new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Angelo custode" } };
+        inizializzaPartita(giocatori);
         String messaggio =
             "Il Capo branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Capo branco.";
         segnalazioneAngeloCustode(nomeLupo);
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaCapoBranco(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoLupoBrancoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica", nomeCacciatore = "Sandra";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
         String messaggio =
             "Il Lupo del branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo del branco.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoBranco(nomeVittima));
+        verificaLupoBranco(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
     @Test public void testAttaccoLupoBrancoAmatoNonna()
     {
-        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica";
-        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" } });
+        String nomeLupo = "Ciro", tipoLupo = "Lupo del branco", nomeVittima = "Federica", nomeCacciatore = "Giorgia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
         segnalazioneAngeloCustode(nomeLupo);
         String messaggio =
             "Il Lupo del branco (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
             "Federica è il Lupo del branco.";
         verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
-        verificaVero(partita.isLupoBranco(nomeVittima));
+        verificaLupoBranco(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+
+    @Test public void testAttaccoLupoReiettoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo reietto", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        String messaggio =
+            "Il Lupo reietto (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo reietto.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaLupoReietto(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+
+    @Test public void testAttaccoLupoReiettoAmatoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo reietto", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        String messaggio =
+            "Il Lupo reietto (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo reietto.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaLupoReietto(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+
+    @Test public void testAttaccoLupoSolitarioNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo solitario", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        inizializzaPartita(new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" } });
+        String messaggio =
+            "Il Lupo solitario (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo solitario.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaLupoSolitario(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
+    }
+
+    @Test public void testAttaccoLupoSolitarioAmatoNonna()
+    {
+        String nomeLupo = "Ciro", tipoLupo = "Lupo solitario", nomeVittima = "Federica", nomeCacciatore = "Lucia";
+        String[][] giocatori =
+            new String[][] { { nomeLupo, tipoLupo }, { nomeVittima, "Nonna" }, { nomeCacciatore, "Cacciatore" }, { "John", "Angelo custode" } };
+        inizializzaPartita(giocatori);
+        segnalazioneAngeloCustode(nomeLupo);
+        String messaggio =
+            "Il Lupo solitario (Ciro) ha beccato la Nonna (Federica).\nSveglia Federica e avvisa i due giocatori che Ciro è eliminato e che " +
+            "Federica è il Lupo solitario.";
+        verificaAttaccoNonna(tipoLupo, nomeVittima, messaggio, nomeLupo);
+        verificaLupoSolitario(nomeVittima);
+        verificaProtezioneCacciatore(tipoLupo, nomeCacciatore);
     }
 
     @ParameterizedTest @CsvSource
@@ -1994,6 +2047,32 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testAttaccoLupiCacciatoreRiuscito(String tipoLupo)
+    {
+        String nomeVittima = "Giacomo";
+        inizializzaPartita(new String[][] { { "Aldo", tipoLupo }, { "Giovanni", "Giovane lupo" }, { nomeVittima, "Cacciatore" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
+    }
+
+    private void verificaLupoBranco(String nome) { verificaVero(partita.isLupoBranco(nome)); }
+
+    private void verificaCapoBranco(String nome) { verificaVero(partita.isCapoBranco(nome)); }
+
+    private void verificaLupoReietto(String nome) { verificaVero(partita.isLupoReietto(nome)); }
+
+    private void verificaLupoSolitario(String nome) { verificaVero(partita.isLupoSolitario(nome)); }
+
+    private void verificaProtezioneCacciatore(String tipoLupo, String nomeCacciatore)
+    {
+        terminaNotte();
+        String messaggioCacciatore = nomeCacciatore + " è il Cacciatore ed è protetto dall'attacco del lupo ex Nonna.\nAvvisa i lupi dell'attacco fallito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeCacciatore)).withMessage(messaggioCacciatore);
+        verificaNonEliminati(nomeCacciatore);
     }
 
     private void nosferatizzazioneAngeloCustodeAmatoProtetto(String nome, String nomeAngelo)

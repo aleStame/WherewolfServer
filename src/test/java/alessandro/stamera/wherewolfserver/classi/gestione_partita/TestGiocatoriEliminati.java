@@ -17,11 +17,11 @@ public final class TestGiocatoriEliminati
 
     @Test public void testBardoPresente()
     {
-        giocatori.aggiungiGiocatore("Pino", new Giocatore(FACTORY.getRuolo("Bardo")));
-        assertThat(isBardoPresente()).isTrue();
+        aggiungiGiocatore("Pino", "Bardo");
+        verificaVero(isBardoPresente());
     }
 
-    @Test public void testBardoAssente() { assertThat(isBardoPresente()).isFalse(); }
+    @Test public void testBardoAssente() { verificaFalso(isBardoPresente()); }
 
     @ParameterizedTest @CsvSource
     (
@@ -40,10 +40,73 @@ public final class TestGiocatoriEliminati
     public void testControlloMedium(String nomeRuolo, Aura aura)
     {
         String nome = "Paolo";
-        giocatori.aggiungiGiocatore(nome, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
+        aggiungiGiocatore(nome, nomeRuolo);
         assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia",
+            "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoNegromante(String nomeRuolo)
+    {
+        String nome = "Salvo";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(isNegromante(nome));
+    }
+
+    @Test public void testNegromante()
+    {
+        String nome = "Salvo";
+        aggiungiGiocatore(nome, "Negromante");
+        verificaVero(isNegromante(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testNoInquisitore(String nomeRuolo)
+    {
+        String nome = "Salvo";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(isInquisitore(nome));
+    }
+
+    @Test public void testInquisitore()
+    {
+        String nome = "Salvo";
+        aggiungiGiocatore(nome, "Inquisitore");
+        verificaVero(isInquisitore(nome));
+    }
+
+    private boolean isInquisitore(String nome) { return giocatori.isInquisitore(nome); }
+
+    private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
+
     private boolean isBardoPresente() { return giocatori.isBardoPresente(); }
+
+    private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
+    {
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
+    }
+
+    private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
 }

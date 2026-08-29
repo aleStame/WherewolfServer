@@ -42,6 +42,8 @@ public final class Protezioni
 
     public boolean isVampiroPresente() { return cercaRuolo(Ruolo::isVampiro); }
 
+    public void perdiProtezione(Ruolo ruolo) { ruoli.remove(ruolo); }
+
     private boolean cercaRuolo(Predicate<Ruolo> condizione) { return ruoli.stream().anyMatch(condizione); }
 
 }
