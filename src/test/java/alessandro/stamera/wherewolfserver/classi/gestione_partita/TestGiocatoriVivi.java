@@ -143,7 +143,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        giocatori.protezioneStrega(nomeVittima);
+        protezioneStrega(nomeVittima);
         segnalazioneAngeloCustode(nomeVittima);
         verificaAssassinioAmato(nomeVittima);
     }
@@ -163,7 +163,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        giocatori.protezioneStrega(nomeVittima);
+        protezioneStrega(nomeVittima);
         verificaAttaccoAssassino(nomeVittima, RIUSCITO);
     }
 
@@ -1307,6 +1307,8 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeNonna, NONNA_BECCATA);
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
+
+    private void protezioneStrega(String nomeVittima) { giocatori.protezioneStrega(nomeVittima); }
 
     private boolean isVampiro(String nome) { return giocatori.isVampiro(nome); }
 
