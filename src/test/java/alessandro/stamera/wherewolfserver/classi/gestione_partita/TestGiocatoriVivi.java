@@ -83,7 +83,7 @@ public final class TestGiocatoriVivi
         verificaAccusati(nomeAngeloCustode);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Giullare, RIUSCITO" })
+    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Giullare, RIUSCITO" })
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
     {
         String[][] giocatori = new String[][] { { "Cristian", nomeRuolo }, { "Carmine", "Assassino" } };
