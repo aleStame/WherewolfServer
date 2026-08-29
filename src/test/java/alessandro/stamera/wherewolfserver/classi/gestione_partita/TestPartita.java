@@ -67,27 +67,27 @@ public final class TestPartita
         verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
     }
 
-    @Test public void testAngeloCustodeAccusatoNonPresente()
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Sidhe" }) public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
-        String nome = "Pamela";
-        String[][] giocatori = new String[][] { { "Domenico", "Angelo custode" }, { "Franco", "Goblin" }, { nome, "Sidhe" } };
-        inizializzaPartita(giocatori);
+        String nomeAngelo = "Domenico", nome = "Pamela";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo } });
         segnalazioneAngeloCustode(nome);
         incrementaVoti(nome, 3);
         terminaVotazioni();
-        verificaAccusati(giocatori[0][0]);
+        verificaAccusati(nomeAngelo);
         verificaNonAccusato(nome);
     }
 
-    @Test public void testAngeloCustodeAccusatoPresente()
+    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore" })
+    public void testAngeloCustodeAccusatoPresente(String nomeRuolo)
     {
-        String nomeAmato = "Fiona";
-        String[][] giocatori = new String[][] { { "Michelle", "Angelo custode" }, { nomeAmato, "Altra guardia" }, { "Biagio", "Ladra" } };
+        String nomeAngelo = "Michelle", nomeAmato = "Fiona", nomeAccusato = "Biagio";
+        String[][] giocatori = new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAmato, nomeRuolo }, { nomeAccusato, "Ladra" } };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeAmato);
         for(String[] giocatore : giocatori) incrementaVoti(giocatore[0], 2);
         terminaVotazioni();
-        verificaAccusati(giocatori[2][0], giocatori[0][0]);
+        verificaAccusati(nomeAccusato, nomeAngelo);
         verificaNonAccusato(nomeAmato);
     }
 
