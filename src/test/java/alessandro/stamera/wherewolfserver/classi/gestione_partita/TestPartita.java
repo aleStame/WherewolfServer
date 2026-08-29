@@ -91,14 +91,12 @@ public final class TestPartita
         verificaNonAccusato(nomeAmato);
     }
 
-    @Test public void testAttaccoAssassino()
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Cacciatore", "Giullare" })
+    public void testAttaccoAssassino(String nomeRuolo)
     {
-        String[][] giocatori = new String[][] { { "Giovanni", "Assassino" }, { "Federico", "Lupo reietto" } };
-        inizializzaPartita(giocatori);
-        int posizione = 1;
-        attaccoAssassino(giocatori[posizione][0]);
-        terminaNotte();
-        verificaEliminazione(giocatori[posizione][0]);
+        String nomeVittima = "Federico";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
+        verificaAttaccoAssassino(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -184,16 +182,23 @@ public final class TestPartita
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
-    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAssassino, String nomeAngelo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAttaccoStregatoAssassino(String nomeRuolo)
     {
-        segnalazioneAngeloCustode(nomeVittima);
-        String messaggio =
-            "L'attacco dell'amato (" + nomeVittima + ") da parte dell'Assassino (" + nomeAssassino + ") causa la morte del suo Angelo custode (" +
-            nomeAngelo + ").\nAvvisa " + nomeAngelo + " dell'attacco subito.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaEliminazione(nomeAngelo);
-        verificaNonEliminati(nomeVittima);
+        String nomeVittima = "Maddalena";
+        inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -1433,9 +1438,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         //romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
-        attaccoAssassino(nomeGiulietta);
-        terminaNotte();
-        verificaEliminazione(nomeGiulietta);
+        verificaAttaccoAssassino(nomeGiulietta);
         verificaNonEliminati(nomeRomeo);
     }
 
@@ -2057,6 +2060,25 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeVittima);
         terminaNotte();
         verificaEliminati(nomeVittima);
+    }
+
+    private void verificaAttaccoAssassino(String nomeVittima)
+    {
+        attaccoAssassino(nomeVittima);
+        terminaNotte();
+        verificaEliminazione(nomeVittima);
+    }
+
+    private void verificaAttaccoAssassinoAmato(String nomeVittima, String nomeAssassino, String nomeAngelo)
+    {
+        segnalazioneAngeloCustode(nomeVittima);
+        String messaggio =
+            "L'attacco dell'amato (" + nomeVittima + ") da parte dell'Assassino (" + nomeAssassino + ") causa la morte del suo Angelo custode (" +
+            nomeAngelo + ").\nAvvisa " + nomeAngelo + " dell'attacco subito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminazione(nomeAngelo);
+        verificaNonEliminati(nomeVittima);
     }
 
     private void verificaLupoBranco(String nome) { verificaVero(partita.isLupoBranco(nome)); }

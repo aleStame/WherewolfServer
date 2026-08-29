@@ -83,7 +83,7 @@ public final class TestGiocatoriVivi
         verificaAccusati(nomeAngeloCustode);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Giullare, RIUSCITO" })
+    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Giullare, RIUSCITO" })
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
     {
         String[][] giocatori = new String[][] { { "Cristian", nomeRuolo }, { "Carmine", "Assassino" } };
@@ -143,9 +143,28 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        giocatori.protezioneStrega(nomeVittima);
+        protezioneStrega(nomeVittima);
         segnalazioneAngeloCustode(nomeVittima);
         verificaAssassinioAmato(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAttaccoStregatoAssassino(String nomeRuolo)
+    {
+        String nomeVittima = "Maddalena";
+        inizializzaGiocatori(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima, RIUSCITO);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
@@ -1288,6 +1307,8 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeNonna, NONNA_BECCATA);
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
+
+    private void protezioneStrega(String nomeVittima) { giocatori.protezioneStrega(nomeVittima); }
 
     private boolean isVampiro(String nome) { return giocatori.isVampiro(nome); }
 
