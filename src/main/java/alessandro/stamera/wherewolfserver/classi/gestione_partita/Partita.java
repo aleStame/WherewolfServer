@@ -319,17 +319,19 @@ public final class Partita
     {
         if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
-        else if(!vivi.isLupo(nome))
-        {
-            boolean valore = vivi.isRomeo(nome);
-            if(potereStregaUsato) valore = false;
-            throw new EccezioneAttaccoGiocatoreProtetto(valore, nome);
-        }
+        else if(!vivi.isLupo(nome)) gestisciEccezioneCacciatoreProtetto(nome);
+    }
+
+    private void gestisciEccezioneCacciatoreProtetto(String nome)
+    {
+        boolean valore = vivi.isRomeo(nome);
+        if(potereStregaUsato) valore = false;
+        throw new EccezioneAttaccoGiocatoreProtetto(valore, nome);
     }
 
     private void gestisciEccezioneCacciatore(String nomeLupo, String nome)
     {
-        if(vivi.isLupoExNonna(nomeLupo)) throw new IllegalStateException(nome);
+        if(vivi.isLupoExNonna(nomeLupo)) throw new EccezioneCacciatore(nome);
         else throw new EccezioneCacciatore(nomeLupo, nome);
     }
 
