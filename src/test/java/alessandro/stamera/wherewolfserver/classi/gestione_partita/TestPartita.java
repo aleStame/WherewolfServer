@@ -91,12 +91,12 @@ public final class TestPartita
         verificaNonAccusato(nomeAmato);
     }
 
-    @Test public void testAttaccoAssassino()
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Cacciatore", "Giullare" })
+    public void testAttaccoAssassino(String nomeRuolo)
     {
-        String[][] giocatori = new String[][] { { "Giovanni", "Assassino" }, { "Federico", "Lupo reietto" } };
-        inizializzaPartita(giocatori);
-        int posizione = 1;
-        verificaAttaccoAssassino(giocatori[posizione][0]);
+        String nomeVittima = "Federico";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
+        verificaAttaccoAssassino(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
