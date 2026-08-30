@@ -185,7 +185,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Rodolfo";
         aggiungiGiocatore(nome, nomeRuolo);
-        giocatori.segnalazioneAzzeccagarbugli(nome);
+        segnalazioneAzzeccagarbugli(nome);
         incrementaVoti(nome, 4);
         assertThat(giocatori.getNumeroVoti(nome)).isZero();
         String nome2 = "Domenica";
@@ -204,6 +204,15 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeInquisitore);
         incrementaVoti(giocatori[3][0], 4);
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
+    }
+
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        String nome = "Biagio", nomeVotato = "Herbert";
+        inizializzaGiocatori(new String[][] { { "Francesco", "Azzeccagarbugli" }, { nome, "Cacciatore" }, { nomeVotato, "Assassino" } });
+        segnalazioneAzzeccagarbugli(nome);
+        incrementaVoti(nomeVotato, 2);
+        verificaAccusati(nome, nomeVotato);
     }
 
     @ParameterizedTest @CsvSource
@@ -1307,6 +1316,8 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeNonna, NONNA_BECCATA);
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
+
+    private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void protezioneStrega(String nomeVittima) { giocatori.protezioneStrega(nomeVittima); }
 
