@@ -206,6 +206,15 @@ public final class TestGiocatoriVivi
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
     }
 
+    @Test public void testSegnalazioneAzzeccagarbugli()
+    {
+        String nome = "Biagio", nomeVotato = "Herbert";
+        inizializzaGiocatori(new String[][] { { "Francesco", "Azzeccagarbugli" }, { nome, "Cacciatore" }, { nomeVotato, "Assassino" } });
+        giocatori.segnalazioneAzzeccagarbugli(nome);
+        incrementaVoti(nomeVotato, 2);
+        verificaAccusati(nome, nomeVotato);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
