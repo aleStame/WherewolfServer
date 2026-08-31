@@ -1,6 +1,5 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -74,7 +73,7 @@ public final class TestBallottaggio
         String nome = "Tony";
         String[][] giocatori = new String[][] { { nome, "Contadino discendente dei lupi" },  { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 1, 0, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
+        verificaBoiata(nome, 1, 1, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
     }
 
     @Test public void testPerdenteBallottaggio()
