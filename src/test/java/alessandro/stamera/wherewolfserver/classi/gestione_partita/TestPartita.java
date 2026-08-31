@@ -2075,6 +2075,7 @@ public final class TestPartita
         incrementaVoti(nomeSecondo, 2);
         partita.segnalazioneBoia(nome);
         terminaBallottaggio();
+        terminaNotte();
         verificaEliminati(nomeSecondo);
     }
 

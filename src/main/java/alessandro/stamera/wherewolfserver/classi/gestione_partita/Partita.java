@@ -227,7 +227,7 @@ public final class Partita
 
     public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
 
-    public void segnalazioneBoia(String nome) { }
+    public void segnalazioneBoia(String nome) { ballottaggio.segnalazioneBoia(nome); }
 
     public void contrattaccoContadinoMostro(String nome)
     {
