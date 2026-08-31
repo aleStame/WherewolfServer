@@ -1286,8 +1286,16 @@ public final class TestGiocatoriVivi
     @Test public void testAttaccoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+    }
+
+    @Test public void testAttaccoCapoBrancoRomeo()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        romeizzazione(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
     }
 
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
