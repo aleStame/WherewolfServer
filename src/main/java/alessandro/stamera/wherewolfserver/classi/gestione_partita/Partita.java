@@ -77,12 +77,7 @@ public final class Partita
         for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
         {
             String nome = ballottaggio.getNomeGiocatore(i);
-            if(ballottaggio.isSegnalatoBorgomastro(nome))
-            {
-                int numeroVoti = getNumeroRuoliCittaPresenti();
-                if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
-                ballottaggio.incrementaVoti(nome, numeroVoti);
-            }
+            if(ballottaggio.isSegnalatoBorgomastro(nome)) gestisciSegnalazioneBorgomastro(nome);
         }
         try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
         perdiProtezioniCappuccettoRosso();
@@ -250,6 +245,13 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private void gestisciSegnalazioneBorgomastro(String nome)
+    {
+        int numeroVoti = getNumeroRuoliCittaPresenti();
+        if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
+        ballottaggio.incrementaVoti(nome, numeroVoti);
     }
 
     private void perditaProtezioniAmato() { getGiocatoreAmato().perdiProtezioni(); }
