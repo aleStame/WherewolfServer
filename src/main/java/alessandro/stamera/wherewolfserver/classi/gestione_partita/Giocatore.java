@@ -229,9 +229,9 @@ public final class Giocatore
 
     public boolean isLupoExNonna() { return lupoExNonna; }
 
-    public void segnalazioneBoia() {  }
+    public void segnalazioneBoia() { if(isCreaturaOmbra() || ruolo.isMistico()) segnalatoBoia = true; }
 
-    public boolean isSegnalatoBoia() { return true; }
+    public boolean isSegnalatoBoia() { return segnalatoBoia; }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
