@@ -1283,6 +1283,13 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
 
+    @Test public void testAttaccoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+    }
+
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void protezioneStrega(String nomeVittima) { giocatori.protezioneStrega(nomeVittima); }
