@@ -2065,6 +2065,19 @@ public final class TestPartita
         verificaEliminati(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Peccatore" }) public void testPotereBoiaNonRiuscito(String nomeRuolo)
+    {
+        String nome = "Miriam", nomeSecondo = "Andrea";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { nomeSecondo, "Pazzo" }, { "Sara", "Borgomastro" } });
+        incrementaVoti(nome, 1);
+        incrementaVoti(nomeSecondo, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeSecondo, 2);
+        partita.segnalazioneBoia(nome);
+        terminaBallottaggio();
+        verificaEliminati(nomeSecondo);
+    }
+
     private void verificaAttaccoAssassino(String nomeVittima)
     {
         attaccoAssassino(nomeVittima);
