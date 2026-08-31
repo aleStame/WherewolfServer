@@ -75,7 +75,7 @@ public final class Partita
     public void terminaBallottaggio()
     {
         terminaConteggioVoti();
-        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
+        eliminaPerdenteBallottaggio();
         perdiProtezioniCappuccettoRosso();
     }
 
@@ -241,6 +241,11 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private void eliminaPerdenteBallottaggio()
+    {
+        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
     }
 
     private void terminaConteggioVoti()
