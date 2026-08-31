@@ -66,12 +66,6 @@ public class Giocatori
 
     public boolean isCriminale(String nome) { return getGiocatore(nome).isCriminale(); }
 
-    public void segnalazioneBoia(String nome) { getGiocatore(nome).getRuolo().segnalazioneBoia(); }
-
-    public boolean isSegnalatoBoia(String nome) { return getGiocatore(nome).getRuolo().isSegnalatoBoia(); }
-
-    public void annullaSegnalazioneBoia(String nome) { getGiocatore(nome).getRuolo().annullaSegnalazioneBoia(); }
-
     public int getNumeroVotiPrimoClassificato() { return getNumeroVoti(getNomeGiocatore(0)); }
 
     public boolean isOratorePresente() { return getStreamRuoli().anyMatch(Giocatore::isOratore); }

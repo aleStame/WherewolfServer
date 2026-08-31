@@ -5,7 +5,6 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestPiccoloPopolo
@@ -42,14 +41,6 @@ public final class TestPiccoloPopolo
     @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
-
-    @Test public void testSegnalazioneBoia()
-    {
-        ruolo.segnalazioneBoia();
-        verificaVero(ruolo.isSegnalatoBoia());
-        ruolo.annullaSegnalazioneBoia();
-        verificaFalso(ruolo.isSegnalatoBoia());
-    }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

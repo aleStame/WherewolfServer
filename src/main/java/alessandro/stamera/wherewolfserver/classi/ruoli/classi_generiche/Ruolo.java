@@ -25,7 +25,7 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean segnalatoBoia, segnalatoOratore;
+    private boolean segnalatoOratore;
 
     private final boolean mistico;
 
@@ -47,7 +47,6 @@ public class Ruolo
         this.lune = lune;
         this.mistico = mistico;
         tratti = new Tratti();
-        annullaSegnalazioneBoia();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
     }
@@ -241,12 +240,6 @@ public class Ruolo
         if(isProtezioneVampiroPresente() || isMistico()) esito = FALLITO;
         return esito;
     }
-
-    public void segnalazioneBoia() { if(isMistico() || isCreaturaOmbra()) segnalatoBoia = true; }
-
-    public void annullaSegnalazioneBoia() { segnalatoBoia = false; }
-
-    public boolean isSegnalatoBoia() { return segnalatoBoia; }
 
     public boolean isSegnalatoOratore() { return segnalatoOratore; }
 

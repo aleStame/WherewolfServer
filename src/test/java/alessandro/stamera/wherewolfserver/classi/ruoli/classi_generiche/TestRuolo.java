@@ -37,12 +37,6 @@ public final class TestRuolo
 
     @Test public void vampirizzazione() { verificaAttaccoRiuscito(ruolo.vampirizzazione()); }
 
-    @Test public void testSegnalazioneBoia()
-    {
-        ruolo.segnalazioneBoia();
-        verificaFalso(ruolo.isSegnalatoBoia());
-    }
-
     @Test public void testSegnalazioneOratore()
     {
         ruolo.segnalazioneOratore();

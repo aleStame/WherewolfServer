@@ -765,6 +765,13 @@ public final class TestGiocatore
         verificaFalso(isLupoExNonna());
     }
 
+    @Test public void testSegnalazioneBoiaNonRiuscita()
+    {
+        cambiaRuolo("Cacciatore");
+        giocatore.segnalazioneBoia();
+        verificaFalso(giocatore.isSegnalatoBoia());
+    }
+
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
 
     private boolean isVampiro() { return giocatore.isVampiro(); }

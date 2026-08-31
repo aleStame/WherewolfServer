@@ -62,14 +62,6 @@ public final class TestLupo
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
-    @Test public void testSegnalazioneBoia()
-    {
-        ruolo.segnalazioneBoia();
-        verificaVero(isSegnalatoBoia());
-        ruolo.annullaSegnalazioneBoia();
-        verificaFalso(isSegnalatoBoia());
-    }
-
     @Test public void testEsitoPartita()
     {
         Partita partita = new Partita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } });
@@ -79,8 +71,6 @@ public final class TestLupo
     @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(FALLITO); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
-
-    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
