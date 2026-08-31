@@ -276,7 +276,11 @@ public final class Giocatore
     {
         switch(esito)
         {
-            case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
+            case CONTADINO_LUPO_BECCATO ->
+            {
+                cambiaFazione(lupo.getFazione());
+                aggiungiTratto(CREATURA_OMBRA);
+            }
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }

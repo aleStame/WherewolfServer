@@ -62,9 +62,9 @@ public final class TestBallottaggio
     {
         String nome = "Tony";
         String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
-        Ruolo ruolo = FACTORY.getRuolo("Contadino discendente dei lupi");
-        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
-        ballottaggio.aggiungiGiocatore(nome, new Giocatore(ruolo));
+        Giocatore giocatore = new Giocatore(FACTORY.getRuolo("Contadino discendente dei lupi"));
+        assertThat(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
+        ballottaggio.aggiungiGiocatore(nome, giocatore);
         aggiungiGiocatori(giocatori);
         verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
     }
