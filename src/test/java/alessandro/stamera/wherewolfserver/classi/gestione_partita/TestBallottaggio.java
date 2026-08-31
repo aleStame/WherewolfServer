@@ -48,7 +48,7 @@ public final class TestBallottaggio
         verificaFalso(isAmatoPresente());
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore, 0", "Lupo del branco, 0", "Peccatore, 2" })
+    @ParameterizedTest @CsvSource({ "Cacciatore, 2", "Guaritore, 0", "Lupo del branco, 0", "Peccatore, 2" })
     public void testSegnalazioneBoia(String nomeRuolo, int risultato)
     {
         String nome = "Miriam";
