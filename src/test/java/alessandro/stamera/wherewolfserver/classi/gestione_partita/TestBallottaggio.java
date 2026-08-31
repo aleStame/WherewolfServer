@@ -1,6 +1,5 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -62,9 +61,9 @@ public final class TestBallottaggio
     {
         String nome = "Tony";
         String[][] giocatori = new String[][] { { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
-        Ruolo ruolo = FACTORY.getRuolo("Contadino discendente dei lupi");
-        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
-        ballottaggio.aggiungiGiocatore(nome, new Giocatore(ruolo));
+        Giocatore giocatore = new Giocatore(FACTORY.getRuolo("Contadino discendente dei lupi"));
+        assertThat(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
+        ballottaggio.aggiungiGiocatore(nome, giocatore);
         aggiungiGiocatori(giocatori);
         verificaBoiata(nome, 3, 0, estraiNomiGiocatori(giocatori));
     }
@@ -74,7 +73,7 @@ public final class TestBallottaggio
         String nome = "Tony";
         String[][] giocatori = new String[][] { { nome, "Contadino discendente dei lupi" },  { "Andrea", "Pazzo" }, { "Sara", "Giullare" } };
         aggiungiGiocatori(giocatori);
-        verificaBoiata(nome, 1, 0, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
+        verificaBoiata(nome, 1, 1, estraiNomiGiocatoriSenzaContadino(giocatori, nome));
     }
 
     @Test public void testPerdenteBallottaggio()
@@ -122,13 +121,6 @@ public final class TestBallottaggio
         verificaNomeEliminato(giocatori[posizione][0]);
     }
 
-    @Test public void testSegnalazioneBorgomastro()
-    {
-        verificaFalso(isSegnalazioneBorgomastroAvvenuta());
-        ballottaggio.segnalazioneBorgomastro();
-        verificaVero(isSegnalazioneBorgomastroAvvenuta());
-    }
-
     private String[] estraiNomiGiocatoriSenzaContadino(String[][] giocatori, String nome)
     {
         return toArray(stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome)));
@@ -151,8 +143,6 @@ public final class TestBallottaggio
 
     private String[] toArray(Stream<String> stream) { return stream.toList().toArray(new String[0]); }
 
-    private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
-
     private void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
     private void verificaNomeEliminato(String nome) { assertThat(getNomeGiocatorePerdente()).isEqualTo(nome); }
@@ -174,7 +164,7 @@ public final class TestBallottaggio
 
     private void verificaNumeroVoti(String nome, int numeroVoti)
     {
-        //assertThat(ballottaggio.getNumeroVoti(nome)).isEqualTo(numeroVoti);
+        assertThat(ballottaggio.getNumeroVoti(nome)).isEqualTo(numeroVoti);
     }
 
     private boolean isAmatoPresente() { return ballottaggio.isAmatoPresente(); }

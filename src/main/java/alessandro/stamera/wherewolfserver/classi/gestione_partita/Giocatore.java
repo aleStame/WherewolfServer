@@ -15,7 +15,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna, segnalatoBoia;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna, segnalatoBoia, segnalatoBorgomastro;
 
     private Ruolo ruolo;
 
@@ -233,6 +233,10 @@ public final class Giocatore
 
     public boolean isSegnalatoBoia() { return segnalatoBoia; }
 
+    public void segnalazioneBorgomastro() { segnalatoBorgomastro = true; }
+
+    public boolean isSegnalatoBorgomastro() { return segnalatoBorgomastro; }
+
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
@@ -276,12 +280,18 @@ public final class Giocatore
     {
         switch(esito)
         {
-            case CONTADINO_LUPO_BECCATO -> cambiaFazione(lupo.getFazione());
+            case CONTADINO_LUPO_BECCATO -> lupizzazioneContadinoLupo(lupo);
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
         }
         return esito;
+    }
+
+    private void lupizzazioneContadinoLupo(Ruolo lupo)
+    {
+        cambiaFazione(lupo.getFazione());
+        aggiungiTratto(CREATURA_OMBRA);
     }
 
     private void lupizzazioneNonna(Ruolo lupo)

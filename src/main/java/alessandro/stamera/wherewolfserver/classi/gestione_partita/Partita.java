@@ -74,8 +74,17 @@ public final class Partita
 
     public void terminaBallottaggio()
     {
-        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
+        terminaConteggioVoti();
+        eliminaPerdenteBallottaggio();
         perdiProtezioniCappuccettoRosso();
+    }
+
+    public boolean isSegnalazioneBorgomastroAvvenuta()
+    {
+        boolean avvenuta = false;
+        for(int i= 0; i < ballottaggio.getNumeroGiocatori() && !avvenuta; i++)
+            avvenuta = ballottaggio.isSegnalatoBorgomastro(ballottaggio.getNomeGiocatore(i));
+        return avvenuta;
     }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
@@ -115,7 +124,7 @@ public final class Partita
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
-            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+           case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
         }
     }
@@ -168,15 +177,7 @@ public final class Partita
 
     public void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
-    public boolean segnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
-
-    public void segnalazioneBorgomastro(String nome)
-    {
-        int numeroVoti = getNumeroRuoliCittaPresenti();
-        if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
-        incrementaVotiBallottaggio(nome, numeroVoti);
-        ballottaggio.segnalazioneBorgomastro();
-    }
+    public void segnalazioneBorgomastro(String nome) { ballottaggio.segnalazioneBorgomastro(nome); }
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
@@ -226,6 +227,8 @@ public final class Partita
 
     public String[] getVotatiContadinoMostro() { return votantiContadinoMostro.toArray(new String[0]); }
 
+    public void segnalazioneBoia(String nome) { ballottaggio.segnalazioneBoia(nome); }
+
     public void contrattaccoContadinoMostro(String nome)
     {
         eliminaGiocatore(nome);
@@ -240,6 +243,28 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private void eliminaPerdenteBallottaggio()
+    {
+        try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
+    }
+
+    private void terminaConteggioVoti()
+    {
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaConteggioVoti(ballottaggio.getNomeGiocatore(i));
+    }
+
+    private void terminaConteggioVoti(String nome)
+    {
+        if(ballottaggio.isSegnalatoBorgomastro(nome)) gestisciSegnalazioneBorgomastro(nome);
+    }
+
+    private void gestisciSegnalazioneBorgomastro(String nome)
+    {
+        int numeroVoti = getNumeroRuoliCittaPresenti();
+        if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
+        ballottaggio.incrementaVoti(nome, numeroVoti);
     }
 
     private void perditaProtezioniAmato() { getGiocatoreAmato().perdiProtezioni(); }
@@ -687,6 +712,7 @@ public final class Partita
         String nome = ballottaggio.getNomeGiocatorePerdente();
         if(isEccezioneOratore(nome))
             throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        System.out.println(nome);
         eliminaPerdente(nome);
     }
 

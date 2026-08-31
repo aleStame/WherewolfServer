@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -457,24 +456,28 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Mercante", "Contadino mostro" }) public void testPotereBorgomastro(String ruolo)
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino mostro", "Mercante" })
+    public void testPotereBorgomastro(String ruolo)
     {
-        String tipoLupo = "Capo branco";
+        String nome = "Tania", nomeBoccaRosa = "Francesco", tipoLupo = "Capo branco", nomeBorgomastro = "Jacopo";
         String[][] giocatori = new String[][]
         {
-            { "Jacopo", "Borgomastro" }, { "Isra", "Angelo custode" }, { "Tania", ruolo }, { "Francesco", "Bocca di rosa" }, { "Alex", tipoLupo }
+            { nomeBorgomastro, "Borgomastro" }, { "Isra", "Angelo custode" }, { nome, ruolo }, { nomeBoccaRosa, "Bocca di rosa" },
+            { "Alex", tipoLupo }
         };
         inizializzaPartita(giocatori);
-        attaccoLupi(tipoLupo, giocatori[3][0]);
-        int posizione = 2;
-        incrementaVoti(giocatori[1][0], 2);
-        incrementaVoti(giocatori[posizione][0], 3);
+        attaccoLupi(tipoLupo, nomeBoccaRosa);
+        incrementaVoti(nomeBorgomastro, 2);
+        incrementaVoti(nome, 3);
         terminaVotazioni();
         verificaFalso(isSegnalazioneBorgomastroAvvenuta());
-        partita.segnalazioneBorgomastro(giocatori[posizione][0]);
+        partita.segnalazioneBorgomastro(nome);
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
-        incrementaVoti(giocatori[posizione][0], 1);
-        //verificaNumeroIntero(FACTORY.getRuolo(giocatori[posizione][1]).getNumeroVoti(), 3);
+        incrementaVoti(nome, 1);
+        incrementaVoti(nomeBorgomastro, 1);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEliminati(nome);
     }
 
     @Test public void testPotereBracconiereUnLupo()
@@ -2062,6 +2065,35 @@ public final class TestPartita
         verificaEliminati(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Peccatore" }) public void testPotereBoiaNonRiuscito(String nomeRuolo)
+    {
+        String nome = "Miriam", nomeSecondo = "Andrea";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { nomeSecondo, "Pazzo" }, { "Sara", "Borgomastro" } });
+        incrementaVoti(nome, 1);
+        incrementaVoti(nomeSecondo, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeSecondo, 2);
+        partita.segnalazioneBoia(nome);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEliminati(nomeSecondo);
+    }
+
+    @ParameterizedTest @CsvSource({ "Guaritore", "Lupo del branco" }) public void testPotereBoiaRiuscito(String nomeRuolo)
+    {
+        String nome = "Miriam", nomeSecondo = "Andrea";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { nomeSecondo, "Pazzo" }, { "Sara", "Borgomastro" } });
+        incrementaVoti(nome, 1);
+        incrementaVoti(nomeSecondo, 2);
+        terminaVotazioni();
+        incrementaVoti(nome, 1);
+        incrementaVoti(nomeSecondo, 1);
+        partita.segnalazioneBoia(nome);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEliminati(nome);
+    }
+
     private void verificaAttaccoAssassino(String nomeVittima)
     {
         attaccoAssassino(nomeVittima);
@@ -2378,7 +2410,7 @@ public final class TestPartita
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
 
-    private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }
+    private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.isSegnalazioneBorgomastroAvvenuta(); }
 
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
 
