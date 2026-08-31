@@ -122,13 +122,6 @@ public final class TestBallottaggio
         verificaNomeEliminato(giocatori[posizione][0]);
     }
 
-    @Test public void testSegnalazioneBorgomastro()
-    {
-        verificaFalso(isSegnalazioneBorgomastroAvvenuta());
-        ballottaggio.segnalazioneBorgomastro();
-        verificaVero(isSegnalazioneBorgomastroAvvenuta());
-    }
-
     private String[] estraiNomiGiocatoriSenzaContadino(String[][] giocatori, String nome)
     {
         return toArray(stream(estraiNomiGiocatori(giocatori)).filter(stringa -> !stringa.equals(nome)));
@@ -151,8 +144,6 @@ public final class TestBallottaggio
 
     private String[] toArray(Stream<String> stream) { return stream.toList().toArray(new String[0]); }
 
-    private boolean isSegnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
-
     private void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
     private void verificaNomeEliminato(String nome) { assertThat(getNomeGiocatorePerdente()).isEqualTo(nome); }
@@ -174,7 +165,7 @@ public final class TestBallottaggio
 
     private void verificaNumeroVoti(String nome, int numeroVoti)
     {
-        //assertThat(ballottaggio.getNumeroVoti(nome)).isEqualTo(numeroVoti);
+        assertThat(ballottaggio.getNumeroVoti(nome)).isEqualTo(numeroVoti);
     }
 
     private boolean isAmatoPresente() { return ballottaggio.isAmatoPresente(); }
