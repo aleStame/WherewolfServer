@@ -26,11 +26,11 @@ public final class Ballottaggio extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
     }
 
-    @Override public void segnalazioneBoia(String nome)
+    /*@Override public void segnalazioneBoia(String nome)
     {
         super.segnalazioneBoia(nome);
         if(isSegnalatoBoia(nome)) annullaVotiBoia(nome);
-    }
+    }*/
 
     public String getNomeGiocatorePerdente()
     {

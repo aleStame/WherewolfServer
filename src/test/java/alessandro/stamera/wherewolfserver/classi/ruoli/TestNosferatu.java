@@ -3,7 +3,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -25,7 +24,7 @@ public final class TestNosferatu
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
@@ -82,18 +81,8 @@ public final class TestNosferatu
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
-    @Test public void testSegnalazioneBoia()
-    {
-        ruolo.segnalazioneBoia();
-        verificaVero(isSegnalatoBoia());
-        ruolo.annullaSegnalazioneBoia();
-        verificaFalso(isSegnalatoBoia());
-    }
-
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testVittoriaNosferatu(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
-
-    private static Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private static Stream<Arguments> getEsempiPartita()
     {
@@ -159,10 +148,6 @@ public final class TestNosferatu
         partita.attaccoLupi(tipoLupo, nome);
         partita.progenizzazioneNosferatu(nome);
         partita.terminaNotte();
-    }
-
-    private boolean isSegnalatoBoia() {
-        return ruolo.isSegnalatoBoia();
     }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

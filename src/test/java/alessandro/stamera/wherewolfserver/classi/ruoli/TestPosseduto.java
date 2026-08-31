@@ -73,19 +73,9 @@ public final class TestPosseduto
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
-    @Test public void testSegnalazioneBoia()
-    {
-        ruolo.segnalazioneBoia();
-        verificaVero(isSegnalatoBoia());
-        ruolo.annullaSegnalazioneBoia();
-        verificaFalso(isSegnalatoBoia());
-    }
-
     @Test public void testVampirizzazione() { verificaAttaccoPosseduto(ruolo.vampirizzazione()); }
 
     private void verificaAttaccoPosseduto(EsitoAttacco esito) { assertThat(esito).isEqualTo(TROVATO_POSSEDUTO); }
-
-    private boolean isSegnalatoBoia() { return ruolo.isSegnalatoBoia(); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 

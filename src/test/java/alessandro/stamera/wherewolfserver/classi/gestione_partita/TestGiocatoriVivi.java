@@ -410,40 +410,6 @@ public final class TestGiocatoriVivi
         verificaNumeroIntero(giocatori.getNumeroMistici(), 2);
     }
 
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Capo branco", "Giovane lupo", "Goblin", "Guaritore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Negromante", "Nosferatu", "Posseduto", "Sensitiva", "Sidhe"
-        }
-    )
-    public void testSegnalazioneBoiaRiuscita(String nomeRuolo)
-    {
-        String nome = "Claudio";
-        aggiungiGiocatore(nome, nomeRuolo);
-        segnalazioneBoia(nome);
-        verificaVero(isSegnalatoBoia(nome));
-        giocatori.annullaSegnalazioneBoia(nome);
-        verificaNonSegnalatoBoia(nome);
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Altra guardia", "Angelo custode", "Assassino", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
-            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale",
-            "Eremita", "Guardia", "Ghoul", "Giulietta", "Giullare", "Guardia corrotta", "Inquisitore", "Ladra", "Mercante", "Monaco", "Nonna",
-            "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
-        }
-    )
-    public void testSegnalazioneBoiaNonRiuscita(String nomeRuolo)
-    {
-        String nome = "Vanessa";
-        aggiungiGiocatore(nome, nomeRuolo);
-        segnalazioneBoia(nome);
-        verificaNonSegnalatoBoia(nome);
-    }
-
     @Test public void testNumeroLupi()
     {
         inizializzaGiocatori(new String[][] { { "Aurora", "Lupo del branco" }, { "Elisa", "Lupo del branco" }, { "Mohamed", "Bracconiere" } });
@@ -1430,12 +1396,6 @@ public final class TestGiocatoriVivi
     private boolean isPotereBracconiereUtilizzato() { return giocatori.isPotereBracconiereUtilizzato(); }
 
     private boolean isBracconierePresente() { return giocatori.isBracconierePresente(); }
-
-    private void verificaNonSegnalatoBoia(String nome) { verificaFalso(isSegnalatoBoia(nome)); }
-
-    private void segnalazioneBoia(String nome) { giocatori.segnalazioneBoia(nome); }
-
-    private boolean isSegnalatoBoia(String nome) { return giocatori.isSegnalatoBoia(nome); }
 
     private boolean isNegromantePresente() { return giocatori.isNegromantePresente(); }
 

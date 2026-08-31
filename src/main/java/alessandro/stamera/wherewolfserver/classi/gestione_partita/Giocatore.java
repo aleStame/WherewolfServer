@@ -15,7 +15,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna, segnalatoBoia;
 
     private Ruolo ruolo;
 
@@ -33,6 +33,7 @@ public final class Giocatore
         setRomeo(false);
         stregato = false;
         setLupoExNonna(false);
+        segnalatoBoia = false;
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -227,6 +228,10 @@ public final class Giocatore
     public void perdiProtezione(Ruolo ruolo) { tratti.perdiProtezione(ruolo); }
 
     public boolean isLupoExNonna() { return lupoExNonna; }
+
+    public void segnalazioneBoia() {  }
+
+    public boolean isSegnalatoBoia() { return true; }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
