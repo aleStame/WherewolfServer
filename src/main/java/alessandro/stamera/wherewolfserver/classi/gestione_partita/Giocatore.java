@@ -15,7 +15,7 @@ public final class Giocatore
 
     private final Tratti tratti;
 
-    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna, segnalatoBoia;
+    private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna, segnalatoBoia, segnalatoBorgomastro;
 
     private Ruolo ruolo;
 
@@ -232,6 +232,10 @@ public final class Giocatore
     public void segnalazioneBoia() { if(isSegnalabileDaBoia()) segnalatoBoia = true; }
 
     public boolean isSegnalatoBoia() { return segnalatoBoia; }
+
+    public void segnalazioneBorgomastro() { segnalatoBorgomastro = true; }
+
+    public boolean isSegnalatoBorgomastro() { return segnalatoBorgomastro; }
 
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 

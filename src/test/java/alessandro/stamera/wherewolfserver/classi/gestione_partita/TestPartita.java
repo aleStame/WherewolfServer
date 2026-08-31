@@ -476,7 +476,8 @@ public final class TestPartita
         verificaVero(isSegnalazioneBorgomastroAvvenuta());
         incrementaVoti(nome, 1);
         incrementaVoti(nomeBorgomastro, 1);
-        terminaVotazioni();
+        terminaBallottaggio();
+        terminaNotte();
         verificaEliminati(nome);
     }
 
@@ -2381,7 +2382,7 @@ public final class TestPartita
 
     private void segnalazioneBracconiere() { partita.segnalazioneBracconiere(); }
 
-    private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.segnalazioneBorgomastroAvvenuta(); }
+    private boolean isSegnalazioneBorgomastroAvvenuta() { return partita.isSegnalazioneBorgomastroAvvenuta(); }
 
     private void segnalazioneOratore(String nome) { partita.segnalazioneOratore(nome); }
 

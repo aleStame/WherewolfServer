@@ -74,8 +74,26 @@ public final class Partita
 
     public void terminaBallottaggio()
     {
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
+        {
+            String nome = ballottaggio.getNomeGiocatore(i);
+            if(ballottaggio.isSegnalatoBorgomastro(nome))
+            {
+                int numeroVoti = getNumeroRuoliCittaPresenti();
+                if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
+                ballottaggio.incrementaVoti(nome, numeroVoti);
+            }
+        }
         try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
         perdiProtezioniCappuccettoRosso();
+    }
+
+    public boolean isSegnalazioneBorgomastroAvvenuta()
+    {
+        boolean avvenuta = false;
+        for(int i= 0; i < ballottaggio.getNumeroGiocatori() && !avvenuta; i++)
+            avvenuta = ballottaggio.isSegnalatoBorgomastro(ballottaggio.getNomeGiocatore(i));
+        return avvenuta;
     }
 
     public boolean isAccusato(String nome) { return ballottaggio.isPresente(nome); }
@@ -168,15 +186,7 @@ public final class Partita
 
     public void segnalazioneOratore(String nome) { ballottaggio.segnalazioneOratore(nome); }
 
-    public boolean segnalazioneBorgomastroAvvenuta() { return ballottaggio.isSegnalazioneBorgomastroAvvenuta(); }
-
-    public void segnalazioneBorgomastro(String nome)
-    {
-        int numeroVoti = getNumeroRuoliCittaPresenti();
-        if(ballottaggio.isContadinoMostro(nome)) numeroVoti = 1;
-        incrementaVotiBallottaggio(nome, numeroVoti);
-        ballottaggio.segnalazioneBorgomastro();
-    }
+    public void segnalazioneBorgomastro(String nome) { ballottaggio.segnalazioneBorgomastro(nome); }
 
     public void segnalazioneBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
@@ -687,6 +697,7 @@ public final class Partita
         String nome = ballottaggio.getNomeGiocatorePerdente();
         if(isEccezioneOratore(nome))
             throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
+        System.out.println(nome);
         eliminaPerdente(nome);
     }
 

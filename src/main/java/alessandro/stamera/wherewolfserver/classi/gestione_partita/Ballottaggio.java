@@ -8,15 +8,11 @@ public final class Ballottaggio extends Giocatori
 
     private static final int NON_TROVATO = -1;
 
-    private boolean segnalazioneBorgomastro;
-
-    public Ballottaggio() { segnalazioneBorgomastro = false; }
+    public Ballottaggio() { }
 
     public boolean isAmatoPresente() { return getPosizioneAmato() != NON_TROVATO; }
 
     public String getNomeAmato() { return getNomeGiocatore(getPosizioneAmato()); }
-
-    public void segnalazioneBorgomastro() { segnalazioneBorgomastro = true; }
 
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
@@ -50,7 +46,9 @@ public final class Ballottaggio extends Giocatori
 
     public void segnalazioneOratore(String nome) { getGiocatore(nome).getRuolo().segnalazioneOratore(); }
 
-    public boolean isSegnalazioneBorgomastroAvvenuta() { return segnalazioneBorgomastro; }
+    public void segnalazioneBorgomastro(String nome) { getGiocatore(nome).segnalazioneBorgomastro(); }
+
+    public boolean isSegnalatoBorgomastro(String nome) { return getGiocatore(nome).isSegnalatoBorgomastro(); }
 
     private boolean isSegnalatoOratore(String nome) { return getGiocatore(nome).getRuolo().isSegnalatoOratore(); }
 
