@@ -1290,11 +1290,19 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
 
-    @Test public void testAttaccoCapoBrancoRomeo()
+    @Test public void testAttaccoRomeoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         romeizzazione(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+    }
+
+    @Test public void testAttaccoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
         verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
     }
 
