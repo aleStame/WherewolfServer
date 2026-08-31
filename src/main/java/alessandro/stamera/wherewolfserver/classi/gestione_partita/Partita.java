@@ -74,11 +74,7 @@ public final class Partita
 
     public void terminaBallottaggio()
     {
-        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++)
-        {
-            String nome = ballottaggio.getNomeGiocatore(i);
-            if(ballottaggio.isSegnalatoBorgomastro(nome)) gestisciSegnalazioneBorgomastro(nome);
-        }
+        for(int i = 0; i < ballottaggio.getNumeroGiocatori(); i++) terminaConteggioVoti(ballottaggio.getNomeGiocatore(i));
         try { eliminaPerdente(); } catch(IllegalArgumentException ignored) {  } finally { svuotaBallottaggio(); }
         perdiProtezioniCappuccettoRosso();
     }
@@ -128,7 +124,7 @@ public final class Partita
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
-            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+           case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
         }
     }
@@ -245,6 +241,11 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private void terminaConteggioVoti(String nome)
+    {
+        if(ballottaggio.isSegnalatoBorgomastro(nome)) gestisciSegnalazioneBorgomastro(nome);
     }
 
     private void gestisciSegnalazioneBorgomastro(String nome)
