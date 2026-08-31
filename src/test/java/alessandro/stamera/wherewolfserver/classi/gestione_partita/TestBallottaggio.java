@@ -138,7 +138,7 @@ public final class TestBallottaggio
     {
         incrementaVoti(nome, numeroVoti);
         for(String giocatore : giocatori) incrementaVoti(giocatore, numeroVoti);
-        //ballottaggio.segnalazioneBoia(nome);
+        ballottaggio.segnalazioneBoia(nome);
         verificaNumeroVoti(nome, numeroVoti);
         for(String giocatore : giocatori) verificaNumeroVoti(giocatore, risultato);
         verificaNumeroVoti(nome, numeroVoti);
