@@ -1246,7 +1246,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Giacomo";
         inizializzaGiocatori(new String[][] { { "Aldo", tipoLupo }, { "Giovanni", "Giovane lupo" }, { nomeVittima, "Cacciatore" } });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
@@ -1288,7 +1288,7 @@ public final class TestGiocatoriVivi
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoRomeoCapoBranco()
@@ -1296,7 +1296,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoStregatoCapoBranco()
@@ -1304,7 +1304,40 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         protezioneStrega(nomeVittima);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+    }
+
+    @Test public void testAttaccoLupoBranco()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
+    }
+
+    @Test public void testAttaccoRomeoLupoBranco()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        romeizzazione(nomeVittima);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+    }
+
+    @Test public void testAttaccoStregatoLupoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
+    }
+
+    private void verificaAttaccoLupiFallito(String tipoLupo, String nomeVittima)
+    {
         verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+    }
+
+    private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
+    {
+        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
 
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
@@ -1354,7 +1387,9 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
     }
 
-    private void verificaAttaccoLupoFallito(String nomeLupo, String nome) { verificaAttaccoLupo(nomeLupo, nome, FALLITO); }
+    private void verificaAttaccoLupoFallito(String nomeLupo, String nome) {
+        verificaAttaccoLupiFallito(nomeLupo, nome);
+    }
 
     private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
 
