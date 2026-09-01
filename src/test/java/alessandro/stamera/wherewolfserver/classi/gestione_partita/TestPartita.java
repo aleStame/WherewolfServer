@@ -2125,6 +2125,15 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
+    @Test public void testAttaccoLupoBranco()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        attaccoLupi(tipoLupo, nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
+    }
+
     @Test public void testGuarigioneVittimaLupi()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
