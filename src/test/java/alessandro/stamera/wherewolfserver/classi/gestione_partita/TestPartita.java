@@ -272,9 +272,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
         verificaAmato(nomeAmato);
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeAmato);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
         verificaEliminazione(nomeAngeloCustode);
     }
 
@@ -486,10 +484,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         segnalazioneBracconiere();
         int posizioneVittima = 2;
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(giocatori[1][1], giocatori[posizioneVittima][0]))
-            .withMessage("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
-        terminaNotte();
-        verificaNonEliminati(giocatori[posizioneVittima][0]);
+        verificaFallimentoAttaccoGiocatoreProtetto(giocatori[posizioneVittima][0], giocatori[1][1], "Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
     }
 
     @Test public void testPotereBracconiereDueLupi()
@@ -1999,9 +1994,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
         String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
 
     @ParameterizedTest @CsvSource
@@ -2024,9 +2017,7 @@ public final class TestPartita
         };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeVittima);
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
 
     @ParameterizedTest @CsvSource
@@ -2046,9 +2037,7 @@ public final class TestPartita
         String[][] giocatori = new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Adele", "Angelo custode" } };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeVittima);
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
@@ -2108,9 +2097,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         protezioneStrega(nomeVittima);
         String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
 
     @Test public void testAttaccoLupoBranco()
@@ -2144,6 +2131,11 @@ public final class TestPartita
     {
         romeizzazione(nomeVittima);
         String messaggio = "Damiano non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+    }
+
+    private void verificaFallimentoAttaccoGiocatoreProtetto(String nomeVittima, String tipoLupo, String messaggio)
+    {
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
