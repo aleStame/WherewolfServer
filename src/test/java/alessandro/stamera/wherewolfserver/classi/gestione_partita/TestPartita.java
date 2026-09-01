@@ -2095,9 +2095,7 @@ public final class TestPartita
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        protezioneStrega(nomeVittima);
-        String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
-        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
     @Test public void testAttaccoLupoBranco()
@@ -2118,9 +2116,7 @@ public final class TestPartita
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        protezioneStrega(nomeVittima);
-        String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
-        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
     @Test public void testGuarigioneVittimaLupi()
@@ -2140,6 +2136,13 @@ public final class TestPartita
     {
         romeizzazione(nomeVittima);
         String messaggio = "Damiano non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+    }
+
+    private void verificaFallimentoAttaccoLupiGiocatoreStregato(String nomeVittima, String tipoLupo)
+    {
+        protezioneStrega(nomeVittima);
+        String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
 

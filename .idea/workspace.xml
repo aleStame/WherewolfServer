@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoRomeoFallito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,30 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00577" summary="REFACTORING: definizione del metodo gestisciEccezioneCacciatoreProtetto">
-      <option name="closed" value="true" />
-      <created>1788007285307</created>
-      <option name="number" value="00577" />
-      <option name="presentableId" value="LOCAL-00577" />
-      <option name="project" value="LOCAL" />
-      <updated>1788007285308</updated>
-    </task>
-    <task id="LOCAL-00578" summary="VERDE DIRETTO: testAttaccoLupiCacciatoreRiuscito riuscito">
-      <option name="closed" value="true" />
-      <created>1788007938530</created>
-      <option name="number" value="00578" />
-      <option name="presentableId" value="LOCAL-00578" />
-      <option name="project" value="LOCAL" />
-      <updated>1788007938530</updated>
-    </task>
-    <task id="LOCAL-00579" summary="VERDE DIRETTO: testAttaccoLupiCacciatoreRiuscito riuscito">
-      <option name="closed" value="true" />
-      <created>1788008425937</created>
-      <option name="number" value="00579" />
-      <option name="presentableId" value="LOCAL-00579" />
-      <option name="project" value="LOCAL" />
-      <updated>1788008425937</updated>
     </task>
     <task id="LOCAL-00580" summary="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito">
       <option name="closed" value="true" />
@@ -598,7 +575,31 @@
       <option name="project" value="LOCAL" />
       <updated>1788272735581</updated>
     </task>
-    <option name="localTasksCounter" value="626" />
+    <task id="LOCAL-00626" summary="REFACTORING: definizione del metodo verificaAttaccoRomeoFallito">
+      <option name="closed" value="true" />
+      <created>1788273861923</created>
+      <option name="number" value="00626" />
+      <option name="presentableId" value="LOCAL-00626" />
+      <option name="project" value="LOCAL" />
+      <updated>1788273861923</updated>
+    </task>
+    <task id="LOCAL-00627" summary="REFACTORING: definizione del metodo verificaFallimentoAttaccoGiocatoreProtetto">
+      <option name="closed" value="true" />
+      <created>1788274030079</created>
+      <option name="number" value="00627" />
+      <option name="presentableId" value="LOCAL-00627" />
+      <option name="project" value="LOCAL" />
+      <updated>1788274030079</updated>
+    </task>
+    <task id="LOCAL-00628" summary="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1788274322099</created>
+      <option name="number" value="00628" />
+      <option name="presentableId" value="LOCAL-00628" />
+      <option name="project" value="LOCAL" />
+      <updated>1788274322100</updated>
+    </task>
+    <option name="localTasksCounter" value="629" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSegnalazioneBoiaContadinoLupoAttaccato non riuscito" />
     <MESSAGE value="VERDE: testSegnalazioneBoiaContadinoLupoAttaccato riuscito" />
     <MESSAGE value="ROSSO: testPotereBorgomastro non riuscito" />
     <MESSAGE value="VERDE: testPotereBorgomastro riuscito" />
@@ -636,11 +636,12 @@
     <MESSAGE value="VERDE DIRETTO: testGuarigioneVittimaLupi riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupoRiuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodop verificaAttaccoLupiRiuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoLupoBranco riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoRomeoFallito" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoRomeoFallito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaFallimentoAttaccoGiocatoreProtetto" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito" />
   </component>
 </project>
