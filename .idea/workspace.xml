@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoRomeoLupoBranco riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoLupiFallito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,14 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00572" summary="ROSSO: testMessaggioCacciatore non riuscito">
-      <option name="closed" value="true" />
-      <created>1787949126383</created>
-      <option name="number" value="00572" />
-      <option name="presentableId" value="LOCAL-00572" />
-      <option name="project" value="LOCAL" />
-      <updated>1787949126383</updated>
     </task>
     <task id="LOCAL-00573" summary="VERDE: testMessaggioCacciatore riuscito">
       <option name="closed" value="true" />
@@ -598,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788270435307</updated>
     </task>
-    <option name="localTasksCounter" value="621" />
+    <task id="LOCAL-00621" summary="REFACTORING: definizione del metodo verificaAttaccoLupiFallito">
+      <option name="closed" value="true" />
+      <created>1788270810802</created>
+      <option name="number" value="00621" />
+      <option name="presentableId" value="LOCAL-00621" />
+      <option name="project" value="LOCAL" />
+      <updated>1788270810803</updated>
+    </task>
+    <option name="localTasksCounter" value="622" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
     <MESSAGE value="ROSSO: testSegnalazioneBoia non riuscita" />
     <MESSAGE value="VERDE: testSegnalazioneBoia riuscita" />
     <MESSAGE value="REFACTORING: definizione del metodo isSegnalabileDaBoia" />
@@ -641,6 +640,7 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupoRiuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoLupoBranco riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoRomeoLupoBranco riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoLupiFallito" />
   </component>
 </project>

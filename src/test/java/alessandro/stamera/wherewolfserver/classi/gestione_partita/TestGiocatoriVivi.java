@@ -1322,6 +1322,14 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testAttaccoStregatoLupoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
+    }
+
     private void verificaAttaccoLupiFallito(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
@@ -1331,17 +1339,6 @@ public final class TestGiocatoriVivi
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
-
-    /*
-
-    @Test public void testAttaccoStregatoCapoBranco()
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        protezioneStrega(nomeVittima);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
-    }
-    * */
 
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
