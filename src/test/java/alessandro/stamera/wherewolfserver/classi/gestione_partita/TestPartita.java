@@ -2114,6 +2114,15 @@ public final class TestPartita
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
+    @Test public void testAttaccoStregatoLupoBranco()
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
+        String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+    }
+
     @Test public void testGuarigioneVittimaLupi()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
