@@ -357,7 +357,8 @@ public final class Partita
     private void gestisciEccezioneCacciatore(String nomeLupo, String nome)
     {
         if(vivi.isLupoExNonna(nomeLupo)) throw new EccezioneCacciatore(nome);
-        else throw new EccezioneCacciatore(nomeLupo, nome);
+        else if(isRimastoUltimoLupoBranco()) throw new EccezioneCacciatore(nomeLupo, nome);
+        else throw new EccezioneAttaccoGiocatoreProtetto(vivi.isRomeo(nome), nome);
     }
 
     private void gestisciInterazioniMago(String nome)
