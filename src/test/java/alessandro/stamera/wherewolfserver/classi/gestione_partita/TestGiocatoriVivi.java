@@ -253,10 +253,11 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupoFallito(tipoLupo, nome);*/
     }
 
-    @Test public void testSegnalazioneInquisitoreMisticoAssente()
+    @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore" })
+    public void testSegnalazioneInquisitoreMisticoAssente(String nomeRuolo)
     {
         String nomeVittima = "Raffaele", nomeInquisitore = "Andrea";
-        inizializzaGiocatori(new String[][] { { nomeInquisitore, "Inquisitore" }, { nomeVittima, "Bocca di rosa" } });
+        inizializzaGiocatori(new String[][] { { nomeInquisitore, "Inquisitore" }, { nomeVittima, nomeRuolo } });
         segnalazioneInquisitore(nomeVittima);
         incrementaVoti(nomeInquisitore, 2);
         verificaAccusati(nomeInquisitore);
