@@ -2114,6 +2114,17 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
+    @Test public void testAttaccoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
+        String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void verificaAttaccoAssassino(String nomeVittima)
     {
         attaccoAssassino(nomeVittima);
