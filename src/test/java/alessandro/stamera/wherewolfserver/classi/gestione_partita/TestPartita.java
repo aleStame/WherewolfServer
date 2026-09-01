@@ -639,9 +639,7 @@ public final class TestPartita
     {
         String tipoLupo = "Capo branco", nomeVittima = "Chloe";
         inizializzaPartita(new String[][] { { "Yorgos", tipoLupo }, { "James", "Templare" }, { nomeVittima, "Inquisitore" } });
-        attaccoLupi(tipoLupo, nomeVittima);
-        terminaNotte();
-        verificaEliminati(nomeVittima);
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
         verificaVero(isCrociataAvviata());
     }
 
@@ -649,9 +647,7 @@ public final class TestPartita
     {
         String tipoLupo = "Capo branco", nomeVittima = "Eve";
         inizializzaPartita(new String[][] { { "Daniel", tipoLupo }, { "Wesley", "Inquisitore" }, { nomeVittima, "Goblin" } });
-        attaccoLupi(tipoLupo, nomeVittima);
-        terminaNotte();
-        verificaEliminati(nomeVittima);
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
         verificaFalso(isCrociataAvviata());
     }
 
@@ -2060,9 +2056,7 @@ public final class TestPartita
     {
         String nomeVittima = "Giacomo";
         inizializzaPartita(new String[][] { { "Aldo", tipoLupo }, { "Giovanni", "Giovane lupo" }, { nomeVittima, "Cacciatore" } });
-        attaccoLupi(tipoLupo, nomeVittima);
-        terminaNotte();
-        verificaEliminati(nomeVittima);
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Peccatore" }) public void testPotereBoiaNonRiuscito(String nomeRuolo)
@@ -2098,9 +2092,7 @@ public final class TestPartita
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        attaccoLupi(tipoLupo, nomeVittima);
-        terminaNotte();
-        verificaEliminati(nomeVittima);
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoRomeoCapoBranco()
@@ -2129,9 +2121,7 @@ public final class TestPartita
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        attaccoLupi(tipoLupo, nomeVittima);
-        terminaNotte();
-        verificaEliminati(nomeVittima);
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
     @Test public void testGuarigioneVittimaLupi()
@@ -2145,6 +2135,13 @@ public final class TestPartita
         guarisci(nomeVittima);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
+    }
+
+    private void verificaAttaccoLupiRiuscito(String tipoLupo, String nomeVittima)
+    {
+        attaccoLupi(tipoLupo, nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
     }
 
     private void verificaAttaccoAssassino(String nomeVittima)
