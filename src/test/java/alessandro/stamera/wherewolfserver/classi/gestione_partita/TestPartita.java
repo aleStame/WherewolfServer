@@ -2099,11 +2099,7 @@ public final class TestPartita
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        romeizzazione(nomeVittima);
-        String messaggio = "Damiano non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
+        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
     @Test public void testAttaccoStregatoCapoBranco()
@@ -2128,11 +2124,7 @@ public final class TestPartita
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        romeizzazione(nomeVittima);
-        String messaggio = "Damiano non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
+        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
     @Test public void testGuarigioneVittimaLupi()
@@ -2144,6 +2136,15 @@ public final class TestPartita
         );
         attaccoLupi(tipoLupo, nomeVittima);
         guarisci(nomeVittima);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
+    private void verificaAttaccoRomeoFallito(String nomeVittima, String tipoLupo)
+    {
+        romeizzazione(nomeVittima);
+        String messaggio = "Damiano non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
     }
