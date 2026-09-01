@@ -1246,7 +1246,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Giacomo";
         inizializzaGiocatori(new String[][] { { "Aldo", tipoLupo }, { "Giovanni", "Giovane lupo" }, { nomeVittima, "Cacciatore" } });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
@@ -1288,7 +1288,7 @@ public final class TestGiocatoriVivi
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
-        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoRomeoCapoBranco()
@@ -1311,6 +1311,11 @@ public final class TestGiocatoriVivi
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
+    }
+
+    private void verificaAttaccoLupoRiuscito(String tipoLupo, String nomeVittima)
+    {
         verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
     }
 
