@@ -1283,6 +1283,29 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
 
+    @Test public void testAttaccoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, RIUSCITO);
+    }
+
+    @Test public void testAttaccoRomeoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        romeizzazione(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+    }
+
+    @Test public void testAttaccoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, FALLITO);
+    }
+
     private void segnalazioneAzzeccagarbugli(String nome) { giocatori.segnalazioneAzzeccagarbugli(nome); }
 
     private void protezioneStrega(String nomeVittima) { giocatori.protezioneStrega(nomeVittima); }

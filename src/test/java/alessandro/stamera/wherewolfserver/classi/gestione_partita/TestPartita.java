@@ -2094,6 +2094,37 @@ public final class TestPartita
         verificaEliminati(nome);
     }
 
+    @Test public void testAttaccoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        attaccoLupi(tipoLupo, nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
+    }
+
+    @Test public void testAttaccoRomeoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        romeizzazione(nomeVittima);
+        String messaggio = "Damiano non muore perché Romeo.\nAvvisa i lupi della sua mancata morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
+    @Test public void testAttaccoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        protezioneStrega(nomeVittima);
+        String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void verificaAttaccoAssassino(String nomeVittima)
     {
         attaccoAssassino(nomeVittima);
