@@ -2132,6 +2132,22 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Borgomastro", "Becchino", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta",
+            "Giullare", "Guardia", "Guaritore", "Inquisitore", "Ladra", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste",
+            "Pazzo", "Prete", "Spia", "Templare"
+        }
+    )
+    public void testAuraChiara(String nomeRuolo)
+    {
+        String nome = "Concetta";
+        inizializzaPartita(new String[][]{ { nome, nomeRuolo } });
+        assertThat(partita.getControlloVeggente(nome)).isEqualTo(BIANCA);
+    }
+
     private void verificaAttaccoRomeoFallito(String nomeVittima, String tipoLupo)
     {
         romeizzazione(nomeVittima);
