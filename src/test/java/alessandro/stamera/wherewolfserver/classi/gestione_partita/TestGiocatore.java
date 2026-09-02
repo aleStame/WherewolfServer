@@ -446,28 +446,37 @@ public final class TestGiocatore
     public void testVampirizzazioneContadinoDopoLupizzazione(String tipoLupo)
     {
         lupizzazioneContadino(tipoLupo);
-        verificaEsitoVampirizzazione(MORTO);
+        verificaAttaccoVampiro(MORTO);
     }
 
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
-            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO",
-            "Cacciatore, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Capo gilda, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
-            "Contadino eroe, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO", "Contadino normale, RIUSCITO",
-            "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giovane lupo, MORTO", "Giulietta, RIUSCITO", "Giullare, RIUSCITO", "Goblin, FALLITO",
-            "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO",
+            "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Contadino normale, RIUSCITO", "Eremita, FALLITO",
+            "Giovane lupo, MORTO", "Goblin, FALLITO", "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO",
             "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO",
-            "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, FALLITO", "Nonna, RIUSCITO", "Nosferatu, FALLITO", "Oratore, RIUSCITO",
-            "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO", "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO",
-            "Spia, RIUSCITO", "Strega, FALLITO", "Sensitiva, FALLITO", "Templare, RIUSCITO"
+            "Negromante, FALLITO", "Nosferatu, FALLITO", "Posseduto, TROVATO_POSSEDUTO", "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO",
         }
     )
     public void testVampirizzazione(String nomeRuolo, EsitoAttacco esito)
     {
-        cambiaRuolo(nomeRuolo);
-        verificaEsitoVampirizzazione(esito);
+        verificaEsitoVampirizzazione(nomeRuolo, esito);
+        verificaFalso(giocatore.isProgenieVampiro());
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Ghoul", "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+        }
+    )
+    public void verificaVampirizzazioneRiuscita(String nomeRuolo)
+    {
+        verificaEsitoVampirizzazione(nomeRuolo, RIUSCITO);
+        verificaVero(giocatore.isProgenieVampiro());
     }
 
     @ParameterizedTest @CsvSource
@@ -494,7 +503,7 @@ public final class TestGiocatore
     {
         cambiaRuolo("Prete");
         verificaEsitoPassaggioPosseduto(MORTO);
-        verificaEsitoVampirizzazione(RIUSCITO);
+        verificaAttaccoVampiro(RIUSCITO);
         verificaEsitoPassaggioPosseduto(RIUSCITO);
     }
 
@@ -798,7 +807,13 @@ public final class TestGiocatore
 
     private void verificaEsitoPassaggioPosseduto(EsitoAttacco esito) { verificaAttacco(giocatore.passaPosseduto(), esito); }
 
-    private void verificaEsitoVampirizzazione(EsitoAttacco esito) { verificaAttacco(giocatore.vampirizzazione(), esito); }
+    private void verificaEsitoVampirizzazione(String nomeRuolo, EsitoAttacco esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaAttaccoVampiro(esito);
+    }
+
+    private void verificaAttaccoVampiro(EsitoAttacco esito) { verificaAttacco(giocatore.vampirizzazione(), esito); }
 
     private boolean isLupoSolitario() { return giocatore.isLupoSolitario(); }
 

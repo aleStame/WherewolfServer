@@ -237,6 +237,8 @@ public final class Giocatore
 
     public boolean isSegnalatoBorgomastro() { return segnalatoBorgomastro; }
 
+    public boolean isProgenieVampiro() { return false; }
+
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
