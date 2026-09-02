@@ -185,6 +185,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
         if(isGiocatoreLupizzato()) esito = MORTO;
+        else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
         if(esito == RIUSCITO) trasformaVampiro();
         return esito;
     }
