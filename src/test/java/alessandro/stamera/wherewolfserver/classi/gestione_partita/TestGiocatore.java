@@ -452,13 +452,13 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource
     (
         {
-            "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Contadino normale, RIUSCITO", "Eremita, FALLITO",
-            "Giovane lupo, MORTO", "Goblin, FALLITO", "Guaritore, FALLITO", "Inquisitore, RIUSCITO", "Leprecauno, FALLITO",
-            "Lupo del branco, MORTO", "Lupo reietto, MORTO", "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO",
-            "Negromante, FALLITO", "Nosferatu, FALLITO", "Posseduto, TROVATO_POSSEDUTO", "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO",
+            "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Eremita, FALLITO", "Giovane lupo, MORTO",
+            "Goblin, FALLITO", "Guaritore, FALLITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
+            "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Negromante, FALLITO", "Nosferatu, FALLITO",
+            "Posseduto, TROVATO_POSSEDUTO", "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO"
         }
     )
-    public void testVampirizzazione(String nomeRuolo, EsitoAttacco esito)
+    public void testVampirizzazioneFallita(String nomeRuolo, EsitoAttacco esito)
     {
         verificaEsitoVampirizzazione(nomeRuolo, esito);
         verificaFalso(giocatore.isProgenieVampiro());

@@ -237,7 +237,7 @@ public final class Giocatore
 
     public boolean isSegnalatoBorgomastro() { return segnalatoBorgomastro; }
 
-    public boolean isProgenieVampiro() { return false; }
+    public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
 
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
