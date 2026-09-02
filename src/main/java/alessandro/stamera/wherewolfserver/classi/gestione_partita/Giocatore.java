@@ -183,9 +183,7 @@ public final class Giocatore
 
     public EsitoAttacco vampirizzazione()
     {
-        EsitoAttacco esito = ruolo.vampirizzazione();
-        if(isGiocatoreLupizzato()) esito = MORTO;
-        else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        EsitoAttacco esito = getRisultatoVampirizzazione();
         if(esito == RIUSCITO) trasformaVampiro();
         return esito;
     }
@@ -239,6 +237,14 @@ public final class Giocatore
     public boolean isSegnalatoBorgomastro() { return segnalatoBorgomastro; }
 
     public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
+
+    private EsitoAttacco getRisultatoVampirizzazione()
+    {
+        EsitoAttacco esito = ruolo.vampirizzazione();
+        if(isGiocatoreLupizzato()) esito = MORTO;
+        else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        return esito;
+    }
 
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
