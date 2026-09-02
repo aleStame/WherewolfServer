@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testVampirizzazioneStregatoFallita riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00594" summary="ROSSO: testSegnalazioneBoiaContadinoLupoAttaccato non riuscito">
-      <option name="closed" value="true" />
-      <created>1788177379556</created>
-      <option name="number" value="00594" />
-      <option name="presentableId" value="LOCAL-00594" />
-      <option name="project" value="LOCAL" />
-      <updated>1788177379594</updated>
     </task>
     <task id="LOCAL-00595" summary="VERDE: testSegnalazioneBoiaContadinoLupoAttaccato riuscito">
       <option name="closed" value="true" />
@@ -598,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788354301397</updated>
     </task>
-    <option name="localTasksCounter" value="643" />
+    <task id="LOCAL-00643" summary="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito">
+      <option name="closed" value="true" />
+      <created>1788361827745</created>
+      <option name="number" value="00643" />
+      <option name="presentableId" value="LOCAL-00643" />
+      <option name="project" value="LOCAL" />
+      <updated>1788361827748</updated>
+    </task>
+    <option name="localTasksCounter" value="644" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAttaccoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGuarigioneVittimaLupi riuscito" />
@@ -641,6 +641,7 @@
     <MESSAGE value="VERDE: testVampirizzazioneRomeoFallita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRisultatoVampirizzazione" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneStregatoFallita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVampirizzazioneStregatoFallita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito" />
   </component>
 </project>
