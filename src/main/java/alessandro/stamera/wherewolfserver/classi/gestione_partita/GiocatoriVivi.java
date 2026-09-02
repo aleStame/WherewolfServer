@@ -338,6 +338,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
 
+    public boolean isProgenieVampiro(String nome) { return true; }
+
     private void aggiornaProtezioni()
     {
         if(isCappuccettoNonnaPresenti()) gestisciProtezioneNonna();
