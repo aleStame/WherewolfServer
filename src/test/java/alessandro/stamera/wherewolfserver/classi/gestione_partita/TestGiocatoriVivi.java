@@ -707,7 +707,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
         verificaAttaccoVampiro(nome, esito);
-        verificaFalso(giocatori.isProgenieVampiro(nome));
+        verificaFalso(isProgenieVampiro(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -724,7 +724,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
         verificaAttaccoVampiro(nome, RIUSCITO);
-        verificaVero(giocatori.isProgenieVampiro(nome));
+        verificaVero(isProgenieVampiro(nome));
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1346,6 +1346,8 @@ public final class TestGiocatoriVivi
         protezioneStrega(nomeVittima);
         verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
     }
+
+    private boolean isProgenieVampiro(String nome) { return giocatori.isProgenieVampiro(nome); }
 
     private void verificaAttaccoLupiFallito(String tipoLupo, String nomeVittima)
     {
