@@ -736,6 +736,25 @@ public final class TestGiocatoriVivi
         verificaAttaccoVampiro(nome, MORTO);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare"
+        }
+    )
+    public void testVampirizzazioneRomeoFallita(String nomeRuolo)
+    {
+        String nome = "Bruno";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Antonia", "Giulietta" }, { "Carlo", "Vampiro" } });
+        romeizzazione(nome);
+        verificaAttaccoVampiro(nome, FALLITO);
+    }
+
     @Test public void testVampiroAssente() { verificaFalso(isVampiroPresente()); }
 
     @Test public void testVampiroPresente()
