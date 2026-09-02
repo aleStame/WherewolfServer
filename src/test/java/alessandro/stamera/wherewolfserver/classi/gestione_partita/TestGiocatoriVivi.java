@@ -710,6 +710,23 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isProgenieVampiro(nome));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Ghoul", "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna",
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+        }
+    )
+    public void testVampirizzazioneRiuscita(String nomeRuolo)
+    {
+        String nome = "Luca";
+        inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
+        verificaAttaccoVampiro(nome, RIUSCITO);
+        verificaVero(giocatori.isProgenieVampiro(nome));
+    }
+
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoVampiroContadinoLupizzato(String tipoLupo)
     {

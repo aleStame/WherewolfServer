@@ -473,7 +473,7 @@ public final class TestGiocatore
             "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
         }
     )
-    public void verificaVampirizzazioneRiuscita(String nomeRuolo)
+    public void testVampirizzazioneRiuscita(String nomeRuolo)
     {
         verificaEsitoVampirizzazione(nomeRuolo, RIUSCITO);
         verificaVero(giocatore.isProgenieVampiro());
