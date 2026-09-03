@@ -438,14 +438,7 @@ public final class Partita
         String nomeVampiro = getNomeVampiroVivo();
         switch(vivi.attaccoVampiro(nome))
         {
-            case FALLITO ->
-            {
-                if(vivi.isRomeo(nome))
-                    throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché Romeo.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
-                else if(vivi.isStregato(nome))
-                    throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché protetto dalla Strega.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
-                else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
-            }
+            case FALLITO -> gestioneVampirizzazioneFallita(nome, nomeVampiro);
             case MORTO -> gestioneMorteVampiro(nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeVampiro);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeVampiro);
@@ -484,6 +477,15 @@ public final class Partita
     {
         if(vivi.isAngeloCustode(nome)) annullaProtezioneAngeloCustode();
         possessione(nome);
+    }
+
+    private void gestioneVampirizzazioneFallita(String nome, String nomeVampiro)
+    {
+        if(vivi.isRomeo(nome))
+            throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché Romeo.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
+        else if(vivi.isStregato(nome))
+            throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché protetto dalla Strega.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
+        else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
     }
 
     private void possessione(String nome) { getGiocatore(nome).cambiaRuolo(getPossedutoMortoNotte()); }
