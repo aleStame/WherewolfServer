@@ -438,7 +438,12 @@ public final class Partita
         String nomeVampiro = getNomeVampiroVivo();
         switch(vivi.attaccoVampiro(nome))
         {
-            case FALLITO -> throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
+            case FALLITO ->
+            {
+                if(vivi.isRomeo(nome))
+                    throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché Romeo.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
+                else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
+            }
             case MORTO -> gestioneMorteVampiro(nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeVampiro);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeVampiro);
