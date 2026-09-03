@@ -442,6 +442,8 @@ public final class Partita
             {
                 if(vivi.isRomeo(nome))
                     throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché Romeo.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
+                else if(vivi.isStregato(nome))
+                    throw new IllegalStateException("Impossibile vampirizzare " + nome + " perché protetto dalla Strega.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
                 else throw new IllegalArgumentException("Impossibile vampirizzare " + nome + ".");
             }
             case MORTO -> gestioneMorteVampiro(nome);
