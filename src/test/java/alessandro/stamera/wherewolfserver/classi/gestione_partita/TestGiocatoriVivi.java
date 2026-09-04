@@ -1035,8 +1035,29 @@ public final class TestGiocatoriVivi
     {
         String nomeAmato = "Lino";
         inizializzaGiocatori(new String[][] { { "Elia", "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo } });
-        verificaAmato(nomeAmato);
-        verificaAttaccoLupo(tipoLupo, nomeAmato, ANGELO_CUSTODE_MORTO);
+        verificaAttaccoAngelo(tipoLupo, nomeAmato);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    public void testAttaccoLupiAmatoAngeloCustodeRomeo(String tipoLupo, String nomeRuolo)
+    {
+        String nomeAngelo = "Elia", nomeAmato = "Lino";
+        String[][] giocatori =
+            new String[][] { { nomeAngelo, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo }, { "Giuila", "Giulietta" } };
+        inizializzaGiocatori(giocatori);
+        romeizzazione(nomeAngelo);
+        verificaAttaccoAngelo(tipoLupo, nomeAmato);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo)
+    {
+        String nomeAngelo = "Elia", nomeAmato = "Lino";
+        String[][] giocatori =
+                new String[][] { { nomeAngelo, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo }, { "Giuila", "Giulietta" } };
+        inizializzaGiocatori(giocatori);
+        protezioneStrega(nomeAngelo);
+        verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1383,6 +1404,12 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         protezioneStrega(nomeVittima);
         verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
+    }
+
+    private void verificaAttaccoAngelo(String tipoLupo, String nomeAmato)
+    {
+        verificaAmato(nomeAmato);
+        verificaAttaccoLupo(tipoLupo, nomeAmato, ANGELO_CUSTODE_MORTO);
     }
 
     private void verificaAttaccoVampiroFallito(String nome) { verificaAttaccoVampiro(nome, FALLITO); }
