@@ -3,9 +3,31 @@ package alessandro.stamera.wherewolfserver.classi.eccezioni;
 public class EccezioneVampirizzazioneFallita extends IllegalStateException
 {
 
-    public EccezioneVampirizzazioneFallita(String nomeRomeo, String nomeVampiro, String protettore)
+    private final String nomeVittima, nomeVampiro, ruoloProtettore;
+
+    public EccezioneVampirizzazioneFallita(String nomeVittima, String nomeVampiro, String ruoloProtettore)
     {
-        super("Impossibile vampirizzare " + nomeRomeo + " perché Romeo.\nAvvisa il Vampiro (" + nomeVampiro + ") della mancata vampirizzazione.");
+        this.nomeVittima = nomeVittima;
+        this.nomeVampiro = nomeVampiro;
+        this.ruoloProtettore = ruoloProtettore;
+    }
+
+    @Override public String getMessage()
+    {
+        return
+            "Impossibile vampirizzare " + nomeVittima + " perché " + getFraseProtettore(ruoloProtettore) + ".\nAvvisa il Vampiro (" + nomeVampiro +
+            ") della mancata vampirizzazione.";
+    }
+
+    private String getFraseProtettore(String protettore)
+    {
+        String risultato = null;
+        switch(protettore)
+        {
+            case "Strega" -> risultato = "protetto dalla Strega";
+            case "Giulietta" -> risultato = "Romeo";
+        }
+        return risultato;
     }
 
 }
