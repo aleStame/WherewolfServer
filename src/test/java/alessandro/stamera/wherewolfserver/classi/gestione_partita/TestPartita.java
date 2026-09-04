@@ -288,6 +288,18 @@ public final class TestPartita
         verificaEliminazione(nomeAngeloCustode);
     }
 
+    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo, String messaggio)
+    {
+        String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
+        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
+        segnalazioneAngeloCustode(nomeAmato);
+        protezioneStrega(nomeAngeloCustode);
+        verificaAmato(nomeAmato);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
+        verificaEliminazione(nomeAngeloCustode);
+    }
+
     @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore" })
     public void testSegnalazioneInquisitoreMisticoAssente(String nomeRuolo)
     {
