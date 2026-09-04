@@ -200,9 +200,6 @@ public final class TestPartita
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
-    /*
-
-
     @ParameterizedTest @CsvSource
     (
         {
@@ -214,7 +211,7 @@ public final class TestPartita
             "Sensitiva", "Templare", "Vampiro"
         }
     )
-    public void testAttaccoAmatoStregatoAssassino(String nomeRuolo)
+    public void testAttaccoAmatoAssassinoAngeloCustodeStregato(String nomeRuolo)
     {
         String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
         String[][] giocatori =
@@ -223,7 +220,6 @@ public final class TestPartita
         protezioneStrega(nomeVittima);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
-    * */
 
     @ParameterizedTest @CsvSource
     (
