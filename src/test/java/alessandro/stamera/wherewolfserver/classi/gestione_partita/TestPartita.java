@@ -1319,7 +1319,9 @@ public final class TestPartita
     {
         String nomeVittima = "Lino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Gino", "Vampiro" } });
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage("Impossibile vampirizzare Lino.");
+        String messaggio =
+            "Impossibile vampirizzare Lino perché protetto dall'attacco del Vampiro.\nAvvisa il Vampiro (Gino) della mancata vampirizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeVittima)).withMessage(messaggio);
     }
 
     @ParameterizedTest @CsvSource
