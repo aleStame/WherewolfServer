@@ -2111,7 +2111,8 @@ public final class TestPartita
         verificaEliminati(nomeSecondo);
     }
 
-    @ParameterizedTest @CsvSource({ "Guaritore", "Lupo del branco" }) public void testPotereBoiaRiuscito(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Capo branco", "Guaritore", "Lupo del branco" })
+    public void testPotereBoiaRiuscito(String nomeRuolo)
     {
         String nome = "Miriam", nomeSecondo = "Andrea";
         inizializzaPartita(new String[][] { { nome, nomeRuolo }, { nomeSecondo, "Pazzo" }, { "Sara", "Borgomastro" } });
