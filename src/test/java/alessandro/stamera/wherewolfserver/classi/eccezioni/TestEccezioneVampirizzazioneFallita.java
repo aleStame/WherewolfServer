@@ -22,6 +22,14 @@ public final class TestEccezioneVampirizzazioneFallita
         verificaMessaggioErrore(messaggio);
     }
 
+    @Test public void testAvvisoErrore()
+    {
+        eccezione = new EccezioneVampirizzazioneFallita("Mario", "Lorenzo");
+        String messaggio =
+            "Impossibile vampirizzare Mario perché protetto dall'attacco del Vampiro.\nAvvisa il Vampiro (Lorenzo) della mancata vampirizzazione.";
+        verificaMessaggioErrore(messaggio);
+    }
+
     private void verificaMessaggioErrore(String messaggio) { assertThat(eccezione.getMessage()).isEqualTo(messaggio); }
 
 }
