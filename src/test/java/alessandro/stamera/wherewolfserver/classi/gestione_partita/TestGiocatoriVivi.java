@@ -83,12 +83,31 @@ public final class TestGiocatoriVivi
         verificaAccusati(nomeAngeloCustode);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Giullare, RIUSCITO" })
+    @ParameterizedTest
+    @CsvSource({ "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO" })
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
     {
         String[][] giocatori = new String[][] { { "Cristian", nomeRuolo }, { "Carmine", "Assassino" } };
         inizializzaGiocatori(giocatori);
         verificaAttaccoAssassino(giocatori[0][0], esito);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO" })
+    public void testAttaccoAssassinoAmatoAngeloCustodeRomeo(String nomeRuolo, EsitoAttacco esito)
+    {
+        String nomeVittima = "Cristian", nomeAngelo = "Lucio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Carmine", "Assassino" }, { nomeAngelo, "Angelo custode" } });
+        romeizzazione(nomeAngelo);
+        verificaAssassinioAmato(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO" })
+    public void testAttaccoAssassinoAmatoAngeloCustodeStregato(String nomeRuolo, EsitoAttacco esito)
+    {
+        String nomeVittima = "Cristian", nomeAngelo = "Lucio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Carmine", "Assassino" }, { nomeAngelo, "Angelo custode" } });
+        protezioneStrega(nomeAngelo);
+        verificaAssassinioAmato(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -114,10 +133,10 @@ public final class TestGiocatoriVivi
         {
             "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
-            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
-            "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoAmatoRomeoAssassino(String nomeRuolo)
@@ -125,26 +144,6 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
         romeizzazione(nomeVittima);
-        verificaAssassinioAmato(nomeVittima);
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
-            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
-            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
-            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
-            "Sensitiva", "Templare", "Vampiro"
-        }
-    )
-    public void testAttaccoAmatoStregatoAssassino(String nomeRuolo)
-    {
-        String nomeVittima = "Maddalena";
-        inizializzaGiocatori(new String[][] { { "Enzo", "Angelo custode" }, { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
-        protezioneStrega(nomeVittima);
-        segnalazioneAngeloCustode(nomeVittima);
         verificaAssassinioAmato(nomeVittima);
     }
 
@@ -162,9 +161,9 @@ public final class TestGiocatoriVivi
     public void testAttaccoStregatoAssassino(String nomeRuolo)
     {
         String nomeVittima = "Maddalena";
-        inizializzaGiocatori(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo } });
+        inizializzaGiocatori(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giuseppe", "Strega" } });
         protezioneStrega(nomeVittima);
-        verificaAttaccoAssassino(nomeVittima, RIUSCITO);
+        verificaAssassinioAmato(nomeVittima);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
