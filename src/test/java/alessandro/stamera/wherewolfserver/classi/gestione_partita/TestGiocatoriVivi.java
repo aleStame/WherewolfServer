@@ -101,6 +101,15 @@ public final class TestGiocatoriVivi
         verificaAssassinioAmato(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO" })
+    public void testAttaccoAssassinoAmatoAngeloCustodeStregato(String nomeRuolo, EsitoAttacco esito)
+    {
+        String nomeVittima = "Cristian", nomeAngelo = "Lucio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Carmine", "Assassino" }, { nomeAngelo, "Angelo custode" } });
+        protezioneStrega(nomeAngelo);
+        verificaAssassinioAmato(nomeVittima);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
