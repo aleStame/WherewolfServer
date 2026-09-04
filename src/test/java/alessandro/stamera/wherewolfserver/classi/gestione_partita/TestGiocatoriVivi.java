@@ -1039,13 +1039,24 @@ public final class TestGiocatoriVivi
     }
 
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
-    public void testAttaccoLupiAmatoAngeloRomeo(String tipoLupo, String nomeRuolo)
+    public void testAttaccoLupiAmatoAngeloCustodeRomeo(String tipoLupo, String nomeRuolo)
     {
         String nomeAngelo = "Elia", nomeAmato = "Lino";
         String[][] giocatori =
             new String[][] { { nomeAngelo, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo }, { "Giuila", "Giulietta" } };
         inizializzaGiocatori(giocatori);
         romeizzazione(nomeAngelo);
+        verificaAttaccoAngelo(tipoLupo, nomeAmato);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo)
+    {
+        String nomeAngelo = "Elia", nomeAmato = "Lino";
+        String[][] giocatori =
+                new String[][] { { nomeAngelo, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo }, { "Giuila", "Giulietta" } };
+        inizializzaGiocatori(giocatori);
+        protezioneStrega(nomeAngelo);
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
