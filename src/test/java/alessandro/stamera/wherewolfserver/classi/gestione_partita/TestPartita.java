@@ -271,9 +271,7 @@ public final class TestPartita
         String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
-        verificaAmato(nomeAmato);
-        verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
-        verificaEliminazione(nomeAngeloCustode);
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
@@ -283,9 +281,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
         romeizzazione(nomeAngeloCustode);
-        verificaAmato(nomeAmato);
-        verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
-        verificaEliminazione(nomeAngeloCustode);
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
@@ -295,9 +291,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
         protezioneStrega(nomeAngeloCustode);
-        verificaAmato(nomeAmato);
-        verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
-        verificaEliminazione(nomeAngeloCustode);
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
     @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore" })
@@ -2220,6 +2214,13 @@ public final class TestPartita
         protezioneStrega(nome);
         String messaggio = "Impossibile vampirizzare Bruno perché protetto dalla Strega.\nAvvisa il Vampiro (Carlo) della mancata vampirizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nome)).withMessage(messaggio);
+    }
+
+    private void verificaEliminazioneAngeloCustodeAttaccoAmato(String tipoLupo, String messaggio, String nomeAmato, String nomeAngeloCustode)
+    {
+        verificaAmato(nomeAmato);
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
+        verificaEliminazione(nomeAngeloCustode);
     }
 
     private void verificaAttaccoRomeoFallito(String nomeVittima, String tipoLupo)
