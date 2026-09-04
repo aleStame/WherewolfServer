@@ -2,9 +2,13 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -68,7 +72,8 @@ public final class TestLupo
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
-    @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(FALLITO); }
+    @ParameterizedTest @CsvSource({ "CREATURA_OMBRA", "LUPO_MANNARO" })
+    public void testTrattiPresenti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
 

@@ -36,13 +36,6 @@ public class Lupo extends CreatureOmbra
 
     @Override public EsitoAttacco gildata() { return MORTO; }
 
-    @Override public EsitoAttacco attaccoLupi(Ruolo attaccante)
-    {
-        EsitoAttacco esito = super.attaccoLupi(attaccante);
-        if(attaccante.isCapoBranco()) esito = FALLITO;
-        return esito;
-    }
-
     private boolean isPresentiSoloLupiConSenzaFazione(Partita partita)
     {
         return partita.getNumeroGiocatoriVivi() == getNumeroLupiConSenzaFazione(partita);
