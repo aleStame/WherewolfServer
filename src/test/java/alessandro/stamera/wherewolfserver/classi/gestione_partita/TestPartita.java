@@ -2244,16 +2244,18 @@ public final class TestPartita
     {
         String tipoLupo = "Capo branco", nomeVittima = "Giulia";
         inizializzaPartita(new String[][] { { "Ciccio", "Bracconiere" }, { "Piera", tipoLupo }, { nomeVittima, nomeRuolo } });
-        verificaFalso(isPotereBracconiereUtilizzato());
+        verificaPotereBracconiereNonUtilizzato();
         partita.utilizzaPotereBracconiere();
         verificaVero(isPotereBracconiereUtilizzato());
         String messaggio = "Il Bracconiere (Ciccio) ha usato il suo potere, pertanto l'attacco a Giulia fallisce.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         partita.riabilitaPotereBracconiere();
-        verificaFalso(isPotereBracconiereUtilizzato());
+        verificaPotereBracconiereNonUtilizzato();
         terminaNotte();
         verificaNonEliminati(nomeVittima);
     }
+
+    private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
 
