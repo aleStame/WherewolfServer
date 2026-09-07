@@ -350,7 +350,7 @@ public final class Partita
     private void gestisciPotereBracconiere(String nome)
     {
         riabilitaPotereBracconiere();
-        throw new IllegalStateException("Il Bracconiere (" + vivi.getNomeBracconiere() + ") ha usato il suo potere, pertanto l'attacco a " + nome + " fallisce.");
+        throw new EccezioneBracconiere(vivi.getNomeBracconiere(), nome);
     }
 
     private void gestisciEccezioneCacciatoreProtetto(String nome)
