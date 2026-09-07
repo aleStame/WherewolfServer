@@ -2238,6 +2238,32 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nome)).withMessage(messaggio);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testUtilizzoPotereBracconiereCapoBranco(String nomeRuolo)
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Giulia";
+        inizializzaPartita(new String[][] { { "Ciccio", "Bracconiere" }, { "Piera", tipoLupo }, { nomeVittima, nomeRuolo } });
+        verificaFalso(partita.isPotereBracconiereUtilizzato());
+        partita.utilizzaPotereBracconiere();
+        verificaVero(partita.isPotereBracconiereUtilizzato());
+        String messaggio = "Il Bracconiere (Ciccio) ha usato il suo potere, pertanto l'attacco a Giulia fallisce";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        partita.riabilitaPotereBracconiere();
+        verificaFalso(partita.isPotereBracconiereUtilizzato());
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void verificaEliminazioneAngeloCustodeAttaccoAmato(String tipoLupo, String messaggio, String nomeAmato, String nomeAngeloCustode)
     {
         verificaAmato(nomeAmato);

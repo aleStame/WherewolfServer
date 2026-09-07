@@ -473,6 +473,12 @@ public final class Partita
 
     public boolean isAmato(String nome) { return getGiocatore(nome).isAmato(); }
 
+    public boolean isPotereBracconiereUtilizzato() { return true; }
+
+    public void utilizzaPotereBracconiere() { }
+
+    public void riabilitaPotereBracconiere() { }
+
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
         if(vivi.isAngeloCustode(nome)) annullaProtezioneAngeloCustode();
