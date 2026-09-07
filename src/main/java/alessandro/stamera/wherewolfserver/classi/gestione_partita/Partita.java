@@ -341,14 +341,16 @@ public final class Partita
 
     private void nessunaEliminazione(String nomeLupo, String nome)
     {
-        if(isPotereBracconiereUtilizzato())
-        {
-            riabilitaPotereBracconiere();
-            throw new IllegalStateException("Il Bracconiere (" + vivi.getNomeBracconiere() + ") ha usato il suo potere, pertanto l'attacco a " + nome + " fallisce.");
-        }
+        if(isPotereBracconiereUtilizzato()) gestisciPotereBracconiere(nome);
         else if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
         else if(!vivi.isLupo(nome)) gestisciEccezioneCacciatoreProtetto(nome);
+    }
+
+    private void gestisciPotereBracconiere(String nome)
+    {
+        riabilitaPotereBracconiere();
+        throw new IllegalStateException("Il Bracconiere (" + vivi.getNomeBracconiere() + ") ha usato il suo potere, pertanto l'attacco a " + nome + " fallisce.");
     }
 
     private void gestisciEccezioneCacciatoreProtetto(String nome)
