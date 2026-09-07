@@ -313,7 +313,6 @@ public final class Partita
     private void gestisciEccezioniAttaccoLupi()
     {
         if(pazzoUcciso) throw new IllegalStateException("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
-        if(vivi.isPotereBracconiereUtilizzato()) gestisciPotereBracconiere();
     }
 
     private void nosferatizzazione(String nome)
@@ -342,7 +341,12 @@ public final class Partita
 
     private void nessunaEliminazione(String nomeLupo, String nome)
     {
-        if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
+        if(isPotereBracconiereUtilizzato())
+        {
+            riabilitaPotereBracconiere();
+            throw new IllegalStateException("Il Bracconiere (" + vivi.getNomeBracconiere() + ") ha usato il suo potere, pertanto l'attacco a " + nome + " fallisce.");
+        }
+        else if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
         else if(!vivi.isLupo(nome)) gestisciEccezioneCacciatoreProtetto(nome);
     }
@@ -473,11 +477,11 @@ public final class Partita
 
     public boolean isAmato(String nome) { return getGiocatore(nome).isAmato(); }
 
-    public boolean isPotereBracconiereUtilizzato() { return true; }
+    public boolean isPotereBracconiereUtilizzato() { return vivi.isPotereBracconiereUtilizzato(); }
 
-    public void utilizzaPotereBracconiere() { }
+    public void utilizzaPotereBracconiere() { vivi.utilizzaPotereBracconiere(); }
 
-    public void riabilitaPotereBracconiere() { }
+    public void riabilitaPotereBracconiere() { vivi.riabilitaPotereBracconiere(); }
 
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
@@ -683,6 +687,7 @@ public final class Partita
     private EsitoAttacco attaccoLupi(Ruolo ruolo, String nome)
     {
         EsitoAttacco esito = vivi.attaccoLupi(ruolo, nome);
+        if(isPotereBracconiereUtilizzato()) esito = FALLITO;
         if(esito == RIUSCITO && isProtezioneUltimoLupoAttiva()) esito = MORTO;
         return esito;
     }
@@ -704,12 +709,6 @@ public final class Partita
         int posizione = -1;
         for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getNomeRuolo(getNomeGiocatoreVivo(i)).equals(tipoLupo)) posizione = i;
         return posizione;
-    }
-
-    private void gestisciPotereBracconiere()
-    {
-        vivi.riabilitaPotereBracconiere();
-        throw new IllegalStateException("Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
     }
 
     private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }

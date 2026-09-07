@@ -517,15 +517,6 @@ public final class TestPartita
         verificaEliminati(nome);
     }
 
-    @Test public void testPotereBracconiereUnLupo()
-    {
-        String[][] giocatori = new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } };
-        inizializzaPartita(giocatori);
-        segnalazioneBracconiere();
-        int posizioneVittima = 2;
-        verificaFallimentoAttaccoGiocatoreProtetto(giocatori[posizioneVittima][0], giocatori[1][1], "Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
-    }
-
     @Test public void testPotereBracconiereDueLupi()
     {
         String[][] giocatori =
@@ -2256,7 +2247,7 @@ public final class TestPartita
         verificaFalso(partita.isPotereBracconiereUtilizzato());
         partita.utilizzaPotereBracconiere();
         verificaVero(partita.isPotereBracconiereUtilizzato());
-        String messaggio = "Il Bracconiere (Ciccio) ha usato il suo potere, pertanto l'attacco a Giulia fallisce";
+        String messaggio = "Il Bracconiere (Ciccio) ha usato il suo potere, pertanto l'attacco a Giulia fallisce.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         partita.riabilitaPotereBracconiere();
         verificaFalso(partita.isPotereBracconiereUtilizzato());
