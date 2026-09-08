@@ -25,9 +25,11 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
     @Override public String getMessage()
     {
         String risultato = getMessaggioAttaccoNormale();
-        if(tipoLupo.equals(ruoloAmato)) risultato = getMessaggioSuicidio();
+        if(isSuicidio()) risultato = getMessaggioSuicidio();
         return risultato;
     }
+
+    private boolean isSuicidio() { return tipoLupo.equals(ruoloAmato); }
 
     private String getMessaggioSuicidio()
     {
