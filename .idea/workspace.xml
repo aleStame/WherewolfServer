@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testLupizzazioneContadino riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +92,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "feature/lupizzazioneContadino",
+    "git-widget-placeholder": "feature/capoBrancoControContadinoEroe",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -215,86 +213,6 @@
       <updated>1784068342511</updated>
       <workItem from="1788856385769" duration="261000" />
       <workItem from="1788859890995" duration="5458000" />
-    </task>
-    <task id="LOCAL-00638" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1788348865828</created>
-      <option name="number" value="00638" />
-      <option name="presentableId" value="LOCAL-00638" />
-      <option name="project" value="LOCAL" />
-      <updated>1788348865829</updated>
-    </task>
-    <task id="LOCAL-00639" summary="ROSSO: testVampirizzazioneRomeoFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1788350880232</created>
-      <option name="number" value="00639" />
-      <option name="presentableId" value="LOCAL-00639" />
-      <option name="project" value="LOCAL" />
-      <updated>1788350880235</updated>
-    </task>
-    <task id="LOCAL-00640" summary="VERDE: testVampirizzazioneRomeoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788351881938</created>
-      <option name="number" value="00640" />
-      <option name="presentableId" value="LOCAL-00640" />
-      <option name="project" value="LOCAL" />
-      <updated>1788351881940</updated>
-    </task>
-    <task id="LOCAL-00641" summary="REFACTORING: definizione del metodo getRisultatoVampirizzazione">
-      <option name="closed" value="true" />
-      <created>1788353830200</created>
-      <option name="number" value="00641" />
-      <option name="presentableId" value="LOCAL-00641" />
-      <option name="project" value="LOCAL" />
-      <updated>1788353830201</updated>
-    </task>
-    <task id="LOCAL-00642" summary="VERDE DIRETTO: testVampirizzazioneStregatoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788354301394</created>
-      <option name="number" value="00642" />
-      <option name="presentableId" value="LOCAL-00642" />
-      <option name="project" value="LOCAL" />
-      <updated>1788354301397</updated>
-    </task>
-    <task id="LOCAL-00643" summary="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito">
-      <option name="closed" value="true" />
-      <created>1788361827745</created>
-      <option name="number" value="00643" />
-      <option name="presentableId" value="LOCAL-00643" />
-      <option name="project" value="LOCAL" />
-      <updated>1788361827748</updated>
-    </task>
-    <task id="LOCAL-00644" summary="ROSSO: testVampirizzazioneRomeoFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1788362699779</created>
-      <option name="number" value="00644" />
-      <option name="presentableId" value="LOCAL-00644" />
-      <option name="project" value="LOCAL" />
-      <updated>1788362699780</updated>
-    </task>
-    <task id="LOCAL-00645" summary="VERDE: testVampirizzazioneRomeoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788426097806</created>
-      <option name="number" value="00645" />
-      <option name="presentableId" value="LOCAL-00645" />
-      <option name="project" value="LOCAL" />
-      <updated>1788426097808</updated>
-    </task>
-    <task id="LOCAL-00646" summary="ROSSO: testVampirizzazioneStregatoFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1788426458726</created>
-      <option name="number" value="00646" />
-      <option name="presentableId" value="LOCAL-00646" />
-      <option name="project" value="LOCAL" />
-      <updated>1788426458727</updated>
-    </task>
-    <task id="LOCAL-00647" summary="VERDE: testVampirizzazioneStregatoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788426984755</created>
-      <option name="number" value="00647" />
-      <option name="presentableId" value="LOCAL-00647" />
-      <option name="project" value="LOCAL" />
-      <updated>1788426984756</updated>
     </task>
     <task id="LOCAL-00648" summary="REFACTORING: definizione del metodo gestioneVampirizzazioneFallita">
       <option name="closed" value="true" />
@@ -608,7 +526,87 @@
       <option name="project" value="LOCAL" />
       <updated>1788875884607</updated>
     </task>
-    <option name="localTasksCounter" value="687" />
+    <task id="LOCAL-00687" summary="Merge branch 'feature/attaccoCapoBrancoAmato' into develop">
+      <option name="closed" value="true" />
+      <created>1788876395770</created>
+      <option name="number" value="00687" />
+      <option name="presentableId" value="LOCAL-00687" />
+      <option name="project" value="LOCAL" />
+      <updated>1788876395770</updated>
+    </task>
+    <task id="LOCAL-00688" summary="VERDE DIRETTO: testAttaccoCapoBrancoStregatoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788877099618</created>
+      <option name="number" value="00688" />
+      <option name="presentableId" value="LOCAL-00688" />
+      <option name="project" value="LOCAL" />
+      <updated>1788877099618</updated>
+    </task>
+    <task id="LOCAL-00689" summary="VERDE DIRETTO: testAttaccoCapoBrancoRomeizzatoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788877357791</created>
+      <option name="number" value="00689" />
+      <option name="presentableId" value="LOCAL-00689" />
+      <option name="project" value="LOCAL" />
+      <updated>1788877357807</updated>
+    </task>
+    <task id="LOCAL-00690" summary="VERDE DIRETTO: testAttaccoLupoAmatoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788878676221</created>
+      <option name="number" value="00690" />
+      <option name="presentableId" value="LOCAL-00690" />
+      <option name="project" value="LOCAL" />
+      <updated>1788878676221</updated>
+    </task>
+    <task id="LOCAL-00691" summary="VERDE DIRETTO: testAttaccoLupoStregatoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788878887196</created>
+      <option name="number" value="00691" />
+      <option name="presentableId" value="LOCAL-00691" />
+      <option name="project" value="LOCAL" />
+      <updated>1788878887196</updated>
+    </task>
+    <task id="LOCAL-00692" summary="VERDE DIRETTO: testAttaccoLupoRomeoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788879154019</created>
+      <option name="number" value="00692" />
+      <option name="presentableId" value="LOCAL-00692" />
+      <option name="project" value="LOCAL" />
+      <updated>1788879154020</updated>
+    </task>
+    <task id="LOCAL-00693" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1788879703907</created>
+      <option name="number" value="00693" />
+      <option name="presentableId" value="LOCAL-00693" />
+      <option name="project" value="LOCAL" />
+      <updated>1788879703908</updated>
+    </task>
+    <task id="LOCAL-00694" summary="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1788879958919</created>
+      <option name="number" value="00694" />
+      <option name="presentableId" value="LOCAL-00694" />
+      <option name="project" value="LOCAL" />
+      <updated>1788879958919</updated>
+    </task>
+    <task id="LOCAL-00695" summary="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1788880371863</created>
+      <option name="number" value="00695" />
+      <option name="presentableId" value="LOCAL-00695" />
+      <option name="project" value="LOCAL" />
+      <updated>1788880371863</updated>
+    </task>
+    <task id="LOCAL-00696" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1788880698573</created>
+      <option name="number" value="00696" />
+      <option name="presentableId" value="LOCAL-00696" />
+      <option name="project" value="LOCAL" />
+      <updated>1788880698573</updated>
+    </task>
+    <option name="localTasksCounter" value="697" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,13 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeRomeo riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
-    <MESSAGE value="ROSSO: testUtilizzoPotereBracconiereCapoBranco non riuscito" />
-    <MESSAGE value="VERDE: testUtilizzoPotereBracconiereCapoBranco riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isPotereBracconiereUtilizzato" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaPotereBracconiereNonUtilizzato" />
-    <MESSAGE value="REFACTORING: definizione del metodo gestisciPotereBracconiere" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSuicidioCapoBranco riuscito" />
@@ -647,10 +638,17 @@
     <MESSAGE value="REFACTORING: definizione del metodo getMessaggioSuicidio" />
     <MESSAGE value="REFACTORING: definizione del metodo isSuicidio" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
-    <MESSAGE value="Merge branch 'feature/attaccoCapoBrancoAmato' into develop" />
     <MESSAGE value="ROSSO: testGildataContadinoDopoLupizzazione non riuscito" />
     <MESSAGE value="VERDE: testGildataContadinoDopoLupizzazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupizzazioneContadino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupizzazioneContadino riuscito" />
+    <MESSAGE value="Merge branch 'feature/attaccoCapoBrancoAmato' into develop" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoStregatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoRomeizzatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoAmatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoStregatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoRomeoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
   </component>
 </project>
