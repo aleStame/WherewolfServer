@@ -517,15 +517,6 @@ public final class TestPartita
         verificaEliminati(nome);
     }
 
-    @Test public void testPotereBracconiereUnLupo()
-    {
-        String[][] giocatori = new String[][] { { "Elisa", "Bracconiere" }, { "Edoardo", "Lupo del branco" }, { "Franca", "Giullare" } };
-        inizializzaPartita(giocatori);
-        segnalazioneBracconiere();
-        int posizioneVittima = 2;
-        verificaFallimentoAttaccoGiocatoreProtetto(giocatori[posizioneVittima][0], giocatori[1][1], "Potere del Bracconiere in corso. Proibito l'attacco dei lupi.");
-    }
-
     @Test public void testPotereBracconiereDueLupi()
     {
         String[][] giocatori =
@@ -2238,7 +2229,40 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nome)).withMessage(messaggio);
     }
 
-    private void verificaEliminazioneAngeloCustodeAttaccoAmato(String tipoLupo, String messaggio, String nomeAmato, String nomeAngeloCustode)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testUtilizzoPotereBracconiereCapoBranco(String nomeRuolo)
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Giulia";
+        inizializzaPartita(new String[][] { { "Ciccio", "Bracconiere" }, { "Piera", tipoLupo }, { nomeVittima, nomeRuolo } });
+        verificaPotereBracconiereNonUtilizzato();
+        partita.utilizzaPotereBracconiere();
+        verificaVero(isPotereBracconiereUtilizzato());
+        String messaggio = "Il Bracconiere (Ciccio) ha usato il suo potere, pertanto l'attacco a Giulia fallisce.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        partita.riabilitaPotereBracconiere();
+        verificaPotereBracconiereNonUtilizzato();
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
+    private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
+
+    private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
+
+    private void verificaEliminazioneAngeloCustodeAttaccoAmato
+    (
+        String tipoLupo, String messaggio, String nomeAmato, String nomeAngeloCustode
+    )
     {
         verificaAmato(nomeAmato);
         verificaFallimentoAttaccoGiocatoreProtetto(nomeAmato, tipoLupo, messaggio);
