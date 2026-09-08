@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGildataContadinoDopoLupizzazione non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testLupizzazioneContadino riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,22 +215,6 @@
       <updated>1784068342511</updated>
       <workItem from="1788856385769" duration="261000" />
       <workItem from="1788859890995" duration="5458000" />
-    </task>
-    <task id="LOCAL-00636" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1788347294265</created>
-      <option name="number" value="00636" />
-      <option name="presentableId" value="LOCAL-00636" />
-      <option name="project" value="LOCAL" />
-      <updated>1788347294281</updated>
-    </task>
-    <task id="LOCAL-00637" summary="REFACTORING: definizione del metodo isProgenieVampiro">
-      <option name="closed" value="true" />
-      <created>1788347891438</created>
-      <option name="number" value="00637" />
-      <option name="presentableId" value="LOCAL-00637" />
-      <option name="project" value="LOCAL" />
-      <updated>1788347891447</updated>
     </task>
     <task id="LOCAL-00638" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
       <option name="closed" value="true" />
@@ -608,7 +592,23 @@
       <option name="project" value="LOCAL" />
       <updated>1788874445466</updated>
     </task>
-    <option name="localTasksCounter" value="685" />
+    <task id="LOCAL-00685" summary="VERDE: testGildataContadinoDopoLupizzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1788875044714</created>
+      <option name="number" value="00685" />
+      <option name="presentableId" value="LOCAL-00685" />
+      <option name="project" value="LOCAL" />
+      <updated>1788875044714</updated>
+    </task>
+    <task id="LOCAL-00686" summary="VERDE DIRETTO: testLupizzazioneContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788875884607</created>
+      <option name="number" value="00686" />
+      <option name="presentableId" value="LOCAL-00686" />
+      <option name="project" value="LOCAL" />
+      <updated>1788875884607</updated>
+    </task>
+    <option name="localTasksCounter" value="687" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,8 +626,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoAssassino riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
     <MESSAGE value="ROSSO: testUtilizzoPotereBracconiereCapoBranco non riuscito" />
@@ -651,6 +649,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
     <MESSAGE value="Merge branch 'feature/attaccoCapoBrancoAmato' into develop" />
     <MESSAGE value="ROSSO: testGildataContadinoDopoLupizzazione non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGildataContadinoDopoLupizzazione non riuscito" />
+    <MESSAGE value="VERDE: testGildataContadinoDopoLupizzazione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupizzazioneContadino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testLupizzazioneContadino riuscito" />
   </component>
 </project>
