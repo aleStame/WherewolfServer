@@ -1060,6 +1060,13 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
+    @Test public void testSuicidioCapoBrancoAmato()
+    {
+        String nomeAmato = "Alice", tipoLupo = "Capo branco";
+        inizializzaGiocatori(new String[][] { { "Elia", "Angelo custode" }, { nomeAmato, tipoLupo } });
+        verificaAttaccoAngelo(tipoLupo, nomeAmato);
+    }
+
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
     public void testAttaccoLupiAmatoAngeloCustodeRomeo(String tipoLupo, String nomeRuolo)
     {
