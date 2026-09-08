@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoCapoBrancoRomeizzatoContadino riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoRomeoContadino riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
@@ -228,8 +230,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -440,30 +443,6 @@
       <updated>1784068342511</updated>
       <workItem from="1788856385769" duration="261000" />
       <workItem from="1788859890995" duration="5458000" />
-    </task>
-    <task id="LOCAL-00641" summary="REFACTORING: definizione del metodo getRisultatoVampirizzazione">
-      <option name="closed" value="true" />
-      <created>1788353830200</created>
-      <option name="number" value="00641" />
-      <option name="presentableId" value="LOCAL-00641" />
-      <option name="project" value="LOCAL" />
-      <updated>1788353830201</updated>
-    </task>
-    <task id="LOCAL-00642" summary="VERDE DIRETTO: testVampirizzazioneStregatoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788354301394</created>
-      <option name="number" value="00642" />
-      <option name="presentableId" value="LOCAL-00642" />
-      <option name="project" value="LOCAL" />
-      <updated>1788354301397</updated>
-    </task>
-    <task id="LOCAL-00643" summary="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito">
-      <option name="closed" value="true" />
-      <created>1788361827745</created>
-      <option name="number" value="00643" />
-      <option name="presentableId" value="LOCAL-00643" />
-      <option name="project" value="LOCAL" />
-      <updated>1788361827748</updated>
     </task>
     <task id="LOCAL-00644" summary="ROSSO: testVampirizzazioneRomeoFallita non riuscito">
       <option name="closed" value="true" />
@@ -833,7 +812,31 @@
       <option name="project" value="LOCAL" />
       <updated>1788877357807</updated>
     </task>
-    <option name="localTasksCounter" value="690" />
+    <task id="LOCAL-00690" summary="VERDE DIRETTO: testAttaccoLupoAmatoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788878676221</created>
+      <option name="number" value="00690" />
+      <option name="presentableId" value="LOCAL-00690" />
+      <option name="project" value="LOCAL" />
+      <updated>1788878676221</updated>
+    </task>
+    <task id="LOCAL-00691" summary="VERDE DIRETTO: testAttaccoLupoStregatoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788878887196</created>
+      <option name="number" value="00691" />
+      <option name="presentableId" value="LOCAL-00691" />
+      <option name="project" value="LOCAL" />
+      <updated>1788878887196</updated>
+    </task>
+    <task id="LOCAL-00692" summary="VERDE DIRETTO: testAttaccoLupoRomeoContadino riuscito">
+      <option name="closed" value="true" />
+      <created>1788879154019</created>
+      <option name="number" value="00692" />
+      <option name="presentableId" value="LOCAL-00692" />
+      <option name="project" value="LOCAL" />
+      <updated>1788879154020</updated>
+    </task>
+    <option name="localTasksCounter" value="693" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -851,9 +854,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testUtilizzoPotereBracconiereCapoBranco non riuscito" />
-    <MESSAGE value="VERDE: testUtilizzoPotereBracconiereCapoBranco riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isPotereBracconiereUtilizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaPotereBracconiereNonUtilizzato" />
     <MESSAGE value="REFACTORING: definizione del metodo gestisciPotereBracconiere" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
@@ -876,6 +876,9 @@
     <MESSAGE value="Merge branch 'feature/attaccoCapoBrancoAmato' into develop" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoStregatoContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoRomeizzatoContadino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoCapoBrancoRomeizzatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoAmatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoStregatoContadino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoRomeoContadino riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoRomeoContadino riuscito" />
   </component>
 </project>

@@ -1762,7 +1762,7 @@ public final class TestPartita
     {
         String nomeLupo = "Iris", nomeVittima = "Filippo";
         inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Asia", "Giulietta" } });
-        segnalazioneAngeloCustode(nomeLupo);
+        romeizzazione(nomeLupo);
         verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
     }
 

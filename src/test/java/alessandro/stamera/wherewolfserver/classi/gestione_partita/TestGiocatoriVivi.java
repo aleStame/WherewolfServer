@@ -1437,10 +1437,11 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
-    @Test public void testAttaccoStregatoCapoBranco()
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoStregatoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Strega"} });
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Strega"} });
         protezioneStrega(nomeVittima);
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
