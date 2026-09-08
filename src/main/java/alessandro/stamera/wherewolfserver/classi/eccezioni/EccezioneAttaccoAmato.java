@@ -1,5 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
+import org.springframework.lang.NonNull;
+
 public final class EccezioneAttaccoAmato extends IllegalStateException
 {
 
@@ -10,7 +12,10 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
         this("Capo branco", nomeLupo, "Capo branco", nomeLupo, nomeAngeloCustode);
     }
 
-    public EccezioneAttaccoAmato(String tipoLupo, String nomeLupo, String ruoloAmato, String nomeAmato, String nomeAngeloCustode)
+    public EccezioneAttaccoAmato
+    (
+        String tipoLupo, String nomeLupo, String ruoloAmato, String nomeAmato, String nomeAngeloCustode
+    )
     {
         this.tipoLupo = tipoLupo;
         this.nomeLupo = nomeLupo;
@@ -25,10 +30,14 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
             return
                 "Il Capo branco amato (" + nomeAmato + ") non può suicidarsi.\nAvvisa l'Angelo custode (" + nomeAngeloCustode +
                 ") della sua morte.";
-        else
-            return
-                "Il " + tipoLupo + " (" + nomeLupo + ") non può attaccare il " + ruoloAmato + " amato (" + nomeAmato + ").\nAvvisa l'Angelo " +
-                "custode (" + nomeAngeloCustode + ") della sua morte.";
+        else return getMessaggioAttaccoNormale();
+    }
+
+    private String getMessaggioAttaccoNormale()
+    {
+        return
+            "Il " + tipoLupo + " (" + nomeLupo + ") non può attaccare il " + ruoloAmato + " amato (" + nomeAmato + ").\nAvvisa l'Angelo custode ("
+            + nomeAngeloCustode + ") della sua morte.";
     }
 
 }

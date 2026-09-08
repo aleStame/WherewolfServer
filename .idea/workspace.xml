@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testMessaggioSuicidioCapoBranco non riuscito" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioSuicidioCapoBranco riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneAttaccoAmato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneAttaccoAmato.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,15 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
       <workItem from="1788856385769" duration="261000" />
-      <workItem from="1788859890995" duration="2620000" />
-    </task>
-    <task id="LOCAL-00629" summary="REFACTORING: definizione del metodo erificaFallimentoAttaccoLupiGiocatoreStregato">
-      <option name="closed" value="true" />
-      <created>1788275311364</created>
-      <option name="number" value="00629" />
-      <option name="presentableId" value="LOCAL-00629" />
-      <option name="project" value="LOCAL" />
-      <updated>1788275311365</updated>
+      <workItem from="1788859890995" duration="3045000" />
     </task>
     <task id="LOCAL-00630" summary="VERDE DIRETTO: testAuraChiara riuscito">
       <option name="closed" value="true" />
@@ -606,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788862497816</updated>
     </task>
-    <option name="localTasksCounter" value="678" />
+    <task id="LOCAL-00678" summary="VERDE: testMessaggioSuicidioCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1788862885486</created>
+      <option name="number" value="00678" />
+      <option name="presentableId" value="LOCAL-00678" />
+      <option name="project" value="LOCAL" />
+      <updated>1788862885487</updated>
+    </task>
+    <option name="localTasksCounter" value="679" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +626,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testAvvisoErroreRomeo riuscito" />
     <MESSAGE value="ROSSO: testAvvisoErroreStrega non riuscito" />
     <MESSAGE value="VERDE: testAvvisoErroreStrega riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
@@ -649,6 +650,7 @@
     <MESSAGE value="ROSSO: testSuicidioCapoBrancoAmato non riuscito" />
     <MESSAGE value="VERDE: testSuicidioCapoBrancoAmato riuscito" />
     <MESSAGE value="ROSSO: testMessaggioSuicidioCapoBranco non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMessaggioSuicidioCapoBranco non riuscito" />
+    <MESSAGE value="VERDE: testMessaggioSuicidioCapoBranco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioSuicidioCapoBranco riuscito" />
   </component>
 </project>
