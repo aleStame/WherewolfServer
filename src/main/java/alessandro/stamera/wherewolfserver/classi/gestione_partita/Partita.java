@@ -307,7 +307,9 @@ public final class Partita
     private void eccezioneMorteAngeloCustode(String tipoLupo, String nome, String nomeLupo)
     {
         eliminazioneAngeloCustode();
-        throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, getNomeRuolo(nome), nome, mortiNotte.getNomeAngeloCustode());
+        String nomeRuolo = getNomeRuolo(nome), nomeAngelo = mortiNotte.getNomeAngeloCustode();
+        if(nomeRuolo.equals(tipoLupo)) throw new EccezioneAttaccoAmato(nomeLupo, nomeAngelo);
+        else throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, nomeRuolo, nome, nomeAngelo);
     }
 
     private void gestisciEccezioniAttaccoLupi()

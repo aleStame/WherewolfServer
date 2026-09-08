@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,13 +12,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestEccezioneAttaccoAmato
 {
 
+    private EccezioneAttaccoAmato eccezione;
+
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
     public void testMessaggio(String tipoLupo, String nomeRuolo, String messaggio)
     {
-        String risultato =
-            new EccezioneAttaccoAmato(tipoLupo, "Maria", nomeRuolo, "Giuseppe", "Erode").getMessage();
-        assertThat(risultato).isEqualTo(messaggio);
+        eccezione = new EccezioneAttaccoAmato(tipoLupo, "Maria", nomeRuolo, "Giuseppe", "Erode");
+        verificaMessaggioErrore(messaggio);
     }
+
+    @Test public void testMessaggioSuicidioCapoBranco()
+    {
+        String soluzione = "Il Capo branco amato (Salvatore) non può suicidarsi.\nAvvisa l'Angelo custode (Martina) della sua morte.";
+        eccezione = new EccezioneAttaccoAmato("Salvatore", "Martina");
+        verificaMessaggioErrore(soluzione);
+    }
+
+    private void verificaMessaggioErrore(String soluzione) { assertThat(eccezione.getMessage()).isEqualTo(soluzione); }
 
     private static Stream<Arguments> getEsempioAttaccoAmato()
     {

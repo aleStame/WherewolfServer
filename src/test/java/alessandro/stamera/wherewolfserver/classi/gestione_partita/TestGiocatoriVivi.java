@@ -1060,6 +1060,13 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
+    @Test public void testSuicidioCapoBrancoAmato()
+    {
+        String nomeAmato = "Alice", tipoLupo = "Capo branco";
+        inizializzaGiocatori(new String[][] { { "Elia", "Angelo custode" }, { nomeAmato, tipoLupo } });
+        verificaAttaccoAngelo(tipoLupo, nomeAmato);
+    }
+
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
     public void testAttaccoLupiAmatoAngeloCustodeRomeo(String tipoLupo, String nomeRuolo)
     {
@@ -1389,6 +1396,13 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testSuicidioCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
+    }
+
     @Test public void testAttaccoRomeoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
@@ -1397,10 +1411,26 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testSuicidioCapoBrancoRomeo()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Giulietta"} });
+        romeizzazione(nomeVittima);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+    }
+
     @Test public void testAttaccoStregatoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Strega"} });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+    }
+
+    @Test public void testSuicidioCapoBrancoStregato()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Strega"} });
         protezioneStrega(nomeVittima);
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
