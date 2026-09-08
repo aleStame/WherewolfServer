@@ -1758,10 +1758,10 @@ public final class TestPartita
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
-    public void testAttaccoLupiContadinoAmato(String tipoContadino, String tipoLupo, String messaggio)
+    public void testAttaccoLupoRomeoContadino(String tipoContadino, String tipoLupo, String messaggio)
     {
         String nomeLupo = "Iris", nomeVittima = "Filippo";
-        inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino } });
+        inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Asia", "Giulietta" } });
         segnalazioneAngeloCustode(nomeLupo);
         verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
     }
