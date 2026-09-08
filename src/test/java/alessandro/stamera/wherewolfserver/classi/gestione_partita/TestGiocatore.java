@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
@@ -14,6 +15,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -428,11 +430,13 @@ public final class TestGiocatore
         verificaVero(isGuaritore());
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testGildataContadinoDopoLupizzazione(String tipoLupo)
+    @ParameterizedTest
+    @CsvSource({ "Capo branco, LUPO_BRANCO", "Lupo del branco, LUPO_BRANCO", "Lupo reietto, LUPO_BRANCO", "Lupo solitario, LUPO_SOLITARIO" })
+    public void testGildataContadinoDopoLupizzazione(String tipoLupo, Fazione fazione)
     {
         lupizzazioneContadino(tipoLupo);
         verificaEsitoGildata(MORTO);
+        assertThat(giocatore.getFazione()).isEqualTo(fazione);
     }
 
     @Test public void testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante()
@@ -839,6 +843,7 @@ public final class TestGiocatore
     {
         cambiaRuolo("Contadino discendente dei lupi");
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
+        assertThat(giocatore.getAura()).isEqualTo(NERA);
     }
 
     private void verificaLupoSolitarioSvegliaCappuccettoRosso()
