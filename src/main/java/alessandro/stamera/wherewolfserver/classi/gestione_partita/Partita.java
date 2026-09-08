@@ -307,7 +307,10 @@ public final class Partita
     private void eccezioneMorteAngeloCustode(String tipoLupo, String nome, String nomeLupo)
     {
         eliminazioneAngeloCustode();
-        throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, getNomeRuolo(nome), nome, mortiNotte.getNomeAngeloCustode());
+        String nomeRuolo = getNomeRuolo(nome), nomeAngelo = mortiNotte.getNomeAngeloCustode();
+        if(nomeRuolo.equals(tipoLupo))
+            throw new IllegalStateException("Il Capo branco amato (" + nomeLupo + ") non può suicidarsi.\nAvvisa l'Angelo custode (" + nomeAngelo + ") della sua morte.");
+        else throw new EccezioneAttaccoAmato(tipoLupo, nomeLupo, nomeRuolo, nome, nomeAngelo);
     }
 
     private void gestisciEccezioniAttaccoLupi()
