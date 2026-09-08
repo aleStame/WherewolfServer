@@ -781,6 +781,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isSegnalatoBoia());
     }
 
+    @Test public void testSuicidioCapoBranco()
+    {
+        cambiaRuolo("Capo branco");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Capo branco")), RIUSCITO);
+    }
+
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
 
     private boolean isVampiro() { return giocatore.isVampiro(); }
