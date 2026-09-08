@@ -5,6 +5,11 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
 
     private final String tipoLupo, nomeLupo, ruoloAmato, nomeAmato, nomeAngeloCustode;
 
+    public EccezioneAttaccoAmato(String nomeLupo, String nomeAngeloCustode)
+    {
+        this("Capo branco", nomeLupo, "Capo branco", nomeLupo, nomeAngeloCustode);
+    }
+
     public EccezioneAttaccoAmato(String tipoLupo, String nomeLupo, String ruoloAmato, String nomeAmato, String nomeAngeloCustode)
     {
         this.tipoLupo = tipoLupo;

@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -17,6 +18,13 @@ public final class TestEccezioneAttaccoAmato
         String risultato =
             new EccezioneAttaccoAmato(tipoLupo, "Maria", nomeRuolo, "Giuseppe", "Erode").getMessage();
         assertThat(risultato).isEqualTo(messaggio);
+    }
+
+    @Test public void testMessaggioSuicidioCapoBranco()
+    {
+        String nomeLupo = "Salvatore", nomeAngeloCustode = "Martina";
+        String soluzione = "Il Capo branco amato (Salvatore) non può suicidarsi.\nAvvisa l'Angelo custode (Martina) della sua morte.";
+        assertThat(new EccezioneAttaccoAmato(nomeLupo, nomeAngeloCustode).getMessage()).isEqualTo(soluzione);
     }
 
     private static Stream<Arguments> getEsempioAttaccoAmato()

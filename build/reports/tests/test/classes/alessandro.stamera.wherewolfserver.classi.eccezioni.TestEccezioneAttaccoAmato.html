@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">188</div>
+<div class="counter">189</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.222s</div>
+<div class="counter">0.565s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">99%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,111 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testMessaggioSuicidioCapoBranco()"></a>
+<h3 class="failures">testMessaggioSuicidioCapoBranco()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: 
+expected: &quot;Il Capo branco amato (Salvatore) non può suicidarsi.
+Avvisa l'Angelo custode (Martina) della sua morte.&quot;
+ but was: &quot;Il Capo branco (Salvatore) non può attaccare il Capo branco amato (Salvatore).
+Avvisa l'Angelo custode (Martina) della sua morte.&quot;
+	at java.base@21.0.3/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base@21.0.3/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at app//alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoAmato.testMessaggioSuicidioCapoBranco(TestEccezioneAttaccoAmato.java:27)
+	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base@21.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -79,35 +180,35 @@
 <td class="success">[100] tipoLupo=Lupo reietto, nomeRuolo=Bocca di rosa, messaggio=Il Lupo reietto (Maria) non può attaccare il Bocca di rosa amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[100]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[101] tipoLupo=Lupo reietto, nomeRuolo=Boia, messaggio=Il Lupo reietto (Maria) non può attaccare il Boia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[101]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[102] tipoLupo=Lupo reietto, nomeRuolo=Borgomastro, messaggio=Il Lupo reietto (Maria) non può attaccare il Borgomastro amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[102]</td>
-<td class="success">0.002s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[103] tipoLupo=Lupo reietto, nomeRuolo=Bracconiere, messaggio=Il Lupo reietto (Maria) non può attaccare il Bracconiere amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[103]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[104] tipoLupo=Lupo reietto, nomeRuolo=Cacciatore, messaggio=Il Lupo reietto (Maria) non può attaccare il Cacciatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[104]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -128,14 +229,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[107] tipoLupo=Lupo reietto, nomeRuolo=Cappuccetto rosso, messaggio=Il Lupo reietto (Maria) non può attaccare il Cappuccetto rosso amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[107]</td>
-<td class="success">0s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[108] tipoLupo=Lupo reietto, nomeRuolo=Contadino eroe, messaggio=Il Lupo reietto (Maria) non può attaccare il Contadino eroe amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[108]</td>
-<td class="success">0.002s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -149,14 +250,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[10] tipoLupo=Capo branco, nomeRuolo=Cacciatore, messaggio=Il Capo branco (Maria) non può attaccare il Cacciatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[10]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[110] tipoLupo=Lupo reietto, nomeRuolo=Contadino normale, messaggio=Il Lupo reietto (Maria) non può attaccare il Contadino normale amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[110]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -177,98 +278,98 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[113] tipoLupo=Lupo reietto, nomeRuolo=Giulietta, messaggio=Il Lupo reietto (Maria) non può attaccare il Giulietta amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[113]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[114] tipoLupo=Lupo reietto, nomeRuolo=Giullare, messaggio=Il Lupo reietto (Maria) non può attaccare il Giullare amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[114]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[115] tipoLupo=Lupo reietto, nomeRuolo=Goblin, messaggio=Il Lupo reietto (Maria) non può attaccare il Goblin amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[115]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[116] tipoLupo=Lupo reietto, nomeRuolo=Guardia, messaggio=Il Lupo reietto (Maria) non può attaccare il Guardia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[116]</td>
-<td class="success">0.001s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[117] tipoLupo=Lupo reietto, nomeRuolo=Guardia corrotta, messaggio=Il Lupo reietto (Maria) non può attaccare il Guardia corrotta amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[117]</td>
-<td class="success">0.001s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[118] tipoLupo=Lupo reietto, nomeRuolo=Guaritore, messaggio=Il Lupo reietto (Maria) non può attaccare il Guaritore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[118]</td>
-<td class="success">0s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[119] tipoLupo=Lupo reietto, nomeRuolo=Inquisitore, messaggio=Il Lupo reietto (Maria) non può attaccare il Inquisitore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[119]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[11] tipoLupo=Capo branco, nomeRuolo=Cacciatore di vampiri, messaggio=Il Capo branco (Maria) non può attaccare il Cacciatore di vampiri amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[11]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[120] tipoLupo=Lupo reietto, nomeRuolo=Ladra, messaggio=Il Lupo reietto (Maria) non può attaccare il Ladra amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[120]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[121] tipoLupo=Lupo reietto, nomeRuolo=Leprecauno, messaggio=Il Lupo reietto (Maria) non può attaccare il Leprecauno amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[121]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[122] tipoLupo=Lupo reietto, nomeRuolo=Mago, messaggio=Il Lupo reietto (Maria) non può attaccare il Mago amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[122]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[123] tipoLupo=Lupo reietto, nomeRuolo=Medium, messaggio=Il Lupo reietto (Maria) non può attaccare il Medium amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[123]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[124] tipoLupo=Lupo reietto, nomeRuolo=Megera, messaggio=Il Lupo reietto (Maria) non può attaccare il Megera amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[124]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[125] tipoLupo=Lupo reietto, nomeRuolo=Mercante, messaggio=Il Lupo reietto (Maria) non può attaccare il Mercante amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[125]</td>
-<td class="success">0s</td>
+<td class="success">0.033s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -296,14 +397,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[129] tipoLupo=Lupo reietto, nomeRuolo=Nosferatu, messaggio=Il Lupo reietto (Maria) non può attaccare il Nosferatu amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[129]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[12] tipoLupo=Capo branco, nomeRuolo=Capo gilda, messaggio=Il Capo branco (Maria) non può attaccare il Capo gilda amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[12]</td>
-<td class="success">0.001s</td>
+<td class="success">0.061s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -317,21 +418,21 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[131] tipoLupo=Lupo reietto, nomeRuolo=Oste, messaggio=Il Lupo reietto (Maria) non può attaccare il Oste amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[131]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[132] tipoLupo=Lupo reietto, nomeRuolo=Pazzo, messaggio=Il Lupo reietto (Maria) non può attaccare il Pazzo amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[132]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[133] tipoLupo=Lupo reietto, nomeRuolo=Peccatore, messaggio=Il Lupo reietto (Maria) non può attaccare il Peccatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[133]</td>
-<td class="success">0.002s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -345,7 +446,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[135] tipoLupo=Lupo reietto, nomeRuolo=Prete, messaggio=Il Lupo reietto (Maria) non può attaccare il Prete amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[135]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -366,7 +467,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[138] tipoLupo=Lupo reietto, nomeRuolo=Strega, messaggio=Il Lupo reietto (Maria) non può attaccare il Strega amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[138]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -380,7 +481,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[13] tipoLupo=Capo branco, nomeRuolo=Cappuccetto rosso, messaggio=Il Capo branco (Maria) non può attaccare il Cappuccetto rosso amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[13]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -401,7 +502,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[142] tipoLupo=Lupo solitario, nomeRuolo=Altra guardia, messaggio=Il Lupo solitario (Maria) non può attaccare il Altra guardia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[142]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -429,14 +530,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[146] tipoLupo=Lupo solitario, nomeRuolo=Becchino, messaggio=Il Lupo solitario (Maria) non può attaccare il Becchino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[146]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[147] tipoLupo=Lupo solitario, nomeRuolo=Bocca di rosa, messaggio=Il Lupo solitario (Maria) non può attaccare il Bocca di rosa amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[147]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -471,35 +572,35 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[151] tipoLupo=Lupo solitario, nomeRuolo=Cacciatore, messaggio=Il Lupo solitario (Maria) non può attaccare il Cacciatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[151]</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[152] tipoLupo=Lupo solitario, nomeRuolo=Cacciatore di vampiri, messaggio=Il Lupo solitario (Maria) non può attaccare il Cacciatore di vampiri amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[152]</td>
-<td class="success">0s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[153] tipoLupo=Lupo solitario, nomeRuolo=Capo gilda, messaggio=Il Lupo solitario (Maria) non può attaccare il Capo gilda amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[153]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[154] tipoLupo=Lupo solitario, nomeRuolo=Cappuccetto rosso, messaggio=Il Lupo solitario (Maria) non può attaccare il Cappuccetto rosso amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[154]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[155] tipoLupo=Lupo solitario, nomeRuolo=Contadino eroe, messaggio=Il Lupo solitario (Maria) non può attaccare il Contadino eroe amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[155]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -513,14 +614,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[157] tipoLupo=Lupo solitario, nomeRuolo=Contadino normale, messaggio=Il Lupo solitario (Maria) non può attaccare il Contadino normale amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[157]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[158] tipoLupo=Lupo solitario, nomeRuolo=Eremita, messaggio=Il Lupo solitario (Maria) non può attaccare il Eremita amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[158]</td>
-<td class="success">0s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -541,7 +642,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[160] tipoLupo=Lupo solitario, nomeRuolo=Giulietta, messaggio=Il Lupo solitario (Maria) non può attaccare il Giulietta amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[160]</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -611,7 +712,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[16] tipoLupo=Capo branco, nomeRuolo=Contadino normale, messaggio=Il Capo branco (Maria) non può attaccare il Contadino normale amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[16]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -632,7 +733,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[172] tipoLupo=Lupo solitario, nomeRuolo=Mercante, messaggio=Il Lupo solitario (Maria) non può attaccare il Mercante amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[172]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -646,28 +747,28 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[174] tipoLupo=Lupo solitario, nomeRuolo=Negromante, messaggio=Il Lupo solitario (Maria) non può attaccare il Negromante amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[174]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[175] tipoLupo=Lupo solitario, nomeRuolo=Nonna, messaggio=Il Lupo solitario (Maria) non può attaccare il Nonna amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[175]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[176] tipoLupo=Lupo solitario, nomeRuolo=Nosferatu, messaggio=Il Lupo solitario (Maria) non può attaccare il Nosferatu amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[176]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[177] tipoLupo=Lupo solitario, nomeRuolo=Oratore, messaggio=Il Lupo solitario (Maria) non può attaccare il Oratore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[177]</td>
-<td class="success">0.005s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -681,7 +782,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[179] tipoLupo=Lupo solitario, nomeRuolo=Pazzo, messaggio=Il Lupo solitario (Maria) non può attaccare il Pazzo amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[179]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -695,7 +796,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[180] tipoLupo=Lupo solitario, nomeRuolo=Peccatore, messaggio=Il Lupo solitario (Maria) non può attaccare il Peccatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[180]</td>
-<td class="success">0.001s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -709,7 +810,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[182] tipoLupo=Lupo solitario, nomeRuolo=Prete, messaggio=Il Lupo solitario (Maria) non può attaccare il Prete amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[182]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -730,28 +831,28 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[185] tipoLupo=Lupo solitario, nomeRuolo=Strega, messaggio=Il Lupo solitario (Maria) non può attaccare il Strega amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[185]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[186] tipoLupo=Lupo solitario, nomeRuolo=Sensitiva, messaggio=Il Lupo solitario (Maria) non può attaccare il Sensitiva amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[186]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[187] tipoLupo=Lupo solitario, nomeRuolo=Templare, messaggio=Il Lupo solitario (Maria) non può attaccare il Templare amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[187]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[188] tipoLupo=Lupo solitario, nomeRuolo=Vampiro, messaggio=Il Lupo solitario (Maria) non può attaccare il Vampiro amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[188]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -772,14 +873,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[1] tipoLupo=Capo branco, nomeRuolo=Altra guardia, messaggio=Il Capo branco (Maria) non può attaccare il Altra guardia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[1]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[20] tipoLupo=Capo branco, nomeRuolo=Giullare, messaggio=Il Capo branco (Maria) non può attaccare il Giullare amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[20]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -793,7 +894,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[22] tipoLupo=Capo branco, nomeRuolo=Guardia, messaggio=Il Capo branco (Maria) non può attaccare il Guardia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[22]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -807,14 +908,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[24] tipoLupo=Capo branco, nomeRuolo=Guaritore, messaggio=Il Capo branco (Maria) non può attaccare il Guaritore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[24]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[25] tipoLupo=Capo branco, nomeRuolo=Inquisitore, messaggio=Il Capo branco (Maria) non può attaccare il Inquisitore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[25]</td>
-<td class="success">0.002s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -849,7 +950,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[2] tipoLupo=Capo branco, nomeRuolo=Assassino, messaggio=Il Capo branco (Maria) non può attaccare il Assassino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[2]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -863,14 +964,14 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[31] tipoLupo=Capo branco, nomeRuolo=Mercante, messaggio=Il Capo branco (Maria) non può attaccare il Mercante amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[31]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[32] tipoLupo=Capo branco, nomeRuolo=Monaco, messaggio=Il Capo branco (Maria) non può attaccare il Monaco amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[32]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -884,7 +985,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[34] tipoLupo=Capo branco, nomeRuolo=Nonna, messaggio=Il Capo branco (Maria) non può attaccare il Nonna amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[34]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -898,7 +999,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[36] tipoLupo=Capo branco, nomeRuolo=Oratore, messaggio=Il Capo branco (Maria) non può attaccare il Oratore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[36]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -919,7 +1020,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[39] tipoLupo=Capo branco, nomeRuolo=Peccatore, messaggio=Il Capo branco (Maria) non può attaccare il Peccatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[39]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -933,49 +1034,49 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[40] tipoLupo=Capo branco, nomeRuolo=Posseduto, messaggio=Il Capo branco (Maria) non può attaccare il Posseduto amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[40]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[41] tipoLupo=Capo branco, nomeRuolo=Prete, messaggio=Il Capo branco (Maria) non può attaccare il Prete amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[41]</td>
-<td class="success">0.001s</td>
+<td class="success">0.081s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[42] tipoLupo=Capo branco, nomeRuolo=Sidhe, messaggio=Il Capo branco (Maria) non può attaccare il Sidhe amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[42]</td>
-<td class="success">0.001s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[43] tipoLupo=Capo branco, nomeRuolo=Spia, messaggio=Il Capo branco (Maria) non può attaccare il Spia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[43]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[44] tipoLupo=Capo branco, nomeRuolo=Strega, messaggio=Il Capo branco (Maria) non può attaccare il Strega amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[44]</td>
-<td class="success">0s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[45] tipoLupo=Capo branco, nomeRuolo=Sensitiva, messaggio=Il Capo branco (Maria) non può attaccare il Sensitiva amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[45]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[46] tipoLupo=Capo branco, nomeRuolo=Templare, messaggio=Il Capo branco (Maria) non può attaccare il Templare amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[46]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -989,21 +1090,21 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[48] tipoLupo=Lupo del branco, nomeRuolo=Altra guardia, messaggio=Il Lupo del branco (Maria) non può attaccare il Altra guardia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[48]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[49] tipoLupo=Lupo del branco, nomeRuolo=Assassino, messaggio=Il Lupo del branco (Maria) non può attaccare il Assassino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[49]</td>
-<td class="success">0.004s</td>
+<td class="success">0.024s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] tipoLupo=Capo branco, nomeRuolo=Bardo, messaggio=Il Capo branco (Maria) non può attaccare il Bardo amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[4]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1017,21 +1118,21 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[51] tipoLupo=Lupo del branco, nomeRuolo=Bardo, messaggio=Il Lupo del branco (Maria) non può attaccare il Bardo amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[51]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[52] tipoLupo=Lupo del branco, nomeRuolo=Becchino, messaggio=Il Lupo del branco (Maria) non può attaccare il Becchino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[52]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[53] tipoLupo=Lupo del branco, nomeRuolo=Bocca di rosa, messaggio=Il Lupo del branco (Maria) non può attaccare il Bocca di rosa amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[53]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1045,7 +1146,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[55] tipoLupo=Lupo del branco, nomeRuolo=Borgomastro, messaggio=Il Lupo del branco (Maria) non può attaccare il Borgomastro amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[55]</td>
-<td class="success">0.001s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1059,7 +1160,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[57] tipoLupo=Lupo del branco, nomeRuolo=Cacciatore, messaggio=Il Lupo del branco (Maria) non può attaccare il Cacciatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[57]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1073,42 +1174,42 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[59] tipoLupo=Lupo del branco, nomeRuolo=Capo gilda, messaggio=Il Lupo del branco (Maria) non può attaccare il Capo gilda amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[59]</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[5] tipoLupo=Capo branco, nomeRuolo=Becchino, messaggio=Il Capo branco (Maria) non può attaccare il Becchino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[5]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[60] tipoLupo=Lupo del branco, nomeRuolo=Cappuccetto rosso, messaggio=Il Lupo del branco (Maria) non può attaccare il Cappuccetto rosso amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[60]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[61] tipoLupo=Lupo del branco, nomeRuolo=Contadino eroe, messaggio=Il Lupo del branco (Maria) non può attaccare il Contadino eroe amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[61]</td>
-<td class="success">0s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[62] tipoLupo=Lupo del branco, nomeRuolo=Contadino mostro, messaggio=Il Lupo del branco (Maria) non può attaccare il Contadino mostro amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[62]</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[63] tipoLupo=Lupo del branco, nomeRuolo=Contadino normale, messaggio=Il Lupo del branco (Maria) non può attaccare il Contadino normale amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[63]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1122,21 +1223,21 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[65] tipoLupo=Lupo del branco, nomeRuolo=Ghoul, messaggio=Il Lupo del branco (Maria) non può attaccare il Ghoul amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[65]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[66] tipoLupo=Lupo del branco, nomeRuolo=Giulietta, messaggio=Il Lupo del branco (Maria) non può attaccare il Giulietta amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[66]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[67] tipoLupo=Lupo del branco, nomeRuolo=Giullare, messaggio=Il Lupo del branco (Maria) non può attaccare il Giullare amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[67]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1150,21 +1251,21 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[69] tipoLupo=Lupo del branco, nomeRuolo=Guardia, messaggio=Il Lupo del branco (Maria) non può attaccare il Guardia amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[69]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[6] tipoLupo=Capo branco, nomeRuolo=Bocca di rosa, messaggio=Il Capo branco (Maria) non può attaccare il Bocca di rosa amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[6]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[70] tipoLupo=Lupo del branco, nomeRuolo=Guardia corrotta, messaggio=Il Lupo del branco (Maria) non può attaccare il Guardia corrotta amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[70]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1178,56 +1279,56 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[72] tipoLupo=Lupo del branco, nomeRuolo=Inquisitore, messaggio=Il Lupo del branco (Maria) non può attaccare il Inquisitore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[72]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[73] tipoLupo=Lupo del branco, nomeRuolo=Ladra, messaggio=Il Lupo del branco (Maria) non può attaccare il Ladra amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[73]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[74] tipoLupo=Lupo del branco, nomeRuolo=Leprecauno, messaggio=Il Lupo del branco (Maria) non può attaccare il Leprecauno amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[74]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[75] tipoLupo=Lupo del branco, nomeRuolo=Mago, messaggio=Il Lupo del branco (Maria) non può attaccare il Mago amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[75]</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[76] tipoLupo=Lupo del branco, nomeRuolo=Medium, messaggio=Il Lupo del branco (Maria) non può attaccare il Medium amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[76]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[77] tipoLupo=Lupo del branco, nomeRuolo=Megera, messaggio=Il Lupo del branco (Maria) non può attaccare il Megera amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[77]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[78] tipoLupo=Lupo del branco, nomeRuolo=Mercante, messaggio=Il Lupo del branco (Maria) non può attaccare il Mercante amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[78]</td>
-<td class="success">0s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[79] tipoLupo=Lupo del branco, nomeRuolo=Monaco, messaggio=Il Lupo del branco (Maria) non può attaccare il Monaco amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[79]</td>
-<td class="success">0.001s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1248,7 +1349,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[81] tipoLupo=Lupo del branco, nomeRuolo=Nonna, messaggio=Il Lupo del branco (Maria) non può attaccare il Nonna amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[81]</td>
-<td class="success">0.001s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1262,42 +1363,42 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[83] tipoLupo=Lupo del branco, nomeRuolo=Oratore, messaggio=Il Lupo del branco (Maria) non può attaccare il Oratore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[83]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[84] tipoLupo=Lupo del branco, nomeRuolo=Oste, messaggio=Il Lupo del branco (Maria) non può attaccare il Oste amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[84]</td>
-<td class="success">0.004s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[85] tipoLupo=Lupo del branco, nomeRuolo=Pazzo, messaggio=Il Lupo del branco (Maria) non può attaccare il Pazzo amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[85]</td>
-<td class="success">0.006s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[86] tipoLupo=Lupo del branco, nomeRuolo=Peccatore, messaggio=Il Lupo del branco (Maria) non può attaccare il Peccatore amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[86]</td>
-<td class="success">0.003s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[87] tipoLupo=Lupo del branco, nomeRuolo=Posseduto, messaggio=Il Lupo del branco (Maria) non può attaccare il Posseduto amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[87]</td>
-<td class="success">0.005s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[88] tipoLupo=Lupo del branco, nomeRuolo=Prete, messaggio=Il Lupo del branco (Maria) non può attaccare il Prete amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[88]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1311,7 +1412,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[8] tipoLupo=Capo branco, nomeRuolo=Borgomastro, messaggio=Il Capo branco (Maria) non può attaccare il Borgomastro amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[8]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1325,7 +1426,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[91] tipoLupo=Lupo del branco, nomeRuolo=Strega, messaggio=Il Lupo del branco (Maria) non può attaccare il Strega amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[91]</td>
-<td class="success">0s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1346,7 +1447,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[94] tipoLupo=Lupo del branco, nomeRuolo=Vampiro, messaggio=Il Lupo del branco (Maria) non può attaccare il Vampiro amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[94]</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1360,7 +1461,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[96] tipoLupo=Lupo reietto, nomeRuolo=Assassino, messaggio=Il Lupo reietto (Maria) non può attaccare il Assassino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[96]</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1381,7 +1482,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">[99] tipoLupo=Lupo reietto, nomeRuolo=Becchino, messaggio=Il Lupo reietto (Maria) non può attaccare il Becchino amato (Giuseppe).
 Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[99]</td>
-<td class="success">0.003s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -1390,6 +1491,12 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <td class="success">testMessaggio(String, String, String)[9]</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">testMessaggioSuicidioCapoBranco()</td>
+<td class="failures">testMessaggioSuicidioCapoBranco()</td>
+<td class="failures">0.054s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
@@ -1401,7 +1508,7 @@ Avvisa l'Angelo custode (Erode) della sua morte.</td>
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 8 set 2026, 11:59:46</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 8 set 2026, 12:11:44</p>
 </div>
 </div>
 </body>
