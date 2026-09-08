@@ -2255,6 +2255,17 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
+    @Test public void testSuicidioCapoBrancoAmato()
+    {
+        String nomeAngelo = "Elia", nomeAmato = "Alice", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAmato, tipoLupo } });
+        segnalazioneAngeloCustode(nomeAmato);
+        String messaggio = "Il Capo branco amato (Alice) non può suicidarsi.\nAvvisa l'Angelo custode (Elia) della sua morte.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeAngelo);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
