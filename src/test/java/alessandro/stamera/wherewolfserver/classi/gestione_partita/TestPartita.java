@@ -1740,6 +1740,15 @@ public final class TestPartita
     }
 
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
+    public void testAttaccoLupoAmatoContadino(String tipoContadino, String tipoLupo, String messaggio)
+    {
+        String nomeLupo = "Iris", nomeVittima = "Filippo";
+        inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Asia", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
     public void testAttaccoLupiContadinoAmato(String tipoContadino, String tipoLupo, String messaggio)
     {
         String nomeLupo = "Iris", nomeVittima = "Filippo";
