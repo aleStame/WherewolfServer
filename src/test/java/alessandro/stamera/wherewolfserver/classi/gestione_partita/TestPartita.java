@@ -295,6 +295,16 @@ public final class TestPartita
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
+    @Test public void testAttaccoGiovaneLupoAmatoCapoBranco()
+    {
+        String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, "Giovane lupo" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        String messaggio =
+            "Il Capo branco (Maria) non può attaccare il Giovane lupo amato (Giuseppe).\nAvvisa l'Angelo custode (Erode) della sua morte.";
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
+    }
+
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
     public void testAttaccoLupiAmatoAngeloCustodeRomeizzato(String tipoLupo, String nomeRuolo, String messaggio)
     {
