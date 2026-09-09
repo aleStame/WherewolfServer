@@ -1414,6 +1414,13 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testAttaccoCapoBrancoGiovaneLupo()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"} });
+        verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
+    }
+
     @Test public void testSuicidioCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Antonio";
