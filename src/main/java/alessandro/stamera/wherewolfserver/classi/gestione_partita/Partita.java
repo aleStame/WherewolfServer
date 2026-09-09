@@ -124,8 +124,14 @@ public final class Partita
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
-           case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
+            case GIULIETTA_BECCATA ->
+            {
+                int posizione = -1;
+                for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isRomeo(getNomeGiocatoreVivo(i))) posizione = i;
+                doppiaEliminazione(nome, getNomeGiocatoreVivo(posizione));
+            }
         }
     }
 
