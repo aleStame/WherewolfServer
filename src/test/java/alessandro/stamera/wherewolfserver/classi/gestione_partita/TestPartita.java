@@ -2168,6 +2168,14 @@ public final class TestPartita
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
+    @Test public void testAttaccoGiovaneLupoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String[][] giocatori = new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"}, { "Willow", "Strega" } };
+        inizializzaPartita(giocatori);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
+    }
+
     @Test public void testAttaccoLupoBranco()
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
