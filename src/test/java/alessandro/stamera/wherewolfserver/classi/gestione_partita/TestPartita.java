@@ -2143,6 +2143,13 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testAttaccoGiovaneLupoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"} });
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
+    }
+
     @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro" })
     public void testAttaccoRomeoCapoBranco(String nomeRuolo)
     {
