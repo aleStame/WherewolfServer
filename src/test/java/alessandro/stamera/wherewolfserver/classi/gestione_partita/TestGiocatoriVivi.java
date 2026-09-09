@@ -92,8 +92,8 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(giocatori[0][0], esito);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO" })
-    public void testAttaccoAssassinoAmatoAngeloCustodeRomeo(String nomeRuolo, EsitoAttacco esito)
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Giullare", "Capo branco" })
+    public void testAttaccoAssassinoAmatoAngeloCustodeRomeo(String nomeRuolo)
     {
         String nomeVittima = "Cristian", nomeAngelo = "Lucio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Carmine", "Assassino" }, { nomeAngelo, "Angelo custode" } });
@@ -101,8 +101,8 @@ public final class TestGiocatoriVivi
         verificaAssassinioAmato(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO" })
-    public void testAttaccoAssassinoAmatoAngeloCustodeStregato(String nomeRuolo, EsitoAttacco esito)
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Giullare", "Capo branco" })
+    public void testAttaccoAssassinoAmatoAngeloCustodeStregato(String nomeRuolo)
     {
         String nomeVittima = "Cristian", nomeAngelo = "Lucio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Carmine", "Assassino" }, { nomeAngelo, "Angelo custode" } });
@@ -245,11 +245,11 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiAngeloCustodeStregato(String tipoLupo)
     {
-        /*String nome = "Gregorio";
+        String nome = "Gregorio";
         inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Giuliano", tipoLupo } });
         giocatori.protezioneStrega(nome);
         verificaVero(giocatori.isStregato(nome));
-        verificaAttaccoLupoFallito(tipoLupo, nome);*/
+        verificaAttaccoLupoFallito(tipoLupo, nome);
     }
 
     @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore" })

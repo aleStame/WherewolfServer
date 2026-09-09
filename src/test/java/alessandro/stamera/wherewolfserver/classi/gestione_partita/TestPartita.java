@@ -1470,7 +1470,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        //romeizzazione(nomeRomeo);
+        romeizzazione(nomeRomeo);
         verificaAttaccoVampiroRiuscito(nomeGiulietta);
         verificaAttaccoAssassino(nomeGiulietta);
         verificaNonEliminati(nomeRomeo);
@@ -1629,7 +1629,7 @@ public final class TestPartita
             { "Rosalba", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        //romeizzazione(nomePrete);
+        romeizzazione(nomePrete);
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
     }
 
@@ -1676,7 +1676,7 @@ public final class TestPartita
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
         inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
-        //romeizzazione(nomeVampiro);
+        romeizzazione(nomeVampiro);
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
 
@@ -1708,7 +1708,7 @@ public final class TestPartita
             { "Luca", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        //romeizzazione(nomeNosferatu);
+        romeizzazione(nomeNosferatu);
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
 
@@ -1899,7 +1899,7 @@ public final class TestPartita
     {
         String nomeRomeo = "Piero";
         inizializzaPartita(new String[][] { { nomeRomeo, "Angelo custode" }, { "Alberto", "Giulietta" } });
-        //romeizzazione(nomeRomeo);
+        romeizzazione(nomeRomeo);
         verificaControlloVeggente(nomeRomeo, BIANCA);
         //verificaVero(partita.isRomeo(nomeRomeo));
     }
@@ -2311,6 +2311,27 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeAmato)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeAngelo);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta",
+            "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
+            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore",
+            "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testMorteRomeoGiuliettaCapoBranco(String nomeRuolo)
+    {
+        String nomeRomeo = "Antonio", nomeGiulietta = "Giulia", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" }, { "Raffaele", tipoLupo } });
+        romeizzazione(nomeRomeo);
+        attaccoLupi(tipoLupo, nomeGiulietta);
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
