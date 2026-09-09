@@ -295,6 +295,16 @@ public final class TestPartita
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
+    @Test public void testAttaccoGiovaneLupoAmatoCapoBranco()
+    {
+        String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, "Giovane lupo" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        String messaggio =
+            "Il Capo branco (Maria) non può attaccare il Giovane lupo amato (Giuseppe).\nAvvisa l'Angelo custode (Erode) della sua morte.";
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
+    }
+
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
     public void testAttaccoLupiAmatoAngeloCustodeRomeizzato(String tipoLupo, String nomeRuolo, String messaggio)
     {
@@ -647,16 +657,6 @@ public final class TestPartita
         verificaEliminazione(nomePazzo);
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima))
             .withMessage("Il Pazzo è morto. L'attacco dei lupi non può essere eseguito.");
-        verificaNonEliminati(nomeVittima);
-    }
-
-    @ParameterizedTest @CsvSource({ "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void attaccoAltriLupi(String tipoLupo)
-    {
-        String lupoAttaccante = "Capo branco", nomeVittima = "Mattia";
-        inizializzaPartita(new String[][] { { "Andrea", lupoAttaccante }, { nomeVittima, tipoLupo } });
-        attaccoLupi(lupoAttaccante, nomeVittima);
-        terminaNotte();
         verificaNonEliminati(nomeVittima);
     }
 
@@ -2143,6 +2143,13 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testAttaccoGiovaneLupoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"} });
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
+    }
+
     @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro" })
     public void testAttaccoRomeoCapoBranco(String nomeRuolo)
     {
@@ -2153,12 +2160,28 @@ public final class TestPartita
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
+    @Test public void testAttaccoGiovaneLupoRomeoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String[][] giocatori = new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo" }, { "Laura", "Giulietta" } };
+        inizializzaPartita(giocatori);
+        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
+    }
+
     @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro" })
     public void testAttaccoStregatoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         String[][] giocatori =
             new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Willow", "Strega" } };
+        inizializzaPartita(giocatori);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
+    }
+
+    @Test public void testAttaccoGiovaneLupoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String[][] giocatori = new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"}, { "Willow", "Strega" } };
         inizializzaPartita(giocatori);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }

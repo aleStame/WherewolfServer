@@ -346,7 +346,7 @@ public final class Partita
         if(isPotereBracconiereUtilizzato()) gestisciPotereBracconiere(nome);
         else if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
-        else if(!vivi.isLupo(nome)) gestisciEccezioneCacciatoreProtetto(nome);
+        else gestisciEccezioneCacciatoreProtetto(nome);
     }
 
     private void gestisciPotereBracconiere(String nome)
