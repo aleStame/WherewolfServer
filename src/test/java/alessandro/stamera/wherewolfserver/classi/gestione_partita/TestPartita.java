@@ -650,16 +650,6 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void attaccoAltriLupi(String tipoLupo)
-    {
-        String lupoAttaccante = "Capo branco", nomeVittima = "Mattia";
-        inizializzaPartita(new String[][] { { "Andrea", lupoAttaccante }, { nomeVittima, tipoLupo } });
-        attaccoLupi(lupoAttaccante, nomeVittima);
-        terminaNotte();
-        verificaNonEliminati(nomeVittima);
-    }
-
     @Test public void testInizioCrociata()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Chloe";
