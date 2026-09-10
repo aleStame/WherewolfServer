@@ -184,7 +184,7 @@ public final class Giocatore
     public EsitoAttacco vampirizzazione()
     {
         EsitoAttacco esito = getRisultatoVampirizzazione();
-        if(esito == RIUSCITO) trasformaVampiro();
+        if(esito == RIUSCITO || esito == GIULIETTA_BECCATA) trasformaVampiro();
         return esito;
     }
 
