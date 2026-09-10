@@ -2348,9 +2348,34 @@ public final class TestPartita
     public void testMorteRomeoGiuliettaAmataCapoBranco(String nomeRuolo)
     {
         String nomeRomeo = "Antonio", nomeGiulietta = "Giulia", tipoLupo = "Capo branco";
-        inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" }, { "Raffaele", tipoLupo }, { "Angelo", "Angelo custode" } });
+        String[][] giocatori =
+            new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" }, { "Raffaele", tipoLupo }, { "Angelo", "Angelo custode" } };
+        inizializzaPartita(giocatori);
         romeizzazione(nomeRomeo);
         segnalazioneAngeloCustode(nomeRomeo);
+        attaccoLupi(tipoLupo, nomeGiulietta);
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Eremita", "Ghoul",
+            "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testMorteRomeoGiuliettaStregataCapoBranco(String nomeRuolo)
+    {
+        String nomeRomeo = "Antonio", nomeGiulietta = "Giulia", tipoLupo = "Capo branco";
+        String[][] giocatori =
+            new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" }, { "Raffaele", tipoLupo }, { "Angelo", "Strega" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeRomeo);
+        protezioneStrega(nomeRomeo);
         attaccoLupi(tipoLupo, nomeGiulietta);
         terminaNotte();
         verificaEliminati(nomeRomeo, nomeGiulietta);
