@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testMorteRomeoGiuliettaAmataCapoBranco riuscito">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: correzione dei nomi dei metodi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,15 +218,7 @@
       <workItem from="1788859890995" duration="5458000" />
       <workItem from="1788956439250" duration="2437000" />
       <workItem from="1789031248956" duration="1215000" />
-      <workItem from="1789032819213" duration="280000" />
-    </task>
-    <task id="LOCAL-00663" summary="VERDE: testUtilizzoPotereBracconiereCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788795632438</created>
-      <option name="number" value="00663" />
-      <option name="presentableId" value="LOCAL-00663" />
-      <option name="project" value="LOCAL" />
-      <updated>1788795632438</updated>
+      <workItem from="1789032819213" duration="1423000" />
     </task>
     <task id="LOCAL-00664" summary="REFACTORING: definizione del metodo isPotereBracconiereUtilizzato">
       <option name="closed" value="true" />
@@ -624,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789032327384</updated>
     </task>
-    <option name="localTasksCounter" value="712" />
+    <task id="LOCAL-00712" summary="VERDE DIRETTO: testMorteRomeoGiuliettaStregataCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1789033356713</created>
+      <option name="number" value="00712" />
+      <option name="presentableId" value="LOCAL-00712" />
+      <option name="project" value="LOCAL" />
+      <updated>1789033356715</updated>
+    </task>
+    <option name="localTasksCounter" value="713" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isSuicidio" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
     <MESSAGE value="ROSSO: testGildataContadinoDopoLupizzazione non riuscito" />
     <MESSAGE value="VERDE: testGildataContadinoDopoLupizzazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLupizzazioneContadino riuscito" />
@@ -667,6 +653,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteRomeoGiuliettaAmataCapoBranco riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMorteRomeoGiuliettaAmataCapoBranco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testMorteRomeoGiuliettaStregataCapoBranco riuscito" />
+    <MESSAGE value="REFACTORING: correzione dei nomi dei metodi" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: correzione dei nomi dei metodi" />
   </component>
 </project>

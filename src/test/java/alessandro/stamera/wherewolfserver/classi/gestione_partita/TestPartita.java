@@ -2345,7 +2345,7 @@ public final class TestPartita
             "Vampiro"
         }
     )
-    public void testMorteRomeoGiuliettaAmataCapoBranco(String nomeRuolo)
+    public void testMorteRomeoAmatoGiuliettaCapoBranco(String nomeRuolo)
     {
         String nomeRomeo = "Antonio", nomeGiulietta = "Giulia", tipoLupo = "Capo branco";
         String[][] giocatori =
@@ -2368,7 +2368,7 @@ public final class TestPartita
             "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
         }
     )
-    public void testMorteRomeoGiuliettaStregataCapoBranco(String nomeRuolo)
+    public void testMorteRomeoStregatoGiuliettaCapoBranco(String nomeRuolo)
     {
         String nomeRomeo = "Antonio", nomeGiulietta = "Giulia", tipoLupo = "Capo branco";
         String[][] giocatori =
