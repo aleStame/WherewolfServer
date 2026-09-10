@@ -24,9 +24,11 @@ public final class Giulietta extends Amanti
 
     @Override public EsitoAttacco gildata() { return FALLITO; }
 
-    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return GIULIETTA_BECCATA; }
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return getEsitoAttaccoDefault(); }
 
-    @Override public EsitoAttacco vampirizzazione() { return GIULIETTA_BECCATA; }
+    @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoDefault(); }
+
+    private EsitoAttacco getEsitoAttaccoDefault() { return GIULIETTA_BECCATA; }
 
     public static Ruolo getInstance() { return new Giulietta(); }
 
