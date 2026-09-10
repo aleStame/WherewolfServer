@@ -2334,6 +2334,28 @@ public final class TestPartita
         verificaEliminati(nomeRomeo, nomeGiulietta);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Eremita", "Ghoul", "Giovane lupo",
+            "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
+            "Vampiro"
+        }
+    )
+    public void testMorteRomeoGiuliettaAmataCapoBranco(String nomeRuolo)
+    {
+        String nomeRomeo = "Antonio", nomeGiulietta = "Giulia", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" }, { "Raffaele", tipoLupo }, { "Angelo", "Angelo custode" } });
+        romeizzazione(nomeRomeo);
+        segnalazioneAngeloCustode(nomeRomeo);
+        attaccoLupi(tipoLupo, nomeGiulietta);
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
