@@ -126,12 +126,7 @@ public final class Partita
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
-            case GIULIETTA_BECCATA ->
-            {
-                int posizione = -1;
-                for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isRomeo(getNomeGiocatoreVivo(i))) posizione = i;
-                doppiaEliminazione(nome, getNomeGiocatoreVivo(posizione));
-            }
+            case GIULIETTA_BECCATA -> doppiaEliminazione(nome, getNomeRomeo());
         }
     }
 
@@ -249,6 +244,13 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private String getNomeRomeo()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isRomeo(getNomeGiocatoreVivo(i))) posizione = i;
+        return getNomeGiocatoreVivo(posizione);
     }
 
     private void eliminaPerdenteBallottaggio()

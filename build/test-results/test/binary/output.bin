@@ -1278,25 +1278,25 @@ Manfredi
 á8 	Vanessa
 á8 Alessandro
 á8 Mario
-§: Steve
-§: 	Vanessa
-§: Alessandro
-§: Mario
-Ì= Ï12:05:16.919 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-Ì= õ12:05:18.306 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
-Ì= 
-Ì= (  .   ____          _            __ _ _
-Ì= ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-Ì= *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-Ì= + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-Ì= *  '  |____| .__|_| |_|_| |_\__, | / / / /
-Ì= ) =========|_|==============|___/=/_/_/_/
-Ì= 
-Ì= , :: Spring Boot ::                (v3.3.1)
-Ì= 
-Ì= ˘2026-09-10T12:05:21.194+02:00  INFO 14964 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 14964 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\WherewolfServer)
-Ì= ∞2026-09-10T12:05:21.200+02:00  INFO 14964 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
-Ì= ô2026-09-10T12:05:32.180+02:00  INFO 14964 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-Ì= Ñ2026-09-10T12:05:32.181+02:00  INFO 14964 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-Ì= ç2026-09-10T12:05:32.195+02:00  INFO 14964 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
-Ì= ∏2026-09-10T12:05:32.549+02:00  INFO 14964 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 13.491 seconds (process running for 89.199)
+•: Steve
+•: 	Vanessa
+•: Alessandro
+•: Mario
+Ó= Ï18:01:35.202 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [alessandro.stamera.wherewolfserver.controller.TestUtenteController]: TestUtenteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Ó= õ18:01:36.514 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration alessandro.stamera.wherewolfserver.WherewolfServerApplication for test class alessandro.stamera.wherewolfserver.controller.TestUtenteController
+Ó= 
+Ó= (  .   ____          _            __ _ _
+Ó= ) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Ó= *( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Ó= + \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Ó= *  '  |____| .__|_| |_|_| |_\__, | / / / /
+Ó= ) =========|_|==============|___/=/_/_/_/
+Ó= 
+Ó= , :: Spring Boot ::                (v3.3.1)
+Ó= 
+Ó= ˘2026-09-10T18:01:40.307+02:00  INFO 21364 --- [    Test worker] a.s.w.controller.TestUtenteController    : Starting TestUtenteController using Java 21.0.3 with PID 21364 (started by SandrettoFX in C:\Users\SandrettoFX\IdeaProjects\WherewolfServer)
+Ó= ∞2026-09-10T18:01:40.336+02:00  INFO 21364 --- [    Test worker] a.s.w.controller.TestUtenteController    : No active profile set, falling back to 1 default profile: "default"
+Ó= ô2026-09-10T18:01:47.647+02:00  INFO 21364 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+Ó= Ñ2026-09-10T18:01:47.648+02:00  INFO 21364 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+Ó= ç2026-09-10T18:01:47.660+02:00  INFO 21364 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+Ó= ∏2026-09-10T18:01:47.805+02:00  INFO 21364 --- [    Test worker] a.s.w.controller.TestUtenteController    : Started TestUtenteController in 10.789 seconds (process running for 76.568)

@@ -36,6 +36,8 @@ public final class TestGiulietta
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupi(String nomeRuolo) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nomeRuolo))).isEqualTo(GIULIETTA_BECCATA); }
 
+    @Test public void testAttaccoVampiro() { assertThat(ruolo.vampirizzazione()).isEqualTo(GIULIETTA_BECCATA); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
 }
