@@ -17,7 +17,7 @@ public final class TestGiulietta
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
+    @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
@@ -35,9 +35,11 @@ public final class TestGiulietta
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isFalse(); }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupi(String nomeRuolo) { verificaGiuliettaBeccata(ruolo.attaccoLupi(FACTORY.getRuolo(nomeRuolo))); }
+    public void testAttaccoLupi(String nomeRuolo) { verificaGiuliettaBeccata(ruolo.attaccoLupi(getRuolo(nomeRuolo))); }
 
     @Test public void testAttaccoVampiro() { verificaGiuliettaBeccata(ruolo.vampirizzazione()); }
+
+    private Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private void verificaGiuliettaBeccata(EsitoAttacco esito) { assertThat(esito).isEqualTo(GIULIETTA_BECCATA); }
 
