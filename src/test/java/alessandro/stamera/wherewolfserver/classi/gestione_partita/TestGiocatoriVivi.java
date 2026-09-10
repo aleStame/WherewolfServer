@@ -735,17 +735,20 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino normale", "Ghoul", "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna",
-            "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
+            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO",
+            "Cacciatore, RIUSCITO", "Capo gilda, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Contadino eroe, RIUSCITO",
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino normale, RIUSCITO", "Ghoul, RIUSCITO", "Giulietta, GIULIETTA_BECCATA",
+            "Giullare, RIUSCITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Inquisitore, RIUSCITO", "Mercante, RIUSCITO",
+            "Monaco, RIUSCITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
+            "Prete, RIUSCITO", "Spia, RIUSCITO", "Templare, RIUSCITO"
         }
     )
-    public void testVampirizzazioneRiuscita(String nomeRuolo)
+    public void testVampirizzazioneRiuscita(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { "Paolo", "Vampiro" }, { nome, nomeRuolo } });
-        verificaAttaccoVampiro(nome, RIUSCITO);
+        verificaAttaccoVampiro(nome, esito);
         verificaVero(isProgenieVampiro(nome));
     }
 
