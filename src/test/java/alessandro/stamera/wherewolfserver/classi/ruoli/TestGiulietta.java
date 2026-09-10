@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,9 +35,11 @@ public final class TestGiulietta
     @Test public void testAngeloCustode() { assertThat(ruolo.isAngeloCustode()).isFalse(); }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupi(String nomeRuolo) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nomeRuolo))).isEqualTo(GIULIETTA_BECCATA); }
+    public void testAttaccoLupi(String nomeRuolo) { verificaGiuliettaBeccata(ruolo.attaccoLupi(FACTORY.getRuolo(nomeRuolo))); }
 
-    @Test public void testAttaccoVampiro() { assertThat(ruolo.vampirizzazione()).isEqualTo(GIULIETTA_BECCATA); }
+    @Test public void testAttaccoVampiro() { verificaGiuliettaBeccata(ruolo.vampirizzazione()); }
+
+    private void verificaGiuliettaBeccata(EsitoAttacco esito) { assertThat(esito).isEqualTo(GIULIETTA_BECCATA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
