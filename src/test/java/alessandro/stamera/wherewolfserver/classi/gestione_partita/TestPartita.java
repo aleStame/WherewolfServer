@@ -2381,6 +2381,16 @@ public final class TestPartita
         verificaEliminati(nomeRomeo, nomeGiulietta);
     }
 
+    @Test public void testGuarigioneLupi()
+    {
+        String nomeLupo = "Giovanni";
+        inizializzaPartita(new String[][] { { "Aldo", "Assassino" }, { nomeLupo, "Capo branco" }, { "Giacomo", "Guaritore" } });
+        attaccoAssassino(nomeLupo);
+        guarisci(nomeLupo);
+        terminaNotte();
+        verificaNonEliminati(nomeLupo);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
