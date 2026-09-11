@@ -124,8 +124,9 @@ public final class Partita
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
-           case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
+            case GIULIETTA_BECCATA -> doppiaEliminazione(nome, getNomeRomeo());
         }
     }
 
@@ -243,6 +244,13 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private String getNomeRomeo()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isRomeo(getNomeGiocatoreVivo(i))) posizione = i;
+        return getNomeGiocatoreVivo(posizione);
     }
 
     private void eliminaPerdenteBallottaggio()
@@ -450,6 +458,13 @@ public final class Partita
             case MORTO -> gestioneMorteVampiro(nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeVampiro);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeVampiro);
+            case GIULIETTA_BECCATA ->
+            {
+                Giocatore giocatore = vivi.getGiocatore(getNomeRomeo());
+                giocatore.perdiProtezioni();
+                giocatore.annullaRomeizzazione();
+                if(giocatore.isStregato()) vivi.aggiungiProtezioneCreatureOmbra(getNomeRomeo());
+            }
         }
     }
 
