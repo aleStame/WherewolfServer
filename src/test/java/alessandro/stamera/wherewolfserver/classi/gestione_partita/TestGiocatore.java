@@ -794,6 +794,23 @@ public final class TestGiocatore
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Capo branco")), RIUSCITO);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testNoLadra(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaFalso(giocatore.isLadra());
+    }
+
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
 
     private boolean isVampiro() { return giocatore.isVampiro(); }

@@ -9,7 +9,6 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
-import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static java.util.Arrays.stream;
 
 public final class GiocatoriVivi extends Giocatori
