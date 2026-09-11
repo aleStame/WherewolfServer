@@ -349,8 +349,10 @@ public final class GiocatoriVivi extends Giocatori
     private void proteggiLadra()
     {
         Giocatore ladra = getGiocatoreLadra();
-        for(Ruolo ruolo : getCreatureOmbra()) if(!ladra.isProtezionePresente(ruolo)) ladra.aggiungiProtezione(ruolo);
+        for(Ruolo ruolo : getCreatureOmbra()) if(!isProtezionePresenteLadra(ruolo)) ladra.aggiungiProtezione(ruolo);
     }
+
+    private boolean isProtezionePresenteLadra(Ruolo ruolo) { return getGiocatoreLadra().isProtezionePresente(ruolo); }
 
     private Giocatore getGiocatoreLadra() { return getGiocatore(getPosizioneLadra()); }
 
