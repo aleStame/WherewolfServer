@@ -306,7 +306,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
-        if(isLadraPresente()) proteggiLadra();
+        aggiornaProtezioniLadra();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -345,6 +345,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
 
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
+
+    private void aggiornaProtezioniLadra() { if(isLadraPresente()) proteggiLadra(); }
 
     private void proteggiLadra()
     {
