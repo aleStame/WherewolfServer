@@ -1523,7 +1523,7 @@ public final class TestGiocatoriVivi
     {
         String nomeLadra = "Lucio", tipoLupo = "Capo branco";
         inizializzaGiocatori(new String[][] { { nomeLadra, "Ladra" }, { "Paola", tipoLupo } });
-        verificaAttaccoLupiFallito(nomeLadra, tipoLupo);
+        verificaAttaccoLupiFallito(tipoLupo, nomeLadra);
         verificaAttaccoLupoRiuscito(tipoLupo, nomeLadra);
     }
 

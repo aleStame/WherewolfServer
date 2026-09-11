@@ -9,6 +9,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
+import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static java.util.Arrays.stream;
 
 public final class GiocatoriVivi extends Giocatori
@@ -39,7 +40,10 @@ public final class GiocatoriVivi extends Giocatori
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
             case FALLITO ->
-                { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            {
+                if(getGiocatore(nome).getRuolo().isLadra()) getGiocatore(nome).perdiProtezioni();
+                else if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+            }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
                 { if(isProtezioneAngeloCustodeNonAttiva(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
@@ -302,6 +306,14 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getGiocatore(getNomeGiocatore(i)).getRuolo().isLadra())
+            posizione = i;
+        if(posizione != NON_TROVATO)
+        {
+            Giocatore ladra = getGiocatore(posizione);
+            for(Ruolo ruolo : getCreatureOmbra()) if(!ladra.isProtezionePresente(ruolo)) ladra.aggiungiProtezione(ruolo);
+        }
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
