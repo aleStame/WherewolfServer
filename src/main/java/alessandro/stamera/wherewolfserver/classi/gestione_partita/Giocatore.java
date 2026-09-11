@@ -240,7 +240,7 @@ public final class Giocatore
 
     public void annullaRomeizzazione() { setRomeo(false); }
 
-    public boolean isLadra() { return true; }
+    public boolean isLadra() { return ruolo.isLadra(); }
 
     private EsitoAttacco getRisultatoVampirizzazione()
     {
