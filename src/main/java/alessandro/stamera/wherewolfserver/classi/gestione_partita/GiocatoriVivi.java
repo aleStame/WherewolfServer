@@ -306,12 +306,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
-        int posizione = getPosizioneLadra();
-        if(isLadraPresente())
-        {
-            Giocatore ladra = getGiocatore(posizione);
-            for(Ruolo ruolo : getCreatureOmbra()) if(!ladra.isProtezionePresente(ruolo)) ladra.aggiungiProtezione(ruolo);
-        }
+        if(isLadraPresente()) proteggiLadra();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -350,6 +345,12 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
 
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
+
+    private void proteggiLadra()
+    {
+        Giocatore ladra = getGiocatore(getPosizioneLadra());
+        for(Ruolo ruolo : getCreatureOmbra()) if(!ladra.isProtezionePresente(ruolo)) ladra.aggiungiProtezione(ruolo);
+    }
 
     private boolean isLadraPresente() { return getPosizioneLadra() != NON_TROVATO; }
 
