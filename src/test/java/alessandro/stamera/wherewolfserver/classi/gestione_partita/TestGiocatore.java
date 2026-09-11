@@ -811,6 +811,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isLadra());
     }
 
+    @Test public void testLadra()
+    {
+        cambiaRuolo("Ladra");
+        verificaVero(giocatore.isLadra());
+    }
+
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
 
     private boolean isVampiro() { return giocatore.isVampiro(); }
