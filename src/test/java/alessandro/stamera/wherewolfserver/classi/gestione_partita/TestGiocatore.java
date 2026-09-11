@@ -11,11 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -808,14 +806,16 @@ public final class TestGiocatore
     public void testNoLadra(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isLadra());
+        verificaFalso(isLadra());
     }
 
     @Test public void testLadra()
     {
         cambiaRuolo("Ladra");
-        verificaVero(giocatore.isLadra());
+        verificaVero(isLadra());
     }
+
+    private boolean isLadra() { return giocatore.isLadra(); }
 
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
 
