@@ -306,9 +306,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getGiocatore(getNomeGiocatore(i)).getRuolo().isLadra())
-            posizione = i;
+        int posizione = getPosizioneLadra();
         if(posizione != NON_TROVATO)
         {
             Giocatore ladra = getGiocatore(posizione);
@@ -352,6 +350,14 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
 
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
+
+    private int getPosizioneLadra()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getGiocatore(getNomeGiocatore(i)).getRuolo().isLadra())
+            posizione = i;
+        return posizione;
+    }
 
     private void aggiornaProtezioni()
     {
