@@ -458,6 +458,13 @@ public final class Partita
             case MORTO -> gestioneMorteVampiro(nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeVampiro);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeVampiro);
+            case GIULIETTA_BECCATA ->
+            {
+                Giocatore giocatore = vivi.getGiocatore(getNomeRomeo());
+                giocatore.perdiProtezioni();
+                giocatore.annullaRomeizzazione();
+                if(giocatore.isStregato()) vivi.aggiungiProtezioneCreatureOmbra(getNomeRomeo());
+            }
         }
     }
 

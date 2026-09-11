@@ -30,7 +30,7 @@ public final class Giocatore
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
         cambiaFazione(NESSUNA);
-        setRomeo(false);
+        annullaRomeizzazione();
         stregato = false;
         setLupoExNonna(false);
         segnalatoBoia = false;
@@ -238,6 +238,8 @@ public final class Giocatore
 
     public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
 
+    public void annullaRomeizzazione() { setRomeo(false); }
+
     private EsitoAttacco getRisultatoVampirizzazione()
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
@@ -293,6 +295,7 @@ public final class Giocatore
             case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case GIULIETTA_BECCATA -> { if(isProgenieVampiro()) esito = RIUSCITO; }
         }
         return esito;
     }
