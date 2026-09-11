@@ -106,7 +106,7 @@ public final class TestGiocatore
             "Cappuccetto rosso, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO",
             "Contadino normale, RIUSCITO", "Eremita, FALLITO", "Ghoul, RIUSCITO", "Giovane lupo, MORTO", "Giulietta, RIUSCITO",
             "Giullare, RIUSCITO", "Goblin, FALLITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, FALLITO",
-            "Inquisitore, RIUSCITO", "Ladra, FALLITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
+            "Inquisitore, RIUSCITO", "Ladra, RIUSCITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
             "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
             "Negromante, FALLITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
             "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO", "Spia, RIUSCITO", "Strega, FALLITO", "Sensitiva, FALLITO",
