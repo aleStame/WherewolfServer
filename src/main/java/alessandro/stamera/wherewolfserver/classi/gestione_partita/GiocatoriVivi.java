@@ -39,7 +39,10 @@ public final class GiocatoriVivi extends Giocatori
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
             case FALLITO ->
-                { if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            {
+                if(isLadra(nome)) getGiocatore(nome).perdiProtezioni();
+                else if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+            }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
                 { if(isProtezioneAngeloCustodeNonAttiva(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
@@ -302,6 +305,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
+        aggiornaProtezioniLadra();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -340,6 +344,30 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isLupoExNonna(String nome) { return getGiocatore(nome).isLupoExNonna(); }
 
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
+
+    public boolean isLadra(String nome) { return getGiocatore(nome).isLadra(); }
+
+    private void aggiornaProtezioniLadra() { if(isLadraPresente()) proteggiLadra(); }
+
+    private void proteggiLadra()
+    {
+        for(Ruolo ruolo : getCreatureOmbra()) if(!isProtezionePresenteLadra(ruolo)) aggiungiProtezioneLadra(ruolo);
+    }
+
+    private boolean isProtezionePresenteLadra(Ruolo ruolo) { return getGiocatoreLadra().isProtezionePresente(ruolo); }
+
+    private void aggiungiProtezioneLadra(Ruolo ruolo) { getGiocatoreLadra().aggiungiProtezione(ruolo); }
+
+    private Giocatore getGiocatoreLadra() { return getGiocatore(getPosizioneLadra()); }
+
+    private boolean isLadraPresente() { return getPosizioneLadra() != NON_TROVATO; }
+
+    private int getPosizioneLadra()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLadra(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
 
     private void aggiornaProtezioni()
     {

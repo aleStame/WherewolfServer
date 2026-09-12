@@ -160,7 +160,6 @@ public final class Giocatore
     {
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
         else if(isGiocatoreProtetto(lupo)) esito = FALLITO;
-        System.out.println(esito);
         return esito;
     }
 
@@ -192,6 +191,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
         if(isNonMorto()) esito = RIUSCITO;
+        else if(!ruolo.isPrete() && tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         if(esito == RIUSCITO) trasformaPosseduto();
         return esito;
     }
@@ -239,6 +239,8 @@ public final class Giocatore
     public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
 
     public void annullaRomeizzazione() { setRomeo(false); }
+
+    public boolean isLadra() { return ruolo.isLadra(); }
 
     private EsitoAttacco getRisultatoVampirizzazione()
     {

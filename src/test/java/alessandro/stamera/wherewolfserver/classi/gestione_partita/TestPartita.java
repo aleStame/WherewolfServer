@@ -2391,6 +2391,21 @@ public final class TestPartita
         verificaNonEliminati(nomeLupo);
     }
 
+    @Test public void testDoppioAttaccoLupiLadra()
+    {
+        String nomeLadra = "Lucio", tipoLupo = "Capo branco";
+        inizializzaPartita(new String[][] { { nomeLadra, "Ladra" }, { "Paola", tipoLupo } });
+        String messaggio =
+            "Impossible uccidere la Ladra (Lucio) perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi dell'attacco " +
+            "fallito.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeLadra)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeLadra);
+        attaccoLupi(tipoLupo, nomeLadra);
+        terminaNotte();
+        verificaEliminati(nomeLadra);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
