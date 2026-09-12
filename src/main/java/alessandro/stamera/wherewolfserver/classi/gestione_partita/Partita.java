@@ -352,6 +352,10 @@ public final class Partita
     private void nessunaEliminazione(String nomeLupo, String nome)
     {
         if(isPotereBracconiereUtilizzato()) gestisciPotereBracconiere(nome);
+        else if(vivi.isLadra(nome)) throw new IllegalStateException
+        (
+            "Impossible uccidere la Ladra (Lucio) perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi dell'attacco fallito."
+        );
         else if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
         else gestisciEccezioneCacciatoreProtetto(nome);

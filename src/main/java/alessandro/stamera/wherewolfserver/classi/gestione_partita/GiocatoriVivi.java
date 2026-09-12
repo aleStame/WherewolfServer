@@ -40,7 +40,7 @@ public final class GiocatoriVivi extends Giocatori
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
             case FALLITO ->
             {
-                if(getGiocatore(nome).getRuolo().isLadra()) getGiocatore(nome).perdiProtezioni();
+                if(isLadra(nome)) getGiocatore(nome).perdiProtezioni();
                 else if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
             }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
@@ -345,6 +345,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
 
+    public boolean isLadra(String nome) { return getGiocatore(nome).isLadra(); }
+
     private void aggiornaProtezioniLadra() { if(isLadraPresente()) proteggiLadra(); }
 
     private void proteggiLadra()
@@ -363,8 +365,7 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneLadra()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getGiocatore(getNomeGiocatore(i)).getRuolo().isLadra())
-            posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isLadra(getNomeGiocatore(i))) posizione = i;
         return posizione;
     }
 
