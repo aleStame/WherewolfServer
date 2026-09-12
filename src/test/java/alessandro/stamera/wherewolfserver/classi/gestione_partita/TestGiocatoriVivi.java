@@ -1410,10 +1410,10 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
 
-    @Test public void testAttaccoCapoBranco()
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Lupo del branco" }) public void testAttaccoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
         verificaAttaccoLupoRiuscito(tipoLupo, nomeVittima);
     }
 
