@@ -2136,10 +2136,10 @@ public final class TestPartita
         verificaEliminati(nome);
     }
 
-    @Test public void testAttaccoCapoBranco()
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Lupo del branco" }) public void testAttaccoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
@@ -2150,7 +2150,7 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro", "Giulietta" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro", "Giulietta", "Lupo del branco" })
     public void testAttaccoRomeoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
@@ -2168,7 +2168,7 @@ public final class TestPartita
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro", "Giulietta" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro", "Giulietta", "Lupo del branco" })
     public void testAttaccoStregatoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
@@ -2404,6 +2404,16 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomeLadra);
         terminaNotte();
         verificaEliminati(nomeLadra);
+    }
+
+    @Test public void testAttaccoCapoBrancoLupoBrancoAmato()
+    {
+        String tipoLupo = "Capo branco", nomeAmato = "Matteo", nomeAngelo = "Michele";
+        inizializzaPartita(new String[][]{ { "Andrea", tipoLupo }, { nomeAmato, "Lupo del branco" }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        String messaggio =
+            "Il Capo branco (Andrea) non può attaccare il Lupo del branco amato (Matteo).\nAvvisa l'Angelo custode (Michele) della sua morte.";
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngelo);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
