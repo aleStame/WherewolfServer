@@ -2146,8 +2146,8 @@ public final class TestPartita
     @Test public void testAttaccoCapoBrancoFallito()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Lupo del branco" } });
-        String messaggio = "Avvisa il Capo branco (Antonio) che non può attaccare il Lupo del branco (Damiano).";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Lupo reietto" } });
+        String messaggio = "Avvisa il Capo branco (Antonio) che non può attaccare il Lupo reietto (Damiano).";
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
