@@ -192,6 +192,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
         if(isNonMorto()) esito = RIUSCITO;
+        else if(tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         if(esito == RIUSCITO) trasformaPosseduto();
         return esito;
     }
