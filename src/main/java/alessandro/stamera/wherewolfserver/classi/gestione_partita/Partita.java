@@ -472,6 +472,7 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
+        System.out.println(vivi.passaPosseduto(nome));
         switch(vivi.passaPosseduto(nome))
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
@@ -744,7 +745,6 @@ public final class Partita
         String nome = ballottaggio.getNomeGiocatorePerdente();
         if(isEccezioneOratore(nome))
             throw new IllegalStateException("Il villaggio non ha trovato accordo su chi mandare al rogo: non viene bruciato nessuno!");
-        System.out.println(nome);
         eliminaPerdente(nome);
     }
 
