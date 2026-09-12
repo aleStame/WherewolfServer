@@ -2406,6 +2406,16 @@ public final class TestPartita
         verificaEliminati(nomeLadra);
     }
 
+    @Test public void testAttaccoCapoBrancoLupoBrancoAmato()
+    {
+        String tipoLupo = "Capo branco", nomeAmato = "Matteo", nomeAngelo = "Michele";
+        inizializzaPartita(new String[][]{ { "Andrea", tipoLupo }, { nomeAmato, "Lupo del branco" }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        String messaggio =
+            "Il Capo branco (Andrea) non può attaccare il Lupo del branco amato (Matteo).\nAvvisa l'Angelo custode (Michele) della sua morte.";
+        verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngelo);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
