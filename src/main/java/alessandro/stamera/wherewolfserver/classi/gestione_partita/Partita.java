@@ -364,6 +364,11 @@ public final class Partita
         (
             "Avvisa il Capo branco (" + nomeLupo + ") che non può attaccare il " + getNomeRuolo(nome) + " (" + nome + ")."
         );
+        else if(getGiocatore(nome).isCappuccettoRosso()) throw new IllegalArgumentException
+        (
+            "Fino a che la Nonna (" + vivi.getNomeNonna() + ") è in gioco, Cappuccetto Rosso (" + vivi.getNomeCappuccettoRosso() +
+            ") non può essere attaccata dai lupi.\nAvvisali dell'attacco fallito"
+        );
         else gestisciEccezioneCacciatoreProtetto(nome);
     }
 
