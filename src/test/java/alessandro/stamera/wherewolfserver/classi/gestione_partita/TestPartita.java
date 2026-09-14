@@ -2143,6 +2143,16 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
+    @Test public void testAttaccoCapoBrancoFallito()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Lupo reietto" } });
+        String messaggio = "Avvisa il Capo branco (Antonio) che non può attaccare il Lupo reietto (Damiano).";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     @Test public void testAttaccoGiovaneLupoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
