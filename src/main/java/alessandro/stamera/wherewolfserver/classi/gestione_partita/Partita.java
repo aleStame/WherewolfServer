@@ -360,8 +360,10 @@ public final class Partita
             );
         else if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
-        else if(getGiocatore(nome).getRuolo().isLupoReietto())
-            throw new IllegalArgumentException("Avvisa il Capo branco (" + nomeLupo + ") che non può attaccare il Lupo reietto (" + nome + ").");
+        else if(vivi.isLupo(nome) && !vivi.isStregato(nome) && !vivi.isRomeo(nome)) throw new IllegalArgumentException
+        (
+            "Avvisa il Capo branco (" + nomeLupo + ") che non può attaccare il " + getNomeRuolo(nome) + " (" + nome + ")."
+        );
         else gestisciEccezioneCacciatoreProtetto(nome);
     }
 

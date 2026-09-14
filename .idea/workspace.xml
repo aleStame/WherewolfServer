@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoCapoBranco riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoCapoBrancoFallito riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,22 +226,6 @@
       <workItem from="1789131951926" duration="10980000" />
       <workItem from="1789215996121" duration="866000" />
       <workItem from="1789372829622" duration="763000" />
-    </task>
-    <task id="LOCAL-00706" summary="VERDE DIRETTO: testAttaccoGiuliettaCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788960866541</created>
-      <option name="number" value="00706" />
-      <option name="presentableId" value="LOCAL-00706" />
-      <option name="project" value="LOCAL" />
-      <updated>1788960866541</updated>
-    </task>
-    <task id="LOCAL-00707" summary="ROSSO: testMorteRomeoGiuliettaCapoBranco non riuscito">
-      <option name="closed" value="true" />
-      <created>1788967026596</created>
-      <option name="number" value="00707" />
-      <option name="presentableId" value="LOCAL-00707" />
-      <option name="project" value="LOCAL" />
-      <updated>1788967026609</updated>
     </task>
     <task id="LOCAL-00708" summary="VERDE: testMorteRomeoGiuliettaCapoBranco riuscito">
       <option name="closed" value="true" />
@@ -621,7 +603,23 @@
       <option name="project" value="LOCAL" />
       <updated>1789374916426</updated>
     </task>
-    <option name="localTasksCounter" value="755" />
+    <task id="LOCAL-00755" summary="ROSSO: testAttaccoCapoBrancoFallito non riuscito">
+      <option name="closed" value="true" />
+      <created>1789375375540</created>
+      <option name="number" value="00755" />
+      <option name="presentableId" value="LOCAL-00755" />
+      <option name="project" value="LOCAL" />
+      <updated>1789375375540</updated>
+    </task>
+    <task id="LOCAL-00756" summary="VERDE: testAttaccoCapoBrancoFallito riuscito">
+      <option name="closed" value="true" />
+      <created>1789376274687</created>
+      <option name="number" value="00756" />
+      <option name="presentableId" value="LOCAL-00756" />
+      <option name="project" value="LOCAL" />
+      <updated>1789376274687</updated>
+    </task>
+    <option name="localTasksCounter" value="757" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,10 +658,10 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoLupoBrancoAmato riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoCapoBrancoFallito non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoCapoBrancoFallito riuscito" />
     <MESSAGE value="Merge branch 'feature/attaccoCapoBrancoAmato' into develop" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoCapoBrancoFallito non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoCapoBrancoFallito riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoCapoBrancoFallito riuscito" />
   </component>
 </project>
