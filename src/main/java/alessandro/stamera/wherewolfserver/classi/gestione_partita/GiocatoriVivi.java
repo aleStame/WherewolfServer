@@ -262,7 +262,10 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
-    public void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
+    public void aggiungiProtezioneCreatureOmbra(String nome)
+    {
+        for(Ruolo ruolo : getCreatureOmbra()) if(!isProtezionePresente(nome, ruolo)) aggiungiProtezione(nome, ruolo);
+    }
 
     public boolean isStregato(String nome) { return getGiocatore(nome).isStregato(); }
 
@@ -388,9 +391,10 @@ public final class GiocatoriVivi extends Giocatori
         return isProtezionePresente(getNomeGiocatore(getPosizioneLadra()), ruolo);
     }
 
-    private void aggiungiProtezioneLadra(Ruolo ruolo) { getGiocatoreLadra().aggiungiProtezione(ruolo); }
-
-    private Giocatore getGiocatoreLadra() { return getGiocatore(getPosizioneLadra()); }
+    private void aggiungiProtezioneLadra(Ruolo ruolo)
+    {
+        aggiungiProtezione(getNomeGiocatore(getPosizioneLadra()), ruolo);
+    }
 
     private boolean isLadraPresente() { return getPosizioneLadra() != NON_TROVATO; }
 
@@ -423,12 +427,7 @@ public final class GiocatoriVivi extends Giocatori
         return isProtezionePresente(getNomeCacciatore(), lupo.getRuolo()) && !lupo.isLupoExNonna();
     }
 
-    private void proteggiCacciatoreDaUltimoLupoBranco()
-    {
-        getGiocatoreCacciatore().aggiungiProtezione(getUltimoLupoRimasto());
-    }
-
-    private Giocatore getGiocatoreCacciatore() { return getGiocatore(getNomeCacciatore()); }
+    private void proteggiCacciatoreDaUltimoLupoBranco() { aggiungiProtezione(getNomeCacciatore(), getUltimoLupoRimasto()); }
 
     private Giocatore[] getLupiBranco()
     {
@@ -556,7 +555,10 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneNonna(posizione);
     }
 
-    private void aggiungiProtezioneNonna(int posizione) { getCappuccettoRosso().aggiungiProtezione(getRuolo(posizione)); }
+    private void aggiungiProtezioneNonna(int posizione)
+    {
+        aggiungiProtezione(getNomeCappuccettoRosso(), getRuolo(posizione));
+    }
 
     private Ruolo getRuolo(int posizione) { return getGiocatore(posizione).getRuolo(); }
 
@@ -842,6 +844,8 @@ public final class GiocatoriVivi extends Giocatori
     private Giocatore getGiocatore(int posizione) { return getGiocatore(getNomeGiocatore(posizione)); }
 
     private boolean isProtezionePresente(String nome, Ruolo ruolo) { return getGiocatore(nome).isProtezionePresente(ruolo); }
+
+    private void aggiungiProtezione(String nome, Ruolo ruolo) { getGiocatore(nome).aggiungiProtezione(ruolo); }
 
     private void perdiProtezione(String nome, Ruolo ruolo) { getGiocatore(nome).perdiProtezione(ruolo); }
 
