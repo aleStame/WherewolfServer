@@ -239,7 +239,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Paola", tipoLupo } });
         romeizzazione(nome);
-        verificaAttaccoLupoFallito(tipoLupo, nome);
+        verificaAttaccoLupiFallito(tipoLupo, nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -249,7 +249,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Giuliano", tipoLupo } });
         giocatori.protezioneStrega(nome);
         verificaVero(giocatori.isStregato(nome));
-        verificaAttaccoLupoFallito(tipoLupo, nome);
+        verificaAttaccoLupiFallito(tipoLupo, nome);
     }
 
     @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore" })
@@ -1380,7 +1380,7 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Tom";
         inizializzaGiocatori(new String[][] { { "Andrew", tipoLupo }, { nomeVittima, "Cacciatore" } });
-        verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -1410,7 +1410,8 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isLupoExNonna(nomeNonna));
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo reietto, FALLITO" })
+    @ParameterizedTest
+    @CsvSource({ "Cacciatore, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo reietto, FALLITO", "Lupo solitario, FALLITO" })
     public void testAttaccoCapoBranco(String nomeRuolo, EsitoAttacco esito)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
@@ -1502,7 +1503,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo" } });
         protezioneStrega(nomeVittima);
-        verificaAttaccoLupoFallito(tipoLupo, nomeVittima);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoGiuliettaCapoBranco()
@@ -1592,10 +1593,6 @@ public final class TestGiocatoriVivi
     private void verificaMortePostAttacco(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, MORTO);
-    }
-
-    private void verificaAttaccoLupoFallito(String nomeLupo, String nome) {
-        verificaAttaccoLupiFallito(nomeLupo, nome);
     }
 
     private void romeizzazione(String nome) { giocatori.romeizzazione(nome); }
