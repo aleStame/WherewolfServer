@@ -299,11 +299,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
-        if(isCappuccettoRossoPresente() && !isNonnaPresente())
-        {
-            String nomeCappuccettoRosso =  getNomeCappuccettoRosso();
-            for(Ruolo lupo : getLupi()) if(isProtezionePresente(nomeCappuccettoRosso, lupo)) perdiProtezione(nomeCappuccettoRosso, lupo);
-        }
+        if(isCappuccettoRossoPresente() && !isNonnaPresente()) aggiornaProtezioniCappuccettoRosso();
         aggiornaProtezioni();
     }
 
@@ -357,6 +353,12 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
 
     public boolean isLadra(String nome) { return getGiocatore(nome).isLadra(); }
+
+    private void aggiornaProtezioniCappuccettoRosso()
+    {
+        String nomeCappuccettoRosso =  getNomeCappuccettoRosso();
+        for(Ruolo lupo : getLupi()) if(isProtezionePresente(nomeCappuccettoRosso, lupo)) perdiProtezione(nomeCappuccettoRosso, lupo);
+    }
 
     private Ruolo[] getLupi()
     {
