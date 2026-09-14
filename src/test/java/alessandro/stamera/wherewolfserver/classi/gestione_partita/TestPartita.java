@@ -2432,6 +2432,19 @@ public final class TestPartita
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngelo);
     }
 
+    @Test public void testAttaccoLupiCappuccettoRossoConNonna()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Elisa";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Elena", "Nonna" }, { "Alessia", tipoLupo }, { "Alex", "Giovane lupo" } };
+        inizializzaPartita(giocatori);
+        String messaggio =
+            "Fino a che la Nonna (Elena) è in gioco, Cappuccetto Rosso (Elisa) non può essere attaccata dai lupi.\nAvvisali dell'attacco fallito";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
