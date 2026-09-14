@@ -311,7 +311,7 @@ public final class GiocatoriVivi extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
-        if(isCappuccettoNonnaPresenti()) for(Ruolo ruolo : getLupi()) aggiungiProtezioneCappuccettoRosso(ruolo);
+        if(isCappuccettoNonnaPresenti()) aggiungiProtezioneLupiCappuccettoRosso();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -352,6 +352,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
 
     public boolean isLadra(String nome) { return getGiocatore(nome).isLadra(); }
+
+    private void aggiungiProtezioneLupiCappuccettoRosso() { for(Ruolo ruolo : getLupi()) aggiungiProtezioneCappuccettoRosso(ruolo); }
 
     private void aggiungiProtezioneCappuccettoRosso(Ruolo ruolo)
     {

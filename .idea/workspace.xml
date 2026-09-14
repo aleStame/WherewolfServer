@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo aggiungiProtezione">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,14 +228,6 @@
       <workItem from="1789131951926" duration="10980000" />
       <workItem from="1789215996121" duration="866000" />
       <workItem from="1789372829622" duration="763000" />
-    </task>
-    <task id="LOCAL-00719" summary="VERDE: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1789057535037</created>
-      <option name="number" value="00719" />
-      <option name="presentableId" value="LOCAL-00719" />
-      <option name="project" value="LOCAL" />
-      <updated>1789057535038</updated>
     </task>
     <task id="LOCAL-00720" summary="REFACTORING: definizione del metodo verificaGiuliettaBeccata">
       <option name="closed" value="true" />
@@ -621,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789398186257</updated>
     </task>
-    <option name="localTasksCounter" value="768" />
+    <task id="LOCAL-00768" summary="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1789398672373</created>
+      <option name="number" value="00768" />
+      <option name="presentableId" value="LOCAL-00768" />
+      <option name="project" value="LOCAL" />
+      <updated>1789398672373</updated>
+    </task>
+    <option name="localTasksCounter" value="769" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testNoLadra non riuscito" />
     <MESSAGE value="VERDE: testNoLadra riuscito" />
     <MESSAGE value="VERDE DIRETTO: testLadra riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isLadra" />
@@ -664,6 +663,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo gestisciProtezioniCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo perdiProtezioneCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiProtezione" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso" />
   </component>
 </project>
