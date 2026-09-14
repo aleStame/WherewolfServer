@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getLupi">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isProtezionePresente">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -454,14 +454,6 @@
       <workItem from="1789215996121" duration="866000" />
       <workItem from="1789372829622" duration="763000" />
     </task>
-    <task id="LOCAL-00712" summary="VERDE DIRETTO: testMorteRomeoGiuliettaStregataCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1789033356713</created>
-      <option name="number" value="00712" />
-      <option name="presentableId" value="LOCAL-00712" />
-      <option name="project" value="LOCAL" />
-      <updated>1789033356715</updated>
-    </task>
     <task id="LOCAL-00713" summary="REFACTORING: correzione dei nomi dei metodi">
       <option name="closed" value="true" />
       <created>1789034458605</created>
@@ -846,7 +838,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789393974839</updated>
     </task>
-    <option name="localTasksCounter" value="761" />
+    <task id="LOCAL-00761" summary="REFACTORING: definizione del metodo isProtezionePresente">
+      <option name="closed" value="true" />
+      <created>1789395233763</created>
+      <option name="number" value="00761" />
+      <option name="presentableId" value="LOCAL-00761" />
+      <option name="project" value="LOCAL" />
+      <updated>1789395233763</updated>
+    </task>
+    <option name="localTasksCounter" value="762" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -864,7 +864,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneLadra" />
     <MESSAGE value="REFACTORING: definizione del metodo isLadraPresente" />
     <MESSAGE value="REFACTORING: definizione del metodo proteggiLadra" />
     <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreLadra" />
@@ -889,6 +888,7 @@
     <MESSAGE value="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupiCappuccettoRossoConNonna riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getLupi" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getLupi" />
+    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isProtezionePresente" />
   </component>
 </project>
