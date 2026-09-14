@@ -2143,11 +2143,17 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
-    @Test public void testAttaccoCapoBrancoFallito()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "'Lupo reietto', 'Avvisa il Capo branco (Antonio) che non può attaccare il Lupo reietto (Damiano).'",
+            "'Lupo solitario', 'Avvisa il Capo branco (Antonio) che non può attaccare il Lupo solitario (Damiano).'"
+        }
+    )
+    public void testAttaccoCapoBrancoFallito(String nomeRuolo, String messaggio)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Lupo reietto" } });
-        String messaggio = "Avvisa il Capo branco (Antonio) che non può attaccare il Lupo reietto (Damiano).";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo } });
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
