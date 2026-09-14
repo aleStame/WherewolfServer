@@ -1531,7 +1531,9 @@ public final class TestGiocatoriVivi
     @Test public void testAttaccoLupiCappuccettoRossoConNonna()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Elisa";
-        inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Elena", "Nonna" }, { "Alessia", tipoLupo } });
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Elena", "Nonna" }, { "Alessia", tipoLupo }, { "Alex", "Giovane lupo" } };
+        inizializzaGiocatori(giocatori);
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 

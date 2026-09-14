@@ -34,6 +34,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
         if(isPotereBracconiereUtilizzato()) esito = FALLITO;
+        System.out.println(esito);
         switch(esito)
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
@@ -298,6 +299,17 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
+        if(isCappuccettoRossoPresente() && !isNonnaPresente())
+        {
+            Giocatore cappuccetto = getCappuccettoRosso();
+            for(Ruolo lupo : stream(getLupiBranco()).map(Giocatore::getRuolo).toList().toArray(new Ruolo[0]))
+                if(cappuccetto.isProtezionePresente(lupo)) cappuccetto.perdiProtezione(lupo);
+            if(isLupoSolitarioPresente())
+            {
+                Ruolo solitario = getGiocatore(getPosizioneLupoSolitario()).getRuolo();
+                if(cappuccetto.isProtezionePresente(solitario)) cappuccetto.perdiProtezione(solitario);
+            }
+        }
         aggiornaProtezioni();
     }
 
@@ -306,6 +318,8 @@ public final class GiocatoriVivi extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
+        if(isCappuccettoNonnaPresenti()) for(int i = 0; i < getNumeroGiocatori(); i++) if(isLupo(i))
+            getCappuccettoRosso().aggiungiProtezione(getRuolo(i));
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
