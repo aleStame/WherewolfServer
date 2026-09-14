@@ -302,7 +302,7 @@ public final class GiocatoriVivi extends Giocatori
         if(isCappuccettoRossoPresente() && !isNonnaPresente())
         {
             Giocatore cappuccetto = getCappuccettoRosso();
-            for(Ruolo lupo : getLupi()) if(cappuccetto.isProtezionePresente(lupo)) cappuccetto.perdiProtezione(lupo);
+            for(Ruolo lupo : getLupi()) if(isProtezionePresente(getNomeCappuccettoRosso(), lupo)) cappuccetto.perdiProtezione(lupo);
         }
         aggiornaProtezioni();
     }
@@ -315,7 +315,7 @@ public final class GiocatoriVivi extends Giocatori
         if(isCappuccettoNonnaPresenti())
         {
             Giocatore cappuccetto = getCappuccettoRosso();
-            for(Ruolo ruolo : getLupi()) if(!cappuccetto.isProtezionePresente(ruolo)) cappuccetto.aggiungiProtezione(ruolo);
+            for(Ruolo ruolo : getLupi()) if(!isProtezionePresente(getNomeCappuccettoRosso(), ruolo)) cappuccetto.aggiungiProtezione(ruolo);
         }
     }
 
@@ -372,7 +372,10 @@ public final class GiocatoriVivi extends Giocatori
         for(Ruolo ruolo : getCreatureOmbra()) if(!isProtezionePresenteLadra(ruolo)) aggiungiProtezioneLadra(ruolo);
     }
 
-    private boolean isProtezionePresenteLadra(Ruolo ruolo) { return getGiocatoreLadra().isProtezionePresente(ruolo); }
+    private boolean isProtezionePresenteLadra(Ruolo ruolo)
+    {
+        return isProtezionePresente(getNomeGiocatore(getPosizioneLadra()), ruolo);
+    }
 
     private void aggiungiProtezioneLadra(Ruolo ruolo) { getGiocatoreLadra().aggiungiProtezione(ruolo); }
 
@@ -406,7 +409,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isProtezioneEliminabile(Giocatore lupo)
     {
-        return getGiocatoreCacciatore().isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna();
+        return isProtezionePresente(getNomeCacciatore(), lupo.getRuolo()) && !lupo.isLupoExNonna();
     }
 
     private void proteggiCacciatoreDaUltimoLupoBranco()
@@ -502,7 +505,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isCappuccettoRossoProtetto(String nome, Ruolo attaccante)
     {
-        return isCappuccettoRosso(nome) && getGiocatore(nome).isProtezionePresente(attaccante);
+        return isCappuccettoRosso(nome) && isProtezionePresente(nome, attaccante);
     }
 
     private boolean isCappuccettoRosso(String nome) { return getGiocatore(nome).isCappuccettoRosso(); }
@@ -826,5 +829,7 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isGuardia(int posizione) { return isGuardia(getNomeGiocatore(posizione)); }
 
     private Giocatore getGiocatore(int posizione) { return getGiocatore(getNomeGiocatore(posizione)); }
+
+    private boolean isProtezionePresente(String nome, Ruolo ruolo) { return getGiocatore(nome).isProtezionePresente(ruolo); }
 
 }
