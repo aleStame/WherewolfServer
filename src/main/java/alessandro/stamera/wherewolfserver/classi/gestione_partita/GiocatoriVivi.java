@@ -302,13 +302,7 @@ public final class GiocatoriVivi extends Giocatori
         if(isCappuccettoRossoPresente() && !isNonnaPresente())
         {
             Giocatore cappuccetto = getCappuccettoRosso();
-            for(Ruolo lupo : stream(getLupiBranco()).map(Giocatore::getRuolo).toList().toArray(new Ruolo[0]))
-                if(cappuccetto.isProtezionePresente(lupo)) cappuccetto.perdiProtezione(lupo);
-            if(isLupoSolitarioPresente())
-            {
-                Ruolo solitario = getGiocatore(getPosizioneLupoSolitario()).getRuolo();
-                if(cappuccetto.isProtezionePresente(solitario)) cappuccetto.perdiProtezione(solitario);
-            }
+            for(Ruolo lupo : getLupi()) if(cappuccetto.isProtezionePresente(lupo)) cappuccetto.perdiProtezione(lupo);
         }
         aggiornaProtezioni();
     }
@@ -318,8 +312,11 @@ public final class GiocatoriVivi extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
-        if(isCappuccettoNonnaPresenti()) for(int i = 0; i < getNumeroGiocatori(); i++) if(isLupo(i))
-            getCappuccettoRosso().aggiungiProtezione(getRuolo(i));
+        if(isCappuccettoNonnaPresenti())
+        {
+            Giocatore cappuccetto = getCappuccettoRosso();
+            for(Ruolo ruolo : getLupi()) if(!cappuccetto.isProtezionePresente(ruolo)) cappuccetto.aggiungiProtezione(ruolo);
+        }
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -360,6 +357,13 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isProgenieVampiro(String nome) { return getGiocatore(nome).isProgenieVampiro(); }
 
     public boolean isLadra(String nome) { return getGiocatore(nome).isLadra(); }
+
+    private Ruolo[] getLupi()
+    {
+        List<Ruolo> ruoli = new ArrayList<>(stream(getLupiBranco()).map(Giocatore::getRuolo).toList());
+        if(isLupoSolitarioPresente()) ruoli.add(getRuolo(getPosizioneLupoSolitario()));
+        return ruoli.toArray(new Ruolo[0]);
+    }
 
     private void aggiornaProtezioniLadra() { if(isLadraPresente()) proteggiLadra(); }
 
