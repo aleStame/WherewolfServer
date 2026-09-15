@@ -1,7 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-public class EccezioneRuoloProtetto extends IllegalArgumentException {
-    public EccezioneRuoloProtetto(String nomeVittima) {
-        super("");
+public final class EccezioneRuoloProtetto extends IllegalArgumentException
+{
+    public EccezioneRuoloProtetto(String nomeVittima)
+    {
+        super
+        (
+            "Impossible uccidere la Ladra (" + nomeVittima + ") perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi " +
+            "dell'attacco fallito."
+        );
     }
 }
