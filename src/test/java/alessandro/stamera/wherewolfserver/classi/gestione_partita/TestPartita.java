@@ -2414,7 +2414,7 @@ public final class TestPartita
         String messaggio =
             "Impossible uccidere la Ladra (Lucio) perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi dell'attacco " +
             "fallito.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeLadra)).withMessage(messaggio);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeLadra)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeLadra);
         attaccoLupi(tipoLupo, nomeLadra);

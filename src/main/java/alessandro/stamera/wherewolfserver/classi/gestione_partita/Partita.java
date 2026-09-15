@@ -358,11 +358,7 @@ public final class Partita
     private void gestisciEccezioniCacciatoreNonProtetto(String nomeLupo, String nome)
     {
         if(isPotereBracconiereUtilizzato()) gestisciPotereBracconiere(nome);
-        else if(vivi.isLadra(nome)) throw new IllegalStateException
-        (
-            "Impossible uccidere la Ladra (" + nome + ") perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi " +
-            "dell'attacco fallito."
-        );
+        else if(vivi.isLadra(nome)) throw new EccezioneRuoloProtetto("Ladra", nome);
         else if(vivi.isEremita(nome)) throw new IllegalArgumentException(nome + " è l'Eremita, i lupi non possono ucciderlo.");
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
         else if(vivi.isLupo(nome)) throw new IllegalArgumentException

@@ -2,7 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
 public final class EccezioneRuoloProtetto extends IllegalArgumentException
 {
-    public EccezioneRuoloProtetto(String nomeVittima)
+
+    public EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima)
     {
         super
         (
@@ -10,4 +11,5 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
             "dell'attacco fallito."
         );
     }
+
 }
