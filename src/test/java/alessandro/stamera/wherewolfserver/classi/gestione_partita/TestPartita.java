@@ -970,12 +970,12 @@ public final class TestPartita
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiEremita(String tipoLupo)
     {
-        String[][] giocatori = new String[][] { { "Margerita", "Eremita" }, { "Tony", tipoLupo } };
-        inizializzaPartita(giocatori);
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, giocatori[0][0]))
-            .withMessage("Margerita è l'Eremita, i lupi non possono ucciderlo.");
+        String nomeEremita = "Margherita";
+        inizializzaPartita(new String[][] { { nomeEremita, "Eremita" }, { "Tony", tipoLupo } });
+        String messaggio = "Margherita è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeEremita)).withMessage(messaggio);
         terminaNotte();
-        verificaNonEliminati(estraiNomiGiocatori(giocatori));
+        verificaNonEliminati(nomeEremita);
     }
 
     @Test public void testGhoulVivoPresente()
