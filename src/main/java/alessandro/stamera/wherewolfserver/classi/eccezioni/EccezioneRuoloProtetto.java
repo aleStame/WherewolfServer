@@ -26,9 +26,13 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
     @Override public String getMessage()
     {
         String risultato = getMessaggioRuoloProtetto();
-        if(nomeCapoBranco.isPresent())
-            risultato = "Avvisa il Capo branco (" + nomeCapoBranco.get() + ") che non può attaccare il " + ruoloVittima + " (" + nomeVittima + ").";
+        if(nomeCapoBranco.isPresent()) risultato = getMessaggioLupo();
         return risultato;
+    }
+
+    private String getMessaggioLupo()
+    {
+        return "Avvisa il Capo branco (" + nomeCapoBranco.get() + ") che non può attaccare il " + ruoloVittima + " (" + nomeVittima + ").";
     }
 
     private String getMessaggioRuoloProtetto()
