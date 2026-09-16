@@ -527,7 +527,7 @@ public final class GiocatoriVivi extends Giocatori
         return isCappuccettoRosso(nome) && isProtezionePresente(nome, attaccante);
     }
 
-    private boolean isCappuccettoRosso(String nome) { return getGiocatore(nome).isCappuccettoRosso(); }
+    public boolean isCappuccettoRosso(String nome) { return getGiocatore(nome).isCappuccettoRosso(); }
 
     public boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
 

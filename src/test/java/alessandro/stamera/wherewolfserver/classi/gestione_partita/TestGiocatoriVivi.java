@@ -1537,6 +1537,24 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro",
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe",
+            "Spia", "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoCappuccettoRosso(String nomeRuolo)
+    {
+        String nome = "Piera";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(giocatori.isCappuccettoRosso(nome));
+    }
+
     private void verificaAttaccoAngelo(String tipoLupo, String nomeAmato)
     {
         verificaAmato(nomeAmato);
