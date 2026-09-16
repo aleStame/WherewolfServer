@@ -36,12 +36,17 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
         String risultato = "";
         switch(ruoloVittima)
         {
-            case "Ladra" -> risultato =
-                "Impossible uccidere la Ladra (" + nomeVittima + ") perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi "
-                + "dell'attacco fallito.";
+            case "Ladra" -> risultato = getMessaggioLadra();
             case "Eremita" -> risultato = nomeVittima + " è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
         }
         return risultato;
+    }
+
+    private String getMessaggioLadra()
+    {
+        return
+            "Impossible uccidere la Ladra (" + nomeVittima + ") perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi "
+            + "dell'attacco fallito.";
     }
 
 }
