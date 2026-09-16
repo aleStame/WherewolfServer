@@ -46,10 +46,12 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
         switch(ruoloVittima)
         {
             case "Ladra" -> risultato = getMessaggioLadra();
-            case "Eremita" -> risultato = nomeVittima + " è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
+            case "Eremita" -> risultato = getMessaggioEremita();
         }
         return risultato;
     }
+
+    private String getMessaggioEremita() { return nomeVittima + " è l'Eremita.\nAvvisa i lupi che l'attacco fallisce"; }
 
     private String getMessaggioLadra()
     {
