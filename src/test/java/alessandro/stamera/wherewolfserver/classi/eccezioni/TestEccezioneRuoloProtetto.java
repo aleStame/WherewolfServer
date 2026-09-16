@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -9,9 +10,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestEccezioneRuoloProtetto
 {
 
-    @ParameterizedTest @MethodSource("esempiRuoli") public void testEccezioneLadraProtetta(String nomeRuolo, String messaggio)
+    @ParameterizedTest @MethodSource("esempiRuoli") public void testEccezioneRuoliProtetti(String nomeRuolo, String messaggio)
     {
         assertThat(new EccezioneRuoloProtetto(nomeRuolo, "Giancarlo").getMessage()).isEqualTo(messaggio);
+    }
+
+    @Test public void testEccezioneLupoReietto()
+    {
+        String messaggio = "Avvisa il Capo branco (Gianluigi) che non può attaccare il Lupo reietto (Ermenegildo).";
+        assertThat(new EccezioneRuoloProtetto("Gianluigi", "Lupo reietto", "Ermenegildo").getMessage()).isEqualTo(messaggio);
     }
 
     private static Stream<Arguments> esempiRuoli()

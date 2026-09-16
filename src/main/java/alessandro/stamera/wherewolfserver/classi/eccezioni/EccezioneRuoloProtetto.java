@@ -1,14 +1,26 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
+import java.util.Optional;
+
 public final class EccezioneRuoloProtetto extends IllegalArgumentException
 {
 
     private final String ruoloVittima, nomeVittima;
 
+    private final Optional<String> nomeCapoBranco;
+
     public EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima)
     {
         this.ruoloVittima = ruoloVittima;
         this.nomeVittima = nomeVittima;
+        nomeCapoBranco = Optional.empty();
+    }
+
+    public EccezioneRuoloProtetto(String nomeCapoBranco, String ruoloVittima, String nomeVittima)
+    {
+        this.ruoloVittima = ruoloVittima;
+        this.nomeVittima = nomeVittima;
+        this.nomeCapoBranco = Optional.of(nomeCapoBranco);
     }
 
     @Override public String getMessage()
