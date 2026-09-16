@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaMessaggioEccezione">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testNoCappuccettoRosso riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,15 +229,7 @@
       <workItem from="1789464528408" duration="2198000" />
       <workItem from="1789476069677" duration="4039000" />
       <workItem from="1789547926833" duration="446000" />
-      <workItem from="1789548790188" duration="3424000" />
-    </task>
-    <task id="LOCAL-00738" summary="ROSSO: testDoppioAttaccoLupiLadra non riuscito">
-      <option name="closed" value="true" />
-      <created>1789219801941</created>
-      <option name="number" value="00738" />
-      <option name="presentableId" value="LOCAL-00738" />
-      <option name="project" value="LOCAL" />
-      <updated>1789219801941</updated>
+      <workItem from="1789548790188" duration="3711000" />
     </task>
     <task id="LOCAL-00739" summary="ROSSO: testAttaccoCapoBranco non riuscito">
       <option name="closed" value="true" />
@@ -626,7 +615,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789551976332</updated>
     </task>
-    <option name="localTasksCounter" value="787" />
+    <task id="LOCAL-00787" summary="VERDE DIRETTO: testNoCappuccettoRosso riuscito">
+      <option name="closed" value="true" />
+      <created>1789552564593</created>
+      <option name="number" value="00787" />
+      <option name="presentableId" value="LOCAL-00787" />
+      <option name="project" value="LOCAL" />
+      <updated>1789552564593</updated>
+    </task>
+    <option name="localTasksCounter" value="788" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,7 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresente" />
     <MESSAGE value="REFACTORING: definizione del metodo perdiProtezione" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRosso" />
     <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoIndifesa" />
@@ -669,6 +665,7 @@
     <MESSAGE value="REFACTORING: definizione di un costruttore privato" />
     <MESSAGE value="REFACTORING: definizione del metodo getMessaggioEremita" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioEccezione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMessaggioEccezione" />
+    <MESSAGE value="VERDE DIRETTO: testNoCappuccettoRosso riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNoCappuccettoRosso riuscito" />
   </component>
 </project>

@@ -362,7 +362,7 @@ public final class Partita
         else if(vivi.isEremita(nome)) throw new EccezioneRuoloProtetto("Eremita", nome);
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
         else if(vivi.isLupo(nome)) throw new EccezioneRuoloProtetto(nomeLupo, getNomeRuolo(nome), nome);
-        else if(getGiocatore(nome).isCappuccettoRosso()) throw new IllegalArgumentException
+        else if(vivi.isCappuccettoRosso(nome)) throw new IllegalArgumentException
         (
             "Fino a che la Nonna (" + vivi.getNomeNonna() + ") è in gioco, Cappuccetto Rosso (" + vivi.getNomeCappuccettoRosso() +
             ") non può essere attaccata dai lupi.\nAvvisali dell'attacco fallito"

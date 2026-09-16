@@ -1555,6 +1555,13 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isCappuccettoRosso(nome));
     }
 
+    @Test public void testCappuccettoRosso()
+    {
+        String nome = "Carmen";
+        aggiungiGiocatore(nome, "Cappuccetto rosso");
+        verificaVero(giocatori.isCappuccettoRosso(nome));
+    }
+
     private void verificaAttaccoAngelo(String tipoLupo, String nomeAmato)
     {
         verificaAmato(nomeAmato);
