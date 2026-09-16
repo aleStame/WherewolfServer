@@ -10,16 +10,22 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestEccezioneRuoloProtetto
 {
 
+    private EccezioneRuoloProtetto eccezione;
+
     @ParameterizedTest @MethodSource("esempiRuoli") public void testEccezioneRuoliProtetti(String nomeRuolo, String messaggio)
     {
-        assertThat(new EccezioneRuoloProtetto(nomeRuolo, "Giancarlo").getMessage()).isEqualTo(messaggio);
+        eccezione = new EccezioneRuoloProtetto(nomeRuolo, "Giancarlo");
+        verificaMessaggioEccezione(messaggio);
     }
 
     @Test public void testEccezioneLupoReietto()
     {
         String messaggio = "Avvisa il Capo branco (Gianluigi) che non può attaccare il Lupo reietto (Ermenegildo).";
-        assertThat(new EccezioneRuoloProtetto("Gianluigi", "Lupo reietto", "Ermenegildo").getMessage()).isEqualTo(messaggio);
+        eccezione = new EccezioneRuoloProtetto("Gianluigi", "Lupo reietto", "Ermenegildo");
+        verificaMessaggioEccezione(messaggio);
     }
+
+    private void verificaMessaggioEccezione(String messaggio) { assertThat(eccezione.getMessage()).isEqualTo(messaggio); }
 
     private static Stream<Arguments> esempiRuoli()
     {
