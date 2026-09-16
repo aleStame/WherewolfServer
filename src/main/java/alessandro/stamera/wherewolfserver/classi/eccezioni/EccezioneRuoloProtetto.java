@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
 import java.util.Optional;
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
 
 public final class EccezioneRuoloProtetto extends IllegalArgumentException
 {
@@ -11,16 +13,19 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
 
     public EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima)
     {
-        this.ruoloVittima = ruoloVittima;
-        this.nomeVittima = nomeVittima;
-        nomeCapoBranco = Optional.empty();
+        this(ruoloVittima, nomeVittima, empty());
     }
 
     public EccezioneRuoloProtetto(String nomeCapoBranco, String ruoloVittima, String nomeVittima)
     {
+        this(ruoloVittima, nomeVittima, of(nomeCapoBranco));
+    }
+
+    private EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima, Optional<String> nomeCapoBranco)
+    {
         this.ruoloVittima = ruoloVittima;
         this.nomeVittima = nomeVittima;
-        this.nomeCapoBranco = Optional.of(nomeCapoBranco);
+        this.nomeCapoBranco = nomeCapoBranco;
     }
 
     @Override public String getMessage()
