@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: compattazione dei due metodo in un unico test parametrico">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testEccezioneLupoReietto riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EccezioneRuoloProtetto.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita$1.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,15 +245,7 @@
       <workItem from="1789464528408" duration="2198000" />
       <workItem from="1789476069677" duration="4039000" />
       <workItem from="1789547926833" duration="446000" />
-      <workItem from="1789548790188" duration="328000" />
-    </task>
-    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo aggiungiProtezioneLadra">
-      <option name="closed" value="true" />
-      <created>1789140492273</created>
-      <option name="number" value="00731" />
-      <option name="presentableId" value="LOCAL-00731" />
-      <option name="project" value="LOCAL" />
-      <updated>1789140492273</updated>
+      <workItem from="1789548790188" duration="639000" />
     </task>
     <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo aggiornaProtezioniLadra">
       <option name="closed" value="true" />
@@ -630,7 +631,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789479051432</updated>
     </task>
-    <option name="localTasksCounter" value="780" />
+    <task id="LOCAL-00780" summary="VERDE: testEccezioneLupoReietto riuscito">
+      <option name="closed" value="true" />
+      <created>1789549249239</created>
+      <option name="number" value="00780" />
+      <option name="presentableId" value="LOCAL-00780" />
+      <option name="project" value="LOCAL" />
+      <updated>1789549249239</updated>
+    </task>
+    <option name="localTasksCounter" value="781" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +657,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoLupoBrancoAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
     <MESSAGE value="ROSSO: testAttaccoCapoBrancoFallito non riuscito" />
@@ -673,6 +681,7 @@
     <MESSAGE value="ROSSO: testEccezioneEremita non riuscito" />
     <MESSAGE value="VERDE: testEccezioneEremita riuscito" />
     <MESSAGE value="REFACTORING: compattazione dei due metodo in un unico test parametrico" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: compattazione dei due metodo in un unico test parametrico" />
+    <MESSAGE value="VERDE: testEccezioneLupoReietto riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEccezioneLupoReietto riuscito" />
   </component>
 </project>

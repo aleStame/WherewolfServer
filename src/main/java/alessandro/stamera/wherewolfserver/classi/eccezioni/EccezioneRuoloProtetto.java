@@ -25,18 +25,21 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
 
     @Override public String getMessage()
     {
-        String risultato = "";
+        String risultato = getMessaggioRuoloProtetto();
         if(nomeCapoBranco.isPresent())
             risultato = "Avvisa il Capo branco (" + nomeCapoBranco.get() + ") che non può attaccare il " + ruoloVittima + " (" + nomeVittima + ").";
-        else
+        return risultato;
+    }
+
+    private String getMessaggioRuoloProtetto()
+    {
+        String risultato = "";
+        switch(ruoloVittima)
         {
-            switch(ruoloVittima)
-            {
-                case "Ladra" -> risultato =
-                    "Impossible uccidere la Ladra (" + nomeVittima + ") perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi "
-                    + "dell'attacco fallito.";
-                case "Eremita" -> risultato = nomeVittima + " è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
-            }
+            case "Ladra" -> risultato =
+                "Impossible uccidere la Ladra (" + nomeVittima + ") perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi "
+                + "dell'attacco fallito.";
+            case "Eremita" -> risultato = nomeVittima + " è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
         }
         return risultato;
     }
