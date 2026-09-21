@@ -2284,6 +2284,20 @@ public final class TestPartita
         verificaNonEliminati(nomeVittima);
     }
 
+    @Test public void testGuarigioneCappuccettoRosso()
+    {
+        String nomeVittima = "Damiano";
+        String[][] giocatori = new String[][]
+            { { "Antonio", "Capo branco" }, { nomeVittima, "Cappuccetto rosso" }, { "Carluccio", "Giovane lupo" }, { "Andrea","Guaritore" } };
+        inizializzaPartita(giocatori);
+        String messaggio =
+            "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Damiano) riconosce il Capo branco (Antonio).";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi("Capo branco", nomeVittima)).withMessage(messaggio);
+        guarisci(nomeVittima);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
