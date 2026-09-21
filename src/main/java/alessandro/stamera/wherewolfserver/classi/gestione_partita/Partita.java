@@ -124,16 +124,7 @@ public final class Partita
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
             case CONTADINO_LUPO_BECCATO -> throw new EccezioneContadinoLupo(nome, getFazione(nomeLupo).toString());
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
-            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
-            {
-                if(isAmato(nome) && vivi.isAngeloCustodePresente())
-                {
-                    String nomeAngeloCustode = getNomeAngeloCustodeVivo();
-                    eliminaGiocatore(nomeAngeloCustode);
-                    throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome, nomeAngeloCustode);
-                }
-                else throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
-            }
+            case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> gestioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
             case GIULIETTA_BECCATA -> doppiaEliminazione(nome, getNomeRomeo());
         }
@@ -253,6 +244,17 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+    }
+
+    private void gestioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
+    {
+        if(isAmato(nome) && vivi.isAngeloCustodePresente())
+        {
+            String nomeAngeloCustode = getNomeAngeloCustodeVivo();
+            eliminaGiocatore(nomeAngeloCustode);
+            throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome, nomeAngeloCustode);
+        }
+        else throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
     }
 
     private String getNomeRomeo()
