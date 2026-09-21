@@ -38,10 +38,12 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
     private String getMessaggioPrincipale()
     {
         String messaggio;
-        if(tipoLupo.equals("Lupo solitario")) messaggio = getMessaggioLupoSolitario();
+        if(isLupoSolitario()) messaggio = getMessaggioLupoSolitario();
         else messaggio = getMessaggioLupoBranco();
         return messaggio;
     }
+
+    private boolean isLupoSolitario() { return tipoLupo.equals("Lupo solitario"); }
 
     private String getMessaggioLupoBranco()
     {
