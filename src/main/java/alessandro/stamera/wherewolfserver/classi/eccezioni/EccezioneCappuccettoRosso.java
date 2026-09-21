@@ -41,7 +41,7 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
 
     private String getMessaggioAngeloCustode()
     {
-        return "Inoltre, essendo il " + tipoLupo + " Amato, muore " + nomeAngeloCustode.get() + " (Angelo custode).";
+        return "Inoltre, essendo il Cappuccetto rosso Amato, muore " + nomeAngeloCustode.get() + " (Angelo custode).";
     }
 
     private boolean isAngeloCustodePresente() { return nomeAngeloCustode.isPresent(); }

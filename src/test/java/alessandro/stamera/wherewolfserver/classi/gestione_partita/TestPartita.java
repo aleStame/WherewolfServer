@@ -2051,7 +2051,9 @@ public final class TestPartita
         String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
         inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
-        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
+        String messaggio =
+            "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce.\nInoltre, essendo il Cappuccetto rosso Amato, " +
+            "muore Gianni (Angelo custode).";
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
         verificaEliminati(nomeAngelo);
     }
