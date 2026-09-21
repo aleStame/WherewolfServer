@@ -164,8 +164,7 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         verificaAttacco(giocatore.criminalizzazione(), RIUSCITO);
-        assertThat(giocatore.getFazione()).isEqualTo(CRIMINALI);
-        verificaVero(giocatore.isCriminale());
+        verificaCriminale();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -827,6 +826,11 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         verificaAttacco(giocatore.gildata(), RIUSCITO);
+        verificaCriminale();
+    }
+
+    private void verificaCriminale()
+    {
         assertThat(giocatore.getFazione()).isEqualTo(CRIMINALI);
         verificaVero(giocatore.isCriminale());
     }
