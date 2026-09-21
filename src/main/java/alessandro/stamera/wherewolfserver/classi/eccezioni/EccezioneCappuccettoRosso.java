@@ -1,7 +1,5 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-import org.springframework.lang.NonNull;
-
 import java.util.Optional;
 
 public class EccezioneCappuccettoRosso extends IllegalStateException
@@ -31,12 +29,17 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
     {
         String messaggio;
         if(tipoLupo.equals("Lupo solitario")) messaggio = getMessaggioLupoSolitario();
-        else messaggio =
-            "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (" + nomeCappuccettoRosso + ") riconosce il " + tipoLupo +
-            " (" + nomeLupo + ").";
+        else messaggio = getMessaggioLupoBranco();
         if(nomeAngeloCustode.isPresent())
             messaggio += "\nInoltre, essendo il " + tipoLupo + " Amato, muore " + nomeAngeloCustode.get() + " (Angelo custode).";
         return messaggio;
+    }
+
+    private String getMessaggioLupoBranco()
+    {
+        return
+            "Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (" + nomeCappuccettoRosso + ") riconosce il " + tipoLupo +
+            " (" + nomeLupo + ").";
     }
 
     private String getMessaggioLupoSolitario()
