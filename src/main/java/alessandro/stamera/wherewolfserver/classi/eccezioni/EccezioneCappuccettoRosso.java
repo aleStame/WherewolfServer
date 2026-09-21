@@ -12,6 +12,13 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
         this.nomeCappuccettoRosso = nomeCappuccettoRosso;
     }
 
+    public EccezioneCappuccettoRosso(String tipoLupo, String nomeLupo, String nomeCappuccettoRosso, String nomeAngeloCustode)
+    {
+        this.tipoLupo = tipoLupo;
+        this.nomeLupo = nomeLupo;
+        this.nomeCappuccettoRosso = nomeCappuccettoRosso;
+    }
+
     @Override public String getMessage()
     {
         String messaggio;
