@@ -2096,6 +2096,15 @@ public final class TestPartita
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
 
+    @Test public void testAttaccoLupoSolitarioCappuccettoRossoStregato()
+    {
+        String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeStrega = "Gianni";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeStrega, "Strega" } });
+        protezioneStrega(nomeVittima);
+        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce.";
+        verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
