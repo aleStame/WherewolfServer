@@ -248,13 +248,15 @@ public final class Partita
 
     private void gestioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
     {
-        if(isAmato(nome) && vivi.isAngeloCustodePresente())
-        {
-            String nomeAngeloCustode = getNomeAngeloCustodeVivo();
-            eliminaGiocatore(nomeAngeloCustode);
-            throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome, nomeAngeloCustode);
-        }
+        if(isAmato(nome) && vivi.isAngeloCustodePresente()) gestisciCappuccettoRossoAmato(tipoLupo, nome, nomeLupo);
         else throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+    }
+
+    private void gestisciCappuccettoRossoAmato(String tipoLupo, String nome, String nomeLupo)
+    {
+        String nomeAngeloCustode = getNomeAngeloCustodeVivo();
+        eliminaGiocatore(nomeAngeloCustode);
+        throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome, nomeAngeloCustode);
     }
 
     private String getNomeRomeo()
