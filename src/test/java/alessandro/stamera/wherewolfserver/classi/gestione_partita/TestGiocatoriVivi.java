@@ -96,6 +96,20 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(giocatori[0][0], esito);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO"
+        }
+    )
+    public void testAttaccoAssassinoRomeo(String nomeRuolo, EsitoAttacco esito)
+    {
+        String nomeRomeo = "Cristian";
+        inizializzaGiocatori(new String[][] { { nomeRomeo, nomeRuolo }, { "Carmine", "Assassino" }, { "Giulia", "Giulietta" } });
+        romeizzazione(nomeRomeo);
+        verificaAttaccoAssassino(nomeRomeo, esito);
+    }
+
     @ParameterizedTest @CsvSource({ "Cacciatore", "Giullare", "Capo branco" })
     public void testAttaccoAssassinoAmatoAngeloCustodeRomeo(String nomeRuolo)
     {
