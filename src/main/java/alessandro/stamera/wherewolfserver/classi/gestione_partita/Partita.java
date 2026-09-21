@@ -126,8 +126,13 @@ public final class Partita
             case ANGELO_CUSTODE_MORTO -> eccezioneMorteAngeloCustode(tipoLupo, nome, nomeLupo);
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
             {
-                if(isAmato(nome) && vivi.isAngeloCustodePresente()) eliminaGiocatore(getNomeAngeloCustodeVivo());
-                throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
+                if(isAmato(nome) && vivi.isAngeloCustodePresente())
+                {
+                    String nomeAngeloCustode = getNomeAngeloCustodeVivo();
+                    eliminaGiocatore(nomeAngeloCustode);
+                    throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome, nomeAngeloCustode);
+                }
+                else throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
             }
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
             case GIULIETTA_BECCATA -> doppiaEliminazione(nome, getNomeRomeo());
