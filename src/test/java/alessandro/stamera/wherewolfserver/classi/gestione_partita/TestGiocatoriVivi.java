@@ -19,6 +19,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
 
 public final class TestGiocatoriVivi
 {
@@ -1588,6 +1589,22 @@ public final class TestGiocatoriVivi
         String nome = "Carmen";
         aggiungiGiocatore(nome, "Cappuccetto rosso");
         verificaVero(isCappuccettoRosso(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testCriminalizzazioneCapoGildaRiuscita(String nomeRuolo)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
+        giocatori.gildata(nomeVittima);
+        verificaVero(giocatori.isCriminale(nomeVittima));
     }
 
     private boolean isCappuccettoRosso(String nome) { return giocatori.isCappuccettoRosso(nome); }
