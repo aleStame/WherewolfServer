@@ -90,7 +90,7 @@ public final class TestPartita
         verificaNonAccusato(nomeAmato);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode", "Cacciatore", "Giullare" })
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare" })
     public void testAttaccoAssassino(String nomeRuolo)
     {
         String nomeVittima = "Federico";
@@ -794,7 +794,7 @@ public final class TestPartita
             "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo del branco " +
             "(Andrea).'",
             "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo reietto (Andrea).'",
-            "Lupo solitario, 'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce'"
+            "Lupo solitario, 'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce.'"
         }
     )
     public void testNessunaProtezioneCappuccettoRosso(String tipoLupo, String messaggio)
@@ -2040,7 +2040,7 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(nomeAngelo, 4);
         terminaBallottaggio();
-        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
+        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeVittima);
@@ -2051,51 +2051,69 @@ public final class TestPartita
         String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
         inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
-        String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
+        String messaggio =
+            "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce.\nInoltre, essendo il Cappuccetto rosso Amato, " +
+            "muore Gianni (Angelo custode).";
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+        verificaEliminati(nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
     (
         {
-            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).'",
-            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco " +
-            "(Dante).'",
-            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto " +
-            "(Dante).'",
-            "Lupo solitario, 'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce'"
+            "Capo branco," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Capo branco (Andrea).\nInoltre, essendo"
+            + " il Cappuccetto rosso Amato, muore Mario (Angelo custode).'",
+            "Lupo del branco," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo del branco (Andrea).\nInoltre, " +
+            "essendo il Cappuccetto rosso Amato, muore Mario (Angelo custode).'",
+            "Lupo reietto," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo reietto (Andrea).\nInoltre, " +
+            "essendo il Cappuccetto rosso Amato, muore Mario (Angelo custode).'",
+            "Lupo solitario," +
+            "'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce.\nInoltre, essendo il Cappuccetto rosso Amato, " +
+            "muore Mario (Angelo custode).'"
         }
     )
     public void testAttaccoUltimoLupoCappuccettoRossoAmato(String tipoLupo, String messaggio)
     {
-        String nomeVittima = "Beatrice";
+        String nomeVittima = "Elena", nomeAngeloCustode = "Mario";
         String[][] giocatori = new String[][]
         {
-            { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Virgilio", "Nonna" }, { "Adele", "Angelo custode" }
+            { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo }, { "Virgilio", "Nonna" }, { nomeAngeloCustode, "Angelo custode" }
         };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeVittima);
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+        verificaEliminati(nomeAngeloCustode);
     }
 
     @ParameterizedTest @CsvSource
     (
         {
-            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).'",
-            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco " +
-            "(Dante).'",
-            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto " +
-            "(Dante).'",
-            "Lupo solitario, 'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce'"
+            "Capo branco," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).\nInoltre, " +
+            "essendo il Cappuccetto rosso Amato, muore Adele (Angelo custode).'",
+            "Lupo del branco," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco (Dante).\n" +
+            "Inoltre, essendo il Cappuccetto rosso Amato, muore Adele (Angelo custode).'",
+            "Lupo reietto," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto (Dante).\nInoltre, " +
+            "essendo il Cappuccetto rosso Amato, muore Adele (Angelo custode).'",
+            "Lupo solitario," +
+            "'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce.\nInoltre, essendo il Cappuccetto rosso Amato, " +
+            "muore Adele (Angelo custode).'"
         }
     )
     public void testAttaccoUltimoLupoCappuccettoRossoAmatoSenzaNonna(String tipoLupo, String messaggio)
     {
-        String nomeVittima = "Beatrice";
-        String[][] giocatori = new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Adele", "Angelo custode" } };
+        String nomeVittima = "Beatrice", nomeAngeloCustode = "Adele";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngeloCustode, "Angelo custode" } };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeVittima);
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+        verificaEliminati(nomeAngeloCustode);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
