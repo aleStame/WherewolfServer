@@ -2061,24 +2061,31 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Capo branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Capo branco (Dante).'",
-            "Lupo del branco, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo del branco " +
-            "(Dante).'",
-            "Lupo reietto, 'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Beatrice) riconosce il Lupo reietto " +
-            "(Dante).'",
-            "Lupo solitario, 'Dante è il Lupo solitario. Cappuccetto rosso (Beatrice) si sveglia e lo riconosce'"
+            "Capo branco," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Capo branco (Andrea).\nInoltre, essendo"
+            + " il Cappuccetto rosso Amato, muore Mario (Angelo custode).'",
+            "Lupo del branco," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo del branco (Andrea).\nInoltre, " +
+            "essendo il Cappuccetto rosso Amato, muore Mario (Angelo custode).'",
+            "Lupo reietto," +
+            "'Dal momento che non ci sono altri lupi del branco, il Cappuccetto rosso (Elena) riconosce il Lupo reietto (Andrea).\nInoltre, " +
+            "essendo il Cappuccetto rosso Amato, muore Mario (Angelo custode).'",
+            "Lupo solitario," +
+            "'Andrea è il Lupo solitario. Cappuccetto rosso (Elena) si sveglia e lo riconosce.\nInoltre, essendo il Cappuccetto rosso Amato, " +
+            "muore Mario (Angelo custode).'"
         }
     )
     public void testAttaccoUltimoLupoCappuccettoRossoAmato(String tipoLupo, String messaggio)
     {
-        String nomeVittima = "Beatrice";
+        String nomeVittima = "Elena", nomeAngeloCustode = "Mario";
         String[][] giocatori = new String[][]
         {
-            { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { "Virgilio", "Nonna" }, { "Adele", "Angelo custode" }
+            { nomeVittima, "Cappuccetto rosso" }, { "Andrea", tipoLupo }, { "Virgilio", "Nonna" }, { nomeAngeloCustode, "Angelo custode" }
         };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeVittima);
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
+        verificaEliminati(nomeAngeloCustode);
     }
 
     @ParameterizedTest @CsvSource
