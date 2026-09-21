@@ -248,9 +248,11 @@ public final class Partita
 
     private void gestioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
     {
-        if(isAmato(nome) && vivi.isAngeloCustodePresente()) gestisciCappuccettoRossoAmato(tipoLupo, nome, nomeLupo);
+        if(isProtettoDaAngeloCustode(nome)) gestisciCappuccettoRossoAmato(tipoLupo, nome, nomeLupo);
         else throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome);
     }
+
+    private boolean isProtettoDaAngeloCustode(String nome) { return isAmato(nome) && vivi.isAngeloCustodePresente(); }
 
     private void gestisciCappuccettoRossoAmato(String tipoLupo, String nome, String nomeLupo)
     {
