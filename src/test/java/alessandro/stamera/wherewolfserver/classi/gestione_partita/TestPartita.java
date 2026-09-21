@@ -2048,12 +2048,12 @@ public final class TestPartita
 
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode()
     {
-        String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni", nomeLupo = "Dante";
-        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { nomeLupo, tipoLupo }, { nomeAngelo, "Angelo custode" } });
+        String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
+        inizializzaPartita(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
         String messaggio = "Dante è il Lupo solitario. Cappuccetto rosso (Leonardo) si sveglia e lo riconosce";
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
-        verificaEliminati(nomeLupo);
+        verificaEliminati(nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
