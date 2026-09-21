@@ -433,7 +433,7 @@ public final class TestGiocatore
     {
         lupizzazioneContadino(tipoLupo);
         verificaEsitoGildata(MORTO);
-        assertThat(giocatore.getFazione()).isEqualTo(fazione);
+        verificaFazione(fazione);
     }
 
     @Test public void testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante()
@@ -831,7 +831,7 @@ public final class TestGiocatore
 
     private void verificaCriminale()
     {
-        assertThat(giocatore.getFazione()).isEqualTo(CRIMINALI);
+        verificaFazione(CRIMINALI);
         verificaVero(giocatore.isCriminale());
     }
 
@@ -951,5 +951,7 @@ public final class TestGiocatore
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private boolean isAmato() { return giocatore.isAmato(); }
+
+    private void verificaFazione(Fazione fazione) { assertThat(giocatore.getFazione()).isEqualTo(fazione); }
 
 }
