@@ -66,7 +66,8 @@ public final class TestPartita
         verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Sidhe" }) public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Sidhe" })
+    public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
         String nomeAngelo = "Domenico", nome = "Pamela";
         inizializzaPartita(new String[][] { { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo } });
