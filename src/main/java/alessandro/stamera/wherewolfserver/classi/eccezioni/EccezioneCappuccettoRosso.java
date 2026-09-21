@@ -21,7 +21,10 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
         this(tipoLupo, nomeLupo, nomeCappuccettoRosso, of(nomeAngeloCustode));
     }
 
-    private EccezioneCappuccettoRosso(String tipoLupo, String nomeLupo, String nomeCappuccettoRosso, Optional<String> nomeAngeloCustode)
+    private EccezioneCappuccettoRosso
+    (
+        String tipoLupo, String nomeLupo, String nomeCappuccettoRosso, Optional<String> nomeAngeloCustode
+    )
     {
         this.tipoLupo = tipoLupo;
         this.nomeLupo = nomeLupo;
@@ -32,9 +35,13 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
     @Override public String getMessage()
     {
         String messaggio = getMessaggioPrincipale();
-        if(isAngeloCustodePresente())
-            messaggio += "\nInoltre, essendo il " + tipoLupo + " Amato, muore " + nomeAngeloCustode.get() + " (Angelo custode).";
+        if(isAngeloCustodePresente()) messaggio += ("\n" + getMessaggioAngeloCustode());
         return messaggio;
+    }
+
+    private String getMessaggioAngeloCustode()
+    {
+        return "Inoltre, essendo il " + tipoLupo + " Amato, muore " + nomeAngeloCustode.get() + " (Angelo custode).";
     }
 
     private boolean isAngeloCustodePresente() { return nomeAngeloCustode.isPresent(); }
