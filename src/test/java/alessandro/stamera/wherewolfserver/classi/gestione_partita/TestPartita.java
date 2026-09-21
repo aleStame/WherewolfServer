@@ -354,7 +354,7 @@ public final class TestPartita
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
-    @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore" })
+    @ParameterizedTest @CsvSource({ "Bocca di rosa", "Cacciatore", "Cappuccetto rosso" })
     public void testSegnalazioneInquisitoreMisticoAssente(String nomeRuolo)
     {
         String nomeVittima = "Raffaele", nomeInquisitore = "Andrea";
