@@ -62,11 +62,11 @@ public final class TestGiocatoriVivi
         verificaAccusati(soluzioni[0][0], soluzioni[2][0], soluzioni[1][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Sidhe" }) public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Sidhe" })
+    public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
         String nomeAngelo = "Domenico", nomeAmato = "Pamela";
-        String[][] giocatori = new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAmato, nomeRuolo } };
-        inizializzaGiocatori(giocatori);
+        inizializzaGiocatori(new String[][] { { nomeAngelo, "Angelo custode" }, { nomeAmato, nomeRuolo } });
         segnalazioneAngeloCustode(nomeAmato);
         incrementaVoti(nomeAmato, 3);
         verificaGiocatoreAccusato(getBallottaggio(), 0, nomeAngelo);

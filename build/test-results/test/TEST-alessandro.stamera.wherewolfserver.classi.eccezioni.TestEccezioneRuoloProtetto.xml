@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-21T13:21:00" hostname="ALESSANDRO" time="0.008">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-21T13:34:27" hostname="ALESSANDRO" time="0.031">
   <properties/>
-  <testcase name="testEccezioneLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
-  <testcase name="[1] nomeRuolo=Ladra, messaggio=Impossible uccidere la Ladra (Giancarlo) perché protetta almeno una volta dalle Creature dell'ombra.&#10;Avvisa i lupi dell'attacco fallito." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
+  <testcase name="testEccezioneLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.007"/>
+  <testcase name="[1] nomeRuolo=Ladra, messaggio=Impossible uccidere la Ladra (Giancarlo) perché protetta almeno una volta dalle Creature dell'ombra.&#10;Avvisa i lupi dell'attacco fallito." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.005"/>
   <testcase name="[2] nomeRuolo=Eremita, messaggio=Giancarlo è l'Eremita.&#10;Avvisa i lupi che l'attacco fallisce" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
