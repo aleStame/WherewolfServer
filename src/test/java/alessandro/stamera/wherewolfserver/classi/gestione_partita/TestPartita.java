@@ -99,6 +99,15 @@ public final class TestPartita
         verificaAttaccoAssassino(nomeVittima);
     }
 
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare" })
+    public void testAttaccoAssassinoRomeo(String nomeRuolo)
+    {
+        String nomeVittima = "Federico";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giulia", "Giulietta" } });
+        romeizzazione(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
