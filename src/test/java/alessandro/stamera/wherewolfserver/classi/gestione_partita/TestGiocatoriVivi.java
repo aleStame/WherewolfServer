@@ -1288,7 +1288,7 @@ public final class TestGiocatoriVivi
         String nome = "Carlo";
         inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Capo gilda" } });
         verificaAttaccoLupo(tipoLupo, nome, CONTADINO_LUPO_BECCATO);
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        verificaEsitoGildata(nome, MORTO);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -1296,7 +1296,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Giulia";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
-        verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
+        verificaEsitoGildata(nomeVittima, FALLITO);
     }
 
     @Test public void testPassaPossedutoPrete()
@@ -1588,6 +1588,27 @@ public final class TestGiocatoriVivi
         String nome = "Carmen";
         aggiungiGiocatore(nome, "Cappuccetto rosso");
         verificaVero(isCappuccettoRosso(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testCriminalizzazioneCapoGildaRiuscita(String nomeRuolo)
+    {
+        String nomeVittima = "Antonio";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
+        verificaEsitoGildata(nomeVittima, RIUSCITO);
+        verificaVero(giocatori.isCriminale(nomeVittima));
+    }
+
+    private void verificaEsitoGildata(String nomeVittima, EsitoAttacco esito)
+    {
+        verificaAttacco(giocatori.gildata(nomeVittima), esito);
     }
 
     private boolean isCappuccettoRosso(String nome) { return giocatori.isCappuccettoRosso(nome); }

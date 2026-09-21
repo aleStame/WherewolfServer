@@ -164,8 +164,7 @@ public final class TestGiocatore
     {
         cambiaRuolo(nomeRuolo);
         verificaAttacco(giocatore.criminalizzazione(), RIUSCITO);
-        assertThat(giocatore.getFazione()).isEqualTo(CRIMINALI);
-        verificaVero(giocatore.isCriminale());
+        verificaCriminale();
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -434,7 +433,7 @@ public final class TestGiocatore
     {
         lupizzazioneContadino(tipoLupo);
         verificaEsitoGildata(MORTO);
-        assertThat(giocatore.getFazione()).isEqualTo(fazione);
+        verificaFazione(fazione);
     }
 
     @Test public void testCriminalizzazioneBecchinoDopoRiconoscimentoNegromante()
@@ -815,6 +814,27 @@ public final class TestGiocatore
         verificaVero(isLadra());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testCriminalizzazioneCapoGildaRiuscita(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoGildata(RIUSCITO);
+        verificaCriminale();
+    }
+
+    private void verificaCriminale()
+    {
+        verificaFazione(CRIMINALI);
+        verificaVero(giocatore.isCriminale());
+    }
+
     private boolean isLadra() { return giocatore.isLadra(); }
 
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
@@ -931,5 +951,7 @@ public final class TestGiocatore
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private boolean isAmato() { return giocatore.isAmato(); }
+
+    private void verificaFazione(Fazione fazione) { assertThat(giocatore.getFazione()).isEqualTo(fazione); }
 
 }

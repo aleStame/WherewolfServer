@@ -175,6 +175,7 @@ public final class Giocatore
             case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
             case VAMPIRO, NEGROMANTE -> esito = FALLITO;
         }
+        if(esito == RIUSCITO) fazione = CRIMINALI;
         return esito;
     }
 
