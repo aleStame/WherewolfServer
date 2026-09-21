@@ -10,7 +10,7 @@ public final class TestEccezioneCappuccettoRossoNonna
     {
         String messaggio =
             "Fino a che la Nonna (Pina) è in gioco, Cappuccetto Rosso (Laura) non può essere attaccata dai lupi.\nAvvisali dell'attacco fallito";
-        assertThat(new EccezioneCappuccettoRossoNonna("Pina", "Piera").getMessage()).isEqualTo(messaggio);
+        assertThat(new EccezioneCappuccettoRossoNonna("Pina", "Laura").getMessage()).isEqualTo(messaggio);
     }
 
 }

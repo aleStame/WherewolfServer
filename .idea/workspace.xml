@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="Commit provvisorio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCappuccettoRossoNonna.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneCappuccettoRossoNonna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +74,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/aleStame/WherewolfServer&quot;,
-    &quot;accountId&quot;: &quot;c794b2a7-45df-4cf8-940e-0bd8736048ba&quot;
+    &quot;url&quot;: &quot;https://github.com/aleStame/WherewolfServer.git&quot;,
+    &quot;accountId&quot;: &quot;8e10a465-0822-4339-9f43-38959b8f5505&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -118,7 +116,7 @@
       <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -199,19 +197,18 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
+    <configuration name="WherewolfServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="wherewolfserver.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="alessandro.stamera.wherewolfserver.WherewolfServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.55" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.55" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -236,6 +233,9 @@
       <workItem from="1789547926833" duration="446000" />
       <workItem from="1789548790188" duration="5033000" />
       <workItem from="1789634363642" duration="1142000" />
+      <workItem from="1789635922847" duration="831000" />
+      <workItem from="1789737497569" duration="229000" />
+      <workItem from="1789980362579" duration="1031000" />
     </task>
     <task id="LOCAL-00740" summary="VERDE: testAttaccoCapoBranco riuscito">
       <option name="closed" value="true" />
