@@ -1288,7 +1288,7 @@ public final class TestGiocatoriVivi
         String nome = "Carlo";
         inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Capo gilda" } });
         verificaAttaccoLupo(tipoLupo, nome, CONTADINO_LUPO_BECCATO);
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        verificaEsitoGildata(nome, MORTO);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -1296,7 +1296,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Giulia";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Becchino" }, { "Tania", "Capo gilda" } });
         giocatori.riconosciNegromante();
-        verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
+        verificaEsitoGildata(nomeVittima, FALLITO);
     }
 
     @Test public void testPassaPossedutoPrete()
@@ -1602,8 +1602,13 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Davide", "Capo gilda" } });
-        giocatori.gildata(nomeVittima);
+        verificaEsitoGildata(nomeVittima, RIUSCITO);
         verificaVero(giocatori.isCriminale(nomeVittima));
+    }
+
+    private void verificaEsitoGildata(String nomeVittima, EsitoAttacco esito)
+    {
+        verificaAttacco(giocatori.gildata(nomeVittima), esito);
     }
 
     private boolean isCappuccettoRosso(String nome) { return giocatori.isCappuccettoRosso(nome); }

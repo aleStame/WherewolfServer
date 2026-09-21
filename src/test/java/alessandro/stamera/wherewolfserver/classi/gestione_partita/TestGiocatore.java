@@ -825,7 +825,7 @@ public final class TestGiocatore
     public void testCriminalizzazioneCapoGildaRiuscita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaAttacco(giocatore.gildata(), RIUSCITO);
+        verificaEsitoGildata(RIUSCITO);
         verificaCriminale();
     }
 
