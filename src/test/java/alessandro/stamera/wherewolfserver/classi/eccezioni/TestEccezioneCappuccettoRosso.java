@@ -7,6 +7,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public final class TestEccezioneCappuccettoRosso
 {
 
+    private EccezioneCappuccettoRosso eccezione;
+
     @ParameterizedTest @CsvSource
     (
         {
@@ -19,7 +21,8 @@ public final class TestEccezioneCappuccettoRosso
     )
     public void testMessaggio(String tipoLupo, String messaggio)
     {
-        assertThat(new EccezioneCappuccettoRosso(tipoLupo, "Andrea", "Elena").getMessage()).isEqualTo(messaggio);
+        eccezione = new EccezioneCappuccettoRosso(tipoLupo, "Andrea", "Elena");
+        verificaMessaggioErrore(messaggio);
     }
 
     @ParameterizedTest @CsvSource
@@ -41,7 +44,10 @@ public final class TestEccezioneCappuccettoRosso
     )
     public void testMessaggioLupoAmato(String tipoLupo, String messaggio)
     {
-        assertThat(new EccezioneCappuccettoRosso(tipoLupo, "Andrea", "Elena", "Mario").getMessage()).isEqualTo(messaggio);
+        eccezione = new EccezioneCappuccettoRosso(tipoLupo, "Andrea", "Elena", "Mario");
+        verificaMessaggioErrore(messaggio);
     }
+
+    private void verificaMessaggioErrore(String messaggio) { assertThat(eccezione.getMessage()).isEqualTo(messaggio); }
 
 }
