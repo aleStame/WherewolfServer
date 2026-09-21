@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
 import java.util.Optional;
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
 
 public class EccezioneCappuccettoRosso extends IllegalStateException
 {
@@ -11,18 +13,20 @@ public class EccezioneCappuccettoRosso extends IllegalStateException
 
     public EccezioneCappuccettoRosso(String tipoLupo, String nomeLupo, String nomeCappuccettoRosso)
     {
-        this.tipoLupo = tipoLupo;
-        this.nomeLupo = nomeLupo;
-        this.nomeCappuccettoRosso = nomeCappuccettoRosso;
-        nomeAngeloCustode = Optional.empty();
+        this(tipoLupo, nomeLupo, nomeCappuccettoRosso, empty());
     }
 
     public EccezioneCappuccettoRosso(String tipoLupo, String nomeLupo, String nomeCappuccettoRosso, String nomeAngeloCustode)
     {
+        this(tipoLupo, nomeLupo, nomeCappuccettoRosso, of(nomeAngeloCustode));
+    }
+
+    private EccezioneCappuccettoRosso(String tipoLupo, String nomeLupo, String nomeCappuccettoRosso, Optional<String> nomeAngeloCustode)
+    {
         this.tipoLupo = tipoLupo;
         this.nomeLupo = nomeLupo;
         this.nomeCappuccettoRosso = nomeCappuccettoRosso;
-        this.nomeAngeloCustode = Optional.of(nomeAngeloCustode);
+        this.nomeAngeloCustode = nomeAngeloCustode;
     }
 
     @Override public String getMessage()

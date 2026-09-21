@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getMessaggioLupoSolitario">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isAngeloCustodePresente">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCappuccettoRosso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneCappuccettoRosso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,38 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00611" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788252403463</created>
-      <option name="number" value="00611" />
-      <option name="presentableId" value="LOCAL-00611" />
-      <option name="project" value="LOCAL" />
-      <updated>1788252403463</updated>
-    </task>
-    <task id="LOCAL-00612" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788252607574</created>
-      <option name="number" value="00612" />
-      <option name="presentableId" value="LOCAL-00612" />
-      <option name="project" value="LOCAL" />
-      <updated>1788252607575</updated>
-    </task>
-    <task id="LOCAL-00613" summary="VERDE DIRETTO: testGuarigioneVittimaLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1788255550718</created>
-      <option name="number" value="00613" />
-      <option name="presentableId" value="LOCAL-00613" />
-      <option name="project" value="LOCAL" />
-      <updated>1788255550718</updated>
-    </task>
-    <task id="LOCAL-00614" summary="VERDE DIRETTO: testGuarigioneVittimaLupi riuscito">
-      <option name="closed" value="true" />
-      <created>1788256470612</created>
-      <option name="number" value="00614" />
-      <option name="presentableId" value="LOCAL-00614" />
-      <option name="project" value="LOCAL" />
-      <updated>1788256470613</updated>
     </task>
     <task id="LOCAL-00615" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
       <option name="closed" value="true" />
@@ -598,7 +566,39 @@
       <option name="project" value="LOCAL" />
       <updated>1789985052007</updated>
     </task>
-    <option name="localTasksCounter" value="660" />
+    <task id="LOCAL-00660" summary="REFACTORING: definizione del metodo getMessaggioLupoBranco">
+      <option name="closed" value="true" />
+      <created>1789985214309</created>
+      <option name="number" value="00660" />
+      <option name="presentableId" value="LOCAL-00660" />
+      <option name="project" value="LOCAL" />
+      <updated>1789985214310</updated>
+    </task>
+    <task id="LOCAL-00661" summary="REFACTORING: definizione del metodo getMessaggioPrincipale">
+      <option name="closed" value="true" />
+      <created>1789985283178</created>
+      <option name="number" value="00661" />
+      <option name="presentableId" value="LOCAL-00661" />
+      <option name="project" value="LOCAL" />
+      <updated>1789985283178</updated>
+    </task>
+    <task id="LOCAL-00662" summary="REFACTORING: definizione del metodo isLupoSolitario">
+      <option name="closed" value="true" />
+      <created>1789985341883</created>
+      <option name="number" value="00662" />
+      <option name="presentableId" value="LOCAL-00662" />
+      <option name="project" value="LOCAL" />
+      <updated>1789985341883</updated>
+    </task>
+    <task id="LOCAL-00663" summary="REFACTORING: definizione del metodo isAngeloCustodePresente">
+      <option name="closed" value="true" />
+      <created>1789985398909</created>
+      <option name="number" value="00663" />
+      <option name="presentableId" value="LOCAL-00663" />
+      <option name="project" value="LOCAL" />
+      <updated>1789985398910</updated>
+    </task>
+    <option name="localTasksCounter" value="664" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,10 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testVampirizzazioneRiuscita non riuscito" />
-    <MESSAGE value="VERDE: testVampirizzazioneRiuscita riuscito" />
-    <MESSAGE value="ROSSO: testVampirizzazioneFallita non riuscito" />
-    <MESSAGE value="VERDE: testVampirizzazioneFallita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProgenieVampiro" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getRisultatoVampirizzazione" />
@@ -641,6 +637,10 @@
     <MESSAGE value="ROSSO: testMessaggioLupoAmato non riuscito" />
     <MESSAGE value="VERDE: testMessaggioLupoAmato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLupoSolitario" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getMessaggioLupoSolitario" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLupoBranco" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioPrincipale" />
+    <MESSAGE value="REFACTORING: definizione del metodo isLupoSolitario" />
+    <MESSAGE value="REFACTORING: definizione del metodo isAngeloCustodePresente" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isAngeloCustodePresente" />
   </component>
 </project>
