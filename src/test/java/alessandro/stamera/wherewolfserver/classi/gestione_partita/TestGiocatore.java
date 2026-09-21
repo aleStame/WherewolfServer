@@ -815,6 +815,22 @@ public final class TestGiocatore
         verificaVero(isLadra());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testCriminalizzazioneCapoGildaRiuscita(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaAttacco(giocatore.gildata(), RIUSCITO);
+        assertThat(giocatore.getFazione()).isEqualTo(CRIMINALI);
+        verificaVero(giocatore.isCriminale());
+    }
+
     private boolean isLadra() { return giocatore.isLadra(); }
 
     private boolean isLupoExNonna() { return giocatore.isLupoExNonna(); }
