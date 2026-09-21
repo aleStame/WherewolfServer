@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoStregato riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -290,12 +290,12 @@
     &quot;assignee&quot;: &quot;aleStame&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/aleStame/WherewolfServer.git",
-    "accountId": "8e10a465-0822-4339-9f43-38959b8f5505"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/aleStame/WherewolfServer.git&quot;,
+    &quot;accountId&quot;: &quot;8e10a465-0822-4339-9f43-38959b8f5505&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -317,7 +317,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/segnalazioneInquisitore",
+    "git-widget-placeholder": "feature/attaccoLupoSolitario",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
@@ -426,30 +426,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00641" summary="REFACTORING: definizione del metodo getRisultatoVampirizzazione">
-      <option name="closed" value="true" />
-      <created>1788353830200</created>
-      <option name="number" value="00641" />
-      <option name="presentableId" value="LOCAL-00641" />
-      <option name="project" value="LOCAL" />
-      <updated>1788353830201</updated>
-    </task>
-    <task id="LOCAL-00642" summary="VERDE DIRETTO: testVampirizzazioneStregatoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788354301394</created>
-      <option name="number" value="00642" />
-      <option name="presentableId" value="LOCAL-00642" />
-      <option name="project" value="LOCAL" />
-      <updated>1788354301397</updated>
-    </task>
-    <task id="LOCAL-00643" summary="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito">
-      <option name="closed" value="true" />
-      <created>1788361827745</created>
-      <option name="number" value="00643" />
-      <option name="presentableId" value="LOCAL-00643" />
-      <option name="project" value="LOCAL" />
-      <updated>1788361827748</updated>
     </task>
     <task id="LOCAL-00644" summary="ROSSO: testVampirizzazioneRomeoFallita non riuscito">
       <option name="closed" value="true" />
@@ -819,7 +795,31 @@
       <option name="project" value="LOCAL" />
       <updated>1790020631475</updated>
     </task>
-    <option name="localTasksCounter" value="690" />
+    <task id="LOCAL-00690" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoRomeoe riuscito">
+      <option name="closed" value="true" />
+      <created>1790022170760</created>
+      <option name="number" value="00690" />
+      <option name="presentableId" value="LOCAL-00690" />
+      <option name="project" value="LOCAL" />
+      <updated>1790022170760</updated>
+    </task>
+    <task id="LOCAL-00691" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1790023059227</created>
+      <option name="number" value="00691" />
+      <option name="presentableId" value="LOCAL-00691" />
+      <option name="project" value="LOCAL" />
+      <updated>1790023059227</updated>
+    </task>
+    <task id="LOCAL-00692" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoStregato riuscito">
+      <option name="closed" value="true" />
+      <created>1790023542027</created>
+      <option name="number" value="00692" />
+      <option name="presentableId" value="LOCAL-00692" />
+      <option name="project" value="LOCAL" />
+      <updated>1790023542029</updated>
+    </task>
+    <option name="localTasksCounter" value="693" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -837,9 +837,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isAngeloCustodePresente" />
-    <MESSAGE value="REFACTORING: definizione di un costruttore privato" />
-    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
     <MESSAGE value="ROSSO: testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode non riuscito" />
     <MESSAGE value="VERDE: testAttaccoLupoSolitarioCappuccettoRossoAmatoConAngeloCustode riuscito" />
@@ -862,6 +859,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFazione" />
     <MESSAGE value="ROSSO: testGuarigioneVittimaLupi non riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoRomeoe riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoRomeo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoStregato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoStregato riuscito" />
   </component>
 </project>
