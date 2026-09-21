@@ -970,12 +970,12 @@ public final class TestPartita
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiEremita(String tipoLupo)
     {
-        String[][] giocatori = new String[][] { { "Margerita", "Eremita" }, { "Tony", tipoLupo } };
-        inizializzaPartita(giocatori);
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, giocatori[0][0]))
-            .withMessage("Margerita è l'Eremita, i lupi non possono ucciderlo.");
+        String nomeEremita = "Margherita";
+        inizializzaPartita(new String[][] { { nomeEremita, "Eremita" }, { "Tony", tipoLupo } });
+        String messaggio = "Margherita è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeEremita)).withMessage(messaggio);
         terminaNotte();
-        verificaNonEliminati(estraiNomiGiocatori(giocatori));
+        verificaNonEliminati(nomeEremita);
     }
 
     @Test public void testGhoulVivoPresente()
@@ -2414,7 +2414,7 @@ public final class TestPartita
         String messaggio =
             "Impossible uccidere la Ladra (Lucio) perché protetta almeno una volta dalle Creature dell'ombra.\nAvvisa i lupi dell'attacco " +
             "fallito.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeLadra)).withMessage(messaggio);
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeLadra)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeLadra);
         attaccoLupi(tipoLupo, nomeLadra);
@@ -2430,6 +2430,19 @@ public final class TestPartita
         String messaggio =
             "Il Capo branco (Andrea) non può attaccare il Lupo del branco amato (Matteo).\nAvvisa l'Angelo custode (Michele) della sua morte.";
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngelo);
+    }
+
+    @Test public void testAttaccoLupiCappuccettoRossoConNonna()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Elisa";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Elena", "Nonna" }, { "Alessia", tipoLupo }, { "Alex", "Giovane lupo" } };
+        inizializzaPartita(giocatori);
+        String messaggio =
+            "Fino a che la Nonna (Elena) è in gioco, Cappuccetto Rosso (Elisa) non può essere attaccata dai lupi.\nAvvisali dell'attacco fallito";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }

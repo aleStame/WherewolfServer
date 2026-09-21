@@ -1528,6 +1528,42 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
+    @Test public void testAttaccoLupiCappuccettoRossoConNonna()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Elisa";
+        String[][] giocatori =
+            new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Elena", "Nonna" }, { "Alessia", tipoLupo }, { "Alex", "Giovane lupo" } };
+        inizializzaGiocatori(giocatori);
+        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro",
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe",
+            "Spia", "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoCappuccettoRosso(String nomeRuolo)
+    {
+        String nome = "Piera";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(isCappuccettoRosso(nome));
+    }
+
+    @Test public void testCappuccettoRosso()
+    {
+        String nome = "Carmen";
+        aggiungiGiocatore(nome, "Cappuccetto rosso");
+        verificaVero(isCappuccettoRosso(nome));
+    }
+
+    private boolean isCappuccettoRosso(String nome) { return giocatori.isCappuccettoRosso(nome); }
+
     private void verificaAttaccoAngelo(String tipoLupo, String nomeAmato)
     {
         verificaAmato(nomeAmato);

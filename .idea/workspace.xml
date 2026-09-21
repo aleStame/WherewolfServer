@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoCapoBrancoFallito riuscito" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="Commit provvisorio">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -71,8 +74,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/aleStame/WherewolfServer&quot;,
-    &quot;accountId&quot;: &quot;c794b2a7-45df-4cf8-940e-0bd8736048ba&quot;
+    &quot;url&quot;: &quot;https://github.com/aleStame/WherewolfServer.git&quot;,
+    &quot;accountId&quot;: &quot;8e10a465-0822-4339-9f43-38959b8f5505&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -97,7 +100,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/attaccoLupoSolitario&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/protezioneCappuccettoRosso&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -113,7 +116,7 @@
       <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -194,19 +197,18 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
+    <configuration name="WherewolfServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="wherewolfserver.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="alessandro.stamera.wherewolfserver.WherewolfServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.55" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.55" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -226,262 +228,14 @@
       <workItem from="1789131951926" duration="10980000" />
       <workItem from="1789215996121" duration="866000" />
       <workItem from="1789372829622" duration="763000" />
-    </task>
-    <task id="LOCAL-00708" summary="VERDE: testMorteRomeoGiuliettaCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788969946782</created>
-      <option name="number" value="00708" />
-      <option name="presentableId" value="LOCAL-00708" />
-      <option name="project" value="LOCAL" />
-      <updated>1788969946782</updated>
-    </task>
-    <task id="LOCAL-00709" summary="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788970342856</created>
-      <option name="number" value="00709" />
-      <option name="presentableId" value="LOCAL-00709" />
-      <option name="project" value="LOCAL" />
-      <updated>1788970342857</updated>
-    </task>
-    <task id="LOCAL-00710" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788970554655</created>
-      <option name="number" value="00710" />
-      <option name="presentableId" value="LOCAL-00710" />
-      <option name="project" value="LOCAL" />
-      <updated>1788970554655</updated>
-    </task>
-    <task id="LOCAL-00711" summary="VERDE DIRETTO: testMorteRomeoGiuliettaAmataCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1789032327383</created>
-      <option name="number" value="00711" />
-      <option name="presentableId" value="LOCAL-00711" />
-      <option name="project" value="LOCAL" />
-      <updated>1789032327384</updated>
-    </task>
-    <task id="LOCAL-00712" summary="VERDE DIRETTO: testMorteRomeoGiuliettaStregataCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1789033356713</created>
-      <option name="number" value="00712" />
-      <option name="presentableId" value="LOCAL-00712" />
-      <option name="project" value="LOCAL" />
-      <updated>1789033356715</updated>
-    </task>
-    <task id="LOCAL-00713" summary="REFACTORING: correzione dei nomi dei metodi">
-      <option name="closed" value="true" />
-      <created>1789034458605</created>
-      <option name="number" value="00713" />
-      <option name="presentableId" value="LOCAL-00713" />
-      <option name="project" value="LOCAL" />
-      <updated>1789034458606</updated>
-    </task>
-    <task id="LOCAL-00714" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1789034798758</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
-      <option name="project" value="LOCAL" />
-      <updated>1789034798758</updated>
-    </task>
-    <task id="LOCAL-00715" summary="ROSSO: testAttaccoVampiro non riuscito">
-      <option name="closed" value="true" />
-      <created>1789056208943</created>
-      <option name="number" value="00715" />
-      <option name="presentableId" value="LOCAL-00715" />
-      <option name="project" value="LOCAL" />
-      <updated>1789056208943</updated>
-    </task>
-    <task id="LOCAL-00716" summary="VERDE: testAttaccoVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1789056474746</created>
-      <option name="number" value="00716" />
-      <option name="presentableId" value="LOCAL-00716" />
-      <option name="project" value="LOCAL" />
-      <updated>1789056474747</updated>
-    </task>
-    <task id="LOCAL-00717" summary="REFACTORING: definizione del metodo getEsitoAttaccoDefault">
-      <option name="closed" value="true" />
-      <created>1789056825604</created>
-      <option name="number" value="00717" />
-      <option name="presentableId" value="LOCAL-00717" />
-      <option name="project" value="LOCAL" />
-      <updated>1789056825604</updated>
-    </task>
-    <task id="LOCAL-00718" summary="ROSSO: testVampirizzazioneRiuscita non riuscito">
-      <option name="closed" value="true" />
-      <created>1789057317858</created>
-      <option name="number" value="00718" />
-      <option name="presentableId" value="LOCAL-00718" />
-      <option name="project" value="LOCAL" />
-      <updated>1789057317858</updated>
-    </task>
-    <task id="LOCAL-00719" summary="VERDE: testVampirizzazioneRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1789057535037</created>
-      <option name="number" value="00719" />
-      <option name="presentableId" value="LOCAL-00719" />
-      <option name="project" value="LOCAL" />
-      <updated>1789057535038</updated>
-    </task>
-    <task id="LOCAL-00720" summary="REFACTORING: definizione del metodo verificaGiuliettaBeccata">
-      <option name="closed" value="true" />
-      <created>1789057782043</created>
-      <option name="number" value="00720" />
-      <option name="presentableId" value="LOCAL-00720" />
-      <option name="project" value="LOCAL" />
-      <updated>1789057782043</updated>
-    </task>
-    <task id="LOCAL-00721" summary="ROSSO: testVampirizzazioneGiuliettaCriminali non riuscito">
-      <option name="closed" value="true" />
-      <created>1789059536645</created>
-      <option name="number" value="00721" />
-      <option name="presentableId" value="LOCAL-00721" />
-      <option name="project" value="LOCAL" />
-      <updated>1789059536646</updated>
-    </task>
-    <task id="LOCAL-00722" summary="Merge branch 'feature/attaccoCapoBrancoAmato' into develop">
-      <option name="closed" value="true" />
-      <created>1789120943593</created>
-      <option name="number" value="00722" />
-      <option name="presentableId" value="LOCAL-00722" />
-      <option name="project" value="LOCAL" />
-      <updated>1789120943593</updated>
-    </task>
-    <task id="LOCAL-00723" summary="Merge branch 'feature/attaccoCapoBrancoAmato' into develop">
-      <option name="closed" value="true" />
-      <created>1789131127171</created>
-      <option name="number" value="00723" />
-      <option name="presentableId" value="LOCAL-00723" />
-      <option name="project" value="LOCAL" />
-      <updated>1789131127171</updated>
-    </task>
-    <task id="LOCAL-00724" summary="ROSSO: testDoppioAttaccoLupiLadra non riuscito">
-      <option name="closed" value="true" />
-      <created>1789132252908</created>
-      <option name="number" value="00724" />
-      <option name="presentableId" value="LOCAL-00724" />
-      <option name="project" value="LOCAL" />
-      <updated>1789132252908</updated>
-    </task>
-    <task id="LOCAL-00725" summary="VERDE: testDoppioAttaccoLupiLadra riuscito">
-      <option name="closed" value="true" />
-      <created>1789137704701</created>
-      <option name="number" value="00725" />
-      <option name="presentableId" value="LOCAL-00725" />
-      <option name="project" value="LOCAL" />
-      <updated>1789137704701</updated>
-    </task>
-    <task id="LOCAL-00726" summary="REFACTORING: definizione del metodo getPosizioneLadra">
-      <option name="closed" value="true" />
-      <created>1789137861452</created>
-      <option name="number" value="00726" />
-      <option name="presentableId" value="LOCAL-00726" />
-      <option name="project" value="LOCAL" />
-      <updated>1789137861452</updated>
-    </task>
-    <task id="LOCAL-00727" summary="REFACTORING: definizione del metodo isLadraPresente">
-      <option name="closed" value="true" />
-      <created>1789138974153</created>
-      <option name="number" value="00727" />
-      <option name="presentableId" value="LOCAL-00727" />
-      <option name="project" value="LOCAL" />
-      <updated>1789138974153</updated>
-    </task>
-    <task id="LOCAL-00728" summary="REFACTORING: definizione del metodo proteggiLadra">
-      <option name="closed" value="true" />
-      <created>1789139206413</created>
-      <option name="number" value="00728" />
-      <option name="presentableId" value="LOCAL-00728" />
-      <option name="project" value="LOCAL" />
-      <updated>1789139206413</updated>
-    </task>
-    <task id="LOCAL-00729" summary="REFACTORING: definizione del metodo getGiocatoreLadra">
-      <option name="closed" value="true" />
-      <created>1789139634441</created>
-      <option name="number" value="00729" />
-      <option name="presentableId" value="LOCAL-00729" />
-      <option name="project" value="LOCAL" />
-      <updated>1789139634441</updated>
-    </task>
-    <task id="LOCAL-00730" summary="REFACTORING: definizione del metodo isProtezionePresenteLadra">
-      <option name="closed" value="true" />
-      <created>1789140136350</created>
-      <option name="number" value="00730" />
-      <option name="presentableId" value="LOCAL-00730" />
-      <option name="project" value="LOCAL" />
-      <updated>1789140136350</updated>
-    </task>
-    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo aggiungiProtezioneLadra">
-      <option name="closed" value="true" />
-      <created>1789140492273</created>
-      <option name="number" value="00731" />
-      <option name="presentableId" value="LOCAL-00731" />
-      <option name="project" value="LOCAL" />
-      <updated>1789140492273</updated>
-    </task>
-    <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo aggiornaProtezioniLadra">
-      <option name="closed" value="true" />
-      <created>1789140757283</created>
-      <option name="number" value="00732" />
-      <option name="presentableId" value="LOCAL-00732" />
-      <option name="project" value="LOCAL" />
-      <updated>1789140757283</updated>
-    </task>
-    <task id="LOCAL-00733" summary="ROSSO: testNoLadra non riuscito">
-      <option name="closed" value="true" />
-      <created>1789141244316</created>
-      <option name="number" value="00733" />
-      <option name="presentableId" value="LOCAL-00733" />
-      <option name="project" value="LOCAL" />
-      <updated>1789141244316</updated>
-    </task>
-    <task id="LOCAL-00734" summary="VERDE: testNoLadra riuscito">
-      <option name="closed" value="true" />
-      <created>1789141484506</created>
-      <option name="number" value="00734" />
-      <option name="presentableId" value="LOCAL-00734" />
-      <option name="project" value="LOCAL" />
-      <updated>1789141484506</updated>
-    </task>
-    <task id="LOCAL-00735" summary="VERDE DIRETTO: testLadra riuscito">
-      <option name="closed" value="true" />
-      <created>1789142017152</created>
-      <option name="number" value="00735" />
-      <option name="presentableId" value="LOCAL-00735" />
-      <option name="project" value="LOCAL" />
-      <updated>1789142017152</updated>
-    </task>
-    <task id="LOCAL-00736" summary="REFACTORING: definizione del metodo isLadra">
-      <option name="closed" value="true" />
-      <created>1789142215193</created>
-      <option name="number" value="00736" />
-      <option name="presentableId" value="LOCAL-00736" />
-      <option name="project" value="LOCAL" />
-      <updated>1789142215193</updated>
-    </task>
-    <task id="LOCAL-00737" summary="ROSSO; testPossessioneLadraNonRiuscita non riuscito">
-      <option name="closed" value="true" />
-      <created>1789142974998</created>
-      <option name="number" value="00737" />
-      <option name="presentableId" value="LOCAL-00737" />
-      <option name="project" value="LOCAL" />
-      <updated>1789142974998</updated>
-    </task>
-    <task id="LOCAL-00738" summary="ROSSO: testDoppioAttaccoLupiLadra non riuscito">
-      <option name="closed" value="true" />
-      <created>1789219801941</created>
-      <option name="number" value="00738" />
-      <option name="presentableId" value="LOCAL-00738" />
-      <option name="project" value="LOCAL" />
-      <updated>1789219801941</updated>
-    </task>
-    <task id="LOCAL-00739" summary="ROSSO: testAttaccoCapoBranco non riuscito">
-      <option name="closed" value="true" />
-      <created>1789221117965</created>
-      <option name="number" value="00739" />
-      <option name="presentableId" value="LOCAL-00739" />
-      <option name="project" value="LOCAL" />
-      <updated>1789221117965</updated>
+      <workItem from="1789464528408" duration="2198000" />
+      <workItem from="1789476069677" duration="4039000" />
+      <workItem from="1789547926833" duration="446000" />
+      <workItem from="1789548790188" duration="5033000" />
+      <workItem from="1789634363642" duration="1142000" />
+      <workItem from="1789635922847" duration="831000" />
+      <workItem from="1789737497569" duration="229000" />
+      <workItem from="1789980362579" duration="1031000" />
     </task>
     <task id="LOCAL-00740" summary="VERDE: testAttaccoCapoBranco riuscito">
       <option name="closed" value="true" />
@@ -619,7 +373,263 @@
       <option name="project" value="LOCAL" />
       <updated>1789376274687</updated>
     </task>
-    <option name="localTasksCounter" value="757" />
+    <task id="LOCAL-00757" summary="Merge branch 'feature/attaccoCapoBrancoAmato' into develop">
+      <option name="closed" value="true" />
+      <created>1789378586510</created>
+      <option name="number" value="00757" />
+      <option name="presentableId" value="LOCAL-00757" />
+      <option name="project" value="LOCAL" />
+      <updated>1789378586510</updated>
+    </task>
+    <task id="LOCAL-00758" summary="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito">
+      <option name="closed" value="true" />
+      <created>1789388547583</created>
+      <option name="number" value="00758" />
+      <option name="presentableId" value="LOCAL-00758" />
+      <option name="project" value="LOCAL" />
+      <updated>1789388547583</updated>
+    </task>
+    <task id="LOCAL-00759" summary="VERDE: testAttaccoLupiCappuccettoRossoConNonna riuscito">
+      <option name="closed" value="true" />
+      <created>1789393190238</created>
+      <option name="number" value="00759" />
+      <option name="presentableId" value="LOCAL-00759" />
+      <option name="project" value="LOCAL" />
+      <updated>1789393190240</updated>
+    </task>
+    <task id="LOCAL-00760" summary="REFACTORING: definizione del metodo getLupi">
+      <option name="closed" value="true" />
+      <created>1789393974839</created>
+      <option name="number" value="00760" />
+      <option name="presentableId" value="LOCAL-00760" />
+      <option name="project" value="LOCAL" />
+      <updated>1789393974839</updated>
+    </task>
+    <task id="LOCAL-00761" summary="REFACTORING: definizione del metodo isProtezionePresente">
+      <option name="closed" value="true" />
+      <created>1789395233763</created>
+      <option name="number" value="00761" />
+      <option name="presentableId" value="LOCAL-00761" />
+      <option name="project" value="LOCAL" />
+      <updated>1789395233763</updated>
+    </task>
+    <task id="LOCAL-00762" summary="REFACTORING: definizione del metodo perdiProtezione">
+      <option name="closed" value="true" />
+      <created>1789396155784</created>
+      <option name="number" value="00762" />
+      <option name="presentableId" value="LOCAL-00762" />
+      <option name="project" value="LOCAL" />
+      <updated>1789396155784</updated>
+    </task>
+    <task id="LOCAL-00763" summary="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1789396497184</created>
+      <option name="number" value="00763" />
+      <option name="presentableId" value="LOCAL-00763" />
+      <option name="project" value="LOCAL" />
+      <updated>1789396497184</updated>
+    </task>
+    <task id="LOCAL-00764" summary="REFACTORING: definizione del metodo isCappuccettoRossoIndifesa">
+      <option name="closed" value="true" />
+      <created>1789396710670</created>
+      <option name="number" value="00764" />
+      <option name="presentableId" value="LOCAL-00764" />
+      <option name="project" value="LOCAL" />
+      <updated>1789396710670</updated>
+    </task>
+    <task id="LOCAL-00765" summary="REFACTORING: definizione del metodo gestisciProtezioniCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1789397012319</created>
+      <option name="number" value="00765" />
+      <option name="presentableId" value="LOCAL-00765" />
+      <option name="project" value="LOCAL" />
+      <updated>1789397012320</updated>
+    </task>
+    <task id="LOCAL-00766" summary="REFACTORING: definizione del metodo perdiProtezioneCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1789397296015</created>
+      <option name="number" value="00766" />
+      <option name="presentableId" value="LOCAL-00766" />
+      <option name="project" value="LOCAL" />
+      <updated>1789397296015</updated>
+    </task>
+    <task id="LOCAL-00767" summary="REFACTORING: definizione del metodo aggiungiProtezione">
+      <option name="closed" value="true" />
+      <created>1789398186257</created>
+      <option name="number" value="00767" />
+      <option name="presentableId" value="LOCAL-00767" />
+      <option name="project" value="LOCAL" />
+      <updated>1789398186257</updated>
+    </task>
+    <task id="LOCAL-00768" summary="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1789398672373</created>
+      <option name="number" value="00768" />
+      <option name="presentableId" value="LOCAL-00768" />
+      <option name="project" value="LOCAL" />
+      <updated>1789398672373</updated>
+    </task>
+    <task id="LOCAL-00769" summary="REFACTORING: definizione del metodo aggiungiProtezioneLupiCappuccettoRosso">
+      <option name="closed" value="true" />
+      <created>1789398958978</created>
+      <option name="number" value="00769" />
+      <option name="presentableId" value="LOCAL-00769" />
+      <option name="project" value="LOCAL" />
+      <updated>1789398958978</updated>
+    </task>
+    <task id="LOCAL-00770" summary="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRossoPostInserimento">
+      <option name="closed" value="true" />
+      <created>1789399278837</created>
+      <option name="number" value="00770" />
+      <option name="presentableId" value="LOCAL-00770" />
+      <option name="project" value="LOCAL" />
+      <updated>1789399278837</updated>
+    </task>
+    <task id="LOCAL-00771" summary="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito">
+      <option name="closed" value="true" />
+      <created>1789399725943</created>
+      <option name="number" value="00771" />
+      <option name="presentableId" value="LOCAL-00771" />
+      <option name="project" value="LOCAL" />
+      <updated>1789399725943</updated>
+    </task>
+    <task id="LOCAL-00772" summary="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito">
+      <option name="closed" value="true" />
+      <created>1789399775438</created>
+      <option name="number" value="00772" />
+      <option name="presentableId" value="LOCAL-00772" />
+      <option name="project" value="LOCAL" />
+      <updated>1789399775438</updated>
+    </task>
+    <task id="LOCAL-00773" summary="VERDE: testAttaccoLupiCappuccettoRossoConNonna riuscito">
+      <option name="closed" value="true" />
+      <created>1789401162817</created>
+      <option name="number" value="00773" />
+      <option name="presentableId" value="LOCAL-00773" />
+      <option name="project" value="LOCAL" />
+      <updated>1789401162817</updated>
+    </task>
+    <task id="LOCAL-00774" summary="REFACTORING: definiizone del metodo gestisciEccezioniCacciatoreNonProtetto">
+      <option name="closed" value="true" />
+      <created>1789465068402</created>
+      <option name="number" value="00774" />
+      <option name="presentableId" value="LOCAL-00774" />
+      <option name="project" value="LOCAL" />
+      <updated>1789465068403</updated>
+    </task>
+    <task id="LOCAL-00775" summary="ROSSO: testEccezioneLadraProtetta non riuscito">
+      <option name="closed" value="true" />
+      <created>1789465741927</created>
+      <option name="number" value="00775" />
+      <option name="presentableId" value="LOCAL-00775" />
+      <option name="project" value="LOCAL" />
+      <updated>1789465741927</updated>
+    </task>
+    <task id="LOCAL-00776" summary="VERDE: testEccezioneLadraProtetta riuscito">
+      <option name="closed" value="true" />
+      <created>1789465987030</created>
+      <option name="number" value="00776" />
+      <option name="presentableId" value="LOCAL-00776" />
+      <option name="project" value="LOCAL" />
+      <updated>1789465987030</updated>
+    </task>
+    <task id="LOCAL-00777" summary="ROSSO: testEccezioneEremita non riuscito">
+      <option name="closed" value="true" />
+      <created>1789476392069</created>
+      <option name="number" value="00777" />
+      <option name="presentableId" value="LOCAL-00777" />
+      <option name="project" value="LOCAL" />
+      <updated>1789476392071</updated>
+    </task>
+    <task id="LOCAL-00778" summary="VERDE: testEccezioneEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1789477269174</created>
+      <option name="number" value="00778" />
+      <option name="presentableId" value="LOCAL-00778" />
+      <option name="project" value="LOCAL" />
+      <updated>1789477269174</updated>
+    </task>
+    <task id="LOCAL-00779" summary="REFACTORING: compattazione dei due metodo in un unico test parametrico">
+      <option name="closed" value="true" />
+      <created>1789479051431</created>
+      <option name="number" value="00779" />
+      <option name="presentableId" value="LOCAL-00779" />
+      <option name="project" value="LOCAL" />
+      <updated>1789479051432</updated>
+    </task>
+    <task id="LOCAL-00780" summary="VERDE: testEccezioneLupoReietto riuscito">
+      <option name="closed" value="true" />
+      <created>1789549249239</created>
+      <option name="number" value="00780" />
+      <option name="presentableId" value="LOCAL-00780" />
+      <option name="project" value="LOCAL" />
+      <updated>1789549249239</updated>
+    </task>
+    <task id="LOCAL-00781" summary="REFACTORING: definizione del metodo getMessaggioRuoloProtetto">
+      <option name="closed" value="true" />
+      <created>1789549600774</created>
+      <option name="number" value="00781" />
+      <option name="presentableId" value="LOCAL-00781" />
+      <option name="project" value="LOCAL" />
+      <updated>1789549600774</updated>
+    </task>
+    <task id="LOCAL-00782" summary="REFACTORING: definizione del metodo getMessaggioLadra">
+      <option name="closed" value="true" />
+      <created>1789549825285</created>
+      <option name="number" value="00782" />
+      <option name="presentableId" value="LOCAL-00782" />
+      <option name="project" value="LOCAL" />
+      <updated>1789549825285</updated>
+    </task>
+    <task id="LOCAL-00783" summary="REFACTORING: definizione del metodo getMessaggioLupo">
+      <option name="closed" value="true" />
+      <created>1789550024831</created>
+      <option name="number" value="00783" />
+      <option name="presentableId" value="LOCAL-00783" />
+      <option name="project" value="LOCAL" />
+      <updated>1789550024831</updated>
+    </task>
+    <task id="LOCAL-00784" summary="REFACTORING: definizione di un costruttore privato">
+      <option name="closed" value="true" />
+      <created>1789550483436</created>
+      <option name="number" value="00784" />
+      <option name="presentableId" value="LOCAL-00784" />
+      <option name="project" value="LOCAL" />
+      <updated>1789550483436</updated>
+    </task>
+    <task id="LOCAL-00785" summary="REFACTORING: definizione del metodo getMessaggioEremita">
+      <option name="closed" value="true" />
+      <created>1789550732951</created>
+      <option name="number" value="00785" />
+      <option name="presentableId" value="LOCAL-00785" />
+      <option name="project" value="LOCAL" />
+      <updated>1789550732951</updated>
+    </task>
+    <task id="LOCAL-00786" summary="REFACTORING: definizione del metodo verificaMessaggioEccezione">
+      <option name="closed" value="true" />
+      <created>1789551976331</created>
+      <option name="number" value="00786" />
+      <option name="presentableId" value="LOCAL-00786" />
+      <option name="project" value="LOCAL" />
+      <updated>1789551976332</updated>
+    </task>
+    <task id="LOCAL-00787" summary="VERDE DIRETTO: testNoCappuccettoRosso riuscito">
+      <option name="closed" value="true" />
+      <created>1789552564593</created>
+      <option name="number" value="00787" />
+      <option name="presentableId" value="LOCAL-00787" />
+      <option name="project" value="LOCAL" />
+      <updated>1789552564593</updated>
+    </task>
+    <task id="LOCAL-00788" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
+      <option name="closed" value="true" />
+      <created>1789552874683</created>
+      <option name="number" value="00788" />
+      <option name="presentableId" value="LOCAL-00788" />
+      <option name="project" value="LOCAL" />
+      <updated>1789552874686</updated>
+    </task>
+    <option name="localTasksCounter" value="789" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,31 +647,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVampirizzazioneGiuliettaCriminali riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testGuarigioneLupi riuscito" />
-    <MESSAGE value="VERDE: testDoppioAttaccoLupiLadra riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneLadra" />
-    <MESSAGE value="REFACTORING: definizione del metodo isLadraPresente" />
-    <MESSAGE value="REFACTORING: definizione del metodo proteggiLadra" />
-    <MESSAGE value="REFACTORING: definizione del metodo getGiocatoreLadra" />
-    <MESSAGE value="REFACTORING: definizione del metodo isProtezionePresenteLadra" />
-    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneLadra" />
-    <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioniLadra" />
-    <MESSAGE value="ROSSO: testNoLadra non riuscito" />
-    <MESSAGE value="VERDE: testNoLadra riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testLadra riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo isLadra" />
-    <MESSAGE value="ROSSO; testPossessioneLadraNonRiuscita non riuscito" />
-    <MESSAGE value="ROSSO: testDoppioAttaccoLupiLadra non riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoCapoBranco non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoCapoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoCapoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBrancoLupoBrancoAmato riuscito" />
-    <MESSAGE value="Merge branch 'feature/attaccoCapoBrancoAmato' into develop" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
-    <MESSAGE value="ROSSO: testAttaccoCapoBrancoFallito non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoCapoBrancoFallito riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoCapoBrancoFallito riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo isCappuccettoRossoIndifesa" />
+    <MESSAGE value="REFACTORING: definizione del metodo gestisciProtezioniCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo perdiProtezioneCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezione" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiungiProtezioneLupiCappuccettoRosso" />
+    <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRossoPostInserimento" />
+    <MESSAGE value="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupiCappuccettoRossoConNonna riuscito" />
+    <MESSAGE value="REFACTORING: definiizone del metodo gestisciEccezioniCacciatoreNonProtetto" />
+    <MESSAGE value="ROSSO: testEccezioneLadraProtetta non riuscito" />
+    <MESSAGE value="VERDE: testEccezioneLadraProtetta riuscito" />
+    <MESSAGE value="ROSSO: testEccezioneEremita non riuscito" />
+    <MESSAGE value="VERDE: testEccezioneEremita riuscito" />
+    <MESSAGE value="REFACTORING: compattazione dei due metodo in un unico test parametrico" />
+    <MESSAGE value="VERDE: testEccezioneLupoReietto riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioRuoloProtetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLadra" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLupo" />
+    <MESSAGE value="REFACTORING: definizione di un costruttore privato" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioEremita" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioEccezione" />
+    <MESSAGE value="VERDE DIRETTO: testNoCappuccettoRosso riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
   </component>
 </project>

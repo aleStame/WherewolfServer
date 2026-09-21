@@ -34,6 +34,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
         if(isPotereBracconiereUtilizzato()) esito = FALLITO;
+        System.out.println(esito);
         switch(esito)
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
@@ -261,7 +262,10 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
-    public void aggiungiProtezioneCreatureOmbra(String nome) { getGiocatore(nome).aggiungiProtezione(getCreatureOmbra()); }
+    public void aggiungiProtezioneCreatureOmbra(String nome)
+    {
+        for(Ruolo ruolo : getCreatureOmbra()) aggiungiProtezione(nome, ruolo);
+    }
 
     public boolean isStregato(String nome) { return getGiocatore(nome).isStregato(); }
 
@@ -298,6 +302,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.eliminaGiocatore(nome);
         perditaProtezioniAmato();
+        aggiornaProtezioniCappuccettoRosso();
         aggiornaProtezioni();
     }
 
@@ -306,6 +311,7 @@ public final class GiocatoriVivi extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
+        aggiornaProtezioniCappuccettoRossoPostInserimento();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -347,6 +353,43 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isLadra(String nome) { return getGiocatore(nome).isLadra(); }
 
+    public String getNomeCappuccettoRosso() { return getNomeGiocatore(getPosizioneCappuccettoRosso()); }
+
+    private void aggiornaProtezioniCappuccettoRossoPostInserimento()
+    {
+        if(isCappuccettoNonnaPresenti()) aggiungiProtezioneLupiCappuccettoRosso();
+    }
+
+    private void aggiungiProtezioneLupiCappuccettoRosso() { for(Ruolo ruolo : getLupi()) aggiungiProtezioneCappuccettoRosso(ruolo); }
+
+    private void aggiungiProtezioneCappuccettoRosso(Ruolo ruolo)
+    {
+        String nomeCappuccettoRosso = getNomeCappuccettoRosso();
+        if(!isProtezionePresente(nomeCappuccettoRosso, ruolo)) aggiungiProtezione(nomeCappuccettoRosso, ruolo);
+    }
+
+    private void aggiornaProtezioniCappuccettoRosso() { if(isCappuccettoRossoIndifesa()) perdiProtezioniLupiCappuccettoRosso(); }
+
+    private boolean isCappuccettoRossoIndifesa() { return isCappuccettoRossoPresente() && !isNonnaPresente(); }
+
+    private void perdiProtezioniLupiCappuccettoRosso()
+    {
+        for(Ruolo lupo : getLupi()) perdiProtezioneCappuccettoRosso(lupo);
+    }
+
+    private void perdiProtezioneCappuccettoRosso(Ruolo lupo)
+    {
+        String nomeCappuccettoRosso =  getNomeCappuccettoRosso();
+        if(isProtezionePresente(nomeCappuccettoRosso, lupo)) perdiProtezione(nomeCappuccettoRosso, lupo);
+    }
+
+    private Ruolo[] getLupi()
+    {
+        List<Ruolo> ruoli = new ArrayList<>(stream(getLupiBranco()).map(Giocatore::getRuolo).toList());
+        if(isLupoSolitarioPresente()) ruoli.add(getRuolo(getPosizioneLupoSolitario()));
+        return ruoli.toArray(new Ruolo[0]);
+    }
+
     private void aggiornaProtezioniLadra() { if(isLadraPresente()) proteggiLadra(); }
 
     private void proteggiLadra()
@@ -354,11 +397,15 @@ public final class GiocatoriVivi extends Giocatori
         for(Ruolo ruolo : getCreatureOmbra()) if(!isProtezionePresenteLadra(ruolo)) aggiungiProtezioneLadra(ruolo);
     }
 
-    private boolean isProtezionePresenteLadra(Ruolo ruolo) { return getGiocatoreLadra().isProtezionePresente(ruolo); }
+    private boolean isProtezionePresenteLadra(Ruolo ruolo)
+    {
+        return isProtezionePresente(getNomeGiocatore(getPosizioneLadra()), ruolo);
+    }
 
-    private void aggiungiProtezioneLadra(Ruolo ruolo) { getGiocatoreLadra().aggiungiProtezione(ruolo); }
-
-    private Giocatore getGiocatoreLadra() { return getGiocatore(getPosizioneLadra()); }
+    private void aggiungiProtezioneLadra(Ruolo ruolo)
+    {
+        aggiungiProtezione(getNomeGiocatore(getPosizioneLadra()), ruolo);
+    }
 
     private boolean isLadraPresente() { return getPosizioneLadra() != NON_TROVATO; }
 
@@ -383,20 +430,15 @@ public final class GiocatoriVivi extends Giocatori
 
     private void togliProtezioniCacciatore()
     {
-        for(Giocatore lupo : getLupiBranco()) if(isProtezioneEliminabile(lupo)) getGiocatoreCacciatore().perdiProtezione(lupo.getRuolo());
+        for(Giocatore lupo : getLupiBranco()) if(isProtezioneEliminabile(lupo)) perdiProtezione(getNomeCacciatore(), lupo.getRuolo());
     }
 
     private boolean isProtezioneEliminabile(Giocatore lupo)
     {
-        return getGiocatoreCacciatore().isProtezionePresente(lupo.getRuolo()) && !lupo.isLupoExNonna();
+        return isProtezionePresente(getNomeCacciatore(), lupo.getRuolo()) && !lupo.isLupoExNonna();
     }
 
-    private void proteggiCacciatoreDaUltimoLupoBranco()
-    {
-        getGiocatoreCacciatore().aggiungiProtezione(getUltimoLupoRimasto());
-    }
-
-    private Giocatore getGiocatoreCacciatore() { return getGiocatore(getNomeCacciatore()); }
+    private void proteggiCacciatoreDaUltimoLupoBranco() { aggiungiProtezione(getNomeCacciatore(), getUltimoLupoRimasto()); }
 
     private Giocatore[] getLupiBranco()
     {
@@ -451,8 +493,6 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isCappuccettoRossoAmato() { return isProtezioneAngeloCustodeAttiva(getNomeCappuccettoRosso()); }
 
-    private String getNomeCappuccettoRosso() { return getNomeGiocatore(getPosizioneCappuccettoRosso()); }
-
     private boolean isProtezioneAngeloCustodeAttiva(String nome) { return isAmato(nome) && isAngeloCustodePresente(); }
 
     private void gestisciProtezioneNonna()
@@ -484,10 +524,10 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isCappuccettoRossoProtetto(String nome, Ruolo attaccante)
     {
-        return isCappuccettoRosso(nome) && getGiocatore(nome).isProtezionePresente(attaccante);
+        return isCappuccettoRosso(nome) && isProtezionePresente(nome, attaccante);
     }
 
-    private boolean isCappuccettoRosso(String nome) { return getGiocatore(nome).isCappuccettoRosso(); }
+    public boolean isCappuccettoRosso(String nome) { return getGiocatore(nome).isCappuccettoRosso(); }
 
     public boolean isTemplarePresente() { return getPosizioneTemplare() != NON_TROVATO; }
 
@@ -524,11 +564,12 @@ public final class GiocatoriVivi extends Giocatori
         aggiungiProtezioneNonna(posizione);
     }
 
-    private void aggiungiProtezioneNonna(int posizione) { getCappuccettoRosso().aggiungiProtezione(getRuolo(posizione)); }
+    private void aggiungiProtezioneNonna(int posizione)
+    {
+        aggiungiProtezione(getNomeCappuccettoRosso(), getRuolo(posizione));
+    }
 
     private Ruolo getRuolo(int posizione) { return getGiocatore(posizione).getRuolo(); }
-
-    private Giocatore getCappuccettoRosso() { return getGiocatore(getPosizioneCappuccettoRosso()); }
 
     private int getPosizioneCacciatoreDiVampiri()
     {
@@ -808,5 +849,11 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isGuardia(int posizione) { return isGuardia(getNomeGiocatore(posizione)); }
 
     private Giocatore getGiocatore(int posizione) { return getGiocatore(getNomeGiocatore(posizione)); }
+
+    private boolean isProtezionePresente(String nome, Ruolo ruolo) { return getGiocatore(nome).isProtezionePresente(ruolo); }
+
+    private void aggiungiProtezione(String nome, Ruolo ruolo) { getGiocatore(nome).aggiungiProtezione(ruolo); }
+
+    private void perdiProtezione(String nome, Ruolo ruolo) { getGiocatore(nome).perdiProtezione(ruolo); }
 
 }
