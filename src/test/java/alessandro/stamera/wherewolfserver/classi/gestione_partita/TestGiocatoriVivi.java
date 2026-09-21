@@ -223,10 +223,20 @@ public final class TestGiocatoriVivi
         verificaAccusati(giocatori[0][0], giocatori[3][0]);
     }
 
-    @Test public void testSegnalazioneAzzeccagarbugli()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Bardo", "Becchino", "Boia", "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guaritore", "Giovane lupo", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Monaco", "Negromante", "Nonna", "Nosferatu", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe",
+            "Templare"
+        }
+    )
+    public void testSegnalazioneAzzeccagarbugli(String nomeRuolo)
     {
         String nome = "Biagio", nomeVotato = "Herbert";
-        inizializzaGiocatori(new String[][] { { "Francesco", "Azzeccagarbugli" }, { nome, "Cacciatore" }, { nomeVotato, "Assassino" } });
+        inizializzaGiocatori(new String[][] { { "Francesco", "Azzeccagarbugli" }, { nome, nomeRuolo }, { nomeVotato, "Assassino" } });
         segnalazioneAzzeccagarbugli(nome);
         incrementaVoti(nomeVotato, 2);
         verificaAccusati(nome, nomeVotato);
