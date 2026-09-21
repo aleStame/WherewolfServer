@@ -607,7 +607,7 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeMago(), nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Contadino mostro, MORTO" })
+    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Contadino mostro, MORTO" })
     public void testAttaccoNegromante(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Mike";
