@@ -116,7 +116,7 @@ public final class TestGiocatore
     public void testProgenieNosferatu(String nomeRuolo, EsitoAttacco esito)
     {
         cambiaRuolo(nomeRuolo);
-        assertThat(giocatore.progenizzazioneNosferatu()).isEqualTo(esito);
+        verificaAttacco(giocatore.progenizzazioneNosferatu(), esito);
     }
 
     @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Contadino mostro, MORTO", "Giullare, RIUSCITO" })
