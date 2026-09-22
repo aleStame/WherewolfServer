@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.springframework.lang.NonNull;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
@@ -252,11 +254,14 @@ public final class Giocatore
     public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = ruolo.getEsitoPartita(partita);
-        if(isRomeo())
-        {
-            esito = SCONFITTA;
-            if(partita.isGiuliettaPresente()) esito = VITTORIA;
-        }
+        if(isRomeo()) esito = getPartitaRomeo(partita);
+        return esito;
+    }
+
+    private EsitoPartita getPartitaRomeo(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isGiuliettaPresente()) esito = VITTORIA;
         return esito;
     }
 
