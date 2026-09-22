@@ -880,6 +880,22 @@ public final class TestGiocatore
         assertThat(giocatore.getEsitoPartita(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }))).isEqualTo(VITTORIA);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testSconfittaGiocatoreCriminalizzatoControGuardie(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoGildata(RIUSCITO);
+        verificaCriminale();
+        assertThat(giocatore.getEsitoPartita(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }))).isEqualTo(SCONFITTA);
+    }
+
     private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
     {
         giocatore.romeizzazione();
