@@ -2545,8 +2545,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         romeizzazione(nome);
         attaccoAssassino(nome);
-        progenizzazioneNosferatu(nome);
-        verificaFalso(partita.isFazioneNosferatu(nome));
+        verificaNonProgenizzabile(nome);
     }
 
     @ParameterizedTest @CsvSource
@@ -2568,6 +2567,11 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         protezioneStrega(nome);
         attaccoAssassino(nome);
+        verificaNonProgenizzabile(nome);
+    }
+
+    private void verificaNonProgenizzabile(String nome)
+    {
         progenizzazioneNosferatu(nome);
         verificaFalso(partita.isFazioneNosferatu(nome));
     }
