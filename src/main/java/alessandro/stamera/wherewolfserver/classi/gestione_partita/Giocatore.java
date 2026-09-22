@@ -199,7 +199,11 @@ public final class Giocatore
 
     public boolean isNonMorto() { return tratti.isPresente(NON_MORTO); }
 
-    public void romeizzazione() { setRomeo(true); }
+    public void romeizzazione()
+    {
+        setRomeo(true);
+        cambiaFazione(AMANTI);
+    }
 
     public boolean isRomeo() { return romeo; }
 
