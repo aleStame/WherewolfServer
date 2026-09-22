@@ -4,6 +4,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -247,7 +248,12 @@ public final class Giocatore
 
     public boolean isLadra() { return ruolo.isLadra(); }
 
-    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
+    public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = ruolo.getEsitoPartita(partita);
+        if(isRomeo() && partita.isGiuliettaPresente()) esito = VITTORIA;
+        return esito;
+    }
 
     private EsitoAttacco getRisultatoVampirizzazione()
     {

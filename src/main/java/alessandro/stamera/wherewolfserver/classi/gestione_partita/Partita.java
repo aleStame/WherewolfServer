@@ -526,6 +526,13 @@ public final class Partita
 
     public void riabilitaPotereBracconiere() { vivi.riabilitaPotereBracconiere(); }
 
+    public boolean isGiuliettaPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++) if(getGiocatore(getNomeGiocatoreVivo(i)).getRuolo().isGiulietta()) trovato = true;
+        return trovato;
+    }
+
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
         if(vivi.isAngeloCustode(nome)) annullaProtezioneAngeloCustode();
