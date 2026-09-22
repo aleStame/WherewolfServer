@@ -877,7 +877,7 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         verificaEsitoGildata(RIUSCITO);
         verificaCriminale();
-        assertThat(giocatore.getEsitoPartita(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }))).isEqualTo(VITTORIA);
+        verificaEsitoPartita(new String[][]{{"Mike", "Capo gilda"}, {"Susan", "Prete"}}, VITTORIA);
     }
 
     @ParameterizedTest @CsvSource
@@ -893,12 +893,17 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         verificaEsitoGildata(RIUSCITO);
         verificaCriminale();
-        assertThat(giocatore.getEsitoPartita(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }))).isEqualTo(SCONFITTA);
+        verificaEsitoPartita(new String[][]{{"Matteo", "Guardia"}, {"Marghe", "Altra guardia"}}, SCONFITTA);
     }
 
     private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
     {
         giocatore.romeizzazione();
+        verificaEsitoPartita(giocatori, sconfitta);
+    }
+
+    private void verificaEsitoPartita(String[][] giocatori, EsitoPartita sconfitta)
+    {
         assertThat(giocatore.getEsitoPartita(new Partita(giocatori))).isEqualTo(sconfitta);
     }
 
