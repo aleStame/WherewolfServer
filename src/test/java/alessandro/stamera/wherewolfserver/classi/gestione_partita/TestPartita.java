@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static java.util.Arrays.stream;
@@ -2445,6 +2446,28 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo reietto", "Lupo solitario", "Mago", "Medium",
+            "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Sidhe", "Spia", "Sensitiva",
+            "Templare", "Vampiro"
+        }
+    )
+    public void testPoterePossedutoStregatoFallito(String nomeRuolo)
+    {
+        String nomePosseduto = "Tommaso", nomeNuovoPosseduto = "Tania";
+        String[][] giocatori = new String[][]
+            { { "Elena", "Assassino" }, { nomePosseduto, "Posseduto" }, { nomeNuovoPosseduto, nomeRuolo }, { "Giulia", "Strega" } };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeNuovoPosseduto);
+        attaccoAssassino(nomePosseduto);
+        assertThat(partita.getFazione(nomeNuovoPosseduto)).isNotEqualTo(POSSEDUTO);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
