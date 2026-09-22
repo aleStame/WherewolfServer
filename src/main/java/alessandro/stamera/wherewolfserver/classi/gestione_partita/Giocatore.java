@@ -247,6 +247,8 @@ public final class Giocatore
 
     public boolean isLadra() { return ruolo.isLadra(); }
 
+    public EsitoPartita getEsitoPartita(Partita partita) { return null; }
+
     private EsitoAttacco getRisultatoVampirizzazione()
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
