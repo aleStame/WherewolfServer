@@ -2618,6 +2618,30 @@ public final class TestPartita
         verificaControlloSensitiva(nome, esito);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testSconfittaBallottaggioGiulietta(String nomeRuolo)
+    {
+        String nomeRomeo = "Paolo", nomeGiulietta = "Luca";
+        inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" } });
+        romeizzazione(nomeRomeo);
+        incrementaVoti(nomeRomeo, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeRomeo, 1);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
+    }
+
     private void verificaNonProgenizzabile(String nome)
     {
         progenizzazioneNosferatu(nome);
