@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
 import org.junit.jupiter.api.BeforeEach;
@@ -547,8 +544,7 @@ public final class TestGiocatore
     public void testVittoriaRomeo(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.romeizzazione();
-        assertThat(giocatore.getEsitoPartita(new Partita(new String[][] { { "Max", "Giulietta" }, { "Angelo", nomeRuolo } }))).isEqualTo(VITTORIA);
+        verificaEsitoPartitaRomeo(new String[][] { { "Max", "Giulietta" }, { "Angelo", nomeRuolo } }, VITTORIA);
     }
 
     @ParameterizedTest @CsvSource
@@ -565,8 +561,7 @@ public final class TestGiocatore
     public void testSconfittaRomeo(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.romeizzazione();
-        assertThat(giocatore.getEsitoPartita(new Partita(new String[][] { { "Angelo", nomeRuolo } }))).isEqualTo(SCONFITTA);
+        verificaEsitoPartitaRomeo(new String[][] { {"Angelo", nomeRuolo } }, SCONFITTA);
     }
 
     @ParameterizedTest @CsvSource
@@ -867,6 +862,12 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         verificaEsitoGildata(RIUSCITO);
         verificaCriminale();
+    }
+
+    private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
+    {
+        giocatore.romeizzazione();
+        assertThat(giocatore.getEsitoPartita(new Partita(giocatori))).isEqualTo(sconfitta);
     }
 
     private void verificaCriminale()
