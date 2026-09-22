@@ -892,6 +892,20 @@ public final class TestGiocatore
         verificaEsitoPartitaGiocatoreCriminalizzato(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }, SCONFITTA);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testSconfittaGiocatoreCriminalizzatoNienteCriminali(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoPartitaGiocatoreCriminalizzato(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }, SCONFITTA);
+    }
+
     private void verificaEsitoPartitaGiocatoreCriminalizzato(String[][] giocatori, EsitoPartita esito)
     {
         verificaEsitoGildata(RIUSCITO);
