@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
@@ -253,6 +254,7 @@ public final class Giocatore
     {
         EsitoPartita esito = ruolo.getEsitoPartita(partita);
         if(isRomeo()) esito = getPartitaRomeo(partita);
+        else if(isCriminale()) esito = new Criminale(null, null, null).getEsitoPartita(partita);
         return esito;
     }
 
