@@ -889,7 +889,7 @@ public final class TestGiocatore
     public void testSconfittaGiocatoreCriminalizzatoControGuardie(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaEsitoPartitaGiocatoreCriminalizzato(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }, SCONFITTA);
+        verificaSconfittaGiocatoreCriminalizzato(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } });
     }
 
     @ParameterizedTest @CsvSource
@@ -903,7 +903,13 @@ public final class TestGiocatore
     public void testSconfittaGiocatoreCriminalizzatoNienteCriminali(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaEsitoPartitaGiocatoreCriminalizzato(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }, SCONFITTA);
+        String[][] giocatori = new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } };
+        verificaSconfittaGiocatoreCriminalizzato(giocatori);
+    }
+
+    private void verificaSconfittaGiocatoreCriminalizzato(String[][] giocatori)
+    {
+        verificaEsitoPartitaGiocatoreCriminalizzato(giocatori, SCONFITTA);
     }
 
     private void verificaEsitoPartitaGiocatoreCriminalizzato(String[][] giocatori, EsitoPartita esito)
