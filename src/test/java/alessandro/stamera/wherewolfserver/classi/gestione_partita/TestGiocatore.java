@@ -12,8 +12,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.AMANTI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -928,6 +927,16 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         String[][] giocatori = new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } };
         verificaSconfittaGiocatoreCriminalizzato(giocatori);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testLupizzazioneLupiBranco(String nomeRuolo)
+    {
+        cambiaRuolo("Contadino discendente dei lupo");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(nomeRuolo)), CONTADINO_LUPO_BECCATO);
+        verificaFazione(LUPO_BRANCO);
+        verificaAura(NERA);
+        verificaEsitoPartita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }, VITTORIA);
     }
 
     private boolean isGiulietta() { return giocatore.isGiulietta(); }
