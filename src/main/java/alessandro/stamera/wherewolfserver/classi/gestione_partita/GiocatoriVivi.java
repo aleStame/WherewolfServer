@@ -364,9 +364,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneGiulietta()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGiulietta(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGiulietta(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isGiulietta(int posizione) { return isGiulietta(getNomeGiocatore(posizione)); }
 
     private void aggiornaProtezioniCappuccettoRossoPostInserimento()
     {
