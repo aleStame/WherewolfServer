@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo lupizzazioneContadino">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/SandrettoFX/IdeaProjects/WherewolfServer" value="3J0PTZfz34KyHZCcYq9co2f7nUg" />
+    </persistenceIdMap>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -38,13 +45,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Alessandro Stamera &lt;alessandro.stamera@studenti.unimi.it&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -86,9 +98,12 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/cappuccettoRossoRomeo&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -100,7 +115,7 @@
       <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -181,6 +196,13 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
+    <configuration name="WherewolfServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="wherewolfserver.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="alessandro.stamera.wherewolfserver.WherewolfServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
@@ -195,400 +217,421 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
+      <workItem from="1788856385769" duration="261000" />
+      <workItem from="1788859890995" duration="5458000" />
+      <workItem from="1788956439250" duration="2437000" />
+      <workItem from="1789031248956" duration="1215000" />
+      <workItem from="1789032819213" duration="4954000" />
+      <workItem from="1789058293554" duration="2278000" />
+      <workItem from="1789118001870" duration="1700000" />
+      <workItem from="1789131951926" duration="10980000" />
+      <workItem from="1789215996121" duration="866000" />
+      <workItem from="1789372829622" duration="763000" />
+      <workItem from="1789464528408" duration="2198000" />
+      <workItem from="1789476069677" duration="4039000" />
+      <workItem from="1789547926833" duration="446000" />
+      <workItem from="1789548790188" duration="5033000" />
+      <workItem from="1789634363642" duration="1142000" />
+      <workItem from="1789635922847" duration="831000" />
+      <workItem from="1789737497569" duration="229000" />
+      <workItem from="1789980362579" duration="1031000" />
+      <workItem from="1790193261875" duration="4562000" />
+      <workItem from="1790237843199" duration="6993000" />
+      <workItem from="1790325595474" duration="1078000" />
     </task>
-    <task id="LOCAL-00686" summary="REFACTORING: definizione del metodo verificaFazione">
+    <task id="LOCAL-00755" summary="ROSSO: testAttaccoCapoBrancoFallito non riuscito">
       <option name="closed" value="true" />
-      <created>1790006782903</created>
-      <option name="number" value="00686" />
-      <option name="presentableId" value="LOCAL-00686" />
+      <created>1789375375540</created>
+      <option name="number" value="00755" />
+      <option name="presentableId" value="LOCAL-00755" />
       <option name="project" value="LOCAL" />
-      <updated>1790006782903</updated>
+      <updated>1789375375540</updated>
     </task>
-    <task id="LOCAL-00687" summary="REFACTORING: definizione del metodo verificaFazione">
+    <task id="LOCAL-00756" summary="VERDE: testAttaccoCapoBrancoFallito riuscito">
       <option name="closed" value="true" />
-      <created>1790007081535</created>
-      <option name="number" value="00687" />
-      <option name="presentableId" value="LOCAL-00687" />
+      <created>1789376274687</created>
+      <option name="number" value="00756" />
+      <option name="presentableId" value="LOCAL-00756" />
       <option name="project" value="LOCAL" />
-      <updated>1790007081535</updated>
+      <updated>1789376274687</updated>
     </task>
-    <task id="LOCAL-00688" summary="ROSSO: testGuarigioneVittimaLupi non riuscito">
+    <task id="LOCAL-00757" summary="Merge branch 'feature/attaccoCapoBrancoAmato' into develop">
       <option name="closed" value="true" />
-      <created>1790009202503</created>
-      <option name="number" value="00688" />
-      <option name="presentableId" value="LOCAL-00688" />
+      <created>1789378586510</created>
+      <option name="number" value="00757" />
+      <option name="presentableId" value="LOCAL-00757" />
       <option name="project" value="LOCAL" />
-      <updated>1790009202503</updated>
+      <updated>1789378586510</updated>
     </task>
-    <task id="LOCAL-00689" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
+    <task id="LOCAL-00758" summary="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito">
       <option name="closed" value="true" />
-      <created>1790020631475</created>
-      <option name="number" value="00689" />
-      <option name="presentableId" value="LOCAL-00689" />
+      <created>1789388547583</created>
+      <option name="number" value="00758" />
+      <option name="presentableId" value="LOCAL-00758" />
       <option name="project" value="LOCAL" />
-      <updated>1790020631475</updated>
+      <updated>1789388547583</updated>
     </task>
-    <task id="LOCAL-00690" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoRomeoe riuscito">
+    <task id="LOCAL-00759" summary="VERDE: testAttaccoLupiCappuccettoRossoConNonna riuscito">
       <option name="closed" value="true" />
-      <created>1790022170760</created>
-      <option name="number" value="00690" />
-      <option name="presentableId" value="LOCAL-00690" />
+      <created>1789393190238</created>
+      <option name="number" value="00759" />
+      <option name="presentableId" value="LOCAL-00759" />
       <option name="project" value="LOCAL" />
-      <updated>1790022170760</updated>
+      <updated>1789393190240</updated>
     </task>
-    <task id="LOCAL-00691" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoRomeo riuscito">
+    <task id="LOCAL-00760" summary="REFACTORING: definizione del metodo getLupi">
       <option name="closed" value="true" />
-      <created>1790023059227</created>
-      <option name="number" value="00691" />
-      <option name="presentableId" value="LOCAL-00691" />
+      <created>1789393974839</created>
+      <option name="number" value="00760" />
+      <option name="presentableId" value="LOCAL-00760" />
       <option name="project" value="LOCAL" />
-      <updated>1790023059227</updated>
+      <updated>1789393974839</updated>
     </task>
-    <task id="LOCAL-00692" summary="VERDE DIRETTO: testAttaccoLupoSolitarioCappuccettoRossoStregato riuscito">
+    <task id="LOCAL-00761" summary="REFACTORING: definizione del metodo isProtezionePresente">
       <option name="closed" value="true" />
-      <created>1790023542027</created>
-      <option name="number" value="00692" />
-      <option name="presentableId" value="LOCAL-00692" />
+      <created>1789395233763</created>
+      <option name="number" value="00761" />
+      <option name="presentableId" value="LOCAL-00761" />
       <option name="project" value="LOCAL" />
-      <updated>1790023542029</updated>
+      <updated>1789395233763</updated>
     </task>
-    <task id="LOCAL-00693" summary="ROSSO: testProgenizzazioneRomeoFallitaNosferatu non riuscito">
+    <task id="LOCAL-00762" summary="REFACTORING: definizione del metodo perdiProtezione">
       <option name="closed" value="true" />
-      <created>1790065882029</created>
-      <option name="number" value="00693" />
-      <option name="presentableId" value="LOCAL-00693" />
+      <created>1789396155784</created>
+      <option name="number" value="00762" />
+      <option name="presentableId" value="LOCAL-00762" />
       <option name="project" value="LOCAL" />
-      <updated>1790065882029</updated>
+      <updated>1789396155784</updated>
     </task>
-    <task id="LOCAL-00694" summary="ROSSO: testProgenizzazioneRomeoFallitaNosferatu non riuscito">
+    <task id="LOCAL-00763" summary="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRosso">
       <option name="closed" value="true" />
-      <created>1790066677701</created>
-      <option name="number" value="00694" />
-      <option name="presentableId" value="LOCAL-00694" />
+      <created>1789396497184</created>
+      <option name="number" value="00763" />
+      <option name="presentableId" value="LOCAL-00763" />
       <option name="project" value="LOCAL" />
-      <updated>1790066677701</updated>
+      <updated>1789396497184</updated>
     </task>
-    <task id="LOCAL-00695" summary="VERDE DIRETTO: testProgenizzazioneStregatoFallitaNosferatu riuscito">
+    <task id="LOCAL-00764" summary="REFACTORING: definizione del metodo isCappuccettoRossoIndifesa">
       <option name="closed" value="true" />
-      <created>1790067547203</created>
-      <option name="number" value="00695" />
-      <option name="presentableId" value="LOCAL-00695" />
+      <created>1789396710670</created>
+      <option name="number" value="00764" />
+      <option name="presentableId" value="LOCAL-00764" />
       <option name="project" value="LOCAL" />
-      <updated>1790067547203</updated>
+      <updated>1789396710670</updated>
     </task>
-    <task id="LOCAL-00696" summary="REFACTORING: definizione del metodo verificaNonProgenizzabile">
+    <task id="LOCAL-00765" summary="REFACTORING: definizione del metodo gestisciProtezioniCappuccettoRosso">
       <option name="closed" value="true" />
-      <created>1790067824793</created>
-      <option name="number" value="00696" />
-      <option name="presentableId" value="LOCAL-00696" />
+      <created>1789397012319</created>
+      <option name="number" value="00765" />
+      <option name="presentableId" value="LOCAL-00765" />
       <option name="project" value="LOCAL" />
-      <updated>1790067824793</updated>
+      <updated>1789397012320</updated>
     </task>
-    <task id="LOCAL-00697" summary="ROSSO: testRomeizzazione non riuscito">
+    <task id="LOCAL-00766" summary="REFACTORING: definizione del metodo perdiProtezioneCappuccettoRosso">
       <option name="closed" value="true" />
-      <created>1790084658368</created>
-      <option name="number" value="00697" />
-      <option name="presentableId" value="LOCAL-00697" />
+      <created>1789397296015</created>
+      <option name="number" value="00766" />
+      <option name="presentableId" value="LOCAL-00766" />
       <option name="project" value="LOCAL" />
-      <updated>1790084658374</updated>
+      <updated>1789397296015</updated>
     </task>
-    <task id="LOCAL-00698" summary="VERDE: testRomeizzazione riuscito">
+    <task id="LOCAL-00767" summary="REFACTORING: definizione del metodo aggiungiProtezione">
       <option name="closed" value="true" />
-      <created>1790085768434</created>
-      <option name="number" value="00698" />
-      <option name="presentableId" value="LOCAL-00698" />
+      <created>1789398186257</created>
+      <option name="number" value="00767" />
+      <option name="presentableId" value="LOCAL-00767" />
       <option name="project" value="LOCAL" />
-      <updated>1790085768434</updated>
+      <updated>1789398186257</updated>
     </task>
-    <task id="LOCAL-00699" summary="ROSSO: testVittoriaRomeo non riuscito">
+    <task id="LOCAL-00768" summary="REFACTORING: definizione del metodo aggiungiProtezioneCappuccettoRosso">
       <option name="closed" value="true" />
-      <created>1790086374446</created>
-      <option name="number" value="00699" />
-      <option name="presentableId" value="LOCAL-00699" />
+      <created>1789398672373</created>
+      <option name="number" value="00768" />
+      <option name="presentableId" value="LOCAL-00768" />
       <option name="project" value="LOCAL" />
-      <updated>1790086374446</updated>
+      <updated>1789398672373</updated>
     </task>
-    <task id="LOCAL-00700" summary="VERDE: testVittoriaRomeo riuscito">
+    <task id="LOCAL-00769" summary="REFACTORING: definizione del metodo aggiungiProtezioneLupiCappuccettoRosso">
       <option name="closed" value="true" />
-      <created>1790086948373</created>
-      <option name="number" value="00700" />
-      <option name="presentableId" value="LOCAL-00700" />
+      <created>1789398958978</created>
+      <option name="number" value="00769" />
+      <option name="presentableId" value="LOCAL-00769" />
       <option name="project" value="LOCAL" />
-      <updated>1790086948373</updated>
+      <updated>1789398958978</updated>
     </task>
-    <task id="LOCAL-00701" summary="ROSSO: testSconfittaRomeo non riuscito">
+    <task id="LOCAL-00770" summary="REFACTORING: definizione del metodo aggiornaProtezioniCappuccettoRossoPostInserimento">
       <option name="closed" value="true" />
-      <created>1790087418788</created>
-      <option name="number" value="00701" />
-      <option name="presentableId" value="LOCAL-00701" />
+      <created>1789399278837</created>
+      <option name="number" value="00770" />
+      <option name="presentableId" value="LOCAL-00770" />
       <option name="project" value="LOCAL" />
-      <updated>1790087418789</updated>
+      <updated>1789399278837</updated>
     </task>
-    <task id="LOCAL-00702" summary="VERDE: testSconfittaRomeo riuscito">
+    <task id="LOCAL-00771" summary="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito">
       <option name="closed" value="true" />
-      <created>1790087648156</created>
-      <option name="number" value="00702" />
-      <option name="presentableId" value="LOCAL-00702" />
+      <created>1789399725943</created>
+      <option name="number" value="00771" />
+      <option name="presentableId" value="LOCAL-00771" />
       <option name="project" value="LOCAL" />
-      <updated>1790087648156</updated>
+      <updated>1789399725943</updated>
     </task>
-    <task id="LOCAL-00703" summary="REFACTORING: definizione del metodo getPartitaRomeo">
+    <task id="LOCAL-00772" summary="ROSSO: testAttaccoLupiCappuccettoRossoConNonna non riuscito">
       <option name="closed" value="true" />
-      <created>1790087957391</created>
-      <option name="number" value="00703" />
-      <option name="presentableId" value="LOCAL-00703" />
+      <created>1789399775438</created>
+      <option name="number" value="00772" />
+      <option name="presentableId" value="LOCAL-00772" />
       <option name="project" value="LOCAL" />
-      <updated>1790087957391</updated>
+      <updated>1789399775438</updated>
     </task>
-    <task id="LOCAL-00704" summary="REFACTORING: definizione del metodo verificaEsitoPartitaRomeo">
+    <task id="LOCAL-00773" summary="VERDE: testAttaccoLupiCappuccettoRossoConNonna riuscito">
       <option name="closed" value="true" />
-      <created>1790088429337</created>
-      <option name="number" value="00704" />
-      <option name="presentableId" value="LOCAL-00704" />
+      <created>1789401162817</created>
+      <option name="number" value="00773" />
+      <option name="presentableId" value="LOCAL-00773" />
       <option name="project" value="LOCAL" />
-      <updated>1790088429337</updated>
+      <updated>1789401162817</updated>
     </task>
-    <task id="LOCAL-00705" summary="ROSSO: testVittoriaGiocatoreCriminalizzato non riuscito">
+    <task id="LOCAL-00774" summary="REFACTORING: definiizone del metodo gestisciEccezioniCacciatoreNonProtetto">
       <option name="closed" value="true" />
-      <created>1790089090492</created>
-      <option name="number" value="00705" />
-      <option name="presentableId" value="LOCAL-00705" />
+      <created>1789465068402</created>
+      <option name="number" value="00774" />
+      <option name="presentableId" value="LOCAL-00774" />
       <option name="project" value="LOCAL" />
-      <updated>1790089090492</updated>
+      <updated>1789465068403</updated>
     </task>
-    <task id="LOCAL-00706" summary="VERDE: testVittoriaGiocatoreCriminalizzato riuscito">
+    <task id="LOCAL-00775" summary="ROSSO: testEccezioneLadraProtetta non riuscito">
       <option name="closed" value="true" />
-      <created>1790089695413</created>
-      <option name="number" value="00706" />
-      <option name="presentableId" value="LOCAL-00706" />
+      <created>1789465741927</created>
+      <option name="number" value="00775" />
+      <option name="presentableId" value="LOCAL-00775" />
       <option name="project" value="LOCAL" />
-      <updated>1790089695413</updated>
+      <updated>1789465741927</updated>
     </task>
-    <task id="LOCAL-00707" summary="VERDE: testSconfittaGiocatoreCriminalizzatoControGuardie riuscito">
+    <task id="LOCAL-00776" summary="VERDE: testEccezioneLadraProtetta riuscito">
       <option name="closed" value="true" />
-      <created>1790091519417</created>
-      <option name="number" value="00707" />
-      <option name="presentableId" value="LOCAL-00707" />
+      <created>1789465987030</created>
+      <option name="number" value="00776" />
+      <option name="presentableId" value="LOCAL-00776" />
       <option name="project" value="LOCAL" />
-      <updated>1790091519417</updated>
+      <updated>1789465987030</updated>
     </task>
-    <task id="LOCAL-00708" summary="REFACTORING: definizione del metodo verificaEsitoPartita">
+    <task id="LOCAL-00777" summary="ROSSO: testEccezioneEremita non riuscito">
       <option name="closed" value="true" />
-      <created>1790091680222</created>
-      <option name="number" value="00708" />
-      <option name="presentableId" value="LOCAL-00708" />
+      <created>1789476392069</created>
+      <option name="number" value="00777" />
+      <option name="presentableId" value="LOCAL-00777" />
       <option name="project" value="LOCAL" />
-      <updated>1790091680223</updated>
+      <updated>1789476392071</updated>
     </task>
-    <task id="LOCAL-00709" summary="REFACTORING: definizione del metodo verificaEsitoPartitaGiocatoreCriminalizzato">
+    <task id="LOCAL-00778" summary="VERDE: testEccezioneEremita riuscito">
       <option name="closed" value="true" />
-      <created>1790092052639</created>
-      <option name="number" value="00709" />
-      <option name="presentableId" value="LOCAL-00709" />
+      <created>1789477269174</created>
+      <option name="number" value="00778" />
+      <option name="presentableId" value="LOCAL-00778" />
       <option name="project" value="LOCAL" />
-      <updated>1790092052639</updated>
+      <updated>1789477269174</updated>
     </task>
-    <task id="LOCAL-00710" summary="VERDE DIRETTO: testSconfittaGiocatoreCriminalizzatoNienteCriminali riuscito">
+    <task id="LOCAL-00779" summary="REFACTORING: compattazione dei due metodo in un unico test parametrico">
       <option name="closed" value="true" />
-      <created>1790092439357</created>
-      <option name="number" value="00710" />
-      <option name="presentableId" value="LOCAL-00710" />
+      <created>1789479051431</created>
+      <option name="number" value="00779" />
+      <option name="presentableId" value="LOCAL-00779" />
       <option name="project" value="LOCAL" />
-      <updated>1790092439357</updated>
+      <updated>1789479051432</updated>
     </task>
-    <task id="LOCAL-00711" summary="REFACTORING: definizione del metodo verificaSconfittaGiocatoreCriminalizzato">
+    <task id="LOCAL-00780" summary="VERDE: testEccezioneLupoReietto riuscito">
       <option name="closed" value="true" />
-      <created>1790092903642</created>
-      <option name="number" value="00711" />
-      <option name="presentableId" value="LOCAL-00711" />
+      <created>1789549249239</created>
+      <option name="number" value="00780" />
+      <option name="presentableId" value="LOCAL-00780" />
       <option name="project" value="LOCAL" />
-      <updated>1790092903642</updated>
+      <updated>1789549249239</updated>
     </task>
-    <task id="LOCAL-00712" summary="ROSSO: testSconfittaBallottaggioGiulietta non riuscito">
+    <task id="LOCAL-00781" summary="REFACTORING: definizione del metodo getMessaggioRuoloProtetto">
       <option name="closed" value="true" />
-      <created>1790094313011</created>
-      <option name="number" value="00712" />
-      <option name="presentableId" value="LOCAL-00712" />
+      <created>1789549600774</created>
+      <option name="number" value="00781" />
+      <option name="presentableId" value="LOCAL-00781" />
       <option name="project" value="LOCAL" />
-      <updated>1790094313011</updated>
+      <updated>1789549600774</updated>
     </task>
-    <task id="LOCAL-00713" summary="VERDE: testSconfittaBallottaggioGiulietta riuscito">
+    <task id="LOCAL-00782" summary="REFACTORING: definizione del metodo getMessaggioLadra">
       <option name="closed" value="true" />
-      <created>1790152348326</created>
-      <option name="number" value="00713" />
-      <option name="presentableId" value="LOCAL-00713" />
+      <created>1789549825285</created>
+      <option name="number" value="00782" />
+      <option name="presentableId" value="LOCAL-00782" />
       <option name="project" value="LOCAL" />
-      <updated>1790152348326</updated>
+      <updated>1789549825285</updated>
     </task>
-    <task id="LOCAL-00714" summary="ROMEO: testSconfittaBallottaggioRomeo non riuscito">
+    <task id="LOCAL-00783" summary="REFACTORING: definizione del metodo getMessaggioLupo">
       <option name="closed" value="true" />
-      <created>1790152760630</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
+      <created>1789550024831</created>
+      <option name="number" value="00783" />
+      <option name="presentableId" value="LOCAL-00783" />
       <option name="project" value="LOCAL" />
-      <updated>1790152760633</updated>
+      <updated>1789550024831</updated>
     </task>
-    <task id="LOCAL-00715" summary="VERDE: testSconfittaBallottaggioRomeo riuscito">
+    <task id="LOCAL-00784" summary="REFACTORING: definizione di un costruttore privato">
       <option name="closed" value="true" />
-      <created>1790153268102</created>
-      <option name="number" value="00715" />
-      <option name="presentableId" value="LOCAL-00715" />
+      <created>1789550483436</created>
+      <option name="number" value="00784" />
+      <option name="presentableId" value="LOCAL-00784" />
       <option name="project" value="LOCAL" />
-      <updated>1790153268105</updated>
+      <updated>1789550483436</updated>
     </task>
-    <task id="LOCAL-00716" summary="ROSSO: testNoGiulietta non riuscito">
+    <task id="LOCAL-00785" summary="REFACTORING: definizione del metodo getMessaggioEremita">
       <option name="closed" value="true" />
-      <created>1790153835649</created>
-      <option name="number" value="00716" />
-      <option name="presentableId" value="LOCAL-00716" />
+      <created>1789550732951</created>
+      <option name="number" value="00785" />
+      <option name="presentableId" value="LOCAL-00785" />
       <option name="project" value="LOCAL" />
-      <updated>1790153835649</updated>
+      <updated>1789550732951</updated>
     </task>
-    <task id="LOCAL-00717" summary="VERDE: testNoGiulietta riuscito">
+    <task id="LOCAL-00786" summary="REFACTORING: definizione del metodo verificaMessaggioEccezione">
       <option name="closed" value="true" />
-      <created>1790154203868</created>
-      <option name="number" value="00717" />
-      <option name="presentableId" value="LOCAL-00717" />
+      <created>1789551976331</created>
+      <option name="number" value="00786" />
+      <option name="presentableId" value="LOCAL-00786" />
       <option name="project" value="LOCAL" />
-      <updated>1790154203868</updated>
+      <updated>1789551976332</updated>
     </task>
-    <task id="LOCAL-00718" summary="REFACTORING: testGiulietta riuscito">
+    <task id="LOCAL-00787" summary="VERDE DIRETTO: testNoCappuccettoRosso riuscito">
       <option name="closed" value="true" />
-      <created>1790154792364</created>
-      <option name="number" value="00718" />
-      <option name="presentableId" value="LOCAL-00718" />
+      <created>1789552564593</created>
+      <option name="number" value="00787" />
+      <option name="presentableId" value="LOCAL-00787" />
       <option name="project" value="LOCAL" />
-      <updated>1790154792364</updated>
+      <updated>1789552564593</updated>
     </task>
-    <task id="LOCAL-00719" summary="REFACTORING: definizione del metodo isGiulietta">
+    <task id="LOCAL-00788" summary="VERDE DIRETTO: testCappuccettoRosso riuscito">
       <option name="closed" value="true" />
-      <created>1790155046396</created>
-      <option name="number" value="00719" />
-      <option name="presentableId" value="LOCAL-00719" />
+      <created>1789552874683</created>
+      <option name="number" value="00788" />
+      <option name="presentableId" value="LOCAL-00788" />
       <option name="project" value="LOCAL" />
-      <updated>1790155046397</updated>
+      <updated>1789552874686</updated>
     </task>
-    <task id="LOCAL-00720" summary="ROSSO: testGiuliettaAssente non riuscito">
+    <task id="LOCAL-00789" summary="ROSSO: testLupizzazioneLupiBranco non riuscito">
       <option name="closed" value="true" />
-      <created>1790157810250</created>
-      <option name="number" value="00720" />
-      <option name="presentableId" value="LOCAL-00720" />
+      <created>1790194352945</created>
+      <option name="number" value="00789" />
+      <option name="presentableId" value="LOCAL-00789" />
       <option name="project" value="LOCAL" />
-      <updated>1790157810250</updated>
+      <updated>1790194352946</updated>
     </task>
-    <task id="LOCAL-00721" summary="VERDE: testGiuliettaAssente riuscito">
+    <task id="LOCAL-00790" summary="VERDE: testLupizzazioneLupiBranco riuscito">
       <option name="closed" value="true" />
-      <created>1790169377870</created>
-      <option name="number" value="00721" />
-      <option name="presentableId" value="LOCAL-00721" />
+      <created>1790238679076</created>
+      <option name="number" value="00790" />
+      <option name="presentableId" value="LOCAL-00790" />
       <option name="project" value="LOCAL" />
-      <updated>1790169377871</updated>
+      <updated>1790238679077</updated>
     </task>
-    <task id="LOCAL-00722" summary="ROSSO: testGiuliettaPresente non riuscito">
+    <task id="LOCAL-00791" summary="ROSSO: testAttaccoAssassinoRomeo non riuscito">
       <option name="closed" value="true" />
-      <created>1790171000010</created>
-      <option name="number" value="00722" />
-      <option name="presentableId" value="LOCAL-00722" />
+      <created>1790239496419</created>
+      <option name="number" value="00791" />
+      <option name="presentableId" value="LOCAL-00791" />
       <option name="project" value="LOCAL" />
-      <updated>1790171000010</updated>
+      <updated>1790239496419</updated>
     </task>
-    <task id="LOCAL-00723" summary="VERDE: testGiuliettaPresente riuscito">
+    <task id="LOCAL-00792" summary="VERDE: testAttaccoAssassinoRomeo riuscito">
       <option name="closed" value="true" />
-      <created>1790171351940</created>
-      <option name="number" value="00723" />
-      <option name="presentableId" value="LOCAL-00723" />
+      <created>1790241137263</created>
+      <option name="number" value="00792" />
+      <option name="presentableId" value="LOCAL-00792" />
       <option name="project" value="LOCAL" />
-      <updated>1790171351942</updated>
+      <updated>1790241137263</updated>
     </task>
-    <task id="LOCAL-00724" summary="REFACTORING: definizione del metodo getPosizioneGiulietta">
+    <task id="LOCAL-00793" summary="ROSSO: testAttaccoAssassinoRomeo non riuscito">
       <option name="closed" value="true" />
-      <created>1790172054465</created>
-      <option name="number" value="00724" />
-      <option name="presentableId" value="LOCAL-00724" />
+      <created>1790241493516</created>
+      <option name="number" value="00793" />
+      <option name="presentableId" value="LOCAL-00793" />
       <option name="project" value="LOCAL" />
-      <updated>1790172054466</updated>
+      <updated>1790241493516</updated>
     </task>
-    <task id="LOCAL-00725" summary="REFACTORING: definizione del metodo isGiulietta">
+    <task id="LOCAL-00794" summary="VERDE: testAttaccoAssassinoRomeo riuscito">
       <option name="closed" value="true" />
-      <created>1790172268026</created>
-      <option name="number" value="00725" />
-      <option name="presentableId" value="LOCAL-00725" />
+      <created>1790241761404</created>
+      <option name="number" value="00794" />
+      <option name="presentableId" value="LOCAL-00794" />
       <option name="project" value="LOCAL" />
-      <updated>1790172268026</updated>
+      <updated>1790241761404</updated>
     </task>
-    <task id="LOCAL-00726" summary="REFACTORING: definizione del metodo eliminaGiulietta">
+    <task id="LOCAL-00795" summary="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
       <option name="closed" value="true" />
-      <created>1790172531819</created>
-      <option name="number" value="00726" />
-      <option name="presentableId" value="LOCAL-00726" />
+      <created>1790242254375</created>
+      <option name="number" value="00795" />
+      <option name="presentableId" value="LOCAL-00795" />
       <option name="project" value="LOCAL" />
-      <updated>1790172531819</updated>
+      <updated>1790242254375</updated>
     </task>
-    <task id="LOCAL-00727" summary="REFACTORING: definizione del metodo isGiulietta">
+    <task id="LOCAL-00796" summary="REFACTORING">
       <option name="closed" value="true" />
-      <created>1790172755916</created>
-      <option name="number" value="00727" />
-      <option name="presentableId" value="LOCAL-00727" />
+      <created>1790244213780</created>
+      <option name="number" value="00796" />
+      <option name="presentableId" value="LOCAL-00796" />
       <option name="project" value="LOCAL" />
-      <updated>1790172755916</updated>
+      <updated>1790244213780</updated>
     </task>
-    <task id="LOCAL-00728" summary="REFACTORING: definizione del metodo isGiuliettaPresente">
+    <task id="LOCAL-00797" summary="REFACTORING: definizione del metodo romeizzazione">
       <option name="closed" value="true" />
-      <created>1790172991153</created>
-      <option name="number" value="00728" />
-      <option name="presentableId" value="LOCAL-00728" />
+      <created>1790244536855</created>
+      <option name="number" value="00797" />
+      <option name="presentableId" value="LOCAL-00797" />
       <option name="project" value="LOCAL" />
-      <updated>1790172991153</updated>
+      <updated>1790244536855</updated>
     </task>
-    <task id="LOCAL-00729" summary="ROSSO: testRomeo non riuscito">
+    <task id="LOCAL-00798" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
       <option name="closed" value="true" />
-      <created>1790173447038</created>
-      <option name="number" value="00729" />
-      <option name="presentableId" value="LOCAL-00729" />
+      <created>1790267864501</created>
+      <option name="number" value="00798" />
+      <option name="presentableId" value="LOCAL-00798" />
       <option name="project" value="LOCAL" />
-      <updated>1790173447038</updated>
+      <updated>1790267864501</updated>
     </task>
-    <task id="LOCAL-00730" summary="VERDE: testRomeo riuscito">
+    <task id="LOCAL-00799" summary="Merge branch 'cappuccettoRosso' into develop&#10;&#10;# Conflicts:&#10;#&#9;.gradle/8.10/executionHistory/executionHistory.bin&#10;#&#9;.gradle/8.10/executionHistory/executionHistory.lock&#10;#&#9;.gradle/8.10/fileHashes/fileHashes.bin&#10;#&#9;.gradle/8.10/fileHashes/fileHashes.lock&#10;#&#9;.gradle/8.10/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.gradle/file-system.probe&#10;#&#9;.idea/workspace.xml&#10;#&#9;build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class&#10;#&#9;build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestMisticismo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAssassinoAmato.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoAmato.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoContadino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoGiocatoreProtetto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneBracconiere.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCacciatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRosso.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRossoNonna.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneContadinoLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneGildata.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneMorteProgenizzatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneNonnaBeccata.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscitaConGhoul.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazionePosseduto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneVampirizzazioneFallita.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html&#10;#&#9;build/reports/tests/test/index.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.eccezioni.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.fazioni.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.gestione_partita.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestUtenti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestMisticismo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAssassinoAmato.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoAmato.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoContadino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoGiocatoreProtetto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneBracconiere.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCacciatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRosso.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRossoNonna.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneContadinoLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneGildata.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneMorteProgenizzatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneNonnaBeccata.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscitaConGhoul.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazionePosseduto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneVampirizzazioneFallita.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml&#10;#&#9;build/test-results/test/binary/output.bin&#10;#&#9;build/test-results/test/binary/output.bin.idx&#10;#&#9;build/test-results/test/binary/results.bin&#10;#&#9;build/tmp/compileTestJava/previous-compilation-data.bin&#10;#&#9;src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java">
       <option name="closed" value="true" />
-      <created>1790173732918</created>
-      <option name="number" value="00730" />
-      <option name="presentableId" value="LOCAL-00730" />
+      <created>1790327281162</created>
+      <option name="number" value="00799" />
+      <option name="presentableId" value="LOCAL-00799" />
       <option name="project" value="LOCAL" />
-      <updated>1790173732919</updated>
+      <updated>1790327281162</updated>
     </task>
-    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo sistemazioneEliminazioniRomeoGiulietta">
+    <task id="LOCAL-00800" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
       <option name="closed" value="true" />
-      <created>1790173910908</created>
-      <option name="number" value="00731" />
-      <option name="presentableId" value="LOCAL-00731" />
+      <created>1790327770407</created>
+      <option name="number" value="00800" />
+      <option name="presentableId" value="LOCAL-00800" />
       <option name="project" value="LOCAL" />
-      <updated>1790173910908</updated>
+      <updated>1790327770407</updated>
     </task>
-    <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo eliminaRomeo">
+    <task id="LOCAL-00801" summary="VERDE DIRETTO: testLupizzazioneLupiBranco riuscito">
       <option name="closed" value="true" />
-      <created>1790174057296</created>
-      <option name="number" value="00732" />
-      <option name="presentableId" value="LOCAL-00732" />
+      <created>1790331377702</created>
+      <option name="number" value="00801" />
+      <option name="presentableId" value="LOCAL-00801" />
       <option name="project" value="LOCAL" />
-      <updated>1790174057296</updated>
+      <updated>1790331377702</updated>
     </task>
-    <task id="LOCAL-00733" summary="REFACTORING: definizione del metodo isRomeoProtettoDaGiulietta">
+    <task id="LOCAL-00802" summary="VERDE DIRETTO: testLupizzazioneLupoSolitario riuscito">
       <option name="closed" value="true" />
-      <created>1790174431427</created>
-      <option name="number" value="00733" />
-      <option name="presentableId" value="LOCAL-00733" />
+      <created>1790331806117</created>
+      <option name="number" value="00802" />
+      <option name="presentableId" value="LOCAL-00802" />
       <option name="project" value="LOCAL" />
-      <updated>1790174431427</updated>
+      <updated>1790331806118</updated>
     </task>
-    <task id="LOCAL-00734" summary="REFACTORING: definizione del metodo isGiuliettaConRomeo">
+    <task id="LOCAL-00803" summary="REFACTORING: definizione del metodo lupizzazioneContadino">
       <option name="closed" value="true" />
-      <created>1790174478549</created>
-      <option name="number" value="00734" />
-      <option name="presentableId" value="LOCAL-00734" />
+      <created>1790332111864</created>
+      <option name="number" value="00803" />
+      <option name="presentableId" value="LOCAL-00803" />
       <option name="project" value="LOCAL" />
-      <updated>1790174478549</updated>
+      <updated>1790332111864</updated>
     </task>
-    <option name="localTasksCounter" value="735" />
+    <option name="localTasksCounter" value="804" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,31 +649,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaSconfittaGiocatoreCriminalizzato" />
-    <MESSAGE value="ROSSO: testSconfittaBallottaggioGiulietta non riuscito" />
-    <MESSAGE value="VERDE: testSconfittaBallottaggioGiulietta riuscito" />
-    <MESSAGE value="ROSSO: testSconfittaBallottaggioRomeo non riuscito" />
-    <MESSAGE value="VERDE: testSconfittaBallottaggioRomeo riuscito" />
-    <MESSAGE value="ROSSO: testNoGiulietta non riuscito" />
-    <MESSAGE value="VERDE: testNoGiulietta riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
-    <MESSAGE value="ROSSO: testGiuliettaAssente non riuscito" />
-    <MESSAGE value="VERDE: testGiuliettaAssente riuscito" />
-    <MESSAGE value="ROSSO: testSconfittaBallottaggioRomeo non riuscito" />
-    <MESSAGE value="ROSSO: testSconfittaBallottaggioRomeo non riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
-    <MESSAGE value="ROSSO: testGiuliettaPresente non riuscito" />
-    <MESSAGE value="VERDE: testGiuliettaPresente riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneGiulietta" />
-    <MESSAGE value="REFACTORING: definizione del metodo eliminaGiulietta" />
-    <MESSAGE value="REFACTORING: definizione del metodo isGiulietta" />
-    <MESSAGE value="REFACTORING: definizione del metodo isGiuliettaPresente" />
-    <MESSAGE value="ROSSO: testRomeo non riuscito" />
-    <MESSAGE value="VERDE: testRomeo riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo sistemazioneEliminazioniRomeoGiulietta" />
-    <MESSAGE value="REFACTORING: definizione del metodo eliminaRomeo" />
-    <MESSAGE value="REFACTORING: definizione del metodo isRomeoProtettoDaGiulietta" />
-    <MESSAGE value="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
+    <MESSAGE value="REFACTORING: compattazione dei due metodo in un unico test parametrico" />
+    <MESSAGE value="VERDE: testEccezioneLupoReietto riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioRuoloProtetto" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLadra" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLupo" />
+    <MESSAGE value="REFACTORING: definizione di un costruttore privato" />
+    <MESSAGE value="REFACTORING: definizione del metodo getMessaggioEremita" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioEccezione" />
+    <MESSAGE value="VERDE DIRETTO: testNoCappuccettoRosso riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCappuccettoRosso riuscito" />
+    <MESSAGE value="ROSSO: testLupizzazioneLupiBranco non riuscito" />
+    <MESSAGE value="VERDE: testLupizzazioneLupiBranco riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoAssassinoRomeo non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoAssassinoRomeo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito" />
+    <MESSAGE value="REFACTORING: semplificazione del metodo attaccoLupi" />
+    <MESSAGE value="REFACTORING: semplificazione del metodo attaccoLupi" />
+    <MESSAGE value="REFACTORING: definizione del metodo romeizzazione" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testPotereBorgomastro riuscito" />
+    <MESSAGE value="Merge branch 'cappuccettoRosso' into develop&#10;&#10;# Conflicts:&#10;#&#9;.gradle/8.10/executionHistory/executionHistory.bin&#10;#&#9;.gradle/8.10/executionHistory/executionHistory.lock&#10;#&#9;.gradle/8.10/fileHashes/fileHashes.bin&#10;#&#9;.gradle/8.10/fileHashes/fileHashes.lock&#10;#&#9;.gradle/8.10/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.gradle/file-system.probe&#10;#&#9;.idea/workspace.xml&#10;#&#9;build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class&#10;#&#9;build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestMisticismo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAssassinoAmato.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoAmato.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoContadino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoGiocatoreProtetto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneBracconiere.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCacciatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRosso.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRossoNonna.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneContadinoLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneGildata.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneMorteProgenizzatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneNonnaBeccata.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscitaConGhoul.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazionePosseduto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneVampirizzazioneFallita.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.controller.TestUtenteController.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.html&#10;#&#9;build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.entity.TestUtente.html&#10;#&#9;build/reports/tests/test/index.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.eccezioni.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.fazioni.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.gestione_partita.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.contadini.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.guardie.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.lupi.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.controller.html&#10;#&#9;build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.entity.html&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.TestUtenti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestEsitoControlloSensitiva.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestFazione.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestMisticismo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestPotere.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestProtezioni.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTipoContadino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestTratti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAssassinoAmato.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoAmato.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoContadino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneAttaccoGiocatoreProtetto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneBracconiere.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCacciatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRosso.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneCappuccettoRossoNonna.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneContadinoLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneGildata.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneMorteProgenizzatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneNonnaBeccata.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazioneNonRiuscitaConGhoul.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneProgenizzazionePosseduto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneVampirizzazioneFallita.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestAmanti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCitta.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestCriminale.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestInquisizione.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestPiccoloPopolo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.fazioni.TestVillaggio.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestBallottaggio.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatori.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriEliminati.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriMortiNotte.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestGiocatoriVivi.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.gestione_partita.TestPartita.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAngeloCustode.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAssassino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestAzzeccagarbugli.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBardo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBecchino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoccaDiRosa.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBoia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBorgomastro.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestBracconiere.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCacciatoreDiVampiri.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCapoGilda.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestCappuccettoRosso.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestEremita.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGhoul.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiulietta.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGiullare.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGoblin.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestGuaritore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestInquisitore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLadra.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestLeprecauno.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMago.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMedium.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMegera.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMercante.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestMonaco.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNegromante.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNonna.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestNosferatu.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOratore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestOste.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPazzo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPeccatore.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPosseduto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestPrete.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadino.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoEroe.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoMostro.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.contadini.TestContadinoNormale.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestAltraGuardia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardia.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaCorrotta.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.guardie.TestGuardiaPrincipale.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestCapoBranco.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestGiovaneLupo.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoBranco.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoReietto.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.lupi.TestLupoSolitario.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.controller.TestUtenteController.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestGiocatoriRicorrenti.xml&#10;#&#9;build/test-results/test/TEST-alessandro.stamera.wherewolfserver.entity.TestUtente.xml&#10;#&#9;build/test-results/test/binary/output.bin&#10;#&#9;build/test-results/test/binary/output.bin.idx&#10;#&#9;build/test-results/test/binary/results.bin&#10;#&#9;build/tmp/compileTestJava/previous-compilation-data.bin&#10;#&#9;src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupizzazioneLupiBranco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testLupizzazioneLupoSolitario riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo lupizzazioneContadino" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo lupizzazioneContadino" />
   </component>
 </project>
