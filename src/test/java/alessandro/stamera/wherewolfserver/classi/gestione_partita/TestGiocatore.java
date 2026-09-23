@@ -742,6 +742,12 @@ public final class TestGiocatore
         verificaFalso(giocatore.isGiulietta());
     }
 
+    @Test public void testGiulietta()
+    {
+        cambiaRuolo("Giulietta");
+        verificaVero(giocatore.isGiulietta());
+    }
+
     @Test public void testGiocatoreStregato()
     {
         verificaFalso(giocatore.isStregato());
