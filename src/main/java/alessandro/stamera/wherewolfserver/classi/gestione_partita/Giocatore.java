@@ -258,7 +258,7 @@ public final class Giocatore
         return esito;
     }
 
-    public boolean isGiulietta() { return true; }
+    public boolean isGiulietta() { return ruolo.isGiulietta(); }
 
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
