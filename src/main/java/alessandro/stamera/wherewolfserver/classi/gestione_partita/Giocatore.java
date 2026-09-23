@@ -258,6 +258,8 @@ public final class Giocatore
         return esito;
     }
 
+    public boolean isGiulietta() { return true; }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
