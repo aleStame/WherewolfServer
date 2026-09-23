@@ -526,12 +526,7 @@ public final class Partita
 
     public void riabilitaPotereBracconiere() { vivi.riabilitaPotereBracconiere(); }
 
-    public boolean isGiuliettaPresente()
-    {
-        boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++) if(getGiocatore(getNomeGiocatoreVivo(i)).isGiulietta()) trovato = true;
-        return trovato;
-    }
+    public boolean isGiuliettaPresente() { return vivi.isGiuliettaPresente(); }
 
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
@@ -781,19 +776,9 @@ public final class Partita
     private void eliminaPerdente(String nome)
     {
         terminaBallottaggio(nome);
-        Giocatore giocatore = getGiocatore(nome);
-        eliminati.aggiungiGiocatore(nome, giocatore);
-        if(giocatore.isRomeo())
-        {
-            boolean trovato = false;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)
-            {
-                String x = getNomeGiocatoreVivo(i);
-                trovato = getGiocatore(x).isGiulietta();
-                if(trovato) eliminaGiocatore(x);
-            }
-        }
-        else if(giocatore.isGiulietta())
+        eliminati.aggiungiGiocatore(nome, getGiocatore(nome));
+        if(vivi.isRomeo(nome) && isGiuliettaPresente()) eliminaGiocatore(vivi.getNomeGiulietta());
+        else if(vivi.isGiulietta(nome))
         {
             boolean trovato = false;
             for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)
