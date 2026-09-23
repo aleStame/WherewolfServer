@@ -2657,7 +2657,7 @@ public final class TestPartita
     {
         String nomeRomeo = "Paolo", nomeGiulietta = "Luca";
         inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" } });
-        romeizzazione(nomeGiulietta);
+        romeizzazione(nomeRomeo);
         incrementaVoti(nomeGiulietta, 2);
         terminaVotazioni();
         incrementaVoti(nomeGiulietta, 1);

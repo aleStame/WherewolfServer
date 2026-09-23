@@ -793,6 +793,16 @@ public final class Partita
                 if(trovato) eliminaGiocatore(x);
             }
         }
+        else if(giocatore.getRuolo().isGiulietta())
+        {
+            boolean trovato = false;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)
+            {
+                String x = getNomeGiocatoreVivo(i);
+                trovato = vivi.isRomeo(x);
+                if(trovato) eliminaGiocatore(x);
+            }
+        }
         vivi.eliminaGiocatore(nome);
         perdiProtezioniCappuccettoRosso();
     }
