@@ -781,7 +781,19 @@ public final class Partita
     private void eliminaPerdente(String nome)
     {
         terminaBallottaggio(nome);
-        eliminaGiocatore(nome);
+        Giocatore giocatore = getGiocatore(nome);
+        eliminati.aggiungiGiocatore(nome, giocatore);
+        if(giocatore.isRomeo())
+        {
+            boolean trovato = false;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)
+            {
+                String x = getNomeGiocatoreVivo(i);
+                trovato = getGiocatore(x).getRuolo().isGiulietta();
+                if(trovato) eliminaGiocatore(x);
+            }
+        }
+        vivi.eliminaGiocatore(nome);
         perdiProtezioniCappuccettoRosso();
     }
 
