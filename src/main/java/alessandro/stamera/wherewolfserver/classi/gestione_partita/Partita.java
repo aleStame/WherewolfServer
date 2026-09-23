@@ -529,7 +529,7 @@ public final class Partita
     public boolean isGiuliettaPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++) if(getGiocatore(getNomeGiocatoreVivo(i)).getRuolo().isGiulietta()) trovato = true;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++) if(getGiocatore(getNomeGiocatoreVivo(i)).isGiulietta()) trovato = true;
         return trovato;
     }
 
@@ -789,11 +789,11 @@ public final class Partita
             for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)
             {
                 String x = getNomeGiocatoreVivo(i);
-                trovato = getGiocatore(x).getRuolo().isGiulietta();
+                trovato = getGiocatore(x).isGiulietta();
                 if(trovato) eliminaGiocatore(x);
             }
         }
-        else if(giocatore.getRuolo().isGiulietta())
+        else if(giocatore.isGiulietta())
         {
             boolean trovato = false;
             for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)

@@ -1638,6 +1638,16 @@ public final class TestGiocatoriVivi
         String nome = "Alessandro";
         aggiungiGiocatore(nome, nomeRuolo);
         verificaFalso(giocatori.isGiulietta(nome));
+        verificaFalso(giocatori.isGiuliettaPresente());
+    }
+
+    @Test public void testGiuliettaPresente()
+    {
+        String nome = "Carmine";
+        aggiungiGiocatore(nome, "Giulietta");
+        verificaVero(giocatori.isGiulietta(nome));
+        verificaStringa(giocatori.getNomeGiulietta(), nome);
+        verificaVero(giocatori.isGiuliettaPresente());
     }
 
     private void verificaEsitoGildata(String nomeVittima, EsitoAttacco esito)
