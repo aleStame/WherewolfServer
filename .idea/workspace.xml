@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eliminaRomeo">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,22 +195,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00684" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1790006438266</created>
-      <option name="number" value="00684" />
-      <option name="presentableId" value="LOCAL-00684" />
-      <option name="project" value="LOCAL" />
-      <updated>1790006438266</updated>
-    </task>
-    <task id="LOCAL-00685" summary="REFACTORING: definizione del metodo verificaCriminale">
-      <option name="closed" value="true" />
-      <created>1790006515406</created>
-      <option name="number" value="00685" />
-      <option name="presentableId" value="LOCAL-00685" />
-      <option name="project" value="LOCAL" />
-      <updated>1790006515406</updated>
     </task>
     <task id="LOCAL-00686" summary="REFACTORING: definizione del metodo verificaFazione">
       <option name="closed" value="true" />
@@ -590,7 +572,23 @@
       <option name="project" value="LOCAL" />
       <updated>1790174057296</updated>
     </task>
-    <option name="localTasksCounter" value="733" />
+    <task id="LOCAL-00733" summary="REFACTORING: definizione del metodo isRomeoProtettoDaGiulietta">
+      <option name="closed" value="true" />
+      <created>1790174431427</created>
+      <option name="number" value="00733" />
+      <option name="presentableId" value="LOCAL-00733" />
+      <option name="project" value="LOCAL" />
+      <updated>1790174431427</updated>
+    </task>
+    <task id="LOCAL-00734" summary="REFACTORING: definizione del metodo isGiuliettaConRomeo">
+      <option name="closed" value="true" />
+      <created>1790174478549</created>
+      <option name="number" value="00734" />
+      <option name="presentableId" value="LOCAL-00734" />
+      <option name="project" value="LOCAL" />
+      <updated>1790174478549</updated>
+    </task>
+    <option name="localTasksCounter" value="735" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,8 +606,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartitaGiocatoreCriminalizzato" />
-    <MESSAGE value="VERDE DIRETTO: testSconfittaGiocatoreCriminalizzatoNienteCriminali riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaSconfittaGiocatoreCriminalizzato" />
     <MESSAGE value="ROSSO: testSconfittaBallottaggioGiulietta non riuscito" />
     <MESSAGE value="VERDE: testSconfittaBallottaggioGiulietta riuscito" />
@@ -633,6 +629,8 @@
     <MESSAGE value="VERDE: testRomeo riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo sistemazioneEliminazioniRomeoGiulietta" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminaRomeo" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaRomeo" />
+    <MESSAGE value="REFACTORING: definizione del metodo isRomeoProtettoDaGiulietta" />
+    <MESSAGE value="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
   </component>
 </project>
