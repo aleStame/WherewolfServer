@@ -259,6 +259,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
         romeizzazione(nome);
         verificaVero(giocatori.isRomeo(nome));
+        verificaVero(giocatori.isRomeoPresente());
+        verificaStringa(giocatori.getNomeRomeo(), nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
