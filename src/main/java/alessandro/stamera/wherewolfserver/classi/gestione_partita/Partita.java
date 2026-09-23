@@ -777,7 +777,7 @@ public final class Partita
     {
         terminaBallottaggio(nome);
         eliminati.aggiungiGiocatore(nome, getGiocatore(nome));
-        if(vivi.isRomeo(nome) && isGiuliettaPresente()) eliminaGiocatore(vivi.getNomeGiulietta());
+        if(vivi.isRomeo(nome) && isGiuliettaPresente()) eliminaGiulietta();
         else if(vivi.isGiulietta(nome))
         {
             boolean trovato = false;
@@ -791,6 +791,8 @@ public final class Partita
         vivi.eliminaGiocatore(nome);
         perdiProtezioniCappuccettoRosso();
     }
+
+    private void eliminaGiulietta() { eliminaGiocatore(vivi.getNomeGiulietta()); }
 
     private boolean isEccezioneOratore(String nome) { return ballottaggio.isCitta(nome) && isOratorePresente(); }
 
