@@ -261,12 +261,7 @@ public final class Partita
         throw new EccezioneCappuccettoRosso(tipoLupo, nomeLupo, nome, nomeAngeloCustode);
     }
 
-    private String getNomeRomeo()
-    {
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isRomeo(getNomeGiocatoreVivo(i))) posizione = i;
-        return getNomeGiocatoreVivo(posizione);
-    }
+    private String getNomeRomeo() { return vivi.getNomeRomeo(); }
 
     private void eliminaPerdenteBallottaggio()
     {
@@ -777,19 +772,15 @@ public final class Partita
     {
         terminaBallottaggio(nome);
         eliminati.aggiungiGiocatore(nome, getGiocatore(nome));
-        if(vivi.isRomeo(nome) && isGiuliettaPresente()) eliminaGiulietta();
-        else if(vivi.isGiulietta(nome))
-        {
-            boolean trovato = false;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && !trovato; i++)
-            {
-                String x = getNomeGiocatoreVivo(i);
-                trovato = vivi.isRomeo(x);
-                if(trovato) eliminaGiocatore(x);
-            }
-        }
+        sistemazioneEliminazioniRomeoGiulietta(nome);
         vivi.eliminaGiocatore(nome);
         perdiProtezioniCappuccettoRosso();
+    }
+
+    private void sistemazioneEliminazioniRomeoGiulietta(String nome)
+    {
+        if(vivi.isRomeo(nome) && isGiuliettaPresente()) eliminaGiulietta();
+        else if(vivi.isGiulietta(nome) && vivi.isRomeoPresente()) eliminaGiocatore(getNomeRomeo());
     }
 
     private void eliminaGiulietta() { eliminaGiocatore(vivi.getNomeGiulietta()); }
