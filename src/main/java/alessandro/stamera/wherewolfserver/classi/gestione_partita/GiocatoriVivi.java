@@ -357,9 +357,19 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isGiulietta(String nome) { return getGiocatore(nome).isGiulietta(); }
 
-    public boolean isGiuliettaPresente() { return false; }
+    public boolean isGiuliettaPresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGiulietta(getNomeGiocatore(i))) posizione = i;
+        return posizione != NON_TROVATO;
+    }
 
-    public String getNomeGiulietta() { return null; }
+    public String getNomeGiulietta()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isGiulietta(getNomeGiocatore(i))) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
 
     private void aggiornaProtezioniCappuccettoRossoPostInserimento()
     {
