@@ -739,13 +739,13 @@ public final class TestGiocatore
     public void testNoGiulietta(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaFalso(giocatore.isGiulietta());
+        verificaFalso(isGiulietta());
     }
 
     @Test public void testGiulietta()
     {
         cambiaRuolo("Giulietta");
-        verificaVero(giocatore.isGiulietta());
+        verificaVero(isGiulietta());
     }
 
     @Test public void testGiocatoreStregato()
@@ -929,6 +929,8 @@ public final class TestGiocatore
         String[][] giocatori = new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } };
         verificaSconfittaGiocatoreCriminalizzato(giocatori);
     }
+
+    private boolean isGiulietta() { return giocatore.isGiulietta(); }
 
     private void verificaSconfittaGiocatoreCriminalizzato(String[][] giocatori)
     {
