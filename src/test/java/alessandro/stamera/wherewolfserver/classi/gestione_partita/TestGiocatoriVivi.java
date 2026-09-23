@@ -1637,7 +1637,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Alessandro";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isGiulietta(nome));
+        verificaFalso(isGiulietta(nome));
         verificaFalso(giocatori.isGiuliettaPresente());
     }
 
@@ -1645,10 +1645,12 @@ public final class TestGiocatoriVivi
     {
         String nome = "Carmine";
         aggiungiGiocatore(nome, "Giulietta");
-        verificaVero(giocatori.isGiulietta(nome));
+        verificaVero(isGiulietta(nome));
         verificaStringa(giocatori.getNomeGiulietta(), nome);
         verificaVero(giocatori.isGiuliettaPresente());
     }
+
+    private boolean isGiulietta(String nome) { return giocatori.isGiulietta(nome); }
 
     private void verificaEsitoGildata(String nomeVittima, EsitoAttacco esito)
     {
