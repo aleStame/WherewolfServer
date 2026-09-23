@@ -355,6 +355,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeCappuccettoRosso() { return getNomeGiocatore(getPosizioneCappuccettoRosso()); }
 
+    public boolean isGiulietta(String nome) { return true; }
+
     private void aggiornaProtezioniCappuccettoRossoPostInserimento()
     {
         if(isCappuccettoNonnaPresenti()) aggiungiProtezioneLupiCappuccettoRosso();
