@@ -1,9 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -199,7 +202,11 @@ public final class Giocatore
 
     public boolean isNonMorto() { return tratti.isPresente(NON_MORTO); }
 
-    public void romeizzazione() { setRomeo(true); }
+    public void romeizzazione()
+    {
+        setRomeo(true);
+        cambiaFazione(AMANTI);
+    }
 
     public boolean isRomeo() { return romeo; }
 
@@ -242,6 +249,23 @@ public final class Giocatore
     public void annullaRomeizzazione() { setRomeo(false); }
 
     public boolean isLadra() { return ruolo.isLadra(); }
+
+    public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = ruolo.getEsitoPartita(partita);
+        if(isRomeo()) esito = getPartitaRomeo(partita);
+        else if(isCriminale()) esito = new Criminale(null, null, null).getEsitoPartita(partita);
+        return esito;
+    }
+
+    public boolean isGiulietta() { return ruolo.isGiulietta(); }
+
+    private EsitoPartita getPartitaRomeo(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isGiuliettaPresente()) esito = VITTORIA;
+        return esito;
+    }
 
     private EsitoAttacco getRisultatoVampirizzazione()
     {

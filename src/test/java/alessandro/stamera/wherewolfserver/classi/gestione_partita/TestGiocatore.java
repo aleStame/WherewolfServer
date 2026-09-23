@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNullo;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +10,9 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.AMANTI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -527,6 +527,41 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         giocatore.romeizzazione();
         verificaVero(giocatore.isRomeo());
+        verificaFazione(AMANTI);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testVittoriaRomeo(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoPartitaRomeo(new String[][] { { "Max", "Giulietta" }, { "Angelo", nomeRuolo } }, VITTORIA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testSconfittaRomeo(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoPartitaRomeo(new String[][] { {"Angelo", nomeRuolo } }, SCONFITTA);
     }
 
     @ParameterizedTest @CsvSource
@@ -690,6 +725,29 @@ public final class TestGiocatore
         verificaVero(isSensitiva());
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva",
+            "Sidhe", "Spia", "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testNoGiulietta(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaFalso(isGiulietta());
+    }
+
+    @Test public void testGiulietta()
+    {
+        cambiaRuolo("Giulietta");
+        verificaVero(isGiulietta());
+    }
+
     @Test public void testGiocatoreStregato()
     {
         verificaFalso(giocatore.isStregato());
@@ -827,6 +885,74 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         verificaEsitoGildata(RIUSCITO);
         verificaCriminale();
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testVittoriaGiocatoreCriminalizzato(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoPartitaGiocatoreCriminalizzato(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }, VITTORIA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testSconfittaGiocatoreCriminalizzatoControGuardie(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaSconfittaGiocatoreCriminalizzato(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } });
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere", "Cacciatore", "Cacciatore di vampiri",
+            "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Guaritore", "Mago",
+            "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Peccatore", "Prete", "Sensitiva"
+        }
+    )
+    public void testSconfittaGiocatoreCriminalizzatoNienteCriminali(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        String[][] giocatori = new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } };
+        verificaSconfittaGiocatoreCriminalizzato(giocatori);
+    }
+
+    private boolean isGiulietta() { return giocatore.isGiulietta(); }
+
+    private void verificaSconfittaGiocatoreCriminalizzato(String[][] giocatori)
+    {
+        verificaEsitoPartitaGiocatoreCriminalizzato(giocatori, SCONFITTA);
+    }
+
+    private void verificaEsitoPartitaGiocatoreCriminalizzato(String[][] giocatori, EsitoPartita esito)
+    {
+        verificaEsitoGildata(RIUSCITO);
+        verificaCriminale();
+        verificaEsitoPartita(giocatori, esito);
+    }
+
+    private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
+    {
+        giocatore.romeizzazione();
+        verificaEsitoPartita(giocatori, sconfitta);
+    }
+
+    private void verificaEsitoPartita(String[][] giocatori, EsitoPartita sconfitta)
+    {
+        assertThat(giocatore.getEsitoPartita(new Partita(giocatori))).isEqualTo(sconfitta);
     }
 
     private void verificaCriminale()

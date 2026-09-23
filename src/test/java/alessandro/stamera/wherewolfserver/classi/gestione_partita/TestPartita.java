@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
@@ -2616,6 +2615,54 @@ public final class TestPartita
         String nome = "Chiara";
         inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Paolo", "Sensitiva" } });
         verificaControlloSensitiva(nome, esito);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oste", "Pazzo", "Peccatore", "Posseduto",
+                "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testSconfittaBallottaggioGiulietta(String nomeRuolo)
+    {
+        String nomeRomeo = "Paolo", nomeGiulietta = "Luca";
+        inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" } });
+        romeizzazione(nomeRomeo);
+        incrementaVoti(nomeRomeo, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeRomeo, 1);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+        }
+    )
+    public void testSconfittaBallottaggioRomeo(String nomeRuolo)
+    {
+        String nomeRomeo = "Paolo", nomeGiulietta = "Luca";
+        inizializzaPartita(new String[][] { { nomeRomeo, nomeRuolo }, { nomeGiulietta, "Giulietta" } });
+        romeizzazione(nomeRomeo);
+        incrementaVoti(nomeGiulietta, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeGiulietta, 1);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
     }
 
     private void verificaNonProgenizzabile(String nome)

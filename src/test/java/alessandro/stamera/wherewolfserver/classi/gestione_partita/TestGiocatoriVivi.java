@@ -259,6 +259,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Alessandro", "Giulietta" }, { nome, nomeRuolo } });
         romeizzazione(nome);
         verificaVero(giocatori.isRomeo(nome));
+        verificaVero(giocatori.isRomeoPresente());
+        verificaStringa(giocatori.getNomeRomeo(), nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1621,6 +1623,38 @@ public final class TestGiocatoriVivi
         verificaEsitoGildata(nomeVittima, RIUSCITO);
         verificaVero(giocatori.isCriminale(nomeVittima));
     }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva",
+            "Sidhe", "Spia", "Strega", "Templare", "Vampiro"
+        }
+    )
+    public void testGiuliettaAssente(String nomeRuolo)
+    {
+        String nome = "Alessandro";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaFalso(isGiulietta(nome));
+        verificaFalso(isGiuliettaPresente());
+    }
+
+    @Test public void testGiuliettaPresente()
+    {
+        String nome = "Carmine";
+        aggiungiGiocatore(nome, "Giulietta");
+        verificaVero(isGiulietta(nome));
+        verificaStringa(giocatori.getNomeGiulietta(), nome);
+        verificaVero(isGiuliettaPresente());
+    }
+
+    private boolean isGiuliettaPresente() { return giocatori.isGiuliettaPresente(); }
+
+    private boolean isGiulietta(String nome) { return giocatori.isGiulietta(nome); }
 
     private void verificaEsitoGildata(String nomeVittima, EsitoAttacco esito)
     {
