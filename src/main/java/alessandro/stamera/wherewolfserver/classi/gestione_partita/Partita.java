@@ -779,9 +779,11 @@ public final class Partita
 
     private void sistemazioneEliminazioniRomeoGiulietta(String nome)
     {
-        if(vivi.isRomeo(nome) && isGiuliettaPresente()) eliminaGiulietta();
+        if(isRomeoProtettoDaGiulietta(nome)) eliminaGiulietta();
         else if(vivi.isGiulietta(nome) && vivi.isRomeoPresente()) eliminaRomeo();
     }
+
+    private boolean isRomeoProtettoDaGiulietta(String nome) { return vivi.isRomeo(nome) && isGiuliettaPresente(); }
 
     private void eliminaRomeo() { eliminaGiocatore(getNomeRomeo()); }
 

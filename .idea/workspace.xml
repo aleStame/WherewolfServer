@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testRomeo riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eliminaRomeo">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,22 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00682" summary="ROSSO: testCriminalizzazioneCapoGildaRiuscita non riuscito">
-      <option name="closed" value="true" />
-      <created>1790005448815</created>
-      <option name="number" value="00682" />
-      <option name="presentableId" value="LOCAL-00682" />
-      <option name="project" value="LOCAL" />
-      <updated>1790005448815</updated>
-    </task>
-    <task id="LOCAL-00683" summary="VERDE: testCriminalizzazioneCapoGildaRiuscita riuscito">
-      <option name="closed" value="true" />
-      <created>1790006061987</created>
-      <option name="number" value="00683" />
-      <option name="presentableId" value="LOCAL-00683" />
-      <option name="project" value="LOCAL" />
-      <updated>1790006061987</updated>
     </task>
     <task id="LOCAL-00684" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaRiuscita riuscito">
       <option name="closed" value="true" />
@@ -590,7 +574,23 @@
       <option name="project" value="LOCAL" />
       <updated>1790173732919</updated>
     </task>
-    <option name="localTasksCounter" value="731" />
+    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo sistemazioneEliminazioniRomeoGiulietta">
+      <option name="closed" value="true" />
+      <created>1790173910908</created>
+      <option name="number" value="00731" />
+      <option name="presentableId" value="LOCAL-00731" />
+      <option name="project" value="LOCAL" />
+      <updated>1790173910908</updated>
+    </task>
+    <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo eliminaRomeo">
+      <option name="closed" value="true" />
+      <created>1790174057296</created>
+      <option name="number" value="00732" />
+      <option name="presentableId" value="LOCAL-00732" />
+      <option name="project" value="LOCAL" />
+      <updated>1790174057296</updated>
+    </task>
+    <option name="localTasksCounter" value="733" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,8 +608,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSconfittaGiocatoreCriminalizzatoControGuardie riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartita" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoPartitaGiocatoreCriminalizzato" />
     <MESSAGE value="VERDE DIRETTO: testSconfittaGiocatoreCriminalizzatoNienteCriminali riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaSconfittaGiocatoreCriminalizzato" />
@@ -633,6 +631,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo isGiuliettaPresente" />
     <MESSAGE value="ROSSO: testRomeo non riuscito" />
     <MESSAGE value="VERDE: testRomeo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testRomeo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo sistemazioneEliminazioniRomeoGiulietta" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaRomeo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaRomeo" />
   </component>
 </project>
