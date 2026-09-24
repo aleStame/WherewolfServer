@@ -524,7 +524,7 @@ public final class TestGiocatore
     public void testRomeizzazione(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.romeizzazione();
+        romeizzazione();
         verificaVero(giocatore.isRomeo());
         verificaFazione(AMANTI);
     }
@@ -939,6 +939,14 @@ public final class TestGiocatore
         verificaEsitoPartita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }, VITTORIA);
     }
 
+    @Test public void testLupizzazioneLupoSolitario()
+    {
+        cambiaRuolo("Contadino discendente dei lupi");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Lupo solitario")), CONTADINO_LUPO_BECCATO);
+        verificaFazione(LUPO_SOLITARIO);
+        verificaAura(NERA);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
@@ -953,9 +961,11 @@ public final class TestGiocatore
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.romeizzazione();
+        romeizzazione();
         verificaAttaccoAssassino(ROMEO_BECCATO);
     }
+
+    private void romeizzazione() { giocatore.romeizzazione(); }
 
     private boolean isGiulietta() { return giocatore.isGiulietta(); }
 
@@ -973,7 +983,7 @@ public final class TestGiocatore
 
     private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
     {
-        giocatore.romeizzazione();
+        romeizzazione();
         verificaEsitoPartita(giocatori, sconfitta);
     }
 
