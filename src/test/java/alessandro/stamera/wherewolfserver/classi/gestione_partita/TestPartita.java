@@ -2476,6 +2476,27 @@ public final class TestPartita
         assertThat(partita.getFazione(nomeNuovoPosseduto)).isNotEqualTo(POSSEDUTO);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAttaccoAssassinoRomeo(String nomeRuolo)
+    {
+        String nomeGiulietta = "Tania", nomeRomeo = "Sandra";
+        inizializzaPartita(new String[][] { { "Alberto", "Assassino" }, { "Tania", "Giulietta" }, { nomeRomeo, nomeRuolo } });
+        romeizzazione(nomeRomeo);
+        attaccoAssassino(nomeRomeo);
+        terminaNotte();
+        verificaEliminati(nomeGiulietta, nomeRomeo);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
