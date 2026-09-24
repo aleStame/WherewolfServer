@@ -12,8 +12,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.AMANTI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -525,7 +524,7 @@ public final class TestGiocatore
     public void testRomeizzazione(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        giocatore.romeizzazione();
+        romeizzazione();
         verificaVero(giocatore.isRomeo());
         verificaFazione(AMANTI);
     }
@@ -930,6 +929,44 @@ public final class TestGiocatore
         verificaSconfittaGiocatoreCriminalizzato(giocatori);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testLupizzazioneLupiBranco(String nomeRuolo)
+    {
+        cambiaRuolo("Contadino discendente dei lupi");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(nomeRuolo)), CONTADINO_LUPO_BECCATO);
+        verificaFazione(LUPO_BRANCO);
+        verificaAura(NERA);
+        verificaEsitoPartita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }, VITTORIA);
+    }
+
+    @Test public void testLupizzazioneLupoSolitario()
+    {
+        cambiaRuolo("Contadino discendente dei lupi");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Lupo solitario")), CONTADINO_LUPO_BECCATO);
+        verificaFazione(LUPO_SOLITARIO);
+        verificaAura(NERA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testAttaccoAssassinoRomeo(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        romeizzazione();
+        verificaAttaccoAssassino(ROMEO_BECCATO);
+    }
+
+    private void romeizzazione() { giocatore.romeizzazione(); }
+
     private boolean isGiulietta() { return giocatore.isGiulietta(); }
 
     private void verificaSconfittaGiocatoreCriminalizzato(String[][] giocatori)
@@ -946,7 +983,7 @@ public final class TestGiocatore
 
     private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
     {
-        giocatore.romeizzazione();
+        romeizzazione();
         verificaEsitoPartita(giocatori, sconfitta);
     }
 
