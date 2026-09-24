@@ -932,7 +932,7 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testLupizzazioneLupiBranco(String nomeRuolo)
     {
-        cambiaRuolo("Contadino discendente dei lupo");
+        cambiaRuolo("Contadino discendente dei lupi");
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(nomeRuolo)), CONTADINO_LUPO_BECCATO);
         verificaFazione(LUPO_BRANCO);
         verificaAura(NERA);
