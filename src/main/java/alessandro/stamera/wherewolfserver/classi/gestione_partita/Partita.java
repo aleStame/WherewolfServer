@@ -95,17 +95,10 @@ public final class Partita
     {
         switch(vivi.attaccoAssassino(nome))
         {
-            case RIUSCITO ->
-            {
-                if(isRomeoProtettoDaGiulietta(nome)) eliminaGiocatori(vivi.getNomeGiulietta(), getNomeRomeo());
-                else eliminaGiocatore(nome);
-            }
+            case RIUSCITO -> eliminaGiocatore(nome);
             case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
-            case MORTO ->
-            {
-                if(isRomeoProtettoDaGiulietta(nome)) eliminaGiocatori(vivi.getNomeGiulietta(), getNomeRomeo());
-                else assassinioContadinoMostro(nome);
-            }
+            case MORTO -> assassinioContadinoMostro(nome);
+            case ROMEO_BECCATO -> eliminaGiocatori(vivi.getNomeGiulietta(), getNomeRomeo());
         }
     }
 
