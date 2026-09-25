@@ -1,10 +1,14 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.CONTADINO_LUPO_BECCATO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -92,6 +96,14 @@ public final class TestGiocatoriEliminati
         String nome = "Salvo";
         aggiungiGiocatore(nome, "Inquisitore");
         verificaVero(isInquisitore(nome));
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testControlloMediumContadinoPostLupizzazione(String tipoLupo)
+    {
+        Giocatore giocatore = new Giocatore(FACTORY.getRuolo("Contadino discendente dei lupi"));
+        assertThat(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
+        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
     }
 
     private boolean isInquisitore(String nome) { return giocatori.isInquisitore(nome); }
