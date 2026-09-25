@@ -1270,6 +1270,24 @@ public final class TestPartita
         verificaControlloMedium(nomeContadino, NERA);
     }
 
+    @Test public void testControlloMediumContadinoPostLupizzazioneSolitario()
+    {
+        String nomeContadino = "Tonio", tipoLupo = "Lupo solitario";
+        String[][] giocatori = new String[][]
+        {
+            { "Lucio", tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" }, { "Lina", "Assassino" }, { "Gaia", "Medium" },
+            { "Rubio", "Medium" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio =
+            "Il Contadino discendente dei lupi (Tonio) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\nSveglia Tonio e " +
+            "fagli riconoscere il Lupo solitario che lo ha attaccato.";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
+        attaccoAssassino(nomeContadino);
+        terminaNotte();
+        verificaControlloMedium(nomeContadino, NERA);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
