@@ -45,7 +45,7 @@ public final class TestGiocatoriEliminati
     {
         String nome = "Paolo";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura);
+        verificaAura(nome, aura);
     }
 
     @ParameterizedTest @CsvSource
@@ -103,8 +103,12 @@ public final class TestGiocatoriEliminati
     {
         Giocatore giocatore = new Giocatore(FACTORY.getRuolo("Contadino discendente dei lupi"));
         assertThat(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
-        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
+        String nome = "Giancarlo";
+        giocatori.aggiungiGiocatore(nome, giocatore);
+        verificaAura(nome, NERA);
     }
+
+    private void verificaAura(String nome, Aura aura) { assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura); }
 
     private boolean isInquisitore(String nome) { return giocatori.isInquisitore(nome); }
 
