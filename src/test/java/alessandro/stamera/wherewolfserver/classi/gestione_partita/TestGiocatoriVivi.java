@@ -19,6 +19,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NER
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_SOLITARIO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -1668,6 +1669,15 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_BRANCO);
+        assertThat(giocatori.getAura(nomeContadino)).isEqualTo(NERA);
+    }
+
+    @Test public void testLupizzazioneLupoSolitario()
+    {
+        String nomeContadino = "Gilberto", tipoLupo = "Lupo solitario";
+        inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
+        verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
+        assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_SOLITARIO);
         assertThat(giocatori.getAura(nomeContadino)).isEqualTo(NERA);
     }
 
