@@ -944,6 +944,7 @@ public final class TestGiocatore
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
         verificaFazione(fazione);
         verificaAura(NERA);
+        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
     }
 
     @ParameterizedTest @CsvSource
