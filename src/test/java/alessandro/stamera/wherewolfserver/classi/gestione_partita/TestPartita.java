@@ -1264,10 +1264,7 @@ public final class TestPartita
         String messaggio =
             "Il Contadino discendente dei lupi (Tonio) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della loro fazione.\n" +
             "Sveglia Tonio e fagli riconoscere gli altri lupi.";
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
-        attaccoAssassino(nomeContadino);
-        terminaNotte();
-        verificaControlloMedium(nomeContadino, NERA);
+        verificaAttaccoAssassinoContadinoLupizzato(tipoLupo, nomeContadino, messaggio);
     }
 
     @Test public void testControlloMediumContadinoPostLupizzazioneSolitario()
@@ -1282,10 +1279,7 @@ public final class TestPartita
         String messaggio =
             "Il Contadino discendente dei lupi (Tonio) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\nSveglia Tonio e " +
             "fagli riconoscere il Lupo solitario che lo ha attaccato.";
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
-        attaccoAssassino(nomeContadino);
-        terminaNotte();
-        verificaControlloMedium(nomeContadino, NERA);
+        verificaAttaccoAssassinoContadinoLupizzato(tipoLupo, nomeContadino, messaggio);
     }
 
     @ParameterizedTest @CsvSource
@@ -2534,6 +2528,14 @@ public final class TestPartita
         attaccoAssassino(nomeRomeo);
         terminaNotte();
         verificaEliminati(nomeGiulietta, nomeRomeo);
+    }
+
+    private void verificaAttaccoAssassinoContadinoLupizzato(String tipoLupo, String nomeContadino, String messaggio)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
+        attaccoAssassino(nomeContadino);
+        terminaNotte();
+        verificaControlloMedium(nomeContadino, NERA);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }

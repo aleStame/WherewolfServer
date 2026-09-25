@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testControlloMediumContadinoPostLupizzazione riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testControlloMediumContadinoPostLupizzazioneSolitario riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,14 +238,6 @@
       <workItem from="1790193261875" duration="4562000" />
       <workItem from="1790237843199" duration="6993000" />
       <workItem from="1790325595474" duration="1078000" />
-    </task>
-    <task id="LOCAL-00756" summary="VERDE: testAttaccoCapoBrancoFallito riuscito">
-      <option name="closed" value="true" />
-      <created>1789376274687</created>
-      <option name="number" value="00756" />
-      <option name="presentableId" value="LOCAL-00756" />
-      <option name="project" value="LOCAL" />
-      <updated>1789376274687</updated>
     </task>
     <task id="LOCAL-00757" summary="Merge branch 'feature/attaccoCapoBrancoAmato' into develop">
       <option name="closed" value="true" />
@@ -631,7 +623,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790348349283</updated>
     </task>
-    <option name="localTasksCounter" value="805" />
+    <task id="LOCAL-00805" summary="VERDE DIRETTO: testControlloMediumContadinoPostLupizzazioneSolitario riuscito">
+      <option name="closed" value="true" />
+      <created>1790348797068</created>
+      <option name="number" value="00805" />
+      <option name="presentableId" value="LOCAL-00805" />
+      <option name="project" value="LOCAL" />
+      <updated>1790348797068</updated>
+    </task>
+    <option name="localTasksCounter" value="806" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +649,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testEccezioneLupoReietto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getMessaggioRuoloProtetto" />
     <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLadra" />
     <MESSAGE value="REFACTORING: definizione del metodo getMessaggioLupo" />
@@ -674,6 +673,7 @@
     <MESSAGE value="VERDE DIRETTO: testLupizzazioneLupoSolitario riuscito" />
     <MESSAGE value="ROSSO: testControlloMediumContadinoPostLupizzazione non riuscito" />
     <MESSAGE value="VERDE: testControlloMediumContadinoPostLupizzazione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testControlloMediumContadinoPostLupizzazione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testControlloMediumContadinoPostLupizzazioneSolitario riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testControlloMediumContadinoPostLupizzazioneSolitario riuscito" />
   </component>
 </project>
