@@ -17,6 +17,8 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -1657,6 +1659,16 @@ public final class TestGiocatoriVivi
         verificaVero(isGiulietta(nome));
         verificaStringa(giocatori.getNomeGiulietta(), nome);
         verificaVero(isGiuliettaPresente());
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testLupizzazioneLupiBranco(String tipoLupo)
+    {
+        String nomeContadino = "Gilberto";
+        inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
+        verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
+        assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_BRANCO);
+        assertThat(giocatori.getAura(nomeContadino)).isEqualTo(NERA);
     }
 
     private boolean isGiuliettaPresente() { return giocatori.isGiuliettaPresente(); }
