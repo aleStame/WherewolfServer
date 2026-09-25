@@ -932,18 +932,17 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testLupizzazioneLupiBranco(String nomeRuolo)
     {
-        cambiaRuolo("Contadino discendente dei lupi");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(nomeRuolo)), CONTADINO_LUPO_BECCATO);
-        verificaFazione(LUPO_BRANCO);
-        verificaAura(NERA);
+        lupizzazioneContadino(nomeRuolo, LUPO_BRANCO);
         verificaEsitoPartita(new String[][] { { "Noemi", "Capo branco" }, { "Elisa", "Lupo del branco" }, { "Damiano", "Pazzo" } }, VITTORIA);
     }
 
-    @Test public void testLupizzazioneLupoSolitario()
+    @Test public void testLupizzazioneLupoSolitario() { lupizzazioneContadino("Lupo solitario", LUPO_SOLITARIO); }
+
+    private void lupizzazioneContadino(String tipoLupo, Fazione fazione)
     {
         cambiaRuolo("Contadino discendente dei lupi");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Lupo solitario")), CONTADINO_LUPO_BECCATO);
-        verificaFazione(LUPO_SOLITARIO);
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
+        verificaFazione(fazione);
         verificaAura(NERA);
     }
 
