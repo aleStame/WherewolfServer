@@ -34,7 +34,6 @@ public final class GiocatoriVivi extends Giocatori
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoLupi(attaccante);
         if(isPotereBracconiereUtilizzato()) esito = FALLITO;
-        System.out.println(esito);
         switch(esito)
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);

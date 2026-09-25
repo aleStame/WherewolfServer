@@ -1222,7 +1222,7 @@ public final class TestPartita
             "Altra guardia, BIANCA", "Angelo custode, BIANCA", "Assassino, NERA", "Azzeccagarbugli, BIANCA", "Bardo, BIANCA", "Becchino, BIANCA",
             "Bocca di rosa, NERA", "Boia, NERA", "Borgomastro, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA",
             "Cacciatore di vampiri, BIANCA", "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
-            "Contadino discendente dei lupi, BIANCA", "Contadino mostro, BIANCA", "Contadino normale, BIANCA", "Eremita, BIANCA", "Ghoul, BIANCA",
+            "Contadino discendente dei lupi, BIANCA", "Contadino mostro, NERA", "Contadino normale, BIANCA", "Eremita, BIANCA", "Ghoul, BIANCA",
             "Giovane lupo, NERA", "Giulietta, BIANCA", "Giullare, BIANCA", "Goblin, NERA", "Guardia, BIANCA", "Guardia corrotta, NERA",
             "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA", "Lupo reietto, NERA",
             "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
@@ -1249,6 +1249,37 @@ public final class TestPartita
         attaccoAssassino(nomeVittima);
         terminaNotte();
         verificaControlloMedium(nomeVittima, BIANCA);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testControlloMediumContadinoPostLupizzazione(String tipoLupo)
+    {
+        String nomeContadino = "Tonio";
+        String[][] giocatori = new String[][]
+        {
+            { "Lucio", tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" }, { "Lina", "Assassino" }, { "Gaia", "Medium" },
+            { "Rubio", "Medium" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio =
+            "Il Contadino discendente dei lupi (Tonio) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della loro fazione.\n" +
+            "Sveglia Tonio e fagli riconoscere gli altri lupi.";
+        verificaAttaccoAssassinoContadinoLupizzato(tipoLupo, nomeContadino, messaggio);
+    }
+
+    @Test public void testControlloMediumContadinoPostLupizzazioneSolitario()
+    {
+        String nomeContadino = "Tonio", tipoLupo = "Lupo solitario";
+        String[][] giocatori = new String[][]
+        {
+            { "Lucio", tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" }, { "Lina", "Assassino" }, { "Gaia", "Medium" },
+            { "Rubio", "Medium" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio =
+            "Il Contadino discendente dei lupi (Tonio) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\nSveglia Tonio e " +
+            "fagli riconoscere il Lupo solitario che lo ha attaccato.";
+        verificaAttaccoAssassinoContadinoLupizzato(tipoLupo, nomeContadino, messaggio);
     }
 
     @ParameterizedTest @CsvSource
@@ -2497,6 +2528,14 @@ public final class TestPartita
         attaccoAssassino(nomeRomeo);
         terminaNotte();
         verificaEliminati(nomeGiulietta, nomeRomeo);
+    }
+
+    private void verificaAttaccoAssassinoContadinoLupizzato(String tipoLupo, String nomeContadino, String messaggio)
+    {
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
+        attaccoAssassino(nomeContadino);
+        terminaNotte();
+        verificaControlloMedium(nomeContadino, NERA);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }

@@ -263,6 +263,13 @@ public final class Giocatore
 
     public boolean isGiulietta() { return ruolo.isGiulietta(); }
 
+    public Aura controlloMedium()
+    {
+        Aura risultato = ruolo.getAura();
+        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) risultato = NERA;
+        return risultato;
+    }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
