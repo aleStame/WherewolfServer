@@ -1251,6 +1251,21 @@ public final class TestPartita
         verificaControlloMedium(nomeVittima, BIANCA);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testControlloMediumContadinoPostLupizzazione(String tipoLupo)
+    {
+        String nomeContadino = "Tonio";
+        String[][] giocatori = new String[][]
+        {
+            { "Lucio", tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" }, { "Lina", "Assassino" }, { "Gaia", "Medium" },
+            { "Rubio", "Medium" }
+        };
+        inizializzaPartita(giocatori);
+        attaccoLupi(tipoLupo, nomeContadino);
+        attaccoAssassino(nomeContadino);
+        verificaControlloMedium(nomeContadino, NERA);
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
