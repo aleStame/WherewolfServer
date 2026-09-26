@@ -973,7 +973,7 @@ public final class TestGiocatore
         verificaFazione(POSSEDUTO);
         verificaControlloVeggente(NERA);
         assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
-        verificaVero(giocatore.isPosseduto());
+        verificaVero(isPosseduto());
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
@@ -982,8 +982,10 @@ public final class TestGiocatore
         cambiaRuolo(nomeRuolo);
         giocatore.aggiungiProtezione(FACTORY.getRuolo("Posseduto"));
         verificaEsitoPassaggioPosseduto(FALLITO);
-        verificaFalso(giocatore.isPosseduto());
+        verificaFalso(isPosseduto());
     }
+
+    private boolean isPosseduto() { return giocatore.isPosseduto(); }
 
     private void romeizzazione() { giocatore.romeizzazione(); }
 
