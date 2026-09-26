@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -398,7 +395,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Concetta";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(BIANCA);
+        verificaAuraControlloVeggente(nome, BIANCA);
     }
 
     @ParameterizedTest @CsvSource
@@ -1100,7 +1097,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(this.giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
+        verificaAuraControlloVeggente(nomeContadino, NERA);
         assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
     }
 
@@ -1667,7 +1664,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_BRANCO);
-        assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
+        verificaAuraControlloVeggente(nomeContadino, NERA);
     }
 
     @Test public void testLupizzazioneLupoSolitario()
@@ -1676,7 +1673,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_SOLITARIO);
-        assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
+        verificaAuraControlloVeggente(nomeContadino, NERA);
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
@@ -1717,8 +1714,13 @@ public final class TestGiocatoriVivi
     {
         verificaEsitoPassaggioPosseduto(nome, RIUSCITO);
         assertThat(giocatori.getFazione(nome)).isEqualTo(POSSEDUTO);
-        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(NERA);
+        verificaAuraControlloVeggente(nome, NERA);
         verificaVero(giocatori.isPosseduto(nome));
+    }
+
+    private void verificaAuraControlloVeggente(String nome, Aura aura)
+    {
+        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(aura);
     }
 
     private void verificaEsitoPassaggioPosseduto(String nome, EsitoAttacco esito)
