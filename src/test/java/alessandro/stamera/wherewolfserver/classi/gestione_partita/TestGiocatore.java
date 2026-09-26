@@ -507,7 +507,7 @@ public final class TestGiocatore
         cambiaRuolo("Prete");
         verificaEsitoPassaggioPosseduto(MORTO);
         verificaAttaccoVampiro(RIUSCITO);
-        verificaEsitoPassaggioPosseduto(RIUSCITO);
+        verificaCorrettoPassaggioPosseduto();
     }
 
     @ParameterizedTest @CsvSource
@@ -969,11 +969,7 @@ public final class TestGiocatore
     public void testPassaPossedutoCorretto(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaEsitoPassaggioPosseduto(RIUSCITO);
-        verificaFazione(POSSEDUTO);
-        verificaControlloVeggente(NERA);
-        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
-        verificaVero(isPosseduto());
+        verificaCorrettoPassaggioPosseduto();
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
@@ -983,6 +979,15 @@ public final class TestGiocatore
         giocatore.aggiungiProtezione(FACTORY.getRuolo("Posseduto"));
         verificaEsitoPassaggioPosseduto(FALLITO);
         verificaFalso(isPosseduto());
+    }
+
+    private void verificaCorrettoPassaggioPosseduto()
+    {
+        verificaEsitoPassaggioPosseduto(RIUSCITO);
+        verificaFazione(POSSEDUTO);
+        verificaControlloVeggente(NERA);
+        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
+        verificaVero(isPosseduto());
     }
 
     private boolean isPosseduto() { return giocatore.isPosseduto(); }
