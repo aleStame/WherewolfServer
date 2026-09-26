@@ -1097,7 +1097,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        verificaAuraControlloVeggente(nomeContadino, NERA);
+        verificaAuraNeraControlloVeggente(nomeContadino);
         verificaFazione(nomeContadino, fazione);
     }
 
@@ -1664,7 +1664,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         verificaFazione(nomeContadino, LUPO_BRANCO);
-        verificaAuraControlloVeggente(nomeContadino, NERA);
+        verificaAuraNeraControlloVeggente(nomeContadino);
     }
 
     @Test public void testLupizzazioneLupoSolitario()
@@ -1673,7 +1673,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         verificaFazione(nomeContadino, LUPO_SOLITARIO);
-        verificaAuraControlloVeggente(nomeContadino, NERA);
+        verificaAuraNeraControlloVeggente(nomeContadino);
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
@@ -1714,9 +1714,11 @@ public final class TestGiocatoriVivi
     {
         verificaEsitoPassaggioPosseduto(nome, RIUSCITO);
         verificaFazione(nome, POSSEDUTO);
-        verificaAuraControlloVeggente(nome, NERA);
+        verificaAuraNeraControlloVeggente(nome);
         verificaVero(giocatori.isPosseduto(nome));
     }
+
+    private void verificaAuraNeraControlloVeggente(String nome) { verificaAuraControlloVeggente(nome, NERA); }
 
     private void verificaFazione(String nome, Fazione fazione) { assertThat(giocatori.getFazione(nome)).isEqualTo(fazione); }
 
