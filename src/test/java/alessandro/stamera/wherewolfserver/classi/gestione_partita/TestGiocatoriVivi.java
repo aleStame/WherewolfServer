@@ -1098,7 +1098,7 @@ public final class TestGiocatoriVivi
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         verificaAuraControlloVeggente(nomeContadino, NERA);
-        assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
+        verificaFazione(nomeContadino, fazione);
     }
 
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
@@ -1663,7 +1663,7 @@ public final class TestGiocatoriVivi
         String nomeContadino = "Gilberto";
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_BRANCO);
+        verificaFazione(nomeContadino, LUPO_BRANCO);
         verificaAuraControlloVeggente(nomeContadino, NERA);
     }
 
@@ -1672,7 +1672,7 @@ public final class TestGiocatoriVivi
         String nomeContadino = "Gilberto", tipoLupo = "Lupo solitario";
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_SOLITARIO);
+        verificaFazione(nomeContadino, LUPO_SOLITARIO);
         verificaAuraControlloVeggente(nomeContadino, NERA);
     }
 
@@ -1713,10 +1713,12 @@ public final class TestGiocatoriVivi
     private void verificaCorrettoPassaggioPosseduto(String nome)
     {
         verificaEsitoPassaggioPosseduto(nome, RIUSCITO);
-        assertThat(giocatori.getFazione(nome)).isEqualTo(POSSEDUTO);
+        verificaFazione(nome, POSSEDUTO);
         verificaAuraControlloVeggente(nome, NERA);
         verificaVero(giocatori.isPosseduto(nome));
     }
+
+    private void verificaFazione(String nome, Fazione fazione) { assertThat(giocatori.getFazione(nome)).isEqualTo(fazione); }
 
     private void verificaAuraControlloVeggente(String nome, Aura aura)
     {
