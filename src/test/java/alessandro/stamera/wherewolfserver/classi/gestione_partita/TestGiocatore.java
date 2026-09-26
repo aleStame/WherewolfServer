@@ -944,7 +944,7 @@ public final class TestGiocatore
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
         verificaFazione(fazione);
         verificaControlloVeggente(NERA);
-        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
+        controlloMediumAuraNera();
     }
 
     @ParameterizedTest @CsvSource
@@ -986,9 +986,11 @@ public final class TestGiocatore
         verificaEsitoPassaggioPosseduto(RIUSCITO);
         verificaFazione(POSSEDUTO);
         verificaControlloVeggente(NERA);
-        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
+        controlloMediumAuraNera();
         verificaVero(isPosseduto());
     }
+
+    private void controlloMediumAuraNera() { assertThat(giocatore.controlloMedium()).isEqualTo(NERA); }
 
     private boolean isPosseduto() { return giocatore.isPosseduto(); }
 
