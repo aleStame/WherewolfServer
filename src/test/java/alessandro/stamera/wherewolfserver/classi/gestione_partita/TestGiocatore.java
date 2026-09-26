@@ -49,9 +49,9 @@ public final class TestGiocatore
         giocatore.maledizione();
         verificaNumeroVoti(1);
         verificaMaledetto();
-        verificaAura(NERA);
+        verificaControlloVeggente(NERA);
         annullaMaledizione();
-        verificaAura(aura);
+        verificaControlloVeggente(aura);
         verificaNonMaledetto();
 
     }
@@ -943,7 +943,7 @@ public final class TestGiocatore
         cambiaRuolo("Contadino discendente dei lupi");
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
         verificaFazione(fazione);
-        verificaAura(NERA);
+        verificaControlloVeggente(NERA);
         assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
     }
 
@@ -1036,7 +1036,7 @@ public final class TestGiocatore
 
     private boolean isLupoSolitario() { return giocatore.isLupoSolitario(); }
 
-    private void verificaAura(Aura aura) { assertThat(giocatore.getAura()).isEqualTo(aura); }
+    private void verificaControlloVeggente(Aura aura) { assertThat(giocatore.controlloVeggente()).isEqualTo(aura); }
 
     private void verificaNonMaledetto() { verificaFalso(isMaledetto()); }
 
@@ -1052,7 +1052,7 @@ public final class TestGiocatore
     {
         cambiaRuolo("Contadino discendente dei lupi");
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
-        assertThat(giocatore.getAura()).isEqualTo(NERA);
+        assertThat(giocatore.controlloVeggente()).isEqualTo(NERA);
     }
 
     private void verificaLupoSolitarioSvegliaCappuccettoRosso()

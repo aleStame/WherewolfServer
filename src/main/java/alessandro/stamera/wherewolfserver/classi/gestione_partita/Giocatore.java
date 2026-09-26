@@ -54,7 +54,7 @@ public final class Giocatore
 
     public void maledizione() { tratti.aggiungi(MALEDETTO); }
 
-    public Aura getAura()
+    public Aura controlloVeggente()
     {
         Aura aura = ruolo.getAura();
         if(isGiocatoreAuraNera()) aura = NERA;

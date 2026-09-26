@@ -184,7 +184,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Maddalena";
         inizializzaGiocatori(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giuseppe", "Strega" } });
         protezioneStrega(nomeVittima);
-        verificaAssassinioAmato(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima, RIUSCITO);
     }
 
     @Test public void testSegnalazioneAzzeccagarbugliAngeloCustode()
@@ -400,7 +400,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Concetta";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(BIANCA);
+        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(BIANCA);
     }
 
     @ParameterizedTest @CsvSource
@@ -414,7 +414,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Gervaso";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.getControlloVeggente(nome)).isEqualTo(NERA);
+        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(NERA);
     }
 
     @Test public void testNumeroCriminali()
@@ -1102,7 +1102,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(this.giocatori.getAura(nomeContadino)).isEqualTo(NERA);
+        assertThat(this.giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
         assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
     }
 
@@ -1669,7 +1669,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_BRANCO);
-        assertThat(giocatori.getAura(nomeContadino)).isEqualTo(NERA);
+        assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
     }
 
     @Test public void testLupizzazioneLupoSolitario()
@@ -1678,7 +1678,7 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_SOLITARIO);
-        assertThat(giocatori.getAura(nomeContadino)).isEqualTo(NERA);
+        assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
     }
 
     private boolean isGiuliettaPresente() { return giocatori.isGiuliettaPresente(); }

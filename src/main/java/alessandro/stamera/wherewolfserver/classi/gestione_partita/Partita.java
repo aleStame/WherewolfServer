@@ -149,9 +149,9 @@ public final class Partita
 
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
-    public Aura getControlloVeggente(String nome)
+    public Aura controlloVeggente(String nome)
     {
-        ultimoControllo = vivi.getControlloVeggente(nome);
+        ultimoControllo = vivi.controlloVeggente(nome);
         return ultimoControllo;
     }
 
@@ -510,7 +510,7 @@ public final class Partita
 
     public boolean isCapoBranco(String nome) { return vivi.getGiocatore(nome).getRuolo().isCapoBranco(); }
 
-    public Aura getAura(String nome) { return getGiocatore(nome).getAura(); }
+    public Aura getAura(String nome) { return getGiocatore(nome).controlloVeggente(); }
 
     public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
 

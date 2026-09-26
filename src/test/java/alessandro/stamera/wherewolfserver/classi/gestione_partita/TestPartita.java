@@ -1251,37 +1251,6 @@ public final class TestPartita
         verificaControlloMedium(nomeVittima, BIANCA);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
-    public void testControlloMediumContadinoPostLupizzazione(String tipoLupo)
-    {
-        String nomeContadino = "Tonio";
-        String[][] giocatori = new String[][]
-        {
-            { "Lucio", tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" }, { "Lina", "Assassino" }, { "Gaia", "Medium" },
-            { "Rubio", "Medium" }
-        };
-        inizializzaPartita(giocatori);
-        String messaggio =
-            "Il Contadino discendente dei lupi (Tonio) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della loro fazione.\n" +
-            "Sveglia Tonio e fagli riconoscere gli altri lupi.";
-        verificaAttaccoAssassinoContadinoLupizzato(tipoLupo, nomeContadino, messaggio);
-    }
-
-    @Test public void testControlloMediumContadinoPostLupizzazioneSolitario()
-    {
-        String nomeContadino = "Tonio", tipoLupo = "Lupo solitario";
-        String[][] giocatori = new String[][]
-        {
-            { "Lucio", tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" }, { "Lina", "Assassino" }, { "Gaia", "Medium" },
-            { "Rubio", "Medium" }
-        };
-        inizializzaPartita(giocatori);
-        String messaggio =
-            "Il Contadino discendente dei lupi (Tonio) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale.\nSveglia Tonio e " +
-            "fagli riconoscere il Lupo solitario che lo ha attaccato.";
-        verificaAttaccoAssassinoContadinoLupizzato(tipoLupo, nomeContadino, messaggio);
-    }
-
     @ParameterizedTest @CsvSource
     (
         {
@@ -1918,14 +1887,44 @@ public final class TestPartita
     )
     public void testLupizzazioneContadino(String tipoLupo, Fazione fazione, String messaggio)
     {
-        String nomeContadino = "Mario";
-        String[][] giocatori =
-            new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { "Sofia", "Angelo custode" } };
+        String nomeContadino = "Mario", nomeAssassino = "Sofia", nomeAngelo = "Rino";
+        String[][] giocatori = new String[][]
+        {
+            { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { nomeAngelo, "Angelo custode" },
+            { nomeAssassino, "Assassino" }
+        };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
-        assertThat(partita.getAura(nomeContadino)).isEqualTo(NERA);
+        assertThat(partita.controlloVeggente(nomeContadino)).isEqualTo(NERA);
         assertThat(partita.getFazione(nomeContadino)).isEqualTo(fazione);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della loro " +
+            "fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo del branco, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo reietto, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
+            "loro fazione.\nSveglia Mario e fagli riconoscere gli altri lupi.'",
+            "Lupo solitario, 'Il Contadino discendente dei lupi (Mario) è stato attaccato dal Lupo solitario, pertanto anche lui diventa tale." +
+            "\nSveglia Mario e fagli riconoscere il Lupo solitario che lo ha attaccato.'"
+        }
+    )
+    public void testControlloMediumPostLupizzazione(String tipoLupo, String messaggio)
+    {
+        String nomeContadino = "Mario", nomeAssassino = "Sofia";
+        String[][] giocatori = new String[][]
+        {
+            { nomeContadino, "Contadino discendente dei lupi" }, { "Piera", tipoLupo }, { nomeAssassino, "Assassino" }
+        };
+        inizializzaPartita(giocatori);
+        verificaVittimaSbagliata(tipoLupo, nomeContadino, messaggio);
+        verificaAttaccoAssassino(nomeContadino);
+        terminaNotte();
+        verificaControlloMedium(nomeContadino, NERA);
     }
 
     @Test public void testRomeizzazioneAngeloCustode()
@@ -1986,14 +1985,14 @@ public final class TestPartita
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia",
-            "Sensitiva", "Templare", "Vampiro"
+            "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva",
+            "Templare", "Vampiro"
         }
     )
     public void testFunzionamentoNegromante(String nomeRuolo)
     {
         String nomeNegromante = "Circe", nomeAssassino = "Agamennone", nome = "Christopher";
-        inizializzaPartita(new String[][] { { "Circe", "Negromante" }, { nomeAssassino, "Assassino" }, { nome, nomeRuolo } });
+        inizializzaPartita(new String[][] { { nomeNegromante, "Negromante" }, { nomeAssassino, "Assassino" }, { nome, nomeRuolo } });
         attaccoNegromante(nomeAssassino);
         attaccoNegromante(nome);
         verificaMaledetto(nomeAssassino);
@@ -2291,7 +2290,7 @@ public final class TestPartita
     {
         String nome = "Concetta";
         inizializzaPartita(new String[][]{ { nome, nomeRuolo } });
-        assertThat(partita.getControlloVeggente(nome)).isEqualTo(BIANCA);
+        assertThat(partita.controlloVeggente(nome)).isEqualTo(BIANCA);
     }
 
     @ParameterizedTest @CsvSource
@@ -2528,14 +2527,6 @@ public final class TestPartita
         attaccoAssassino(nomeRomeo);
         terminaNotte();
         verificaEliminati(nomeGiulietta, nomeRomeo);
-    }
-
-    private void verificaAttaccoAssassinoContadinoLupizzato(String tipoLupo, String nomeContadino, String messaggio)
-    {
-        assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeContadino)).withMessage(messaggio);
-        attaccoAssassino(nomeContadino);
-        terminaNotte();
-        verificaControlloMedium(nomeContadino, NERA);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
@@ -2906,7 +2897,7 @@ public final class TestPartita
 
     private void verificaControlloVeggente(String nome, Aura aura)
     {
-        assertThat(partita.getControlloVeggente(nome)).isEqualTo(aura);
+        assertThat(partita.controlloVeggente(nome)).isEqualTo(aura);
     }
 
     private void verificaNienteCantoBardo() { verificaFalso(getCantoBardo()); }
