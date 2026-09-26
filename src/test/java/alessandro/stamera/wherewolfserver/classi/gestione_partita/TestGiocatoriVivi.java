@@ -1694,6 +1694,20 @@ public final class TestGiocatoriVivi
         String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Giulietta" } });
         romeizzazione(nome);
+        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoFallitoStregato(String nomeRuolo)
+    {
+        String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Strega" } });
+        protezioneStrega(nome);
+        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+    }
+
+    private void verificaPassaggioPossedutoFallito(String nomePosseduto, String nome)
+    {
         giocatori.eliminaGiocatore(nomePosseduto);
         assertThat(giocatori.passaPosseduto(nome)).isEqualTo(FALLITO);
     }
