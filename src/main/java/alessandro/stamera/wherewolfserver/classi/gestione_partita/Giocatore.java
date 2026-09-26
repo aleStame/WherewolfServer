@@ -289,7 +289,11 @@ public final class Giocatore
 
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
-    private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
+    private void trasformaPosseduto()
+    {
+        cambiaRuolo(getPosseduto());
+        fazione = NESSUNA;
+    }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
 
