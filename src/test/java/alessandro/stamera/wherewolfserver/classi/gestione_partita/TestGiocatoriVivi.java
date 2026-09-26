@@ -573,7 +573,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, "Guaritore");
         verificaVero(isGuaritorePresente());
         verificaStringa(giocatori.getNomeGuaritore(), nome);
-        giocatori.eliminaGiocatore(nome);
+        eliminaGiocatore(nome);
         verificaFalso(isGuaritorePresente());
     }
 
@@ -1231,7 +1231,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
-        giocatori.eliminaGiocatore(nomeAngelo);
+        eliminaGiocatore(nomeAngelo);
         verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
@@ -1708,9 +1708,11 @@ public final class TestGiocatoriVivi
 
     private void verificaPassaggioPossedutoFallito(String nomePosseduto, String nome)
     {
-        giocatori.eliminaGiocatore(nomePosseduto);
+        eliminaGiocatore(nomePosseduto);
         assertThat(giocatori.passaPosseduto(nome)).isEqualTo(FALLITO);
     }
+
+    private void eliminaGiocatore(String nome) { giocatori.eliminaGiocatore(nome); }
 
     private void verificaCorrettoPassaggioPosseduto(String nome)
     {
