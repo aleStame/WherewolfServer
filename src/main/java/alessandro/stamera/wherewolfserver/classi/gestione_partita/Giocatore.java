@@ -270,6 +270,8 @@ public final class Giocatore
         return risultato;
     }
 
+    public boolean isPosseduto() { return true; }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
