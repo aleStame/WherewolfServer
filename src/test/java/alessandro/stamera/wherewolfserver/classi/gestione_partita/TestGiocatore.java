@@ -965,6 +965,15 @@ public final class TestGiocatore
         verificaAttaccoAssassino(ROMEO_BECCATO);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoCorretto()
+    {
+        verificaEsitoPassaggioPosseduto(RIUSCITO);
+        verificaFazione(POSSEDUTO);
+        verificaControlloVeggente(NERA);
+        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
+    }
+
     private void romeizzazione() { giocatore.romeizzazione(); }
 
     private boolean isGiulietta() { return giocatore.isGiulietta(); }
