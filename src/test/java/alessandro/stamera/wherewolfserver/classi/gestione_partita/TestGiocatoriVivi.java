@@ -1688,6 +1688,16 @@ public final class TestGiocatoriVivi
         verificaCorrettoPassaggioPosseduto(nome);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoFallitoRomeo(String nomeRuolo)
+    {
+        String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Giulietta" } });
+        romeizzazione(nome);
+        giocatori.eliminaGiocatore(nomePosseduto);
+        assertThat(giocatori.passaPosseduto(nome)).isEqualTo(FALLITO);
+    }
+
     private void verificaCorrettoPassaggioPosseduto(String nome)
     {
         verificaAttacco(giocatori.passaPosseduto(nome), RIUSCITO);
