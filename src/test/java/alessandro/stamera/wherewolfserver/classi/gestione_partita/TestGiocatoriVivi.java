@@ -17,7 +17,6 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -343,7 +342,7 @@ public final class TestGiocatoriVivi
         String nomeAngeloCustode = "Marco", nomeAmato = "Giorgia";
         inizializzaGiocatori(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { nomeAmato, "Templare" } });
         segnalazioneAngeloCustode(nomeAmato);
-        verificaAttacco(giocatori.passaPosseduto(nomeAngeloCustode), RIUSCITO);
+        verificaEsitoPassaggioPosseduto(nomeAngeloCustode, RIUSCITO);
         verificaVero(giocatori.isPosseduto(nomeAngeloCustode));
         verificaNonAmato(nomeAmato);
     }
@@ -1323,7 +1322,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Lorella";
         aggiungiGiocatore(nome, "Prete");
-        verificaAttacco(giocatori.passaPosseduto(nome), MORTO);
+        verificaEsitoPassaggioPosseduto(nome, MORTO);
     }
 
     @Test public void testCacciatoreAssente() { verificaFalso(isCacciatorePresente()); }
@@ -1709,17 +1708,22 @@ public final class TestGiocatoriVivi
     private void verificaPassaggioPossedutoFallito(String nomePosseduto, String nome)
     {
         eliminaGiocatore(nomePosseduto);
-        assertThat(giocatori.passaPosseduto(nome)).isEqualTo(FALLITO);
+        verificaEsitoPassaggioPosseduto(nome, FALLITO);
     }
 
     private void eliminaGiocatore(String nome) { giocatori.eliminaGiocatore(nome); }
 
     private void verificaCorrettoPassaggioPosseduto(String nome)
     {
-        verificaAttacco(giocatori.passaPosseduto(nome), RIUSCITO);
+        verificaEsitoPassaggioPosseduto(nome, RIUSCITO);
         assertThat(giocatori.getFazione(nome)).isEqualTo(POSSEDUTO);
         assertThat(giocatori.controlloVeggente(nome)).isEqualTo(NERA);
         verificaVero(giocatori.isPosseduto(nome));
+    }
+
+    private void verificaEsitoPassaggioPosseduto(String nome, EsitoAttacco esito)
+    {
+        verificaAttacco(giocatori.passaPosseduto(nome), esito);
     }
 
     private boolean isGiuliettaPresente() { return giocatori.isGiuliettaPresente(); }
