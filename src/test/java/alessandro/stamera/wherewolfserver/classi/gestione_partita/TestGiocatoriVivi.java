@@ -18,8 +18,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIA
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_SOLITARIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -1679,6 +1678,22 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
         assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_SOLITARIO);
         assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoCorretto(String nomeRuolo)
+    {
+        String nome = "Grazia";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaCorrettoPassaggioPosseduto(nome);
+    }
+
+    private void verificaCorrettoPassaggioPosseduto(String nome)
+    {
+        verificaAttacco(giocatori.passaPosseduto(nome), RIUSCITO);
+        assertThat(giocatori.getFazione(nome)).isEqualTo(POSSEDUTO);
+        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(NERA);
+        verificaVero(giocatori.isPosseduto(nome));
     }
 
     private boolean isGiuliettaPresente() { return giocatori.isGiuliettaPresente(); }
