@@ -270,7 +270,7 @@ public final class Giocatore
         return risultato;
     }
 
-    public boolean isPosseduto() { return true; }
+    public boolean isPosseduto() { return ruolo.isPosseduto(); }
 
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
