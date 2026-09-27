@@ -2353,7 +2353,7 @@ public final class TestPartita
     {
         String nome = "Concetta";
         inizializzaPartita(new String[][]{ { nome, nomeRuolo } });
-        assertThat(partita.getControlloVeggente(nome)).isEqualTo(BIANCA);
+        assertThat(partita.controlloVeggente(nome)).isEqualTo(BIANCA);
     }
 
     @ParameterizedTest @CsvSource
@@ -3044,7 +3044,7 @@ public final class TestPartita
 
     private void verificaControlloVeggente(String nome, Aura aura)
     {
-        assertThat(partita.getControlloVeggente(nome)).isEqualTo(aura);
+        assertThat(partita.controlloVeggente(nome)).isEqualTo(aura);
     }
 
     private void verificaNienteCantoBardo() { verificaFalso(getCantoBardo()); }
