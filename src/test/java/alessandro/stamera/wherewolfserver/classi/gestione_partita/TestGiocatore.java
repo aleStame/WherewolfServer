@@ -507,7 +507,7 @@ public final class TestGiocatore
         cambiaRuolo("Prete");
         verificaEsitoPassaggioPosseduto(MORTO);
         verificaAttaccoVampiro(RIUSCITO);
-        verificaEsitoPassaggioPosseduto(RIUSCITO);
+        verificaCorrettoPassaggioPosseduto();
     }
 
     @ParameterizedTest @CsvSource
@@ -944,7 +944,7 @@ public final class TestGiocatore
         verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
         verificaFazione(fazione);
         verificaControlloVeggente(NERA);
-        assertThat(giocatore.controlloMedium()).isEqualTo(NERA);
+        controlloMediumAuraNera();
     }
 
     @ParameterizedTest @CsvSource
@@ -964,6 +964,35 @@ public final class TestGiocatore
         romeizzazione();
         verificaAttaccoAssassino(ROMEO_BECCATO);
     }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoCorretto(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaCorrettoPassaggioPosseduto();
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoFallito(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        giocatore.aggiungiProtezione(FACTORY.getRuolo("Posseduto"));
+        verificaEsitoPassaggioPosseduto(FALLITO);
+        verificaFalso(isPosseduto());
+    }
+
+    private void verificaCorrettoPassaggioPosseduto()
+    {
+        verificaEsitoPassaggioPosseduto(RIUSCITO);
+        verificaFazione(POSSEDUTO);
+        verificaControlloVeggente(NERA);
+        controlloMediumAuraNera();
+        verificaVero(isPosseduto());
+    }
+
+    private void controlloMediumAuraNera() { assertThat(giocatore.controlloMedium()).isEqualTo(NERA); }
+
+    private boolean isPosseduto() { return giocatore.isPosseduto(); }
 
     private void romeizzazione() { giocatore.romeizzazione(); }
 

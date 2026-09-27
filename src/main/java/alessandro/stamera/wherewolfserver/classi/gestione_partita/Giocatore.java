@@ -270,6 +270,8 @@ public final class Giocatore
         return risultato;
     }
 
+    public boolean isPosseduto() { return ruolo.isPosseduto(); }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
@@ -287,7 +289,11 @@ public final class Giocatore
 
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
-    private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
+    private void trasformaPosseduto()
+    {
+        cambiaRuolo(getPosseduto());
+        fazione = NESSUNA;
+    }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
 

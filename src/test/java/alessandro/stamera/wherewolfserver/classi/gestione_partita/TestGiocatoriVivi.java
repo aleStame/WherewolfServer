@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,9 +14,7 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_SOLITARIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -344,7 +339,7 @@ public final class TestGiocatoriVivi
         String nomeAngeloCustode = "Marco", nomeAmato = "Giorgia";
         inizializzaGiocatori(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { nomeAmato, "Templare" } });
         segnalazioneAngeloCustode(nomeAmato);
-        verificaAttacco(giocatori.passaPosseduto(nomeAngeloCustode), RIUSCITO);
+        verificaEsitoPassaggioPosseduto(nomeAngeloCustode, RIUSCITO);
         verificaVero(giocatori.isPosseduto(nomeAngeloCustode));
         verificaNonAmato(nomeAmato);
     }
@@ -400,7 +395,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Concetta";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(BIANCA);
+        verificaAuraControlloVeggente(nome, BIANCA);
     }
 
     @ParameterizedTest @CsvSource
@@ -574,7 +569,7 @@ public final class TestGiocatoriVivi
         aggiungiGiocatore(nome, "Guaritore");
         verificaVero(isGuaritorePresente());
         verificaStringa(giocatori.getNomeGuaritore(), nome);
-        giocatori.eliminaGiocatore(nome);
+        eliminaGiocatore(nome);
         verificaFalso(isGuaritorePresente());
     }
 
@@ -1102,8 +1097,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(giocatori);
         segnalazioneAngeloCustode(nomeContadino);
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(this.giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
-        assertThat(this.giocatori.getFazione(nomeContadino)).isEqualTo(fazione);
+        verificaAuraNeraControlloVeggente(nomeContadino);
+        verificaFazione(nomeContadino, fazione);
     }
 
     @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
@@ -1232,7 +1227,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Leonardo", tipoLupo = "Lupo solitario", nomeAngelo = "Gianni";
         inizializzaGiocatori(new String[][] { { nomeVittima, "Cappuccetto rosso" }, { "Dante", tipoLupo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
-        giocatori.eliminaGiocatore(nomeAngelo);
+        eliminaGiocatore(nomeAngelo);
         verificaAttaccoLupo(tipoLupo, nomeVittima, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO);
     }
 
@@ -1324,7 +1319,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Lorella";
         aggiungiGiocatore(nome, "Prete");
-        verificaAttacco(giocatori.passaPosseduto(nome), MORTO);
+        verificaEsitoPassaggioPosseduto(nome, MORTO);
     }
 
     @Test public void testCacciatoreAssente() { verificaFalso(isCacciatorePresente()); }
@@ -1668,8 +1663,8 @@ public final class TestGiocatoriVivi
         String nomeContadino = "Gilberto";
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_BRANCO);
-        assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
+        verificaFazione(nomeContadino, LUPO_BRANCO);
+        verificaAuraNeraControlloVeggente(nomeContadino);
     }
 
     @Test public void testLupizzazioneLupoSolitario()
@@ -1677,8 +1672,64 @@ public final class TestGiocatoriVivi
         String nomeContadino = "Gilberto", tipoLupo = "Lupo solitario";
         inizializzaGiocatori(new String[][] { { nomeContadino, "Contadino discendente dei lupi" }, { "Tania", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeContadino, CONTADINO_LUPO_BECCATO);
-        assertThat(giocatori.getFazione(nomeContadino)).isEqualTo(LUPO_SOLITARIO);
-        assertThat(giocatori.controlloVeggente(nomeContadino)).isEqualTo(NERA);
+        verificaFazione(nomeContadino, LUPO_SOLITARIO);
+        verificaAuraNeraControlloVeggente(nomeContadino);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoCorretto(String nomeRuolo)
+    {
+        String nome = "Grazia";
+        aggiungiGiocatore(nome, nomeRuolo);
+        verificaCorrettoPassaggioPosseduto(nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoFallitoRomeo(String nomeRuolo)
+    {
+        String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Giulietta" } });
+        romeizzazione(nome);
+        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+    }
+
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    public void testPassaPossedutoFallitoStregato(String nomeRuolo)
+    {
+        String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Strega" } });
+        protezioneStrega(nome);
+        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+    }
+
+    private void verificaPassaggioPossedutoFallito(String nomePosseduto, String nome)
+    {
+        eliminaGiocatore(nomePosseduto);
+        verificaEsitoPassaggioPosseduto(nome, FALLITO);
+    }
+
+    private void eliminaGiocatore(String nome) { giocatori.eliminaGiocatore(nome); }
+
+    private void verificaCorrettoPassaggioPosseduto(String nome)
+    {
+        verificaEsitoPassaggioPosseduto(nome, RIUSCITO);
+        verificaFazione(nome, POSSEDUTO);
+        verificaAuraNeraControlloVeggente(nome);
+        verificaVero(giocatori.isPosseduto(nome));
+    }
+
+    private void verificaAuraNeraControlloVeggente(String nome) { verificaAuraControlloVeggente(nome, NERA); }
+
+    private void verificaFazione(String nome, Fazione fazione) { assertThat(giocatori.getFazione(nome)).isEqualTo(fazione); }
+
+    private void verificaAuraControlloVeggente(String nome, Aura aura)
+    {
+        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(aura);
+    }
+
+    private void verificaEsitoPassaggioPosseduto(String nome, EsitoAttacco esito)
+    {
+        verificaAttacco(giocatori.passaPosseduto(nome), esito);
     }
 
     private boolean isGiuliettaPresente() { return giocatori.isGiuliettaPresente(); }
