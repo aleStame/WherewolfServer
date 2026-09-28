@@ -534,7 +534,10 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizione][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino mostro", "Mercante" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Mercante" }
+    )
     public void testPotereBorgomastro(String ruolo)
     {
         String nome = "Tania", nomeBoccaRosa = "Francesco", tipoLupo = "Capo branco", nomeBorgomastro = "Jacopo";
