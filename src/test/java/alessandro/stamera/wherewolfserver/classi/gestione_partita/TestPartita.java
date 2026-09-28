@@ -2703,6 +2703,17 @@ public final class TestPartita
         verificaEliminati(nomeRomeo, nomeGiulietta);
     }
 
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino eroe" })
+    public void testProgenizzazioneNosferatuVittimaAssassino(String nomeRuolo)
+    {
+        String nomeVittima = "Hal";
+        inizializzaPartita(new String[][] { { "Sinestro", "Assassino" }, { nomeVittima, nomeRuolo }, { "John", "Nosferatu" } });
+        attaccoAssassino(nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        verificaNonEliminati(nomeVittima);
+    }
+
     private void verificaNonProgenizzabile(String nome)
     {
         progenizzazioneNosferatu(nome);
