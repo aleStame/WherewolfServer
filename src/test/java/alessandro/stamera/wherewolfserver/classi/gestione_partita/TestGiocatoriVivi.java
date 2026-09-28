@@ -618,6 +618,23 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
+            "Altra guardia", "Assassino", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testFunzionamentoNegromanteControRomeo(String nomeRuolo)
+    {
+        String nome = "Mike";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Silvio", "Negromante" }, { "Romano", "Giulietta" } });
+        romeizzazione(nome);
+        verificaAttacco(giocatori.attaccoNegromante(nome), FALLITO);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
             "Altra guardia, VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Assassino, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
             "Bardo, VILLAGGIO", "Becchino, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Boia, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO",
             "Bracconiere, VILLAGGIO", "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO",
