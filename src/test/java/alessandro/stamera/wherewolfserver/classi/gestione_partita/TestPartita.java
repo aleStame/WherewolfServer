@@ -978,8 +978,8 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         int posizioneVittima = 0;
         romeizzazione(giocatori[posizioneVittima][0]);
-        assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0]))
-            .withMessage("Scegli un'altra persona da attaccare.");
+        String messaggio = "Lino non può essere maledetto perché Romeo.\nDì al Negromante di cambiare persona.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(giocatori[posizioneVittima][0])).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(estraiNomiGiocatori(giocatori));
     }
@@ -2057,7 +2057,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Silvio", "Negromante" }, { "Romano", "Giulietta" } });
         romeizzazione(nome);
         String messaggio = "Mike non può essere maledetto perché Romeo.\nDì al Negromante di cambiare persona.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(nome)).isEqualTo(messaggio);
+        assertThatIllegalStateException().isThrownBy(() -> attaccoNegromante(nome)).withMessage(messaggio);
     }
 
     @ParameterizedTest @MethodSource("getEsempioCombinazioni")

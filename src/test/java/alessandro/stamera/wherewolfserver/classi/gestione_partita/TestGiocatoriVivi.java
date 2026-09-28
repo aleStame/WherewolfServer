@@ -636,7 +636,7 @@ public final class TestGiocatoriVivi
         String nome = "Mike";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Silvio", "Negromante" }, { "Romano", "Giulietta" } });
         romeizzazione(nome);
-        verificaEsitoAttaccoNegromante(nome, FALLITO);
+        verificaEsitoAttaccoNegromante(nome, ROMEO_BECCATO);
     }
 
     @ParameterizedTest @CsvSource
