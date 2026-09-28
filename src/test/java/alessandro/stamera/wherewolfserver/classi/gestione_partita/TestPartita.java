@@ -1790,6 +1790,16 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> passaPosseduto(nomeLadra)).withMessage("Impossibile possedere Piera.");
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testGuarigioneContadinoEroe(String tipoLupo)
+    {
+        String nomeLupo = "Iris", nomeVittima = "Filippo", messaggio =
+            "L'attacco al Contadino eroe (Filippo) causa la morte anche del lupo attaccante (Iris).\nAvvisa entrambi i giocatori della loro " +
+            "morte.";
+        inizializzaPartita(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, "Contadino eroe" } });
+        verificaEccezioneAttaccoContadino(messaggio, tipoLupo, nomeVittima, nomeLupo);
+    }
+
     @ParameterizedTest @MethodSource("getEsempiAttacchiContadini")
     public void testAttaccoLupiContadino(String tipoContadino, String tipoLupo, String messaggio)
     {
@@ -2010,10 +2020,10 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia", "Guardia corrotta",
-            "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
-            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva", "Templare",
-            "Vampiro"
+            "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testFunzionamentoNegromante(String nomeRuolo)
@@ -2320,9 +2330,10 @@ public final class TestPartita
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
-    @Test public void testGuarigioneVittimaLupi()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
+    public void testGuarigioneVittimaLupi(String tipoLupo)
     {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String nomeVittima = "Damiano";
         inizializzaPartita
         (
             new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo" }, { "Andrea","Guaritore" } }
@@ -2606,15 +2617,15 @@ public final class TestPartita
             "Altra guardia, VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Assassino, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
             "Bardo, VILLAGGIO", "Becchino, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Boia, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO",
             "Bracconiere, VILLAGGIO", "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO",
-            "Capo gilda, NON_VILLAGGIO", "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO", "Contadino discendente dei lupi, VILLAGGIO",
-            "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO", "Eremita, VILLAGGIO", "Ghoul, NON_VILLAGGIO",
-            "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO", "Goblin, NON_VILLAGGIO", "Guardia, VILLAGGIO",
-            "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO", "Inquisitore, NON_VILLAGGIO", "Ladra, NON_VILLAGGIO",
-            "Leprecauno, NON_VILLAGGIO", "Lupo del branco, NON_VILLAGGIO", "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO",
-            "Mago, VILLAGGIO", "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO", "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO",
-            "Negromante, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Nosferatu, NON_VILLAGGIO", "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO",
-            "Pazzo, NON_VILLAGGIO", "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO", "Prete, VILLAGGIO", "Sidhe, NON_VILLAGGIO",
-            "Spia, NON_VILLAGGIO", "Sensitiva, VILLAGGIO", "Templare, NON_VILLAGGIO"
+            "Capo gilda, NON_VILLAGGIO", "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO",
+            "Contadino discendente dei lupi, VILLAGGIO", "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO", "Eremita, VILLAGGIO",
+            "Ghoul, NON_VILLAGGIO", "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO",
+            "Goblin, NON_VILLAGGIO", "Guardia, VILLAGGIO", "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO",
+            "Inquisitore, NON_VILLAGGIO", "Ladra, NON_VILLAGGIO", "Leprecauno, NON_VILLAGGIO", "Lupo del branco, NON_VILLAGGIO",
+            "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO", "Mago, VILLAGGIO", "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO",
+            "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO", "Negromante, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Nosferatu, NON_VILLAGGIO",
+            "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO", "Pazzo, NON_VILLAGGIO", "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO",
+            "Prete, VILLAGGIO", "Sidhe, NON_VILLAGGIO", "Spia, NON_VILLAGGIO", "Sensitiva, VILLAGGIO", "Templare, NON_VILLAGGIO"
         }
     )
     public void testControlloSensitiva(String nomeRuolo, EsitoControlloSensitiva esito)
