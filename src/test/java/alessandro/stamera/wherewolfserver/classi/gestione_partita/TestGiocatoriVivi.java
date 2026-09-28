@@ -612,7 +612,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Mike";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaAttacco(giocatori.attaccoNegromante(nome), esito);
+        verificaEsitoAttaccoNegromante(nome, esito);
     }
 
     @ParameterizedTest @CsvSource
@@ -629,7 +629,7 @@ public final class TestGiocatoriVivi
         String nome = "Mike";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Silvio", "Negromante" }, { "Romano", "Giulietta" } });
         romeizzazione(nome);
-        verificaAttacco(giocatori.attaccoNegromante(nome), FALLITO);
+        verificaEsitoAttaccoNegromante(nome, FALLITO);
     }
 
     @ParameterizedTest @CsvSource
@@ -1723,6 +1723,11 @@ public final class TestGiocatoriVivi
     {
         eliminaGiocatore(nomePosseduto);
         verificaEsitoPassaggioPosseduto(nome, FALLITO);
+    }
+
+    private void verificaEsitoAttaccoNegromante(String nome, EsitoAttacco esito)
+    {
+        verificaAttacco(giocatori.attaccoNegromante(nome), esito);
     }
 
     private void eliminaGiocatore(String nome) { giocatori.eliminaGiocatore(nome); }
