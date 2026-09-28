@@ -607,12 +607,36 @@ public final class TestGiocatoriVivi
         verificaStringa(giocatori.getNomeMago(), nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Contadino mostro, MORTO" })
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO",
+            "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO"
+        }
+    )
     public void testAttaccoNegromante(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Mike";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaAttacco(giocatori.attaccoNegromante(nome), esito);
+        verificaEsitoAttaccoNegromante(nome, esito);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Assassino", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testFunzionamentoNegromanteControRomeo(String nomeRuolo)
+    {
+        String nome = "Mike";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Silvio", "Negromante" }, { "Romano", "Giulietta" } });
+        romeizzazione(nome);
+        verificaEsitoAttaccoNegromante(nome, ROMEO_BECCATO);
     }
 
     @ParameterizedTest @CsvSource
@@ -1706,6 +1730,11 @@ public final class TestGiocatoriVivi
     {
         eliminaGiocatore(nomePosseduto);
         verificaEsitoPassaggioPosseduto(nome, FALLITO);
+    }
+
+    private void verificaEsitoAttaccoNegromante(String nome, EsitoAttacco esito)
+    {
+        verificaAttacco(giocatori.attaccoNegromante(nome), esito);
     }
 
     private void eliminaGiocatore(String nome) { giocatori.eliminaGiocatore(nome); }

@@ -378,7 +378,7 @@ public final class Giocatore
     public EsitoAttacco attaccoNegromante()
     {
         EsitoAttacco esito = ruolo.attaccoNegromante();
-        if(tratti.isProtezioneNegromantePresente()) esito = FALLITO;
+        if(tratti.isProtezioneNegromantePresente()) esito = ROMEO_BECCATO;
         if(esito == RIUSCITO) maledizione();
         return esito;
     }
