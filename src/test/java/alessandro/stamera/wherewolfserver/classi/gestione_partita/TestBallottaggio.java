@@ -50,7 +50,7 @@ public final class TestBallottaggio
     @ParameterizedTest @CsvSource
     (
         {
-            "Cacciatore, 2", "Capo branco, 0", "Cappuccetto rosso, 2", "Guaritore, 0", "Lupo del branco, 0", "Peccatore, 2",
+            "Cacciatore, 2", "Capo branco, 0", "Cappuccetto rosso, 2", "Guaritore, 0", "Lupo del branco, 0", "Peccatore, 2", "Contadino eroe, 2",
             "Contadino discendente dei lupi, 2"
         }
     )
