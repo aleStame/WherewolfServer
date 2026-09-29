@@ -84,7 +84,8 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Giullare, RIUSCITO", "Capo branco, RIUSCITO"
+            "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Capo branco, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Eremita, RIUSCITO", "Giullare, RIUSCITO"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
