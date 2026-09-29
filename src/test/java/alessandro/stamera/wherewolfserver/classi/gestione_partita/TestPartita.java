@@ -2332,14 +2332,19 @@ public final class TestPartita
     public void testAttaccoLupiRomeo(String nomeRuolo, String tipoLupo)
     {
         String nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
+        String[][] giocatori =
+            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Monica", "Giulietta" } };
+        inizializzaPartita(giocatori);
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
-    @Test public void testAttaccoStregatoLupoBranco()
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testAttaccoLupiStregato(String nomeRuolo, String tipoLupo)
     {
-        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        String nomeVittima = "Damiano";
+        String[][] giocatori =
+            new String[][]{ { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo" }, { "Maria", "Strega" } };
+        inizializzaPartita(giocatori);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
