@@ -14,13 +14,17 @@ public class EccezioneProgenizzazioneGiocatoreProtetto extends IllegalStateExcep
 
     @Override public String getMessage()
     {
-        String risultato = nomeGiocatore + " è ";
+        return nomeGiocatore + " è " + getFraseProtettore() + ".\nAvvisa il Nosferatu (" + nomeNosferatu + ") della mancata progenizzazione.";
+    }
+
+    private String getFraseProtettore()
+    {
+        String risultato = "";
         switch(ruoloProtettore)
         {
-            case "Strega" -> risultato += "protetto dalla Strega.\n";
-            case "Giulietta" -> risultato += "Romeo.\n";
+            case "Strega" -> risultato = "protetto dalla Strega";
+            case "Giulietta" -> risultato = "Romeo";
         }
-        risultato += ("Avvisa il Nosferatu (" + nomeNosferatu + ") della mancata progenizzazione.");
         return risultato;
     }
 
