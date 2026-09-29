@@ -1531,6 +1531,15 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testAttaccoLupiRomeo(String tipoLupo, String nomeRuolo)
+    {
+        String nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giulietta" } });
+        romeizzazione(nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
+    }
+
     @Test public void testAttaccoGiovaneLupoStregatoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
