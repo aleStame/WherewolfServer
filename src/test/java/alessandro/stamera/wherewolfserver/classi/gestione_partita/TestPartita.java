@@ -2295,16 +2295,6 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro", "Giulietta", "Lupo del branco" })
-    public void testAttaccoRomeoCapoBranco(String nomeRuolo)
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        String[][] giocatori =
-            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Laura", "Giulietta" } };
-        inizializzaPartita(giocatori);
-        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
-    }
-
     @Test public void testAttaccoGiovaneLupoRomeoCapoBranco()
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
@@ -2338,26 +2328,10 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe" })
-    public void testAttaccoRomeoLupoBranco(String nomeRuolo)
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testAttaccoLupiRomeo(String nomeRuolo, String tipoLupo)
     {
-        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
-        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
-    }
-
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe" })
-    public void testAttaccoRomeoLupoReietto(String nomeRuolo)
-    {
-        String tipoLupo = "Lupo reietto", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
-        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
-    }
-
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe" })
-    public void testAttaccoRomeoLupoSolitario(String nomeRuolo)
-    {
-        String tipoLupo = "Lupo solitario", nomeVittima = "Damiano";
+        String nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
