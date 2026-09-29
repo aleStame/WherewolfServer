@@ -267,7 +267,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Paola", tipoLupo } });
         romeizzazione(nome);
-        verificaAttaccoLupo(tipoLupo, nome, ROMEO_BECCATO);
+        verificaRomeoBeccato(tipoLupo, nome);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1511,7 +1511,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
+        verificaRomeoBeccato(tipoLupo, nomeVittima);
     }
 
     @Test public void testSuicidioCapoBrancoRomeo()
@@ -1519,7 +1519,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Giulietta"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
+        verificaRomeoBeccato(tipoLupo, nomeVittima);
     }
 
     @ParameterizedTest @MethodSource("getEsempioCombinazioni")
@@ -1537,7 +1537,7 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giulietta" } });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
+        verificaRomeoBeccato(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoGiovaneLupoStregatoCapoBranco()
@@ -1568,7 +1568,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
+        verificaRomeoBeccato(tipoLupo, nomeVittima);
     }
 
     @Test public void testAttaccoStregatoLupoBranco()
@@ -1722,6 +1722,11 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Strega" } });
         protezioneStrega(nome);
         verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+    }
+
+    private void verificaRomeoBeccato(String tipoLupo, String nomeVittima)
+    {
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
     private void verificaPassaggioPossedutoFallito(String nomePosseduto, String nome)
