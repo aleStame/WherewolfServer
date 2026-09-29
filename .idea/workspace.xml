@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupiRomeo riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoLupiRomeo riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
@@ -236,9 +235,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId68" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Partita.class.uniqueId68" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,31 +435,7 @@
       <workItem from="1790601202311" duration="4405000" />
       <workItem from="1790608362081" duration="11362000" />
       <workItem from="1790669706184" duration="7459000" />
-      <workItem from="1790684071808" duration="5969000" />
-    </task>
-    <task id="LOCAL-00715" summary="VERDE: testSconfittaBallottaggioRomeo riuscito">
-      <option name="closed" value="true" />
-      <created>1790153268102</created>
-      <option name="number" value="00715" />
-      <option name="presentableId" value="LOCAL-00715" />
-      <option name="project" value="LOCAL" />
-      <updated>1790153268105</updated>
-    </task>
-    <task id="LOCAL-00716" summary="ROSSO: testNoGiulietta non riuscito">
-      <option name="closed" value="true" />
-      <created>1790153835649</created>
-      <option name="number" value="00716" />
-      <option name="presentableId" value="LOCAL-00716" />
-      <option name="project" value="LOCAL" />
-      <updated>1790153835649</updated>
-    </task>
-    <task id="LOCAL-00717" summary="VERDE: testNoGiulietta riuscito">
-      <option name="closed" value="true" />
-      <created>1790154203868</created>
-      <option name="number" value="00717" />
-      <option name="presentableId" value="LOCAL-00717" />
-      <option name="project" value="LOCAL" />
-      <updated>1790154203868</updated>
+      <workItem from="1790684071808" duration="10821000" />
     </task>
     <task id="LOCAL-00718" summary="REFACTORING: testGiulietta riuscito">
       <option name="closed" value="true" />
@@ -830,7 +805,31 @@
       <option name="project" value="LOCAL" />
       <updated>1790689708661</updated>
     </task>
-    <option name="localTasksCounter" value="764" />
+    <task id="LOCAL-00764" summary="ROSSO: testAttaccoLupiRomeo non riuscito">
+      <option name="closed" value="true" />
+      <created>1790690447792</created>
+      <option name="number" value="00764" />
+      <option name="presentableId" value="LOCAL-00764" />
+      <option name="project" value="LOCAL" />
+      <updated>1790690447792</updated>
+    </task>
+    <task id="LOCAL-00765" summary="VERDE: testAttaccoLupiRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1790696360788</created>
+      <option name="number" value="00765" />
+      <option name="presentableId" value="LOCAL-00765" />
+      <option name="project" value="LOCAL" />
+      <updated>1790696360788</updated>
+    </task>
+    <task id="LOCAL-00766" summary="VERDE: testAttaccoLupiRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1790696575507</created>
+      <option name="number" value="00766" />
+      <option name="presentableId" value="LOCAL-00766" />
+      <option name="project" value="LOCAL" />
+      <updated>1790696575507</updated>
+    </task>
+    <option name="localTasksCounter" value="767" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,8 +847,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isRomeoProtettoDaGiulietta" />
-    <MESSAGE value="REFACTORING: definizione del metodo isGiuliettaConRomeo" />
     <MESSAGE value="Commit provvisorio" />
     <MESSAGE value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
@@ -873,6 +870,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoLupoReietto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoLupoSolitario riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiRomeo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupiRomeo riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupiRomeo non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupiRomeo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupiRomeo riuscito" />
   </component>
 </project>

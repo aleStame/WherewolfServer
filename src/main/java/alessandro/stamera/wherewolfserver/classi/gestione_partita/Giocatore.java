@@ -339,7 +339,11 @@ public final class Giocatore
         switch(esito)
         {
             case CONTADINO_LUPO_BECCATO -> lupizzazioneContadinoLupo(lupo);
-            case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case FALLITO ->
+            {
+                if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+                else if(isRomeo()) esito = ROMEO_BECCATO;
+            }
             case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case GIULIETTA_BECCATA -> { if(isProgenieVampiro()) esito = RIUSCITO; }
