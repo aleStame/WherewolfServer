@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.ROMEO_BECCATO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
@@ -639,7 +638,8 @@ public final class TestPartita
         );
         romeizzazione(nomeVittima);
         attaccoAssassino(nomeVittima);
-        progenizzazioneNosferatu(nomeVittima);
+        String messaggio = "Gianmaria è Romeo.\nAvvisa Augusta (Nosferatu) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeVittima);
     }
@@ -2093,8 +2093,10 @@ public final class TestPartita
             { "Pino", "Giulietta" }
         };
         inizializzaPartita(giocatori);
+        String messaggio = "Miriam è Romeo.\nAvvisa Giuliano (Nosferatu) della mancata progenizzazione.";
         romeizzazione(nomeAngelo);
-        nosferatizzazioneAngeloCustodeAmatoProtetto(nome, nomeAngelo);
+        attaccoAssassino(nomeAngelo);
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggio);
     }
 
     @ParameterizedTest @CsvSource
@@ -2606,7 +2608,9 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         romeizzazione(nome);
         attaccoAssassino(nome);
-        verificaNonProgenizzabile(nome);
+        String messaggio = "Biagio è Romeo.\nAvvisa Brenda (Nosferatu) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        verificaFalso(partita.isProgenieNosferatuViva(nome));
     }
 
     @ParameterizedTest @CsvSource
@@ -2628,7 +2632,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         protezioneStrega(nome);
         attaccoAssassino(nome);
-        verificaNonProgenizzabile(nome);
+        progenizzazioneNosferatu(nome);
     }
 
     @ParameterizedTest @CsvSource
@@ -2728,16 +2732,11 @@ public final class TestPartita
     public void testProgenizzazioneRomeoFallita(String nomeRuolo)
     {
         String nome = "Giulio";
-        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Lucia", "Giulietta" }, { "Nicolas", "Nosferatu" } });
+        inizializzaPartita(new String[][] { { "Alex", "Assassino" }, { nome, nomeRuolo }, { "Lucia", "Giulietta" }, { "Nicolas", "Nosferatu" } });
         romeizzazione(nome);
+        attaccoAssassino(nome);
         String messaggio = "Giulio è Romeo.\nAvvisa Nicolas (Nosferatu) della mancata progenizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
-    }
-
-    private void verificaNonProgenizzabile(String nome)
-    {
-        progenizzazioneNosferatu(nome);
-        verificaFalso(partita.isFazioneNosferatu(nome));
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }

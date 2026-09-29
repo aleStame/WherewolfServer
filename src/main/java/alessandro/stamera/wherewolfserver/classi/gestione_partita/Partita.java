@@ -192,6 +192,8 @@ public final class Partita
             case MORTO -> morteNosferatu(nome);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeNosferatu);
+            case ROMEO_BECCATO ->
+                throw new IllegalStateException(nome + " è Romeo.\nAvvisa " + nomeNosferatu + " (Nosferatu) della mancata progenizzazione.");
         }
     }
 

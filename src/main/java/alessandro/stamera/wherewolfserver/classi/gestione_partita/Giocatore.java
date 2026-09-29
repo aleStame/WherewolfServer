@@ -86,7 +86,11 @@ public final class Giocatore
     public EsitoAttacco progenizzazioneNosferatu()
     {
         EsitoAttacco esito = ruolo.attaccoNosferatu();
-        if(tratti.isProtezioneNosferatuPresente()) esito = FALLITO;
+        if(tratti.isProtezioneNosferatuPresente())
+        {
+            esito = FALLITO;
+            if(isRomeo()) esito = ROMEO_BECCATO;
+        }
         if(esito == RIUSCITO) nosferatizzazione();
         return esito;
     }
