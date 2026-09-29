@@ -2822,7 +2822,8 @@ public final class TestPartita
     {
         segnalazioneAngeloCustode(nome);
         attaccoAssassino(nomeAngelo);
-        progenizzazioneNosferatu(nomeAngelo);
+        String messaggio = "Miriam è protetto dalla Strega.\nAvvisa il Nosferatu (Giuliano) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggio);
         verificaAmato(nome);
     }
 
