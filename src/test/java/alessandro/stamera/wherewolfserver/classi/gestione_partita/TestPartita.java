@@ -2632,7 +2632,9 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         protezioneStrega(nome);
         attaccoAssassino(nome);
-        progenizzazioneNosferatu(nome);
+        String messaggio = "Biagio è protetto dalla Strega.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        verificaFalso(partita.isProgenieNosferatuViva(nome));
     }
 
     @ParameterizedTest @CsvSource
