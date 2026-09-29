@@ -1125,7 +1125,7 @@ public final class TestGiocatoriVivi
         verificaFazione(nomeContadino, fazione);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
     public void testAttaccoLupiAmato(String tipoLupo, String nomeRuolo)
     {
         String nomeAmato = "Lino";
@@ -1140,7 +1140,7 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
     public void testAttaccoLupiAmatoAngeloCustodeRomeo(String tipoLupo, String nomeRuolo)
     {
         String nomeAngelo = "Elia", nomeAmato = "Lino";
@@ -1151,7 +1151,7 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
     public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo)
     {
         String nomeAngelo = "Elia", nomeAmato = "Lino";
@@ -1540,14 +1540,13 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Lupo del branco" })
-    public void testAttaccoRomeoCapoBranco(String nomeRuolo)
+    @ParameterizedTest @MethodSource({ "getEsempioCombinazioni" })
+    public void testAttaccoLupiRomeo(String nomeRuolo, String tipoLupo)
     {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giulietta"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
     @Test public void testSuicidioCapoBrancoStregato()
@@ -1816,7 +1815,7 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isAmato(nomeAmato));
     }
 
-    private static Stream<Arguments> getEsempioAttaccoAmato()
+    private static Stream<Arguments> getEsempioCombinazioni()
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
         String[] nomiRuoli =
