@@ -93,7 +93,13 @@ public final class TestPartita
         verificaNonAccusato(nomeAmato);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare" })
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Angelo custode", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Eremita",
+            "Giullare"
+        }
+    )
     public void testAttaccoAssassino(String nomeRuolo)
     {
         String nomeVittima = "Federico";
