@@ -98,7 +98,8 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare", "Capo branco", "Contadino discendente dei lupi"
+            "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare", "Capo branco", "Contadino eroe", "Contadino discendente dei lupi",
+            "Eremita"
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
