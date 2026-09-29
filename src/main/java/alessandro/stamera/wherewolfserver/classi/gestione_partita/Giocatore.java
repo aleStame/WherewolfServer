@@ -158,17 +158,18 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = ruolo.attaccoLupi(lupo);
-        if(isProtezioneAngeloCustodeNonBucata() || isGiocatoreProtetto(lupo)) esito = gestioneAttaccoVittimaProtetta(lupo, esito);
+        System.out.println(isGiocatoreProtetto(lupo));
+        if(isProtezioneAngeloCustodeNonBucata() || isGiocatoreProtetto(lupo)) esito = gestioneAttaccoVittimaProtetta();
         esito = verificaEsitoAttaccoLupi(lupo, esito);
         return esito;
     }
 
     public boolean isEremita() { return ruolo.isEremita(); }
 
-    private EsitoAttacco gestioneAttaccoVittimaProtetta(Ruolo lupo, EsitoAttacco esito)
+    private EsitoAttacco gestioneAttaccoVittimaProtetta()
     {
+        EsitoAttacco esito = FALLITO;
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
-        else if(isGiocatoreProtetto(lupo)) esito = FALLITO;
         return esito;
     }
 
