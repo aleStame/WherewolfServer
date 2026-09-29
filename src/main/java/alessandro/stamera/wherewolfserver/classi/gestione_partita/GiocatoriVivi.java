@@ -266,8 +266,6 @@ public final class GiocatoriVivi extends Giocatori
         for(Ruolo ruolo : getCreatureOmbra()) aggiungiProtezione(nome, ruolo);
     }
 
-    public boolean isStregato(String nome) { return getGiocatore(nome).isStregato(); }
-
     public boolean isVampiroAmato()
     {
         boolean esito = false;

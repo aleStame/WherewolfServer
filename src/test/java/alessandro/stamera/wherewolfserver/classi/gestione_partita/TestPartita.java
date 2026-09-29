@@ -638,7 +638,7 @@ public final class TestPartita
         );
         romeizzazione(nomeVittima);
         attaccoAssassino(nomeVittima);
-        String messaggio = "Gianmaria è Romeo.\nAvvisa Augusta (Nosferatu) della mancata progenizzazione.";
+        String messaggio = "Gianmaria è Romeo.\nAvvisa il Nosferatu (Augusta) della mancata progenizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
         terminaNotte();
         verificaEliminati(nomeVittima);
@@ -2093,7 +2093,7 @@ public final class TestPartita
             { "Pino", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "Miriam è Romeo.\nAvvisa Giuliano (Nosferatu) della mancata progenizzazione.";
+        String messaggio = "Miriam è Romeo.\nAvvisa il Nosferatu (Giuliano) della mancata progenizzazione.";
         romeizzazione(nomeAngelo);
         attaccoAssassino(nomeAngelo);
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggio);
@@ -2608,7 +2608,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         romeizzazione(nome);
         attaccoAssassino(nome);
-        String messaggio = "Biagio è Romeo.\nAvvisa Brenda (Nosferatu) della mancata progenizzazione.";
+        String messaggio = "Biagio è Romeo.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
         verificaFalso(partita.isProgenieNosferatuViva(nome));
     }
@@ -2737,7 +2737,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Alex", "Assassino" }, { nome, nomeRuolo }, { "Lucia", "Giulietta" }, { "Nicolas", "Nosferatu" } });
         romeizzazione(nome);
         attaccoAssassino(nome);
-        String messaggio = "Giulio è Romeo.\nAvvisa Nicolas (Nosferatu) della mancata progenizzazione.";
+        String messaggio = "Giulio è Romeo.\nAvvisa il Nosferatu (Nicolas) della mancata progenizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
     }
 

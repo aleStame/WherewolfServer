@@ -192,10 +192,11 @@ public final class Partita
             case MORTO -> morteNosferatu(nome);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeNosferatu);
-            case ROMEO_BECCATO ->
-                throw new IllegalStateException(nome + " è Romeo.\nAvvisa " + nomeNosferatu + " (Nosferatu) della mancata progenizzazione.");
+            case ROMEO_BECCATO -> throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Giulietta", nomeNosferatu);
             case FALLITO ->
-            { if(mortiNotte.getGiocatore(nome).isStregato()) throw new IllegalStateException(nome + " è protetto dalla Strega.\nAvvisa il Nosferatu (" + nomeNosferatu + ") della mancata progenizzazione."); }
+            {
+                if(mortiNotte.isStregato(nome)) throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Strega", nomeNosferatu);
+            }
         }
     }
 
