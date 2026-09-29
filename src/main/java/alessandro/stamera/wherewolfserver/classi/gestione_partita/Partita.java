@@ -35,7 +35,7 @@ public final class Partita
 
     private final String[] maledettiNegromante;
 
-    private boolean pazzoUcciso, potereStregaUsato, crociataAvviata;
+    private boolean pazzoUcciso, crociataAvviata;
 
     private int numeroNotte;
 
@@ -51,7 +51,6 @@ public final class Partita
         perdiProtezioniCappuccettoRosso();
         votantiContadinoMostro = new ArrayList<>();
         numeroNotte = 1;
-        potereStregaUsato = false;
         maledettiNegromante = new String[2];
         crociataAvviata = false;
     }
@@ -128,6 +127,7 @@ public final class Partita
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO -> gestioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
             case GIULIETTA_BECCATA -> doppiaEliminazione(nome, getNomeRomeo());
+            case ROMEO_BECCATO -> throw new EccezioneAttaccoGiocatoreProtetto(true, nome);
         }
     }
 
@@ -369,8 +369,8 @@ public final class Partita
 
     private void nessunaEliminazione(String nomeLupo, String nome)
     {
-        if(!vivi.isStregato(nome) && !vivi.isRomeo(nome)) gestisciEccezioniCacciatoreNonProtetto(nomeLupo, nome);
-        else gestisciEccezioneCacciatoreProtetto(nome);
+        if(!vivi.isStregato(nome)) gestisciEccezioniCacciatoreNonProtetto(nomeLupo, nome);
+        else throw new EccezioneAttaccoGiocatoreProtetto(false, nome);
     }
 
     private void gestisciEccezioniCacciatoreNonProtetto(String nomeLupo, String nome)
@@ -387,13 +387,6 @@ public final class Partita
     {
         riabilitaPotereBracconiere();
         throw new EccezioneBracconiere(vivi.getNomeBracconiere(), nome);
-    }
-
-    private void gestisciEccezioneCacciatoreProtetto(String nome)
-    {
-        boolean valore = vivi.isRomeo(nome);
-        if(potereStregaUsato) valore = false;
-        throw new EccezioneAttaccoGiocatoreProtetto(valore, nome);
     }
 
     private void gestisciEccezioneCacciatore(String nomeLupo, String nome)
@@ -509,11 +502,7 @@ public final class Partita
 
     public boolean isPosseduto(String nome) { return getGiocatore(nome).getRuolo().isPosseduto(); }
 
-    public void protezioneStrega(String nome)
-    {
-        vivi.protezioneStrega(nome);
-        potereStregaUsato = true;
-    }
+    public void protezioneStrega(String nome) { vivi.protezioneStrega(nome); }
 
     public boolean isCapoBranco(String nome) { return vivi.getGiocatore(nome).getRuolo().isCapoBranco(); }
 

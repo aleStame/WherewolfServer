@@ -267,7 +267,7 @@ public final class TestGiocatoriVivi
         String nome = "Luca";
         inizializzaGiocatori(new String[][] { { nome, "Angelo custode" }, { "Paola", tipoLupo } });
         romeizzazione(nome);
-        verificaAttaccoLupiFallito(tipoLupo, nome);
+        verificaAttaccoLupo(tipoLupo, nome, ROMEO_BECCATO);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1125,7 +1125,7 @@ public final class TestGiocatoriVivi
         verificaFazione(nomeContadino, fazione);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
     public void testAttaccoLupiAmato(String tipoLupo, String nomeRuolo)
     {
         String nomeAmato = "Lino";
@@ -1140,7 +1140,7 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
     public void testAttaccoLupiAmatoAngeloCustodeRomeo(String tipoLupo, String nomeRuolo)
     {
         String nomeAngelo = "Elia", nomeAmato = "Lino";
@@ -1151,7 +1151,7 @@ public final class TestGiocatoriVivi
         verificaAttaccoAngelo(tipoLupo, nomeAmato);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioAttaccoAmato")
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
     public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo)
     {
         String nomeAngelo = "Elia", nomeAmato = "Lino";
@@ -1511,7 +1511,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
     @Test public void testSuicidioCapoBrancoRomeo()
@@ -1519,7 +1519,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Antonio";
         inizializzaGiocatori(new String[][] { { nomeVittima, tipoLupo }, { "Damiano", "Cacciatore" }, { "Carluccio", "Giulietta"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
     @ParameterizedTest
@@ -1537,16 +1537,6 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo" } });
         protezioneStrega(nomeVittima);
-        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
-    }
-
-    @ParameterizedTest
-    @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Lupo del branco" })
-    public void testAttaccoRomeoCapoBranco(String nomeRuolo)
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giulietta"} });
-        romeizzazione(nomeVittima);
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
     }
 
@@ -1570,7 +1560,7 @@ public final class TestGiocatoriVivi
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
         romeizzazione(nomeVittima);
-        verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
+        verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
     @Test public void testAttaccoStregatoLupoBranco()
@@ -1816,7 +1806,7 @@ public final class TestGiocatoriVivi
         verificaVero(giocatori.isAmato(nomeAmato));
     }
 
-    private static Stream<Arguments> getEsempioAttaccoAmato()
+    private static Stream<Arguments> getEsempioCombinazioni()
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
         String[] nomiRuoli =
