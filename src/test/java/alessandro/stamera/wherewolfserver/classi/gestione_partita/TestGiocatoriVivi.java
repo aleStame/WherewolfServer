@@ -1522,11 +1522,10 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino eroe", "Contadino mostro", "Giulietta", "Lupo del branco" })
-    public void testAttaccoStregatoCapoBranco(String nomeRuolo)
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testAttaccoLupiStregato(String tipoLupo, String nomeRuolo)
     {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String nomeVittima = "Damiano";
         inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Strega"} });
         protezioneStrega(nomeVittima);
         verificaAttaccoLupiFallito(tipoLupo, nomeVittima);
