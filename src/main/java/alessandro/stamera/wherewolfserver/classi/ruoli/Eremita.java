@@ -22,6 +22,8 @@ public final class Eremita extends Villaggio
 
     @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoDefault(); }
 
+    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
+
     private EsitoAttacco getEsitoAttaccoDefault() { return EREMITA_BECCATO; }
 
     public static Ruolo getInstance() { return new Eremita(); }
