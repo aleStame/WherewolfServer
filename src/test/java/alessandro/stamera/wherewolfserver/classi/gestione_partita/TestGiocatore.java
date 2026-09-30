@@ -399,7 +399,7 @@ public final class TestGiocatore
     @Test public void testAttaccoLupoSolitarioCappuccettoRossoProtetto()
     {
         utilizzaCappuccettoRosso();
-        giocatore.aggiungiProtezione(getLupoSolitario());
+        giocatore.aggiungiProtezione(FACTORY.getRuolo("Lupo solitario"));
         verificaLupoSolitarioSvegliaCappuccettoRosso();
     }
 
@@ -1105,8 +1105,6 @@ public final class TestGiocatore
     {
         assertThat(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(esito);
     }
-
-    private Ruolo getLupoSolitario() { return FACTORY.getRuolo("Lupo solitario"); }
 
     private boolean isCappuccettoRosso() { return giocatore.isCappuccettoRosso(); }
 
