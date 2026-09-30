@@ -2250,7 +2250,7 @@ public final class TestPartita
     }
 
     @ParameterizedTest
-    @CsvSource({ "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe", "Cappuccetto rosso", "Peccatore" })
+    @CsvSource({ "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe", "Cappuccetto rosso", "Eremita", "Peccatore" })
     public void testPotereBoiaNonRiuscito(String nomeRuolo)
     {
         String nome = "Miriam", nomeSecondo = "Andrea";
