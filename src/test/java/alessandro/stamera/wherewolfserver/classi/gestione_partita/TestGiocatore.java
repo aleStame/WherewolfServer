@@ -452,7 +452,7 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource
     (
         {
-            "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Eremita, FALLITO", "Giovane lupo, MORTO",
+            "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Eremita, EREMITA_BECCATO", "Giovane lupo, MORTO",
             "Goblin, FALLITO", "Guaritore, FALLITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
             "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Negromante, FALLITO", "Nosferatu, FALLITO",
             "Posseduto, TROVATO_POSSEDUTO", "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO"
@@ -981,10 +981,11 @@ public final class TestGiocatore
         verificaFalso(isPosseduto());
     }
 
-    /*@Test public void testCapoBrancoControEremita()
+    @Test public void testCapoBrancoControEremita()
     {
-
-    }*/
+        cambiaRuolo("Eremita");
+        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Capo branco")), EREMITA_BECCATO);
+    }
 
     private void verificaCorrettoPassaggioPosseduto()
     {
