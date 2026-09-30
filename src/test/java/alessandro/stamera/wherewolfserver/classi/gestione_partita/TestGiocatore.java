@@ -981,6 +981,11 @@ public final class TestGiocatore
         verificaFalso(isPosseduto());
     }
 
+    /*@Test public void testCapoBrancoControEremita()
+    {
+
+    }*/
+
     private void verificaCorrettoPassaggioPosseduto()
     {
         verificaEsitoPassaggioPosseduto(RIUSCITO);

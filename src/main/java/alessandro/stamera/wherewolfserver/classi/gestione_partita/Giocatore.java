@@ -158,7 +158,6 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = ruolo.attaccoLupi(lupo);
-        System.out.println(isGiocatoreProtetto(lupo));
         if(isProtezioneAngeloCustodeNonBucata() || isGiocatoreProtetto(lupo)) esito = gestioneAttaccoVittimaProtetta();
         esito = verificaEsitoAttaccoLupi(lupo, esito);
         return esito;
