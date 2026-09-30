@@ -814,7 +814,7 @@ public final class TestGiocatore
     public void testLupoExNonna(String tipoLupo)
     {
         cambiaRuolo("Nonna");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), NONNA_BECCATA);
+        verificaAttaccoLupi(tipoLupo, NONNA_BECCATA);
         verificaVero(isLupoExNonna());
     }
 
@@ -845,7 +845,7 @@ public final class TestGiocatore
     @Test public void testSuicidioCapoBranco()
     {
         cambiaRuolo("Capo branco");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Capo branco")), RIUSCITO);
+        verificaAttaccoLupi("Capo branco", RIUSCITO);
     }
 
     @ParameterizedTest @CsvSource
@@ -941,7 +941,7 @@ public final class TestGiocatore
     private void lupizzazioneContadino(String tipoLupo, Fazione fazione)
     {
         cambiaRuolo("Contadino discendente dei lupi");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
+        verificaAttaccoLupi(tipoLupo, CONTADINO_LUPO_BECCATO);
         verificaFazione(fazione);
         verificaControlloVeggente(NERA);
         controlloMediumAuraNera();
@@ -984,7 +984,7 @@ public final class TestGiocatore
     @Test public void testCapoBrancoControEremita()
     {
         cambiaRuolo("Eremita");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo("Capo branco")), EREMITA_BECCATO);
+        verificaAttaccoLupi("Capo branco", EREMITA_BECCATO);
     }
 
     private void verificaCorrettoPassaggioPosseduto()
@@ -1086,7 +1086,7 @@ public final class TestGiocatore
     private void lupizzazioneContadino(String tipoLupo)
     {
         cambiaRuolo("Contadino discendente dei lupi");
-        verificaAttacco(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo)), CONTADINO_LUPO_BECCATO);
+        verificaAttaccoLupi(tipoLupo, CONTADINO_LUPO_BECCATO);
         assertThat(giocatore.controlloVeggente()).isEqualTo(NERA);
     }
 
@@ -1099,9 +1099,11 @@ public final class TestGiocatore
 
     private void utilizzaCappuccettoRosso() { cambiaRuolo("Cappuccetto rosso"); }
 
-    private void verificaAttaccoLupoSolitario(EsitoAttacco esito)
+    private void verificaAttaccoLupoSolitario(EsitoAttacco esito) { verificaAttaccoLupi("Lupo solitario", esito); }
+
+    private void verificaAttaccoLupi(String tipoLupo, EsitoAttacco esito)
     {
-        assertThat(giocatore.attaccoLupi(getLupoSolitario())).isEqualTo(esito);
+        assertThat(giocatore.attaccoLupi(FACTORY.getRuolo(tipoLupo))).isEqualTo(esito);
     }
 
     private Ruolo getLupoSolitario() { return FACTORY.getRuolo("Lupo solitario"); }
