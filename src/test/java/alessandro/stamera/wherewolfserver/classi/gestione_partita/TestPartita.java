@@ -552,7 +552,10 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource
     (
-        { "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Mercante" }
+        {
+            "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Eremita",
+            "Mercante"
+        }
     )
     public void testPotereBorgomastro(String ruolo)
     {
