@@ -9,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.EREMITA_BECCATO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -75,7 +74,7 @@ public final class TestEremita
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { verificaAttacco(ruolo.attaccoLupi(getRuolo(nome))); }
 
-    @Test public void testNegromanteEremita() { assertThat(ruolo.attaccoNegromante()).isEqualTo(FALLITO); }
+    @Test public void testNegromanteEremita() { verificaAttacco(ruolo.attaccoNegromante()); }
 
     @Test public void testVampirizzazione() { verificaAttacco(ruolo.vampirizzazione()); }
 
