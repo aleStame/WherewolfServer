@@ -128,6 +128,7 @@ public final class Partita
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> eccezioneEliminazioneCappuccettoRosso(tipoLupo, nome, nomeLupo);
             case GIULIETTA_BECCATA -> doppiaEliminazione(nome, getNomeRomeo());
             case ROMEO_BECCATO -> throw new EccezioneAttaccoGiocatoreProtetto(true, nome);
+            case EREMITA_BECCATO -> throw new EccezioneRuoloProtetto(tipoLupo, nomeLupo, "Eremita", nome);
         }
     }
 
@@ -377,9 +378,8 @@ public final class Partita
     {
         if(isPotereBracconiereUtilizzato()) gestisciPotereBracconiere(nome);
         else if(vivi.isLadra(nome)) throw new EccezioneRuoloProtetto("Ladra", nome);
-        else if(vivi.isEremita(nome)) throw new EccezioneRuoloProtetto("Eremita", nome);
         else if(vivi.isCacciatore(nome)) gestisciEccezioneCacciatore(nomeLupo, nome);
-        else if(vivi.isLupo(nome)) throw new EccezioneRuoloProtetto(nomeLupo, getNomeRuolo(nome), nome);
+        else if(vivi.isLupo(nome)) throw new EccezioneRuoloProtetto(getNomeRuolo(nomeLupo), nomeLupo, getNomeRuolo(nome), nome);
         else if(vivi.isCappuccettoRosso(nome)) throw new EccezioneCappuccettoRossoNonna(vivi.getNomeNonna(), vivi.getNomeCappuccettoRosso());
     }
 

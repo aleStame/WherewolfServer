@@ -3,9 +3,8 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.EREMITA_BECCATO;
 
 public final class Eremita extends Villaggio
 {
@@ -17,11 +16,15 @@ public final class Eremita extends Villaggio
 
     @Override public boolean isEremita() { return true; }
 
-    @Override public EsitoAttacco attaccoNegromante() { return getEsitoAttaccoFallito(); }
+    @Override public EsitoAttacco attaccoLupi(Ruolo lupo) { return getEsitoAttaccoDefault(); }
 
-    @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoFallito(); }
+    @Override public EsitoAttacco attaccoNegromante() { return getEsitoAttaccoDefault(); }
 
-    private EsitoAttacco getEsitoAttaccoFallito() { return FALLITO; }
+    @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoDefault(); }
+
+    @Override public EsitoAttacco attaccoNosferatu() { return getEsitoAttaccoDefault(); }
+
+    private EsitoAttacco getEsitoAttaccoDefault() { return EREMITA_BECCATO; }
 
     public static Ruolo getInstance() { return new Eremita(); }
 

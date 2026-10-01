@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSegnalazioneBoia riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoLupiEremita riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
@@ -234,9 +234,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBallottaggio.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestEccezioneRuoloProtetto.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestEccezioneRuoloProtetto.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +319,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/borgomastroSegnalaEremita",
+    "git-widget-placeholder": "feature/capoBrancoControEremita",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -435,87 +435,7 @@
       <workItem from="1790608362081" duration="11362000" />
       <workItem from="1790669706184" duration="7459000" />
       <workItem from="1790684071808" duration="17765000" />
-      <workItem from="1790772445239" duration="2930000" />
-    </task>
-    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo sistemazioneEliminazioniRomeoGiulietta">
-      <option name="closed" value="true" />
-      <created>1790173910908</created>
-      <option name="number" value="00731" />
-      <option name="presentableId" value="LOCAL-00731" />
-      <option name="project" value="LOCAL" />
-      <updated>1790173910908</updated>
-    </task>
-    <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo eliminaRomeo">
-      <option name="closed" value="true" />
-      <created>1790174057296</created>
-      <option name="number" value="00732" />
-      <option name="presentableId" value="LOCAL-00732" />
-      <option name="project" value="LOCAL" />
-      <updated>1790174057296</updated>
-    </task>
-    <task id="LOCAL-00733" summary="REFACTORING: definizione del metodo isRomeoProtettoDaGiulietta">
-      <option name="closed" value="true" />
-      <created>1790174431427</created>
-      <option name="number" value="00733" />
-      <option name="presentableId" value="LOCAL-00733" />
-      <option name="project" value="LOCAL" />
-      <updated>1790174431427</updated>
-    </task>
-    <task id="LOCAL-00734" summary="REFACTORING: definizione del metodo isGiuliettaConRomeo">
-      <option name="closed" value="true" />
-      <created>1790174478549</created>
-      <option name="number" value="00734" />
-      <option name="presentableId" value="LOCAL-00734" />
-      <option name="project" value="LOCAL" />
-      <updated>1790174478549</updated>
-    </task>
-    <task id="LOCAL-00735" summary="Commit provvisorio">
-      <option name="closed" value="true" />
-      <created>1790540922596</created>
-      <option name="number" value="00735" />
-      <option name="presentableId" value="LOCAL-00735" />
-      <option name="project" value="LOCAL" />
-      <updated>1790540922597</updated>
-    </task>
-    <task id="LOCAL-00736" summary="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito">
-      <option name="closed" value="true" />
-      <created>1790601867719</created>
-      <option name="number" value="00736" />
-      <option name="presentableId" value="LOCAL-00736" />
-      <option name="project" value="LOCAL" />
-      <updated>1790601867723</updated>
-    </task>
-    <task id="LOCAL-00737" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1790602609333</created>
-      <option name="number" value="00737" />
-      <option name="presentableId" value="LOCAL-00737" />
-      <option name="project" value="LOCAL" />
-      <updated>1790602609333</updated>
-    </task>
-    <task id="LOCAL-00738" summary="VERDE DIRETTO: testPotereBorgomastro riuscito">
-      <option name="closed" value="true" />
-      <created>1790602977024</created>
-      <option name="number" value="00738" />
-      <option name="presentableId" value="LOCAL-00738" />
-      <option name="project" value="LOCAL" />
-      <updated>1790602977024</updated>
-    </task>
-    <task id="LOCAL-00739" summary="VERDE DIRETTO: testGuarigioneContadinoEroe riuscito">
-      <option name="closed" value="true" />
-      <created>1790610255128</created>
-      <option name="number" value="00739" />
-      <option name="presentableId" value="LOCAL-00739" />
-      <option name="project" value="LOCAL" />
-      <updated>1790610255128</updated>
-    </task>
-    <task id="LOCAL-00740" summary="VERDE DIRETTO: testGuarigioneContadinoEroe riuscito">
-      <option name="closed" value="true" />
-      <created>1790610627813</created>
-      <option name="number" value="00740" />
-      <option name="presentableId" value="LOCAL-00740" />
-      <option name="project" value="LOCAL" />
-      <updated>1790610627813</updated>
+      <workItem from="1790772445239" duration="16382000" />
     </task>
     <task id="LOCAL-00741" summary="ROSSO: testFunzionamentoNegromanteControRomeo non riuscito">
       <option name="closed" value="true" />
@@ -829,7 +749,87 @@
       <option name="project" value="LOCAL" />
       <updated>1790774285731</updated>
     </task>
-    <option name="localTasksCounter" value="780" />
+    <task id="LOCAL-00780" summary="VERDE DIRETTO: testPotereBorgomastro riuscito">
+      <option name="closed" value="true" />
+      <created>1790775536885</created>
+      <option name="number" value="00780" />
+      <option name="presentableId" value="LOCAL-00780" />
+      <option name="project" value="LOCAL" />
+      <updated>1790775536885</updated>
+    </task>
+    <task id="LOCAL-00781" summary="ROSSO: testAttaccoLupi non riuscito">
+      <option name="closed" value="true" />
+      <created>1790776994784</created>
+      <option name="number" value="00781" />
+      <option name="presentableId" value="LOCAL-00781" />
+      <option name="project" value="LOCAL" />
+      <updated>1790776994784</updated>
+    </task>
+    <task id="LOCAL-00782" summary="VERDE: testAttaccoLupi riuscito">
+      <option name="closed" value="true" />
+      <created>1790777573865</created>
+      <option name="number" value="00782" />
+      <option name="presentableId" value="LOCAL-00782" />
+      <option name="project" value="LOCAL" />
+      <updated>1790777573865</updated>
+    </task>
+    <task id="LOCAL-00783" summary="VERDE DIRETTO: testVampirizzazione riuscito">
+      <option name="closed" value="true" />
+      <created>1790777842737</created>
+      <option name="number" value="00783" />
+      <option name="presentableId" value="LOCAL-00783" />
+      <option name="project" value="LOCAL" />
+      <updated>1790777842737</updated>
+    </task>
+    <task id="LOCAL-00784" summary="ROSSO. testProgenizzazioneNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1790778678127</created>
+      <option name="number" value="00784" />
+      <option name="presentableId" value="LOCAL-00784" />
+      <option name="project" value="LOCAL" />
+      <updated>1790778678127</updated>
+    </task>
+    <task id="LOCAL-00785" summary="VERDE: testProgenizzazioneNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1790779022564</created>
+      <option name="number" value="00785" />
+      <option name="presentableId" value="LOCAL-00785" />
+      <option name="project" value="LOCAL" />
+      <updated>1790779022565</updated>
+    </task>
+    <task id="LOCAL-00786" summary="VERDE DIRETTO: testCapoBrancoControEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1790780137541</created>
+      <option name="number" value="00786" />
+      <option name="presentableId" value="LOCAL-00786" />
+      <option name="project" value="LOCAL" />
+      <updated>1790780137543</updated>
+    </task>
+    <task id="LOCAL-00787" summary="REFACTORING: definizione del metodo verificaAttaccoLupi">
+      <option name="closed" value="true" />
+      <created>1790780630573</created>
+      <option name="number" value="00787" />
+      <option name="presentableId" value="LOCAL-00787" />
+      <option name="project" value="LOCAL" />
+      <updated>1790780630573</updated>
+    </task>
+    <task id="LOCAL-00788" summary="ROSSO: testAttaccoLupiEremita non riuscito">
+      <option name="closed" value="true" />
+      <created>1790780915445</created>
+      <option name="number" value="00788" />
+      <option name="presentableId" value="LOCAL-00788" />
+      <option name="project" value="LOCAL" />
+      <updated>1790780915445</updated>
+    </task>
+    <task id="LOCAL-00789" summary="VERDE: testAttaccoLupiEremita riuscito">
+      <option name="closed" value="true" />
+      <created>1790863370185</created>
+      <option name="number" value="00789" />
+      <option name="presentableId" value="LOCAL-00789" />
+      <option name="project" value="LOCAL" />
+      <updated>1790863370185</updated>
+    </task>
+    <option name="localTasksCounter" value="790" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -847,16 +847,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoAttaccoNegromante" />
-    <MESSAGE value="ROSSO: testFunzionamentoNegromanteControRomeo non riuscito" />
-    <MESSAGE value="VEDE: testFunzionamentoNegromanteControRomeo riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testProgenizzazioneNosferatuVittimaAssassino riuscito" />
-    <MESSAGE value="ROSSO: testProgenizzazioneRomeoFallita non riuscito" />
-    <MESSAGE value="VERDE: testProgenizzazioneRomeoFallita riuscito" />
-    <MESSAGE value="ROSSO: testProgenizzazioneStregatoFallitaNosferatu non riuscito" />
-    <MESSAGE value="VERDE: testProgenizzazioneStregatoFallitaNosferatu riuscito" />
-    <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
-    <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getFraseProtettore" />
     <MESSAGE value="REFACTORING: semplificazione del metodo progenizzazioneNosferatu" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoRomeoLupoBranco riuscito" />
@@ -872,6 +862,16 @@
     <MESSAGE value="Ultimo commit prima della chiusura della feature" />
     <MESSAGE value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testPotereBorgomastro riuscito" />
+    <MESSAGE value="ROSSO: testAttaccoLupi non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupi riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVampirizzazione riuscito" />
+    <MESSAGE value="ROSSO. testProgenizzazioneNosferatu non riuscito" />
+    <MESSAGE value="VERDE: testProgenizzazioneNosferatu riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testCapoBrancoControEremita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
+    <MESSAGE value="ROSSO: testAttaccoLupiEremita non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoLupiEremita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoLupiEremita riuscito" />
   </component>
 </project>

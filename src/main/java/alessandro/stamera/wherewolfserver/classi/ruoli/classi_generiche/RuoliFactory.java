@@ -28,7 +28,6 @@ public final class RuoliFactory
         {
             case "Cacciatore" -> ruolo = getCacciatore();
             case "Goblin" -> ruolo = getGoblin();
-            case "Eremita" -> ruolo = getEremita();
             case "Leprecauno" -> ruolo = getLeprecauno();
             case "Sidhe" -> ruolo = getSidhe();
             default -> ruolo = ruoli.get(nome);
@@ -66,14 +65,6 @@ public final class RuoliFactory
     {
         Ruolo ruolo = ottieniRuolo("Cacciatore");
         ruolo.aggiungiProtezione(ottieniRuolo("Nonna"));
-        return ruolo;
-    }
-
-    private Ruolo getEremita()
-    {
-        Ruolo ruolo = ottieniRuolo("Eremita");
-        ruolo.aggiungiProtezione(getCreatureOmbra());
-        if(ruolo.isEremita()) ruolo.aggiungiProtezione(getRuolo("Contadino discendente dei lupi"));
         return ruolo;
     }
 

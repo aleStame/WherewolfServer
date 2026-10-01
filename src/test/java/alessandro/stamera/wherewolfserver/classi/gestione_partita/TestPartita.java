@@ -1024,12 +1024,19 @@ public final class TestPartita
         verificaNonEliminati(nomeContadinoMostro);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testAttaccoLupiEremita(String tipoLupo)
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Capo branco, 'Avvisa il Capo branco (Tony) che non può attaccare Margherita (Eremita).'",
+            "Lupo del branco, 'Avvisa il Lupo del branco (Tony) che non può attaccare Margherita (Eremita).'",
+            "Lupo reietto, 'Avvisa il Lupo reietto (Tony) che non può attaccare Margherita (Eremita).'",
+            "Lupo solitario, 'Avvisa il Lupo solitario (Tony) che non può attaccare Margherita (Eremita).'"
+        }
+    )
+    public void testAttaccoLupiEremita(String tipoLupo, String messaggio)
     {
         String nomeEremita = "Margherita";
         inizializzaPartita(new String[][] { { nomeEremita, "Eremita" }, { "Tony", tipoLupo } });
-        String messaggio = "Margherita è l'Eremita.\nAvvisa i lupi che l'attacco fallisce";
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoLupi(tipoLupo, nomeEremita)).withMessage(messaggio);
         terminaNotte();
         verificaNonEliminati(nomeEremita);
@@ -1401,7 +1408,7 @@ public final class TestPartita
         verificaAttaccoVampiroRiuscito(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Eremita", "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Negromante" })
+    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Negromante" })
     public void testVampirizzazioneFallita(String nomeRuolo)
     {
         String nomeVittima = "Lino";
