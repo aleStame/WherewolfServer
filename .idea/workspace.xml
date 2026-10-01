@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testCapoBrancoControEremita riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testAttaccoLupiEremita non riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
@@ -234,9 +239,15 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Eremita.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/IstanzaRuolo.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatore.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneRuoloProtetto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneRuoloProtetto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,23 +446,7 @@
       <workItem from="1790608362081" duration="11362000" />
       <workItem from="1790669706184" duration="7459000" />
       <workItem from="1790684071808" duration="17765000" />
-      <workItem from="1790772445239" duration="7738000" />
-    </task>
-    <task id="LOCAL-00738" summary="VERDE DIRETTO: testPotereBorgomastro riuscito">
-      <option name="closed" value="true" />
-      <created>1790602977024</created>
-      <option name="number" value="00738" />
-      <option name="presentableId" value="LOCAL-00738" />
-      <option name="project" value="LOCAL" />
-      <updated>1790602977024</updated>
-    </task>
-    <task id="LOCAL-00739" summary="VERDE DIRETTO: testGuarigioneContadinoEroe riuscito">
-      <option name="closed" value="true" />
-      <created>1790610255128</created>
-      <option name="number" value="00739" />
-      <option name="presentableId" value="LOCAL-00739" />
-      <option name="project" value="LOCAL" />
-      <updated>1790610255128</updated>
+      <workItem from="1790772445239" duration="15221000" />
     </task>
     <task id="LOCAL-00740" summary="VERDE DIRETTO: testGuarigioneContadinoEroe riuscito">
       <option name="closed" value="true" />
@@ -829,7 +824,23 @@
       <option name="project" value="LOCAL" />
       <updated>1790780137543</updated>
     </task>
-    <option name="localTasksCounter" value="787" />
+    <task id="LOCAL-00787" summary="REFACTORING: definizione del metodo verificaAttaccoLupi">
+      <option name="closed" value="true" />
+      <created>1790780630573</created>
+      <option name="number" value="00787" />
+      <option name="presentableId" value="LOCAL-00787" />
+      <option name="project" value="LOCAL" />
+      <updated>1790780630573</updated>
+    </task>
+    <task id="LOCAL-00788" summary="ROSSO: testAttaccoLupiEremita non riuscito">
+      <option name="closed" value="true" />
+      <created>1790780915445</created>
+      <option name="number" value="00788" />
+      <option name="presentableId" value="LOCAL-00788" />
+      <option name="project" value="LOCAL" />
+      <updated>1790780915445</updated>
+    </task>
+    <option name="localTasksCounter" value="789" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -847,8 +858,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testProgenizzazioneStregatoFallitaNosferatu riuscito" />
-    <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getFraseProtettore" />
     <MESSAGE value="REFACTORING: semplificazione del metodo progenizzazioneNosferatu" />
@@ -872,6 +881,8 @@
     <MESSAGE value="ROSSO. testProgenizzazioneNosferatu non riuscito" />
     <MESSAGE value="VERDE: testProgenizzazioneNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCapoBrancoControEremita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCapoBrancoControEremita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupi" />
+    <MESSAGE value="ROSSO: testAttaccoLupiEremita non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoLupiEremita non riuscito" />
   </component>
 </project>

@@ -9,49 +9,47 @@ public final class EccezioneRuoloProtetto extends IllegalArgumentException
 
     private final String ruoloVittima, nomeVittima;
 
-    private final Optional<String> nomeCapoBranco;
+    private final Optional<String> nomeLupo, tipoLupo;
 
     public EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima)
     {
-        this(ruoloVittima, nomeVittima, empty());
+        this(ruoloVittima, nomeVittima, empty(), empty());
     }
 
-    public EccezioneRuoloProtetto(String nomeCapoBranco, String ruoloVittima, String nomeVittima)
+    public EccezioneRuoloProtetto(String tipoLupo, String nomeLupo, String ruoloVittima, String nomeVittima)
     {
-        this(ruoloVittima, nomeVittima, of(nomeCapoBranco));
+        this(ruoloVittima, nomeVittima, of(tipoLupo), of(nomeLupo));
     }
 
-    private EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima, Optional<String> nomeCapoBranco)
+    private EccezioneRuoloProtetto(String ruoloVittima, String nomeVittima, Optional<String> tipoLupo, Optional<String> nomeLupo)
     {
         this.ruoloVittima = ruoloVittima;
         this.nomeVittima = nomeVittima;
-        this.nomeCapoBranco = nomeCapoBranco;
+        this.tipoLupo = tipoLupo;
+        this.nomeLupo = nomeLupo;
     }
 
     @Override public String getMessage()
-    {
-        String risultato = getMessaggioRuoloProtetto();
-        if(nomeCapoBranco.isPresent()) risultato = getMessaggioLupo();
-        return risultato;
-    }
-
-    private String getMessaggioLupo()
-    {
-        return "Avvisa il Capo branco (" + nomeCapoBranco.get() + ") che non può attaccare il " + ruoloVittima + " (" + nomeVittima + ").";
-    }
-
-    private String getMessaggioRuoloProtetto()
     {
         String risultato = "";
         switch(ruoloVittima)
         {
             case "Ladra" -> risultato = getMessaggioLadra();
             case "Eremita" -> risultato = getMessaggioEremita();
+            case "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" -> risultato = getMessaggioLupo();
         }
         return risultato;
     }
 
-    private String getMessaggioEremita() { return nomeVittima + " è l'Eremita.\nAvvisa i lupi che l'attacco fallisce"; }
+    private String getMessaggioLupo()
+    {
+        return "Avvisa il " + tipoLupo.get() + " (" + nomeLupo.get() + ") che non può attaccare il " + ruoloVittima + " (" + nomeVittima + ").";
+    }
+
+    private String getMessaggioEremita()
+    {
+        return "Avvisa il " + tipoLupo.get() + " (" + nomeLupo.get() + ") che non può attaccare " + nomeVittima + " (Eremita).";
+    }
 
     private String getMessaggioLadra()
     {
