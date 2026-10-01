@@ -614,7 +614,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO",
-            "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO"
+            "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, EREMITA_BECCATO"
         }
     )
     public void testAttaccoNegromante(String nomeRuolo, EsitoAttacco esito)
