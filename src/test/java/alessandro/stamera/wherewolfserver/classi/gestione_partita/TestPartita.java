@@ -2763,6 +2763,18 @@ public final class TestPartita
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
     }
 
+    @ParameterizedTest
+    @CsvSource({ "Cacciatore", "Capo branco", "Contadino discendente dei lupi", "Contadino eroe", "Eremita" })
+    public void testGuarigioneVittimeAssassino(String nomeRuolo)
+    {
+        String nome = "Carlo";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Pietro", "Assassino" }, { "Lorenzo", "Guaritore" } });
+        attaccoAssassino(nome);
+        guarisci(nome);
+        terminaNotte();
+        verificaNonEliminati(nome);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }
