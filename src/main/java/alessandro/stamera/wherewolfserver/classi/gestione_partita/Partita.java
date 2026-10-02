@@ -493,6 +493,7 @@ public final class Partita
                 giocatore.perdiProtezioni();
                 giocatore.annullaRomeizzazione();
                 if(giocatore.isStregato()) vivi.aggiungiProtezioneCreatureOmbra(getNomeRomeo());
+                throw new IllegalStateException("A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nome + " non è più Romeo.");
             }
         }
     }
