@@ -105,7 +105,7 @@ public final class Partita
     {
         String nomeRomeo = getNomeRomeo(), nomeGiulietta = vivi.getNomeGiulietta();
         eliminaGiocatori(nomeGiulietta, nomeRomeo);
-        throw new IllegalStateException(nomeRomeo + " è Romeo.\nAvvisa " + nomeGiulietta + " (Giulietta) del fatto che anche lei deve morire.");
+        throw new EccezioneAttaccoRomeoGiulietta(nomeRomeo, nomeGiulietta);
     }
 
     private void gestisciAssassinioAmato()
