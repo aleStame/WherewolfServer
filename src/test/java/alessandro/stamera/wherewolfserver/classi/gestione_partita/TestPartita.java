@@ -660,9 +660,10 @@ public final class TestPartita
             new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" }, { "Maria", "Giulietta" } }
         );
         romeizzazione(nomeVittima);
-        attaccoAssassino(nomeVittima);
-        String messaggio = "Gianmaria è Romeo.\nAvvisa il Nosferatu (Augusta) della mancata progenizzazione.";
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
+        String messaggioAssassino = "Gianmaria è Romeo.\nAvvisa Maria (Giulietta) del fatto che anche lei deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggioAssassino);
+        String messaggioNosferatu = "Gianmaria è Romeo.\nAvvisa il Nosferatu (Augusta) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggioNosferatu);
         terminaNotte();
         verificaEliminati(nomeVittima);
     }
@@ -2123,10 +2124,11 @@ public final class TestPartita
             { "Pino", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "Miriam è Romeo.\nAvvisa il Nosferatu (Giuliano) della mancata progenizzazione.";
         romeizzazione(nomeAngelo);
-        attaccoAssassino(nomeAngelo);
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggio);
+        String messaggioRomeo = "Miriam è Romeo.\nAvvisa Pino (Giulietta) del fatto che anche lei deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeAngelo)).withMessage(messaggioRomeo);
+        String messaggioNosferatu = "Miriam è Romeo.\nAvvisa il Nosferatu (Giuliano) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggioNosferatu);
     }
 
     @ParameterizedTest @CsvSource
@@ -2633,9 +2635,10 @@ public final class TestPartita
             new String[][] { { "Stefano", "Giulietta" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, nomeRuolo } };
         inizializzaPartita(giocatori);
         romeizzazione(nome);
-        attaccoAssassino(nome);
-        String messaggio = "Biagio è Romeo.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        String messaggioAssassino = "Biagio è Romeo.\nAvvisa Stefano (Giulietta) del fatto che anche lei deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nome)).withMessage(messaggioAssassino);
+        String messaggioNosferatu = "Biagio è Romeo.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggioNosferatu);
         verificaFalso(partita.isProgenieNosferatuViva(nome));
     }
 
@@ -2762,9 +2765,10 @@ public final class TestPartita
         String nome = "Giulio";
         inizializzaPartita(new String[][] { { "Alex", "Assassino" }, { nome, nomeRuolo }, { "Lucia", "Giulietta" }, { "Nicolas", "Nosferatu" } });
         romeizzazione(nome);
-        attaccoAssassino(nome);
-        String messaggio = "Giulio è Romeo.\nAvvisa il Nosferatu (Nicolas) della mancata progenizzazione.";
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        String messaggioAssassino = "Giulio è Romeo.\nAvvisa Lucia (Giulietta) del fatto che anche lei deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nome)).withMessage(messaggioAssassino);
+        String messaggioNosferatu = "Giulio è Romeo.\nAvvisa il Nosferatu (Nicolas) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggioNosferatu);
     }
 
     @ParameterizedTest
