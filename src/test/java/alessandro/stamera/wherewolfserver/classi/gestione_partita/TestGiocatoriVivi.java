@@ -17,6 +17,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 public final class TestGiocatoriVivi
 {
@@ -1733,6 +1734,31 @@ public final class TestGiocatoriVivi
         String nomeEremita = "Steve";
         inizializzaGiocatori(new String[][] { { nomeEremita, "Eremita" }, { "Tony", tipoLupo } });
         verificaAttaccoLupo(tipoLupo, nomeEremita, EREMITA_BECCATO);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guaritore",
+            "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Sensitiva", "Templare",
+            "Vampiro"
+        }
+    )
+    public void testVampirizzazioneGiulietta(String nomeRuolo)
+    {
+        String nomeRomeo = "Brian", nomeGiulietta = "Elliott", nomeVampiro = "John";
+        String[][] giocatori =
+            new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
+        inizializzaGiocatori(giocatori);
+        romeizzazione(nomeRomeo);
+        verificaAttaccoVampiro(nomeGiulietta, GIULIETTA_BECCATA);
+        verificaFalso(this.giocatori.isProtetto(nomeRomeo));
+        verificaFalso(this.giocatori.isRomeo(nomeRomeo));
+        verificaFazione(nomeGiulietta, VAMPIRO);
+        verificaVero(isProgenieVampiro(nomeGiulietta));
     }
 
     private void verificaRomeoBeccato(String tipoLupo, String nomeVittima)

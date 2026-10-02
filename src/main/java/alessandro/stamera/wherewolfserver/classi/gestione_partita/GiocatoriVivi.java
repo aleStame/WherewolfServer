@@ -370,6 +370,8 @@ public final class GiocatoriVivi extends Giocatori
         return getNomeGiocatore(posizione);
     }
 
+    public boolean isProtetto(String nome) { return true; }
+
     private int getPosizioneGiulietta()
     {
         int posizione = NON_TROVATO;
