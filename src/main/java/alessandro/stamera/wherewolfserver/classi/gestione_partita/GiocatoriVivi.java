@@ -59,6 +59,7 @@ public final class GiocatoriVivi extends Giocatori
         EsitoAttacco esito = vampirizzazioneRuolo(nome);
         if(esito == MORTO && isGhoulPresente()) esito = GHOUL_MORTO;
         gestisciResetAmato(nome, esito);
+        if(esito == GIULIETTA_BECCATA) getGiocatore(getNomeRomeo()).annullaRomeizzazione();
         return esito;
     }
 
@@ -370,7 +371,7 @@ public final class GiocatoriVivi extends Giocatori
         return getNomeGiocatore(posizione);
     }
 
-    public boolean isProtetto(String nome) { return true; }
+    public boolean isProtetto(String nome) { return getGiocatore(nome).isProtetto(); }
 
     private int getPosizioneGiulietta()
     {

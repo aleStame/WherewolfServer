@@ -252,7 +252,11 @@ public final class Giocatore
 
     public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
 
-    public void annullaRomeizzazione() { setRomeo(false); }
+    public void annullaRomeizzazione()
+    {
+        setRomeo(false);
+        perdiProtezioni();
+    }
 
     public boolean isLadra() { return ruolo.isLadra(); }
 
@@ -275,6 +279,8 @@ public final class Giocatore
     }
 
     public boolean isPosseduto() { return ruolo.isPosseduto(); }
+
+    public boolean isProtetto() { return isTrattoPresente(PROTETTO); }
 
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
