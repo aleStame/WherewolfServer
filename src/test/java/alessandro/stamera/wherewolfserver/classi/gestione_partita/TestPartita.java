@@ -2776,6 +2776,13 @@ public final class TestPartita
         verificaNonEliminati(nome);
     }
 
+    @Test public void testNegromanteControEremita()
+    {
+        inizializzaPartita(new String[][] { { "Salvo", "Negromante" }, { "Balduccio", "Eremita" } });
+        String messaggio = "Balduccio è l'Eremita.\nAvvisa Salvo (Negromante) che non può maledirlo, e che indicare qualcun altro";
+        assertThatIllegalArgumentException().isThrownBy(() -> attaccoNegromante("Balduccio")).withMessage(messaggio);
+    }
+
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }
 
     private boolean isPotereBracconiereUtilizzato() { return partita.isPotereBracconiereUtilizzato(); }

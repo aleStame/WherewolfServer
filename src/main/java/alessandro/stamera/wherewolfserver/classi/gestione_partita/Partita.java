@@ -307,13 +307,16 @@ public final class Partita
 
     public void attaccoNegromante(String nome)
     {
+        String nomeNegromante = getNomeNegromante();
         switch(vivi.attaccoNegromante(nome))
         {
-            case MORTO -> eliminaGiocatore(getNomeNegromante());
+            case MORTO -> eliminaGiocatore(nomeNegromante);
             case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
             case ROMEO_BECCATO ->
                 throw new IllegalStateException(nome + " non può essere maledetto perché Romeo.\nDì al Negromante di cambiare persona.");
             case RIUSCITO -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
+            case EREMITA_BECCATO ->
+                throw new IllegalArgumentException(nome + " è l'Eremita.\nAvvisa " + nomeNegromante + " (Negromante) che non può maledirlo, e che indicare qualcun altro");
         }
     }
 
