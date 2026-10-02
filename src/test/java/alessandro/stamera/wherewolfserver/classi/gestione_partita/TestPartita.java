@@ -139,10 +139,13 @@ public final class TestPartita
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
     {
-        String nomeVittima = "Federico";
-        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giulia", "Giulietta" } });
+        String nomeVittima = "Federico", nomeGiulietta = "Giulia";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { nomeGiulietta, "Giulietta" } });
         romeizzazione(nomeVittima);
-        verificaAttaccoAssassino(nomeVittima);
+        String messaggio = "Federico è Romeo.\nAvvisa Giulia (Giulietta) del fatto che anche lei deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
