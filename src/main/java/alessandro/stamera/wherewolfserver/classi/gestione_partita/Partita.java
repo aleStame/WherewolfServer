@@ -480,21 +480,15 @@ public final class Partita
 
     public void attaccoVampiro(String nome)
     {
-        String nomeVampiro = getNomeVampiroVivo();
+        String nomeVampiro = getNomeVampiroVivo(), nomeRomeo = "";
+        if(isGiuliettaConRomeo(nome)) nomeRomeo = getNomeRomeo();
         switch(vivi.attaccoVampiro(nome))
         {
             case FALLITO -> gestioneVampirizzazioneFallita(nome, nomeVampiro);
             case MORTO -> gestioneMorteVampiro(nome);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeVampiro);
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeVampiro);
-            case GIULIETTA_BECCATA ->
-            {
-                Giocatore giocatore = vivi.getGiocatore(getNomeRomeo());
-                giocatore.perdiProtezioni();
-                giocatore.annullaRomeizzazione();
-                if(giocatore.isStregato()) vivi.aggiungiProtezioneCreatureOmbra(getNomeRomeo());
-                throw new IllegalStateException("A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nome + " non è più Romeo.");
-            }
+            case GIULIETTA_BECCATA -> vampirizzazioneGiulietta(nomeRomeo);
         }
     }
 
@@ -502,7 +496,6 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
-        System.out.println(vivi.passaPosseduto(nome));
         switch(vivi.passaPosseduto(nome))
         {
             case FALLITO -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
@@ -531,6 +524,12 @@ public final class Partita
 
     public boolean isGiuliettaPresente() { return vivi.isGiuliettaPresente(); }
 
+    private void vampirizzazioneGiulietta(String nomeRomeo)
+    {
+        if(vivi.isStregato(nomeRomeo)) vivi.aggiungiProtezioneCreatureOmbra(nomeRomeo);
+        throw new IllegalStateException("A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nomeRomeo + " non è più Romeo.");
+    }
+
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
         if(vivi.isAngeloCustode(nome)) annullaProtezioneAngeloCustode();
@@ -539,6 +538,7 @@ public final class Partita
 
     private void gestioneVampirizzazioneFallita(String nome, String nomeVampiro)
     {
+        System.out.println("eccoci");
         if(vivi.isRomeo(nome)) throw new EccezioneVampirizzazioneFallita(nome, nomeVampiro, "Giulietta");
         else if(vivi.isStregato(nome)) throw new EccezioneVampirizzazioneFallita(nome, nomeVampiro, "Strega");
         else throw new EccezioneVampirizzazioneFallita(nome, nomeVampiro);

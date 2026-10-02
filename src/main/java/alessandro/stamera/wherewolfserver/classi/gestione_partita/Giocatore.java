@@ -292,8 +292,12 @@ public final class Giocatore
     private EsitoAttacco getRisultatoVampirizzazione()
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
-        if(isGiocatoreLupizzato()) esito = MORTO;
-        else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        if(isStregato()) esito = FALLITO;
+        else if(esito != GIULIETTA_BECCATA)
+        {
+            if(isGiocatoreLupizzato()) esito = MORTO;
+            else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        }
         return esito;
     }
 
