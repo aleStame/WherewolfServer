@@ -97,13 +97,15 @@ public final class Partita
             case RIUSCITO -> eliminaGiocatore(nome);
             case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
             case MORTO -> assassinioContadinoMostro(nome);
-            case ROMEO_BECCATO ->
-            {
-                String nomeRomeo = getNomeRomeo(), nomeGiulietta = vivi.getNomeGiulietta();
-                eliminaGiocatori(nomeGiulietta, nomeRomeo);
-                throw new IllegalStateException(nomeRomeo + " è Romeo.\nAvvisa " + nomeGiulietta + " (Giulietta) del fatto che anche lei deve morire.");
-            }
+            case ROMEO_BECCATO -> assassinioRomeoGiulietta();
         }
+    }
+
+    private void assassinioRomeoGiulietta()
+    {
+        String nomeRomeo = getNomeRomeo(), nomeGiulietta = vivi.getNomeGiulietta();
+        eliminaGiocatori(nomeGiulietta, nomeRomeo);
+        throw new IllegalStateException(nomeRomeo + " è Romeo.\nAvvisa " + nomeGiulietta + " (Giulietta) del fatto che anche lei deve morire.");
     }
 
     private void gestisciAssassinioAmato()
