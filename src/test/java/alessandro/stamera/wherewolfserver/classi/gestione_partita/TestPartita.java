@@ -654,14 +654,16 @@ public final class TestPartita
 
     @Test public void testAttaccoNosferatuContadinoMostroRomeo()
     {
-        String nomeVittima = "Gianmaria", nomeLupo = "Renato";
+        String nomeVittima = "Gianmaria", nomeLupo = "Renato", nomeGiulietta = "Maria";
         inizializzaPartita
         (
-            new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" }, { "Maria", "Giulietta" } }
+            new String[][]
+            {
+                { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" }, { nomeGiulietta, "Giulietta" }
+            }
         );
         romeizzazione(nomeVittima);
-        String messaggioAssassino = "Gianmaria è Romeo.\nAvvisa anche Maria (Giulietta) del fatto che deve morire.";
-        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggioAssassino);
+        verificaAssassinioRomeo(nomeVittima, nomeGiulietta);
         String messaggioNosferatu = "Gianmaria è Romeo.\nAvvisa il Nosferatu (Augusta) della mancata progenizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggioNosferatu);
         terminaNotte();
@@ -1540,7 +1542,8 @@ public final class TestPartita
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
         romeizzazione(nomeRomeo);
-        verificaAttaccoVampiroRiuscito(nomeGiulietta);
+        String message = "A seguito della vampirizzazione di Giulietta (Ellott), Brian non è più Romeo.";
+        assertThatIllegalArgumentException().isThrownBy(() -> verificaAttaccoVampiroRiuscito(nomeGiulietta)).withMessage(message);
         verificaAttaccoAssassino(nomeGiulietta);
         verificaNonEliminati(nomeRomeo);
     }
