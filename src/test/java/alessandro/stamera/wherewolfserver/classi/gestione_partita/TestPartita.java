@@ -139,10 +139,13 @@ public final class TestPartita
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
     {
-        String nomeVittima = "Federico";
-        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giulia", "Giulietta" } });
+        String nomeVittima = "Federico", nomeGiulietta = "Giulia";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { nomeGiulietta, "Giulietta" } });
         romeizzazione(nomeVittima);
-        verificaAttaccoAssassino(nomeVittima);
+        String messaggio = "Federico è Romeo.\nAvvisa anche Giulia (Giulietta) del fatto che deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
     }
 
     @ParameterizedTest @CsvSource
@@ -651,15 +654,18 @@ public final class TestPartita
 
     @Test public void testAttaccoNosferatuContadinoMostroRomeo()
     {
-        String nomeVittima = "Gianmaria", nomeLupo = "Renato";
+        String nomeVittima = "Gianmaria", nomeLupo = "Renato", nomeGiulietta = "Maria";
         inizializzaPartita
         (
-            new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" }, { "Maria", "Giulietta" } }
+            new String[][]
+            {
+                { "Augusta", "Nosferatu" }, { nomeVittima, "Contadino mostro" }, { nomeLupo, "Assassino" }, { nomeGiulietta, "Giulietta" }
+            }
         );
         romeizzazione(nomeVittima);
-        attaccoAssassino(nomeVittima);
-        String messaggio = "Gianmaria è Romeo.\nAvvisa il Nosferatu (Augusta) della mancata progenizzazione.";
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
+        verificaAssassinioRomeo(nomeVittima, nomeGiulietta);
+        String messaggioNosferatu = "Gianmaria è Romeo.\nAvvisa il Nosferatu (Augusta) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggioNosferatu);
         terminaNotte();
         verificaEliminati(nomeVittima);
     }
@@ -1536,23 +1542,9 @@ public final class TestPartita
             new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { "Carla", "Assassino" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
         romeizzazione(nomeRomeo);
-        verificaAttaccoVampiroRiuscito(nomeGiulietta);
+        String message = "A seguito della vampirizzazione di Giulietta (Elliott), Brian non è più Romeo.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nomeGiulietta)).withMessage(message);
         verificaAttaccoAssassino(nomeGiulietta);
-        verificaNonEliminati(nomeRomeo);
-    }
-
-    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Spia" })
-    public void testVampirizzazioneGiuliettaCriminali(String nomeRuolo)
-    {
-        String nomeRomeo = "Brian", nomeGiulietta = "Elliott", nomeVampiro = "John", nomeLupo = "Carla";
-        String[][] giocatori =
-            new String[][] { { nomeVampiro, "Vampiro" }, { nomeGiulietta, "Giulietta" }, { nomeLupo, "Capo branco" }, { nomeRomeo, nomeRuolo } };
-        inizializzaPartita(giocatori);
-        romeizzazione(nomeRomeo);
-        verificaAttaccoVampiroRiuscito(nomeGiulietta);
-        attaccoLupi("Capo branco", nomeGiulietta);
-        terminaNotte();
-        verificaEliminazione(nomeGiulietta);
         verificaNonEliminati(nomeRomeo);
     }
 
@@ -1779,8 +1771,10 @@ public final class TestPartita
     public void testNosferatizzazionePossedutoAmato(String tipoLupo)
     {
         String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
-        String[][] giocatori =
-            new String[][] { { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Mario", tipoLupo } };
+        String[][] giocatori = new String[][]
+        {
+            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Mario", tipoLupo }
+        };
         inizializzaPartita(giocatori);
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
     }
@@ -1803,8 +1797,10 @@ public final class TestPartita
     public void testNosferatizzazionePossedutoAmatoNosferatuStregato(String tipoLupo)
     {
         String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
-        String[][] giocatori =
-            new String[][] { { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo } };
+        String[][] giocatori = new String[][]
+        {
+            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo }
+        };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeNosferatu);
         verificaFallimentoNosferatizzazionePossedutoAmato(nomeAngelo, nomePosseduto, nomeNosferatu, tipoLupo);
@@ -2113,17 +2109,17 @@ public final class TestPartita
     )
     public void testNosferatizzazioneAngeloCustodeRomeizzato(String nomeRuolo)
     {
-        String nomeAngelo = "Miriam", nome = "Sara";
+        String nomeAngelo = "Miriam", nome = "Sara", nomeGiulietta = "Pino";
         String[][] giocatori = new String[][]
         {
             { "Alfonso", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nome, nomeRuolo }, { "Giuliano", "Nosferatu" },
-            { "Pino", "Giulietta" }
+            { nomeGiulietta, "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "Miriam è Romeo.\nAvvisa il Nosferatu (Giuliano) della mancata progenizzazione.";
         romeizzazione(nomeAngelo);
-        attaccoAssassino(nomeAngelo);
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggio);
+        verificaAssassinioRomeo(nomeAngelo, nomeGiulietta);
+        String messaggioNosferatu = "Miriam è Romeo.\nAvvisa il Nosferatu (Giuliano) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAngelo)).withMessage(messaggioNosferatu);
     }
 
     @ParameterizedTest @CsvSource
@@ -2625,15 +2621,15 @@ public final class TestPartita
     )
     public void testProgenizzazioneRomeoFallitaNosferatu(String nomeRuolo)
     {
-        String nome = "Biagio";
+        String nomeRomeo = "Biagio", nomeGiulietta = "Stefano";
         String[][] giocatori =
-            new String[][] { { "Stefano", "Giulietta" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, nomeRuolo } };
+            new String[][] { { "Stefano", "Giulietta" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
-        romeizzazione(nome);
-        attaccoAssassino(nome);
-        String messaggio = "Biagio è Romeo.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
-        verificaFalso(partita.isProgenieNosferatuViva(nome));
+        romeizzazione(nomeRomeo);
+        verificaAssassinioRomeo(nomeRomeo, nomeGiulietta);
+        String messaggioNosferatu = "Biagio è Romeo.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeRomeo)).withMessage(messaggioNosferatu);
+        verificaFalso(partita.isProgenieNosferatuViva(nomeRomeo));
     }
 
     @ParameterizedTest @CsvSource
@@ -2756,12 +2752,14 @@ public final class TestPartita
     )
     public void testProgenizzazioneRomeoFallita(String nomeRuolo)
     {
-        String nome = "Giulio";
-        inizializzaPartita(new String[][] { { "Alex", "Assassino" }, { nome, nomeRuolo }, { "Lucia", "Giulietta" }, { "Nicolas", "Nosferatu" } });
-        romeizzazione(nome);
-        attaccoAssassino(nome);
-        String messaggio = "Giulio è Romeo.\nAvvisa il Nosferatu (Nicolas) della mancata progenizzazione.";
-        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        String nomeRomeo = "Giulio", nomeGiulietta = "Lucia";
+        String[][] giocatori =
+            new String[][] { { "Alex", "Assassino" }, { nomeRomeo, nomeRuolo }, { "Lucia", "Giulietta" }, { "Nicolas", "Nosferatu" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeRomeo);
+        verificaAssassinioRomeo(nomeRomeo, nomeGiulietta);
+        String messaggioNosferatu = "Giulio è Romeo.\nAvvisa il Nosferatu (Nicolas) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeRomeo)).withMessage(messaggioNosferatu);
     }
 
     @ParameterizedTest
@@ -2781,6 +2779,12 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Salvo", "Negromante" }, { "Balduccio", "Eremita" } });
         String messaggio = "Balduccio è l'Eremita.\nAvvisa Salvo (Negromante) che non può maledirlo, e che indicare qualcun altro";
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoNegromante("Balduccio")).withMessage(messaggio);
+    }
+
+    private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
+    {
+        String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeRomeo)).withMessage(messaggio);
     }
 
     private void verificaPotereBracconiereNonUtilizzato() { verificaFalso(isPotereBracconiereUtilizzato()); }

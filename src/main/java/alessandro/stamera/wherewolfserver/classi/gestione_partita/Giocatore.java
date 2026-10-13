@@ -252,7 +252,11 @@ public final class Giocatore
 
     public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
 
-    public void annullaRomeizzazione() { setRomeo(false); }
+    public void annullaRomeizzazione()
+    {
+        setRomeo(false);
+        perdiProtezioni();
+    }
 
     public boolean isLadra() { return ruolo.isLadra(); }
 
@@ -276,6 +280,8 @@ public final class Giocatore
 
     public boolean isPosseduto() { return ruolo.isPosseduto(); }
 
+    public boolean isProtetto() { return isTrattoPresente(PROTETTO); }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
@@ -286,8 +292,12 @@ public final class Giocatore
     private EsitoAttacco getRisultatoVampirizzazione()
     {
         EsitoAttacco esito = ruolo.vampirizzazione();
-        if(isGiocatoreLupizzato()) esito = MORTO;
-        else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        if(isStregato()) esito = FALLITO;
+        else if(esito != GIULIETTA_BECCATA)
+        {
+            if(isGiocatoreLupizzato()) esito = MORTO;
+            else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        }
         return esito;
     }
 
