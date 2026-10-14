@@ -2258,8 +2258,10 @@ public final class TestPartita
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe", "Cappuccetto rosso", "Eremita", "Peccatore" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Cappuccetto rosso", "Eremita", "Peccatore" }
+    )
     public void testPotereBoiaNonRiuscito(String nomeRuolo)
     {
         String nome = "Miriam", nomeSecondo = "Andrea";
