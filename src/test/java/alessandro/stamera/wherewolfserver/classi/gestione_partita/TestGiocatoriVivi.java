@@ -100,7 +100,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare", "Capo branco", "Contadino eroe", "Contadino discendente dei lupi",
-            "Eremita"
+            "Contadino mostro", "Eremita"
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
