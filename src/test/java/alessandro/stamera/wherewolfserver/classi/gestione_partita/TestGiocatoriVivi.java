@@ -351,7 +351,15 @@ public final class TestGiocatoriVivi
     @Test public void testAttaccoAssassinoContadinoMostro()
     {
         String nome = "Matilde";
-        aggiungiGiocatore(nome, "Contadino mostro");
+        inizializzaGiocatori(new String[][] { { nome, "Contadino mostro"}, { "Pino", "Assassino" } });
+        verificaAttaccoAssassino(nome, MORTO);
+    }
+
+    @Test public void testAttaccoAssassinoContadinoMostroStregato()
+    {
+        String nome = "Matilde";
+        inizializzaGiocatori(new String[][] { { nome, "Contadino mostro"}, { "Pino", "Assassino" }, { "Giulia", "Strega" } });
+        protezioneStrega(nome);
         verificaAttaccoAssassino(nome, MORTO);
     }
 
