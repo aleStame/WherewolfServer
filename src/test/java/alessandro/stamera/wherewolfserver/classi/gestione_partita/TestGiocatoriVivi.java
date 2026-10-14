@@ -1797,7 +1797,10 @@ public final class TestGiocatoriVivi
 
     private void verificaAuraNeraControlloVeggente(String nome) { verificaAuraControlloVeggente(nome, NERA); }
 
-    private void verificaFazione(String nome, Fazione fazione) { assertThat(giocatori.getFazione(nome)).isEqualTo(fazione); }
+    private void verificaFazione(String nome, Fazione fazione)
+    {
+        assertThat(giocatori.getFazione(nome)).isEqualTo(fazione);
+    }
 
     private void verificaAuraControlloVeggente(String nome, Aura aura)
     {
