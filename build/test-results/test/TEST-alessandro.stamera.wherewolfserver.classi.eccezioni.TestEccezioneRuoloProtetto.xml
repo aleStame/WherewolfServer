@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-14T15:46:54" hostname="ALESSANDRO" time="0.024">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-14T15:50:04" hostname="ALESSANDRO" time="0.019">
   <properties/>
-  <testcase name="testEccezioneLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.006"/>
-  <testcase name="[1] tipoLupo=Capo branco, messaggio=Avvisa il Capo branco (Tony) che non può attaccare Margherita (Eremita)." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.004"/>
-  <testcase name="[2] tipoLupo=Lupo del branco, messaggio=Avvisa il Lupo del branco (Tony) che non può attaccare Margherita (Eremita)." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.002"/>
+  <testcase name="testEccezioneLupoReietto()" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.003"/>
+  <testcase name="[1] tipoLupo=Capo branco, messaggio=Avvisa il Capo branco (Tony) che non può attaccare Margherita (Eremita)." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
+  <testcase name="[2] tipoLupo=Lupo del branco, messaggio=Avvisa il Lupo del branco (Tony) che non può attaccare Margherita (Eremita)." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
   <testcase name="[3] tipoLupo=Lupo reietto, messaggio=Avvisa il Lupo reietto (Tony) che non può attaccare Margherita (Eremita)." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
   <testcase name="[4] tipoLupo=Lupo solitario, messaggio=Avvisa il Lupo solitario (Tony) che non può attaccare Margherita (Eremita)." classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
   <testcase name="testEccezioneLadra()" classname="alessandro.stamera.wherewolfserver.classi.eccezioni.TestEccezioneRuoloProtetto" time="0.001"/>
