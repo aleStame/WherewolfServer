@@ -85,7 +85,8 @@ public final class TestGiocatoriVivi
     (
         {
             "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Capo branco, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
-            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Eremita, RIUSCITO", "Giullare, RIUSCITO"
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, RIUSCITO",
+            "Giullare, RIUSCITO"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
