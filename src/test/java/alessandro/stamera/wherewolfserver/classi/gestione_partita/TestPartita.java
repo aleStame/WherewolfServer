@@ -96,8 +96,8 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Angelo custode", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Eremita",
-            "Giullare"
+            "Angelo custode", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Eremita", "Giullare"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo)
