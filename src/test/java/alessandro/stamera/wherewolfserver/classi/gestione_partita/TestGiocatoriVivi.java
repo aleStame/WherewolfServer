@@ -1056,6 +1056,15 @@ public final class TestGiocatoriVivi
     }
 
     @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoBrancoAmatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo del branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
     public void testAttaccoCapoBrancoStregatoContadino(String tipoContadino)
     {
         String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
