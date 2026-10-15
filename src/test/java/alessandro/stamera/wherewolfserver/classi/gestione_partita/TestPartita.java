@@ -1012,11 +1012,10 @@ public final class TestPartita
 
     @Test public void testControlloSensitivaContadinoMostroPrimaNotte()
     {
-        String[][] giocatori = new String[][] { { "Elettra", "Contadino mostro" }, { "Gianluca", "Sensitiva" } };
-        inizializzaPartita(giocatori);
-        int posizioneContadino = 0;
-        verificaVillaggio(giocatori[posizioneContadino][0]);
-        verificaNonEliminati(estraiNomiGiocatori(giocatori));
+        String nomeContadino = "Elettra", nomeSensitiva = "Gianluca";
+        inizializzaPartita(new String[][] { { nomeContadino, "Contadino mostro" }, { "Gianluca", "Sensitiva" } });
+        verificaVillaggio(nomeContadino);
+        verificaNonEliminati(nomeContadino, nomeSensitiva);
     }
 
     @Test public void testControlloSensitivaContadinoMostro()
@@ -2783,6 +2782,14 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Salvo", "Negromante" }, { "Balduccio", "Eremita" } });
         String messaggio = "Balduccio è l'Eremita.\nAvvisa Salvo (Negromante) che non può maledirlo, e che indicare qualcun altro";
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoNegromante("Balduccio")).withMessage(messaggio);
+    }
+
+    @Test public void testProtezioneStregaContadinoMostro()
+    {
+        String nomeContadino = "Paolo";
+        inizializzaPartita(new String[][] { { "Sonia", "Strega" }, { "Paolo", "Contadino mostro" } });
+        String messaggio = "La Strega (Sonia) ha cercato di proteggere il Contadino Mostro (Paolo).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeContadino)).withMessage(messaggio);
     }
 
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
