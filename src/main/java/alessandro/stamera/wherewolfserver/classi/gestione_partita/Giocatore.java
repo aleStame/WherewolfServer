@@ -273,9 +273,10 @@ public final class Giocatore
 
     public Aura controlloMedium()
     {
-        Aura risultato = ruolo.getAura();
-        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) risultato = NERA;
-        return risultato;
+        Aura aura = ruolo.controlloMedium();
+        Fazione risultato = getFazione();
+        if(risultato == LUPO_BRANCO || risultato == LUPO_SOLITARIO) aura = NERA;
+        return aura;
     }
 
     public boolean isPosseduto() { return ruolo.isPosseduto(); }
