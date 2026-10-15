@@ -970,22 +970,21 @@ public final class TestPartita
 
     @Test public void testControlloMagoContadinoMostroPrimaNotte()
     {
-        String[][] giocatori = new String[][] { { "Harry", "Mago" }, { "Hagrid", "Contadino mostro" } };
-        inizializzaPartita(giocatori);
-        verificaNonMistico(giocatori[1][0]);
-        verificaNonEliminati(estraiNomiGiocatori(giocatori));
+        String nomeMago = "Harry", nomeContadino = "Hagrid";
+        inizializzaPartita(new String[][] { { nomeMago, "Mago" }, { nomeContadino, "Contadino mostro" } });
+        verificaNonMistico(nomeContadino);
+        verificaNonEliminati(nomeMago, nomeContadino);
     }
 
     @Test public void testControlloMagoContadinoMostro()
     {
-        String[][] giocatori = new String[][] { { "Massimo", "Mago" }, { "Christian", "Contadino mostro" } };
-        inizializzaPartita(giocatori);
+        String nomeMago = "Harry", nomeContadino = "Hagrid";
+        inizializzaPartita(new String[][] { { nomeMago, "Mago" }, { nomeContadino, "Contadino mostro" } });
         terminaNotte();
-        int indiceContadino = 1;
-        verificaNonMistico(giocatori[indiceContadino][0]);
+        verificaNonMistico(nomeContadino);
         terminaNotte();
-        verificaEliminazione(giocatori[0][0]);
-        verificaNonEliminati(giocatori[indiceContadino][0]);
+        verificaEliminazione(nomeMago);
+        verificaNonEliminati(nomeContadino);
     }
 
     @Test public void testMorteNegromante()

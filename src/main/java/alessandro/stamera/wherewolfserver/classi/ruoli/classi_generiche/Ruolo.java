@@ -253,8 +253,6 @@ public class Ruolo
 
     public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
-    public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
-
     public boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 
     public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }
