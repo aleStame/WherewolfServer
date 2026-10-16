@@ -2932,6 +2932,24 @@ public final class TestPartita
         verificaCorrettezzaPossessione(nomeContadino);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoPossedutoContadinoMostroStregato(String tipoLupo)
+    {
+        String nomePosseduto = "Agostino", nomeContadino = "Serena";
+        String[][] giocatori = new String[][]
+        {
+            { "Piera", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomeContadino, "Contadino mostro" }, { "Salamandra", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggioContadino = "La Strega (Salamandra) ha cercato di proteggere il Contadino Mostro (Serena).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeContadino)).withMessage(messaggioContadino);
+        attaccoLupi(tipoLupo, nomePosseduto);
+        String messaggioPosseduto =
+            "Serena (Contadino mostro) è protetto dalla Strega.\nAvvisa il Posseduto (Agostino) che non può possederla.";
+        assertThatIllegalStateException().isThrownBy(() -> partita.passaPosseduto(nomeContadino)).withMessage(messaggioPosseduto);
+        verificaFalso(partita.isPosseduto(nomeContadino));
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
