@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,7 +51,7 @@ public final class TestContadinoMostro
 
     @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
 
-    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium() { verificaAura(ruolo.controlloMedium(), BIANCA); }
 
     @Test public void testControlloVeggente() { verificaAuraNeraVeggente(); }
 
@@ -60,7 +61,9 @@ public final class TestContadinoMostro
         verificaAuraNeraVeggente();
     }
 
-    private void verificaAuraNeraVeggente() { assertThat(ruolo.controlloVeggente()).isEqualTo(NERA); }
+    private void verificaAuraNeraVeggente() { verificaAura(ruolo.controlloVeggente(), NERA); }
+
+    private void verificaAura(Aura valore, Aura risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito); }
 
