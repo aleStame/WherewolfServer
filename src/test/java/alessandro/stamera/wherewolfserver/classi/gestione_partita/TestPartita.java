@@ -2922,6 +2922,16 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeContadino)).withMessage(messaggio);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoPossedutoContadinoMostroNonProtetto(String tipoLupo)
+    {
+        String nomePosseduto = "Agostino", nomeContadino = "Serena";
+        inizializzaPartita(new String[][] { { "Piera", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomeContadino, "Contadino mostro" } });
+        attaccoLupi(tipoLupo, nomePosseduto);
+        partita.passaPosseduto(nomeContadino);
+        verificaCorrettezzaPossessione(nomeContadino);
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
