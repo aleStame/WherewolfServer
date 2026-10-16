@@ -52,13 +52,15 @@ public final class TestContadinoMostro
 
     @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
-    @Test public void testControlloVeggente() { assertThat(ruolo.controlloVeggente()).isEqualTo(NERA); }
+    @Test public void testControlloVeggente() { verificaAuraNeraVeggente(); }
 
     private void verificaMaledetto()
     {
         verificaVero(ruolo.isMaledetto());
-        assertThat(ruolo.controlloVeggente()).isEqualTo(NERA);
+        verificaAuraNeraVeggente();
     }
+
+    private void verificaAuraNeraVeggente() { assertThat(ruolo.controlloVeggente()).isEqualTo(NERA); }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito); }
 
