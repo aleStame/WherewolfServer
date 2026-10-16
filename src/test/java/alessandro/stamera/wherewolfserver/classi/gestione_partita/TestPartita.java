@@ -1486,7 +1486,9 @@ public final class TestPartita
             "'Lupo del branco', 'Impossibile vampirizzare il Lupo del branco (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
             "'Lupo reietto', 'Impossibile vampirizzare il Lupo reietto (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
             "'Lupo solitario', 'Impossibile vampirizzare il Lupo solitario (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'",
-            "'Cacciatore di vampiri', 'Impossibile vampirizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
+            "'Cacciatore di vampiri', 'Impossibile vampirizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Vampiro (Michele) della sua " +
+            "morte.'",
+            "'Contadino mostro', 'Impossibile vampirizzare il Contadino mostro (Giuliano).\nAvvisa il Vampiro (Michele) della sua morte.'"
         }
     )
     public void testMorteVampiroAmato(String nomeRuolo, String messaggio)
