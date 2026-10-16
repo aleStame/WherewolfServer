@@ -56,7 +56,7 @@ public final class Giocatore
 
     public Aura controlloVeggente()
     {
-        Aura aura = ruolo.getAura();
+        Aura aura = ruolo.controlloVeggente();
         if(isGiocatoreAuraNera()) aura = NERA;
         return aura;
     }

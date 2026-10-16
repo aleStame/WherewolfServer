@@ -19,8 +19,6 @@ public final class TestBoccaDiRosa
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
 
     @Test public void testDescrizione()

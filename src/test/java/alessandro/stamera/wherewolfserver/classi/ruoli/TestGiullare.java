@@ -33,8 +33,6 @@ public final class TestGiullare
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }

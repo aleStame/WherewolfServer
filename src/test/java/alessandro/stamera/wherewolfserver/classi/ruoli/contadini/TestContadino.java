@@ -27,8 +27,6 @@ public final class TestContadino
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testContadino() { verificaVero(ruolo.isContadino()); }

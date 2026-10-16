@@ -55,7 +55,7 @@ public class Ruolo
 
     public String getNome() { return nome; }
 
-    public Aura getAura()
+    public Aura controlloVeggente()
     {
         Aura risultato = controlloMedium();
         if(controlloTrattiOscuri()) risultato = NERA;

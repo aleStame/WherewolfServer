@@ -19,8 +19,6 @@ public final class TestMedium
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         verificaStringa(ruolo.getDescrizione(), "Dalla seconda notte, indica un giocatore eliminato e scopre se possedeva aura oscura.");

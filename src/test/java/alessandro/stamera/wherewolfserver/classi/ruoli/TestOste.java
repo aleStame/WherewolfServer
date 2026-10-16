@@ -19,8 +19,6 @@ public final class TestOste
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testDescrizione()

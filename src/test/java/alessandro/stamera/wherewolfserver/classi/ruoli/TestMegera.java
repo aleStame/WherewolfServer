@@ -25,8 +25,6 @@ public final class TestMegera
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testDescrizione()

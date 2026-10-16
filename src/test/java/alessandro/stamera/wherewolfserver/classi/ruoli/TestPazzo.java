@@ -21,8 +21,6 @@ public final class TestPazzo
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testBianca() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }

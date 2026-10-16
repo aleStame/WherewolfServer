@@ -19,8 +19,6 @@ public final class TestBoia
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione =

@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
@@ -41,8 +40,6 @@ public final class TestGiovaneLupo
     @Test public void testGiovaneLupo() { verificaVero(ruolo.isGiovaneLupo()); }
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
-
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 

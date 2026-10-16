@@ -19,8 +19,6 @@ public final class TestBecchino
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String soluzione =

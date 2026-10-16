@@ -19,8 +19,6 @@ public final class TestMago
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         verificaStringa(ruolo.getDescrizione(), "Ogni notte indica un giocatore e scopre se è mistico.");

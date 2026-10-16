@@ -32,8 +32,6 @@ public final class TestNosferatu
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }

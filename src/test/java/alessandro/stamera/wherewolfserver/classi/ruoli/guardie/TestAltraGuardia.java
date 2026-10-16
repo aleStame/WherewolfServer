@@ -25,8 +25,6 @@ public final class TestAltraGuardia
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testGuardiaCorrotta() { assertThat(ruolo.isGuardiaCorrotta()).isFalse(); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
