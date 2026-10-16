@@ -112,10 +112,10 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta",
-            "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
-            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore",
-            "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoStregatoAssassino(String nomeRuolo)
@@ -123,6 +123,15 @@ public final class TestPartita
         String nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giuseppe", "Strega" } });
         protezioneStrega(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima);
+    }
+
+    @Test public void testAttaccoContadinoMostroStregatoAssassino()
+    {
+        String nomeVittima = "Maddalena";
+        inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, "Contadino mostro" }, { "Giuseppe", "Strega" } });
+        String messaggio = "La Strega (Giuseppe) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaAttaccoAssassino(nomeVittima);
     }
 
@@ -215,10 +224,10 @@ public final class TestPartita
         {
             "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
-            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
-            "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoAmatoStregatoAssassino(String nomeRuolo)
@@ -228,6 +237,19 @@ public final class TestPartita
             new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeVittima);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
+    }
+
+    @Test public void testAttaccoContadinoMostroAmatoStregatoAssassino()
+    {
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
+        String[][] giocatori = new String[][]
+        {
+            { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, "Contadino mostro" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -255,19 +277,34 @@ public final class TestPartita
         {
             "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
-            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
-            "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoAmatoAssassinoAngeloCustodeStregato(String nomeRuolo)
     {
         String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
-        String[][] giocatori =
-            new String[][] { { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo } };
+        String[][] giocatori = new String[][]
+        {
+            { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, nomeRuolo }
+        };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeVittima);
+        verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
+    }
+
+    @Test public void testAttaccoContadinoMostroAmatoAssassinoAngeloCustodeStregato()
+    {
+        String nomeAngelo = "Enzo", nomeAssassino = "Barbara", nomeVittima = "Maddalena";
+        String[][] giocatori = new String[][]
+        {
+            { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, "Contadino mostro" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
 
@@ -2329,13 +2366,40 @@ public final class TestPartita
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Contadino mostro", "Giulietta", "Lupo del branco" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Contadino eroe", "Giulietta", "Lupo del branco" })
     public void testAttaccoStregatoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         String[][] giocatori =
             new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Willow", "Strega" } };
         inizializzaPartita(giocatori);
+        protezioneStrega(nomeVittima);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
+    }
+
+    @Test public void testAttaccoContadinoMostroStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String[][] giocatori = new String[][]
+        {
+            { "Antonio", tipoLupo }, { nomeVittima, "Contadino mostro" }, { "Carluccio", "Giovane lupo"}, { "Willow", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
+    }
+
+    @Test public void testAttaccoStregatoCapoBranco()
+    {
+        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
+        String[][] giocatori = new String[][]
+        {
+            { "Antonio", tipoLupo }, { nomeVittima, "Contadino mostro" }, { "Carluccio", "Giovane lupo"}, { "Willow", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
@@ -2344,6 +2408,7 @@ public final class TestPartita
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         String[][] giocatori = new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Giovane lupo"}, { "Willow", "Strega" } };
         inizializzaPartita(giocatori);
+        protezioneStrega(nomeVittima);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
@@ -2364,13 +2429,28 @@ public final class TestPartita
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
-    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
-    public void testAttaccoLupiStregato(String nomeRuolo, String tipoLupo)
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiContadinoEroeStregato(String tipoLupo)
     {
         String nomeVittima = "Damiano";
         String[][] giocatori =
-            new String[][]{ { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo" }, { "Maria", "Strega" } };
+            new String[][]{ { "Antonio", tipoLupo }, { nomeVittima, "Contadino eroe" }, { "Carluccio", "Giovane lupo" }, { "Maria", "Strega" } };
         inizializzaPartita(giocatori);
+        protezioneStrega(nomeVittima);
+        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoLupiContadinoMostroStregato(String tipoLupo)
+    {
+        String nomeVittima = "Damiano";
+        String[][] giocatori = new String[][]
+        {
+            { "Antonio", tipoLupo }, { nomeVittima, "Contadino mostro" }, { "Carluccio", "Giovane lupo" }, { "Maria", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        String messaggio = "La Strega (Maria) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
@@ -2443,19 +2523,32 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
-            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
-            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
         }
     )
     public void testVampirizzazioneStregatoFallita(String nomeRuolo)
     {
         String nome = "Bruno";
-        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Antonia", "Giulietta" }, { "Carlo", "Vampiro" } });
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Antonia", "Giulietta" }, { "Carlo", "Vampiro" }, { "Maria", "Strega" } });
         protezioneStrega(nome);
         String messaggio = "Impossibile vampirizzare Bruno perché protetto dalla Strega.\nAvvisa il Vampiro (Carlo) della mancata vampirizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nome)).withMessage(messaggio);
+    }
+
+    @Test public void testVampirizzazioneContadinoMostroStregatoFallita()
+    {
+        String nome = "Bruno";
+        String[][] giocatori =
+            new String[][] { { nome, "Contadino mostro" }, { "Antonia", "Giulietta" }, { "Carlo", "Vampiro" }, { "Maria", "Strega" } };
+        inizializzaPartita(giocatori);
+        String messaggioStrega = "La Strega (Maria) ha cercato di proteggere il Contadino Mostro (Bruno).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nome)).withMessage(messaggioStrega);
+        String messaggioVampiro =
+            "Impossibile vampirizzare Bruno perché protetto dalla Strega.\nAvvisa il Vampiro (Carlo) della mancata vampirizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoVampiro(nome)).withMessage(messaggioVampiro);
     }
 
     @ParameterizedTest @CsvSource
@@ -2640,10 +2733,10 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta",
-            "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
-            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste",
-            "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testProgenizzazioneStregatoFallitaNosferatu(String nomeRuolo)
@@ -2653,6 +2746,20 @@ public final class TestPartita
             new String[][] { { "Stefano", "Strega" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, nomeRuolo } };
         inizializzaPartita(giocatori);
         protezioneStrega(nome);
+        attaccoAssassino(nome);
+        String messaggio = "Biagio è protetto dalla Strega.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        verificaFalso(partita.isProgenieNosferatuViva(nome));
+    }
+
+    @Test public void testProgenizzazioneContadinoMostroStregatoFallitaNosferatu()
+    {
+        String nome = "Biagio";
+        String[][] giocatori =
+            new String[][] { { "Stefano", "Strega" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, "Contadino mostro" } };
+        inizializzaPartita(giocatori);
+        String messaggioStrega = "La Strega (Stefano) ha cercato di proteggere il Contadino Mostro (Biagio).\nAvvisa Sonia della sua morte.";
+        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nome)).withMessage(messaggioStrega);
         attaccoAssassino(nome);
         String messaggio = "Biagio è protetto dalla Strega.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
         assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
@@ -2821,7 +2928,6 @@ public final class TestPartita
 
     private void verificaFallimentoAttaccoLupiGiocatoreStregato(String nomeVittima, String tipoLupo)
     {
-        protezioneStrega(nomeVittima);
         String messaggio = "Damiano non muore perché protetto dalla Strega.\nAvvisa i lupi della sua mancata morte.";
         verificaFallimentoAttaccoGiocatoreProtetto(nomeVittima, tipoLupo, messaggio);
     }
