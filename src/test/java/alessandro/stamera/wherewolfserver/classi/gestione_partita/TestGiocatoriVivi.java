@@ -413,15 +413,15 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Megera",
-            "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
+            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Megera", "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
         }
     )
     public void testAuraOscura(String nomeRuolo)
     {
         String nome = "Gervaso";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(NERA);
+        verificaAuraControlloVeggente(nome, NERA);
     }
 
     @Test public void testNumeroCriminali()

@@ -2503,6 +2503,20 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
+            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Megera", "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
+        }
+    )
+    public void testAuraOscura(String nomeRuolo)
+    {
+        String nome = "Concetta";
+        inizializzaPartita(new String[][]{ { nome, nomeRuolo } });
+        assertThat(partita.controlloVeggente(nome)).isEqualTo(NERA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
