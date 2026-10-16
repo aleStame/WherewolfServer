@@ -2514,6 +2514,13 @@ public final class TestPartita
         assertThat(partita.controlloVeggente(nome)).isEqualTo(NERA);
     }
 
+    @Test public void testControlloVeggenteContadinoMostroPrimaNotte()
+    {
+        String nome = "Concetta";
+        inizializzaPartita(new String[][]{ { nome, "Contadino mostro" } });
+        assertThatNoException().isThrownBy(() -> partita.controlloVeggente(nome));
+    }
+
     @ParameterizedTest @CsvSource
     (
         {
