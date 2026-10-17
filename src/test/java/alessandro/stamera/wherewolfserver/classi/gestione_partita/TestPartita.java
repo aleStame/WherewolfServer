@@ -97,7 +97,7 @@ public final class TestPartita
     (
         {
             "Angelo custode", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
-            "Contadino mostro", "Eremita", "Giullare"
+            "Contadino mostro", "Eremita", "Giovane lupo", "Giullare"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo)
