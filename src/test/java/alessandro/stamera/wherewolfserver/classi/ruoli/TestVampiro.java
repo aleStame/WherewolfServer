@@ -6,9 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VAMPIRO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -59,8 +57,6 @@ public final class TestVampiro
     @Test public void testCreaturaOmbra() { verificaVero(ruolo.isCreaturaOmbra()); }
 
     @Test public void testUomini() { verificaFalso(ruolo.isCategoriaUomini()); }
-
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 

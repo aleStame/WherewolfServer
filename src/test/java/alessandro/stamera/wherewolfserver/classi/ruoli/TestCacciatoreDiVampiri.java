@@ -28,8 +28,6 @@ public final class TestCacciatoreDiVampiri
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(BIANCA); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }

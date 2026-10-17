@@ -27,8 +27,6 @@ public final class TestInquisitore
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }
 
     @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }

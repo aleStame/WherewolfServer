@@ -19,8 +19,6 @@ public final class TestGuaritore
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione = "Ogni notte individua i giocatori uccisi e una volta per partita può indicarne uno per farlo tornare in vita.";

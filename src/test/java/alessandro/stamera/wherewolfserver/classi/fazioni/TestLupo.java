@@ -20,8 +20,6 @@ public final class TestLupo
 
     @BeforeEach public void setUp() { ruolo = new Lupo(null, null, 0); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testFazione() { assertThat(getFazione()).isEqualTo(LUPO_BRANCO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }

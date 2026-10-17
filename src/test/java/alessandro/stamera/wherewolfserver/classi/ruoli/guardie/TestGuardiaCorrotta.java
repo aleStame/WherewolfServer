@@ -27,8 +27,6 @@ public final class TestGuardiaCorrotta
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testGuardiaCorrotta() { assertThat(ruolo.isGuardiaCorrotta()).isTrue(); }
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }

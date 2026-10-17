@@ -498,7 +498,24 @@ public final class Partita
     {
         switch(vivi.passaPosseduto(nome))
         {
-            case FALLITO -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+            case FALLITO ->
+            {
+                if(vivi.isStregato(nome))
+                {
+                    String messaggio =
+                        nome + " (" + getNomeRuolo(nome) + ") è protetto dalla Strega.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
+                        ") che non può possederla.";
+                    throw new IllegalStateException(messaggio);
+                }
+                else if(vivi.isLadra(nome)) throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+            }
+            case ROMEO_BECCATO ->
+            {
+                String messaggio =
+                    nome + " (" + getNomeRuolo(nome) + ") è Romeo.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
+                    ") che non può possederla.";
+                throw new IllegalStateException(messaggio);
+            }
             case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
         }
@@ -506,7 +523,22 @@ public final class Partita
 
     public boolean isPosseduto(String nome) { return getGiocatore(nome).getRuolo().isPosseduto(); }
 
-    public void protezioneStrega(String nome) { vivi.protezioneStrega(nome); }
+    public void protezioneStrega(String nome)
+    {
+        vivi.protezioneStrega(nome);
+        if(vivi.isContadinoMostro(nome))
+        {
+            int posizione = -1;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getNomeRuolo(getNomeGiocatoreVivo(i)).equals("Strega"))
+                posizione = i;
+            String nomeStrega = getNomeGiocatoreVivo(posizione);
+            eliminaGiocatore(nomeStrega);
+            throw new IllegalArgumentException
+            (
+                "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + nome + ").\nAvvisa Sonia della sua morte."
+            );
+        }
+    }
 
     public boolean isCapoBranco(String nome) { return vivi.getGiocatore(nome).getRuolo().isCapoBranco(); }
 

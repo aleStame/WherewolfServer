@@ -55,7 +55,7 @@ public class Ruolo
 
     public String getNome() { return nome; }
 
-    public Aura getAura()
+    public Aura controlloVeggente()
     {
         Aura risultato = controlloMedium();
         if(controlloTrattiOscuri()) risultato = NERA;
@@ -252,8 +252,6 @@ public class Ruolo
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 
     public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
-
-    public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
     public boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 

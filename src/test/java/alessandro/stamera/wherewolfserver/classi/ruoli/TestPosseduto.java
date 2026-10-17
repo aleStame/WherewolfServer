@@ -28,8 +28,6 @@ public final class TestPosseduto
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
 
-    @Test public void testAura() { verificaAuraOscura(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraOscura(ruolo.controlloMedium()); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }

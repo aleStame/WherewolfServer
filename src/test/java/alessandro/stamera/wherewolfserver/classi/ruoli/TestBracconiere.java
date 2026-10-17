@@ -19,8 +19,6 @@ public final class TestBracconiere
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione =

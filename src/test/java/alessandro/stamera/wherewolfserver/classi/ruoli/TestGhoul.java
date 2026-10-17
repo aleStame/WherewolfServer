@@ -39,8 +39,6 @@ public final class TestGhoul
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }

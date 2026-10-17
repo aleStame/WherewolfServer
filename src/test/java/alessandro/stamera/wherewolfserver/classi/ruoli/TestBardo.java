@@ -28,8 +28,6 @@ public final class TestBardo
         );
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }

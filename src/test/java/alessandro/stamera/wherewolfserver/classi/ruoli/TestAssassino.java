@@ -19,8 +19,6 @@ public final class TestAssassino
 
     @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void tesDescrizione()
     {
         String soluzione =

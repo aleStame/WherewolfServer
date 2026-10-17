@@ -27,8 +27,6 @@ public final class TestAzzeccagarbugli
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
     @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }

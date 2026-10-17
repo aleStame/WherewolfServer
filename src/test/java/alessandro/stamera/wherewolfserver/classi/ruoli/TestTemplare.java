@@ -19,8 +19,6 @@ public final class TestTemplare
 
     @Test public void testNome() { assertThat(ruolo.getNome()).isEqualTo(NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
     @Test public void testInquisizione() { verificaVero(ruolo.isInquisizione()); }

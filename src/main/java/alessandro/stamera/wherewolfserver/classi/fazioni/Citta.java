@@ -1,16 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Uomini;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 
 public class Citta extends Uomini
 {
@@ -26,17 +22,10 @@ public class Citta extends Uomini
         return esito;
     }
 
-    /*@Override public void incrementaVoti(int numeroVoti)
-    {
-        int voti = numeroVoti;
-        if(isSegnalatoAzzeccagarbugli()) voti = 0;
-        super.incrementaVoti(voti);
-    }*/
-
     private EsitoPartita getEsitoPartitaSenzaOmbra(Partita partita)
     {
         EsitoPartita esito = VITTORIA;
-        if(isCriminale()) esito = new Criminale(getNome(), getAura(), getDescrizione()).getEsitoPartita(partita);
+        if(isCriminale()) esito = new Criminale(getNome(), controlloVeggente(), getDescrizione()).getEsitoPartita(partita);
         return esito;
     }
 

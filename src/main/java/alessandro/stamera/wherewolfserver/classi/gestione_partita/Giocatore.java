@@ -56,7 +56,7 @@ public final class Giocatore
 
     public Aura controlloVeggente()
     {
-        Aura aura = ruolo.getAura();
+        Aura aura = ruolo.controlloVeggente();
         if(isGiocatoreAuraNera()) aura = NERA;
         return aura;
     }
@@ -203,6 +203,7 @@ public final class Giocatore
         if(isNonMorto()) esito = RIUSCITO;
         else if(!ruolo.isPrete() && tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         if(esito == RIUSCITO) trasformaPosseduto();
+        else if(esito == FALLITO && isRomeo()) esito = ROMEO_BECCATO;
         return esito;
     }
 
@@ -273,9 +274,10 @@ public final class Giocatore
 
     public Aura controlloMedium()
     {
-        Aura risultato = ruolo.getAura();
-        if(fazione == LUPO_BRANCO || fazione == LUPO_SOLITARIO) risultato = NERA;
-        return risultato;
+        Aura aura = ruolo.controlloMedium();
+        Fazione risultato = getFazione();
+        if(risultato == LUPO_BRANCO || risultato == LUPO_SOLITARIO) aura = NERA;
+        return aura;
     }
 
     public boolean isPosseduto() { return ruolo.isPosseduto(); }

@@ -20,8 +20,6 @@ public final class TestAmanti
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }

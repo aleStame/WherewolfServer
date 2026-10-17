@@ -85,7 +85,8 @@ public final class TestGiocatoriVivi
     (
         {
             "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Capo branco, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
-            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Eremita, RIUSCITO", "Giullare, RIUSCITO"
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, RIUSCITO",
+            "Giullare, RIUSCITO"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
@@ -99,7 +100,7 @@ public final class TestGiocatoriVivi
     (
         {
             "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare", "Capo branco", "Contadino eroe", "Contadino discendente dei lupi",
-            "Eremita"
+            "Contadino mostro", "Eremita"
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
@@ -350,7 +351,15 @@ public final class TestGiocatoriVivi
     @Test public void testAttaccoAssassinoContadinoMostro()
     {
         String nome = "Matilde";
-        aggiungiGiocatore(nome, "Contadino mostro");
+        inizializzaGiocatori(new String[][] { { nome, "Contadino mostro"}, { "Pino", "Assassino" } });
+        verificaAttaccoAssassino(nome, MORTO);
+    }
+
+    @Test public void testAttaccoAssassinoContadinoMostroStregato()
+    {
+        String nome = "Matilde";
+        inizializzaGiocatori(new String[][] { { nome, "Contadino mostro"}, { "Pino", "Assassino" }, { "Giulia", "Strega" } });
+        protezioneStrega(nome);
         verificaAttaccoAssassino(nome, MORTO);
     }
 
@@ -404,15 +413,15 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Megera",
-            "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
+            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Megera", "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
         }
     )
     public void testAuraOscura(String nomeRuolo)
     {
         String nome = "Gervaso";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.controlloVeggente(nome)).isEqualTo(NERA);
+        verificaAuraControlloVeggente(nome, NERA);
     }
 
     @Test public void testNumeroCriminali()
@@ -1014,9 +1023,60 @@ public final class TestGiocatoriVivi
     }
 
     @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoBrancoContadino(String tipoContadino)
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { "Iris", tipoLupo }, { nomeVittima, tipoContadino } });
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoReiettoContadino(String tipoContadino)
+    {
+        String tipoLupo = "Lupo reietto", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { "Iris", tipoLupo }, { nomeVittima, tipoContadino } });
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoSolitarioContadino(String tipoContadino)
+    {
+        String tipoLupo = "Lupo solitario", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { "Iris", tipoLupo }, { nomeVittima, tipoContadino } });
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
     public void testAttaccoCapoBrancoAmatoContadino(String tipoContadino)
     {
         String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoBrancoAmatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo del branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoReiettoAmatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo reietto", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoSolitarioAmatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo solitario", nomeVittima = "Filippo";
         inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Angelo custode" } });
         segnalazioneAngeloCustode(nomeLupo);
         verificaMortePostAttacco(tipoLupo, nomeVittima);
@@ -1035,6 +1095,33 @@ public final class TestGiocatoriVivi
     public void testAttaccoCapoBrancoRomeizzatoContadino(String tipoContadino)
     {
         String nomeLupo = "Iris", tipoLupo = "Capo branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Giulietta" } });
+        romeizzazione(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoBrancoRomeizzatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo del branco", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Giulietta" } });
+        romeizzazione(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoReiettoRomeizzatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo reietto", nomeVittima = "Filippo";
+        inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Giulietta" } });
+        romeizzazione(nomeLupo);
+        verificaMortePostAttacco(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource({ "Contadino eroe", "Contadino mostro" })
+    public void testAttaccoLupoSolitarioRomeizzatoContadino(String tipoContadino)
+    {
+        String nomeLupo = "Iris", tipoLupo = "Lupo solitario", nomeVittima = "Filippo";
         inizializzaGiocatori(new String[][]{ { nomeLupo, tipoLupo }, { nomeVittima, tipoContadino }, { "Gabriele", "Giulietta" } });
         romeizzazione(nomeLupo);
         verificaMortePostAttacco(tipoLupo, nomeVittima);
@@ -1715,7 +1802,7 @@ public final class TestGiocatoriVivi
         String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Giulietta" } });
         romeizzazione(nome);
-        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+        assertThat(giocatori.passaPosseduto(nome)).isEqualTo(ROMEO_BECCATO);
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
@@ -1788,7 +1875,10 @@ public final class TestGiocatoriVivi
 
     private void verificaAuraNeraControlloVeggente(String nome) { verificaAuraControlloVeggente(nome, NERA); }
 
-    private void verificaFazione(String nome, Fazione fazione) { assertThat(giocatori.getFazione(nome)).isEqualTo(fazione); }
+    private void verificaFazione(String nome, Fazione fazione)
+    {
+        assertThat(giocatori.getFazione(nome)).isEqualTo(fazione);
+    }
 
     private void verificaAuraControlloVeggente(String nome, Aura aura)
     {
