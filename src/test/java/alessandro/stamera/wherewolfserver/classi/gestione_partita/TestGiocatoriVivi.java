@@ -1802,7 +1802,7 @@ public final class TestGiocatoriVivi
         String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Giulietta" } });
         romeizzazione(nome);
-        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+        assertThat(giocatori.passaPosseduto(nome)).isEqualTo(ROMEO_BECCATO);
     }
 
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })

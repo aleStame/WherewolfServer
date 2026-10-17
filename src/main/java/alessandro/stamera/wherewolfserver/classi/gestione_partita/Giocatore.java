@@ -203,6 +203,7 @@ public final class Giocatore
         if(isNonMorto()) esito = RIUSCITO;
         else if(!ruolo.isPrete() && tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         if(esito == RIUSCITO) trasformaPosseduto();
+        else if(esito == FALLITO && isRomeo()) esito = ROMEO_BECCATO;
         return esito;
     }
 

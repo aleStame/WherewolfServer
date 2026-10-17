@@ -2959,8 +2959,7 @@ public final class TestPartita
             { "Piera", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomeContadino, "Contadino mostro" }, { "Salamandra", "Giulietta" }
         };
         inizializzaPartita(giocatori);
-        String messaggioContadino = "La Strega (Salamandra) ha cercato di proteggere il Contadino Mostro (Serena).\nAvvisa Sonia della sua morte.";
-        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeContadino)).withMessage(messaggioContadino);
+        romeizzazione(nomeContadino);
         attaccoLupi(tipoLupo, nomePosseduto);
         String messaggioPosseduto =
             "Serena (Contadino mostro) è Romeo.\nAvvisa il Posseduto (Agostino) che non può possederla.";

@@ -507,7 +507,14 @@ public final class Partita
                         ") che non può possederla.";
                     throw new IllegalStateException(messaggio);
                 }
-                else throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+                else if(vivi.isLadra(nome)) throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+            }
+            case ROMEO_BECCATO ->
+            {
+                String messaggio =
+                    nome + " (" + getNomeRuolo(nome) + ") è Romeo.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
+                    ") che non può possederla.";
+                throw new IllegalStateException(messaggio);
             }
             case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
