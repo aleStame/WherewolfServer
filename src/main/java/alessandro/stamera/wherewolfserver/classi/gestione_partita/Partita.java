@@ -498,7 +498,17 @@ public final class Partita
     {
         switch(vivi.passaPosseduto(nome))
         {
-            case FALLITO -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+            case FALLITO ->
+            {
+                if(vivi.isStregato(nome))
+                {
+                    String messaggio =
+                        nome + " (" + getNomeRuolo(nome) + ") è protetto dalla Strega.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
+                        ") che non può possederla.";
+                    throw new IllegalStateException(messaggio);
+                }
+                else throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
+            }
             case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
         }
