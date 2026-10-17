@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoAssassino riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -445,14 +445,6 @@
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
     </task>
-    <task id="LOCAL-00814" summary="REFACTORING: definizione del metodo vampirizzazioneGiulietta">
-      <option name="closed" value="true" />
-      <created>1791907989501</created>
-      <option name="number" value="00814" />
-      <option name="presentableId" value="LOCAL-00814" />
-      <option name="project" value="LOCAL" />
-      <updated>1791907989504</updated>
-    </task>
     <task id="LOCAL-00815" summary="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito">
       <option name="closed" value="true" />
       <created>1791983709087</created>
@@ -837,7 +829,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792252378839</updated>
     </task>
-    <option name="localTasksCounter" value="863" />
+    <task id="LOCAL-00863" summary="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1792252786595</created>
+      <option name="number" value="00863" />
+      <option name="presentableId" value="LOCAL-00863" />
+      <option name="project" value="LOCAL" />
+      <updated>1792252786595</updated>
+    </task>
+    <option name="localTasksCounter" value="864" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -855,7 +855,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBrancoRomeizzatoContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoReiettoRomeizzatoContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitarioRomeizzatoContadino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
@@ -880,6 +879,7 @@
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito" />
   </component>
 </project>
