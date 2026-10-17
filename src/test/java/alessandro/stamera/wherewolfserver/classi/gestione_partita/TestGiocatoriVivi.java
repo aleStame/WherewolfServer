@@ -60,7 +60,7 @@ public final class TestGiocatoriVivi
         verificaAccusati(soluzioni[0][0], soluzioni[2][0], soluzioni[1][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Sidhe" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Giovane lupo", "Sidhe" })
     public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
         String nomeAngelo = "Domenico", nomeAmato = "Pamela";
