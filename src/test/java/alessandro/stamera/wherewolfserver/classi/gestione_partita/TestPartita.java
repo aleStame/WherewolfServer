@@ -80,7 +80,7 @@ public final class TestPartita
         verificaNonAccusato(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore", "Contadino mostro" })
+    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore", "Contadino mostro", "Giovane lupo" })
     public void testAngeloCustodeAccusatoPresente(String nomeRuolo)
     {
         String nomeAngelo = "Michelle", nomeAmato = "Fiona", nomeAccusato = "Biagio";
