@@ -42,7 +42,7 @@ public final class TestAssassino
     @Test public void testConsigliGioco()
     {
         String messaggio =
-            "Avete un solo colpo da sparare e dovete decidere molto bene come usarlo. L'obiettivo migliore potrebbe essere una GUARDIA, poiché " +
+            "Avete un solo colpo da sparare e dovete decidere molto bene come usarlo. L'obiettivo migliore potrebbe essere una Guardia, poiché " +
             "nessun altro, a parte i Criminali, ha interesse che le guardie vengano eliminate. Di sicuro anche un Lupo sarebbe un ottimo " +
             "bersaglio, anche perché, se capisse chi siete, sarebbe forse lui ad eliminare voi. Scegliete bene il momento in cui aprire gli occhi " +
             "perché, se il Mistico di turno dovesse essere in gioco, dovreste uccidere per forza lui e perdereste così la vostra unica " +
