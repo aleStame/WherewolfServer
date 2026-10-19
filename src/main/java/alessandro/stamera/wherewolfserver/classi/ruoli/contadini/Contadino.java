@@ -16,7 +16,7 @@ public class Contadino extends Villaggio
         (
         "Contadino", BIANCA,
     "Il Contadino ha una delle seguenti identità nascoste (a sua insaputa) : Semplice, Eroe, Discendente dei Lupi, Mostro.", 1,
-        false
+        false, null
         );
         this.tipoContadino = tipoContadino;
     }

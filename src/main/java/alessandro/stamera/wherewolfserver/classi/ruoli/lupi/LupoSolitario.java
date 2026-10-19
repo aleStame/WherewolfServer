@@ -13,7 +13,7 @@ public final class LupoSolitario extends Lupo
 
     private LupoSolitario()
     {
-        super("Lupo solitario", null, 3);
+        super("Lupo solitario", null, 3, null);
     }
 
     @Override public boolean isLupoSolitario() { return true; }

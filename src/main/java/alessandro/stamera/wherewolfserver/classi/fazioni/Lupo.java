@@ -15,9 +15,9 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.L
 public class Lupo extends CreatureOmbra
 {
 
-    public Lupo(String nome, String descrizione, int lune)
+    public Lupo(String nome, String descrizione, int lune, String consigli)
     {
-        super(nome, LUPO_BRANCO, NERA, descrizione, lune, false);
+        super(nome, LUPO_BRANCO, NERA, descrizione, lune, false, consigli);
         aggiungiTratti(CREATURA_OMBRA, LUPO_MANNARO);
     }
 

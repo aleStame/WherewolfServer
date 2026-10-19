@@ -19,7 +19,7 @@ public final class Posseduto extends CreatureOmbra
 "La prima notte individua la Megera e riconosce il Peccatore. Anche se è stato ucciso, non è considerato eliminato dal gioco finché " +
            "un altro giocatore non diventa il Posseduto. Se è stato ucciso, indica un giocatore che lo riconosce: il ruolo di quel giocatore " +
            "diventa il Posseduto. Se viene ucciso al rogo perde tutti i poteri.",
-     3, false
+     3, false, null
         );
         aggiungiTratti(CREATURA_OMBRA);
     }

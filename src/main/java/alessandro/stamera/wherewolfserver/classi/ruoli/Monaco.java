@@ -14,7 +14,7 @@ public final class Monaco extends Villaggio
         (
     "Monaco", BIANCA,
 "La prima notte scopre almeno due ruoli che non sono presenti nel gioco, fra quelli che sono tra i ruoli possibili per quella partita.",
-     1, false
+     1, false, null
         );
     }
 

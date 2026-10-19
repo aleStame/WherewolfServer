@@ -13,9 +13,12 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPar
 public class CreatureOmbra extends Ruolo
 {
 
-    public CreatureOmbra(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico)
+    public CreatureOmbra
+    (
+        String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, String consigli
+    )
     {
-        super(nome, fazione, aura, descrizione, lune, mistico, CREATURE_OMBRA);
+        super(nome, fazione, aura, descrizione, lune, mistico, CREATURE_OMBRA, consigli);
     }
 
     @Override public EsitoPartita getEsitoPartita(Partita partita)

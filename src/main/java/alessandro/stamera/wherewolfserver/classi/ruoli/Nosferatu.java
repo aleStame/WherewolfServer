@@ -22,7 +22,7 @@ public final class Nosferatu extends CreatureOmbra
 "La prima notte riconosce il Ghoul e individua la Megera. Dalla seconda notte, individua i giocatori uccisi quella notte, può " +
           "indicarne uno e farlo tornare in vita. Se è un lupo mannaro o il Cacciatore di vampiri, il Nosferatu viene ucciso. Se è un mistico, " +
           "non accade nulla. Altrimenti, lo riconosce e diventa una progenie vampirica con aura oscura e fazione Nosferatu",
-     3, false
+     3, false, null
         );
         aggiungiTratti(CREATURA_OMBRA);
     }

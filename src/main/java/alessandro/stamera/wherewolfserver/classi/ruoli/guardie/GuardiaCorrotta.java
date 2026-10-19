@@ -9,7 +9,7 @@ public final class GuardiaCorrotta extends Criminale
 
     private GuardiaCorrotta()
     {
-        super("Guardia corrotta", NERA, "La prima notte riconosce le altre guardie e in seguito gli altri criminali.");
+        super("Guardia corrotta", NERA, "La prima notte riconosce le altre guardie e in seguito gli altri criminali.", null);
     }
 
     @Override public boolean isGuardiaCorrotta() { return true; }

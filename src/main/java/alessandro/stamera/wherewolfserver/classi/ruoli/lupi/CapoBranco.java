@@ -17,8 +17,7 @@ public final class CapoBranco extends Lupo
         (
     "Capo branco",
 "La prima notte individua il Traditore e riconosce i lupi del branco. Dalla seconda notte può indicare un giocatore, e questi " +
-          "viene ucciso.",
-     1
+          "viene ucciso.", 1, null
         );
     }
 

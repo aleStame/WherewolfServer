@@ -13,7 +13,8 @@ public final class Oste extends Villaggio
         super
         (
     "Oste", BIANCA,
-"Ogni mattino se la Veggente quella notte ha scoperto un'aura oscura, il moderatore lo comunica pubblicamente", 1, false
+"Ogni mattino se la Veggente quella notte ha scoperto un'aura oscura, il moderatore lo comunica pubblicamente", 1, false,
+                null
         );
     }
 

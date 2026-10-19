@@ -12,7 +12,8 @@ public final class Bardo extends Villaggio
         super
         (
     "Bardo", BIANCA,
-"Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente.", 1, false
+"Ogni mattina, se la Veggente quella notte ha scoperto un'aura bianca, il Moderatore la comunica pubblicamente.", 1, false,
+                null
         );
     }
 

@@ -18,7 +18,7 @@ public class Becchino extends Villaggio
 "La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua fazione " +
           "diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il Moderatore lo " +
           "annuncia pubblicamente",
-     3, false
+     3, false, null
         );
     }
 

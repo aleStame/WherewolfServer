@@ -15,7 +15,7 @@ public final class Peccatore extends Villaggio
     "Peccatore", NERA,
 "La prima notte viene individuato dal Prete e apre gli occhi nel turno del Posseduto. Se rimane in gioco, vince con una vittoria degli " +
           "uomini, altrimenti con il Posseduto",
-     1, false
+     1, false, null
         );
     }
 

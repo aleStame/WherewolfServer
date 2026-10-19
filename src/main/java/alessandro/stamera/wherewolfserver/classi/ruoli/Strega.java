@@ -6,7 +6,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 public class Strega extends Villaggio
 {
 
-    private Strega() { super("Strega", null, null, 0, true); }
+    private Strega() { super("Strega", null, null, 0, true, null); }
 
     public static Ruolo getInstance() { return new Strega(); }
 

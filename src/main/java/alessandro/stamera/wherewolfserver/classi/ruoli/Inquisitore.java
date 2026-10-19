@@ -14,7 +14,7 @@ public final class Inquisitore extends Inquisizione
         (
     "Inquisitore", BIANCA,
 "La prima notte individua il Boia e il Templare e scopre quanti mistici sono in gioco. Se viene indicato da un mistico, lo riconosce. " +
-          "Può segnalare un giocatore durante le accuse: se è un mistico, sarà accusato a prescindere dai voti ricevuti."
+          "Può segnalare un giocatore durante le accuse: se è un mistico, sarà accusato a prescindere dai voti ricevuti.", null
         );
     }
 

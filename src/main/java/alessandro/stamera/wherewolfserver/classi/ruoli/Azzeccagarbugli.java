@@ -13,7 +13,7 @@ public final class Azzeccagarbugli extends Citta
         (
     "Azzeccagarbugli", BIANCA,
 "Può votare al ballottaggio anche se è accusato e può segnalare un altro giocatore durante le accuse: se la sua fazione è Città o " +
-          "Criminali, i voti che riceve vengono azzerati, altrimenti sarà accusato a prescindere dai voti ricevuti."
+          "Criminali, i voti che riceve vengono azzerati, altrimenti sarà accusato a prescindere dai voti ricevuti.", null
         );
     }
 

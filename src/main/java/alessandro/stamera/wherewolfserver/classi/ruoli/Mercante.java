@@ -14,7 +14,7 @@ public final class Mercante extends Citta
         (
     "Mercante", BIANCA,
 "Può votare al ballottaggio anche se è accusato. In ogni votazione, non ha limite sul numero di giocatori per cui può votare. I voti " +
-          "che il Mercante riceve vengono ridotti di uno per ogni altro giocatore della fazione Città in gioco."
+          "che il Mercante riceve vengono ridotti di uno per ogni altro giocatore della fazione Città in gioco.", null
         );
     }
 

@@ -16,7 +16,8 @@ public final class Guaritore extends Villaggio
         super
         (
     "Guaritore", BIANCA,
-"Ogni notte individua i giocatori uccisi e una volta per partita può indicarne uno per farlo tornare in vita.", 1, true
+"Ogni notte individua i giocatori uccisi e una volta per partita può indicarne uno per farlo tornare in vita.", 1, true,
+                null
         );
         potere = new Potere();
     }

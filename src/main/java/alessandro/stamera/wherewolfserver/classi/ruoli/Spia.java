@@ -14,7 +14,7 @@ public final class Spia extends Criminale
         (
     "Spia", BIANCA,
 "La prima notte riconosce gli altri criminali. Può tenere gli occhi aperti durante le votazioni per le accuse. Se lo fa, in quella" +
-          " votazione può votare per sé stesso"
+          " votazione può votare per sé stesso", null
         );
     }
 

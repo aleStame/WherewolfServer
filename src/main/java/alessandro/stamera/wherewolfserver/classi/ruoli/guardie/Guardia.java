@@ -10,7 +10,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.N
 public class Guardia extends Villaggio
 {
 
-    public Guardia(String nome, Aura aura, String descrizione) { super(nome, aura, descrizione, 2, false); }
+    public Guardia(String nome, Aura aura, String descrizione) { super(nome, aura, descrizione, 2, false, null); }
 
     @Override public boolean isGuardia() { return true; }
 

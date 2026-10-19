@@ -13,7 +13,7 @@ public final class BoccaDiRosa extends Citta
         (
     "Bocca di rosa", NERA,
 "Può votare al ballottaggio anche se è accusata. In ogni votazione i voti che Bocca di rosa riceve vengono dimezzati, arrotondando " +
-          "per eccesso."
+          "per eccesso.", null
         );
     }
 

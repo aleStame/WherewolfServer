@@ -16,9 +16,9 @@ public class Criminale extends Uomini
 
     private final Potere potere;
 
-    public Criminale(String nome, Aura aura, String descrizione)
+    public Criminale(String nome, Aura aura, String descrizione, String consigli)
     {
-        super(nome, CRIMINALI, aura, descrizione, 2, false);
+        super(nome, CRIMINALI, aura, descrizione, 2, false, consigli);
         potere = new Potere();
     }
 

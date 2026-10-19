@@ -14,7 +14,7 @@ public class Borgomastro extends Citta
         (
     "Borgomastro", BIANCA,
 "Può votare al ballottaggio anche se è accusato. Può segnalare un giocatore durante il ballottaggio: quel giocatore riceve un minimo " +
-          "di voti pari ai ruoli con fazione Città in gioco più uno."
+          "di voti pari ai ruoli con fazione Città in gioco più uno.", null
         );
     }
 

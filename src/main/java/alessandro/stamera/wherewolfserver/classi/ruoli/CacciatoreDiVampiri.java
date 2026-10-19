@@ -16,7 +16,7 @@ public final class CacciatoreDiVampiri extends Villaggio
         (
     "Cacciatore di vampiri", BIANCA,
 "La prima notte scopre il Vampiro è in gioco. È protetto dal Vampiro e, se viene attaccato, viene avvisato e lo elimina", 2,
-    false
+    false, null
         );
     }
 

@@ -8,7 +8,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIA
 public final class Templare extends Inquisizione
 {
 
-    private Templare() { super("Templare", BIANCA, null); }
+    private Templare() { super("Templare", BIANCA, null, null); }
 
     @Override public boolean isTemplare() { return true; }
 

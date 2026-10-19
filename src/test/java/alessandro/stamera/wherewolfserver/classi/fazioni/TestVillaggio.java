@@ -25,7 +25,7 @@ public final class TestVillaggio
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Villaggio(null, null, null, -1, true); }
+    @BeforeEach public void setUp() { ruolo = new Villaggio(null, null, null, -1, true, null); }
 
     @Test public void testFazione() { verificaFazione(VILLAGGIO); }
 

@@ -15,7 +15,7 @@ public final class Oratore extends Citta
     "Oratore", BIANCA,
 "Può votare al ballottaggio anche se è accusato. Se un altro giocatore con fazione Città dovesse andare al rogo, il rogo viene " +
           "annullato. Se non è accusato, può segnalare uno o più giocatori durante il ballottaggio: se uno di quei giocatori dovesse andare al " +
-          "rogo, il rogo viene annullato"
+          "rogo, il rogo viene annullato", null
         );
     }
 

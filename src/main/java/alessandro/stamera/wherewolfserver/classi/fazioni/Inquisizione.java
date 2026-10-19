@@ -13,9 +13,9 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.
 public class Inquisizione extends Uomini
 {
 
-    public Inquisizione(String nome, Aura aura, String descrizione)
+    public Inquisizione(String nome, Aura aura, String descrizione, String consigli)
     {
-        super(nome, INQUISIZIONE, aura, descrizione, 3, false);
+        super(nome, INQUISIZIONE, aura, descrizione, 3, false, consigli);
     }
 
     @Override public boolean isInquisizione() { return true; }

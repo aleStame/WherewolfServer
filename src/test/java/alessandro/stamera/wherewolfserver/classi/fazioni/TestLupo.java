@@ -18,7 +18,7 @@ public final class TestLupo
 
     private Lupo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Lupo(null, null, 0); }
+    @BeforeEach public void setUp() { ruolo = new Lupo(null, null, 0, null); }
 
     @Test public void testFazione() { assertThat(getFazione()).isEqualTo(LUPO_BRANCO); }
 
