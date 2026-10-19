@@ -68,7 +68,7 @@ public final class TestPartita
         verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino mostro", "Sidhe" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino mostro", "Giovane lupo", "Sidhe" })
     public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
         String nomeAngelo = "Domenico", nome = "Pamela";
@@ -80,7 +80,7 @@ public final class TestPartita
         verificaNonAccusato(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore", "Contadino mostro" })
+    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore", "Contadino mostro", "Giovane lupo" })
     public void testAngeloCustodeAccusatoPresente(String nomeRuolo)
     {
         String nomeAngelo = "Michelle", nomeAmato = "Fiona", nomeAccusato = "Biagio";
@@ -97,7 +97,7 @@ public final class TestPartita
     (
         {
             "Angelo custode", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
-            "Contadino mostro", "Eremita", "Giullare"
+            "Contadino mostro", "Eremita", "Giovane lupo", "Giullare"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo)

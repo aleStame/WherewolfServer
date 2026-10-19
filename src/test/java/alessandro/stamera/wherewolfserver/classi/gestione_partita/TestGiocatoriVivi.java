@@ -60,7 +60,7 @@ public final class TestGiocatoriVivi
         verificaAccusati(soluzioni[0][0], soluzioni[2][0], soluzioni[1][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Sidhe" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Giovane lupo", "Sidhe" })
     public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
         String nomeAngelo = "Domenico", nomeAmato = "Pamela";
@@ -70,7 +70,7 @@ public final class TestGiocatoriVivi
         verificaGiocatoreAccusato(getBallottaggio(), 0, nomeAngelo);
     }
 
-    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore" })
+    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore", "Contadino mostro", "Giovane lupo" })
     public void testAngeloCustodeAccusatoPresente(String nomeRuolo)
     {
         String nomeAngeloCustode = "Michelle", nomeAmato = "Fiona";
@@ -86,7 +86,7 @@ public final class TestGiocatoriVivi
         {
             "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Capo branco, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
             "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, RIUSCITO",
-            "Giullare, RIUSCITO"
+            "Giovane lupo, RIUSCITO", "Giullare, RIUSCITO"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
@@ -99,8 +99,8 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Giullare", "Capo branco", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino mostro", "Eremita"
+            "Angelo custode", "Cacciatore", "Cappuccetto rosso", "Capo branco", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Eremita", "Giovane lupo", "Giullare",
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
@@ -111,7 +111,7 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nomeRomeo, ROMEO_BECCATO);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Giullare", "Capo branco" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Giovane lupo", "Giullare" })
     public void testAttaccoAssassinoAmatoAngeloCustodeRomeo(String nomeRuolo)
     {
         String nomeVittima = "Cristian", nomeAngelo = "Lucio";
@@ -120,7 +120,7 @@ public final class TestGiocatoriVivi
         verificaAssassinioAmato(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Giullare", "Capo branco" })
+    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Giovane lupo", "Giullare" })
     public void testAttaccoAssassinoAmatoAngeloCustodeStregato(String nomeRuolo)
     {
         String nomeVittima = "Cristian", nomeAngelo = "Lucio";
