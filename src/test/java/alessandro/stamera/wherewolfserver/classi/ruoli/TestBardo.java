@@ -72,6 +72,17 @@ public final class TestBardo
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Il vostro Ruolo, come quello dell’Oste, funzionerà meglio se resterete nascosti e lascerete che sia il Moderatore a dare le " +
+            "informazioni dovute alla vostra presenza in gioco. Trovare un’Aura Bianca è di gran lunga più probabile, quindi, anche se di per sé " +
+            "è un’informazione meno importante, potrebbe essere che il villaggio sappia fin da subito della vostra presenza in gioco. Ogni volta " +
+            "che il Moderatore, al mattino, dirà che non giungono voci, voi saprete che la Veggente, se ancora in vita, avrà trovato un’Aura " +
+            "Oscura, starà a voi capire come e quando condividere con gli altri questa informazione.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
