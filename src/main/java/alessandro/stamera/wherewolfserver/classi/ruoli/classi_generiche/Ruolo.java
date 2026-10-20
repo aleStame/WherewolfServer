@@ -33,9 +33,9 @@ public class Ruolo
 
     private Categoria categoria;
 
-    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico, String consigli)
     {
-        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA, "");
+        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA, consigli);
     }
 
     public Ruolo

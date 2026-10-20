@@ -9,7 +9,10 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 public class PiccoloPopolo extends Ruolo
 {
 
-    public PiccoloPopolo(String nome, Aura aura, String descrizione) { super(nome, aura, descrizione, 1, true); }
+    public PiccoloPopolo(String nome, Aura aura, String descrizione, String consigli)
+    {
+        super(nome, aura, descrizione, 1, true, consigli);
+    }
 
     @Override public EsitoAttacco gildata() { return FALLITO; }
 

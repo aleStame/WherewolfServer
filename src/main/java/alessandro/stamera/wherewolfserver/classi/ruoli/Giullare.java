@@ -15,7 +15,7 @@ public final class Giullare extends Ruolo
             "Giullare", BIANCA,
             "Se viene messo al rogo, il giorno successivo il rogo sarà annullato a prescindere dai voti e dai poteri utilizzati. " +
             "Vince se viene messo al rogo.",
-            1, false
+            1, false, null
         );
     }
 

@@ -15,7 +15,7 @@ public final class Megera extends Ruolo
     "Megera", NERA,
 "La prima notte viene individuata da tutte le creature dell'ombra. Se viene indicata da un mistico, fino a che la Megera è in gioco, " +
           "quel giocatore diventa Maledetto, riceverà sempre responsi negativi e non potrà più proteggere. Vince con qualsiasi creatura dell'ombra",
-     3, true
+     3, true, null
         );
     }
 
