@@ -78,6 +78,18 @@ public final class TestEremita
 
     @Test public void testProgenizzazioneNosferatu() { verificaAttacco(ruolo.attaccoNosferatu());}
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Essendo immuni all'attacco di tutte le Creature dell'Ombra, dovete cercare di guadagnarvi la fiducia del Villaggio, poichè l'unica " +
+            "possibilità per voi di essere eliminati è quell di finire al rogo. Potrebbe non essere facile, poichè è vero che voi non morirete " +
+            "mai di notte, ma questo è vero anche per i Lupi Mannari, e questo potrebbe risultare sospetto col tempo. Una strategia efficace " +
+            "potrebbe essere anche quella di fingervi un ruolo importante per farvi attaccare dai Lupi Mannari o dal Vampiro e togliergli una " +
+            "notte di azione. L'unico inconveniente di questa strategia è che, se quel ruolo dovesse essere in gioco, il giocatore potrebbe " +
+            "uscire allo scoperto per cercare di smascherarvi facendo crollare il vostro piano e mettendo in pericolo lui stesso.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAttacco(EsitoAttacco esito) { assertThat(esito).isEqualTo(EREMITA_BECCATO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
