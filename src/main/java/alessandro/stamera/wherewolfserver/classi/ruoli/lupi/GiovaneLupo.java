@@ -15,7 +15,10 @@ public class GiovaneLupo extends Lupo
     "Giovane lupo",
 "La prima notte individua il Traditore e riconosce i lupi del branco e nelle altre apre gli occhi durante il turno dei lupi mannari. " +
           "Se viene messo al rogo, la notte successiva i lupi del branco attaccheranno due volte",
-     1, null
+     1,
+    "Di tutti i Lupi del Branco, siete quello che teme meno di finire sul rogo. Anzi, molto probabilmente dovrete morire per dare il " +
+            "maggiore contributo ai vostri compagni di branco. Il vostro compito sarà quindi quello di uscire allo scoperto anche bluffando un " +
+            "ruolo molto rischioso, per permettere ai vostri compagni di rimanere nascosti con ruoli che danno meno nell'occhio."
         );
     }
 

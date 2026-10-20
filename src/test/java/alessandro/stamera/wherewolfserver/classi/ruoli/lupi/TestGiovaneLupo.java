@@ -55,7 +55,7 @@ public final class TestGiovaneLupo
     {
         String messaggio =
             "Di tutti i Lupi del Branco, siete quello che teme meno di finire sul rogo. Anzi, molto probabilmente dovrete morire per dare il " +
-            "maggiore contributo ai costri compagni di branco. Il vostro compito sarà quindi quello di uscire allo scoperto anche bluffando un " +
+            "maggiore contributo ai vostri compagni di branco. Il vostro compito sarà quindi quello di uscire allo scoperto anche bluffando un " +
             "ruolo molto rischioso, per permettere ai vostri compagni di rimanere nascosti con ruoli che danno meno nell'occhio.";
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
