@@ -17,7 +17,12 @@ public final class CapoBranco extends Lupo
         (
     "Capo branco",
 "La prima notte individua il Traditore e riconosce i lupi del branco. Dalla seconda notte può indicare un giocatore, e questi " +
-          "viene ucciso.", 1, null
+          "viene ucciso.", 1,
+    "Come primo fra i Lupi Mannari, siete il nemico numero uno del Villaggio. Tutte le attenzioni dei giocatori saranno indirizzate a " +
+            "scoprire la vostra identità. Inizialmente sarete tentati di giocare nell’ombra e fingervi magari un semplice Contadino, ma " +
+            "ricordate che, se nessuno impersonerà un Ruolo importante diffondendo nel Villaggio false informazioni, gli abitanti avranno vita " +
+            "facile nello stanarvi.Voi siete il Capo Branco, il Lupo più forte, ma ricordate che nel branco potrebbe esserci anche il Reietto " +
+            "che ha lo scopo di uccidervi prima che la partita sia finita, quindi non fidatevi troppo nemmeno dei vostri compagni di branco."
         );
     }
 
