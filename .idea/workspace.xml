@@ -11,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/TestEremita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/TestEremita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/TestContadino.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/TestContadino.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
@@ -236,9 +236,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestCapoGilda.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestEremita.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestEremita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestEremita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/TestContadino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/TestContadino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -445,22 +445,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-00843" summary="VERDE: testProtezioneStregaContadinoMostro riuscito">
-      <option name="closed" value="true" />
-      <created>1792140906928</created>
-      <option name="number" value="00843" />
-      <option name="presentableId" value="LOCAL-00843" />
-      <option name="project" value="LOCAL" />
-      <updated>1792140906929</updated>
-    </task>
-    <task id="LOCAL-00844" summary="VERDE DIRETTO: testMorteVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1792142298193</created>
-      <option name="number" value="00844" />
-      <option name="presentableId" value="LOCAL-00844" />
-      <option name="project" value="LOCAL" />
-      <updated>1792142298206</updated>
     </task>
     <task id="LOCAL-00845" summary="VERDE DIRETTO: testMorteVampiroAmato riuscito">
       <option name="closed" value="true" />
@@ -838,7 +822,23 @@
       <option name="project" value="LOCAL" />
       <updated>1792489013993</updated>
     </task>
-    <option name="localTasksCounter" value="892" />
+    <task id="LOCAL-00892" summary="ROSSO: testConsigliGioco non riuscito">
+      <option name="closed" value="true" />
+      <created>1792489368730</created>
+      <option name="number" value="00892" />
+      <option name="presentableId" value="LOCAL-00892" />
+      <option name="project" value="LOCAL" />
+      <updated>1792489368730</updated>
+    </task>
+    <task id="LOCAL-00893" summary="VERDE: testConsigliGioco riuscito">
+      <option name="closed" value="true" />
+      <created>1792489665271</created>
+      <option name="number" value="00893" />
+      <option name="presentableId" value="LOCAL-00893" />
+      <option name="project" value="LOCAL" />
+      <updated>1792489665271</updated>
+    </task>
+    <option name="localTasksCounter" value="894" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
