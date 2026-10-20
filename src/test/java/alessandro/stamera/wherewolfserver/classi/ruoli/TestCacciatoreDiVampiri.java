@@ -72,6 +72,18 @@ public final class TestCacciatoreDiVampiri
 
     @Test public void testVampirizzazione() { verificaMorto(ruolo.vampirizzazione()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Il Vampiro è una delle minacce più insidiose per il Villaggio e voi siete l’unica reale risorsa contro di esso. La vostra strategia " +
+            "dovrebbe essere quella di farvi attaccare da lui traendolo in inganno, magari fingendo di essere una facile preda da attaccare. La " +
+            "parte difficile del vostro Ruolo sarà anche quella di far in modo che i giocatori si ricordino della minaccia del Vampiro, senza " +
+            "essere costretti a rivelarvi, annullando del tutto la possibilità di ucciderlo. Il Nosferatu è una minaccia del tutto diversa dal " +
+            "Vampiro. Da una parte, egli è un pericolo ancora maggiore per i Lupi Mannari, e quindi saranno loro i primi a cercare di ucciderlo. " +
+            "Dall’altra, voi per ucciderlo avrete una sola possibilità, poiché, per farlo, dovreste farvi prima uccidere voi stessi!";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaMorto(EsitoAttacco esito) { assertThat(esito).isEqualTo(MORTO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
