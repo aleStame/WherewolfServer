@@ -56,6 +56,17 @@ public final class TestCapoBranco
     @ParameterizedTest @MethodSource("getEsempiEsitoPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Come primo fra i Lupi Mannari, siete il nemico numero uno del Villaggio. Tutte le attenzioni dei giocatori saranno indirizzate a " +
+            "scoprire la vostra identità. Inizialmente sarete tentati di giocare nell’ombra e fingervi magari un semplice Contadino, ma " +
+            "ricordate che, se nessuno impersonerà un Ruolo importante diffondendo nel Villaggio false informazioni, gli abitanti avranno vita " +
+            "facile nello stanarvi.Voi siete il Capo Branco, il Lupo più forte, ma ricordate che nel branco potrebbe esserci anche il Reietto " +
+            "che ha lo scopo di uccidervi prima che la partita sia finita, quindi non fidatevi troppo nemmeno dei vostri compagni di branco.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private static Stream<Arguments> getEsempiEsitoPartita()
     {
         String[] capoBranco = { "Luisa", "Capo branco" }, lupoBranco = { "Maria", "Lupo del branco" }, lupoReietto = { "Mario", "Lupo reietto" };
