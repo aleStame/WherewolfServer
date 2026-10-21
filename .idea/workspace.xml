@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testConsigliGioco non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Guaritore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Guaritore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestGuaritore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestGuaritore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testConsigliGioco riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestInquisitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestInquisitore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,14 +212,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-00862" summary="VERDE DIRETTO: testAttaccoAssassino riuscito">
-      <option name="closed" value="true" />
-      <created>1792252378838</created>
-      <option name="number" value="00862" />
-      <option name="presentableId" value="LOCAL-00862" />
-      <option name="project" value="LOCAL" />
-      <updated>1792252378839</updated>
     </task>
     <task id="LOCAL-00863" summary="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
       <option name="closed" value="true" />
@@ -606,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792571737267</updated>
     </task>
-    <option name="localTasksCounter" value="911" />
+    <task id="LOCAL-00911" summary="VERDE: testConsigliGioco riuscito">
+      <option name="closed" value="true" />
+      <created>1792572059095</created>
+      <option name="number" value="00911" />
+      <option name="presentableId" value="LOCAL-00911" />
+      <option name="project" value="LOCAL" />
+      <updated>1792572059095</updated>
+    </task>
+    <option name="localTasksCounter" value="912" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,8 +646,8 @@
     <MESSAGE value="ROSSO: testConsiglioGioco non riuscito" />
     <MESSAGE value="VERDE: testConsiglioGioco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testConsigliGioco riuscito" />
-    <MESSAGE value="VERDE: testConsigliGioco riuscito" />
     <MESSAGE value="ROSSO: testConsigliGioco non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testConsigliGioco non riuscito" />
+    <MESSAGE value="VERDE: testConsigliGioco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testConsigliGioco riuscito" />
   </component>
 </project>
