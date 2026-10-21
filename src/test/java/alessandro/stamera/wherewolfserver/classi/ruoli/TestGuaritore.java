@@ -78,11 +78,11 @@ public final class TestGuaritore
     {
         String messaggio =
             "Il Guaritore è l'unico ruolo che può far guadagnare una notte al Villaggio con una certezza assoluta. Tenete a mente che dovrete " +
-            "usare il vostro potere prima di essere uccisi o, peggio ancora, di essere costretti a rivelarvi, perché a quel punto sareste voi ad " +
-            "essere attaccati. Ma attenzione a chi salvate, ricordate che non tutti i giocatori che vengono uccisi di notte giocano per il " +
-            "Villaggio! Siete l'unico in gioco a poter tenere monitorato l'avanzamento del morbo. Ricordatevi che l'Appestato non si rende conto " +
-            "di quanti giocatori stia contagiando, sarete voi a doverlo fare uscire allo scoperto qualora la situazione diventi troppo pericolosa " +
-            "per il Villaggio.";
+            "usare il vostro potere prima di essere uccisi o, peggio ancora, di essere costretti a rivelarvi, perché a quel punto sareste voi " +
+            "ad essere attaccati. Ma attenzione a chi salvate, ricordate che non tutti i giocatori che vengono uccisi di notte giocano per il " +
+            "Villaggio! Siete l'unico in gioco a poter tenere monitorato l'avanzamento del morbo. Ricordatevi che l'Appestato non si rende " +
+            "conto di quanti giocatori stia contagiando, sarete voi a doverlo fare uscire allo scoperto qualora la situazione diventi troppo " +
+            "pericolosa per il Villaggio.";
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
