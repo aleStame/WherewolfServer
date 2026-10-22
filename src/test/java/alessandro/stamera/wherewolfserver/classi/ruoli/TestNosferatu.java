@@ -79,6 +79,17 @@ public final class TestNosferatu
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "A differenza del Vampiro, il vostro potere è molto più visibile sia per il villaggio, ma soprattutto per i Lupi Mannari, che " +
+            "vedranno le loro vittime ancora in vita alla fine della notte. State molto attenti ad usarlo indiscriminatamente. Da una parte " +
+            "perché provochereste una ritorsione dei Lupi Mannari ed essi inizierebbero ad uccidere le vostre Progenie, di cui conoscono " +
+            "perfettamente l’identità. Dall’altra, perché, se usato in maniera più sporadica, il villaggio potrebbe rimanere nel dubbio che " +
+            "siano state altre le cause della mancata morte durante la notte.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testVittoriaNosferatu(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
 
