@@ -73,6 +73,16 @@ public final class TestPosseduto
 
     @Test public void testVampirizzazione() { verificaAttaccoPosseduto(ruolo.vampirizzazione()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Quello del Posseduto è un ruolo dell’Ombra diverso da tutti gli altri. Se siete il primo dei giocatori ad avere il ruolo, la vostra " +
+            "posizione è la più delicata di tutte, in quanto non avete una seconda identità a vostro supporto. Il vostro scopo è quello di essere " +
+            "uccisi dai Lupi il più in fretta possibile, per poter passare il Ruolo al giocatore che sembra godere maggiormente della fiducia del " +
+            "villaggio.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAttaccoPosseduto(EsitoAttacco esito) { assertThat(esito).isEqualTo(TROVATO_POSSEDUTO); }
 
     private void verificaAuraOscura(Aura aura) { assertThat(aura).isEqualTo(NERA); }
