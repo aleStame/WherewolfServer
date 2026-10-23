@@ -68,6 +68,17 @@ public final class TestOste
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "L'Oste è un ruolo interessante da giocare, in quanto consente di smentire le affermazioni di presunte Veggenti senza che nessuno " +
+            "debba rivelarsi. Anzi, il fatto che l'Oste sia in gioco dovrebbe rimanere segreto il più a lungo possibile, per fare in modo che le " +
+            "false Veggenti si tradiscano da sole. A differenza del Bardo, il vostro potere si manifesterà meno volte, ma quando lo farà tutti " +
+            "sapranno che un potenziale nemico è stato individuato quella notte. Se la Veggente il giorno prima si fosse rivelata e avesse detto " +
+            "chi avrebbe indagato, il suo responso si saprebbe anche se i Lupi Mannari l'avessero uccisa quella notte stessa.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
