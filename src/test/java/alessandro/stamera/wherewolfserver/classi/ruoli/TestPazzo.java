@@ -68,7 +68,7 @@ public final class TestPazzo
     @Test public void testConsigliGioco()
     {
         String messaggio =
-            "C'è un solo motivo perchè i Lupo vorranno attaccarvi: dovranno credere veramente che siate chi dite di essere, e chi dite di essere " +
+            "C'è un solo motivo perché i Lupo vorranno attaccarvi: dovranno credere veramente che siate chi dite di essere, e chi dite di essere " +
             "dovrà essere per loro un nemico prioritario. Sicuramente la scelta migliore è quella di fingervi Veggente o Strega. Ma attenzione: " +
             "se i Lupi capiranno che state bluffando, vi trascureranno e vi lasceranno in vita, mentre se non sarete credibili per il villaggio " +
             "finirete sul rogo. In entrambi i casi non raggiungerete il vostro scopo. Il Pazzo è un ruolo molto difficile da giocare. Dovrete " +
