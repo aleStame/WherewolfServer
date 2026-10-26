@@ -9,9 +9,9 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.
 public class Villaggio extends Uomini
 {
 
-    public Villaggio(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    public Villaggio(String nome, Aura aura, String descrizione, int lune, boolean mistico, String consigli)
     {
-        super(nome, VILLAGGIO, aura, descrizione, lune, mistico);
+        super(nome, VILLAGGIO, aura, descrizione, lune, mistico, consigli);
     }
 
     @Override public boolean isVillaggio() { return true; }
@@ -28,7 +28,7 @@ public class Villaggio extends Uomini
     private EsitoPartita getEsitoPartitaSenzaOmbre(Partita partita)
     {
         EsitoPartita esito = getEsitoPartitaCriminali(partita);
-        if(isCriminale()) esito = new Criminale(getNome(), controlloVeggente(), getDescrizione()).getEsitoPartita(partita);
+        if(isCriminale()) esito = new Criminale(getNome(), controlloVeggente(), getDescrizione(), null).getEsitoPartita(partita);
         return esito;
     }
 

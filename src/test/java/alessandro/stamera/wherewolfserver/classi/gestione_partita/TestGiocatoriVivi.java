@@ -1246,7 +1246,7 @@ public final class TestGiocatoriVivi
     {
         String nomeAngelo = "Elia", nomeAmato = "Lino";
         String[][] giocatori =
-                new String[][] { { nomeAngelo, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo }, { "Giuila", "Giulietta" } };
+            new String[][] { { nomeAngelo, "Angelo custode" }, { "Alice", tipoLupo }, { nomeAmato, nomeRuolo }, { "Giuila", "Giulietta" } };
         inizializzaGiocatori(giocatori);
         protezioneStrega(nomeAngelo);
         verificaAttaccoAngelo(tipoLupo, nomeAmato);

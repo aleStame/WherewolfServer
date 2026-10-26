@@ -19,7 +19,12 @@ public final class AngeloCustode extends Amanti
       "Angelo custode",
   "La prima notte indica un giocatore, l'Amato, che viene avvisato. Se quel giocatore dovesse essere accusato, l'Angelo custode sarà " +
             "accusato al suo posto. Se dovesse essere attaccato e ucciso durante la notte, sarà invece attaccato, avvisato e ucciso l'Angelo " +
-            "custode."
+            "custode.",
+            "La vostra partita sarà interamente concentrata sul giocatore che scegliete di proteggere. La vostra abilità gli darà una seconda " +
+            "possibilità nel caso che venga attaccato o Accusato, ma la protezione migliore che potrete dargli sarà quella di rafforzare la sua " +
+            "credibilità durante il giorno.\nChe poi sia un villico, un Criminale o una Creatura dell’Ombra poco importa. Ricordate che, avendo " +
+            "il doppio di possibilità di essere Accusati, presto anche voi dovrete crearvi un alibi, in quanto, se diceste chi siete la vostra " +
+            "credibilità verso chi state proteggendo sarebbe del tutto compromessa."
         );
     }
 

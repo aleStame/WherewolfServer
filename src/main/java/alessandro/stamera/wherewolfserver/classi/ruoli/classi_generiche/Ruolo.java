@@ -17,7 +17,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.N
 public class Ruolo
 {
 
-    private final String nome, descrizione;
+    private final String nome, descrizione, consigli;
 
     private Fazione fazione;
 
@@ -33,12 +33,15 @@ public class Ruolo
 
     private Categoria categoria;
 
-    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico, String consigli)
     {
-        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA);
+        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA, consigli);
     }
 
-    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, Categoria categoria)
+    public Ruolo
+    (
+        String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, Categoria categoria, String consigli
+    )
     {
         this.nome = nome;
         cambiaFazione(fazione);
@@ -49,6 +52,7 @@ public class Ruolo
         tratti = new Tratti();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
+        this.consigli = consigli;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
@@ -278,6 +282,8 @@ public class Ruolo
     }
 
     public EsitoAttacco passaPosseduto() { return RIUSCITO; }
+
+    public String getConsigli() { return consigli; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 

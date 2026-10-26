@@ -12,7 +12,8 @@ public final class Leprecauno extends PiccoloPopolo
     {
         super
         (
-    "Leprecauno", BIANCA, "La prima notte riconosce le altre creature del Piccolo Popolo. Inoltre, è protetto da tutti i mistici"
+    "Leprecauno", BIANCA, "La prima notte riconosce le altre creature del Piccolo Popolo. Inoltre, è protetto da tutti i mistici",
+                null
         );
     }
 

@@ -10,7 +10,7 @@ public final class Goblin extends PiccoloPopolo
 
     private Goblin()
     {
-        super("Goblin", NERA, "La prima notte riconosce le altre creature del piccolo popolo ed è protetto da tutti i mistici.");
+        super("Goblin", NERA, "La prima notte riconosce le altre creature del piccolo popolo ed è protetto da tutti i mistici.", null);
     }
 
     @Override public boolean isGoblin() { return true; }

@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeStregato riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testConsigliGioco non riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.TestUtenti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestAura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TestCategoria.html" afterDir="false" />
@@ -93,8 +94,12 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestStrega.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestStrega.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTraditore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestTraditore.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestVeggente.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestVeggente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.html" afterDir="false" />
@@ -210,8 +215,12 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSensitiva.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSidhe.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestSpia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestStrega.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestStrega.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTemplare.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTraditore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestTraditore.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestVampiro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestVeggente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestVeggente.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestCreatureOmbra.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuoliFactory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestRuolo.xml" afterDir="false" />
@@ -236,9 +245,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/IstanzaRuolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,8 +282,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -318,10 +327,11 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/giovaneLupo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/consigliDiGioco&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -333,6 +343,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="alessandro.stamera.wherewolfserver.classi.ruoli" />
       <recent name="alessandro.stamera.wherewolfserver.classi.eccezioni" />
       <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
     </key>
@@ -445,399 +456,399 @@
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
     </task>
-    <task id="LOCAL-00817" summary="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
+    <task id="LOCAL-00912" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1791990676665</created>
-      <option name="number" value="00817" />
-      <option name="presentableId" value="LOCAL-00817" />
+      <created>1792572564107</created>
+      <option name="number" value="00912" />
+      <option name="presentableId" value="LOCAL-00912" />
       <option name="project" value="LOCAL" />
-      <updated>1791990676665</updated>
+      <updated>1792572564107</updated>
     </task>
-    <task id="LOCAL-00818" summary="VERDE DIRETTO: testAttaccoAssassino riuscito">
+    <task id="LOCAL-00913" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1791991411595</created>
-      <option name="number" value="00818" />
-      <option name="presentableId" value="LOCAL-00818" />
+      <created>1792574792356</created>
+      <option name="number" value="00913" />
+      <option name="presentableId" value="LOCAL-00913" />
       <option name="project" value="LOCAL" />
-      <updated>1791991411595</updated>
+      <updated>1792574792357</updated>
     </task>
-    <task id="LOCAL-00819" summary="VERDE DIRETTO: testAttaccoStregatoAssassino riuscito">
+    <task id="LOCAL-00914" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1791991776514</created>
-      <option name="number" value="00819" />
-      <option name="presentableId" value="LOCAL-00819" />
+      <created>1792575469895</created>
+      <option name="number" value="00914" />
+      <option name="presentableId" value="LOCAL-00914" />
       <option name="project" value="LOCAL" />
-      <updated>1791991776514</updated>
+      <updated>1792575469901</updated>
     </task>
-    <task id="LOCAL-00820" summary="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
+    <task id="LOCAL-00915" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1791992045629</created>
-      <option name="number" value="00820" />
-      <option name="presentableId" value="LOCAL-00820" />
+      <created>1792575812893</created>
+      <option name="number" value="00915" />
+      <option name="presentableId" value="LOCAL-00915" />
       <option name="project" value="LOCAL" />
-      <updated>1791992045629</updated>
+      <updated>1792575812893</updated>
     </task>
-    <task id="LOCAL-00821" summary="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito">
+    <task id="LOCAL-00916" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1791992270422</created>
-      <option name="number" value="00821" />
-      <option name="presentableId" value="LOCAL-00821" />
+      <created>1792576283555</created>
+      <option name="number" value="00916" />
+      <option name="presentableId" value="LOCAL-00916" />
       <option name="project" value="LOCAL" />
-      <updated>1791992270422</updated>
+      <updated>1792576283557</updated>
     </task>
-    <task id="LOCAL-00822" summary="VERDE DIRETTO: testGuarigioneAngeloPostAttaccoAmato riuscito">
+    <task id="LOCAL-00917" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1791992681627</created>
-      <option name="number" value="00822" />
-      <option name="presentableId" value="LOCAL-00822" />
+      <created>1792576755350</created>
+      <option name="number" value="00917" />
+      <option name="presentableId" value="LOCAL-00917" />
       <option name="project" value="LOCAL" />
-      <updated>1791992681627</updated>
+      <updated>1792576755350</updated>
     </task>
-    <task id="LOCAL-00823" summary="VERDE DIRETTO: testAttaccoAmatoRomeoAssassino riuscito">
+    <task id="LOCAL-00918" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1791992926430</created>
-      <option name="number" value="00823" />
-      <option name="presentableId" value="LOCAL-00823" />
+      <created>1792577195138</created>
+      <option name="number" value="00918" />
+      <option name="presentableId" value="LOCAL-00918" />
       <option name="project" value="LOCAL" />
-      <updated>1791992926430</updated>
+      <updated>1792577195138</updated>
     </task>
-    <task id="LOCAL-00824" summary="VERDE DIRETTO: testAttaccoAmatoStregatoAssassino riuscito">
+    <task id="LOCAL-00919" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1791993218423</created>
-      <option name="number" value="00824" />
-      <option name="presentableId" value="LOCAL-00824" />
+      <created>1792577405207</created>
+      <option name="number" value="00919" />
+      <option name="presentableId" value="LOCAL-00919" />
       <option name="project" value="LOCAL" />
-      <updated>1791993218423</updated>
+      <updated>1792577405208</updated>
     </task>
-    <task id="LOCAL-00825" summary="VERDE DIRETTO: testAttaccoAmatoAssassinoAngeloCustodeRomeo riuscito">
+    <task id="LOCAL-00920" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1791993438684</created>
-      <option name="number" value="00825" />
-      <option name="presentableId" value="LOCAL-00825" />
+      <created>1792577813644</created>
+      <option name="number" value="00920" />
+      <option name="presentableId" value="LOCAL-00920" />
       <option name="project" value="LOCAL" />
-      <updated>1791993438684</updated>
+      <updated>1792577813644</updated>
     </task>
-    <task id="LOCAL-00826" summary="VERDE DIRETTO: testAttaccoAmatoAssassinoAngeloCustodeStregato riuscito">
+    <task id="LOCAL-00921" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1791993710391</created>
-      <option name="number" value="00826" />
-      <option name="presentableId" value="LOCAL-00826" />
+      <created>1792596950569</created>
+      <option name="number" value="00921" />
+      <option name="presentableId" value="LOCAL-00921" />
       <option name="project" value="LOCAL" />
-      <updated>1791993710391</updated>
+      <updated>1792596950570</updated>
     </task>
-    <task id="LOCAL-00827" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
+    <task id="LOCAL-00922" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1791994742596</created>
-      <option name="number" value="00827" />
-      <option name="presentableId" value="LOCAL-00827" />
+      <created>1792597677069</created>
+      <option name="number" value="00922" />
+      <option name="presentableId" value="LOCAL-00922" />
       <option name="project" value="LOCAL" />
-      <updated>1791994742597</updated>
+      <updated>1792597677069</updated>
     </task>
-    <task id="LOCAL-00828" summary="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito">
+    <task id="LOCAL-00923" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1791995012327</created>
-      <option name="number" value="00828" />
-      <option name="presentableId" value="LOCAL-00828" />
+      <created>1792598546117</created>
+      <option name="number" value="00923" />
+      <option name="presentableId" value="LOCAL-00923" />
       <option name="project" value="LOCAL" />
-      <updated>1791995012327</updated>
+      <updated>1792598546117</updated>
     </task>
-    <task id="LOCAL-00829" summary="VERDE DIRETTO: testAttaccoLupoBrancoContadino riuscito">
+    <task id="LOCAL-00924" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792055723359</created>
-      <option name="number" value="00829" />
-      <option name="presentableId" value="LOCAL-00829" />
+      <created>1792599091146</created>
+      <option name="number" value="00924" />
+      <option name="presentableId" value="LOCAL-00924" />
       <option name="project" value="LOCAL" />
-      <updated>1792055723360</updated>
+      <updated>1792599091146</updated>
     </task>
-    <task id="LOCAL-00830" summary="VERDE DIRETTO: testAttaccoLupoReiettoContadino riuscito">
+    <task id="LOCAL-00925" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792056013681</created>
-      <option name="number" value="00830" />
-      <option name="presentableId" value="LOCAL-00830" />
+      <created>1792662381240</created>
+      <option name="number" value="00925" />
+      <option name="presentableId" value="LOCAL-00925" />
       <option name="project" value="LOCAL" />
-      <updated>1792056013681</updated>
+      <updated>1792662381240</updated>
     </task>
-    <task id="LOCAL-00831" summary="VERDE DIRETTO: testAttaccoLupoSolitarioContadino riuscito">
+    <task id="LOCAL-00926" summary="ROSSO. testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792056210960</created>
-      <option name="number" value="00831" />
-      <option name="presentableId" value="LOCAL-00831" />
+      <created>1792662882319</created>
+      <option name="number" value="00926" />
+      <option name="presentableId" value="LOCAL-00926" />
       <option name="project" value="LOCAL" />
-      <updated>1792056210960</updated>
+      <updated>1792662882319</updated>
     </task>
-    <task id="LOCAL-00832" summary="VERDE DIRETTO: testAttaccoLupoBrancoAmatoContadino riuscito">
+    <task id="LOCAL-00927" summary="VERDE: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792056443056</created>
-      <option name="number" value="00832" />
-      <option name="presentableId" value="LOCAL-00832" />
+      <created>1792663105431</created>
+      <option name="number" value="00927" />
+      <option name="presentableId" value="LOCAL-00927" />
       <option name="project" value="LOCAL" />
-      <updated>1792056443056</updated>
+      <updated>1792663105431</updated>
     </task>
-    <task id="LOCAL-00833" summary="VERDE DIRETTO: testAttaccoLupoReiettoAmatoContadino riuscito">
+    <task id="LOCAL-00928" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792056931228</created>
-      <option name="number" value="00833" />
-      <option name="presentableId" value="LOCAL-00833" />
+      <created>1792664067171</created>
+      <option name="number" value="00928" />
+      <option name="presentableId" value="LOCAL-00928" />
       <option name="project" value="LOCAL" />
-      <updated>1792056931229</updated>
+      <updated>1792664067176</updated>
     </task>
-    <task id="LOCAL-00834" summary="VERDE DIRETTO: testAttaccoLupoSolitarioAmatoContadino riuscito">
+    <task id="LOCAL-00929" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792057212301</created>
-      <option name="number" value="00834" />
-      <option name="presentableId" value="LOCAL-00834" />
+      <created>1792664402478</created>
+      <option name="number" value="00929" />
+      <option name="presentableId" value="LOCAL-00929" />
       <option name="project" value="LOCAL" />
-      <updated>1792057212301</updated>
+      <updated>1792664402478</updated>
     </task>
-    <task id="LOCAL-00835" summary="VERDE DIRETTO: testAttaccoLupoBrancoRomeizzatoContadino riuscito">
+    <task id="LOCAL-00930" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792057715922</created>
-      <option name="number" value="00835" />
-      <option name="presentableId" value="LOCAL-00835" />
+      <created>1792675870633</created>
+      <option name="number" value="00930" />
+      <option name="presentableId" value="LOCAL-00930" />
       <option name="project" value="LOCAL" />
-      <updated>1792057715922</updated>
+      <updated>1792675870707</updated>
     </task>
-    <task id="LOCAL-00836" summary="VERDE DIRETTO: testAttaccoLupoReiettoRomeizzatoContadino riuscito">
+    <task id="LOCAL-00931" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792058036894</created>
-      <option name="number" value="00836" />
-      <option name="presentableId" value="LOCAL-00836" />
+      <created>1792676294621</created>
+      <option name="number" value="00931" />
+      <option name="presentableId" value="LOCAL-00931" />
       <option name="project" value="LOCAL" />
-      <updated>1792058036894</updated>
+      <updated>1792676294621</updated>
     </task>
-    <task id="LOCAL-00837" summary="VERDE DIRETTO: testAttaccoLupoSolitarioRomeizzatoContadino riuscito">
+    <task id="LOCAL-00932" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792058349036</created>
-      <option name="number" value="00837" />
-      <option name="presentableId" value="LOCAL-00837" />
+      <created>1792677232452</created>
+      <option name="number" value="00932" />
+      <option name="presentableId" value="LOCAL-00932" />
       <option name="project" value="LOCAL" />
-      <updated>1792058349036</updated>
+      <updated>1792677232549</updated>
     </task>
-    <task id="LOCAL-00838" summary="VERDE DIRETTO: testControlloMedium riuscito">
+    <task id="LOCAL-00933" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792067627653</created>
-      <option name="number" value="00838" />
-      <option name="presentableId" value="LOCAL-00838" />
+      <created>1792677655409</created>
+      <option name="number" value="00933" />
+      <option name="presentableId" value="LOCAL-00933" />
       <option name="project" value="LOCAL" />
-      <updated>1792067627657</updated>
+      <updated>1792677655409</updated>
     </task>
-    <task id="LOCAL-00839" summary="ROSSO: testControlloMedium non riuscito">
+    <task id="LOCAL-00934" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792067938273</created>
-      <option name="number" value="00839" />
-      <option name="presentableId" value="LOCAL-00839" />
+      <created>1792682518669</created>
+      <option name="number" value="00934" />
+      <option name="presentableId" value="LOCAL-00934" />
       <option name="project" value="LOCAL" />
-      <updated>1792067938273</updated>
+      <updated>1792682518669</updated>
     </task>
-    <task id="LOCAL-00840" summary="VERDE: testControlloMedium riuscito">
+    <task id="LOCAL-00935" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792069100560</created>
-      <option name="number" value="00840" />
-      <option name="presentableId" value="LOCAL-00840" />
+      <created>1792682722580</created>
+      <option name="number" value="00935" />
+      <option name="presentableId" value="LOCAL-00935" />
       <option name="project" value="LOCAL" />
-      <updated>1792069100560</updated>
+      <updated>1792682722580</updated>
     </task>
-    <task id="LOCAL-00841" summary="VERDE DIRETTO: testFunzionamentoNegromanteControRomeo riuscito">
+    <task id="LOCAL-00936" summary="ROSSo: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792069480454</created>
-      <option name="number" value="00841" />
-      <option name="presentableId" value="LOCAL-00841" />
+      <created>1792683032499</created>
+      <option name="number" value="00936" />
+      <option name="presentableId" value="LOCAL-00936" />
       <option name="project" value="LOCAL" />
-      <updated>1792069480454</updated>
+      <updated>1792683032499</updated>
     </task>
-    <task id="LOCAL-00842" summary="ROSSO: testProtezioneStregaContadinoMostro riuscito">
+    <task id="LOCAL-00937" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792077235855</created>
-      <option name="number" value="00842" />
-      <option name="presentableId" value="LOCAL-00842" />
+      <created>1792683298892</created>
+      <option name="number" value="00937" />
+      <option name="presentableId" value="LOCAL-00937" />
       <option name="project" value="LOCAL" />
-      <updated>1792077235855</updated>
+      <updated>1792683298901</updated>
     </task>
-    <task id="LOCAL-00843" summary="VERDE: testProtezioneStregaContadinoMostro riuscito">
+    <task id="LOCAL-00938" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792140906928</created>
-      <option name="number" value="00843" />
-      <option name="presentableId" value="LOCAL-00843" />
+      <created>1792746941263</created>
+      <option name="number" value="00938" />
+      <option name="presentableId" value="LOCAL-00938" />
       <option name="project" value="LOCAL" />
-      <updated>1792140906929</updated>
+      <updated>1792746941265</updated>
     </task>
-    <task id="LOCAL-00844" summary="VERDE DIRETTO: testMorteVampiro riuscito">
+    <task id="LOCAL-00939" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792142298193</created>
-      <option name="number" value="00844" />
-      <option name="presentableId" value="LOCAL-00844" />
+      <created>1792747395699</created>
+      <option name="number" value="00939" />
+      <option name="presentableId" value="LOCAL-00939" />
       <option name="project" value="LOCAL" />
-      <updated>1792142298206</updated>
+      <updated>1792747395699</updated>
     </task>
-    <task id="LOCAL-00845" summary="VERDE DIRETTO: testMorteVampiroAmato riuscito">
+    <task id="LOCAL-00940" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792142568258</created>
-      <option name="number" value="00845" />
-      <option name="presentableId" value="LOCAL-00845" />
+      <created>1792750340844</created>
+      <option name="number" value="00940" />
+      <option name="presentableId" value="LOCAL-00940" />
       <option name="project" value="LOCAL" />
-      <updated>1792142568258</updated>
+      <updated>1792750340844</updated>
     </task>
-    <task id="LOCAL-00846" summary="VERDE DIRETTO: testControlloVeggente riuscito">
+    <task id="LOCAL-00941" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792154191833</created>
-      <option name="number" value="00846" />
-      <option name="presentableId" value="LOCAL-00846" />
+      <created>1792750578446</created>
+      <option name="number" value="00941" />
+      <option name="presentableId" value="LOCAL-00941" />
       <option name="project" value="LOCAL" />
-      <updated>1792154191833</updated>
+      <updated>1792750578447</updated>
     </task>
-    <task id="LOCAL-00847" summary="REFACTORING: definizione del metodo verificaAuraNeraVeggente">
+    <task id="LOCAL-00942" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792154536036</created>
-      <option name="number" value="00847" />
-      <option name="presentableId" value="LOCAL-00847" />
+      <created>1792763903493</created>
+      <option name="number" value="00942" />
+      <option name="presentableId" value="LOCAL-00942" />
       <option name="project" value="LOCAL" />
-      <updated>1792154536036</updated>
+      <updated>1792763903493</updated>
     </task>
-    <task id="LOCAL-00848" summary="REFACTORING: definizione del metodo verificaAura">
+    <task id="LOCAL-00943" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792155171546</created>
-      <option name="number" value="00848" />
-      <option name="presentableId" value="LOCAL-00848" />
+      <created>1792764174817</created>
+      <option name="number" value="00943" />
+      <option name="presentableId" value="LOCAL-00943" />
       <option name="project" value="LOCAL" />
-      <updated>1792155171546</updated>
+      <updated>1792764174817</updated>
     </task>
-    <task id="LOCAL-00849" summary="VERDE DIRETTO: testAuraOscura riuscito">
+    <task id="LOCAL-00944" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792155394374</created>
-      <option name="number" value="00849" />
-      <option name="presentableId" value="LOCAL-00849" />
+      <created>1792764498738</created>
+      <option name="number" value="00944" />
+      <option name="presentableId" value="LOCAL-00944" />
       <option name="project" value="LOCAL" />
-      <updated>1792155394374</updated>
+      <updated>1792764498738</updated>
     </task>
-    <task id="LOCAL-00850" summary="VERDE DIRETTO: testAuraOscura riuscito">
+    <task id="LOCAL-00945" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792164189897</created>
-      <option name="number" value="00850" />
-      <option name="presentableId" value="LOCAL-00850" />
+      <created>1792764748492</created>
+      <option name="number" value="00945" />
+      <option name="presentableId" value="LOCAL-00945" />
       <option name="project" value="LOCAL" />
-      <updated>1792164189941</updated>
+      <updated>1792764748493</updated>
     </task>
-    <task id="LOCAL-00851" summary="VERDE DIRETTO: testControlloVeggenteContadinoMostroPrimaNotte riuscito">
+    <task id="LOCAL-00946" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792165694380</created>
-      <option name="number" value="00851" />
-      <option name="presentableId" value="LOCAL-00851" />
+      <created>1792765139532</created>
+      <option name="number" value="00946" />
+      <option name="presentableId" value="LOCAL-00946" />
       <option name="project" value="LOCAL" />
-      <updated>1792165694380</updated>
+      <updated>1792765139532</updated>
     </task>
-    <task id="LOCAL-00852" summary="VERDE DIRETTO: testAttaccoPossedutoContadinoMostroNonProtetto riuscito">
+    <task id="LOCAL-00947" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792168096782</created>
-      <option name="number" value="00852" />
-      <option name="presentableId" value="LOCAL-00852" />
+      <created>1792765359042</created>
+      <option name="number" value="00947" />
+      <option name="presentableId" value="LOCAL-00947" />
       <option name="project" value="LOCAL" />
-      <updated>1792168096782</updated>
+      <updated>1792765359042</updated>
     </task>
-    <task id="LOCAL-00853" summary="ROSSO: testAttaccoPossedutoContadinoMostroStregato non riuscito">
+    <task id="LOCAL-00948" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792184162140</created>
-      <option name="number" value="00853" />
-      <option name="presentableId" value="LOCAL-00853" />
+      <created>1792831531059</created>
+      <option name="number" value="00948" />
+      <option name="presentableId" value="LOCAL-00948" />
       <option name="project" value="LOCAL" />
-      <updated>1792184162145</updated>
+      <updated>1792831531062</updated>
     </task>
-    <task id="LOCAL-00854" summary="VERDE: testAttaccoPossedutoContadinoMostroStregato riuscito">
+    <task id="LOCAL-00949" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792228743461</created>
-      <option name="number" value="00854" />
-      <option name="presentableId" value="LOCAL-00854" />
+      <created>1792831856969</created>
+      <option name="number" value="00949" />
+      <option name="presentableId" value="LOCAL-00949" />
       <option name="project" value="LOCAL" />
-      <updated>1792228743461</updated>
+      <updated>1792831856970</updated>
     </task>
-    <task id="LOCAL-00855" summary="ROSSO: testAttaccoPossedutoContadinoMostroRomeo non riuscito">
+    <task id="LOCAL-00950" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792229083882</created>
-      <option name="number" value="00855" />
-      <option name="presentableId" value="LOCAL-00855" />
+      <created>1792832642047</created>
+      <option name="number" value="00950" />
+      <option name="presentableId" value="LOCAL-00950" />
       <option name="project" value="LOCAL" />
-      <updated>1792229083882</updated>
+      <updated>1792832642047</updated>
     </task>
-    <task id="LOCAL-00856" summary="VERDE: testAttaccoPossedutoContadinoMostroRomeo riuscito">
+    <task id="LOCAL-00951" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792230048800</created>
-      <option name="number" value="00856" />
-      <option name="presentableId" value="LOCAL-00856" />
+      <created>1792832919381</created>
+      <option name="number" value="00951" />
+      <option name="presentableId" value="LOCAL-00951" />
       <option name="project" value="LOCAL" />
-      <updated>1792230048800</updated>
+      <updated>1792832919381</updated>
     </task>
-    <task id="LOCAL-00857" summary="VERDE: testAttaccoPossedutoContadinoMostroRomeo riuscito">
+    <task id="LOCAL-00952" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792230385114</created>
-      <option name="number" value="00857" />
-      <option name="presentableId" value="LOCAL-00857" />
+      <created>1792833358861</created>
+      <option name="number" value="00952" />
+      <option name="presentableId" value="LOCAL-00952" />
       <option name="project" value="LOCAL" />
-      <updated>1792230385114</updated>
+      <updated>1792833358861</updated>
     </task>
-    <task id="LOCAL-00858" summary="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito">
+    <task id="LOCAL-00953" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792230950420</created>
-      <option name="number" value="00858" />
-      <option name="presentableId" value="LOCAL-00858" />
+      <created>1792833963305</created>
+      <option name="number" value="00953" />
+      <option name="presentableId" value="LOCAL-00953" />
       <option name="project" value="LOCAL" />
-      <updated>1792230950420</updated>
+      <updated>1792833963305</updated>
     </task>
-    <task id="LOCAL-00859" summary="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito">
+    <task id="LOCAL-00954" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792231143021</created>
-      <option name="number" value="00859" />
-      <option name="presentableId" value="LOCAL-00859" />
+      <created>1792834794172</created>
+      <option name="number" value="00954" />
+      <option name="presentableId" value="LOCAL-00954" />
       <option name="project" value="LOCAL" />
-      <updated>1792231143022</updated>
+      <updated>1792834794172</updated>
     </task>
-    <task id="LOCAL-00860" summary="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito">
+    <task id="LOCAL-00955" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792231422698</created>
-      <option name="number" value="00860" />
-      <option name="presentableId" value="LOCAL-00860" />
+      <created>1792835888149</created>
+      <option name="number" value="00955" />
+      <option name="presentableId" value="LOCAL-00955" />
       <option name="project" value="LOCAL" />
-      <updated>1792231422698</updated>
+      <updated>1792835888149</updated>
     </task>
-    <task id="LOCAL-00861" summary="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito">
+    <task id="LOCAL-00956" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792231620839</created>
-      <option name="number" value="00861" />
-      <option name="presentableId" value="LOCAL-00861" />
+      <created>1793008965204</created>
+      <option name="number" value="00956" />
+      <option name="presentableId" value="LOCAL-00956" />
       <option name="project" value="LOCAL" />
-      <updated>1792231620839</updated>
+      <updated>1793008965208</updated>
     </task>
-    <task id="LOCAL-00862" summary="VERDE DIRETTO: testAttaccoAssassino riuscito">
+    <task id="LOCAL-00957" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792252378838</created>
-      <option name="number" value="00862" />
-      <option name="presentableId" value="LOCAL-00862" />
+      <created>1793009204765</created>
+      <option name="number" value="00957" />
+      <option name="presentableId" value="LOCAL-00957" />
       <option name="project" value="LOCAL" />
-      <updated>1792252378839</updated>
+      <updated>1793009204765</updated>
     </task>
-    <task id="LOCAL-00863" summary="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito">
+    <task id="LOCAL-00958" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792252786595</created>
-      <option name="number" value="00863" />
-      <option name="presentableId" value="LOCAL-00863" />
+      <created>1793011892876</created>
+      <option name="number" value="00958" />
+      <option name="presentableId" value="LOCAL-00958" />
       <option name="project" value="LOCAL" />
-      <updated>1792252786595</updated>
+      <updated>1793011892876</updated>
     </task>
-    <task id="LOCAL-00864" summary="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeRomeo riuscito">
+    <task id="LOCAL-00959" summary="VERDE: testConsigliGioco riuscito">
       <option name="closed" value="true" />
-      <created>1792253543501</created>
-      <option name="number" value="00864" />
-      <option name="presentableId" value="LOCAL-00864" />
+      <created>1793012787962</created>
+      <option name="number" value="00959" />
+      <option name="presentableId" value="LOCAL-00959" />
       <option name="project" value="LOCAL" />
-      <updated>1792253543502</updated>
+      <updated>1793012787963</updated>
     </task>
-    <task id="LOCAL-00865" summary="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeStregato riuscito">
+    <task id="LOCAL-00960" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
-      <created>1792253885223</created>
-      <option name="number" value="00865" />
-      <option name="presentableId" value="LOCAL-00865" />
+      <created>1793021518708</created>
+      <option name="number" value="00960" />
+      <option name="presentableId" value="LOCAL-00960" />
       <option name="project" value="LOCAL" />
-      <updated>1792253885223</updated>
+      <updated>1793021518708</updated>
     </task>
-    <option name="localTasksCounter" value="866" />
+    <option name="localTasksCounter" value="961" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -855,15 +866,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testControlloMedium riuscito" />
-    <MESSAGE value="ROSSO: testControlloMedium non riuscito" />
-    <MESSAGE value="VERDE: testControlloMedium riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testFunzionamentoNegromanteControRomeo riuscito" />
-    <MESSAGE value="ROSSO: testProtezioneStregaContadinoMostro non riuscito" />
-    <MESSAGE value="VERDE: testProtezioneStregaContadinoMostro riuscito" />
-    <MESSAGE value="ROSSO: testProtezioneStregaContadinoMostro non riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testMorteVampiro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testMorteVampiroAmato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testControlloVeggente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAuraNeraVeggente" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAura" />
@@ -880,6 +882,15 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeStregato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAssassinoAmatoAngeloCustodeStregato riuscito" />
+    <MESSAGE value="Merge branch 'feature/giovaneLupo' into develop" />
+    <MESSAGE value="ROSSO: testConsiglioGioco non riuscito" />
+    <MESSAGE value="VERDE: testConsiglioGioco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testConsigliGioco riuscito" />
+    <MESSAGE value="ROSSO. testConsigliGioco non riuscito" />
+    <MESSAGE value="VERDE: testConsigliGioco non riuscito" />
+    <MESSAGE value="ROSSo: testConsigliGioco non riuscito" />
+    <MESSAGE value="VERDE: testConsigliGioco riuscito" />
+    <MESSAGE value="ROSSO: testConsigliGioco non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testConsigliGioco non riuscito" />
   </component>
 </project>

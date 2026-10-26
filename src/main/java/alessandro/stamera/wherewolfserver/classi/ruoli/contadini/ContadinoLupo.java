@@ -23,7 +23,7 @@ public final class ContadinoLupo extends Contadino
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(isLupo()) esito = new Lupo(getNome(), getDescrizione(), getLune()).getEsitoPartita(partita);
+        if(isLupo()) esito = new Lupo(getNome(), getDescrizione(), getLune(), null).getEsitoPartita(partita);
         return esito;
     }
 

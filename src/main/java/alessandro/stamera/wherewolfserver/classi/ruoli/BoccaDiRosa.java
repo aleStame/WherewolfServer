@@ -13,7 +13,12 @@ public final class BoccaDiRosa extends Citta
         (
     "Bocca di rosa", NERA,
 "Può votare al ballottaggio anche se è accusata. In ogni votazione i voti che Bocca di rosa riceve vengono dimezzati, arrotondando " +
-          "per eccesso."
+          "per eccesso.",
+    "Come il Peccatore, siete un Ruolo dall’aura nera che gioca però per la vittoria degli Uomini. A differenza di lui, il vostro potere " +
+            "vi rende abbastanza protetti nelle votazioni, ma attenti a non farci troppo affidamento perché, se in troppi dovessero convincersi " +
+            "che siete un Lupo, potreste rischiare di finire ugualmente al rogo. Essendo un ruolo con fazione Città, diversi altri giocatori con " +
+            "la stessa fazione potrebbero beneficiare della vostra presenza e usare i loro poteri per proteggervi. Questo potrebbe essere un " +
+            "motivo in più per rivelarvi apertamente."
         );
     }
 

@@ -20,7 +20,7 @@ public final class TestInquisizione
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Inquisizione(null, null, null); }
+    @BeforeEach public void setUp() { ruolo = new Inquisizione(null, null, null, null); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(INQUISIZIONE); }
 

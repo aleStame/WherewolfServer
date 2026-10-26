@@ -39,6 +39,16 @@ public final class TestGiulietta
 
     @Test public void testAttaccoVampiro() { verificaGiuliettaBeccata(ruolo.vampirizzazione()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "La vostra sarà una partita molto difficile. Dovrete proteggere il vostro amato senza rendere troppo palese il vostro legame, in " +
+            "quanto diverreste facile preda dei Lupi che eliminerebbero due giocatori in una volta sola. Come Giulietta, non sapete che ruolo " +
+            "abbia il vostro amato, quindi il vostro primo obiettivo sarà capire chi sia in realtà il vostro Romeo per poterlo difendere al " +
+            "meglio.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private void verificaGiuliettaBeccata(EsitoAttacco esito) { assertThat(esito).isEqualTo(GIULIETTA_BECCATA); }

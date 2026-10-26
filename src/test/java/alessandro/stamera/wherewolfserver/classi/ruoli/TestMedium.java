@@ -66,6 +66,16 @@ public final class TestMedium
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Il ruolo del Medium è fondamentale per capire se il villaggio sta proseguendo nella giusta direzione e per smascherare eventuali " +
+            "impostori. Il vostro ruolo all'inizio non sarà preponderante, ma se riuscirete ad arrivare alla terza o quarta notte, il vostro " +
+            "responso servirà ad avvalorare delle teorie e a farne crollare altre. Ricordate che potete indagare anche sui giocatori che sono " +
+            "stati uccisi durante la notte, perchè anche loro potrebbero aver avuto in vita aura nera.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }

@@ -22,7 +22,7 @@ public final class TestCriminale
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Criminale(null, null, null); }
+    @BeforeEach public void setUp() { ruolo = new Criminale(null, null, null, null); }
 
     @Test public void tesFazione() { assertThat(ruolo.getFazione()).isEqualTo(CRIMINALI); }
 

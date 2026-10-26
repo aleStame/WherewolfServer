@@ -17,14 +17,14 @@ public final class TestAssassino
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void tesDescrizione()
     {
         String soluzione =
             "La prima notte riconosce gli altri criminali. Una volta per partita, dalla seconda notte, può aprire gli occhi nel turno di un " +
             "mistico. Se quel mistico in gioco, viene ucciso. Altrimenti, l'Assassino indica un giocatore che viene avvisato ed ucciso.";
-        testStringa(ruolo.getDescrizione(), soluzione);
+        verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
@@ -39,9 +39,20 @@ public final class TestAssassino
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Avete un solo colpo da sparare e dovete decidere molto bene come usarlo. L'obiettivo migliore potrebbe essere una Guardia, poiché " +
+            "nessun altro, a parte i Criminali, ha interesse che le guardie vengano eliminate. Di sicuro anche un Lupo sarebbe un ottimo " +
+            "bersaglio, anche perché, se capisse chi siete, sarebbe forse lui ad eliminare voi. Scegliete bene il momento in cui aprire gli occhi " +
+            "perché, se il Mistico di turno dovesse essere in gioco, dovreste uccidere per forza lui e perdereste così la vostra unica " +
+            "occasione.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
-    private void testStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
+    private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

@@ -39,6 +39,17 @@ public final class TestSpia
 
     @Test public void testSpia() { verificaVero(ruolo.isSpia()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Le informazioni in vostro possesso saranno veramente tantissime. Dal modo in cui vota un giocatore si può capire davvero molto su " +
+            "di lui, inoltre conoscere immediatamente l'identità del Borgomastro, del Mercante, dell'Azzeccagarbugli non appena useranno i loro " +
+            "poteri. Il vostro scopo è quello di usare al meglio queste informazioni senza rivelare la vostra identità. Siete uno dei Criminali " +
+            "con aura bianca, cercate di sfruttare al massimo questa caratteristica e di far sapere ai vostri alleati quello che avete capito " +
+            "senza dare troppo nell'occhio.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }

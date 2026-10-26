@@ -14,7 +14,7 @@ public final class TestAmanti
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Amanti(null, null); }
+    @BeforeEach public void setUp() { ruolo = new Amanti(null, null, null); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(AMANTI); }
 

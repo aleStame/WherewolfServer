@@ -17,15 +17,15 @@ public final class TestBecchino
 
     @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo(NOME); }
 
-    @Test public void testNome() { testStringa(ruolo.getNome(), NOME); }
+    @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testDescrizione()
     {
         String soluzione =
-            "La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua " +
-            "fazione diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il " +
-            "Moderatore lo annuncia pubblicamente";
-        testStringa(ruolo.getDescrizione(), soluzione);
+            "La prima notte scopre se il Negromante è in gioco. Durante il turno del Negromante sceglie se riconoscerlo. Se lo fa, la sua fazione " +
+            "diventa Negromante. Altrimenti, ogni mattino, se sono stati eliminati giocatori maledetti dal mattino precedente, il Moderatore lo " +
+            "annuncia pubblicamente";
+        verificaStringa(ruolo.getDescrizione(), soluzione);
     }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(3); }
@@ -74,9 +74,20 @@ public final class TestBecchino
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "In ogni partita che farete con questo Ruolo avrete una scelta. Potrete scegliere se cercare di aiutare il villaggio contro il " +
+            "rituale messo in atto dal Negromante, o collaborare con lui per realizzarlo. Sappiate che, comunque, il villaggio non si fiderà mai " +
+            "completamente di voi, perché non potrà essere certo della vostra lealtà. Nel caso vi siate schierati con il Negromante, la prima " +
+            "mossa dovrà per forza essere capire dalle sue parole e dalle sue azioni chi siano i due giocatori Maledetti, poiché, senza saperlo, " +
+            "non potrete essergli di nessun aiuto.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
-    private void testStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
+    private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

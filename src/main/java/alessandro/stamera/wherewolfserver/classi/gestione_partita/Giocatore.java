@@ -265,8 +265,8 @@ public final class Giocatore
     {
         EsitoPartita esito = ruolo.getEsitoPartita(partita);
         if(isRomeo()) esito = getPartitaRomeo(partita);
-        else if(isCriminale()) esito = new Criminale(null, null, null).getEsitoPartita(partita);
-        else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0).getEsitoPartita(partita);
+        else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
+        else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
         return esito;
     }
 
