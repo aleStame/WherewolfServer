@@ -31,7 +31,7 @@ public enum IstanzaRuolo
     OSTE(Oste.getInstance()), PAZZO(Pazzo.getInstance()), PECCATORE(Peccatore.getInstance()), POSSEDUTO(Posseduto.getInstance()),
     PRETE(Prete.getInstance()), SIDHE(Sidhe.getInstance()), SPIA(Spia.getInstance()), STREGA(Strega.getInstance()),
     SENSITIVA(Sensitiva.getInstance()), TEMPLARE(Templare.getInstance()), TRADITORE(Traditore.getInstance()),
-    VAMPIRO(Vampiro.getInstance()), VEGGENTE(Veggente.getInstance());
+    VAMPIRO(Vampiro.getInstance()), VEGGENTE(Veggente.getInstance()), VIAGGIATORE(Viaggiatore.getInstance());
 
     private final Ruolo ruolo;
 
