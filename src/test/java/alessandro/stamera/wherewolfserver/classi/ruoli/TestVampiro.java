@@ -62,6 +62,18 @@ public final class TestVampiro
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Di notte non siete potenti quanto i Lupi e dovete temere i loro attacchi; di giorno, non siete influenti quanto il villaggio e " +
+            "dovete temere il rogo. I vostri poteri vi rendono comunque temibile in entrambi i momenti del gioco. Scegliete bene le vittime, " +
+            "aspettando anche un turno in più, se necessario, e non cercate di attaccare ogni turno. Scoprirete che, se ben gestiti, anche solo " +
+            "un paio di Non Morti sono sufficienti per assicurarsi la vittoria, anche qualora voi doveste essere uccisi nel frattempo. Ricordate " +
+            "che i Non Morti non si conoscono fra di loro. Sarete voi, scegliendo accuratamente le parole, a far loro capire chi devono votare " +
+            "e di chi devono fidarsi";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
