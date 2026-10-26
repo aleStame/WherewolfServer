@@ -70,7 +70,7 @@ public final class TestVampiro
             "aspettando anche un turno in più, se necessario, e non cercate di attaccare ogni turno. Scoprirete che, se ben gestiti, anche solo " +
             "un paio di Non Morti sono sufficienti per assicurarsi la vittoria, anche qualora voi doveste essere uccisi nel frattempo. Ricordate " +
             "che i Non Morti non si conoscono fra di loro. Sarete voi, scegliendo accuratamente le parole, a far loro capire chi devono votare " +
-            "e di chi devono fidarsi";
+            "e di chi devono fidarsi.";
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
