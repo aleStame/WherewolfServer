@@ -32,8 +32,19 @@ import static org.mockito.Mockito.doCallRealMethod;
             new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }),
             new Partita(new String[][] { { "Pino", "Capo branco" }, { "Dino", "Assassino" } }),
             new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Assassino" } }),
+            new Partita(new String[][] { { "Pino", "Giovane lupo" }, { "Adam", "Assassino" } }),
+            new Partita(new String[][] { { "Matteo", "Lupo reietto" }, { "Omar", "Assassino" } }),
+            new Partita(new String[][] { { "Saverio", "Capo branco" }, { "Desmond", "Assassino" } }),
+            new Partita(new String[][] { { "Paola", "Lupo solitario" }, { "Paolo", "Assassino" } })
         };
-        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], NON_FINITO));
+        return
+            Stream.of
+            (
+                Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], NON_FINITO),
+                Arguments.of(partite[3], NON_FINITO), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], NON_FINITO),
+                Arguments.of(partite[6], NON_FINITO)
+
+            );
     }
 
 }
