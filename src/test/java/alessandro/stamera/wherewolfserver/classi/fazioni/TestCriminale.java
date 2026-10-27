@@ -80,13 +80,6 @@ public final class TestCriminale
             Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
             Arguments.of(new Partita(new String[][] { { "Ale", "Guardia" }, { "Franz", "Assassino" } }), SCONFITTA),
             Arguments.of(new Partita(new String[][] { { "Antonio", "Altra guardia" }, { "Giorgia", "Assassino" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "Anna", "Capo branco" }, { "Romana", "Traditore" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "Fabrizio", "Lupo del branco" }, { "Paola", "Traditore" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "Anna", "Giovane lupo" }, { "Romana", "Traditore" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "Ezio", "Lupo reietto" }, { "Enzo", "Traditore" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "Claudia", "Lupo solitario" }, { "Massimo", "Traditore" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "John", "Vampiro" }, { "Jack", "Ghoul" } }), SCONFITTA),
-            Arguments.of(new Partita(new String[][] { { "Hal", "Nosferatu" }, { "Guy", "Ghoul" } }), SCONFITTA),
             Arguments.of
             (
                 new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA

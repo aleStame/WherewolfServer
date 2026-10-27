@@ -35,15 +35,23 @@ import static org.mockito.Mockito.doCallRealMethod;
             new Partita(new String[][] { { "Pino", "Giovane lupo" }, { "Adam", "Assassino" } }),
             new Partita(new String[][] { { "Matteo", "Lupo reietto" }, { "Omar", "Assassino" } }),
             new Partita(new String[][] { { "Saverio", "Capo branco" }, { "Desmond", "Assassino" } }),
-            new Partita(new String[][] { { "Paola", "Lupo solitario" }, { "Paolo", "Assassino" } })
+            new Partita(new String[][] { { "Paola", "Lupo solitario" }, { "Paolo", "Assassino" } }),
+            new Partita(new String[][] { { "Anna", "Capo branco" }, { "Romana", "Traditore" } }),
+            new Partita(new String[][] { { "Fabrizio", "Lupo del branco" }, { "Paola", "Traditore" } }),
+            new Partita(new String[][] { { "Anna", "Giovane lupo" }, { "Romana", "Traditore" } }),
+            new Partita(new String[][] { { "Ezio", "Lupo reietto" }, { "Enzo", "Traditore" } }),
+            new Partita(new String[][] { { "Claudia", "Lupo solitario" }, { "Massimo", "Traditore" } }),
+            new Partita(new String[][] { { "John", "Vampiro" }, { "Jack", "Ghoul" } }),
+            new Partita(new String[][] { { "Hal", "Nosferatu" }, { "Guy", "Ghoul" } }),
         };
         return
             Stream.of
             (
                 Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], NON_FINITO),
                 Arguments.of(partite[3], NON_FINITO), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], NON_FINITO),
-                Arguments.of(partite[6], NON_FINITO)
-
+                Arguments.of(partite[6], NON_FINITO), Arguments.of(partite[7], SCONFITTA), Arguments.of(partite[8], SCONFITTA),
+                Arguments.of(partite[9], SCONFITTA), Arguments.of(partite[10], SCONFITTA), Arguments.of(partite[11], SCONFITTA),
+                Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA)
             );
     }
 
