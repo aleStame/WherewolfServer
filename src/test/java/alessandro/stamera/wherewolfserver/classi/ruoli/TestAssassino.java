@@ -50,6 +50,8 @@ public final class TestAssassino
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
