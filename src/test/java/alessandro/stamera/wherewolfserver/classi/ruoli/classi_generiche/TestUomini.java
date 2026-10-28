@@ -66,8 +66,8 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Stream<Arguments> getEsempiEsitiPartitaProgenie()
     {
-        Partita[] partite = new Partita[3];
-        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina" };
+        Partita[] partite = new Partita[4];
+        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora" };
         partite[0] = getPartitaConAttaccoVampiro(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } }, nomiVittime[0]);
         String nomeVampiro = "Alberto";
         partite[1] = getPartitaConAttaccoVampiroEliminato
@@ -79,7 +79,20 @@ import static org.mockito.Mockito.doCallRealMethod;
         (
             new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" } }, nomiVittime[3]
         );
-        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
+        String tipoLupo = "Capo branco";
+        partite[3] = new Partita(new String[][] { { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } });
+        partite[3].attaccoLupi(tipoLupo, nomiVittime[5]);
+        partite[3].progenizzazioneNosferatu(nomiVittime[5]);
+        partite[3].incrementaVoti(nomiVittime[4], 2);
+        partite[3].terminaVotazioni();
+        partite[3].incrementaVoti(nomiVittime[4], 2);
+        partite[3].terminaBallottaggio();
+        return
+            Stream.of
+            (
+                Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO),
+                Arguments.of(partite[3], SCONFITTA)
+            );
     }
 
     private static Partita getPartitaConAttaccoVampiroEliminato(String nomeVampiro, String[][] ruoli, String... nomiVittime)
