@@ -19,8 +19,17 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     @Mock Uomini ruolo;
 
-    @ParameterizedTest @MethodSource("getEsempiEsitiPartita") public void testEsitoPartita(Partita partita, EsitoPartita esito)
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
+    public void testEsitoPartita(Partita partita, EsitoPartita esito)
     {
+        doCallRealMethod().when(ruolo).getEsitoPartita(partita);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaProgenie")
+    public void testEsitoPartitaProgenie(Partita partita, EsitoPartita esito)
+    {
+        System.out.println(esito);
         doCallRealMethod().when(ruolo).getEsitoPartita(partita);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
@@ -53,6 +62,25 @@ import static org.mockito.Mockito.doCallRealMethod;
                 Arguments.of(partite[9], SCONFITTA), Arguments.of(partite[10], SCONFITTA), Arguments.of(partite[11], SCONFITTA),
                 Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA)
             );
+    }
+
+    private static Stream<Arguments> getEsempiEsitiPartitaProgenie()
+    {
+        Partita[] partite = new Partita[3];
+        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina" };
+        partite[0] = new Partita(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } });
+        partite[0].attaccoVampiro(nomiVittime[0]);
+        String nomeVampiro = "Alberto";
+        partite[1] = new Partita(new String[][] { { nomiVittime[1], "Peccatore" }, { nomiVittime[2], "Pazzo" }, { nomeVampiro, "Vampiro" } });
+        partite[1].attaccoVampiro(nomiVittime[1]);
+        partite[1].attaccoVampiro(nomiVittime[2]);
+        partite[1].incrementaVoti(nomeVampiro, 2);
+        partite[1].terminaVotazioni();
+        partite[1].incrementaVoti(nomeVampiro, 2);
+        partite[1].terminaBallottaggio();
+        partite[2] = new Partita(new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" } });
+        partite[2].attaccoVampiro(nomiVittime[3]);
+        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
     }
 
 }
