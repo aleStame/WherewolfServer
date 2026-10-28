@@ -147,13 +147,11 @@ public final class Partita
 
     public boolean isViaggiatoreAmato() { return false; }
 
-    public boolean isSoloCreatureOmbra() { return controllaNumeroCreatureOmbra(getNumeroGiocatoriVivi()); }
-
     public boolean isSoloGuardie() { return controllaNumeroGuardie(getNumeroGiocatoriVivi()); }
 
     public boolean isNoGuardie() { return controllaNumeroGuardie(0); }
 
-    public boolean isNoCreatureOmbra() { return controllaNumeroCreatureOmbra(0); }
+    public boolean isNoCreatureOmbra() { return getNumeroCreatureOmbraVive() == 0; }
 
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
@@ -851,8 +849,6 @@ public final class Partita
     private String getNomeNegromante() { return vivi.getNomeNegromante(); }
 
     private boolean controllaNumeroGuardie(int valore) { return confrontaValori(vivi.getNumeroGuardie(), valore); }
-
-    private boolean controllaNumeroCreatureOmbra(int valore) { return confrontaValori(getNumeroCreatureOmbraVive(), valore); }
 
     private boolean confrontaValori(int valore1, int valore2) { return valore1 == valore2; }
 

@@ -479,12 +479,6 @@ public final class TestPartita
         for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);
     }
 
-    @Test public void testSoloCreatureOmbra()
-    {
-        inizializzaPartita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } });
-        verificaVero(partita.isSoloCreatureOmbra());
-    }
-
     @Test public void testSoloGuardie()
     {
         inizializzaPartita(new String[][] { { "Sara", "Guardia" }, { "Elisa", "Altra guardia" } });
@@ -637,15 +631,6 @@ public final class TestPartita
         terminaNotte();
         verificaEliminazione(giocatori[posizioneVittima][0]);
     }
-
-    /*@Test public void testAttaccoLupoSolitarioCacciatore()
-    {
-        String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
-        inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
-        attaccoLupi(lupo, nomeCacciatore);
-        terminaNotte();
-        verificaEliminati(nomeLupo, nomeCacciatore);
-    }*/
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testAttaccoUltimoLupoBranco(String tipoLupo)
