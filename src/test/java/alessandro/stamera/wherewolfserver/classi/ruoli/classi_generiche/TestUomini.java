@@ -70,20 +70,26 @@ import static org.mockito.Mockito.doCallRealMethod;
         String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina" };
         partite[0] = getPartitaConAttaccoVampiro(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } }, nomiVittime[0]);
         String nomeVampiro = "Alberto";
-        partite[1] = getPartitaConAttaccoVampiro
+        partite[1] = getPartitaConAttaccoVampiroEliminato
         (
-            new String[][] { { nomiVittime[1], "Peccatore" }, { nomiVittime[2], "Pazzo" }, { nomeVampiro, "Vampiro" } }, nomiVittime[1],
-            nomiVittime[2]
+            nomeVampiro, new String[][] { { nomiVittime[1], "Peccatore" }, { nomiVittime[2], "Pazzo" }, { nomeVampiro, "Vampiro" } },
+            nomiVittime[1], nomiVittime[2]
         );
-        partite[1].incrementaVoti(nomeVampiro, 2);
-        partite[1].terminaVotazioni();
-        partite[1].incrementaVoti(nomeVampiro, 2);
-        partite[1].terminaBallottaggio();
         partite[2] = getPartitaConAttaccoVampiro
         (
             new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" } }, nomiVittime[3]
         );
         return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO));
+    }
+
+    private static Partita getPartitaConAttaccoVampiroEliminato(String nomeVampiro, String[][] ruoli, String... nomiVittime)
+    {
+        Partita partita = getPartitaConAttaccoVampiro(ruoli, nomiVittime);
+        partita.incrementaVoti(nomeVampiro, 2);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeVampiro, 2);
+        partita.terminaBallottaggio();
+        return partita;
     }
 
     private static Partita getPartitaConAttaccoVampiro(String[][] ruoli, String... nomiVittime)

@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-28T17:03:19" hostname="ALESSANDRO" time="4.23">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-28T17:23:55" hostname="ALESSANDRO" time="0.304">
   <properties/>
-  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@f107c50, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="4.105"/>
-  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@720bf653, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.022"/>
-  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@21c815e4, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.025"/>
-  <system-out><![CDATA[SCONFITTA
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@5a090f62, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.145"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@113f9078, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.006"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@47df5041, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.009"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@2e56b4d, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.012"/>
+  <testcase name="[5] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@b5ac0c1, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.01"/>
+  <testcase name="[6] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@55846997, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.009"/>
+  <testcase name="[7] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@168142da, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.009"/>
+  <testcase name="[8] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@36f6e521, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.009"/>
+  <testcase name="[9] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@50211483, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.004"/>
+  <testcase name="[10] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@35bd8bc9, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.006"/>
+  <testcase name="[11] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@4026461d, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.011"/>
+  <testcase name="[12] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@1a8e9ed9, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.009"/>
+  <testcase name="[13] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@57bd6a8f, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.006"/>
+  <testcase name="[14] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@77cca767, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.004"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@23444a36, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.006"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@31a136a6, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.004"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@30a9e3db, esito=NON_FINITO" classname="alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini" time="0.006"/>
+  <system-out><![CDATA[Alberto
+SCONFITTA
 SCONFITTA
 NON_FINITO
 ]]></system-out>
-  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\SandrettoFX\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

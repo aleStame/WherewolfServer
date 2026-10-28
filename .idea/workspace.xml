@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEsitoPartitaProgenie riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getPartitaConAttaccoVampiro">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestUomini.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestUomini.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.TestUomini.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestUomini.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestUomini.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestUomini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestUomini.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +124,7 @@
       <recent name="alessandro.stamera.wherewolfserver.classi.gestione_partita" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestUomini.testEsitoPartitaProgenie">
+  <component name="RunManager" selected="Gradle.Tests in 'wherewolfserver.test'">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -218,8 +234,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestUomini.testEsitoPartitaProgenie" />
         <item itemvalue="Gradle.Tests in 'wherewolfserver.test'" />
+        <item itemvalue="Gradle.TestUomini.testEsitoPartitaProgenie" />
       </list>
     </recent_temporary>
   </component>
@@ -243,14 +259,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-00923" summary="VERDE: testConsigliGioco riuscito">
-      <option name="closed" value="true" />
-      <created>1792598546117</created>
-      <option name="number" value="00923" />
-      <option name="presentableId" value="LOCAL-00923" />
-      <option name="project" value="LOCAL" />
-      <updated>1792598546117</updated>
     </task>
     <task id="LOCAL-00924" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
@@ -636,7 +644,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793205523887</updated>
     </task>
-    <option name="localTasksCounter" value="972" />
+    <task id="LOCAL-00972" summary="REFACTORING: definizione del metodo getPartitaConAttaccoVampiro">
+      <option name="closed" value="true" />
+      <created>1793207050735</created>
+      <option name="number" value="00972" />
+      <option name="presentableId" value="LOCAL-00972" />
+      <option name="project" value="LOCAL" />
+      <updated>1793207050736</updated>
+    </task>
+    <option name="localTasksCounter" value="973" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +670,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoContadinoMostroNonProtetto riuscito" />
     <MESSAGE value="ROSSO: testAttaccoPossedutoContadinoMostroStregato non riuscito" />
     <MESSAGE value="VERDE: testAttaccoPossedutoContadinoMostroStregato riuscito" />
     <MESSAGE value="ROSSO: testAttaccoPossedutoContadinoMostroRomeo non riuscito" />
@@ -679,6 +694,7 @@
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartitaProgenie riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEsitoPartitaProgenie riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPartitaConAttaccoVampiro" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPartitaConAttaccoVampiro" />
   </component>
 </project>
