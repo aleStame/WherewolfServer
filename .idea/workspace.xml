@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getPartitaConAttaccoNosferatu">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEsitoPartitaProgenie riuscito">
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -485,14 +485,6 @@
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
     </task>
-    <task id="LOCAL-00927" summary="VERDE: testConsigliGioco non riuscito">
-      <option name="closed" value="true" />
-      <created>1792663105431</created>
-      <option name="number" value="00927" />
-      <option name="presentableId" value="LOCAL-00927" />
-      <option name="project" value="LOCAL" />
-      <updated>1792663105431</updated>
-    </task>
     <task id="LOCAL-00928" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
       <created>1792664067171</created>
@@ -877,7 +869,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793268389458</updated>
     </task>
-    <option name="localTasksCounter" value="976" />
+    <task id="LOCAL-00976" summary="VERDE DIRETTO: testEsitoPartitaProgenie riuscito">
+      <option name="closed" value="true" />
+      <created>1793272753939</created>
+      <option name="number" value="00976" />
+      <option name="presentableId" value="LOCAL-00976" />
+      <option name="project" value="LOCAL" />
+      <updated>1793272753940</updated>
+    </task>
+    <option name="localTasksCounter" value="977" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -918,8 +918,8 @@
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartitaConAttaccoVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartitaConAttaccoVampiroEliminato" />
-    <MESSAGE value="VERDE DIRETTO: testEsitoPartitaProgenie riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartitaConAttaccoNosferatu" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPartitaConAttaccoNosferatu" />
+    <MESSAGE value="VERDE DIRETTO: testEsitoPartitaProgenie riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEsitoPartitaProgenie riuscito" />
   </component>
 </project>

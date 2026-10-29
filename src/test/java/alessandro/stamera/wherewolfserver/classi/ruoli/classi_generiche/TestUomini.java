@@ -65,8 +65,8 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Stream<Arguments> getEsempiEsitiPartitaProgenie()
     {
-        Partita[] partite = new Partita[5];
-        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora" };
+        Partita[] partite = new Partita[6];
+        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora", "Dino", "Sandra" };
         partite[0] = getPartitaConAttaccoVampiro(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } }, nomiVittime[0]);
         String nomeVampiro = "Alberto";
         partite[1] = getPartitaConAttaccoVampiroEliminato
@@ -78,26 +78,37 @@ import static org.mockito.Mockito.doCallRealMethod;
         (
             new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" } }, nomiVittime[3]
         );
-        String tipoLupo = "Capo branco";
+        String[] tipoLupo = { "Capo branco", "Lupo del branco" };
         partite[3] = getPartitaConAttaccoNosferatu
         (
-            tipoLupo, new String[][] { { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } },
+            tipoLupo[0], new String[][] { { nomiVittime[4], tipoLupo[0] }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } },
             nomiVittime[5], nomiVittime[4]
         );
         partite[4] = getPartitaConAttaccoNosferatu
         (
-            tipoLupo,
+            tipoLupo[1],
             new String[][]
             {
-                { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" }, { "Leo", "Assassino" }
+                { nomiVittime[6], tipoLupo[1] }, { nomiVittime[7], "Oratore" }, { "Gaia", "Nosferatu" }, { "Leo", "Assassino" }
             },
-            nomiVittime[5], nomiVittime[4]
+            nomiVittime[7], nomiVittime[6]
         );
+        String nomeNosferatu = "Annalisa";
+        partite[5] = getPartitaConAttaccoNosferatu
+        (
+            tipoLupo[1],
+            new String[][] { { nomiVittime[6], tipoLupo[1] }, { nomiVittime[7], "Borgomastro" }, { nomeNosferatu, "Nosferatu" } },
+            nomiVittime[7], nomiVittime[6]
+        );
+        partite[5].incrementaVoti(nomeNosferatu, 2);
+        partite[5].terminaVotazioni();
+        partite[5].incrementaVoti(nomeNosferatu, 2);
+        partite[5].terminaBallottaggio();
         return
             Stream.of
             (
                 Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO),
-                Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO)
+                Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], SCONFITTA)
             );
     }
 
