@@ -29,7 +29,6 @@ import static org.mockito.Mockito.doCallRealMethod;
     @ParameterizedTest @MethodSource("getEsempiEsitiPartitaProgenie")
     public void testEsitoPartitaProgenie(Partita partita, EsitoPartita esito)
     {
-        System.out.println(esito);
         doCallRealMethod().when(ruolo).getEsitoPartita(partita);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
@@ -80,19 +79,29 @@ import static org.mockito.Mockito.doCallRealMethod;
             new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" } }, nomiVittime[3]
         );
         String tipoLupo = "Capo branco";
-        partite[3] = new Partita(new String[][] { { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } });
-        partite[3].attaccoLupi(tipoLupo, nomiVittime[5]);
-        partite[3].progenizzazioneNosferatu(nomiVittime[5]);
-        partite[3].incrementaVoti(nomiVittime[4], 2);
-        partite[3].terminaVotazioni();
-        partite[3].incrementaVoti(nomiVittime[4], 2);
-        partite[3].terminaBallottaggio();
+        partite[3] = getPartitaConAttaccoNosferatu
+        (
+            tipoLupo, new String[][] { { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } },
+            nomiVittime[5], nomiVittime[4]
+        );
         return
             Stream.of
             (
                 Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO),
                 Arguments.of(partite[3], SCONFITTA)
             );
+    }
+
+    private static Partita getPartitaConAttaccoNosferatu(String tipoLupo, String[][] ruoli, String nomeVittima, String nomeLupo)
+    {
+        Partita partita = new Partita(ruoli);
+        partita.attaccoLupi(tipoLupo, nomeVittima);
+        partita.progenizzazioneNosferatu(nomeVittima);
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaBallottaggio();
+        return partita;
     }
 
     private static Partita getPartitaConAttaccoVampiroEliminato(String nomeVampiro, String[][] ruoli, String... nomiVittime)
