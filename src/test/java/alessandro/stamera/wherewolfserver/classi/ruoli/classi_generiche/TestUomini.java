@@ -94,16 +94,12 @@ import static org.mockito.Mockito.doCallRealMethod;
             nomiVittime[7], nomiVittime[6]
         );
         String nomeNosferatu = "Annalisa";
-        partite[5] = getPartitaConAttaccoNosferatu
+        partite[5] = getPartitaConAttaccoNosferatuEliminato
         (
             tipoLupo[1],
             new String[][] { { nomiVittime[8], tipoLupo[1] }, { nomiVittime[9], "Borgomastro" }, { nomeNosferatu, "Nosferatu" } },
-            nomiVittime[9], nomiVittime[9]
+            nomiVittime[9], nomiVittime[9], nomeNosferatu
         );
-        partite[5].incrementaVoti(nomeNosferatu, 2);
-        partite[5].terminaVotazioni();
-        partite[5].incrementaVoti(nomeNosferatu, 2);
-        partite[5].terminaBallottaggio();
         return
             Stream.of
             (
@@ -112,7 +108,23 @@ import static org.mockito.Mockito.doCallRealMethod;
             );
     }
 
-    private static Partita getPartitaConAttaccoNosferatu(String tipoLupo, String[][] ruoli, String nomeVittima, String nomeLupo)
+    private static Partita getPartitaConAttaccoNosferatuEliminato
+    (
+        String tipoLupo, String[][] ruoli, String nomeVittima, String nomeLupo, String nomeNosferatu
+    )
+    {
+        Partita partita = getPartitaConAttaccoNosferatu(tipoLupo, ruoli, nomeVittima, nomeLupo);
+        partita.incrementaVoti(nomeNosferatu, 2);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeNosferatu, 2);
+        partita.terminaBallottaggio();
+        return partita;
+    }
+
+    private static Partita getPartitaConAttaccoNosferatu
+    (
+        String tipoLupo, String[][] ruoli, String nomeVittima, String nomeLupo
+    )
     {
         Partita partita = new Partita(ruoli);
         partita.attaccoLupi(tipoLupo, nomeVittima);
