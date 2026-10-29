@@ -65,7 +65,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Stream<Arguments> getEsempiEsitiPartitaProgenie()
     {
-        Partita[] partite = new Partita[4];
+        Partita[] partite = new Partita[5];
         String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora" };
         partite[0] = getPartitaConAttaccoVampiro(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } }, nomiVittime[0]);
         String nomeVampiro = "Alberto";
@@ -84,11 +84,20 @@ import static org.mockito.Mockito.doCallRealMethod;
             tipoLupo, new String[][] { { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } },
             nomiVittime[5], nomiVittime[4]
         );
+        partite[4] = getPartitaConAttaccoNosferatu
+        (
+            tipoLupo,
+            new String[][]
+            {
+                { nomiVittime[4], tipoLupo }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" }, { "Leo", "Assassino" }
+            },
+            nomiVittime[5], nomiVittime[4]
+        );
         return
             Stream.of
             (
                 Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO),
-                Arguments.of(partite[3], SCONFITTA)
+                Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO)
             );
     }
 
