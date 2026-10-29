@@ -66,7 +66,7 @@ import static org.mockito.Mockito.doCallRealMethod;
     private static Stream<Arguments> getEsempiEsitiPartitaProgenie()
     {
         Partita[] partite = new Partita[6];
-        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora", "Dino", "Sandra" };
+        String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora", "Dino", "Sandra", "John", "Jack" };
         partite[0] = getPartitaConAttaccoVampiro(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } }, nomiVittime[0]);
         String nomeVampiro = "Alberto";
         partite[1] = getPartitaConAttaccoVampiroEliminato
@@ -97,8 +97,8 @@ import static org.mockito.Mockito.doCallRealMethod;
         partite[5] = getPartitaConAttaccoNosferatu
         (
             tipoLupo[1],
-            new String[][] { { nomiVittime[6], tipoLupo[1] }, { nomiVittime[7], "Borgomastro" }, { nomeNosferatu, "Nosferatu" } },
-            nomiVittime[7], nomiVittime[6]
+            new String[][] { { nomiVittime[8], tipoLupo[1] }, { nomiVittime[9], "Borgomastro" }, { nomeNosferatu, "Nosferatu" } },
+            nomiVittime[9], nomiVittime[9]
         );
         partite[5].incrementaVoti(nomeNosferatu, 2);
         partite[5].terminaVotazioni();
