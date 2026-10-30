@@ -1,7 +1,16 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.ruoli.*;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoEroe;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoLupo;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoMostro;
+import alessandro.stamera.wherewolfserver.classi.ruoli.contadini.ContadinoNormale;
+import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.AltraGuardia;
+import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaCorrotta;
+import alessandro.stamera.wherewolfserver.classi.ruoli.guardie.GuardiaPrincipale;
+import alessandro.stamera.wherewolfserver.classi.ruoli.lupi.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
@@ -2957,6 +2958,29 @@ public final class TestPartita
         verificaFalso(partita.isPosseduto(nomeContadino));
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Prete", "Sidhe", "Spia", "Strega",
+            "Sensitiva", "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAngeloCustodeAssassino(String nomeRuolo)
+    {
+        String nomeAmato = "Elio", nomeAngelo = "Giorgia";
+        inizializzaPartita(new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        verificaAttaccoAssassino(nomeAngelo);
+        terminaNotte();
+        verificaEliminati(nomeAngelo);
+        verificaNonAmato(nomeAmato);
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
@@ -3049,6 +3073,8 @@ public final class TestPartita
     }
 
     private void verificaAmato(String nome) { verificaVero(isAmato(nome)); }
+
+    private void verificaNonAmato(String nome) { verificaVero(isAmato(nome)); }
 
     private boolean isAmato(String nome) { return partita.isAmato(nome); }
 
