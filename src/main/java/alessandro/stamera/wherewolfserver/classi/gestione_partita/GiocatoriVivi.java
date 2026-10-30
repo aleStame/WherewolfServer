@@ -308,6 +308,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
         aggiornaProtezioniCappuccettoRossoPostInserimento();
+        if(isPeccatorePresente() && isPossedutoPresente()) cambiaFazione(getNomePeccatore(), NESSUNA);
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -373,6 +374,26 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isProtetto(String nome) { return getGiocatore(nome).isProtetto(); }
 
+    private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
+
+    public String getNomePeccatore() { return getNomeGiocatore(getPosizionePeccatore()); }
+
+    private int getPosizionePeccatore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isPeccatore(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
+
+    private boolean isPeccatore(String nome) { return getGiocatore(nome).isPeccatore(); }
+
+    private boolean isPossedutoPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isPosseduto(getNomeGiocatore(i))) trovato = true;
+        return trovato;
+    }
+
     private int getPosizioneGiulietta()
     {
         int posizione = NON_TROVATO;
@@ -403,6 +424,8 @@ public final class GiocatoriVivi extends Giocatori
     {
         for(Ruolo lupo : getLupi()) perdiProtezioneCappuccettoRosso(lupo);
     }
+
+    private void cambiaFazione(String nome, Fazione fazione) { getGiocatore(nome).cambiaFazione(fazione); }
 
     private void perdiProtezioneCappuccettoRosso(Ruolo lupo)
     {

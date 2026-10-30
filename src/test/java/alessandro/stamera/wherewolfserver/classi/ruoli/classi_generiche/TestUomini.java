@@ -49,8 +49,9 @@ import static org.mockito.Mockito.doCallRealMethod;
                 Arguments.of(partite[6], NON_FINITO), Arguments.of(partite[7], SCONFITTA), Arguments.of(partite[8], SCONFITTA),
                 Arguments.of(partite[9], SCONFITTA), Arguments.of(partite[10], SCONFITTA), Arguments.of(partite[11], SCONFITTA),
                 Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA), Arguments.of(partite[14], SCONFITTA),
-                Arguments.of(partite[15], SCONFITTA), Arguments.of(partite[16], NON_FINITO), Arguments.of(partite[17], SCONFITTA),
-                Arguments.of(partite[18], NON_FINITO), Arguments.of(partite[19], SCONFITTA)
+                Arguments.of(partite[15], NON_FINITO), Arguments.of(partite[16], SCONFITTA), Arguments.of(partite[17], SCONFITTA),
+                Arguments.of(partite[18], NON_FINITO), Arguments.of(partite[19], SCONFITTA), Arguments.of(partite[20], NON_FINITO),
+                Arguments.of(partite[21], SCONFITTA)
             );
     }
 
@@ -72,6 +73,8 @@ import static org.mockito.Mockito.doCallRealMethod;
             new Partita(new String[][] { { "Claudia", "Lupo solitario" }, { "Massimo", "Traditore" } }),
             new Partita(new String[][] { { "John", "Vampiro" }, { "Jack", "Ghoul" } }),
             new Partita(new String[][] { { "Hal", "Nosferatu" }, { "Guy", "Ghoul" } }),
+            new Partita(new String[][] { { "Ilaria", "Peccatore" }, { "Kamala", "Posseduto" } }),
+            new Partita(new String[][] { { "Selvaggia", "Negromante" }, { "Camilla", "Assassino" } })
         };
     }
 

@@ -33,7 +33,6 @@ public final class Giocatore
         cambiaRuolo(ruolo);
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
-        cambiaFazione(NESSUNA);
         annullaRomeizzazione();
         stregato = false;
         setLupoExNonna(false);
@@ -81,7 +80,11 @@ public final class Giocatore
 
     public boolean isNosferatu() { return ruolo.isNosferatu(); }
 
-    public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
+    public void cambiaRuolo(Ruolo ruolo)
+    {
+        this.ruolo = ruolo;
+        cambiaFazione(ruolo.getFazione());
+    }
 
     public EsitoAttacco progenizzazioneNosferatu()
     {
@@ -113,12 +116,7 @@ public final class Giocatore
         return RIUSCITO;
     }
 
-    public Fazione getFazione()
-    {
-        Fazione risultato = fazione;
-        if(risultato == NESSUNA) risultato = ruolo.getFazione();
-        return risultato;
-    }
+    public Fazione getFazione() { return fazione; }
 
     public boolean isCriminale() { return getFazione() == CRIMINALI; }
 
@@ -284,6 +282,10 @@ public final class Giocatore
 
     public boolean isProtetto() { return isTrattoPresente(PROTETTO); }
 
+    public boolean isPeccatore() { return ruolo.isPeccatore(); }
+
+    public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;
@@ -305,11 +307,7 @@ public final class Giocatore
 
     private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
 
-    private void trasformaPosseduto()
-    {
-        cambiaRuolo(getPosseduto());
-        fazione = NESSUNA;
-    }
+    private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
     private Ruolo getPosseduto() { return FACTORY.getRuolo("Posseduto"); }
 
@@ -378,8 +376,6 @@ public final class Giocatore
     private void setLupoExNonna(boolean lupoExNonna) { this.lupoExNonna = lupoExNonna; }
 
     private boolean isProtetto(Ruolo lupo) { return isAmato() || isProtezionePresente(lupo); }
-
-    private void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     private boolean isGiocatoreProtetto(Ruolo lupo) { return tratti.isProtezionePresente(lupo); }
 
