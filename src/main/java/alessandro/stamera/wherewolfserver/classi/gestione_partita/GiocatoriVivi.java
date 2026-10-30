@@ -85,7 +85,11 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCreatureOmbra;
     }
 
-    public Aura controlloVeggente(String nome) { return getGiocatore(nome).controlloVeggente(); }
+    public Aura controlloVeggente(String nome)
+    {
+        if(isMegera(nome)) maledizione(nome);
+        return getGiocatore(nome).controlloVeggente();
+    }
 
     public int getNumeroCriminali()
     {

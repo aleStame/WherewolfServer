@@ -28,8 +28,8 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
-        Partita[] noProgenie = getPartiteSenzaProgenie(), progenie = getPartiteConProgenie();
-        Partita[] partite = new Partita[noProgenie.length + progenie.length];
+        Partita[] noProgenie = getPartiteSenzaProgenie(), progenie = getPartiteConProgenie(), maledetti = getPartiteConMaledetti();
+        Partita[] partite = new Partita[noProgenie.length + progenie.length + maledetti.length];
         int i = 0;
         for(Partita partita : noProgenie)
         {
@@ -37,6 +37,11 @@ import static org.mockito.Mockito.doCallRealMethod;
             i++;
         }
         for(Partita partita : progenie)
+        {
+            partite[i] = partita;
+            i++;
+        }
+        for(Partita partita : maledetti)
         {
             partite[i] = partita;
             i++;
@@ -51,8 +56,16 @@ import static org.mockito.Mockito.doCallRealMethod;
                 Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA), Arguments.of(partite[14], SCONFITTA),
                 Arguments.of(partite[15], NON_FINITO), Arguments.of(partite[16], NON_FINITO), Arguments.of(partite[17], SCONFITTA),
                 Arguments.of(partite[18], SCONFITTA), Arguments.of(partite[19], NON_FINITO), Arguments.of(partite[20], SCONFITTA),
-                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA)
+                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], NON_FINITO)
             );
+    }
+
+    private static Partita[] getPartiteConMaledetti()
+    {
+        String nomeMegera = "Emilia";
+        Partita veggente = new Partita(new String[][] { { "Emilio", "Veggente" }, { nomeMegera, "Megera" } });
+        veggente.controlloVeggente(nomeMegera);
+        return new Partita[] { veggente };
     }
 
     private static Partita[] getPartiteSenzaProgenie()
