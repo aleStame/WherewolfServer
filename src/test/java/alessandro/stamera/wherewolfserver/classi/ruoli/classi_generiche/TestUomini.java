@@ -63,7 +63,10 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Partita[] getPartiteConMaledetti()
     {
-        return new Partita[] { getPartitaVeggenteMaledetta(), getPartitaMagoMaledetto(), getPartitaSensitivaMaledetta() };
+        return new Partita[]
+        {
+            getPartitaVeggenteMaledetta(), getPartitaMagoMaledetto(), getPartitaSensitivaMaledetta(), getPartitaStregaMaledetta()
+        };
     }
 
     private static Partita getPartitaVeggenteMaledetta()
@@ -84,9 +87,17 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Partita getPartitaSensitivaMaledetta()
     {
-        String nomeMegera = "Francesca";
+        String nomeMegera = "Nadia";
         Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
         partita.controlloMago(nomeMegera);
+        return partita;
+    }
+
+    private static Partita getPartitaStregaMaledetta()
+    {
+        String nomeMegera = "Amelia";
+        Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
+        partita.protezioneStrega(nomeMegera);
         return partita;
     }
 
