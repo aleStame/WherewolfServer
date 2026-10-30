@@ -26,16 +26,37 @@ import static org.mockito.Mockito.doCallRealMethod;
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
-    @ParameterizedTest @MethodSource("getEsempiEsitiPartitaProgenie")
-    public void testEsitoPartitaProgenie(Partita partita, EsitoPartita esito)
-    {
-        doCallRealMethod().when(ruolo).getEsitoPartita(partita);
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
-    }
-
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
-        Partita[] partite = new Partita[]
+        Partita[] noProgenie = getPartiteSenzaProgenie(), progenie = getPartiteConProgenie();
+        Partita[] partite = new Partita[noProgenie.length + progenie.length];
+        int i = 0;
+        for(Partita partita : noProgenie)
+        {
+            partite[i] = partita;
+            i++;
+        }
+        for(Partita partita : progenie)
+        {
+            partite[i] = partita;
+            i++;
+        }
+        return
+            Stream.of
+            (
+                Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], NON_FINITO),
+                Arguments.of(partite[3], NON_FINITO), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], NON_FINITO),
+                Arguments.of(partite[6], NON_FINITO), Arguments.of(partite[7], SCONFITTA), Arguments.of(partite[8], SCONFITTA),
+                Arguments.of(partite[9], SCONFITTA), Arguments.of(partite[10], SCONFITTA), Arguments.of(partite[11], SCONFITTA),
+                Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA), Arguments.of(partite[14], SCONFITTA),
+                Arguments.of(partite[15], SCONFITTA), Arguments.of(partite[16], NON_FINITO), Arguments.of(partite[17], SCONFITTA),
+                Arguments.of(partite[18], NON_FINITO), Arguments.of(partite[19], SCONFITTA)
+            );
+    }
+
+    private static Partita[] getPartiteSenzaProgenie()
+    {
+        return new Partita[]
         {
             new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }),
             new Partita(new String[][] { { "Pino", "Capo branco" }, { "Dino", "Assassino" } }),
@@ -52,18 +73,9 @@ import static org.mockito.Mockito.doCallRealMethod;
             new Partita(new String[][] { { "John", "Vampiro" }, { "Jack", "Ghoul" } }),
             new Partita(new String[][] { { "Hal", "Nosferatu" }, { "Guy", "Ghoul" } }),
         };
-        return
-            Stream.of
-            (
-                Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], NON_FINITO),
-                Arguments.of(partite[3], NON_FINITO), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], NON_FINITO),
-                Arguments.of(partite[6], NON_FINITO), Arguments.of(partite[7], SCONFITTA), Arguments.of(partite[8], SCONFITTA),
-                Arguments.of(partite[9], SCONFITTA), Arguments.of(partite[10], SCONFITTA), Arguments.of(partite[11], SCONFITTA),
-                Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA)
-            );
     }
 
-    private static Stream<Arguments> getEsempiEsitiPartitaProgenie()
+    private static Partita[] getPartiteConProgenie()
     {
         Partita[] partite = new Partita[6];
         String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora", "Dino", "Sandra", "John", "Jack" };
@@ -100,12 +112,7 @@ import static org.mockito.Mockito.doCallRealMethod;
             new String[][] { { nomiVittime[8], tipoLupo[1] }, { nomiVittime[9], "Borgomastro" }, { nomeNosferatu, "Nosferatu" } },
             nomiVittime[9], nomiVittime[9], nomeNosferatu
         );
-        return
-            Stream.of
-            (
-                Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], SCONFITTA), Arguments.of(partite[2], NON_FINITO),
-                Arguments.of(partite[3], SCONFITTA), Arguments.of(partite[4], NON_FINITO), Arguments.of(partite[5], SCONFITTA)
-            );
+        return partite;
     }
 
     private static Partita getPartitaConAttaccoNosferatuEliminato
@@ -136,7 +143,10 @@ import static org.mockito.Mockito.doCallRealMethod;
         return partita;
     }
 
-    private static Partita getPartitaConAttaccoVampiroEliminato(String nomeVampiro, String[][] ruoli, String... nomiVittime)
+    private static Partita getPartitaConAttaccoVampiroEliminato
+    (
+        String nomeVampiro, String[][] ruoli, String... nomiVittime
+    )
     {
         Partita partita = getPartitaConAttaccoVampiro(ruoli, nomiVittime);
         partita.incrementaVoti(nomeVampiro, 2);
