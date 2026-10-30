@@ -57,21 +57,30 @@ import static org.mockito.Mockito.doCallRealMethod;
                 Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA), Arguments.of(partite[14], SCONFITTA),
                 Arguments.of(partite[15], NON_FINITO), Arguments.of(partite[16], NON_FINITO), Arguments.of(partite[17], SCONFITTA),
                 Arguments.of(partite[18], SCONFITTA), Arguments.of(partite[19], NON_FINITO), Arguments.of(partite[20], SCONFITTA),
-                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], NON_FINITO)
+                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], NON_FINITO),
+                Arguments.of(partite[24], NON_FINITO)
             );
     }
 
     private static Partita[] getPartiteConMaledetti()
     {
-        return new Partita[] { getPartitaVeggenteMaledetta() };
+        return new Partita[] { getPartitaVeggenteMaledetta(), getPartitaMagoMaledetto() };
     }
 
     private static Partita getPartitaVeggenteMaledetta()
     {
         String nomeMegera = "Emilia";
-        Partita veggente = new Partita(new String[][] { { "Emilio", "Veggente" }, { nomeMegera, "Megera" } });
-        veggente.controlloVeggente(nomeMegera);
-        return veggente;
+        Partita partita = new Partita(new String[][] { { "Emilio", "Veggente" }, { nomeMegera, "Megera" } });
+        partita.controlloVeggente(nomeMegera);
+        return partita;
+    }
+
+    private static Partita getPartitaMagoMaledetto()
+    {
+        String nomeMegera = "Francesca";
+        Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
+        partita.controlloMago(nomeMegera);
+        return partita;
     }
 
     private static Partita[] getPartiteSenzaProgenie()
