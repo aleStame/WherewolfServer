@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
-import jakarta.annotation.Nonnull;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -64,7 +63,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Partita[] getPartiteConMaledetti()
     {
-        return new Partita[] { getPartitaVeggenteMaledetta(), getPartitaMagoMaledetto() };
+        return new Partita[] { getPartitaVeggenteMaledetta(), getPartitaMagoMaledetto(), getPartitaSensitivaMaledetta() };
     }
 
     private static Partita getPartitaVeggenteMaledetta()
@@ -76,6 +75,14 @@ import static org.mockito.Mockito.doCallRealMethod;
     }
 
     private static Partita getPartitaMagoMaledetto()
+    {
+        String nomeMegera = "Francesca";
+        Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
+        partita.controlloMago(nomeMegera);
+        return partita;
+    }
+
+    private static Partita getPartitaSensitivaMaledetta()
     {
         String nomeMegera = "Francesca";
         Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
