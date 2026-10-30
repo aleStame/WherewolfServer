@@ -2973,12 +2973,7 @@ public final class TestPartita
     {
         String nomeAmato = "Elio", nomeAngelo = "Giorgia";
         inizializzaPartita(new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" } });
-        segnalazioneAngeloCustode(nomeAmato);
-        verificaAmato(nomeAmato);
-        verificaAttaccoAssassino(nomeAngelo);
-        terminaNotte();
-        verificaEliminati(nomeAngelo);
-        verificaNonAmato(nomeAmato);
+        verificaAttaccoAngeloCustode(nomeAmato, nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource
@@ -2999,6 +2994,11 @@ public final class TestPartita
             new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" }, { "Duccio", "Strega" } };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeAngelo);
+        verificaAttaccoAngeloCustode(nomeAmato, nomeAngelo);
+    }
+
+    private void verificaAttaccoAngeloCustode(String nomeAmato, String nomeAngelo)
+    {
         segnalazioneAngeloCustode(nomeAmato);
         verificaAmato(nomeAmato);
         verificaAttaccoAssassino(nomeAngelo);
