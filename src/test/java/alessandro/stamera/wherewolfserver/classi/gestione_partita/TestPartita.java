@@ -2981,6 +2981,32 @@ public final class TestPartita
         verificaNonAmato(nomeAmato);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Prete", "Sidhe", "Spia", "Sensitiva",
+            "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAngeloCustodeRomeoAssassino(String nomeRuolo)
+    {
+        String nomeAmato = "Elio", nomeAngelo = "Giorgia";
+        String[][] giocatori =
+            new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" }, { "Duccio", "Strega" } };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeAngelo);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        verificaAttaccoAssassino(nomeAngelo);
+        terminaNotte();
+        verificaEliminati(nomeAngelo);
+        verificaNonAmato(nomeAmato);
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
