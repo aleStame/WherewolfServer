@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
+import jakarta.annotation.Nonnull;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -62,10 +63,15 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Partita[] getPartiteConMaledetti()
     {
+        return new Partita[] { getPartitaVeggenteMaledetta() };
+    }
+
+    private static Partita getPartitaVeggenteMaledetta()
+    {
         String nomeMegera = "Emilia";
         Partita veggente = new Partita(new String[][] { { "Emilio", "Veggente" }, { nomeMegera, "Megera" } });
         veggente.controlloVeggente(nomeMegera);
-        return new Partita[] { veggente };
+        return veggente;
     }
 
     private static Partita[] getPartiteSenzaProgenie()
