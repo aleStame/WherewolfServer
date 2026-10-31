@@ -1859,6 +1859,14 @@ public final class TestGiocatoriVivi
         verificaVero(isProgenieVampiro(nomeGiulietta));
     }
 
+    @ParameterizedTest @CsvSource({ "Assassino" })
+    public void testGildataFallita(String nomeRuolo)
+    {
+        String nomeVittima = "Francesco";
+        inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Ivan", "Capo gilda" } });
+        verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
+    }
+
     private void verificaRomeoBeccato(String tipoLupo, String nomeVittima)
     {
         verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
