@@ -1867,7 +1867,8 @@ public final class TestGiocatoriVivi
         verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
     }
 
-    @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" }) public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
+    public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
     {
         String nomeVittima = "Giacomo";
         inizializzaGiocatori(new String[][] { { "Aldo", "Ghoul" }, { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });

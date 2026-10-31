@@ -3043,6 +3043,16 @@ public final class TestPartita
         verificaNonAmato(nomeAmato);
     }
 
+    @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
+    public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
+    {
+        String nomeVittima = "Giacomo", nomeGhoul = "Aldo";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
+        attaccoAssassino(nomeVittima);
+        terminaNotte();
+        verificaEliminazione(nomeGhoul);
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");

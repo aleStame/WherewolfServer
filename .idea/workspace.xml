@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testTrasferimentoAttaccoAssassinoGhoul non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testTrasferimentoAttaccoAssassinoGhoul riuscito">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestGiocatoriVivi.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestPartita.class.uniqueId1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,14 +282,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-00953" summary="VERDE: testConsigliGioco riuscito">
-      <option name="closed" value="true" />
-      <created>1792833963305</created>
-      <option name="number" value="00953" />
-      <option name="presentableId" value="LOCAL-00953" />
-      <option name="project" value="LOCAL" />
-      <updated>1792833963305</updated>
     </task>
     <task id="LOCAL-00954" summary="ROSSO: testConsigliGioco non riuscito">
       <option name="closed" value="true" />
@@ -664,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793468752128</updated>
     </task>
-    <option name="localTasksCounter" value="1002" />
+    <task id="LOCAL-01002" summary="VERDE: testTrasferimentoAttaccoAssassinoGhoul riuscito">
+      <option name="closed" value="true" />
+      <created>1793469192217</created>
+      <option name="number" value="01002" />
+      <option name="presentableId" value="LOCAL-01002" />
+      <option name="project" value="LOCAL" />
+      <updated>1793469192217</updated>
+    </task>
+    <option name="localTasksCounter" value="1003" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
@@ -707,6 +717,7 @@
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGildataFallita riuscito" />
     <MESSAGE value="ROSSO: testTrasferimentoAttaccoAssassinoGhoul non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testTrasferimentoAttaccoAssassinoGhoul non riuscito" />
+    <MESSAGE value="VERDE: testTrasferimentoAttaccoAssassinoGhoul riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testTrasferimentoAttaccoAssassinoGhoul riuscito" />
   </component>
 </project>
