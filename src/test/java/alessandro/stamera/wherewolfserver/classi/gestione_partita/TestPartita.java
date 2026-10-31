@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
@@ -2973,7 +2972,10 @@ public final class TestPartita
     {
         String nomeAmato = "Elio", nomeAngelo = "Giorgia";
         inizializzaPartita(new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" } });
-        verificaAttaccoAngeloCustode(nomeAmato, nomeAngelo);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        verificaAttaccoAssassino(nomeAngelo);
+        verificaNonAmato(nomeAmato);
     }
 
     @ParameterizedTest @CsvSource
@@ -2987,23 +2989,43 @@ public final class TestPartita
             "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
-    public void testAttaccoAngeloCustodeRomeoAssassino(String nomeRuolo)
+    public void testAttaccoAngeloCustodeStregatoAssassino(String nomeRuolo)
     {
         String nomeAmato = "Elio", nomeAngelo = "Giorgia";
         String[][] giocatori =
             new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" }, { "Duccio", "Strega" } };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeAngelo);
-        verificaAttaccoAngeloCustode(nomeAmato, nomeAngelo);
-    }
-
-    private void verificaAttaccoAngeloCustode(String nomeAmato, String nomeAngelo)
-    {
         segnalazioneAngeloCustode(nomeAmato);
         verificaAmato(nomeAmato);
         verificaAttaccoAssassino(nomeAngelo);
+        verificaNonAmato(nomeAmato);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Prete", "Sidhe", "Spia", "Sensitiva", "Strega", "Templare",
+            "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAngeloCustodeRomeoAssassino(String nomeRuolo)
+    {
+        String nomeAmato = "Elio", nomeAngelo = "Giorgia", nomeGiulietta = "Duccio";
+        String[][] giocatori =
+            new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nomeGiulietta, "Giulietta" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeAngelo);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        String messaggio = "Giorgia è Romeo.\nAvvisa anche Duccio (Giulietta) del fatto che deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeAngelo)).withMessage(messaggio);
         terminaNotte();
-        verificaEliminati(nomeAngelo);
+        verificaEliminati(nomeAngelo, nomeGiulietta);
         verificaNonAmato(nomeAmato);
     }
 
