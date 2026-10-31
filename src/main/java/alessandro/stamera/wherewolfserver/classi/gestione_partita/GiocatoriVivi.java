@@ -28,7 +28,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getGiocatore(nome).protezioneAngeloCustode(); }
 
-    public EsitoAttacco attaccoAssassino(String nome) { return getGiocatore(nome).attaccoAssassino(); }
+    public EsitoAttacco attaccoAssassino(String nome)
+    {
+        EsitoAttacco esito = getGiocatore(nome).attaccoAssassino();
+        if(esito == RIUSCITO && (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente()) esito = GHOUL_MORTO;
+        return esito;
+    }
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
@@ -312,7 +317,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
         aggiornaProtezioniCappuccettoRossoPostInserimento();
-        if(isPeccatorePresente() && isPossedutoPresente()) cambiaFazione(getNomePeccatore(), NESSUNA);
+        if(isPeccatorePresente() && isPossedutoPresente()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -428,8 +433,6 @@ public final class GiocatoriVivi extends Giocatori
     {
         for(Ruolo lupo : getLupi()) perdiProtezioneCappuccettoRosso(lupo);
     }
-
-    private void cambiaFazione(String nome, Fazione fazione) { getGiocatore(nome).cambiaFazione(fazione); }
 
     private void perdiProtezioneCappuccettoRosso(Ruolo lupo)
     {
