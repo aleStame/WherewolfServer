@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -51,6 +52,8 @@ public final class TestAssassino
     }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
+    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(FALLITO); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 
