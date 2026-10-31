@@ -98,6 +98,7 @@ public final class Partita
             case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
             case MORTO -> assassinioContadinoMostro(nome);
             case ROMEO_BECCATO -> assassinioRomeoGiulietta();
+            case GHOUL_MORTO -> eliminaGiocatore(getNomeGhoul());
         }
     }
 
