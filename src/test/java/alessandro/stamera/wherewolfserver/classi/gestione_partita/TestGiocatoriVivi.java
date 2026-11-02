@@ -306,7 +306,7 @@ public final class TestGiocatoriVivi
     }
 
     @ParameterizedTest
-    @CsvSource({ "Bocca di rosa", "Cacciatore", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe" })
+    @CsvSource({ "Assassino", "Bocca di rosa", "Cacciatore", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe" })
     public void testSegnalazioneInquisitoreMisticoAssente(String nomeRuolo)
     {
         String nomeVittima = "Raffaele", nomeInquisitore = "Andrea";
