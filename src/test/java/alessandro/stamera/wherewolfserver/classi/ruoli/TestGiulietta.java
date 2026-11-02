@@ -49,6 +49,8 @@ public final class TestGiulietta
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
+    @Test public void testAttaccoAssassino() { verificaGiuliettaBeccata(ruolo.attaccoAssassino()); }
+
     private Ruolo getRuolo(String nomeRuolo) { return FACTORY.getRuolo(nomeRuolo); }
 
     private void verificaGiuliettaBeccata(EsitoAttacco esito) { assertThat(esito).isEqualTo(GIULIETTA_BECCATA); }
