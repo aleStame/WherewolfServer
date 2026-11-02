@@ -2469,14 +2469,13 @@ public final class TestPartita
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
-    public void testGuarigioneVittimaLupi(String tipoLupo)
+    @ParameterizedTest @MethodSource("getCombinazioni")
+    public void testGuarigioneVittimaLupi(String tipoLupo, String nomeRuolo)
     {
         String nomeVittima = "Damiano";
-        inizializzaPartita
-        (
-            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo" }, { "Andrea","Guaritore" } }
-        );
+        String[][] giocatori =
+            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo" }, { "Andrea","Guaritore" } };
+        inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomeVittima);
         guarisci(nomeVittima);
         terminaNotte();
@@ -3254,6 +3253,21 @@ public final class TestPartita
     {
         attaccoLupi(tipoLupo, nomeVittima);
         verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
+    }
+
+    private static Stream<Arguments> getCombinazioni()
+    {
+        String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
+        String[] nomiRuoli =
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore di vampiri", "Capo gilda", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
+            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
+        };
+        List<Arguments> argomenti = new ArrayList<>();
+        for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
+        return argomenti.stream();
     }
 
     private static Stream<Arguments> getEsempioAttaccoAmato()
