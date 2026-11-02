@@ -99,6 +99,7 @@ public final class Partita
             case MORTO -> assassinioContadinoMostro(nome);
             case ROMEO_BECCATO -> assassinioRomeoGiulietta();
             case GHOUL_MORTO -> eliminaGiocatore(getNomeGhoul());
+            case GIULIETTA_BECCATA -> eliminaGiocatori(nome, getNomeRomeo());
         }
     }
 
@@ -841,7 +842,7 @@ public final class Partita
         perdiProtezioniCappuccettoRosso();
     }
 
-    private void aggiungiGiocatoreVivo(String nome, Giocatore giocatore) { System.out.println("ecchice"); vivi.aggiungiGiocatore(nome, giocatore); }
+    private void aggiungiGiocatoreVivo(String nome, Giocatore giocatore) { vivi.aggiungiGiocatore(nome, giocatore); }
 
     private EsitoPartita getEsitoPartitaNegromante() { return getNegromante().getEsitoPartita(this); }
 

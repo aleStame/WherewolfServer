@@ -103,6 +103,7 @@ public final class Giocatore
         EsitoAttacco esito = ruolo.attaccoAssassino();
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
         else if(isRomeo()) esito = ROMEO_BECCATO;
+        else if(isFazione(VAMPIRO) && isNonMorto()) esito = RIUSCITO;
         return esito;
     }
 
