@@ -19,6 +19,8 @@ public final class Traditore extends Ruolo
         );
     }
 
+    @Override public boolean isTraditore() { return true; }
+
     public static Ruolo getInstance() { return new Traditore(); }
 
 }

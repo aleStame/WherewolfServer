@@ -287,6 +287,8 @@ public final class Giocatore
 
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
+    public boolean isTraditore() { return ruolo.isTraditore(); }
+
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
         EsitoPartita esito = SCONFITTA;

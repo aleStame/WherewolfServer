@@ -285,6 +285,8 @@ public class Ruolo
 
     public String getConsigli() { return consigli; }
 
+    public boolean isTraditore() { return false; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean controlloTrattiOscuri()

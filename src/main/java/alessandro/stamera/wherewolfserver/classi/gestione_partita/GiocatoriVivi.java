@@ -318,6 +318,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiornaProtezioniLadra();
         aggiornaProtezioniCappuccettoRossoPostInserimento();
         if(isPeccatorePresente() && isPossedutoPresente()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
+        if(isTraditorePresente()) aggiungiProtezioneLupi(getNomeTraditore());
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -386,6 +387,21 @@ public final class GiocatoriVivi extends Giocatori
     private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
 
     public String getNomePeccatore() { return getNomeGiocatore(getPosizionePeccatore()); }
+
+    public boolean isTraditorePresente() { return getPosizioneTraditore() != NON_TROVATO; }
+
+    public String getNomeTraditore() { return getNomeGiocatore(getPosizioneTraditore()); }
+
+    public void aggiungiProtezioneLupi(String nome) { getGiocatore(nome).aggiungiProtezione(getLupi()); }
+
+    private int getPosizioneTraditore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isTraditore(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
+
+    private boolean isTraditore(String nome) { return getGiocatore(nome).isTraditore(); }
 
     private int getPosizionePeccatore()
     {
