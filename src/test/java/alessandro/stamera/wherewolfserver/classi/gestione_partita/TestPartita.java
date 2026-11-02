@@ -2444,6 +2444,16 @@ public final class TestPartita
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
 
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testAttaccoLupiStregato(String nomeRuolo, String tipoLupo)
+    {
+        String nomeVittima = "Damiano";
+        String[][] giocatori =
+            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Monica", "Strega" } };
+        inizializzaPartita(giocatori);
+        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
+    }
+
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testAttaccoLupiContadinoEroeStregato(String tipoLupo)
     {
