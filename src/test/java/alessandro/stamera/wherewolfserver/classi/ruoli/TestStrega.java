@@ -21,4 +21,6 @@ public final class TestStrega
         assertThat(FACTORY.getRuolo("Strega").getConsigli()).isEqualTo(messaggio);
     }
 
+    @Test public void testControlloMedium() { assertThat() }
+
 }
