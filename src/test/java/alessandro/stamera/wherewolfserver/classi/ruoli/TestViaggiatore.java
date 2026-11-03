@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,5 +19,7 @@ public final class TestViaggiatore
             "quel momento. Dovete solo capire quale può essere quel ruolo in quel contesto specifico.";
         assertThat(FACTORY.getRuolo("Viaggiatore").getConsigli()).isEqualTo(messaggio);
     }
+
+    @Test public void testControlloMedium() { assertThat(FACTORY.getRuolo("Viaggiatore").controlloMedium()).isEqualTo(BIANCA); }
 
 }
