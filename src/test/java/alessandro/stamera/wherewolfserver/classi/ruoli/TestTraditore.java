@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,5 +19,7 @@ public final class TestTraditore
             "rispetto a quella dei Lupi che proteggete.";
         assertThat(FACTORY.getRuolo("Traditore").getConsigli()).isEqualTo(messaggio);
     }
+
+    @Test public void testControlloMedium() { assertThat(FACTORY.getRuolo("Traditore").controlloMedium()).isEqualTo(BIANCA); }
 
 }
