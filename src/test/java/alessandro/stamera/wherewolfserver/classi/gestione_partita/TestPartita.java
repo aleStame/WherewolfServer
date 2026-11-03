@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -2437,7 +2434,24 @@ public final class TestPartita
             "Veggente", "Viaggiatore"
         }
     )
-    public void testAttaccoLupoBranco(String nomeRuolo)
+    public void testAttaccoLupoBrancoRiuscito(String nomeRuolo)
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Mago", "Medium", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva",
+            "Templare", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoLupoReiettoRiuscito(String nomeRuolo)
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
