@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoReietto riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoSolitario riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,14 +271,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-00970" summary="VERDE DIRETTO: testEsitoPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1793196615651</created>
-      <option name="number" value="00970" />
-      <option name="presentableId" value="LOCAL-00970" />
-      <option name="project" value="LOCAL" />
-      <updated>1793196615653</updated>
     </task>
     <task id="LOCAL-00971" summary="VERDE DIRETTO: testEsitoPartitaProgenie riuscito">
       <option name="closed" value="true" />
@@ -664,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793699379619</updated>
     </task>
-    <option name="localTasksCounter" value="1019" />
+    <task id="LOCAL-01019" summary="VERDE DIRETTO: testAttaccoLupoSolitario riuscito">
+      <option name="closed" value="true" />
+      <created>1793699873739</created>
+      <option name="number" value="01019" />
+      <option name="presentableId" value="LOCAL-01019" />
+      <option name="project" value="LOCAL" />
+      <updated>1793699873739</updated>
+    </task>
+    <option name="localTasksCounter" value="1020" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +682,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAngeloCustodeAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAngeloCustodeRomeoAssassino riuscito" />
@@ -707,6 +706,7 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupiStregato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitario riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoSolitario riuscito" />
   </component>
 </project>
