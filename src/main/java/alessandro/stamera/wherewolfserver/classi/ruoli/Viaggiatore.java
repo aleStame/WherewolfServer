@@ -2,6 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+
 public final class Viaggiatore extends Ruolo
 {
 
@@ -9,7 +11,7 @@ public final class Viaggiatore extends Ruolo
     {
         super
         (
-    "Viaggiatore", null, null, 0, false,
+    "Viaggiatore", BIANCA, null, 0, false,
     "La vostra condizione di vittoria è unica e differente da tutte le altre: dovete rimanere vivo. Se non fino alla fine del gioco, " +
             "almeno quanto basta da poter lasciare il villaggio. La scelta più importante sarà quella di decidere se rivelare o meno la vostra " +
             "identità al villaggio. Quello del Viaggiatore è uno dei ruoli verso cui le reazioni saranno più disparate: a volte vi crederanno e vi " +
