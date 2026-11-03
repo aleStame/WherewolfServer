@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 
 public final class Veggente extends Villaggio
 {
@@ -10,7 +11,7 @@ public final class Veggente extends Villaggio
     {
         super
         (
-    "Veggente", null, null, 0, true,
+    "Veggente", BIANCA, null, 0, true,
     "La Veggente è il ruolo principale della fazione degli Uomini. Il suo compito è il più delicato e, ovviamente, è in cima alla lista " +
             "dei bersagli per le Creature dell'Ombra. Scegliete bene quando rivelarvi: troppo presto e farete il gioco dei Lupi, troppo tardi e " +
             "avrete celato troppo a lungo informazioni preziose per il villaggio. Ricordatevi che è molto probabile che sarete uccisi prima che " +
