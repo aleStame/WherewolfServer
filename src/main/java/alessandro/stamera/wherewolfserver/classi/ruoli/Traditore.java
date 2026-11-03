@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 
 public final class Traditore extends Ruolo
 {
@@ -9,7 +10,7 @@ public final class Traditore extends Ruolo
     {
         super
         (
-    "Traditore", null, null, 0, false,
+    "Traditore", BIANCA, null, 0, false,
     "Il vostro obiettivo è quello di far vincere i Lupi, ma è ostacolato dal fatto che non li conoscerete. Per prima cosa dovrete " +
             "quindi cercare di capire chi siano per aiutarli nel loro compito. Ricordatevi che loro conoscono la vostra identità quindi " +
             "potrebbero darvi segnali durante la partita per farsi a loro volta riconoscere. Dal momento che possedete aura bianca, il vostro " +
