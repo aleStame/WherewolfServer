@@ -623,7 +623,8 @@ public final class TestGiocatoriVivi
             "Lupo solitario, NON_MISTICO", "Mago, MISTICO", "Medium, MISTICO", "Megera, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO",
             "Negromante, MISTICO", "Nonna, NON_MISTICO", "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO",
             "Pazzo, NON_MISTICO", "Peccatore, NON_MISTICO", "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO",
-            "Spia, NON_MISTICO", "Sensitiva, MISTICO", "Sensitiva, MISTICO", "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
+            "Spia, NON_MISTICO", "Sensitiva, MISTICO", "Strega, MISTICO", "Templare, NON_MISTICO", "Traditore, NON_MISTICO",
+            "Vampiro, NON_MISTICO", "Veggente, MISTICO", "Viaggiatore, NON_MISTICO"
         }
     )
     public void testControlloMago(String nomeRuolo, Misticismo misticismo)

@@ -21,4 +21,6 @@ public final class TestVeggente
         assertThat(FACTORY.getRuolo("Veggente").getConsigli()).isEqualTo(messaggio);
     }
 
+    @Test public void testMistico() { assertThat(FACTORY.getRuolo("Veggente").isMistico()).isTrue(); }
+
 }
