@@ -1697,6 +1697,29 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
+            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO",
+            "Cacciatore di vampiri, RIUSCITO", "Capo gilda, RIUSCITO", "Contadino eroe, MORTO",
+            "Contadino discendente dei lupi, CONTADINO_LUPO_BECCATO", "Contadino mostro, MORTO", "Contadino normale, RIUSCITO",
+            "Eremita, EREMITA_BECCATO", "Ghoul, RIUSCITO", "Giovane lupo, RIUSCITO", "Giulietta, GIULIETTA_BECCATA", "Giullare, RIUSCITO",
+            "Goblin, RIUSCITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, RIUSCITO", "Inquisitore, RIUSCITO",
+            "Ladra, FALLITO", "Leprecauno, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo solitario, FALLITO", "Mago, RIUSCITO",
+            "Medium, RIUSCITO", "Medium, RIUSCITO", "Megera, RIUSCITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, RIUSCITO",
+            "Nosferatu, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
+            "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, RIUSCITO", "Spia, RIUSCITO", "Strega, RIUSCITO", "Sensitiva, RIUSCITO",
+            "Templare, RIUSCITO", "Traditore, FALLITO", "Vampiro, RIUSCITO", "Veggente, RIUSCITO", "Viaggiatore, RIUSCITO"
+        }
+    )
+    public void testAttaccoLupoReietto(String nomeRuolo, EsitoAttacco esito)
+    {
+        String tipoLupo = "Lupo reietto", nomeVittima = "Damiano";
+        inizializzaGiocatori(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupo(tipoLupo, nomeVittima, esito);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino eroe", "Contadino discendente dei lupi", "Contadino mostro",
             "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta",

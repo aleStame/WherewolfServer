@@ -2427,10 +2427,20 @@ public final class TestPartita
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
-    @Test public void testAttaccoLupoBranco()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Mago", "Medium", "Medium", "Megera", "Mercante", "Monaco", "Negromante",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro",
+            "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoLupoBranco(String nomeRuolo)
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
