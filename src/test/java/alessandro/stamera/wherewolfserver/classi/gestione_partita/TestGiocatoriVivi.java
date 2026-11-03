@@ -647,14 +647,24 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Angelo custode, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO",
-            "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, EREMITA_BECCATO"
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
+            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO",
+            "Cacciatore, RIUSCITO", "Cacciatore di vampiri, RIUSCITO", "Capo branco, RIUSCITO", "Capo gilda, RIUSCITO",
+            "Cappuccetto rosso, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO",
+            "Contadino normale, RIUSCITO", "Eremita, EREMITA_BECCATO", "Ghoul, RIUSCITO", "Giovane lupo, RIUSCITO", "Giulietta, RIUSCITO",
+            "Giullare, RIUSCITO", "Goblin, RIUSCITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, RIUSCITO",
+            "Inquisitore, RIUSCITO", "Ladra, FALLITO", "Leprecauno, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo reietto, RIUSCITO",
+            "Lupo solitario, RIUSCITO", "Mago, RIUSCITO", "Medium, RIUSCITO", "Megera, RIUSCITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
+            "Monaco, RIUSCITO", "Nonna, RIUSCITO", "Nonna, RIUSCITO", "Nosferatu, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO",
+            "Pazzo, RIUSCITO", "Peccatore, RIUSCITO", "Posseduto, RIUSCITO", "Prete, RIUSCITO", "Sidhe, RIUSCITO", "Spia, RIUSCITO",
+            "Strega, RIUSCITO", "Sensitiva, RIUSCITO", "Templare, RIUSCITO", "Traditore, RIUSCITO", "Vampiro, RIUSCITO", "Veggente, RIUSCITO",
+            "Viaggiatore, RIUSCITO"
         }
     )
     public void testAttaccoNegromante(String nomeRuolo, EsitoAttacco esito)
     {
         String nome = "Mike";
-        aggiungiGiocatore(nome, nomeRuolo);
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Salvatore", "Negromante" } });
         verificaEsitoAttaccoNegromante(nome, esito);
     }
 

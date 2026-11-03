@@ -2094,7 +2094,7 @@ public final class TestPartita
             "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia",
-            "Sensitiva", "Templare", "Vampiro"
+            "Sensitiva", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testFunzionamentoNegromante(String nomeRuolo)
