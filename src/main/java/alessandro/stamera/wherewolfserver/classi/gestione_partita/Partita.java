@@ -256,10 +256,12 @@ public final class Partita
     {
         controlloViaggiatore();
         confermaEliminazioneMortiNotte();
-        if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
+        controlloAngeloCustodeAmato();
         numeroNotte++;
         if(isViaggioPronto()) setViaggioPartito(true);
     }
+
+    private void controlloAngeloCustodeAmato() { if(isAmatoSenzaAngelo()) perditaProtezioniAmato(); }
 
     private void controlloViaggiatore() { if(isViaggioPartito()) eliminaViaggiatore(); }
 
