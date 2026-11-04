@@ -44,4 +44,24 @@ public final class TestViaggiatore
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
+    @Test public void testVittoriaPartitaSetteGiocatori()
+    {
+        String nomeViaggiatore = "Buffy", nomeAssassino = "Spike", tipoLupo = "Capo branco", nomeMedium = "Giles";
+        String[][] giocatori =
+        {
+            { nomeViaggiatore, "Viaggiatore" }, { "Oz", tipoLupo }, { nomeAssassino, "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
+            { "Willow", "Strega" }, { nomeMedium, "Medium" }
+        };
+        Partita partita = new Partita(giocatori);
+        int numeroVoti = 6;
+        partita.incrementaVoti(nomeAssassino, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeAssassino, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.attaccoLupi(tipoLupo, nomeMedium);
+        partita.terminaNotte();
+        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
 }
