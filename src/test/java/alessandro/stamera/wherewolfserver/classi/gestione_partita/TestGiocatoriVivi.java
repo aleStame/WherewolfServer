@@ -424,7 +424,7 @@ public final class TestGiocatoriVivi
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Borgomastro", "Becchino", "Bracconiere", "Cacciatore",
             "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino normale", "Eremita", "Ghoul", "Giulietta",
             "Giullare", "Guardia", "Guaritore", "Inquisitore", "Ladra", "Mago", "Medium", "Mercante", "Monaco", "Nonna", "Oratore", "Oste",
-            "Pazzo", "Prete", "Spia", "Templare"
+            "Pazzo", "Prete", "Spia", "Strega", "Templare", "Traditore", "Veggente", "Viaggiatore"
         }
     )
     public void testAuraChiara(String nomeRuolo)
@@ -437,8 +437,8 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Contadino mostro", "Giovane lupo", "Lupo del branco", "Lupo reietto",
-            "Lupo solitario", "Megera", "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
+            "Assassino", "Bocca di rosa", "Boia", "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia corrotta", "Lupo del branco",
+            "Lupo reietto", "Lupo solitario", "Megera", "Negromante", "Nosferatu", "Peccatore", "Posseduto", "Guardia corrotta"
         }
     )
     public void testAuraOscura(String nomeRuolo)
