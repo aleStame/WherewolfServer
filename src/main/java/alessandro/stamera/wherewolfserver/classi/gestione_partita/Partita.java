@@ -258,8 +258,10 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         controlloAngeloCustodeAmato();
         numeroNotte++;
-        if(isViaggioPronto()) setViaggioPartito(true);
+        controlloViaggio();
     }
+
+    private void controlloViaggio() { if(isViaggioPronto()) setViaggioPartito(true); }
 
     private void controlloAngeloCustodeAmato() { if(isAmatoSenzaAngelo()) perditaProtezioniAmato(); }
 
