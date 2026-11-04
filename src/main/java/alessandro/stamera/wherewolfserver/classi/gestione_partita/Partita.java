@@ -35,7 +35,7 @@ public final class Partita
 
     private final String[] maledettiNegromante;
 
-    private boolean pazzoUcciso, crociataAvviata;
+    private boolean pazzoUcciso, crociataAvviata, viaggioPartito;
 
     private int numeroNotte;
 
@@ -53,6 +53,7 @@ public final class Partita
         numeroNotte = 1;
         maledettiNegromante = new String[2];
         crociataAvviata = false;
+        viaggioPartito = getNumeroGiocatoriVivi() == 6;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -141,11 +142,9 @@ public final class Partita
         }
     }
 
-    //public void segnalazioneAzzeccagarbugli(String nome) { vivi.segnalazioneAzzeccagarbugli(nome); }
-
     public void segnalazioneInquisitore(String nome) { vivi.segnalazioneInquisitore(nome); }
 
-    public boolean isViaggioPartito() { return false; }
+    public boolean isViaggioPartito() { return viaggioPartito; }
 
     public boolean isViaggiatoreAmato() { return false; }
 
@@ -255,9 +254,19 @@ public final class Partita
 
     public void terminaNotte()
     {
+        if(isViaggioPartito()) eliminaGiocatore(getNomeViaggiatore());
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
+        if(getNumeroGiocatoriVivi() == 6) viaggioPartito = true;
+    }
+
+    private String getNomeViaggiatore()
+    {
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
+            if(vivi.getGiocatore(vivi.getNomeGiocatore(i)).getRuolo().isViaggiatore()) posizione = i;
+        return getNomeGiocatoreVivo(posizione);
     }
 
     private void gestioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
