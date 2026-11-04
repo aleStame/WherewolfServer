@@ -412,6 +412,8 @@ public final class Giocatore
 
     public boolean isInquisitore() { return ruolo.isInquisitore(); }
 
+    public EsitoControlloSensitiva controlloSensitiva() { return null; }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;

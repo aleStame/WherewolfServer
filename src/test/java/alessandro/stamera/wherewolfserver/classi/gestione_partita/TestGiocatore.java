@@ -1028,6 +1028,28 @@ public final class TestGiocatore
         verificaControlloVeggente(aura);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, VILLAGGIO", "Assassino, NON_VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
+            "Bardo, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO", "Becchino, VILLAGGIO", "Bracconiere, NON_VILLAGGIO",
+            "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO", "Capo gilda, NON_VILLAGGIO",
+            "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO", "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO",
+            "Eremita, VILLAGGIO", "Ghoul, NON_VILLAGGIO", "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO",
+            "Guardia, VILLAGGIO", "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO", "Inquisitore, NON_VILLAGGIO", "Ladra, NON_VILLAGGIO",
+            "Lupo del branco, NON_VILLAGGIO", "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO", "Mago, VILLAGGIO",
+            "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO", "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO", "Negromante, NON_VILLAGGIO",
+            "Nosferatu, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO", "Pazzo, NON_VILLAGGIO",
+            "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO", "Prete, VILLAGGIO", "Spia, NON_VILLAGGIO", "Strega, VILLAGGIO",
+            "Templare, NON_VILLAGGIO", "Traditore, NON_VILLAGGIO", "Vampiro, NON_VILLAGGIO", "Veggente, VILLAGGIO", "Viaggiatore, NON_VILLAGGIO"
+        }
+    )
+    public void testControlloSensitiva(String nomeRuolo, EsitoControlloSensitiva esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.controlloSensitiva()).isEqualTo(esito);
+    }
+
     private void verificaCorrettoPassaggioPosseduto()
     {
         verificaEsitoPassaggioPosseduto(RIUSCITO);
