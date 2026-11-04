@@ -1008,6 +1008,26 @@ public final class TestGiocatore
         assertThat(giocatore.controlloMedium()).isEqualTo(aura);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, BIANCA", "Assassino, NERA", "Angelo custode, BIANCA", "Azzeccagarbugli, BIANCA", "Bardo, BIANCA",
+            "Bocca di rosa, NERA", "Borgomastro, BIANCA", "Becchino, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA",
+            "Cacciatore di vampiri, BIANCA", "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
+            "Contadino mostro, NERA", "Contadino normale, BIANCA", "Eremita, BIANCA", "Ghoul, BIANCA", "Giovane lupo, NERA", "Giulietta, BIANCA",
+            "Giullare, BIANCA", "Guardia, BIANCA", "Guardia corrotta, NERA", "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA",
+            "Lupo del branco, NERA", "Lupo reietto, NERA", "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA",
+            "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA", "Nosferatu, NERA", "Nonna, BIANCA", "Oratore, BIANCA", "Oste, BIANCA",
+            "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA", "Prete, BIANCA", "Spia, BIANCA", "Strega, BIANCA", "Templare, BIANCA",
+            "Traditore, BIANCA", "Vampiro, NERA", "Veggente, BIANCA", "Viaggiatore, BIANCA"
+        }
+    )
+    public void testControlloVeggente(String nomeRuolo, Aura aura)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaControlloVeggente(aura);
+    }
+
     private void verificaCorrettoPassaggioPosseduto()
     {
         verificaEsitoPassaggioPosseduto(RIUSCITO);
