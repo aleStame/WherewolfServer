@@ -151,7 +151,7 @@ public final class TestGiocatoriVivi
             "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
-            "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Spia", "Sensitiva", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testAttaccoAmatoAssassino(String nomeRuolo)
