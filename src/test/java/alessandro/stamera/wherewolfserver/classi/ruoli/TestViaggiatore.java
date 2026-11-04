@@ -1,6 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -9,6 +11,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestViaggiatore
 {
+
+    private Ruolo ruolo;
+
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Viaggiatore"); }
 
     @Test public void testConsigliGioco()
     {
@@ -19,13 +25,10 @@ public final class TestViaggiatore
             "trascureranno del tutto, a volte vi bruceranno subito poiché, non avendo schieramento, potreste comunque essere d’intralcio. Spesso " +
             "potrebbe risultare più efficace mentire sulla vostra identità, fingendo di essere un ruolo che nessuno ha interesse ad eliminare in " +
             "quel momento. Dovete solo capire quale può essere quel ruolo in quel contesto specifico.";
-        assertThat(FACTORY.getRuolo("Viaggiatore").getConsigli()).isEqualTo(messaggio);
+        assertThat(ruolo.getConsigli()).isEqualTo(messaggio);
     }
 
-    @Test public void testControlloMedium()
-    {
-        assertThat(FACTORY.getRuolo("Viaggiatore").controlloMedium()).isEqualTo(BIANCA);
-    }
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
     @Test public void testVittoriaPartitaSeiGiocatori()
     {
@@ -38,7 +41,7 @@ public final class TestViaggiatore
         Partita partita = new Partita(giocatori);
         partita.terminaNotte();
         assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
-        assertThat(FACTORY.getRuolo("Viaggiatore").getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
 }

@@ -3,7 +3,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 
@@ -29,11 +28,14 @@ public final class Viaggiatore extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO)
-        {
-            esito = SCONFITTA;
-            if(partita.isViaggioPartito()) esito = VITTORIA;
-        }
+        if(esito == NON_FINITO) esito = getEsitoViaggio(partita);
+        return esito;
+    }
+
+    private EsitoPartita getEsitoViaggio(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isViaggioPartito()) esito = VITTORIA;
         return esito;
     }
 
