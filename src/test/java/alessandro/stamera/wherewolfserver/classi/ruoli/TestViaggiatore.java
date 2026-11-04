@@ -1,7 +1,9 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,6 +22,23 @@ public final class TestViaggiatore
         assertThat(FACTORY.getRuolo("Viaggiatore").getConsigli()).isEqualTo(messaggio);
     }
 
-    @Test public void testControlloMedium() { assertThat(FACTORY.getRuolo("Viaggiatore").controlloMedium()).isEqualTo(BIANCA); }
+    @Test public void testControlloMedium()
+    {
+        assertThat(FACTORY.getRuolo("Viaggiatore").controlloMedium()).isEqualTo(BIANCA);
+    }
+
+    @Test public void testVittoriaPartitaSeiGiocatori()
+    {
+        String nomeViaggiatore = "Buffy";
+        String[][] giocatori =
+        {
+            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
+            { "Willow", "Strega" }
+        };
+        Partita partita = new Partita(giocatori);
+        partita.terminaNotte();
+        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
+        assertThat(FACTORY.getRuolo("Viaggiatore").getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
 
 }
