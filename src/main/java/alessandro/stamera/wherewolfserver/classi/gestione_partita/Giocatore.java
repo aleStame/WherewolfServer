@@ -412,7 +412,7 @@ public final class Giocatore
 
     public boolean isInquisitore() { return ruolo.isInquisitore(); }
 
-    public EsitoControlloSensitiva controlloSensitiva() { return null; }
+    public EsitoControlloSensitiva controlloSensitiva() { return ruolo.controlloSensitiva(); }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
