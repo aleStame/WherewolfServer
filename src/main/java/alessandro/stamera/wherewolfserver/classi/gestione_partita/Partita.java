@@ -53,7 +53,7 @@ public final class Partita
         numeroNotte = 1;
         maledettiNegromante = new String[2];
         crociataAvviata = false;
-        viaggioPartito = getNumeroGiocatoriVivi() == 6;
+        setViaggioPartito(getNumeroGiocatoriVivi() == 6);
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -258,8 +258,10 @@ public final class Partita
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
-        if(getNumeroGiocatoriVivi() == 6) viaggioPartito = true;
+        if(getNumeroGiocatoriVivi() == 6) setViaggioPartito(true);
     }
+
+    private void setViaggioPartito(boolean viaggioPartito) { this.viaggioPartito = viaggioPartito; }
 
     private String getNomeViaggiatore()
     {
