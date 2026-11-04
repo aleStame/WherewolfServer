@@ -254,12 +254,14 @@ public final class Partita
 
     public void terminaNotte()
     {
-        if(isViaggioPartito()) eliminaViaggiatore();
+        controlloViaggiatore();
         confermaEliminazioneMortiNotte();
         if(isAmatoSenzaAngelo()) perditaProtezioniAmato();
         numeroNotte++;
         if(isViaggioPronto()) setViaggioPartito(true);
     }
+
+    private void controlloViaggiatore() { if(isViaggioPartito()) eliminaViaggiatore(); }
 
     private boolean isViaggioPronto() { return getNumeroGiocatoriVivi() == 6; }
 
