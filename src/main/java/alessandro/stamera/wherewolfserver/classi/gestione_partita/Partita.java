@@ -235,6 +235,7 @@ public final class Partita
         mortiNotte.eliminaGiocatore(nome);
         if(vivi.isMegera(nome)) maledizioneGuaritore();
         else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
+        if(vivi.isViaggiatore(nome)) controlloViaggio();
     }
 
     public void incrementaVotiContadinoMostro(String nome)

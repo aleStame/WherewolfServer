@@ -1,9 +1,16 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -31,26 +38,41 @@ public final class TestViaggiatore
 
     @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
-    @Test public void testVittoriaPartitaSeiGiocatori()
+    @ParameterizedTest @MethodSource("getEsempiPartite")
+    public void testEsitoPartitaViaggiatore(Partita partita, EsitoPartita esito)
     {
-        String nomeViaggiatore = "Buffy";
+        assertThat(partita.isEliminato("Buffy")).isTrue();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    private static Stream<Arguments> getEsempiPartite()
+    {
+        return Stream.of
+        (
+            Arguments.of(getPartitaSeiGiocatoriViaggiatoreNonEliminatoVincitore(), VITTORIA),
+            Arguments.of(getPartitaSetteGiocatori(), VITTORIA), Arguments.of(getPartitaSeiGiocatoriViaggiatoreEliminatoSconfitto(), SCONFITTA),
+            Arguments.of(getPartitaSeiGiocatoriViaggiatoreEliminatoVincitore(), VITTORIA)
+        );
+    }
+
+    private static Partita getPartitaSeiGiocatoriViaggiatoreNonEliminatoVincitore()
+    {
         String[][] giocatori =
         {
-            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
+            { "Buffy", "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
             { "Willow", "Guaritore" }
         };
         Partita partita = new Partita(giocatori);
         partita.terminaNotte();
-        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        return partita;
     }
 
-    @Test public void testVittoriaPartitaSetteGiocatori()
+    private static Partita getPartitaSetteGiocatori()
     {
-        String nomeViaggiatore = "Buffy", nomeAssassino = "Spike", tipoLupo = "Capo branco", nomeMedium = "Giles";
+        String nomeAssassino = "Spike", tipoLupo = "Capo branco", nomeMedium = "Giles";
         String[][] giocatori =
         {
-            { nomeViaggiatore, "Viaggiatore" }, { "Oz", tipoLupo }, { nomeAssassino, "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
+            { "Buffy", "Viaggiatore" }, { "Oz", tipoLupo }, { nomeAssassino, "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
             { "Willow", "Guaritore" }, { nomeMedium, "Medium" }
         };
         Partita partita = new Partita(giocatori);
@@ -62,39 +84,36 @@ public final class TestViaggiatore
         partita.attaccoLupi(tipoLupo, nomeMedium);
         partita.terminaNotte();
         partita.terminaNotte();
-        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        return partita;
     }
 
-    @Test public void testSconfittaViaggiatoreAssassinato()
+    private static Partita getPartitaSeiGiocatoriViaggiatoreEliminatoSconfitto()
     {
         String nomeViaggiatore = "Buffy";
         String[][] giocatori =
         {
-            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
-            { "Willow", "Guaritore" }
+            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" },
+            { "Xander", "Guardia" }, { "Willow", "Guaritore" }
         };
         Partita partita = new Partita(giocatori);
         partita.attaccoAssassino(nomeViaggiatore);
         partita.terminaNotte();
-        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        return partita;
     }
 
-    @Test public void testVittoriaViaggiatoreAssassinato()
+    private static Partita getPartitaSeiGiocatoriViaggiatoreEliminatoVincitore()
     {
         String nomeViaggiatore = "Buffy";
         String[][] giocatori =
         {
-            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
-            { "Willow", "Guaritore" }
+            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" },
+            { "Xander", "Guardia" }, { "Willow", "Guaritore" }
         };
         Partita partita = new Partita(giocatori);
         partita.attaccoAssassino(nomeViaggiatore);
         partita.guarisci(nomeViaggiatore);
         partita.terminaNotte();
-        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
-        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        return partita;
     }
 
 }
