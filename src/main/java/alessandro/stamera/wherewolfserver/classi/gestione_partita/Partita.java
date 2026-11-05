@@ -135,11 +135,7 @@ public final class Partita
         String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
         switch(attaccoLupi(getGiocatore(nomeLupo).getRuolo(), nome))
         {
-            case RIUSCITO, TROVATO_POSSEDUTO ->
-            {
-                eliminaGiocatore(nome);
-                if(mortiNotte.isPazzo(nome)) setPazzoUcciso(true);
-            }
+            case RIUSCITO, TROVATO_POSSEDUTO -> uccisioneGiocatore(nome);
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nomeLupo, nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
@@ -151,6 +147,12 @@ public final class Partita
             case ROMEO_BECCATO -> throw new EccezioneAttaccoGiocatoreProtetto(true, nome);
             case EREMITA_BECCATO -> throw new EccezioneRuoloProtetto(tipoLupo, nomeLupo, "Eremita", nome);
         }
+    }
+
+    private void uccisioneGiocatore(String nome)
+    {
+        eliminaGiocatore(nome);
+        if(mortiNotte.isPazzo(nome)) setPazzoUcciso(true);
     }
 
     public void segnalazioneInquisitore(String nome) { vivi.segnalazioneInquisitore(nome); }
