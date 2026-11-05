@@ -105,7 +105,8 @@ public final class Partita
         }
     }
 
-    private void assassinioGiocatore(String nome) {
+    private void assassinioGiocatore(String nome)
+    {
         eliminaGiocatore(nome);
         if(mortiNotte.isViaggiatore(nome)) setViaggioPartito(false);
     }
@@ -134,7 +135,11 @@ public final class Partita
         String nomeLupo = getNomeGiocatoreLupo(tipoLupo);
         switch(attaccoLupi(getGiocatore(nomeLupo).getRuolo(), nome))
         {
-            case RIUSCITO, TROVATO_POSSEDUTO -> eliminaGiocatore(nome);
+            case RIUSCITO, TROVATO_POSSEDUTO ->
+            {
+                eliminaGiocatore(nome);
+                if(mortiNotte.isPazzo(nome)) setPazzoUcciso(true);
+            }
             case MORTO -> doppiaEliminazione(nomeLupo, nome);
             case FALLITO -> nessunaEliminazione(nomeLupo, nome);
             case NONNA_BECCATA -> lupizzazioneNonna(nome, nomeLupo, tipoLupo);
@@ -268,6 +273,8 @@ public final class Partita
         numeroNotte++;
         controlloViaggio();
     }
+
+    public boolean isPazzoUcciso() { return pazzoUcciso; }
 
     private void controlloViaggio() { if(isViaggioPronto()) setViaggioPartito(true); }
 
@@ -902,7 +909,6 @@ public final class Partita
     {
         mortiNotte.aggiungiGiocatore(nome, getGiocatore(nome));
         vivi.eliminaGiocatore(nome);
-        setPazzoUcciso(mortiNotte.isPazzo(nome));
     }
 
     private void setPazzoUcciso(boolean pazzoUcciso) { this.pazzoUcciso = pazzoUcciso; }
