@@ -101,6 +101,8 @@ public class Giocatori
 
     private boolean isContadino(String nome) { return getGiocatore(nome).isContadino(); }
 
+    public boolean isViaggiatore(String nome) { return getGiocatore(nome).isViaggiatore(); }
+
     private String getNomeTipoContadino(String nomeGiocatore)
     {
         String risultato = "Contadino normale";

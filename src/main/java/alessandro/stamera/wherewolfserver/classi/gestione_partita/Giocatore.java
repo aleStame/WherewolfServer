@@ -414,6 +414,8 @@ public final class Giocatore
 
     public EsitoControlloSensitiva controlloSensitiva() { return ruolo.controlloSensitiva(); }
 
+    public boolean isViaggiatore() { return ruolo.isViaggiatore(); }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;

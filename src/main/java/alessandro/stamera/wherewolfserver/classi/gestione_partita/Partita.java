@@ -55,7 +55,6 @@ public final class Partita
         crociataAvviata = false;
         setViaggioPartito(false);
         controlloViaggio();
-        System.out.println(isViaggioPartito());
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -97,7 +96,11 @@ public final class Partita
     {
         switch(vivi.attaccoAssassino(nome))
         {
-            case RIUSCITO -> eliminaGiocatore(nome);
+            case RIUSCITO ->
+            {
+                eliminaGiocatore(nome);
+                if(mortiNotte.isViaggiatore(nome)) setViaggioPartito(false);
+            }
             case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
             case MORTO -> assassinioContadinoMostro(nome);
             case ROMEO_BECCATO -> assassinioRomeoGiulietta();
@@ -247,6 +250,7 @@ public final class Partita
 
     public void contrattaccoContadinoMostro(String nome)
     {
+        if(vivi.isViaggiatore(nome)) setViaggioPartito(false);
         eliminaGiocatore(nome);
         votantiContadinoMostro.clear();
         confermaEliminazioneMortiNotte();
@@ -279,10 +283,10 @@ public final class Partita
 
     private String getNomeViaggiatore() { return getNomeGiocatoreVivo(getPosizioneViaggiatore()); }
 
-    private int getPosizioneViaggiatore() {
+    private int getPosizioneViaggiatore()
+    {
         int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
-            if(vivi.getGiocatore(vivi.getNomeGiocatore(i)).getRuolo().isViaggiatore()) posizione = i;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isViaggiatore(getNomeGiocatoreVivo(i))) posizione = i;
         return posizione;
     }
 
