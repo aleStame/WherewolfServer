@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -63,6 +64,21 @@ public final class TestViaggiatore
         partita.terminaNotte();
         assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
+    @Test public void testSconfittaViaggiatoreAssassinato()
+    {
+        String nomeViaggiatore = "Buffy";
+        String[][] giocatori =
+        {
+            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
+            { "Willow", "Strega" }
+        };
+        Partita partita = new Partita(giocatori);
+        partita.attaccoAssassino(nomeViaggiatore);
+        partita.terminaNotte();
+        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
     }
 
 }
