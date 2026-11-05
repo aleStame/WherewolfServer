@@ -1458,7 +1458,8 @@ public final class TestPartita
         verificaAttaccoVampiroRiuscito(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Negromante" })
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Nosferatu", "Sidhe", "Strega", "Sensitiva" })
     public void testVampirizzazioneFallita(String nomeRuolo)
     {
         String nomeVittima = "Lino";
