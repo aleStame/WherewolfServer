@@ -99,7 +99,7 @@ public final class TestPartita
             "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
             "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
             "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
-            "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+            "Templare", "Traditore", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo)
@@ -154,7 +154,7 @@ public final class TestPartita
             "Contadino eroe", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe",
-            "Spia", "Strega", "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+            "Spia", "Strega", "Templare", "Traditore", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
@@ -176,7 +176,7 @@ public final class TestPartita
             "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
             "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
             "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
-            "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+            "Templare", "Traditore", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoAmatoAssassino(String nomeRuolo)
@@ -1336,7 +1336,7 @@ public final class TestPartita
             "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
             "Nonna, BIANCA", "Nosferatu, NERA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA", "Prete, BIANCA",
             "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Strega, BIANCA", "Templare, BIANCA", "Traditore, BIANCA", "Vampiro, NERA",
-            "Veggente, BIANCA", "Viaggiatore, BIANCA"
+            "Veggente, BIANCA"
         }
     )
     public void testControlloMedium(String nomeRuolo, Aura aura)
@@ -2094,7 +2094,7 @@ public final class TestPartita
             "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia",
-            "Sensitiva", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
+            "Sensitiva", "Strega", "Templare", "Vampiro", "Veggente"
         }
     )
     public void testFunzionamentoNegromante(String nomeRuolo)
@@ -2433,7 +2433,7 @@ public final class TestPartita
             "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Mago", "Medium", "Medium", "Megera", "Mercante", "Monaco", "Negromante",
             "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro",
-            "Veggente", "Viaggiatore"
+            "Veggente"
         }
     )
     public void testAttaccoLupoBrancoRiuscito(String nomeRuolo)
@@ -2450,7 +2450,7 @@ public final class TestPartita
             "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Mago", "Medium", "Medium", "Megera", "Mercante",
             "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva",
-            "Templare", "Vampiro", "Veggente", "Viaggiatore"
+            "Templare", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoLupoReiettoRiuscito(String nomeRuolo)
@@ -2467,7 +2467,7 @@ public final class TestPartita
             "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Mago", "Medium", "Medium", "Megera", "Mercante", "Monaco",
             "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
-            "Vampiro", "Veggente", "Viaggiatore"
+            "Vampiro", "Veggente"
         }
     )
     public void testAttaccoLupoSolitarioRiuscito(String nomeRuolo)
@@ -3316,7 +3316,7 @@ public final class TestPartita
             "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore di vampiri", "Capo gilda", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
             "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));

@@ -60,6 +60,7 @@ public final class TestViaggiatore
         partita.terminaBallottaggio();
         partita.attaccoLupi(tipoLupo, nomeMedium);
         partita.terminaNotte();
+        partita.terminaNotte();
         assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }

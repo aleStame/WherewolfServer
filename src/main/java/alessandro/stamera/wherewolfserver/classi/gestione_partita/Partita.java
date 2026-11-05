@@ -53,7 +53,9 @@ public final class Partita
         numeroNotte = 1;
         maledettiNegromante = new String[2];
         crociataAvviata = false;
-        setViaggioPartito(isViaggioPronto());
+        setViaggioPartito(false);
+        controlloViaggio();
+        System.out.println(isViaggioPartito());
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -267,18 +269,21 @@ public final class Partita
 
     private void controlloViaggiatore() { if(isViaggioPartito()) eliminaViaggiatore(); }
 
-    private boolean isViaggioPronto() { return getNumeroGiocatoriVivi() == 6; }
+    private boolean isViaggioPronto() { return getNumeroGiocatoriVivi() <= 6 && isViaggiatorePresente(); }
+
+    private boolean isViaggiatorePresente() { return getPosizioneViaggiatore() != -1; }
 
     private void eliminaViaggiatore() { eliminaGiocatore(getNomeViaggiatore()); }
 
     private void setViaggioPartito(boolean viaggioPartito) { this.viaggioPartito = viaggioPartito; }
 
-    private String getNomeViaggiatore()
-    {
+    private String getNomeViaggiatore() { return getNomeGiocatoreVivo(getPosizioneViaggiatore()); }
+
+    private int getPosizioneViaggiatore() {
         int posizione = -1;
         for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++)
             if(vivi.getGiocatore(vivi.getNomeGiocatore(i)).getRuolo().isViaggiatore()) posizione = i;
-        return getNomeGiocatoreVivo(posizione);
+        return posizione;
     }
 
     private void gestioneCappuccettoRosso(String tipoLupo, String nome, String nomeLupo)
