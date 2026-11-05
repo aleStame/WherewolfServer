@@ -37,7 +37,7 @@ public final class TestViaggiatore
         String[][] giocatori =
         {
             { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
-            { "Willow", "Strega" }
+            { "Willow", "Guaritore" }
         };
         Partita partita = new Partita(giocatori);
         partita.terminaNotte();
@@ -51,7 +51,7 @@ public final class TestViaggiatore
         String[][] giocatori =
         {
             { nomeViaggiatore, "Viaggiatore" }, { "Oz", tipoLupo }, { nomeAssassino, "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
-            { "Willow", "Strega" }, { nomeMedium, "Medium" }
+            { "Willow", "Guaritore" }, { nomeMedium, "Medium" }
         };
         Partita partita = new Partita(giocatori);
         int numeroVoti = 6;
@@ -72,10 +72,26 @@ public final class TestViaggiatore
         String[][] giocatori =
         {
             { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
-            { "Willow", "Strega" }
+            { "Willow", "Guaritore" }
         };
         Partita partita = new Partita(giocatori);
         partita.attaccoAssassino(nomeViaggiatore);
+        partita.terminaNotte();
+        assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
+
+    @Test public void testVittoriaViaggiatoreAssassinato()
+    {
+        String nomeViaggiatore = "Buffy";
+        String[][] giocatori =
+        {
+            { nomeViaggiatore, "Viaggiatore" }, { "Oz", "Capo branco" }, { "Spike", "Assassino" }, { "Nathan", "Prete" }, { "Xander", "Guardia" },
+            { "Willow", "Guaritore" }
+        };
+        Partita partita = new Partita(giocatori);
+        partita.attaccoAssassino(nomeViaggiatore);
+        partita.guarisci(nomeViaggiatore);
         partita.terminaNotte();
         assertThat(partita.isEliminato(nomeViaggiatore)).isTrue();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
