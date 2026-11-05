@@ -840,7 +840,7 @@ public final class TestGiocatoriVivi
             "Contadino discendente dei lupi, RIUSCITO", "Contadino normale, RIUSCITO", "Ghoul, RIUSCITO", "Giullare, RIUSCITO",
             "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Inquisitore, RIUSCITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
             "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO", "Prete, RIUSCITO",
-            "Spia, RIUSCITO", "Templare, RIUSCITO"
+            "Spia, RIUSCITO", "Templare, RIUSCITO", "Viaggiatore, RIUSCITO"
         }
     )
     public void testVampirizzazioneRiuscita(String nomeRuolo, EsitoAttacco esito)
