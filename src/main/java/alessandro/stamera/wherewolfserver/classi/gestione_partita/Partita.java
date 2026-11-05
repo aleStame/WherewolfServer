@@ -96,17 +96,18 @@ public final class Partita
     {
         switch(vivi.attaccoAssassino(nome))
         {
-            case RIUSCITO ->
-            {
-                eliminaGiocatore(nome);
-                if(mortiNotte.isViaggiatore(nome)) setViaggioPartito(false);
-            }
+            case RIUSCITO -> assassinioGiocatore(nome);
             case ANGELO_CUSTODE_MORTO -> gestisciAssassinioAmato();
             case MORTO -> assassinioContadinoMostro(nome);
             case ROMEO_BECCATO -> assassinioRomeoGiulietta();
             case GHOUL_MORTO -> eliminaGiocatore(getNomeGhoul());
             case GIULIETTA_BECCATA -> eliminaGiocatori(nome, getNomeRomeo());
         }
+    }
+
+    private void assassinioGiocatore(String nome) {
+        eliminaGiocatore(nome);
+        if(mortiNotte.isViaggiatore(nome)) setViaggioPartito(false);
     }
 
     private void assassinioRomeoGiulietta()
