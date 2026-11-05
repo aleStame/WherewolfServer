@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testSconfittaPerAssassino riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo uccisioneGiocatore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,14 +299,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-01024" summary="REFACTORING: definizione di un metodo di set up">
-      <option name="closed" value="true" />
-      <created>1793702019581</created>
-      <option name="number" value="01024" />
-      <option name="presentableId" value="LOCAL-01024" />
-      <option name="project" value="LOCAL" />
-      <updated>1793702019581</updated>
     </task>
     <task id="LOCAL-01025" summary="ROSSo. testControlloMedium non riuscito">
       <option name="closed" value="true" />
@@ -694,7 +684,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793899755037</updated>
     </task>
-    <option name="localTasksCounter" value="1073" />
+    <task id="LOCAL-01073" summary="REFACTORING: definizione del metodo uccisioneGiocatore">
+      <option name="closed" value="true" />
+      <created>1793902098218</created>
+      <option name="number" value="01073" />
+      <option name="presentableId" value="LOCAL-01073" />
+      <option name="project" value="LOCAL" />
+      <updated>1793902098218</updated>
+    </task>
+    <option name="localTasksCounter" value="1074" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAmatoAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
     <MESSAGE value="ROSSO. testVittoriaPartitaSeiGiocatori non riuscito" />
@@ -737,7 +734,8 @@
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="ROSSO: testSconfittaPerAssassino non riuscito" />
     <MESSAGE value="VERDE: testSconfittaPerAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSconfittaPerAssassino riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo uccisioneGiocatore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo uccisioneGiocatore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

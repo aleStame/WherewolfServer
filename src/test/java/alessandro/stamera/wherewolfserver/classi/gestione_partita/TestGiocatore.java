@@ -109,7 +109,7 @@ public final class TestGiocatore
             "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
             "Negromante, FALLITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
             "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO", "Spia, RIUSCITO", "Strega, FALLITO", "Sensitiva, FALLITO",
-            "Templare, RIUSCITO", "Vampiro, RIUSCITO"
+            "Templare, RIUSCITO", "Vampiro, RIUSCITO", "Viaggiatore, RIUSCITO"
         }
     )
     public void testProgenieNosferatu(String nomeRuolo, EsitoAttacco esito)
