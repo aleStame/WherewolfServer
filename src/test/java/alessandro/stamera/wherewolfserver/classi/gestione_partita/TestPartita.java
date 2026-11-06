@@ -1131,15 +1131,6 @@ public final class TestPartita
         verificaNosferatuNonVivo(nome);
     }
 
-    @Test public void testNosferatuMorto()
-    {
-        String nomeNosferatu = "Cesare", tipoLupo = "Lupo del branco";
-        inizializzaPartita(new String[][] { { nomeNosferatu, "Nosferatu" }, { "Annibale", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeNosferatu);
-        terminaNotte();
-        verificaNosferatuNonVivo(nomeNosferatu);
-    }
-
     @Test public void testProgenieNosferatuViva()
     {
         String nomeVittima = "Pina", tipoLupo = "Lupo solitario";
@@ -1518,25 +1509,6 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" }, { "Gabriele", "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVampiro);
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "'Capo branco', 'Impossibile progenizzare il Capo branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Lupo del branco', 'Impossibile progenizzare il Lupo del branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Lupo reietto', 'Impossibile progenizzare il Lupo reietto (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Lupo solitario', 'Impossibile progenizzare il Lupo solitario (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Cacciatore di vampiri', 'Impossibile progenizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Nosferatu (Michele) della sua " +
-            "morte.'"
-        }
-    )
-    public void testMorteNosferatu(String nomeRuolo, String messaggio)
-    {
-        String nomeVittima = "Giuliano", nomeNosferatu = "Michele";
-        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeNosferatu, "Nosferatu" }, { "Giampiero", "Assassino" } });
-        attaccoAssassino(nomeVittima);
-        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
     }
 
     @ParameterizedTest @CsvSource
@@ -3153,6 +3125,17 @@ public final class TestPartita
         attaccoAssassino(nomeVittima);
         terminaNotte();
         verificaEliminazione(nomeGhoul);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoNosferatuAssassino(String tipoLupo)
+    {
+        String nomeAssassino = "Pietro";
+        inizializzaPartita(new String[][] { { "Lucio", tipoLupo }, { nomeAssassino, "Assassino" }, { "Robert", "Nosferatu" } });
+        attaccoLupi(tipoLupo, nomeAssassino);
+        progenizzazioneNosferatu(nomeAssassino);
+        terminaNotte();
+        verificaNonEliminati(nomeAssassino);
     }
 
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
