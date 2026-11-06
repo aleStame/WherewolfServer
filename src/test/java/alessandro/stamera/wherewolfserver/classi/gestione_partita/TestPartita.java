@@ -730,11 +730,20 @@ public final class TestPartita
         verificaNumeroIntero(partita.getNumeroLupiBrancoVivi(), 3);
     }
 
-    @Test public void testAttaccoNosferatuRiuscito()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Ghoul", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore",
+            "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare, RIUSCITO", "Vampiro", "Viaggiatore"
+        }
+    )
+    public void testAttaccoNosferatuRiuscito(String nomeRuolo)
     {
-        String nome = "Marco", tipoLupo = "Capo branco";
-        inizializzaPartita(new String[][] { { nome, "Prete" }, { "Tina", "Nosferatu" }, { "Rolando", tipoLupo } });
-        attaccoLupi(tipoLupo, nome);
+        String nome = "Marco";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Tina", "Nosferatu" }, { "Rolando", "Assassino" } });
+        attaccoAssassino(nome);
         progenizzazioneNosferatu(nome);
         terminaNotte();
         verificaNonEliminati(nome);
