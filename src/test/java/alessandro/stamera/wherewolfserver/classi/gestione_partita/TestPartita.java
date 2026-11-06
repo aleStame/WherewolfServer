@@ -660,15 +660,17 @@ public final class TestPartita
         verificaNonEliminati(lupo);
     }
 
-    @Test public void testAttaccoNosferatuMorto()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoNosferatuLupi(String nomeRuolo)
     {
-        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco";
-        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeVittima);
-        String messaggio = "Impossibile progenizzare il Cacciatore di vampiri (Gianmaria).\nAvvisa il Nosferatu (Augusta) della sua morte.";
+        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta";
+        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, nomeRuolo }, { "Raimondo", "Assassino" } });
+        attaccoAssassino(nomeVittima);
+        String messaggio = "Impossibile progenizzare il " + nomeRuolo + " (Gianmaria).\nAvvisa il Nosferatu (Augusta) della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
         terminaNotte();
-        verificaEliminati(nomeVittima, nomeNosferatu);
+        verificaEliminati(nomeNosferatu);
+        verificaNonEliminati(nomeVittima);
     }
 
     @Test public void testAttaccoNosferatuContadinoMostro()
@@ -704,10 +706,12 @@ public final class TestPartita
         verificaEliminati(nomeVittima);
     }
 
-    @Test public void testAttaccoNosferatuFallito()
+    @ParameterizedTest @CsvSource
+    ({ "Eremita", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sidhe", "Strega", "Sensitiva" })
+    public void testAttaccoNosferatuFallito(String nomeRuolo)
     {
         String nomeVittima = "Paolo";
-        inizializzaPartita(new String[][] { { "Assunta", "Nosferatu" }, { nomeVittima, "Eremita" }, { "Franca", "Assassino" } });
+        inizializzaPartita(new String[][] { { "Assunta", "Nosferatu" }, { nomeVittima, nomeRuolo }, { "Franca", "Assassino" } });
         attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();

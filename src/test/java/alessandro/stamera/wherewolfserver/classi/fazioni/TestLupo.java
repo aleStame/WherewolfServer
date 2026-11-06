@@ -68,6 +68,8 @@ public final class TestLupo
 
     @Test public void testAttaccoLupi() { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(FALLITO); }
 
+    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(MORTO); }
+
     private Fazione getFazione() { return ruolo.getFazione(); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
