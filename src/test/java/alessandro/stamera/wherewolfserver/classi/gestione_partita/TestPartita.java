@@ -3138,6 +3138,21 @@ public final class TestPartita
         verificaNonEliminati(nomeAssassino);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoNosferatuAssassinoRomeo(String tipoLupo)
+    {
+        String nomeAssassino = "Pietro", nomeGiulietta = "Duccio";
+        String[][] giocatori =
+            new String[][] { { "Lucio", tipoLupo }, { nomeAssassino, "Assassino" }, { "Robert", "Nosferatu" }, { nomeGiulietta, "Giulietta" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeAssassino);
+        attaccoLupi(tipoLupo, nomeGiulietta);
+        String messaggio = "Pietro è Romeo.\nAvvisa il Nosferatu (Robert) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAssassino)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeAssassino);
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
