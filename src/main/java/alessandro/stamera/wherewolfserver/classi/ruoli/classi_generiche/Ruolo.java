@@ -289,7 +289,7 @@ public class Ruolo
 
     public boolean isViaggiatore() { return false; }
 
-    public boolean isSenzaFazione() { return false; }
+    public boolean isSenzaFazione() { return getFazione() == NESSUNA; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
