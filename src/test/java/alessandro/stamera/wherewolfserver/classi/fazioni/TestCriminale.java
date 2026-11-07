@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -32,8 +30,6 @@ public final class TestCriminale
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
@@ -42,23 +38,11 @@ public final class TestCriminale
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
-
-    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
-
-    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
-
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
-
-    @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
-    @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
-
     @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
-
-    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
@@ -67,6 +51,8 @@ public final class TestCriminale
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testCreaturaOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
+
+    @Test public void testNegromante() { verificaFalso(ruolo.isNegromante()); }
 
     @ParameterizedTest @MethodSource("getCasiEsitoPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
