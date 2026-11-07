@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testEsitoPartitaNosferatu riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testSconfittaProgenieNosferatu non riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,14 +303,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-01053" summary="REFACTORING: definizione del metodo eliminaViaggiatore">
-      <option name="closed" value="true" />
-      <created>1793825280589</created>
-      <option name="number" value="01053" />
-      <option name="presentableId" value="LOCAL-01053" />
-      <option name="project" value="LOCAL" />
-      <updated>1793825280594</updated>
     </task>
     <task id="LOCAL-01054" summary="REFACTORING: definizione del metodo isViaggioPronto">
       <option name="closed" value="true" />
@@ -694,7 +688,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794064632059</updated>
     </task>
-    <option name="localTasksCounter" value="1102" />
+    <task id="LOCAL-01102" summary="ROSSO: testSconfittaProgenieNosferatu non riuscito">
+      <option name="closed" value="true" />
+      <created>1794065060981</created>
+      <option name="number" value="01102" />
+      <option name="presentableId" value="LOCAL-01102" />
+      <option name="project" value="LOCAL" />
+      <updated>1794065060981</updated>
+    </task>
+    <option name="localTasksCounter" value="1103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +714,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVampirizzazioneFallita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
     <MESSAGE value="ROSSO: testSconfittaPerAssassino non riuscito" />
     <MESSAGE value="VERDE: testSconfittaPerAssassino riuscito" />
@@ -737,7 +738,8 @@
     <MESSAGE value="VERDE DIRETTO: testSenzaFazione riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartitaNosferatu non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartitaNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEsitoPartitaNosferatu riuscito" />
+    <MESSAGE value="ROSSO: testSconfittaProgenieNosferatu non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSconfittaProgenieNosferatu non riuscito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

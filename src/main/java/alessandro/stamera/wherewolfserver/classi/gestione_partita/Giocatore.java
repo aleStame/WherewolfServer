@@ -269,6 +269,7 @@ public final class Giocatore
         {
             esito = NON_FINITO;
             if(partita.isNosferatuVincitore()) esito = VITTORIA;
+            else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
         }
         return esito;
     }

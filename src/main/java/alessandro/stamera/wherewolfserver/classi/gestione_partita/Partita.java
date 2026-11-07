@@ -581,6 +581,15 @@ public final class Partita
         }
     }
 
+    public boolean isProgenieNosferatuAssenti()
+    {
+        boolean assente = true;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && assente; i++) assente = !isProgenieNosferatuViva(getNomeGiocatoreVivo(i));
+        return assente;
+    }
+
+    public boolean isNosferatuAssente() { return !vivi.isNosferatuPresente(); }
+
     public boolean isCapoBranco(String nome) { return vivi.getGiocatore(nome).getRuolo().isCapoBranco(); }
 
     public Aura getAura(String nome) { return getGiocatore(nome).controlloVeggente(); }
