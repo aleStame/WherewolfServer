@@ -52,7 +52,9 @@ public final class TestCriminale
 
     @Test public void testCreaturaOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
 
-    @Test public void testNegromante() { verificaFalso(ruolo.isNegromante()); }
+    @Test public void testNegromante() { verificaFalso(ruolo.isFazioneNegromante()); }
+
+    //@Test public void testSenzaFazione() { verificaFa }
 
     @ParameterizedTest @MethodSource("getCasiEsitoPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }

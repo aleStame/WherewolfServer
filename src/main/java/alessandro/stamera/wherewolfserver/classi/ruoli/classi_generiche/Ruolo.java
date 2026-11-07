@@ -289,6 +289,8 @@ public class Ruolo
 
     public boolean isViaggiatore() { return false; }
 
+    public boolean isSenzaFazione() { return false; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean controlloTrattiOscuri()
