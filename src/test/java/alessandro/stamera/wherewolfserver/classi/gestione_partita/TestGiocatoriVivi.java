@@ -351,7 +351,7 @@ public final class TestGiocatoriVivi
     }
 
     @ParameterizedTest
-    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe", "Strega", "Veggente" })
     public void testSegnalazioneInquisitoreMisticoPresenteAmato(String nomeRuolo)
     {
         String nomeMistico = "Davide";
