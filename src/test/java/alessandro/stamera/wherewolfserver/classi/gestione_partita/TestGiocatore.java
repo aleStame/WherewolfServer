@@ -1091,8 +1091,9 @@ public final class TestGiocatore
         Partita partita = new Partita(new String[][] { { nomeLupo, tipoLupo }, { "Werner", "Nosferatu" }, { "Alex", "Ghoul" } });
         assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(NON_FINITO);
         partita.incrementaVoti(nomeLupo, 2);
-        partita.terminaNotte();
+        partita.terminaVotazioni();
         partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaBallottaggio();
         partita.terminaNotte();
         assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
