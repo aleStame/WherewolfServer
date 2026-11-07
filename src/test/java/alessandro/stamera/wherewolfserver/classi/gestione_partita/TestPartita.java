@@ -3153,6 +3153,23 @@ public final class TestPartita
         verificaEliminati(nomeAssassino);
     }
 
+    @Test public void testAttaccoNosferatuAssassinoStregato()
+    {
+        String nomeAssassino = "Pietro", nomeContadinoMostro = "Lucio";
+        String[][] giocatori = new String[][]
+        {
+            { nomeContadinoMostro, "Contadino mostro" }, { nomeAssassino, "Assassino" }, { "Robert", "Nosferatu" }, { "Duccio", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeAssassino);
+        terminaNotte();
+        attaccoAssassino(nomeContadinoMostro);
+        String messaggio = "Pietro è protetto dalla Strega.\nAvvisa il Nosferatu (Robert) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAssassino)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeAssassino);
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");
