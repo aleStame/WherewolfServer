@@ -149,8 +149,8 @@ public final class TestGiocatore
     }
 
     @ParameterizedTest
-    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega" })
-    public void testSegnalazioneInquisitore(String nomeRuolo)
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega", "Veggente" })
+    public void testSegnalazioneInquisitoreRiuscita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
         segnalazioneInquisitore();
