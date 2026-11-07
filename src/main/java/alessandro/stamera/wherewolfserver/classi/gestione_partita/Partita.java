@@ -606,6 +606,8 @@ public final class Partita
 
     public boolean isGiuliettaPresente() { return vivi.isGiuliettaPresente(); }
 
+    public EsitoPartita getEsitoPartitaGiocatore(String nome) { return null; }
+
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {
         if(vivi.isStregato(nomeRomeo)) vivi.aggiungiProtezioneCreatureOmbra(nomeRomeo);
