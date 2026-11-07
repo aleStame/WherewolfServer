@@ -1085,34 +1085,35 @@ public final class TestGiocatore
     @ParameterizedTest @MethodSource("getAbbinamentiPartiteNosferatu")
     public void testVittoriaProgenieNosferatu(String tipoLupo, String nomeRuolo)
     {
-        cambiaRuolo(nomeRuolo);
-        giocatore.progenizzazioneNosferatu();
         String nomeLupo = "Lucio";
-        Partita partita = new Partita(new String[][] { { nomeLupo, tipoLupo }, { "Werner", "Nosferatu" }, { "Alex", "Ghoul" } });
-        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(NON_FINITO);
-        partita.incrementaVoti(nomeLupo, 2);
-        partita.terminaVotazioni();
-        partita.incrementaVoti(nomeLupo, 2);
-        partita.terminaBallottaggio();
-        partita.terminaNotte();
-        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+        String[][] giocatori = new String[][] { { nomeLupo, tipoLupo }, { "Werner", "Nosferatu" }, { "Alex", "Ghoul" } };
+        verificaPartitaNosferatu(nomeRuolo, giocatori, nomeLupo, VITTORIA);
     }
 
     @ParameterizedTest @MethodSource("getAbbinamentiPartiteNosferatu")
     public void testSconfittaProgenieNosferatu(String tipoLupo, String nomeRuolo)
     {
+        String nomeNosferatu = "Werner";
+        String[][] giocatori = new String[][] { { "Lucio", tipoLupo }, { nomeNosferatu, "Nosferatu" }, { "Alex", "Ghoul" } };
+        verificaPartitaNosferatu(nomeRuolo, giocatori, nomeNosferatu, SCONFITTA);
+    }
+
+    private void verificaPartitaNosferatu
+    (
+        String nomeRuolo, String[][] giocatori, String nomeEliminato, EsitoPartita esito
+    )
+    {
         cambiaRuolo(nomeRuolo);
         giocatore.progenizzazioneNosferatu();
-        String nomeNosferatu = "Werner";
-        Partita partita = new Partita(new String[][] { { "Lucio", tipoLupo }, { nomeNosferatu, "Nosferatu" }, { "Alex", "Ghoul" } });
+        Partita partita = new Partita(giocatori);
         assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(NON_FINITO);
         int numeroVoti = 2;
-        partita.incrementaVoti(nomeNosferatu, numeroVoti);
+        partita.incrementaVoti(nomeEliminato, numeroVoti);
         partita.terminaVotazioni();
-        partita.incrementaVoti(nomeNosferatu, numeroVoti);
+        partita.incrementaVoti(nomeEliminato, numeroVoti);
         partita.terminaBallottaggio();
         partita.terminaNotte();
-        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
     private static Stream<Arguments> getAbbinamentiPartiteNosferatu()
