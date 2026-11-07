@@ -1083,7 +1083,7 @@ public final class TestGiocatore
     }
 
     @ParameterizedTest @MethodSource("getAbbinamentiPartiteNosferatu")
-    public void testEsitoPartitaNosferatu(String tipoLupo, String nomeRuolo)
+    public void testVittoriaProgenieNosferatu(String tipoLupo, String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
         giocatore.progenizzazioneNosferatu();
@@ -1096,6 +1096,23 @@ public final class TestGiocatore
         partita.terminaBallottaggio();
         partita.terminaNotte();
         assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
+    @ParameterizedTest @MethodSource("getAbbinamentiPartiteNosferatu")
+    public void testSconfittaProgenieNosferatu(String tipoLupo, String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        giocatore.progenizzazioneNosferatu();
+        String nomeNosferatu = "Werner";
+        Partita partita = new Partita(new String[][] { { "Lucio", tipoLupo }, { nomeNosferatu, "Nosferatu" }, { "Alex", "Ghoul" } });
+        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(NON_FINITO);
+        int numeroVoti = 2;
+        partita.incrementaVoti(nomeNosferatu, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeNosferatu, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
     }
 
     private static Stream<Arguments> getAbbinamentiPartiteNosferatu()
