@@ -106,12 +106,12 @@ import static org.mockito.Mockito.doCallRealMethod;
         return new Partita[]
         {
             new Partita(new String[][] { { "Aurora", "Capo branco" }, { "Giulia", "Nosferatu" } }),
-            new Partita(new String[][] { { "Pino", "Capo branco" }, { "Dino", "Assassino" } }),
-            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Assassino" } }),
-            new Partita(new String[][] { { "Pino", "Giovane lupo" }, { "Adam", "Assassino" } }),
-            new Partita(new String[][] { { "Matteo", "Lupo reietto" }, { "Omar", "Assassino" } }),
-            new Partita(new String[][] { { "Saverio", "Capo branco" }, { "Desmond", "Assassino" } }),
-            new Partita(new String[][] { { "Paola", "Lupo solitario" }, { "Paolo", "Assassino" } }),
+            new Partita(new String[][] { { "Pino", "Capo branco" }, { "Dino", "Assassino" }, { "Morgan", "Guardia" } }),
+            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Assassino" }, { "Bugo", "Altra guardia" } }),
+            new Partita(new String[][] { { "Pino", "Giovane lupo" }, { "Adam", "Assassino" }, { "Rosario", "Guardia" } }),
+            new Partita(new String[][] { { "Matteo", "Lupo reietto" }, { "Omar", "Assassino" }, { "Amedeo", "Altra guardia" } }),
+            new Partita(new String[][] { { "Saverio", "Capo branco" }, { "Desmond", "Assassino" }, { "Emanuela", "Guardia" } }),
+            new Partita(new String[][] { { "Paola", "Lupo solitario" }, { "Paolo", "Assassino" }, { "Valeria", "Altra guardia" } }),
             new Partita(new String[][] { { "Anna", "Capo branco" }, { "Romana", "Traditore" } }),
             new Partita(new String[][] { { "Fabrizio", "Lupo del branco" }, { "Paola", "Traditore" } }),
             new Partita(new String[][] { { "Anna", "Giovane lupo" }, { "Romana", "Traditore" } }),
@@ -120,8 +120,8 @@ import static org.mockito.Mockito.doCallRealMethod;
             new Partita(new String[][] { { "John", "Vampiro" }, { "Jack", "Ghoul" } }),
             new Partita(new String[][] { { "Hal", "Nosferatu" }, { "Guy", "Ghoul" } }),
             new Partita(new String[][] { { "Ilaria", "Peccatore" }, { "Kamala", "Posseduto" } }),
-            new Partita(new String[][] { { "Selvaggia", "Negromante" }, { "Camilla", "Assassino" } }),
-            new Partita(new String[][] { { "Edoardo", "Contadino mostro" }, { "Giorgia", "Assassino" } })
+            new Partita(new String[][] { { "Selvaggia", "Negromante" }, { "Camilla", "Assassino" }, { "Valentina", "Guardia" } }),
+            new Partita(new String[][] { { "Edoardo", "Contadino mostro" }, { "Giorgia", "Assassino" }, { "Jolanda", "Altra guardia" } })
         };
     }
 

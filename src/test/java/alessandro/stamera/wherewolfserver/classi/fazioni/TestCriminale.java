@@ -72,7 +72,11 @@ public final class TestCriminale
             (
                 new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
             ),
-            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
+            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "Paolo", "Assassino" }, { "Susan", "Peccatore" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "Maria", "Ladra" }, { "Sabrina", "Monaco" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "David", "Spia" }, { "Sarah", "Bocca di rosa" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "David", "Guardia corrotta" }, { "Sarah", "Mercante" } }), VITTORIA)
         );
     }
 
