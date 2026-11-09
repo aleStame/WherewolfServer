@@ -3196,6 +3196,7 @@ public final class TestPartita
     {
         String nomeRomeo = "Alice", nomeGiulietta = "Anna";
         inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } });
+        romeizzazione(nomeRomeo);
         for(String nome : new String[]{ nomeRomeo, nomeGiulietta }) assertThat(partita.getEsitoPartitaGiocatore(nome)).isEqualTo(VITTORIA);
     }
 

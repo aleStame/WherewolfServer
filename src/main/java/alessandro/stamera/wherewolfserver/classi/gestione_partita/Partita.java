@@ -11,8 +11,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIA
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
 import static java.util.Arrays.stream;
 
@@ -606,12 +605,22 @@ public final class Partita
 
     public boolean isGiuliettaPresente() { return vivi.isGiuliettaPresente(); }
 
-    public EsitoPartita getEsitoPartitaGiocatore(String nome) { return null; }
+    public EsitoPartita getEsitoPartitaGiocatore(String nome)
+    {
+        EsitoPartita esito;
+        if(isVivo(nome)) esito = vivi.getEsitoPartita(nome, this);
+        else if(isEliminato(nome)) esito = eliminati.getEsitoPartita(nome, this);
+        else esito = mortiNotte.getEsitoPartita(nome, this);
+        return esito;
+    }
+
+    public boolean isRomeoPresente() { return vivi.isRomeoPresente(); }
 
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {
         if(vivi.isStregato(nomeRomeo)) vivi.aggiungiProtezioneCreatureOmbra(nomeRomeo);
-        throw new IllegalStateException("A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nomeRomeo + " non è più Romeo.");
+        String messaggio = "A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nomeRomeo + " non è più Romeo.";
+        throw new IllegalStateException(messaggio);
     }
 
     private void gestionePassaggioPossedutoRiuscito(String nome)
@@ -622,7 +631,6 @@ public final class Partita
 
     private void gestioneVampirizzazioneFallita(String nome, String nomeVampiro)
     {
-        System.out.println("eccoci");
         if(vivi.isRomeo(nome)) throw new EccezioneVampirizzazioneFallita(nome, nomeVampiro, "Giulietta");
         else if(vivi.isStregato(nome)) throw new EccezioneVampirizzazioneFallita(nome, nomeVampiro, "Strega");
         else throw new EccezioneVampirizzazioneFallita(nome, nomeVampiro);

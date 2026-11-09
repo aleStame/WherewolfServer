@@ -271,6 +271,16 @@ public final class Giocatore
             if(partita.isNosferatuVincitore()) esito = VITTORIA;
             else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
         }
+        else if(fazione == AMANTI)
+        {
+            if(partita.isRomeoPresente() && partita.isGiuliettaPresente())
+            {
+                esito = NON_FINITO;
+                if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
+                System.out.println(esito);
+            }
+            else esito = SCONFITTA;
+        }
         return esito;
     }
 

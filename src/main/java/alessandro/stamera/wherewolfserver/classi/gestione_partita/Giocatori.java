@@ -1,5 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreAlfabetico;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreVoti;
 import java.util.Map;
@@ -102,6 +103,8 @@ public class Giocatori
     private boolean isContadino(String nome) { return getGiocatore(nome).isContadino(); }
 
     public boolean isViaggiatore(String nome) { return getGiocatore(nome).isViaggiatore(); }
+
+    public EsitoPartita getEsitoPartita(String nome, Partita partita) { return getGiocatore(nome).getEsitoPartita(partita); }
 
     private String getNomeTipoContadino(String nomeGiocatore)
     {
