@@ -492,6 +492,8 @@ public final class Partita
 
     public boolean isProgenieNosferatuViva(String nome) { return vivi.isProgenieNosferatu(nome); }
 
+    public boolean isProgenieVampiroViva(String nome) { return vivi.isProgenieVampiro(nome); }
+
     public boolean isLupoReiettoVivo() { return vivi.isLupoReiettoPresente(); }
 
     public boolean isLupoAttaccanteVivo() { return vivi.isCapoBrancoPresente() || vivi.isLupoBrancoPresente(); }
@@ -507,6 +509,13 @@ public final class Partita
         return esito;
     }
 
+    public boolean isFazioneVampiro(String nome)
+    {
+        boolean esito = false;
+        if(isVivo(nome)) esito = vivi.isFazioneVampiro(nome);
+        return esito;
+    }
+
     public boolean isNosferatuVincitore()
     {
         boolean esito = false;
@@ -514,7 +523,16 @@ public final class Partita
         return esito;
     }
 
+    public boolean isVampiroVincitore()
+    {
+        boolean esito = false;
+        if(isVampiroPresente()) esito = verificaVittoriaVampiro();
+        return esito;
+    }
+
     private boolean isNosferatuPresente() { return vivi.isNosferatuPresente() || eliminati.isNosferatuPresente(); }
+
+    private boolean isVampiroPresente() { return vivi.isVampiroPresente() || eliminati.isVampiroPresente(); }
 
     public Aura controlloMedium(String nome) { return eliminati.controlloMedium(nome); }
 
@@ -587,7 +605,16 @@ public final class Partita
         return assente;
     }
 
+    public boolean isProgenieVampiroAssenti()
+    {
+        boolean assente = true;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && assente; i++) assente = !isProgenieVampiroViva(getNomeGiocatoreVivo(i));
+        return assente;
+    }
+
     public boolean isNosferatuAssente() { return !vivi.isNosferatuPresente(); }
+
+    public boolean isVampiroAssente() { return !vivi.isVampiroPresente(); }
 
     public boolean isCapoBranco(String nome) { return vivi.getGiocatore(nome).getRuolo().isCapoBranco(); }
 
@@ -660,9 +687,15 @@ public final class Partita
 
     private boolean verificaVittoriaNosferatu() { return isPartitaVinta(getNosferatu()); }
 
+    private boolean verificaVittoriaVampiro() { return isPartitaVinta(getVampiro()); }
+
     private Ruolo getNosferatu() { return getGiocatoreNosferatu().getRuolo(); }
 
+    private Ruolo getVampiro() { return getGiocatoreVampiro().getRuolo(); }
+
     private Giocatore getGiocatoreNosferatu() { return getGiocatore(getNomeNosferatu()); }
+
+    private Giocatore getGiocatoreVampiro() { return getGiocatore(getNomeVampiroVivo()); }
 
     private String getNomeNosferatu()
     {

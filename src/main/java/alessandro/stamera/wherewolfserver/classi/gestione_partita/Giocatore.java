@@ -265,11 +265,22 @@ public final class Giocatore
         if(isRomeo()) esito = getPartitaRomeo(partita);
         else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
         else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
-        else if(fazione == NOSFERATU && isNonMorto())
+        else if(isNonMorto())
         {
             esito = NON_FINITO;
-            if(partita.isNosferatuVincitore()) esito = VITTORIA;
-            else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
+            switch(fazione)
+            {
+                case NOSFERATU ->
+                {
+                    if(partita.isNosferatuVincitore()) esito = VITTORIA;
+                    else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
+                }
+                case VAMPIRO ->
+                {
+                    if(partita.isVampiroVincitore()) esito = VITTORIA;
+                    else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
+                }
+            }
         }
         else if(fazione == AMANTI)
         {
@@ -277,7 +288,6 @@ public final class Giocatore
             {
                 esito = NON_FINITO;
                 if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
-                System.out.println(esito);
             }
             else esito = SCONFITTA;
         }
