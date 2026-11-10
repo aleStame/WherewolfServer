@@ -12,8 +12,7 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -3222,6 +3221,21 @@ public final class TestPartita
         incrementaVoti(nomeGiulietta, 1);
         terminaBallottaggio();
         for(String nome : new String[]{ nomeRomeo, nomeGiulietta }) assertThat(partita.getEsitoPartitaGiocatore(nome)).isEqualTo(SCONFITTA);
+    }
+
+    @Test public void testGuaritoreMaledetto()
+    {
+        String nomeAssassino = "Pietro", nomeMegera = "Maria";
+        inizializzaPartita(new String[][] { { "Guido", "Guaritore" }, { nomeAssassino, "Assassino" }, { nomeMegera, "Megera" } });
+        attaccoAssassino(nomeMegera);
+        guarisci(nomeMegera);
+        terminaNotte();
+        assertThat(partita.getEsitoPartitaGiocatore(nomeAssassino)).isEqualTo(NON_FINITO);
+        incrementaVoti(nomeAssassino, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeAssassino, 2);
+        terminaBallottaggio();
+        assertThat(partita.getEsitoPartitaGiocatore(nomeAssassino)).isEqualTo(SCONFITTA);
     }
 
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
