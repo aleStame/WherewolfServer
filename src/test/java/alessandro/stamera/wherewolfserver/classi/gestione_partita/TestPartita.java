@@ -418,7 +418,9 @@ public final class TestPartita
     public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo, String messaggio)
     {
         String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
-        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
+        String[][] giocatori =
+            new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo }, { "Wanda", "Strega" } };
+        inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeAmato);
         protezioneStrega(nomeAngeloCustode);
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
@@ -1806,7 +1808,9 @@ public final class TestPartita
     @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
-        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        String[][] giocatori =
+            new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" }, { "Pina", "Strega" } };
+        inizializzaPartita(giocatori);
         protezioneStrega(nomeVampiro);
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
@@ -1843,7 +1847,8 @@ public final class TestPartita
         String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
         String[][] giocatori = new String[][]
         {
-            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo }
+            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo },
+            { "Giulio", "Strega" }
         };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeNosferatu);

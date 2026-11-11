@@ -50,7 +50,11 @@ public final class Giocatore
 
     public void annullaVoti() { setNumeroVoti(0); }
 
-    public void maledizione() { tratti.aggiungi(MALEDETTO); }
+    public void maledizione()
+    {
+        tratti.aggiungi(MALEDETTO);
+        tratti.aggiungi(CREATURA_OMBRA);
+    }
 
     public Aura controlloVeggente()
     {
@@ -83,6 +87,7 @@ public final class Giocatore
     {
         this.ruolo = ruolo;
         cambiaFazione(ruolo.getFazione());
+        if(ruolo.isMaledetto()) tratti.aggiungi(CREATURA_OMBRA);
     }
 
     public EsitoAttacco progenizzazioneNosferatu()
@@ -333,7 +338,7 @@ public final class Giocatore
         return esito;
     }
 
-    private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
+    private boolean isSegnalabileDaBoia() { return (isCreaturaOmbra() || ruolo.isMistico()) && !isContadinoMostro(); }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 

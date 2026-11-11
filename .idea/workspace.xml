@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSconfittaRomeoGiulietta riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGuaritoreMaledetto riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,22 +299,6 @@
       <workItem from="1791143029199" duration="1243000" />
       <workItem from="1791190720018" duration="34000" />
       <workItem from="1791297784628" duration="79000" />
-    </task>
-    <task id="LOCAL-01063" summary="ROSSO: testVittoriaViaggiatoreAssassinato non riuscito">
-      <option name="closed" value="true" />
-      <created>1793888939506</created>
-      <option name="number" value="01063" />
-      <option name="presentableId" value="LOCAL-01063" />
-      <option name="project" value="LOCAL" />
-      <updated>1793888939509</updated>
-    </task>
-    <task id="LOCAL-01064" summary="VERDE: testVittoriaViaggiatoreAssassinato riuscito">
-      <option name="closed" value="true" />
-      <created>1793891667033</created>
-      <option name="number" value="01064" />
-      <option name="presentableId" value="LOCAL-01064" />
-      <option name="project" value="LOCAL" />
-      <updated>1793891667034</updated>
     </task>
     <task id="LOCAL-01065" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
       <option name="closed" value="true" />
@@ -695,7 +676,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794240110666</updated>
     </task>
-    <option name="localTasksCounter" value="1112" />
+    <task id="LOCAL-01112" summary="ROSSO: testGuaritoreMaledetto non riuscito">
+      <option name="closed" value="true" />
+      <created>1794270847941</created>
+      <option name="number" value="01112" />
+      <option name="presentableId" value="LOCAL-01112" />
+      <option name="project" value="LOCAL" />
+      <updated>1794270847942</updated>
+    </task>
+    <task id="LOCAL-01113" summary="VERDE: testGuaritoreMaledetto riuscito">
+      <option name="closed" value="true" />
+      <created>1794392493171</created>
+      <option name="number" value="01113" />
+      <option name="presentableId" value="LOCAL-01113" />
+      <option name="project" value="LOCAL" />
+      <updated>1794392493172</updated>
+    </task>
+    <option name="localTasksCounter" value="1114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,8 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatuAssassinoRomeo riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatuAssassinoStregato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreRiuscita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoPresente riuscito" />
@@ -738,17 +733,8 @@
     <MESSAGE value="ROSSO: testVittoriaProgenieVampiro non riuscito" />
     <MESSAGE value="VERDE: testVittoriaProgenieVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSconfittaRomeoGiulietta riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSconfittaRomeoGiulietta riuscito" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="ROSSO: testGuaritoreMaledetto non riuscito" />
+    <MESSAGE value="VERDE: testGuaritoreMaledetto riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGuaritoreMaledetto riuscito" />
   </component>
 </project>

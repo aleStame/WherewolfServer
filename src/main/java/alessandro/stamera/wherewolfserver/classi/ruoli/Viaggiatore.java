@@ -28,7 +28,7 @@ public final class Viaggiatore extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO) esito = getEsitoViaggio(partita);
+        if(esito == VITTORIA) esito = getEsitoViaggio(partita);
         return esito;
     }
 

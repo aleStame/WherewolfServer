@@ -36,11 +36,7 @@ public final class Pazzo extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO)
-        {
-            esito = SCONFITTA;
-            if(partita.isPazzoUcciso()) esito = VITTORIA;
-        }
+        if(esito == VITTORIA && !partita.isPazzoUcciso()) esito = SCONFITTA;
         return esito;
     }
 

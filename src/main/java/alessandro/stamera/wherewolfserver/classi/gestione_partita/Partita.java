@@ -166,6 +166,11 @@ public final class Partita
 
     public boolean isNoCreatureOmbra() { return getNumeroCreatureOmbraVive() == 0; }
 
+    public boolean isNoUomini()
+    {
+        return getNumeroCreatureOmbraVive() + getNumeroSenzaFazioneVivi() == getNumeroGiocatoriVivi();
+    }
+
     public int getNumeroCreatureOmbraVive() { return vivi.getNumeroCreatureOmbra(); }
 
     public Aura controlloVeggente(String nome)
@@ -276,6 +281,8 @@ public final class Partita
     }
 
     public boolean isPazzoUcciso() { return pazzoUcciso; }
+
+    public boolean isMegeraPresente() { return vivi.isMegeraPresente(); }
 
     private void controlloViaggio() { if(isViaggioPronto()) setViaggioPartito(true); }
 
@@ -476,7 +483,11 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO && isSensitivaEliminabile(nome)) eliminaSensitiva();
+        if(esito == VILLAGGIO)
+        {
+            if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeSensitiva()).maledizione();
+            if(isSensitivaEliminabile(nome)) eliminaSensitiva();
+        }
         return esito;
     }
 
@@ -584,18 +595,19 @@ public final class Partita
     public void protezioneStrega(String nome)
     {
         vivi.protezioneStrega(nome);
+        int posizione = -1;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getNomeRuolo(getNomeGiocatoreVivo(i)).equals("Strega"))
+            posizione = i;
+        String nomeStrega = getNomeGiocatoreVivo(posizione);
         if(vivi.isContadinoMostro(nome))
         {
-            int posizione = -1;
-            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getNomeRuolo(getNomeGiocatoreVivo(i)).equals("Strega"))
-                posizione = i;
-            String nomeStrega = getNomeGiocatoreVivo(posizione);
             eliminaGiocatore(nomeStrega);
             throw new IllegalArgumentException
             (
                 "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + nome + ").\nAvvisa Sonia della sua morte."
             );
         }
+        else if(vivi.isMegera(nome)) getGiocatore(nomeStrega).maledizione();
     }
 
     public boolean isProgenieNosferatuAssenti()

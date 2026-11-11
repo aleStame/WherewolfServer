@@ -5,8 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 
 public class Uomini extends Ruolo
 {
@@ -19,7 +18,12 @@ public class Uomini extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && (partita.getNumeroSenzaFazioneVivi() + partita.getNumeroCreatureOmbraVive() == partita.getNumeroGiocatoriVivi())) esito = SCONFITTA;
+        if(esito == VITTORIA)
+        {
+            if(partita.isNoUomini()) esito = SCONFITTA;
+            else if(!partita.isNoCreatureOmbra()) esito = NON_FINITO;
+        }
+        System.out.println(esito);
         return esito;
     }
 

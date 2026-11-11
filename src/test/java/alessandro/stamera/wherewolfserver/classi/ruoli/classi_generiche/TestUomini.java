@@ -56,8 +56,8 @@ import static org.mockito.Mockito.doCallRealMethod;
                 Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA), Arguments.of(partite[14], SCONFITTA),
                 Arguments.of(partite[15], NON_FINITO), Arguments.of(partite[16], NON_FINITO), Arguments.of(partite[17], SCONFITTA),
                 Arguments.of(partite[18], SCONFITTA), Arguments.of(partite[19], NON_FINITO), Arguments.of(partite[20], SCONFITTA),
-                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], NON_FINITO),
-                Arguments.of(partite[24], NON_FINITO)
+                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], SCONFITTA),
+                Arguments.of(partite[24], SCONFITTA)
             );
     }
 
@@ -88,15 +88,15 @@ import static org.mockito.Mockito.doCallRealMethod;
     private static Partita getPartitaSensitivaMaledetta()
     {
         String nomeMegera = "Nadia";
-        Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
-        partita.controlloMago(nomeMegera);
+        Partita partita = new Partita(new String[][] { { nomeMegera, "Megera" }, { "Giuseppe", "Sensitiva" } });
+        partita.controlloSensitiva(nomeMegera);
         return partita;
     }
 
     private static Partita getPartitaStregaMaledetta()
     {
         String nomeMegera = "Amelia";
-        Partita partita = new Partita(new String[][] { { "Emilio", "Mago" }, { nomeMegera, "Megera" } });
+        Partita partita = new Partita(new String[][] { { nomeMegera, "Megera" }, { "Ermenegildo", "Strega" } });
         partita.protezioneStrega(nomeMegera);
         return partita;
     }

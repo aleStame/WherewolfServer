@@ -394,6 +394,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public void aggiungiProtezioneLupi(String nome) { getGiocatore(nome).aggiungiProtezione(getLupi()); }
 
+    public boolean isMegeraPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
+        return trovato;
+    }
+
     private int getPosizioneTraditore()
     {
         int posizione = NON_TROVATO;

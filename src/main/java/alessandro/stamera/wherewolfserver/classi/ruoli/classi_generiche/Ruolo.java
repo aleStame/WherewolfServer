@@ -233,7 +233,7 @@ public class Ruolo
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito =  NON_FINITO;
+        EsitoPartita esito = VITTORIA;
         if(partita.isNoGiocatoriVivi()) esito = SCONFITTA;
         return esito;
     }
