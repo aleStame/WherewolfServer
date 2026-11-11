@@ -2,6 +2,7 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 
 public final class Strega extends Villaggio
 {
@@ -10,7 +11,7 @@ public final class Strega extends Villaggio
     {
         super
         (
-    "Strega", null, null, 0, true,
+    "Strega", BIANCA, null, 0, true,
     "La Strega è l'unico ruolo a poter fermare ogni notte l'attacco delle Creature dell'Ombra, a patto che riesca ad intuire le loro " +
             "mosse e ad agire preventivamente. Cercate di non rivelare la vostra identità se non assolutamente costretti, in quanto siete forse " +
             "l'unico bersaglio nella lista dei Lupi che viene ancora prima della Veggente. Dal momento che il vostro potere protegge sia " +

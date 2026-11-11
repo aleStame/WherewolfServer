@@ -5,6 +5,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -44,11 +45,17 @@ public final class TestAssassino
         String messaggio =
             "Avete un solo colpo da sparare e dovete decidere molto bene come usarlo. L'obiettivo migliore potrebbe essere una Guardia, poiché " +
             "nessun altro, a parte i Criminali, ha interesse che le guardie vengano eliminate. Di sicuro anche un Lupo sarebbe un ottimo " +
-            "bersaglio, anche perché, se capisse chi siete, sarebbe forse lui ad eliminare voi. Scegliete bene il momento in cui aprire gli occhi " +
-            "perché, se il Mistico di turno dovesse essere in gioco, dovreste uccidere per forza lui e perdereste così la vostra unica " +
+            "bersaglio, anche perché, se capisse chi siete, sarebbe forse lui ad eliminare voi. Scegliete bene il momento in cui aprire gli " +
+            "occhi perché, se il Mistico di turno dovesse essere in gioco, dovreste uccidere per forza lui e perdereste così la vostra unica " +
             "occasione.";
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
+
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
+    @Test public void testGildata() { assertThat(ruolo.gildata()).isEqualTo(FALLITO); }
+
+    @Test public void testGuardiaCorrotta() { verificaFalso(ruolo.isGuardiaCorrotta()); }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 

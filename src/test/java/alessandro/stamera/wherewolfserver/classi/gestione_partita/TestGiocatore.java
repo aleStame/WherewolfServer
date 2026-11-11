@@ -6,12 +6,16 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.RuoloNul
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -36,7 +40,8 @@ public final class TestGiocatore
             "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA", "Lupo reietto, NERA",
             "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
             "Nonna, BIANCA", "Nosferatu, NERA", "Oratore, BIANCA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA",
-            "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Templare, BIANCA", "Vampiro, NERA"
+            "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Templare, BIANCA", "Vampiro, NERA", "Veggente, BIANCA",
+            "Viaggiatore, BIANCA"
         }
     )
     public void testVoti(String nomeRuolo, Aura aura)
@@ -109,7 +114,7 @@ public final class TestGiocatore
             "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
             "Negromante, FALLITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
             "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO", "Spia, RIUSCITO", "Strega, FALLITO", "Sensitiva, FALLITO",
-            "Templare, RIUSCITO", "Vampiro, RIUSCITO"
+            "Templare, RIUSCITO", "Vampiro, RIUSCITO", "Viaggiatore, RIUSCITO"
         }
     )
     public void testProgenieNosferatu(String nomeRuolo, EsitoAttacco esito)
@@ -118,7 +123,22 @@ public final class TestGiocatore
         verificaAttacco(giocatore.progenizzazioneNosferatu(), esito);
     }
 
-    @ParameterizedTest @CsvSource({ "Angelo custode, RIUSCITO", "Contadino mostro, MORTO", "Giullare, RIUSCITO" })
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO", "Becchino, RIUSCITO",
+            "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO", "Cacciatore, RIUSCITO",
+            "Cacciatore di vampiri, RIUSCITO", "Capo branco, RIUSCITO", "Capo gilda, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, RIUSCITO",
+            "Ghoul, RIUSCITO", "Giovane lupo, RIUSCITO", "Giulietta, GIULIETTA_BECCATA", "Giullare, RIUSCITO", "Goblin, RIUSCITO",
+            "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, RIUSCITO", "Inquisitore, RIUSCITO", "Ladra, RIUSCITO",
+            "Leprecauno, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo reietto, RIUSCITO", "Lupo solitario, RIUSCITO", "Mago, RIUSCITO",
+            "Medium, RIUSCITO", "Megera, RIUSCITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, RIUSCITO", "Nonna, RIUSCITO",
+            "Nosferatu, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Posseduto, RIUSCITO", "Prete, RIUSCITO",
+            "Sensitiva, RIUSCITO", "Sidhe, RIUSCITO", "Spia, RIUSCITO", "Strega, RIUSCITO", "Templare, RIUSCITO", "Traditore, RIUSCITO",
+            "Vampiro, RIUSCITO", "Veggente, RIUSCITO", "Viaggiatore, RIUSCITO"
+        }
+    )
     public void testAttaccoAssassino(String nomeRuolo, EsitoAttacco esito)
     {
         cambiaRuolo(nomeRuolo);
@@ -134,8 +154,8 @@ public final class TestGiocatore
     }
 
     @ParameterizedTest
-    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega" })
-    public void testSegnalazioneInquisitore(String nomeRuolo)
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Sensitiva", "Sidhe", "Strega", "Veggente" })
+    public void testSegnalazioneInquisitoreRiuscita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
         segnalazioneInquisitore();
@@ -149,7 +169,7 @@ public final class TestGiocatore
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco",
-            "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+            "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro", "Viaggiatore"
         }
     )
     public void testSegnalazioneInquisitoreNonRiuscita(String nomeRuolo)
@@ -181,7 +201,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Goblin",
             "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco",
             "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega",
-            "Sensitiva", "Templare", "Vampiro"
+            "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNonLupo(String nomeLupo)
@@ -204,7 +224,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
             "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNonBracconiere(String nomeLupo)
@@ -214,7 +234,7 @@ public final class TestGiocatore
     }
 
     @ParameterizedTest
-    @CsvSource ( { "Assassino", "Bocca di rosa", "Borgomastro", "Capo gilda", "Guardia corrotta", "Ladra", "Oratore", "Spia" } )
+    @CsvSource ( { "Assassino", "Bocca di rosa", "Borgomastro", "Capo gilda", "Guardia corrotta", "Ladra", "Mercante", "Oratore", "Spia" } )
     public void testAnnullamentoVotiDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
@@ -232,7 +252,7 @@ public final class TestGiocatore
             "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul",
             "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco",
             "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testAccusaDopoSegnalazioneAzzeccagarbugli(String nomeRuolo)
@@ -253,7 +273,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
             "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNonCacciatore(String nomeRuolo)
@@ -276,7 +296,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
             "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNonLupoSolitario(String nomeRuolo)
@@ -299,7 +319,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
             "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNonNegromante(String nome)
@@ -322,7 +342,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
             "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
-            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoCapoGilda(String nomeRuolo)
@@ -345,7 +365,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
             "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoNonna(String nomeRuolo)
@@ -368,7 +388,7 @@ public final class TestGiocatore
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
             "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
-            "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoCappuccettoRosso(String nomeRuolo)
@@ -411,7 +431,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
             "Goblin", "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
             "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoGuaritore(String nomeRuolo)
@@ -473,7 +493,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi, RIUSCITO", "Contadino normale, RIUSCITO", "Ghoul, RIUSCITO", "Giulietta, GIULIETTA_BECCATA",
             "Giullare, RIUSCITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Inquisitore, RIUSCITO", "Mercante, RIUSCITO",
             "Monaco, RIUSCITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
-            "Prete, RIUSCITO", "Spia, RIUSCITO", "Templare, RIUSCITO"
+            "Prete, RIUSCITO", "Spia, RIUSCITO", "Templare, RIUSCITO", "Viaggiatore, RIUSCITO"
         }
     )
     public void testVampirizzazioneRiuscita(String nomeRuolo, EsitoAttacco esito)
@@ -489,8 +509,8 @@ public final class TestGiocatore
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
-            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva", "Templare",
-            "Vampiro"
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Sensitiva", "Strega",
+            "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testFunzionamentoNegromante(String nomeRuolo)
@@ -518,7 +538,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
             "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
             "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testRomeizzazione(String nomeRuolo)
@@ -537,24 +557,7 @@ public final class TestGiocatore
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
             "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
             "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
-        }
-    )
-    public void testVittoriaRomeo(String nomeRuolo)
-    {
-        cambiaRuolo(nomeRuolo);
-        verificaEsitoPartitaRomeo(new String[][] { { "Max", "Giulietta" }, { "Angelo", nomeRuolo } }, VITTORIA);
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testSconfittaRomeo(String nomeRuolo)
@@ -568,9 +571,10 @@ public final class TestGiocatore
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Eremita", "Ghoul",
-            "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
-            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste",
-            "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
+            "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNonContadino(String nomeRuolo)
@@ -591,11 +595,11 @@ public final class TestGiocatore
     (
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
-            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
-            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
-            "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoContadinoEroe(String nomeRuolo)
@@ -617,8 +621,8 @@ public final class TestGiocatore
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
-            "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
+            "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoContadinoLupo(String nomeRuolo)
@@ -637,11 +641,11 @@ public final class TestGiocatore
     (
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
-            "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
-            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
-            "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso",
+            "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo",
+            "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
+            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste",
+            "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoMegera(String nomeRuolo)
@@ -661,9 +665,10 @@ public final class TestGiocatore
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Eremita", "Ghoul",
-            "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
-            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste",
-            "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno",
+            "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
+            "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNomeRuolo(String nomeRuolo) { verificaNomeRuolo(nomeRuolo, nomeRuolo); }
@@ -685,8 +690,8 @@ public final class TestGiocatore
             "Bracconiere", "Cacciatore", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
-            "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
+            "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoCacciatoreDiVampiri(String nomeRuolo)
@@ -709,7 +714,7 @@ public final class TestGiocatore
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
-            "Spia", "Strega", "Templare", "Vampiro"
+            "Spia", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoSensitiva(String nomeRuolo)
@@ -732,7 +737,7 @@ public final class TestGiocatore
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva",
-            "Sidhe", "Spia", "Strega", "Templare", "Vampiro"
+            "Sidhe", "Spia", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoGiulietta(String nomeRuolo)
@@ -762,7 +767,7 @@ public final class TestGiocatore
             "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
             "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
             "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe",
-            "Spia", "Strega", "Templare", "Vampiro"
+            "Spia", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoEremita(String nomeRuolo)
@@ -791,7 +796,7 @@ public final class TestGiocatore
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva",
-            "Sidhe", "Spia", "Strega", "Templare"
+            "Sidhe", "Spia", "Strega", "Templare", "Veggente", "Viaggiatore"
         }
     )
     public void testNoVampiro(String nomeRuolo)
@@ -826,7 +831,7 @@ public final class TestGiocatore
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva",
-            "Sidhe", "Spia", "Strega", "Templare", "Vampiro"
+            "Sidhe", "Spia", "Strega", "Templare", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testNoLupoExNonna(String nomeRuolo)
@@ -853,10 +858,10 @@ public final class TestGiocatore
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
-            "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta",
+            "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testNoLadra(String nomeRuolo)
@@ -953,9 +958,9 @@ public final class TestGiocatore
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
@@ -987,6 +992,70 @@ public final class TestGiocatore
         verificaAttaccoLupi("Capo branco", EREMITA_BECCATO);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, BIANCA", "Angelo custode, BIANCA", "Assassino, NERA", "Azzeccagarbugli, BIANCA", "Bardo, BIANCA", "Becchino, BIANCA",
+            "Bocca di rosa, NERA", "Boia, NERA", "Borgomastro, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA",
+            "Cacciatore di vampiri, BIANCA", "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
+            "Contadino discendente dei lupi, BIANCA", "Contadino mostro, BIANCA", "Contadino normale, BIANCA", "Eremita, BIANCA",
+            "Ghoul, BIANCA", "Giovane lupo, NERA", "Giulietta, BIANCA", "Giullare, BIANCA", "Goblin, NERA", "Guardia, BIANCA",
+            "Guardia corrotta, NERA", "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA",
+            "Lupo reietto, NERA", "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA",
+            "Negromante, NERA", "Nonna, BIANCA", "Nosferatu, NERA", "Oratore, BIANCA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA",
+            "Posseduto, NERA", "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Strega, BIANCA", "Templare, BIANCA",
+            "Traditore, BIANCA", "Vampiro, NERA", "Veggente, BIANCA", "Viaggiatore, BIANCA"
+        }
+    )
+    public void testControlloMedium(String nomeRuolo, Aura aura)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.controlloMedium()).isEqualTo(aura);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, BIANCA", "Assassino, NERA", "Angelo custode, BIANCA", "Azzeccagarbugli, BIANCA", "Bardo, BIANCA",
+            "Bocca di rosa, NERA", "Borgomastro, BIANCA", "Becchino, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA",
+            "Cacciatore di vampiri, BIANCA", "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
+            "Contadino mostro, NERA", "Contadino normale, BIANCA", "Eremita, BIANCA", "Ghoul, BIANCA", "Giovane lupo, NERA", "Giulietta, BIANCA",
+            "Giullare, BIANCA", "Guardia, BIANCA", "Guardia corrotta, NERA", "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA",
+            "Lupo del branco, NERA", "Lupo reietto, NERA", "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA",
+            "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA", "Nosferatu, NERA", "Nonna, BIANCA", "Oratore, BIANCA", "Oste, BIANCA",
+            "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA", "Prete, BIANCA", "Spia, BIANCA", "Strega, BIANCA", "Templare, BIANCA",
+            "Traditore, BIANCA", "Vampiro, NERA", "Veggente, BIANCA", "Viaggiatore, BIANCA"
+        }
+    )
+    public void testControlloVeggente(String nomeRuolo, Aura aura)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaControlloVeggente(aura);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia, VILLAGGIO", "Assassino, NON_VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
+            "Bardo, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO", "Becchino, VILLAGGIO", "Bracconiere, VILLAGGIO",
+            "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO", "Capo gilda, NON_VILLAGGIO",
+            "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO", "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO",
+            "Eremita, VILLAGGIO", "Ghoul, NON_VILLAGGIO", "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO",
+            "Guardia, VILLAGGIO", "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO", "Inquisitore, NON_VILLAGGIO",
+            "Ladra, NON_VILLAGGIO", "Lupo del branco, NON_VILLAGGIO", "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO",
+            "Mago, VILLAGGIO", "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO", "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO",
+            "Negromante, NON_VILLAGGIO", "Nosferatu, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO",
+            "Pazzo, NON_VILLAGGIO", "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO", "Prete, VILLAGGIO", "Spia, NON_VILLAGGIO",
+            "Strega, VILLAGGIO", "Templare, NON_VILLAGGIO", "Traditore, NON_VILLAGGIO", "Vampiro, NON_VILLAGGIO", "Veggente, VILLAGGIO",
+            "Viaggiatore, NON_VILLAGGIO"
+        }
+    )
+    public void testControlloSensitiva(String nomeRuolo, EsitoControlloSensitiva esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        assertThat(giocatore.controlloSensitiva()).isEqualTo(esito);
+    }
+
     private void verificaCorrettoPassaggioPosseduto()
     {
         verificaEsitoPassaggioPosseduto(RIUSCITO);
@@ -994,6 +1063,66 @@ public final class TestGiocatore
         verificaControlloVeggente(NERA);
         controlloMediumAuraNera();
         verificaVero(isPosseduto());
+    }
+
+    @ParameterizedTest @MethodSource("getAbbinamentiPartiteNosferatu")
+    public void testVittoriaProgenieNosferatu(String tipoLupo, String nomeRuolo)
+    {
+        String nomeLupo = "Lucio";
+        String[][] giocatori = new String[][] { { nomeLupo, tipoLupo }, { "Werner", "Nosferatu" }, { "Alex", "Ghoul" } };
+        verificaPartitaNosferatu(nomeRuolo, giocatori, nomeLupo, VITTORIA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Contadino normale", "Ghoul",
+            "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Prete", "Spia", "Templare", "Viaggiatore"
+        }
+    )
+    public void testVittoriaProgenieVampiro(String nomeRuolo)
+    {
+        Partita partita = new Partita(new String[][] { { "Angel", "Vampiro" }, { "Doyle", "Ghoul" } });
+        cambiaRuolo(nomeRuolo);
+        verificaAttaccoVampiro(RIUSCITO);
+        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
+    @ParameterizedTest @MethodSource("getAbbinamentiPartiteNosferatu")
+    public void testSconfittaProgenieNosferatu(String tipoLupo, String nomeRuolo)
+    {
+        String nomeNosferatu = "Werner";
+        String[][] giocatori = new String[][] { { "Lucio", tipoLupo }, { nomeNosferatu, "Nosferatu" }, { "Alex", "Ghoul" } };
+        verificaPartitaNosferatu(nomeRuolo, giocatori, nomeNosferatu, SCONFITTA);
+    }
+
+    private void verificaPartitaNosferatu
+    (
+        String nomeRuolo, String[][] giocatori, String nomeEliminato, EsitoPartita esito
+    )
+    {
+        cambiaRuolo(nomeRuolo);
+        giocatore.progenizzazioneNosferatu();
+        Partita partita = new Partita(giocatori);
+        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(NON_FINITO);
+        int numeroVoti = 2;
+        partita.incrementaVoti(nomeEliminato, numeroVoti);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeEliminato, numeroVoti);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+        assertThat(giocatore.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    private static Stream<Arguments> getAbbinamentiPartiteNosferatu()
+    {
+        return Stream.of
+        (
+            Arguments.of("Capo branco", "Assassino"), Arguments.of("Lupo del branco", "Assassino"),
+            Arguments.of("Lupo reietto", "Assassino"), Arguments.of("Lupo solitario", "Assassino")
+        );
     }
 
     private void controlloMediumAuraNera() { assertThat(giocatore.controlloMedium()).isEqualTo(NERA); }

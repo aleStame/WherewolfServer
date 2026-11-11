@@ -1,11 +1,19 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestVeggente
 {
+
+    private Ruolo ruolo;
+
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Veggente"); }
 
     @Test public void testConsigliGioco()
     {
@@ -18,7 +26,11 @@ public final class TestVeggente
             "confusione nel villaggio. Se doveste vedere che il gruppo si sta fidando di una finta Veggente potrebbe valere la pena di uscire " +
             "allo scoperto anche senza molte informazioni, in quanto seguire una falsa pista porta molto velocemente a risultati difficilmente " +
             "rimediabili in seguito.";
-        assertThat(FACTORY.getRuolo("Veggente").getConsigli()).isEqualTo(messaggio);
+        assertThat(ruolo.getConsigli()).isEqualTo(messaggio);
     }
+
+    @Test public void testMistico() { assertThat(ruolo.isMistico()).isTrue(); }
+
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
 }

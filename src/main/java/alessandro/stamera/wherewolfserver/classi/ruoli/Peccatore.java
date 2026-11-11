@@ -2,7 +2,6 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 
 public final class Peccatore extends Villaggio

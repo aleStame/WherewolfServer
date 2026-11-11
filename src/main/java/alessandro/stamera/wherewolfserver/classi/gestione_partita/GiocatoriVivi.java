@@ -28,7 +28,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public void segnalazioneAngeloCustode(String nome) { getGiocatore(nome).protezioneAngeloCustode(); }
 
-    public EsitoAttacco attaccoAssassino(String nome) { return getGiocatore(nome).attaccoAssassino(); }
+    public EsitoAttacco attaccoAssassino(String nome)
+    {
+        EsitoAttacco esito = getGiocatore(nome).attaccoAssassino();
+        if(esito == RIUSCITO && (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente()) esito = GHOUL_MORTO;
+        return esito;
+    }
 
     public EsitoAttacco attaccoLupi(Ruolo attaccante, String nome)
     {
@@ -85,7 +90,11 @@ public final class GiocatoriVivi extends Giocatori
         return numeroCreatureOmbra;
     }
 
-    public Aura controlloVeggente(String nome) { return getGiocatore(nome).controlloVeggente(); }
+    public Aura controlloVeggente(String nome)
+    {
+        if(isMegera(nome)) maledizione(nome);
+        return getGiocatore(nome).controlloVeggente();
+    }
 
     public int getNumeroCriminali()
     {
@@ -176,7 +185,7 @@ public final class GiocatoriVivi extends Giocatori
         return esito;
     }
 
-    public EsitoControlloSensitiva controlloSensitiva(String nome) { return getGiocatore(nome).getRuolo().controlloSensitiva(); }
+    public EsitoControlloSensitiva controlloSensitiva(String nome) { return getGiocatore(nome).controlloSensitiva(); }
 
     public boolean isSensitivaPresente() { return getPosizioneSensitiva() != NON_TROVATO; }
 
@@ -243,7 +252,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isFazioneNosferatu(String nome) { return getFazione(nome) == NOSFERATU; }
 
-    public boolean isVampiroPresente() { return getPosizioneVampiro() != NON_TROVATO; }
+    public boolean isFazioneVampiro(String nome) { return getFazione(nome) == VAMPIRO; }
 
     public String getNomeVampiro() { return getNomeGiocatore(getPosizioneVampiro()); }
 
@@ -308,6 +317,8 @@ public final class GiocatoriVivi extends Giocatori
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
         aggiornaProtezioniCappuccettoRossoPostInserimento();
+        if(isPeccatorePresente() && isPossedutoPresente()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
+        if(isTraditorePresente()) aggiungiProtezioneLupi(getNomeTraditore());
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -372,6 +383,48 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     public boolean isProtetto(String nome) { return getGiocatore(nome).isProtetto(); }
+
+    private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
+
+    public String getNomePeccatore() { return getNomeGiocatore(getPosizionePeccatore()); }
+
+    public boolean isTraditorePresente() { return getPosizioneTraditore() != NON_TROVATO; }
+
+    public String getNomeTraditore() { return getNomeGiocatore(getPosizioneTraditore()); }
+
+    public void aggiungiProtezioneLupi(String nome) { getGiocatore(nome).aggiungiProtezione(getLupi()); }
+
+    public boolean isMegeraPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
+        return trovato;
+    }
+
+    private int getPosizioneTraditore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isTraditore(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
+
+    private boolean isTraditore(String nome) { return getGiocatore(nome).isTraditore(); }
+
+    private int getPosizionePeccatore()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isPeccatore(getNomeGiocatore(i))) posizione = i;
+        return posizione;
+    }
+
+    private boolean isPeccatore(String nome) { return getGiocatore(nome).isPeccatore(); }
+
+    private boolean isPossedutoPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isPosseduto(getNomeGiocatore(i))) trovato = true;
+        return trovato;
+    }
 
     private int getPosizioneGiulietta()
     {

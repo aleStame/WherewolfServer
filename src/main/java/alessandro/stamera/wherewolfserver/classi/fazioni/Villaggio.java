@@ -19,7 +19,7 @@ public class Villaggio extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && partita.isNoCreatureOmbra()) esito = getEsitoPartitaSenzaOmbre(partita);
+        if(esito == VITTORIA && partita.isNoCreatureOmbra()) esito = getEsitoPartitaSenzaOmbre(partita);
         return esito;
     }
 

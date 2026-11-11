@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T13:40:49" hostname="ALESSANDRO" time="0.015">
+<testsuite name="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-11T10:19:52" hostname="ALESSANDRO" time="0.01">
   <properties/>
-  <testcase name="testConsigliGioco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.015"/>
+  <testcase name="testControlloMedium()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.0"/>
+  <testcase name="[1] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@18e4551, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.001"/>
+  <testcase name="[2] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@3ea48c37, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.001"/>
+  <testcase name="[3] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@11e834ad, esito=SCONFITTA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.0"/>
+  <testcase name="[4] partita=alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita@710ae6a7, esito=VITTORIA" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.0"/>
+  <testcase name="testConsigliGioco()" classname="alessandro.stamera.wherewolfserver.classi.ruoli.TestViaggiatore" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
