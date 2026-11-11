@@ -1,11 +1,18 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestStrega
 {
+
+    private Ruolo ruolo;
+
+    @BeforeEach public void setUp() { ruolo = FACTORY.getRuolo("Strega"); }
 
     @Test public void testConsigliGioco()
     {
@@ -18,7 +25,9 @@ public final class TestStrega
             "per leggere correttamente la partita. E' possibile infatti che la Veggente abbia visto un'aura nera su un giocatore che sostiene di " +
             "non possederla e che entrambi stiano dicendo il vero. Soltanto l'uso del vostro potere permetterà di discernere una situazione come " +
             "questa.";
-        assertThat(FACTORY.getRuolo("Strega").getConsigli()).isEqualTo(messaggio);
+        assertThat(ruolo.getConsigli()).isEqualTo(messaggio);
     }
+
+    @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
 }

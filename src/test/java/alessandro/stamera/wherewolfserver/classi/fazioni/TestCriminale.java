@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
@@ -32,8 +30,6 @@ public final class TestCriminale
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testBoia() { verificaFalso(ruolo.isBoia()); }
-
     @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
 
     @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
@@ -42,23 +38,11 @@ public final class TestCriminale
 
     @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
 
-    @Test public void testGhoul() { verificaFalso(ruolo.isGhoul()); }
-
-    @Test public void testGiullare() { verificaFalso(ruolo.isGiullare()); }
-
-    @Test public void testGoblin() { verificaFalso(ruolo.isGoblin()); }
-
     @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
-
-    @Test public void testMegera() { verificaFalso(ruolo.isMegera()); }
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
-    @Test public void testPazzo() { verificaFalso(ruolo.isPazzo()); }
-
     @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
-
-    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
     @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
 
@@ -67,6 +51,10 @@ public final class TestCriminale
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
 
     @Test public void testCreaturaOmbra() { verificaFalso(ruolo.isCreaturaOmbra()); }
+
+    @Test public void testNegromante() { verificaFalso(ruolo.isFazioneNegromante()); }
+
+    @Test public void testSenzaFazione() { verificaFalso(ruolo.isSenzaFazione()); }
 
     @ParameterizedTest @MethodSource("getCasiEsitoPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
@@ -78,11 +66,17 @@ public final class TestCriminale
         return Stream.of
         (
             Arguments.of(new Partita(new String[][] { { "Matteo", "Guardia" }, { "Marghe", "Altra guardia" } }), SCONFITTA),
+            Arguments.of(new Partita(new String[][] { { "Ale", "Guardia" }, { "Franz", "Assassino" } }), SCONFITTA),
+            Arguments.of(new Partita(new String[][] { { "Antonio", "Altra guardia" }, { "Giorgia", "Assassino" } }), SCONFITTA),
             Arguments.of
             (
                 new Partita(new String[][] { { "Giuseppe", "Prete" }, { "Salvatore", "Peccatore" }, { "Marino", "Bocca di rosa" } }), SCONFITTA
             ),
-            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA)
+            Arguments.of(new Partita(new String[][] { { "Mike", "Capo gilda" }, { "Susan", "Prete" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "Paolo", "Assassino" }, { "Susan", "Peccatore" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "Maria", "Ladra" }, { "Sabrina", "Monaco" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "David", "Spia" }, { "Sarah", "Bocca di rosa" } }), VITTORIA),
+            Arguments.of(new Partita(new String[][] { { "David", "Guardia corrotta" }, { "Sarah", "Mercante" } }), VITTORIA)
         );
     }
 

@@ -23,7 +23,7 @@ public class Inquisizione extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && partita.isNoCreatureOmbra()) esito = getEsitoPartitaMistici(partita);
+        if(esito == VITTORIA && partita.isNoCreatureOmbra()) esito = getEsitoPartitaMistici(partita);
         return esito;
     }
 

@@ -3,10 +3,12 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -76,6 +78,14 @@ public final class TestPazzo
             "attaccandovi perderebbero due turni preziosi durante la notte. Riuscire a vincere con questo ruolo spesso risulta tanto arduo quanto " +
             "gratificante.";
         verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
+    @Test public void testSconfittaPerAssassinio()
+    {
+        String nomeVittima = "Cooper";
+        Partita partita = new Partita(new String[][] { { "Bob", "Assassino" }, { "Laura", "Bocca di rosa" }, { nomeVittima, "Pazzo" } });
+        partita.attaccoAssassino(nomeVittima);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
     }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }

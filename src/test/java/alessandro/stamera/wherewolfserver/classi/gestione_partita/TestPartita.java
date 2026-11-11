@@ -1,9 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -15,6 +12,7 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.VILLAGGIO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.MISTICO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Misticismo.NON_MISTICO;
@@ -68,7 +66,8 @@ public final class TestPartita
         verificaAccusati(soluzioni[0][0], soluzioni[1][0], soluzioni[2][0]);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Cappuccetto rosso", "Contadino mostro", "Giovane lupo", "Sidhe" })
+    @ParameterizedTest
+    @CsvSource({ "Assassino", "Cacciatore", "Cappuccetto rosso", "Contadino mostro", "Giovane lupo", "Sidhe" })
     public void testAngeloCustodeAccusatoNonPresente(String nomeRuolo)
     {
         String nomeAngelo = "Domenico", nome = "Pamela";
@@ -80,7 +79,7 @@ public final class TestPartita
         verificaNonAccusato(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Altra guardia", "Cacciatore", "Contadino mostro", "Giovane lupo" })
+    @ParameterizedTest @CsvSource({ "Altra guardia", "Assassino", "Cacciatore", "Contadino mostro", "Giovane lupo" })
     public void testAngeloCustodeAccusatoPresente(String nomeRuolo)
     {
         String nomeAngelo = "Michelle", nomeAmato = "Fiona", nomeAccusato = "Biagio";
@@ -96,8 +95,12 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Angelo custode", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
-            "Contadino mostro", "Eremita", "Giovane lupo", "Giullare"
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
+            "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
+            "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
+            "Templare", "Traditore", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo)
@@ -112,16 +115,25 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
+            "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testAttaccoStregatoAssassino(String nomeRuolo)
     {
         String nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giuseppe", "Strega" } });
+        protezioneStrega(nomeVittima);
+        verificaAttaccoAssassino(nomeVittima);
+    }
+
+    @Test public void testAttaccoGiuliettaStregataAssassino()
+    {
+        String nomeVittima = "Maddalena", nomeStrega = "Giuseppe";
+        inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, "Giulietta" }, { nomeStrega, "Strega" } });
+        romeizzazione(nomeStrega);
         protezioneStrega(nomeVittima);
         verificaAttaccoAssassino(nomeVittima);
     }
@@ -138,12 +150,12 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
-            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
+            "Contadino eroe", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
-            "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe",
+            "Spia", "Strega", "Templare", "Traditore", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoAssassinoRomeo(String nomeRuolo)
@@ -154,18 +166,18 @@ public final class TestPartita
         String messaggio = "Federico è Romeo.\nAvvisa anche Giulia (Giulietta) del fatto che deve morire.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
         terminaNotte();
-        verificaEliminati(nomeVittima);
+        verificaEliminati(nomeVittima, nomeGiulietta);
     }
 
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
-            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
-            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
-            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
-            "Prete", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
+            "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
+            "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
+            "Templare", "Traditore", "Vampiro", "Veggente"
         }
     )
     public void testAttaccoAmatoAssassino(String nomeRuolo)
@@ -406,14 +418,24 @@ public final class TestPartita
     public void testAttaccoLupiAmatoAngeloCustodeStregato(String tipoLupo, String nomeRuolo, String messaggio)
     {
         String nomeAngeloCustode = "Erode", nomeAmato = "Giuseppe";
-        inizializzaPartita(new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo } });
+        String[][] giocatori =
+            new String[][] { { nomeAngeloCustode, "Angelo custode" }, { "Maria", tipoLupo }, { nomeAmato, nomeRuolo }, { "Wanda", "Strega" } };
+        inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeAmato);
         protezioneStrega(nomeAngeloCustode);
         verificaEliminazioneAngeloCustodeAttaccoAmato(tipoLupo, messaggio, nomeAmato, nomeAngeloCustode);
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Bocca di rosa", "Cacciatore", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi", "Eremita" })
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
+            "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco",
+            "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro", "Viaggiatore"
+        }
+    )
     public void testSegnalazioneInquisitoreMisticoAssente(String nomeRuolo)
     {
         String nomeVittima = "Raffaele", nomeInquisitore = "Andrea";
@@ -425,7 +447,7 @@ public final class TestPartita
     }
 
     @ParameterizedTest
-    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe", "Strega", "Veggente" })
     public void testSegnalazioneInquisitoreMisticoPresente(String nomeRuolo)
     {
         String nomeMistico = "Alberto";
@@ -437,10 +459,12 @@ public final class TestPartita
         verificaAccusati(nomeMistico, giocatori[1][0]);
     }
 
-    @Test public void testSegnalazioneInquisitoreMisticoAssenteAmato()
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe", "Strega", "Veggente" })
+    public void testSegnalazioneInquisitoreMisticoAssenteAmato(String nomeRuolo)
     {
         String nome = "Irvano";
-        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nome, "Medium" }, { "Luca", "Inquisitore" } };
+        String[][] giocatori = new String[][] { { "Elena", "Angelo custode" }, { nome, nomeRuolo }, { "Luca", "Inquisitore" } };
         inizializzaPartita(giocatori);
         int posizioneVoto = 2;
         segnalazioneInquisitore(nome);
@@ -451,7 +475,7 @@ public final class TestPartita
     }
 
     @ParameterizedTest
-    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe" })
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sensitiva", "Sidhe", "Strega", "Veggente" })
     public void testSegnalazioneInquisitoreMisticoPresenteAmato(String nomeRuolo)
     {
         String nomeSegnalato = "Davide";
@@ -473,12 +497,6 @@ public final class TestPartita
         attaccoAssassino(nomeVittima);
         terminaNotte();
         for(int i = 0; i < soluzioni.length - 1; i++) verificaEliminazione(soluzioni[i][0]);
-    }
-
-    @Test public void testSoloCreatureOmbra()
-    {
-        inizializzaPartita(new String[][] { { "Raffaele", "Nosferatu" }, { "Aurora", "Capo branco" } });
-        verificaVero(partita.isSoloCreatureOmbra());
     }
 
     @Test public void testSoloGuardie()
@@ -634,15 +652,6 @@ public final class TestPartita
         verificaEliminazione(giocatori[posizioneVittima][0]);
     }
 
-    /*@Test public void testAttaccoLupoSolitarioCacciatore()
-    {
-        String lupo = "Lupo solitario", nomeLupo = "Katia", nomeCacciatore = "Valeria";
-        inizializzaPartita(new String[][] { { nomeLupo, lupo }, { nomeCacciatore, "Cacciatore" }, { "Pino", "Prete" } });
-        attaccoLupi(lupo, nomeCacciatore);
-        terminaNotte();
-        verificaEliminati(nomeLupo, nomeCacciatore);
-    }*/
-
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testAttaccoUltimoLupoBranco(String tipoLupo)
     {
@@ -664,15 +673,17 @@ public final class TestPartita
         verificaNonEliminati(lupo);
     }
 
-    @Test public void testAttaccoNosferatuMorto()
+    @ParameterizedTest @CsvSource({ "Capo branco", "Giovane lupo", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoNosferatuLupi(String nomeRuolo)
     {
-        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta", tipoLupo = "Lupo del branco";
-        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { "Raimondo", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeVittima);
-        String messaggio = "Impossibile progenizzare il Cacciatore di vampiri (Gianmaria).\nAvvisa il Nosferatu (Augusta) della sua morte.";
+        String nomeVittima = "Gianmaria", nomeNosferatu = "Augusta";
+        inizializzaPartita(new String[][] { { "Augusta", "Nosferatu" }, { nomeVittima, nomeRuolo }, { "Raimondo", "Assassino" } });
+        attaccoAssassino(nomeVittima);
+        String messaggio = "Impossibile progenizzare il " + nomeRuolo + " (Gianmaria).\nAvvisa il Nosferatu (Augusta) della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomeVittima)).withMessage(messaggio);
         terminaNotte();
-        verificaEliminati(nomeVittima, nomeNosferatu);
+        verificaEliminati(nomeNosferatu);
+        verificaNonEliminati(nomeVittima);
     }
 
     @Test public void testAttaccoNosferatuContadinoMostro()
@@ -708,10 +719,12 @@ public final class TestPartita
         verificaEliminati(nomeVittima);
     }
 
-    @Test public void testAttaccoNosferatuFallito()
+    @ParameterizedTest @CsvSource
+    ({ "Eremita", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Sidhe", "Strega", "Sensitiva" })
+    public void testAttaccoNosferatuFallito(String nomeRuolo)
     {
         String nomeVittima = "Paolo";
-        inizializzaPartita(new String[][] { { "Assunta", "Nosferatu" }, { nomeVittima, "Eremita" }, { "Franca", "Assassino" } });
+        inizializzaPartita(new String[][] { { "Assunta", "Nosferatu" }, { nomeVittima, nomeRuolo }, { "Franca", "Assassino" } });
         attaccoAssassino(nomeVittima);
         progenizzazioneNosferatu(nomeVittima);
         terminaNotte();
@@ -730,11 +743,20 @@ public final class TestPartita
         verificaNumeroIntero(partita.getNumeroLupiBrancoVivi(), 3);
     }
 
-    @Test public void testAttaccoNosferatuRiuscito()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Ghoul", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore",
+            "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare, RIUSCITO", "Vampiro", "Viaggiatore"
+        }
+    )
+    public void testAttaccoNosferatuRiuscito(String nomeRuolo)
     {
-        String nome = "Marco", tipoLupo = "Capo branco";
-        inizializzaPartita(new String[][] { { nome, "Prete" }, { "Tina", "Nosferatu" }, { "Rolando", tipoLupo } });
-        attaccoLupi(tipoLupo, nome);
+        String nome = "Marco";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Tina", "Nosferatu" }, { "Rolando", "Assassino" } });
+        attaccoAssassino(nome);
         progenizzazioneNosferatu(nome);
         terminaNotte();
         verificaNonEliminati(nome);
@@ -1122,15 +1144,6 @@ public final class TestPartita
         verificaNosferatuNonVivo(nome);
     }
 
-    @Test public void testNosferatuMorto()
-    {
-        String nomeNosferatu = "Cesare", tipoLupo = "Lupo del branco";
-        inizializzaPartita(new String[][] { { nomeNosferatu, "Nosferatu" }, { "Annibale", tipoLupo } });
-        attaccoLupi(tipoLupo, nomeNosferatu);
-        terminaNotte();
-        verificaNosferatuNonVivo(nomeNosferatu);
-    }
-
     @Test public void testProgenieNosferatuViva()
     {
         String nomeVittima = "Pina", tipoLupo = "Lupo solitario";
@@ -1261,7 +1274,10 @@ public final class TestPartita
             { "Primo", tipoLupo }, { "Secondo", "Nosferatu" }, { nomeVittima, "Cacciatore di vampiri" }, { nomeGhoul, "Ghoul" }
         };
         inizializzaPartita(giocatori);
-        verificaMorteGhoul(tipoLupo, nomeVittima, "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.", nomeGhoul);
+        String messaggio =
+            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua " +
+            "morte.";
+        verificaMorteGhoul(tipoLupo, nomeVittima, messaggio, nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1274,7 +1290,10 @@ public final class TestPartita
         };
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeGhoul);
-        verificaMorteGhoul(tipoLupo, nomeVittima, "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.", nomeGhoul);
+        String messaggio =
+            "Il tentativo di progenizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua " +
+            "morte.";
+        verificaMorteGhoul(tipoLupo, nomeVittima, messaggio, nomeGhoul);
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -1287,7 +1306,8 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         String nomeVittima = giocatori[2][0];
         String messaggioLupi =
-            "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro morte.";
+            "L'attacco al Contadino mostro (Terzo) causa la morte anche del lupo attaccante (Primo).\nAvvisa entrambi i giocatori della loro " +
+            "morte.";
         String messaggioNosferatu =
             "Il tentativo di progenizzazione del Contadino mostro (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
         verificaVittimaSbagliata(tipoLupo, nomeVittima, messaggioLupi);
@@ -1308,10 +1328,10 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare",
-            "Goblin", "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
-            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta",
+            "Giullare", "Goblin", "Guardia", "Guardia corrotta,", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco",
+            "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste",
+            "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
         }
     )
     public void testNonFazioneNosferatu(String nomeRuolo)
@@ -1325,14 +1345,15 @@ public final class TestPartita
     (
         {
             "Altra guardia, BIANCA", "Angelo custode, BIANCA", "Assassino, NERA", "Azzeccagarbugli, BIANCA", "Bardo, BIANCA", "Becchino, BIANCA",
-            "Bocca di rosa, NERA", "Boia, NERA", "Borgomastro, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA",
-            "Cacciatore di vampiri, BIANCA", "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
+            "Bocca di rosa, NERA", "Boia, NERA", "Borgomastro, BIANCA", "Bracconiere, BIANCA", "Cacciatore, BIANCA", "Cacciatore di vampiri, BIANCA",
+            "Capo branco, NERA", "Capo gilda, BIANCA", "Cappuccetto rosso, BIANCA", "Contadino eroe, BIANCA",
             "Contadino discendente dei lupi, BIANCA", "Contadino mostro, BIANCA", "Contadino normale, BIANCA", "Eremita, BIANCA", "Ghoul, BIANCA",
             "Giovane lupo, NERA", "Giulietta, BIANCA", "Giullare, BIANCA", "Goblin, NERA", "Guardia, BIANCA", "Guardia corrotta, NERA",
             "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA", "Lupo reietto, NERA",
             "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
             "Nonna, BIANCA", "Nosferatu, NERA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA", "Prete, BIANCA",
-            "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Templare, BIANCA", "Vampiro, NERA"
+            "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Strega, BIANCA", "Templare, BIANCA", "Traditore, BIANCA", "Vampiro, NERA",
+            "Veggente, BIANCA"
         }
     )
     public void testControlloMedium(String nomeRuolo, Aura aura)
@@ -1367,10 +1388,11 @@ public final class TestPartita
             "Eremita, NON_MISTICO", "Ghoul, NON_MISTICO", "Giovane lupo, NON_MISTICO", "Giulietta, NON_MISTICO", "Giullare, NON_MISTICO",
             "Goblin, MISTICO", "Guardia, NON_MISTICO", "Guardia corrotta, NON_MISTICO", "Guaritore, MISTICO", "Inquisitore, NON_MISTICO",
             "Ladra, NON_MISTICO", "Leprecauno, MISTICO", "Lupo del branco, NON_MISTICO", "Lupo reietto, NON_MISTICO",
-            "Lupo solitario, NON_MISTICO", "Mago, MISTICO", "Medium, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO",
+            "Lupo solitario, NON_MISTICO", "Mago, MISTICO", "Medium, MISTICO", "Megera, MISTICO", "Mercante, NON_MISTICO", "Monaco, NON_MISTICO",
             "Negromante, MISTICO", "Nonna, NON_MISTICO", "Nosferatu, NON_MISTICO", "Oratore, NON_MISTICO", "Oste, NON_MISTICO",
-            "Pazzo, NON_MISTICO", "Peccatore, NON_MISTICO", "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO", "Spia, NON_MISTICO",
-            "Sensitiva, MISTICO", "Sensitiva, MISTICO", "Templare, NON_MISTICO", "Vampiro, NON_MISTICO"
+            "Pazzo, NON_MISTICO", "Peccatore, NON_MISTICO", "Posseduto, NON_MISTICO", "Prete, NON_MISTICO", "Sidhe, MISTICO",
+            "Spia, NON_MISTICO", "Sensitiva, MISTICO", "Strega, MISTICO", "Templare, NON_MISTICO", "Traditore, NON_MISTICO",
+            "Vampiro, NON_MISTICO", "Veggente, MISTICO", "Viaggiatore, NON_MISTICO"
         }
     )
     public void testMisticismo(String nomeRuolo, Misticismo misticismo)
@@ -1389,7 +1411,8 @@ public final class TestPartita
         };
         inizializzaPartita(giocatori);
         String messaggio =
-            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua " +
+            "morte.";
         verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeGhoul);
     }
 
@@ -1403,7 +1426,8 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         segnalazioneAngeloCustode(nomeGhoul);
         String messaggio =
-            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua morte.";
+            "Il tentativo di vampirizzazione del Cacciatore di vampiri (Terzo) causa la morte del Ghoul (Quarto).\nAvvisa Quarto della sua " +
+            "morte.";
         verificaMortePostAttaccoVampiro(nomeCacciatore, messaggio, nomeGhoul);
     }
 
@@ -1441,7 +1465,7 @@ public final class TestPartita
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
             "Contadino normale", "Ghoul", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore",
-            "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare"
+            "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare", "Viaggiatore"
         }
     )
     public void testVampirizzazioneRiuscita(String nomeRuolo)
@@ -1451,7 +1475,8 @@ public final class TestPartita
         verificaAttaccoVampiroRiuscito(nomeVittima);
     }
 
-    @ParameterizedTest @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Negromante" })
+    @ParameterizedTest
+    @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Nosferatu", "Sidhe", "Strega", "Sensitiva" })
     public void testVampirizzazioneFallita(String nomeRuolo)
     {
         String nomeVittima = "Lino";
@@ -1497,25 +1522,6 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeVampiro, "Vampiro" }, { "Gabriele", "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVampiro);
         verificaMortePostAttaccoVampiro(nomeVittima, messaggio, nomeVampiro);
-    }
-
-    @ParameterizedTest @CsvSource
-    (
-        {
-            "'Capo branco', 'Impossibile progenizzare il Capo branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Lupo del branco', 'Impossibile progenizzare il Lupo del branco (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Lupo reietto', 'Impossibile progenizzare il Lupo reietto (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Lupo solitario', 'Impossibile progenizzare il Lupo solitario (Giuliano).\nAvvisa il Nosferatu (Michele) della sua morte.'",
-            "'Cacciatore di vampiri', 'Impossibile progenizzare il Cacciatore di vampiri (Giuliano).\nAvvisa il Nosferatu (Michele) della sua " +
-            "morte.'"
-        }
-    )
-    public void testMorteNosferatu(String nomeRuolo, String messaggio)
-    {
-        String nomeVittima = "Giuliano", nomeNosferatu = "Michele";
-        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeNosferatu, "Nosferatu" }, { "Giampiero", "Assassino" } });
-        attaccoAssassino(nomeVittima);
-        verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeNosferatu);
     }
 
     @ParameterizedTest @CsvSource
@@ -1651,7 +1657,8 @@ public final class TestPartita
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
             "Contadino mostro", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
             "Inquisitore", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Sidhe", "Spia", "Sensitiva", "Templare",
+            "Vampiro"
         }
     )
     public void testPoterePossedutoRomeoFallito(String nomeRuolo)
@@ -1801,7 +1808,9 @@ public final class TestPartita
     @Test public void testVampirizzazionePossedutoAmatoVampiroStregato()
     {
         String nomeVampiro = "Ale", nomePosseduto = "Franz";
-        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" } });
+        String[][] giocatori =
+            new String[][] { { nomeVampiro, "Vampiro" }, { nomePosseduto, "Posseduto" }, { "Nino", "Angelo custode" }, { "Pina", "Strega" } };
+        inizializzaPartita(giocatori);
         protezioneStrega(nomeVampiro);
         verificaFallimentoVampirizzazionePossedutoAmato(nomePosseduto, nomeVampiro);
     }
@@ -1838,7 +1847,8 @@ public final class TestPartita
         String nomeNosferatu = "Ale", nomePosseduto = "Franz", nomeAngelo = "Nino";
         String[][] giocatori = new String[][]
         {
-            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo }
+            { nomeNosferatu, "Nosferatu" }, { nomePosseduto, "Posseduto" }, { nomeAngelo, "Angelo custode" }, { "Bob", tipoLupo },
+            { "Giulio", "Strega" }
         };
         inizializzaPartita(giocatori);
         protezioneStrega(nomeNosferatu);
@@ -2043,7 +2053,7 @@ public final class TestPartita
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
             "Guardia corrotta", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco", "Nonna", "Nosferatu",
-            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro", "Viaggiatore"
         }
     )
     public void testSegnalazioneInquisitoreNonRiuscitaBallottaggio(String nomeRuolo)
@@ -2064,7 +2074,7 @@ public final class TestPartita
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
             "Guardia corrotta", "Ladra", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mercante", "Monaco", "Nonna", "Nosferatu",
-            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro"
+            "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia", "Templare", "Vampiro", "Viaggiatore"
         }
     )
     public void testSegnalazioneInquisitoreNonRiuscitaNonBallottaggio(String nomeRuolo)
@@ -2086,7 +2096,7 @@ public final class TestPartita
             "Contadino discendente dei lupi", "Contadino normale", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
             "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Spia",
-            "Sensitiva", "Templare", "Vampiro"
+            "Sensitiva", "Strega", "Templare", "Vampiro", "Veggente"
         }
     )
     public void testFunzionamentoNegromante(String nomeRuolo)
@@ -2143,8 +2153,8 @@ public final class TestPartita
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
             "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
-            "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega",
-            "Sensitiva", "Templare", "Vampiro"
+            "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia",
+            "Strega", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testNosferatizzazioneAngeloCustodeRomeizzato(String nomeRuolo)
@@ -2169,8 +2179,8 @@ public final class TestPartita
             "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
             "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
             "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
-            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sidhe",
-            "Spia", "Sensitiva", "Templare", "Vampiro"
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testNosferatizzazioneAngeloCustodeStregato(String nomeRuolo)
@@ -2298,7 +2308,10 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource
     (
-        { "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Cappuccetto rosso", "Eremita", "Peccatore" }
+        {
+            "Assassino", "Cacciatore", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Cappuccetto rosso", "Eremita",
+            "Peccatore"
+        }
     )
     public void testPotereBoiaNonRiuscito(String nomeRuolo)
     {
@@ -2330,7 +2343,8 @@ public final class TestPartita
         verificaEliminati(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Lupo del branco" }) public void testAttaccoCapoBranco(String nomeRuolo)
+    @ParameterizedTest @CsvSource({ "Assassino", "Cacciatore", "Lupo del branco" })
+    public void testAttaccoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
         inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
@@ -2414,10 +2428,54 @@ public final class TestPartita
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
-    @Test public void testAttaccoLupoBranco()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Mago", "Medium", "Medium", "Megera", "Mercante", "Monaco", "Negromante",
+            "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro",
+            "Veggente"
+        }
+    )
+    public void testAttaccoLupoBrancoRiuscito(String nomeRuolo)
     {
         String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
-        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo"} });
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"} });
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Lupo del branco", "Mago", "Medium", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva",
+            "Templare", "Vampiro", "Veggente"
+        }
+    )
+    public void testAttaccoLupoReiettoRiuscito(String nomeRuolo)
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo" } });
+        verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore di vampiri", "Capo gilda", "Contadino normale", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Leprecauno", "Mago", "Medium", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare",
+            "Vampiro", "Veggente"
+        }
+    )
+    public void testAttaccoLupoSolitarioRiuscito(String nomeRuolo)
+    {
+        String tipoLupo = "Lupo del branco", nomeVittima = "Damiano";
+        inizializzaPartita(new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo } });
         verificaAttaccoLupiRiuscito(tipoLupo, nomeVittima);
     }
 
@@ -2427,6 +2485,16 @@ public final class TestPartita
         String nomeVittima = "Damiano";
         String[][] giocatori =
             new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Monica", "Giulietta" } };
+        inizializzaPartita(giocatori);
+        verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempioCombinazioni")
+    public void testAttaccoLupiStregato(String nomeRuolo, String tipoLupo)
+    {
+        String nomeVittima = "Damiano";
+        String[][] giocatori =
+            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo"}, { "Monica", "Strega" } };
         inizializzaPartita(giocatori);
         verificaAttaccoRomeoFallito(nomeVittima, tipoLupo);
     }
@@ -2456,14 +2524,13 @@ public final class TestPartita
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
-    public void testGuarigioneVittimaLupi(String tipoLupo)
+    @ParameterizedTest @MethodSource("getCombinazioni")
+    public void testGuarigioneVittimaLupi(String tipoLupo, String nomeRuolo)
     {
         String nomeVittima = "Damiano";
-        inizializzaPartita
-        (
-            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, "Cacciatore" }, { "Carluccio", "Giovane lupo" }, { "Andrea","Guaritore" } }
-        );
+        String[][] giocatori =
+            new String[][] { { "Antonio", tipoLupo }, { nomeVittima, nomeRuolo }, { "Carluccio", "Giovane lupo" }, { "Andrea","Guaritore" } };
+        inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomeVittima);
         guarisci(nomeVittima);
         terminaNotte();
@@ -2527,9 +2594,9 @@ public final class TestPartita
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare"
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare"
         }
     )
     public void testVampirizzazioneRomeoFallita(String nomeRuolo)
@@ -2547,9 +2614,9 @@ public final class TestPartita
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
-            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo",
+            "Peccatore", "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
         }
     )
     public void testVampirizzazioneStregatoFallita(String nomeRuolo)
@@ -2756,9 +2823,9 @@ public final class TestPartita
         {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
             "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
         }
     )
@@ -2768,6 +2835,33 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { "Stefano", "Strega" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, nomeRuolo } };
         inizializzaPartita(giocatori);
+        protezioneStrega(nome);
+        attaccoAssassino(nome);
+        String messaggio = "Biagio è protetto dalla Strega.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nome)).withMessage(messaggio);
+        verificaFalso(partita.isProgenieNosferatuViva(nome));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
+            "Sidhe", "Spia", "Sensitiva", "Templare", "Vampiro"
+        }
+    )
+    public void testProgenizzazioneGiuliettaStregataNosferatuFallita(String nomeRuolo)
+    {
+        String nome = "Biagio", nomeRomeo = "Marcello";
+        String[][] giocatori = new String[][]
+        {
+            { "Stefano", "Strega" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, "Giulietta" }, { nomeRomeo, nomeRuolo }
+        };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeRomeo);
         protezioneStrega(nome);
         attaccoAssassino(nome);
         String messaggio = "Biagio è protetto dalla Strega.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
@@ -2792,18 +2886,18 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia, VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Assassino, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
-            "Bardo, VILLAGGIO", "Becchino, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Boia, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO",
-            "Bracconiere, VILLAGGIO", "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO",
-            "Capo gilda, NON_VILLAGGIO", "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO",
-            "Contadino discendente dei lupi, VILLAGGIO", "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO", "Eremita, VILLAGGIO",
-            "Ghoul, NON_VILLAGGIO", "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO",
-            "Goblin, NON_VILLAGGIO", "Guardia, VILLAGGIO", "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO",
-            "Inquisitore, NON_VILLAGGIO", "Ladra, NON_VILLAGGIO", "Leprecauno, NON_VILLAGGIO", "Lupo del branco, NON_VILLAGGIO",
-            "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO", "Mago, VILLAGGIO", "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO",
-            "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO", "Negromante, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Nosferatu, NON_VILLAGGIO",
-            "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO", "Pazzo, NON_VILLAGGIO", "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO",
-            "Prete, VILLAGGIO", "Sidhe, NON_VILLAGGIO", "Spia, NON_VILLAGGIO", "Sensitiva, VILLAGGIO", "Templare, NON_VILLAGGIO"
+            "Altra guardia, VILLAGGIO", "Assassino, NON_VILLAGGIO", "Angelo custode, NON_VILLAGGIO", "Azzeccagarbugli, NON_VILLAGGIO",
+            "Bardo, VILLAGGIO", "Bocca di rosa, NON_VILLAGGIO", "Borgomastro, NON_VILLAGGIO", "Becchino, VILLAGGIO", "Bracconiere, VILLAGGIO",
+            "Cacciatore, VILLAGGIO", "Cacciatore di vampiri, VILLAGGIO", "Capo branco, NON_VILLAGGIO", "Capo gilda, NON_VILLAGGIO",
+            "Cappuccetto rosso, VILLAGGIO", "Contadino eroe, VILLAGGIO", "Contadino mostro, VILLAGGIO", "Contadino normale, VILLAGGIO",
+            "Eremita, VILLAGGIO", "Ghoul, NON_VILLAGGIO", "Giovane lupo, NON_VILLAGGIO", "Giulietta, NON_VILLAGGIO", "Giullare, NON_VILLAGGIO",
+            "Guardia, VILLAGGIO", "Guardia corrotta, NON_VILLAGGIO", "Guaritore, VILLAGGIO", "Inquisitore, NON_VILLAGGIO",
+            "Ladra, NON_VILLAGGIO", "Lupo del branco, NON_VILLAGGIO", "Lupo reietto, NON_VILLAGGIO", "Lupo solitario, NON_VILLAGGIO",
+            "Mago, VILLAGGIO", "Medium, VILLAGGIO", "Megera, NON_VILLAGGIO", "Mercante, NON_VILLAGGIO", "Monaco, VILLAGGIO",
+            "Negromante, NON_VILLAGGIO", "Nosferatu, NON_VILLAGGIO", "Nonna, VILLAGGIO", "Oratore, NON_VILLAGGIO", "Oste, VILLAGGIO",
+            "Pazzo, NON_VILLAGGIO", "Peccatore, VILLAGGIO", "Posseduto, NON_VILLAGGIO", "Prete, VILLAGGIO", "Spia, NON_VILLAGGIO",
+            "Strega, VILLAGGIO", "Templare, NON_VILLAGGIO", "Traditore, NON_VILLAGGIO", "Vampiro, NON_VILLAGGIO", "Veggente, VILLAGGIO",
+            "Viaggiatore, NON_VILLAGGIO"
         }
     )
     public void testControlloSensitiva(String nomeRuolo, EsitoControlloSensitiva esito)
@@ -2819,9 +2913,9 @@ public final class TestPartita
             "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
-            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oste", "Pazzo", "Peccatore", "Posseduto",
-                "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto",
+            "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Sensitiva", "Templare"
         }
     )
     public void testSconfittaBallottaggioGiulietta(String nomeRuolo)
@@ -2879,8 +2973,8 @@ public final class TestPartita
             "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
             "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
             "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
-            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete",
-            "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Posseduto",
+            "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro"
         }
     )
     public void testProgenizzazioneRomeoFallita(String nomeRuolo)
@@ -2965,6 +3059,188 @@ public final class TestPartita
             "Serena (Contadino mostro) è Romeo.\nAvvisa il Posseduto (Agostino) che non può possederla.";
         assertThatIllegalStateException().isThrownBy(() -> partita.passaPosseduto(nomeContadino)).withMessage(messaggioPosseduto);
         verificaFalso(partita.isPosseduto(nomeContadino));
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Prete", "Sidhe", "Spia", "Strega",
+            "Sensitiva", "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAngeloCustodeAssassino(String nomeRuolo)
+    {
+        String nomeAmato = "Elio", nomeAngelo = "Giorgia";
+        inizializzaPartita(new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        verificaAttaccoAssassino(nomeAngelo);
+        verificaNonAmato(nomeAmato);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago",
+            "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Prete", "Sidhe", "Spia", "Sensitiva",
+            "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAngeloCustodeStregatoAssassino(String nomeRuolo)
+    {
+        String nomeAmato = "Elio", nomeAngelo = "Giorgia";
+        String[][] giocatori =
+            new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" }, { "Duccio", "Strega" } };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeAngelo);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        verificaAttaccoAssassino(nomeAngelo);
+        verificaNonAmato(nomeAmato);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",
+            "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera",
+            "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Prete", "Sidhe", "Spia", "Sensitiva", "Strega", "Templare",
+            "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAngeloCustodeRomeoAssassino(String nomeRuolo)
+    {
+        String nomeAmato = "Elio", nomeAngelo = "Giorgia", nomeGiulietta = "Duccio";
+        String[][] giocatori =
+            new String[][] { { nomeAmato, nomeRuolo }, { "Morgan", "Assassino" }, { nomeAngelo, "Angelo custode" }, { nomeGiulietta, "Giulietta" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeAngelo);
+        segnalazioneAngeloCustode(nomeAmato);
+        verificaAmato(nomeAmato);
+        String messaggio = "Giorgia è Romeo.\nAvvisa anche Duccio (Giulietta) del fatto che deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeAngelo)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeAngelo, nomeGiulietta);
+        verificaNonAmato(nomeAmato);
+    }
+
+    @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
+    public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
+    {
+        String nomeVittima = "Giacomo", nomeGhoul = "Aldo";
+        inizializzaPartita(new String[][] { { nomeGhoul, "Ghoul" }, { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
+        attaccoAssassino(nomeVittima);
+        terminaNotte();
+        verificaEliminazione(nomeGhoul);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoNosferatuAssassino(String tipoLupo)
+    {
+        String nomeAssassino = "Pietro";
+        inizializzaPartita(new String[][] { { "Lucio", tipoLupo }, { nomeAssassino, "Assassino" }, { "Robert", "Nosferatu" } });
+        attaccoLupi(tipoLupo, nomeAssassino);
+        progenizzazioneNosferatu(nomeAssassino);
+        terminaNotte();
+        verificaNonEliminati(nomeAssassino);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoNosferatuAssassinoRomeo(String tipoLupo)
+    {
+        String nomeAssassino = "Pietro", nomeGiulietta = "Duccio";
+        String[][] giocatori =
+            new String[][] { { "Lucio", tipoLupo }, { nomeAssassino, "Assassino" }, { "Robert", "Nosferatu" }, { nomeGiulietta, "Giulietta" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeAssassino);
+        attaccoLupi(tipoLupo, nomeGiulietta);
+        String messaggio = "Pietro è Romeo.\nAvvisa il Nosferatu (Robert) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAssassino)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeAssassino);
+    }
+
+    @Test public void testAttaccoNosferatuAssassinoStregato()
+    {
+        String nomeAssassino = "Pietro", nomeContadinoMostro = "Lucio";
+        String[][] giocatori = new String[][]
+        {
+            { nomeContadinoMostro, "Contadino mostro" }, { nomeAssassino, "Assassino" }, { "Robert", "Nosferatu" }, { "Duccio", "Strega" }
+        };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeAssassino);
+        terminaNotte();
+        attaccoAssassino(nomeContadinoMostro);
+        String messaggio = "Pietro è protetto dalla Strega.\nAvvisa il Nosferatu (Robert) della mancata progenizzazione.";
+        assertThatIllegalStateException().isThrownBy(() -> progenizzazioneNosferatu(nomeAssassino)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeAssassino);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testVittoriaRomeoGiulietta(String nomeRuolo)
+    {
+        String nomeRomeo = "Alice", nomeGiulietta = "Anna";
+        inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } });
+        romeizzazione(nomeRomeo);
+        for(String nome : new String[]{ nomeRomeo, nomeGiulietta }) assertThat(partita.getEsitoPartitaGiocatore(nome)).isEqualTo(VITTORIA);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino normale", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin",
+            "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario",
+            "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testSconfittaRomeoGiulietta(String nomeRuolo)
+    {
+        String nomeRomeo = "Alice", nomeGiulietta = "Anna";
+        inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } });
+        romeizzazione(nomeRomeo);
+        incrementaVoti(nomeGiulietta, 1);
+        terminaVotazioni();
+        incrementaVoti(nomeGiulietta, 1);
+        terminaBallottaggio();
+        for(String nome : new String[]{ nomeRomeo, nomeGiulietta }) assertThat(partita.getEsitoPartitaGiocatore(nome)).isEqualTo(SCONFITTA);
+    }
+
+    @Test public void testGuaritoreMaledetto()
+    {
+        String nomeAssassino = "Pietro", nomeMegera = "Maria";
+        inizializzaPartita(new String[][] { { "Guido", "Guaritore" }, { nomeAssassino, "Assassino" }, { nomeMegera, "Megera" } });
+        attaccoAssassino(nomeMegera);
+        guarisci(nomeMegera);
+        terminaNotte();
+        assertThat(partita.getEsitoPartitaGiocatore(nomeAssassino)).isEqualTo(NON_FINITO);
+        incrementaVoti(nomeAssassino, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeAssassino, 2);
+        terminaBallottaggio();
+        assertThat(partita.getEsitoPartitaGiocatore(nomeAssassino)).isEqualTo(SCONFITTA);
     }
 
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
@@ -3060,6 +3336,8 @@ public final class TestPartita
 
     private void verificaAmato(String nome) { verificaVero(isAmato(nome)); }
 
+    private void verificaNonAmato(String nome) { verificaVero(isAmato(nome)); }
+
     private boolean isAmato(String nome) { return partita.isAmato(nome); }
 
     private static Stream<Arguments> getEsempioCombinazioni()
@@ -3130,6 +3408,21 @@ public final class TestPartita
     {
         attaccoLupi(tipoLupo, nomeVittima);
         verificaMortePostAttaccoNosferatu(nomeVittima, messaggio, nomeGhoul);
+    }
+
+    private static Stream<Arguments> getCombinazioni()
+    {
+        String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
+        String[] nomiRuoli =
+        {
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore di vampiri", "Capo gilda", "Ghoul", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
+            "Leprecauno", "Mago", "Medium", "Megera", "Mercante", "Monaco", "Negromante", "Nosferatu", "Oratore", "Oste", "Pazzo", "Peccatore",
+            "Posseduto", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente"
+        };
+        List<Arguments> argomenti = new ArrayList<>();
+        for(String tipoLupo : tipiLupo) for(String nomeRuolo : nomiRuoli) argomenti.add(Arguments.of(tipoLupo, nomeRuolo));
+        return argomenti.stream();
     }
 
     private static Stream<Arguments> getEsempioAttaccoAmato()

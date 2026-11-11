@@ -233,7 +233,7 @@ public class Ruolo
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito =  NON_FINITO;
+        EsitoPartita esito = VITTORIA;
         if(partita.isNoGiocatoriVivi()) esito = SCONFITTA;
         return esito;
     }
@@ -284,6 +284,12 @@ public class Ruolo
     public EsitoAttacco passaPosseduto() { return RIUSCITO; }
 
     public String getConsigli() { return consigli; }
+
+    public boolean isTraditore() { return false; }
+
+    public boolean isViaggiatore() { return false; }
+
+    public boolean isSenzaFazione() { return getFazione() == NESSUNA; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 

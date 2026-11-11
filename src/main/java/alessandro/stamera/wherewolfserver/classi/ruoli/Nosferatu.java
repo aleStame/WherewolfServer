@@ -37,7 +37,7 @@ public final class Nosferatu extends CreatureOmbra
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && isNosferatuVincitore(partita)) esito = VITTORIA;
+        if(esito == VITTORIA && !isNosferatuVincitore(partita)) esito = NON_FINITO;
         return esito;
     }
 

@@ -31,6 +31,8 @@ public final class Giulietta extends Amanti
 
     @Override public EsitoAttacco vampirizzazione() { return getEsitoAttaccoDefault(); }
 
+    @Override public EsitoAttacco attaccoAssassino() { return GIULIETTA_BECCATA; }
+
     private EsitoAttacco getEsitoAttaccoDefault() { return GIULIETTA_BECCATA; }
 
     public static Ruolo getInstance() { return new Giulietta(); }
