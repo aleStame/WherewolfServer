@@ -147,6 +147,25 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nomeRomeo, ROMEO_BECCATO);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere", "Cacciatore",
+            "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe",
+            "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giulietta", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante",
+            "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia",
+            "Strega", "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
+        }
+    )
+    public void testAttaccoAssassinoAmato(String nomeRuolo)
+    {
+        String nomeRomeo = "Cristian";
+        inizializzaGiocatori(new String[][] { { nomeRomeo, nomeRuolo }, { "Carmine", "Assassino" }, { "Giulia", "Angelo custode" } });
+        segnalazioneAngeloCustode(nomeRomeo);
+        verificaAttaccoAssassino(nomeRomeo, ANGELO_CUSTODE_MORTO);
+    }
+
     @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Giovane lupo", "Giullare" })
     public void testAttaccoAssassinoAmatoAngeloCustodeRomeo(String nomeRuolo)
     {
