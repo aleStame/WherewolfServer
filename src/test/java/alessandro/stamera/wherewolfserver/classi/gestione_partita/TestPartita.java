@@ -121,7 +121,7 @@ public final class TestPartita
             "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
             "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
             "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
-            "Templare", "Traditore", "Vampiro", "Veggente"
+            "Templare", "Traditore", "Vampiro", "Veggente", "Viaggiatore"
         }
     )
     public void testAttaccoAssassino(String nomeRuolo)
