@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isGhoulVittima">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +251,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00611" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788252403463</created>
-      <option name="number" value="00611" />
-      <option name="presentableId" value="LOCAL-00611" />
-      <option name="project" value="LOCAL" />
-      <updated>1788252403463</updated>
     </task>
     <task id="LOCAL-00612" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
       <option name="closed" value="true" />
@@ -645,7 +636,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794498088825</updated>
     </task>
-    <option name="localTasksCounter" value="660" />
+    <task id="LOCAL-00660" summary="REFACTORING: definizione del metodo isGhoulVittima">
+      <option name="closed" value="true" />
+      <created>1794498626152</created>
+      <option name="number" value="00660" />
+      <option name="presentableId" value="LOCAL-00660" />
+      <option name="project" value="LOCAL" />
+      <updated>1794498626152</updated>
+    </task>
+    <option name="localTasksCounter" value="661" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +662,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAuraChiara riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazioneRiuscita non riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazioneRiuscita non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazioneRiuscita riuscito" />
@@ -688,6 +686,7 @@
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isGhoulVittima" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isGhoulVittima" />
   </component>
 </project>

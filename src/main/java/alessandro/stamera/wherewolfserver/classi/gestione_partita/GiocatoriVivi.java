@@ -317,7 +317,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiornaProtezioni();
         aggiornaProtezioniLadra();
         aggiornaProtezioniCappuccettoRossoPostInserimento();
-        if(isPeccatorePresente() && isPossedutoPresente()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
+        if(isCoppiaPeccatorePosseduto()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
         if(isTraditorePresente()) aggiungiProtezioneLupi(getNomeTraditore());
     }
 
@@ -398,6 +398,8 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
         return trovato;
     }
+
+    private boolean isCoppiaPeccatorePosseduto() { return isPeccatorePresente() && isPossedutoPresente(); }
 
     private boolean isGhoulVittima(String nome) { return (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente(); }
 
