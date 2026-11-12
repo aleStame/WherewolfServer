@@ -39,8 +39,6 @@ public final class TestGhoul
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
@@ -79,6 +77,19 @@ public final class TestGhoul
 
     @ParameterizedTest @MethodSource("getEsempiPartita")
     public void testEsempioPartita(Partita partita) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "La vostra aura bianca vi da delle possibilità che il Vampiro non possiede. Sarà vostro compito esporvi per confondere le " +
+            "informazioni del villaggio e proteggere il vostro signore. Ricordate che non siete una Creatura dell'Ombra, quindi la vostra sola " +
+            "presenza non preclude la fine della partita. Nel caso il Vampiro dovesse essere eliminato, cercate a costo della vostra vita di " +
+            "far sopravvivere almeno un vampirizzato per poter vincere la partita. L'opera del Nosferatu è molto più palese di quella del " +
+            "Vampiro, quindi presto il villaggio inizierà a muoversi per trovarlo e bruciarlo. Fingere un ruolo che giustifichi l'assenza di " +
+            "giocatori uccidi potrebbe dare al vostro signore un paio di turni in più di caccia. Se sono in gioco sia Vampiro che Nosferatu, " +
+            "potrete vincere con entrambi: scegliete bene quello che secondo voi ha più possibilità.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private static Stream<Arguments> getEsempiPartita()
     {

@@ -1,10 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
+import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.CONTADINO_LUPO_BECCATO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -34,14 +37,15 @@ public final class TestGiocatoriEliminati
             "Guaritore, BIANCA", "Inquisitore, BIANCA", "Ladra, BIANCA", "Leprecauno, BIANCA", "Lupo del branco, NERA", "Lupo reietto, NERA",
             "Lupo solitario, NERA", "Mago, BIANCA", "Medium, BIANCA", "Megera, NERA", "Mercante, BIANCA", "Monaco, BIANCA", "Negromante, NERA",
             "Nonna, BIANCA", "Nosferatu, NERA", "Oratore, BIANCA", "Oste, BIANCA", "Pazzo, BIANCA", "Peccatore, NERA", "Posseduto, NERA",
-            "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Templare, BIANCA", "Vampiro, NERA"
+            "Prete, BIANCA", "Sidhe, BIANCA", "Spia, BIANCA", "Sensitiva, BIANCA", "Strega, BIANCA", "Templare, BIANCA", "Traditore, BIANCA",
+            "Vampiro, NERA", "Veggente, BIANCA", "Viaggiatore, BIANCA"
         }
     )
     public void testControlloMedium(String nomeRuolo, Aura aura)
     {
         String nome = "Paolo";
         aggiungiGiocatore(nome, nomeRuolo);
-        assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura);
+        verificaAura(nome, aura);
     }
 
     @ParameterizedTest @CsvSource
@@ -94,6 +98,20 @@ public final class TestGiocatoriEliminati
         verificaVero(isInquisitore(nome));
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testControlloMediumContadinoPostLupizzazione(String tipoLupo)
+    {
+        Giocatore giocatore = new Giocatore(getRuolo("Contadino discendente dei lupi"));
+        assertThat(giocatore.attaccoLupi(getRuolo(tipoLupo))).isEqualTo(CONTADINO_LUPO_BECCATO);
+        String nome = "Giancarlo";
+        giocatori.aggiungiGiocatore(nome, giocatore);
+        verificaAura(nome, NERA);
+    }
+
+    private Ruolo getRuolo(String tipoLupo) { return FACTORY.getRuolo(tipoLupo); }
+
+    private void verificaAura(String nome, Aura aura) { assertThat(giocatori.controlloMedium(nome)).isEqualTo(aura); }
+
     private boolean isInquisitore(String nome) { return giocatori.isInquisitore(nome); }
 
     private boolean isNegromante(String nome) { return giocatori.isNegromante(nome); }
@@ -102,7 +120,7 @@ public final class TestGiocatoriEliminati
 
     private void aggiungiGiocatore(String nomeGiocatore, String nomeRuolo)
     {
-        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(FACTORY.getRuolo(nomeRuolo)));
+        giocatori.aggiungiGiocatore(nomeGiocatore, new Giocatore(getRuolo(nomeRuolo)));
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

@@ -16,9 +16,9 @@ public class Criminale extends Uomini
 
     private final Potere potere;
 
-    public Criminale(String nome, Aura aura, String descrizione)
+    public Criminale(String nome, Aura aura, String descrizione, String consigli)
     {
-        super(nome, CRIMINALI, aura, descrizione, 2, false);
+        super(nome, CRIMINALI, aura, descrizione, 2, false, consigli);
         potere = new Potere();
     }
 
@@ -31,7 +31,7 @@ public class Criminale extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO) esito = getEsitoPartitaCriminali(partita);
+        if(esito == VITTORIA) esito = getEsitoPartitaCriminali(partita);
         return esito;
     }
 

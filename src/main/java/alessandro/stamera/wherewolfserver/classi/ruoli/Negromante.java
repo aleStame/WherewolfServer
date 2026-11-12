@@ -20,7 +20,13 @@ public final class Negromante extends CreatureOmbra
 "La prima notte individua la Megera, riconosce il Becchino e indica due giocatori che diventano maledetti fino a che il Negromante è " +
           "in gioco. Se all'inizio del giorno sono stati maledetti due o più giocatori maledetti, il Moderatore lo comunica pubblicamente. Il " +
           "mattino successivo, se il Negromante è ancora in gioco, tutti i giocatori di fazione diversa da Negromante vengono eliminati.",
-     3, true
+     3, true,
+    "Quello del Negromante è un Ruolo difficile. Dovrete cercare di tenere un profilo basso e di evitare di essere indagati dalla " +
+            "Veggente. Infatti, anche nel caso riusciste a bluffare un alibi sul momento, probabilmente i giocatori si ricorderebbero una volta " +
+            "che il rituale dovesse partire. L’unico vantaggio che avete, è che spesso i giocatori tenderanno a dimenticarsi della minaccia che " +
+            "costituite fino a che non sarà troppo tardi. Se doveste arrivare a far partire il rituale, fate di tutto per cercare di rimanere " +
+            "vivi, anche a costo di dire di essere una Creatura dell’Ombra differente pur di allontanare da voi ogni sospetto. In fondo, in quel " +
+            "momento, vi basterà guadagnare un giorno soltanto."
         );
     }
 

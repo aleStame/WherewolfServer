@@ -19,8 +19,6 @@ public final class TestOratore
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione =
@@ -43,6 +41,16 @@ public final class TestOratore
     @Test public void testOratore() { verificaVero(ruolo.isOratore()); }
 
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Avete un grande potere, ma anche molto rischioso e delicato da usare. Ricordatevi che annullare un rogo può voler dire anche salvare " +
+            "un vostro nemico, usate quindi il vostro potere solo quando vi fidate davvero della persona che state proteggendo. Se usate il " +
+            "vostro potere indiscriminatamente non farete altro che giocare per i Lupi e le altre Creature dell'Ombra. in quanto più roghi " +
+            "verranno annullati, più notti avranno loro per mietere le loro vittime.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

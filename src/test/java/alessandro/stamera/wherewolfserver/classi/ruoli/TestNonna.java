@@ -20,8 +20,6 @@ public final class TestNonna
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione =

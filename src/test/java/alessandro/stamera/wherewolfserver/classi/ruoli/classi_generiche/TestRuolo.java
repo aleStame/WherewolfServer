@@ -11,8 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
@@ -24,7 +23,7 @@ public final class TestRuolo
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, -1, false); }
+    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, -1, false, null); }
 
     @Test public void testInizializzazione()
     {
@@ -64,9 +63,11 @@ public final class TestRuolo
 
     @Test public void testPassaPosseduto() { verificaAttaccoRiuscito(ruolo.passaPosseduto()); }
 
+    @Test public void testSenzaFazione() { verificaVero(ruolo.isSenzaFazione()); }
+
     private static Stream<Arguments> getEsempiPartita()
     {
-        return Stream.of(Arguments.of(getPartitaGenerica(), NON_FINITO), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
+        return Stream.of(Arguments.of(getPartitaGenerica(), VITTORIA), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
     }
 
     private static Partita getPartitaGenerica()

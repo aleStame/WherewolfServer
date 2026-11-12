@@ -48,6 +48,18 @@ public final class TestLupoReietto
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Il vostro è un obiettivo difficile. Dovrete evitare il rogo e guadagnarvi la fiducia del villaggio e, allo stesso tempo, fare in " +
+            "modo che il Capo Branco sia eliminato prima della fine della partita. Per fare questo dovrete ricorrere ad una strategia indiretta, " +
+            "magari appoggiandolo solo per tradirlo quando meno se lo aspetta, la vostra sopravvivenza non è indispensabile per la vostra " +
+            "vittoria. Ricordate anche che questa è una vostra sfida personale, gli altri Lupi del Branco non avranno alcun interesse nel suo " +
+            "esito. Vincere la sfida contro il villaggio e quella contro il Capo Branco potrebbe rivelarsi arduo, ma di certo molto soddisfacente " +
+            "qualora vi riusciste.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }

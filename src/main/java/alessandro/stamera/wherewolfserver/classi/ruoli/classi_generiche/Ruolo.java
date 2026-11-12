@@ -17,7 +17,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.N
 public class Ruolo
 {
 
-    private final String nome, descrizione;
+    private final String nome, descrizione, consigli;
 
     private Fazione fazione;
 
@@ -33,12 +33,15 @@ public class Ruolo
 
     private Categoria categoria;
 
-    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    public Ruolo(String nome, Aura aura, String descrizione, int lune, boolean mistico, String consigli)
     {
-        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA);
+        this(nome, Fazione.NESSUNA, aura, descrizione, lune, mistico, Categoria.NESSUNA, consigli);
     }
 
-    public Ruolo(String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, Categoria categoria)
+    public Ruolo
+    (
+        String nome, Fazione fazione, Aura aura, String descrizione, int lune, boolean mistico, Categoria categoria, String consigli
+    )
     {
         this.nome = nome;
         cambiaFazione(fazione);
@@ -49,13 +52,14 @@ public class Ruolo
         tratti = new Tratti();
         annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
+        this.consigli = consigli;
     }
 
     public boolean isCreaturaOmbra() { return getCategoria() == CREATURE_OMBRA || isTrattoPresente(CREATURA_OMBRA); }
 
     public String getNome() { return nome; }
 
-    public Aura getAura()
+    public Aura controlloVeggente()
     {
         Aura risultato = controlloMedium();
         if(controlloTrattiOscuri()) risultato = NERA;
@@ -229,7 +233,7 @@ public class Ruolo
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito =  NON_FINITO;
+        EsitoPartita esito = VITTORIA;
         if(partita.isNoGiocatoriVivi()) esito = SCONFITTA;
         return esito;
     }
@@ -252,8 +256,6 @@ public class Ruolo
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 
     public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
-
-    public boolean isProtezionePossedutoPresente() { return tratti.isProtezionePossedutoPresente(); }
 
     public boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 
@@ -280,6 +282,14 @@ public class Ruolo
     }
 
     public EsitoAttacco passaPosseduto() { return RIUSCITO; }
+
+    public String getConsigli() { return consigli; }
+
+    public boolean isTraditore() { return false; }
+
+    public boolean isViaggiatore() { return false; }
+
+    public boolean isSenzaFazione() { return getFazione() == NESSUNA; }
 
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 

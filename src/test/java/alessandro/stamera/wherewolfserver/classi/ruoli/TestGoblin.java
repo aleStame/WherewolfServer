@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
@@ -37,8 +36,6 @@ public final class TestGoblin
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @ParameterizedTest @CsvSource({ "Guaritore", "Mago", "Megera" }) public void testProtezioneMistici(String nome)
@@ -51,7 +48,6 @@ public final class TestGoblin
     {
         verificaFalso(ruolo.maledizione());
         verificaFalso(ruolo.isMaledetto());
-        int numeroVoti = 2;
     }
 
     @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }

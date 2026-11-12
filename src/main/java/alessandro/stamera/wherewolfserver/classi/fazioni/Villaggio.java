@@ -3,18 +3,15 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Uomini;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
 
 public class Villaggio extends Uomini
 {
 
-    public Villaggio(String nome, Aura aura, String descrizione, int lune, boolean mistico)
+    public Villaggio(String nome, Aura aura, String descrizione, int lune, boolean mistico, String consigli)
     {
-        super(nome, VILLAGGIO, aura, descrizione, lune, mistico);
+        super(nome, VILLAGGIO, aura, descrizione, lune, mistico, consigli);
     }
 
     @Override public boolean isVillaggio() { return true; }
@@ -22,7 +19,7 @@ public class Villaggio extends Uomini
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO && partita.isNoCreatureOmbra()) esito = getEsitoPartitaSenzaOmbre(partita);
+        if(esito == VITTORIA && partita.isNoCreatureOmbra()) esito = getEsitoPartitaSenzaOmbre(partita);
         return esito;
     }
 
@@ -31,7 +28,7 @@ public class Villaggio extends Uomini
     private EsitoPartita getEsitoPartitaSenzaOmbre(Partita partita)
     {
         EsitoPartita esito = getEsitoPartitaCriminali(partita);
-        if(isCriminale()) esito = new Criminale(getNome(), getAura(), getDescrizione()).getEsitoPartita(partita);
+        if(isCriminale()) esito = new Criminale(getNome(), controlloVeggente(), getDescrizione(), null).getEsitoPartita(partita);
         return esito;
     }
 

@@ -18,7 +18,7 @@ public final class Nonna extends Villaggio
     "Nonna", BIANCA,
 "Non ci sono più creature dell'ombra ed almeno un giocatore è in gioco. Non ci sono Criminali in gioco a fine partita o, se almeno un " +
           "Criminale è ancora in gioco, lo è anche almeno uno tra Guardia e Altra guardia",
-     1, false
+     1, false, null
         );
     }
 

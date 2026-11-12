@@ -12,7 +12,7 @@ public final class GiocatoriEliminati extends Giocatori
         return esito;
     }
 
-    public Aura controlloMedium(String nome) { return getGiocatore(nome).getRuolo().controlloMedium(); }
+    public Aura controlloMedium(String nome) { return getGiocatore(nome).controlloMedium(); }
 
     public boolean isNegromante(String nome) { return getGiocatore(nome).isNegromante(); }
 

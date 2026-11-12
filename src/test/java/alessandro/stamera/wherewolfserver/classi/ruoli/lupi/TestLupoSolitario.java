@@ -44,6 +44,18 @@ public final class TestLupoSolitario
     @ParameterizedTest @CsvSource({ "Capo branco, Lupo del branco, Lupo reietto, Contadino discendente dei lupi" })
     public void testAttaccoLupi(String nome) { assertThat(ruolo.attaccoLupi(getRuolo(nome))).isEqualTo(FALLITO); }
 
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "La partita, da Lupo Solitario, sarà estremamente interessante. Da una parte, avete tutte le informazioni per fare in modo che i " +
+            "Lupi del Branco vengano debellati in poco tempo. Dall’altra, dovete capire come far arrivare queste informazioni al villaggio senza " +
+            "destare sospetti a vostra volta. Come dice il vostro nome, non avrete alleati, se non, eventualmente, il Traditore, che tuttavia " +
+            "non conoscerà la vostra identità. Ricordatevi che voi sapete tutto dei Lupi del Branco, ma loro non sanno nulla di voi, se non " +
+            "quello che farete loro credere. La vittoria del Lupo Solitario è ardua da raggiungere, ma proprio per questo, una di quelle che può " +
+            "dare più soddisfazioni";
+        assertThat(ruolo.getConsigli()).isEqualTo(messaggio);
+    }
+
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }

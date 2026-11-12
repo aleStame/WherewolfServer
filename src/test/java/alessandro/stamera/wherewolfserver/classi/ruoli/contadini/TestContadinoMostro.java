@@ -1,11 +1,14 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli.contadini;
 
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
@@ -48,11 +51,19 @@ public final class TestContadinoMostro
 
     @Test public void testAttaccoAssassino() { verificaAttaccoMorto(ruolo.attaccoAssassino()); }
 
+    @Test public void testControlloMedium() { verificaAura(ruolo.controlloMedium(), BIANCA); }
+
+    @Test public void testControlloVeggente() { verificaAuraNeraVeggente(); }
+
     private void verificaMaledetto()
     {
         verificaVero(ruolo.isMaledetto());
-        assertThat(ruolo.getAura()).isEqualTo(NERA);
+        verificaAuraNeraVeggente();
     }
+
+    private void verificaAuraNeraVeggente() { verificaAura(ruolo.controlloVeggente(), NERA); }
+
+    private void verificaAura(Aura valore, Aura risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAttaccoMorto(EsitoAttacco esito) { verificaAttacco(esito); }
 

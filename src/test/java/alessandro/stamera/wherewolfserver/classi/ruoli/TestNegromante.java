@@ -9,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.NEGROMANTE;
@@ -28,8 +27,6 @@ public final class TestNegromante
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(NEGROMANTE); }
-
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
 
     @Test public void testDescrizione()
     {
@@ -52,6 +49,18 @@ public final class TestNegromante
 
     @ParameterizedTest @MethodSource({ "getEsempiPartita" })
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Quello del Negromante è un Ruolo difficile. Dovrete cercare di tenere un profilo basso e di evitare di essere indagati dalla " +
+            "Veggente. Infatti, anche nel caso riusciste a bluffare un alibi sul momento, probabilmente i giocatori si ricorderebbero una volta " +
+            "che il rituale dovesse partire. L’unico vantaggio che avete, è che spesso i giocatori tenderanno a dimenticarsi della minaccia che " +
+            "costituite fino a che non sarà troppo tardi. Se doveste arrivare a far partire il rituale, fate di tutto per cercare di rimanere " +
+            "vivi, anche a costo di dire di essere una Creatura dell’Ombra differente pur di allontanare da voi ogni sospetto. In fondo, in quel " +
+            "momento, vi basterà guadagnare un giorno soltanto.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

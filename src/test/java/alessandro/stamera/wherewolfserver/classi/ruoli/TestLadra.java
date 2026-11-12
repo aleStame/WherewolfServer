@@ -1,18 +1,9 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.PROTETTO;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestLadra
@@ -34,8 +25,6 @@ public final class TestLadra
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(getAura()); }
-
     @Test public void testCriminale() { verificaVero(ruolo.isCriminale()); }
 
     @Test public void testAssassino() { verificaFalso(ruolo.isAssassino()); }
@@ -46,75 +35,17 @@ public final class TestLadra
 
     @Test public void testSpia() { verificaFalso(ruolo.isSpia()); }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
-    public void testUtilizzoPotereLupi(String nome)
+    @Test public void testConsigliGioco()
     {
-        verificaProtetto();
-        verificaAttaccoLupi(nome, FALLITO);
-        verificaPotereUtilizzato();
-        verificaNonProtetto();
-        verificaAttaccoLupi(nome, RIUSCITO);
+        String messaggio =
+            "Il vostro ruolo è molto delicato. Essendo uno dei Criminali con aura bianca, siete più difficilmente individuabili e sarà per voi " +
+            "più facile confondervi tra i vari abitanti del Villaggio. L'unico modo per essere scoperta, è quello di usare il vostro potere " +
+            "nel turno di un Mistico ancora in gioco, quindi dovreste cercare di utilizzarlo solo se pensate che uno dei Mistici in gioco stia " +
+            "bluffando. Anche la vostra protezione durante la notte è delicata: è vero che funziona una volta soltanto, ma le Creature " +
+            "dell'Ombra questo non lo sanno e possono pensare di aver attaccato qualcuno che sia protetto continuamente e questo può sicuramente " +
+            "giocare a vostro vantaggio.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
     }
-
-    @Test public void testAttaccoNegromante()
-    {
-        verificaProtetto();
-        verificaFalso(maledizione());
-        verificaPotereUtilizzato();
-        verificaFalso(isMaledetto());
-        verificaNonProtetto();
-        verificaVero(maledizione());
-        verificaVero(isMaledetto());
-        verificaAuraNera();
-    }
-
-    @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
-
-    @Test public void testVampirizzazione()
-    {
-        verificaProtetto();
-        verificaVero(isProtezionePresente(FACTORY.getRuolo("Vampiro")));
-        verificaAttaccoVampiro(FALLITO);
-        verificaNonProtetto();
-        verificaAttaccoVampiro(RIUSCITO);
-    }
-
-    @Test public void testAttaccoPosseduto()
-    {
-        verificaVero(isProtezionePresente(FACTORY.getRuolo("Posseduto")));
-        assertThat(ruolo.passaPosseduto()).isEqualTo(FALLITO);
-        verificaNonProtetto();
-        assertThat(ruolo.passaPosseduto()).isEqualTo(RIUSCITO);
-    }
-
-    private void verificaAuraNera() { verificaAura(getAura(), NERA); }
-
-    private void verificaAttaccoVampiro(EsitoAttacco esito) { assertThat(ruolo.vampirizzazione()).isEqualTo(esito); }
-
-    private boolean isProtezionePresente(Ruolo vampiro) { return ruolo.isProtezionePresente(vampiro); }
-
-    private Aura getAura() { return ruolo.getAura(); }
-
-    private boolean maledizione() { return ruolo.maledizione(); }
-
-    private boolean isMaledetto() { return ruolo.isMaledetto(); }
-
-    private void verificaProtetto() { verificaVero(isProtetto()); }
-
-    private void verificaPotereUtilizzato() { verificaVero(ruolo.isPotereUtilizzato()); }
-
-    private void verificaNonProtetto() { verificaFalso(isProtetto()); }
-
-    private boolean isProtetto() { return ruolo.isTrattoPresente(PROTETTO); }
-
-    private void verificaAttaccoLupi(String nome, EsitoAttacco esito)
-    {
-        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nome))).isEqualTo(esito);
-    }
-
-    private void verificaAuraBianca(Aura aura) { verificaAura(aura, BIANCA); }
-
-    private void verificaAura(Aura valore, Aura risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

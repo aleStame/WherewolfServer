@@ -13,7 +13,7 @@ public final class Sidhe extends PiccoloPopolo
         super
         (
     "Sidhe", BIANCA,
-"La prima notte riconosce le altre creature del Piccolo Popolo (Goblin, Leprecauno). È protetta da tutti i Mistici."
+"La prima notte riconosce le altre creature del Piccolo Popolo (Goblin, Leprecauno). È protetta da tutti i Mistici.", null
         );
     }
 

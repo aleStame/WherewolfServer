@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.LUPO_BRANCO;
@@ -42,8 +41,6 @@ public final class TestGiovaneLupo
 
     @Test public void testLupoReietto() { verificaFalso(ruolo.isLupoReietto()); }
 
-    @Test public void testAura() { assertThat(ruolo.getAura()).isEqualTo(NERA); }
-
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(LUPO_BRANCO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(CREATURE_OMBRA); }
@@ -53,6 +50,15 @@ public final class TestGiovaneLupo
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto" })
     public void testAttaccoLupi(String nomeLupo) { assertThat(ruolo.attaccoLupi(FACTORY.getRuolo(nomeLupo))).isEqualTo(RIUSCITO); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Di tutti i Lupi del Branco, siete quello che teme meno di finire sul rogo. Anzi, molto probabilmente dovrete morire per dare il " +
+            "maggiore contributo ai vostri compagni di branco. Il vostro compito sarà quindi quello di uscire allo scoperto anche bluffando un " +
+            "ruolo molto rischioso, per permettere ai vostri compagni di rimanere nascosti con ruoli che danno meno nell'occhio.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 

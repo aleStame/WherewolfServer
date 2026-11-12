@@ -25,8 +25,6 @@ public final class TestMegera
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(Categoria.NESSUNA); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
 
     @Test public void testDescrizione()
@@ -65,6 +63,18 @@ public final class TestMegera
     @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
 
     @Test public void testVillaggio() { verificaFalso(ruolo.isVillaggio()); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Giocherete la partita allo stesso tempo da sola e con tutte le fazioni dell’Ombra. E’ molto probabile che qualcuno dei vostri " +
+            "alleati cercherà di farvi capire in qualche modo la sua identità durante il corso del gioco, quindi tenete le orecchie bene aperte a " +
+            "tutto quello che vi viene detto. A parte questo, la vostra strategia consisterà nel farvi indicare dai Mistici del villaggio e nel " +
+            "cercare di restare in vita il più possibile da quel momento in poi. Anche se potrebbe sembrarvi poco, a volte è sufficiente un " +
+            "responso sbagliato dato alla Veggente per dare inizio ad una serie di ragionamenti che possono portare in poco tempo alle " +
+            "conclusioni più errate.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 

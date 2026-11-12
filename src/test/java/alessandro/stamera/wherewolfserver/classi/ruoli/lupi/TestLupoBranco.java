@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -43,6 +43,23 @@ public final class TestLupoBranco
 
     @ParameterizedTest @CsvSource({ "CREATURA_OMBRA, LUPO_MANNARO" })
     public void testTratto(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
+
+    @Test public void testAttaccoCapoBranco()
+    {
+        assertThat(ruolo.attaccoLupi(FACTORY.getRuolo("Capo branco"))).isEqualTo(RIUSCITO);
+    }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Come il Capo Branco, siete nella cima delle priorità da eliminare per il villaggio. Il vostro gioco dipenderà molto da come si " +
+            "muovono gli altri Lupi. Se tutti cercheranno di rimanere nascosti, allora sarà preferibile per voi esporvi e confondere il " +
+            "villaggio. Se invece qualcun altro lo farà per primo, avrete la possibilità di passare inosservati e magari arrivare a fine partita. " +
+            "Costruite una strategia comune con gli altri Lupi: non solo il villaggio, anche il branco vincerà se giocherà unito. A parte dover " +
+            "nascondere la vostra vera identità e cercare di rimanere vivi, ricordatevi che dovete anche conquistare la fiducia del Capo Branco. " +
+            "Egli potrebbe infatti dubitare della vostra lealtà al branco credendovi il Lupo Reietto.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaStringa(String valore, String soluzione) { assertThat(valore).isEqualTo(soluzione); }
 

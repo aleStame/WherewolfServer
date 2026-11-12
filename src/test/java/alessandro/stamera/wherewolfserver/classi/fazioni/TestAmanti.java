@@ -14,13 +14,11 @@ public final class TestAmanti
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Amanti(null, null); }
+    @BeforeEach public void setUp() { ruolo = new Amanti(null, null, null); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(AMANTI); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
-
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
 
     @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(2); }
 

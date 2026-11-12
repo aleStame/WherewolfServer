@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.EREMITA_BECCATO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,22 +17,18 @@ public final class TestEremita
 
     private static final String NOME = "Eremita";
 
-    private static final int ESEMPIO_VOTI = 2;
-
     private Ruolo ruolo;
 
     @BeforeEach public void setUp() { ruolo = getRuolo(NOME); }
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         verificaStringa(ruolo.getDescrizione(), "È protetto dalle creature dell'ombra");
     }
 
-    @Test public void testLune() { verificaNumeroIntero(ruolo.getLune(), 1); }
+    @Test public void testLune() { assertThat(ruolo.getLune()).isEqualTo(1); }
 
     @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
@@ -70,46 +66,35 @@ public final class TestEremita
 
     @Test public void testVillaggio() { verificaVero(ruolo.isVillaggio()); }
 
-    @Test public void testProtezioni()
-    {
-        verificaVero(ruolo.isProtezioneLupiPresente());
-        verificaVero(ruolo.isProtezioneNegromantePresente());
-        verificaVero(ruolo.isProtezioneNosferatuPresente());
-        verificaVero(ruolo.isProtezionePossedutoPresente());
-    }
-
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
-
-    @Test public void testVoti()
-    {
-        verificaNumeroVoti();
-        verificaNonMaledetto();
-        ruolo.maledizione();
-        verificaNonMaledetto();
-        verificaNumeroVoti();
-        verificaAuraBianca(ruolo.getAura());
-    }
 
     @ParameterizedTest
     @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Contadino discendente dei lupi" })
-    public void testAttaccoLupi(String nome) { verificaAttaccoFallito(ruolo.attaccoLupi(getRuolo(nome))); }
+    public void testAttaccoLupi(String nome) { verificaAttacco(ruolo.attaccoLupi(getRuolo(nome))); }
 
-    @Test public void testNegromanteEremita() { assertThat(ruolo.attaccoNegromante()).isEqualTo(FALLITO); }
+    @Test public void testNegromanteEremita() { verificaAttacco(ruolo.attaccoNegromante()); }
 
-    @Test public void testVampirizzazione() { verificaAttaccoFallito(ruolo.vampirizzazione()); }
+    @Test public void testVampirizzazione() { verificaAttacco(ruolo.vampirizzazione()); }
 
-    private void verificaAttaccoFallito(EsitoAttacco esito) { assertThat(esito).isEqualTo(FALLITO); }
+    @Test public void testProgenizzazioneNosferatu() { verificaAttacco(ruolo.attaccoNosferatu());}
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Essendo immuni all'attacco di tutte le Creature dell'Ombra, dovete cercare di guadagnarvi la fiducia del Villaggio, poichè l'unica " +
+            "possibilità per voi di essere eliminati è quell di finire al rogo. Potrebbe non essere facile, poichè è vero che voi non morirete " +
+            "mai di notte, ma questo è vero anche per i Lupi Mannari, e questo potrebbe risultare sospetto col tempo. Una strategia efficace " +
+            "potrebbe essere anche quella di fingervi un ruolo importante per farvi attaccare dai Lupi Mannari o dal Vampiro e togliergli una " +
+            "notte di azione. L'unico inconveniente di questa strategia è che, se quel ruolo dovesse essere in gioco, il giocatore potrebbe " +
+            "uscire allo scoperto per cercare di smascherarvi facendo crollare il vostro piano e mettendo in pericolo lui stesso.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
+    private void verificaAttacco(EsitoAttacco esito) { assertThat(esito).isEqualTo(EREMITA_BECCATO); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaNumeroVoti() { //verificaNumeroIntero(ruolo.getNumeroVoti(), ESEMPIO_VOTI);
-        }
-
-    private void verificaNumeroIntero(int valore, int risultato) { assertThat(valore).isEqualTo(risultato); }
-
-    private void verificaNonMaledetto() { verificaFalso(ruolo.isMaledetto()); }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
 

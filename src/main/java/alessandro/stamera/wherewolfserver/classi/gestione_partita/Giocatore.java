@@ -1,9 +1,12 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
+import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
+import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -29,8 +32,7 @@ public final class Giocatore
         cambiaRuolo(ruolo);
         annullaSegnalazioneAzzeccagarbugli();
         annullaSegnalazioneInquisitore();
-        cambiaFazione(NESSUNA);
-        setRomeo(false);
+        annullaRomeizzazione();
         stregato = false;
         setLupoExNonna(false);
         segnalatoBoia = false;
@@ -48,11 +50,15 @@ public final class Giocatore
 
     public void annullaVoti() { setNumeroVoti(0); }
 
-    public void maledizione() { tratti.aggiungi(MALEDETTO); }
-
-    public Aura getAura()
+    public void maledizione()
     {
-        Aura aura = ruolo.getAura();
+        tratti.aggiungi(MALEDETTO);
+        tratti.aggiungi(CREATURA_OMBRA);
+    }
+
+    public Aura controlloVeggente()
+    {
+        Aura aura = ruolo.controlloVeggente();
         if(isGiocatoreAuraNera()) aura = NERA;
         return aura;
     }
@@ -77,12 +83,21 @@ public final class Giocatore
 
     public boolean isNosferatu() { return ruolo.isNosferatu(); }
 
-    public void cambiaRuolo(Ruolo ruolo) { this.ruolo = ruolo; }
+    public void cambiaRuolo(Ruolo ruolo)
+    {
+        this.ruolo = ruolo;
+        cambiaFazione(ruolo.getFazione());
+        if(ruolo.isMaledetto()) tratti.aggiungi(CREATURA_OMBRA);
+    }
 
     public EsitoAttacco progenizzazioneNosferatu()
     {
         EsitoAttacco esito = ruolo.attaccoNosferatu();
-        if(tratti.isProtezioneNosferatuPresente()) esito = FALLITO;
+        if(tratti.isProtezioneNosferatuPresente())
+        {
+            esito = FALLITO;
+            if(isRomeo()) esito = ROMEO_BECCATO;
+        }
         if(esito == RIUSCITO) nosferatizzazione();
         return esito;
     }
@@ -91,6 +106,8 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.attaccoAssassino();
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
+        else if(isRomeo()) esito = ROMEO_BECCATO;
+        else if(isFazione(VAMPIRO) && isNonMorto()) esito = RIUSCITO;
         return esito;
     }
 
@@ -104,12 +121,7 @@ public final class Giocatore
         return RIUSCITO;
     }
 
-    public Fazione getFazione()
-    {
-        Fazione risultato = fazione;
-        if(risultato == NESSUNA) risultato = ruolo.getFazione();
-        return risultato;
-    }
+    public Fazione getFazione() { return fazione; }
 
     public boolean isCriminale() { return getFazione() == CRIMINALI; }
 
@@ -149,18 +161,17 @@ public final class Giocatore
     public EsitoAttacco attaccoLupi(Ruolo lupo)
     {
         EsitoAttacco esito = ruolo.attaccoLupi(lupo);
-        if(isProtezioneAngeloCustodeNonBucata() || isGiocatoreProtetto(lupo)) esito = gestioneAttaccoVittimaProtetta(lupo, esito);
+        if(isProtezioneAngeloCustodeNonBucata() || isGiocatoreProtetto(lupo)) esito = gestioneAttaccoVittimaProtetta();
         esito = verificaEsitoAttaccoLupi(lupo, esito);
         return esito;
     }
 
     public boolean isEremita() { return ruolo.isEremita(); }
 
-    private EsitoAttacco gestioneAttaccoVittimaProtetta(Ruolo lupo, EsitoAttacco esito)
+    private EsitoAttacco gestioneAttaccoVittimaProtetta()
     {
+        EsitoAttacco esito = FALLITO;
         if(isAmato()) esito = ANGELO_CUSTODE_MORTO;
-        else if(isGiocatoreProtetto(lupo)) esito = FALLITO;
-        System.out.println(esito);
         return esito;
     }
 
@@ -176,6 +187,7 @@ public final class Giocatore
             case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
             case VAMPIRO, NEGROMANTE -> esito = FALLITO;
         }
+        if(esito == RIUSCITO) fazione = CRIMINALI;
         return esito;
     }
 
@@ -184,7 +196,7 @@ public final class Giocatore
     public EsitoAttacco vampirizzazione()
     {
         EsitoAttacco esito = getRisultatoVampirizzazione();
-        if(esito == RIUSCITO) trasformaVampiro();
+        if(esito == RIUSCITO || esito == GIULIETTA_BECCATA) trasformaVampiro();
         return esito;
     }
 
@@ -192,13 +204,19 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
         if(isNonMorto()) esito = RIUSCITO;
+        else if(!ruolo.isPrete() && tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         if(esito == RIUSCITO) trasformaPosseduto();
+        else if(esito == FALLITO && isRomeo()) esito = ROMEO_BECCATO;
         return esito;
     }
 
     public boolean isNonMorto() { return tratti.isPresente(NON_MORTO); }
 
-    public void romeizzazione() { setRomeo(true); }
+    public void romeizzazione()
+    {
+        setRomeo(true);
+        cambiaFazione(AMANTI);
+    }
 
     public boolean isRomeo() { return romeo; }
 
@@ -238,15 +256,89 @@ public final class Giocatore
 
     public boolean isProgenieVampiro() { return isNonMorto() || getFazione() == VAMPIRO; }
 
-    private EsitoAttacco getRisultatoVampirizzazione()
+    public void annullaRomeizzazione()
     {
-        EsitoAttacco esito = ruolo.vampirizzazione();
-        if(isGiocatoreLupizzato()) esito = MORTO;
-        else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        setRomeo(false);
+        perdiProtezioni();
+    }
+
+    public boolean isLadra() { return ruolo.isLadra(); }
+
+    public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = ruolo.getEsitoPartita(partita);
+        if(isRomeo()) esito = getPartitaRomeo(partita);
+        else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
+        else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
+        else if(isNonMorto())
+        {
+            esito = NON_FINITO;
+            switch(fazione)
+            {
+                case NOSFERATU ->
+                {
+                    if(partita.isNosferatuVincitore()) esito = VITTORIA;
+                    else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
+                }
+                case VAMPIRO ->
+                {
+                    if(partita.isVampiroVincitore()) esito = VITTORIA;
+                    else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
+                }
+            }
+        }
+        else if(fazione == AMANTI)
+        {
+            if(partita.isRomeoPresente() && partita.isGiuliettaPresente())
+            {
+                esito = NON_FINITO;
+                if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
+            }
+            else esito = SCONFITTA;
+        }
         return esito;
     }
 
-    private boolean isSegnalabileDaBoia() { return isCreaturaOmbra() || ruolo.isMistico(); }
+    public boolean isGiulietta() { return ruolo.isGiulietta(); }
+
+    public Aura controlloMedium()
+    {
+        Aura aura = ruolo.controlloMedium();
+        Fazione risultato = getFazione();
+        if(risultato == LUPO_BRANCO || risultato == LUPO_SOLITARIO) aura = NERA;
+        return aura;
+    }
+
+    public boolean isPosseduto() { return ruolo.isPosseduto(); }
+
+    public boolean isProtetto() { return isTrattoPresente(PROTETTO); }
+
+    public boolean isPeccatore() { return ruolo.isPeccatore(); }
+
+    public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
+
+    public boolean isTraditore() { return ruolo.isTraditore(); }
+
+    private EsitoPartita getPartitaRomeo(Partita partita)
+    {
+        EsitoPartita esito = SCONFITTA;
+        if(partita.isGiuliettaPresente()) esito = VITTORIA;
+        return esito;
+    }
+
+    private EsitoAttacco getRisultatoVampirizzazione()
+    {
+        EsitoAttacco esito = ruolo.vampirizzazione();
+        if(isStregato()) esito = FALLITO;
+        else if(esito != GIULIETTA_BECCATA)
+        {
+            if(isGiocatoreLupizzato()) esito = MORTO;
+            else if(tratti.isProtezioneVampiroPresente()) esito = FALLITO;
+        }
+        return esito;
+    }
+
+    private boolean isSegnalabileDaBoia() { return (isCreaturaOmbra() || ruolo.isMistico()) && !isContadinoMostro(); }
 
     private void trasformaPosseduto() { cambiaRuolo(getPosseduto()); }
 
@@ -290,9 +382,14 @@ public final class Giocatore
         switch(esito)
         {
             case CONTADINO_LUPO_BECCATO -> lupizzazioneContadinoLupo(lupo);
-            case FALLITO -> { if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case FALLITO ->
+            {
+                if(lupo.isLupoSolitario() && isCappuccettoRosso()) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+                else if(isRomeo()) esito = ROMEO_BECCATO;
+            }
             case NONNA_BECCATA -> lupizzazioneNonna(lupo);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtetto(lupo)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
+            case GIULIETTA_BECCATA -> { if(isProgenieVampiro()) esito = RIUSCITO; }
         }
         return esito;
     }
@@ -313,8 +410,6 @@ public final class Giocatore
 
     private boolean isProtetto(Ruolo lupo) { return isAmato() || isProtezionePresente(lupo); }
 
-    private void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
-
     private boolean isGiocatoreProtetto(Ruolo lupo) { return tratti.isProtezionePresente(lupo); }
 
     private boolean isAccusabileInquisizione() { return isInquisito() && ruolo.isMistico(); }
@@ -332,7 +427,11 @@ public final class Giocatore
     public EsitoAttacco attaccoNegromante()
     {
         EsitoAttacco esito = ruolo.attaccoNegromante();
-        if(tratti.isProtezioneNegromantePresente()) esito = FALLITO;
+        if(tratti.isProtezioneNegromantePresente())
+        {
+            esito = FALLITO;
+            if(isRomeo()) esito = ROMEO_BECCATO;
+        }
         if(esito == RIUSCITO) maledizione();
         return esito;
     }
@@ -342,6 +441,10 @@ public final class Giocatore
     public boolean isSensitiva() { return ruolo.isSensitiva(); }
 
     public boolean isInquisitore() { return ruolo.isInquisitore(); }
+
+    public EsitoControlloSensitiva controlloSensitiva() { return ruolo.controlloSensitiva(); }
+
+    public boolean isViaggiatore() { return ruolo.isViaggiatore(); }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {

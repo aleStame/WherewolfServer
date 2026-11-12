@@ -19,8 +19,6 @@ public final class TestBoccaDiRosa
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
-
     @Test public void testBoccaDiRosa() { verificaVero(ruolo.isBoccaDiRosa()); }
 
     @Test public void testDescrizione()
@@ -42,6 +40,17 @@ public final class TestBoccaDiRosa
     @Test public void testOratore() { verificaFalso(ruolo.isOratore()); }
 
     @Test public void testControlloMedium() { verificaAuraNera(ruolo.controlloMedium()); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Come il Peccatore, siete un Ruolo dall’aura nera che gioca però per la vittoria degli Uomini. A differenza di lui, il vostro potere " +
+            "vi rende abbastanza protetti nelle votazioni, ma attenti a non farci troppo affidamento perché, se in troppi dovessero convincersi " +
+            "che siete un Lupo, potreste rischiare di finire ugualmente al rogo. Essendo un ruolo con fazione Città, diversi altri giocatori con " +
+            "la stessa fazione potrebbero beneficiare della vostra presenza e usare i loro poteri per proteggervi. Questo potrebbe essere un " +
+            "motivo in più per rivelarvi apertamente.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaAuraNera(Aura aura) { assertThat(aura).isEqualTo(NERA); }
 

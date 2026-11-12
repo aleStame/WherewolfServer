@@ -2,10 +2,8 @@ package alessandro.stamera.wherewolfserver.classi.fazioni;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,11 +11,8 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.UOMINI;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.RIUSCITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.CRIMINALI;
-import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class TestVillaggio
@@ -25,9 +20,12 @@ public final class TestVillaggio
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Villaggio(null, null, null, -1, true); }
+    @BeforeEach public void setUp()
+    {
+        ruolo = new Villaggio(null, null, null, -1, true, null);
+    }
 
-    @Test public void testFazione() { verificaFazione(VILLAGGIO); }
+    @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(VILLAGGIO); }
 
     @Test public void testCategoria() { assertThat(ruolo.getCategoria()).isEqualTo(UOMINI); }
 
@@ -54,7 +52,10 @@ public final class TestVillaggio
     @ParameterizedTest @MethodSource("getEsempiEsitiPartita")
     public void testEsitoPartita(Partita partita, EsitoPartita esito) { assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito); }
 
-    @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO); }
+    @Test public void testControlloSensitiva()
+    {
+        assertThat(ruolo.controlloSensitiva()).isEqualTo(EsitoControlloSensitiva.VILLAGGIO);
+    }
 
     private static Stream<Arguments> getEsempiEsitiPartita()
     {
@@ -66,8 +67,6 @@ public final class TestVillaggio
         };
         return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
     }
-
-    private void verificaFazione(Fazione fazione) { assertThat(ruolo.getFazione()).isEqualTo(fazione); }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 

@@ -5,7 +5,15 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
 
     private final String tipoLupo, nomeLupo, ruoloAmato, nomeAmato, nomeAngeloCustode;
 
-    public EccezioneAttaccoAmato(String tipoLupo, String nomeLupo, String ruoloAmato, String nomeAmato, String nomeAngeloCustode)
+    public EccezioneAttaccoAmato(String nomeLupo, String nomeAngeloCustode)
+    {
+        this("Capo branco", nomeLupo, "Capo branco", nomeLupo, nomeAngeloCustode);
+    }
+
+    public EccezioneAttaccoAmato
+    (
+        String tipoLupo, String nomeLupo, String ruoloAmato, String nomeAmato, String nomeAngeloCustode
+    )
     {
         this.tipoLupo = tipoLupo;
         this.nomeLupo = nomeLupo;
@@ -16,9 +24,24 @@ public final class EccezioneAttaccoAmato extends IllegalStateException
 
     @Override public String getMessage()
     {
+        String risultato = getMessaggioAttaccoNormale();
+        if(isSuicidio()) risultato = getMessaggioSuicidio();
+        return risultato;
+    }
+
+    private boolean isSuicidio() { return tipoLupo.equals(ruoloAmato); }
+
+    private String getMessaggioSuicidio()
+    {
         return
-            "Il " + tipoLupo + " (" + nomeLupo + ") non può attaccare il " + ruoloAmato + " amato (" + nomeAmato + ").\nAvvisa l'Angelo custode "
-            + "(" + nomeAngeloCustode + ") della sua morte.";
+            "Il Capo branco amato (" + nomeAmato + ") non può suicidarsi.\nAvvisa l'Angelo custode (" + nomeAngeloCustode + ") della sua morte.";
+    }
+
+    private String getMessaggioAttaccoNormale()
+    {
+        return
+            "Il " + tipoLupo + " (" + nomeLupo + ") non può attaccare il " + ruoloAmato + " amato (" + nomeAmato + ").\nAvvisa l'Angelo custode ("
+            + nomeAngeloCustode + ") della sua morte.";
     }
 
 }

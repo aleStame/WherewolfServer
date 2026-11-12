@@ -12,7 +12,7 @@ public final class TestPiccoloPopolo
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new PiccoloPopolo(null, null, null); }
+    @BeforeEach public void setUp() { ruolo = new PiccoloPopolo(null, null, null, null); }
 
     @Test public void testFazione() { assertThat(ruolo.getFazione()).isEqualTo(Fazione.NESSUNA); }
 

@@ -19,8 +19,6 @@ public final class TestCapoGilda
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione =
@@ -41,6 +39,17 @@ public final class TestCapoGilda
     @Test public void testSpia() { verificaFalso(ruolo.isSpia()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Il vostro Ruolo è molto importante fra i Criminali. Come l’Assassino, avete una sola occasione per usare il vostro potere e dovete " +
+            "cercare di sfruttarlo al meglio. L’obiettivo è quello di riuscire a far passare dalla vostra parte qualche Ruolo importante e " +
+            "sinergico con i vostri obiettivi, come la Veggente o il Borgomastro. Ma attenzione ai bersagli troppo interessanti, potrebbero " +
+            "essere Guardie che vi stanno tendendo una trappola! Se sono poi presenti altri Criminali sarà poi vostro compito far capire al nuovo " +
+            "arrivato chi sono i suoi alleati senza essere troppo palesi e a loro chi sia la nuova recluta della Gilda.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 

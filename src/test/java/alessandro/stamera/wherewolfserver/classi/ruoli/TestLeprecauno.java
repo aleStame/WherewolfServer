@@ -22,8 +22,6 @@ public final class TestLeprecauno
 
     @Test public void testNome() { verificaStringa(ruolo.getNome(), NOME); }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testDescrizione()
     {
         String descrizione = "La prima notte riconosce le altre creature del Piccolo Popolo. Inoltre, è protetto da tutti i mistici";
@@ -42,7 +40,6 @@ public final class TestLeprecauno
     {
         verificaFalso(ruolo.maledizione());
         verificaFalso(ruolo.isMaledetto());
-        int numeroVoti = 2;
     }
 
     @Test public void testPiccoloPopolo() { verificaVero(ruolo.isPiccoloPopolo()); }

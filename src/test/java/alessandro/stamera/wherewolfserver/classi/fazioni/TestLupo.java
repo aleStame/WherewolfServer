@@ -22,9 +22,7 @@ public final class TestLupo
 
     private Lupo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Lupo(null, null, 0); }
-
-    @Test public void testAura() { verificaAuraNera(ruolo.getAura()); }
+    @BeforeEach public void setUp() { ruolo = new Lupo(null, null, 0, null); }
 
     @Test public void testFazione() { assertThat(getFazione()).isEqualTo(LUPO_BRANCO); }
 
@@ -74,6 +72,8 @@ public final class TestLupo
 
     @ParameterizedTest @CsvSource({ "CREATURA_OMBRA", "LUPO_MANNARO" })
     public void testTrattiPresenti(Tratto tratto) { verificaVero(ruolo.isTrattoPresente(tratto)); }
+
+    @Test public void testAttaccoNosferatu() { assertThat(ruolo.attaccoNosferatu()).isEqualTo(MORTO); }
 
     private Fazione getFazione() { return ruolo.getFazione(); }
 

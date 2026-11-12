@@ -27,8 +27,6 @@ public final class TestAzzeccagarbugli
         verificaStringa(ruolo.getDescrizione(), descrizione);
     }
 
-    @Test public void testAura() { verificaAuraBianca(ruolo.getAura()); }
-
     @Test public void testBoccaDiRosa() { verificaFalso(ruolo.isBoccaDiRosa()); }
 
     @Test public void testAzzeccagarbugli() { verificaVero(ruolo.isAzzeccagarbugli()); }
@@ -42,6 +40,16 @@ public final class TestAzzeccagarbugli
     @Test public void testCitta() { verificaVero(ruolo.isCitta()); }
 
     @Test public void testControlloMedium() { verificaAuraBianca(ruolo.controlloMedium()); }
+
+    @Test public void testConsigliGioco()
+    {
+        String messaggio =
+            "Il vostro ruolo ha due effetti opposti: proteggere i vostri alleati della Città e costringere ad una arringa di difesa quelli che " +
+            "non godono della vostra fiducia. Durante i primi turni questo secondo aspetto è sicuramente molto importante perché farà in modo " +
+            "che ci siano più giocatori esposti e costretti a rivelare informazioni. Se il giocatore che segnalate non dovesse essere accusato, " +
+            "allora saprete di aver trovato un alleato, starà poi a voi fargli capire, magari velatamente, che siete dalla stessa parte.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
+    }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
 

@@ -64,11 +64,15 @@ public final class TestAngeloCustode
     @ParameterizedTest @MethodSource("getEsempiPartitaPersa")
     public void testSconfittaNienteAmato(Partita partita) { verificaEsitoPartita(partita, SCONFITTA); }
 
-    @Test public void testRomeizzazione()
+    @Test public void testConsigliGioco()
     {
-        /*ruolo.romeizzazione();
-        assertThat(ruolo.getAura()).isEqualTo(BIANCA);
-        verificaVero(ruolo.isRomeo());*/
+        String messaggio =
+            "La vostra partita sarà interamente concentrata sul giocatore che scegliete di proteggere. La vostra abilità gli darà una seconda " +
+            "possibilità nel caso che venga attaccato o Accusato, ma la protezione migliore che potrete dargli sarà quella di rafforzare la sua " +
+            "credibilità durante il giorno.\nChe poi sia un villico, un Criminale o una Creatura dell’Ombra poco importa. Ricordate che, avendo " +
+            "il doppio di possibilità di essere Accusati, presto anche voi dovrete crearvi un alibi, in quanto, se diceste chi siete la vostra " +
+            "credibilità verso chi state proteggendo sarebbe del tutto compromessa.";
+        verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
     private void verificaVero(boolean valore) { assertThat(valore).isTrue(); }
