@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo aggiornaProtezioniTraditore" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo sistemaProtezioniRuoli" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,14 +249,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00615" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
-      <option name="closed" value="true" />
-      <created>1788267699660</created>
-      <option name="number" value="00615" />
-      <option name="presentableId" value="LOCAL-00615" />
-      <option name="project" value="LOCAL" />
-      <updated>1788267699661</updated>
     </task>
     <task id="LOCAL-00616" summary="VERDE DIRETTO: testSegnalazioneInquisitoreMisticoAssente riuscito">
       <option name="closed" value="true" />
@@ -642,7 +634,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794499610109</updated>
     </task>
-    <option name="localTasksCounter" value="664" />
+    <task id="LOCAL-00664" summary="REFACTORING: definizione del metodo sistemaProtezioniRuoli">
+      <option name="closed" value="true" />
+      <created>1794499896052</created>
+      <option name="number" value="00664" />
+      <option name="presentableId" value="LOCAL-00664" />
+      <option name="project" value="LOCAL" />
+      <updated>1794499896052</updated>
+    </task>
+    <option name="localTasksCounter" value="665" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +660,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testVampirizzazioneFallita non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazioneFallita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isProgenieVampiro" />
     <MESSAGE value="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito" />
@@ -685,6 +684,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isCoppiaPeccatorePosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo proteggiTraditoreDaiLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioniTraditore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo aggiornaProtezioniTraditore" />
+    <MESSAGE value="REFACTORING: definizione del metodo sistemaProtezioniRuoli" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo sistemaProtezioniRuoli" />
   </component>
 </project>

@@ -315,7 +315,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         super.aggiungiGiocatore(nome, giocatore);
         sistemaProtezioniRuoli();
-        if(isCoppiaPeccatorePosseduto()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
+        if(isCoppiaPeccatorePosseduto()) getGiocatorePeccatore().cambiaFazione(NESSUNA);
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -395,6 +395,8 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
         return trovato;
     }
+
+    private Giocatore getGiocatorePeccatore() { return getGiocatore(getNomePeccatore()); }
 
     private void sistemaProtezioniRuoli()
     {
