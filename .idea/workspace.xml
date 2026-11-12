@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="Commit workspace">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00606" summary="VERDE DIRETTO: testAttaccoCapoBrancoRomeo riuscito">
-      <option name="closed" value="true" />
-      <created>1788191884344</created>
-      <option name="number" value="00606" />
-      <option name="presentableId" value="LOCAL-00606" />
-      <option name="project" value="LOCAL" />
-      <updated>1788191884344</updated>
     </task>
     <task id="LOCAL-00607" summary="VERDE DIRETTO: testAttaccoStregatoCapoBranco riuscito">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794495075999</updated>
     </task>
-    <option name="localTasksCounter" value="655" />
+    <task id="LOCAL-00655" summary="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1794496465089</created>
+      <option name="number" value="00655" />
+      <option name="presentableId" value="LOCAL-00655" />
+      <option name="project" value="LOCAL" />
+      <updated>1794496465090</updated>
+    </task>
+    <option name="localTasksCounter" value="656" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaFallimentoAttaccoGiocatoreProtetto" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo erificaFallimentoAttaccoLupiGiocatoreStregato" />
     <MESSAGE value="VERDE DIRETTO: testAuraChiara riuscito" />
@@ -688,6 +687,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
     <MESSAGE value="ROSSO: testAvvisoErrore non riuscito" />
     <MESSAGE value="Commit workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit workspace" />
+    <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
   </component>
 </project>
