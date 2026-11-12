@@ -131,6 +131,29 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
+            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO", "Becchino, RIUSCITO",
+            "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO", "Bracconiere, RIUSCITO", "Cacciatore, RIUSCITO",
+            "Cacciatore di vampiri, RIUSCITO", "Capo branco, RIUSCITO", "Capo gilda, RIUSCITO", "Cappuccetto rosso, RIUSCITO",
+            "Contadino discendente dei lupi, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino mostro, MORTO", "Eremita, RIUSCITO",
+            "Ghoul, RIUSCITO", "Giovane lupo, RIUSCITO", "Giulietta, GIULIETTA_BECCATA", "Giullare, RIUSCITO", "Goblin, RIUSCITO",
+            "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, RIUSCITO", "Inquisitore, RIUSCITO", "Ladra, RIUSCITO",
+            "Leprecauno, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo reietto, RIUSCITO", "Lupo solitario, RIUSCITO", "Mago, RIUSCITO",
+            "Medium, RIUSCITO", "Megera, RIUSCITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO", "Negromante, RIUSCITO", "Nonna, RIUSCITO",
+            "Nosferatu, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Posseduto, RIUSCITO", "Prete, RIUSCITO",
+            "Sensitiva, RIUSCITO", "Sidhe, RIUSCITO", "Spia, RIUSCITO", "Strega, RIUSCITO", "Templare, RIUSCITO", "Traditore, RIUSCITO",
+            "Vampiro, RIUSCITO", "Veggente, RIUSCITO", "Viaggiatore, RIUSCITO"
+        }
+    )
+    public void testAttaccoAssassinoStregato(String nomeRuolo, EsitoAttacco esito)
+    {
+        String[][] giocatori = new String[][] { { "Cristian", nomeRuolo }, { "Carmine", "Assassino" } };
+        inizializzaGiocatori(giocatori);
+        verificaAttaccoAssassino(giocatori[0][0], esito);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
             "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
             "Contadino eroe", "Contadino mostro", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta",

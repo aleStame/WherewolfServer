@@ -266,8 +266,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void protezioneStrega(String nome)
     {
-        Giocatore giocatore = getGiocatore(nome);
-        giocatore.protezioneStrega();
+        getGiocatore(nome).protezioneStrega();
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
