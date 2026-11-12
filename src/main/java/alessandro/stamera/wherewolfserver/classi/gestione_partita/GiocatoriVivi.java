@@ -318,7 +318,7 @@ public final class GiocatoriVivi extends Giocatori
         aggiornaProtezioniLadra();
         aggiornaProtezioniCappuccettoRossoPostInserimento();
         if(isCoppiaPeccatorePosseduto()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
-        if(isTraditorePresente()) proteggiTraditoreDaiLupi();
+        aggiornaProtezioniTraditore();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -398,6 +398,8 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
         return trovato;
     }
+
+    private void aggiornaProtezioniTraditore() { if(isTraditorePresente()) proteggiTraditoreDaiLupi(); }
 
     private void proteggiTraditoreDaiLupi() { aggiungiProtezioneLupi(getNomeTraditore()); }
 
