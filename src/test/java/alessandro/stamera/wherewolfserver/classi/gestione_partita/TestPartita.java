@@ -197,6 +197,27 @@ public final class TestPartita
             "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
             "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
             "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
+            "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Templare",
+            "Traditore", "Vampiro", "Veggente"
+        }
+    )
+    public void testAttaccoAssassinoStregato(String nomeRuolo)
+    {
+        String nomeVittima = "Federico";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giulia", "Strega" } });
+        protezioneStrega(nomeVittima);
+        attaccoAssassino(nomeVittima);
+        terminaNotte();
+        verificaEliminati(nomeVittima);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo branco", "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi",
+            "Contadino eroe", "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore",
+            "Ladra", "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Mercante", "Monaco",
             "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Pazzo", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega",
             "Templare", "Traditore", "Vampiro", "Veggente"
         }
