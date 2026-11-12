@@ -31,7 +31,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoAssassino(String nome)
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoAssassino();
-        if(esito == RIUSCITO && (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente()) esito = GHOUL_MORTO;
+        if(esito == RIUSCITO && isGhoulVittima(nome)) esito = GHOUL_MORTO;
         return esito;
     }
 
@@ -384,8 +384,6 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isProtetto(String nome) { return getGiocatore(nome).isProtetto(); }
 
-    private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
-
     public String getNomePeccatore() { return getNomeGiocatore(getPosizionePeccatore()); }
 
     public boolean isTraditorePresente() { return getPosizioneTraditore() != NON_TROVATO; }
@@ -400,6 +398,10 @@ public final class GiocatoriVivi extends Giocatori
         for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
         return trovato;
     }
+
+    private boolean isGhoulVittima(String nome) { return (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente(); }
+
+    private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
 
     private int getPosizioneTraditore()
     {
