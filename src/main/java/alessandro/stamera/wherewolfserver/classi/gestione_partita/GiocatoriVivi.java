@@ -314,11 +314,8 @@ public final class GiocatoriVivi extends Giocatori
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
         super.aggiungiGiocatore(nome, giocatore);
-        aggiornaProtezioni();
-        aggiornaProtezioniLadra();
-        aggiornaProtezioniCappuccettoRossoPostInserimento();
+        sistemaProtezioniRuoli();
         if(isCoppiaPeccatorePosseduto()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
-        aggiornaProtezioniTraditore();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -397,6 +394,14 @@ public final class GiocatoriVivi extends Giocatori
         boolean trovato = false;
         for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
         return trovato;
+    }
+
+    private void sistemaProtezioniRuoli()
+    {
+        aggiornaProtezioni();
+        aggiornaProtezioniLadra();
+        aggiornaProtezioniCappuccettoRossoPostInserimento();
+        aggiornaProtezioniTraditore();
     }
 
     private void aggiornaProtezioniTraditore() { if(isTraditorePresente()) proteggiTraditoreDaiLupi(); }
