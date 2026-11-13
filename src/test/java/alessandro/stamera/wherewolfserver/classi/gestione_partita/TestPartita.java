@@ -2415,7 +2415,7 @@ public final class TestPartita
         verificaEliminati(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Assassino", "Cacciatore", "Lupo del branco" })
+    @ParameterizedTest @CsvSource({ "Altra guardia", "Assassino", "Cacciatore", "Lupo del branco" })
     public void testAttaccoCapoBranco(String nomeRuolo)
     {
         String tipoLupo = "Capo branco", nomeVittima = "Damiano";
