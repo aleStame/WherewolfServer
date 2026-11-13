@@ -2073,14 +2073,22 @@ public final class TestGiocatoriVivi
     {
         String nomeVittima = "Francesco";
         inizializzaGiocatori(new String[][] { { nomeVittima, nomeRuolo }, { "Ivan", "Capo gilda" } });
-        verificaAttacco(giocatori.gildata(nomeVittima), FALLITO);
+        verificaEsitoGildata(nomeVittima, FALLITO);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildata(String nomeRuolo)
     {
         String nome = "Vittoria";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" } });
-        verificaAttacco(giocatori.gildata(nome), MORTO);
+        verificaEsitoGildata(nome, MORTO);
+    }
+
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildataRomeo(String nomeRuolo)
+    {
+        String nome = "Vittoria";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" }, { "Pedro", "Giulietta" } });
+        romeizzazione(nome);
+        verificaEsitoGildata(nome, MORTO);
     }
 
     @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
