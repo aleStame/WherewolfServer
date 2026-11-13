@@ -2091,6 +2091,14 @@ public final class TestGiocatoriVivi
         verificaEsitoGildata(nome, MORTO);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildataStregato(String nomeRuolo)
+    {
+        String nome = "Vittoria";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" }, { "Pedro", "Strega" } });
+        protezioneStrega(nome);
+        verificaEsitoGildata(nome, MORTO);
+    }
+
     @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
     public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
     {
