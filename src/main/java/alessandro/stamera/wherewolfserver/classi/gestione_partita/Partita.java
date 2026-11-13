@@ -595,16 +595,16 @@ public final class Partita
     public void protezioneStrega(String nome)
     {
         vivi.protezioneStrega(nome);
-        //String nomeStrega = getNomeGiocatoreVivo(posizione);
+        String nomeStrega = vivi.getNomeStrega();
         if(vivi.isContadinoMostro(nome))
         {
-            //eliminaGiocatore(nomeStrega);
-            /*throw new IllegalArgumentException
+            eliminaGiocatore(nomeStrega);
+            throw new IllegalArgumentException
             (
                 "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + nome + ").\nAvvisa Sonia della sua morte."
-            );*/
+            );
         }
-        //else if(vivi.isMegera(nome)) getGiocatore(nomeStrega).maledizione();
+        else if(vivi.isMegera(nome)) getGiocatore(nomeStrega).maledizione();
     }
 
     public boolean isProgenieNosferatuAssenti()
