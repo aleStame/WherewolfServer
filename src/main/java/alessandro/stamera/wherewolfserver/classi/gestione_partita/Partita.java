@@ -596,7 +596,7 @@ public final class Partita
     {
         vivi.protezioneStrega(nome);
         if(vivi.isContadinoMostro(nome)) protezioneContadinoMostroStrega();
-        else if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeStrega()).maledizione();
+        else if(vivi.isMegera(nome)) vivi.maledizione(getNomeStrega());
     }
 
     public boolean isProgenieNosferatuAssenti()
@@ -653,7 +653,7 @@ public final class Partita
 
     private void protezioneContadinoMostroStrega()
     {
-        String nomeStrega = vivi.getNomeStrega();
+        String nomeStrega = getNomeStrega();
         eliminaGiocatore(nomeStrega);
         throw new IllegalArgumentException
         (
@@ -661,6 +661,8 @@ public final class Partita
             nomeStrega + " della sua morte."
         );
     }
+
+    private String getNomeStrega() { return vivi.getNomeStrega(); }
 
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
