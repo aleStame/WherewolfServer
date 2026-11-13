@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioErrore riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneProtezioneContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneProtezioneContadinoMostro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestBallottaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestBallottaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00637" summary="REFACTORING: definizione del metodo isProgenieVampiro">
-      <option name="closed" value="true" />
-      <created>1788347891438</created>
-      <option name="number" value="00637" />
-      <option name="presentableId" value="LOCAL-00637" />
-      <option name="project" value="LOCAL" />
-      <updated>1788347891447</updated>
     </task>
     <task id="LOCAL-00638" summary="VERDE DIRETTO: testVampirizzazioneRiuscita riuscito">
       <option name="closed" value="true" />
@@ -648,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794582420887</updated>
     </task>
-    <option name="localTasksCounter" value="686" />
+    <task id="LOCAL-00686" summary="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito">
+      <option name="closed" value="true" />
+      <created>1794584942632</created>
+      <option name="number" value="00686" />
+      <option name="presentableId" value="LOCAL-00686" />
+      <option name="project" value="LOCAL" />
+      <updated>1794584942632</updated>
+    </task>
+    <option name="localTasksCounter" value="687" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isGhoulVittima" />
     <MESSAGE value="REFACTORING: definizione del metodo isCoppiaPeccatorePosseduto" />
@@ -691,6 +687,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getNomeStrega" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioErrore riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito" />
   </component>
 </project>
