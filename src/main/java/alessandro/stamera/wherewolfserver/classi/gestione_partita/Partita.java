@@ -595,16 +595,8 @@ public final class Partita
     public void protezioneStrega(String nome)
     {
         vivi.protezioneStrega(nome);
-        String nomeStrega = vivi.getNomeStrega();
-        if(vivi.isContadinoMostro(nome))
-        {
-            eliminaGiocatore(nomeStrega);
-            throw new IllegalArgumentException
-            (
-                "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + nome + ").\nAvvisa Sonia della sua morte."
-            );
-        }
-        else if(vivi.isMegera(nome)) getGiocatore(nomeStrega).maledizione();
+        if(vivi.isContadinoMostro(nome)) protezioneContadinoMostroStrega();
+        else if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeStrega()).maledizione();
     }
 
     public boolean isProgenieNosferatuAssenti()
@@ -657,6 +649,17 @@ public final class Partita
         if(vivi.isStregato(nomeRomeo)) vivi.aggiungiProtezioneCreatureOmbra(nomeRomeo);
         String messaggio = "A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nomeRomeo + " non è più Romeo.";
         throw new IllegalStateException(messaggio);
+    }
+
+    private void protezioneContadinoMostroStrega()
+    {
+        String nomeStrega = vivi.getNomeStrega();
+        eliminaGiocatore(nomeStrega);
+        throw new IllegalArgumentException
+        (
+            "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + vivi.getNomeContadinoMostro() + ").\nAvvisa " +
+            nomeStrega + " della sua morte."
+        );
     }
 
     private void gestionePassaggioPossedutoRiuscito(String nome)

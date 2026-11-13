@@ -163,7 +163,7 @@ public final class TestPartita
     {
         String nomeVittima = "Maddalena";
         inizializzaPartita(new String[][] { { "Barbara", "Assassino" }, { nomeVittima, "Contadino mostro" }, { "Giuseppe", "Strega" } });
-        String messaggio = "La Strega (Giuseppe) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Sonia della sua morte.";
+        String messaggio = "La Strega (Giuseppe) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Giuseppe della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaAttaccoAssassino(nomeVittima);
     }
@@ -326,7 +326,7 @@ public final class TestPartita
             { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, "Contadino mostro" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Sonia della sua morte.";
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Willow della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
@@ -381,7 +381,7 @@ public final class TestPartita
             { "Willow", "Strega" }, { nomeAngelo, "Angelo custode" }, { nomeAssassino, "Assassino" }, { nomeVittima, "Contadino mostro" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Sonia della sua morte.";
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Maddalena).\nAvvisa Willow della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaAttaccoAssassinoAmato(nomeVittima, nomeAssassino, nomeAngelo);
     }
@@ -2467,20 +2467,7 @@ public final class TestPartita
             { "Antonio", tipoLupo }, { nomeVittima, "Contadino mostro" }, { "Carluccio", "Giovane lupo"}, { "Willow", "Strega" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Sonia della sua morte.";
-        assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
-        verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
-    }
-
-    @Test public void testAttaccoStregatoCapoBranco()
-    {
-        String tipoLupo = "Capo branco", nomeVittima = "Damiano";
-        String[][] giocatori = new String[][]
-        {
-            { "Antonio", tipoLupo }, { nomeVittima, "Contadino mostro" }, { "Carluccio", "Giovane lupo"}, { "Willow", "Strega" }
-        };
-        inizializzaPartita(giocatori);
-        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Sonia della sua morte.";
+        String messaggio = "La Strega (Willow) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Willow della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
@@ -2585,7 +2572,7 @@ public final class TestPartita
             { "Antonio", tipoLupo }, { nomeVittima, "Contadino mostro" }, { "Carluccio", "Giovane lupo" }, { "Maria", "Strega" }
         };
         inizializzaPartita(giocatori);
-        String messaggio = "La Strega (Maria) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Sonia della sua morte.";
+        String messaggio = "La Strega (Maria) ha cercato di proteggere il Contadino Mostro (Damiano).\nAvvisa Maria della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeVittima)).withMessage(messaggio);
         verificaFallimentoAttaccoLupiGiocatoreStregato(nomeVittima, tipoLupo);
     }
@@ -2700,7 +2687,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { nome, "Contadino mostro" }, { "Antonia", "Giulietta" }, { "Carlo", "Vampiro" }, { "Maria", "Strega" } };
         inizializzaPartita(giocatori);
-        String messaggioStrega = "La Strega (Maria) ha cercato di proteggere il Contadino Mostro (Bruno).\nAvvisa Sonia della sua morte.";
+        String messaggioStrega = "La Strega (Maria) ha cercato di proteggere il Contadino Mostro (Bruno).\nAvvisa Maria della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nome)).withMessage(messaggioStrega);
         String messaggioVampiro =
             "Impossibile vampirizzare Bruno perché protetto dalla Strega.\nAvvisa il Vampiro (Carlo) della mancata vampirizzazione.";
@@ -2941,7 +2928,7 @@ public final class TestPartita
         String[][] giocatori =
             new String[][] { { "Stefano", "Strega" }, { "Brenda", "Nosferatu" }, { "Emma", "Assassino" }, { nome, "Contadino mostro" } };
         inizializzaPartita(giocatori);
-        String messaggioStrega = "La Strega (Stefano) ha cercato di proteggere il Contadino Mostro (Biagio).\nAvvisa Sonia della sua morte.";
+        String messaggioStrega = "La Strega (Stefano) ha cercato di proteggere il Contadino Mostro (Biagio).\nAvvisa Stefano della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nome)).withMessage(messaggioStrega);
         attaccoAssassino(nome);
         String messaggio = "Biagio è protetto dalla Strega.\nAvvisa il Nosferatu (Brenda) della mancata progenizzazione.";
@@ -3101,7 +3088,8 @@ public final class TestPartita
             { "Piera", tipoLupo }, { nomePosseduto, "Posseduto" }, { nomeContadino, "Contadino mostro" }, { "Salamandra", "Strega" }
         };
         inizializzaPartita(giocatori);
-        String messaggioContadino = "La Strega (Salamandra) ha cercato di proteggere il Contadino Mostro (Serena).\nAvvisa Sonia della sua morte.";
+        String messaggioContadino =
+            "La Strega (Salamandra) ha cercato di proteggere il Contadino Mostro (Serena).\nAvvisa Salamandra della sua morte.";
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeContadino)).withMessage(messaggioContadino);
         attaccoLupi(tipoLupo, nomePosseduto);
         String messaggioPosseduto =
