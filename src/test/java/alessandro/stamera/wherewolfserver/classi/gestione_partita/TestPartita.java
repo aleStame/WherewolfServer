@@ -224,15 +224,15 @@ public final class TestPartita
     )
     public void testAttaccoAssassinoAmato(String nomeRuolo)
     {
-        String nomeVittima = "Federico";
-        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { "Giulia", "Angelo custode" } });
+        String nomeVittima = "Federico", nomeAngelo = "Giulia";
+        inizializzaPartita(new String[][] { { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo }, { nomeAngelo, "Angelo custode" } });
         segnalazioneAngeloCustode(nomeVittima);
         String messaggio =
             "L'attacco dell'amato (Federico) da parte dell'Assassino (Giovanni) causa la morte del suo Angelo custode (Giulia).\nAvvisa Giulia " +
             "dell'attacco subito.";
         assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeVittima)).withMessage(messaggio);
         terminaNotte();
-        verificaEliminati("Giulia");
+        verificaEliminati(nomeAngelo);
     }
 
     @ParameterizedTest @CsvSource

@@ -395,6 +395,10 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
+    public boolean isStregaPresente() { return true; }
+
+    public boolean isStrega(String nome) { return true; }
+
     private void sistemaCoppiaPeccatorePosseduto() { if(isCoppiaPeccatorePosseduto()) annullaFazionePeccatore(); }
 
     private void annullaFazionePeccatore() { getGiocatorePeccatore().cambiaFazione(NESSUNA); }
