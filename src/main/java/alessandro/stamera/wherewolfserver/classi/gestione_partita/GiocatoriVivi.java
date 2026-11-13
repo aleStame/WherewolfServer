@@ -404,6 +404,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isStrega(String nome) { return getGiocatore(nome).isStrega(); }
 
+    public String getNomeStrega()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isStrega(getNomeGiocatore(i))) posizione = i;
+        return getNomeGiocatore(posizione);
+    }
+
     private void sistemaCoppiaPeccatorePosseduto() { if(isCoppiaPeccatorePosseduto()) annullaFazionePeccatore(); }
 
     private void annullaFazionePeccatore() { getGiocatorePeccatore().cambiaFazione(NESSUNA); }

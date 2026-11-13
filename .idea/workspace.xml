@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testStrega riuscito" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testStregaPresente riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00626" summary="REFACTORING: definizione del metodo verificaAttaccoRomeoFallito">
-      <option name="closed" value="true" />
-      <created>1788273861923</created>
-      <option name="number" value="00626" />
-      <option name="presentableId" value="LOCAL-00626" />
-      <option name="project" value="LOCAL" />
-      <updated>1788273861923</updated>
-    </task>
-    <task id="LOCAL-00627" summary="REFACTORING: definizione del metodo verificaFallimentoAttaccoGiocatoreProtetto">
-      <option name="closed" value="true" />
-      <created>1788274030079</created>
-      <option name="number" value="00627" />
-      <option name="presentableId" value="LOCAL-00627" />
-      <option name="project" value="LOCAL" />
-      <updated>1788274030079</updated>
     </task>
     <task id="LOCAL-00628" summary="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito">
       <option name="closed" value="true" />
@@ -642,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794563634270</updated>
     </task>
-    <option name="localTasksCounter" value="675" />
+    <task id="LOCAL-00675" summary="VERDE DIRETTO: testStrega riuscito">
+      <option name="closed" value="true" />
+      <created>1794563940547</created>
+      <option name="number" value="00675" />
+      <option name="presentableId" value="LOCAL-00675" />
+      <option name="project" value="LOCAL" />
+      <updated>1794563940547</updated>
+    </task>
+    <task id="LOCAL-00676" summary="VERDE DIRETTO: testStregaPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1794564368050</created>
+      <option name="number" value="00676" />
+      <option name="presentableId" value="LOCAL-00676" />
+      <option name="project" value="LOCAL" />
+      <updated>1794564368051</updated>
+    </task>
+    <option name="localTasksCounter" value="677" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVampirizzazioneStregatoFallita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneVampirizzazioneFallita" />
     <MESSAGE value="VERDE: testAvvisoErroreRomeo riuscito" />
     <MESSAGE value="ROSSO: testAvvisoErroreStrega non riuscito" />
@@ -685,6 +687,7 @@
     <MESSAGE value="ROSSO: testNoStrega non riuscito" />
     <MESSAGE value="VERDE: testNoStrega riuscito" />
     <MESSAGE value="VERDE DIRETTO: testStrega riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testStrega riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testStregaPresente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testStregaPresente riuscito" />
   </component>
 </project>

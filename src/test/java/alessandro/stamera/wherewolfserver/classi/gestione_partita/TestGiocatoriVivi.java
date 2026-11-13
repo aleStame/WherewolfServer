@@ -1083,6 +1083,15 @@ public final class TestGiocatoriVivi
         verificaFalso(giocatori.isStregaPresente());
     }
 
+    @Test public void testStregaPresente()
+    {
+        String nome = "Antonio";
+        aggiungiGiocatore(nome, "Strega");
+        verificaVero(giocatori.isStrega(nome));
+        verificaVero(giocatori.isStregaPresente());
+        verificaStringa(giocatori.getNomeStrega(), nome);
+    }
+
     @Test public void testMaledizioneMegeraNonRomeizzata()
     {
         String nome = "Elisa";
