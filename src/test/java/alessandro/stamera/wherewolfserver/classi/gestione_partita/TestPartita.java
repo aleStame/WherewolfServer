@@ -679,8 +679,12 @@ public final class TestPartita
     @ParameterizedTest @CsvSource
     (
         {
-            "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Eremita",
-            "Mercante"
+            "Altra guardia", "Angelo custode", "Assassino", "Bardo", "Becchino", "Boia", "Bracconiere", "Cacciatore", "Capo branco",
+            "Capo gilda", "Cappuccetto rosso", "Contadino discendente dei lupi", "Contadino eroe", "Contadino mostro", "Contadino normale",
+            "Eremita", "Ghoul", "Giovane lupo", "Giullare", "Goblin", "Guardia", "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra",
+            "Leprecauno", "Lupo del branco", "Lupo reietto", "Lupo solitario", "Mago", "Medium", "Megera", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oste", "Pazzo", "Peccatore", "Posseduto", "Prete", "Sensitiva", "Sidhe", "Spia", "Strega", "Templare", "Vampiro",
+            "Veggente"
         }
     )
     public void testPotereBorgomastro(String ruolo)

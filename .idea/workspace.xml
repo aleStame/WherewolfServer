@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSegnalazioneBoia riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00639" summary="ROSSO: testVampirizzazioneRomeoFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1788350880232</created>
-      <option name="number" value="00639" />
-      <option name="presentableId" value="LOCAL-00639" />
-      <option name="project" value="LOCAL" />
-      <updated>1788350880235</updated>
     </task>
     <task id="LOCAL-00640" summary="VERDE: testVampirizzazioneRomeoFallita riuscito">
       <option name="closed" value="true" />
@@ -645,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794585326196</updated>
     </task>
-    <option name="localTasksCounter" value="688" />
+    <task id="LOCAL-00688" summary="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito">
+      <option name="closed" value="true" />
+      <created>1794586013646</created>
+      <option name="number" value="00688" />
+      <option name="presentableId" value="LOCAL-00688" />
+      <option name="project" value="LOCAL" />
+      <updated>1794586013646</updated>
+    </task>
+    <option name="localTasksCounter" value="689" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isGhoulVittima" />
     <MESSAGE value="REFACTORING: definizione del metodo isCoppiaPeccatorePosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo proteggiTraditoreDaiLupi" />
     <MESSAGE value="REFACTORING: definizione del metodo aggiornaProtezioniTraditore" />
@@ -688,6 +688,7 @@
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
   </component>
 </project>
