@@ -899,8 +899,10 @@ public final class TestPartita
         verificaFallimentoGildata(nomeVittima, "Impossibile criminalizzare " + nomeVittima + ".");
     }
 
-    @ParameterizedTest
-    @CsvSource( { "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Altra guardia", "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
+    )
     public void testCriminalizzazioneCapoGildaMorto(String nomeRuolo)
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
