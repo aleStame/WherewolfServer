@@ -1556,7 +1556,7 @@ public final class TestGiocatoriVivi
         String nome = "Carlo";
         inizializzaGiocatori(new String[][] { { "Giovanni", tipoLupo }, { nome, "Contadino discendente dei lupi" }, { "Pino", "Capo gilda" } });
         verificaAttaccoLupo(tipoLupo, nome, CONTADINO_LUPO_BECCATO);
-        verificaEsitoGildata(nome, MORTO);
+        verificaMortePostGildata(nome);
     }
 
     @Test public void testCriminalizzazioneBecchino()
@@ -2080,7 +2080,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Vittoria";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" } });
-        verificaEsitoGildata(nome, MORTO);
+        verificaMortePostGildata(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildataRomeo(String nomeRuolo)
@@ -2088,7 +2088,7 @@ public final class TestGiocatoriVivi
         String nome = "Vittoria";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" }, { "Pedro", "Giulietta" } });
         romeizzazione(nome);
-        verificaEsitoGildata(nome, MORTO);
+        verificaMortePostGildata(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildataStregato(String nomeRuolo)
@@ -2096,8 +2096,10 @@ public final class TestGiocatoriVivi
         String nome = "Vittoria";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" }, { "Pedro", "Strega" } });
         protezioneStrega(nome);
-        verificaEsitoGildata(nome, MORTO);
+        verificaMortePostGildata(nome);
     }
+
+    private void verificaMortePostGildata(String nome) { verificaEsitoGildata(nome, MORTO); }
 
     @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
     public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
