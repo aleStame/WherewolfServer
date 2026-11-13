@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaEsitoGildata">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eseguiGildata">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00647" summary="VERDE: testVampirizzazioneStregatoFallita riuscito">
-      <option name="closed" value="true" />
-      <created>1788426984755</created>
-      <option name="number" value="00647" />
-      <option name="presentableId" value="LOCAL-00647" />
-      <option name="project" value="LOCAL" />
-      <updated>1788426984756</updated>
     </task>
     <task id="LOCAL-00648" summary="REFACTORING: definizione del metodo gestioneVampirizzazioneFallita">
       <option name="closed" value="true" />
@@ -645,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794591819595</updated>
     </task>
-    <option name="localTasksCounter" value="696" />
+    <task id="LOCAL-00696" summary="REFACTORING: definizione del metodo eseguiGildata">
+      <option name="closed" value="true" />
+      <created>1794592022528</created>
+      <option name="number" value="00696" />
+      <option name="presentableId" value="LOCAL-00696" />
+      <option name="project" value="LOCAL" />
+      <updated>1794592022528</updated>
+    </task>
+    <option name="localTasksCounter" value="697" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo sistemaCoppiaPeccatorePosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo testAttaccoAssassinoStregato" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito" />
@@ -688,6 +688,7 @@
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoGildata" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaEsitoGildata" />
+    <MESSAGE value="REFACTORING: definizione del metodo eseguiGildata" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eseguiGildata" />
   </component>
 </project>
