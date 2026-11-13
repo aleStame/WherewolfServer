@@ -1709,7 +1709,7 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource
     (
         {
-            "Assassino, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO",
+            "Altra guardia, RIUSCITO", "Assassino, RIUSCITO", "Cacciatore, RIUSCITO", "Cappuccetto rosso, ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO",
             "Lupo del branco, RIUSCITO", "Lupo reietto, FALLITO", "Lupo solitario, FALLITO"
         }
     )
