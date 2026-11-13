@@ -404,9 +404,11 @@ public final class GiocatoriVivi extends Giocatori
     private int getPosizioneStrega()
     {
         int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isStrega(getNomeGiocatore(i))) posizione = i;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isStrega(i)) posizione = i;
         return posizione;
     }
+
+    private boolean isStrega(int posizione) { return isStrega(getNomeGiocatore(posizione)); }
 
     private void sistemaCoppiaPeccatorePosseduto() { if(isCoppiaPeccatorePosseduto()) annullaFazionePeccatore(); }
 

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testStregaPresente riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getPosizioneStrega">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,22 +251,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00628" summary="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788274322099</created>
-      <option name="number" value="00628" />
-      <option name="presentableId" value="LOCAL-00628" />
-      <option name="project" value="LOCAL" />
-      <updated>1788274322100</updated>
-    </task>
-    <task id="LOCAL-00629" summary="REFACTORING: definizione del metodo erificaFallimentoAttaccoLupiGiocatoreStregato">
-      <option name="closed" value="true" />
-      <created>1788275311364</created>
-      <option name="number" value="00629" />
-      <option name="presentableId" value="LOCAL-00629" />
-      <option name="project" value="LOCAL" />
-      <updated>1788275311365</updated>
     </task>
     <task id="LOCAL-00630" summary="VERDE DIRETTO: testAuraChiara riuscito">
       <option name="closed" value="true" />
@@ -645,7 +628,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794564368051</updated>
     </task>
-    <option name="localTasksCounter" value="677" />
+    <task id="LOCAL-00677" summary="VERDE DIRETTO: testStregaPresente riuscito">
+      <option name="closed" value="true" />
+      <created>1794564748842</created>
+      <option name="number" value="00677" />
+      <option name="presentableId" value="LOCAL-00677" />
+      <option name="project" value="LOCAL" />
+      <updated>1794564748843</updated>
+    </task>
+    <task id="LOCAL-00678" summary="REFACTORING: definizione del metodo getPosizioneStrega">
+      <option name="closed" value="true" />
+      <created>1794565015861</created>
+      <option name="number" value="00678" />
+      <option name="presentableId" value="LOCAL-00678" />
+      <option name="project" value="LOCAL" />
+      <updated>1794565015863</updated>
+    </task>
+    <option name="localTasksCounter" value="679" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +662,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo gestioneVampirizzazioneFallita" />
     <MESSAGE value="VERDE: testAvvisoErroreRomeo riuscito" />
     <MESSAGE value="ROSSO: testAvvisoErroreStrega non riuscito" />
     <MESSAGE value="VERDE: testAvvisoErroreStrega riuscito" />
@@ -688,6 +686,7 @@
     <MESSAGE value="VERDE: testNoStrega riuscito" />
     <MESSAGE value="VERDE DIRETTO: testStrega riuscito" />
     <MESSAGE value="VERDE DIRETTO: testStregaPresente riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testStregaPresente riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getPosizioneStrega" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPosizioneStrega" />
   </component>
 </project>
