@@ -65,6 +65,8 @@ public final class TestRuolo
 
     @Test public void testSenzaFazione() { verificaVero(ruolo.isSenzaFazione()); }
 
+    @Test public void testStrega() { verificaFalso(ruolo.isStrega()); }
+
     private static Stream<Arguments> getEsempiPartita()
     {
         return Stream.of(Arguments.of(getPartitaGenerica(), VITTORIA), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
