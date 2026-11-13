@@ -183,19 +183,8 @@ public final class Giocatore
 
     public EsitoAttacco gildata()
     {
-        EsitoAttacco esito = ruolo.gildata();
-        if(esito == RIUSCITO || isProgenieVampiro()) esito = verificaEsitoGildata(esito);
+        EsitoAttacco esito = eseguiGildata();
         if(esito == RIUSCITO) fazione = CRIMINALI;
-        return esito;
-    }
-
-    private EsitoAttacco verificaEsitoGildata(EsitoAttacco esito)
-    {
-        switch(fazione)
-        {
-            case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
-            case VAMPIRO, NEGROMANTE -> esito = FALLITO;
-        }
         return esito;
     }
 
@@ -326,6 +315,23 @@ public final class Giocatore
     public void cambiaFazione(Fazione fazione) { this.fazione = fazione; }
 
     public boolean isTraditore() { return ruolo.isTraditore(); }
+
+    private EsitoAttacco eseguiGildata()
+    {
+        EsitoAttacco esito = ruolo.gildata();
+        if(esito == RIUSCITO || isProgenieVampiro()) esito = verificaEsitoGildata(esito);
+        return esito;
+    }
+
+    private EsitoAttacco verificaEsitoGildata(EsitoAttacco esito)
+    {
+        switch(fazione)
+        {
+            case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
+            case VAMPIRO, NEGROMANTE -> esito = FALLITO;
+        }
+        return esito;
+    }
 
     private EsitoPartita getPartitaRomeo(Partita partita)
     {
