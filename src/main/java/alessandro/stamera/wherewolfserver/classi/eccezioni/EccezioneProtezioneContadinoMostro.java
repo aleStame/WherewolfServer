@@ -8,7 +8,7 @@ public class EccezioneProtezioneContadinoMostro extends IllegalArgumentException
         super
         (
             "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + nomeContadinoMostro +
-            ").\nAvvisa Agatha della sua morte."
+            ").\nAvvisa " + nomeStrega + " della sua morte."
         );
     }
 

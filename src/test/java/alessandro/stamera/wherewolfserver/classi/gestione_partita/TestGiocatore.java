@@ -563,7 +563,7 @@ public final class TestGiocatore
     public void testSconfittaRomeo(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaEsitoPartitaRomeo(new String[][] { {"Angelo", nomeRuolo } }, SCONFITTA);
+        verificaEsitoPartitaRomeo(new String[][] { {"Angelo", nomeRuolo } });
     }
 
     @ParameterizedTest @CsvSource
@@ -840,9 +840,18 @@ public final class TestGiocatore
         verificaFalso(isLupoExNonna());
     }
 
-    @Test public void testSegnalazioneBoiaNonRiuscita()
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Eremita", "Ghoul", "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Mercante",
+            "Monaco", "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare", "Viaggiatore"
+        }
+    )
+    public void testSegnalazioneBoiaNonRiuscita(String nomeRuolo)
     {
-        cambiaRuolo("Cacciatore");
+        cambiaRuolo(nomeRuolo);
         giocatore.segnalazioneBoia();
         verificaFalso(giocatore.isSegnalatoBoia());
     }
@@ -1145,10 +1154,10 @@ public final class TestGiocatore
         verificaEsitoPartita(giocatori, esito);
     }
 
-    private void verificaEsitoPartitaRomeo(String[][] giocatori, EsitoPartita sconfitta)
+    private void verificaEsitoPartitaRomeo(String[][] giocatori)
     {
         romeizzazione();
-        verificaEsitoPartita(giocatori, sconfitta);
+        verificaEsitoPartita(giocatori, SCONFITTA);
     }
 
     private void verificaEsitoPartita(String[][] giocatori, EsitoPartita sconfitta)

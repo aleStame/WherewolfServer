@@ -282,8 +282,6 @@ public final class Partita
 
     public boolean isPazzoUcciso() { return pazzoUcciso; }
 
-    public boolean isMegeraPresente() { return vivi.isMegeraPresente(); }
-
     private void controlloViaggio() { if(isViaggioPronto()) setViaggioPartito(true); }
 
     private void controlloAngeloCustodeAmato() { if(isAmatoSenzaAngelo()) perditaProtezioniAmato(); }
@@ -655,11 +653,7 @@ public final class Partita
     {
         String nomeStrega = getNomeStrega();
         eliminaGiocatore(nomeStrega);
-        throw new IllegalArgumentException
-        (
-            "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + vivi.getNomeContadinoMostro() + ").\nAvvisa " +
-            nomeStrega + " della sua morte."
-        );
+        throw new EccezioneProtezioneContadinoMostro(nomeStrega, vivi.getNomeContadinoMostro());
     }
 
     private String getNomeStrega() { return vivi.getNomeStrega(); }
