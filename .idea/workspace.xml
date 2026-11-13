@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoAssassino riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00621" summary="REFACTORING: definizione del metodo verificaAttaccoLupiFallito">
-      <option name="closed" value="true" />
-      <created>1788270810802</created>
-      <option name="number" value="00621" />
-      <option name="presentableId" value="LOCAL-00621" />
-      <option name="project" value="LOCAL" />
-      <updated>1788270810803</updated>
     </task>
     <task id="LOCAL-00622" summary="VERDE DIRETTO: testAttaccoStregatoLupoBranco riuscito">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794503358056</updated>
     </task>
-    <option name="localTasksCounter" value="670" />
+    <task id="LOCAL-00670" summary="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito">
+      <option name="closed" value="true" />
+      <created>1794504834332</created>
+      <option name="number" value="00670" />
+      <option name="presentableId" value="LOCAL-00670" />
+      <option name="project" value="LOCAL" />
+      <updated>1794504834332</updated>
+    </task>
+    <option name="localTasksCounter" value="671" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoVampiroFallito" />
     <MESSAGE value="ROSSO: testVampirizzazioneRomeoFallita non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazioneRomeoFallita riuscito" />
     <MESSAGE value="ROSSO: testVampirizzazioneStregatoFallita non riuscito" />
@@ -688,6 +687,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo sistemaCoppiaPeccatorePosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo testAttaccoAssassinoStregato" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAssassino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito" />
   </component>
 </project>
