@@ -2099,7 +2099,13 @@ public final class TestGiocatoriVivi
         verificaMortePostGildata(nome);
     }
 
-    private void verificaMortePostGildata(String nome) { verificaEsitoGildata(nome, MORTO); }
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildataAmato(String nomeRuolo)
+    {
+        String nome = "Vittoria";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Sandra", "Capo gilda" }, { "Pedro", "Angelo custode" } });
+        segnalazioneAngeloCustode(nome);
+        verificaMortePostGildata(nome);
+    }
 
     @ParameterizedTest @CsvSource({ "Nosferatu", "Vampiro" })
     public void testTrasferimentoAttaccoAssassinoGhoul(String nomeRuolo)
@@ -2108,6 +2114,8 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Aldo", "Ghoul" }, { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoAssassino(nomeVittima, GHOUL_MORTO);
     }
+
+    private void verificaMortePostGildata(String nome) { verificaEsitoGildata(nome, MORTO); }
 
     private boolean isStregaPresente() { return giocatori.isStregaPresente(); }
 

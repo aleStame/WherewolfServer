@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testMortePostGildataStregato riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaMortePostGildata">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00651" summary="VERDE: testAvvisoErroreStrega riuscito">
-      <option name="closed" value="true" />
-      <created>1788524132074</created>
-      <option name="number" value="00651" />
-      <option name="presentableId" value="LOCAL-00651" />
-      <option name="project" value="LOCAL" />
-      <updated>1788524132074</updated>
     </task>
     <task id="LOCAL-00652" summary="REFACTORING: definizione del metodo verificaMessaggioErrore">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794610177320</updated>
     </task>
-    <option name="localTasksCounter" value="700" />
+    <task id="LOCAL-00700" summary="REFACTORING: definizione del metodo verificaMortePostGildata">
+      <option name="closed" value="true" />
+      <created>1794610739705</created>
+      <option name="number" value="00700" />
+      <option name="presentableId" value="LOCAL-00700" />
+      <option name="project" value="LOCAL" />
+      <updated>1794610739706</updated>
+    </task>
+    <option name="localTasksCounter" value="701" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito" />
     <MESSAGE value="ROSSO: testNoStrega non riuscito" />
     <MESSAGE value="VERDE: testNoStrega riuscito" />
     <MESSAGE value="VERDE DIRETTO: testStrega riuscito" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE DIRETTO: testMortePostGildata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMortePostGildataRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMortePostGildataStregato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testMortePostGildataStregato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaMortePostGildata" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaMortePostGildata" />
   </component>
 </project>
