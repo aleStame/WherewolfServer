@@ -1079,7 +1079,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Claudia";
         aggiungiGiocatore(nome, nomeRuolo);
-        verificaFalso(giocatori.isStrega(nome));
+        verificaFalso(isStrega(nome));
         verificaFalso(giocatori.isStregaPresente());
     }
 
@@ -1087,10 +1087,12 @@ public final class TestGiocatoriVivi
     {
         String nome = "Antonio";
         aggiungiGiocatore(nome, "Strega");
-        verificaVero(giocatori.isStrega(nome));
+        verificaVero(isStrega(nome));
         verificaVero(giocatori.isStregaPresente());
         verificaStringa(giocatori.getNomeStrega(), nome);
     }
+
+    private boolean isStrega(String nome) { return giocatori.isStrega(nome); }
 
     @Test public void testMaledizioneMegeraNonRomeizzata()
     {
