@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo protezioneContadinoMostroStrega">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getNomeStrega">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneProtezioneContadinoMostro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneProtezioneContadinoMostro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,7 @@
       <list>
         <option value="Class" />
         <option value="Exception" />
+        <option value="Enum" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -251,14 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00634" summary="ROSSO: testVampirizzazioneFallita non riuscito">
-      <option name="closed" value="true" />
-      <created>1788346688761</created>
-      <option name="number" value="00634" />
-      <option name="presentableId" value="LOCAL-00634" />
-      <option name="project" value="LOCAL" />
-      <updated>1788346688762</updated>
     </task>
     <task id="LOCAL-00635" summary="VERDE: testVampirizzazioneFallita riuscito">
       <option name="closed" value="true" />
@@ -644,7 +639,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794580616068</updated>
     </task>
-    <option name="localTasksCounter" value="683" />
+    <task id="LOCAL-00683" summary="REFACTORING: definizione del metodo getNomeStrega">
+      <option name="closed" value="true" />
+      <created>1794580960949</created>
+      <option name="number" value="00683" />
+      <option name="presentableId" value="LOCAL-00683" />
+      <option name="project" value="LOCAL" />
+      <updated>1794580960950</updated>
+    </task>
+    <option name="localTasksCounter" value="684" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaMessaggioErrore" />
     <MESSAGE value="ROSSO: testAvvisoErrore non riuscito" />
     <MESSAGE value="Commit workspace" />
     <MESSAGE value="VERDE DIRETTO: testAngeloCustodeAccusatoNonPresente riuscito" />
@@ -687,6 +689,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isStrega" />
     <MESSAGE value="REFACTORING: definizione del metodo isStregaPresente" />
     <MESSAGE value="REFACTORING: definizione del metodo protezioneContadinoMostroStrega" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo protezioneContadinoMostroStrega" />
+    <MESSAGE value="REFACTORING: definizione del metodo getNomeStrega" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getNomeStrega" />
   </component>
 </project>
