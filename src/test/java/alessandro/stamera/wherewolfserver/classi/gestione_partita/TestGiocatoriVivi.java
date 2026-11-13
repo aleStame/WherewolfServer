@@ -1080,7 +1080,7 @@ public final class TestGiocatoriVivi
         String nome = "Claudia";
         aggiungiGiocatore(nome, nomeRuolo);
         verificaFalso(isStrega(nome));
-        verificaFalso(giocatori.isStregaPresente());
+        verificaFalso(isStregaPresente());
     }
 
     @Test public void testStregaPresente()
@@ -1088,11 +1088,9 @@ public final class TestGiocatoriVivi
         String nome = "Antonio";
         aggiungiGiocatore(nome, "Strega");
         verificaVero(isStrega(nome));
-        verificaVero(giocatori.isStregaPresente());
+        verificaVero(isStregaPresente());
         verificaStringa(giocatori.getNomeStrega(), nome);
     }
-
-    private boolean isStrega(String nome) { return giocatori.isStrega(nome); }
 
     @Test public void testMaledizioneMegeraNonRomeizzata()
     {
@@ -2085,6 +2083,10 @@ public final class TestGiocatoriVivi
         inizializzaGiocatori(new String[][] { { "Aldo", "Ghoul" }, { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoAssassino(nomeVittima, GHOUL_MORTO);
     }
+
+    private boolean isStregaPresente() { return giocatori.isStregaPresente(); }
+
+    private boolean isStrega(String nome) { return giocatori.isStrega(nome); }
 
     private void verificaRomeoBeccato(String tipoLupo, String nomeVittima)
     {
