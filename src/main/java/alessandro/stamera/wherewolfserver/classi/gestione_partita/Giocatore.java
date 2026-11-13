@@ -184,12 +184,18 @@ public final class Giocatore
     public EsitoAttacco gildata()
     {
         EsitoAttacco esito = ruolo.gildata();
+        if(esito == RIUSCITO || isProgenieVampiro()) esito = verificaEsitoGildata(esito);
+        if(esito == RIUSCITO) fazione = CRIMINALI;
+        return esito;
+    }
+
+    private EsitoAttacco verificaEsitoGildata(EsitoAttacco esito)
+    {
         switch(fazione)
         {
             case LUPO_BRANCO, LUPO_SOLITARIO -> esito = MORTO;
             case VAMPIRO, NEGROMANTE -> esito = FALLITO;
         }
-        if(esito == RIUSCITO) fazione = CRIMINALI;
         return esito;
     }
 
