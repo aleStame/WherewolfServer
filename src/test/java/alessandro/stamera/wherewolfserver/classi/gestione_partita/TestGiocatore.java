@@ -1107,6 +1107,12 @@ public final class TestGiocatore
         verificaPartitaNosferatu(nomeRuolo, giocatori, nomeNosferatu, SCONFITTA);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testMortePostGildata(String nomeRuolo)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaEsitoGildata(MORTO);
+    }
+
     private void verificaPartitaNosferatu
     (
         String nomeRuolo, String[][] giocatori, String nomeEliminato, EsitoPartita esito

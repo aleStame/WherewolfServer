@@ -612,8 +612,6 @@ public final class GiocatoriVivi extends Giocatori
 
     private void perditaProtezioniNonna() { perdiProtezioni(getNomeNonna()); }
 
-    private Giocatore getNonna() { return getGiocatore(getPosizioneNonna()); }
-
     private Ruolo[] getCreatureOmbra()
     {
         List<Ruolo> ruoli = new ArrayList<>();
