@@ -291,6 +291,8 @@ public class Ruolo
 
     public boolean isSenzaFazione() { return getFazione() == NESSUNA; }
 
+    public boolean isStrega() { return false; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean controlloTrattiOscuri()

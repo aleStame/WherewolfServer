@@ -395,9 +395,14 @@ public final class GiocatoriVivi extends Giocatori
         return trovato;
     }
 
-    public boolean isStregaPresente() { return true; }
+    public boolean isStregaPresente()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isStrega(getNomeGiocatore(i))) posizione = i;
+        return posizione != NON_TROVATO;
+    }
 
-    public boolean isStrega(String nome) { return true; }
+    public boolean isStrega(String nome) { return getGiocatore(nome).isStrega(); }
 
     private void sistemaCoppiaPeccatorePosseduto() { if(isCoppiaPeccatorePosseduto()) annullaFazionePeccatore(); }
 

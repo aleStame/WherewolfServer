@@ -168,6 +168,8 @@ public final class Giocatore
 
     public boolean isEremita() { return ruolo.isEremita(); }
 
+    public boolean isStrega() { return ruolo.isStrega(); }
+
     private EsitoAttacco gestioneAttaccoVittimaProtetta()
     {
         EsitoAttacco esito = FALLITO;
