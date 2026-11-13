@@ -30,4 +30,6 @@ public final class TestStrega
 
     @Test public void testControlloMedium() { assertThat(ruolo.controlloMedium()).isEqualTo(BIANCA); }
 
+    @Test public void testStrega() { assertThat(ruolo.isStrega()).isTrue(); }
+
 }

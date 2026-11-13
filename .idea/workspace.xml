@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testNoStrega non riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Strega.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Strega.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testStrega riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -256,22 +249,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00624" summary="REFACTORING: definizione del metodop verificaAttaccoLupiRiuscito">
-      <option name="closed" value="true" />
-      <created>1788272007818</created>
-      <option name="number" value="00624" />
-      <option name="presentableId" value="LOCAL-00624" />
-      <option name="project" value="LOCAL" />
-      <updated>1788272007818</updated>
-    </task>
-    <task id="LOCAL-00625" summary="VERDE DIRETTO: testAttaccoRomeoLupoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1788272735581</created>
-      <option name="number" value="00625" />
-      <option name="presentableId" value="LOCAL-00625" />
-      <option name="project" value="LOCAL" />
-      <updated>1788272735581</updated>
     </task>
     <task id="LOCAL-00626" summary="REFACTORING: definizione del metodo verificaAttaccoRomeoFallito">
       <option name="closed" value="true" />
@@ -649,7 +626,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794562712913</updated>
     </task>
-    <option name="localTasksCounter" value="673" />
+    <task id="LOCAL-00673" summary="VERDE: testNoStrega riuscito">
+      <option name="closed" value="true" />
+      <created>1794563373894</created>
+      <option name="number" value="00673" />
+      <option name="presentableId" value="LOCAL-00673" />
+      <option name="project" value="LOCAL" />
+      <updated>1794563373894</updated>
+    </task>
+    <task id="LOCAL-00674" summary="VERDE DIRETTO: testStrega riuscito">
+      <option name="closed" value="true" />
+      <created>1794563634270</created>
+      <option name="number" value="00674" />
+      <option name="presentableId" value="LOCAL-00674" />
+      <option name="project" value="LOCAL" />
+      <updated>1794563634270</updated>
+    </task>
+    <option name="localTasksCounter" value="675" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,8 +660,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testVampirizzazioneRomeoFallita riuscito" />
-    <MESSAGE value="ROSSO: testVampirizzazioneStregatoFallita non riuscito" />
     <MESSAGE value="VERDE: testVampirizzazioneStregatoFallita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo gestioneVampirizzazioneFallita" />
     <MESSAGE value="VERDE: testAvvisoErroreRomeo riuscito" />
@@ -692,6 +683,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito" />
     <MESSAGE value="ROSSO: testNoStrega non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testNoStrega non riuscito" />
+    <MESSAGE value="VERDE: testNoStrega riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testStrega riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testStrega riuscito" />
   </component>
 </project>
