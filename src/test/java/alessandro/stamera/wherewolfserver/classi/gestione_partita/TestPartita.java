@@ -910,8 +910,10 @@ public final class TestPartita
         verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
     }
 
-    @ParameterizedTest
-    @CsvSource( { "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    @ParameterizedTest @CsvSource
+    (
+        { "Altra guardia", "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
+    )
     public void testCriminalizzazioneCapoGildaAmatoMorto(String nomeRuolo)
     {
         String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
