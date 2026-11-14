@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGuarigione riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGuarigione non riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,14 +250,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00660" summary="REFACTORING: definizione del metodo isGhoulVittima">
-      <option name="closed" value="true" />
-      <created>1794498626152</created>
-      <option name="number" value="00660" />
-      <option name="presentableId" value="LOCAL-00660" />
-      <option name="project" value="LOCAL" />
-      <updated>1794498626152</updated>
     </task>
     <task id="LOCAL-00661" summary="REFACTORING: definizione del metodo isCoppiaPeccatorePosseduto">
       <option name="closed" value="true" />
@@ -647,7 +635,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794653050157</updated>
     </task>
-    <option name="localTasksCounter" value="709" />
+    <task id="LOCAL-00709" summary="ROSSO: testGuarigione non riuscito">
+      <option name="closed" value="true" />
+      <created>1794654705615</created>
+      <option name="number" value="00709" />
+      <option name="presentableId" value="LOCAL-00709" />
+      <option name="project" value="LOCAL" />
+      <updated>1794654705615</updated>
+    </task>
+    <option name="localTasksCounter" value="710" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,8 +684,8 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaAmatoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito" />
-    <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testGuarigione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGuarigione riuscito" />
+    <MESSAGE value="ROSSO: testGuarigione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGuarigione non riuscito" />
   </component>
 </project>
