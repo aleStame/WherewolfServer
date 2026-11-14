@@ -28,13 +28,7 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public String getNomePosseduto() { return getNomeGiocatore(getPosizionePosseduto()); }
 
-    public EsitoGuarigione guarigione(String nome)
-    {
-        Giocatore giocatore = getGiocatore(nome);
-        EsitoGuarigione esito = giocatore.guarigione();
-        if(giocatore.isMegera()) esito = GUARITORE_MALEDETTO;
-        return esito;
-    }
+    public EsitoGuarigione guarigione(String nome) { return getGiocatore(nome).guarigione(); }
 
     private int getPosizionePosseduto()
     {

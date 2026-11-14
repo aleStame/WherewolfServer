@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMaledizioneGuaritore riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSo: testGuarigione non riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestMegera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestMegera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Megera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Megera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/TestContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/TestContadinoMostro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,14 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00668" summary="REFACTORING: definizione del metodo testAttaccoAssassinoStregato">
-      <option name="closed" value="true" />
-      <created>1794503117415</created>
-      <option name="number" value="00668" />
-      <option name="presentableId" value="LOCAL-00668" />
-      <option name="project" value="LOCAL" />
-      <updated>1794503117418</updated>
     </task>
     <task id="LOCAL-00669" summary="VERDE DIRETTO: testAttaccoAssassino riuscito">
       <option name="closed" value="true" />
@@ -647,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794679809785</updated>
     </task>
-    <option name="localTasksCounter" value="717" />
+    <task id="LOCAL-00717" summary="ROSSo: testGuarigione non riuscito">
+      <option name="closed" value="true" />
+      <created>1794689502469</created>
+      <option name="number" value="00717" />
+      <option name="presentableId" value="LOCAL-00717" />
+      <option name="project" value="LOCAL" />
+      <updated>1794689502469</updated>
+    </task>
+    <option name="localTasksCounter" value="718" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
@@ -690,6 +691,7 @@
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMaledizioneGuaritore riuscito" />
+    <MESSAGE value="ROSSo: testGuarigione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSo: testGuarigione non riuscito" />
   </component>
 </project>

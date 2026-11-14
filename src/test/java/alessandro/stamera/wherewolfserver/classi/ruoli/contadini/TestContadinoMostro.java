@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione.GUARITORE_MORTO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino.MOSTRO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.NON_MORTO;
@@ -54,6 +55,8 @@ public final class TestContadinoMostro
     @Test public void testControlloMedium() { verificaAura(ruolo.controlloMedium(), BIANCA); }
 
     @Test public void testControlloVeggente() { verificaAuraNeraVeggente(); }
+
+    //@Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(GUARITORE_MORTO); }
 
     private void verificaMaledetto()
     {
