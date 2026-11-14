@@ -56,7 +56,7 @@ public final class TestContadinoMostro
 
     @Test public void testControlloVeggente() { verificaAuraNeraVeggente(); }
 
-    //@Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(GUARITORE_MORTO); }
+    @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(GUARITORE_MORTO); }
 
     private void verificaMaledetto()
     {
