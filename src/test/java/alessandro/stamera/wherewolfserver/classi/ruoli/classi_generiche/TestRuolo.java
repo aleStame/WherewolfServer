@@ -67,7 +67,7 @@ public final class TestRuolo
 
     @Test public void testStrega() { verificaFalso(ruolo.isStrega()); }
 
-    @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(RIUSCITO); }
+    @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(EsitoGuarigione.RIUSCITO); }
 
     private static Stream<Arguments> getEsempiPartita()
     {
