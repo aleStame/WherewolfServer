@@ -4,6 +4,8 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
 
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione.GUARITORE_MALEDETTO;
+
 public final class GiocatoriMortiNotte extends Giocatori
 {
 
@@ -26,7 +28,13 @@ public final class GiocatoriMortiNotte extends Giocatori
 
     public String getNomePosseduto() { return getNomeGiocatore(getPosizionePosseduto()); }
 
-    public EsitoGuarigione guarigione(String nome) { return getGiocatore(nome).guarigione(); }
+    public EsitoGuarigione guarigione(String nome)
+    {
+        Giocatore giocatore = getGiocatore(nome);
+        EsitoGuarigione esito = giocatore.guarigione();
+        if(giocatore.isMegera()) esito = GUARITORE_MALEDETTO;
+        return esito;
+    }
 
     private int getPosizionePosseduto()
     {
