@@ -293,6 +293,8 @@ public class Ruolo
 
     public boolean isStrega() { return false; }
 
+    public EsitoGuarigione guarigione() { return null; }
+
     private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean controlloTrattiOscuri()
