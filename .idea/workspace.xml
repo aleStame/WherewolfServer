@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGuarigione riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGuarigioneContadinoMostro non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoMostro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00670" summary="VERDE DIRETTO: testAttaccoAssassinoStregato riuscito">
-      <option name="closed" value="true" />
-      <created>1794504834332</created>
-      <option name="number" value="00670" />
-      <option name="presentableId" value="LOCAL-00670" />
-      <option name="project" value="LOCAL" />
-      <updated>1794504834332</updated>
     </task>
     <task id="LOCAL-00671" summary="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794692143730</updated>
     </task>
-    <option name="localTasksCounter" value="719" />
+    <task id="LOCAL-00719" summary="ROSSO: testGuarigioneContadinoMostro non riuscito">
+      <option name="closed" value="true" />
+      <created>1794699456649</created>
+      <option name="number" value="00719" />
+      <option name="presentableId" value="LOCAL-00719" />
+      <option name="project" value="LOCAL" />
+      <updated>1794699456659</updated>
+    </task>
+    <option name="localTasksCounter" value="720" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoiaNonRiuscita riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBorgomastro riuscito" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
     <MESSAGE value="ROSSo: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testGuarigione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGuarigione riuscito" />
+    <MESSAGE value="ROSSO: testGuarigioneContadinoMostro non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGuarigioneContadinoMostro non riuscito" />
   </component>
 </project>
