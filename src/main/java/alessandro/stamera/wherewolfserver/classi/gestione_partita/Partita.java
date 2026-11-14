@@ -249,10 +249,15 @@ public final class Partita
                 aggiungiGiocatoreVivo(nome, getGiocatore(nome));
                 mortiNotte.eliminaGiocatore(nome);
             }
+            case GUARITORE_MALEDETTO ->
+            {
+                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
+                mortiNotte.eliminaGiocatore(nome);
+                maledizioneGuaritore();
+            }
             default ->
             {
-                if(vivi.isMegera(nome)) maledizioneGuaritore();
-                else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
+                if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
                 if(vivi.isViaggiatore(nome)) controlloViaggio();
             }
         }
