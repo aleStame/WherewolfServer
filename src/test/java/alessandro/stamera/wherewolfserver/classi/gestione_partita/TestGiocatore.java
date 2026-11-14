@@ -1113,6 +1113,13 @@ public final class TestGiocatore
         verificaEsitoGildata(MORTO);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
+    public void testGuarigione(String nome, EsitoGuarigione esito)
+    {
+        cambiaRuolo(nome);
+        assertThat(giocatore.guarigione()).isEqualTo(esito);
+    }
+
     private void verificaPartitaNosferatu
     (
         String nomeRuolo, String[][] giocatori, String nomeEliminato, EsitoPartita esito

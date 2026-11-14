@@ -460,6 +460,8 @@ public final class Giocatore
 
     public boolean isViaggiatore() { return ruolo.isViaggiatore(); }
 
+    public EsitoGuarigione guarigione() { return null; }
+
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
         this.segnalatoInquisitore = segnalatoInquisitore;

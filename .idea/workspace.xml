@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGuarigione riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,22 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00658" summary="VERDE DIRETTO: testAngeloCustodeAccusatoPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1794497497483</created>
-      <option name="number" value="00658" />
-      <option name="presentableId" value="LOCAL-00658" />
-      <option name="project" value="LOCAL" />
-      <updated>1794497497515</updated>
-    </task>
-    <task id="LOCAL-00659" summary="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1794498088824</created>
-      <option name="number" value="00659" />
-      <option name="presentableId" value="LOCAL-00659" />
-      <option name="project" value="LOCAL" />
-      <updated>1794498088825</updated>
     </task>
     <task id="LOCAL-00660" summary="REFACTORING: definizione del metodo isGhoulVittima">
       <option name="closed" value="true" />
@@ -648,7 +631,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794651987937</updated>
     </task>
-    <option name="localTasksCounter" value="707" />
+    <task id="LOCAL-00707" summary="ROSSO: testGuarigione non riuscito">
+      <option name="closed" value="true" />
+      <created>1794652664377</created>
+      <option name="number" value="00707" />
+      <option name="presentableId" value="LOCAL-00707" />
+      <option name="project" value="LOCAL" />
+      <updated>1794652664377</updated>
+    </task>
+    <task id="LOCAL-00708" summary="VERDE: testGuarigione riuscito">
+      <option name="closed" value="true" />
+      <created>1794653050156</created>
+      <option name="number" value="00708" />
+      <option name="presentableId" value="LOCAL-00708" />
+      <option name="project" value="LOCAL" />
+      <updated>1794653050157</updated>
+    </task>
+    <option name="localTasksCounter" value="709" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,8 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isStregaPresente" />
-    <MESSAGE value="REFACTORING: definizione del metodo protezioneContadinoMostroStrega" />
     <MESSAGE value="REFACTORING: definizione del metodo getNomeStrega" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
@@ -691,6 +688,8 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaAmatoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito" />
+    <MESSAGE value="ROSSO: testGuarigione non riuscito" />
+    <MESSAGE value="VERDE: testGuarigione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGuarigione riuscito" />
   </component>
 </project>
