@@ -242,11 +242,20 @@ public final class Partita
 
     public void guarisci(String nome)
     {
-        aggiungiGiocatoreVivo(nome, getGiocatore(nome));
-        mortiNotte.eliminaGiocatore(nome);
-        if(vivi.isMegera(nome)) maledizioneGuaritore();
-        else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
-        if(vivi.isViaggiatore(nome)) controlloViaggio();
+        switch(mortiNotte.guarigione(nome))
+        {
+            case RIUSCITO ->
+            {
+                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
+                mortiNotte.eliminaGiocatore(nome);
+            }
+            default ->
+            {
+                if(vivi.isMegera(nome)) maledizioneGuaritore();
+                else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
+                if(vivi.isViaggiatore(nome)) controlloViaggio();
+            }
+        }
     }
 
     public void incrementaVotiContadinoMostro(String nome)
