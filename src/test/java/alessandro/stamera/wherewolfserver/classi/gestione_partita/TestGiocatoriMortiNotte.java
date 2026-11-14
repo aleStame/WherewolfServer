@@ -110,7 +110,8 @@ public final class TestGiocatoriMortiNotte
         assertThat(giocatori.getNomePosseduto()).isEqualTo(nome);
     }
 
-    @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO", "Megera, GUARITORE_MALEDETTO" })
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO", "Contadino mostro, GUARITORE_MORTO", "Megera, GUARITORE_MALEDETTO" })
     public void testGuarigione(String nomeRuolo, EsitoGuarigione esito)
     {
         String nome = "Paolo";
