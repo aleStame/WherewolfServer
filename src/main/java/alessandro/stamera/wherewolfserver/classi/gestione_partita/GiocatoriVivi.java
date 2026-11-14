@@ -387,6 +387,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeStrega() { return getNomeGiocatore(getPosizioneStrega()); }
 
+    public EsitoGuarigione guarigione(String nome) { return null; }
+
     private EsitoAttacco gestioneFallimentoAttacco(Ruolo attaccante, String nome)
     {
         EsitoAttacco esito = FALLITO;

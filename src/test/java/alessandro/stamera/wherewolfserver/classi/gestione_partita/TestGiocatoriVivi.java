@@ -2115,6 +2115,14 @@ public final class TestGiocatoriVivi
         verificaAttaccoAssassino(nomeVittima, GHOUL_MORTO);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
+    public void testGuarigione(String nomeRuolo, EsitoGuarigione esito)
+    {
+        String nome = "Paolo";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Jasmine", "Guaritore" } });
+        assertThat(giocatori.guarigione(nome)).isEqualTo(esito);
+    }
+
     private void verificaMortePostGildata(String nome) { verificaEsitoGildata(nome, MORTO); }
 
     private boolean isStregaPresente() { return giocatori.isStregaPresente(); }

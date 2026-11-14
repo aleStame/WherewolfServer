@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGuarigione non riuscito" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGuarigione riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00661" summary="REFACTORING: definizione del metodo isCoppiaPeccatorePosseduto">
-      <option name="closed" value="true" />
-      <created>1794499027012</created>
-      <option name="number" value="00661" />
-      <option name="presentableId" value="LOCAL-00661" />
-      <option name="project" value="LOCAL" />
-      <updated>1794499027012</updated>
     </task>
     <task id="LOCAL-00662" summary="REFACTORING: definizione del metodo proteggiTraditoreDaiLupi">
       <option name="closed" value="true" />
@@ -643,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794654705615</updated>
     </task>
-    <option name="localTasksCounter" value="710" />
+    <task id="LOCAL-00710" summary="VERDE: testGuarigione riuscito">
+      <option name="closed" value="true" />
+      <created>1794655280944</created>
+      <option name="number" value="00710" />
+      <option name="presentableId" value="LOCAL-00710" />
+      <option name="project" value="LOCAL" />
+      <updated>1794655280944</updated>
+    </task>
+    <option name="localTasksCounter" value="711" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,8 +687,8 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaAmatoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito" />
-    <MESSAGE value="VERDE: testGuarigione riuscito" />
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGuarigione non riuscito" />
+    <MESSAGE value="VERDE: testGuarigione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGuarigione riuscito" />
   </component>
 </project>
