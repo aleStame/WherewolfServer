@@ -1,6 +1,7 @@
 package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,7 +44,7 @@ public final class TestGiocatoriMortiNotte
     @Test public void testLupo()
     {
         String[][] giocatori = new String[][] { { "Katia", "Nosferatu" }, { "Valeria", "Giovane lupo" } };
-        aggiungiGiocatori(giocatori);
+        inizializzaGiocatori(giocatori);
         verificaFalso(isLupo(giocatori[0][0]));
         verificaVero(isLupo(giocatori[1][0]));
     }
@@ -51,7 +52,7 @@ public final class TestGiocatoriMortiNotte
     @Test public void testPazzo()
     {
         String[][] giocatori = new String[][] { { "Pablo", "Templare" }, { "Pedro", "Pazzo" } };
-        aggiungiGiocatori(giocatori);
+        inizializzaGiocatori(giocatori);
         verificaFalso(isPazzo(giocatori[0][0]));
         verificaVero(isPazzo(giocatori[1][0]));
     }
@@ -109,9 +110,17 @@ public final class TestGiocatoriMortiNotte
         assertThat(giocatori.getNomePosseduto()).isEqualTo(nome);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
+    public void testGuarigione(String nomeRuolo, EsitoGuarigione esito)
+    {
+        String nome = "Paolo";
+        inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { "Jasmine", "Guaritore" } });
+        assertThat(giocatori.guarigione(nome)).isEqualTo(esito);
+    }
+
     private boolean isPossedutoPresente() { return giocatori.isPossedutoPresente(); }
 
-    private void aggiungiGiocatori(String[][] giocatori)
+    private void inizializzaGiocatori(String[][] giocatori)
     {
         for(String[] giocatore : giocatori) aggiungiGiocatore(giocatore[0], giocatore[1]);
     }
