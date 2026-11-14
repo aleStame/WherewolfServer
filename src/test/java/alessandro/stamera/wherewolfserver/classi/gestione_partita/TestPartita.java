@@ -924,6 +924,18 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource
     (
+        { "Altra guardia", "Capo branco", "Contadino mostro", "Giovane lupo", "Guardia", "Lupo del branco", "Lupo reietto", "Lupo solitario" }
+    )
+    public void testCriminalizzazioneCapoGildaRomeoMorto(String nomeRuolo)
+    {
+        String nomeVittima = "Arturo", nomeCapoGilda = "Raffaele";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { nomeCapoGilda, "Capo gilda" }, { "Maria", "Giulietta" } });
+        romeizzazione(nomeCapoGilda);
+        verificaMorteCapoGilda(nomeVittima, "Impossibile criminalizzare Arturo.\nIl Capo gilda (Raffaele) muore.", nomeCapoGilda);
+    }
+
+    @ParameterizedTest @CsvSource
+    (
         {
             "Capo branco, 'Il Contadino discendente dei lupi (Arturo) è stato attaccato dai Lupi del branco, pertanto adesso fa parte della " +
             "loro fazione.\nSveglia Arturo e fagli riconoscere gli altri lupi.'",
