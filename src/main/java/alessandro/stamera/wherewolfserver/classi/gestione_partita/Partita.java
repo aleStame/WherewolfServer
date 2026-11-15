@@ -242,31 +242,11 @@ public final class Partita
 
     public void guarisci(String nome)
     {
-        switch(mortiNotte.guarigione(nome))
+        switch(guarigione(nome))
         {
-            case RIUSCITO ->
-            {
-                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
-                mortiNotte.eliminaGiocatore(nome);
-            }
-            case GUARITORE_MALEDETTO ->
-            {
-                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
-                mortiNotte.eliminaGiocatore(nome);
-                maledizioneGuaritore();
-            }
-            case GUARITORE_MORTO ->
-            {
-                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
-                mortiNotte.eliminaGiocatore(nome);
-                eliminaGuaritore();
-            }
-            case VIAGGIATORE_GUARITO ->
-            {
-                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
-                mortiNotte.eliminaGiocatore(nome);
-                controlloViaggio();
-            }
+            case GUARITORE_MALEDETTO -> maledizioneGuaritore();
+            case GUARITORE_MORTO -> eliminaGuaritore();
+            case VIAGGIATORE_GUARITO -> controlloViaggio();
         }
     }
 
@@ -302,6 +282,14 @@ public final class Partita
     }
 
     public boolean isPazzoUcciso() { return pazzoUcciso; }
+
+    private EsitoGuarigione guarigione(String nome)
+    {
+        EsitoGuarigione esito = mortiNotte.guarigione(nome);
+        aggiungiGiocatoreVivo(nome, getGiocatore(nome));
+        mortiNotte.eliminaGiocatore(nome);
+        return esito;
+    }
 
     private void controlloViaggio() { if(isViaggioPronto()) setViaggioPartito(true); }
 
