@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGuarigioneContadinoMostro non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoMostro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/contadini/ContadinoMostro.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testGuarigione riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestViaggiatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestViaggiatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,22 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00671" summary="VERDE DIRETTO: testAttaccoAssassinoAmato riuscito">
-      <option name="closed" value="true" />
-      <created>1794534004103</created>
-      <option name="number" value="00671" />
-      <option name="presentableId" value="LOCAL-00671" />
-      <option name="project" value="LOCAL" />
-      <updated>1794534004106</updated>
-    </task>
-    <task id="LOCAL-00672" summary="ROSSO: testNoStrega non riuscito">
-      <option name="closed" value="true" />
-      <created>1794562712913</created>
-      <option name="number" value="00672" />
-      <option name="presentableId" value="LOCAL-00672" />
-      <option name="project" value="LOCAL" />
-      <updated>1794562712913</updated>
     </task>
     <task id="LOCAL-00673" summary="VERDE: testNoStrega riuscito">
       <option name="closed" value="true" />
@@ -645,7 +631,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794699456659</updated>
     </task>
-    <option name="localTasksCounter" value="720" />
+    <task id="LOCAL-00720" summary="VERDE: testGuarigioneContadinoMostro riuscito">
+      <option name="closed" value="true" />
+      <created>1794699765236</created>
+      <option name="number" value="00720" />
+      <option name="presentableId" value="LOCAL-00720" />
+      <option name="project" value="LOCAL" />
+      <updated>1794699765236</updated>
+    </task>
+    <task id="LOCAL-00721" summary="VERDE DIRETTO: testGuarigione riuscito">
+      <option name="closed" value="true" />
+      <created>1794700010291</created>
+      <option name="number" value="00721" />
+      <option name="presentableId" value="LOCAL-00721" />
+      <option name="project" value="LOCAL" />
+      <updated>1794700010292</updated>
+    </task>
+    <option name="localTasksCounter" value="722" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testSegnalazioneBoia riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPotereBorgomastro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo perdiProtezioni" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
@@ -688,6 +688,8 @@
     <MESSAGE value="ROSSo: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testGuarigione riuscito" />
     <MESSAGE value="ROSSO: testGuarigioneContadinoMostro non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGuarigioneContadinoMostro non riuscito" />
+    <MESSAGE value="VERDE: testGuarigioneContadinoMostro riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGuarigione riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGuarigione riuscito" />
   </component>
 </project>

@@ -255,11 +255,13 @@ public final class Partita
                 mortiNotte.eliminaGiocatore(nome);
                 maledizioneGuaritore();
             }
-            default ->
+            case GUARITORE_MORTO ->
             {
-                if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
-                if(vivi.isViaggiatore(nome)) controlloViaggio();
+                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
+                mortiNotte.eliminaGiocatore(nome);
+                eliminaGuaritore();
             }
+            default -> { if(vivi.isViaggiatore(nome)) controlloViaggio(); }
         }
     }
 
