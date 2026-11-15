@@ -1120,6 +1120,13 @@ public final class TestGiocatore
         assertThat(giocatore.guarigione()).isEqualTo(esito);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
+    public void testCapoBranco(String nomeRuolo, EsitoAttacco esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaAttaccoLupi("Capo branco", esito);
+    }
+
     private void verificaPartitaNosferatu
     (
         String nomeRuolo, String[][] giocatori, String nomeEliminato, EsitoPartita esito

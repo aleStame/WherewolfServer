@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testGuarigione riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo guarigione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,14 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00675" summary="VERDE DIRETTO: testStrega riuscito">
-      <option name="closed" value="true" />
-      <created>1794563940547</created>
-      <option name="number" value="00675" />
-      <option name="presentableId" value="LOCAL-00675" />
-      <option name="project" value="LOCAL" />
-      <updated>1794563940547</updated>
     </task>
     <task id="LOCAL-00676" summary="VERDE DIRETTO: testStregaPresente riuscito">
       <option name="closed" value="true" />
@@ -646,7 +639,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794701682286</updated>
     </task>
-    <option name="localTasksCounter" value="724" />
+    <task id="LOCAL-00724" summary="REFACTORING: definizione del metodo guarigione">
+      <option name="closed" value="true" />
+      <created>1794704277703</created>
+      <option name="number" value="00724" />
+      <option name="presentableId" value="LOCAL-00724" />
+      <option name="project" value="LOCAL" />
+      <updated>1794704277705</updated>
+    </task>
+    <option name="localTasksCounter" value="725" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testPotereBorgomastro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo perdiProtezioni" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
@@ -689,6 +689,7 @@
     <MESSAGE value="VERDE DIRETTO: testGuarigione riuscito" />
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testGuarigione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testGuarigione riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo guarigione" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo guarigione" />
   </component>
 </project>

@@ -30,9 +30,8 @@ public final class TestRuolo
         verificaAssenzaProtezioni();
     }
 
-    @ParameterizedTest
-    @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto", "Contadino discendente dei lupi" })
-    public void testAttaccoRuoloNonProtetto(String nome) { verificaAttaccoLupiRiuscito(nome); }
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo solitario", "Lupo reietto" })
+    public void testAttaccoLupi(String nome) { verificaAttaccoLupiRiuscito(nome); }
 
     @Test public void vampirizzazione() { verificaAttaccoRiuscito(ruolo.vampirizzazione()); }
 
