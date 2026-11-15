@@ -93,11 +93,7 @@ public final class Giocatore
     public EsitoAttacco progenizzazioneNosferatu()
     {
         EsitoAttacco esito = ruolo.attaccoNosferatu();
-        if(tratti.isProtezioneNosferatuPresente())
-        {
-            esito = FALLITO;
-            if(isRomeo()) esito = ROMEO_BECCATO;
-        }
+        if(tratti.isProtezioneNosferatuPresente()) esito = getEsitoFallimentoAttacco();
         if(esito == RIUSCITO) nosferatizzazione();
         return esito;
     }
@@ -441,11 +437,7 @@ public final class Giocatore
     public EsitoAttacco attaccoNegromante()
     {
         EsitoAttacco esito = ruolo.attaccoNegromante();
-        if(tratti.isProtezioneNegromantePresente())
-        {
-            esito = FALLITO;
-            if(isRomeo()) esito = ROMEO_BECCATO;
-        }
+        if(tratti.isProtezioneNegromantePresente()) esito = getEsitoFallimentoAttacco();
         if(esito == RIUSCITO) maledizione();
         return esito;
     }
@@ -461,6 +453,13 @@ public final class Giocatore
     public boolean isViaggiatore() { return ruolo.isViaggiatore(); }
 
     public EsitoGuarigione guarigione() { return ruolo.guarigione(); }
+
+    private EsitoAttacco getEsitoFallimentoAttacco()
+    {
+        EsitoAttacco esito = FALLITO;
+        if(isRomeo()) esito = ROMEO_BECCATO;
+        return esito;
+    }
 
     private void setSegnalazioneInquisitore(boolean segnalatoInquisitore)
     {
