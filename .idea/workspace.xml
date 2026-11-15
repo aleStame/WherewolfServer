@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoBranco riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoReietto riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00678" summary="REFACTORING: definizione del metodo getPosizioneStrega">
-      <option name="closed" value="true" />
-      <created>1794565015861</created>
-      <option name="number" value="00678" />
-      <option name="presentableId" value="LOCAL-00678" />
-      <option name="project" value="LOCAL" />
-      <updated>1794565015863</updated>
     </task>
     <task id="LOCAL-00679" summary="REFACTORING: definizione del metodo isStrega">
       <option name="closed" value="true" />
@@ -646,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794779979656</updated>
     </task>
-    <option name="localTasksCounter" value="727" />
+    <task id="LOCAL-00727" summary="VERDE DIRETTO: testAttaccoLupoReietto riuscito">
+      <option name="closed" value="true" />
+      <created>1794781643273</created>
+      <option name="number" value="00727" />
+      <option name="presentableId" value="LOCAL-00727" />
+      <option name="project" value="LOCAL" />
+      <updated>1794781643274</updated>
+    </task>
+    <option name="localTasksCounter" value="728" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoGildata" />
     <MESSAGE value="REFACTORING: definizione del metodo eseguiGildata" />
@@ -689,6 +687,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo guarigione" />
     <MESSAGE value="VERDE DIRETTO: testCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
   </component>
 </project>

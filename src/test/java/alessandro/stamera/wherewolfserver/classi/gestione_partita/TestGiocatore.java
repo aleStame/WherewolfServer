@@ -1141,6 +1141,13 @@ public final class TestGiocatore
         verificaAttaccoLupi("Lupo reietto", esito);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
+    public void testAttaccoLupoSolitario(String nomeRuolo, EsitoAttacco esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaAttaccoLupi("Lupo solitario", esito);
+    }
+
     private void verificaPartitaNosferatu
     (
         String nomeRuolo, String[][] giocatori, String nomeEliminato, EsitoPartita esito
