@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo guarigione">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoLupoBranco riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,22 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00676" summary="VERDE DIRETTO: testStregaPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1794564368050</created>
-      <option name="number" value="00676" />
-      <option name="presentableId" value="LOCAL-00676" />
-      <option name="project" value="LOCAL" />
-      <updated>1794564368051</updated>
-    </task>
-    <task id="LOCAL-00677" summary="VERDE DIRETTO: testStregaPresente riuscito">
-      <option name="closed" value="true" />
-      <created>1794564748842</created>
-      <option name="number" value="00677" />
-      <option name="presentableId" value="LOCAL-00677" />
-      <option name="project" value="LOCAL" />
-      <updated>1794564748843</updated>
     </task>
     <task id="LOCAL-00678" summary="REFACTORING: definizione del metodo getPosizioneStrega">
       <option name="closed" value="true" />
@@ -647,7 +630,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794704277705</updated>
     </task>
-    <option name="localTasksCounter" value="725" />
+    <task id="LOCAL-00725" summary="VERDE DIRETTO: testCapoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1794779320712</created>
+      <option name="number" value="00725" />
+      <option name="presentableId" value="LOCAL-00725" />
+      <option name="project" value="LOCAL" />
+      <updated>1794779320716</updated>
+    </task>
+    <task id="LOCAL-00726" summary="VERDE DIRETTO: testAttaccoLupoBranco riuscito">
+      <option name="closed" value="true" />
+      <created>1794779979655</created>
+      <option name="number" value="00726" />
+      <option name="presentableId" value="LOCAL-00726" />
+      <option name="project" value="LOCAL" />
+      <updated>1794779979656</updated>
+    </task>
+    <option name="localTasksCounter" value="727" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,8 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo perdiProtezioni" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGildata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMorteGildata riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaEsitoGildata" />
@@ -690,6 +687,8 @@
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testGuarigione riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo guarigione" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo guarigione" />
+    <MESSAGE value="VERDE DIRETTO: testCapoBranco riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
   </component>
 </project>
