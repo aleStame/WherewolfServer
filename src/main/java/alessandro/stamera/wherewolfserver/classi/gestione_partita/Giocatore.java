@@ -297,8 +297,7 @@ public final class Giocatore
     public Aura controlloMedium()
     {
         Aura aura = ruolo.controlloMedium();
-        Fazione risultato = getFazione();
-        if(risultato == LUPO_BRANCO || risultato == LUPO_SOLITARIO) aura = NERA;
+        if(isFazioneLupo()) aura = NERA;
         return aura;
     }
 
@@ -473,6 +472,12 @@ public final class Giocatore
     private void setSegnalatoAzzeccagarbugli(boolean segnalatoAzzeccagarbugli)
     {
         this.segnalatoAzzeccagarbugli = segnalatoAzzeccagarbugli;
+    }
+
+    private boolean isFazioneLupo()
+    {
+        Fazione risultato = getFazione();
+        return risultato == LUPO_BRANCO || risultato == LUPO_SOLITARIO;
     }
 
 }

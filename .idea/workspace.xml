@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testControlloMediumMaledetto riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoFallimentoAttacco">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00682" summary="REFACTORING: definizione del metodo protezioneContadinoMostroStrega">
-      <option name="closed" value="true" />
-      <created>1794580616068</created>
-      <option name="number" value="00682" />
-      <option name="presentableId" value="LOCAL-00682" />
-      <option name="project" value="LOCAL" />
-      <updated>1794580616068</updated>
     </task>
     <task id="LOCAL-00683" summary="REFACTORING: definizione del metodo getNomeStrega">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794784247217</updated>
     </task>
-    <option name="localTasksCounter" value="731" />
+    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo getEsitoFallimentoAttacco">
+      <option name="closed" value="true" />
+      <created>1794784831288</created>
+      <option name="number" value="00731" />
+      <option name="presentableId" value="LOCAL-00731" />
+      <option name="project" value="LOCAL" />
+      <updated>1794784831289</updated>
+    </task>
+    <option name="localTasksCounter" value="732" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testMortePostGildata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMortePostGildataRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMortePostGildataStregato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMortePostGildata" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitario riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testControlloMediumMaledetto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testControlloMediumMaledetto riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoFallimentoAttacco" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoFallimentoAttacco" />
   </component>
 </project>
