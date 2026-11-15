@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testGuarigione riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoGuarigione.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGuarigione non riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Viaggiatore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestViaggiatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestViaggiatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,14 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00673" summary="VERDE: testNoStrega riuscito">
-      <option name="closed" value="true" />
-      <created>1794563373894</created>
-      <option name="number" value="00673" />
-      <option name="presentableId" value="LOCAL-00673" />
-      <option name="project" value="LOCAL" />
-      <updated>1794563373894</updated>
     </task>
     <task id="LOCAL-00674" summary="VERDE DIRETTO: testStrega riuscito">
       <option name="closed" value="true" />
@@ -647,7 +639,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794700010292</updated>
     </task>
-    <option name="localTasksCounter" value="722" />
+    <task id="LOCAL-00722" summary="ROSSO: testGuarigione non riuscito">
+      <option name="closed" value="true" />
+      <created>1794700921954</created>
+      <option name="number" value="00722" />
+      <option name="presentableId" value="LOCAL-00722" />
+      <option name="project" value="LOCAL" />
+      <updated>1794700921956</updated>
+    </task>
+    <option name="localTasksCounter" value="723" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,13 +683,13 @@
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito" />
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
-    <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
     <MESSAGE value="ROSSo: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testGuarigione riuscito" />
     <MESSAGE value="ROSSO: testGuarigioneContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testGuarigioneContadinoMostro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGuarigione riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGuarigione riuscito" />
+    <MESSAGE value="ROSSO: testGuarigione non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGuarigione non riuscito" />
   </component>
 </project>

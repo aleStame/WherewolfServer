@@ -7,11 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione.VIAGGIATORE_GUARITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
@@ -47,7 +44,7 @@ public final class TestViaggiatore
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
 
-    @ParameterizedTest @CsvSource public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(VIAGGIATORE_GUARITO); }
+    @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(VIAGGIATORE_GUARITO); }
 
     private static Stream<Arguments> getEsempiPartite()
     {

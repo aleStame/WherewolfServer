@@ -261,7 +261,12 @@ public final class Partita
                 mortiNotte.eliminaGiocatore(nome);
                 eliminaGuaritore();
             }
-            default -> { if(vivi.isViaggiatore(nome)) controlloViaggio(); }
+            case VIAGGIATORE_GUARITO ->
+            {
+                aggiungiGiocatoreVivo(nome, getGiocatore(nome));
+                mortiNotte.eliminaGiocatore(nome);
+                controlloViaggio();
+            }
         }
     }
 
