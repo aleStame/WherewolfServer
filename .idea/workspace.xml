@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoFallimentoAttacco">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isFazioneLupo">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoAttacco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoAttacco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestMegera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestMegera.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00683" summary="REFACTORING: definizione del metodo getNomeStrega">
-      <option name="closed" value="true" />
-      <created>1794580960949</created>
-      <option name="number" value="00683" />
-      <option name="presentableId" value="LOCAL-00683" />
-      <option name="project" value="LOCAL" />
-      <updated>1794580960950</updated>
     </task>
     <task id="LOCAL-00684" summary="ROSSO: testMessaggioErrore non riuscito">
       <option name="closed" value="true" />
@@ -645,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794784831289</updated>
     </task>
-    <option name="localTasksCounter" value="732" />
+    <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo isFazioneLupo">
+      <option name="closed" value="true" />
+      <created>1794785254641</created>
+      <option name="number" value="00732" />
+      <option name="presentableId" value="LOCAL-00732" />
+      <option name="project" value="LOCAL" />
+      <updated>1794785254643</updated>
+    </task>
+    <option name="localTasksCounter" value="733" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testMortePostGildataRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMortePostGildataStregato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaMortePostGildata" />
     <MESSAGE value="VERDE DIRETTO: testMortePostGildataAmato riuscito" />
@@ -688,6 +688,7 @@
     <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testControlloMediumMaledetto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoFallimentoAttacco" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoFallimentoAttacco" />
+    <MESSAGE value="REFACTORING: definizione del metodo isFazioneLupo" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isFazioneLupo" />
   </component>
 </project>

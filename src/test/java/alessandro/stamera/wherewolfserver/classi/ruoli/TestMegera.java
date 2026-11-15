@@ -7,6 +7,7 @@ import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MEGERA_BECCATA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione.GUARITORE_MALEDETTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -78,6 +79,8 @@ public final class TestMegera
     }
 
     @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(GUARITORE_MALEDETTO); }
+
+    @Test public void testAttaccoNegromante() { assertThat(ruolo.attaccoNegromante()).isEqualTo(MEGERA_BECCATA); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
