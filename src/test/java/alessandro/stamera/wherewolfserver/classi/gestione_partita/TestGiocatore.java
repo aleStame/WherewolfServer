@@ -1123,29 +1123,31 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
     public void testAttaccoCapoBranco(String nomeRuolo, EsitoAttacco esito)
     {
-        cambiaRuolo(nomeRuolo);
-        verificaAttaccoLupi("Capo branco", esito);
+        verificaAttaccoLupo(nomeRuolo, "Capo branco", esito);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
     public void testAttaccoLupoBranco(String nomeRuolo, EsitoAttacco esito)
     {
-        cambiaRuolo(nomeRuolo);
-        verificaAttaccoLupi("Lupo del branco", esito);
+        verificaAttaccoLupo(nomeRuolo, "Lupo del branco", esito);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
     public void testAttaccoLupoReietto(String nomeRuolo, EsitoAttacco esito)
     {
-        cambiaRuolo(nomeRuolo);
-        verificaAttaccoLupi("Lupo reietto", esito);
+        verificaAttaccoLupo(nomeRuolo, "Lupo reietto", esito);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia, RIUSCITO", "Assassino, RIUSCITO" })
     public void testAttaccoLupoSolitario(String nomeRuolo, EsitoAttacco esito)
     {
+        verificaAttaccoLupo(nomeRuolo, "Lupo solitario", esito);
+    }
+
+    private void verificaAttaccoLupo(String nomeRuolo, String tipoLupo, EsitoAttacco esito)
+    {
         cambiaRuolo(nomeRuolo);
-        verificaAttaccoLupi("Lupo solitario", esito);
+        verificaAttaccoLupi(tipoLupo, esito);
     }
 
     private void verificaPartitaNosferatu

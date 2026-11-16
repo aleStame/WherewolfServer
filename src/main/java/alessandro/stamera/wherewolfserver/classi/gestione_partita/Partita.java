@@ -373,8 +373,7 @@ public final class Partita
         {
             case MORTO -> eliminaGiocatore(nomeNegromante);
             case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
-            case ROMEO_BECCATO ->
-                throw new IllegalStateException(nome + " non può essere maledetto perché Romeo.\nDì al Negromante di cambiare persona.");
+            case ROMEO_BECCATO -> throw new EccezioneNegromanteControRomeo(nome);
             case RIUSCITO, MEGERA_BECCATA -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
             case EREMITA_BECCATO -> throw new EccezioneNegromanteControEremita(nome, nomeNegromante);
         }
