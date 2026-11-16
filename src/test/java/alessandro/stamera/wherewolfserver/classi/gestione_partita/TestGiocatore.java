@@ -118,19 +118,20 @@ public final class TestGiocatore
         verificaVero(giocatore.isNonMorto());
     }
 
-    /*@ParameterizedTest @CsvSource
+    @ParameterizedTest @CsvSource
     (
         {
             "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Eremita, EREMITA_BECCATO", "Giovane lupo, MORTO",
             "Goblin, FALLITO", "Guaritore, FALLITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
             "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Negromante, FALLITO", "Posseduto, TROVATO_POSSEDUTO",
-                "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO"
+            "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO"
         }
     )
-    public void testProgenieNosferatuFallita()
+    public void testProgenieNosferatuFallita(String nomeRuolo, EsitoAttacco esito)
     {
-
-    }*/
+        cambiaRuolo(nomeRuolo);
+        verificaAttacco(giocatore.progenizzazioneNosferatu(), esito);
+    }
 
     @ParameterizedTest @CsvSource
     (

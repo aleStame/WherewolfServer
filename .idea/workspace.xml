@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoNosferatu riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testProgenieNosferatuRiuscita riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriMortiNotte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestPiccoloPopolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestPiccoloPopolo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,14 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00693" summary="VERDE DIRETTO: testGildata riuscito">
-      <option name="closed" value="true" />
-      <created>1794590477372</created>
-      <option name="number" value="00693" />
-      <option name="presentableId" value="LOCAL-00693" />
-      <option name="project" value="LOCAL" />
-      <updated>1794590477372</updated>
     </task>
     <task id="LOCAL-00694" summary="VERDE DIRETTO: testMorteGildata riuscito">
       <option name="closed" value="true" />
@@ -647,7 +639,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794837246743</updated>
     </task>
-    <option name="localTasksCounter" value="742" />
+    <task id="LOCAL-00742" summary="VERDE DIRETTO: testProgenieNosferatuRiuscita riuscito">
+      <option name="closed" value="true" />
+      <created>1794839244444</created>
+      <option name="number" value="00742" />
+      <option name="presentableId" value="LOCAL-00742" />
+      <option name="project" value="LOCAL" />
+      <updated>1794839244444</updated>
+    </task>
+    <option name="localTasksCounter" value="743" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito" />
     <MESSAGE value="ROSSO: testGuarigione non riuscito" />
     <MESSAGE value="VERDE: testMaledizioneGuaritore riuscito" />
     <MESSAGE value="ROSSo: testGuarigione non riuscito" />
@@ -690,6 +689,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupo" />
     <MESSAGE value="ROSSO: testAttaccoNosferatu non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoNosferatu riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testProgenieNosferatuRiuscita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testProgenieNosferatuRiuscita riuscito" />
   </component>
 </project>
