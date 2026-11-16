@@ -728,7 +728,7 @@ public final class TestGiocatoriVivi
             "Contadino normale, RIUSCITO", "Eremita, EREMITA_BECCATO", "Ghoul, RIUSCITO", "Giovane lupo, RIUSCITO", "Giulietta, RIUSCITO",
             "Giullare, RIUSCITO", "Goblin, RIUSCITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, RIUSCITO",
             "Inquisitore, RIUSCITO", "Ladra, FALLITO", "Leprecauno, RIUSCITO", "Lupo del branco, RIUSCITO", "Lupo reietto, RIUSCITO",
-            "Lupo solitario, RIUSCITO", "Mago, RIUSCITO", "Medium, RIUSCITO", "Megera, RIUSCITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
+            "Lupo solitario, RIUSCITO", "Mago, RIUSCITO", "Medium, RIUSCITO", "Megera, MEGERA_BECCATA", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
             "Monaco, RIUSCITO", "Nonna, RIUSCITO", "Nonna, RIUSCITO", "Nosferatu, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO",
             "Pazzo, RIUSCITO", "Peccatore, RIUSCITO", "Posseduto, RIUSCITO", "Prete, RIUSCITO", "Sidhe, RIUSCITO", "Spia, RIUSCITO",
             "Strega, RIUSCITO", "Sensitiva, RIUSCITO", "Templare, RIUSCITO", "Traditore, RIUSCITO", "Vampiro, RIUSCITO", "Veggente, RIUSCITO",

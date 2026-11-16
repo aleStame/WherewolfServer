@@ -437,7 +437,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = ruolo.attaccoNegromante();
         if(tratti.isProtezioneNegromantePresente()) esito = getEsitoFallimentoAttacco();
-        if(esito == RIUSCITO) maledizione();
+        if(esito == RIUSCITO || esito == MEGERA_BECCATA) maledizione();
         return esito;
     }
 
