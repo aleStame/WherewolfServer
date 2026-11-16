@@ -274,7 +274,7 @@ public class Ruolo
 
     public EsitoAttacco gildata() { return RIUSCITO; }
 
-    public EsitoAttacco attaccoNosferatu() { return null; }
+    public EsitoAttacco attaccoNosferatu() { return RIUSCITO; }
 
     public EsitoAttacco passaPosseduto() { return RIUSCITO; }
 
