@@ -19,6 +19,7 @@ public final class Giocatore
     private final Tratti tratti;
 
     private boolean amato, segnalatoAzzeccagarbugli, segnalatoInquisitore, romeo, stregato, lupoExNonna, segnalatoBoia, segnalatoBorgomastro;
+    private boolean segnalatoOratore;
 
     private Ruolo ruolo;
 
@@ -36,6 +37,7 @@ public final class Giocatore
         stregato = false;
         setLupoExNonna(false);
         segnalatoBoia = false;
+        annullaSegnalazioneOratore();
     }
 
     public void incrementaVoti(int numeroVoti) { setNumeroVoti(getNumeroVoti() + numeroVoti); }
@@ -311,6 +313,14 @@ public final class Giocatore
 
     public boolean isTraditore() { return ruolo.isTraditore(); }
 
+    public void segnalazioneOratore() { setSegnalatoOratore(true); }
+
+    public boolean isSegnalatoOratore() { return segnalatoOratore; }
+
+    public void annullaSegnalazioneOratore() { setSegnalatoOratore(false); }
+
+    private void setSegnalatoOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
+
     private EsitoAttacco eseguiGildata()
     {
         EsitoAttacco esito = ruolo.gildata();
@@ -457,6 +467,7 @@ public final class Giocatore
     {
         EsitoAttacco esito = FALLITO;
         if(isRomeo()) esito = ROMEO_BECCATO;
+        else if(isStregato()) esito = STREGATO_BECCATO;
         return esito;
     }
 

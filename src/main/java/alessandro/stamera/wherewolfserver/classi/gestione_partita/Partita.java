@@ -217,10 +217,7 @@ public final class Partita
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeNosferatu);
             case ROMEO_BECCATO -> throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Giulietta", nomeNosferatu);
-            case FALLITO ->
-            {
-                if(mortiNotte.isStregato(nome)) throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Strega", nomeNosferatu);
-            }
+            case STREGATO_BECCATO -> throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Strega", nomeNosferatu);
         }
     }
 

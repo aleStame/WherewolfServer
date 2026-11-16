@@ -25,8 +25,6 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean segnalatoOratore;
-
     private final boolean mistico;
 
     private final Tratti tratti;
@@ -50,7 +48,6 @@ public class Ruolo
         this.lune = lune;
         this.mistico = mistico;
         tratti = new Tratti();
-        annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
         this.consigli = consigli;
     }
@@ -245,12 +242,6 @@ public class Ruolo
         return esito;
     }
 
-    public boolean isSegnalatoOratore() { return segnalatoOratore; }
-
-    public void segnalazioneOratore() { setSegnalazioneOratore(true); }
-
-    public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
-
     public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
@@ -292,8 +283,6 @@ public class Ruolo
     public boolean isStrega() { return false; }
 
     public EsitoGuarigione guarigione() { return EsitoGuarigione.RIUSCITO; }
-
-    private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 
     private boolean controlloTrattiOscuri()
     {

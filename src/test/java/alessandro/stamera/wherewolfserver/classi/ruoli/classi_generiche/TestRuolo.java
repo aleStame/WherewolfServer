@@ -35,14 +35,6 @@ public final class TestRuolo
 
     @Test public void vampirizzazione() { verificaAttaccoRiuscito(ruolo.vampirizzazione()); }
 
-    @Test public void testSegnalazioneOratore()
-    {
-        ruolo.segnalazioneOratore();
-        verificaVero(isSegnalatoOratore());
-        ruolo.annullaSegnalazioneOratore();
-        verificaFalso(isSegnalatoOratore());
-    }
-
     @Test public void testAttaccoNegromante() { verificaAttaccoRiuscito(ruolo.attaccoNegromante()); }
 
     @Test public void testControlloSensitiva() { assertThat(ruolo.controlloSensitiva()).isEqualTo(NON_VILLAGGIO); }
@@ -81,8 +73,6 @@ public final class TestRuolo
         when(partita.isNoGiocatoriVivi()).thenReturn(false);
         return partita;
     }
-
-    private boolean isSegnalatoOratore() { return ruolo.isSegnalatoOratore(); }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
 

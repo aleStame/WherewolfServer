@@ -1149,6 +1149,16 @@ public final class TestGiocatore
         verificaAttaccoLupo(nomeRuolo, "Lupo solitario", esito);
     }
 
+    @Test public void testSegnalazioneOratore()
+    {
+        giocatore.segnalazioneOratore();
+        verificaVero(isSegnalatoOratore());
+        giocatore.annullaSegnalazioneOratore();
+        verificaFalso(isSegnalatoOratore());
+    }
+
+    private boolean isSegnalatoOratore() { return giocatore.isSegnalatoOratore(); }
+
     private void verificaProgenizzazioneNosferatu(String nomeRuolo, EsitoAttacco esito)
     {
         cambiaRuolo(nomeRuolo);
