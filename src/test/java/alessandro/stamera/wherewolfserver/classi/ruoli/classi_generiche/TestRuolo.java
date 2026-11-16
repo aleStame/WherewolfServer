@@ -68,6 +68,8 @@ public final class TestRuolo
 
     @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(EsitoGuarigione.RIUSCITO); }
 
+    @Test public void testAttaccoNosferatu() { verificaAttaccoRiuscito(ruolo.attaccoNosferatu()); }
+
     private static Stream<Arguments> getEsempiPartita()
     {
         return Stream.of(Arguments.of(getPartitaGenerica(), VITTORIA), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));

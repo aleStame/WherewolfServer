@@ -274,12 +274,7 @@ public class Ruolo
 
     public EsitoAttacco gildata() { return RIUSCITO; }
 
-    public EsitoAttacco attaccoNosferatu()
-    {
-        EsitoAttacco esito = RIUSCITO;
-        if(isProtezioneNosferatuPresente()) esito = FALLITO;
-        return esito;
-    }
+    public EsitoAttacco attaccoNosferatu() { return null; }
 
     public EsitoAttacco passaPosseduto() { return RIUSCITO; }
 
