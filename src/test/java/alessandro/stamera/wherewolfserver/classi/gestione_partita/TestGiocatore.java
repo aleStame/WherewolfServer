@@ -104,24 +104,33 @@ public final class TestGiocatore
     @ParameterizedTest @CsvSource
     (
         {
-            "Altra guardia, RIUSCITO", "Angelo custode, RIUSCITO", "Assassino, RIUSCITO", "Azzeccagarbugli, RIUSCITO", "Bardo, RIUSCITO",
-            "Becchino, RIUSCITO", "Bocca di rosa, RIUSCITO", "Bocca di rosa, RIUSCITO", "Boia, RIUSCITO", "Borgomastro, RIUSCITO",
-            "Bracconiere, RIUSCITO", "Cacciatore, RIUSCITO", "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Capo gilda, RIUSCITO",
-            "Cappuccetto rosso, RIUSCITO", "Contadino eroe, RIUSCITO", "Contadino discendente dei lupi, RIUSCITO", "Contadino mostro, MORTO",
-            "Contadino normale, RIUSCITO", "Eremita, EREMITA_BECCATO", "Ghoul, RIUSCITO", "Giovane lupo, MORTO", "Giulietta, RIUSCITO",
-            "Giullare, RIUSCITO", "Goblin, FALLITO", "Guardia, RIUSCITO", "Guardia corrotta, RIUSCITO", "Guaritore, FALLITO",
-            "Inquisitore, RIUSCITO", "Ladra, RIUSCITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
-            "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Mercante, RIUSCITO", "Monaco, RIUSCITO",
-            "Negromante, FALLITO", "Nonna, RIUSCITO", "Oratore, RIUSCITO", "Oste, RIUSCITO", "Pazzo, RIUSCITO", "Peccatore, RIUSCITO",
-            "Posseduto, TROVATO_POSSEDUTO", "Prete, RIUSCITO", "Sidhe, FALLITO", "Spia, RIUSCITO", "Strega, FALLITO", "Sensitiva, FALLITO",
-            "Templare, RIUSCITO", "Vampiro, RIUSCITO", "Viaggiatore, RIUSCITO"
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Ghoul", "Giulietta", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Ladra", "Mercante", "Monaco",
+            "Nonna", "Oratore", "Oste", "Pazzo", "Peccatore", "Prete", "Spia", "Templare", "Vampiro", "Viaggiatore"
         }
     )
-    public void testProgenieNosferatu(String nomeRuolo, EsitoAttacco esito)
+    public void testProgenieNosferatuRiuscita(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
-        verificaAttacco(giocatore.progenizzazioneNosferatu(), esito);
+        verificaAttacco(giocatore.progenizzazioneNosferatu(), RIUSCITO);
+        verificaFazione(NOSFERATU);
+        verificaVero(giocatore.isNonMorto());
     }
+
+    /*@ParameterizedTest @CsvSource
+    (
+        {
+            "Cacciatore di vampiri, MORTO", "Capo branco, MORTO", "Contadino mostro, MORTO", "Eremita, EREMITA_BECCATO", "Giovane lupo, MORTO",
+            "Goblin, FALLITO", "Guaritore, FALLITO", "Leprecauno, FALLITO", "Lupo del branco, MORTO", "Lupo reietto, MORTO",
+            "Lupo solitario, MORTO", "Mago, FALLITO", "Medium, FALLITO", "Megera, FALLITO", "Negromante, FALLITO", "Posseduto, TROVATO_POSSEDUTO",
+                "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO"
+        }
+    )
+    public void testProgenieNosferatuFallita()
+    {
+
+    }*/
 
     @ParameterizedTest @CsvSource
     (

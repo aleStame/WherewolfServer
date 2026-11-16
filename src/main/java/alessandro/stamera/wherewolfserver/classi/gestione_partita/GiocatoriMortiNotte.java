@@ -4,8 +4,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.TipoContadino;
 
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione.GUARITORE_MALEDETTO;
-
 public final class GiocatoriMortiNotte extends Giocatori
 {
 
