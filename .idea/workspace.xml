@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testMessaggioErrore non riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioErrore riuscito">
+      <change afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneNegromanteControRomeo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneNegromanteControRomeo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneNegromanteControEremita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneNegromanteControEremita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00687" summary="VERDE DIRETTO: testSegnalazioneBoia riuscito">
-      <option name="closed" value="true" />
-      <created>1794585326196</created>
-      <option name="number" value="00687" />
-      <option name="presentableId" value="LOCAL-00687" />
-      <option name="project" value="LOCAL" />
-      <updated>1794585326196</updated>
     </task>
     <task id="LOCAL-00688" summary="VERDE DIRETTO: testPotereBoiaNonRiuscito riuscito">
       <option name="closed" value="true" />
@@ -645,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794824580643</updated>
     </task>
-    <option name="localTasksCounter" value="736" />
+    <task id="LOCAL-00736" summary="VERDE: testMessaggioErrore riuscito">
+      <option name="closed" value="true" />
+      <created>1794825039452</created>
+      <option name="number" value="00736" />
+      <option name="presentableId" value="LOCAL-00736" />
+      <option name="project" value="LOCAL" />
+      <updated>1794825039452</updated>
+    </task>
+    <option name="localTasksCounter" value="737" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testCriminalizzazioneCapoGildaMorto riuscito" />
     <MESSAGE value="VERDE: testCriminalizzazioneCapoGildaMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaAmatoMorto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito" />
@@ -688,6 +691,7 @@
     <MESSAGE value="ROSSO: testAttaccoNegromante non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNegromante riuscito" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMessaggioErrore non riuscito" />
+    <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioErrore riuscito" />
   </component>
 </project>

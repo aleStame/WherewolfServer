@@ -1,6 +1,6 @@
 package alessandro.stamera.wherewolfserver.classi.eccezioni;
 
-public class EccezioneNegromanteControEremita extends RuntimeException
+public class EccezioneNegromanteControEremita extends IllegalArgumentException
 {
 
     public EccezioneNegromanteControEremita(String nomeEremita, String nomeNegromante)
