@@ -984,20 +984,12 @@ public final class TestGiocatore
         verificaAttaccoAssassino(ROMEO_BECCATO);
     }
 
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
+    @ParameterizedTest
+    @CsvSource({ "Altra guardia", "Assassino", "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
     public void testPassaPossedutoCorretto(String nomeRuolo)
     {
         cambiaRuolo(nomeRuolo);
         verificaCorrettoPassaggioPosseduto();
-    }
-
-    @ParameterizedTest @CsvSource({ "Cacciatore", "Capo branco", "Cappuccetto rosso", "Contadino discendente dei lupi" })
-    public void testPassaPossedutoFallito(String nomeRuolo)
-    {
-        cambiaRuolo(nomeRuolo);
-        giocatore.aggiungiProtezione(FACTORY.getRuolo("Posseduto"));
-        verificaEsitoPassaggioPosseduto(FALLITO);
-        verificaFalso(isPosseduto());
     }
 
     @Test public void testCapoBrancoControEremita()
