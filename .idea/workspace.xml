@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testAttaccoNosferatu non riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testAttaccoNosferatu riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00695" summary="REFACTORING: definizione del metodo verificaEsitoGildata">
-      <option name="closed" value="true" />
-      <created>1794591819594</created>
-      <option name="number" value="00695" />
-      <option name="presentableId" value="LOCAL-00695" />
-      <option name="project" value="LOCAL" />
-      <updated>1794591819595</updated>
     </task>
     <task id="LOCAL-00696" summary="REFACTORING: definizione del metodo eseguiGildata">
       <option name="closed" value="true" />
@@ -645,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794840591359</updated>
     </task>
-    <option name="localTasksCounter" value="744" />
+    <task id="LOCAL-00744" summary="VERDE: testAttaccoNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1794841011094</created>
+      <option name="number" value="00744" />
+      <option name="presentableId" value="LOCAL-00744" />
+      <option name="project" value="LOCAL" />
+      <updated>1794841011094</updated>
+    </task>
+    <option name="localTasksCounter" value="745" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,9 +686,9 @@
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupo" />
-    <MESSAGE value="VERDE: testAttaccoNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testProgenieNosferatuRiuscita riuscito" />
     <MESSAGE value="ROSSO: testAttaccoNosferatu non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testAttaccoNosferatu non riuscito" />
+    <MESSAGE value="VERDE: testAttaccoNosferatu riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testAttaccoNosferatu riuscito" />
   </component>
 </project>

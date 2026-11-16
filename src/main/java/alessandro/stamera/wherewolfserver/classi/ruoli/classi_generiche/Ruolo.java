@@ -255,8 +255,6 @@ public class Ruolo
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
 
-    public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
-
     public boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 
     public void cambiaCategoria(Categoria categoria) { this.categoria = categoria; }

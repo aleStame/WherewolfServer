@@ -112,8 +112,7 @@ public final class TestGiocatore
     )
     public void testProgenieNosferatuRiuscita(String nomeRuolo)
     {
-        cambiaRuolo(nomeRuolo);
-        verificaAttacco(giocatore.progenizzazioneNosferatu(), RIUSCITO);
+        verificaProgenizzazioneNosferatu(nomeRuolo, RIUSCITO);
         verificaFazione(NOSFERATU);
         verificaVero(giocatore.isNonMorto());
     }
@@ -127,11 +126,7 @@ public final class TestGiocatore
             "Sidhe, FALLITO", "Strega, FALLITO", "Sensitiva, FALLITO"
         }
     )
-    public void testProgenieNosferatuFallita(String nomeRuolo, EsitoAttacco esito)
-    {
-        cambiaRuolo(nomeRuolo);
-        verificaAttacco(giocatore.progenizzazioneNosferatu(), esito);
-    }
+    public void testProgenieNosferatuFallita(String nomeRuolo, EsitoAttacco esito) { verificaProgenizzazioneNosferatu(nomeRuolo, esito); }
 
     @ParameterizedTest @CsvSource
     (
@@ -1152,6 +1147,12 @@ public final class TestGiocatore
     public void testAttaccoLupoSolitario(String nomeRuolo, EsitoAttacco esito)
     {
         verificaAttaccoLupo(nomeRuolo, "Lupo solitario", esito);
+    }
+
+    private void verificaProgenizzazioneNosferatu(String nomeRuolo, EsitoAttacco esito)
+    {
+        cambiaRuolo(nomeRuolo);
+        verificaAttacco(giocatore.progenizzazioneNosferatu(), esito);
     }
 
     private void verificaAttaccoLupo(String nomeRuolo, String tipoLupo, EsitoAttacco esito)
