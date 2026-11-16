@@ -1,11 +1,8 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
-import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Villaggio;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.MORTO;
 
 public final class Prete extends Villaggio
 {
@@ -29,8 +26,6 @@ public final class Prete extends Villaggio
     }
 
     @Override public boolean isPrete() { return true; }
-
-    @Override public EsitoAttacco passaPosseduto() { return MORTO; }
 
     public static Ruolo getInstance() { return new Prete(); }
 

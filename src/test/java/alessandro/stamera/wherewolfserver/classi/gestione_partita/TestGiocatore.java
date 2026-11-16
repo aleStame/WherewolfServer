@@ -527,14 +527,6 @@ public final class TestGiocatore
         verificaNonMaledetto();
     }
 
-    @Test public void testPassaPossedutoPrete()
-    {
-        cambiaRuolo("Prete");
-        verificaEsitoPassaggioPosseduto(MORTO);
-        verificaAttaccoVampiro(RIUSCITO);
-        verificaCorrettoPassaggioPosseduto();
-    }
-
     @ParameterizedTest @CsvSource
     (
         {

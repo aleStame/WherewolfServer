@@ -198,10 +198,12 @@ public final class Giocatore
     public EsitoAttacco passaPosseduto()
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
-        if(isNonMorto()) esito = RIUSCITO;
-        else if(!ruolo.isPrete() && tratti.isProtezionePossedutoPresente()) esito = FALLITO;
-        if(esito == RIUSCITO) trasformaPosseduto();
-        else if(esito == FALLITO && isRomeo()) esito = ROMEO_BECCATO;
+        if(esito == RIUSCITO)
+        {
+            if(tratti.isProtezionePossedutoPresente()) esito = FALLITO;
+            else trasformaPosseduto();
+        }
+        if(esito == FALLITO && isRomeo()) esito = ROMEO_BECCATO;
         return esito;
     }
 
@@ -379,8 +381,8 @@ public final class Giocatore
 
     private void trasformaNonMorto()
     {
-        tratti.aggiungi(CREATURA_OMBRA);
-        tratti.aggiungi(NON_MORTO);
+        for(Tratto tratto : new Tratto[] { CREATURA_OMBRA, NON_MORTO } ) tratti.aggiungi(tratto);
+        tratti.perdiProtezioni();
     }
 
     private boolean isGiocatoreAuraNera() { return isMaledetto() || isGiocatoreLupizzato(); }

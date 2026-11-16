@@ -1570,8 +1570,8 @@ public final class TestGiocatoriVivi
     @Test public void testPassaPossedutoPrete()
     {
         String nome = "Lorella";
-        aggiungiGiocatore(nome, "Prete");
-        verificaEsitoPassaggioPosseduto(nome, MORTO);
+        inizializzaGiocatori(new String[][] { { nome, "Prete" }, { "Ale", "Posseduto" } });
+        verificaEsitoPassaggioPosseduto(nome, FALLITO);
     }
 
     @Test public void testCacciatoreAssente() { verificaFalso(isCacciatorePresente()); }
