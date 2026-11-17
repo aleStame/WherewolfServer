@@ -319,7 +319,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         boolean isAngeloCustode = isAngeloCustode(nome);
         EsitoAttacco esito = getGiocatore(nome).passaPosseduto();
-        if(isAngeloCustode && esito == RIUSCITO) getGiocatoreAmato().annullaProtezioneAngeloCustode();
+        if(isAngeloCustode && esito == RIUSCITO) annullaProtezioneAngeloCustode();
         return esito;
     }
 
@@ -385,6 +385,8 @@ public final class GiocatoriVivi extends Giocatori
     public boolean isStrega(String nome) { return getGiocatore(nome).isStrega(); }
 
     public String getNomeStrega() { return getNomeGiocatore(getPosizioneStrega()); }
+
+    private void annullaProtezioneAngeloCustode() { getGiocatoreAmato().annullaProtezioneAngeloCustode(); }
 
     private EsitoAttacco gestioneFallimentoAttacco(Ruolo attaccante, String nome)
     {
