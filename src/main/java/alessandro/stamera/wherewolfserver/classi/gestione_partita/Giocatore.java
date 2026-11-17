@@ -198,12 +198,9 @@ public final class Giocatore
     public EsitoAttacco passaPosseduto()
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
-        if(esito == RIUSCITO)
-        {
-            if(tratti.isProtezionePossedutoPresente()) esito = FALLITO;
-            else trasformaPosseduto();
-        }
-        if(esito == FALLITO && isRomeo()) esito = ROMEO_BECCATO;
+        if(isRomeo()) esito = ROMEO_BECCATO;
+        else if(isNonMorto()) esito = RIUSCITO;
+        else if(esito == RIUSCITO) esito = getEsitoPassaggioPosseduto();
         return esito;
     }
 
@@ -320,6 +317,14 @@ public final class Giocatore
     public boolean isSegnalatoOratore() { return segnalatoOratore; }
 
     public void annullaSegnalazioneOratore() { setSegnalatoOratore(false); }
+
+    private EsitoAttacco getEsitoPassaggioPosseduto()
+    {
+        EsitoAttacco esito = RIUSCITO;
+        if(tratti.isProtezionePossedutoPresente()) esito = FALLITO;
+        else trasformaPosseduto();
+        return esito;
+    }
 
     private void setSegnalatoOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
 

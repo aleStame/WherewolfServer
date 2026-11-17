@@ -307,13 +307,6 @@ public final class GiocatoriVivi extends Giocatori
         super.aggiungiGiocatore(nome, giocatore);
         sistemaProtezioniRuoli();
         sistemaCoppiaPeccatorePosseduto();
-        int posizione = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(getGiocatore(i).getRuolo().isPrete()) posizione = i;
-        int posizionePosseduto = NON_TROVATO;
-        for(int i = 0; i < getNumeroGiocatori() && posizionePosseduto == NON_TROVATO; i++) if(getGiocatore(i).isPosseduto()) posizionePosseduto = i;
-        System.out.println(posizione + " " + posizionePosseduto);
-        if((posizione != -1) && isPossedutoPresente())
-            getGiocatore(posizione).aggiungiProtezione(getGiocatore(posizionePosseduto).getRuolo());
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }

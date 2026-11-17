@@ -1571,7 +1571,7 @@ public final class TestGiocatoriVivi
     {
         String nome = "Lorella";
         inizializzaGiocatori(new String[][] { { nome, "Prete" }, { "Ale", "Posseduto" } });
-        verificaEsitoPassaggioPosseduto(nome, FALLITO);
+        verificaEsitoPassaggioPosseduto(nome, PRETE_BECCATO);
     }
 
     @Test public void testCacciatoreAssente() { verificaFalso(isCacciatorePresente()); }

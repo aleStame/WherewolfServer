@@ -587,7 +587,7 @@ public final class Partita
                     ") che non può possederla.";
                 throw new IllegalStateException(messaggio);
             }
-            case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
+            case PRETE_BECCATO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
         }
     }
