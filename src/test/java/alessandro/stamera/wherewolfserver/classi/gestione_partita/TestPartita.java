@@ -3411,6 +3411,20 @@ public final class TestPartita
         verificaFalso(isPosseduto(nomeAssassino));
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoPossedutoAssassinoStregato(String tipoLupo)
+    {
+        String nomePosseduto = "Paolo", nomeAssassino = "Luca";
+        String[][] giocatori =
+            new String[][] { { "Andrea", tipoLupo }, { nomeAssassino, "Assassino" }, { nomePosseduto, "Posseduto" }, { "Lara", "Strega" } };
+        inizializzaPartita(giocatori);
+        protezioneStrega(nomeAssassino);
+        attaccoLupi(tipoLupo, nomePosseduto);
+        String messaggio = "Luca (Assassino) è protetto dalla Strega.\nAvvisa il Posseduto (Paolo) che non può possederla.";
+        assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nomeAssassino)).withMessage(messaggio);
+        verificaFalso(isPosseduto(nomeAssassino));
+    }
+
     private void verificaPassaggioPossedutoCorretto(String nome)
     {
         passaPosseduto(nome);
