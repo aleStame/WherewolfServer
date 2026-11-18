@@ -491,9 +491,11 @@ public final class Partita
 
     private void conseguenzeControlloMegera(String nome)
     {
-        if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeSensitiva()).maledizione();
+        if(vivi.isMegera(nome)) maledizioneSensitiva();
         if(isSensitivaEliminabile(nome)) eliminaSensitiva();
     }
+
+    private void maledizioneSensitiva() { getGiocatore(vivi.getNomeSensitiva()).maledizione(); }
 
     private boolean isSensitivaEliminabile(String nome) { return isPrimaNotte() || vivi.isContadinoMostro(nome); }
 
