@@ -3765,7 +3765,7 @@ public final class TestPartita
 
     private void verificaControlloMedium(String nomeVittima, Aura risultato)
     {
-        assertThat(partita.controlloMedium(nomeVittima)).isEqualTo(risultato);
+        verificaAura(partita.controlloMedium(nomeVittima), risultato);
     }
 
     private void verificaFazioneNosferatu(String nome) { verificaVero(isFazioneNosferatu(nome)); }
@@ -3838,7 +3838,7 @@ public final class TestPartita
 
     private void verificaControlloVeggente(String nome, Aura aura)
     {
-        assertThat(partita.controlloVeggente(nome)).isEqualTo(aura);
+        verificaAura(partita.controlloVeggente(nome), aura);
     }
 
     private void verificaNienteCantoBardo() { verificaFalso(getCantoBardo()); }
@@ -3876,5 +3876,7 @@ public final class TestPartita
     private void attaccoLupi(String nomeLupo, String nome) { partita.attaccoLupi(nomeLupo, nome); }
 
     private void segnalazioneInquisitore(String nome) { partita.segnalazioneInquisitore(nome); }
+
+    private void verificaAura(Aura aura, Aura risultato) { assertThat(aura).isEqualTo(risultato); }
 
 }
