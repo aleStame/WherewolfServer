@@ -2033,7 +2033,7 @@ public final class TestGiocatoriVivi
         String nome = "Grazia", nomeGiulietta = "Maria Grazia", nomePosseduto = "Giancarlo";
         inizializzaGiocatori(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { nomeGiulietta, "Strega" } });
         protezioneStrega(nome);
-        verificaPassaggioPossedutoFallito(nomePosseduto, nome);
+        verificaEsitoPassaggioPosseduto(nome, STREGATO_BECCATO);
     }
 
     @ParameterizedTest @CsvSource( { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" } )

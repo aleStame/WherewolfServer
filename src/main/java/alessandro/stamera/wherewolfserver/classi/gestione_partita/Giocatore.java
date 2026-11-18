@@ -198,9 +198,7 @@ public final class Giocatore
     public EsitoAttacco passaPosseduto()
     {
         EsitoAttacco esito = ruolo.passaPosseduto();
-        if(isRomeo()) esito = ROMEO_BECCATO;
-        else if(isNonMorto()) esito = RIUSCITO;
-        else if(esito == RIUSCITO) esito = getEsitoPassaggioPosseduto();
+        if(esito != FALLITO) esito = getEsitoPassaggioPosseduto(esito);
         return esito;
     }
 
@@ -318,11 +316,19 @@ public final class Giocatore
 
     public void annullaSegnalazioneOratore() { setSegnalatoOratore(false); }
 
-    private EsitoAttacco getEsitoPassaggioPosseduto()
+    private EsitoAttacco getEsitoPassaggioPosseduto(EsitoAttacco esito)
     {
-        EsitoAttacco esito = RIUSCITO;
         if(tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         else trasformaPosseduto();
+        if(esito != RIUSCITO) esito = getEsitoPassaggioPossedutoNonRiuscito(esito);
+        return esito;
+    }
+
+    private EsitoAttacco getEsitoPassaggioPossedutoNonRiuscito(EsitoAttacco esito)
+    {
+        if(isRomeo()) esito = ROMEO_BECCATO;
+        else if(isStregato()) esito = STREGATO_BECCATO;
+        else if(isNonMorto()) esito = RIUSCITO;
         return esito;
     }
 

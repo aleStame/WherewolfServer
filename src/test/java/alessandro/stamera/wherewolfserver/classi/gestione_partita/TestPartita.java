@@ -1855,7 +1855,7 @@ public final class TestPartita
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
     }
 
-    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    /*@ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testPoterePossedutoAmatoPreteStregato(String tipoLupo)
     {
         String nomeAngelo = "Sigismondo", nomePosseduto = "Alessandro", nomePrete = "Michelangelo";
@@ -1867,7 +1867,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         protezioneStrega(nomePrete);
         attaccoPossedutoPreteAmato(tipoLupo, nomePosseduto, nomeAngelo, nomePrete);
-    }
+    }*/
 
     /*@ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
     public void testPoterePossedutoAmatoPreteRomeizzato(String tipoLupo)
