@@ -817,7 +817,10 @@ public final class Partita
         for(int i = 0; i < getNumeroGiocatoriVivi(); i++) annullaMaledizioneMegera(getNomeGiocatoreVivo(i));
     }
 
-    private void annullaMaledizioneMegera(String nome) { if(isMaledettoNonNegromante(nome)) vivi.annullaMaledizione(nome); }
+    private void annullaMaledizioneMegera(String nome)
+    {
+        if(isMaledettoNonNegromante(nome)) vivi.annullaMaledizione(nome);
+    }
 
     private boolean isMaledettoNonNegromante(String nome) { return isMaledetto(nome) && !isMaledettoNegromante(nome); }
 
@@ -864,7 +867,10 @@ public final class Partita
         if(isCappuccettoRossoSenzaNonna()) vivi.annullaProtezioniCappuccettoRosso();
     }
 
-    private boolean isCappuccettoRossoSenzaNonna() { return vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente(); }
+    private boolean isCappuccettoRossoSenzaNonna()
+    {
+        return vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente();
+    }
 
     private void risorgiGiocatore(String nome)
     {
@@ -887,7 +893,8 @@ public final class Partita
     private void doppiaEliminazione(String nomeLupo, String nomeVittima)
     {
         eliminaGiocatori(nomeLupo, nomeVittima);
-        if(mortiNotte.isContadino(nomeVittima)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nomeVittima), nomeVittima, nomeLupo);
+        if(mortiNotte.isContadino(nomeVittima))
+            throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nomeVittima), nomeVittima, nomeLupo);
     }
 
     private String getNomeGiocatoreLupo(String tipoLupo) { return getNomeGiocatoreVivo(getPosizioneLupo(tipoLupo)); }
@@ -895,11 +902,15 @@ public final class Partita
     private int getPosizioneLupo(String tipoLupo)
     {
         int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getNomeRuolo(getNomeGiocatoreVivo(i)).equals(tipoLupo)) posizione = i;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getNomeRuolo(getNomeGiocatoreVivo(i)).equals(tipoLupo))
+            posizione = i;
         return posizione;
     }
 
-    private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
+    private void incrementaVotiBallottaggio(String nome, int numeroVoti)
+    {
+        ballottaggio.incrementaVoti(nome, numeroVoti);
+    }
 
     private int getNumeroRuoliCittaPresenti() { return vivi.getNumeroRuoliCitta() + ballottaggio.getNumeroRuoliCitta(); }
 
