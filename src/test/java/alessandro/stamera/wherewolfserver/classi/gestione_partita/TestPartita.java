@@ -3374,6 +3374,11 @@ public final class TestPartita
         String nome = "Max";
         inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } });
         attaccoAssassino("Claudio");
+        verificaPassaggioPossedutoCorretto(nome);
+    }
+
+    private void verificaPassaggioPossedutoCorretto(String nome)
+    {
         passaPosseduto(nome);
         verificaVero(isPosseduto(nome));
     }
@@ -3395,8 +3400,7 @@ public final class TestPartita
         String nomePosseduto = "Paolo", nomeAssassino = "Luca";
         inizializzaPartita(new String[][] { { "Andrea", tipoLupo }, { "Luca", "Assassino" }, { nomePosseduto, "Posseduto" } });
         attaccoLupi(tipoLupo, nomePosseduto);
-        passaPosseduto(nomeAssassino);
-        verificaVero(isPosseduto(nomeAssassino));
+        verificaPassaggioPossedutoCorretto(nomeAssassino);
     }
 
     private void verificaAttaccoPossedutoNonRiuscito(String nomePosseduto, String nomeVittima, String messaggio)
@@ -3672,8 +3676,7 @@ public final class TestPartita
 
     private void verificaCorrettezzaPossessione(String nome)
     {
-        passaPosseduto(nome);
-        verificaVero(isPosseduto(nome));
+        verificaPassaggioPossedutoCorretto(nome);
     }
 
     private void passaPosseduto(String nome) { partita.passaPosseduto(nome); }
