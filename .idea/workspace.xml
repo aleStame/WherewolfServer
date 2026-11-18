@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eseguiPassaggioPosseduto">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,22 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00705" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1794651665657</created>
-      <option name="number" value="00705" />
-      <option name="presentableId" value="LOCAL-00705" />
-      <option name="project" value="LOCAL" />
-      <updated>1794651665666</updated>
-    </task>
-    <task id="LOCAL-00706" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaStregatoMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1794651987937</created>
-      <option name="number" value="00706" />
-      <option name="presentableId" value="LOCAL-00706" />
-      <option name="project" value="LOCAL" />
-      <updated>1794651987937</updated>
     </task>
     <task id="LOCAL-00707" summary="ROSSO: testGuarigione non riuscito">
       <option name="closed" value="true" />
@@ -645,7 +630,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795011198660</updated>
     </task>
-    <option name="localTasksCounter" value="754" />
+    <task id="LOCAL-00754" summary="VERDE DIRETTO: testAttaccoPossedutoRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1795013657421</created>
+      <option name="number" value="00754" />
+      <option name="presentableId" value="LOCAL-00754" />
+      <option name="project" value="LOCAL" />
+      <updated>1795013657421</updated>
+    </task>
+    <task id="LOCAL-00755" summary="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito">
+      <option name="closed" value="true" />
+      <created>1795014085508</created>
+      <option name="number" value="00755" />
+      <option name="presentableId" value="LOCAL-00755" />
+      <option name="project" value="LOCAL" />
+      <updated>1795014085508</updated>
+    </task>
+    <option name="localTasksCounter" value="756" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testCapoBranco riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitario riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
@@ -688,6 +687,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPassaggioPossedutoNonRiuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eseguiPassaggioPosseduto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eseguiPassaggioPosseduto" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoRomeo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito" />
   </component>
 </project>

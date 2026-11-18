@@ -3371,6 +3371,15 @@ public final class TestPartita
         verificaFalso(partita.isPosseduto(nome));
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPosseduto(String nomeRuolo)
+    {
+        String nome = "Max";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } });
+        attaccoAssassino("Claudio");
+        passaPosseduto(nome);
+        verificaVero(partita.isPosseduto(nome));
+    }
+
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoStregato(String nomeRuolo)
     {
         String nome = "Max";
