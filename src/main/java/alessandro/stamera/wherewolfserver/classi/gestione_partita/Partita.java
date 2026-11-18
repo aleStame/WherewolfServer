@@ -495,7 +495,7 @@ public final class Partita
         if(isSensitivaEliminabile(nome)) eliminaSensitiva();
     }
 
-    private void maledizioneSensitiva() { getGiocatore(vivi.getNomeSensitiva()).maledizione(); }
+    private void maledizioneSensitiva() { maledizione(vivi.getNomeSensitiva()); }
 
     private boolean isSensitivaEliminabile(String nome) { return isPrimaNotte() || vivi.isContadinoMostro(nome); }
 
@@ -599,7 +599,7 @@ public final class Partita
     {
         vivi.protezioneStrega(nome);
         if(vivi.isContadinoMostro(nome)) protezioneContadinoMostroStrega();
-        else if(vivi.isMegera(nome)) vivi.maledizione(getNomeStrega());
+        else if(vivi.isMegera(nome)) maledizione(getNomeStrega());
     }
 
     public boolean isProgenieNosferatuAssenti()
@@ -718,7 +718,7 @@ public final class Partita
         return risultato;
     }
 
-    private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
+    private void malediciMago() { maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
     {
@@ -728,7 +728,9 @@ public final class Partita
         return misticismo;
     }
 
-    private void maledizioneGuaritore() { vivi.maledizione(vivi.getNomeGuaritore()); }
+    private void maledizioneGuaritore() { maledizione(vivi.getNomeGuaritore()); }
+
+    private void maledizione(String nome) { vivi.maledizione(nome); }
 
     private void gestioneMorteGhoul(String nomeVittima, String nomeProgenizzatore)
     {
