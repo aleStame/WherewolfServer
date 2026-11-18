@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00710" summary="VERDE: testGuarigione riuscito">
-      <option name="closed" value="true" />
-      <created>1794655280944</created>
-      <option name="number" value="00710" />
-      <option name="presentableId" value="LOCAL-00710" />
-      <option name="project" value="LOCAL" />
-      <updated>1794655280944</updated>
-    </task>
-    <task id="LOCAL-00711" summary="ROSSO: testGuarigione non riuscito">
-      <option name="closed" value="true" />
-      <created>1794655778387</created>
-      <option name="number" value="00711" />
-      <option name="presentableId" value="LOCAL-00711" />
-      <option name="project" value="LOCAL" />
-      <updated>1794655778387</updated>
     </task>
     <task id="LOCAL-00712" summary="VERDE: testGuarigione riuscito">
       <option name="closed" value="true" />
@@ -645,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795015208634</updated>
     </task>
-    <option name="localTasksCounter" value="759" />
+    <task id="LOCAL-00759" summary="VERDE DIRETTO: testAttaccoPossedutoAssassino riuscito">
+      <option name="closed" value="true" />
+      <created>1795015874674</created>
+      <option name="number" value="00759" />
+      <option name="presentableId" value="LOCAL-00759" />
+      <option name="project" value="LOCAL" />
+      <updated>1795015874675</updated>
+    </task>
+    <task id="LOCAL-00760" summary="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto">
+      <option name="closed" value="true" />
+      <created>1795018980615</created>
+      <option name="number" value="00760" />
+      <option name="presentableId" value="LOCAL-00760" />
+      <option name="project" value="LOCAL" />
+      <updated>1795018980615</updated>
+    </task>
+    <option name="localTasksCounter" value="761" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testControlloMediumMaledetto riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo getEsitoFallimentoAttacco" />
     <MESSAGE value="REFACTORING: definizione del metodo isFazioneLupo" />
     <MESSAGE value="ROSSO: testAttaccoNegromante non riuscito" />
     <MESSAGE value="VERDE: testAttaccoNegromante riuscito" />
@@ -688,6 +686,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoPosseduto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassino riuscito" />
+    <MESSAGE value="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto" />
   </component>
 </project>

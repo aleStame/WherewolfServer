@@ -3371,16 +3371,10 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPosseduto(String nomeRuolo)
     {
-        String nome = "Max";
-        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } });
+        String nome = "Max", nomePosseduto = "Claudio";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { nomePosseduto, "Posseduto" }, { "Roberto", "Assassino" } });
         attaccoAssassino("Claudio");
         verificaPassaggioPossedutoCorretto(nome);
-    }
-
-    private void verificaPassaggioPossedutoCorretto(String nome)
-    {
-        passaPosseduto(nome);
-        verificaVero(isPosseduto(nome));
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoStregato(String nomeRuolo)
@@ -3401,6 +3395,26 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Andrea", tipoLupo }, { "Luca", "Assassino" }, { nomePosseduto, "Posseduto" } });
         attaccoLupi(tipoLupo, nomePosseduto);
         verificaPassaggioPossedutoCorretto(nomeAssassino);
+    }
+
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoPossedutoAssassinoRomeo(String tipoLupo)
+    {
+        String nomePosseduto = "Paolo", nomeAssassino = "Luca";
+        String[][] giocatori =
+            new String[][] { { "Andrea", tipoLupo }, { nomeAssassino, "Assassino" }, { nomePosseduto, "Posseduto" }, { "Lara", "Giulietta" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeAssassino);
+        attaccoLupi(tipoLupo, nomePosseduto);
+        String messaggio = "Luca (Assassino) è Romeo.\nAvvisa il Posseduto (Paolo) che non può possederla.";
+        assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nomeAssassino)).withMessage(messaggio);
+        verificaFalso(isPosseduto(nomeAssassino));
+    }
+
+    private void verificaPassaggioPossedutoCorretto(String nome)
+    {
+        passaPosseduto(nome);
+        verificaVero(isPosseduto(nome));
     }
 
     private void verificaAttaccoPossedutoNonRiuscito(String nomePosseduto, String nomeVittima, String messaggio)
