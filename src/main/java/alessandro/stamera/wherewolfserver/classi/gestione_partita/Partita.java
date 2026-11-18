@@ -485,12 +485,14 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO)
-        {
-            if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeSensitiva()).maledizione();
-            if(isSensitivaEliminabile(nome)) eliminaSensitiva();
-        }
+        if(esito == VILLAGGIO) conseguenzeControlloMegera(nome);
         return esito;
+    }
+
+    private void conseguenzeControlloMegera(String nome)
+    {
+        if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeSensitiva()).maledizione();
+        if(isSensitivaEliminabile(nome)) eliminaSensitiva();
     }
 
     private boolean isSensitivaEliminabile(String nome) { return isPrimaNotte() || vivi.isContadinoMostro(nome); }
