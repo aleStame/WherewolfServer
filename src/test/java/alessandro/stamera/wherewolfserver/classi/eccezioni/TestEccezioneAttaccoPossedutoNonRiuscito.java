@@ -10,8 +10,8 @@ public final class TestEccezioneAttaccoPossedutoNonRiuscito
     @ParameterizedTest @CsvSource
     (
         {
-            "Strega, Paolo (Vampiro) è protetto dalla Strega.\nAvvisa il Posseduto (Luca) che non può possederlo.",
-            "Giulietta, Paolo (Vampiro) è Romeo.\nAvvisa il Posseduto (Luca) che non può possederlo."
+            "Strega, 'Paolo (Vampiro) è protetto dalla Strega.\nAvvisa il Posseduto (Luca) che non può possederlo.'",
+            "Giulietta, 'Paolo (Vampiro) è Romeo.\nAvvisa il Posseduto (Luca) che non può possederlo.'"
         }
     )
     public void testMessaggioErrore(String nomeRuoloProtettore, String messaggio)
