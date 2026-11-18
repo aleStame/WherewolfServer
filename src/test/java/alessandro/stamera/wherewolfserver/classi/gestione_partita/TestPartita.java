@@ -3389,6 +3389,16 @@ public final class TestPartita
         verificaAttaccoPossedutoNonRiuscito(nomePosseduto, nome, messaggio);
     }
 
+    @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
+    public void testAttaccoPossedutoAssassino(String tipoLupo)
+    {
+        String nomePosseduto = "Paolo", nomeAssassino = "Luca";
+        inizializzaPartita(new String[][] { { "Andrea", tipoLupo }, { "Luca", "Assassino" }, { nomePosseduto, "Posseduto" } });
+        attaccoLupi(tipoLupo, nomePosseduto);
+        passaPosseduto(nomeAssassino);
+        verificaVero(isPosseduto(nomeAssassino));
+    }
+
     private void verificaAttaccoPossedutoNonRiuscito(String nomePosseduto, String nomeVittima, String messaggio)
     {
         attaccoAssassino(nomePosseduto);
