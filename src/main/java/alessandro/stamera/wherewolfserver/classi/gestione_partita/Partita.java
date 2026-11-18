@@ -576,7 +576,7 @@ public final class Partita
                     ") che non può possederla.";
                 throw new IllegalStateException(messaggio);
             }
-            case FALLITO -> { if(vivi.isLadra(nome)) throw new IllegalArgumentException("Impossibile possedere " + nome + "."); }
+            case LADRA_BECCATA -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
             case ROMEO_BECCATO ->
             {
                 String messaggio =

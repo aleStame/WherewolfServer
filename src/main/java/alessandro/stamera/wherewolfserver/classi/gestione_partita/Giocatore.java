@@ -335,6 +335,7 @@ public final class Giocatore
         if(isRomeo()) esito = ROMEO_BECCATO;
         else if(isStregato()) esito = STREGATO_BECCATO;
         else if(isNonMorto()) esito = RIUSCITO;
+        else if(isLadra()) esito = LADRA_BECCATA;
         return esito;
     }
 

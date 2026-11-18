@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoPossedutoAssassinoRomeo riuscito">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoAttacco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/attributi_ruolo/EsitoAttacco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,22 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00713" summary="VERDE: testGuarigione riuscito">
-      <option name="closed" value="true" />
-      <created>1794677976915</created>
-      <option name="number" value="00713" />
-      <option name="presentableId" value="LOCAL-00713" />
-      <option name="project" value="LOCAL" />
-      <updated>1794677976917</updated>
-    </task>
-    <task id="LOCAL-00714" summary="ROSSO: testMaledizioneGuaritore non riuscito">
-      <option name="closed" value="true" />
-      <created>1794678402508</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
-      <option name="project" value="LOCAL" />
-      <updated>1794678402508</updated>
     </task>
     <task id="LOCAL-00715" summary="ROSSO: testMaledizioneGuaritore non riuscito">
       <option name="closed" value="true" />
@@ -645,7 +631,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795020695311</updated>
     </task>
-    <option name="localTasksCounter" value="762" />
+    <task id="LOCAL-00762" summary="VERDE DIRETTO: testAttaccoPossedutoAssassinoStregato riuscito">
+      <option name="closed" value="true" />
+      <created>1795021031749</created>
+      <option name="number" value="00762" />
+      <option name="presentableId" value="LOCAL-00762" />
+      <option name="project" value="LOCAL" />
+      <updated>1795021031749</updated>
+    </task>
+    <task id="LOCAL-00763" summary="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto">
+      <option name="closed" value="true" />
+      <created>1795021401435</created>
+      <option name="number" value="00763" />
+      <option name="presentableId" value="LOCAL-00763" />
+      <option name="project" value="LOCAL" />
+      <updated>1795021401436</updated>
+    </task>
+    <option name="localTasksCounter" value="764" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testAttaccoNegromante non riuscito" />
-    <MESSAGE value="VERDE: testAttaccoNegromante riuscito" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoLupo" />
@@ -688,6 +688,8 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassinoRomeo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoPossedutoAssassinoRomeo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassinoStregato riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto" />
   </component>
 </project>
