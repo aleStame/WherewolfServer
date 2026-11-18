@@ -3156,7 +3156,7 @@ public final class TestPartita
         String messaggioPosseduto =
             "Serena (Contadino mostro) è protetto dalla Strega.\nAvvisa il Posseduto (Agostino) che non può possederla.";
         assertThatIllegalStateException().isThrownBy(() -> partita.passaPosseduto(nomeContadino)).withMessage(messaggioPosseduto);
-        verificaFalso(partita.isPosseduto(nomeContadino));
+        verificaFalso(isPosseduto(nomeContadino));
     }
 
     @ParameterizedTest @CsvSource({ "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" })
@@ -3173,7 +3173,7 @@ public final class TestPartita
         String messaggioPosseduto =
             "Serena (Contadino mostro) è Romeo.\nAvvisa il Posseduto (Agostino) che non può possederla.";
         assertThatIllegalStateException().isThrownBy(() -> partita.passaPosseduto(nomeContadino)).withMessage(messaggioPosseduto);
-        verificaFalso(partita.isPosseduto(nomeContadino));
+        verificaFalso(isPosseduto(nomeContadino));
     }
 
     @ParameterizedTest @CsvSource
@@ -3368,7 +3368,7 @@ public final class TestPartita
         attaccoAssassino("Claudio");
         String messaggio = "Max (Altra guardia) è Romeo.\nAvvisa il Posseduto (Claudio) che non può possederla.";
         assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nome)).withMessage(messaggio);
-        verificaFalso(partita.isPosseduto(nome));
+        verificaFalso(isPosseduto(nome));
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPosseduto(String nomeRuolo)
@@ -3377,7 +3377,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } });
         attaccoAssassino("Claudio");
         passaPosseduto(nome);
-        verificaVero(partita.isPosseduto(nome));
+        verificaVero(isPosseduto(nome));
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoStregato(String nomeRuolo)
@@ -3390,8 +3390,10 @@ public final class TestPartita
         attaccoAssassino("Claudio");
         String messaggio = "Max (Altra guardia) è protetto dalla Strega.\nAvvisa il Posseduto (Claudio) che non può possederla.";
         assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nome)).withMessage(messaggio);
-        verificaFalso(partita.isPosseduto(nome));
+        verificaFalso(isPosseduto(nome));
     }
+
+    private boolean isPosseduto(String nome) { return partita.isPosseduto(nome); }
 
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
@@ -3526,7 +3528,7 @@ public final class TestPartita
             " diventerà il Posseduto e " + nomePosseduto + " che morirà.";
         assertThatIllegalArgumentException().isThrownBy(() -> attaccoVampiro(nomePosseduto)).withMessage(messaggio);
         verificaEliminazione(nomePosseduto);
-        verificaVero(partita.isPosseduto(nomeVampiro));
+        verificaVero(isPosseduto(nomeVampiro));
     }
 
     private void verificaFallimentoNosferatizzazionePosseduto(String nomePosseduto, String nomeNosferatu, String tipoLupo)
@@ -3537,7 +3539,7 @@ public final class TestPartita
         attaccoLupi(tipoLupo, nomePosseduto);
         assertThatIllegalArgumentException().isThrownBy(() -> progenizzazioneNosferatu(nomePosseduto)).withMessage(messaggio);
         verificaEliminazione(nomePosseduto);
-        verificaVero(partita.isPosseduto(nomeNosferatu));
+        verificaVero(isPosseduto(nomeNosferatu));
     }
 
     private void attaccoPossedutoPreteAmato(String tipoLupo, String nomePosseduto, String nomeAngelo, String nomePrete)
@@ -3658,7 +3660,7 @@ public final class TestPartita
     private void verificaCorrettezzaPossessione(String nome)
     {
         passaPosseduto(nome);
-        verificaVero(partita.isPosseduto(nome));
+        verificaVero(isPosseduto(nome));
     }
 
     private void passaPosseduto(String nome) { partita.passaPosseduto(nome); }
