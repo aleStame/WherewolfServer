@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testMessaggioErrore non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneAttaccoPossedutoNonRiuscito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/eccezioni/EccezioneAttaccoPossedutoNonRiuscito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneAttaccoPossedutoNonRiuscito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/eccezioni/TestEccezioneAttaccoPossedutoNonRiuscito.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testMessaggioErrore riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00722" summary="ROSSO: testGuarigione non riuscito">
-      <option name="closed" value="true" />
-      <created>1794700921954</created>
-      <option name="number" value="00722" />
-      <option name="presentableId" value="LOCAL-00722" />
-      <option name="project" value="LOCAL" />
-      <updated>1794700921956</updated>
     </task>
     <task id="LOCAL-00723" summary="VERDE: testGuarigione riuscito">
       <option name="closed" value="true" />
@@ -646,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795035994211</updated>
     </task>
-    <option name="localTasksCounter" value="771" />
+    <task id="LOCAL-00771" summary="VERDE: testMessaggioErrore riuscito">
+      <option name="closed" value="true" />
+      <created>1795036881455</created>
+      <option name="number" value="00771" />
+      <option name="presentableId" value="LOCAL-00771" />
+      <option name="project" value="LOCAL" />
+      <updated>1795036881455</updated>
+    </task>
+    <option name="localTasksCounter" value="772" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaProgenizzazioneNosferatu" />
     <MESSAGE value="REFACTORING: semplificazione del codice" />
     <MESSAGE value="VERDE DIRETTO: testPassaPossedutoCorretto riuscito" />
     <MESSAGE value="ROSSO: testPassaPosseduto non riuscito" />
@@ -689,6 +688,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAura" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testMessaggioErrore non riuscito" />
+    <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testMessaggioErrore riuscito" />
   </component>
 </project>

@@ -571,23 +571,14 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
+        String nomePosseduto = mortiNotte.getNomePosseduto();
         switch(vivi.passaPosseduto(nome))
         {
             case STREGATO_BECCATO ->
-            {
-                String messaggio =
-                    nome + " (" + getNomeRuolo(nome) + ") è protetto dalla Strega.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
-                    ") che non può possederla.";
-                throw new IllegalStateException(messaggio);
-            }
+                throw new EccezioneAttaccoPossedutoNonRiuscito("Strega", nome, getNomeRuolo(nome), nomePosseduto);
             case LADRA_BECCATA -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
             case ROMEO_BECCATO ->
-            {
-                String messaggio =
-                    nome + " (" + getNomeRuolo(nome) + ") è Romeo.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
-                    ") che non può possederla.";
-                throw new IllegalStateException(messaggio);
-            }
+                throw new EccezioneAttaccoPossedutoNonRiuscito("Giulietta", nome, getNomeRuolo(nome), nomePosseduto);
             case PRETE_BECCATO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
         }

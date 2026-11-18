@@ -3154,7 +3154,7 @@ public final class TestPartita
         assertThatIllegalArgumentException().isThrownBy(() -> protezioneStrega(nomeContadino)).withMessage(messaggioContadino);
         attaccoLupi(tipoLupo, nomePosseduto);
         String messaggioPosseduto =
-            "Serena (Contadino mostro) è protetto dalla Strega.\nAvvisa il Posseduto (Agostino) che non può possederla.";
+            "Serena (Contadino mostro) è protetto dalla Strega.\nAvvisa il Posseduto (Agostino) che non può possederlo.";
         assertThatIllegalStateException().isThrownBy(() -> partita.passaPosseduto(nomeContadino)).withMessage(messaggioPosseduto);
         verificaFalso(isPosseduto(nomeContadino));
     }
@@ -3171,7 +3171,7 @@ public final class TestPartita
         romeizzazione(nomeContadino);
         attaccoLupi(tipoLupo, nomePosseduto);
         String messaggioPosseduto =
-            "Serena (Contadino mostro) è Romeo.\nAvvisa il Posseduto (Agostino) che non può possederla.";
+            "Serena (Contadino mostro) è Romeo.\nAvvisa il Posseduto (Agostino) che non può possederlo.";
         assertThatIllegalStateException().isThrownBy(() -> partita.passaPosseduto(nomeContadino)).withMessage(messaggioPosseduto);
         verificaFalso(isPosseduto(nomeContadino));
     }
@@ -3365,7 +3365,7 @@ public final class TestPartita
             new String[][] { { nome, nomeRuolo }, { "Mauro", "Giulietta" }, { nomePosseduto, "Posseduto" }, { "Roberto", "Assassino" } };
         inizializzaPartita(giocatori);
         romeizzazione(nome);
-        String messaggio = "Max (Altra guardia) è Romeo.\nAvvisa il Posseduto (Claudio) che non può possederla.";
+        String messaggio = "Max (Altra guardia) è Romeo.\nAvvisa il Posseduto (Claudio) che non può possederlo.";
         verificaAttaccoPossedutoNonRiuscito(nomePosseduto, nome, messaggio);
     }
 
@@ -3384,7 +3384,7 @@ public final class TestPartita
             new String[][] { { nome, nomeRuolo }, { "Mauro", "Strega" }, { nomePosseduto, "Posseduto" }, { "Roberto", "Assassino" } };
         inizializzaPartita(giocatori);
         protezioneStrega(nome);
-        String messaggio = "Max (Altra guardia) è protetto dalla Strega.\nAvvisa il Posseduto (Claudio) che non può possederla.";
+        String messaggio = "Max (Altra guardia) è protetto dalla Strega.\nAvvisa il Posseduto (Claudio) che non può possederlo.";
         verificaAttaccoPossedutoNonRiuscito(nomePosseduto, nome, messaggio);
     }
 
@@ -3406,7 +3406,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         romeizzazione(nomeAssassino);
         attaccoLupi(tipoLupo, nomePosseduto);
-        String messaggio = "Luca (Assassino) è Romeo.\nAvvisa il Posseduto (Paolo) che non può possederla.";
+        String messaggio = "Luca (Assassino) è Romeo.\nAvvisa il Posseduto (Paolo) che non può possederlo.";
         verificaErroreAttaccoPosseduto(nomeAssassino, messaggio);
     }
 
@@ -3419,7 +3419,7 @@ public final class TestPartita
         inizializzaPartita(giocatori);
         protezioneStrega(nomeAssassino);
         attaccoLupi(tipoLupo, nomePosseduto);
-        String messaggio = "Luca (Assassino) è protetto dalla Strega.\nAvvisa il Posseduto (Paolo) che non può possederla.";
+        String messaggio = "Luca (Assassino) è protetto dalla Strega.\nAvvisa il Posseduto (Paolo) che non può possederlo.";
         verificaErroreAttaccoPosseduto(nomeAssassino, messaggio);
     }
 
