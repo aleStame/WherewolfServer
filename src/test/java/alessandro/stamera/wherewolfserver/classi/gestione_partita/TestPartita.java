@@ -3360,15 +3360,13 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoRomeo(String nomeRuolo)
     {
-        String nome = "Max";
+        String nome = "Max", nomePosseduto = "Claudio";
         String[][] giocatori =
-            new String[][] { { nome, nomeRuolo }, { "Mauro", "Giulietta" }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } };
+            new String[][] { { nome, nomeRuolo }, { "Mauro", "Giulietta" }, { nomePosseduto, "Posseduto" }, { "Roberto", "Assassino" } };
         inizializzaPartita(giocatori);
         romeizzazione(nome);
-        attaccoAssassino("Claudio");
         String messaggio = "Max (Altra guardia) è Romeo.\nAvvisa il Posseduto (Claudio) che non può possederla.";
-        assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nome)).withMessage(messaggio);
-        verificaFalso(isPosseduto(nome));
+        verificaAttaccoPossedutoNonRiuscito(nomePosseduto, nome, messaggio);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPosseduto(String nomeRuolo)
@@ -3382,15 +3380,20 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoStregato(String nomeRuolo)
     {
-        String nome = "Max";
+        String nome = "Max", nomePosseduto = "Claudio";
         String[][] giocatori =
-            new String[][] { { nome, nomeRuolo }, { "Mauro", "Strega" }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } };
+            new String[][] { { nome, nomeRuolo }, { "Mauro", "Strega" }, { nomePosseduto, "Posseduto" }, { "Roberto", "Assassino" } };
         inizializzaPartita(giocatori);
         protezioneStrega(nome);
-        attaccoAssassino("Claudio");
         String messaggio = "Max (Altra guardia) è protetto dalla Strega.\nAvvisa il Posseduto (Claudio) che non può possederla.";
-        assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nome)).withMessage(messaggio);
-        verificaFalso(isPosseduto(nome));
+        verificaAttaccoPossedutoNonRiuscito(nomePosseduto, nome, messaggio);
+    }
+
+    private void verificaAttaccoPossedutoNonRiuscito(String nomePosseduto, String nomeVittima, String messaggio)
+    {
+        attaccoAssassino(nomePosseduto);
+        assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nomeVittima)).withMessage(messaggio);
+        verificaFalso(isPosseduto(nomeVittima));
     }
 
     private boolean isPosseduto(String nome) { return partita.isPosseduto(nome); }

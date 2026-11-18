@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isPosseduto">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00707" summary="ROSSO: testGuarigione non riuscito">
-      <option name="closed" value="true" />
-      <created>1794652664377</created>
-      <option name="number" value="00707" />
-      <option name="presentableId" value="LOCAL-00707" />
-      <option name="project" value="LOCAL" />
-      <updated>1794652664377</updated>
-    </task>
-    <task id="LOCAL-00708" summary="VERDE: testGuarigione riuscito">
-      <option name="closed" value="true" />
-      <created>1794653050156</created>
-      <option name="number" value="00708" />
-      <option name="presentableId" value="LOCAL-00708" />
-      <option name="project" value="LOCAL" />
-      <updated>1794653050157</updated>
     </task>
     <task id="LOCAL-00709" summary="ROSSO: testGuarigione non riuscito">
       <option name="closed" value="true" />
@@ -646,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795014085508</updated>
     </task>
-    <option name="localTasksCounter" value="756" />
+    <task id="LOCAL-00756" summary="VERDE DIRETTO: testAttaccoPosseduto riuscito">
+      <option name="closed" value="true" />
+      <created>1795014487734</created>
+      <option name="number" value="00756" />
+      <option name="presentableId" value="LOCAL-00756" />
+      <option name="project" value="LOCAL" />
+      <updated>1795014487734</updated>
+    </task>
+    <task id="LOCAL-00757" summary="REFACTORING: definizione del metodo isPosseduto">
+      <option name="closed" value="true" />
+      <created>1795014587345</created>
+      <option name="number" value="00757" />
+      <option name="presentableId" value="LOCAL-00757" />
+      <option name="project" value="LOCAL" />
+      <updated>1795014587345</updated>
+    </task>
+    <option name="localTasksCounter" value="758" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,8 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoLupoSolitario riuscito" />
     <MESSAGE value="VERDE DIRETTO: testMistico riuscito" />
     <MESSAGE value="VERDE DIRETTO: testControlloMediumMaledetto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoFallimentoAttacco" />
@@ -689,6 +686,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo eseguiPassaggioPosseduto" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testAttaccoPosseduto riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo isPosseduto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isPosseduto" />
   </component>
 </project>
