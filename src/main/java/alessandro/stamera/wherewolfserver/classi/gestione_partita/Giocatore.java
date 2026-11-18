@@ -318,9 +318,15 @@ public final class Giocatore
 
     private EsitoAttacco getEsitoPassaggioPosseduto(EsitoAttacco esito)
     {
+        esito = eseguiPassaggioPosseduto(esito);
+        if(esito != RIUSCITO) esito = getEsitoPassaggioPossedutoNonRiuscito(esito);
+        return esito;
+    }
+
+    private EsitoAttacco eseguiPassaggioPosseduto(EsitoAttacco esito)
+    {
         if(tratti.isProtezionePossedutoPresente()) esito = FALLITO;
         else trasformaPosseduto();
-        if(esito != RIUSCITO) esito = getEsitoPassaggioPossedutoNonRiuscito(esito);
         return esito;
     }
 
