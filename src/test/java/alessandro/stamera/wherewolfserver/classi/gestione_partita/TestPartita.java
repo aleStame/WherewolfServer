@@ -3358,6 +3358,19 @@ public final class TestPartita
         assertThat(partita.getEsitoPartitaGiocatore(nomeAssassino)).isEqualTo(SCONFITTA);
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoRomeo(String nomeRuolo)
+    {
+        String nome = "Max";
+        String[][] giocatori =
+            new String[][] { { nome, nomeRuolo }, { "Mauro", "Giulietta" }, { "Claudio", "Posseduto" }, { "Roberto", "Assassino" } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nome);
+        attaccoAssassino("Claudio");
+        String messaggio = "Max (Altra guardia) è Romeo.\nAvvisa il Posseduto (Claudio) che non può possederla.";
+        assertThatIllegalStateException().isThrownBy(() -> passaPosseduto(nome)).withMessage(messaggio);
+        verificaFalso(partita.isPosseduto(nome));
+    }
+
     private void verificaAssassinioRomeo(String nomeRomeo, String nomeGiulietta)
     {
         String messaggio = (nomeRomeo + " è Romeo.\nAvvisa anche " + nomeGiulietta + " (Giulietta) del fatto che deve morire.");

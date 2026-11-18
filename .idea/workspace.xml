@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eseguiPassaggioPosseduto">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -256,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00703" summary="ROSSO: testMortePostGildata non riuscito">
-      <option name="closed" value="true" />
-      <created>1794612243388</created>
-      <option name="number" value="00703" />
-      <option name="presentableId" value="LOCAL-00703" />
-      <option name="project" value="LOCAL" />
-      <updated>1794612243388</updated>
-    </task>
-    <task id="LOCAL-00704" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaAmatoMorto riuscito">
-      <option name="closed" value="true" />
-      <created>1794651315853</created>
-      <option name="number" value="00704" />
-      <option name="presentableId" value="LOCAL-00704" />
-      <option name="project" value="LOCAL" />
-      <updated>1794651315853</updated>
     </task>
     <task id="LOCAL-00705" summary="VERDE DIRETTO: testCriminalizzazioneCapoGildaRomeoMorto riuscito">
       <option name="closed" value="true" />
@@ -649,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794910826016</updated>
     </task>
-    <option name="localTasksCounter" value="752" />
+    <task id="LOCAL-00752" summary="REFACTORING: definizione del metodo getEsitoPassaggioPossedutoNonRiuscito">
+      <option name="closed" value="true" />
+      <created>1795010921634</created>
+      <option name="number" value="00752" />
+      <option name="presentableId" value="LOCAL-00752" />
+      <option name="project" value="LOCAL" />
+      <updated>1795010921635</updated>
+    </task>
+    <task id="LOCAL-00753" summary="REFACTORING: definizione del metodo eseguiPassaggioPosseduto">
+      <option name="closed" value="true" />
+      <created>1795011198660</created>
+      <option name="number" value="00753" />
+      <option name="presentableId" value="LOCAL-00753" />
+      <option name="project" value="LOCAL" />
+      <updated>1795011198660</updated>
+    </task>
+    <option name="localTasksCounter" value="754" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,8 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testGuarigione riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo guarigione" />
     <MESSAGE value="VERDE DIRETTO: testCapoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoBranco riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoLupoReietto riuscito" />
@@ -692,6 +686,8 @@
     <MESSAGE value="VERDE: testPassaPosseduto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPassaggioPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPassaggioPossedutoNonRiuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo eseguiPassaggioPosseduto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eseguiPassaggioPosseduto" />
   </component>
 </project>
