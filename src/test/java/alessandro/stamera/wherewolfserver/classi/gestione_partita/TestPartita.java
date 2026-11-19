@@ -3443,6 +3443,16 @@ public final class TestPartita
         verificaVero(partita.isVampiroVincitore());
     }
 
+    @Test public void testEliminazioneVampiro()
+    {
+        String nomeVampiro = "Spike", nomeVittima = "Nathan", nomeLupo = "Oz", tipoLupo = "Lupo del branco";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Vampiro" }, { nomeLupo, tipoLupo }, { nomeVittima, "Prete" } });
+        attaccoVampiro(nomeVittima);
+        attaccoLupi(tipoLupo, nomeVampiro);
+        verificaFalso(partita.isVampiroSconfitto());
+        verificaFalso(partita.isVampiroVincitore());
+    }
+
     private void verificaPassaggioPossedutoCorretto(String nome)
     {
         passaPosseduto(nome);
