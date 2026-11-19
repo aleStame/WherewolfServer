@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: semplificazione del metodo passaPosseduto">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_11_2026_16_46_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_11_2026_16_46__Changes_.xml" beforeDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testVittoriaRomeo riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00724" summary="REFACTORING: definizione del metodo guarigione">
-      <option name="closed" value="true" />
-      <created>1794704277703</created>
-      <option name="number" value="00724" />
-      <option name="presentableId" value="LOCAL-00724" />
-      <option name="project" value="LOCAL" />
-      <updated>1794704277705</updated>
     </task>
     <task id="LOCAL-00725" summary="VERDE DIRETTO: testCapoBranco riuscito">
       <option name="closed" value="true" />
@@ -649,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795039656873</updated>
     </task>
-    <option name="localTasksCounter" value="773" />
+    <task id="LOCAL-00773" summary="VERDE DIRETTO: testVittoriaRomeo riuscito">
+      <option name="closed" value="true" />
+      <created>1795084757100</created>
+      <option name="number" value="00773" />
+      <option name="presentableId" value="LOCAL-00773" />
+      <option name="project" value="LOCAL" />
+      <updated>1795084757104</updated>
+    </task>
+    <option name="localTasksCounter" value="774" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPassaPosseduto non riuscito" />
     <MESSAGE value="VERDE: testPassaPosseduto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPassaggioPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode" />
@@ -692,6 +688,7 @@
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del metodo passaPosseduto" />
     <MESSAGE value="REFACTORING: semplificazione del metodo passaPosseduto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del metodo passaPosseduto" />
+    <MESSAGE value="VERDE DIRETTO: testVittoriaRomeo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVittoriaRomeo riuscito" />
   </component>
 </project>

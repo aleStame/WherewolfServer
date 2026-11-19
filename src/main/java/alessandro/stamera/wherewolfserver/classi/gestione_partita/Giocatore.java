@@ -4,6 +4,8 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
+import jakarta.annotation.Nonnull;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
@@ -262,23 +264,7 @@ public final class Giocatore
         if(isRomeo()) esito = getPartitaRomeo(partita);
         else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
         else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
-        else if(isNonMorto())
-        {
-            esito = NON_FINITO;
-            switch(fazione)
-            {
-                case NOSFERATU ->
-                {
-                    if(partita.isNosferatuVincitore()) esito = VITTORIA;
-                    else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
-                }
-                case VAMPIRO ->
-                {
-                    if(partita.isVampiroVincitore()) esito = VITTORIA;
-                    else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
-                }
-            }
-        }
+        else if(isNonMorto()) esito = getEsitoPartitaNonMorto(partita);
         else if(fazione == AMANTI)
         {
             if(partita.isRomeoPresente() && partita.isGiuliettaPresente())
@@ -509,6 +495,26 @@ public final class Giocatore
     {
         Fazione risultato = getFazione();
         return risultato == LUPO_BRANCO || risultato == LUPO_SOLITARIO;
+    }
+
+    private EsitoPartita getEsitoPartitaNonMorto(Partita partita)
+    {
+        EsitoPartita esito;
+        esito = NON_FINITO;
+        switch(fazione)
+        {
+            case NOSFERATU ->
+            {
+                if(partita.isNosferatuVincitore()) esito = VITTORIA;
+                else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
+            }
+            case VAMPIRO ->
+            {
+                if(partita.isVampiroVincitore()) esito = VITTORIA;
+                else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
+            }
+        }
+        return esito;
     }
 
 }
