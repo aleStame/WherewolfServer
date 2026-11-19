@@ -2126,12 +2126,6 @@ public final class TestGiocatoriVivi
         verificaAttaccoLupo(tipoLupo, nomeVittima, ROMEO_BECCATO);
     }
 
-    private void verificaPassaggioPossedutoFallito(String nomePosseduto, String nome)
-    {
-        eliminaGiocatore(nomePosseduto);
-        verificaEsitoPassaggioPosseduto(nome, FALLITO);
-    }
-
     private void verificaEsitoAttaccoNegromante(String nome, EsitoAttacco esito)
     {
         verificaAttacco(giocatori.attaccoNegromante(nome), esito);
