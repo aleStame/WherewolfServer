@@ -508,12 +508,16 @@ public final class Giocatore
                 if(partita.isNosferatuVincitore()) esito = VITTORIA;
                 else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
             }
-            case VAMPIRO ->
-            {
-                if(partita.isVampiroVincitore()) esito = VITTORIA;
-                else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
-            }
+            case VAMPIRO -> esito = getEsitoPartitaVampiro(partita);
         }
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaVampiro(Partita partita)
+    {
+        EsitoPartita esito = NON_FINITO;
+        if(partita.isVampiroVincitore()) esito = VITTORIA;
+        else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
         return esito;
     }
 

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testVittoriaRomeo riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaNonMorto">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00725" summary="VERDE DIRETTO: testCapoBranco riuscito">
-      <option name="closed" value="true" />
-      <created>1794779320712</created>
-      <option name="number" value="00725" />
-      <option name="presentableId" value="LOCAL-00725" />
-      <option name="project" value="LOCAL" />
-      <updated>1794779320716</updated>
     </task>
     <task id="LOCAL-00726" summary="VERDE DIRETTO: testAttaccoLupoBranco riuscito">
       <option name="closed" value="true" />
@@ -646,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795084757104</updated>
     </task>
-    <option name="localTasksCounter" value="774" />
+    <task id="LOCAL-00774" summary="REFACTORING: definizione del metodo getEsitoPartitaNonMorto">
+      <option name="closed" value="true" />
+      <created>1795085915642</created>
+      <option name="number" value="00774" />
+      <option name="presentableId" value="LOCAL-00774" />
+      <option name="project" value="LOCAL" />
+      <updated>1795085915642</updated>
+    </task>
+    <option name="localTasksCounter" value="775" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testPassaPosseduto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPassaggioPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo annullaProtezioneAngeloCustode" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPassaggioPossedutoNonRiuscito" />
@@ -689,6 +687,7 @@
     <MESSAGE value="REFACTORING: semplificazione del metodo passaPosseduto" />
     <MESSAGE value="REFACTORING: semplificazione del metodo passaPosseduto" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaRomeo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVittoriaRomeo riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaNonMorto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaNonMorto" />
   </component>
 </project>
