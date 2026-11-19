@@ -499,17 +499,20 @@ public final class Giocatore
 
     private EsitoPartita getEsitoPartitaNonMorto(Partita partita)
     {
-        EsitoPartita esito;
-        esito = NON_FINITO;
+        EsitoPartita esito = NON_FINITO;
         switch(fazione)
         {
-            case NOSFERATU ->
-            {
-                if(partita.isNosferatuVincitore()) esito = VITTORIA;
-                else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
-            }
+            case NOSFERATU -> esito = getEsitoPartitaNosferatu(partita);
             case VAMPIRO -> esito = getEsitoPartitaVampiro(partita);
         }
+        return esito;
+    }
+
+    private EsitoPartita getEsitoPartitaNosferatu(Partita partita)
+    {
+        EsitoPartita esito = NON_FINITO;
+        if(partita.isNosferatuVincitore()) esito = VITTORIA;
+        else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
         return esito;
     }
 
