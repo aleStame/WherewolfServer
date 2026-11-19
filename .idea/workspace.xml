@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testSconfittaVampiro non riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testSconfittaVampiro riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +255,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00729" summary="VERDE DIRETTO: testMistico riuscito">
-      <option name="closed" value="true" />
-      <created>1794782940224</created>
-      <option name="number" value="00729" />
-      <option name="presentableId" value="LOCAL-00729" />
-      <option name="project" value="LOCAL" />
-      <updated>1794782940226</updated>
     </task>
     <task id="LOCAL-00730" summary="VERDE DIRETTO: testControlloMediumMaledetto riuscito">
       <option name="closed" value="true" />
@@ -645,7 +640,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795095897350</updated>
     </task>
-    <option name="localTasksCounter" value="778" />
+    <task id="LOCAL-00778" summary="VERDE: testSconfittaVampiro riuscito">
+      <option name="closed" value="true" />
+      <created>1795096261369</created>
+      <option name="number" value="00778" />
+      <option name="presentableId" value="LOCAL-00778" />
+      <option name="project" value="LOCAL" />
+      <updated>1795096261369</updated>
+    </task>
+    <option name="localTasksCounter" value="779" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +666,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo eseguiPassaggioPosseduto" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPosseduto riuscito" />
@@ -688,6 +690,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaVampiro" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaNosferatu" />
     <MESSAGE value="ROSSO: testSconfittaVampiro non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSconfittaVampiro non riuscito" />
+    <MESSAGE value="VERDE: testSconfittaVampiro riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSconfittaVampiro riuscito" />
   </component>
 </project>

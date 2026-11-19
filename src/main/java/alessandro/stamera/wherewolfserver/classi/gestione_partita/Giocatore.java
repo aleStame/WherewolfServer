@@ -520,7 +520,7 @@ public final class Giocatore
     {
         EsitoPartita esito = NON_FINITO;
         if(partita.isVampiroVincitore()) esito = VITTORIA;
-        else if(partita.isVampiroAssente() && partita.isProgenieVampiroAssenti()) esito = SCONFITTA;
+        else if(partita.isVampiroSconfitto()) esito = SCONFITTA;
         return esito;
     }
 

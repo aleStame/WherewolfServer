@@ -638,7 +638,7 @@ public final class Partita
 
     public boolean isRomeoPresente() { return vivi.isRomeoPresente(); }
 
-    public boolean isVampiroSconfitto() { return isNosferatuAssente() && isProgenieNosferatuAssenti(); }
+    public boolean isVampiroSconfitto() { return isVampiroAssente() && isProgenieVampiroAssenti(); }
 
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {

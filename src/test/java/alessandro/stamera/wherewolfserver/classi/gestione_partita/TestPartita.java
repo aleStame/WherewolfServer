@@ -3430,6 +3430,19 @@ public final class TestPartita
         verificaFalso(partita.isVampiroVincitore());
     }
 
+    @Test public void testVittoriaVampiro()
+    {
+        String nomeVittima = "Nathan", nomeLupo = "Oz";
+        inizializzaPartita(new String[][] { { "Angel", "Vampiro" }, { nomeLupo, "Capo branco" }, { nomeVittima, "Prete" } });
+        attaccoVampiro(nomeVittima);
+        incrementaVoti(nomeLupo, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeLupo, 2);
+        terminaBallottaggio();
+        verificaFalso(partita.isVampiroSconfitto());
+        verificaVero(partita.isVampiroVincitore());
+    }
+
     private void verificaPassaggioPossedutoCorretto(String nome)
     {
         passaPosseduto(nome);
