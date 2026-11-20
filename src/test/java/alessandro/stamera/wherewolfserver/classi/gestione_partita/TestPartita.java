@@ -3493,6 +3493,19 @@ public final class TestPartita
         verificaVero(partita.isRomeoGiuliettaPresenti());
     }
 
+    @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testRomeoSconfittoPerAssassinio(String nomeRuolo)
+    {
+        String nomeRomeo = "Giulia", nomeGiulietta = "Valentina";
+        inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo }, { "Pietro", "Assassino" } });
+        romeizzazione(nomeRomeo);
+        String messaggio = "Giulia è Romeo.\nAvvisa anche Valentina (Giulietta) del fatto che deve morire.";
+        assertThatIllegalStateException().isThrownBy(() -> attaccoAssassino(nomeRomeo)).withMessage(messaggio);
+        terminaNotte();
+        verificaEliminati(nomeRomeo, nomeGiulietta);
+        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) assertThat(partita.getEsitoPartitaGiocatore(nome)).isEqualTo(SCONFITTA);
+
+    }
+
     private boolean isVampiroSconfitto() { return partita.isVampiroSconfitto(); }
 
     private boolean isVampiroVincitore() { return partita.isVampiroVincitore(); }
