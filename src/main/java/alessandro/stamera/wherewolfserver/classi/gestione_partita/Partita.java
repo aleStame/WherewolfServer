@@ -640,7 +640,7 @@ public final class Partita
 
     public boolean isVampiroSconfitto() { return isVampiroAssente() && isProgenieVampiroAssenti(); }
 
-    public boolean isNosferatuSconfitto() { return false; }
+    public boolean isNosferatuSconfitto() { return isNosferatuAssente() && isProgenieNosferatuAssenti(); }
 
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {
