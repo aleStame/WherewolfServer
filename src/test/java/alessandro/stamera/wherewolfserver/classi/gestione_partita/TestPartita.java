@@ -3485,6 +3485,12 @@ public final class TestPartita
         verificaFalso(isNosferatuVincitore());
     }
 
+    @Test public void testPresenzaRomeoGiulietta()
+    {
+        inizializzaPartita(new String[][] { { "Tommaso", "Giulietta" }, { "Arturo", "Giullare" } });
+        verificaVero(partita.isRomeoGiuliettaPresenti());
+    }
+
     private boolean isVampiroSconfitto() { return partita.isVampiroSconfitto(); }
 
     private boolean isVampiroVincitore() { return partita.isVampiroVincitore(); }

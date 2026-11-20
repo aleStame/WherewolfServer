@@ -4,8 +4,6 @@ import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.*;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Criminale;
 import alessandro.stamera.wherewolfserver.classi.fazioni.Lupo;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-import jakarta.annotation.Nonnull;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
@@ -260,9 +258,8 @@ public final class Giocatore
 
     public EsitoPartita getEsitoPartita(Partita partita)
     {
-        EsitoPartita esito = ruolo.getEsitoPartita(partita);
+        EsitoPartita esito;
         if(isRomeo()) esito = getPartitaRomeo(partita);
-        else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
         else if(isNonMorto()) esito = getEsitoPartitaNonMorto(partita);
         else esito = getEsitoPartitaFazioniRimaste(partita);
         return esito;
@@ -295,11 +292,13 @@ public final class Giocatore
 
     private EsitoPartita getEsitoPartitaFazioniRimaste(Partita partita)
     {
-        EsitoPartita esito = NON_FINITO;
+        EsitoPartita esito;
         switch(fazione)
         {
             case LUPO_BRANCO -> esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
             case AMANTI -> esito = getEsitoPartitaAmanti(partita);
+            case CRIMINALI -> esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
+            default -> esito = ruolo.getEsitoPartita(partita);
         }
         return esito;
     }

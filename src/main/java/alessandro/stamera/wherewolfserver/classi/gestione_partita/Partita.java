@@ -278,6 +278,8 @@ public final class Partita
         controlloViaggio();
     }
 
+    public boolean isRomeoGiuliettaPresenti() { return false; }
+
     public boolean isPazzoUcciso() { return pazzoUcciso; }
 
     private EsitoGuarigione guarigione(String nome)

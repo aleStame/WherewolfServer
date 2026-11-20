@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isVampiroVincitore">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isVampiroSconfitto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestVampiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00741" summary="VERDE: testAttaccoNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1794837246743</created>
-      <option name="number" value="00741" />
-      <option name="presentableId" value="LOCAL-00741" />
-      <option name="project" value="LOCAL" />
-      <updated>1794837246743</updated>
     </task>
     <task id="LOCAL-00742" summary="VERDE DIRETTO: testProgenieNosferatuRiuscita riuscito">
       <option name="closed" value="true" />
@@ -645,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795188343085</updated>
     </task>
-    <option name="localTasksCounter" value="790" />
+    <task id="LOCAL-00790" summary="REFACTORING: definizione del metodo isVampiroSconfitto">
+      <option name="closed" value="true" />
+      <created>1795188575576</created>
+      <option name="number" value="00790" />
+      <option name="presentableId" value="LOCAL-00790" />
+      <option name="project" value="LOCAL" />
+      <updated>1795188575576</updated>
+    </task>
+    <option name="localTasksCounter" value="791" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo conseguenzeControlloMegera" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizioneSensitiva" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAura" />
@@ -688,6 +691,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuSconfitto" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroVincitore" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isVampiroVincitore" />
+    <MESSAGE value="REFACTORING: definizione del metodo isVampiroSconfitto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isVampiroSconfitto" />
   </component>
 </project>
