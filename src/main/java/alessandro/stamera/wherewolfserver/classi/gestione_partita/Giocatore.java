@@ -297,12 +297,15 @@ public final class Giocatore
     private EsitoPartita getEsitoPartitaAmanti(Partita partita)
     {
         EsitoPartita esito;
-        if(partita.isRomeoPresente() && partita.isGiuliettaPresente())
-        {
-            esito = NON_FINITO;
-            if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
-        }
+        if(partita.isRomeoPresente() && partita.isGiuliettaPresente()) esito = getEsitoPartitaRomeoGiulietta(partita);
         else esito = SCONFITTA;
+        return esito;
+    }
+
+    private static EsitoPartita getEsitoPartitaRomeoGiulietta(Partita partita)
+    {
+        EsitoPartita esito = NON_FINITO;
+        if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
         return esito;
     }
 
