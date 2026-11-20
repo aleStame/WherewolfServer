@@ -3340,7 +3340,7 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(nomeGiulietta, 1);
         terminaBallottaggio();
-        for(String nome : new String[]{ nomeRomeo, nomeGiulietta }) verificaEsitoPartitaGiocatore(nome, SCONFITTA);
+        for(String nome : new String[]{ nomeRomeo, nomeGiulietta }) verificaPartitaPersa(nome);
     }
 
     @Test public void testGuaritoreMaledetto()
@@ -3355,7 +3355,7 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(nomeAssassino, 2);
         terminaBallottaggio();
-        verificaEsitoPartitaGiocatore(nomeAssassino, SCONFITTA);
+        verificaPartitaPersa(nomeAssassino);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testAttaccoPossedutoRomeo(String nomeRuolo)
@@ -3501,7 +3501,7 @@ public final class TestPartita
         verificaAssassinioRomeo(nomeRomeo, nomeGiulietta);
         terminaNotte();
         verificaEliminati(nomeRomeo, nomeGiulietta);
-        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaEsitoPartitaGiocatore(nome, SCONFITTA);
+        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testRomeoSconfittoPerAssassinioGiulietta(String nomeRuolo)
@@ -3512,15 +3512,15 @@ public final class TestPartita
         attaccoAssassino(nomeGiulietta);
         terminaNotte();
         verificaEliminati(nomeRomeo, nomeGiulietta);
-        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaEsitoPartitaGiocatore(nome, SCONFITTA);
+        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
     }
+
+    private void verificaPartitaPersa(String nome) { verificaEsitoPartitaGiocatore(nome, SCONFITTA); }
 
     private void verificaEsitoPartitaGiocatore(String nome, EsitoPartita sconfitta)
     {
         assertThat(partita.getEsitoPartitaGiocatore(nome)).isEqualTo(sconfitta);
     }
-
-    //private void verificaEsitoPartitaGiocatore() {}
 
     private boolean isVampiroSconfitto() { return partita.isVampiroSconfitto(); }
 
