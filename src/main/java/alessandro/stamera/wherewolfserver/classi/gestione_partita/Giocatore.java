@@ -265,15 +265,7 @@ public final class Giocatore
         else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
         else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
         else if(isNonMorto()) esito = getEsitoPartitaNonMorto(partita);
-        else if(fazione == AMANTI)
-        {
-            if(partita.isRomeoPresente() && partita.isGiuliettaPresente())
-            {
-                esito = NON_FINITO;
-                if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
-            }
-            else esito = SCONFITTA;
-        }
+        else if(fazione == AMANTI) esito = getEsitoPartitaAmanti(partita);
         return esito;
     }
 
@@ -301,6 +293,18 @@ public final class Giocatore
     public boolean isSegnalatoOratore() { return segnalatoOratore; }
 
     public void annullaSegnalazioneOratore() { setSegnalatoOratore(false); }
+
+    private EsitoPartita getEsitoPartitaAmanti(Partita partita)
+    {
+        EsitoPartita esito;
+        if(partita.isRomeoPresente() && partita.isGiuliettaPresente())
+        {
+            esito = NON_FINITO;
+            if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
+        }
+        else esito = SCONFITTA;
+        return esito;
+    }
 
     private EsitoAttacco getEsitoPassaggioPosseduto(EsitoAttacco esito)
     {
@@ -512,7 +516,7 @@ public final class Giocatore
     {
         EsitoPartita esito = NON_FINITO;
         if(partita.isNosferatuVincitore()) esito = VITTORIA;
-        else if(partita.isNosferatuAssente() && partita.isProgenieNosferatuAssenti()) esito = SCONFITTA;
+        else if(partita.isNosferatuSconfitto()) esito = SCONFITTA;
         return esito;
     }
 
