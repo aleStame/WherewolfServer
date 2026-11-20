@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testPresenzaRomeoGiulietta riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
@@ -253,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00744" summary="VERDE: testAttaccoNosferatu riuscito">
-      <option name="closed" value="true" />
-      <created>1794841011094</created>
-      <option name="number" value="00744" />
-      <option name="presentableId" value="LOCAL-00744" />
-      <option name="project" value="LOCAL" />
-      <updated>1794841011094</updated>
     </task>
     <task id="LOCAL-00745" summary="REFACTORING: definizione del metodo verificaProgenizzazioneNosferatu">
       <option name="closed" value="true" />
@@ -646,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795193693169</updated>
     </task>
-    <option name="localTasksCounter" value="793" />
+    <task id="LOCAL-00793" summary="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito">
+      <option name="closed" value="true" />
+      <created>1795194700040</created>
+      <option name="number" value="00793" />
+      <option name="presentableId" value="LOCAL-00793" />
+      <option name="project" value="LOCAL" />
+      <updated>1795194700040</updated>
+    </task>
+    <option name="localTasksCounter" value="794" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo verificaAura" />
     <MESSAGE value="ROSSO: testMessaggioErrore non riuscito" />
     <MESSAGE value="VERDE: testMessaggioErrore riuscito" />
     <MESSAGE value="REFACTORING: semplificazione del metodo passaPosseduto" />
@@ -689,6 +688,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroSconfitto" />
     <MESSAGE value="ROSSO: testPresenzaRomeoGiulietta non riuscito" />
     <MESSAGE value="VERDE: testPresenzaRomeoGiulietta riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testPresenzaRomeoGiulietta riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito" />
   </component>
 </project>
