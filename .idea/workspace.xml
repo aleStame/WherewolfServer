@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isNosferatuSconfitto" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isVampiroVincitore">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00740" summary="ROSSO: testAttaccoNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1794836840058</created>
-      <option name="number" value="00740" />
-      <option name="presentableId" value="LOCAL-00740" />
-      <option name="project" value="LOCAL" />
-      <updated>1794836840058</updated>
     </task>
     <task id="LOCAL-00741" summary="VERDE: testAttaccoNosferatu riuscito">
       <option name="closed" value="true" />
@@ -643,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795188112624</updated>
     </task>
-    <option name="localTasksCounter" value="789" />
+    <task id="LOCAL-00789" summary="REFACTORING: definizione del metodo isVampiroVincitore">
+      <option name="closed" value="true" />
+      <created>1795188343085</created>
+      <option name="number" value="00789" />
+      <option name="presentableId" value="LOCAL-00789" />
+      <option name="project" value="LOCAL" />
+      <updated>1795188343085</updated>
+    </task>
+    <option name="localTasksCounter" value="790" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione della costante LADRA_BECCATA" />
     <MESSAGE value="REFACTORING: definizione del metodo conseguenzeControlloMegera" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizioneSensitiva" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizione" />
@@ -686,6 +687,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuSconfitto" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatuSconfitto" />
+    <MESSAGE value="REFACTORING: definizione del metodo isVampiroVincitore" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isVampiroVincitore" />
   </component>
 </project>
