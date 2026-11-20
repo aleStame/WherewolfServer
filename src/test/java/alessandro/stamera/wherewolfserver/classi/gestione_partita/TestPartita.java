@@ -3428,7 +3428,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { "Elisa", "Cacciatore di vampiri" }, { "Giorgia", "Prete" } });
         verificaVero(partita.isVampiroSconfitto());
         verificaFalso(partita.isVampiroVincitore());
-        verificaVero(partita.isNosferatuSconfitto());
+        verificaVero(isNosferatuSconfitto());
         verificaFalso(isNosferatuVincitore());
     }
 
@@ -3456,7 +3456,7 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(nomeLupo, 2);
         terminaBallottaggio();
-        verificaFalso(partita.isNosferatuSconfitto());
+        verificaFalso(isNosferatuSconfitto());
         verificaVero(isNosferatuVincitore());
     }
 
@@ -3481,9 +3481,11 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(nomeVampiro, 2);
         terminaBallottaggio();
-        verificaFalso(partita.isNosferatuSconfitto());
+        verificaFalso(isNosferatuSconfitto());
         verificaFalso(isNosferatuVincitore());
     }
+
+    private boolean isNosferatuSconfitto() { return partita.isNosferatuSconfitto(); }
 
     private boolean isNosferatuVincitore() { return partita.isNosferatuVincitore(); }
 
