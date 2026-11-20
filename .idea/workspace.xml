@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testSconfittaVampiroNosferatu non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testSconfittaVampiroNosferatu riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00733" summary="ROSSO: testAttaccoNegromante non riuscito">
-      <option name="closed" value="true" />
-      <created>1794785954940</created>
-      <option name="number" value="00733" />
-      <option name="presentableId" value="LOCAL-00733" />
-      <option name="project" value="LOCAL" />
-      <updated>1794785954941</updated>
     </task>
     <task id="LOCAL-00734" summary="VERDE: testAttaccoNegromante riuscito">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795169661778</updated>
     </task>
-    <option name="localTasksCounter" value="782" />
+    <task id="LOCAL-00782" summary="VERDE: testSconfittaVampiroNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1795170027615</created>
+      <option name="number" value="00782" />
+      <option name="presentableId" value="LOCAL-00782" />
+      <option name="project" value="LOCAL" />
+      <updated>1795170027617</updated>
+    </task>
+    <option name="localTasksCounter" value="783" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassino riuscito" />
     <MESSAGE value="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE DIRETTO: testSconfittaVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEliminazioneVampiro riuscito" />
     <MESSAGE value="ROSSO: testSconfittaVampiroNosferatu non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testSconfittaVampiroNosferatu non riuscito" />
+    <MESSAGE value="VERDE: testSconfittaVampiroNosferatu riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testSconfittaVampiroNosferatu riuscito" />
   </component>
 </project>
