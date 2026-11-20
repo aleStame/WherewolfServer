@@ -3470,6 +3470,21 @@ public final class TestPartita
         verificaFalso(partita.isVampiroVincitore());
     }
 
+    @Test public void testEliminazioneNosferatu()
+    {
+        String nomeVampiro = "Spike", nomeVittima = "Nathan", nomeLupo = "Oz", tipoLupo = "Lupo del branco";
+        inizializzaPartita(new String[][] { { nomeVampiro, "Nosferatu" }, { nomeLupo, tipoLupo }, { nomeVittima, "Prete" } });
+        attaccoLupi(tipoLupo, nomeVittima);
+        progenizzazioneNosferatu(nomeVittima);
+        terminaNotte();
+        incrementaVoti(nomeVampiro, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeVampiro, 2);
+        terminaBallottaggio();
+        verificaFalso(partita.isNosferatuSconfitto());
+        verificaFalso(partita.isNosferatuVincitore());
+    }
+
     private void verificaPassaggioPossedutoCorretto(String nome)
     {
         passaPosseduto(nome);
