@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEliminazioneNosferatu riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Giocatore.java" afterDir="false" />
     </list>
@@ -253,22 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00736" summary="VERDE: testMessaggioErrore riuscito">
-      <option name="closed" value="true" />
-      <created>1794825039452</created>
-      <option name="number" value="00736" />
-      <option name="presentableId" value="LOCAL-00736" />
-      <option name="project" value="LOCAL" />
-      <updated>1794825039452</updated>
-    </task>
-    <task id="LOCAL-00737" summary="ROSSO: testMessaggioErrore non riuscito">
-      <option name="closed" value="true" />
-      <created>1794826329245</created>
-      <option name="number" value="00737" />
-      <option name="presentableId" value="LOCAL-00737" />
-      <option name="project" value="LOCAL" />
-      <updated>1794826329245</updated>
     </task>
     <task id="LOCAL-00738" summary="VERDE: testMessaggioErrore riuscito">
       <option name="closed" value="true" />
@@ -646,7 +630,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795171937480</updated>
     </task>
-    <option name="localTasksCounter" value="785" />
+    <task id="LOCAL-00785" summary="REFACTORING: definizione del metodo getEsitoPartitaAmanti">
+      <option name="closed" value="true" />
+      <created>1795172687059</created>
+      <option name="number" value="00785" />
+      <option name="presentableId" value="LOCAL-00785" />
+      <option name="project" value="LOCAL" />
+      <updated>1795172687059</updated>
+    </task>
+    <task id="LOCAL-00786" summary="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta">
+      <option name="closed" value="true" />
+      <created>1795172963092</created>
+      <option name="number" value="00786" />
+      <option name="presentableId" value="LOCAL-00786" />
+      <option name="project" value="LOCAL" />
+      <updated>1795172963092</updated>
+    </task>
+    <option name="localTasksCounter" value="787" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,8 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto" />
-    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassinoRomeo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassinoStregato riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto" />
     <MESSAGE value="REFACTORING: definizione della costante LADRA_BECCATA" />
@@ -689,6 +687,8 @@
     <MESSAGE value="VERDE: testSconfittaVampiroNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaAmanti" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
   </component>
 </project>

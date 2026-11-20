@@ -263,9 +263,8 @@ public final class Giocatore
         EsitoPartita esito = ruolo.getEsitoPartita(partita);
         if(isRomeo()) esito = getPartitaRomeo(partita);
         else if(isCriminale()) esito = new Criminale(null, null, null, null).getEsitoPartita(partita);
-        else if(fazione == LUPO_BRANCO) esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
         else if(isNonMorto()) esito = getEsitoPartitaNonMorto(partita);
-        else if(fazione == AMANTI) esito = getEsitoPartitaAmanti(partita);
+        else esito = getEsitoPartitaFazioniRimaste(partita);
         return esito;
     }
 
@@ -294,6 +293,17 @@ public final class Giocatore
 
     public void annullaSegnalazioneOratore() { setSegnalatoOratore(false); }
 
+    private EsitoPartita getEsitoPartitaFazioniRimaste(Partita partita)
+    {
+        EsitoPartita esito = NON_FINITO;
+        switch(fazione)
+        {
+            case LUPO_BRANCO -> esito = new Lupo(null, null, 0, null).getEsitoPartita(partita);
+            case AMANTI -> esito = getEsitoPartitaAmanti(partita);
+        }
+        return esito;
+    }
+
     private EsitoPartita getEsitoPartitaAmanti(Partita partita)
     {
         EsitoPartita esito;
@@ -302,7 +312,7 @@ public final class Giocatore
         return esito;
     }
 
-    private static EsitoPartita getEsitoPartitaRomeoGiulietta(Partita partita)
+    private EsitoPartita getEsitoPartitaRomeoGiulietta(Partita partita)
     {
         EsitoPartita esito = NON_FINITO;
         if(partita.getNumeroGiocatoriVivi() == 2) esito = VITTORIA;
