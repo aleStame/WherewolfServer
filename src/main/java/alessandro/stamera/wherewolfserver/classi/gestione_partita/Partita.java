@@ -640,6 +640,8 @@ public final class Partita
 
     public boolean isVampiroSconfitto() { return isVampiroAssente() && isProgenieVampiroAssenti(); }
 
+    public boolean isNosferatuSconfitto() { return false; }
+
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {
         if(vivi.isStregato(nomeRomeo)) vivi.aggiungiProtezioneCreatureOmbra(nomeRomeo);

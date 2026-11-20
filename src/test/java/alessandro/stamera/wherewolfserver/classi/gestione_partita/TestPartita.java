@@ -3423,11 +3423,13 @@ public final class TestPartita
         verificaErroreAttaccoPosseduto(nomeAssassino, messaggio);
     }
 
-    @Test public void testSconfittaVampiro()
+    @Test public void testSconfittaVampiroNosferatu()
     {
         inizializzaPartita(new String[][] { { "Elisa", "Cacciatore di vampiri" }, { "Giorgia", "Prete" } });
         verificaVero(partita.isVampiroSconfitto());
         verificaFalso(partita.isVampiroVincitore());
+        verificaVero(partita.isNosferatuSconfitto());
+        verificaFalso(partita.isNosferatuVincitore());
     }
 
     @Test public void testVittoriaVampiro()

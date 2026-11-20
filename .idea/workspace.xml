@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testSconfittaVampiro riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEliminazioneVampiro riuscito">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_2026_10_57_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_2026_10_57__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00731" summary="REFACTORING: definizione del metodo getEsitoFallimentoAttacco">
-      <option name="closed" value="true" />
-      <created>1794784831288</created>
-      <option name="number" value="00731" />
-      <option name="presentableId" value="LOCAL-00731" />
-      <option name="project" value="LOCAL" />
-      <updated>1794784831289</updated>
     </task>
     <task id="LOCAL-00732" summary="REFACTORING: definizione del metodo isFazioneLupo">
       <option name="closed" value="true" />
@@ -645,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795098832789</updated>
     </task>
-    <option name="localTasksCounter" value="780" />
+    <task id="LOCAL-00780" summary="VERDE DIRETTO: testEliminazioneVampiro riuscito">
+      <option name="closed" value="true" />
+      <created>1795099363890</created>
+      <option name="number" value="00780" />
+      <option name="presentableId" value="LOCAL-00780" />
+      <option name="project" value="LOCAL" />
+      <updated>1795099363891</updated>
+    </task>
+    <option name="localTasksCounter" value="781" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoPosseduto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo isPosseduto" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito" />
@@ -688,6 +691,7 @@
     <MESSAGE value="ROSSO: testSconfittaVampiro non riuscito" />
     <MESSAGE value="VERDE: testSconfittaVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSconfittaVampiro riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testSconfittaVampiro riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testEliminazioneVampiro riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEliminazioneVampiro riuscito" />
   </component>
 </project>
