@@ -3429,7 +3429,7 @@ public final class TestPartita
         verificaVero(partita.isVampiroSconfitto());
         verificaFalso(partita.isVampiroVincitore());
         verificaVero(partita.isNosferatuSconfitto());
-        verificaFalso(partita.isNosferatuVincitore());
+        verificaFalso(isNosferatuVincitore());
     }
 
     @Test public void testVittoriaVampiro()
@@ -3457,7 +3457,7 @@ public final class TestPartita
         incrementaVoti(nomeLupo, 2);
         terminaBallottaggio();
         verificaFalso(partita.isNosferatuSconfitto());
-        verificaVero(partita.isNosferatuVincitore());
+        verificaVero(isNosferatuVincitore());
     }
 
     @Test public void testEliminazioneVampiro()
@@ -3482,8 +3482,10 @@ public final class TestPartita
         incrementaVoti(nomeVampiro, 2);
         terminaBallottaggio();
         verificaFalso(partita.isNosferatuSconfitto());
-        verificaFalso(partita.isNosferatuVincitore());
+        verificaFalso(isNosferatuVincitore());
     }
+
+    private boolean isNosferatuVincitore() { return partita.isNosferatuVincitore(); }
 
     private void verificaPassaggioPossedutoCorretto(String nome)
     {
