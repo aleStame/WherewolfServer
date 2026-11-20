@@ -278,7 +278,7 @@ public final class Partita
         controlloViaggio();
     }
 
-    public boolean isRomeoGiuliettaPresenti() { return false; }
+    public boolean isRomeoGiuliettaPresenti() { return isRomeoPresente() && isGiuliettaPresente(); }
 
     public boolean isPazzoUcciso() { return pazzoUcciso; }
 

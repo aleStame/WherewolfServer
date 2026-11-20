@@ -3487,7 +3487,9 @@ public final class TestPartita
 
     @Test public void testPresenzaRomeoGiulietta()
     {
-        inizializzaPartita(new String[][] { { "Tommaso", "Giulietta" }, { "Arturo", "Giullare" } });
+        String nome = "Arturo";
+        inizializzaPartita(new String[][] { { "Tommaso", "Giulietta" }, { nome, "Giullare" } });
+        romeizzazione(nome);
         verificaVero(partita.isRomeoGiuliettaPresenti());
     }
 
