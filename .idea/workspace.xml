@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo isNosferatuSconfitto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,22 +250,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00738" summary="VERDE: testMessaggioErrore riuscito">
-      <option name="closed" value="true" />
-      <created>1794826538938</created>
-      <option name="number" value="00738" />
-      <option name="presentableId" value="LOCAL-00738" />
-      <option name="project" value="LOCAL" />
-      <updated>1794826538938</updated>
-    </task>
-    <task id="LOCAL-00739" summary="REFACTORING: definizione del metodo verificaAttaccoLupo">
-      <option name="closed" value="true" />
-      <created>1794827466989</created>
-      <option name="number" value="00739" />
-      <option name="presentableId" value="LOCAL-00739" />
-      <option name="project" value="LOCAL" />
-      <updated>1794827466989</updated>
     </task>
     <task id="LOCAL-00740" summary="ROSSO: testAttaccoNosferatu non riuscito">
       <option name="closed" value="true" />
@@ -646,7 +627,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795172963092</updated>
     </task>
-    <option name="localTasksCounter" value="787" />
+    <task id="LOCAL-00787" summary="REFACTORING: definizione del metodo isNosferatuVincitore">
+      <option name="closed" value="true" />
+      <created>1795187833864</created>
+      <option name="number" value="00787" />
+      <option name="presentableId" value="LOCAL-00787" />
+      <option name="project" value="LOCAL" />
+      <updated>1795187833864</updated>
+    </task>
+    <task id="LOCAL-00788" summary="REFACTORING: definizione del metodo isNosferatuSconfitto">
+      <option name="closed" value="true" />
+      <created>1795188112624</created>
+      <option name="number" value="00788" />
+      <option name="presentableId" value="LOCAL-00788" />
+      <option name="project" value="LOCAL" />
+      <updated>1795188112624</updated>
+    </task>
+    <option name="localTasksCounter" value="789" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,8 +661,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testAttaccoPossedutoAssassinoStregato riuscito" />
-    <MESSAGE value="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto" />
     <MESSAGE value="REFACTORING: definizione della costante LADRA_BECCATA" />
     <MESSAGE value="REFACTORING: definizione del metodo conseguenzeControlloMegera" />
     <MESSAGE value="REFACTORING: definizione del metodo maledizioneSensitiva" />
@@ -689,6 +684,8 @@
     <MESSAGE value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaAmanti" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
+    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuSconfitto" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo isNosferatuSconfitto" />
   </component>
 </project>
