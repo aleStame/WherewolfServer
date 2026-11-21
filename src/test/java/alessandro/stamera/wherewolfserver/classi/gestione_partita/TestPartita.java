@@ -3499,9 +3499,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo }, { "Pietro", "Assassino" } });
         romeizzazione(nomeRomeo);
         verificaAssassinioRomeo(nomeRomeo, nomeGiulietta);
-        terminaNotte();
-        verificaEliminati(nomeRomeo, nomeGiulietta);
-        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
+        verificaPartitePerseRomeoGiulietta(nomeRomeo, nomeGiulietta);
     }
 
     @ParameterizedTest @CsvSource({ "Altra guardia" }) public void testRomeoSconfittoPerAssassinioGiulietta(String nomeRuolo)
@@ -3510,9 +3508,7 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo }, { "Pietro", "Assassino" } });
         romeizzazione(nomeRomeo);
         attaccoAssassino(nomeGiulietta);
-        terminaNotte();
-        verificaEliminati(nomeRomeo, nomeGiulietta);
-        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
+        verificaPartitePerseRomeoGiulietta(nomeRomeo, nomeGiulietta);
     }
 
     @ParameterizedTest @MethodSource("getCombinazioni")
@@ -3522,9 +3518,14 @@ public final class TestPartita
         inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { "Milo", nomeRuolo }, { "Lucio", tipoLupo } });
         romeizzazione(nomeRomeo);
         attaccoLupi(tipoLupo, nomeGiulietta);
+        verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
+    }
+
+    private void verificaPartitePerseRomeoGiulietta(String nomeGiulietta, String nomeRomeo)
+    {
         terminaNotte();
         verificaEliminati(nomeGiulietta, nomeRomeo);
-        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
+        for(String nome : new String[] {nomeGiulietta, nomeRomeo}) verificaPartitaPersa(nome);
     }
 
     private void verificaPartitaPersa(String nome) { verificaEsitoPartitaGiocatore(nome, SCONFITTA); }
