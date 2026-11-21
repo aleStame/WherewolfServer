@@ -1093,18 +1093,12 @@ public final class TestPartita
 
     @ParameterizedTest @CsvSource({ "1, 2" }) public void testContrattaccoContadinoMostro(int posizioneVittima)
     {
-        String[][] giocatori = new String[][] { { "Carmine", "Contadino mostro" }, { "Carmela", "Peccatore" }, { "Giulia", "Posseduto" } };
+        String nomeContadinoMostro = "Carmine";
+        String[][] giocatori =
+            new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { "Carmela", "Peccatore" }, { "Giulia", "Posseduto" } };
         inizializzaPartita(giocatori);
-        int posizione = 0;
-        incrementaVoti(giocatori[posizione][0], 2);
-        terminaVotazioni();
-        for(int i = 1; i < giocatori.length; i++) partita.incrementaVotiContadinoMostro(giocatori[i][0]);
-        terminaBallottaggio();
-        String[] votantiContadinoMostro = partita.getVotatiContadinoMostro();
-        for(int i = 1; i < giocatori.length; i++) assertThat(votantiContadinoMostro).contains(giocatori[i][0]);
-        partita.contrattaccoContadinoMostro(giocatori[posizioneVittima][0]);
+        contrattaccoContadinoMostro(nomeContadinoMostro, giocatori, giocatori[posizioneVittima][0]);
         verificaEliminazione(giocatori[posizioneVittima][0]);
-        assertThat(partita.getVotatiContadinoMostro()).isEmpty();
     }
 
     @ParameterizedTest @CsvSource({ "Assassino", "Altra guardia" })
@@ -1115,15 +1109,32 @@ public final class TestPartita
             new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
         romeizzazione(nomeRomeo);
+        contrattaccoContadinoMostro(nomeContadinoMostro, giocatori, nomeGiulietta);
+        verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
+    }
+
+    @ParameterizedTest @CsvSource({ "Assassino", "Altra guardia" })
+    public void testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro(String nomeRuolo)
+    {
+        String nomeContadinoMostro = "Carmine", nomeGiulietta = "Carmela", nomeRomeo = "Giulia";
+        String[][] giocatori =
+                new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeRomeo);
+        contrattaccoContadinoMostro(nomeContadinoMostro, giocatori, nomeRomeo);
+        verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
+    }
+
+    private void contrattaccoContadinoMostro(String nomeContadinoMostro, String[][] giocatori, String nomeVittima)
+    {
         incrementaVoti(nomeContadinoMostro, 2);
         terminaVotazioni();
         for(int i = 1; i < giocatori.length; i++) partita.incrementaVotiContadinoMostro(giocatori[i][0]);
         terminaBallottaggio();
         String[] votantiContadinoMostro = partita.getVotatiContadinoMostro();
         for(int i = 1; i < giocatori.length; i++) assertThat(votantiContadinoMostro).contains(giocatori[i][0]);
-        partita.contrattaccoContadinoMostro(nomeGiulietta);
+        partita.contrattaccoContadinoMostro(nomeVittima);
         assertThat(partita.getVotatiContadinoMostro()).isEmpty();
-        verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
     }
 
     @Test public void testNumeroNotte()

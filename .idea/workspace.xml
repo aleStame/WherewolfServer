@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eliminazioneSingoloGiocatoreContrattaccoContadinoMostro">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eliminazioneGiocatoriContrattaccoContadinoMostro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00752" summary="REFACTORING: definizione del metodo getEsitoPassaggioPossedutoNonRiuscito">
-      <option name="closed" value="true" />
-      <created>1795010921634</created>
-      <option name="number" value="00752" />
-      <option name="presentableId" value="LOCAL-00752" />
-      <option name="project" value="LOCAL" />
-      <updated>1795010921635</updated>
     </task>
     <task id="LOCAL-00753" summary="REFACTORING: definizione del metodo eseguiPassaggioPosseduto">
       <option name="closed" value="true" />
@@ -646,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795255822616</updated>
     </task>
-    <option name="localTasksCounter" value="801" />
+    <task id="LOCAL-00801" summary="REFACTORING: definizione del metodo eliminazioneGiocatoriContrattaccoContadinoMostro">
+      <option name="closed" value="true" />
+      <created>1795256451681</created>
+      <option name="number" value="00801" />
+      <option name="presentableId" value="LOCAL-00801" />
+      <option name="project" value="LOCAL" />
+      <updated>1795256451681</updated>
+    </task>
+    <option name="localTasksCounter" value="802" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaNosferatu" />
     <MESSAGE value="ROSSO: testSconfittaVampiro non riuscito" />
     <MESSAGE value="VERDE: testSconfittaVampiro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSconfittaVampiro riuscito" />
@@ -689,6 +688,7 @@
     <MESSAGE value="ROSSO: testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminazioneSingoloGiocatoreContrattaccoContadinoMostro" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminazioneSingoloGiocatoreContrattaccoContadinoMostro" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminazioneGiocatoriContrattaccoContadinoMostro" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminazioneGiocatoriContrattaccoContadinoMostro" />
   </component>
 </project>
