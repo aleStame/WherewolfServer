@@ -262,6 +262,7 @@ public final class Partita
     public void contrattaccoContadinoMostro(String nome)
     {
         if(vivi.isViaggiatore(nome)) setViaggioPartito(false);
+        if(vivi.isGiulietta(nome)) eliminaGiocatori(nome, getNomeRomeo());
         eliminaGiocatore(nome);
         votantiContadinoMostro.clear();
         confermaEliminazioneMortiNotte();
