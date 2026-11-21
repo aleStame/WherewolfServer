@@ -269,6 +269,12 @@ public final class Partita
     private void eliminazioneGiocatoriContrattaccoContadinoMostro(String nome)
     {
         if(vivi.isGiulietta(nome)) eliminaGiocatori(nome, getNomeRomeo());
+        else if(vivi.isRomeo(nome))
+        {
+            int posizione = -1;
+            for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.isGiulietta(getNomeGiocatoreVivo(i))) posizione = i;
+            eliminaGiocatori(nome, getNomeGiocatoreVivo(posizione));
+        }
         else eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(nome);
     }
 

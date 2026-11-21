@@ -1118,7 +1118,7 @@ public final class TestPartita
     {
         String nomeContadinoMostro = "Carmine", nomeGiulietta = "Carmela", nomeRomeo = "Giulia";
         String[][] giocatori =
-                new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } };
+            new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } };
         inizializzaPartita(giocatori);
         romeizzazione(nomeRomeo);
         contrattaccoContadinoMostro(nomeContadinoMostro, giocatori, nomeRomeo);
