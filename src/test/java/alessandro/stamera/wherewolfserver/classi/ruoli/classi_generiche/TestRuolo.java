@@ -62,6 +62,8 @@ public final class TestRuolo
 
     @Test public void testAttaccoNosferatu() { verificaAttaccoRiuscito(ruolo.attaccoNosferatu()); }
 
+    @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
+
     private static Stream<Arguments> getEsempiPartita()
     {
         return Stream.of(Arguments.of(getPartitaGenerica(), VITTORIA), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));

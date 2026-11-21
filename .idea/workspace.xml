@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-    </list>
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testGiulietta riuscito" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,22 +250,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00754" summary="VERDE DIRETTO: testAttaccoPossedutoRomeo riuscito">
-      <option name="closed" value="true" />
-      <created>1795013657421</created>
-      <option name="number" value="00754" />
-      <option name="presentableId" value="LOCAL-00754" />
-      <option name="project" value="LOCAL" />
-      <updated>1795013657421</updated>
-    </task>
-    <task id="LOCAL-00755" summary="VERDE DIRETTO: testAttaccoPossedutoStregato riuscito">
-      <option name="closed" value="true" />
-      <created>1795014085508</created>
-      <option name="number" value="00755" />
-      <option name="presentableId" value="LOCAL-00755" />
-      <option name="project" value="LOCAL" />
-      <updated>1795014085508</updated>
     </task>
     <task id="LOCAL-00756" summary="VERDE DIRETTO: testAttaccoPosseduto riuscito">
       <option name="closed" value="true" />
@@ -646,7 +627,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795257114651</updated>
     </task>
-    <option name="localTasksCounter" value="803" />
+    <task id="LOCAL-00803" summary="VERDE: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito">
+      <option name="closed" value="true" />
+      <created>1795257720230</created>
+      <option name="number" value="00803" />
+      <option name="presentableId" value="LOCAL-00803" />
+      <option name="project" value="LOCAL" />
+      <updated>1795257720231</updated>
+    </task>
+    <task id="LOCAL-00804" summary="VERDE DIRETTO: testGiulietta riuscito">
+      <option name="closed" value="true" />
+      <created>1795258055508</created>
+      <option name="number" value="00804" />
+      <option name="presentableId" value="LOCAL-00804" />
+      <option name="project" value="LOCAL" />
+      <updated>1795258055508</updated>
+    </task>
+    <option name="localTasksCounter" value="805" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,9 +661,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSconfittaVampiro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testSconfittaVampiro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testEliminazioneVampiro riuscito" />
     <MESSAGE value="ROSSO: testSconfittaVampiroNosferatu non riuscito" />
     <MESSAGE value="VERDE: testSconfittaVampiroNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
@@ -688,7 +682,10 @@
     <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminazioneSingoloGiocatoreContrattaccoContadinoMostro" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminazioneGiocatoriContrattaccoContadinoMostro" />
-    <MESSAGE value="VERDE DIRETTO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito" />
+    <MESSAGE value="ROSSO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro non riuscito" />
+    <MESSAGE value="ROSSO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro non riuscito" />
+    <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGiulietta riuscito" />
   </component>
 </project>
