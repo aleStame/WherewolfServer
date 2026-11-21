@@ -3515,6 +3515,18 @@ public final class TestPartita
         for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
     }
 
+    @ParameterizedTest @MethodSource("getCombinazioni")
+    public void testRomeoSconfittoPerAttaccoLupiGiulietta(String nomeRuolo, String tipoLupo)
+    {
+        String nomeGiulietta = "Tonio", nomeRomeo = "Milo";
+        inizializzaPartita(new String[][] { { nomeGiulietta, "Giulietta" }, { "Milo", nomeRuolo }, { "Lucio", tipoLupo } });
+        romeizzazione(nomeRomeo);
+        attaccoLupi(tipoLupo, nomeGiulietta);
+        terminaNotte();
+        verificaEliminati(nomeGiulietta, nomeRomeo);
+        for(String nome : new String[] { nomeGiulietta, nomeRomeo }) verificaPartitaPersa(nome);
+    }
+
     private void verificaPartitaPersa(String nome) { verificaEsitoPartitaGiocatore(nome, SCONFITTA); }
 
     private void verificaEsitoPartitaGiocatore(String nome, EsitoPartita sconfitta)
