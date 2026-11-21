@@ -261,10 +261,15 @@ public final class Partita
 
     public void contrattaccoContadinoMostro(String nome)
     {
-        if(vivi.isGiulietta(nome)) eliminaGiocatori(nome, getNomeRomeo());
-        else eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(nome);
+        eliminazioneGiocatoriContrattaccoContadinoMostro(nome);
         votantiContadinoMostro.clear();
         confermaEliminazioneMortiNotte();
+    }
+
+    private void eliminazioneGiocatoriContrattaccoContadinoMostro(String nome)
+    {
+        if(vivi.isGiulietta(nome)) eliminaGiocatori(nome, getNomeRomeo());
+        else eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(nome);
     }
 
     private void eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(String nome)

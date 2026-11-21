@@ -1108,7 +1108,7 @@ public final class TestPartita
     }
 
     @ParameterizedTest @CsvSource({ "Assassino", "Altra guardia" })
-    public void testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro(String nomeRuolo)
+    public void testRomeoGiuliettaMortiPerContrattaccoGiuliettaContadinoMostro(String nomeRuolo)
     {
         String nomeContadinoMostro = "Carmine", nomeGiulietta = "Carmela", nomeRomeo = "Giulia";
         String[][] giocatori =
