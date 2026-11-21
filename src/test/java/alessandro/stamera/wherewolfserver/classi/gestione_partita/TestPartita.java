@@ -1107,6 +1107,25 @@ public final class TestPartita
         assertThat(partita.getVotatiContadinoMostro()).isEmpty();
     }
 
+    @ParameterizedTest @CsvSource({ "Assassino", "Altra guardia" })
+    public void testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro(String nomeRuolo)
+    {
+        String nomeContadinoMostro = "Carmine", nomeGiulietta = "Carmela", nomeRomeo = "Giulia";
+        String[][] giocatori =
+            new String[][] { { nomeContadinoMostro, "Contadino mostro" }, { nomeGiulietta, "Giulietta" }, { nomeRomeo, nomeRuolo } };
+        inizializzaPartita(giocatori);
+        romeizzazione(nomeRomeo);
+        incrementaVoti(nomeContadinoMostro, 2);
+        terminaVotazioni();
+        for(int i = 1; i < giocatori.length; i++) partita.incrementaVotiContadinoMostro(giocatori[i][0]);
+        terminaBallottaggio();
+        String[] votantiContadinoMostro = partita.getVotatiContadinoMostro();
+        for(int i = 1; i < giocatori.length; i++) assertThat(votantiContadinoMostro).contains(giocatori[i][0]);
+        partita.contrattaccoContadinoMostro(nomeGiulietta);
+        assertThat(partita.getVotatiContadinoMostro()).isEmpty();
+        verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
+    }
+
     @Test public void testNumeroNotte()
     {
         inizializzaPartita(new String[][]{ });
