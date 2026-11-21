@@ -261,11 +261,16 @@ public final class Partita
 
     public void contrattaccoContadinoMostro(String nome)
     {
-        if(vivi.isViaggiatore(nome)) setViaggioPartito(false);
         if(vivi.isGiulietta(nome)) eliminaGiocatori(nome, getNomeRomeo());
-        eliminaGiocatore(nome);
+        else eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(nome);
         votantiContadinoMostro.clear();
         confermaEliminazioneMortiNotte();
+    }
+
+    private void eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(String nome)
+    {
+        if(vivi.isViaggiatore(nome)) setViaggioPartito(false);
+        eliminaGiocatore(nome);
     }
 
     public int getNumeroNotte() { return numeroNotte; }
