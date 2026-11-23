@@ -2,12 +2,17 @@ package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categoria.CREATURE_OMBRA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.TROVATO_POSSEDUTO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.POSSEDUTO;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Tratto.CREATURA_OMBRA;
@@ -81,6 +86,13 @@ public final class TestPosseduto
             "uccisi dai Lupi il più in fretta possibile, per poter passare il Ruolo al giocatore che sembra godere maggiormente della fiducia del " +
             "villaggio.";
         verificaStringa(ruolo.getConsigli(), messaggio);
+    }
+
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Ghoul", "Pazzo", "Giullare", "Peccatore" })
+    public void testEsitoPartita(String nomeAltroRuolo)
+    {
+        Partita partita = new Partita(new String[][] { { "Alessandro", "Posseduto" }, { "Marco", nomeAltroRuolo } });
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
     private void verificaAttaccoPosseduto(EsitoAttacco esito) { assertThat(esito).isEqualTo(TROVATO_POSSEDUTO); }

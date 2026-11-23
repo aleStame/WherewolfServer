@@ -3551,6 +3551,35 @@ public final class TestPartita
         verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
     }
 
+    /*@ParameterizedTest @MethodSource("getCombinazioniPosseduto")
+    public void testVittoriaConPosseduto(String tipoLupo, String nomeRuoloVittima, String nomeAltroRuolo)
+    {
+        String nomeVittima = "Max", nomeLupo = "Mauro", nomePosseduto = "Claudio";
+        String[][] giocatori = new String[][]
+        {
+            { nomeVittima, nomeRuoloVittima }, { "Mauro", tipoLupo }, { nomePosseduto, "Posseduto" }, { "Piero", nomeAltroRuolo }
+        };
+        inizializzaPartita(giocatori);
+        attaccoLupi(tipoLupo, nomePosseduto);
+        passaPosseduto(nomeVittima);
+        terminaNotte();
+        incrementaVoti(nomeLupo, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeLupo, 2);
+        terminaBallottaggio();
+        assertThat(partita.getEsitoPartitaGiocatore(nomeVittima)).isEqualTo(VITTORIA);
+    }
+
+    private static Stream<Arguments> getCombinazioniPosseduto()
+    {
+        String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
+        String[] nomiRuoli = { "Assassino", "Altra guardia" };
+        List<Arguments> argomenti = new ArrayList<>();
+        for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiRuoli)
+            if(!nomeRuoloVittima.equals(nomeAltroRuolo)) argomenti.add(Arguments.of(tipoLupo, nomeRuoloVittima, nomeAltroRuolo));
+        return argomenti.stream();
+    }*/
+
     private void verificaPartitePerseRomeoGiulietta(String nomeGiulietta, String nomeRomeo)
     {
         terminaNotte();
