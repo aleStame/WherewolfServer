@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: semplificazione del metodo getEsitoPartita">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestGiocatoriVivi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00760" summary="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto">
-      <option name="closed" value="true" />
-      <created>1795018980615</created>
-      <option name="number" value="00760" />
-      <option name="presentableId" value="LOCAL-00760" />
-      <option name="project" value="LOCAL" />
-      <updated>1795018980615</updated>
     </task>
     <task id="LOCAL-00761" summary="VERDE DIRETTO: testAttaccoPossedutoAssassinoRomeo riuscito">
       <option name="closed" value="true" />
@@ -645,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795427759079</updated>
     </task>
-    <option name="localTasksCounter" value="809" />
+    <task id="LOCAL-00809" summary="REFACTORING: semplificazione del metodo getEsitoPartita">
+      <option name="closed" value="true" />
+      <created>1795428276843</created>
+      <option name="number" value="00809" />
+      <option name="presentableId" value="LOCAL-00809" />
+      <option name="project" value="LOCAL" />
+      <updated>1795428276844</updated>
+    </task>
+    <option name="localTasksCounter" value="810" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaAmanti" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
@@ -688,6 +688,7 @@
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra" />
+    <MESSAGE value="REFACTORING: semplificazione del metodo getEsitoPartita" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: semplificazione del metodo getEsitoPartita" />
   </component>
 </project>

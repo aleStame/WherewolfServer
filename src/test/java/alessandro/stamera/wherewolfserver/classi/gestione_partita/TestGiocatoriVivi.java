@@ -16,6 +16,8 @@ import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.NERA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.*;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -2113,6 +2115,14 @@ public final class TestGiocatoriVivi
         String nomeVittima = "Giacomo";
         inizializzaGiocatori(new String[][] { { "Aldo", "Ghoul" }, { "Giovanni", "Assassino" }, { nomeVittima, nomeRuolo } });
         verificaAttaccoAssassino(nomeVittima, GHOUL_MORTO);
+    }
+
+    @ParameterizedTest @CsvSource({ "Angelo custode", "Ghoul", "Pazzo", "Giullare", "Peccatore" })
+    public void testVittoriaPosseduto(String nomeAltroRuolo)
+    {
+        Partita partita = new Partita(new String[][] { { "Alessandro", "Posseduto" }, { "Marco", nomeAltroRuolo } });
+        assertThat(giocatori.getEsitoPartita("Alessandro", partita)).isEqualTo(VITTORIA);
+        assertThat(giocatori.getEsitoPartita("Marco", partita)).isEqualTo(SCONFITTA);
     }
 
     private void verificaMortePostGildata(String nome) { verificaEsitoGildata(nome, MORTO); }
