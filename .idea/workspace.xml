@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testEsitoPartita non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testEsitoPartita riuscito">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00758" summary="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito">
-      <option name="closed" value="true" />
-      <created>1795015208633</created>
-      <option name="number" value="00758" />
-      <option name="presentableId" value="LOCAL-00758" />
-      <option name="project" value="LOCAL" />
-      <updated>1795015208634</updated>
     </task>
     <task id="LOCAL-00759" summary="VERDE DIRETTO: testAttaccoPossedutoAssassino riuscito">
       <option name="closed" value="true" />
@@ -647,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795425178505</updated>
     </task>
-    <option name="localTasksCounter" value="807" />
+    <task id="LOCAL-00807" summary="VERDE: testEsitoPartita riuscito">
+      <option name="closed" value="true" />
+      <created>1795426644463</created>
+      <option name="number" value="00807" />
+      <option name="presentableId" value="LOCAL-00807" />
+      <option name="project" value="LOCAL" />
+      <updated>1795426644463</updated>
+    </task>
+    <option name="localTasksCounter" value="808" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testSconfittaVampiroNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaAmanti" />
@@ -690,6 +687,7 @@
     <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsitoPartita non riuscito" />
+    <MESSAGE value="VERDE: testEsitoPartita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEsitoPartita riuscito" />
   </component>
 </project>
