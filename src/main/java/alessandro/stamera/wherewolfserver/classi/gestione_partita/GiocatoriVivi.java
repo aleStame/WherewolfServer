@@ -53,7 +53,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isTrattoPresente(String nome, Tratto tratto) { return getGiocatore(nome).isTrattoPresente(tratto); }
 
-    public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
+    public Fazione getFazione(String nome)
+    {
+        Fazione fazione = getGiocatore(nome).getFazione();
+        if(fazione == AMANTI && isAngeloCustode(nome) && !isAmatoPresente()) fazione = NESSUNA;
+        return fazione;
+    }
 
     public EsitoAttacco attaccoVampiro(String nome)
     {
@@ -141,7 +146,7 @@ public final class GiocatoriVivi extends Giocatori
     public int getNumeroSenzaFazione()
     {
         int numeroSenzaFazione = 0;
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(isSenzaFazione(i)) numeroSenzaFazione++;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isSenzaFazione(getNomeGiocatore(i))) numeroSenzaFazione++;
         return numeroSenzaFazione;
     }
 
@@ -791,7 +796,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isCapoGilda(int posizione) { return getGiocatore(posizione).isCapoGilda(); }
 
-    private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
+    private boolean isSenzaFazione(String nome) { return getFazione(nome) == NESSUNA; }
 
     private Fazione getFazione(int posizione) { return getGiocatore(posizione).getFazione(); }
 

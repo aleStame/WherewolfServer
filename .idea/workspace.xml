@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testGiulietta riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestPosseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/TestPosseduto.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testEsitoPartita non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,14 +254,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00757" summary="REFACTORING: definizione del metodo isPosseduto">
-      <option name="closed" value="true" />
-      <created>1795014587345</created>
-      <option name="number" value="00757" />
-      <option name="presentableId" value="LOCAL-00757" />
-      <option name="project" value="LOCAL" />
-      <updated>1795014587345</updated>
     </task>
     <task id="LOCAL-00758" summary="REFACTORING: definizione del metodo verificaAttaccoPossedutoNonRiuscito">
       <option name="closed" value="true" />
@@ -647,7 +639,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795258370436</updated>
     </task>
-    <option name="localTasksCounter" value="806" />
+    <task id="LOCAL-00806" summary="ROSSO: testEsitoPartita non riuscito">
+      <option name="closed" value="true" />
+      <created>1795425178505</created>
+      <option name="number" value="00806" />
+      <option name="presentableId" value="LOCAL-00806" />
+      <option name="project" value="LOCAL" />
+      <updated>1795425178505</updated>
+    </task>
+    <option name="localTasksCounter" value="807" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testSconfittaVampiroNosferatu non riuscito" />
     <MESSAGE value="VERDE: testSconfittaVampiroNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
@@ -690,6 +689,7 @@
     <MESSAGE value="ROSSO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro non riuscito" />
     <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito" />
     <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testGiulietta riuscito" />
+    <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testEsitoPartita non riuscito" />
   </component>
 </project>
