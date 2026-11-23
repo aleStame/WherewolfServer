@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testEsitoPartita riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra">
       <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/CreatureOmbra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00759" summary="VERDE DIRETTO: testAttaccoPossedutoAssassino riuscito">
-      <option name="closed" value="true" />
-      <created>1795015874674</created>
-      <option name="number" value="00759" />
-      <option name="presentableId" value="LOCAL-00759" />
-      <option name="project" value="LOCAL" />
-      <updated>1795015874675</updated>
     </task>
     <task id="LOCAL-00760" summary="REFACTORING: definizione dle metodo verificaPassaggioPossedutoCorretto">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795426644463</updated>
     </task>
-    <option name="localTasksCounter" value="808" />
+    <task id="LOCAL-00808" summary="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra">
+      <option name="closed" value="true" />
+      <created>1795427759079</created>
+      <option name="number" value="00808" />
+      <option name="presentableId" value="LOCAL-00808" />
+      <option name="project" value="LOCAL" />
+      <updated>1795427759079</updated>
+    </task>
+    <option name="localTasksCounter" value="809" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testVittoriaNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEliminazioneNosferatu riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaAmanti" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testEsitoPartita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra" />
   </component>
 </project>

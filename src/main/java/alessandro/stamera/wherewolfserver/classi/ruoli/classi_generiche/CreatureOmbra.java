@@ -23,8 +23,7 @@ public class CreatureOmbra extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == VITTORIA && !partita.isNoUomini() && partita.getNumeroSenzaFazioneVivi() < (partita.getNumeroGiocatoriVivi() - 1))
-            esito = getEsitoPartitaCreatureOmbra(partita);
+        if(esito == VITTORIA && !partita.isNoUomini()) esito = getEsitoPartitaCreatureOmbra(partita);
         return esito;
     }
 
