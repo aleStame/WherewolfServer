@@ -90,6 +90,8 @@ public final class TestAltraGuardia
 
     @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
 
+    @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
