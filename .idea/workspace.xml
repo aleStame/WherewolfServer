@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testVeggente non riuscito">
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testVeggente riuscito">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00807" summary="VERDE: testEsitoPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1795426644463</created>
-      <option name="number" value="00807" />
-      <option name="presentableId" value="LOCAL-00807" />
-      <option name="project" value="LOCAL" />
-      <updated>1795426644463</updated>
     </task>
     <task id="LOCAL-00808" summary="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795564001628</updated>
     </task>
-    <option name="localTasksCounter" value="856" />
+    <task id="LOCAL-00856" summary="VERDE: testVeggente riuscito">
+      <option name="closed" value="true" />
+      <created>1795564269484</created>
+      <option name="number" value="00856" />
+      <option name="presentableId" value="LOCAL-00856" />
+      <option name="project" value="LOCAL" />
+      <updated>1795564269484</updated>
+    </task>
+    <option name="localTasksCounter" value="857" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testLupo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testSenzaFazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPosseduto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNegromante riuscito" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE DIRETTO: testSensitiva riuscito" />
     <MESSAGE value="VERDE DIRETTO: testStrega riuscito" />
     <MESSAGE value="ROSSO: testVeggente non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVeggente non riuscito" />
+    <MESSAGE value="VERDE: testVeggente riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVeggente riuscito" />
   </component>
 </project>
