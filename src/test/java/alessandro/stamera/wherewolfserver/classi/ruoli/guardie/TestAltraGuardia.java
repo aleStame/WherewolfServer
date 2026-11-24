@@ -42,9 +42,11 @@ public final class TestAltraGuardia
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
-    @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
 
-    @Test public void testGuardiaNormale() { assertThat(ruolo.isGuardiaPrincipale()).isFalse(); }
+    @Test public void testGuardiaNormale() { verificaFalso(ruolo.isGuardiaPrincipale()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
