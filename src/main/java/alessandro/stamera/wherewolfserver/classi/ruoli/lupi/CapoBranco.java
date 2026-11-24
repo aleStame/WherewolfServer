@@ -31,7 +31,7 @@ public final class CapoBranco extends Lupo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if((esito == VITTORIA || esito == NON_FINITO) && (partita.isLupoReiettoVivo() && !partita.isLupoAttaccanteVivo())) esito = SCONFITTA;
+        if((esito != SCONFITTA) && (partita.isLupoReiettoVivo() && !partita.isLupoAttaccanteVivo())) esito = SCONFITTA;
         return esito;
     }
 

@@ -2120,9 +2120,11 @@ public final class TestGiocatoriVivi
     @ParameterizedTest @CsvSource({ "Angelo custode", "Ghoul", "Pazzo", "Giullare", "Peccatore" })
     public void testVittoriaPosseduto(String nomeAltroRuolo)
     {
-        Partita partita = new Partita(new String[][] { { "Alessandro", "Posseduto" }, { "Marco", nomeAltroRuolo } });
-        assertThat(giocatori.getEsitoPartita("Alessandro", partita)).isEqualTo(VITTORIA);
-        assertThat(giocatori.getEsitoPartita("Marco", partita)).isEqualTo(SCONFITTA);
+        String[][] giocatori = new String[][] { { "Alessandro", "Posseduto" }, { "Marco", nomeAltroRuolo } };
+        Partita partita = new Partita(giocatori);
+        inizializzaGiocatori(giocatori);
+        assertThat(this.giocatori.getEsitoPartita("Alessandro", partita)).isEqualTo(VITTORIA);
+        assertThat(this.giocatori.getEsitoPartita("Marco", partita)).isEqualTo(SCONFITTA);
     }
 
     private void verificaMortePostGildata(String nome) { verificaEsitoGildata(nome, MORTO); }

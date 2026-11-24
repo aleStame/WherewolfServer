@@ -34,7 +34,7 @@ public final class Partita
 
     private final String[] maledettiNegromante;
 
-    private boolean pazzoUcciso, crociataAvviata, viaggioPartito;
+    private boolean pazzoUcciso, crociataAvviata, viaggioPartito, giullareEliminato;
 
     private int numeroNotte;
 
@@ -54,6 +54,7 @@ public final class Partita
         crociataAvviata = false;
         setViaggioPartito(false);
         controlloViaggio();
+        giullareEliminato = false;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -293,6 +294,8 @@ public final class Partita
     public boolean isRomeoGiuliettaPresenti() { return isRomeoPresente() && isGiuliettaPresente(); }
 
     public boolean isPazzoUcciso() { return pazzoUcciso; }
+
+    public boolean isAngeloCustodePresente() { return vivi.isAngeloCustodePresente(); }
 
     private EsitoGuarigione guarigione(String nome)
     {
@@ -655,6 +658,8 @@ public final class Partita
     public boolean isVampiroSconfitto() { return isVampiroAssente() && isProgenieVampiroAssenti(); }
 
     public boolean isNosferatuSconfitto() { return isNosferatuAssente() && isProgenieNosferatuAssenti(); }
+
+    public boolean isGiullareVincitore() { return giullareEliminato; }
 
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {
