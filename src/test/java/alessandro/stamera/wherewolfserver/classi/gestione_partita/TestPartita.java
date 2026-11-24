@@ -3564,7 +3564,7 @@ public final class TestPartita
         verificaEsitoPartitaGiocatore(nomeAltraGuardia, VITTORIA);
     }
 
-    /*@ParameterizedTest @MethodSource("getCombinazioniPosseduto")
+    @ParameterizedTest @MethodSource("getCombinazioniPosseduto")
     public void testVittoriaConPosseduto(String tipoLupo, String nomeRuoloVittima, String nomeAltroRuolo)
     {
         String nomeVittima = "Max", nomeLupo = "Mauro", nomePosseduto = "Claudio";
@@ -3591,7 +3591,7 @@ public final class TestPartita
         for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiRuoli)
             if(!nomeRuoloVittima.equals(nomeAltroRuolo)) argomenti.add(Arguments.of(tipoLupo, nomeRuoloVittima, nomeAltroRuolo));
         return argomenti.stream();
-    }*/
+    }
 
     private void verificaPartitePerseRomeoGiulietta(String nomeGiulietta, String nomeRomeo)
     {
