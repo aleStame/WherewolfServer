@@ -88,6 +88,8 @@ public final class TestAltraGuardia
 
     @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
 
+    @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
