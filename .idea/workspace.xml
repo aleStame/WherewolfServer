@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testBardo riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testBracconiere riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00790" summary="REFACTORING: definizione del metodo isVampiroSconfitto">
-      <option name="closed" value="true" />
-      <created>1795188575576</created>
-      <option name="number" value="00790" />
-      <option name="presentableId" value="LOCAL-00790" />
-      <option name="project" value="LOCAL" />
-      <updated>1795188575576</updated>
-    </task>
-    <task id="LOCAL-00791" summary="ROSSO: testPresenzaRomeoGiulietta non riuscito">
-      <option name="closed" value="true" />
-      <created>1795193080633</created>
-      <option name="number" value="00791" />
-      <option name="presentableId" value="LOCAL-00791" />
-      <option name="project" value="LOCAL" />
-      <updated>1795193080633</updated>
     </task>
     <task id="LOCAL-00792" summary="VERDE: testPresenzaRomeoGiulietta riuscito">
       <option name="closed" value="true" />
@@ -645,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795559608604</updated>
     </task>
-    <option name="localTasksCounter" value="839" />
+    <task id="LOCAL-00839" summary="VERDE DIRETTO: testBecchino riuscito">
+      <option name="closed" value="true" />
+      <created>1795560042798</created>
+      <option name="number" value="00839" />
+      <option name="presentableId" value="LOCAL-00839" />
+      <option name="project" value="LOCAL" />
+      <updated>1795560042798</updated>
+    </task>
+    <task id="LOCAL-00840" summary="VERDE DIRETTO: testBracconiere riuscito">
+      <option name="closed" value="true" />
+      <created>1795560277083</created>
+      <option name="number" value="00840" />
+      <option name="presentableId" value="LOCAL-00840" />
+      <option name="project" value="LOCAL" />
+      <updated>1795560277083</updated>
+    </task>
+    <option name="localTasksCounter" value="841" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra" />
-    <MESSAGE value="REFACTORING: semplificazione del metodo getEsitoPartita" />
     <MESSAGE value="ROSSO: testVittoriaPosseduto non riuscito" />
     <MESSAGE value="VERDE: testVittoriaPosseduto riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartiteVinte" />
@@ -688,6 +686,8 @@
     <MESSAGE value="VERDE DIRETTO: testNosferatu riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCitta riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBardo riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBecchino riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testBracconiere riuscito" />
   </component>
 </project>
