@@ -297,6 +297,8 @@ public final class Partita
 
     public boolean isAngeloCustodePresente() { return vivi.isAngeloCustodePresente(); }
 
+    public boolean isPossedutoPresente() { return vivi.isPossedutoPresente(); }
+
     private EsitoGuarigione guarigione(String nome)
     {
         EsitoGuarigione esito = mortiNotte.guarigione(nome);

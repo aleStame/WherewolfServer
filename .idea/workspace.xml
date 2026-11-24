@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEsitoPartita riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testVittoriaConPosseduto non riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/GiocatoriVivi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,14 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00771" summary="VERDE: testMessaggioErrore riuscito">
-      <option name="closed" value="true" />
-      <created>1795036881455</created>
-      <option name="number" value="00771" />
-      <option name="presentableId" value="LOCAL-00771" />
-      <option name="project" value="LOCAL" />
-      <updated>1795036881455</updated>
     </task>
     <task id="LOCAL-00772" summary="REFACTORING: definizione del metodo passaPosseduto">
       <option name="closed" value="true" />
@@ -646,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795533761670</updated>
     </task>
-    <option name="localTasksCounter" value="820" />
+    <task id="LOCAL-00820" summary="ROSSO: testVittoriaConPosseduto non riuscito">
+      <option name="closed" value="true" />
+      <created>1795534222481</created>
+      <option name="number" value="00820" />
+      <option name="presentableId" value="LOCAL-00820" />
+      <option name="project" value="LOCAL" />
+      <updated>1795534222482</updated>
+    </task>
+    <option name="localTasksCounter" value="821" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testPresenzaRomeoGiulietta non riuscito" />
     <MESSAGE value="VERDE: testPresenzaRomeoGiulietta riuscito" />
     <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito" />
     <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAssassinioGiulietta riuscito" />
@@ -689,6 +691,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getArgomentiTest" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEsitoPartita riuscito" />
+    <MESSAGE value="ROSSO: testVittoriaConPosseduto non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVittoriaConPosseduto non riuscito" />
   </component>
 </project>

@@ -391,6 +391,13 @@ public final class GiocatoriVivi extends Giocatori
 
     public String getNomeStrega() { return getNomeGiocatore(getPosizioneStrega()); }
 
+    public boolean isPossedutoPresente()
+    {
+        boolean trovato = false;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isPosseduto(getNomeGiocatore(i))) trovato = true;
+        return trovato;
+    }
+
     private void annullaProtezioneAngeloCustode() { getGiocatoreAmato().annullaProtezioneAngeloCustode(); }
 
     private EsitoAttacco gestioneFallimentoAttacco(Ruolo attaccante, String nome)
@@ -453,13 +460,6 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private boolean isPeccatore(String nome) { return getGiocatore(nome).isPeccatore(); }
-
-    private boolean isPossedutoPresente()
-    {
-        boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isPosseduto(getNomeGiocatore(i))) trovato = true;
-        return trovato;
-    }
 
     private int getPosizioneGiulietta()
     {

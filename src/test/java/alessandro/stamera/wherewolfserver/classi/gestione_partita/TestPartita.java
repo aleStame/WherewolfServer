@@ -3587,8 +3587,9 @@ public final class TestPartita
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
         String[] nomiRuoli = { "Assassino", "Altra guardia" };
+        String[] nomiAltriRuoli = { "Ghoul", "Giullare", "Pazzo", "Peccatore" };
         List<Arguments> argomenti = new ArrayList<>();
-        for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiRuoli)
+        for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiAltriRuoli)
             if(!nomeRuoloVittima.equals(nomeAltroRuolo)) argomenti.add(Arguments.of(tipoLupo, nomeRuoloVittima, nomeAltroRuolo));
         return argomenti.stream();
     }
