@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testNegromante riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testNosferatu riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00786" summary="REFACTORING: definizione del metodo getEsitoPartitaRomeoGiulietta">
-      <option name="closed" value="true" />
-      <created>1795172963092</created>
-      <option name="number" value="00786" />
-      <option name="presentableId" value="LOCAL-00786" />
-      <option name="project" value="LOCAL" />
-      <updated>1795172963092</updated>
-    </task>
-    <task id="LOCAL-00787" summary="REFACTORING: definizione del metodo isNosferatuVincitore">
-      <option name="closed" value="true" />
-      <created>1795187833864</created>
-      <option name="number" value="00787" />
-      <option name="presentableId" value="LOCAL-00787" />
-      <option name="project" value="LOCAL" />
-      <updated>1795187833864</updated>
     </task>
     <task id="LOCAL-00788" summary="REFACTORING: definizione del metodo isNosferatuSconfitto">
       <option name="closed" value="true" />
@@ -645,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795558586251</updated>
     </task>
-    <option name="localTasksCounter" value="835" />
+    <task id="LOCAL-00835" summary="VERDE DIRETTO: testVampiro riuscito">
+      <option name="closed" value="true" />
+      <created>1795558966917</created>
+      <option name="number" value="00835" />
+      <option name="presentableId" value="LOCAL-00835" />
+      <option name="project" value="LOCAL" />
+      <updated>1795558966917</updated>
+    </task>
+    <task id="LOCAL-00836" summary="VERDE DIRETTO: testNosferatu riuscito">
+      <option name="closed" value="true" />
+      <created>1795559148916</created>
+      <option name="number" value="00836" />
+      <option name="presentableId" value="LOCAL-00836" />
+      <option name="project" value="LOCAL" />
+      <updated>1795559148916</updated>
+    </task>
+    <option name="localTasksCounter" value="837" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro riuscito" />
-    <MESSAGE value="VERDE DIRETTO: testGiulietta riuscito" />
     <MESSAGE value="ROSSO: testEsitoPartita non riuscito" />
     <MESSAGE value="VERDE: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getEsitoPartitaCreatureOmbra" />
@@ -688,6 +686,8 @@
     <MESSAGE value="VERDE DIRETTO: testSenzaFazione riuscito" />
     <MESSAGE value="VERDE DIRETTO: testPosseduto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testNegromante riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNegromante riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVampiro riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testNosferatu riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testNosferatu riuscito" />
   </component>
 </project>

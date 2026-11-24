@@ -66,6 +66,8 @@ public final class TestAltraGuardia
 
     @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
 
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
