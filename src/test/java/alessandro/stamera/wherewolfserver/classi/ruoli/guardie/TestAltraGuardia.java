@@ -58,6 +58,8 @@ public final class TestAltraGuardia
 
     @Test public void testSenzaFazione() { verificaFalso(ruolo.isSenzaFazione()); }
 
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
