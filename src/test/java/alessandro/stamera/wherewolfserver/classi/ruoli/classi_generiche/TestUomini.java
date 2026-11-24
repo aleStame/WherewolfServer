@@ -11,6 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.stream.Stream;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static java.util.Arrays.stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
 
@@ -24,6 +25,38 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         doCallRealMethod().when(ruolo).getEsitoPartita(partita);
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
+    }
+
+    @ParameterizedTest @MethodSource("getEsempiPartiteGuardieCriminali")
+    public void testEsitoPartitaGuardieCriminali(Partita partita)
+    {
+        doCallRealMethod().when(ruolo).getEsitoPartita(partita);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
+    }
+
+    private static Stream<Arguments> getEsempiPartiteGuardieCriminali()
+    {
+        return stream(getArgomentiTestPartiteGuardieCriminali());
+    }
+
+    private static Arguments[] getArgomentiTestPartiteGuardieCriminali()
+    {
+        Partita[] partite = getPartiteVinte();
+        Arguments[] argomenti = new Arguments[partite.length];
+        for(int i = 0; i < partite.length; i++) argomenti[i] = Arguments.of(partite[i]);
+        return argomenti;
+    }
+
+    private static Partita[] getPartiteVinte()
+    {
+        return new Partita[]
+        {
+                new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Marco", "Guardia" }, { "Maurizio", "Assassino" } }),
+                new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Antonio", "Guardia" }, { "Aurora", "Capo gilda" } }),
+                new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Andrea", "Guardia" }, { "Elene", "Guardia corrotta" } }),
+                new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
+                new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } })
+        };
     }
 
     private static Stream<Arguments> getEsempiEsitiPartita()

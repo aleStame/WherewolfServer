@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getPartiteVinte">
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo getArgomentiTest">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestUomini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestUomini.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00765" summary="REFACTORING: definizione del metodo conseguenzeControlloMegera">
-      <option name="closed" value="true" />
-      <created>1795022722889</created>
-      <option name="number" value="00765" />
-      <option name="presentableId" value="LOCAL-00765" />
-      <option name="project" value="LOCAL" />
-      <updated>1795022722889</updated>
     </task>
     <task id="LOCAL-00766" summary="REFACTORING: definizione del metodo maledizioneSensitiva">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795517521597</updated>
     </task>
-    <option name="localTasksCounter" value="814" />
+    <task id="LOCAL-00814" summary="REFACTORING: definizione del metodo getArgomentiTest">
+      <option name="closed" value="true" />
+      <created>1795517734018</created>
+      <option name="number" value="00814" />
+      <option name="presentableId" value="LOCAL-00814" />
+      <option name="project" value="LOCAL" />
+      <updated>1795517734018</updated>
+    </task>
+    <option name="localTasksCounter" value="815" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiroVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroSconfitto" />
     <MESSAGE value="ROSSO: testPresenzaRomeoGiulietta non riuscito" />
     <MESSAGE value="VERDE: testPresenzaRomeoGiulietta riuscito" />
@@ -688,6 +687,7 @@
     <MESSAGE value="VERDE: testVittoriaPosseduto riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo getPartiteVinte" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getPartiteVinte" />
+    <MESSAGE value="REFACTORING: definizione del metodo getArgomentiTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo getArgomentiTest" />
   </component>
 </project>
