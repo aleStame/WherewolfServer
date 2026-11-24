@@ -76,6 +76,8 @@ public final class TestAltraGuardia
 
     @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
 
+    @Test public void testCacciatoreVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
