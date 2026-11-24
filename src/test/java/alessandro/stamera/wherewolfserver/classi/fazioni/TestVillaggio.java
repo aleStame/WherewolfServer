@@ -62,10 +62,20 @@ public final class TestVillaggio
         Partita[] partite = new Partita[]
         {
             new Partita(new String[][] { { "Noemi", "Bardo" }, { "Elisa", "Pazzo" } }),
-            new Partita(new String[][] { { "Elena", "Assassino" }, { "Mattia", "Altra guardia" } }),
+            new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Marco", "Guardia" }, { "Maurizio", "Assassino" } }),
+            new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Antonio", "Guardia" }, { "Aurora", "Capo gilda" } }),
+            new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Andrea", "Guardia" }, { "Elene", "Guardia corrotta" } }),
+            new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
+            new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } }),
             new Partita(new String[][] { { "Federico", "Capo gilda" }, { "Otello", "Giullare" } })
         };
-        return Stream.of(Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], SCONFITTA));
+        return
+            Stream.of
+            (
+                Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], VITTORIA),
+                Arguments.of(partite[3], VITTORIA), Arguments.of(partite[4], VITTORIA), Arguments.of(partite[5], VITTORIA),
+                Arguments.of(partite[6], SCONFITTA)
+            );
     }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
