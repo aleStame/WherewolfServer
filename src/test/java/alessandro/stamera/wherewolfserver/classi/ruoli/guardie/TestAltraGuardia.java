@@ -46,6 +46,8 @@ public final class TestAltraGuardia
 
     @Test public void testGuardiaNormale() { verificaFalso(ruolo.isGuardiaPrincipale()); }
 
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
