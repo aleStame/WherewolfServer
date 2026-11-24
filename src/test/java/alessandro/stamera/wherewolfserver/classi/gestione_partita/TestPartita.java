@@ -3570,7 +3570,7 @@ public final class TestPartita
         String nomeVittima = "Max", nomeLupo = "Mauro", nomePosseduto = "Claudio";
         String[][] giocatori = new String[][]
         {
-            { nomeVittima, nomeRuoloVittima }, { "Mauro", tipoLupo }, { nomePosseduto, "Posseduto" }, { "Piero", nomeAltroRuolo }
+            { nomeVittima, nomeRuoloVittima }, { nomeLupo, tipoLupo }, { nomePosseduto, "Posseduto" }, { "Piero", nomeAltroRuolo }
         };
         inizializzaPartita(giocatori);
         attaccoLupi(tipoLupo, nomePosseduto);
@@ -3587,14 +3587,15 @@ public final class TestPartita
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
         String[] nomiRuoli = { "Assassino", "Altra guardia" };
-        String[] nomiAltriRuoliVittoria = { "Ghoul", "Giullare", "Pazzo", "Peccatore" };
+        String[] nomiAltriRuoliVittoria =
+            { "Angelo custode", "Ghoul", "Giullare", "Goblin", "Leprecauno", "Pazzo", "Peccatore", "Sidhe", "Traditore" };
         String[] nomiAltriRuoliSconfitta =
         {
-            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
-            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
-            "Contadino discendente dei lupi", "Contadino mostro", "Contadino mostro", "Eremita", "Giovane lupo", "Giulietta", "Goblin", "Guardia",
-            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium", "Mercante", "Monaco", "Negromante", "Nonna",
-            "Nosferatu", "Oratore", "Oste", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Traditore", "Vampiro", "Veggente"
+            "Altra guardia", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro", "Bracconiere",
+            "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino mostro", "Contadino mostro", "Eremita", "Giovane lupo", "Giulietta", "Guardia", "Guardia corrotta", "Guaritore",
+            "Inquisitore", "Ladra", "Mago", "Medium", "Mercante", "Monaco", "Negromante", "Nonna", "Nosferatu", "Oratore", "Oste", "Prete",
+            "Spia", "Strega", "Sensitiva", "Templare", "Vampiro", "Veggente"
         };
         List<Arguments> argomenti = new ArrayList<>();
         for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiAltriRuoliVittoria)
