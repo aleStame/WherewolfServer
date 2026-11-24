@@ -82,6 +82,8 @@ public final class TestAltraGuardia
 
     @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
 
+    @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
