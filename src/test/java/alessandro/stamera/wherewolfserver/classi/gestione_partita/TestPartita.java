@@ -3565,7 +3565,7 @@ public final class TestPartita
     }
 
     @ParameterizedTest @MethodSource("getCombinazioniPosseduto")
-    public void testVittoriaConPosseduto(String tipoLupo, String nomeRuoloVittima, String nomeAltroRuolo)
+    public void testVittoriaConPosseduto(String tipoLupo, String nomeRuoloVittima, String nomeAltroRuolo, EsitoPartita esito)
     {
         String nomeVittima = "Max", nomeLupo = "Mauro", nomePosseduto = "Claudio";
         String[][] giocatori = new String[][]
@@ -3580,17 +3580,27 @@ public final class TestPartita
         terminaVotazioni();
         incrementaVoti(nomeLupo, 2);
         terminaBallottaggio();
-        assertThat(partita.getEsitoPartitaGiocatore(nomeVittima)).isEqualTo(VITTORIA);
+        assertThat(partita.getEsitoPartitaGiocatore(nomeVittima)).isEqualTo(esito);
     }
 
     private static Stream<Arguments> getCombinazioniPosseduto()
     {
         String[] tipiLupo = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
         String[] nomiRuoli = { "Assassino", "Altra guardia" };
-        String[] nomiAltriRuoli = { "Ghoul", "Giullare", "Pazzo", "Peccatore" };
+        String[] nomiAltriRuoliVittoria = { "Ghoul", "Giullare", "Pazzo", "Peccatore" };
+        String[] nomiAltriRuoliSconfitta =
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Cacciatore di vampiri", "Capo gilda", "Cappuccetto rosso", "Contadino eroe",
+            "Contadino discendente dei lupi", "Contadino mostro", "Contadino mostro", "Eremita", "Giovane lupo", "Giulietta", "Goblin", "Guardia",
+            "Guardia corrotta", "Guaritore", "Inquisitore", "Ladra", "Leprecauno", "Mago", "Medium", "Mercante", "Monaco", "Negromante", "Nonna",
+            "Nosferatu", "Oratore", "Oste", "Prete", "Sidhe", "Spia", "Strega", "Sensitiva", "Templare", "Traditore", "Vampiro", "Veggente"
+        };
         List<Arguments> argomenti = new ArrayList<>();
-        for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiAltriRuoli)
-            if(!nomeRuoloVittima.equals(nomeAltroRuolo)) argomenti.add(Arguments.of(tipoLupo, nomeRuoloVittima, nomeAltroRuolo));
+        for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiAltriRuoliVittoria)
+            argomenti.add(Arguments.of(tipoLupo, nomeRuoloVittima, nomeAltroRuolo, VITTORIA));
+        for(String tipoLupo : tipiLupo) for(String nomeRuoloVittima : nomiRuoli) for(String nomeAltroRuolo : nomiAltriRuoliSconfitta)
+            if(!nomeRuoloVittima.equals(nomeAltroRuolo)) argomenti.add(Arguments.of(tipoLupo, nomeRuoloVittima, nomeAltroRuolo, SCONFITTA));
         return argomenti.stream();
     }
 
