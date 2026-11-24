@@ -13,17 +13,19 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAtt
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoControlloSensitiva.NON_VILLAGGIO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
+import static java.util.Arrays.stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public final class TestRuolo
 {
 
     private Ruolo ruolo;
 
-    @BeforeEach public void setUp() { ruolo = new Ruolo(null, null, null, -1, false, null); }
+    @BeforeEach public void setUp()
+    {
+        ruolo = new Ruolo(null, null, null, -1, false, null);
+    }
 
     @Test public void testInizializzazione()
     {
@@ -66,14 +68,18 @@ public final class TestRuolo
 
     private static Stream<Arguments> getEsempiPartita()
     {
-        return Stream.of(Arguments.of(getPartitaGenerica(), VITTORIA), Arguments.of(new Partita(new String[][]{ }), SCONFITTA));
-    }
-
-    private static Partita getPartitaGenerica()
-    {
-        Partita partita = mock(Partita.class);
-        when(partita.isNoGiocatoriVivi()).thenReturn(false);
-        return partita;
+        Partita[] partite = new Partita[]
+        {
+            new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Marco", "Guardia" }, { "Maurizio", "Assassino" } }),
+            new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Antonio", "Guardia" }, { "Aurora", "Capo gilda" } }),
+            new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Andrea", "Guardia" }, { "Elene", "Guardia corrotta" } }),
+            new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
+            new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } })
+        };
+        Arguments[] argomenti = new Arguments[partite.length + 1];
+        for(int i = 0; i < partite.length; i++) argomenti[i] = Arguments.of(partite[i], VITTORIA);
+        argomenti[argomenti.length - 1] = Arguments.of(new Partita(new String[][]{ }), SCONFITTA);
+        return stream(argomenti);
     }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }
