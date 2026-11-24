@@ -100,6 +100,8 @@ public final class TestAltraGuardia
 
     @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
 
+    @Test public void testStrega() { verificaFalso(ruolo.isStrega()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
