@@ -3551,6 +3551,19 @@ public final class TestPartita
         verificaPartitePerseRomeoGiulietta(nomeGiulietta, nomeRomeo);
     }
 
+    @ParameterizedTest @CsvSource({ "Assassino", "Capo gilda", "Guardia corrotta", "Ladra", "Spia" })
+    public void testVittoriaAltraGuardiaEliminata(String tipoCriminale)
+    {
+        String nomeAltraGuardia = "Lino";
+        inizializzaPartita(new String[][] { { nomeAltraGuardia, "Altra guardia" }, { "Pino", "Guardia" }, { "Dino", tipoCriminale } });
+        incrementaVoti(nomeAltraGuardia, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeAltraGuardia, 2);
+        terminaBallottaggio();
+        terminaNotte();
+        verificaEsitoPartitaGiocatore(nomeAltraGuardia, VITTORIA);
+    }
+
     /*@ParameterizedTest @MethodSource("getCombinazioniPosseduto")
     public void testVittoriaConPosseduto(String tipoLupo, String nomeRuoloVittima, String nomeAltroRuolo)
     {
