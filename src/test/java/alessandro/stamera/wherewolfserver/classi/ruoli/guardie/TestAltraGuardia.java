@@ -98,6 +98,8 @@ public final class TestAltraGuardia
 
     @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
 
+    @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
