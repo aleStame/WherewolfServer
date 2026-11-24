@@ -284,6 +284,8 @@ public class Ruolo
 
     public EsitoGuarigione guarigione() { return EsitoGuarigione.RIUSCITO; }
 
+    public boolean isGuardiaPrincipale() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();

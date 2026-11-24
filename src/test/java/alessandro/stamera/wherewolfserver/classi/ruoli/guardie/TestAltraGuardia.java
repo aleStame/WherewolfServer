@@ -44,6 +44,8 @@ public final class TestAltraGuardia
 
     @Test public void testMistico() { assertThat(ruolo.isMistico()).isFalse(); }
 
+    @Test public void testGuardiaNormale() { assertThat(ruolo.isGuardiaPrincipale()).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }

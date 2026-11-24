@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testVittoriaConPosseduto non riuscito">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/Posseduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="ROSSO: testGuardiaNormale non riuscito">
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/Ruolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,22 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00774" summary="REFACTORING: definizione del metodo getEsitoPartitaNonMorto">
-      <option name="closed" value="true" />
-      <created>1795085915642</created>
-      <option name="number" value="00774" />
-      <option name="presentableId" value="LOCAL-00774" />
-      <option name="project" value="LOCAL" />
-      <updated>1795085915642</updated>
-    </task>
-    <task id="LOCAL-00775" summary="REFACTORING: definizione del metodo getEsitoPartitaVampiro">
-      <option name="closed" value="true" />
-      <created>1795086487177</created>
-      <option name="number" value="00775" />
-      <option name="presentableId" value="LOCAL-00775" />
-      <option name="project" value="LOCAL" />
-      <updated>1795086487177</updated>
     </task>
     <task id="LOCAL-00776" summary="REFACTORING: definizione del metodo getEsitoPartitaNosferatu">
       <option name="closed" value="true" />
@@ -647,7 +630,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795537471896</updated>
     </task>
-    <option name="localTasksCounter" value="823" />
+    <task id="LOCAL-00823" summary="VERDE: testVittoriaConPosseduto riuscito">
+      <option name="closed" value="true" />
+      <created>1795554599444</created>
+      <option name="number" value="00823" />
+      <option name="presentableId" value="LOCAL-00823" />
+      <option name="project" value="LOCAL" />
+      <updated>1795554599445</updated>
+    </task>
+    <task id="LOCAL-00824" summary="ROSSO: testGuardiaNormale non riuscito">
+      <option name="closed" value="true" />
+      <created>1795555241385</created>
+      <option name="number" value="00824" />
+      <option name="presentableId" value="LOCAL-00824" />
+      <option name="project" value="LOCAL" />
+      <updated>1795555241385</updated>
+    </task>
+    <option name="localTasksCounter" value="825" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito" />
     <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAssassinioGiulietta riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo verificaPartitaPersa" />
     <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAttaccoLupiGiulietta riuscito" />
@@ -688,8 +686,9 @@
     <MESSAGE value="REFACTORING: definizione del metodo getArgomentiTest" />
     <MESSAGE value="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
-    <MESSAGE value="VERDE: testVittoriaConPosseduto riuscito" />
     <MESSAGE value="ROSSO: testVittoriaConPosseduto non riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testVittoriaConPosseduto non riuscito" />
+    <MESSAGE value="VERDE: testVittoriaConPosseduto riuscito" />
+    <MESSAGE value="ROSSO: testGuardiaNormale non riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROSSO: testGuardiaNormale non riuscito" />
   </component>
 </project>
