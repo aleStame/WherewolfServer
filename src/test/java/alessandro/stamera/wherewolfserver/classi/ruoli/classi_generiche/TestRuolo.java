@@ -68,7 +68,16 @@ public final class TestRuolo
 
     private static Stream<Arguments> getEsempiPartita()
     {
-        Partita[] partite = new Partita[]
+        Partita[] partite = getPartiteVinte();
+        Arguments[] argomenti = new Arguments[partite.length + 1];
+        for(int i = 0; i < partite.length; i++) argomenti[i] = Arguments.of(partite[i], VITTORIA);
+        argomenti[argomenti.length - 1] = Arguments.of(new Partita(new String[][]{ }), SCONFITTA);
+        return stream(argomenti);
+    }
+
+    private static Partita[] getPartiteVinte()
+    {
+        return new Partita[]
         {
             new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Marco", "Guardia" }, { "Maurizio", "Assassino" } }),
             new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Antonio", "Guardia" }, { "Aurora", "Capo gilda" } }),
@@ -76,10 +85,6 @@ public final class TestRuolo
             new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
             new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } })
         };
-        Arguments[] argomenti = new Arguments[partite.length + 1];
-        for(int i = 0; i < partite.length; i++) argomenti[i] = Arguments.of(partite[i], VITTORIA);
-        argomenti[argomenti.length - 1] = Arguments.of(new Partita(new String[][]{ }), SCONFITTA);
-        return stream(argomenti);
     }
 
     private void verificaAttaccoLupiRiuscito(String nome) { verificaAttaccoRiuscito(attaccoLupi(nome)); }

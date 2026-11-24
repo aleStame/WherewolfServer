@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE: testVittoriaPosseduto riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEsitoPartita riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestRuolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00763" summary="REFACTORING: definizione del metodo verificaErroreAttaccoPosseduto">
-      <option name="closed" value="true" />
-      <created>1795021401435</created>
-      <option name="number" value="00763" />
-      <option name="presentableId" value="LOCAL-00763" />
-      <option name="project" value="LOCAL" />
-      <updated>1795021401436</updated>
     </task>
     <task id="LOCAL-00764" summary="REFACTORING: definizione della costante LADRA_BECCATA">
       <option name="closed" value="true" />
@@ -645,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795516390027</updated>
     </task>
-    <option name="localTasksCounter" value="812" />
+    <task id="LOCAL-00812" summary="VERDE DIRETTO: testEsitoPartita riuscito">
+      <option name="closed" value="true" />
+      <created>1795517264031</created>
+      <option name="number" value="00812" />
+      <option name="presentableId" value="LOCAL-00812" />
+      <option name="project" value="LOCAL" />
+      <updated>1795517264031</updated>
+    </task>
+    <option name="localTasksCounter" value="813" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isNosferatuVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo isNosferatuSconfitto" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroVincitore" />
     <MESSAGE value="REFACTORING: definizione del metodo isVampiroSconfitto" />
@@ -688,6 +687,7 @@
     <MESSAGE value="REFACTORING: semplificazione del metodo getEsitoPartita" />
     <MESSAGE value="ROSSO: testVittoriaPosseduto non riuscito" />
     <MESSAGE value="VERDE: testVittoriaPosseduto riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE: testVittoriaPosseduto riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEsitoPartita riuscito" />
   </component>
 </project>
