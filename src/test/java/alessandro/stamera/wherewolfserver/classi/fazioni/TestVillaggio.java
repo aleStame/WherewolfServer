@@ -107,7 +107,17 @@ public final class TestVillaggio
             new Partita(new String[][] { { "Manuel", "Altra guardia" }, { "Camilla", "Templare" } }),
             new Partita(new String[][] { { "Damiano", "Altra guardia" }, { "Tara", "Veggente" } }),
             new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Maria", "Guardia" }, { "Sara", "Ladra" } }),
-            new Partita(new String[][] { { "Federico", "Capo gilda" }, { "Otello", "Giullare" } })
+            new Partita(new String[][] { { "Federico", "Capo gilda" }, { "Otello", "Giullare" } }),
+            new Partita(new String[][] { { "Chris", "Altra guardia" }, { "Iaia", "Capo branco" } }),
+            new Partita(new String[][] { { "Bradley", "Altra guardia" }, { "Yoko", "Contadino mostro" } }),
+            new Partita(new String[][] { { "Patrick", "Altra guardia" }, { "Elizabeth", "Giovane lupo" } }),
+            new Partita(new String[][] { { "Ian", "Altra guardia" }, { "Kathryn", "Lupo del branco" } }),
+            new Partita(new String[][] { { "Hugh", "Altra guardia" }, { "Irina", "Lupo reietto" } }),
+            new Partita(new String[][] { { "Ryan", "Altra guardia" }, { "Tatiana", "Lupo solitario" } }),
+            new Partita(new String[][] { { "John", "Altra guardia" }, { "Karen", "Negromante" } }),
+            new Partita(new String[][] { { "Joseph", "Altra guardia" }, { "Morgane", "Nosferatu" } }),
+            new Partita(new String[][] { { "Anthony", "Altra guardia" }, { "Dalia", "Posseduto" } }),
+            new Partita(new String[][] { { "James", "Altra guardia" }, { "Anna Maria", "Vampiro" } })
         };
         return
             Stream.of
@@ -128,7 +138,10 @@ public final class TestVillaggio
                 Arguments.of(partite[37], VITTORIA), Arguments.of(partite[38], VITTORIA), Arguments.of(partite[39], VITTORIA),
                 Arguments.of(partite[40], VITTORIA), Arguments.of(partite[41], VITTORIA), Arguments.of(partite[42], VITTORIA),
                 Arguments.of(partite[43], VITTORIA), Arguments.of(partite[44], VITTORIA), Arguments.of(partite[45], VITTORIA),
-                Arguments.of(partite[46], SCONFITTA)
+                Arguments.of(partite[46], SCONFITTA), Arguments.of(partite[47], SCONFITTA), Arguments.of(partite[48], SCONFITTA),
+                Arguments.of(partite[49], SCONFITTA), Arguments.of(partite[50], SCONFITTA), Arguments.of(partite[51], SCONFITTA),
+                Arguments.of(partite[52], SCONFITTA), Arguments.of(partite[53], SCONFITTA), Arguments.of(partite[54], SCONFITTA),
+                Arguments.of(partite[55], SCONFITTA), Arguments.of(partite[56], SCONFITTA)
             );
     }
 
