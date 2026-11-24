@@ -286,11 +286,11 @@ public class Ruolo
 
     public boolean isGuardiaPrincipale() { return false; }
 
+    public boolean isVeggente() { return false; }
+
     private boolean controlloTrattiOscuri()
     {
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
-
-    public boolean isVeggente() { return true; }
 
 }
