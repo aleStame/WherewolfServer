@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testCriminale riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testPiccoloPopolo riuscito">
       <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/guardie/TestAltraGuardia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,22 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00780" summary="VERDE DIRETTO: testEliminazioneVampiro riuscito">
-      <option name="closed" value="true" />
-      <created>1795099363890</created>
-      <option name="number" value="00780" />
-      <option name="presentableId" value="LOCAL-00780" />
-      <option name="project" value="LOCAL" />
-      <updated>1795099363891</updated>
-    </task>
-    <task id="LOCAL-00781" summary="ROSSO: testSconfittaVampiroNosferatu non riuscito">
-      <option name="closed" value="true" />
-      <created>1795169661777</created>
-      <option name="number" value="00781" />
-      <option name="presentableId" value="LOCAL-00781" />
-      <option name="project" value="LOCAL" />
-      <updated>1795169661778</updated>
     </task>
     <task id="LOCAL-00782" summary="VERDE: testSconfittaVampiroNosferatu riuscito">
       <option name="closed" value="true" />
@@ -645,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795556776128</updated>
     </task>
-    <option name="localTasksCounter" value="829" />
+    <task id="LOCAL-00829" summary="VERDE DIRETTO: testInquisizione riuscito">
+      <option name="closed" value="true" />
+      <created>1795557076101</created>
+      <option name="number" value="00829" />
+      <option name="presentableId" value="LOCAL-00829" />
+      <option name="project" value="LOCAL" />
+      <updated>1795557076101</updated>
+    </task>
+    <task id="LOCAL-00830" summary="VERDE DIRETTO: testPiccoloPopolo riuscito">
+      <option name="closed" value="true" />
+      <created>1795557330307</created>
+      <option name="number" value="00830" />
+      <option name="presentableId" value="LOCAL-00830" />
+      <option name="project" value="LOCAL" />
+      <updated>1795557330308</updated>
+    </task>
+    <option name="localTasksCounter" value="831" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,8 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ROSSO: testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro non riuscito" />
-    <MESSAGE value="VERDE: testRomeoGiuliettaMortiPerContrattattoGiuliettaContadinoMostro riuscito" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminazioneSingoloGiocatoreContrattaccoContadinoMostro" />
     <MESSAGE value="REFACTORING: definizione del metodo eliminazioneGiocatoriContrattaccoContadinoMostro" />
     <MESSAGE value="ROSSO: testRomeoGiuliettaMortiPerContrattaccoRomeoContadinoMostro non riuscito" />
@@ -688,6 +686,8 @@
     <MESSAGE value="REFACTORING: definizione del metodo verificaFalso" />
     <MESSAGE value="VERDE DIRETTO: testAmanti riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCriminale riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testCriminale riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testInquisizione riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testPiccoloPopolo riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testPiccoloPopolo riuscito" />
   </component>
 </project>

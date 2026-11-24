@@ -54,6 +54,8 @@ public final class TestAltraGuardia
 
     @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
 
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
 
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
