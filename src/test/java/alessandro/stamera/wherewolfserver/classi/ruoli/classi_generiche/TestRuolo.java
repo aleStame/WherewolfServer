@@ -66,13 +66,15 @@ public final class TestRuolo
 
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
 
-    private static Stream<Arguments> getEsempiPartita()
+    private static Stream<Arguments> getEsempiPartita() { return stream(getArgomentiTest()); }
+
+    private static Arguments[] getArgomentiTest()
     {
         Partita[] partite = getPartiteVinte();
         Arguments[] argomenti = new Arguments[partite.length + 1];
         for(int i = 0; i < partite.length; i++) argomenti[i] = Arguments.of(partite[i], VITTORIA);
         argomenti[argomenti.length - 1] = Arguments.of(new Partita(new String[][]{ }), SCONFITTA);
-        return stream(argomenti);
+        return argomenti;
     }
 
     private static Partita[] getPartiteVinte()
