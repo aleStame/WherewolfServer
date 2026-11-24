@@ -67,6 +67,11 @@ public final class TestVillaggio
             new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Andrea", "Guardia" }, { "Elene", "Guardia corrotta" } }),
             new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
             new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } }),
+            new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Maurizio", "Assassino" } }),
+            new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Aurora", "Capo gilda" } }),
+            new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Elena", "Guardia corrotta" } }),
+            new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Monica", "Spia" } }),
+            new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } }),
             new Partita(new String[][] { { "Federico", "Capo gilda" }, { "Otello", "Giullare" } })
         };
         return
@@ -74,7 +79,9 @@ public final class TestVillaggio
             (
                 Arguments.of(partite[0], VITTORIA), Arguments.of(partite[1], VITTORIA), Arguments.of(partite[2], VITTORIA),
                 Arguments.of(partite[3], VITTORIA), Arguments.of(partite[4], VITTORIA), Arguments.of(partite[5], VITTORIA),
-                Arguments.of(partite[6], SCONFITTA)
+                Arguments.of(partite[4], VITTORIA), Arguments.of(partite[5], VITTORIA), Arguments.of(partite[6], VITTORIA),
+                Arguments.of(partite[7], VITTORIA), Arguments.of(partite[8], VITTORIA), Arguments.of(partite[9], VITTORIA),
+                Arguments.of(partite[10], VITTORIA), Arguments.of(partite[11], SCONFITTA)
             );
     }
 

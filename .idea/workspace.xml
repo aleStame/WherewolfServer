@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEsitoPartita riuscito">
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/gestione_partita/TestPartita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestVillaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/fazioni/TestVillaggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,14 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00767" summary="REFACTORING: definizione del metodo maledizione">
-      <option name="closed" value="true" />
-      <created>1795023413756</created>
-      <option name="number" value="00767" />
-      <option name="presentableId" value="LOCAL-00767" />
-      <option name="project" value="LOCAL" />
-      <updated>1795023413756</updated>
     </task>
     <task id="LOCAL-00768" summary="REFACTORING: definizione del metodo verificaAura">
       <option name="closed" value="true" />
@@ -646,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795526818782</updated>
     </task>
-    <option name="localTasksCounter" value="816" />
+    <task id="LOCAL-00816" summary="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito">
+      <option name="closed" value="true" />
+      <created>1795528043633</created>
+      <option name="number" value="00816" />
+      <option name="presentableId" value="LOCAL-00816" />
+      <option name="project" value="LOCAL" />
+      <updated>1795528043633</updated>
+    </task>
+    <option name="localTasksCounter" value="817" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTORING: definizione del metodo isVampiroSconfitto" />
     <MESSAGE value="ROSSO: testPresenzaRomeoGiulietta non riuscito" />
     <MESSAGE value="VERDE: testPresenzaRomeoGiulietta riuscito" />
     <MESSAGE value="VERDE DIRETTO: testRomeoSconfittoPerAssassinio riuscito" />
@@ -689,6 +688,7 @@
     <MESSAGE value="REFACTORING: definizione del metodo getPartiteVinte" />
     <MESSAGE value="REFACTORING: definizione del metodo getArgomentiTest" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEsitoPartita riuscito" />
+    <MESSAGE value="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito" />
   </component>
 </project>
