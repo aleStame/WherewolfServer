@@ -66,6 +66,8 @@ public final class TestRuolo
 
     @Test public void testGiulietta() { verificaFalso(ruolo.isGiulietta()); }
 
+    @Test public void testVeggente() { verificaFalso(ruolo.isVeggente()); }
+
     private static Stream<Arguments> getEsempiPartita() { return stream(getArgomentiTest()); }
 
     private static Arguments[] getArgomentiTest()

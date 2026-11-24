@@ -291,4 +291,6 @@ public class Ruolo
         return isTrattoPresente(CREATURA_OMBRA) || isTrattoPresente(LUPO_MANNARO) || isTrattoPresente(NON_MORTO) || isMaledetto();
     }
 
+    public boolean isVeggente() { return true; }
+
 }
