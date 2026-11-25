@@ -1628,6 +1628,7 @@ public final class TestPartita
         String nomeVittima = "Rino";
         inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Pino", "Vampiro" } });
         verificaAttaccoVampiroRiuscito(nomeVittima);
+        verificaEsitoPartitaGiocatore(nomeVittima, VITTORIA);
     }
 
     @ParameterizedTest
