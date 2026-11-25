@@ -8,10 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.stream.Stream;
-
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoGuarigione.VIAGGIATORE_GUARITO;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 import static alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita.FACTORY;
@@ -44,6 +43,8 @@ public final class TestViaggiatore
         assertThat(partita.isEliminato("Buffy")).isTrue();
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(esito);
     }
+
+    @Test public void testGuarigione() { assertThat(ruolo.guarigione()).isEqualTo(VIAGGIATORE_GUARITO); }
 
     private static Stream<Arguments> getEsempiPartite()
     {

@@ -3,8 +3,6 @@ package alessandro.stamera.wherewolfserver.classi.gestione_partita;
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreAlfabetico;
 import alessandro.stamera.wherewolfserver.classi.gestione_partita.comparatori.ComparatoreVoti;
-import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
-
 import java.util.Map;
 import java.util.LinkedHashMap;
 import java.util.Optional;

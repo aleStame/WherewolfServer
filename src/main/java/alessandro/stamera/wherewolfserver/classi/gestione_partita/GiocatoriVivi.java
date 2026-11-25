@@ -31,7 +31,7 @@ public final class GiocatoriVivi extends Giocatori
     public EsitoAttacco attaccoAssassino(String nome)
     {
         EsitoAttacco esito = getGiocatore(nome).attaccoAssassino();
-        if(esito == RIUSCITO && (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente()) esito = GHOUL_MORTO;
+        if(esito == RIUSCITO && isGhoulVittima(nome)) esito = GHOUL_MORTO;
         return esito;
     }
 
@@ -43,11 +43,7 @@ public final class GiocatoriVivi extends Giocatori
         {
             case RIUSCITO -> esito = gestioneAttaccoRiuscito(attaccante, nome);
             case ANGELO_CUSTODE_MORTO -> esito = gestioneAttaccoAngeloCustode(nome, attaccante);
-            case FALLITO ->
-            {
-                if(isLadra(nome)) getGiocatore(nome).perdiProtezioni();
-                else if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
-            }
+            case FALLITO -> esito = gestioneFallimentoAttacco(attaccante, nome);
             case ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO -> { if(isProtezioneAngeloCustodeAttiva(nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO; }
             case ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO ->
                 { if(isProtezioneAngeloCustodeNonAttiva(nome)) esito = ULTIMO_LUPO_UCCIDE_CAPPUCCETTO_ROSSO; }
@@ -57,7 +53,12 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isTrattoPresente(String nome, Tratto tratto) { return getGiocatore(nome).isTrattoPresente(tratto); }
 
-    public Fazione getFazione(String nome) { return getGiocatore(nome).getFazione(); }
+    public Fazione getFazione(String nome)
+    {
+        Fazione fazione = getGiocatore(nome).getFazione();
+        if(fazione == AMANTI && isAngeloCustode(nome) && !isAmatoPresente()) fazione = NESSUNA;
+        return fazione;
+    }
 
     public EsitoAttacco attaccoVampiro(String nome)
     {
@@ -145,7 +146,7 @@ public final class GiocatoriVivi extends Giocatori
     public int getNumeroSenzaFazione()
     {
         int numeroSenzaFazione = 0;
-        for(int i = 0; i < getNumeroGiocatori(); i++) if(isSenzaFazione(i)) numeroSenzaFazione++;
+        for(int i = 0; i < getNumeroGiocatori(); i++) if(isSenzaFazione(getNomeGiocatore(i))) numeroSenzaFazione++;
         return numeroSenzaFazione;
     }
 
@@ -153,10 +154,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void riconosciNegromante() { getGiocatore(getPosizioneBecchino()).riconosciNegromante(); }
 
-    public void annullaProtezioniCappuccettoRosso()
-    {
-        getGiocatore(getNomeCappuccettoRosso()).perdiProtezioni();
-    }
+    public void annullaProtezioniCappuccettoRosso() { perdiProtezioni(getNomeCappuccettoRosso()); }
 
     public boolean isNonnaPresente() { return getPosizioneNonna() != NON_TROVATO; }
 
@@ -179,9 +177,8 @@ public final class GiocatoriVivi extends Giocatori
 
     public EsitoAttacco attaccoNegromante(String nome)
     {
-        Giocatore giocatore = getGiocatore(nome);
-        EsitoAttacco esito = giocatore.attaccoNegromante();
-        if(esito == RIUSCITO && giocatore.getRuolo().isMegera()) getGiocatore(getNomeNegromante()).maledizione();
+        EsitoAttacco esito = getGiocatore(nome).attaccoNegromante();
+        if(esito == MEGERA_BECCATA) maledizione(getNomeNegromante());
         return esito;
     }
 
@@ -266,8 +263,7 @@ public final class GiocatoriVivi extends Giocatori
 
     public void protezioneStrega(String nome)
     {
-        Giocatore giocatore = getGiocatore(nome);
-        giocatore.protezioneStrega();
+        getGiocatore(nome).protezioneStrega();
         aggiungiProtezioneCreatureOmbra(nome);
     }
 
@@ -314,11 +310,8 @@ public final class GiocatoriVivi extends Giocatori
     @Override public void aggiungiGiocatore(String nome, Giocatore giocatore)
     {
         super.aggiungiGiocatore(nome, giocatore);
-        aggiornaProtezioni();
-        aggiornaProtezioniLadra();
-        aggiornaProtezioniCappuccettoRossoPostInserimento();
-        if(isPeccatorePresente() && isPossedutoPresente()) getGiocatore(getNomePeccatore()).cambiaFazione(NESSUNA);
-        if(isTraditorePresente()) aggiungiProtezioneLupi(getNomeTraditore());
+        sistemaProtezioniRuoli();
+        sistemaCoppiaPeccatorePosseduto();
     }
 
     public void segnalazioneInquisitore(String nome) { getGiocatore(nome).segnalazioneInquisitore(); }
@@ -331,7 +324,7 @@ public final class GiocatoriVivi extends Giocatori
     {
         boolean isAngeloCustode = isAngeloCustode(nome);
         EsitoAttacco esito = getGiocatore(nome).passaPosseduto();
-        if(isAngeloCustode && esito == RIUSCITO) getGiocatoreAmato().annullaProtezioneAngeloCustode();
+        if(isAngeloCustode && esito == RIUSCITO) annullaProtezioneAngeloCustode();
         return esito;
     }
 
@@ -384,8 +377,6 @@ public final class GiocatoriVivi extends Giocatori
 
     public boolean isProtetto(String nome) { return getGiocatore(nome).isProtetto(); }
 
-    private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
-
     public String getNomePeccatore() { return getNomeGiocatore(getPosizionePeccatore()); }
 
     public boolean isTraditorePresente() { return getPosizioneTraditore() != NON_TROVATO; }
@@ -394,12 +385,63 @@ public final class GiocatoriVivi extends Giocatori
 
     public void aggiungiProtezioneLupi(String nome) { getGiocatore(nome).aggiungiProtezione(getLupi()); }
 
-    public boolean isMegeraPresente()
+    public boolean isStregaPresente() { return getPosizioneStrega() != NON_TROVATO; }
+
+    public boolean isStrega(String nome) { return getGiocatore(nome).isStrega(); }
+
+    public String getNomeStrega() { return getNomeGiocatore(getPosizioneStrega()); }
+
+    public boolean isPossedutoPresente()
     {
         boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isMegera(getNomeGiocatore(i))) trovato = true;
+        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isPosseduto(getNomeGiocatore(i))) trovato = true;
         return trovato;
     }
+
+    private void annullaProtezioneAngeloCustode() { getGiocatoreAmato().annullaProtezioneAngeloCustode(); }
+
+    private EsitoAttacco gestioneFallimentoAttacco(Ruolo attaccante, String nome)
+    {
+        EsitoAttacco esito = FALLITO;
+        if(isLadra(nome)) perdiProtezioni(nome);
+        else if(isCappuccettoRossoDaSvegliare(attaccante, nome)) esito = ULTIMO_LUPO_SVEGLIA_CAPPUCCETTO_ROSSO;
+        return esito;
+    }
+
+    private void perdiProtezioni(String nome) { getGiocatore(nome).perdiProtezioni(); }
+
+    private int getPosizioneStrega()
+    {
+        int posizione = NON_TROVATO;
+        for(int i = 0; i < getNumeroGiocatori() && posizione == NON_TROVATO; i++) if(isStrega(i)) posizione = i;
+        return posizione;
+    }
+
+    private boolean isStrega(int posizione) { return isStrega(getNomeGiocatore(posizione)); }
+
+    private void sistemaCoppiaPeccatorePosseduto() { if(isCoppiaPeccatorePosseduto()) annullaFazionePeccatore(); }
+
+    private void annullaFazionePeccatore() { getGiocatorePeccatore().cambiaFazione(NESSUNA); }
+
+    private Giocatore getGiocatorePeccatore() { return getGiocatore(getNomePeccatore()); }
+
+    private void sistemaProtezioniRuoli()
+    {
+        aggiornaProtezioni();
+        aggiornaProtezioniLadra();
+        aggiornaProtezioniCappuccettoRossoPostInserimento();
+        aggiornaProtezioniTraditore();
+    }
+
+    private void aggiornaProtezioniTraditore() { if(isTraditorePresente()) proteggiTraditoreDaiLupi(); }
+
+    private void proteggiTraditoreDaiLupi() { aggiungiProtezioneLupi(getNomeTraditore()); }
+
+    private boolean isCoppiaPeccatorePosseduto() { return isPeccatorePresente() && isPossedutoPresente(); }
+
+    private boolean isGhoulVittima(String nome) { return (isVampiro(nome) || isNosferatu(nome)) && isGhoulPresente(); }
+
+    private boolean isPeccatorePresente() { return getPosizionePeccatore() != NON_TROVATO; }
 
     private int getPosizioneTraditore()
     {
@@ -418,13 +460,6 @@ public final class GiocatoriVivi extends Giocatori
     }
 
     private boolean isPeccatore(String nome) { return getGiocatore(nome).isPeccatore(); }
-
-    private boolean isPossedutoPresente()
-    {
-        boolean trovato = false;
-        for(int i = 0; i < getNumeroGiocatori() && !trovato; i++) if(isPosseduto(getNomeGiocatore(i))) trovato = true;
-        return trovato;
-    }
 
     private int getPosizioneGiulietta()
     {
@@ -581,9 +616,7 @@ public final class GiocatoriVivi extends Giocatori
         else perditaProtezioniNonna();
     }
 
-    private void perditaProtezioniNonna() { getNonna().perdiProtezioni(); }
-
-    private Giocatore getNonna() { return getGiocatore(getPosizioneNonna()); }
+    private void perditaProtezioniNonna() { perdiProtezioni(getNomeNonna()); }
 
     private Ruolo[] getCreatureOmbra()
     {
@@ -622,7 +655,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isTemplare(int posizione) { return isTemplare(getNomeGiocatore(posizione)); }
 
-    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) getGiocatoreAmato().perdiProtezioni(); }
+    private void perditaProtezioniAmato() { if(isAngeloCustodeMorto()) perdiProtezioni(getNomeAmato()); }
 
     private boolean isAngeloCustodeMorto() { return isAmatoPresente() && !isAngeloCustodePresente(); }
 
@@ -763,7 +796,7 @@ public final class GiocatoriVivi extends Giocatori
 
     private boolean isCapoGilda(int posizione) { return getGiocatore(posizione).isCapoGilda(); }
 
-    private boolean isSenzaFazione(int posizione) { return getFazione(posizione) == NESSUNA; }
+    private boolean isSenzaFazione(String nome) { return getFazione(nome) == NESSUNA; }
 
     private Fazione getFazione(int posizione) { return getGiocatore(posizione).getFazione(); }
 

@@ -23,6 +23,8 @@ public final class Strega extends Villaggio
         );
     }
 
+    @Override public boolean isStrega() { return true; }
+
     public static Ruolo getInstance() { return new Strega(); }
 
 }
