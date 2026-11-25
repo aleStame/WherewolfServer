@@ -1631,6 +1631,23 @@ public final class TestPartita
         verificaEsitoPartitaGiocatore(nomeVittima, VITTORIA);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Assassino", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste",
+            "Pazzo", "Peccatore", "Prete", "Spia", "Templare", "Viaggiatore"
+        }
+    )
+    public void testVampirizzazioneConGhoulRiuscita(String nomeRuolo)
+    {
+        String nomeVittima = "Rino";
+        inizializzaPartita(new String[][] { { nomeVittima, nomeRuolo }, { "Pino", "Vampiro" }, { "Larry", "Ghoul" } });
+        verificaAttaccoVampiroRiuscito(nomeVittima);
+        verificaEsitoPartitaGiocatore(nomeVittima, VITTORIA);
+    }
+
     @ParameterizedTest
     @CsvSource({ "Goblin", "Guaritore", "Leprecauno", "Mago", "Medium", "Megera", "Negromante", "Nosferatu", "Sidhe", "Strega", "Sensitiva" })
     public void testVampirizzazioneFallita(String nomeRuolo)
