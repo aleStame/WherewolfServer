@@ -44,13 +44,13 @@ public final class Ballottaggio extends Giocatori
 
     public boolean isCitta(String nome) { return getGiocatore(nome).isCitta(); }
 
-    public void segnalazioneOratore(String nome) { getGiocatore(nome).getRuolo().segnalazioneOratore(); }
+    public void segnalazioneOratore(String nome) { getGiocatore(nome).segnalazioneOratore(); }
 
     public void segnalazioneBorgomastro(String nome) { getGiocatore(nome).segnalazioneBorgomastro(); }
 
     public boolean isSegnalatoBorgomastro(String nome) { return getGiocatore(nome).isSegnalatoBorgomastro(); }
 
-    private boolean isSegnalatoOratore(String nome) { return getGiocatore(nome).getRuolo().isSegnalatoOratore(); }
+    private boolean isSegnalatoOratore(String nome) { return getGiocatore(nome).isSegnalatoOratore(); }
 
     private void annullaSegnalazioneOratore()
     {
@@ -59,7 +59,7 @@ public final class Ballottaggio extends Giocatori
 
     private void annullaSegnalazioneOratore(int posizione) { annullaSegnalazioneOratore(getNomeGiocatore(posizione)); }
 
-    private void annullaSegnalazioneOratore(String nome) { getGiocatore(nome).getRuolo().annullaSegnalazioneOratore(); }
+    private void annullaSegnalazioneOratore(String nome) { getGiocatore(nome).annullaSegnalazioneOratore(); }
 
     private boolean isPareggioPresente() { return getNomiPerdenti().size() > 1; }
 

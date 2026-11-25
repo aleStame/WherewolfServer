@@ -34,7 +34,7 @@ public final class Partita
 
     private final String[] maledettiNegromante;
 
-    private boolean pazzoUcciso, crociataAvviata, viaggioPartito;
+    private boolean pazzoUcciso, crociataAvviata, viaggioPartito, giullareEliminato;
 
     private int numeroNotte;
 
@@ -54,6 +54,7 @@ public final class Partita
         crociataAvviata = false;
         setViaggioPartito(false);
         controlloViaggio();
+        giullareEliminato = false;
     }
 
     public void incrementaVoti(String nome, int numeroVoti)
@@ -217,10 +218,7 @@ public final class Partita
             case GHOUL_MORTO -> gestioneMorteGhoul(nome, nomeNosferatu);
             case TROVATO_POSSEDUTO -> gestionePosseduto(nome, nomeNosferatu);
             case ROMEO_BECCATO -> throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Giulietta", nomeNosferatu);
-            case FALLITO ->
-            {
-                if(mortiNotte.isStregato(nome)) throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Strega", nomeNosferatu);
-            }
+            case STREGATO_BECCATO -> throw new EccezioneProgenizzazioneGiocatoreProtetto(nome, "Strega", nomeNosferatu);
         }
     }
 
@@ -242,11 +240,12 @@ public final class Partita
 
     public void guarisci(String nome)
     {
-        aggiungiGiocatoreVivo(nome, getGiocatore(nome));
-        mortiNotte.eliminaGiocatore(nome);
-        if(vivi.isMegera(nome)) maledizioneGuaritore();
-        else if(vivi.isContadinoMostro(nome)) eliminaGuaritore();
-        if(vivi.isViaggiatore(nome)) controlloViaggio();
+        switch(guarigione(nome))
+        {
+            case GUARITORE_MALEDETTO -> maledizioneGuaritore();
+            case GUARITORE_MORTO -> eliminaGuaritore();
+            case VIAGGIATORE_GUARITO -> controlloViaggio();
+        }
     }
 
     public void incrementaVotiContadinoMostro(String nome)
@@ -263,10 +262,22 @@ public final class Partita
 
     public void contrattaccoContadinoMostro(String nome)
     {
-        if(vivi.isViaggiatore(nome)) setViaggioPartito(false);
-        eliminaGiocatore(nome);
+        eliminazioneGiocatoriContrattaccoContadinoMostro(nome);
         votantiContadinoMostro.clear();
         confermaEliminazioneMortiNotte();
+    }
+
+    private void eliminazioneGiocatoriContrattaccoContadinoMostro(String nome)
+    {
+        if(vivi.isGiulietta(nome)) eliminaGiocatori(nome, getNomeRomeo());
+        else if(vivi.isRomeo(nome)) eliminaGiocatori(nome, vivi.getNomeGiulietta());
+        else eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(nome);
+    }
+
+    private void eliminazioneSingoloGiocatoreContrattaccoContadinoMostro(String nome)
+    {
+        if(vivi.isViaggiatore(nome)) setViaggioPartito(false);
+        eliminaGiocatore(nome);
     }
 
     public int getNumeroNotte() { return numeroNotte; }
@@ -280,9 +291,21 @@ public final class Partita
         controlloViaggio();
     }
 
+    public boolean isRomeoGiuliettaPresenti() { return isRomeoPresente() && isGiuliettaPresente(); }
+
     public boolean isPazzoUcciso() { return pazzoUcciso; }
 
-    public boolean isMegeraPresente() { return vivi.isMegeraPresente(); }
+    public boolean isAngeloCustodePresente() { return vivi.isAngeloCustodePresente(); }
+
+    public boolean isPossedutoPresente() { return vivi.isPossedutoPresente(); }
+
+    private EsitoGuarigione guarigione(String nome)
+    {
+        EsitoGuarigione esito = mortiNotte.guarigione(nome);
+        aggiungiGiocatoreVivo(nome, getGiocatore(nome));
+        mortiNotte.eliminaGiocatore(nome);
+        return esito;
+    }
 
     private void controlloViaggio() { if(isViaggioPronto()) setViaggioPartito(true); }
 
@@ -366,11 +389,9 @@ public final class Partita
         {
             case MORTO -> eliminaGiocatore(nomeNegromante);
             case FALLITO -> throw new IllegalStateException("Scegli un'altra persona da attaccare.");
-            case ROMEO_BECCATO ->
-                throw new IllegalStateException(nome + " non può essere maledetto perché Romeo.\nDì al Negromante di cambiare persona.");
-            case RIUSCITO -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
-            case EREMITA_BECCATO ->
-                throw new IllegalArgumentException(nome + " è l'Eremita.\nAvvisa " + nomeNegromante + " (Negromante) che non può maledirlo, e che indicare qualcun altro");
+            case ROMEO_BECCATO -> throw new EccezioneNegromanteControRomeo(nome);
+            case RIUSCITO, MEGERA_BECCATA -> maledettiNegromante[getPosizioneLiberaMaledettiNegromante()] = nome;
+            case EREMITA_BECCATO -> throw new EccezioneNegromanteControEremita(nome, nomeNegromante);
         }
     }
 
@@ -483,13 +504,17 @@ public final class Partita
     public EsitoControlloSensitiva controlloSensitiva(String nome)
     {
         EsitoControlloSensitiva esito = vivi.controlloSensitiva(nome);
-        if(esito == VILLAGGIO)
-        {
-            if(vivi.isMegera(nome)) getGiocatore(vivi.getNomeSensitiva()).maledizione();
-            if(isSensitivaEliminabile(nome)) eliminaSensitiva();
-        }
+        if(esito == VILLAGGIO) conseguenzeControlloMegera(nome);
         return esito;
     }
+
+    private void conseguenzeControlloMegera(String nome)
+    {
+        if(vivi.isMegera(nome)) maledizioneSensitiva();
+        if(isSensitivaEliminabile(nome)) eliminaSensitiva();
+    }
+
+    private void maledizioneSensitiva() { maledizione(vivi.getNomeSensitiva()); }
 
     private boolean isSensitivaEliminabile(String nome) { return isPrimaNotte() || vivi.isContadinoMostro(nome); }
 
@@ -565,27 +590,15 @@ public final class Partita
 
     public void passaPosseduto(String nome)
     {
+        String nomePosseduto = mortiNotte.getNomePosseduto();
         switch(vivi.passaPosseduto(nome))
         {
-            case FALLITO ->
-            {
-                if(vivi.isStregato(nome))
-                {
-                    String messaggio =
-                        nome + " (" + getNomeRuolo(nome) + ") è protetto dalla Strega.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
-                        ") che non può possederla.";
-                    throw new IllegalStateException(messaggio);
-                }
-                else if(vivi.isLadra(nome)) throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
-            }
+            case STREGATO_BECCATO ->
+                throw new EccezioneAttaccoPossedutoNonRiuscito("Strega", nome, getNomeRuolo(nome), nomePosseduto);
+            case LADRA_BECCATA -> throw new IllegalArgumentException("Impossibile possedere " + nome + ".");
             case ROMEO_BECCATO ->
-            {
-                String messaggio =
-                    nome + " (" + getNomeRuolo(nome) + ") è Romeo.\nAvvisa il Posseduto (" + mortiNotte.getNomePosseduto() +
-                    ") che non può possederla.";
-                throw new IllegalStateException(messaggio);
-            }
-            case MORTO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
+                throw new EccezioneAttaccoPossedutoNonRiuscito("Giulietta", nome, getNomeRuolo(nome), nomePosseduto);
+            case PRETE_BECCATO -> throw new IllegalArgumentException("Impossibile possedere il Prete.");
             case RIUSCITO -> gestionePassaggioPossedutoRiuscito(nome);
         }
     }
@@ -595,19 +608,8 @@ public final class Partita
     public void protezioneStrega(String nome)
     {
         vivi.protezioneStrega(nome);
-        int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(vivi.getNomeRuolo(getNomeGiocatoreVivo(i)).equals("Strega"))
-            posizione = i;
-        String nomeStrega = getNomeGiocatoreVivo(posizione);
-        if(vivi.isContadinoMostro(nome))
-        {
-            eliminaGiocatore(nomeStrega);
-            throw new IllegalArgumentException
-            (
-                "La Strega (" + nomeStrega + ") ha cercato di proteggere il Contadino Mostro (" + nome + ").\nAvvisa Sonia della sua morte."
-            );
-        }
-        else if(vivi.isMegera(nome)) getGiocatore(nomeStrega).maledizione();
+        if(vivi.isContadinoMostro(nome)) protezioneContadinoMostroStrega();
+        else if(vivi.isMegera(nome)) maledizione(getNomeStrega());
     }
 
     public boolean isProgenieNosferatuAssenti()
@@ -655,12 +657,27 @@ public final class Partita
 
     public boolean isRomeoPresente() { return vivi.isRomeoPresente(); }
 
+    public boolean isVampiroSconfitto() { return isVampiroAssente() && isProgenieVampiroAssenti(); }
+
+    public boolean isNosferatuSconfitto() { return isNosferatuAssente() && isProgenieNosferatuAssenti(); }
+
+    public boolean isGiullareVincitore() { return giullareEliminato; }
+
     private void vampirizzazioneGiulietta(String nomeRomeo)
     {
         if(vivi.isStregato(nomeRomeo)) vivi.aggiungiProtezioneCreatureOmbra(nomeRomeo);
         String messaggio = "A seguito della vampirizzazione di Giulietta (" + vivi.getNomeGiulietta() + "), " + nomeRomeo + " non è più Romeo.";
         throw new IllegalStateException(messaggio);
     }
+
+    private void protezioneContadinoMostroStrega()
+    {
+        String nomeStrega = getNomeStrega();
+        eliminaGiocatore(nomeStrega);
+        throw new EccezioneProtezioneContadinoMostro(nomeStrega, vivi.getNomeContadinoMostro());
+    }
+
+    private String getNomeStrega() { return vivi.getNomeStrega(); }
 
     private void gestionePassaggioPossedutoRiuscito(String nome)
     {
@@ -717,7 +734,7 @@ public final class Partita
         return risultato;
     }
 
-    private void malediciMago() { vivi.maledizione(getNomeMagoVivo()); }
+    private void malediciMago() { maledizione(getNomeMagoVivo()); }
 
     private Misticismo eseguiControlloMago(String nome)
     {
@@ -727,7 +744,9 @@ public final class Partita
         return misticismo;
     }
 
-    private void maledizioneGuaritore() { vivi.maledizione(vivi.getNomeGuaritore()); }
+    private void maledizioneGuaritore() { maledizione(vivi.getNomeGuaritore()); }
+
+    private void maledizione(String nome) { vivi.maledizione(nome); }
 
     private void gestioneMorteGhoul(String nomeVittima, String nomeProgenizzatore)
     {
@@ -814,7 +833,10 @@ public final class Partita
         for(int i = 0; i < getNumeroGiocatoriVivi(); i++) annullaMaledizioneMegera(getNomeGiocatoreVivo(i));
     }
 
-    private void annullaMaledizioneMegera(String nome) { if(isMaledettoNonNegromante(nome)) vivi.annullaMaledizione(nome); }
+    private void annullaMaledizioneMegera(String nome)
+    {
+        if(isMaledettoNonNegromante(nome)) vivi.annullaMaledizione(nome);
+    }
 
     private boolean isMaledettoNonNegromante(String nome) { return isMaledetto(nome) && !isMaledettoNegromante(nome); }
 
@@ -861,7 +883,10 @@ public final class Partita
         if(isCappuccettoRossoSenzaNonna()) vivi.annullaProtezioniCappuccettoRosso();
     }
 
-    private boolean isCappuccettoRossoSenzaNonna() { return vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente(); }
+    private boolean isCappuccettoRossoSenzaNonna()
+    {
+        return vivi.isCappuccettoRossoPresente() && !vivi.isNonnaPresente();
+    }
 
     private void risorgiGiocatore(String nome)
     {
@@ -884,7 +909,8 @@ public final class Partita
     private void doppiaEliminazione(String nomeLupo, String nomeVittima)
     {
         eliminaGiocatori(nomeLupo, nomeVittima);
-        if(mortiNotte.isContadino(nomeVittima)) throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nomeVittima), nomeVittima, nomeLupo);
+        if(mortiNotte.isContadino(nomeVittima))
+            throw new EccezioneAttaccoContadino(mortiNotte.getTipoContadino(nomeVittima), nomeVittima, nomeLupo);
     }
 
     private String getNomeGiocatoreLupo(String tipoLupo) { return getNomeGiocatoreVivo(getPosizioneLupo(tipoLupo)); }
@@ -892,11 +918,15 @@ public final class Partita
     private int getPosizioneLupo(String tipoLupo)
     {
         int posizione = -1;
-        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getNomeRuolo(getNomeGiocatoreVivo(i)).equals(tipoLupo)) posizione = i;
+        for(int i = 0; i < getNumeroGiocatoriVivi() && posizione == -1; i++) if(getNomeRuolo(getNomeGiocatoreVivo(i)).equals(tipoLupo))
+            posizione = i;
         return posizione;
     }
 
-    private void incrementaVotiBallottaggio(String nome, int numeroVoti) { ballottaggio.incrementaVoti(nome, numeroVoti); }
+    private void incrementaVotiBallottaggio(String nome, int numeroVoti)
+    {
+        ballottaggio.incrementaVoti(nome, numeroVoti);
+    }
 
     private int getNumeroRuoliCittaPresenti() { return vivi.getNumeroRuoliCitta() + ballottaggio.getNumeroRuoliCitta(); }
 

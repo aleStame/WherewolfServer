@@ -25,8 +25,6 @@ public class Ruolo
 
     private final int lune;
 
-    private boolean segnalatoOratore;
-
     private final boolean mistico;
 
     private final Tratti tratti;
@@ -50,7 +48,6 @@ public class Ruolo
         this.lune = lune;
         this.mistico = mistico;
         tratti = new Tratti();
-        annullaSegnalazioneOratore();
         cambiaCategoria(categoria);
         this.consigli = consigli;
     }
@@ -245,17 +242,9 @@ public class Ruolo
         return esito;
     }
 
-    public boolean isSegnalatoOratore() { return segnalatoOratore; }
-
-    public void segnalazioneOratore() { setSegnalazioneOratore(true); }
-
-    public void annullaSegnalazioneOratore() { setSegnalazioneOratore(false); }
-
     public EsitoAttacco attaccoNegromante() { return RIUSCITO; }
 
     public EsitoControlloSensitiva controlloSensitiva() { return NON_VILLAGGIO; }
-
-    public boolean isProtezioneNosferatuPresente() { return tratti.isProtezioneNosferatuPresente(); }
 
     public boolean isProtezioneVampiroPresente() { return tratti.isProtezioneVampiroPresente(); }
 
@@ -277,7 +266,7 @@ public class Ruolo
     public EsitoAttacco attaccoNosferatu()
     {
         EsitoAttacco esito = RIUSCITO;
-        if(isProtezioneNosferatuPresente()) esito = FALLITO;
+        if(isMistico()) esito = FALLITO;
         return esito;
     }
 
@@ -291,7 +280,13 @@ public class Ruolo
 
     public boolean isSenzaFazione() { return getFazione() == NESSUNA; }
 
-    private void setSegnalazioneOratore(boolean segnalatoOratore) { this.segnalatoOratore = segnalatoOratore; }
+    public boolean isStrega() { return false; }
+
+    public EsitoGuarigione guarigione() { return EsitoGuarigione.RIUSCITO; }
+
+    public boolean isGuardiaPrincipale() { return false; }
+
+    public boolean isVeggente() { return false; }
 
     private boolean controlloTrattiOscuri()
     {

@@ -34,7 +34,7 @@ public class Ghoul extends Ruolo
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        if(esito == NON_FINITO) esito = getVittoriaNosferatu(partita);
+        if(esito == VITTORIA) esito = getVittoriaNosferatu(partita);
         return esito;
     }
 
