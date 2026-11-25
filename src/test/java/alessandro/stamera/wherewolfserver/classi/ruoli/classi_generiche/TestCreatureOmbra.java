@@ -50,12 +50,17 @@ import static org.mockito.Mockito.doCallRealMethod;
         partita.attaccoLupi(tipoLupo, nomePosseduto);
         partita.passaPosseduto(nomeVittima);
         partita.terminaNotte();
+        eliminaGiocatoreBallottaggio(partita, nomeLupo);
+        return partita;
+    }
+
+    private static void eliminaGiocatoreBallottaggio(Partita partita, String nomeLupo)
+    {
         partita.incrementaVoti(nomeLupo, 2);
         partita.terminaVotazioni();
         partita.incrementaVoti(nomeLupo, 2);
         partita.terminaBallottaggio();
         partita.terminaNotte();
-        return partita;
     }
 
 }
