@@ -9,8 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.stream.Stream;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.NON_FINITO;
-import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doCallRealMethod;
 
@@ -30,9 +29,33 @@ import static org.mockito.Mockito.doCallRealMethod;
         Partita[] partite = new Partita[]
         {
             new Partita(new String[][] { { "Aurora", "Oratore" }, { "Giulia", "Prete" } }),
-            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } })
+            new Partita(new String[][] { { "Francesca", "Lupo del branco" }, { "Ermenegildo", "Peccatore" } }),
+            getEsempioVittoriaPosseduto("Altra guardia", "Capo branco"),
+            getEsempioVittoriaPosseduto("Altra guardia", "Lupo del branco"),
+            getEsempioVittoriaPosseduto("Altra guardia", "Lupo reietto"),
+            getEsempioVittoriaPosseduto("Altra guardia", "Lupo solitario")
         };
-        return Stream.of(Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO));
+        return
+            Stream.of
+            (
+                Arguments.of(partite[0], SCONFITTA), Arguments.of(partite[1], NON_FINITO), Arguments.of(partite[2], VITTORIA),
+                Arguments.of(partite[3], VITTORIA), Arguments.of(partite[4], VITTORIA), Arguments.of(partite[5], VITTORIA)
+            );
+    }
+
+    private static Partita getEsempioVittoriaPosseduto(String nomeRuolo, String tipoLupo)
+    {
+        String nomePosseduto = "Franco", nomeVittima = "Giulio", nomeLupo = "Ciccio";
+        Partita partita = new Partita(new String[][] { { nomePosseduto, "Posseduto" }, { nomeLupo, tipoLupo }, { "Pina", "Megera" }, { nomeVittima, nomeRuolo } });
+        partita.attaccoLupi(tipoLupo, nomePosseduto);
+        partita.passaPosseduto(nomeVittima);
+        partita.terminaNotte();
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+        return partita;
     }
 
 }
