@@ -34,6 +34,54 @@ import static org.mockito.Mockito.doCallRealMethod;
         assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(VITTORIA);
     }
 
+    @ParameterizedTest @MethodSource("getCombinazioniPosseduto") public void testEsitoPartitaPosseduto(String nomeRuolo, String tipoLupo)
+    {
+        Partita partita = getEsempioVittoriaPosseduto(nomeRuolo, tipoLupo);
+        doCallRealMethod().when(ruolo).getEsitoPartita(partita);
+        assertThat(ruolo.getEsitoPartita(partita)).isEqualTo(SCONFITTA);
+    }
+
+    private static Stream<Arguments> getCombinazioniPosseduto()
+    {
+        String[] nomiRuoli = { "Altra guardia" };
+        String[] tipiLupi = { "Capo branco", "Lupo del branco", "Lupo reietto", "Lupo solitario" };
+        Arguments[] argomenti = new Arguments[nomiRuoli.length * tipiLupi.length];
+        int i = 0;
+        for(String nomeRuolo : nomiRuoli) for(String tipoLupo : tipiLupi)
+        {
+            argomenti[i] = Arguments.of(nomeRuolo, tipoLupo);
+            i++;
+        }
+        return stream(argomenti);
+    }
+
+    private static Partita getEsempioVittoriaPosseduto(String nomeRuolo, String tipoLupo)
+    {
+        String nomePosseduto = "Franco", nomeVittima = "Giulio", nomeLupo = "Ciccio";
+        String[][] giocatori =
+            new String[][] { { nomePosseduto, "Posseduto" }, { nomeLupo, tipoLupo }, { "Pina", "Megera" }, { nomeVittima, nomeRuolo } };
+        Partita partita = new Partita(giocatori);
+        passaPosseduto(tipoLupo, partita, nomePosseduto, nomeVittima);
+        eliminaGiocatoreBallottaggio(partita, nomeLupo);
+        return partita;
+    }
+
+    private static void passaPosseduto(String tipoLupo, Partita partita, String nomePosseduto, String nomeVittima)
+    {
+        partita.attaccoLupi(tipoLupo, nomePosseduto);
+        partita.passaPosseduto(nomeVittima);
+        partita.terminaNotte();
+    }
+
+    private static void eliminaGiocatoreBallottaggio(Partita partita, String nomeLupo)
+    {
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaBallottaggio();
+        partita.terminaNotte();
+    }
+
     private static Stream<Arguments> getEsempiPartiteGuardieCriminali()
     {
         return stream(getArgomentiTestPartiteGuardieCriminali());
@@ -51,11 +99,11 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         return new Partita[]
         {
-                new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Marco", "Guardia" }, { "Maurizio", "Assassino" } }),
-                new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Antonio", "Guardia" }, { "Aurora", "Capo gilda" } }),
-                new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Andrea", "Guardia" }, { "Elene", "Guardia corrotta" } }),
-                new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
-                new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } })
+            new Partita(new String[][] { { "Alessandro", "Altra guardia" }, { "Marco", "Guardia" }, { "Maurizio", "Assassino" } }),
+            new Partita(new String[][] { { "Tommaso", "Altra guardia" }, { "Antonio", "Guardia" }, { "Aurora", "Capo gilda" } }),
+            new Partita(new String[][] { { "Raffaele", "Altra guardia" }, { "Andrea", "Guardia" }, { "Elene", "Guardia corrotta" } }),
+            new Partita(new String[][] { { "Francesco", "Altra guardia" }, { "Matteo", "Guardia" }, { "Monica", "Spia" } }),
+            new Partita(new String[][] { { "Michele", "Altra guardia" }, { "Giulia", "Guardia" }, { "Sara", "Ladra" } })
         };
     }
 
