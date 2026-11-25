@@ -824,13 +824,18 @@ public final class TestPartita
     )
     public void testAttaccoNosferatuRiuscito(String nomeRuolo)
     {
-        String nome = "Marco";
-        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Tina", "Nosferatu" }, { "Rolando", "Assassino" } });
+        String nome = "Marco", nomeAssassino = "Rolando";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Tina", "Nosferatu" }, { nomeAssassino, "Assassino" } });
         attaccoAssassino(nome);
         progenizzazioneNosferatu(nome);
         terminaNotte();
         verificaNonEliminati(nome);
+        incrementaVoti(nomeAssassino, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeAssassino, 2);
+        terminaBallottaggio();
         verificaFazioneNosferatu(nome);
+        verificaEsitoPartitaGiocatore(nome, VITTORIA);
     }
 
     @Test public void testSuicidioCapoBranco()
