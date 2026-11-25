@@ -21,9 +21,12 @@ public class Uomini extends Ruolo
         if(esito == VITTORIA)
         {
             if(partita.isNoUomini()) esito = SCONFITTA;
-            else if(!partita.isNoCreatureOmbra()) esito = NON_FINITO;
+            else if(!partita.isNoCreatureOmbra())
+            {
+                esito = NON_FINITO;
+                if(partita.getNumeroGiocatoriVivi() == 2) esito = SCONFITTA;
+            }
         }
-        System.out.println(esito);
         return esito;
     }
 

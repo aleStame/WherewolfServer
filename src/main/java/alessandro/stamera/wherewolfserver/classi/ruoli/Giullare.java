@@ -1,9 +1,13 @@
 package alessandro.stamera.wherewolfserver.classi.ruoli;
 
 import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco;
+import alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita;
+import alessandro.stamera.wherewolfserver.classi.gestione_partita.Partita;
 import alessandro.stamera.wherewolfserver.classi.ruoli.classi_generiche.Ruolo;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Aura.BIANCA;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoAttacco.FALLITO;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.SCONFITTA;
+import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.VITTORIA;
 
 public final class Giullare extends Ruolo
 {
@@ -29,6 +33,13 @@ public final class Giullare extends Ruolo
     @Override public boolean isGiullare() { return true; }
 
     @Override public EsitoAttacco gildata() { return FALLITO; }
+
+    @Override public EsitoPartita getEsitoPartita(Partita partita)
+    {
+        EsitoPartita esito = super.getEsitoPartita(partita);
+        if(esito == VITTORIA && !partita.isGiullareVincitore()) esito = SCONFITTA;
+        return esito;
+    }
 
     public static Ruolo getInstance() { return new Giullare(); }
 

@@ -33,8 +33,7 @@ public final class AngeloCustode extends Amanti
     @Override public EsitoPartita getEsitoPartita(Partita partita)
     {
         EsitoPartita esito = super.getEsitoPartita(partita);
-        System.out.println(esito);
-        if(esito != SCONFITTA) esito = valutaPartitaNonFinita(partita);
+        if(esito == VITTORIA) esito = valutaPartitaNonFinita(partita);
         return esito;
     }
 

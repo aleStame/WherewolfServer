@@ -42,6 +42,70 @@ public final class TestAltraGuardia
         verificaStringa(ruolo.getConsigli(), messaggio);
     }
 
+    @Test public void testMistico() { verificaFalso(ruolo.isMistico()); }
+
+    @Test public void testGuardiaNormale() { verificaFalso(ruolo.isGuardiaPrincipale()); }
+
+    @Test public void testAmanti() { verificaFalso(ruolo.isAmanti()); }
+
+    @Test public void testCriminale() { verificaFalso(ruolo.isCriminale()); }
+
+    @Test public void testInquisizione() { verificaFalso(ruolo.isInquisizione()); }
+
+    @Test public void testPiccoloPopolo() { verificaFalso(ruolo.isPiccoloPopolo()); }
+
+    @Test public void testLupo() { verificaFalso(ruolo.isLupo()); }
+
+    @Test public void testSenzaFazione() { verificaFalso(ruolo.isSenzaFazione()); }
+
+    @Test public void testPosseduto() { verificaFalso(ruolo.isPosseduto()); }
+
+    @Test public void testNegromante() { verificaFalso(ruolo.isNegromante()); }
+
+    @Test public void testVampiro() { verificaFalso(ruolo.isVampiro()); }
+
+    @Test public void testNosferatu() { verificaFalso(ruolo.isNosferatu()); }
+
+    @Test public void testCitta() { verificaFalso(ruolo.isCitta()); }
+
+    @Test public void testBardo() { verificaFalso(ruolo.isBardo()); }
+
+    @Test public void testBecchino() { verificaFalso(ruolo.isBecchino()); }
+
+    @Test public void testBracconiere() { verificaFalso(ruolo.isBracconiere()); }
+
+    @Test public void testCacciatore() { verificaFalso(ruolo.isCacciatore()); }
+
+    @Test public void testCacciatoreVampiri() { verificaFalso(ruolo.isCacciatoreDiVampiri()); }
+
+    @Test public void testCappuccettoRosso() { verificaFalso(ruolo.isCappuccettoRosso()); }
+
+    @Test public void testEremita() { verificaFalso(ruolo.isEremita()); }
+
+    @Test public void testGuaritore() { verificaFalso(ruolo.isGuaritore()); }
+
+    @Test public void testMago() { verificaFalso(ruolo.isMago()); }
+
+    @Test public void testMedium() { verificaFalso(ruolo.isMedium()); }
+
+    @Test public void testMonaco() { verificaFalso(ruolo.isMonaco()); }
+
+    @Test public void testNonna() { verificaFalso(ruolo.isNonna()); }
+
+    @Test public void testOste() { verificaFalso(ruolo.isOste()); }
+
+    @Test public void testPeccatore() { verificaFalso(ruolo.isPeccatore()); }
+
+    @Test public void testPrete() { verificaFalso(ruolo.isPrete()); }
+
+    @Test public void testSensitiva() { verificaFalso(ruolo.isSensitiva()); }
+
+    @Test public void testStrega() { verificaFalso(ruolo.isStrega()); }
+
+    @Test public void testVeggente() { verificaFalso(ruolo.isVeggente()); }
+
+    private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
     private void verificaStringa(String valore, String risultato) { assertThat(valore).isEqualTo(risultato); }
 
     private void verificaAuraBianca(Aura aura) { assertThat(aura).isEqualTo(BIANCA); }
