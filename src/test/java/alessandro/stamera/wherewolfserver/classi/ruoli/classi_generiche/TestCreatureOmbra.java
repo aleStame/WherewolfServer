@@ -47,11 +47,16 @@ import static org.mockito.Mockito.doCallRealMethod;
     {
         String nomePosseduto = "Franco", nomeVittima = "Giulio", nomeLupo = "Ciccio";
         Partita partita = new Partita(new String[][] { { nomePosseduto, "Posseduto" }, { nomeLupo, tipoLupo }, { "Pina", "Megera" }, { nomeVittima, nomeRuolo } });
+        passaPosseduto(tipoLupo, partita, nomePosseduto, nomeVittima);
+        eliminaGiocatoreBallottaggio(partita, nomeLupo);
+        return partita;
+    }
+
+    private static void passaPosseduto(String tipoLupo, Partita partita, String nomePosseduto, String nomeVittima)
+    {
         partita.attaccoLupi(tipoLupo, nomePosseduto);
         partita.passaPosseduto(nomeVittima);
         partita.terminaNotte();
-        eliminaGiocatoreBallottaggio(partita, nomeLupo);
-        return partita;
     }
 
     private static void eliminaGiocatoreBallottaggio(Partita partita, String nomeLupo)

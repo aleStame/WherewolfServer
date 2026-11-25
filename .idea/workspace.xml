@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="VERDE DIRETTO: testEsitoPartita riuscito" />
+    <list default="true" id="2f5fad0f-0ab7-4cd0-a3df-691dc6b3ec4c" name="Changes" comment="REFACTORING: definizione del metodo eliminaGiocatoreBallottaggio">
+      <change beforePath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestCreatureOmbra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/alessandro/stamera/wherewolfserver/classi/ruoli/classi_generiche/TestCreatureOmbra.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,14 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784068342511</updated>
-    </task>
-    <task id="LOCAL-00815" summary="VERDE DIRETTO: testEsitoPartita riuscito">
-      <option name="closed" value="true" />
-      <created>1795526818782</created>
-      <option name="number" value="00815" />
-      <option name="presentableId" value="LOCAL-00815" />
-      <option name="project" value="LOCAL" />
-      <updated>1795526818782</updated>
     </task>
     <task id="LOCAL-00816" summary="VERDE DIRETTO: testVittoriaAltraGuardiaEliminata riuscito">
       <option name="closed" value="true" />
@@ -643,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795602324821</updated>
     </task>
-    <option name="localTasksCounter" value="864" />
+    <task id="LOCAL-00864" summary="REFACTORING: definizione del metodo eliminaGiocatoreBallottaggio">
+      <option name="closed" value="true" />
+      <created>1795602806891</created>
+      <option name="number" value="00864" />
+      <option name="presentableId" value="LOCAL-00864" />
+      <option name="project" value="LOCAL" />
+      <updated>1795602806891</updated>
+    </task>
+    <option name="localTasksCounter" value="865" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="VERDE DIRETTO: testBardo riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBecchino riuscito" />
     <MESSAGE value="VERDE DIRETTO: testBracconiere riuscito" />
     <MESSAGE value="VERDE DIRETTO: testCacciatore riuscito" />
@@ -686,6 +687,7 @@
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatuRiuscito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testAttaccoNosferatuConGhoulRiuscito riuscito" />
     <MESSAGE value="VERDE DIRETTO: testEsitoPartita riuscito" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERDE DIRETTO: testEsitoPartita riuscito" />
+    <MESSAGE value="REFACTORING: definizione del metodo eliminaGiocatoreBallottaggio" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTORING: definizione del metodo eliminaGiocatoreBallottaggio" />
   </component>
 </project>
