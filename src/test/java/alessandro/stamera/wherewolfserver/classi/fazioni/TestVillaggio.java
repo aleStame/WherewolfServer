@@ -14,6 +14,7 @@ import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Categori
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.EsitoPartita.*;
 import static alessandro.stamera.wherewolfserver.classi.attributi_ruolo.Fazione.VILLAGGIO;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 public final class TestVillaggio
 {
@@ -117,7 +118,11 @@ public final class TestVillaggio
             new Partita(new String[][] { { "John", "Altra guardia" }, { "Karen", "Negromante" } }),
             new Partita(new String[][] { { "Joseph", "Altra guardia" }, { "Morgane", "Nosferatu" } }),
             new Partita(new String[][] { { "Anthony", "Altra guardia" }, { "Dalia", "Posseduto" } }),
-            new Partita(new String[][] { { "James", "Altra guardia" }, { "Anna Maria", "Vampiro" } })
+            new Partita(new String[][] { { "James", "Altra guardia" }, { "Anna Maria", "Vampiro" } }),
+            getPartitaContadinoLupizzato("Altra guardia", "Capo branco"),
+            getPartitaContadinoLupizzato("Altra guardia", "Lupo del branco"),
+            getPartitaContadinoLupizzato("Altra guardia", "Lupo reietto"),
+            getPartitaContadinoLupizzato("Altra guardia", "Lupo solitario")
         };
         return
             Stream.of
@@ -141,10 +146,24 @@ public final class TestVillaggio
                 Arguments.of(partite[46], SCONFITTA), Arguments.of(partite[47], SCONFITTA), Arguments.of(partite[48], SCONFITTA),
                 Arguments.of(partite[49], SCONFITTA), Arguments.of(partite[50], SCONFITTA), Arguments.of(partite[51], SCONFITTA),
                 Arguments.of(partite[52], SCONFITTA), Arguments.of(partite[53], SCONFITTA), Arguments.of(partite[54], SCONFITTA),
-                Arguments.of(partite[55], SCONFITTA), Arguments.of(partite[56], SCONFITTA)
+                Arguments.of(partite[55], SCONFITTA), Arguments.of(partite[56], SCONFITTA), Arguments.of(partite[57], SCONFITTA),
+                Arguments.of(partite[58], SCONFITTA), Arguments.of(partite[59], SCONFITTA), Arguments.of(partite[60], SCONFITTA)
             );
     }
 
     private void verificaFalso(boolean valore) { assertThat(valore).isFalse(); }
+
+    private static Partita getPartitaContadinoLupizzato(String nomeRuolo, String tipoLupo)
+    {
+        String nomeContadino = "Pino", nomeLupo = "Lucio";
+        String[][] giocatori = { { "Anna", nomeRuolo }, { nomeLupo, tipoLupo }, { nomeContadino, "Contadino discendente dei lupi" } };
+        Partita partita = new Partita(giocatori);
+        assertThatIllegalArgumentException().isThrownBy(() -> partita.attaccoLupi(tipoLupo, nomeContadino));
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaVotazioni();
+        partita.incrementaVoti(nomeLupo, 2);
+        partita.terminaBallottaggio();
+        return partita;
+    }
 
 }
