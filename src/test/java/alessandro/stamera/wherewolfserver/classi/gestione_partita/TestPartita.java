@@ -838,6 +838,31 @@ public final class TestPartita
         verificaEsitoPartitaGiocatore(nome, VITTORIA);
     }
 
+    @ParameterizedTest @CsvSource
+    (
+        {
+            "Altra guardia", "Angelo custode", "Azzeccagarbugli", "Bardo", "Becchino", "Bocca di rosa", "Bocca di rosa", "Boia", "Borgomastro",
+            "Bracconiere", "Cacciatore", "Capo gilda", "Cappuccetto rosso", "Contadino eroe", "Contadino discendente dei lupi",
+            "Contadino normale", "Giullare", "Guardia", "Guardia corrotta", "Inquisitore", "Mercante", "Monaco", "Nonna", "Oratore", "Oste",
+            "Pazzo", "Peccatore", "Prete", "Spia", "Templare, RIUSCITO", "Viaggiatore"
+        }
+    )
+    public void testAttaccoNosferatuConGhoulRiuscito(String nomeRuolo)
+    {
+        String nome = "Marco", nomeAssassino = "Rolando";
+        inizializzaPartita(new String[][] { { nome, nomeRuolo }, { "Tina", "Nosferatu" }, { nomeAssassino, "Assassino" }, { "Pino", "Ghoul" } });
+        attaccoAssassino(nome);
+        progenizzazioneNosferatu(nome);
+        terminaNotte();
+        verificaNonEliminati(nome);
+        incrementaVoti(nomeAssassino, 2);
+        terminaVotazioni();
+        incrementaVoti(nomeAssassino, 2);
+        terminaBallottaggio();
+        verificaFazioneNosferatu(nome);
+        verificaEsitoPartitaGiocatore(nome, VITTORIA);
+    }
+
     @Test public void testSuicidioCapoBranco()
     {
         String nomeVittima = "Marco", tipoLupo = "Capo branco", nomeNosferatu = "Luca";
