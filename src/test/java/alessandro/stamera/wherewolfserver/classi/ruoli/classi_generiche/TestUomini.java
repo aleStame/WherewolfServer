@@ -88,9 +88,9 @@ import static org.mockito.Mockito.doCallRealMethod;
                 Arguments.of(partite[9], SCONFITTA), Arguments.of(partite[10], SCONFITTA), Arguments.of(partite[11], SCONFITTA),
                 Arguments.of(partite[12], SCONFITTA), Arguments.of(partite[13], SCONFITTA), Arguments.of(partite[14], SCONFITTA),
                 Arguments.of(partite[15], NON_FINITO), Arguments.of(partite[16], NON_FINITO), Arguments.of(partite[17], SCONFITTA),
-                Arguments.of(partite[18], SCONFITTA), Arguments.of(partite[19], NON_FINITO), Arguments.of(partite[20], SCONFITTA),
-                Arguments.of(partite[21], NON_FINITO), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], SCONFITTA),
-                Arguments.of(partite[24], SCONFITTA)
+                Arguments.of(partite[18], SCONFITTA), Arguments.of(partite[19], NON_FINITO), Arguments.of(partite[20], NON_FINITO),
+                Arguments.of(partite[21], SCONFITTA), Arguments.of(partite[22], SCONFITTA), Arguments.of(partite[23], NON_FINITO),
+                Arguments.of(partite[24], SCONFITTA), Arguments.of(partite[25], SCONFITTA), Arguments.of(partite[26], SCONFITTA)
             );
     }
 
@@ -160,7 +160,7 @@ import static org.mockito.Mockito.doCallRealMethod;
 
     private static Partita[] getPartiteConProgenie()
     {
-        Partita[] partite = new Partita[6];
+        Partita[] partite = new Partita[8];
         String[] nomiVittime = { "Dario", "Elena", "Alessandro", "Giuseppina", "Giulia", "Aurora", "Dino", "Sandra", "John", "Jack" };
         partite[0] = getPartitaConAttaccoVampiro(new String[][] { { "Mario", "Vampiro" }, { nomiVittime[0], "Giullare" } }, nomiVittime[0]);
         String nomeVampiro = "Alberto";
@@ -173,13 +173,23 @@ import static org.mockito.Mockito.doCallRealMethod;
         (
             new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" } }, nomiVittime[3]
         );
+        partite[3] = getPartitaConAttaccoVampiro
+        (
+            new String[][] { { "Michela", "Vampiro" }, { nomiVittime[3], "Pazzo" }, { "Maria", "Assassino" }, { "Adamo", "Ghoul" } }, nomiVittime[3]
+        );
         String[] tipoLupo = { "Capo branco", "Lupo del branco" };
-        partite[3] = getPartitaConAttaccoNosferatu
+        partite[4] = getPartitaConAttaccoNosferatu
         (
             tipoLupo[0], new String[][] { { nomiVittime[4], tipoLupo[0] }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" } },
             nomiVittime[5], nomiVittime[4]
         );
-        partite[4] = getPartitaConAttaccoNosferatu
+        partite[5] = getPartitaConAttaccoNosferatu
+        (
+            tipoLupo[0],
+            new String[][] { { nomiVittime[4], tipoLupo[0] }, { nomiVittime[5], "Angelo custode" }, { "Emma", "Nosferatu" }, { "Eva", "Ghoul" } },
+            nomiVittime[5], nomiVittime[4]
+        );
+        partite[6] = getPartitaConAttaccoNosferatu
         (
             tipoLupo[1],
             new String[][]
@@ -189,7 +199,7 @@ import static org.mockito.Mockito.doCallRealMethod;
             nomiVittime[7], nomiVittime[6]
         );
         String nomeNosferatu = "Annalisa";
-        partite[5] = getPartitaConAttaccoNosferatuEliminato
+        partite[7] = getPartitaConAttaccoNosferatuEliminato
         (
             tipoLupo[1],
             new String[][] { { nomiVittime[8], tipoLupo[1] }, { nomiVittime[9], "Borgomastro" }, { nomeNosferatu, "Nosferatu" } },
